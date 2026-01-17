@@ -399,9 +399,13 @@ UniquePtr<IPC::Message> ConvertProtobufToIPCMessage(UniquePtr<TypedProtobuf>& pr
                 namespace_pb = getNamespace("::", allprotocols[protocol], addParent=True)
                 print("""
         case IPC::%s: {
-            return %s::%s::%s_ToIPC(LibprotobufMapping::ParseTypedProtobuf<%s::%s::%s>(std::move(proto)));
+            auto parsed_proto = LibprotobufMapping::ParseTypedProtobuf<%s::%s::%s>(proto);
+            if (!parsed_proto) {
+                return {};
+            }
+            return %s::%s::%s_ToIPC(parsed_proto);
         }"""
-                    % (enum, namespace, protocol, msg, namespace_pb, protocol, msg),
+                    % (enum, namespace_pb, protocol, msg, namespace, protocol, msg),
                     file=ipc_factory,
                 )
 
@@ -422,9 +426,13 @@ UniquePtr<TypedProtobuf> ConvertIPCMessageToProtobuf(UniquePtr<IPC::Message>& ip
                 namespace = getNamespace("::", allprotocols[protocol], addParent=False)
                 namespace_pb = getNamespace("::", allprotocols[protocol], addParent=True)
                 print("""   case IPC::%s: {
-            return LibprotobufMapping::SerializeTypedProtobuf<%s::%s::%s>(%s::%s::%s_ToProtobuf(std::move(ipc)), IPC::%s);
+            auto proto = %s::%s::%s_ToProtobuf(ipc);
+            if (!proto) {
+                return {};
+            }
+            return LibprotobufMapping::SerializeTypedProtobuf<%s::%s::%s>(proto, IPC::%s);
         }"""
-                    % (enum, namespace_pb, protocol, msg, namespace, protocol, msg, enum),
+                    % (enum, namespace, protocol, msg, namespace_pb, protocol, msg, enum),
                     file=ipc_factory,
                 )
 
