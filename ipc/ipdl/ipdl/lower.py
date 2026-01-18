@@ -2301,8 +2301,8 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                     toProto, toIPC, typedefs = self._generateCxxUnionProtobuf(su)
 
 
-                toProtoDefn, toProtoDecl = _splitFuncDeclDefn(toProto)
-                toIPCDefn, toIPCDecl = _splitFuncDeclDefn(toIPC)
+                toProtoDecl, toProtoDefn = _splitFuncDeclDefn(toProto)
+                toIPCDecl, toIPCDefn = _splitFuncDeclDefn(toIPC)
 
                 decls = [toProtoDecl, toIPCDecl]
                 defns = [toProtoDefn, toIPCDefn]
@@ -2314,17 +2314,27 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                 defnsBlock = Block()
                 defnsBlock.addstmts(defns)
 
+                ns_defns = Namespace(su.name + "Protobuf")
+                ns_decls = Namespace(su.name + "Protobuf")
+
+                ns_defns.addstmts(typedefs)
+                ns_defns.addstmts(defns)
+
+                ns_decls.addstmts(decls)
+
+
+
                 self.structUnionDefns.extend(
                         [
                             Whitespace(
                                 """
 //-----------------------------------------------------------------------------
-// Fuzzing helper functions for the IPDL type |%s %s|
+// Fuzzing helper functions definition for the IPDL type |%s %s|
 //
 """
                                 % (which, su.name)
                             ),
-                            _putInNamespaces(declsBlock, su.namespaces),
+                            _putInNamespaces(ns_defns, su.namespaces),
                             Whitespace.NL,
                         ]
                     )
@@ -2334,12 +2344,12 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                             Whitespace(
                                 """
 //-----------------------------------------------------------------------------
-// Fuzzing helper functions for the IPDL type |%s %s|
+// Fuzzing helper functions declarations for the IPDL type |%s %s|
 //
 """
                                 % (which, su.name)
                             ),
-                            _putInNamespaces(defnsBlock, su.namespaces),
+                            _putInNamespaces(ns_decls, su.namespaces),
                             Whitespace.NL,
                         ]
                     )
@@ -2451,7 +2461,9 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         block = Block()
 
         if _protobufTypeIsStructOrUnion(ipdltype):
-            return ExprCall(ExprVar(f"{_getNamespacedObject(ipdltype.name(), ipdltype._ast.namespaces, False)}_ToProtobuf"), [ExprVar(readField)])
+            ns = Namespace(ipdltype.name() + "Protobuf")
+            namespaces = ipdltype._ast.namespaces + [ns]
+            return ExprCall(ExprVar(f"{_getNamespacedObject(ipdltype.name(), namespaces, False)}_ToProtobuf"), [ExprVar(readField)])
             #return ExprCall(ExprVar(f"{ipdltype.name()}_ToProtobuf"), [ExprVar(readField)])
         elif _protobufTypeIsScalar(ipdltype):
             if _protobufTypeIsConvertible(ipdltype):
@@ -2472,7 +2484,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                 method=method,
             )
 
-    def _generateProtobufAssignDecl(self, ipdltype, protoVar, protoField, readField, sep = "->"):
+    def _generateProtobufAssignDecl(self, ipdltype, protoVar, protoField, readField, sep = "->", forIPC = True):
         block = Block()
         if _protobufTypeIsStructOrUnion(ipdltype):
             block.addcode(
@@ -2557,16 +2569,28 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                         readField=self._generateProtobufValue(ipdltype, readField),
                     )
         else:
-            # read as serialized so just set it
-            block.addcode(
-                        """
-                        ${protoVar}${sep}set_${protoField}(${readField});
-                        """,
-                        protoVar=protoVar,
-                        protoField=protoField,
-                        sep=sep,
-                        readField=readField,
-                    )
+            # read as serialized so just set it, if intended for IPC reading
+            if forIPC:
+                block.addcode(
+                            """
+                            ${protoVar}${sep}set_${protoField}(${readField});
+                            """,
+                            protoVar=protoVar,
+                            protoField=protoField,
+                            sep=sep,
+                            readField=readField,
+                        )
+            else:
+                # if assiging to a struct / union, we need to serialize to string
+                block.addcode(
+                            """
+                            ${protoVar}${sep}set_${protoField}(${readField});
+                            """,
+                            protoVar=protoVar,
+                            protoField=protoField,
+                            sep=sep,
+                            readField=self._generateProtobufValue(ipdltype, readField),
+                        )
         return block
 
     def _generateMsgToProtobuf(self, md, protocol, forReply=False):
@@ -2620,7 +2644,9 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         block = Block()
 
         if _protobufTypeIsStructOrUnion(ipdltype):
-            return ExprCall(ExprVar(f"{_getNamespacedObject(ipdltype.name(), ipdltype._ast.namespaces, False)}_ToIPC"), [ExprVar(readField)])
+            ns = Namespace(ipdltype.name() + "Protobuf")
+            namespaces = ipdltype._ast.namespaces + [ns]
+            return ExprCall(ExprVar(f"{_getNamespacedObject(ipdltype.name(), namespaces, False)}_ToIPC"), [ExprVar(readField)])
         elif _protobufTypeIsScalar(ipdltype):
             if _protobufTypeNeedsCast(ipdltype):
                 return ExprCast(ExprVar(readField), _cxxBareType(ipdltype, "Child"), static=True)
@@ -2642,35 +2668,31 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                 method=method,
             )
 
-    def _generateIPCAssignDecl(self, p, protoVar, sep="->"):
+    def _generateIPCAssignDecl(self, ipdltype, varName, protoVar, protoField, sep="->", forIPC = True):
         block = Block()
-        if _protobufTypeIsArray(p.ipdltype):
+        if _protobufTypeIsArray(ipdltype):
             # for "ArrayTypes" we convert the protobuf array to the mozilla array "nsTArray"
             inner = Block()
-            if _protobufTypeIsScalar(p.ipdltype.basetype):
+            if _protobufTypeIsScalar(ipdltype.basetype):
                 inner.addcode("""
-                    //${varName}[i] = ${protoVar}${sep}${protoField}(i);
-                    //${varName}.AppendElement(${protoVar}${sep}${protoField}(i));
-                    //auto& item = ${protoVar}${sep}${protoField}(i);
                     ${varName}.AppendElement(${protoValue});
                     """,
-                    varName=p.var(),
+                    varName=varName,
                     protoVar=protoVar,
                     sep=sep,
-                    protoField=p.protobufVar(),
-                    protoValue=self._generateIPCValue(p.ipdltype.basetype, f"{protoVar}{sep}{p.protobufVar()}(i)")
+                    protoField=protoField,
+                    protoValue=self._generateIPCValue(ipdltype.basetype, f"{protoVar}{sep}{protoField}(i)")
                 )
-            elif _protobufTypeIsStructOrUnion(p.ipdltype.basetype):
+            elif _protobufTypeIsStructOrUnion(ipdltype.basetype):
                 inner.addcode("""
                     auto& item = ${protoVar}${sep}${protoField}(i);
-                    //${varName}[i] = ${protoValue};
                     ${varName}.AppendElement(${protoValue});
                     """,
-                    varName=p.var(),
+                    varName=varName,
                     protoVar=protoVar,
                     sep=sep,
-                    protoField=p.protobufVar(),
-                    protoValue=self._generateIPCValue(p.ipdltype.basetype, "item"),
+                    protoField=protoField,
+                    protoValue=self._generateIPCValue(ipdltype.basetype, "item"),
                 )
             else:
                 # needs deserialization
@@ -2685,11 +2707,11 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                         MOZ_FUZZING_NYX_PRINT("Error deserializing ${protoField}");
                     }
                     """,
-                    varName=p.var(),
+                    varName=varName,
                     protoVar=protoVar,
                     sep=sep,
-                    protoField=p.protobufVar(),
-                    protoValue=self._generateIPCValue(p.ipdltype.basetype, "item"),
+                    protoField=protoField,
+                    protoValue=self._generateIPCValue(ipdltype.basetype, "item"),
                 )
 
             block.addcode("""
@@ -2699,31 +2721,31 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                     ${inner}
                 }
                 """,
-                varName=p.var(),
+                varName=varName,
                 protoVar=protoVar,
-                ty=_cxxBareType(p.ipdltype.basetype, "Child"),
+                ty=_cxxBareType(ipdltype.basetype, "Child"),
                 sep=sep,
                 inner=inner,
-                protoField=p.protobufVar()
+                protoField=protoField
             )
-        elif _protobufTypeIsMaybe(p.ipdltype):
+        elif _protobufTypeIsMaybe(ipdltype):
             # check if basetype will be deserialized in the inner block
             inner = Block()
-            if _protobufTypeIsStructOrUnion(p.ipdltype.basetype) or _protobufTypeIsScalar(p.ipdltype.basetype):
+            if _protobufTypeIsStructOrUnion(ipdltype.basetype) or _protobufTypeIsScalar(ipdltype.basetype):
                 # if not, then we need a mozilla::Some() wrapper
                 inner.addcode("""
                     ${varName} = mozilla::Some(${protoValue});
                     """,
-                    varName=p.var(),
-                    protoValue=self._generateIPCValue(p.ipdltype.basetype, f"{protoVar}{sep}{p.protobufVar()}()")
+                    varName=varName,
+                    protoValue=self._generateIPCValue(ipdltype.basetype, f"{protoVar}{sep}{protoField}()")
                 )
             else:
                 # if yes, then DeserializeFromString already returns a maybe object
                 inner.addcode("""
                     ${varName} = ${protoValue};
                     """,
-                    varName=p.var(),
-                    protoValue=self._generateIPCValue(p.ipdltype.basetype, f"{protoVar}{sep}{p.protobufVar()}()")
+                    varName=varName,
+                    protoValue=self._generateIPCValue(ipdltype.basetype, f"{protoVar}{sep}{protoField}()")
                 )
             # for "MaybeTypes" we first check, whether we got something from the fuzzer.
             # If so, assign is to local variable
@@ -2733,31 +2755,48 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                     ${inner}
                 }
                 """,
-                varName=p.var(),
-                ty=_cxxBareType(p.ipdltype.basetype, "Child"),
+                varName=varName,
+                ty=_cxxBareType(ipdltype.basetype, "Child"),
                 sep=sep,
                 protoVar=protoVar,
-                protoField=p.protobufVar(),
+                protoField=protoField,
                 inner=inner,
             )
-        elif _protobufTypeIsScalar(p.ipdltype) or _protobufTypeIsStructOrUnion(p.ipdltype):
+        elif _protobufTypeIsScalar(ipdltype) or _protobufTypeIsStructOrUnion(ipdltype):
             # for scalar types, we might need a static cast in case
             # the c++ type is more narrow than the protobuf type it was mapped to
             block.addcode("""
-            auto ${varName} = ${protoValue};
-            """,
-            varName=p.var(),
-            protoValue=self._generateIPCValue(p.ipdltype, f"{protoVar}{sep}{p.protobufVar()}()")
+                auto ${varName} = ${protoValue};
+                """,
+                varName=varName,
+                protoValue=self._generateIPCValue(ipdltype, f"{protoVar}{sep}{protoField}()")
             )
         else:
             # otherwise we have a complex type mapped to "bytes".
             # For these, simply read the protobuf field into a string
-            block.addcode("""
-            auto ${varName} = ${protoValue};
-            """,
-            varName=p.var(),
-            protoValue=f"{protoVar}{sep}{p.protobufVar()}()"
-            )
+            if forIPC:
+                block.addcode("""
+                    auto ${varName} = ${protoValue};
+                    """,
+                    varName=varName,
+                    protoValue=f"{protoVar}{sep}{protoField}()"
+                )
+            else:
+                # if not intented for writing to an ipc message but instead for unions / structs conversion
+                # then we need to deserialize these complex typed into their member fields
+                block.addcode("""
+                    auto maybe_${varName} = ${protoValue};
+                    if (!maybe_${varName}) {
+                        MOZ_FUZZING_NYX_PRINT("Error deserializing ${protoField}");
+                        mozilla::fuzzing::Nyx::instance().release(0);
+                    }
+                    auto ${varName} = *maybe_${varName};
+                    """,
+                    varName=varName,
+                    protoField=protoField,
+                    protoValue=self._generateIPCValue(ipdltype, f"{protoVar}{sep}{protoField}()")
+                )
+
         return block
 
     def _generateMsgToIPC(self, md, p, forReply=False):
@@ -2792,7 +2831,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         if not (forReply or md.decl.type.isCtor() or md.decl.type.isDtor()):
             # convert protobuf fields to local variables that can be serialized
             for p in md.params:
-                func.addstmt(self._generateIPCAssignDecl(p, protoVar))
+                func.addstmt(self._generateIPCAssignDecl(p.ipdltype, p.var(), protoVar, p.protobufVar()))
 
             # standard serialization routine
             func.addstmts(self.makeMessage(md, ExprVar(ipcVar)))
@@ -2945,36 +2984,16 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         )
 
         # step 2: copy fields
-        block = Block()
         stmts = []
         for f in sd.fields_member_order():
+            block = Block()
             #pprint(vars(f))
             getProtoField_var = f"{protoVar}.{f.protobufVar()}()"
-            getIpcField_var = f"{ipcVar}.{f.memberVar()}"
-            block.addstmt(self._generateProtobufAssignDecl(f.ipdltype, protoVar, f.protobufVar(), getIpcField_var, "."))
-            # if _protobufTypeIsScalar(f.ipdltype):
-            #     # case 1: scalar type
-            #     block.addcode("""
-            #         ${protoVar}.set_${protoField}(${ipcField_var});
-            #     """,
-            #     ipcField_var = getIpcField_var,
-            #     protoField = f.protobufVar(),
-            #     )
-            # elif _protobufTypeIsStructOrUnion(f.ipdltype):
-            #     # case 2: struct or union
-            #     # recursively call protobuf constructor of struct / union
-            #     block.addcode("""
-            #         ${ipcField_var} = ${}_ToProtobuf(${protoField_var});
-            #     """,
-            #     ipcField_var = ipcField_var,
-            #     protoField_var = protoField_var,
-            #     )
-            #     stmts.append(StmtDecl(protoVar))
-            # else:
-            #     # case 3: some complex type which is given in serialized from
-            #     stmts.append(StmtDecl(protoVar))
-        func_toIPC.addstmts(stmts)
-
+            getIpcField_var = f"{ipcVar}.{f.getMethod().name}()"
+            temp_var = f"{f.memberVar()}"
+            block.addstmt(self._generateProtobufAssignDecl(f.ipdltype, protoVar, f.protobufVar(), getIpcField_var, ".", False))
+            stmts.append(block)
+        func_toProto.addstmts(stmts)
 
         # step 3: return
         func_toProto.addcode(
@@ -2985,16 +3004,42 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         )
 
         # now onto the other way: protobuf -> ipc
-        # step 1: create ipc struct
-        func_toIPC.addcode(
+        # step 1: for that direction we cannot create a struct first and instead create local variables which will be used to call the constructor
+        stmts_toIpc = []
+
+        for f in sd.fields_ipdl_order():
+            block = Block()
+            #pprint(vars(f))
+            getProtoField_var = f"{protoVar}.{f.protobufVar()}()"
+            getIpcField_var = f"{ipcVar}.{f.getMethod().name}()"
+            temp_var = f"{f.memberVar()}"
+            block.addstmt(self._generateIPCAssignDecl(f.ipdltype, f.var(), protoVar, f.protobufVar(), ".", False))
+            stmts_toIpc.append(block)
+        func_toIPC.addstmts(stmts_toIpc)
+
+
+        # step 2: call constructor
+        # build parameter list:
+        ctorargs = []
+        for f in sd.fields_ipdl_order():
+            if _cxxTypeCanMove(f.ipdltype):
+                    ctorargs.append(ExprMove(f.var()))
+            else:
+                ctorargs.append(f.var())
+
+        call = Block()
+        call.addcode(
             """
-            //${struct} ${var} = ${struct}();
+            auto ${ipcVar} = ${constructor};
             """,
-            var=ipcVar,
-            struct=_getNamespacedObject(sd.name, sd.namespaces, False),
+            ipcVar=ipcVar,
+            constructor=ExprCall(
+                    ExprVar(_getNamespacedObject(sd.name, sd.namespaces, False)),
+                    ctorargs
+                    )
         )
 
-        # step 2: copy fields
+        func_toIPC.addstmt(call)
 
         # step 3: return
         func_toIPC.addcode(
