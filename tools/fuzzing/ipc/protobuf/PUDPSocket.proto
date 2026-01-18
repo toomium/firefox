@@ -35,13 +35,13 @@ message Msg_OutgoingData {
 }
 
 message Msg_JoinMulticast {
-  required bytes a_multicastAddress = 1;
-  required bytes a_iface = 2;
+  required string a_multicastAddress = 1;
+  required string a_iface = 2;
 }
 
 message Msg_LeaveMulticast {
-  required bytes a_multicastAddress = 1;
-  required bytes a_iface = 2;
+  required string a_multicastAddress = 1;
+  required string a_iface = 2;
 }
 
 message Msg_Close {
@@ -67,8 +67,8 @@ message Msg_CallbackReceivedData {
 }
 
 message Msg_CallbackError {
-  required bytes a_message = 1;
-  required bytes a_filename = 2;
+  required string a_message = 1;
+  required string a_filename = 2;
   required uint32 a_lineNumber = 3;
 }
 
@@ -81,5 +81,5 @@ message Reply___delete__ {
 // Parameter mappings stats:
 // Total parameters in this file 27
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 2, "<class 'ipdl.type.BuiltinCType'>": 2, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 14, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 7, "<class 'ipdl.type.UnionType'>": 2, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 8
+// Scalar mappings performed: 15
 // Message structs/unions generated from ipdl structs/unions: 3

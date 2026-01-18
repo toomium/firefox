@@ -14,5 +14,5 @@ import public "GraphicsMessages_protobuf.mozilla.gfx.h.proto";
 // Parameter mappings stats:
 // Total parameters in this file 37
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 2, "<class 'ipdl.type.BuiltinCType'>": 4, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 25, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 3, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 2, "<class 'ipdl.type.UnionType'>": 1, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 13
+// Scalar mappings performed: 18
 // Message structs/unions generated from ipdl structs/unions: 8

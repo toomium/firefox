@@ -946,7 +946,7 @@ class Msg_AsyncMessage final :
     kAAMessageFieldNumber = 1,
     kAADataFieldNumber = 2,
   };
-  // required bytes a_aMessage = 1;
+  // required string a_aMessage = 1;
   bool has_a_amessage() const;
   private:
   bool _internal_has_a_amessage() const;
@@ -2328,7 +2328,7 @@ class Msg_DropLinks final :
   enum : int {
     kAALinksFieldNumber = 1,
   };
-  // repeated bytes a_aLinks = 1;
+  // repeated string a_aLinks = 1;
   int a_alinks_size() const;
   private:
   int _internal_a_alinks_size() const;
@@ -2339,12 +2339,12 @@ class Msg_DropLinks final :
   void set_a_alinks(int index, const std::string& value);
   void set_a_alinks(int index, std::string&& value);
   void set_a_alinks(int index, const char* value);
-  void set_a_alinks(int index, const void* value, size_t size);
+  void set_a_alinks(int index, const char* value, size_t size);
   std::string* add_a_alinks();
   void add_a_alinks(const std::string& value);
   void add_a_alinks(std::string&& value);
   void add_a_alinks(const char* value);
-  void add_a_alinks(const void* value, size_t size);
+  void add_a_alinks(const char* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_alinks() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_alinks();
   private:
@@ -2481,7 +2481,7 @@ class Msg_SyncMessage final :
     kAAMessageFieldNumber = 1,
     kAADataFieldNumber = 2,
   };
-  // required bytes a_aMessage = 1;
+  // required string a_aMessage = 1;
   bool has_a_amessage() const;
   private:
   bool _internal_has_a_amessage() const;
@@ -4396,7 +4396,7 @@ class Reply_RequestIMEToCommitComposition final :
     kACommittedStringFieldNumber = 2,
     kAIsCommittedFieldNumber = 1,
   };
-  // required bytes a_committedString = 2;
+  // required string a_committedString = 2;
   bool has_a_committedstring() const;
   private:
   bool _internal_has_a_committedstring() const;
@@ -5035,7 +5035,7 @@ class Msg_EnableDisableCommands final :
     kABcFieldNumber = 1,
     kAActionFieldNumber = 2,
   };
-  // repeated bytes a_enabledCommands = 3;
+  // repeated string a_enabledCommands = 3;
   int a_enabledcommands_size() const;
   private:
   int _internal_a_enabledcommands_size() const;
@@ -5046,12 +5046,12 @@ class Msg_EnableDisableCommands final :
   void set_a_enabledcommands(int index, const std::string& value);
   void set_a_enabledcommands(int index, std::string&& value);
   void set_a_enabledcommands(int index, const char* value);
-  void set_a_enabledcommands(int index, const void* value, size_t size);
+  void set_a_enabledcommands(int index, const char* value, size_t size);
   std::string* add_a_enabledcommands();
   void add_a_enabledcommands(const std::string& value);
   void add_a_enabledcommands(std::string&& value);
   void add_a_enabledcommands(const char* value);
-  void add_a_enabledcommands(const void* value, size_t size);
+  void add_a_enabledcommands(const char* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_enabledcommands() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_enabledcommands();
   private:
@@ -5059,7 +5059,7 @@ class Msg_EnableDisableCommands final :
   std::string* _internal_add_a_enabledcommands();
   public:
 
-  // repeated bytes a_disabledCommands = 4;
+  // repeated string a_disabledCommands = 4;
   int a_disabledcommands_size() const;
   private:
   int _internal_a_disabledcommands_size() const;
@@ -5070,12 +5070,12 @@ class Msg_EnableDisableCommands final :
   void set_a_disabledcommands(int index, const std::string& value);
   void set_a_disabledcommands(int index, std::string&& value);
   void set_a_disabledcommands(int index, const char* value);
-  void set_a_disabledcommands(int index, const void* value, size_t size);
+  void set_a_disabledcommands(int index, const char* value, size_t size);
   std::string* add_a_disabledcommands();
   void add_a_disabledcommands(const std::string& value);
   void add_a_disabledcommands(std::string&& value);
   void add_a_disabledcommands(const char* value);
-  void add_a_disabledcommands(const void* value, size_t size);
+  void add_a_disabledcommands(const char* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_disabledcommands() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_disabledcommands();
   private:
@@ -5101,7 +5101,7 @@ class Msg_EnableDisableCommands final :
   std::string* _internal_mutable_a_bc();
   public:
 
-  // required bytes a_action = 2;
+  // required string a_action = 2;
   bool has_a_action() const;
   private:
   bool _internal_has_a_action() const;
@@ -5940,7 +5940,7 @@ class Msg_SetLinkStatus final :
   enum : int {
     kAStatusFieldNumber = 1,
   };
-  // required bytes a_status = 1;
+  // required string a_status = 1;
   bool has_a_status() const;
   private:
   bool _internal_has_a_status() const;
@@ -6090,7 +6090,7 @@ class Msg_ShowTooltip final :
     kAXFieldNumber = 1,
     kAYFieldNumber = 2,
   };
-  // required bytes a_tooltip = 3;
+  // required string a_tooltip = 3;
   bool has_a_tooltip() const;
   private:
   bool _internal_has_a_tooltip() const;
@@ -6108,7 +6108,7 @@ class Msg_ShowTooltip final :
   std::string* _internal_mutable_a_tooltip();
   public:
 
-  // required bytes a_direction = 4;
+  // required string a_direction = 4;
   bool has_a_direction() const;
   private:
   bool _internal_has_a_direction() const;
@@ -6414,7 +6414,7 @@ class Msg_PColorPickerConstructor final :
     kATitleFieldNumber = 2,
     kAInitialColorFieldNumber = 3,
   };
-  // repeated bytes a_defaultColors = 4;
+  // repeated string a_defaultColors = 4;
   int a_defaultcolors_size() const;
   private:
   int _internal_a_defaultcolors_size() const;
@@ -6425,12 +6425,12 @@ class Msg_PColorPickerConstructor final :
   void set_a_defaultcolors(int index, const std::string& value);
   void set_a_defaultcolors(int index, std::string&& value);
   void set_a_defaultcolors(int index, const char* value);
-  void set_a_defaultcolors(int index, const void* value, size_t size);
+  void set_a_defaultcolors(int index, const char* value, size_t size);
   std::string* add_a_defaultcolors();
   void add_a_defaultcolors(const std::string& value);
   void add_a_defaultcolors(std::string&& value);
   void add_a_defaultcolors(const char* value);
-  void add_a_defaultcolors(const void* value, size_t size);
+  void add_a_defaultcolors(const char* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_defaultcolors() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_defaultcolors();
   private:
@@ -6456,7 +6456,7 @@ class Msg_PColorPickerConstructor final :
   std::string* _internal_mutable_a_abrowsingcontext();
   public:
 
-  // required bytes a_title = 2;
+  // required string a_title = 2;
   bool has_a_title() const;
   private:
   bool _internal_has_a_title() const;
@@ -6474,7 +6474,7 @@ class Msg_PColorPickerConstructor final :
   std::string* _internal_mutable_a_title();
   public:
 
-  // required bytes a_initialColor = 3;
+  // required string a_initialColor = 3;
   bool has_a_initialcolor() const;
   private:
   bool _internal_has_a_initialcolor() const;
@@ -6753,7 +6753,7 @@ class Msg_PFilePickerConstructor final :
     kAAModeFieldNumber = 2,
     kAABrowsingContextFieldNumber = 3,
   };
-  // required bytes a_aTitle = 1;
+  // required string a_aTitle = 1;
   bool has_a_atitle() const;
   private:
   bool _internal_has_a_atitle() const;
@@ -7252,7 +7252,7 @@ class Msg_LookUpDictionary final :
   std::string* _internal_add_a_afontrangearray();
   public:
 
-  // required bytes a_aText = 1;
+  // required string a_aText = 1;
   bool has_a_atext() const;
   private:
   bool _internal_has_a_atext() const;
@@ -8176,7 +8176,7 @@ class Msg_SynthesizeNativeKeyEvent final :
     kAACallbackIdFieldNumber = 6,
     kAAModifierFlagsFieldNumber = 3,
   };
-  // required bytes a_aCharacters = 4;
+  // required string a_aCharacters = 4;
   bool has_a_acharacters() const;
   private:
   bool _internal_has_a_acharacters() const;
@@ -8194,7 +8194,7 @@ class Msg_SynthesizeNativeKeyEvent final :
   std::string* _internal_mutable_a_acharacters();
   public:
 
-  // required bytes a_aUnmodifiedCharacters = 5;
+  // required string a_aUnmodifiedCharacters = 5;
   bool has_a_aunmodifiedcharacters() const;
   private:
   bool _internal_has_a_aunmodifiedcharacters() const;
@@ -10706,7 +10706,7 @@ class Msg_RegisterProtocolHandler final :
     kATitleFieldNumber = 3,
     kADocumentURIFieldNumber = 4,
   };
-  // required bytes a_scheme = 1;
+  // required string a_scheme = 1;
   bool has_a_scheme() const;
   private:
   bool _internal_has_a_scheme() const;
@@ -10742,7 +10742,7 @@ class Msg_RegisterProtocolHandler final :
   std::string* _internal_mutable_a_handleruri();
   public:
 
-  // required bytes a_title = 3;
+  // required string a_title = 3;
   bool has_a_title() const;
   private:
   bool _internal_has_a_title() const;
@@ -11568,7 +11568,7 @@ class Msg_OnStatusChange final :
   enum : int {
     kAAMessageFieldNumber = 1,
   };
-  // required bytes a_aMessage = 1;
+  // required string a_aMessage = 1;
   bool has_a_amessage() const;
   private:
   bool _internal_has_a_amessage() const;
@@ -11722,7 +11722,7 @@ class Msg_NotifyContentBlockingEvent final :
     kAABlockedFieldNumber = 3,
     kAACanvasFingerprinterKnownTextFieldNumber = 8,
   };
-  // repeated bytes a_aTrackingFullHashes = 5;
+  // repeated string a_aTrackingFullHashes = 5;
   int a_atrackingfullhashes_size() const;
   private:
   int _internal_a_atrackingfullhashes_size() const;
@@ -11733,12 +11733,12 @@ class Msg_NotifyContentBlockingEvent final :
   void set_a_atrackingfullhashes(int index, const std::string& value);
   void set_a_atrackingfullhashes(int index, std::string&& value);
   void set_a_atrackingfullhashes(int index, const char* value);
-  void set_a_atrackingfullhashes(int index, const void* value, size_t size);
+  void set_a_atrackingfullhashes(int index, const char* value, size_t size);
   std::string* add_a_atrackingfullhashes();
   void add_a_atrackingfullhashes(const std::string& value);
   void add_a_atrackingfullhashes(std::string&& value);
   void add_a_atrackingfullhashes(const char* value);
-  void add_a_atrackingfullhashes(const void* value, size_t size);
+  void add_a_atrackingfullhashes(const char* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_atrackingfullhashes() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_atrackingfullhashes();
   private:
@@ -11746,7 +11746,7 @@ class Msg_NotifyContentBlockingEvent final :
   std::string* _internal_add_a_atrackingfullhashes();
   public:
 
-  // required bytes a_aTrackingOrigin = 4;
+  // required string a_aTrackingOrigin = 4;
   bool has_a_atrackingorigin() const;
   private:
   bool _internal_has_a_atrackingorigin() const;
@@ -12984,7 +12984,7 @@ class Reply_RequestPointerLock final :
   enum : int {
     kAErrorFieldNumber = 1,
   };
-  // required bytes a_error = 1;
+  // required string a_error = 1;
   bool has_a_error() const;
   private:
   bool _internal_has_a_error() const;
@@ -16094,7 +16094,7 @@ class Msg_ShowCanvasPermissionPrompt final :
     kAAOriginFieldNumber = 1,
     kAAHideDoorHangerFieldNumber = 2,
   };
-  // required bytes a_aOrigin = 1;
+  // required string a_aOrigin = 1;
   bool has_a_aorigin() const;
   private:
   bool _internal_has_a_aorigin() const;
@@ -16258,7 +16258,7 @@ class Msg_SetSystemFont final :
   enum : int {
     kAAFontNameFieldNumber = 1,
   };
-  // required bytes a_aFontName = 1;
+  // required string a_aFontName = 1;
   bool has_a_afontname() const;
   private:
   bool _internal_has_a_afontname() const;
@@ -16653,7 +16653,7 @@ class Reply_GetSystemFont final :
   enum : int {
     kARetvalFieldNumber = 1,
   };
-  // required bytes a_retval = 1;
+  // required string a_retval = 1;
   bool has_a_retval() const;
   private:
   bool _internal_has_a_retval() const;
@@ -25963,7 +25963,7 @@ class Msg_InsertText final :
   enum : int {
     kAAStringToInsertFieldNumber = 1,
   };
-  // required bytes a_aStringToInsert = 1;
+  // required string a_aStringToInsert = 1;
   bool has_a_astringtoinsert() const;
   private:
   bool _internal_has_a_astringtoinsert() const;
@@ -26110,7 +26110,7 @@ class Msg_NormalPriorityInsertText final :
   enum : int {
     kAAStringToInsertFieldNumber = 1,
   };
-  // required bytes a_aStringToInsert = 1;
+  // required string a_aStringToInsert = 1;
   bool has_a_astringtoinsert() const;
   private:
   bool _internal_has_a_astringtoinsert() const;
@@ -26260,7 +26260,7 @@ class Msg_ReplaceText final :
     kAAOffsetFieldNumber = 3,
     kAAPreventSetSelectionFieldNumber = 4,
   };
-  // required bytes a_aReplacementString = 1;
+  // required string a_aReplacementString = 1;
   bool has_a_areplacementstring() const;
   private:
   bool _internal_has_a_areplacementstring() const;
@@ -26278,7 +26278,7 @@ class Msg_ReplaceText final :
   std::string* _internal_mutable_a_areplacementstring();
   public:
 
-  // required bytes a_aStringToInsert = 2;
+  // required string a_aStringToInsert = 2;
   bool has_a_astringtoinsert() const;
   private:
   bool _internal_has_a_astringtoinsert() const;
@@ -26460,7 +26460,7 @@ class Msg_NormalPriorityReplaceText final :
     kAAOffsetFieldNumber = 3,
     kAAPreventSetSelectionFieldNumber = 4,
   };
-  // required bytes a_aReplacementString = 1;
+  // required string a_aReplacementString = 1;
   bool has_a_areplacementstring() const;
   private:
   bool _internal_has_a_areplacementstring() const;
@@ -26478,7 +26478,7 @@ class Msg_NormalPriorityReplaceText final :
   std::string* _internal_mutable_a_areplacementstring();
   public:
 
-  // required bytes a_aStringToInsert = 2;
+  // required string a_aStringToInsert = 2;
   bool has_a_astringtoinsert() const;
   private:
   bool _internal_has_a_astringtoinsert() const;
@@ -26805,7 +26805,7 @@ class Msg_LoadRemoteScript final :
     kAAURLFieldNumber = 1,
     kAARunInGlobalScopeFieldNumber = 2,
   };
-  // required bytes a_aURL = 1;
+  // required string a_aURL = 1;
   bool has_a_aurl() const;
   private:
   bool _internal_has_a_aurl() const;
@@ -32229,7 +32229,7 @@ class Msg_UpdateDropEffect final :
 #endif  // __GNUC__
 // Msg_AsyncMessage
 
-// required bytes a_aMessage = 1;
+// required string a_aMessage = 1;
 inline bool Msg_AsyncMessage::_internal_has_a_amessage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -32249,7 +32249,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncMessage::set_a_amessage(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_amessage_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_amessage_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_AsyncMessage.a_aMessage)
 }
 inline std::string* Msg_AsyncMessage::mutable_a_amessage() {
@@ -32644,7 +32644,7 @@ inline void Msg_MoveFocus::set_a_fordocumentnavigation(bool value) {
 
 // Msg_DropLinks
 
-// repeated bytes a_aLinks = 1;
+// repeated string a_aLinks = 1;
 inline int Msg_DropLinks::_internal_a_alinks_size() const {
   return _impl_.a_alinks_.size();
 }
@@ -32683,7 +32683,7 @@ inline void Msg_DropLinks::set_a_alinks(int index, const char* value) {
   _impl_.a_alinks_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PBrowser.Msg_DropLinks.a_aLinks)
 }
-inline void Msg_DropLinks::set_a_alinks(int index, const void* value, size_t size) {
+inline void Msg_DropLinks::set_a_alinks(int index, const char* value, size_t size) {
   _impl_.a_alinks_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PBrowser.Msg_DropLinks.a_aLinks)
@@ -32704,7 +32704,7 @@ inline void Msg_DropLinks::add_a_alinks(const char* value) {
   _impl_.a_alinks_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PBrowser.Msg_DropLinks.a_aLinks)
 }
-inline void Msg_DropLinks::add_a_alinks(const void* value, size_t size) {
+inline void Msg_DropLinks::add_a_alinks(const char* value, size_t size) {
   _impl_.a_alinks_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PBrowser.Msg_DropLinks.a_aLinks)
 }
@@ -32723,7 +32723,7 @@ Msg_DropLinks::mutable_a_alinks() {
 
 // Msg_SyncMessage
 
-// required bytes a_aMessage = 1;
+// required string a_aMessage = 1;
 inline bool Msg_SyncMessage::_internal_has_a_amessage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -32743,7 +32743,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SyncMessage::set_a_amessage(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_amessage_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_amessage_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_SyncMessage.a_aMessage)
 }
 inline std::string* Msg_SyncMessage::mutable_a_amessage() {
@@ -33997,7 +33997,7 @@ inline void Reply_RequestIMEToCommitComposition::set_a_iscommitted(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Reply_RequestIMEToCommitComposition.a_isCommitted)
 }
 
-// required bytes a_committedString = 2;
+// required string a_committedString = 2;
 inline bool Reply_RequestIMEToCommitComposition::_internal_has_a_committedstring() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -34017,7 +34017,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_RequestIMEToCommitComposition::set_a_committedstring(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_committedstring_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_committedstring_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Reply_RequestIMEToCommitComposition.a_committedString)
 }
 inline std::string* Reply_RequestIMEToCommitComposition::mutable_a_committedstring() {
@@ -34369,7 +34369,7 @@ inline void Msg_EnableDisableCommands::set_allocated_a_bc(std::string* a_bc) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_EnableDisableCommands.a_bc)
 }
 
-// required bytes a_action = 2;
+// required string a_action = 2;
 inline bool Msg_EnableDisableCommands::_internal_has_a_action() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -34389,7 +34389,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_EnableDisableCommands::set_a_action(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_action_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_EnableDisableCommands.a_action)
 }
 inline std::string* Msg_EnableDisableCommands::mutable_a_action() {
@@ -34437,7 +34437,7 @@ inline void Msg_EnableDisableCommands::set_allocated_a_action(std::string* a_act
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_EnableDisableCommands.a_action)
 }
 
-// repeated bytes a_enabledCommands = 3;
+// repeated string a_enabledCommands = 3;
 inline int Msg_EnableDisableCommands::_internal_a_enabledcommands_size() const {
   return _impl_.a_enabledcommands_.size();
 }
@@ -34476,7 +34476,7 @@ inline void Msg_EnableDisableCommands::set_a_enabledcommands(int index, const ch
   _impl_.a_enabledcommands_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PBrowser.Msg_EnableDisableCommands.a_enabledCommands)
 }
-inline void Msg_EnableDisableCommands::set_a_enabledcommands(int index, const void* value, size_t size) {
+inline void Msg_EnableDisableCommands::set_a_enabledcommands(int index, const char* value, size_t size) {
   _impl_.a_enabledcommands_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PBrowser.Msg_EnableDisableCommands.a_enabledCommands)
@@ -34497,7 +34497,7 @@ inline void Msg_EnableDisableCommands::add_a_enabledcommands(const char* value) 
   _impl_.a_enabledcommands_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PBrowser.Msg_EnableDisableCommands.a_enabledCommands)
 }
-inline void Msg_EnableDisableCommands::add_a_enabledcommands(const void* value, size_t size) {
+inline void Msg_EnableDisableCommands::add_a_enabledcommands(const char* value, size_t size) {
   _impl_.a_enabledcommands_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PBrowser.Msg_EnableDisableCommands.a_enabledCommands)
 }
@@ -34512,7 +34512,7 @@ Msg_EnableDisableCommands::mutable_a_enabledcommands() {
   return &_impl_.a_enabledcommands_;
 }
 
-// repeated bytes a_disabledCommands = 4;
+// repeated string a_disabledCommands = 4;
 inline int Msg_EnableDisableCommands::_internal_a_disabledcommands_size() const {
   return _impl_.a_disabledcommands_.size();
 }
@@ -34551,7 +34551,7 @@ inline void Msg_EnableDisableCommands::set_a_disabledcommands(int index, const c
   _impl_.a_disabledcommands_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PBrowser.Msg_EnableDisableCommands.a_disabledCommands)
 }
-inline void Msg_EnableDisableCommands::set_a_disabledcommands(int index, const void* value, size_t size) {
+inline void Msg_EnableDisableCommands::set_a_disabledcommands(int index, const char* value, size_t size) {
   _impl_.a_disabledcommands_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PBrowser.Msg_EnableDisableCommands.a_disabledCommands)
@@ -34572,7 +34572,7 @@ inline void Msg_EnableDisableCommands::add_a_disabledcommands(const char* value)
   _impl_.a_disabledcommands_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PBrowser.Msg_EnableDisableCommands.a_disabledCommands)
 }
-inline void Msg_EnableDisableCommands::add_a_disabledcommands(const void* value, size_t size) {
+inline void Msg_EnableDisableCommands::add_a_disabledcommands(const char* value, size_t size) {
   _impl_.a_disabledcommands_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PBrowser.Msg_EnableDisableCommands.a_disabledCommands)
 }
@@ -35106,7 +35106,7 @@ inline void Msg_SetCursor::set_a_force(bool value) {
 
 // Msg_SetLinkStatus
 
-// required bytes a_status = 1;
+// required string a_status = 1;
 inline bool Msg_SetLinkStatus::_internal_has_a_status() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -35126,7 +35126,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetLinkStatus::set_a_status(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_status_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_status_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_SetLinkStatus.a_status)
 }
 inline std::string* Msg_SetLinkStatus::mutable_a_status() {
@@ -35234,7 +35234,7 @@ inline void Msg_ShowTooltip::set_a_y(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_ShowTooltip.a_y)
 }
 
-// required bytes a_tooltip = 3;
+// required string a_tooltip = 3;
 inline bool Msg_ShowTooltip::_internal_has_a_tooltip() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -35254,7 +35254,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ShowTooltip::set_a_tooltip(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_tooltip_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_tooltip_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_ShowTooltip.a_tooltip)
 }
 inline std::string* Msg_ShowTooltip::mutable_a_tooltip() {
@@ -35302,7 +35302,7 @@ inline void Msg_ShowTooltip::set_allocated_a_tooltip(std::string* a_tooltip) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_ShowTooltip.a_tooltip)
 }
 
-// required bytes a_direction = 4;
+// required string a_direction = 4;
 inline bool Msg_ShowTooltip::_internal_has_a_direction() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -35322,7 +35322,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ShowTooltip::set_a_direction(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_direction_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_direction_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_ShowTooltip.a_direction)
 }
 inline std::string* Msg_ShowTooltip::mutable_a_direction() {
@@ -35446,7 +35446,7 @@ inline void Msg_PColorPickerConstructor::set_allocated_a_abrowsingcontext(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_PColorPickerConstructor.a_aBrowsingContext)
 }
 
-// required bytes a_title = 2;
+// required string a_title = 2;
 inline bool Msg_PColorPickerConstructor::_internal_has_a_title() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -35466,7 +35466,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PColorPickerConstructor::set_a_title(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_title_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_title_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_PColorPickerConstructor.a_title)
 }
 inline std::string* Msg_PColorPickerConstructor::mutable_a_title() {
@@ -35514,7 +35514,7 @@ inline void Msg_PColorPickerConstructor::set_allocated_a_title(std::string* a_ti
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_PColorPickerConstructor.a_title)
 }
 
-// required bytes a_initialColor = 3;
+// required string a_initialColor = 3;
 inline bool Msg_PColorPickerConstructor::_internal_has_a_initialcolor() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -35534,7 +35534,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PColorPickerConstructor::set_a_initialcolor(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_initialcolor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_initialcolor_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_PColorPickerConstructor.a_initialColor)
 }
 inline std::string* Msg_PColorPickerConstructor::mutable_a_initialcolor() {
@@ -35582,7 +35582,7 @@ inline void Msg_PColorPickerConstructor::set_allocated_a_initialcolor(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_PColorPickerConstructor.a_initialColor)
 }
 
-// repeated bytes a_defaultColors = 4;
+// repeated string a_defaultColors = 4;
 inline int Msg_PColorPickerConstructor::_internal_a_defaultcolors_size() const {
   return _impl_.a_defaultcolors_.size();
 }
@@ -35621,7 +35621,7 @@ inline void Msg_PColorPickerConstructor::set_a_defaultcolors(int index, const ch
   _impl_.a_defaultcolors_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PBrowser.Msg_PColorPickerConstructor.a_defaultColors)
 }
-inline void Msg_PColorPickerConstructor::set_a_defaultcolors(int index, const void* value, size_t size) {
+inline void Msg_PColorPickerConstructor::set_a_defaultcolors(int index, const char* value, size_t size) {
   _impl_.a_defaultcolors_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PBrowser.Msg_PColorPickerConstructor.a_defaultColors)
@@ -35642,7 +35642,7 @@ inline void Msg_PColorPickerConstructor::add_a_defaultcolors(const char* value) 
   _impl_.a_defaultcolors_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PBrowser.Msg_PColorPickerConstructor.a_defaultColors)
 }
-inline void Msg_PColorPickerConstructor::add_a_defaultcolors(const void* value, size_t size) {
+inline void Msg_PColorPickerConstructor::add_a_defaultcolors(const char* value, size_t size) {
   _impl_.a_defaultcolors_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PBrowser.Msg_PColorPickerConstructor.a_defaultColors)
 }
@@ -35665,7 +35665,7 @@ Msg_PColorPickerConstructor::mutable_a_defaultcolors() {
 
 // Msg_PFilePickerConstructor
 
-// required bytes a_aTitle = 1;
+// required string a_aTitle = 1;
 inline bool Msg_PFilePickerConstructor::_internal_has_a_atitle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -35685,7 +35685,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PFilePickerConstructor::set_a_atitle(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_atitle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_atitle_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_PFilePickerConstructor.a_aTitle)
 }
 inline std::string* Msg_PFilePickerConstructor::mutable_a_atitle() {
@@ -35937,7 +35937,7 @@ inline void Msg_RespondStartSwipeEvent::set_a_astartswipe(bool value) {
 
 // Msg_LookUpDictionary
 
-// required bytes a_aText = 1;
+// required string a_aText = 1;
 inline bool Msg_LookUpDictionary::_internal_has_a_atext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -35957,7 +35957,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LookUpDictionary::set_a_atext(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_atext_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_atext_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_LookUpDictionary.a_aText)
 }
 inline std::string* Msg_LookUpDictionary::mutable_a_atext() {
@@ -36591,7 +36591,7 @@ inline void Msg_SynthesizeNativeKeyEvent::set_a_amodifierflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_SynthesizeNativeKeyEvent.a_aModifierFlags)
 }
 
-// required bytes a_aCharacters = 4;
+// required string a_aCharacters = 4;
 inline bool Msg_SynthesizeNativeKeyEvent::_internal_has_a_acharacters() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -36611,7 +36611,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SynthesizeNativeKeyEvent::set_a_acharacters(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_acharacters_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_acharacters_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_SynthesizeNativeKeyEvent.a_aCharacters)
 }
 inline std::string* Msg_SynthesizeNativeKeyEvent::mutable_a_acharacters() {
@@ -36659,7 +36659,7 @@ inline void Msg_SynthesizeNativeKeyEvent::set_allocated_a_acharacters(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_SynthesizeNativeKeyEvent.a_aCharacters)
 }
 
-// required bytes a_aUnmodifiedCharacters = 5;
+// required string a_aUnmodifiedCharacters = 5;
 inline bool Msg_SynthesizeNativeKeyEvent::_internal_has_a_aunmodifiedcharacters() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -36679,7 +36679,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SynthesizeNativeKeyEvent::set_a_aunmodifiedcharacters(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_aunmodifiedcharacters_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_aunmodifiedcharacters_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_SynthesizeNativeKeyEvent.a_aUnmodifiedCharacters)
 }
 inline std::string* Msg_SynthesizeNativeKeyEvent::mutable_a_aunmodifiedcharacters() {
@@ -38655,7 +38655,7 @@ inline void Msg_AccessKeyNotHandled::set_allocated_a_event(std::string* a_event)
 
 // Msg_RegisterProtocolHandler
 
-// required bytes a_scheme = 1;
+// required string a_scheme = 1;
 inline bool Msg_RegisterProtocolHandler::_internal_has_a_scheme() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -38675,7 +38675,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RegisterProtocolHandler::set_a_scheme(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_scheme_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_scheme_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_RegisterProtocolHandler.a_scheme)
 }
 inline std::string* Msg_RegisterProtocolHandler::mutable_a_scheme() {
@@ -38791,7 +38791,7 @@ inline void Msg_RegisterProtocolHandler::set_allocated_a_handleruri(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_RegisterProtocolHandler.a_handlerURI)
 }
 
-// required bytes a_title = 3;
+// required string a_title = 3;
 inline bool Msg_RegisterProtocolHandler::_internal_has_a_title() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -38811,7 +38811,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RegisterProtocolHandler::set_a_title(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_title_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_title_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_RegisterProtocolHandler.a_title)
 }
 inline std::string* Msg_RegisterProtocolHandler::mutable_a_title() {
@@ -39797,7 +39797,7 @@ inline void Msg_OnProgressChange::set_a_amaxtotalprogress(int32_t value) {
 
 // Msg_OnStatusChange
 
-// required bytes a_aMessage = 1;
+// required string a_aMessage = 1;
 inline bool Msg_OnStatusChange::_internal_has_a_amessage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -39817,7 +39817,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnStatusChange::set_a_amessage(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_amessage_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_amessage_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_OnStatusChange.a_aMessage)
 }
 inline std::string* Msg_OnStatusChange::mutable_a_amessage() {
@@ -40012,7 +40012,7 @@ inline void Msg_NotifyContentBlockingEvent::set_a_ablocked(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_NotifyContentBlockingEvent.a_aBlocked)
 }
 
-// required bytes a_aTrackingOrigin = 4;
+// required string a_aTrackingOrigin = 4;
 inline bool Msg_NotifyContentBlockingEvent::_internal_has_a_atrackingorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -40032,7 +40032,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyContentBlockingEvent::set_a_atrackingorigin(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_atrackingorigin_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_atrackingorigin_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_NotifyContentBlockingEvent.a_aTrackingOrigin)
 }
 inline std::string* Msg_NotifyContentBlockingEvent::mutable_a_atrackingorigin() {
@@ -40080,7 +40080,7 @@ inline void Msg_NotifyContentBlockingEvent::set_allocated_a_atrackingorigin(std:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_NotifyContentBlockingEvent.a_aTrackingOrigin)
 }
 
-// repeated bytes a_aTrackingFullHashes = 5;
+// repeated string a_aTrackingFullHashes = 5;
 inline int Msg_NotifyContentBlockingEvent::_internal_a_atrackingfullhashes_size() const {
   return _impl_.a_atrackingfullhashes_.size();
 }
@@ -40119,7 +40119,7 @@ inline void Msg_NotifyContentBlockingEvent::set_a_atrackingfullhashes(int index,
   _impl_.a_atrackingfullhashes_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PBrowser.Msg_NotifyContentBlockingEvent.a_aTrackingFullHashes)
 }
-inline void Msg_NotifyContentBlockingEvent::set_a_atrackingfullhashes(int index, const void* value, size_t size) {
+inline void Msg_NotifyContentBlockingEvent::set_a_atrackingfullhashes(int index, const char* value, size_t size) {
   _impl_.a_atrackingfullhashes_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PBrowser.Msg_NotifyContentBlockingEvent.a_aTrackingFullHashes)
@@ -40140,7 +40140,7 @@ inline void Msg_NotifyContentBlockingEvent::add_a_atrackingfullhashes(const char
   _impl_.a_atrackingfullhashes_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PBrowser.Msg_NotifyContentBlockingEvent.a_aTrackingFullHashes)
 }
-inline void Msg_NotifyContentBlockingEvent::add_a_atrackingfullhashes(const void* value, size_t size) {
+inline void Msg_NotifyContentBlockingEvent::add_a_atrackingfullhashes(const char* value, size_t size) {
   _impl_.a_atrackingfullhashes_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PBrowser.Msg_NotifyContentBlockingEvent.a_aTrackingFullHashes)
 }
@@ -40639,7 +40639,7 @@ inline void Msg_ReleasePointerCapture::set_a_apointerid(uint32_t value) {
 
 // Reply_RequestPointerLock
 
-// required bytes a_error = 1;
+// required string a_error = 1;
 inline bool Reply_RequestPointerLock::_internal_has_a_error() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -40659,7 +40659,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_RequestPointerLock::set_a_error(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_error_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_error_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Reply_RequestPointerLock.a_error)
 }
 inline std::string* Reply_RequestPointerLock::mutable_a_error() {
@@ -42221,7 +42221,7 @@ inline void Reply_EnsureLayersConnected::set_allocated_a_compositoroptions(std::
 
 // Msg_ShowCanvasPermissionPrompt
 
-// required bytes a_aOrigin = 1;
+// required string a_aOrigin = 1;
 inline bool Msg_ShowCanvasPermissionPrompt::_internal_has_a_aorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -42241,7 +42241,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ShowCanvasPermissionPrompt::set_a_aorigin(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_aorigin_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_aorigin_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_ShowCanvasPermissionPrompt.a_aOrigin)
 }
 inline std::string* Msg_ShowCanvasPermissionPrompt::mutable_a_aorigin() {
@@ -42321,7 +42321,7 @@ inline void Msg_ShowCanvasPermissionPrompt::set_a_ahidedoorhanger(bool value) {
 
 // Msg_SetSystemFont
 
-// required bytes a_aFontName = 1;
+// required string a_aFontName = 1;
 inline bool Msg_SetSystemFont::_internal_has_a_afontname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -42341,7 +42341,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetSystemFont::set_a_afontname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_afontname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_afontname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_SetSystemFont.a_aFontName)
 }
 inline std::string* Msg_SetSystemFont::mutable_a_afontname() {
@@ -42401,7 +42401,7 @@ inline void Msg_SetSystemFont::set_allocated_a_afontname(std::string* a_afontnam
 
 // Reply_GetSystemFont
 
-// required bytes a_retval = 1;
+// required string a_retval = 1;
 inline bool Reply_GetSystemFont::_internal_has_a_retval() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -42421,7 +42421,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_GetSystemFont::set_a_retval(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_retval_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_retval_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Reply_GetSystemFont.a_retval)
 }
 inline std::string* Reply_GetSystemFont::mutable_a_retval() {
@@ -50040,7 +50040,7 @@ inline void Msg_NormalPrioritySimpleContentCommandEvent::set_allocated_a_message
 
 // Msg_InsertText
 
-// required bytes a_aStringToInsert = 1;
+// required string a_aStringToInsert = 1;
 inline bool Msg_InsertText::_internal_has_a_astringtoinsert() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -50060,7 +50060,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_InsertText::set_a_astringtoinsert(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_astringtoinsert_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_astringtoinsert_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_InsertText.a_aStringToInsert)
 }
 inline std::string* Msg_InsertText::mutable_a_astringtoinsert() {
@@ -50112,7 +50112,7 @@ inline void Msg_InsertText::set_allocated_a_astringtoinsert(std::string* a_astri
 
 // Msg_NormalPriorityInsertText
 
-// required bytes a_aStringToInsert = 1;
+// required string a_aStringToInsert = 1;
 inline bool Msg_NormalPriorityInsertText::_internal_has_a_astringtoinsert() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -50132,7 +50132,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NormalPriorityInsertText::set_a_astringtoinsert(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_astringtoinsert_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_astringtoinsert_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_NormalPriorityInsertText.a_aStringToInsert)
 }
 inline std::string* Msg_NormalPriorityInsertText::mutable_a_astringtoinsert() {
@@ -50184,7 +50184,7 @@ inline void Msg_NormalPriorityInsertText::set_allocated_a_astringtoinsert(std::s
 
 // Msg_ReplaceText
 
-// required bytes a_aReplacementString = 1;
+// required string a_aReplacementString = 1;
 inline bool Msg_ReplaceText::_internal_has_a_areplacementstring() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -50204,7 +50204,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReplaceText::set_a_areplacementstring(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_areplacementstring_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_areplacementstring_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_ReplaceText.a_aReplacementString)
 }
 inline std::string* Msg_ReplaceText::mutable_a_areplacementstring() {
@@ -50252,7 +50252,7 @@ inline void Msg_ReplaceText::set_allocated_a_areplacementstring(std::string* a_a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_ReplaceText.a_aReplacementString)
 }
 
-// required bytes a_aStringToInsert = 2;
+// required string a_aStringToInsert = 2;
 inline bool Msg_ReplaceText::_internal_has_a_astringtoinsert() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -50272,7 +50272,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReplaceText::set_a_astringtoinsert(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_astringtoinsert_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_astringtoinsert_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_ReplaceText.a_aStringToInsert)
 }
 inline std::string* Msg_ReplaceText::mutable_a_astringtoinsert() {
@@ -50380,7 +50380,7 @@ inline void Msg_ReplaceText::set_a_apreventsetselection(bool value) {
 
 // Msg_NormalPriorityReplaceText
 
-// required bytes a_aReplacementString = 1;
+// required string a_aReplacementString = 1;
 inline bool Msg_NormalPriorityReplaceText::_internal_has_a_areplacementstring() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -50400,7 +50400,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NormalPriorityReplaceText::set_a_areplacementstring(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_areplacementstring_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_areplacementstring_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_NormalPriorityReplaceText.a_aReplacementString)
 }
 inline std::string* Msg_NormalPriorityReplaceText::mutable_a_areplacementstring() {
@@ -50448,7 +50448,7 @@ inline void Msg_NormalPriorityReplaceText::set_allocated_a_areplacementstring(st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_NormalPriorityReplaceText.a_aReplacementString)
 }
 
-// required bytes a_aStringToInsert = 2;
+// required string a_aStringToInsert = 2;
 inline bool Msg_NormalPriorityReplaceText::_internal_has_a_astringtoinsert() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -50468,7 +50468,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NormalPriorityReplaceText::set_a_astringtoinsert(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_astringtoinsert_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_astringtoinsert_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_NormalPriorityReplaceText.a_aStringToInsert)
 }
 inline std::string* Msg_NormalPriorityReplaceText::mutable_a_astringtoinsert() {
@@ -50667,7 +50667,7 @@ inline void Msg_PasteTransferable::set_allocated_a_atransferable(::protobuf::moz
 
 // Msg_LoadRemoteScript
 
-// required bytes a_aURL = 1;
+// required string a_aURL = 1;
 inline bool Msg_LoadRemoteScript::_internal_has_a_aurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -50687,7 +50687,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LoadRemoteScript::set_a_aurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_aurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_aurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_LoadRemoteScript.a_aURL)
 }
 inline std::string* Msg_LoadRemoteScript::mutable_a_aurl() {

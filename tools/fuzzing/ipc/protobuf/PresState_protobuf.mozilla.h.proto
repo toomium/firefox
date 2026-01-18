@@ -15,7 +15,7 @@ import "CustomElementTypes.proto";
 // Structs and unions declarations
 message SelectContentData {
   repeated uint32 a_indices = 1;
-  repeated bytes a_values = 2;
+  repeated string a_values = 2;
 }
 
 message CheckedContentData {
@@ -25,12 +25,12 @@ message CheckedContentData {
 message FileContentData {
   oneof content {
     bytes a_mVBlobImpl = 1;
-    bytes a_mVnsString = 2;
+    string a_mVnsString = 2;
   }
 }
 
 message TextContentData {
-  required bytes a_value = 1;
+  required string a_value = 1;
   required bool a_lastValueChangeWasInteractive = 2;
 }
 

@@ -735,7 +735,7 @@ class Msg_OperationDone final :
     kAAContentTypeFieldNumber = 1,
     kAAFDFieldNumber = 2,
   };
-  // required bytes a_aContentType = 1;
+  // required string a_aContentType = 1;
   bool has_a_acontenttype() const;
   private:
   bool _internal_has_a_acontenttype() const;
@@ -972,7 +972,7 @@ inline void Msg___delete__::set_allocated_a_abloborerror(::protobuf::mozilla::do
 
 // Msg_OperationDone
 
-// required bytes a_aContentType = 1;
+// required string a_aContentType = 1;
 inline bool Msg_OperationDone::_internal_has_a_acontenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -992,7 +992,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OperationDone::set_a_acontenttype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_acontenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_acontenttype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PTemporaryIPCBlob.Msg_OperationDone.a_aContentType)
 }
 inline std::string* Msg_OperationDone::mutable_a_acontenttype() {

@@ -183,7 +183,7 @@ class MIDIPortInfo final :
     kAVersionFieldNumber = 4,
     kATypeFieldNumber = 5,
   };
-  // required bytes a_id = 1;
+  // required string a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -201,7 +201,7 @@ class MIDIPortInfo final :
   std::string* _internal_mutable_a_id();
   public:
 
-  // required bytes a_name = 2;
+  // required string a_name = 2;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -219,7 +219,7 @@ class MIDIPortInfo final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required bytes a_manufacturer = 3;
+  // required string a_manufacturer = 3;
   bool has_a_manufacturer() const;
   private:
   bool _internal_has_a_manufacturer() const;
@@ -237,7 +237,7 @@ class MIDIPortInfo final :
   std::string* _internal_mutable_a_manufacturer();
   public:
 
-  // required bytes a_version = 4;
+  // required string a_version = 4;
   bool has_a_version() const;
   private:
   bool _internal_has_a_version() const;
@@ -618,7 +618,7 @@ class MIDIPortList final :
 #endif  // __GNUC__
 // MIDIPortInfo
 
-// required bytes a_id = 1;
+// required string a_id = 1;
 inline bool MIDIPortInfo::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -638,7 +638,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void MIDIPortInfo::set_a_id(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MIDIPortInfo.a_id)
 }
 inline std::string* MIDIPortInfo::mutable_a_id() {
@@ -686,7 +686,7 @@ inline void MIDIPortInfo::set_allocated_a_id(std::string* a_id) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MIDIPortInfo.a_id)
 }
 
-// required bytes a_name = 2;
+// required string a_name = 2;
 inline bool MIDIPortInfo::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -706,7 +706,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void MIDIPortInfo::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MIDIPortInfo.a_name)
 }
 inline std::string* MIDIPortInfo::mutable_a_name() {
@@ -754,7 +754,7 @@ inline void MIDIPortInfo::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MIDIPortInfo.a_name)
 }
 
-// required bytes a_manufacturer = 3;
+// required string a_manufacturer = 3;
 inline bool MIDIPortInfo::_internal_has_a_manufacturer() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -774,7 +774,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void MIDIPortInfo::set_a_manufacturer(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_manufacturer_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_manufacturer_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MIDIPortInfo.a_manufacturer)
 }
 inline std::string* MIDIPortInfo::mutable_a_manufacturer() {
@@ -822,7 +822,7 @@ inline void MIDIPortInfo::set_allocated_a_manufacturer(std::string* a_manufactur
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MIDIPortInfo.a_manufacturer)
 }
 
-// required bytes a_version = 4;
+// required string a_version = 4;
 inline bool MIDIPortInfo::_internal_has_a_version() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -842,7 +842,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void MIDIPortInfo::set_a_version(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_version_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_version_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MIDIPortInfo.a_version)
 }
 inline std::string* MIDIPortInfo::mutable_a_version() {

@@ -151,7 +151,7 @@ const char* IPCNavigationPreloadState::_InternalParse(const char* ptr, ::_pbi::P
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_headerValue = 2;
+      // required string a_headerValue = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_headervalue();
@@ -197,9 +197,9 @@ uint8_t* IPCNavigationPreloadState::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_enabled(), target);
   }
 
-  // required bytes a_headerValue = 2;
+  // required string a_headerValue = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_headervalue(), target);
   }
 
@@ -216,9 +216,9 @@ size_t IPCNavigationPreloadState::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_headervalue()) {
-    // required bytes a_headerValue = 2;
+    // required string a_headerValue = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_headervalue());
   }
 
@@ -234,9 +234,9 @@ size_t IPCNavigationPreloadState::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_headerValue = 2;
+    // required string a_headerValue = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_headervalue());
 
     // required bool a_enabled = 1;

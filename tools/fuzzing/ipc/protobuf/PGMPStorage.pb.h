@@ -212,7 +212,7 @@ class Msg_OpenComplete final :
     kAARecordNameFieldNumber = 1,
     kAAStatusFieldNumber = 2,
   };
-  // required bytes a_aRecordName = 1;
+  // required string a_aRecordName = 1;
   bool has_a_arecordname() const;
   private:
   bool _internal_has_a_arecordname() const;
@@ -405,7 +405,7 @@ class Msg_ReadComplete final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_abytes();
 
-  // required bytes a_aRecordName = 1;
+  // required string a_aRecordName = 1;
   bool has_a_arecordname() const;
   private:
   bool _internal_has_a_arecordname() const;
@@ -576,7 +576,7 @@ class Msg_WriteComplete final :
     kAARecordNameFieldNumber = 1,
     kAAStatusFieldNumber = 2,
   };
-  // required bytes a_aRecordName = 1;
+  // required string a_aRecordName = 1;
   bool has_a_arecordname() const;
   private:
   bool _internal_has_a_arecordname() const;
@@ -869,7 +869,7 @@ class Msg_Open final :
   enum : int {
     kAARecordNameFieldNumber = 1,
   };
-  // required bytes a_aRecordName = 1;
+  // required string a_aRecordName = 1;
   bool has_a_arecordname() const;
   private:
   bool _internal_has_a_arecordname() const;
@@ -1016,7 +1016,7 @@ class Msg_Read final :
   enum : int {
     kAARecordNameFieldNumber = 1,
   };
-  // required bytes a_aRecordName = 1;
+  // required string a_aRecordName = 1;
   bool has_a_arecordname() const;
   private:
   bool _internal_has_a_arecordname() const;
@@ -1186,7 +1186,7 @@ class Msg_Write final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_abytes();
 
-  // required bytes a_aRecordName = 1;
+  // required string a_aRecordName = 1;
   bool has_a_arecordname() const;
   private:
   bool _internal_has_a_arecordname() const;
@@ -1334,7 +1334,7 @@ class Msg_Close final :
   enum : int {
     kAARecordNameFieldNumber = 1,
   };
-  // required bytes a_aRecordName = 1;
+  // required string a_aRecordName = 1;
   bool has_a_arecordname() const;
   private:
   bool _internal_has_a_arecordname() const;
@@ -1626,7 +1626,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_OpenComplete
 
-// required bytes a_aRecordName = 1;
+// required string a_aRecordName = 1;
 inline bool Msg_OpenComplete::_internal_has_a_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1646,7 +1646,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OpenComplete::set_a_arecordname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_arecordname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_OpenComplete.a_aRecordName)
 }
 inline std::string* Msg_OpenComplete::mutable_a_arecordname() {
@@ -1766,7 +1766,7 @@ inline void Msg_OpenComplete::set_allocated_a_astatus(std::string* a_astatus) {
 
 // Msg_ReadComplete
 
-// required bytes a_aRecordName = 1;
+// required string a_aRecordName = 1;
 inline bool Msg_ReadComplete::_internal_has_a_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1786,7 +1786,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReadComplete::set_a_arecordname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_arecordname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_ReadComplete.a_aRecordName)
 }
 inline std::string* Msg_ReadComplete::mutable_a_arecordname() {
@@ -1953,7 +1953,7 @@ Msg_ReadComplete::mutable_a_abytes() {
 
 // Msg_WriteComplete
 
-// required bytes a_aRecordName = 1;
+// required string a_aRecordName = 1;
 inline bool Msg_WriteComplete::_internal_has_a_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1973,7 +1973,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_WriteComplete::set_a_arecordname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_arecordname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_WriteComplete.a_aRecordName)
 }
 inline std::string* Msg_WriteComplete::mutable_a_arecordname() {
@@ -2097,7 +2097,7 @@ inline void Msg_WriteComplete::set_allocated_a_astatus(std::string* a_astatus) {
 
 // Msg_Open
 
-// required bytes a_aRecordName = 1;
+// required string a_aRecordName = 1;
 inline bool Msg_Open::_internal_has_a_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2117,7 +2117,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Open::set_a_arecordname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_arecordname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_Open.a_aRecordName)
 }
 inline std::string* Msg_Open::mutable_a_arecordname() {
@@ -2169,7 +2169,7 @@ inline void Msg_Open::set_allocated_a_arecordname(std::string* a_arecordname) {
 
 // Msg_Read
 
-// required bytes a_aRecordName = 1;
+// required string a_aRecordName = 1;
 inline bool Msg_Read::_internal_has_a_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2189,7 +2189,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Read::set_a_arecordname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_arecordname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_Read.a_aRecordName)
 }
 inline std::string* Msg_Read::mutable_a_arecordname() {
@@ -2241,7 +2241,7 @@ inline void Msg_Read::set_allocated_a_arecordname(std::string* a_arecordname) {
 
 // Msg_Write
 
-// required bytes a_aRecordName = 1;
+// required string a_aRecordName = 1;
 inline bool Msg_Write::_internal_has_a_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2261,7 +2261,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Write::set_a_arecordname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_arecordname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_Write.a_aRecordName)
 }
 inline std::string* Msg_Write::mutable_a_arecordname() {
@@ -2360,7 +2360,7 @@ Msg_Write::mutable_a_abytes() {
 
 // Msg_Close
 
-// required bytes a_aRecordName = 1;
+// required string a_aRecordName = 1;
 inline bool Msg_Close::_internal_has_a_arecordname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2380,7 +2380,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Close::set_a_arecordname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_arecordname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_arecordname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPStorage.Msg_Close.a_aRecordName)
 }
 inline std::string* Msg_Close::mutable_a_arecordname() {

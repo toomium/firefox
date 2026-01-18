@@ -1216,7 +1216,7 @@ const char* Msg_OpenVRControllerActionPathToVR::_InternalParse(const char* ptr, 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aPath = 1;
+      // required string a_aPath = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_apath();
@@ -1256,9 +1256,9 @@ uint8_t* Msg_OpenVRControllerActionPathToVR::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aPath = 1;
+  // required string a_aPath = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_apath(), target);
   }
 
@@ -1274,10 +1274,10 @@ size_t Msg_OpenVRControllerActionPathToVR::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerActionPathToVR)
   size_t total_size = 0;
 
-  // required bytes a_aPath = 1;
+  // required string a_aPath = 1;
   if (_internal_has_a_apath()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_apath());
   }
   uint32_t cached_has_bits = 0;
@@ -1465,7 +1465,7 @@ const char* Msg_OpenVRControllerManifestPathToVR::_InternalParse(const char* ptr
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aPath = 2;
+      // required string a_aPath = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_apath();
@@ -1511,9 +1511,9 @@ uint8_t* Msg_OpenVRControllerManifestPathToVR::_InternalSerialize(
         1, this->_internal_a_atype(), target);
   }
 
-  // required bytes a_aPath = 2;
+  // required string a_aPath = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_apath(), target);
   }
 
@@ -1537,9 +1537,9 @@ size_t Msg_OpenVRControllerManifestPathToVR::RequiredFieldsByteSizeFallback() co
   }
 
   if (_internal_has_a_apath()) {
-    // required bytes a_aPath = 2;
+    // required string a_aPath = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_apath());
   }
 
@@ -1555,9 +1555,9 @@ size_t Msg_OpenVRControllerManifestPathToVR::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_atype());
 
-    // required bytes a_aPath = 2;
+    // required string a_aPath = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_apath());
 
   } else {
@@ -2409,7 +2409,7 @@ const char* Msg_OpenVRControllerActionPathToParent::_InternalParse(const char* p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aPath = 1;
+      // required string a_aPath = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_apath();
@@ -2449,9 +2449,9 @@ uint8_t* Msg_OpenVRControllerActionPathToParent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aPath = 1;
+  // required string a_aPath = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_apath(), target);
   }
 
@@ -2467,10 +2467,10 @@ size_t Msg_OpenVRControllerActionPathToParent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerActionPathToParent)
   size_t total_size = 0;
 
-  // required bytes a_aPath = 1;
+  // required string a_aPath = 1;
   if (_internal_has_a_apath()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_apath());
   }
   uint32_t cached_has_bits = 0;
@@ -2658,7 +2658,7 @@ const char* Msg_OpenVRControllerManifestPathToParent::_InternalParse(const char*
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aPath = 2;
+      // required string a_aPath = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_apath();
@@ -2704,9 +2704,9 @@ uint8_t* Msg_OpenVRControllerManifestPathToParent::_InternalSerialize(
         1, this->_internal_a_atype(), target);
   }
 
-  // required bytes a_aPath = 2;
+  // required string a_aPath = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_apath(), target);
   }
 
@@ -2730,9 +2730,9 @@ size_t Msg_OpenVRControllerManifestPathToParent::RequiredFieldsByteSizeFallback(
   }
 
   if (_internal_has_a_apath()) {
-    // required bytes a_aPath = 2;
+    // required string a_aPath = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_apath());
   }
 
@@ -2748,9 +2748,9 @@ size_t Msg_OpenVRControllerManifestPathToParent::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_atype());
 
-    // required bytes a_aPath = 2;
+    // required string a_aPath = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_apath());
 
   } else {

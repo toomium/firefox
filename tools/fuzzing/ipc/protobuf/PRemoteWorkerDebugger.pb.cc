@@ -429,7 +429,7 @@ const char* Msg_PostMessageToDebugger::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aMessage = 1;
+      // required string a_aMessage = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_amessage();
@@ -469,9 +469,9 @@ uint8_t* Msg_PostMessageToDebugger::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aMessage = 1;
+  // required string a_aMessage = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_amessage(), target);
   }
 
@@ -487,10 +487,10 @@ size_t Msg_PostMessageToDebugger::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_PostMessageToDebugger)
   size_t total_size = 0;
 
-  // required bytes a_aMessage = 1;
+  // required string a_aMessage = 1;
   if (_internal_has_a_amessage()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_amessage());
   }
   uint32_t cached_has_bits = 0;
@@ -1845,7 +1845,7 @@ const char* Msg_Initialize::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aURL = 1;
+      // required string a_aURL = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_aurl();
@@ -1885,9 +1885,9 @@ uint8_t* Msg_Initialize::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aURL = 1;
+  // required string a_aURL = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_aurl(), target);
   }
 
@@ -1903,10 +1903,10 @@ size_t Msg_Initialize::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_Initialize)
   size_t total_size = 0;
 
-  // required bytes a_aURL = 1;
+  // required string a_aURL = 1;
   if (_internal_has_a_aurl()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aurl());
   }
   uint32_t cached_has_bits = 0;
@@ -2062,7 +2062,7 @@ const char* Msg_PostMessage::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aMessage = 1;
+      // required string a_aMessage = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_amessage();
@@ -2102,9 +2102,9 @@ uint8_t* Msg_PostMessage::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aMessage = 1;
+  // required string a_aMessage = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_amessage(), target);
   }
 
@@ -2120,10 +2120,10 @@ size_t Msg_PostMessage::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_PostMessage)
   size_t total_size = 0;
 
-  // required bytes a_aMessage = 1;
+  // required string a_aMessage = 1;
   if (_internal_has_a_amessage()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_amessage());
   }
   uint32_t cached_has_bits = 0;

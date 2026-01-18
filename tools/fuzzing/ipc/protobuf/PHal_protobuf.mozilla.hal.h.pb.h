@@ -752,7 +752,7 @@ class WakeLockInformation final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
       mutable_a_lockingprocesses();
 
-  // required bytes a_topic = 1;
+  // required string a_topic = 1;
   bool has_a_topic() const;
   private:
   bool _internal_has_a_topic() const;
@@ -1191,7 +1191,7 @@ inline void NetworkInformation::set_a_dhcpgateway(uint32_t value) {
 
 // WakeLockInformation
 
-// required bytes a_topic = 1;
+// required string a_topic = 1;
 inline bool WakeLockInformation::_internal_has_a_topic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1211,7 +1211,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WakeLockInformation::set_a_topic(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_topic_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_topic_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.hal.WakeLockInformation.a_topic)
 }
 inline std::string* WakeLockInformation::mutable_a_topic() {

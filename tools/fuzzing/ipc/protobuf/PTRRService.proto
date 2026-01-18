@@ -18,7 +18,7 @@ import "PSMIPCTypes.proto";
 
 // Message declarations
 message Msg_NotifyNetworkConnectivityServiceObservers {
-  required bytes a_aTopic = 1;
+  required string a_aTopic = 1;
 }
 
 message Msg_InitTRRConnectionInfo {
@@ -35,7 +35,7 @@ message Reply___delete__ {
 }
 
 message Msg_UpdatePlatformDNSInformation {
-  repeated bytes a_aSuffixList = 1;
+  repeated string a_aSuffixList = 1;
 }
 
 message Msg_UpdateParentalControlEnabled {
@@ -47,7 +47,7 @@ message Msg_ClearDNSCache {
 }
 
 message Msg_SetDetectedTrrURI {
-  required bytes a_aURI = 1;
+  required string a_aURI = 1;
 }
 
 message Msg_SetDefaultTRRConnectionInfo {
@@ -55,11 +55,11 @@ message Msg_SetDefaultTRRConnectionInfo {
 }
 
 message Msg_UpdateEtcHosts {
-  repeated bytes a_aHosts = 1;
+  repeated string a_aHosts = 1;
 }
 
 // Parameter mappings stats:
 // Total parameters in this file 10
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 2, "<class 'ipdl.type.BuiltinCType'>": 2, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 5, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 1, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 0, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 3
+// Scalar mappings performed: 7
 // Message structs/unions generated from ipdl structs/unions: 0

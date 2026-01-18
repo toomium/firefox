@@ -564,7 +564,7 @@ class Msg_Observe final :
     kAPrincipalInfoFieldNumber = 1,
     kAPrivateBrowsingIdFieldNumber = 2,
   };
-  // required bytes a_documentURI = 3;
+  // required string a_documentURI = 3;
   bool has_a_documenturi() const;
   private:
   bool _internal_has_a_documenturi() const;
@@ -582,7 +582,7 @@ class Msg_Observe final :
   std::string* _internal_mutable_a_documenturi();
   public:
 
-  // required bytes a_key = 4;
+  // required string a_key = 4;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -828,7 +828,7 @@ inline void Msg_Observe::set_a_privatebrowsingid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSObserver.Msg_Observe.a_privateBrowsingId)
 }
 
-// required bytes a_documentURI = 3;
+// required string a_documentURI = 3;
 inline bool Msg_Observe::_internal_has_a_documenturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -848,7 +848,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Observe::set_a_documenturi(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_documenturi_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_documenturi_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSObserver.Msg_Observe.a_documentURI)
 }
 inline std::string* Msg_Observe::mutable_a_documenturi() {
@@ -896,7 +896,7 @@ inline void Msg_Observe::set_allocated_a_documenturi(std::string* a_documenturi)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLSObserver.Msg_Observe.a_documentURI)
 }
 
-// required bytes a_key = 4;
+// required string a_key = 4;
 inline bool Msg_Observe::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -916,7 +916,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Observe::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSObserver.Msg_Observe.a_key)
 }
 inline std::string* Msg_Observe::mutable_a_key() {

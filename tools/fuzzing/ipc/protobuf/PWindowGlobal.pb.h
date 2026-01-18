@@ -1507,7 +1507,7 @@ class Msg_DispatchSecurityPolicyViolation final :
   enum : int {
     kAAViolationEventJSONFieldNumber = 1,
   };
-  // required bytes a_aViolationEventJSON = 1;
+  // required string a_aViolationEventJSON = 1;
   bool has_a_aviolationeventjson() const;
   private:
   bool _internal_has_a_aviolationeventjson() const;
@@ -4196,7 +4196,7 @@ class Msg_UpdateDocumentTitle final :
   enum : int {
     kAATitleFieldNumber = 1,
   };
-  // required bytes a_aTitle = 1;
+  // required string a_aTitle = 1;
   bool has_a_atitle() const;
   private:
   bool _internal_has_a_atitle() const;
@@ -7352,7 +7352,7 @@ class Msg_SetCookies final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStruct >&
       a_cookies() const;
 
-  // required bytes a_baseDomain = 1;
+  // required string a_baseDomain = 1;
   bool has_a_basedomain() const;
   private:
   bool _internal_has_a_basedomain() const;
@@ -8314,7 +8314,7 @@ class Msg_NotifyPermissionChange final :
     kATypeFieldNumber = 1,
     kAPermissionFieldNumber = 2,
   };
-  // required bytes a_type = 1;
+  // required string a_type = 1;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -9059,7 +9059,7 @@ inline void Reply_DrawSnapshot::set_allocated_a_retval(std::string* a_retval) {
 
 // Msg_DispatchSecurityPolicyViolation
 
-// required bytes a_aViolationEventJSON = 1;
+// required string a_aViolationEventJSON = 1;
 inline bool Msg_DispatchSecurityPolicyViolation::_internal_has_a_aviolationeventjson() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9079,7 +9079,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DispatchSecurityPolicyViolation::set_a_aviolationeventjson(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_aviolationeventjson_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_aviolationeventjson_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWindowGlobal.Msg_DispatchSecurityPolicyViolation.a_aViolationEventJSON)
 }
 inline std::string* Msg_DispatchSecurityPolicyViolation::mutable_a_aviolationeventjson() {
@@ -10402,7 +10402,7 @@ inline void Msg_UpdateCookieJarSettings::set_allocated_a_cookiejarsettings(::pro
 
 // Msg_UpdateDocumentTitle
 
-// required bytes a_aTitle = 1;
+// required string a_aTitle = 1;
 inline bool Msg_UpdateDocumentTitle::_internal_has_a_atitle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10422,7 +10422,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UpdateDocumentTitle::set_a_atitle(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_atitle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_atitle_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWindowGlobal.Msg_UpdateDocumentTitle.a_aTitle)
 }
 inline std::string* Msg_UpdateDocumentTitle::mutable_a_atitle() {
@@ -11448,7 +11448,7 @@ inline void Reply_GetStorageAccessPermission::set_a_permission_action(uint32_t v
 
 // Msg_SetCookies
 
-// required bytes a_baseDomain = 1;
+// required string a_baseDomain = 1;
 inline bool Msg_SetCookies::_internal_has_a_basedomain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11468,7 +11468,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetCookies::set_a_basedomain(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_basedomain_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_basedomain_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWindowGlobal.Msg_SetCookies.a_baseDomain)
 }
 inline std::string* Msg_SetCookies::mutable_a_basedomain() {
@@ -11773,7 +11773,7 @@ Msg_SetCookies::a_cookies() const {
 
 // Msg_NotifyPermissionChange
 
-// required bytes a_type = 1;
+// required string a_type = 1;
 inline bool Msg_NotifyPermissionChange::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11793,7 +11793,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyPermissionChange::set_a_type(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_type_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWindowGlobal.Msg_NotifyPermissionChange.a_type)
 }
 inline std::string* Msg_NotifyPermissionChange::mutable_a_type() {

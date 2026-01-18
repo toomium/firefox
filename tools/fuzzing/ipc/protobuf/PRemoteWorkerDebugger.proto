@@ -20,7 +20,7 @@ message Msg_Unregister {
 }
 
 message Msg_PostMessageToDebugger {
-  required bytes a_aMessage = 1;
+  required string a_aMessage = 1;
 }
 
 message Msg_ReportErrorToDebugger {
@@ -48,11 +48,11 @@ message Msg_UnregisterDone {
 }
 
 message Msg_Initialize {
-  required bytes a_aURL = 1;
+  required string a_aURL = 1;
 }
 
 message Msg_PostMessage {
-  required bytes a_aMessage = 1;
+  required string a_aMessage = 1;
 }
 
 message Msg_SetDebuggerReady {
@@ -62,5 +62,5 @@ message Msg_SetDebuggerReady {
 // Parameter mappings stats:
 // Total parameters in this file 7
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 1, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 5, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 1, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 3
+// Scalar mappings performed: 6
 // Message structs/unions generated from ipdl structs/unions: 0

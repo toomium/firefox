@@ -663,7 +663,7 @@ const char* CStringArrayResponse__mVArrayOfnsCString::_InternalParse(const char*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated bytes a_mVArrayOfnsCString = 1;
+      // repeated string a_mVArrayOfnsCString = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -706,10 +706,10 @@ uint8_t* CStringArrayResponse__mVArrayOfnsCString::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated bytes a_mVArrayOfnsCString = 1;
+  // repeated string a_mVArrayOfnsCString = 1;
   for (int i = 0, n = this->_internal_a_mvarrayofnscstring_size(); i < n; i++) {
     const auto& s = this->_internal_a_mvarrayofnscstring(i);
-    target = stream->WriteBytes(1, s, target);
+    target = stream->WriteString(1, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -728,11 +728,11 @@ size_t CStringArrayResponse__mVArrayOfnsCString::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated bytes a_mVArrayOfnsCString = 1;
+  // repeated string a_mVArrayOfnsCString = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_mvarrayofnscstring_.size());
   for (int i = 0, n = _impl_.a_mvarrayofnscstring_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
       _impl_.a_mvarrayofnscstring_.Get(i));
   }
 

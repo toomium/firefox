@@ -36,8 +36,8 @@ message ContentDeviceData {
 
 message FeatureFailure {
   required bytes a_status = 1;
-  required bytes a_message = 2;
-  required bytes a_failureId = 3;
+  required string a_message = 2;
+  required string a_failureId = 3;
 }
 
 message GPUDeviceData {
@@ -55,8 +55,8 @@ message GfxVarValue {
     bool a_mVbool = 2;
     bytes a_mVgfxImageFormat = 3;
     bytes a_mVIntSize = 4;
-    bytes a_mVnsCString = 5;
-    bytes a_mVnsString = 6;
+    string a_mVnsCString = 5;
+    string a_mVnsString = 6;
     sint32 a_mVint32_t = 7;
     uint64 a_mVuint64_t = 8;
     float a_mVfloat = 9;
@@ -72,5 +72,5 @@ message GfxVarUpdate {
 message GfxInfoFeatureStatus {
   required sint32 a_feature = 1;
   required sint32 a_status = 2;
-  required bytes a_failureId = 3;
+  required string a_failureId = 3;
 }

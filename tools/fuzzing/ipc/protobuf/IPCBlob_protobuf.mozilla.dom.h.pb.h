@@ -182,7 +182,7 @@ class IPCFile final :
     kALastModifiedFieldNumber = 2,
     kAIsDirectoryFieldNumber = 5,
   };
-  // required bytes a_name = 1;
+  // required string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -200,7 +200,7 @@ class IPCFile final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required bytes a_DOMPath = 3;
+  // required string a_DOMPath = 3;
   bool has_a_dompath() const;
   private:
   bool _internal_has_a_dompath() const;
@@ -218,7 +218,7 @@ class IPCFile final :
   std::string* _internal_mutable_a_dompath();
   public:
 
-  // required bytes a_fullPath = 4;
+  // required string a_fullPath = 4;
   bool has_a_fullpath() const;
   private:
   bool _internal_has_a_fullpath() const;
@@ -403,7 +403,7 @@ class IPCBlob final :
     kASizeFieldNumber = 2,
     kAFileIdFieldNumber = 6,
   };
-  // required bytes a_type = 1;
+  // required string a_type = 1;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -421,7 +421,7 @@ class IPCBlob final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // required bytes a_blobImplType = 3;
+  // required string a_blobImplType = 3;
   bool has_a_blobimpltype() const;
   private:
   bool _internal_has_a_blobimpltype() const;
@@ -535,7 +535,7 @@ class IPCBlob final :
 #endif  // __GNUC__
 // IPCFile
 
-// required bytes a_name = 1;
+// required string a_name = 1;
 inline bool IPCFile::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -555,7 +555,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCFile::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCFile.a_name)
 }
 inline std::string* IPCFile::mutable_a_name() {
@@ -631,7 +631,7 @@ inline void IPCFile::set_a_lastmodified(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCFile.a_lastModified)
 }
 
-// required bytes a_DOMPath = 3;
+// required string a_DOMPath = 3;
 inline bool IPCFile::_internal_has_a_dompath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -651,7 +651,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCFile::set_a_dompath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_dompath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_dompath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCFile.a_DOMPath)
 }
 inline std::string* IPCFile::mutable_a_dompath() {
@@ -699,7 +699,7 @@ inline void IPCFile::set_allocated_a_dompath(std::string* a_dompath) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCFile.a_DOMPath)
 }
 
-// required bytes a_fullPath = 4;
+// required string a_fullPath = 4;
 inline bool IPCFile::_internal_has_a_fullpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -719,7 +719,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCFile::set_a_fullpath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_fullpath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_fullpath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCFile.a_fullPath)
 }
 inline std::string* IPCFile::mutable_a_fullpath() {
@@ -799,7 +799,7 @@ inline void IPCFile::set_a_isdirectory(bool value) {
 
 // IPCBlob
 
-// required bytes a_type = 1;
+// required string a_type = 1;
 inline bool IPCBlob::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -819,7 +819,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCBlob::set_a_type(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_type_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCBlob.a_type)
 }
 inline std::string* IPCBlob::mutable_a_type() {
@@ -895,7 +895,7 @@ inline void IPCBlob::set_a_size(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCBlob.a_size)
 }
 
-// required bytes a_blobImplType = 3;
+// required string a_blobImplType = 3;
 inline bool IPCBlob::_internal_has_a_blobimpltype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -915,7 +915,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCBlob::set_a_blobimpltype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_blobimpltype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_blobimpltype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCBlob.a_blobImplType)
 }
 inline std::string* IPCBlob::mutable_a_blobimpltype() {

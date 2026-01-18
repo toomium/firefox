@@ -177,7 +177,7 @@ class IPCServerTiming final :
     kADescriptionFieldNumber = 3,
     kADurationFieldNumber = 2,
   };
-  // required bytes a_name = 1;
+  // required string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -195,7 +195,7 @@ class IPCServerTiming final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required bytes a_description = 3;
+  // required string a_description = 3;
   bool has_a_description() const;
   private:
   bool _internal_has_a_description() const;
@@ -410,7 +410,7 @@ class IPCPerformanceTimingData final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCServerTiming >&
       a_servertiming() const;
 
-  // required bytes a_nextHopProtocol = 2;
+  // required string a_nextHopProtocol = 2;
   bool has_a_nexthopprotocol() const;
   private:
   bool _internal_has_a_nexthopprotocol() const;
@@ -752,7 +752,7 @@ class IPCPerformanceTimingData final :
   std::string* _internal_mutable_a_fetchstart();
   public:
 
-  // required bytes a_contentType = 27;
+  // required string a_contentType = 27;
   bool has_a_contenttype() const;
   private:
   bool _internal_has_a_contenttype() const;
@@ -992,7 +992,7 @@ class IPCPerformanceTimingData final :
 #endif  // __GNUC__
 // IPCServerTiming
 
-// required bytes a_name = 1;
+// required string a_name = 1;
 inline bool IPCServerTiming::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1012,7 +1012,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCServerTiming::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServerTiming.a_name)
 }
 inline std::string* IPCServerTiming::mutable_a_name() {
@@ -1088,7 +1088,7 @@ inline void IPCServerTiming::set_a_duration(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServerTiming.a_duration)
 }
 
-// required bytes a_description = 3;
+// required string a_description = 3;
 inline bool IPCServerTiming::_internal_has_a_description() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1108,7 +1108,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCServerTiming::set_a_description(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_description_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_description_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCServerTiming.a_description)
 }
 inline std::string* IPCServerTiming::mutable_a_description() {
@@ -1200,7 +1200,7 @@ IPCPerformanceTimingData::a_servertiming() const {
   return _impl_.a_servertiming_;
 }
 
-// required bytes a_nextHopProtocol = 2;
+// required string a_nextHopProtocol = 2;
 inline bool IPCPerformanceTimingData::_internal_has_a_nexthopprotocol() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1220,7 +1220,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPerformanceTimingData::set_a_nexthopprotocol(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_nexthopprotocol_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_nexthopprotocol_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_nextHopProtocol)
 }
 inline std::string* IPCPerformanceTimingData::mutable_a_nexthopprotocol() {
@@ -2660,7 +2660,7 @@ inline void IPCPerformanceTimingData::set_a_renderblocking(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_renderBlocking)
 }
 
-// required bytes a_contentType = 27;
+// required string a_contentType = 27;
 inline bool IPCPerformanceTimingData::_internal_has_a_contenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00080000u) != 0;
   return value;
@@ -2680,7 +2680,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPerformanceTimingData::set_a_contenttype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00080000u;
- _impl_.a_contenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_contenttype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPerformanceTimingData.a_contentType)
 }
 inline std::string* IPCPerformanceTimingData::mutable_a_contenttype() {

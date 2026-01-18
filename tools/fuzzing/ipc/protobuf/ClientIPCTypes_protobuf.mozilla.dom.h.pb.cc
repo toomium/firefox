@@ -615,7 +615,7 @@ const char* ClientSourceConstructorArgs::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_url = 6;
+      // required string a_url = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_a_url();
@@ -695,9 +695,9 @@ uint8_t* ClientSourceConstructorArgs::_InternalSerialize(
         5, this->_internal_a_creationtime(), target);
   }
 
-  // required bytes a_url = 6;
+  // required string a_url = 6;
   if (cached_has_bits & 0x00000010u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         6, this->_internal_a_url(), target);
   }
 
@@ -741,9 +741,9 @@ size_t ClientSourceConstructorArgs::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_a_url()) {
-    // required bytes a_url = 6;
+    // required string a_url = 6;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_url());
   }
 
@@ -783,9 +783,9 @@ size_t ClientSourceConstructorArgs::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_creationtime());
 
-    // required bytes a_url = 6;
+    // required string a_url = 6;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_url());
 
     // required bytes a_frameType = 7;
@@ -1225,7 +1225,7 @@ const char* IPCClientInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_url = 6;
+      // required string a_url = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_a_url();
@@ -1321,9 +1321,9 @@ uint8_t* IPCClientInfo::_InternalSerialize(
         5, this->_internal_a_creationtime(), target);
   }
 
-  // required bytes a_url = 6;
+  // required string a_url = 6;
   if (cached_has_bits & 0x00000010u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         6, this->_internal_a_url(), target);
   }
 
@@ -1381,9 +1381,9 @@ size_t IPCClientInfo::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_a_url()) {
-    // required bytes a_url = 6;
+    // required string a_url = 6;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_url());
   }
 
@@ -1423,9 +1423,9 @@ size_t IPCClientInfo::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_creationtime());
 
-    // required bytes a_url = 6;
+    // required string a_url = 6;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_url());
 
     // required bytes a_frameType = 7;
@@ -3254,7 +3254,7 @@ const char* ClientSourceExecutionReadyArgs::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_url = 1;
+      // required string a_url = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_url();
@@ -3303,9 +3303,9 @@ uint8_t* ClientSourceExecutionReadyArgs::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_url = 1;
+  // required string a_url = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_url(), target);
   }
 
@@ -3328,9 +3328,9 @@ size_t ClientSourceExecutionReadyArgs::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_url()) {
-    // required bytes a_url = 1;
+    // required string a_url = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_url());
   }
 
@@ -3348,9 +3348,9 @@ size_t ClientSourceExecutionReadyArgs::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_url = 1;
+    // required string a_url = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_url());
 
     // required bytes a_frameType = 2;
@@ -4029,7 +4029,7 @@ const char* ClientNavigateArgs::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_url = 2;
+      // required string a_url = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_url();
@@ -4038,7 +4038,7 @@ const char* ClientNavigateArgs::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_baseURL = 3;
+      // required string a_baseURL = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_baseurl();
@@ -4093,15 +4093,15 @@ uint8_t* ClientNavigateArgs::_InternalSerialize(
         _Internal::a_target(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes a_url = 2;
+  // required string a_url = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_url(), target);
   }
 
-  // required bytes a_baseURL = 3;
+  // required string a_baseURL = 3;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_baseurl(), target);
   }
 
@@ -4125,16 +4125,16 @@ size_t ClientNavigateArgs::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_url()) {
-    // required bytes a_url = 2;
+    // required string a_url = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_url());
   }
 
   if (_internal_has_a_baseurl()) {
-    // required bytes a_baseURL = 3;
+    // required string a_baseURL = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_baseurl());
   }
 
@@ -4159,14 +4159,14 @@ size_t ClientNavigateArgs::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required bytes a_url = 2;
+    // required string a_url = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_url());
 
-    // required bytes a_baseURL = 3;
+    // required string a_baseURL = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_baseurl());
 
     // required .protobuf.mozilla.dom.IPCClientInfo a_target = 1;
@@ -5593,7 +5593,7 @@ const char* ClientOpenWindowArgs::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_url = 3;
+      // required string a_url = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_url();
@@ -5602,7 +5602,7 @@ const char* ClientOpenWindowArgs::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_baseURL = 4;
+      // required string a_baseURL = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_baseurl();
@@ -5656,15 +5656,15 @@ uint8_t* ClientOpenWindowArgs::_InternalSerialize(
         _Internal::a_cspinfo(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes a_url = 3;
+  // required string a_url = 3;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_url(), target);
   }
 
-  // required bytes a_baseURL = 4;
+  // required string a_baseURL = 4;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_baseurl(), target);
   }
 
@@ -5681,16 +5681,16 @@ size_t ClientOpenWindowArgs::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_url()) {
-    // required bytes a_url = 3;
+    // required string a_url = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_url());
   }
 
   if (_internal_has_a_baseurl()) {
-    // required bytes a_baseURL = 4;
+    // required string a_baseURL = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_baseurl());
   }
 
@@ -5708,14 +5708,14 @@ size_t ClientOpenWindowArgs::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes a_url = 3;
+    // required string a_url = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_url());
 
-    // required bytes a_baseURL = 4;
+    // required string a_baseURL = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_baseurl());
 
     // required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
@@ -7070,7 +7070,7 @@ const char* ClientNavigateOpConstructorArgs::_InternalParse(const char* ptr, ::_
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_url = 2;
+      // required string a_url = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_url();
@@ -7079,7 +7079,7 @@ const char* ClientNavigateOpConstructorArgs::_InternalParse(const char* ptr, ::_
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_baseURL = 3;
+      // required string a_baseURL = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_baseurl();
@@ -7125,15 +7125,15 @@ uint8_t* ClientNavigateOpConstructorArgs::_InternalSerialize(
         1, this->_internal_a_target(), target);
   }
 
-  // required bytes a_url = 2;
+  // required string a_url = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_url(), target);
   }
 
-  // required bytes a_baseURL = 3;
+  // required string a_baseURL = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_baseurl(), target);
   }
 
@@ -7157,16 +7157,16 @@ size_t ClientNavigateOpConstructorArgs::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_a_url()) {
-    // required bytes a_url = 2;
+    // required string a_url = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_url());
   }
 
   if (_internal_has_a_baseurl()) {
-    // required bytes a_baseURL = 3;
+    // required string a_baseURL = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_baseurl());
   }
 
@@ -7182,14 +7182,14 @@ size_t ClientNavigateOpConstructorArgs::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_target());
 
-    // required bytes a_url = 2;
+    // required string a_url = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_url());
 
-    // required bytes a_baseURL = 3;
+    // required string a_baseURL = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_baseurl());
 
   } else {

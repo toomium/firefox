@@ -319,7 +319,7 @@ const char* SimpleURIParams::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_spec = 1;
+      // required string a_spec = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_spec();
@@ -359,9 +359,9 @@ uint8_t* SimpleURIParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_spec = 1;
+  // required string a_spec = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_spec(), target);
   }
 
@@ -377,10 +377,10 @@ size_t SimpleURIParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.SimpleURIParams)
   size_t total_size = 0;
 
-  // required bytes a_spec = 1;
+  // required string a_spec = 1;
   if (_internal_has_a_spec()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_spec());
   }
   uint32_t cached_has_bits = 0;
@@ -536,7 +536,7 @@ const char* DefaultURIParams::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_spec = 1;
+      // required string a_spec = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_spec();
@@ -576,9 +576,9 @@ uint8_t* DefaultURIParams::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_spec = 1;
+  // required string a_spec = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_spec(), target);
   }
 
@@ -594,10 +594,10 @@ size_t DefaultURIParams::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.DefaultURIParams)
   size_t total_size = 0;
 
-  // required bytes a_spec = 1;
+  // required string a_spec = 1;
   if (_internal_has_a_spec()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_spec());
   }
   uint32_t cached_has_bits = 0;
@@ -1294,7 +1294,7 @@ const char* StandardURLParams::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_spec = 4;
+      // required string a_spec = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_spec();
@@ -1466,9 +1466,9 @@ uint8_t* StandardURLParams::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_a_defaultport(), target);
   }
 
-  // required bytes a_spec = 4;
+  // required string a_spec = 4;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_spec(), target);
   }
 
@@ -1581,9 +1581,9 @@ size_t StandardURLParams::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_spec()) {
-    // required bytes a_spec = 4;
+    // required string a_spec = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_spec());
   }
 
@@ -1703,9 +1703,9 @@ size_t StandardURLParams::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0003ffff) ^ 0x0003ffff) == 0) {  // All required fields are present.
-    // required bytes a_spec = 4;
+    // required string a_spec = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_spec());
 
     // required .protobuf.mozilla.ipc.StandardURLSegment a_scheme = 5;
@@ -2107,7 +2107,7 @@ const char* JARURIParams::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_charset = 3;
+      // required string a_charset = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_charset();
@@ -2161,9 +2161,9 @@ uint8_t* JARURIParams::_InternalSerialize(
         _Internal::a_jarentry(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes a_charset = 3;
+  // required string a_charset = 3;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_charset(), target);
   }
 
@@ -2180,9 +2180,9 @@ size_t JARURIParams::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_charset()) {
-    // required bytes a_charset = 3;
+    // required string a_charset = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_charset());
   }
 
@@ -2207,9 +2207,9 @@ size_t JARURIParams::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes a_charset = 3;
+    // required string a_charset = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_charset());
 
     // required .protobuf.mozilla.ipc.URIParams a_jarFile = 1;
@@ -2503,7 +2503,7 @@ const char* IconURIParams::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_contentType = 3;
+      // required string a_contentType = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_contenttype();
@@ -2512,7 +2512,7 @@ const char* IconURIParams::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_fileName = 4;
+      // required string a_fileName = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_filename();
@@ -2521,7 +2521,7 @@ const char* IconURIParams::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_stockIcon = 5;
+      // required string a_stockIcon = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_a_stockicon();
@@ -2592,21 +2592,21 @@ uint8_t* IconURIParams::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_size(), target);
   }
 
-  // required bytes a_contentType = 3;
+  // required string a_contentType = 3;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_contenttype(), target);
   }
 
-  // required bytes a_fileName = 4;
+  // required string a_fileName = 4;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_filename(), target);
   }
 
-  // required bytes a_stockIcon = 5;
+  // required string a_stockIcon = 5;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         5, this->_internal_a_stockicon(), target);
   }
 
@@ -2635,23 +2635,23 @@ size_t IconURIParams::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_contenttype()) {
-    // required bytes a_contentType = 3;
+    // required string a_contentType = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_contenttype());
   }
 
   if (_internal_has_a_filename()) {
-    // required bytes a_fileName = 4;
+    // required string a_fileName = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_filename());
   }
 
   if (_internal_has_a_stockicon()) {
-    // required bytes a_stockIcon = 5;
+    // required string a_stockIcon = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_stockicon());
   }
 
@@ -2672,19 +2672,19 @@ size_t IconURIParams::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000037) ^ 0x00000037) == 0) {  // All required fields are present.
-    // required bytes a_contentType = 3;
+    // required string a_contentType = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_contenttype());
 
-    // required bytes a_fileName = 4;
+    // required string a_fileName = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_filename());
 
-    // required bytes a_stockIcon = 5;
+    // required string a_stockIcon = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_stockicon());
 
     // required uint32 a_size = 2;

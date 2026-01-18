@@ -176,7 +176,7 @@ class PermissionRequest final :
     kAOptionsFieldNumber = 2,
     kATypeFieldNumber = 1,
   };
-  // repeated bytes a_options = 2;
+  // repeated string a_options = 2;
   int a_options_size() const;
   private:
   int _internal_a_options_size() const;
@@ -187,12 +187,12 @@ class PermissionRequest final :
   void set_a_options(int index, const std::string& value);
   void set_a_options(int index, std::string&& value);
   void set_a_options(int index, const char* value);
-  void set_a_options(int index, const void* value, size_t size);
+  void set_a_options(int index, const char* value, size_t size);
   std::string* add_a_options();
   void add_a_options(const std::string& value);
   void add_a_options(std::string&& value);
   void add_a_options(const char* value);
-  void add_a_options(const void* value, size_t size);
+  void add_a_options(const char* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_options() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_options();
   private:
@@ -200,7 +200,7 @@ class PermissionRequest final :
   std::string* _internal_add_a_options();
   public:
 
-  // required bytes a_type = 1;
+  // required string a_type = 1;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -349,7 +349,7 @@ class PermissionChoice final :
     kATypeFieldNumber = 1,
     kAChoiceFieldNumber = 2,
   };
-  // required bytes a_type = 1;
+  // required string a_type = 1;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -367,7 +367,7 @@ class PermissionChoice final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // required bytes a_choice = 2;
+  // required string a_choice = 2;
   bool has_a_choice() const;
   private:
   bool _internal_has_a_choice() const;
@@ -415,7 +415,7 @@ class PermissionChoice final :
 #endif  // __GNUC__
 // PermissionRequest
 
-// required bytes a_type = 1;
+// required string a_type = 1;
 inline bool PermissionRequest::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -435,7 +435,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PermissionRequest::set_a_type(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_type_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PermissionRequest.a_type)
 }
 inline std::string* PermissionRequest::mutable_a_type() {
@@ -483,7 +483,7 @@ inline void PermissionRequest::set_allocated_a_type(std::string* a_type) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PermissionRequest.a_type)
 }
 
-// repeated bytes a_options = 2;
+// repeated string a_options = 2;
 inline int PermissionRequest::_internal_a_options_size() const {
   return _impl_.a_options_.size();
 }
@@ -522,7 +522,7 @@ inline void PermissionRequest::set_a_options(int index, const char* value) {
   _impl_.a_options_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PermissionRequest.a_options)
 }
-inline void PermissionRequest::set_a_options(int index, const void* value, size_t size) {
+inline void PermissionRequest::set_a_options(int index, const char* value, size_t size) {
   _impl_.a_options_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PermissionRequest.a_options)
@@ -543,7 +543,7 @@ inline void PermissionRequest::add_a_options(const char* value) {
   _impl_.a_options_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PermissionRequest.a_options)
 }
-inline void PermissionRequest::add_a_options(const void* value, size_t size) {
+inline void PermissionRequest::add_a_options(const char* value, size_t size) {
   _impl_.a_options_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PermissionRequest.a_options)
 }
@@ -562,7 +562,7 @@ PermissionRequest::mutable_a_options() {
 
 // PermissionChoice
 
-// required bytes a_type = 1;
+// required string a_type = 1;
 inline bool PermissionChoice::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -582,7 +582,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PermissionChoice::set_a_type(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_type_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PermissionChoice.a_type)
 }
 inline std::string* PermissionChoice::mutable_a_type() {
@@ -630,7 +630,7 @@ inline void PermissionChoice::set_allocated_a_type(std::string* a_type) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PermissionChoice.a_type)
 }
 
-// required bytes a_choice = 2;
+// required string a_choice = 2;
 inline bool PermissionChoice::_internal_has_a_choice() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -650,7 +650,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PermissionChoice::set_a_choice(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_choice_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_choice_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PermissionChoice.a_choice)
 }
 inline std::string* PermissionChoice::mutable_a_choice() {

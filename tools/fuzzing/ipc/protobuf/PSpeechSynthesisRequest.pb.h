@@ -1283,7 +1283,7 @@ class Msg_OnStart final :
   enum : int {
     kAAUriFieldNumber = 1,
   };
-  // required bytes a_aUri = 1;
+  // required string a_aUri = 1;
   bool has_a_auri() const;
   private:
   bool _internal_has_a_auri() const;
@@ -1754,7 +1754,7 @@ class Msg_OnBoundary final :
     kAACharLengthFieldNumber = 4,
     kAArgcFieldNumber = 5,
   };
-  // required bytes a_aName = 1;
+  // required string a_aName = 1;
   bool has_a_aname() const;
   private:
   bool _internal_has_a_aname() const;
@@ -1962,7 +1962,7 @@ class Msg_OnMark final :
     kAAElapsedTimeFieldNumber = 2,
     kAACharIndexFieldNumber = 3,
   };
-  // required bytes a_aName = 1;
+  // required string a_aName = 1;
   bool has_a_aname() const;
   private:
   bool _internal_has_a_aname() const;
@@ -2181,7 +2181,7 @@ inline void Msg_OnEnd::set_a_acharindex(uint32_t value) {
 
 // Msg_OnStart
 
-// required bytes a_aUri = 1;
+// required string a_aUri = 1;
 inline bool Msg_OnStart::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2201,7 +2201,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnStart::set_a_auri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_auri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_auri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnStart.a_aUri)
 }
 inline std::string* Msg_OnStart::mutable_a_auri() {
@@ -2373,7 +2373,7 @@ inline void Msg_OnResume::set_a_acharindex(uint32_t value) {
 
 // Msg_OnBoundary
 
-// required bytes a_aName = 1;
+// required string a_aName = 1;
 inline bool Msg_OnBoundary::_internal_has_a_aname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2393,7 +2393,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnBoundary::set_a_aname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_aname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_aname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnBoundary.a_aName)
 }
 inline std::string* Msg_OnBoundary::mutable_a_aname() {
@@ -2557,7 +2557,7 @@ inline void Msg_OnBoundary::set_a_argc(uint32_t value) {
 
 // Msg_OnMark
 
-// required bytes a_aName = 1;
+// required string a_aName = 1;
 inline bool Msg_OnMark::_internal_has_a_aname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2577,7 +2577,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnMark::set_a_aname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_aname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_aname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesisRequest.Msg_OnMark.a_aName)
 }
 inline std::string* Msg_OnMark::mutable_a_aname() {

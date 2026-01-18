@@ -88,8 +88,8 @@ message Msg_AdapterDrop {
 message Msg_DeviceCreateShaderModule {
   required bytes a_selfId = 1;
   required bytes a_bufferId = 2;
-  required bytes a_label = 3;
-  required bytes a_code = 4;
+  required string a_label = 3;
+  required string a_code = 4;
 }
 
 message Reply_DeviceCreateShaderModule {
@@ -254,18 +254,18 @@ message Reply_DevicePopErrorScope {
 message Msg_ReportError {
   required bytes a_selfId = 1;
   required bytes a_aType = 2;
-  required bytes a_message = 3;
+  required string a_message = 3;
 }
 
 message Msg_UncapturedError {
   optional bytes a_aDeviceId = 1;
-  required bytes a_message = 2;
+  required string a_message = 2;
 }
 
 message Msg_DeviceLost {
   required bytes a_aDeviceId = 1;
   optional uint32 a_reason = 2;
-  required bytes a_message = 3;
+  required string a_message = 3;
 }
 
 message Msg___delete__ {
@@ -277,5 +277,5 @@ message Reply___delete__ {
 // Parameter mappings stats:
 // Total parameters in this file 107
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 5, "<class 'ipdl.type.BuiltinCType'>": 4, "<class 'ipdl.type.ByteBufType'>": 9, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 86, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 2, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 0, "<class 'ipdl.type.UnionType'>": 1, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 7
+// Scalar mappings performed: 12
 // Message structs/unions generated from ipdl structs/unions: 0

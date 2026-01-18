@@ -17,25 +17,25 @@ import "NeckoChannelParams.proto";
 // Structs and unions declarations
 message WebBrowserPersistDocumentAttrs {
   required bool a_isPrivate = 1;
-  required bytes a_documentURI = 2;
-  required bytes a_baseURI = 3;
-  required bytes a_contentType = 4;
-  required bytes a_characterSet = 5;
-  required bytes a_title = 6;
+  required string a_documentURI = 2;
+  required string a_baseURI = 3;
+  required string a_contentType = 4;
+  required string a_characterSet = 5;
+  required string a_title = 6;
   required bytes a_referrerInfo = 7;
   required protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 8;
-  required bytes a_contentDisposition = 9;
+  required string a_contentDisposition = 9;
   required uint32 a_sessionHistoryCacheKey = 10;
   required uint32 a_persistFlags = 11;
   required protobuf.mozilla.ipc.PrincipalInfo a_principal = 12;
 }
 
 message WebBrowserPersistURIMapEntry {
-  required bytes a_mapFrom = 1;
-  required bytes a_mapTo = 2;
+  required string a_mapFrom = 1;
+  required string a_mapTo = 2;
 }
 
 message WebBrowserPersistURIMap {
   repeated protobuf.mozilla.WebBrowserPersistURIMapEntry a_mapURIs = 1;
-  required bytes a_targetBaseURI = 2;
+  required string a_targetBaseURI = 2;
 }

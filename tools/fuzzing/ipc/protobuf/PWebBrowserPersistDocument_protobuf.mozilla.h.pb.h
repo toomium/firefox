@@ -190,7 +190,7 @@ class WebBrowserPersistDocumentAttrs final :
     kASessionHistoryCacheKeyFieldNumber = 10,
     kAPersistFlagsFieldNumber = 11,
   };
-  // required bytes a_documentURI = 2;
+  // required string a_documentURI = 2;
   bool has_a_documenturi() const;
   private:
   bool _internal_has_a_documenturi() const;
@@ -208,7 +208,7 @@ class WebBrowserPersistDocumentAttrs final :
   std::string* _internal_mutable_a_documenturi();
   public:
 
-  // required bytes a_baseURI = 3;
+  // required string a_baseURI = 3;
   bool has_a_baseuri() const;
   private:
   bool _internal_has_a_baseuri() const;
@@ -226,7 +226,7 @@ class WebBrowserPersistDocumentAttrs final :
   std::string* _internal_mutable_a_baseuri();
   public:
 
-  // required bytes a_contentType = 4;
+  // required string a_contentType = 4;
   bool has_a_contenttype() const;
   private:
   bool _internal_has_a_contenttype() const;
@@ -244,7 +244,7 @@ class WebBrowserPersistDocumentAttrs final :
   std::string* _internal_mutable_a_contenttype();
   public:
 
-  // required bytes a_characterSet = 5;
+  // required string a_characterSet = 5;
   bool has_a_characterset() const;
   private:
   bool _internal_has_a_characterset() const;
@@ -262,7 +262,7 @@ class WebBrowserPersistDocumentAttrs final :
   std::string* _internal_mutable_a_characterset();
   public:
 
-  // required bytes a_title = 6;
+  // required string a_title = 6;
   bool has_a_title() const;
   private:
   bool _internal_has_a_title() const;
@@ -298,7 +298,7 @@ class WebBrowserPersistDocumentAttrs final :
   std::string* _internal_mutable_a_referrerinfo();
   public:
 
-  // required bytes a_contentDisposition = 9;
+  // required string a_contentDisposition = 9;
   bool has_a_contentdisposition() const;
   private:
   bool _internal_has_a_contentdisposition() const;
@@ -535,7 +535,7 @@ class WebBrowserPersistURIMapEntry final :
     kAMapFromFieldNumber = 1,
     kAMapToFieldNumber = 2,
   };
-  // required bytes a_mapFrom = 1;
+  // required string a_mapFrom = 1;
   bool has_a_mapfrom() const;
   private:
   bool _internal_has_a_mapfrom() const;
@@ -553,7 +553,7 @@ class WebBrowserPersistURIMapEntry final :
   std::string* _internal_mutable_a_mapfrom();
   public:
 
-  // required bytes a_mapTo = 2;
+  // required string a_mapTo = 2;
   bool has_a_mapto() const;
   private:
   bool _internal_has_a_mapto() const;
@@ -723,7 +723,7 @@ class WebBrowserPersistURIMap final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::WebBrowserPersistURIMapEntry >&
       a_mapuris() const;
 
-  // required bytes a_targetBaseURI = 2;
+  // required string a_targetBaseURI = 2;
   bool has_a_targetbaseuri() const;
   private:
   bool _internal_has_a_targetbaseuri() const;
@@ -796,7 +796,7 @@ inline void WebBrowserPersistDocumentAttrs::set_a_isprivate(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.WebBrowserPersistDocumentAttrs.a_isPrivate)
 }
 
-// required bytes a_documentURI = 2;
+// required string a_documentURI = 2;
 inline bool WebBrowserPersistDocumentAttrs::_internal_has_a_documenturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -816,7 +816,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebBrowserPersistDocumentAttrs::set_a_documenturi(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_documenturi_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_documenturi_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.WebBrowserPersistDocumentAttrs.a_documentURI)
 }
 inline std::string* WebBrowserPersistDocumentAttrs::mutable_a_documenturi() {
@@ -864,7 +864,7 @@ inline void WebBrowserPersistDocumentAttrs::set_allocated_a_documenturi(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.WebBrowserPersistDocumentAttrs.a_documentURI)
 }
 
-// required bytes a_baseURI = 3;
+// required string a_baseURI = 3;
 inline bool WebBrowserPersistDocumentAttrs::_internal_has_a_baseuri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -884,7 +884,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebBrowserPersistDocumentAttrs::set_a_baseuri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_baseuri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_baseuri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.WebBrowserPersistDocumentAttrs.a_baseURI)
 }
 inline std::string* WebBrowserPersistDocumentAttrs::mutable_a_baseuri() {
@@ -932,7 +932,7 @@ inline void WebBrowserPersistDocumentAttrs::set_allocated_a_baseuri(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.WebBrowserPersistDocumentAttrs.a_baseURI)
 }
 
-// required bytes a_contentType = 4;
+// required string a_contentType = 4;
 inline bool WebBrowserPersistDocumentAttrs::_internal_has_a_contenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -952,7 +952,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebBrowserPersistDocumentAttrs::set_a_contenttype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_contenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_contenttype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.WebBrowserPersistDocumentAttrs.a_contentType)
 }
 inline std::string* WebBrowserPersistDocumentAttrs::mutable_a_contenttype() {
@@ -1000,7 +1000,7 @@ inline void WebBrowserPersistDocumentAttrs::set_allocated_a_contenttype(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.WebBrowserPersistDocumentAttrs.a_contentType)
 }
 
-// required bytes a_characterSet = 5;
+// required string a_characterSet = 5;
 inline bool WebBrowserPersistDocumentAttrs::_internal_has_a_characterset() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1020,7 +1020,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebBrowserPersistDocumentAttrs::set_a_characterset(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_characterset_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_characterset_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.WebBrowserPersistDocumentAttrs.a_characterSet)
 }
 inline std::string* WebBrowserPersistDocumentAttrs::mutable_a_characterset() {
@@ -1068,7 +1068,7 @@ inline void WebBrowserPersistDocumentAttrs::set_allocated_a_characterset(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.WebBrowserPersistDocumentAttrs.a_characterSet)
 }
 
-// required bytes a_title = 6;
+// required string a_title = 6;
 inline bool WebBrowserPersistDocumentAttrs::_internal_has_a_title() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -1088,7 +1088,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebBrowserPersistDocumentAttrs::set_a_title(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.a_title_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_title_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.WebBrowserPersistDocumentAttrs.a_title)
 }
 inline std::string* WebBrowserPersistDocumentAttrs::mutable_a_title() {
@@ -1291,7 +1291,7 @@ inline void WebBrowserPersistDocumentAttrs::set_allocated_a_cookiejarsettings(::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.WebBrowserPersistDocumentAttrs.a_cookieJarSettings)
 }
 
-// required bytes a_contentDisposition = 9;
+// required string a_contentDisposition = 9;
 inline bool WebBrowserPersistDocumentAttrs::_internal_has_a_contentdisposition() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -1311,7 +1311,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebBrowserPersistDocumentAttrs::set_a_contentdisposition(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000040u;
- _impl_.a_contentdisposition_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_contentdisposition_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.WebBrowserPersistDocumentAttrs.a_contentDisposition)
 }
 inline std::string* WebBrowserPersistDocumentAttrs::mutable_a_contentdisposition() {
@@ -1506,7 +1506,7 @@ inline void WebBrowserPersistDocumentAttrs::set_allocated_a_principal(::protobuf
 
 // WebBrowserPersistURIMapEntry
 
-// required bytes a_mapFrom = 1;
+// required string a_mapFrom = 1;
 inline bool WebBrowserPersistURIMapEntry::_internal_has_a_mapfrom() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1526,7 +1526,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebBrowserPersistURIMapEntry::set_a_mapfrom(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_mapfrom_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_mapfrom_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.WebBrowserPersistURIMapEntry.a_mapFrom)
 }
 inline std::string* WebBrowserPersistURIMapEntry::mutable_a_mapfrom() {
@@ -1574,7 +1574,7 @@ inline void WebBrowserPersistURIMapEntry::set_allocated_a_mapfrom(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.WebBrowserPersistURIMapEntry.a_mapFrom)
 }
 
-// required bytes a_mapTo = 2;
+// required string a_mapTo = 2;
 inline bool WebBrowserPersistURIMapEntry::_internal_has_a_mapto() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1594,7 +1594,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebBrowserPersistURIMapEntry::set_a_mapto(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_mapto_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_mapto_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.WebBrowserPersistURIMapEntry.a_mapTo)
 }
 inline std::string* WebBrowserPersistURIMapEntry::mutable_a_mapto() {
@@ -1686,7 +1686,7 @@ WebBrowserPersistURIMap::a_mapuris() const {
   return _impl_.a_mapuris_;
 }
 
-// required bytes a_targetBaseURI = 2;
+// required string a_targetBaseURI = 2;
 inline bool WebBrowserPersistURIMap::_internal_has_a_targetbaseuri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1706,7 +1706,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebBrowserPersistURIMap::set_a_targetbaseuri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_targetbaseuri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_targetbaseuri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.WebBrowserPersistURIMap.a_targetBaseURI)
 }
 inline std::string* WebBrowserPersistURIMap::mutable_a_targetbaseuri() {

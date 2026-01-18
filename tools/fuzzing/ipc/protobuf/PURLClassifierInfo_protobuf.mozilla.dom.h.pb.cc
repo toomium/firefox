@@ -196,7 +196,7 @@ const char* ClassifierInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_list = 1;
+      // required string a_list = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_list();
@@ -205,7 +205,7 @@ const char* ClassifierInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_provider = 2;
+      // required string a_provider = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_provider();
@@ -214,7 +214,7 @@ const char* ClassifierInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_fullhash = 3;
+      // required string a_fullhash = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_fullhash();
@@ -254,21 +254,21 @@ uint8_t* ClassifierInfo::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_list = 1;
+  // required string a_list = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_list(), target);
   }
 
-  // required bytes a_provider = 2;
+  // required string a_provider = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_provider(), target);
   }
 
-  // required bytes a_fullhash = 3;
+  // required string a_fullhash = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_fullhash(), target);
   }
 
@@ -285,23 +285,23 @@ size_t ClassifierInfo::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_list()) {
-    // required bytes a_list = 1;
+    // required string a_list = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_list());
   }
 
   if (_internal_has_a_provider()) {
-    // required bytes a_provider = 2;
+    // required string a_provider = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_provider());
   }
 
   if (_internal_has_a_fullhash()) {
-    // required bytes a_fullhash = 3;
+    // required string a_fullhash = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_fullhash());
   }
 
@@ -312,19 +312,19 @@ size_t ClassifierInfo::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes a_list = 1;
+    // required string a_list = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_list());
 
-    // required bytes a_provider = 2;
+    // required string a_provider = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_provider());
 
-    // required bytes a_fullhash = 3;
+    // required string a_fullhash = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_fullhash());
 
   } else {
@@ -553,7 +553,7 @@ const char* URLClassifierLocalResult::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_featureName = 2;
+      // required string a_featureName = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_featurename();
@@ -562,7 +562,7 @@ const char* URLClassifierLocalResult::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_matchingList = 3;
+      // required string a_matchingList = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_matchinglist();
@@ -608,15 +608,15 @@ uint8_t* URLClassifierLocalResult::_InternalSerialize(
         1, this->_internal_a_uri(), target);
   }
 
-  // required bytes a_featureName = 2;
+  // required string a_featureName = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_featurename(), target);
   }
 
-  // required bytes a_matchingList = 3;
+  // required string a_matchingList = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_matchinglist(), target);
   }
 
@@ -640,16 +640,16 @@ size_t URLClassifierLocalResult::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_a_featurename()) {
-    // required bytes a_featureName = 2;
+    // required string a_featureName = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_featurename());
   }
 
   if (_internal_has_a_matchinglist()) {
-    // required bytes a_matchingList = 3;
+    // required string a_matchingList = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_matchinglist());
   }
 
@@ -665,14 +665,14 @@ size_t URLClassifierLocalResult::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_uri());
 
-    // required bytes a_featureName = 2;
+    // required string a_featureName = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_featurename());
 
-    // required bytes a_matchingList = 3;
+    // required string a_matchingList = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_matchinglist());
 
   } else {

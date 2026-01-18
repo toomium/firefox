@@ -218,7 +218,7 @@ class Msg_Open final :
     kAUseSSLFieldNumber = 3,
     kAUseArrayBuffersFieldNumber = 4,
   };
-  // required bytes a_host = 1;
+  // required string a_host = 1;
   bool has_a_host() const;
   private:
   bool _internal_has_a_host() const;
@@ -1055,7 +1055,7 @@ class Msg_Callback final :
     kADataFieldNumber = 2,
     kAReadyStateFieldNumber = 3,
   };
-  // required bytes a_type = 1;
+  // required string a_type = 1;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -1667,7 +1667,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_Open
 
-// required bytes a_host = 1;
+// required string a_host = 1;
 inline bool Msg_Open::_internal_has_a_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1687,7 +1687,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Open::set_a_host(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_host_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_host_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTCPSocket.Msg_Open.a_host)
 }
 inline std::string* Msg_Open::mutable_a_host() {
@@ -1930,7 +1930,7 @@ inline void Msg_Data::set_allocated_a_data(::protobuf::SendableData* a_data) {
 
 // Msg_Callback
 
-// required bytes a_type = 1;
+// required string a_type = 1;
 inline bool Msg_Callback::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1950,7 +1950,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Callback::set_a_type(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_type_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PTCPSocket.Msg_Callback.a_type)
 }
 inline std::string* Msg_Callback::mutable_a_type() {

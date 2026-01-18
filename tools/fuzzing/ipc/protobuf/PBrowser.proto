@@ -27,7 +27,7 @@ import "PBackgroundSharedTypes.proto";
 
 // Message declarations
 message Msg_AsyncMessage {
-  required bytes a_aMessage = 1;
+  required string a_aMessage = 1;
   required protobuf.mozilla.dom.ClonedMessageData a_aData = 2;
 }
 
@@ -64,11 +64,11 @@ message Msg_MoveFocus {
 }
 
 message Msg_DropLinks {
-  repeated bytes a_aLinks = 1;
+  repeated string a_aLinks = 1;
 }
 
 message Msg_SyncMessage {
-  required bytes a_aMessage = 1;
+  required string a_aMessage = 1;
   required protobuf.mozilla.dom.ClonedMessageData a_aData = 2;
 }
 
@@ -124,7 +124,7 @@ message Msg_RequestIMEToCommitComposition {
 
 message Reply_RequestIMEToCommitComposition {
   required bool a_isCommitted = 1;
-  required bytes a_committedString = 2;
+  required string a_committedString = 2;
 }
 
 message Msg_OnEventNeedingAckHandled {
@@ -143,9 +143,9 @@ message Msg_WheelZoomChange {
 
 message Msg_EnableDisableCommands {
   required bytes a_bc = 1;
-  required bytes a_action = 2;
-  repeated bytes a_enabledCommands = 3;
-  repeated bytes a_disabledCommands = 4;
+  required string a_action = 2;
+  repeated string a_enabledCommands = 3;
+  repeated string a_disabledCommands = 4;
 }
 
 message Msg_GetInputContext {
@@ -171,14 +171,14 @@ message Msg_SetCursor {
 }
 
 message Msg_SetLinkStatus {
-  required bytes a_status = 1;
+  required string a_status = 1;
 }
 
 message Msg_ShowTooltip {
   required uint32 a_x = 1;
   required uint32 a_y = 2;
-  required bytes a_tooltip = 3;
-  required bytes a_direction = 4;
+  required string a_tooltip = 3;
+  required string a_direction = 4;
 }
 
 message Msg_HideTooltip {
@@ -186,16 +186,16 @@ message Msg_HideTooltip {
 
 message Msg_PColorPickerConstructor {
   required bytes a_aBrowsingContext = 1;
-  required bytes a_title = 2;
-  required bytes a_initialColor = 3;
-  repeated bytes a_defaultColors = 4;
+  required string a_title = 2;
+  required string a_initialColor = 3;
+  repeated string a_defaultColors = 4;
 }
 
 message Reply_PColorPickerConstructor {
 }
 
 message Msg_PFilePickerConstructor {
-  required bytes a_aTitle = 1;
+  required string a_aTitle = 1;
   required bytes a_aMode = 2;
   required bytes a_aBrowsingContext = 3;
 }
@@ -209,7 +209,7 @@ message Msg_RespondStartSwipeEvent {
 }
 
 message Msg_LookUpDictionary {
-  required bytes a_aText = 1;
+  required string a_aText = 1;
   repeated bytes a_aFontRangeArray = 2;
   required bool a_aIsVertical = 3;
   required bytes a_aPoint = 4;
@@ -239,8 +239,8 @@ message Msg_SynthesizeNativeKeyEvent {
   required sint32 a_aNativeKeyboardLayout = 1;
   required sint32 a_aNativeKeyCode = 2;
   required uint32 a_aModifierFlags = 3;
-  required bytes a_aCharacters = 4;
-  required bytes a_aUnmodifiedCharacters = 5;
+  required string a_aCharacters = 4;
+  required string a_aUnmodifiedCharacters = 5;
   optional uint64 a_aCallbackId = 6;
 }
 
@@ -327,9 +327,9 @@ message Msg_AccessKeyNotHandled {
 }
 
 message Msg_RegisterProtocolHandler {
-  required bytes a_scheme = 1;
+  required string a_scheme = 1;
   required bytes a_handlerURI = 2;
-  required bytes a_title = 3;
+  required string a_title = 3;
   required bytes a_documentURI = 4;
 }
 
@@ -358,15 +358,15 @@ message Msg_OnProgressChange {
 }
 
 message Msg_OnStatusChange {
-  required bytes a_aMessage = 1;
+  required string a_aMessage = 1;
 }
 
 message Msg_NotifyContentBlockingEvent {
   required uint32 a_aEvent = 1;
   required protobuf.mozilla.dom.RequestData a_aRequestData = 2;
   required bool a_aBlocked = 3;
-  required bytes a_aTrackingOrigin = 4;
-  repeated bytes a_aTrackingFullHashes = 5;
+  required string a_aTrackingOrigin = 4;
+  repeated string a_aTrackingFullHashes = 5;
   optional bytes a_aReason = 6;
   optional bytes a_aCanvasFingerprinter = 7;
   optional bool a_aCanvasFingerprinterKnownText = 8;
@@ -400,7 +400,7 @@ message Msg_RequestPointerLock {
 }
 
 message Reply_RequestPointerLock {
-  required bytes a_error = 1;
+  required string a_error = 1;
 }
 
 message Msg_ReleasePointerLock {
@@ -487,12 +487,12 @@ message Reply_EnsureLayersConnected {
 }
 
 message Msg_ShowCanvasPermissionPrompt {
-  required bytes a_aOrigin = 1;
+  required string a_aOrigin = 1;
   required bool a_aHideDoorHanger = 2;
 }
 
 message Msg_SetSystemFont {
-  required bytes a_aFontName = 1;
+  required string a_aFontName = 1;
 }
 
 message Reply_SetSystemFont {
@@ -502,7 +502,7 @@ message Msg_GetSystemFont {
 }
 
 message Reply_GetSystemFont {
-  required bytes a_retval = 1;
+  required string a_retval = 1;
 }
 
 message Msg_MaybeFireEmbedderLoadEvents {
@@ -790,23 +790,23 @@ message Msg_NormalPrioritySimpleContentCommandEvent {
 }
 
 message Msg_InsertText {
-  required bytes a_aStringToInsert = 1;
+  required string a_aStringToInsert = 1;
 }
 
 message Msg_NormalPriorityInsertText {
-  required bytes a_aStringToInsert = 1;
+  required string a_aStringToInsert = 1;
 }
 
 message Msg_ReplaceText {
-  required bytes a_aReplacementString = 1;
-  required bytes a_aStringToInsert = 2;
+  required string a_aReplacementString = 1;
+  required string a_aStringToInsert = 2;
   required uint32 a_aOffset = 3;
   required bool a_aPreventSetSelection = 4;
 }
 
 message Msg_NormalPriorityReplaceText {
-  required bytes a_aReplacementString = 1;
-  required bytes a_aStringToInsert = 2;
+  required string a_aReplacementString = 1;
+  required string a_aStringToInsert = 2;
   required uint32 a_aOffset = 3;
   required bool a_aPreventSetSelection = 4;
 }
@@ -816,7 +816,7 @@ message Msg_PasteTransferable {
 }
 
 message Msg_LoadRemoteScript {
-  required bytes a_aURL = 1;
+  required string a_aURL = 1;
   required bool a_aRunInGlobalScope = 2;
 }
 
@@ -982,5 +982,5 @@ message Msg_UpdateDropEffect {
 // Parameter mappings stats:
 // Total parameters in this file 424
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 1, "<class 'ipdl.type.ArrayType'>": 13, "<class 'ipdl.type.BuiltinCType'>": 55, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 304, "<class 'ipdl.type.ManagedEndpointType'>": 1, "<class 'ipdl.type.MaybeType'>": 24, "<class 'ipdl.type.NotNullType'>": 1, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 24, "<class 'ipdl.type.UnionType'>": 1, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 139
+// Scalar mappings performed: 179
 // Message structs/unions generated from ipdl structs/unions: 5

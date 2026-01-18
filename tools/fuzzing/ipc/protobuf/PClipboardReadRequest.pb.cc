@@ -172,7 +172,7 @@ const char* Msg_GetData::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated bytes a_aFlavors = 1;
+      // repeated string a_aFlavors = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -215,10 +215,10 @@ uint8_t* Msg_GetData::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated bytes a_aFlavors = 1;
+  // repeated string a_aFlavors = 1;
   for (int i = 0, n = this->_internal_a_aflavors_size(); i < n; i++) {
     const auto& s = this->_internal_a_aflavors(i);
-    target = stream->WriteBytes(1, s, target);
+    target = stream->WriteString(1, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -237,11 +237,11 @@ size_t Msg_GetData::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated bytes a_aFlavors = 1;
+  // repeated string a_aFlavors = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_aflavors_.size());
   for (int i = 0, n = _impl_.a_aflavors_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
       _impl_.a_aflavors_.Get(i));
   }
 
@@ -576,7 +576,7 @@ const char* Msg_GetDataSync::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated bytes a_aFlavors = 1;
+      // repeated string a_aFlavors = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -619,10 +619,10 @@ uint8_t* Msg_GetDataSync::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated bytes a_aFlavors = 1;
+  // repeated string a_aFlavors = 1;
   for (int i = 0, n = this->_internal_a_aflavors_size(); i < n; i++) {
     const auto& s = this->_internal_a_aflavors(i);
-    target = stream->WriteBytes(1, s, target);
+    target = stream->WriteString(1, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -641,11 +641,11 @@ size_t Msg_GetDataSync::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated bytes a_aFlavors = 1;
+  // repeated string a_aFlavors = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_aflavors_.size());
   for (int i = 0, n = _impl_.a_aflavors_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
       _impl_.a_aflavors_.Get(i));
   }
 

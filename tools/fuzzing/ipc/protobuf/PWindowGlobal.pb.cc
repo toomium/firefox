@@ -2634,7 +2634,7 @@ const char* Msg_DispatchSecurityPolicyViolation::_InternalParse(const char* ptr,
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aViolationEventJSON = 1;
+      // required string a_aViolationEventJSON = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_aviolationeventjson();
@@ -2674,9 +2674,9 @@ uint8_t* Msg_DispatchSecurityPolicyViolation::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aViolationEventJSON = 1;
+  // required string a_aViolationEventJSON = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_aviolationeventjson(), target);
   }
 
@@ -2692,10 +2692,10 @@ size_t Msg_DispatchSecurityPolicyViolation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PWindowGlobal.Msg_DispatchSecurityPolicyViolation)
   size_t total_size = 0;
 
-  // required bytes a_aViolationEventJSON = 1;
+  // required string a_aViolationEventJSON = 1;
   if (_internal_has_a_aviolationeventjson()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aviolationeventjson());
   }
   uint32_t cached_has_bits = 0;
@@ -6630,7 +6630,7 @@ const char* Msg_UpdateDocumentTitle::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aTitle = 1;
+      // required string a_aTitle = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_atitle();
@@ -6670,9 +6670,9 @@ uint8_t* Msg_UpdateDocumentTitle::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aTitle = 1;
+  // required string a_aTitle = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_atitle(), target);
   }
 
@@ -6688,10 +6688,10 @@ size_t Msg_UpdateDocumentTitle::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PWindowGlobal.Msg_UpdateDocumentTitle)
   size_t total_size = 0;
 
-  // required bytes a_aTitle = 1;
+  // required string a_aTitle = 1;
   if (_internal_has_a_atitle()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_atitle());
   }
   uint32_t cached_has_bits = 0;
@@ -11110,7 +11110,7 @@ const char* Msg_SetCookies::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_baseDomain = 1;
+      // required string a_baseDomain = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_basedomain();
@@ -11199,9 +11199,9 @@ uint8_t* Msg_SetCookies::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_baseDomain = 1;
+  // required string a_baseDomain = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_basedomain(), target);
   }
 
@@ -11250,9 +11250,9 @@ size_t Msg_SetCookies::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_basedomain()) {
-    // required bytes a_baseDomain = 1;
+    // required string a_baseDomain = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_basedomain());
   }
 
@@ -11287,9 +11287,9 @@ size_t Msg_SetCookies::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
-    // required bytes a_baseDomain = 1;
+    // required string a_baseDomain = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_basedomain());
 
     // required bytes a_attrs = 2;
@@ -12400,7 +12400,7 @@ const char* Msg_NotifyPermissionChange::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_type = 1;
+      // required string a_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_type();
@@ -12449,9 +12449,9 @@ uint8_t* Msg_NotifyPermissionChange::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_type = 1;
+  // required string a_type = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_type(), target);
   }
 
@@ -12474,9 +12474,9 @@ size_t Msg_NotifyPermissionChange::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_type()) {
-    // required bytes a_type = 1;
+    // required string a_type = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_type());
   }
 
@@ -12492,9 +12492,9 @@ size_t Msg_NotifyPermissionChange::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_type = 1;
+    // required string a_type = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_type());
 
     // required uint32 a_permission = 2;

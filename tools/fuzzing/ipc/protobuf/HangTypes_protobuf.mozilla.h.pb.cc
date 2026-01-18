@@ -1959,7 +1959,7 @@ const char* HangEntry::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_mVnsCString = 1;
+      // string a_mVnsCString = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_mvnscstring();
@@ -2063,7 +2063,7 @@ uint8_t* HangEntry::_InternalSerialize(
 
   switch (content_case()) {
     case kAMVnsCString: {
-      target = stream->WriteBytesMaybeAliased(
+      target = stream->WriteStringMaybeAliased(
           1, this->_internal_a_mvnscstring(), target);
       break;
     }
@@ -2134,10 +2134,10 @@ size_t HangEntry::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes a_mVnsCString = 1;
+    // string a_mVnsCString = 1;
     case kAMVnsCString: {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
           this->_internal_a_mvnscstring());
       break;
     }
@@ -2454,7 +2454,7 @@ const char* HangModule::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_name = 1;
+      // required string a_name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_name();
@@ -2463,7 +2463,7 @@ const char* HangModule::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_breakpadId = 2;
+      // required string a_breakpadId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_breakpadid();
@@ -2503,15 +2503,15 @@ uint8_t* HangModule::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_name = 1;
+  // required string a_name = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_name(), target);
   }
 
-  // required bytes a_breakpadId = 2;
+  // required string a_breakpadId = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_breakpadid(), target);
   }
 
@@ -2528,16 +2528,16 @@ size_t HangModule::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_name()) {
-    // required bytes a_name = 1;
+    // required string a_name = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_name());
   }
 
   if (_internal_has_a_breakpadid()) {
-    // required bytes a_breakpadId = 2;
+    // required string a_breakpadId = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_breakpadid());
   }
 
@@ -2548,14 +2548,14 @@ size_t HangModule::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_name = 1;
+    // required string a_name = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_name());
 
-    // required bytes a_breakpadId = 2;
+    // required string a_breakpadId = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_breakpadid());
 
   } else {
@@ -3009,7 +3009,7 @@ const char* HangAnnotation::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_name = 1;
+      // required string a_name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_name();
@@ -3018,7 +3018,7 @@ const char* HangAnnotation::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_value = 2;
+      // required string a_value = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_value();
@@ -3058,15 +3058,15 @@ uint8_t* HangAnnotation::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_name = 1;
+  // required string a_name = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_name(), target);
   }
 
-  // required bytes a_value = 2;
+  // required string a_value = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_value(), target);
   }
 
@@ -3083,16 +3083,16 @@ size_t HangAnnotation::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_name()) {
-    // required bytes a_name = 1;
+    // required string a_name = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_name());
   }
 
   if (_internal_has_a_value()) {
-    // required bytes a_value = 2;
+    // required string a_value = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_value());
   }
 
@@ -3103,14 +3103,14 @@ size_t HangAnnotation::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_name = 1;
+    // required string a_name = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_name());
 
-    // required bytes a_value = 2;
+    // required string a_value = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_value());
 
   } else {
@@ -3396,7 +3396,7 @@ const char* HangDetails::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_process = 2;
+      // required string a_process = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_process();
@@ -3405,7 +3405,7 @@ const char* HangDetails::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_remoteType = 3;
+      // required string a_remoteType = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_remotetype();
@@ -3414,7 +3414,7 @@ const char* HangDetails::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_threadName = 4;
+      // required string a_threadName = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_threadname();
@@ -3423,7 +3423,7 @@ const char* HangDetails::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_runnableName = 5;
+      // required string a_runnableName = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_a_runnablename();
@@ -3490,27 +3490,27 @@ uint8_t* HangDetails::_InternalSerialize(
         1, this->_internal_a_duration(), target);
   }
 
-  // required bytes a_process = 2;
+  // required string a_process = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_process(), target);
   }
 
-  // required bytes a_remoteType = 3;
+  // required string a_remoteType = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_remotetype(), target);
   }
 
-  // required bytes a_threadName = 4;
+  // required string a_threadName = 4;
   if (cached_has_bits & 0x00000008u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_threadname(), target);
   }
 
-  // required bytes a_runnableName = 5;
+  // required string a_runnableName = 5;
   if (cached_has_bits & 0x00000010u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         5, this->_internal_a_runnablename(), target);
   }
 
@@ -3549,30 +3549,30 @@ size_t HangDetails::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_a_process()) {
-    // required bytes a_process = 2;
+    // required string a_process = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_process());
   }
 
   if (_internal_has_a_remotetype()) {
-    // required bytes a_remoteType = 3;
+    // required string a_remoteType = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_remotetype());
   }
 
   if (_internal_has_a_threadname()) {
-    // required bytes a_threadName = 4;
+    // required string a_threadName = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_threadname());
   }
 
   if (_internal_has_a_runnablename()) {
-    // required bytes a_runnableName = 5;
+    // required string a_runnableName = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_runnablename());
   }
 
@@ -3595,24 +3595,24 @@ size_t HangDetails::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_duration());
 
-    // required bytes a_process = 2;
+    // required string a_process = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_process());
 
-    // required bytes a_remoteType = 3;
+    // required string a_remoteType = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_remotetype());
 
-    // required bytes a_threadName = 4;
+    // required string a_threadName = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_threadname());
 
-    // required bytes a_runnableName = 5;
+    // required string a_runnableName = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_runnablename());
 
     // required .protobuf.mozilla.HangStack a_stack = 6;

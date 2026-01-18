@@ -281,7 +281,7 @@ const char* GMPLaunchResult::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_displayName = 4;
+      // required string a_displayName = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_displayname();
@@ -308,7 +308,7 @@ const char* GMPLaunchResult::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_errorDescription = 7;
+      // required string a_errorDescription = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           auto str = _internal_mutable_a_errordescription();
@@ -366,9 +366,9 @@ uint8_t* GMPLaunchResult::_InternalSerialize(
         3, this->_internal_a_pid(), target);
   }
 
-  // required bytes a_displayName = 4;
+  // required string a_displayName = 4;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_displayname(), target);
   }
 
@@ -384,9 +384,9 @@ uint8_t* GMPLaunchResult::_InternalSerialize(
         6, this->_internal_a_result(), target);
   }
 
-  // required bytes a_errorDescription = 7;
+  // required string a_errorDescription = 7;
   if (cached_has_bits & 0x00000020u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         7, this->_internal_a_errordescription(), target);
   }
 
@@ -417,9 +417,9 @@ size_t GMPLaunchResult::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_a_displayname()) {
-    // required bytes a_displayName = 4;
+    // required string a_displayName = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_displayname());
   }
 
@@ -438,9 +438,9 @@ size_t GMPLaunchResult::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_a_errordescription()) {
-    // required bytes a_errorDescription = 7;
+    // required string a_errorDescription = 7;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_errordescription());
   }
 
@@ -466,9 +466,9 @@ size_t GMPLaunchResult::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_pid());
 
-    // required bytes a_displayName = 4;
+    // required string a_displayName = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_displayname());
 
     // required bytes a_endpoint = 5;
@@ -481,9 +481,9 @@ size_t GMPLaunchResult::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_result());
 
-    // required bytes a_errorDescription = 7;
+    // required string a_errorDescription = 7;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_errordescription());
 
     // required uint32 a_pluginId = 1;

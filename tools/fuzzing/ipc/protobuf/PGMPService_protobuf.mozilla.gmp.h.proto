@@ -17,8 +17,8 @@ message GMPLaunchResult {
   required uint32 a_pluginId = 1;
   required bytes a_pluginType = 2;
   required bytes a_pid = 3;
-  required bytes a_displayName = 4;
+  required string a_displayName = 4;
   required bytes a_endpoint = 5;
   required bytes a_result = 6;
-  required bytes a_errorDescription = 7;
+  required string a_errorDescription = 7;
 }

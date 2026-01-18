@@ -44,18 +44,18 @@ message Msg_CrashPluginNow {
 }
 
 message Msg_StartPlugin {
-  required bytes a_adapter = 1;
+  required string a_adapter = 1;
 }
 
 message Reply_StartPlugin {
 }
 
 message Msg_ProvideStorageId {
-  required bytes a_storageId = 1;
+  required string a_storageId = 1;
 }
 
 message Msg_PreloadLibs {
-  required bytes a_libs = 1;
+  required string a_libs = 1;
 }
 
 message Msg_CloseActive {
@@ -91,11 +91,11 @@ message Msg_Shutdown {
 }
 
 message Reply_Shutdown {
-  required bytes a_profile = 1;
+  required string a_profile = 1;
 }
 
 // Parameter mappings stats:
 // Total parameters in this file 11
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 1, "<class 'ipdl.type.ByteBufType'>": 2, "<class 'ipdl.type.EndpointType'>": 2, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 4, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 2, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 1
+// Scalar mappings performed: 5
 // Message structs/unions generated from ipdl structs/unions: 0

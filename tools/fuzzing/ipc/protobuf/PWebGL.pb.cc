@@ -8110,7 +8110,7 @@ const char* Msg_GetFragDataLocation::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required string a_name = 2;
+      // required bytes a_name = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_name();
@@ -8156,9 +8156,9 @@ uint8_t* Msg_GetFragDataLocation::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_id(), target);
   }
 
-  // required string a_name = 2;
+  // required bytes a_name = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_name(), target);
   }
 
@@ -8175,9 +8175,9 @@ size_t Msg_GetFragDataLocation::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_name()) {
-    // required string a_name = 2;
+    // required bytes a_name = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_name());
   }
 
@@ -8193,9 +8193,9 @@ size_t Msg_GetFragDataLocation::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_name = 2;
+    // required bytes a_name = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_name());
 
     // required uint64 a_id = 1;
@@ -12801,7 +12801,7 @@ const char* Reply_GetString::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional string a_ret = 1;
+      // optional bytes a_ret = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_ret();
@@ -12841,9 +12841,9 @@ uint8_t* Reply_GetString::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional string a_ret = 1;
+  // optional bytes a_ret = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_ret(), target);
   }
 
@@ -12863,11 +12863,11 @@ size_t Reply_GetString::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional string a_ret = 1;
+  // optional bytes a_ret = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_ret());
   }
 
@@ -15076,7 +15076,7 @@ const char* Msg_JsWarning::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_text = 1;
+      // required bytes a_text = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_text();
@@ -15116,9 +15116,9 @@ uint8_t* Msg_JsWarning::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_text = 1;
+  // required bytes a_text = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_text(), target);
   }
 
@@ -15134,10 +15134,10 @@ size_t Msg_JsWarning::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PWebGL.Msg_JsWarning)
   size_t total_size = 0;
 
-  // required string a_text = 1;
+  // required bytes a_text = 1;
   if (_internal_has_a_text()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_text());
   }
   uint32_t cached_has_bits = 0;

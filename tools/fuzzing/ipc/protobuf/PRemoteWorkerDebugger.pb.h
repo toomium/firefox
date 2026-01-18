@@ -343,7 +343,7 @@ class Msg_PostMessageToDebugger final :
   enum : int {
     kAAMessageFieldNumber = 1,
   };
-  // required bytes a_aMessage = 1;
+  // required string a_aMessage = 1;
   bool has_a_amessage() const;
   private:
   bool _internal_has_a_amessage() const;
@@ -1417,7 +1417,7 @@ class Msg_Initialize final :
   enum : int {
     kAAURLFieldNumber = 1,
   };
-  // required bytes a_aURL = 1;
+  // required string a_aURL = 1;
   bool has_a_aurl() const;
   private:
   bool _internal_has_a_aurl() const;
@@ -1564,7 +1564,7 @@ class Msg_PostMessage final :
   enum : int {
     kAAMessageFieldNumber = 1,
   };
-  // required bytes a_aMessage = 1;
+  // required string a_aMessage = 1;
   bool has_a_amessage() const;
   private:
   bool _internal_has_a_amessage() const;
@@ -1754,7 +1754,7 @@ class Msg_SetDebuggerReady final :
 
 // Msg_PostMessageToDebugger
 
-// required bytes a_aMessage = 1;
+// required string a_aMessage = 1;
 inline bool Msg_PostMessageToDebugger::_internal_has_a_amessage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1774,7 +1774,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PostMessageToDebugger::set_a_amessage(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_amessage_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_amessage_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_PostMessageToDebugger.a_aMessage)
 }
 inline std::string* Msg_PostMessageToDebugger::mutable_a_amessage() {
@@ -1997,7 +1997,7 @@ inline void Msg_RemoveWindowID::set_a_awindowid(uint64_t value) {
 
 // Msg_Initialize
 
-// required bytes a_aURL = 1;
+// required string a_aURL = 1;
 inline bool Msg_Initialize::_internal_has_a_aurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2017,7 +2017,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Initialize::set_a_aurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_aurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_aurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_Initialize.a_aURL)
 }
 inline std::string* Msg_Initialize::mutable_a_aurl() {
@@ -2069,7 +2069,7 @@ inline void Msg_Initialize::set_allocated_a_aurl(std::string* a_aurl) {
 
 // Msg_PostMessage
 
-// required bytes a_aMessage = 1;
+// required string a_aMessage = 1;
 inline bool Msg_PostMessage::_internal_has_a_amessage() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2089,7 +2089,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PostMessage::set_a_amessage(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_amessage_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_amessage_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PRemoteWorkerDebugger.Msg_PostMessage.a_aMessage)
 }
 inline std::string* Msg_PostMessage::mutable_a_amessage() {

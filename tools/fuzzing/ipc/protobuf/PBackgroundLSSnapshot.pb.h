@@ -1704,7 +1704,7 @@ class Msg_LoadValueAndMoreItems final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required bytes a_key = 1;
+  // required string a_key = 1;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -2142,7 +2142,7 @@ class Reply_LoadKeys final :
   enum : int {
     kAKeysFieldNumber = 1,
   };
-  // repeated bytes a_keys = 1;
+  // repeated string a_keys = 1;
   int a_keys_size() const;
   private:
   int _internal_a_keys_size() const;
@@ -2153,12 +2153,12 @@ class Reply_LoadKeys final :
   void set_a_keys(int index, const std::string& value);
   void set_a_keys(int index, std::string&& value);
   void set_a_keys(int index, const char* value);
-  void set_a_keys(int index, const void* value, size_t size);
+  void set_a_keys(int index, const char* value, size_t size);
   std::string* add_a_keys();
   void add_a_keys(const std::string& value);
   void add_a_keys(std::string&& value);
   void add_a_keys(const char* value);
-  void add_a_keys(const void* value, size_t size);
+  void add_a_keys(const char* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_keys() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_keys();
   private:
@@ -3039,7 +3039,7 @@ Msg_SyncCheckpointAndNotify::a_writeandnotifyinfos() const {
 
 // Msg_LoadValueAndMoreItems
 
-// required bytes a_key = 1;
+// required string a_key = 1;
 inline bool Msg_LoadValueAndMoreItems::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3059,7 +3059,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LoadValueAndMoreItems::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSSnapshot.Msg_LoadValueAndMoreItems.a_key)
 }
 inline std::string* Msg_LoadValueAndMoreItems::mutable_a_key() {
@@ -3224,7 +3224,7 @@ Reply_LoadValueAndMoreItems::a_iteminfos() const {
 
 // Reply_LoadKeys
 
-// repeated bytes a_keys = 1;
+// repeated string a_keys = 1;
 inline int Reply_LoadKeys::_internal_a_keys_size() const {
   return _impl_.a_keys_.size();
 }
@@ -3263,7 +3263,7 @@ inline void Reply_LoadKeys::set_a_keys(int index, const char* value) {
   _impl_.a_keys_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.a_keys)
 }
-inline void Reply_LoadKeys::set_a_keys(int index, const void* value, size_t size) {
+inline void Reply_LoadKeys::set_a_keys(int index, const char* value, size_t size) {
   _impl_.a_keys_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.a_keys)
@@ -3284,7 +3284,7 @@ inline void Reply_LoadKeys::add_a_keys(const char* value) {
   _impl_.a_keys_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.a_keys)
 }
-inline void Reply_LoadKeys::add_a_keys(const void* value, size_t size) {
+inline void Reply_LoadKeys::add_a_keys(const char* value, size_t size) {
   _impl_.a_keys_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PBackgroundLSSnapshot.Reply_LoadKeys.a_keys)
 }

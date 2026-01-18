@@ -188,7 +188,7 @@ class Msg_VisitResource final :
     kAAURIFieldNumber = 1,
     kAAContentPolicyTypeFieldNumber = 2,
   };
-  // required bytes a_aURI = 1;
+  // required string a_aURI = 1;
   bool has_a_auri() const;
   private:
   bool _internal_has_a_auri() const;
@@ -819,7 +819,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_VisitResource
 
-// required bytes a_aURI = 1;
+// required string a_aURI = 1;
 inline bool Msg_VisitResource::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -839,7 +839,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_VisitResource::set_a_auri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_auri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_auri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistResources.Msg_VisitResource.a_aURI)
 }
 inline std::string* Msg_VisitResource::mutable_a_auri() {

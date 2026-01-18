@@ -47,8 +47,8 @@ message Msg_ReplyGetCaptureCapability {
 }
 
 message Msg_ReplyGetCaptureDevice {
-  required bytes a_device_name = 1;
-  required bytes a_device_id = 2;
+  required string a_device_name = 1;
+  required string a_device_id = 2;
   required bool a_scary = 3;
   required bool a_placeholder = 4;
 }
@@ -71,12 +71,12 @@ message Msg_NumberOfCaptureDevices {
 
 message Msg_NumberOfCapabilities {
   required bytes a_engine = 1;
-  required bytes a_deviceUniqueIdUTF8 = 2;
+  required string a_deviceUniqueIdUTF8 = 2;
 }
 
 message Msg_GetCaptureCapability {
   required bytes a_engine = 1;
-  required bytes a_unique_idUTF8 = 2;
+  required string a_unique_idUTF8 = 2;
   required sint32 a_capability_number = 3;
 }
 
@@ -87,7 +87,7 @@ message Msg_GetCaptureDevice {
 
 message Msg_AllocateCapture {
   required bytes a_engine = 1;
-  required bytes a_unique_idUTF8 = 2;
+  required string a_unique_idUTF8 = 2;
   required uint64 a_windowID = 3;
 }
 
@@ -123,5 +123,5 @@ message Msg_EnsureInitialized {
 // Parameter mappings stats:
 // Total parameters in this file 53
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 27, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 21, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 2, "<class 'ipdl.type.StructType'>": 3, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 32
+// Scalar mappings performed: 37
 // Message structs/unions generated from ipdl structs/unions: 2

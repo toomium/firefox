@@ -207,7 +207,7 @@ class LSRequestCommonParams final :
     kAPrincipalInfoFieldNumber = 1,
     kAStoragePrincipalInfoFieldNumber = 2,
   };
-  // required bytes a_originKey = 3;
+  // required string a_originKey = 3;
   bool has_a_originkey() const;
   private:
   bool _internal_has_a_originkey() const;
@@ -1672,7 +1672,7 @@ class LSItemInfo final :
     kAKeyFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required bytes a_key = 1;
+  // required string a_key = 1;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -1912,7 +1912,7 @@ inline void LSRequestCommonParams::set_allocated_a_storageprincipalinfo(::protob
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSRequestCommonParams.a_storagePrincipalInfo)
 }
 
-// required bytes a_originKey = 3;
+// required string a_originKey = 3;
 inline bool LSRequestCommonParams::_internal_has_a_originkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1932,7 +1932,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSRequestCommonParams::set_a_originkey(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_originkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originkey_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRequestCommonParams.a_originKey)
 }
 inline std::string* LSRequestCommonParams::mutable_a_originkey() {
@@ -3412,7 +3412,7 @@ inline LSSimpleRequestParams::ContentCase LSSimpleRequestParams::content_case() 
 
 // LSItemInfo
 
-// required bytes a_key = 1;
+// required string a_key = 1;
 inline bool LSItemInfo::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3432,7 +3432,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSItemInfo::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSItemInfo.a_key)
 }
 inline std::string* LSItemInfo::mutable_a_key() {

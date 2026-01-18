@@ -318,7 +318,7 @@ const char* LSRequestCommonParams::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_originKey = 3;
+      // required string a_originKey = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_originkey();
@@ -372,9 +372,9 @@ uint8_t* LSRequestCommonParams::_InternalSerialize(
         _Internal::a_storageprincipalinfo(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes a_originKey = 3;
+  // required string a_originKey = 3;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_originkey(), target);
   }
 
@@ -391,9 +391,9 @@ size_t LSRequestCommonParams::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_originkey()) {
-    // required bytes a_originKey = 3;
+    // required string a_originKey = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_originkey());
   }
 
@@ -418,9 +418,9 @@ size_t LSRequestCommonParams::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes a_originKey = 3;
+    // required string a_originKey = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_originkey());
 
     // required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
@@ -2889,7 +2889,7 @@ const char* LSItemInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_key = 1;
+      // required string a_key = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_key();
@@ -2938,9 +2938,9 @@ uint8_t* LSItemInfo::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_key = 1;
+  // required string a_key = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_key(), target);
   }
 
@@ -2963,9 +2963,9 @@ size_t LSItemInfo::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_key()) {
-    // required bytes a_key = 1;
+    // required string a_key = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_key());
   }
 
@@ -2983,9 +2983,9 @@ size_t LSItemInfo::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_key = 1;
+    // required string a_key = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_key());
 
     // required bytes a_value = 2;

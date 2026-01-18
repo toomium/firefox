@@ -756,7 +756,7 @@ class Msg_JoinMulticast final :
     kAMulticastAddressFieldNumber = 1,
     kAIfaceFieldNumber = 2,
   };
-  // required bytes a_multicastAddress = 1;
+  // required string a_multicastAddress = 1;
   bool has_a_multicastaddress() const;
   private:
   bool _internal_has_a_multicastaddress() const;
@@ -774,7 +774,7 @@ class Msg_JoinMulticast final :
   std::string* _internal_mutable_a_multicastaddress();
   public:
 
-  // required bytes a_iface = 2;
+  // required string a_iface = 2;
   bool has_a_iface() const;
   private:
   bool _internal_has_a_iface() const;
@@ -926,7 +926,7 @@ class Msg_LeaveMulticast final :
     kAMulticastAddressFieldNumber = 1,
     kAIfaceFieldNumber = 2,
   };
-  // required bytes a_multicastAddress = 1;
+  // required string a_multicastAddress = 1;
   bool has_a_multicastaddress() const;
   private:
   bool _internal_has_a_multicastaddress() const;
@@ -944,7 +944,7 @@ class Msg_LeaveMulticast final :
   std::string* _internal_mutable_a_multicastaddress();
   public:
 
-  // required bytes a_iface = 2;
+  // required string a_iface = 2;
   bool has_a_iface() const;
   private:
   bool _internal_has_a_iface() const;
@@ -1934,7 +1934,7 @@ class Msg_CallbackError final :
     kAFilenameFieldNumber = 2,
     kALineNumberFieldNumber = 3,
   };
-  // required bytes a_message = 1;
+  // required string a_message = 1;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -1952,7 +1952,7 @@ class Msg_CallbackError final :
   std::string* _internal_mutable_a_message();
   public:
 
-  // required bytes a_filename = 2;
+  // required string a_filename = 2;
   bool has_a_filename() const;
   private:
   bool _internal_has_a_filename() const;
@@ -2734,7 +2734,7 @@ inline void Msg_OutgoingData::set_allocated_a_addr(::protobuf::UDPSocketAddr* a_
 
 // Msg_JoinMulticast
 
-// required bytes a_multicastAddress = 1;
+// required string a_multicastAddress = 1;
 inline bool Msg_JoinMulticast::_internal_has_a_multicastaddress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2754,7 +2754,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_JoinMulticast::set_a_multicastaddress(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_multicastaddress_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_multicastaddress_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PUDPSocket.Msg_JoinMulticast.a_multicastAddress)
 }
 inline std::string* Msg_JoinMulticast::mutable_a_multicastaddress() {
@@ -2802,7 +2802,7 @@ inline void Msg_JoinMulticast::set_allocated_a_multicastaddress(std::string* a_m
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_JoinMulticast.a_multicastAddress)
 }
 
-// required bytes a_iface = 2;
+// required string a_iface = 2;
 inline bool Msg_JoinMulticast::_internal_has_a_iface() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2822,7 +2822,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_JoinMulticast::set_a_iface(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_iface_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_iface_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PUDPSocket.Msg_JoinMulticast.a_iface)
 }
 inline std::string* Msg_JoinMulticast::mutable_a_iface() {
@@ -2874,7 +2874,7 @@ inline void Msg_JoinMulticast::set_allocated_a_iface(std::string* a_iface) {
 
 // Msg_LeaveMulticast
 
-// required bytes a_multicastAddress = 1;
+// required string a_multicastAddress = 1;
 inline bool Msg_LeaveMulticast::_internal_has_a_multicastaddress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2894,7 +2894,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LeaveMulticast::set_a_multicastaddress(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_multicastaddress_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_multicastaddress_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PUDPSocket.Msg_LeaveMulticast.a_multicastAddress)
 }
 inline std::string* Msg_LeaveMulticast::mutable_a_multicastaddress() {
@@ -2942,7 +2942,7 @@ inline void Msg_LeaveMulticast::set_allocated_a_multicastaddress(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_LeaveMulticast.a_multicastAddress)
 }
 
-// required bytes a_iface = 2;
+// required string a_iface = 2;
 inline bool Msg_LeaveMulticast::_internal_has_a_iface() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2962,7 +2962,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LeaveMulticast::set_a_iface(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_iface_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_iface_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PUDPSocket.Msg_LeaveMulticast.a_iface)
 }
 inline std::string* Msg_LeaveMulticast::mutable_a_iface() {
@@ -3346,7 +3346,7 @@ Msg_CallbackReceivedData::mutable_a_data() {
 
 // Msg_CallbackError
 
-// required bytes a_message = 1;
+// required string a_message = 1;
 inline bool Msg_CallbackError::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3366,7 +3366,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CallbackError::set_a_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PUDPSocket.Msg_CallbackError.a_message)
 }
 inline std::string* Msg_CallbackError::mutable_a_message() {
@@ -3414,7 +3414,7 @@ inline void Msg_CallbackError::set_allocated_a_message(std::string* a_message) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_CallbackError.a_message)
 }
 
-// required bytes a_filename = 2;
+// required string a_filename = 2;
 inline bool Msg_CallbackError::_internal_has_a_filename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3434,7 +3434,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CallbackError::set_a_filename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_filename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_filename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PUDPSocket.Msg_CallbackError.a_filename)
 }
 inline std::string* Msg_CallbackError::mutable_a_filename() {

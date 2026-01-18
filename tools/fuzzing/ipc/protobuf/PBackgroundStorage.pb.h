@@ -384,7 +384,7 @@ class Msg_Preload final :
     kAOriginNoSuffixFieldNumber = 2,
     kAAlreadyLoadedCountFieldNumber = 3,
   };
-  // required bytes a_originSuffix = 1;
+  // required string a_originSuffix = 1;
   bool has_a_originsuffix() const;
   private:
   bool _internal_has_a_originsuffix() const;
@@ -402,7 +402,7 @@ class Msg_Preload final :
   std::string* _internal_mutable_a_originsuffix();
   public:
 
-  // required bytes a_originNoSuffix = 2;
+  // required string a_originNoSuffix = 2;
   bool has_a_originnosuffix() const;
   private:
   bool _internal_has_a_originnosuffix() const;
@@ -569,7 +569,7 @@ class Reply_Preload final :
     kAValuesFieldNumber = 2,
     kARvFieldNumber = 3,
   };
-  // repeated bytes a_keys = 1;
+  // repeated string a_keys = 1;
   int a_keys_size() const;
   private:
   int _internal_a_keys_size() const;
@@ -580,12 +580,12 @@ class Reply_Preload final :
   void set_a_keys(int index, const std::string& value);
   void set_a_keys(int index, std::string&& value);
   void set_a_keys(int index, const char* value);
-  void set_a_keys(int index, const void* value, size_t size);
+  void set_a_keys(int index, const char* value, size_t size);
   std::string* add_a_keys();
   void add_a_keys(const std::string& value);
   void add_a_keys(std::string&& value);
   void add_a_keys(const char* value);
-  void add_a_keys(const void* value, size_t size);
+  void add_a_keys(const char* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_keys() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_keys();
   private:
@@ -593,7 +593,7 @@ class Reply_Preload final :
   std::string* _internal_add_a_keys();
   public:
 
-  // repeated bytes a_values = 2;
+  // repeated string a_values = 2;
   int a_values_size() const;
   private:
   int _internal_a_values_size() const;
@@ -604,12 +604,12 @@ class Reply_Preload final :
   void set_a_values(int index, const std::string& value);
   void set_a_values(int index, std::string&& value);
   void set_a_values(int index, const char* value);
-  void set_a_values(int index, const void* value, size_t size);
+  void set_a_values(int index, const char* value, size_t size);
   std::string* add_a_values();
   void add_a_values(const std::string& value);
   void add_a_values(std::string&& value);
   void add_a_values(const char* value);
-  void add_a_values(const void* value, size_t size);
+  void add_a_values(const char* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_values() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_values();
   private:
@@ -768,7 +768,7 @@ class Msg_AsyncPreload final :
     kAOriginNoSuffixFieldNumber = 2,
     kAPriorityFieldNumber = 3,
   };
-  // required bytes a_originSuffix = 1;
+  // required string a_originSuffix = 1;
   bool has_a_originsuffix() const;
   private:
   bool _internal_has_a_originsuffix() const;
@@ -786,7 +786,7 @@ class Msg_AsyncPreload final :
   std::string* _internal_mutable_a_originsuffix();
   public:
 
-  // required bytes a_originNoSuffix = 2;
+  // required string a_originNoSuffix = 2;
   bool has_a_originnosuffix() const;
   private:
   bool _internal_has_a_originnosuffix() const;
@@ -951,7 +951,7 @@ class Msg_AsyncGetUsage final :
   enum : int {
     kAScopeFieldNumber = 1,
   };
-  // required bytes a_scope = 1;
+  // required string a_scope = 1;
   bool has_a_scope() const;
   private:
   bool _internal_has_a_scope() const;
@@ -1101,7 +1101,7 @@ class Msg_AsyncAddItem final :
     kAKeyFieldNumber = 3,
     kAValueFieldNumber = 4,
   };
-  // required bytes a_originSuffix = 1;
+  // required string a_originSuffix = 1;
   bool has_a_originsuffix() const;
   private:
   bool _internal_has_a_originsuffix() const;
@@ -1119,7 +1119,7 @@ class Msg_AsyncAddItem final :
   std::string* _internal_mutable_a_originsuffix();
   public:
 
-  // required bytes a_originNoSuffix = 2;
+  // required string a_originNoSuffix = 2;
   bool has_a_originnosuffix() const;
   private:
   bool _internal_has_a_originnosuffix() const;
@@ -1137,7 +1137,7 @@ class Msg_AsyncAddItem final :
   std::string* _internal_mutable_a_originnosuffix();
   public:
 
-  // required bytes a_key = 3;
+  // required string a_key = 3;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -1155,7 +1155,7 @@ class Msg_AsyncAddItem final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required bytes a_value = 4;
+  // required string a_value = 4;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -1311,7 +1311,7 @@ class Msg_AsyncUpdateItem final :
     kAKeyFieldNumber = 3,
     kAValueFieldNumber = 4,
   };
-  // required bytes a_originSuffix = 1;
+  // required string a_originSuffix = 1;
   bool has_a_originsuffix() const;
   private:
   bool _internal_has_a_originsuffix() const;
@@ -1329,7 +1329,7 @@ class Msg_AsyncUpdateItem final :
   std::string* _internal_mutable_a_originsuffix();
   public:
 
-  // required bytes a_originNoSuffix = 2;
+  // required string a_originNoSuffix = 2;
   bool has_a_originnosuffix() const;
   private:
   bool _internal_has_a_originnosuffix() const;
@@ -1347,7 +1347,7 @@ class Msg_AsyncUpdateItem final :
   std::string* _internal_mutable_a_originnosuffix();
   public:
 
-  // required bytes a_key = 3;
+  // required string a_key = 3;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -1365,7 +1365,7 @@ class Msg_AsyncUpdateItem final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required bytes a_value = 4;
+  // required string a_value = 4;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -1520,7 +1520,7 @@ class Msg_AsyncRemoveItem final :
     kAOriginNoSuffixFieldNumber = 2,
     kAKeyFieldNumber = 3,
   };
-  // required bytes a_originSuffix = 1;
+  // required string a_originSuffix = 1;
   bool has_a_originsuffix() const;
   private:
   bool _internal_has_a_originsuffix() const;
@@ -1538,7 +1538,7 @@ class Msg_AsyncRemoveItem final :
   std::string* _internal_mutable_a_originsuffix();
   public:
 
-  // required bytes a_originNoSuffix = 2;
+  // required string a_originNoSuffix = 2;
   bool has_a_originnosuffix() const;
   private:
   bool _internal_has_a_originnosuffix() const;
@@ -1556,7 +1556,7 @@ class Msg_AsyncRemoveItem final :
   std::string* _internal_mutable_a_originnosuffix();
   public:
 
-  // required bytes a_key = 3;
+  // required string a_key = 3;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -1709,7 +1709,7 @@ class Msg_AsyncClear final :
     kAOriginSuffixFieldNumber = 1,
     kAOriginNoSuffixFieldNumber = 2,
   };
-  // required bytes a_originSuffix = 1;
+  // required string a_originSuffix = 1;
   bool has_a_originsuffix() const;
   private:
   bool _internal_has_a_originsuffix() const;
@@ -1727,7 +1727,7 @@ class Msg_AsyncClear final :
   std::string* _internal_mutable_a_originsuffix();
   public:
 
-  // required bytes a_originNoSuffix = 2;
+  // required string a_originNoSuffix = 2;
   bool has_a_originnosuffix() const;
   private:
   bool _internal_has_a_originnosuffix() const;
@@ -2250,7 +2250,7 @@ class Msg_ClearMatchingOrigin final :
   enum : int {
     kAOriginNoSuffixFieldNumber = 1,
   };
-  // required bytes a_originNoSuffix = 1;
+  // required string a_originNoSuffix = 1;
   bool has_a_originnosuffix() const;
   private:
   bool _internal_has_a_originnosuffix() const;
@@ -2794,7 +2794,7 @@ class Msg_Observe final :
     kAOriginAttributesPatternFieldNumber = 2,
     kAOriginScopeFieldNumber = 3,
   };
-  // required bytes a_topic = 1;
+  // required string a_topic = 1;
   bool has_a_topic() const;
   private:
   bool _internal_has_a_topic() const;
@@ -2812,7 +2812,7 @@ class Msg_Observe final :
   std::string* _internal_mutable_a_topic();
   public:
 
-  // required bytes a_originAttributesPattern = 2;
+  // required string a_originAttributesPattern = 2;
   bool has_a_originattributespattern() const;
   private:
   bool _internal_has_a_originattributespattern() const;
@@ -2830,7 +2830,7 @@ class Msg_Observe final :
   std::string* _internal_mutable_a_originattributespattern();
   public:
 
-  // required bytes a_originScope = 3;
+  // required string a_originScope = 3;
   bool has_a_originscope() const;
   private:
   bool _internal_has_a_originscope() const;
@@ -2982,7 +2982,7 @@ class Msg_OriginsHavingData final :
   enum : int {
     kAOriginsFieldNumber = 1,
   };
-  // repeated bytes a_origins = 1;
+  // repeated string a_origins = 1;
   int a_origins_size() const;
   private:
   int _internal_a_origins_size() const;
@@ -2993,12 +2993,12 @@ class Msg_OriginsHavingData final :
   void set_a_origins(int index, const std::string& value);
   void set_a_origins(int index, std::string&& value);
   void set_a_origins(int index, const char* value);
-  void set_a_origins(int index, const void* value, size_t size);
+  void set_a_origins(int index, const char* value, size_t size);
   std::string* add_a_origins();
   void add_a_origins(const std::string& value);
   void add_a_origins(std::string&& value);
   void add_a_origins(const char* value);
-  void add_a_origins(const void* value, size_t size);
+  void add_a_origins(const char* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_origins() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_origins();
   private:
@@ -3137,7 +3137,7 @@ class Msg_LoadItem final :
     kAKeyFieldNumber = 3,
     kAValueFieldNumber = 4,
   };
-  // required bytes a_originSuffix = 1;
+  // required string a_originSuffix = 1;
   bool has_a_originsuffix() const;
   private:
   bool _internal_has_a_originsuffix() const;
@@ -3155,7 +3155,7 @@ class Msg_LoadItem final :
   std::string* _internal_mutable_a_originsuffix();
   public:
 
-  // required bytes a_originNoSuffix = 2;
+  // required string a_originNoSuffix = 2;
   bool has_a_originnosuffix() const;
   private:
   bool _internal_has_a_originnosuffix() const;
@@ -3173,7 +3173,7 @@ class Msg_LoadItem final :
   std::string* _internal_mutable_a_originnosuffix();
   public:
 
-  // required bytes a_key = 3;
+  // required string a_key = 3;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -3191,7 +3191,7 @@ class Msg_LoadItem final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required bytes a_value = 4;
+  // required string a_value = 4;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -3346,7 +3346,7 @@ class Msg_LoadDone final :
     kAOriginNoSuffixFieldNumber = 2,
     kARvFieldNumber = 3,
   };
-  // required bytes a_originSuffix = 1;
+  // required string a_originSuffix = 1;
   bool has_a_originsuffix() const;
   private:
   bool _internal_has_a_originsuffix() const;
@@ -3364,7 +3364,7 @@ class Msg_LoadDone final :
   std::string* _internal_mutable_a_originsuffix();
   public:
 
-  // required bytes a_originNoSuffix = 2;
+  // required string a_originNoSuffix = 2;
   bool has_a_originnosuffix() const;
   private:
   bool _internal_has_a_originnosuffix() const;
@@ -3535,7 +3535,7 @@ class Msg_LoadUsage final :
     kAScopeFieldNumber = 1,
     kAUsageFieldNumber = 2,
   };
-  // required bytes a_scope = 1;
+  // required string a_scope = 1;
   bool has_a_scope() const;
   private:
   bool _internal_has_a_scope() const;
@@ -3747,7 +3747,7 @@ class Msg_Error final :
 
 // Msg_Preload
 
-// required bytes a_originSuffix = 1;
+// required string a_originSuffix = 1;
 inline bool Msg_Preload::_internal_has_a_originsuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3767,7 +3767,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Preload::set_a_originsuffix(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_originsuffix_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originsuffix_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_Preload.a_originSuffix)
 }
 inline std::string* Msg_Preload::mutable_a_originsuffix() {
@@ -3815,7 +3815,7 @@ inline void Msg_Preload::set_allocated_a_originsuffix(std::string* a_originsuffi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_Preload.a_originSuffix)
 }
 
-// required bytes a_originNoSuffix = 2;
+// required string a_originNoSuffix = 2;
 inline bool Msg_Preload::_internal_has_a_originnosuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3835,7 +3835,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Preload::set_a_originnosuffix(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_originnosuffix_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originnosuffix_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_Preload.a_originNoSuffix)
 }
 inline std::string* Msg_Preload::mutable_a_originnosuffix() {
@@ -3915,7 +3915,7 @@ inline void Msg_Preload::set_a_alreadyloadedcount(uint32_t value) {
 
 // Reply_Preload
 
-// repeated bytes a_keys = 1;
+// repeated string a_keys = 1;
 inline int Reply_Preload::_internal_a_keys_size() const {
   return _impl_.a_keys_.size();
 }
@@ -3954,7 +3954,7 @@ inline void Reply_Preload::set_a_keys(int index, const char* value) {
   _impl_.a_keys_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PBackgroundStorage.Reply_Preload.a_keys)
 }
-inline void Reply_Preload::set_a_keys(int index, const void* value, size_t size) {
+inline void Reply_Preload::set_a_keys(int index, const char* value, size_t size) {
   _impl_.a_keys_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PBackgroundStorage.Reply_Preload.a_keys)
@@ -3975,7 +3975,7 @@ inline void Reply_Preload::add_a_keys(const char* value) {
   _impl_.a_keys_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PBackgroundStorage.Reply_Preload.a_keys)
 }
-inline void Reply_Preload::add_a_keys(const void* value, size_t size) {
+inline void Reply_Preload::add_a_keys(const char* value, size_t size) {
   _impl_.a_keys_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PBackgroundStorage.Reply_Preload.a_keys)
 }
@@ -3990,7 +3990,7 @@ Reply_Preload::mutable_a_keys() {
   return &_impl_.a_keys_;
 }
 
-// repeated bytes a_values = 2;
+// repeated string a_values = 2;
 inline int Reply_Preload::_internal_a_values_size() const {
   return _impl_.a_values_.size();
 }
@@ -4029,7 +4029,7 @@ inline void Reply_Preload::set_a_values(int index, const char* value) {
   _impl_.a_values_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PBackgroundStorage.Reply_Preload.a_values)
 }
-inline void Reply_Preload::set_a_values(int index, const void* value, size_t size) {
+inline void Reply_Preload::set_a_values(int index, const char* value, size_t size) {
   _impl_.a_values_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PBackgroundStorage.Reply_Preload.a_values)
@@ -4050,7 +4050,7 @@ inline void Reply_Preload::add_a_values(const char* value) {
   _impl_.a_values_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PBackgroundStorage.Reply_Preload.a_values)
 }
-inline void Reply_Preload::add_a_values(const void* value, size_t size) {
+inline void Reply_Preload::add_a_values(const char* value, size_t size) {
   _impl_.a_values_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PBackgroundStorage.Reply_Preload.a_values)
 }
@@ -4137,7 +4137,7 @@ inline void Reply_Preload::set_allocated_a_rv(std::string* a_rv) {
 
 // Msg_AsyncPreload
 
-// required bytes a_originSuffix = 1;
+// required string a_originSuffix = 1;
 inline bool Msg_AsyncPreload::_internal_has_a_originsuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4157,7 +4157,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncPreload::set_a_originsuffix(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_originsuffix_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originsuffix_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncPreload.a_originSuffix)
 }
 inline std::string* Msg_AsyncPreload::mutable_a_originsuffix() {
@@ -4205,7 +4205,7 @@ inline void Msg_AsyncPreload::set_allocated_a_originsuffix(std::string* a_origin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncPreload.a_originSuffix)
 }
 
-// required bytes a_originNoSuffix = 2;
+// required string a_originNoSuffix = 2;
 inline bool Msg_AsyncPreload::_internal_has_a_originnosuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4225,7 +4225,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncPreload::set_a_originnosuffix(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_originnosuffix_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originnosuffix_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncPreload.a_originNoSuffix)
 }
 inline std::string* Msg_AsyncPreload::mutable_a_originnosuffix() {
@@ -4305,7 +4305,7 @@ inline void Msg_AsyncPreload::set_a_priority(bool value) {
 
 // Msg_AsyncGetUsage
 
-// required bytes a_scope = 1;
+// required string a_scope = 1;
 inline bool Msg_AsyncGetUsage::_internal_has_a_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4325,7 +4325,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncGetUsage::set_a_scope(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_scope_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_scope_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncGetUsage.a_scope)
 }
 inline std::string* Msg_AsyncGetUsage::mutable_a_scope() {
@@ -4377,7 +4377,7 @@ inline void Msg_AsyncGetUsage::set_allocated_a_scope(std::string* a_scope) {
 
 // Msg_AsyncAddItem
 
-// required bytes a_originSuffix = 1;
+// required string a_originSuffix = 1;
 inline bool Msg_AsyncAddItem::_internal_has_a_originsuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4397,7 +4397,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncAddItem::set_a_originsuffix(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_originsuffix_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originsuffix_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncAddItem.a_originSuffix)
 }
 inline std::string* Msg_AsyncAddItem::mutable_a_originsuffix() {
@@ -4445,7 +4445,7 @@ inline void Msg_AsyncAddItem::set_allocated_a_originsuffix(std::string* a_origin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncAddItem.a_originSuffix)
 }
 
-// required bytes a_originNoSuffix = 2;
+// required string a_originNoSuffix = 2;
 inline bool Msg_AsyncAddItem::_internal_has_a_originnosuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4465,7 +4465,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncAddItem::set_a_originnosuffix(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_originnosuffix_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originnosuffix_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncAddItem.a_originNoSuffix)
 }
 inline std::string* Msg_AsyncAddItem::mutable_a_originnosuffix() {
@@ -4513,7 +4513,7 @@ inline void Msg_AsyncAddItem::set_allocated_a_originnosuffix(std::string* a_orig
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncAddItem.a_originNoSuffix)
 }
 
-// required bytes a_key = 3;
+// required string a_key = 3;
 inline bool Msg_AsyncAddItem::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4533,7 +4533,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncAddItem::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncAddItem.a_key)
 }
 inline std::string* Msg_AsyncAddItem::mutable_a_key() {
@@ -4581,7 +4581,7 @@ inline void Msg_AsyncAddItem::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncAddItem.a_key)
 }
 
-// required bytes a_value = 4;
+// required string a_value = 4;
 inline bool Msg_AsyncAddItem::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -4601,7 +4601,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncAddItem::set_a_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncAddItem.a_value)
 }
 inline std::string* Msg_AsyncAddItem::mutable_a_value() {
@@ -4653,7 +4653,7 @@ inline void Msg_AsyncAddItem::set_allocated_a_value(std::string* a_value) {
 
 // Msg_AsyncUpdateItem
 
-// required bytes a_originSuffix = 1;
+// required string a_originSuffix = 1;
 inline bool Msg_AsyncUpdateItem::_internal_has_a_originsuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4673,7 +4673,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncUpdateItem::set_a_originsuffix(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_originsuffix_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originsuffix_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncUpdateItem.a_originSuffix)
 }
 inline std::string* Msg_AsyncUpdateItem::mutable_a_originsuffix() {
@@ -4721,7 +4721,7 @@ inline void Msg_AsyncUpdateItem::set_allocated_a_originsuffix(std::string* a_ori
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncUpdateItem.a_originSuffix)
 }
 
-// required bytes a_originNoSuffix = 2;
+// required string a_originNoSuffix = 2;
 inline bool Msg_AsyncUpdateItem::_internal_has_a_originnosuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4741,7 +4741,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncUpdateItem::set_a_originnosuffix(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_originnosuffix_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originnosuffix_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncUpdateItem.a_originNoSuffix)
 }
 inline std::string* Msg_AsyncUpdateItem::mutable_a_originnosuffix() {
@@ -4789,7 +4789,7 @@ inline void Msg_AsyncUpdateItem::set_allocated_a_originnosuffix(std::string* a_o
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncUpdateItem.a_originNoSuffix)
 }
 
-// required bytes a_key = 3;
+// required string a_key = 3;
 inline bool Msg_AsyncUpdateItem::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4809,7 +4809,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncUpdateItem::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncUpdateItem.a_key)
 }
 inline std::string* Msg_AsyncUpdateItem::mutable_a_key() {
@@ -4857,7 +4857,7 @@ inline void Msg_AsyncUpdateItem::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncUpdateItem.a_key)
 }
 
-// required bytes a_value = 4;
+// required string a_value = 4;
 inline bool Msg_AsyncUpdateItem::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -4877,7 +4877,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncUpdateItem::set_a_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncUpdateItem.a_value)
 }
 inline std::string* Msg_AsyncUpdateItem::mutable_a_value() {
@@ -4929,7 +4929,7 @@ inline void Msg_AsyncUpdateItem::set_allocated_a_value(std::string* a_value) {
 
 // Msg_AsyncRemoveItem
 
-// required bytes a_originSuffix = 1;
+// required string a_originSuffix = 1;
 inline bool Msg_AsyncRemoveItem::_internal_has_a_originsuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4949,7 +4949,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncRemoveItem::set_a_originsuffix(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_originsuffix_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originsuffix_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncRemoveItem.a_originSuffix)
 }
 inline std::string* Msg_AsyncRemoveItem::mutable_a_originsuffix() {
@@ -4997,7 +4997,7 @@ inline void Msg_AsyncRemoveItem::set_allocated_a_originsuffix(std::string* a_ori
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncRemoveItem.a_originSuffix)
 }
 
-// required bytes a_originNoSuffix = 2;
+// required string a_originNoSuffix = 2;
 inline bool Msg_AsyncRemoveItem::_internal_has_a_originnosuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5017,7 +5017,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncRemoveItem::set_a_originnosuffix(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_originnosuffix_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originnosuffix_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncRemoveItem.a_originNoSuffix)
 }
 inline std::string* Msg_AsyncRemoveItem::mutable_a_originnosuffix() {
@@ -5065,7 +5065,7 @@ inline void Msg_AsyncRemoveItem::set_allocated_a_originnosuffix(std::string* a_o
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncRemoveItem.a_originNoSuffix)
 }
 
-// required bytes a_key = 3;
+// required string a_key = 3;
 inline bool Msg_AsyncRemoveItem::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -5085,7 +5085,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncRemoveItem::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncRemoveItem.a_key)
 }
 inline std::string* Msg_AsyncRemoveItem::mutable_a_key() {
@@ -5137,7 +5137,7 @@ inline void Msg_AsyncRemoveItem::set_allocated_a_key(std::string* a_key) {
 
 // Msg_AsyncClear
 
-// required bytes a_originSuffix = 1;
+// required string a_originSuffix = 1;
 inline bool Msg_AsyncClear::_internal_has_a_originsuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5157,7 +5157,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncClear::set_a_originsuffix(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_originsuffix_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originsuffix_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncClear.a_originSuffix)
 }
 inline std::string* Msg_AsyncClear::mutable_a_originsuffix() {
@@ -5205,7 +5205,7 @@ inline void Msg_AsyncClear::set_allocated_a_originsuffix(std::string* a_originsu
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncClear.a_originSuffix)
 }
 
-// required bytes a_originNoSuffix = 2;
+// required string a_originNoSuffix = 2;
 inline bool Msg_AsyncClear::_internal_has_a_originnosuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5225,7 +5225,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncClear::set_a_originnosuffix(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_originnosuffix_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originnosuffix_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_AsyncClear.a_originNoSuffix)
 }
 inline std::string* Msg_AsyncClear::mutable_a_originnosuffix() {
@@ -5289,7 +5289,7 @@ inline void Msg_AsyncClear::set_allocated_a_originnosuffix(std::string* a_origin
 
 // Msg_ClearMatchingOrigin
 
-// required bytes a_originNoSuffix = 1;
+// required string a_originNoSuffix = 1;
 inline bool Msg_ClearMatchingOrigin::_internal_has_a_originnosuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5309,7 +5309,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ClearMatchingOrigin::set_a_originnosuffix(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_originnosuffix_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originnosuffix_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_ClearMatchingOrigin.a_originNoSuffix)
 }
 inline std::string* Msg_ClearMatchingOrigin::mutable_a_originnosuffix() {
@@ -5441,7 +5441,7 @@ inline void Msg_ClearMatchingOriginAttributes::set_allocated_a_pattern(std::stri
 
 // Msg_Observe
 
-// required bytes a_topic = 1;
+// required string a_topic = 1;
 inline bool Msg_Observe::_internal_has_a_topic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5461,7 +5461,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Observe::set_a_topic(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_topic_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_topic_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_Observe.a_topic)
 }
 inline std::string* Msg_Observe::mutable_a_topic() {
@@ -5509,7 +5509,7 @@ inline void Msg_Observe::set_allocated_a_topic(std::string* a_topic) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_Observe.a_topic)
 }
 
-// required bytes a_originAttributesPattern = 2;
+// required string a_originAttributesPattern = 2;
 inline bool Msg_Observe::_internal_has_a_originattributespattern() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5529,7 +5529,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Observe::set_a_originattributespattern(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_originattributespattern_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originattributespattern_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_Observe.a_originAttributesPattern)
 }
 inline std::string* Msg_Observe::mutable_a_originattributespattern() {
@@ -5577,7 +5577,7 @@ inline void Msg_Observe::set_allocated_a_originattributespattern(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_Observe.a_originAttributesPattern)
 }
 
-// required bytes a_originScope = 3;
+// required string a_originScope = 3;
 inline bool Msg_Observe::_internal_has_a_originscope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -5597,7 +5597,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Observe::set_a_originscope(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_originscope_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originscope_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_Observe.a_originScope)
 }
 inline std::string* Msg_Observe::mutable_a_originscope() {
@@ -5649,7 +5649,7 @@ inline void Msg_Observe::set_allocated_a_originscope(std::string* a_originscope)
 
 // Msg_OriginsHavingData
 
-// repeated bytes a_origins = 1;
+// repeated string a_origins = 1;
 inline int Msg_OriginsHavingData::_internal_a_origins_size() const {
   return _impl_.a_origins_.size();
 }
@@ -5688,7 +5688,7 @@ inline void Msg_OriginsHavingData::set_a_origins(int index, const char* value) {
   _impl_.a_origins_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.PBackgroundStorage.Msg_OriginsHavingData.a_origins)
 }
-inline void Msg_OriginsHavingData::set_a_origins(int index, const void* value, size_t size) {
+inline void Msg_OriginsHavingData::set_a_origins(int index, const char* value, size_t size) {
   _impl_.a_origins_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.PBackgroundStorage.Msg_OriginsHavingData.a_origins)
@@ -5709,7 +5709,7 @@ inline void Msg_OriginsHavingData::add_a_origins(const char* value) {
   _impl_.a_origins_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.PBackgroundStorage.Msg_OriginsHavingData.a_origins)
 }
-inline void Msg_OriginsHavingData::add_a_origins(const void* value, size_t size) {
+inline void Msg_OriginsHavingData::add_a_origins(const char* value, size_t size) {
   _impl_.a_origins_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.PBackgroundStorage.Msg_OriginsHavingData.a_origins)
 }
@@ -5728,7 +5728,7 @@ Msg_OriginsHavingData::mutable_a_origins() {
 
 // Msg_LoadItem
 
-// required bytes a_originSuffix = 1;
+// required string a_originSuffix = 1;
 inline bool Msg_LoadItem::_internal_has_a_originsuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5748,7 +5748,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LoadItem::set_a_originsuffix(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_originsuffix_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originsuffix_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_LoadItem.a_originSuffix)
 }
 inline std::string* Msg_LoadItem::mutable_a_originsuffix() {
@@ -5796,7 +5796,7 @@ inline void Msg_LoadItem::set_allocated_a_originsuffix(std::string* a_originsuff
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_LoadItem.a_originSuffix)
 }
 
-// required bytes a_originNoSuffix = 2;
+// required string a_originNoSuffix = 2;
 inline bool Msg_LoadItem::_internal_has_a_originnosuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5816,7 +5816,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LoadItem::set_a_originnosuffix(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_originnosuffix_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originnosuffix_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_LoadItem.a_originNoSuffix)
 }
 inline std::string* Msg_LoadItem::mutable_a_originnosuffix() {
@@ -5864,7 +5864,7 @@ inline void Msg_LoadItem::set_allocated_a_originnosuffix(std::string* a_originno
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_LoadItem.a_originNoSuffix)
 }
 
-// required bytes a_key = 3;
+// required string a_key = 3;
 inline bool Msg_LoadItem::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -5884,7 +5884,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LoadItem::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_LoadItem.a_key)
 }
 inline std::string* Msg_LoadItem::mutable_a_key() {
@@ -5932,7 +5932,7 @@ inline void Msg_LoadItem::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_LoadItem.a_key)
 }
 
-// required bytes a_value = 4;
+// required string a_value = 4;
 inline bool Msg_LoadItem::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -5952,7 +5952,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LoadItem::set_a_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_LoadItem.a_value)
 }
 inline std::string* Msg_LoadItem::mutable_a_value() {
@@ -6004,7 +6004,7 @@ inline void Msg_LoadItem::set_allocated_a_value(std::string* a_value) {
 
 // Msg_LoadDone
 
-// required bytes a_originSuffix = 1;
+// required string a_originSuffix = 1;
 inline bool Msg_LoadDone::_internal_has_a_originsuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6024,7 +6024,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LoadDone::set_a_originsuffix(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_originsuffix_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originsuffix_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_LoadDone.a_originSuffix)
 }
 inline std::string* Msg_LoadDone::mutable_a_originsuffix() {
@@ -6072,7 +6072,7 @@ inline void Msg_LoadDone::set_allocated_a_originsuffix(std::string* a_originsuff
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundStorage.Msg_LoadDone.a_originSuffix)
 }
 
-// required bytes a_originNoSuffix = 2;
+// required string a_originNoSuffix = 2;
 inline bool Msg_LoadDone::_internal_has_a_originnosuffix() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6092,7 +6092,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LoadDone::set_a_originnosuffix(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_originnosuffix_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originnosuffix_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_LoadDone.a_originNoSuffix)
 }
 inline std::string* Msg_LoadDone::mutable_a_originnosuffix() {
@@ -6212,7 +6212,7 @@ inline void Msg_LoadDone::set_allocated_a_rv(std::string* a_rv) {
 
 // Msg_LoadUsage
 
-// required bytes a_scope = 1;
+// required string a_scope = 1;
 inline bool Msg_LoadUsage::_internal_has_a_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6232,7 +6232,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LoadUsage::set_a_scope(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_scope_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_scope_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundStorage.Msg_LoadUsage.a_scope)
 }
 inline std::string* Msg_LoadUsage::mutable_a_scope() {

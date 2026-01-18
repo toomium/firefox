@@ -182,7 +182,7 @@ class ServiceWorkerRegistrationData final :
     kACurrentWorkerActivatedTimeFieldNumber = 8,
     kALastUpdateTimeFieldNumber = 9,
   };
-  // required bytes a_scope = 1;
+  // required string a_scope = 1;
   bool has_a_scope() const;
   private:
   bool _internal_has_a_scope() const;
@@ -200,7 +200,7 @@ class ServiceWorkerRegistrationData final :
   std::string* _internal_mutable_a_scope();
   public:
 
-  // required bytes a_currentWorkerURL = 2;
+  // required string a_currentWorkerURL = 2;
   bool has_a_currentworkerurl() const;
   private:
   bool _internal_has_a_currentworkerurl() const;
@@ -218,7 +218,7 @@ class ServiceWorkerRegistrationData final :
   std::string* _internal_mutable_a_currentworkerurl();
   public:
 
-  // required bytes a_cacheName = 4;
+  // required string a_cacheName = 4;
   bool has_a_cachename() const;
   private:
   bool _internal_has_a_cachename() const;
@@ -375,7 +375,7 @@ class ServiceWorkerRegistrationData final :
 #endif  // __GNUC__
 // ServiceWorkerRegistrationData
 
-// required bytes a_scope = 1;
+// required string a_scope = 1;
 inline bool ServiceWorkerRegistrationData::_internal_has_a_scope() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -395,7 +395,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ServiceWorkerRegistrationData::set_a_scope(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_scope_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_scope_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_scope)
 }
 inline std::string* ServiceWorkerRegistrationData::mutable_a_scope() {
@@ -443,7 +443,7 @@ inline void ServiceWorkerRegistrationData::set_allocated_a_scope(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_scope)
 }
 
-// required bytes a_currentWorkerURL = 2;
+// required string a_currentWorkerURL = 2;
 inline bool ServiceWorkerRegistrationData::_internal_has_a_currentworkerurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -463,7 +463,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ServiceWorkerRegistrationData::set_a_currentworkerurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_currentworkerurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_currentworkerurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_currentWorkerURL)
 }
 inline std::string* ServiceWorkerRegistrationData::mutable_a_currentworkerurl() {
@@ -539,7 +539,7 @@ inline void ServiceWorkerRegistrationData::set_a_currentworkerhandlesfetch(bool 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_currentWorkerHandlesFetch)
 }
 
-// required bytes a_cacheName = 4;
+// required string a_cacheName = 4;
 inline bool ServiceWorkerRegistrationData::_internal_has_a_cachename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -559,7 +559,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ServiceWorkerRegistrationData::set_a_cachename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_cachename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_cachename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerRegistrationData.a_cacheName)
 }
 inline std::string* ServiceWorkerRegistrationData::mutable_a_cachename() {

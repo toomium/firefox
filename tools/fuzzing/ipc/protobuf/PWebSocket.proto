@@ -19,10 +19,10 @@ import "NeckoChannelParams.proto";
 // Message declarations
 message Msg_AsyncOpen {
   required bytes a_aURI = 1;
-  required bytes a_aOrigin = 2;
+  required string a_aOrigin = 2;
   required bytes a_aOriginAttributes = 3;
   required uint64 a_aInnerWindowID = 4;
-  required bytes a_aProtocol = 5;
+  required string a_aProtocol = 5;
   required bool a_aSecure = 6;
   required uint32 a_aPingInterval = 7;
   required bool a_aClientSetPingInterval = 8;
@@ -30,20 +30,20 @@ message Msg_AsyncOpen {
   required bool a_aClientSetPingTimeout = 10;
   required protobuf.mozilla.net.LoadInfoArgs a_aLoadInfoArgs = 11;
   optional bytes a_aProvider = 12;
-  required bytes a_aNegotiatedExtensions = 13;
+  required string a_aNegotiatedExtensions = 13;
 }
 
 message Msg_Close {
   required uint32 a_code = 1;
-  required bytes a_reason = 2;
+  required string a_reason = 2;
 }
 
 message Msg_SendMsg {
-  required bytes a_aMsg = 1;
+  required string a_aMsg = 1;
 }
 
 message Msg_SendBinaryMsg {
-  required bytes a_aMsg = 1;
+  required string a_aMsg = 1;
 }
 
 message Msg_SendBinaryStream {
@@ -55,9 +55,9 @@ message Msg_DeleteSelf {
 }
 
 message Msg_OnStart {
-  required bytes a_aProtocol = 1;
-  required bytes a_aExtensions = 2;
-  required bytes a_aEffectiveURL = 3;
+  required string a_aProtocol = 1;
+  required string a_aExtensions = 2;
+  required string a_aEffectiveURL = 3;
   required bool a_aEncrypted = 4;
   required uint64 a_aHttpChannelId = 5;
 }
@@ -67,12 +67,12 @@ message Msg_OnStop {
 }
 
 message Msg_OnMessageAvailable {
-  required bytes a_aMsg = 1;
+  required string a_aMsg = 1;
   required bool a_aMoreData = 2;
 }
 
 message Msg_OnBinaryMessageAvailable {
-  required bytes a_aMsg = 1;
+  required string a_aMsg = 1;
   required bool a_aMoreData = 2;
 }
 
@@ -82,7 +82,7 @@ message Msg_OnAcknowledge {
 
 message Msg_OnServerClose {
   required uint32 a_code = 1;
-  required bytes a_aReason = 2;
+  required string a_aReason = 2;
 }
 
 message Msg___delete__ {
@@ -94,5 +94,5 @@ message Reply___delete__ {
 // Parameter mappings stats:
 // Total parameters in this file 32
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 6, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 23, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 1, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 2, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 14
+// Scalar mappings performed: 26
 // Message structs/unions generated from ipdl structs/unions: 0

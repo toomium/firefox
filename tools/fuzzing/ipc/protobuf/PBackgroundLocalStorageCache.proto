@@ -20,20 +20,20 @@ message Msg_DeleteMe {
 }
 
 message Msg_Notify {
-  required bytes a_documentURI = 1;
-  required bytes a_key = 2;
-  required bytes a_oldValue = 3;
-  required bytes a_newValue = 4;
+  required string a_documentURI = 1;
+  required string a_key = 2;
+  required string a_oldValue = 3;
+  required string a_newValue = 4;
 }
 
 message Msg_Observe {
   required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
   required protobuf.mozilla.ipc.PrincipalInfo a_cachePrincipalInfo = 2;
   required uint32 a_privateBrowsingId = 3;
-  required bytes a_documentURI = 4;
-  required bytes a_key = 5;
-  required bytes a_oldValue = 6;
-  required bytes a_newValue = 7;
+  required string a_documentURI = 4;
+  required string a_key = 5;
+  required string a_oldValue = 6;
+  required string a_newValue = 7;
 }
 
 message Msg___delete__ {
@@ -45,5 +45,5 @@ message Reply___delete__ {
 // Parameter mappings stats:
 // Total parameters in this file 11
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 0, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 9, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 0, "<class 'ipdl.type.UnionType'>": 2, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 1
+// Scalar mappings performed: 9
 // Message structs/unions generated from ipdl structs/unions: 0

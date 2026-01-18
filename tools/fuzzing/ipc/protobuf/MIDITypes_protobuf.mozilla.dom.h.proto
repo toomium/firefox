@@ -12,10 +12,10 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message MIDIPortInfo {
-  required bytes a_id = 1;
-  required bytes a_name = 2;
-  required bytes a_manufacturer = 3;
-  required bytes a_version = 4;
+  required string a_id = 1;
+  required string a_name = 2;
+  required string a_manufacturer = 3;
+  required string a_version = 4;
   required uint32 a_type = 5;
 }
 

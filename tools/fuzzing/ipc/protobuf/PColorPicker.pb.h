@@ -310,7 +310,7 @@ class Msg_Update final :
   enum : int {
     kAColorFieldNumber = 1,
   };
-  // required bytes a_color = 1;
+  // required string a_color = 1;
   bool has_a_color() const;
   private:
   bool _internal_has_a_color() const;
@@ -457,7 +457,7 @@ class Msg___delete__ final :
   enum : int {
     kAColorFieldNumber = 1,
   };
-  // required bytes a_color = 1;
+  // required string a_color = 1;
   bool has_a_color() const;
   private:
   bool _internal_has_a_color() const;
@@ -629,7 +629,7 @@ class Reply___delete__ final :
 
 // Msg_Update
 
-// required bytes a_color = 1;
+// required string a_color = 1;
 inline bool Msg_Update::_internal_has_a_color() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -649,7 +649,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Update::set_a_color(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_color_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_color_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PColorPicker.Msg_Update.a_color)
 }
 inline std::string* Msg_Update::mutable_a_color() {
@@ -701,7 +701,7 @@ inline void Msg_Update::set_allocated_a_color(std::string* a_color) {
 
 // Msg___delete__
 
-// required bytes a_color = 1;
+// required string a_color = 1;
 inline bool Msg___delete__::_internal_has_a_color() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -721,7 +721,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg___delete__::set_a_color(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_color_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_color_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PColorPicker.Msg___delete__.a_color)
 }
 inline std::string* Msg___delete__::mutable_a_color() {

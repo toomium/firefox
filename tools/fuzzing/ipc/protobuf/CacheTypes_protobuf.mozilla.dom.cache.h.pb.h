@@ -288,7 +288,7 @@ class CacheQueryParams final :
     kAIgnoreVaryFieldNumber = 3,
     kACacheNameSetFieldNumber = 4,
   };
-  // required bytes a_cacheName = 5;
+  // required string a_cacheName = 5;
   bool has_a_cachename() const;
   private:
   bool _internal_has_a_cachename() const;
@@ -685,7 +685,7 @@ class HeadersEntry final :
     kANameFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required bytes a_name = 1;
+  // required string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -703,7 +703,7 @@ class HeadersEntry final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required bytes a_value = 2;
+  // required string a_value = 2;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -889,7 +889,7 @@ class CacheRequest final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::cache::HeadersEntry >&
       a_headers() const;
 
-  // required bytes a_method = 1;
+  // required string a_method = 1;
   bool has_a_method() const;
   private:
   bool _internal_has_a_method() const;
@@ -907,7 +907,7 @@ class CacheRequest final :
   std::string* _internal_mutable_a_method();
   public:
 
-  // required bytes a_urlWithoutQuery = 2;
+  // required string a_urlWithoutQuery = 2;
   bool has_a_urlwithoutquery() const;
   private:
   bool _internal_has_a_urlwithoutquery() const;
@@ -925,7 +925,7 @@ class CacheRequest final :
   std::string* _internal_mutable_a_urlwithoutquery();
   public:
 
-  // required bytes a_urlQuery = 3;
+  // required string a_urlQuery = 3;
   bool has_a_urlquery() const;
   private:
   bool _internal_has_a_urlquery() const;
@@ -943,7 +943,7 @@ class CacheRequest final :
   std::string* _internal_mutable_a_urlquery();
   public:
 
-  // required bytes a_urlFragment = 4;
+  // required string a_urlFragment = 4;
   bool has_a_urlfragment() const;
   private:
   bool _internal_has_a_urlfragment() const;
@@ -979,7 +979,7 @@ class CacheRequest final :
   std::string* _internal_mutable_a_headersguard();
   public:
 
-  // required bytes a_referrer = 7;
+  // required string a_referrer = 7;
   bool has_a_referrer() const;
   private:
   bool _internal_has_a_referrer() const;
@@ -1105,7 +1105,7 @@ class CacheRequest final :
   std::string* _internal_mutable_a_requestredirect();
   public:
 
-  // required bytes a_integrity = 16;
+  // required string a_integrity = 16;
   bool has_a_integrity() const;
   private:
   bool _internal_has_a_integrity() const;
@@ -1351,7 +1351,7 @@ class CacheResponse final :
     kABodyDiskSizeFieldNumber = 8,
     kAPaddingSizeFieldNumber = 12,
   };
-  // repeated bytes a_urlList = 2;
+  // repeated string a_urlList = 2;
   int a_urllist_size() const;
   private:
   int _internal_a_urllist_size() const;
@@ -1362,12 +1362,12 @@ class CacheResponse final :
   void set_a_urllist(int index, const std::string& value);
   void set_a_urllist(int index, std::string&& value);
   void set_a_urllist(int index, const char* value);
-  void set_a_urllist(int index, const void* value, size_t size);
+  void set_a_urllist(int index, const char* value, size_t size);
   std::string* add_a_urllist();
   void add_a_urllist(const std::string& value);
   void add_a_urllist(std::string&& value);
   void add_a_urllist(const char* value);
-  void add_a_urllist(const void* value, size_t size);
+  void add_a_urllist(const char* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_urllist() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_urllist();
   private:
@@ -1411,7 +1411,7 @@ class CacheResponse final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // required bytes a_statusText = 4;
+  // required string a_statusText = 4;
   bool has_a_statustext() const;
   private:
   bool _internal_has_a_statustext() const;
@@ -2961,7 +2961,7 @@ class StorageHasArgs final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required bytes a_key = 1;
+  // required string a_key = 1;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -3108,7 +3108,7 @@ class StorageOpenArgs final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required bytes a_key = 1;
+  // required string a_key = 1;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -3255,7 +3255,7 @@ class StorageDeleteArgs final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required bytes a_key = 1;
+  // required string a_key = 1;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -5193,7 +5193,7 @@ class StorageKeysResult final :
   enum : int {
     kAKeyListFieldNumber = 1,
   };
-  // repeated bytes a_keyList = 1;
+  // repeated string a_keyList = 1;
   int a_keylist_size() const;
   private:
   int _internal_a_keylist_size() const;
@@ -5204,12 +5204,12 @@ class StorageKeysResult final :
   void set_a_keylist(int index, const std::string& value);
   void set_a_keylist(int index, std::string&& value);
   void set_a_keylist(int index, const char* value);
-  void set_a_keylist(int index, const void* value, size_t size);
+  void set_a_keylist(int index, const char* value, size_t size);
   std::string* add_a_keylist();
   void add_a_keylist(const std::string& value);
   void add_a_keylist(std::string&& value);
   void add_a_keylist(const char* value);
-  void add_a_keylist(const void* value, size_t size);
+  void add_a_keylist(const char* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_keylist() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_keylist();
   private:
@@ -5737,7 +5737,7 @@ inline void CacheQueryParams::set_a_cachenameset(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.CacheQueryParams.a_cacheNameSet)
 }
 
-// required bytes a_cacheName = 5;
+// required string a_cacheName = 5;
 inline bool CacheQueryParams::_internal_has_a_cachename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5757,7 +5757,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CacheQueryParams::set_a_cachename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_cachename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_cachename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.CacheQueryParams.a_cacheName)
 }
 inline std::string* CacheQueryParams::mutable_a_cachename() {
@@ -6036,7 +6036,7 @@ inline void CacheReadStream::set_allocated_a_stream(::protobuf::mozilla::ipc::IP
 
 // HeadersEntry
 
-// required bytes a_name = 1;
+// required string a_name = 1;
 inline bool HeadersEntry::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6056,7 +6056,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HeadersEntry::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.HeadersEntry.a_name)
 }
 inline std::string* HeadersEntry::mutable_a_name() {
@@ -6104,7 +6104,7 @@ inline void HeadersEntry::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.HeadersEntry.a_name)
 }
 
-// required bytes a_value = 2;
+// required string a_value = 2;
 inline bool HeadersEntry::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6124,7 +6124,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HeadersEntry::set_a_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.HeadersEntry.a_value)
 }
 inline std::string* HeadersEntry::mutable_a_value() {
@@ -6176,7 +6176,7 @@ inline void HeadersEntry::set_allocated_a_value(std::string* a_value) {
 
 // CacheRequest
 
-// required bytes a_method = 1;
+// required string a_method = 1;
 inline bool CacheRequest::_internal_has_a_method() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6196,7 +6196,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CacheRequest::set_a_method(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_method_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_method_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.CacheRequest.a_method)
 }
 inline std::string* CacheRequest::mutable_a_method() {
@@ -6244,7 +6244,7 @@ inline void CacheRequest::set_allocated_a_method(std::string* a_method) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.CacheRequest.a_method)
 }
 
-// required bytes a_urlWithoutQuery = 2;
+// required string a_urlWithoutQuery = 2;
 inline bool CacheRequest::_internal_has_a_urlwithoutquery() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6264,7 +6264,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CacheRequest::set_a_urlwithoutquery(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_urlwithoutquery_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_urlwithoutquery_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.CacheRequest.a_urlWithoutQuery)
 }
 inline std::string* CacheRequest::mutable_a_urlwithoutquery() {
@@ -6312,7 +6312,7 @@ inline void CacheRequest::set_allocated_a_urlwithoutquery(std::string* a_urlwith
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.CacheRequest.a_urlWithoutQuery)
 }
 
-// required bytes a_urlQuery = 3;
+// required string a_urlQuery = 3;
 inline bool CacheRequest::_internal_has_a_urlquery() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -6332,7 +6332,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CacheRequest::set_a_urlquery(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_urlquery_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_urlquery_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.CacheRequest.a_urlQuery)
 }
 inline std::string* CacheRequest::mutable_a_urlquery() {
@@ -6380,7 +6380,7 @@ inline void CacheRequest::set_allocated_a_urlquery(std::string* a_urlquery) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.CacheRequest.a_urlQuery)
 }
 
-// required bytes a_urlFragment = 4;
+// required string a_urlFragment = 4;
 inline bool CacheRequest::_internal_has_a_urlfragment() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -6400,7 +6400,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CacheRequest::set_a_urlfragment(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_urlfragment_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_urlfragment_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.CacheRequest.a_urlFragment)
 }
 inline std::string* CacheRequest::mutable_a_urlfragment() {
@@ -6556,7 +6556,7 @@ inline void CacheRequest::set_allocated_a_headersguard(std::string* a_headersgua
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.CacheRequest.a_headersGuard)
 }
 
-// required bytes a_referrer = 7;
+// required string a_referrer = 7;
 inline bool CacheRequest::_internal_has_a_referrer() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -6576,7 +6576,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CacheRequest::set_a_referrer(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.a_referrer_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_referrer_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.CacheRequest.a_referrer)
 }
 inline std::string* CacheRequest::mutable_a_referrer() {
@@ -7150,7 +7150,7 @@ inline void CacheRequest::set_allocated_a_requestredirect(std::string* a_request
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.CacheRequest.a_requestRedirect)
 }
 
-// required bytes a_integrity = 16;
+// required string a_integrity = 16;
 inline bool CacheRequest::_internal_has_a_integrity() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -7170,7 +7170,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CacheRequest::set_a_integrity(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00001000u;
- _impl_.a_integrity_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_integrity_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.CacheRequest.a_integrity)
 }
 inline std::string* CacheRequest::mutable_a_integrity() {
@@ -7445,7 +7445,7 @@ inline void CacheResponse::set_allocated_a_type(std::string* a_type) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.CacheResponse.a_type)
 }
 
-// repeated bytes a_urlList = 2;
+// repeated string a_urlList = 2;
 inline int CacheResponse::_internal_a_urllist_size() const {
   return _impl_.a_urllist_.size();
 }
@@ -7484,7 +7484,7 @@ inline void CacheResponse::set_a_urllist(int index, const char* value) {
   _impl_.a_urllist_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.cache.CacheResponse.a_urlList)
 }
-inline void CacheResponse::set_a_urllist(int index, const void* value, size_t size) {
+inline void CacheResponse::set_a_urllist(int index, const char* value, size_t size) {
   _impl_.a_urllist_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.cache.CacheResponse.a_urlList)
@@ -7505,7 +7505,7 @@ inline void CacheResponse::add_a_urllist(const char* value) {
   _impl_.a_urllist_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.cache.CacheResponse.a_urlList)
 }
-inline void CacheResponse::add_a_urllist(const void* value, size_t size) {
+inline void CacheResponse::add_a_urllist(const char* value, size_t size) {
   _impl_.a_urllist_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.cache.CacheResponse.a_urlList)
 }
@@ -7548,7 +7548,7 @@ inline void CacheResponse::set_a_status(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.CacheResponse.a_status)
 }
 
-// required bytes a_statusText = 4;
+// required string a_statusText = 4;
 inline bool CacheResponse::_internal_has_a_statustext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7568,7 +7568,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CacheResponse::set_a_statustext(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_statustext_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_statustext_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.CacheResponse.a_statusText)
 }
 inline std::string* CacheResponse::mutable_a_statustext() {
@@ -9545,7 +9545,7 @@ inline void StorageMatchArgs::set_allocated_a_openmode(std::string* a_openmode) 
 
 // StorageHasArgs
 
-// required bytes a_key = 1;
+// required string a_key = 1;
 inline bool StorageHasArgs::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9565,7 +9565,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void StorageHasArgs::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.StorageHasArgs.a_key)
 }
 inline std::string* StorageHasArgs::mutable_a_key() {
@@ -9617,7 +9617,7 @@ inline void StorageHasArgs::set_allocated_a_key(std::string* a_key) {
 
 // StorageOpenArgs
 
-// required bytes a_key = 1;
+// required string a_key = 1;
 inline bool StorageOpenArgs::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9637,7 +9637,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void StorageOpenArgs::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.StorageOpenArgs.a_key)
 }
 inline std::string* StorageOpenArgs::mutable_a_key() {
@@ -9689,7 +9689,7 @@ inline void StorageOpenArgs::set_allocated_a_key(std::string* a_key) {
 
 // StorageDeleteArgs
 
-// required bytes a_key = 1;
+// required string a_key = 1;
 inline bool StorageDeleteArgs::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9709,7 +9709,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void StorageDeleteArgs::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.StorageDeleteArgs.a_key)
 }
 inline std::string* StorageDeleteArgs::mutable_a_key() {
@@ -11034,7 +11034,7 @@ inline void StorageDeleteResult::set_a_success(bool value) {
 
 // StorageKeysResult
 
-// repeated bytes a_keyList = 1;
+// repeated string a_keyList = 1;
 inline int StorageKeysResult::_internal_a_keylist_size() const {
   return _impl_.a_keylist_.size();
 }
@@ -11073,7 +11073,7 @@ inline void StorageKeysResult::set_a_keylist(int index, const char* value) {
   _impl_.a_keylist_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.cache.StorageKeysResult.a_keyList)
 }
-inline void StorageKeysResult::set_a_keylist(int index, const void* value, size_t size) {
+inline void StorageKeysResult::set_a_keylist(int index, const char* value, size_t size) {
   _impl_.a_keylist_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.cache.StorageKeysResult.a_keyList)
@@ -11094,7 +11094,7 @@ inline void StorageKeysResult::add_a_keylist(const char* value) {
   _impl_.a_keylist_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.cache.StorageKeysResult.a_keyList)
 }
-inline void StorageKeysResult::add_a_keylist(const void* value, size_t size) {
+inline void StorageKeysResult::add_a_keylist(const char* value, size_t size) {
   _impl_.a_keylist_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.cache.StorageKeysResult.a_keyList)
 }

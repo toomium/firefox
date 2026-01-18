@@ -17,18 +17,18 @@ import "GMPTypes.proto";
 
 // Message declarations
 message Msg_OpenComplete {
-  required bytes a_aRecordName = 1;
+  required string a_aRecordName = 1;
   required bytes a_aStatus = 2;
 }
 
 message Msg_ReadComplete {
-  required bytes a_aRecordName = 1;
+  required string a_aRecordName = 1;
   required bytes a_aStatus = 2;
   repeated uint32 a_aBytes = 3;
 }
 
 message Msg_WriteComplete {
-  required bytes a_aRecordName = 1;
+  required string a_aRecordName = 1;
   required bytes a_aStatus = 2;
 }
 
@@ -36,20 +36,20 @@ message Msg_Shutdown {
 }
 
 message Msg_Open {
-  required bytes a_aRecordName = 1;
+  required string a_aRecordName = 1;
 }
 
 message Msg_Read {
-  required bytes a_aRecordName = 1;
+  required string a_aRecordName = 1;
 }
 
 message Msg_Write {
-  required bytes a_aRecordName = 1;
+  required string a_aRecordName = 1;
   repeated uint32 a_aBytes = 2;
 }
 
 message Msg_Close {
-  required bytes a_aRecordName = 1;
+  required string a_aRecordName = 1;
 }
 
 message Msg___delete__ {
@@ -61,5 +61,5 @@ message Reply___delete__ {
 // Parameter mappings stats:
 // Total parameters in this file 14
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 2, "<class 'ipdl.type.BuiltinCType'>": 0, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 12, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 0, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 2
+// Scalar mappings performed: 9
 // Message structs/unions generated from ipdl structs/unions: 0

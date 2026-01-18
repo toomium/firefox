@@ -46,7 +46,7 @@ message IPCTransferableDataType {
 }
 
 message IPCTransferableDataItem {
-  required bytes a_flavor = 1;
+  required string a_flavor = 1;
   required protobuf.mozilla.dom.IPCTransferableDataType a_data = 2;
 }
 

@@ -992,7 +992,7 @@ const char* Msg_ChangeShippingAddress::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aRequestId = 1;
+      // required string a_aRequestId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_arequestid();
@@ -1040,9 +1040,9 @@ uint8_t* Msg_ChangeShippingAddress::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aRequestId = 1;
+  // required string a_aRequestId = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_arequestid(), target);
   }
 
@@ -1066,9 +1066,9 @@ size_t Msg_ChangeShippingAddress::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_arequestid()) {
-    // required bytes a_aRequestId = 1;
+    // required string a_aRequestId = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_arequestid());
   }
 
@@ -1086,9 +1086,9 @@ size_t Msg_ChangeShippingAddress::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aRequestId = 1;
+    // required string a_aRequestId = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_arequestid());
 
     // required .protobuf.mozilla.dom.IPCPaymentAddress a_aAddress = 2;
@@ -1286,7 +1286,7 @@ const char* Msg_ChangeShippingOption::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aRequestId = 1;
+      // required string a_aRequestId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_arequestid();
@@ -1295,7 +1295,7 @@ const char* Msg_ChangeShippingOption::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aOption = 2;
+      // required string a_aOption = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_aoption();
@@ -1335,15 +1335,15 @@ uint8_t* Msg_ChangeShippingOption::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aRequestId = 1;
+  // required string a_aRequestId = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_arequestid(), target);
   }
 
-  // required bytes a_aOption = 2;
+  // required string a_aOption = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_aoption(), target);
   }
 
@@ -1360,16 +1360,16 @@ size_t Msg_ChangeShippingOption::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_arequestid()) {
-    // required bytes a_aRequestId = 1;
+    // required string a_aRequestId = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_arequestid());
   }
 
   if (_internal_has_a_aoption()) {
-    // required bytes a_aOption = 2;
+    // required string a_aOption = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aoption());
   }
 
@@ -1380,14 +1380,14 @@ size_t Msg_ChangeShippingOption::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aRequestId = 1;
+    // required string a_aRequestId = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_arequestid());
 
-    // required bytes a_aOption = 2;
+    // required string a_aOption = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aoption());
 
   } else {
@@ -1621,7 +1621,7 @@ const char* Msg_ChangePayerDetail::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aRequestId = 1;
+      // required string a_aRequestId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_arequestid();
@@ -1630,7 +1630,7 @@ const char* Msg_ChangePayerDetail::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aPayerName = 2;
+      // required string a_aPayerName = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_apayername();
@@ -1639,7 +1639,7 @@ const char* Msg_ChangePayerDetail::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aPayerEmail = 3;
+      // required string a_aPayerEmail = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_apayeremail();
@@ -1648,7 +1648,7 @@ const char* Msg_ChangePayerDetail::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aPayerPhone = 4;
+      // required string a_aPayerPhone = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_apayerphone();
@@ -1688,27 +1688,27 @@ uint8_t* Msg_ChangePayerDetail::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aRequestId = 1;
+  // required string a_aRequestId = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_arequestid(), target);
   }
 
-  // required bytes a_aPayerName = 2;
+  // required string a_aPayerName = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_apayername(), target);
   }
 
-  // required bytes a_aPayerEmail = 3;
+  // required string a_aPayerEmail = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_apayeremail(), target);
   }
 
-  // required bytes a_aPayerPhone = 4;
+  // required string a_aPayerPhone = 4;
   if (cached_has_bits & 0x00000008u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_apayerphone(), target);
   }
 
@@ -1725,30 +1725,30 @@ size_t Msg_ChangePayerDetail::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_arequestid()) {
-    // required bytes a_aRequestId = 1;
+    // required string a_aRequestId = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_arequestid());
   }
 
   if (_internal_has_a_apayername()) {
-    // required bytes a_aPayerName = 2;
+    // required string a_aPayerName = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_apayername());
   }
 
   if (_internal_has_a_apayeremail()) {
-    // required bytes a_aPayerEmail = 3;
+    // required string a_aPayerEmail = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_apayeremail());
   }
 
   if (_internal_has_a_apayerphone()) {
-    // required bytes a_aPayerPhone = 4;
+    // required string a_aPayerPhone = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_apayerphone());
   }
 
@@ -1759,24 +1759,24 @@ size_t Msg_ChangePayerDetail::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required bytes a_aRequestId = 1;
+    // required string a_aRequestId = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_arequestid());
 
-    // required bytes a_aPayerName = 2;
+    // required string a_aPayerName = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_apayername());
 
-    // required bytes a_aPayerEmail = 3;
+    // required string a_aPayerEmail = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_apayeremail());
 
-    // required bytes a_aPayerPhone = 4;
+    // required string a_aPayerPhone = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_apayerphone());
 
   } else {
@@ -2004,7 +2004,7 @@ const char* Msg_ChangePaymentMethod::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aRequestId = 1;
+      // required string a_aRequestId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_arequestid();
@@ -2013,7 +2013,7 @@ const char* Msg_ChangePaymentMethod::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aMethodName = 2;
+      // required string a_aMethodName = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_amethodname();
@@ -2061,15 +2061,15 @@ uint8_t* Msg_ChangePaymentMethod::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aRequestId = 1;
+  // required string a_aRequestId = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_arequestid(), target);
   }
 
-  // required bytes a_aMethodName = 2;
+  // required string a_aMethodName = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_amethodname(), target);
   }
 
@@ -2093,16 +2093,16 @@ size_t Msg_ChangePaymentMethod::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_arequestid()) {
-    // required bytes a_aRequestId = 1;
+    // required string a_aRequestId = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_arequestid());
   }
 
   if (_internal_has_a_amethodname()) {
-    // required bytes a_aMethodName = 2;
+    // required string a_aMethodName = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_amethodname());
   }
 
@@ -2120,14 +2120,14 @@ size_t Msg_ChangePaymentMethod::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes a_aRequestId = 1;
+    // required string a_aRequestId = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_arequestid());
 
-    // required bytes a_aMethodName = 2;
+    // required string a_aMethodName = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_amethodname());
 
     // required .protobuf.mozilla.dom.IPCMethodChangeDetails a_aMethodDetails = 3;

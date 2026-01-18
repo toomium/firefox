@@ -193,7 +193,7 @@ class Msg_CancelDNSRequest final :
     kAPortFieldNumber = 3,
     kATypeFieldNumber = 4,
   };
-  // required bytes a_hostName = 1;
+  // required string a_hostName = 1;
   bool has_a_hostname() const;
   private:
   bool _internal_has_a_hostname() const;
@@ -211,7 +211,7 @@ class Msg_CancelDNSRequest final :
   std::string* _internal_mutable_a_hostname();
   public:
 
-  // required bytes a_trrServer = 2;
+  // required string a_trrServer = 2;
   bool has_a_trrserver() const;
   private:
   bool _internal_has_a_trrserver() const;
@@ -739,7 +739,7 @@ class Msg_LookupCompleted final :
 #endif  // __GNUC__
 // Msg_CancelDNSRequest
 
-// required bytes a_hostName = 1;
+// required string a_hostName = 1;
 inline bool Msg_CancelDNSRequest::_internal_has_a_hostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -759,7 +759,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CancelDNSRequest::set_a_hostname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_hostname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_hostname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_hostName)
 }
 inline std::string* Msg_CancelDNSRequest::mutable_a_hostname() {
@@ -807,7 +807,7 @@ inline void Msg_CancelDNSRequest::set_allocated_a_hostname(std::string* a_hostna
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_hostName)
 }
 
-// required bytes a_trrServer = 2;
+// required string a_trrServer = 2;
 inline bool Msg_CancelDNSRequest::_internal_has_a_trrserver() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -827,7 +827,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CancelDNSRequest::set_a_trrserver(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_trrserver_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_trrserver_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_trrServer)
 }
 inline std::string* Msg_CancelDNSRequest::mutable_a_trrserver() {

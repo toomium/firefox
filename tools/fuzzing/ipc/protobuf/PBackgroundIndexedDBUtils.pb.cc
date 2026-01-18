@@ -429,7 +429,7 @@ const char* Msg_GetFileReferences::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_origin = 2;
+      // required string a_origin = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_origin();
@@ -438,7 +438,7 @@ const char* Msg_GetFileReferences::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_databaseName = 3;
+      // required string a_databaseName = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_databasename();
@@ -493,15 +493,15 @@ uint8_t* Msg_GetFileReferences::_InternalSerialize(
         1, this->_internal_a_persistencetype(), target);
   }
 
-  // required bytes a_origin = 2;
+  // required string a_origin = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_origin(), target);
   }
 
-  // required bytes a_databaseName = 3;
+  // required string a_databaseName = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_databasename(), target);
   }
 
@@ -531,16 +531,16 @@ size_t Msg_GetFileReferences::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_a_origin()) {
-    // required bytes a_origin = 2;
+    // required string a_origin = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_origin());
   }
 
   if (_internal_has_a_databasename()) {
-    // required bytes a_databaseName = 3;
+    // required string a_databaseName = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_databasename());
   }
 
@@ -561,14 +561,14 @@ size_t Msg_GetFileReferences::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_persistencetype());
 
-    // required bytes a_origin = 2;
+    // required string a_origin = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_origin());
 
-    // required bytes a_databaseName = 3;
+    // required string a_databaseName = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_databasename());
 
     // required sint64 a_fileId = 4;

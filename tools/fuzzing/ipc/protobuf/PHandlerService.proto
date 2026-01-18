@@ -18,7 +18,7 @@ import public "PHandlerService_protobuf.mozilla.dom.h.proto";
 // Message declarations
 message Msg_FillHandlerInfo {
   required protobuf.mozilla.dom.HandlerInfo a_aHandlerInfoData = 1;
-  required bytes a_aOverrideType = 2;
+  required string a_aOverrideType = 2;
 }
 
 message Reply_FillHandlerInfo {
@@ -26,7 +26,7 @@ message Reply_FillHandlerInfo {
 }
 
 message Msg_ExistsForProtocolOS {
-  required bytes a_aProtocolScheme = 1;
+  required string a_aProtocolScheme = 1;
 }
 
 message Reply_ExistsForProtocolOS {
@@ -34,7 +34,7 @@ message Reply_ExistsForProtocolOS {
 }
 
 message Msg_ExistsForProtocol {
-  required bytes a_aProtocolScheme = 1;
+  required string a_aProtocolScheme = 1;
 }
 
 message Reply_ExistsForProtocol {
@@ -50,16 +50,16 @@ message Reply_Exists {
 }
 
 message Msg_GetTypeFromExtension {
-  required bytes a_aFileExtension = 1;
+  required string a_aFileExtension = 1;
 }
 
 message Reply_GetTypeFromExtension {
-  required bytes a_type = 1;
+  required string a_type = 1;
 }
 
 message Msg_GetMIMEInfoFromOS {
-  required bytes a_aMIMEType = 1;
-  required bytes a_aExtension = 2;
+  required string a_aMIMEType = 1;
+  required string a_aExtension = 2;
 }
 
 message Reply_GetMIMEInfoFromOS {
@@ -69,12 +69,12 @@ message Reply_GetMIMEInfoFromOS {
 }
 
 message Msg_GetApplicationDescription {
-  required bytes a_aScheme = 1;
+  required string a_aScheme = 1;
 }
 
 message Reply_GetApplicationDescription {
   required bytes a_rv = 1;
-  required bytes a_description = 2;
+  required string a_description = 2;
 }
 
 message Msg___delete__ {
@@ -86,5 +86,5 @@ message Reply___delete__ {
 // Parameter mappings stats:
 // Total parameters in this file 31
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 2, "<class 'ipdl.type.BuiltinCType'>": 6, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 17, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 6, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 7
+// Scalar mappings performed: 21
 // Message structs/unions generated from ipdl structs/unions: 2

@@ -13,8 +13,8 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message IPCIdentityCredential {
-  required bytes a_id = 1;
-  optional bytes a_token = 2;
+  required string a_id = 1;
+  optional string a_token = 2;
 }
 
 message WebIdentityGetCredentialResponse {

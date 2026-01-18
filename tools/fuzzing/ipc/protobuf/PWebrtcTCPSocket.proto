@@ -17,9 +17,9 @@ import "WebrtcProxyConfig.proto";
 
 // Message declarations
 message Msg_AsyncOpen {
-  required bytes a_aHost = 1;
+  required string a_aHost = 1;
   required sint32 a_aPort = 2;
-  required bytes a_aLocalAddress = 3;
+  required string a_aLocalAddress = 3;
   required sint32 a_aLocalPort = 4;
   required bool a_aUseTls = 5;
   optional protobuf.mozilla.net.WebrtcProxyConfig a_aProxyConfig = 6;
@@ -37,7 +37,7 @@ message Msg_OnClose {
 }
 
 message Msg_OnConnected {
-  required bytes a_aProxyType = 1;
+  required string a_aProxyType = 1;
 }
 
 message Msg_OnRead {
@@ -53,5 +53,5 @@ message Reply___delete__ {
 // Parameter mappings stats:
 // Total parameters in this file 12
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 2, "<class 'ipdl.type.BuiltinCType'>": 1, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 8, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 1, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 0, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 5
+// Scalar mappings performed: 8
 // Message structs/unions generated from ipdl structs/unions: 0

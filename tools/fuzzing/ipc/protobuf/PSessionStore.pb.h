@@ -203,7 +203,7 @@ class Msg_SessionStoreUpdate final :
     kAANeedCollectSHistoryFieldNumber = 4,
     kAAEpochFieldNumber = 5,
   };
-  // optional bytes a_aDocShellCaps = 1;
+  // optional string a_aDocShellCaps = 1;
   bool has_a_adocshellcaps() const;
   private:
   bool _internal_has_a_adocshellcaps() const;
@@ -1195,7 +1195,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_SessionStoreUpdate
 
-// optional bytes a_aDocShellCaps = 1;
+// optional string a_aDocShellCaps = 1;
 inline bool Msg_SessionStoreUpdate::_internal_has_a_adocshellcaps() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1215,7 +1215,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SessionStoreUpdate::set_a_adocshellcaps(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_adocshellcaps_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_adocshellcaps_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSessionStore.Msg_SessionStoreUpdate.a_aDocShellCaps)
 }
 inline std::string* Msg_SessionStoreUpdate::mutable_a_adocshellcaps() {

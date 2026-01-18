@@ -196,7 +196,7 @@ class ScriptData final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_xdrdata();
 
-  // required bytes a_url = 1;
+  // required string a_url = 1;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -214,7 +214,7 @@ class ScriptData final :
   std::string* _internal_mutable_a_url();
   public:
 
-  // required bytes a_cachePath = 2;
+  // required string a_cachePath = 2;
   bool has_a_cachepath() const;
   private:
   bool _internal_has_a_cachepath() const;
@@ -282,7 +282,7 @@ class ScriptData final :
 #endif  // __GNUC__
 // ScriptData
 
-// required bytes a_url = 1;
+// required string a_url = 1;
 inline bool ScriptData::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -302,7 +302,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ScriptData::set_a_url(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_url_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.loader.ScriptData.a_url)
 }
 inline std::string* ScriptData::mutable_a_url() {
@@ -350,7 +350,7 @@ inline void ScriptData::set_allocated_a_url(std::string* a_url) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.loader.ScriptData.a_url)
 }
 
-// required bytes a_cachePath = 2;
+// required string a_cachePath = 2;
 inline bool ScriptData::_internal_has_a_cachepath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -370,7 +370,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ScriptData::set_a_cachepath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_cachepath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_cachepath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.loader.ScriptData.a_cachePath)
 }
 inline std::string* ScriptData::mutable_a_cachepath() {

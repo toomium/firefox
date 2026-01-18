@@ -232,7 +232,7 @@ class Msg_InitVerifySSLServerCert final :
   std::string* _internal_mutable_a_aendpoint();
   public:
 
-  // required bytes a_aHostName = 3;
+  // required string a_aHostName = 3;
   bool has_a_ahostname() const;
   private:
   bool _internal_has_a_ahostname() const;
@@ -546,7 +546,7 @@ class Msg_InitSelectTLSClientAuthCert final :
   std::string* _internal_mutable_a_aendpoint();
   public:
 
-  // required bytes a_aHostName = 2;
+  // required string a_aHostName = 2;
   bool has_a_ahostname() const;
   private:
   bool _internal_has_a_ahostname() const;
@@ -1106,7 +1106,7 @@ Msg_InitVerifySSLServerCert::a_apeercertchain() const {
   return _impl_.a_apeercertchain_;
 }
 
-// required bytes a_aHostName = 3;
+// required string a_aHostName = 3;
 inline bool Msg_InitVerifySSLServerCert::_internal_has_a_ahostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1126,7 +1126,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_InitVerifySSLServerCert::set_a_ahostname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_ahostname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_ahostname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitVerifySSLServerCert.a_aHostName)
 }
 inline std::string* Msg_InitVerifySSLServerCert::mutable_a_ahostname() {
@@ -1659,7 +1659,7 @@ inline void Msg_InitSelectTLSClientAuthCert::set_allocated_a_aendpoint(std::stri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitSelectTLSClientAuthCert.a_aEndpoint)
 }
 
-// required bytes a_aHostName = 2;
+// required string a_aHostName = 2;
 inline bool Msg_InitSelectTLSClientAuthCert::_internal_has_a_ahostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1679,7 +1679,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_InitSelectTLSClientAuthCert::set_a_ahostname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_ahostname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_ahostname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitSelectTLSClientAuthCert.a_aHostName)
 }
 inline std::string* Msg_InitSelectTLSClientAuthCert::mutable_a_ahostname() {

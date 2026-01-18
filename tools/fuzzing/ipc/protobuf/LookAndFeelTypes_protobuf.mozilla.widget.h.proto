@@ -13,7 +13,7 @@ package protobuf.mozilla.widget;
 // Structs and unions declarations
 message LookAndFeelFont {
   required bool a_haveFont = 1;
-  required bytes a_name = 2;
+  required string a_name = 2;
   required float a_size = 3;
   required float a_weight = 4;
   required bool a_italic = 5;

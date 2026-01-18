@@ -1306,7 +1306,7 @@ class Msg_NotifyMozMouseScrollEvent final :
   std::string* _internal_mutable_a_ascrollid();
   public:
 
-  // required bytes a_aEvent = 2;
+  // required string a_aEvent = 2;
   bool has_a_aevent() const;
   private:
   bool _internal_has_a_aevent() const;
@@ -2824,7 +2824,7 @@ inline void Msg_NotifyMozMouseScrollEvent::set_allocated_a_ascrollid(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZ.Msg_NotifyMozMouseScrollEvent.a_aScrollId)
 }
 
-// required bytes a_aEvent = 2;
+// required string a_aEvent = 2;
 inline bool Msg_NotifyMozMouseScrollEvent::_internal_has_a_aevent() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2844,7 +2844,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyMozMouseScrollEvent::set_a_aevent(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_aevent_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_aevent_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZ.Msg_NotifyMozMouseScrollEvent.a_aEvent)
 }
 inline std::string* Msg_NotifyMozMouseScrollEvent::mutable_a_aevent() {

@@ -176,7 +176,7 @@ class CStringKeyValue final :
     kAKeyFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required bytes a_key = 1;
+  // required string a_key = 1;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -194,7 +194,7 @@ class CStringKeyValue final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required bytes a_value = 2;
+  // required string a_value = 2;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -478,7 +478,7 @@ class PrintData final :
   std::string* _internal_mutable_a_remoteprintjob();
   public:
 
-  // required bytes a_title = 23;
+  // required string a_title = 23;
   bool has_a_title() const;
   private:
   bool _internal_has_a_title() const;
@@ -496,7 +496,7 @@ class PrintData final :
   std::string* _internal_mutable_a_title();
   public:
 
-  // required bytes a_docURL = 24;
+  // required string a_docURL = 24;
   bool has_a_docurl() const;
   private:
   bool _internal_has_a_docurl() const;
@@ -514,7 +514,7 @@ class PrintData final :
   std::string* _internal_mutable_a_docurl();
   public:
 
-  // required bytes a_headerStrLeft = 25;
+  // required string a_headerStrLeft = 25;
   bool has_a_headerstrleft() const;
   private:
   bool _internal_has_a_headerstrleft() const;
@@ -532,7 +532,7 @@ class PrintData final :
   std::string* _internal_mutable_a_headerstrleft();
   public:
 
-  // required bytes a_headerStrCenter = 26;
+  // required string a_headerStrCenter = 26;
   bool has_a_headerstrcenter() const;
   private:
   bool _internal_has_a_headerstrcenter() const;
@@ -550,7 +550,7 @@ class PrintData final :
   std::string* _internal_mutable_a_headerstrcenter();
   public:
 
-  // required bytes a_headerStrRight = 27;
+  // required string a_headerStrRight = 27;
   bool has_a_headerstrright() const;
   private:
   bool _internal_has_a_headerstrright() const;
@@ -568,7 +568,7 @@ class PrintData final :
   std::string* _internal_mutable_a_headerstrright();
   public:
 
-  // required bytes a_footerStrLeft = 28;
+  // required string a_footerStrLeft = 28;
   bool has_a_footerstrleft() const;
   private:
   bool _internal_has_a_footerstrleft() const;
@@ -586,7 +586,7 @@ class PrintData final :
   std::string* _internal_mutable_a_footerstrleft();
   public:
 
-  // required bytes a_footerStrCenter = 29;
+  // required string a_footerStrCenter = 29;
   bool has_a_footerstrcenter() const;
   private:
   bool _internal_has_a_footerstrcenter() const;
@@ -604,7 +604,7 @@ class PrintData final :
   std::string* _internal_mutable_a_footerstrcenter();
   public:
 
-  // required bytes a_footerStrRight = 30;
+  // required string a_footerStrRight = 30;
   bool has_a_footerstrright() const;
   private:
   bool _internal_has_a_footerstrright() const;
@@ -622,7 +622,7 @@ class PrintData final :
   std::string* _internal_mutable_a_footerstrright();
   public:
 
-  // required bytes a_paperId = 33;
+  // required string a_paperId = 33;
   bool has_a_paperid() const;
   private:
   bool _internal_has_a_paperid() const;
@@ -640,7 +640,7 @@ class PrintData final :
   std::string* _internal_mutable_a_paperid();
   public:
 
-  // required bytes a_driverName = 49;
+  // required string a_driverName = 49;
   bool has_a_drivername() const;
   private:
   bool _internal_has_a_drivername() const;
@@ -658,7 +658,7 @@ class PrintData final :
   std::string* _internal_mutable_a_drivername();
   public:
 
-  // required bytes a_deviceName = 50;
+  // required string a_deviceName = 50;
   bool has_a_devicename() const;
   private:
   bool _internal_has_a_devicename() const;
@@ -676,7 +676,7 @@ class PrintData final :
   std::string* _internal_mutable_a_devicename();
   public:
 
-  // required bytes a_disposition = 53;
+  // required string a_disposition = 53;
   bool has_a_disposition() const;
   private:
   bool _internal_has_a_disposition() const;
@@ -1270,7 +1270,7 @@ class PrintData final :
 #endif  // __GNUC__
 // CStringKeyValue
 
-// required bytes a_key = 1;
+// required string a_key = 1;
 inline bool CStringKeyValue::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1290,7 +1290,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CStringKeyValue::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.CStringKeyValue.a_key)
 }
 inline std::string* CStringKeyValue::mutable_a_key() {
@@ -1338,7 +1338,7 @@ inline void CStringKeyValue::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.CStringKeyValue.a_key)
 }
 
-// required bytes a_value = 2;
+// required string a_value = 2;
 inline bool CStringKeyValue::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1358,7 +1358,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CStringKeyValue::set_a_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.CStringKeyValue.a_value)
 }
 inline std::string* CStringKeyValue::mutable_a_value() {
@@ -2085,7 +2085,7 @@ PrintData::mutable_a_pageranges() {
   return _internal_mutable_a_pageranges();
 }
 
-// required bytes a_title = 23;
+// required string a_title = 23;
 inline bool PrintData::_internal_has_a_title() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2105,7 +2105,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PrintData::set_a_title(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_title_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_title_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_title)
 }
 inline std::string* PrintData::mutable_a_title() {
@@ -2153,7 +2153,7 @@ inline void PrintData::set_allocated_a_title(std::string* a_title) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_title)
 }
 
-// required bytes a_docURL = 24;
+// required string a_docURL = 24;
 inline bool PrintData::_internal_has_a_docurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2173,7 +2173,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PrintData::set_a_docurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_docurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_docurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_docURL)
 }
 inline std::string* PrintData::mutable_a_docurl() {
@@ -2221,7 +2221,7 @@ inline void PrintData::set_allocated_a_docurl(std::string* a_docurl) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_docURL)
 }
 
-// required bytes a_headerStrLeft = 25;
+// required string a_headerStrLeft = 25;
 inline bool PrintData::_internal_has_a_headerstrleft() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2241,7 +2241,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PrintData::set_a_headerstrleft(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_headerstrleft_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_headerstrleft_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_headerStrLeft)
 }
 inline std::string* PrintData::mutable_a_headerstrleft() {
@@ -2289,7 +2289,7 @@ inline void PrintData::set_allocated_a_headerstrleft(std::string* a_headerstrlef
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_headerStrLeft)
 }
 
-// required bytes a_headerStrCenter = 26;
+// required string a_headerStrCenter = 26;
 inline bool PrintData::_internal_has_a_headerstrcenter() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -2309,7 +2309,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PrintData::set_a_headerstrcenter(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.a_headerstrcenter_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_headerstrcenter_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_headerStrCenter)
 }
 inline std::string* PrintData::mutable_a_headerstrcenter() {
@@ -2357,7 +2357,7 @@ inline void PrintData::set_allocated_a_headerstrcenter(std::string* a_headerstrc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_headerStrCenter)
 }
 
-// required bytes a_headerStrRight = 27;
+// required string a_headerStrRight = 27;
 inline bool PrintData::_internal_has_a_headerstrright() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -2377,7 +2377,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PrintData::set_a_headerstrright(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.a_headerstrright_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_headerstrright_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_headerStrRight)
 }
 inline std::string* PrintData::mutable_a_headerstrright() {
@@ -2425,7 +2425,7 @@ inline void PrintData::set_allocated_a_headerstrright(std::string* a_headerstrri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_headerStrRight)
 }
 
-// required bytes a_footerStrLeft = 28;
+// required string a_footerStrLeft = 28;
 inline bool PrintData::_internal_has_a_footerstrleft() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -2445,7 +2445,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PrintData::set_a_footerstrleft(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000040u;
- _impl_.a_footerstrleft_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_footerstrleft_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_footerStrLeft)
 }
 inline std::string* PrintData::mutable_a_footerstrleft() {
@@ -2493,7 +2493,7 @@ inline void PrintData::set_allocated_a_footerstrleft(std::string* a_footerstrlef
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_footerStrLeft)
 }
 
-// required bytes a_footerStrCenter = 29;
+// required string a_footerStrCenter = 29;
 inline bool PrintData::_internal_has_a_footerstrcenter() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -2513,7 +2513,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PrintData::set_a_footerstrcenter(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000080u;
- _impl_.a_footerstrcenter_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_footerstrcenter_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_footerStrCenter)
 }
 inline std::string* PrintData::mutable_a_footerstrcenter() {
@@ -2561,7 +2561,7 @@ inline void PrintData::set_allocated_a_footerstrcenter(std::string* a_footerstrc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_footerStrCenter)
 }
 
-// required bytes a_footerStrRight = 30;
+// required string a_footerStrRight = 30;
 inline bool PrintData::_internal_has_a_footerstrright() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -2581,7 +2581,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PrintData::set_a_footerstrright(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000100u;
- _impl_.a_footerstrright_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_footerstrright_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_footerStrRight)
 }
 inline std::string* PrintData::mutable_a_footerstrright() {
@@ -2685,7 +2685,7 @@ inline void PrintData::set_a_shrinktofit(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_shrinkToFit)
 }
 
-// required bytes a_paperId = 33;
+// required string a_paperId = 33;
 inline bool PrintData::_internal_has_a_paperid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -2705,7 +2705,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PrintData::set_a_paperid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000200u;
- _impl_.a_paperid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_paperid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_paperId)
 }
 inline std::string* PrintData::mutable_a_paperid() {
@@ -3173,7 +3173,7 @@ inline void PrintData::set_a_isinitializedfromprefs(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_isInitializedFromPrefs)
 }
 
-// required bytes a_driverName = 49;
+// required string a_driverName = 49;
 inline bool PrintData::_internal_has_a_drivername() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -3193,7 +3193,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PrintData::set_a_drivername(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000400u;
- _impl_.a_drivername_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_drivername_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_driverName)
 }
 inline std::string* PrintData::mutable_a_drivername() {
@@ -3241,7 +3241,7 @@ inline void PrintData::set_allocated_a_drivername(std::string* a_drivername) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.embedding.PrintData.a_driverName)
 }
 
-// required bytes a_deviceName = 50;
+// required string a_deviceName = 50;
 inline bool PrintData::_internal_has_a_devicename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -3261,7 +3261,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PrintData::set_a_devicename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000800u;
- _impl_.a_devicename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_devicename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_deviceName)
 }
 inline std::string* PrintData::mutable_a_devicename() {
@@ -3396,7 +3396,7 @@ PrintData::a_gtkprintsettings() const {
   return _impl_.a_gtkprintsettings_;
 }
 
-// required bytes a_disposition = 53;
+// required string a_disposition = 53;
 inline bool PrintData::_internal_has_a_disposition() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -3416,7 +3416,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PrintData::set_a_disposition(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00001000u;
- _impl_.a_disposition_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_disposition_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.embedding.PrintData.a_disposition)
 }
 inline std::string* PrintData::mutable_a_disposition() {

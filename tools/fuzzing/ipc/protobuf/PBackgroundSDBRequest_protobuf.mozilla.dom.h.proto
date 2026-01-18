@@ -19,7 +19,7 @@ message SDBRequestSeekResponse {
 }
 
 message SDBRequestReadResponse {
-  required bytes a_data = 1;
+  required string a_data = 1;
 }
 
 message SDBRequestWriteResponse {

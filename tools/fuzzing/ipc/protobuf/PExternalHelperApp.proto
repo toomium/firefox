@@ -16,11 +16,11 @@ package protobuf.mozilla.dom.PExternalHelperApp;
 
 // Message declarations
 message Msg_OnStartRequest {
-  required bytes a_entityID = 1;
+  required string a_entityID = 1;
 }
 
 message Msg_OnDataAvailable {
-  required bytes a_data = 1;
+  required string a_data = 1;
   required uint64 a_offset = 2;
   required uint32 a_count = 3;
 }
@@ -42,5 +42,5 @@ message Reply___delete__ {
 // Parameter mappings stats:
 // Total parameters in this file 6
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 0, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 6, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 0, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 2
+// Scalar mappings performed: 4
 // Message structs/unions generated from ipdl structs/unions: 0

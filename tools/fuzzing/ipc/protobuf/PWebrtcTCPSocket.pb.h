@@ -208,7 +208,7 @@ class Msg_AsyncOpen final :
     kAALocalPortFieldNumber = 4,
     kAAUseTlsFieldNumber = 5,
   };
-  // required bytes a_aHost = 1;
+  // required string a_aHost = 1;
   bool has_a_ahost() const;
   private:
   bool _internal_has_a_ahost() const;
@@ -226,7 +226,7 @@ class Msg_AsyncOpen final :
   std::string* _internal_mutable_a_ahost();
   public:
 
-  // required bytes a_aLocalAddress = 3;
+  // required string a_aLocalAddress = 3;
   bool has_a_alocaladdress() const;
   private:
   bool _internal_has_a_alocaladdress() const;
@@ -859,7 +859,7 @@ class Msg_OnConnected final :
   enum : int {
     kAAProxyTypeFieldNumber = 1,
   };
-  // required bytes a_aProxyType = 1;
+  // required string a_aProxyType = 1;
   bool has_a_aproxytype() const;
   private:
   bool _internal_has_a_aproxytype() const;
@@ -1301,7 +1301,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_AsyncOpen
 
-// required bytes a_aHost = 1;
+// required string a_aHost = 1;
 inline bool Msg_AsyncOpen::_internal_has_a_ahost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1321,7 +1321,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncOpen::set_a_ahost(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_ahost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_ahost_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aHost)
 }
 inline std::string* Msg_AsyncOpen::mutable_a_ahost() {
@@ -1397,7 +1397,7 @@ inline void Msg_AsyncOpen::set_a_aport(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aPort)
 }
 
-// required bytes a_aLocalAddress = 3;
+// required string a_aLocalAddress = 3;
 inline bool Msg_AsyncOpen::_internal_has_a_alocaladdress() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1417,7 +1417,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncOpen::set_a_alocaladdress(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_alocaladdress_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_alocaladdress_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_AsyncOpen.a_aLocalAddress)
 }
 inline std::string* Msg_AsyncOpen::mutable_a_alocaladdress() {
@@ -1739,7 +1739,7 @@ inline void Msg_OnClose::set_allocated_a_areason(std::string* a_areason) {
 
 // Msg_OnConnected
 
-// required bytes a_aProxyType = 1;
+// required string a_aProxyType = 1;
 inline bool Msg_OnConnected::_internal_has_a_aproxytype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1759,7 +1759,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnConnected::set_a_aproxytype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_aproxytype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_aproxytype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebrtcTCPSocket.Msg_OnConnected.a_aProxyType)
 }
 inline std::string* Msg_OnConnected::mutable_a_aproxytype() {

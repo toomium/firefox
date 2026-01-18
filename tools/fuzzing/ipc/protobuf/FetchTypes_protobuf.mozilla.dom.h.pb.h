@@ -220,7 +220,7 @@ class HeadersEntry final :
     kANameFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required bytes a_name = 1;
+  // required string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -238,7 +238,7 @@ class HeadersEntry final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required bytes a_value = 2;
+  // required string a_value = 2;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -1100,7 +1100,7 @@ class IPCInternalRequest final :
     kAKeepaliveFieldNumber = 19,
     kAInterceptionFromThirdPartyFieldNumber = 25,
   };
-  // repeated bytes a_urlList = 2;
+  // repeated string a_urlList = 2;
   int a_urllist_size() const;
   private:
   int _internal_a_urllist_size() const;
@@ -1111,12 +1111,12 @@ class IPCInternalRequest final :
   void set_a_urllist(int index, const std::string& value);
   void set_a_urllist(int index, std::string&& value);
   void set_a_urllist(int index, const char* value);
-  void set_a_urllist(int index, const void* value, size_t size);
+  void set_a_urllist(int index, const char* value, size_t size);
   std::string* add_a_urllist();
   void add_a_urllist(const std::string& value);
   void add_a_urllist(std::string&& value);
   void add_a_urllist(const char* value);
-  void add_a_urllist(const void* value, size_t size);
+  void add_a_urllist(const char* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_urllist() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_urllist();
   private:
@@ -1160,7 +1160,7 @@ class IPCInternalRequest final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::RedirectHistoryEntryInfo >&
       a_interceptionredirectchain() const;
 
-  // required bytes a_method = 1;
+  // required string a_method = 1;
   bool has_a_method() const;
   private:
   bool _internal_has_a_method() const;
@@ -1196,7 +1196,7 @@ class IPCInternalRequest final :
   std::string* _internal_mutable_a_headersguard();
   public:
 
-  // required bytes a_preferredAlternativeDataType = 7;
+  // required string a_preferredAlternativeDataType = 7;
   bool has_a_preferredalternativedatatype() const;
   private:
   bool _internal_has_a_preferredalternativedatatype() const;
@@ -1232,7 +1232,7 @@ class IPCInternalRequest final :
   std::string* _internal_mutable_a_contentpolicytype();
   public:
 
-  // required bytes a_referrer = 10;
+  // required string a_referrer = 10;
   bool has_a_referrer() const;
   private:
   bool _internal_has_a_referrer() const;
@@ -1376,7 +1376,7 @@ class IPCInternalRequest final :
   std::string* _internal_mutable_a_requestpriority();
   public:
 
-  // required bytes a_integrity = 18;
+  // required string a_integrity = 18;
   bool has_a_integrity() const;
   private:
   bool _internal_has_a_integrity() const;
@@ -1394,7 +1394,7 @@ class IPCInternalRequest final :
   std::string* _internal_mutable_a_integrity();
   public:
 
-  // required bytes a_fragment = 20;
+  // required string a_fragment = 20;
   bool has_a_fragment() const;
   private:
   bool _internal_has_a_fragment() const;
@@ -1723,7 +1723,7 @@ class InternalResponseMetadata final :
     kAPrincipalInfoFieldNumber = 10,
     kAStatusFieldNumber = 3,
   };
-  // repeated bytes a_urlList = 2;
+  // repeated string a_urlList = 2;
   int a_urllist_size() const;
   private:
   int _internal_a_urllist_size() const;
@@ -1734,12 +1734,12 @@ class InternalResponseMetadata final :
   void set_a_urllist(int index, const std::string& value);
   void set_a_urllist(int index, std::string&& value);
   void set_a_urllist(int index, const char* value);
-  void set_a_urllist(int index, const void* value, size_t size);
+  void set_a_urllist(int index, const char* value, size_t size);
   std::string* add_a_urllist();
   void add_a_urllist(const std::string& value);
   void add_a_urllist(std::string&& value);
   void add_a_urllist(const char* value);
-  void add_a_urllist(const void* value, size_t size);
+  void add_a_urllist(const char* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_urllist() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_urllist();
   private:
@@ -1783,7 +1783,7 @@ class InternalResponseMetadata final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // required bytes a_statusText = 4;
+  // required string a_statusText = 4;
   bool has_a_statustext() const;
   private:
   bool _internal_has_a_statustext() const;
@@ -1837,7 +1837,7 @@ class InternalResponseMetadata final :
   std::string* _internal_mutable_a_errorcode();
   public:
 
-  // required bytes a_alternativeDataType = 8;
+  // required string a_alternativeDataType = 8;
   bool has_a_alternativedatatype() const;
   private:
   bool _internal_has_a_alternativedatatype() const;
@@ -1873,7 +1873,7 @@ class InternalResponseMetadata final :
   std::string* _internal_mutable_a_securityinfo();
   public:
 
-  // required bytes a_bodyBlobURISpec = 11;
+  // required string a_bodyBlobURISpec = 11;
   bool has_a_bodybloburispec() const;
   private:
   bool _internal_has_a_bodybloburispec() const;
@@ -1891,7 +1891,7 @@ class InternalResponseMetadata final :
   std::string* _internal_mutable_a_bodybloburispec();
   public:
 
-  // required bytes a_bodyLocalPath = 12;
+  // required string a_bodyLocalPath = 12;
   bool has_a_bodylocalpath() const;
   private:
   bool _internal_has_a_bodylocalpath() const;
@@ -2719,7 +2719,7 @@ class ResponseTiming final :
     kAEntryNameFieldNumber = 3,
     kATimingDataFieldNumber = 1,
   };
-  // required bytes a_initiatorType = 2;
+  // required string a_initiatorType = 2;
   bool has_a_initiatortype() const;
   private:
   bool _internal_has_a_initiatortype() const;
@@ -2737,7 +2737,7 @@ class ResponseTiming final :
   std::string* _internal_mutable_a_initiatortype();
   public:
 
-  // required bytes a_entryName = 3;
+  // required string a_entryName = 3;
   bool has_a_entryname() const;
   private:
   bool _internal_has_a_entryname() const;
@@ -2951,7 +2951,7 @@ class ResponseEndArgs final :
 #endif  // __GNUC__
 // HeadersEntry
 
-// required bytes a_name = 1;
+// required string a_name = 1;
 inline bool HeadersEntry::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2971,7 +2971,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HeadersEntry::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.HeadersEntry.a_name)
 }
 inline std::string* HeadersEntry::mutable_a_name() {
@@ -3019,7 +3019,7 @@ inline void HeadersEntry::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.HeadersEntry.a_name)
 }
 
-// required bytes a_value = 2;
+// required string a_value = 2;
 inline bool HeadersEntry::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3039,7 +3039,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HeadersEntry::set_a_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.HeadersEntry.a_value)
 }
 inline std::string* HeadersEntry::mutable_a_value() {
@@ -3645,7 +3645,7 @@ inline BodyStreamVariant::ContentCase BodyStreamVariant::content_case() const {
 
 // IPCInternalRequest
 
-// required bytes a_method = 1;
+// required string a_method = 1;
 inline bool IPCInternalRequest::_internal_has_a_method() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3665,7 +3665,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCInternalRequest::set_a_method(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_method_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_method_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCInternalRequest.a_method)
 }
 inline std::string* IPCInternalRequest::mutable_a_method() {
@@ -3713,7 +3713,7 @@ inline void IPCInternalRequest::set_allocated_a_method(std::string* a_method) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCInternalRequest.a_method)
 }
 
-// repeated bytes a_urlList = 2;
+// repeated string a_urlList = 2;
 inline int IPCInternalRequest::_internal_a_urllist_size() const {
   return _impl_.a_urllist_.size();
 }
@@ -3752,7 +3752,7 @@ inline void IPCInternalRequest::set_a_urllist(int index, const char* value) {
   _impl_.a_urllist_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.IPCInternalRequest.a_urlList)
 }
-inline void IPCInternalRequest::set_a_urllist(int index, const void* value, size_t size) {
+inline void IPCInternalRequest::set_a_urllist(int index, const char* value, size_t size) {
   _impl_.a_urllist_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.IPCInternalRequest.a_urlList)
@@ -3773,7 +3773,7 @@ inline void IPCInternalRequest::add_a_urllist(const char* value) {
   _impl_.a_urllist_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.IPCInternalRequest.a_urlList)
 }
-inline void IPCInternalRequest::add_a_urllist(const void* value, size_t size) {
+inline void IPCInternalRequest::add_a_urllist(const char* value, size_t size) {
   _impl_.a_urllist_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.IPCInternalRequest.a_urlList)
 }
@@ -4014,7 +4014,7 @@ inline void IPCInternalRequest::set_a_bodysize(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCInternalRequest.a_bodySize)
 }
 
-// required bytes a_preferredAlternativeDataType = 7;
+// required string a_preferredAlternativeDataType = 7;
 inline bool IPCInternalRequest::_internal_has_a_preferredalternativedatatype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4034,7 +4034,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCInternalRequest::set_a_preferredalternativedatatype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_preferredalternativedatatype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_preferredalternativedatatype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCInternalRequest.a_preferredAlternativeDataType)
 }
 inline std::string* IPCInternalRequest::mutable_a_preferredalternativedatatype() {
@@ -4178,7 +4178,7 @@ inline void IPCInternalRequest::set_a_internalpriority(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCInternalRequest.a_internalPriority)
 }
 
-// required bytes a_referrer = 10;
+// required string a_referrer = 10;
 inline bool IPCInternalRequest::_internal_has_a_referrer() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -4198,7 +4198,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCInternalRequest::set_a_referrer(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.a_referrer_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_referrer_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCInternalRequest.a_referrer)
 }
 inline std::string* IPCInternalRequest::mutable_a_referrer() {
@@ -4722,7 +4722,7 @@ inline void IPCInternalRequest::set_allocated_a_requestpriority(std::string* a_r
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCInternalRequest.a_requestPriority)
 }
 
-// required bytes a_integrity = 18;
+// required string a_integrity = 18;
 inline bool IPCInternalRequest::_internal_has_a_integrity() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -4742,7 +4742,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCInternalRequest::set_a_integrity(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00001000u;
- _impl_.a_integrity_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_integrity_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCInternalRequest.a_integrity)
 }
 inline std::string* IPCInternalRequest::mutable_a_integrity() {
@@ -4818,7 +4818,7 @@ inline void IPCInternalRequest::set_a_keepalive(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCInternalRequest.a_keepalive)
 }
 
-// required bytes a_fragment = 20;
+// required string a_fragment = 20;
 inline bool IPCInternalRequest::_internal_has_a_fragment() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
@@ -4838,7 +4838,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCInternalRequest::set_a_fragment(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00002000u;
- _impl_.a_fragment_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_fragment_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCInternalRequest.a_fragment)
 }
 inline std::string* IPCInternalRequest::mutable_a_fragment() {
@@ -5333,7 +5333,7 @@ inline void InternalResponseMetadata::set_allocated_a_type(std::string* a_type) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.InternalResponseMetadata.a_type)
 }
 
-// repeated bytes a_urlList = 2;
+// repeated string a_urlList = 2;
 inline int InternalResponseMetadata::_internal_a_urllist_size() const {
   return _impl_.a_urllist_.size();
 }
@@ -5372,7 +5372,7 @@ inline void InternalResponseMetadata::set_a_urllist(int index, const char* value
   _impl_.a_urllist_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.InternalResponseMetadata.a_urlList)
 }
-inline void InternalResponseMetadata::set_a_urllist(int index, const void* value, size_t size) {
+inline void InternalResponseMetadata::set_a_urllist(int index, const char* value, size_t size) {
   _impl_.a_urllist_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.InternalResponseMetadata.a_urlList)
@@ -5393,7 +5393,7 @@ inline void InternalResponseMetadata::add_a_urllist(const char* value) {
   _impl_.a_urllist_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.InternalResponseMetadata.a_urlList)
 }
-inline void InternalResponseMetadata::add_a_urllist(const void* value, size_t size) {
+inline void InternalResponseMetadata::add_a_urllist(const char* value, size_t size) {
   _impl_.a_urllist_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.InternalResponseMetadata.a_urlList)
 }
@@ -5436,7 +5436,7 @@ inline void InternalResponseMetadata::set_a_status(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.InternalResponseMetadata.a_status)
 }
 
-// required bytes a_statusText = 4;
+// required string a_statusText = 4;
 inline bool InternalResponseMetadata::_internal_has_a_statustext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5456,7 +5456,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void InternalResponseMetadata::set_a_statustext(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_statustext_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_statustext_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.InternalResponseMetadata.a_statusText)
 }
 inline std::string* InternalResponseMetadata::mutable_a_statustext() {
@@ -5680,7 +5680,7 @@ inline void InternalResponseMetadata::set_allocated_a_errorcode(std::string* a_e
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.InternalResponseMetadata.a_errorCode)
 }
 
-// required bytes a_alternativeDataType = 8;
+// required string a_alternativeDataType = 8;
 inline bool InternalResponseMetadata::_internal_has_a_alternativedatatype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -5700,7 +5700,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void InternalResponseMetadata::set_a_alternativedatatype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.a_alternativedatatype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_alternativedatatype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.InternalResponseMetadata.a_alternativeDataType)
 }
 inline std::string* InternalResponseMetadata::mutable_a_alternativedatatype() {
@@ -5903,7 +5903,7 @@ inline void InternalResponseMetadata::set_allocated_a_principalinfo(::protobuf::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.InternalResponseMetadata.a_principalInfo)
 }
 
-// required bytes a_bodyBlobURISpec = 11;
+// required string a_bodyBlobURISpec = 11;
 inline bool InternalResponseMetadata::_internal_has_a_bodybloburispec() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -5923,7 +5923,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void InternalResponseMetadata::set_a_bodybloburispec(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000040u;
- _impl_.a_bodybloburispec_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_bodybloburispec_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.InternalResponseMetadata.a_bodyBlobURISpec)
 }
 inline std::string* InternalResponseMetadata::mutable_a_bodybloburispec() {
@@ -5971,7 +5971,7 @@ inline void InternalResponseMetadata::set_allocated_a_bodybloburispec(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.InternalResponseMetadata.a_bodyBlobURISpec)
 }
 
-// required bytes a_bodyLocalPath = 12;
+// required string a_bodyLocalPath = 12;
 inline bool InternalResponseMetadata::_internal_has_a_bodylocalpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -5991,7 +5991,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void InternalResponseMetadata::set_a_bodylocalpath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000080u;
- _impl_.a_bodylocalpath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_bodylocalpath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.InternalResponseMetadata.a_bodyLocalPath)
 }
 inline std::string* InternalResponseMetadata::mutable_a_bodylocalpath() {
@@ -7104,7 +7104,7 @@ inline void ResponseTiming::set_allocated_a_timingdata(::protobuf::mozilla::dom:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ResponseTiming.a_timingData)
 }
 
-// required bytes a_initiatorType = 2;
+// required string a_initiatorType = 2;
 inline bool ResponseTiming::_internal_has_a_initiatortype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7124,7 +7124,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ResponseTiming::set_a_initiatortype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_initiatortype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_initiatortype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ResponseTiming.a_initiatorType)
 }
 inline std::string* ResponseTiming::mutable_a_initiatortype() {
@@ -7172,7 +7172,7 @@ inline void ResponseTiming::set_allocated_a_initiatortype(std::string* a_initiat
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ResponseTiming.a_initiatorType)
 }
 
-// required bytes a_entryName = 3;
+// required string a_entryName = 3;
 inline bool ResponseTiming::_internal_has_a_entryname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7192,7 +7192,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ResponseTiming::set_a_entryname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_entryname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_entryname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ResponseTiming.a_entryName)
 }
 inline std::string* ResponseTiming::mutable_a_entryname() {

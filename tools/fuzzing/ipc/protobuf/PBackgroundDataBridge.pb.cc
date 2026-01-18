@@ -241,7 +241,7 @@ const char* Msg_OnTransportAndData::_InternalParse(const char* ptr, ::_pbi::Pars
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_data = 3;
+      // required string a_data = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_data();
@@ -302,9 +302,9 @@ uint8_t* Msg_OnTransportAndData::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_count(), target);
   }
 
-  // required bytes a_data = 3;
+  // required string a_data = 3;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_data(), target);
   }
 
@@ -327,9 +327,9 @@ size_t Msg_OnTransportAndData::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_data()) {
-    // required bytes a_data = 3;
+    // required string a_data = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_data());
   }
 
@@ -357,9 +357,9 @@ size_t Msg_OnTransportAndData::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required bytes a_data = 3;
+    // required string a_data = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_data());
 
     // required bytes a_onDataAvailableStart = 4;

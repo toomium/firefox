@@ -19,7 +19,7 @@ import "PSMIPCTypes.proto";
 message Msg_InitVerifySSLServerCert {
   required bytes a_aEndpoint = 1;
   repeated protobuf.mozilla.psm.ByteArray a_aPeerCertChain = 2;
-  required bytes a_aHostName = 3;
+  required string a_aHostName = 3;
   required sint32 a_aPort = 4;
   required bytes a_aOriginAttributes = 5;
   optional protobuf.mozilla.psm.ByteArray a_aStapledOCSPResponse = 6;
@@ -31,7 +31,7 @@ message Msg_InitVerifySSLServerCert {
 
 message Msg_InitSelectTLSClientAuthCert {
   required bytes a_aEndpoint = 1;
-  required bytes a_aHostName = 2;
+  required string a_aHostName = 2;
   required bytes a_aOriginAttributes = 3;
   required sint32 a_aPort = 4;
   required uint32 a_aProviderFlags = 5;
@@ -53,5 +53,5 @@ message Msg_InitWebSocketConnection {
 // Parameter mappings stats:
 // Total parameters in this file 24
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 2, "<class 'ipdl.type.BuiltinCType'>": 0, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 4, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 12, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 3, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 3, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 8
+// Scalar mappings performed: 10
 // Message structs/unions generated from ipdl structs/unions: 0

@@ -316,7 +316,7 @@ const char* FetchOpArgs::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_workerScript = 3;
+      // required string a_workerScript = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_workerscript();
@@ -448,9 +448,9 @@ uint8_t* FetchOpArgs::_InternalSerialize(
         _Internal::a_principalinfo(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes a_workerScript = 3;
+  // required string a_workerScript = 3;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_workerscript(), target);
   }
 
@@ -524,9 +524,9 @@ size_t FetchOpArgs::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_workerscript()) {
-    // required bytes a_workerScript = 3;
+    // required string a_workerScript = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_workerscript());
   }
 
@@ -588,9 +588,9 @@ size_t FetchOpArgs::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000fcf) ^ 0x00000fcf) == 0) {  // All required fields are present.
-    // required bytes a_workerScript = 3;
+    // required string a_workerScript = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_workerscript());
 
     // required .protobuf.mozilla.dom.IPCInternalRequest a_request = 1;

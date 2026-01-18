@@ -269,7 +269,7 @@ const char* ServiceWorkerRegistrationData::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_scope = 1;
+      // required string a_scope = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_scope();
@@ -278,7 +278,7 @@ const char* ServiceWorkerRegistrationData::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_currentWorkerURL = 2;
+      // required string a_currentWorkerURL = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_currentworkerurl();
@@ -296,7 +296,7 @@ const char* ServiceWorkerRegistrationData::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_cacheName = 4;
+      // required string a_cacheName = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_cachename();
@@ -388,15 +388,15 @@ uint8_t* ServiceWorkerRegistrationData::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_scope = 1;
+  // required string a_scope = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_scope(), target);
   }
 
-  // required bytes a_currentWorkerURL = 2;
+  // required string a_currentWorkerURL = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_currentworkerurl(), target);
   }
 
@@ -406,9 +406,9 @@ uint8_t* ServiceWorkerRegistrationData::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_currentworkerhandlesfetch(), target);
   }
 
-  // required bytes a_cacheName = 4;
+  // required string a_cacheName = 4;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_cachename(), target);
   }
 
@@ -463,23 +463,23 @@ size_t ServiceWorkerRegistrationData::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_scope()) {
-    // required bytes a_scope = 1;
+    // required string a_scope = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_scope());
   }
 
   if (_internal_has_a_currentworkerurl()) {
-    // required bytes a_currentWorkerURL = 2;
+    // required string a_currentWorkerURL = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_currentworkerurl());
   }
 
   if (_internal_has_a_cachename()) {
-    // required bytes a_cacheName = 4;
+    // required string a_cacheName = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_cachename());
   }
 
@@ -529,19 +529,19 @@ size_t ServiceWorkerRegistrationData::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x000003ff) ^ 0x000003ff) == 0) {  // All required fields are present.
-    // required bytes a_scope = 1;
+    // required string a_scope = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_scope());
 
-    // required bytes a_currentWorkerURL = 2;
+    // required string a_currentWorkerURL = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_currentworkerurl());
 
-    // required bytes a_cacheName = 4;
+    // required string a_cacheName = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_cachename());
 
     // required .protobuf.mozilla.ipc.PrincipalInfo a_principal = 5;

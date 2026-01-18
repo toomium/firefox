@@ -12,7 +12,7 @@ package protobuf.mozilla._ipdltest;
 
 // Structs and unions declarations
 message DummyStruct {
-  required string a_x = 1;
+  required bytes a_x = 1;
 }
 
 message DummyUnion {

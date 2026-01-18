@@ -173,7 +173,7 @@ message Msg_RegisterChrome {
   repeated bytes a_packages = 1;
   repeated bytes a_substitutions = 2;
   repeated bytes a_overrides = 3;
-  required bytes a_locale = 4;
+  required string a_locale = 4;
   required bool a_reset = 5;
 }
 
@@ -185,25 +185,25 @@ message Msg_ClearImageCache {
   optional bool a_privateLoader = 1;
   optional bool a_aChrome = 2;
   optional bytes a_aPrincipal = 3;
-  optional bytes a_aSchemelessSite = 4;
+  optional string a_aSchemelessSite = 4;
   optional bytes a_aPattern = 5;
-  optional bytes a_aURL = 6;
+  optional string a_aURL = 6;
 }
 
 message Msg_ClearStyleSheetCache {
   optional bool a_aChrome = 1;
   optional bytes a_aPrincipal = 2;
-  optional bytes a_aSchemelessSite = 3;
+  optional string a_aSchemelessSite = 3;
   optional bytes a_aPattern = 4;
-  optional bytes a_aURL = 5;
+  optional string a_aURL = 5;
 }
 
 message Msg_ClearScriptCache {
   optional bool a_aChrome = 1;
   optional bytes a_aPrincipal = 2;
-  optional bytes a_aSchemelessSite = 3;
+  optional string a_aSchemelessSite = 3;
   optional bytes a_aPattern = 4;
-  optional bytes a_aURL = 5;
+  optional string a_aURL = 5;
 }
 
 message Msg_SetOffline {
@@ -248,7 +248,7 @@ message Msg_CollectPerfStatsJSON {
 }
 
 message Reply_CollectPerfStatsJSON {
-  required bytes a_aStats = 1;
+  required string a_aStats = 1;
 }
 
 message Msg_CollectScrollingMetrics {
@@ -268,7 +268,7 @@ message Msg_GeolocationError {
 }
 
 message Msg_UpdateDictionaryList {
-  repeated bytes a_dictionaries = 1;
+  repeated string a_dictionaries = 1;
 }
 
 message Msg_UpdateFontList {
@@ -290,11 +290,11 @@ message Msg_FontListShmBlockAdded {
 }
 
 message Msg_UpdateAppLocales {
-  repeated bytes a_appLocales = 1;
+  repeated string a_appLocales = 1;
 }
 
 message Msg_UpdateRequestedLocales {
-  repeated bytes a_requestedLocales = 1;
+  repeated string a_requestedLocales = 1;
 }
 
 message Msg_SystemTimezoneChanged {
@@ -309,13 +309,13 @@ message Msg_RegisterStringBundles {
 }
 
 message Msg_SimpleURIUnknownRemoteSchemes {
-  repeated bytes a_remoteSchemes = 1;
+  repeated string a_remoteSchemes = 1;
 }
 
 message Msg_UpdateSharedData {
   required bytes a_aMapHandle = 1;
   repeated protobuf.mozilla.dom.IPCBlob a_blobs = 2;
-  repeated bytes a_changedKeys = 3;
+  repeated string a_changedKeys = 3;
 }
 
 message Msg_AddPermission {
@@ -326,7 +326,7 @@ message Msg_RemoveAllPermissions {
 }
 
 message Msg_FlushMemory {
-  required bytes a_reason = 1;
+  required string a_reason = 1;
 }
 
 message Msg_ApplicationBackground {
@@ -356,19 +356,19 @@ message Msg_SetCacheDomains {
 }
 
 message Msg_AppInfo {
-  required bytes a_version = 1;
-  required bytes a_buildID = 2;
-  required bytes a_name = 3;
-  required bytes a_UAName = 4;
-  required bytes a_ID = 5;
-  required bytes a_vendor = 6;
-  required bytes a_sourceURL = 7;
-  required bytes a_updateURL = 8;
+  required string a_version = 1;
+  required string a_buildID = 2;
+  required string a_name = 3;
+  required string a_UAName = 4;
+  required string a_ID = 5;
+  required string a_vendor = 6;
+  required string a_sourceURL = 7;
+  required string a_updateURL = 8;
 }
 
 message Msg_RemoteType {
-  required bytes a_aRemoteType = 1;
-  required bytes a_aProfile = 2;
+  required string a_aRemoteType = 1;
+  required string a_aProfile = 2;
 }
 
 message Msg_InitRemoteWorkerService {
@@ -386,11 +386,11 @@ message Msg_InitJSActorInfos {
 }
 
 message Msg_UnregisterJSWindowActor {
-  required bytes a_name = 1;
+  required string a_name = 1;
 }
 
 message Msg_UnregisterJSProcessActor {
-  required bytes a_name = 1;
+  required string a_name = 1;
 }
 
 message Msg_SetXPCOMProcessAttributes {
@@ -426,8 +426,8 @@ message Msg_UnregisterSheet {
 
 message Msg_NotifyIdleObserver {
   required uint64 a_observerId = 1;
-  required bytes a_topic = 2;
-  required bytes a_str = 3;
+  required string a_topic = 2;
+  required string a_str = 3;
 }
 
 message Msg_DomainSetChanged {
@@ -443,7 +443,7 @@ message Msg_Shutdown {
 }
 
 message Msg_LoadProcessScript {
-  required bytes a_url = 1;
+  required string a_url = 1;
 }
 
 message Msg_UpdateWindow {
@@ -454,15 +454,15 @@ message Msg_NotifyEmptyHTTPCache {
 }
 
 message Msg_Push {
-  required bytes a_scope = 1;
+  required string a_scope = 1;
   required bytes a_principal = 2;
-  required bytes a_messageId = 3;
+  required string a_messageId = 3;
 }
 
 message Msg_PushWithData {
-  required bytes a_scope = 1;
+  required string a_scope = 1;
   required bytes a_principal = 2;
-  required bytes a_messageId = 3;
+  required string a_messageId = 3;
   repeated uint32 a_data = 4;
 }
 
@@ -472,14 +472,14 @@ message Msg_GetFilesResponse {
 }
 
 message Msg_BlobURLRegistration {
-  required bytes a_aURI = 1;
+  required string a_aURI = 1;
   required protobuf.mozilla.dom.IPCBlob a_aBlob = 2;
   required bytes a_aPrincipal = 3;
-  required bytes a_aPartitionKey = 4;
+  required string a_aPartitionKey = 4;
 }
 
 message Msg_BlobURLUnregistration {
-  repeated bytes a_aURIs = 1;
+  repeated string a_aURIs = 1;
 }
 
 message Msg_GMPsChanged {
@@ -492,7 +492,7 @@ message Msg_ProvideAnonymousTemporaryFile {
 }
 
 message Msg_SetPermissionsWithKey {
-  required bytes a_aPermissionKey = 1;
+  required string a_aPermissionKey = 1;
   repeated bytes a_aPermissions = 2;
 }
 
@@ -577,7 +577,7 @@ message Msg_InternalLoad {
 
 message Msg_DisplayLoadError {
   required bytes a_aContext = 1;
-  required bytes a_aURI = 2;
+  required string a_aURI = 2;
 }
 
 message Msg_GoBack {
@@ -613,7 +613,7 @@ message Msg_StopLoad {
 
 message Msg_OnAllowAccessFor {
   required bytes a_aParentContext = 1;
-  required bytes a_aTrackingOrigin = 2;
+  required string a_aTrackingOrigin = 2;
   required uint32 a_aCookieBehavior = 3;
   required bytes a_aReason = 4;
 }
@@ -682,7 +682,7 @@ message Msg_SynchronizeLayoutHistoryState {
 
 message Msg_SessionHistoryEntryTitle {
   required bytes a_aContext = 1;
-  required bytes a_aTitle = 2;
+  required string a_aTitle = 2;
 }
 
 message Msg_SessionHistoryEntryScrollRestorationIsManual {
@@ -703,7 +703,7 @@ message Msg_SessionHistoryEntryCacheKey {
 
 message Msg_SessionHistoryEntryStoreWindowNameInContiguousEntries {
   required bytes a_aContext = 1;
-  required bytes a_aName = 2;
+  required string a_aName = 2;
 }
 
 message Msg_SessionHistoryEntryWireframe {
@@ -745,7 +745,7 @@ message Msg_CreateClipboardContentAnalysis {
 
 message Msg_InitStreamFilter {
   required uint64 a_channelId = 1;
-  required bytes a_addonId = 2;
+  required string a_addonId = 2;
 }
 
 message Reply_InitStreamFilter {
@@ -838,7 +838,7 @@ message Reply_PURLClassifierLocalConstructor {
 
 message Msg_PURLClassifierLocalByNameConstructor {
   required bytes a_uri = 1;
-  repeated bytes a_featureNames = 2;
+  repeated string a_featureNames = 2;
   required bytes a_aListType = 3;
 }
 
@@ -857,7 +857,7 @@ message Msg_StartVisitedQueries {
 
 message Msg_SetURITitle {
   required bytes a_uri = 1;
-  required bytes a_title = 2;
+  required string a_title = 2;
 }
 
 message Msg_LoadURIExternal {
@@ -875,7 +875,7 @@ message Msg_ExtProtocolChannelConnectParent {
 }
 
 message Msg_SyncMessage {
-  required bytes a_aMessage = 1;
+  required string a_aMessage = 1;
   required protobuf.mozilla.dom.ClonedMessageData a_aData = 2;
 }
 
@@ -891,10 +891,10 @@ message Msg_AddSecurityState {
 message Msg_PExternalHelperAppConstructor {
   required bytes a_uri = 1;
   required protobuf.mozilla.net.LoadInfoArgs a_loadInfoArgs = 2;
-  required bytes a_aMimeContentType = 3;
-  required bytes a_aContentDisposition = 4;
+  required string a_aMimeContentType = 3;
+  required string a_aContentDisposition = 4;
   required uint32 a_aContentDispositionHint = 5;
-  required bytes a_aContentDispositionFilename = 6;
+  required string a_aContentDispositionFilename = 6;
   required bool a_aForceSave = 7;
   required sint64 a_aContentLength = 8;
   required bool a_aWasFileChannel = 9;
@@ -923,16 +923,16 @@ message Msg_SetGeolocationHigherAccuracy {
 }
 
 message Msg_ConsoleMessage {
-  required bytes a_message = 1;
+  required string a_message = 1;
 }
 
 message Msg_ScriptErrorWithStack {
-  required bytes a_message = 1;
-  required bytes a_sourceName = 2;
+  required string a_message = 1;
+  required string a_sourceName = 2;
   required uint32 a_lineNumber = 3;
   required uint32 a_colNumber = 4;
   required uint32 a_flags = 5;
-  required bytes a_category = 6;
+  required string a_category = 6;
   required bool a_isFromPrivateWindow = 7;
   required bool a_isFromChromeContext = 8;
   required protobuf.mozilla.dom.ClonedMessageData a_stack = 9;
@@ -945,7 +945,7 @@ message Msg_SetClipboard {
 }
 
 message Msg_GetClipboard {
-  repeated bytes a_aTypes = 1;
+  repeated string a_aTypes = 1;
   required bytes a_aWhichClipboard = 2;
   required bytes a_aRequestingWindowContext = 3;
 }
@@ -955,7 +955,7 @@ message Reply_GetClipboard {
 }
 
 message Msg_GetClipboardDataSnapshot {
-  repeated bytes a_aTypes = 1;
+  repeated string a_aTypes = 1;
   required bytes a_aWhichClipboard = 2;
   required bytes a_aRequestingWindowContext = 3;
   required bytes a_aRequestingPrincipal = 4;
@@ -966,7 +966,7 @@ message Reply_GetClipboardDataSnapshot {
 }
 
 message Msg_GetClipboardDataSnapshotSync {
-  repeated bytes a_aTypes = 1;
+  repeated string a_aTypes = 1;
   required bytes a_aWhichClipboard = 2;
   required bytes a_aRequestingWindowContext = 3;
 }
@@ -980,7 +980,7 @@ message Msg_EmptyClipboard {
 }
 
 message Msg_ClipboardHasType {
-  repeated bytes a_aTypes = 1;
+  repeated string a_aTypes = 1;
   required bytes a_aWhichClipboard = 2;
 }
 
@@ -997,7 +997,7 @@ message Reply_PClipboardWriteRequestConstructor {
 }
 
 message Msg_GetIconForExtension {
-  required bytes a_aFileExt = 1;
+  required string a_aFileExt = 1;
   required uint32 a_aIconSize = 2;
 }
 
@@ -1016,7 +1016,7 @@ message Msg_CopyFavicon {
 
 message Msg_FindImageText {
   required protobuf.mozilla.dom.IPCImage a_image = 1;
-  repeated bytes a_languages = 2;
+  repeated string a_languages = 2;
 }
 
 message Reply_FindImageText {
@@ -1024,7 +1024,7 @@ message Reply_FindImageText {
 }
 
 message Msg_GraphicsError {
-  required bytes a_aError = 1;
+  required string a_aError = 1;
 }
 
 message Msg_BeginDriverCrashGuard {
@@ -1079,11 +1079,11 @@ message Reply_PContentPermissionRequestConstructor {
 }
 
 message Msg_ShutdownProfile {
-  required bytes a_aProfile = 1;
+  required string a_aProfile = 1;
 }
 
 message Msg_ShutdownPerfStats {
-  required bytes a_aPerfStats = 1;
+  required string a_aPerfStats = 1;
 }
 
 message Msg_GetFontListShmBlock {
@@ -1150,7 +1150,7 @@ message Msg_CreateWindow {
   required bool a_aForWindowDotPrint = 7;
   required bool a_aTopLevelCreatedByContent = 8;
   required bytes a_aURIToLoad = 9;
-  required bytes a_aFeatures = 10;
+  required string a_aFeatures = 10;
   required bytes a_aModifiers = 11;
   required bytes a_aTriggeringPrincipal = 12;
   required bytes a_aCsp = 13;
@@ -1171,9 +1171,9 @@ message Msg_CreateWindowInDifferentProcess {
   required bool a_aCalledFromJS = 4;
   required bool a_aTopLevelCreatedByContent = 5;
   required bytes a_aURIToLoad = 6;
-  required bytes a_aFeatures = 7;
+  required string a_aFeatures = 7;
   required bytes a_aModifiers = 8;
-  required bytes a_aName = 9;
+  required string a_aName = 9;
   required bytes a_aTriggeringPrincipal = 10;
   required bytes a_aCsp = 11;
   required bytes a_aReferrerInfo = 12;
@@ -1183,21 +1183,21 @@ message Msg_CreateWindowInDifferentProcess {
 }
 
 message Msg_NotifyPushObservers {
-  required bytes a_scope = 1;
+  required string a_scope = 1;
   required bytes a_principal = 2;
-  required bytes a_messageId = 3;
+  required string a_messageId = 3;
 }
 
 message Msg_NotifyPushObserversWithData {
-  required bytes a_scope = 1;
+  required string a_scope = 1;
   required bytes a_principal = 2;
-  required bytes a_messageId = 3;
+  required string a_messageId = 3;
   repeated uint32 a_data = 4;
 }
 
 message Msg_GetFilesRequest {
   required bytes a_aID = 1;
-  repeated bytes a_aDirectories = 2;
+  repeated string a_aDirectories = 2;
   required bool a_aRecursiveFlag = 3;
 }
 
@@ -1206,10 +1206,10 @@ message Msg_DeleteGetFilesRequest {
 }
 
 message Msg_StoreAndBroadcastBlobURLRegistration {
-  required bytes a_url = 1;
+  required string a_url = 1;
   required protobuf.mozilla.dom.IPCBlob a_blob = 2;
   required bytes a_principal = 3;
-  required bytes a_aPartitionKey = 4;
+  required string a_aPartitionKey = 4;
 }
 
 message Msg_UnstoreAndBroadcastBlobURLUnregistration {
@@ -1254,7 +1254,7 @@ message Msg_BHRThreadHang {
 
 message Msg_AddCertException {
   required bytes a_aCert = 1;
-  required bytes a_aHostName = 2;
+  required string a_aHostName = 2;
   required sint32 a_aPort = 3;
   required bytes a_aOriginAttributes = 4;
   required bool a_aIsTemporary = 5;
@@ -1276,7 +1276,7 @@ message Msg_StorageAccessPermissionGrantedForOrigin {
   required uint64 a_aTopLevelWindowId = 1;
   required bytes a_aParentContext = 2;
   required bytes a_aTrackingPrincipal = 3;
-  required bytes a_aTrackingOrigin = 4;
+  required string a_aTrackingOrigin = 4;
   required sint32 a_aAllowMode = 5;
   optional bytes a_aReason = 6;
   required bool a_aFrameOnly = 7;
@@ -1290,7 +1290,7 @@ message Msg_CompleteAllowAccessFor {
   required bytes a_aParentContext = 1;
   required uint64 a_aTopLevelWindowId = 2;
   required bytes a_aTrackingPrincipal = 3;
-  required bytes a_aTrackingOrigin = 4;
+  required string a_aTrackingOrigin = 4;
   required uint32 a_aCookieBehavior = 5;
   required bytes a_aReason = 6;
 }
@@ -1332,7 +1332,7 @@ message Reply_TestCookiePermissionDecided {
 
 message Msg_TestStorageAccessPermission {
   required bytes a_aEmbeddingPrincipal = 1;
-  required bytes a_aEmbeddedOrigin = 2;
+  required string a_aEmbeddedOrigin = 2;
 }
 
 message Reply_TestStorageAccessPermission {
@@ -1445,12 +1445,12 @@ message Reply_HistoryGo {
 }
 
 message Msg_BlobURLDataRequest {
-  required bytes a_aBlobURL = 1;
+  required string a_aBlobURL = 1;
   required bytes a_aTriggeringPrincipal = 2;
   required bytes a_aLoadingPrincipal = 3;
   required bytes a_aOriginAttributes = 4;
   required uint64 a_aInnerWindowId = 5;
-  required bytes a_aPartitionKey = 6;
+  required string a_aPartitionKey = 6;
 }
 
 message Reply_BlobURLDataRequest {
@@ -1485,12 +1485,12 @@ message Msg_CleanupPendingLoadState {
 }
 
 message Msg_ScriptError {
-  required bytes a_message = 1;
-  required bytes a_sourceName = 2;
+  required string a_message = 1;
+  required string a_sourceName = 2;
   required uint32 a_lineNumber = 3;
   required uint32 a_colNumber = 4;
   required uint32 a_flags = 5;
-  required bytes a_category = 6;
+  required string a_category = 6;
   required bool a_isFromPrivateWindow = 7;
   required uint64 a_innerWindowId = 8;
   required bool a_isFromChromeContext = 9;
@@ -1498,8 +1498,8 @@ message Msg_ScriptError {
 
 message Msg_ReportFrameTimingData {
   required protobuf.mozilla.net.LoadInfoArgs a_loadInfo = 1;
-  required bytes a_entryName = 2;
-  required bytes a_initiatorType = 3;
+  required string a_entryName = 2;
+  required string a_initiatorType = 3;
   required bytes a_aData = 4;
 }
 
@@ -1510,19 +1510,19 @@ message Msg_CommitBrowsingContextTransaction {
 }
 
 message Msg_AsyncMessage {
-  required bytes a_aMessage = 1;
+  required string a_aMessage = 1;
   required protobuf.mozilla.dom.ClonedMessageData a_aData = 2;
 }
 
 message Msg_NotifyPushSubscriptionModifiedObservers {
-  required bytes a_scope = 1;
+  required string a_scope = 1;
   required bytes a_principal = 2;
 }
 
 message Msg_PushError {
-  required bytes a_scope = 1;
+  required string a_scope = 1;
   required bytes a_principal = 2;
-  required bytes a_message = 3;
+  required string a_message = 3;
   required uint32 a_flags = 4;
 }
 
@@ -1715,25 +1715,25 @@ message Msg_SignalFuzzingReady {
 }
 
 message Msg_AttributionEvent {
-  required bytes a_aSourceHost = 1;
+  required string a_aSourceHost = 1;
   required bytes a_aType = 2;
   required uint32 a_aIndex = 3;
-  required bytes a_aAd = 4;
-  required bytes a_aTargetHost = 5;
+  required string a_aAd = 4;
+  required string a_aTargetHost = 5;
 }
 
 message Msg_AttributionConversion {
-  required bytes a_aTargetHost = 1;
-  required bytes a_aTask = 2;
+  required string a_aTargetHost = 1;
+  required string a_aTask = 2;
   required uint32 a_aHistogramSize = 3;
   optional uint32 a_aLookbackDays = 4;
   optional bytes a_aImpressionType = 5;
-  repeated bytes a_aAds = 6;
-  repeated bytes a_aImpressionSourceHosts = 7;
+  repeated string a_aAds = 6;
+  repeated string a_aImpressionSourceHosts = 7;
 }
 
 // Parameter mappings stats:
 // Total parameters in this file 852
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 1, "<class 'ipdl.type.ArrayType'>": 77, "<class 'ipdl.type.BuiltinCType'>": 115, "<class 'ipdl.type.ByteBufType'>": 2, "<class 'ipdl.type.EndpointType'>": 17, "<class 'ipdl.type.FDType'>": 4, "<class 'ipdl.type.ImportedCxxType'>": 506, "<class 'ipdl.type.ManagedEndpointType'>": 5, "<class 'ipdl.type.MaybeType'>": 43, "<class 'ipdl.type.NotNullType'>": 10, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 57, "<class 'ipdl.type.UnionType'>": 14, "<class 'ipdl.type.UniquePtrType'>": 1}
-// Scalar mappings performed: 232
+// Scalar mappings performed: 358
 // Message structs/unions generated from ipdl structs/unions: 33

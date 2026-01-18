@@ -12,14 +12,14 @@ package protobuf.mozilla.gmp;
 
 // Structs and unions declarations
 message NodeIdParts {
-  required bytes a_mOrigin = 1;
-  required bytes a_mTopLevelOrigin = 2;
-  required bytes a_mGMPName = 3;
+  required string a_mOrigin = 1;
+  required string a_mTopLevelOrigin = 2;
+  required string a_mGMPName = 3;
 }
 
 message NodeIdVariant {
   oneof content {
-    bytes a_mVnsCString = 1;
+    string a_mVnsCString = 1;
     protobuf.mozilla.gmp.NodeIdParts a_mVNodeIdParts = 2;
   }
 }

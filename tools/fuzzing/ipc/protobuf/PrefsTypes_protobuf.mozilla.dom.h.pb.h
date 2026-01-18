@@ -184,7 +184,7 @@ class PrefValue final :
     kAMVint32TFieldNumber = 2,
     kAMVboolFieldNumber = 3,
   };
-  // bytes a_mVnsCString = 1;
+  // string a_mVnsCString = 1;
   bool has_a_mvnscstring() const;
   private:
   bool _internal_has_a_mvnscstring() const;
@@ -376,7 +376,7 @@ class Pref final :
     kAIsLockedFieldNumber = 2,
     kAIsSanitizedFieldNumber = 3,
   };
-  // required bytes a_name = 1;
+  // required string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -489,7 +489,7 @@ class Pref final :
 #endif  // __GNUC__
 // PrefValue
 
-// bytes a_mVnsCString = 1;
+// string a_mVnsCString = 1;
 inline bool PrefValue::_internal_has_a_mvnscstring() const {
   return content_case() == kAMVnsCString;
 }
@@ -516,7 +516,7 @@ inline void PrefValue::set_a_mvnscstring(ArgT0&& arg0, ArgT... args) {
     set_has_a_mvnscstring();
     _impl_.content_.a_mvnscstring_.InitDefault();
   }
-  _impl_.content_.a_mvnscstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  _impl_.content_.a_mvnscstring_.Set( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PrefValue.a_mVnsCString)
 }
 inline std::string* PrefValue::mutable_a_mvnscstring() {
@@ -655,7 +655,7 @@ inline PrefValue::ContentCase PrefValue::content_case() const {
 
 // Pref
 
-// required bytes a_name = 1;
+// required string a_name = 1;
 inline bool Pref::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -675,7 +675,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Pref::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.Pref.a_name)
 }
 inline std::string* Pref::mutable_a_name() {

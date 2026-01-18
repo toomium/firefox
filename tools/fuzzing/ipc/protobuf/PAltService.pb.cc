@@ -216,7 +216,7 @@ const char* Msg_ClearHostMapping::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_host = 1;
+      // required string a_host = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_host();
@@ -274,9 +274,9 @@ uint8_t* Msg_ClearHostMapping::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_host = 1;
+  // required string a_host = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_host(), target);
   }
 
@@ -305,9 +305,9 @@ size_t Msg_ClearHostMapping::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_host()) {
-    // required bytes a_host = 1;
+    // required string a_host = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_host());
   }
 
@@ -330,9 +330,9 @@ size_t Msg_ClearHostMapping::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes a_host = 1;
+    // required string a_host = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_host());
 
     // required bytes a_originAttributes = 3;
@@ -653,7 +653,7 @@ const char* Msg_ProcessHeader::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_buf = 1;
+      // required string a_buf = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_buf();
@@ -662,7 +662,7 @@ const char* Msg_ProcessHeader::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_originScheme = 2;
+      // required string a_originScheme = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_originscheme();
@@ -671,7 +671,7 @@ const char* Msg_ProcessHeader::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_originHost = 3;
+      // required string a_originHost = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_originhost();
@@ -689,7 +689,7 @@ const char* Msg_ProcessHeader::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_username = 5;
+      // required string a_username = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_a_username();
@@ -777,21 +777,21 @@ uint8_t* Msg_ProcessHeader::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_buf = 1;
+  // required string a_buf = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_buf(), target);
   }
 
-  // required bytes a_originScheme = 2;
+  // required string a_originScheme = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_originscheme(), target);
   }
 
-  // required bytes a_originHost = 3;
+  // required string a_originHost = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_originhost(), target);
   }
 
@@ -801,9 +801,9 @@ uint8_t* Msg_ProcessHeader::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_a_originport(), target);
   }
 
-  // required bytes a_username = 5;
+  // required string a_username = 5;
   if (cached_has_bits & 0x00000008u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         5, this->_internal_a_username(), target);
   }
 
@@ -853,30 +853,30 @@ size_t Msg_ProcessHeader::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_buf()) {
-    // required bytes a_buf = 1;
+    // required string a_buf = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_buf());
   }
 
   if (_internal_has_a_originscheme()) {
-    // required bytes a_originScheme = 2;
+    // required string a_originScheme = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_originscheme());
   }
 
   if (_internal_has_a_originhost()) {
-    // required bytes a_originHost = 3;
+    // required string a_originHost = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_originhost());
   }
 
   if (_internal_has_a_username()) {
-    // required bytes a_username = 5;
+    // required string a_username = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_username());
   }
 
@@ -916,24 +916,24 @@ size_t Msg_ProcessHeader::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x000001ff) ^ 0x000001ff) == 0) {  // All required fields are present.
-    // required bytes a_buf = 1;
+    // required string a_buf = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_buf());
 
-    // required bytes a_originScheme = 2;
+    // required string a_originScheme = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_originscheme());
 
-    // required bytes a_originHost = 3;
+    // required string a_originHost = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_originhost());
 
-    // required bytes a_username = 5;
+    // required string a_username = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_username());
 
     // required bytes a_originAttributes = 9;

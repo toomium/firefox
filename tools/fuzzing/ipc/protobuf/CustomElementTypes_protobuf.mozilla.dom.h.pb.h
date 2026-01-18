@@ -212,7 +212,7 @@ class IPCFormDataValue final :
   std::string* _internal_mutable_a_mvblobimpl();
   public:
 
-  // bytes a_mVnsString = 2;
+  // string a_mVnsString = 2;
   bool has_a_mvnsstring() const;
   private:
   bool _internal_has_a_mvnsstring() const;
@@ -373,7 +373,7 @@ class FormDataTuple final :
     kANameFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required bytes a_name = 1;
+  // required string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -737,7 +737,7 @@ class CustomElementFormValue final :
   std::string* _internal_mutable_a_mvblobimpl();
   public:
 
-  // bytes a_mVnsString = 3;
+  // string a_mVnsString = 3;
   bool has_a_mvnsstring() const;
   private:
   bool _internal_has_a_mvnsstring() const;
@@ -1063,7 +1063,7 @@ inline void IPCFormDataValue::set_allocated_a_mvblobimpl(std::string* a_mvblobim
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCFormDataValue.a_mVBlobImpl)
 }
 
-// bytes a_mVnsString = 2;
+// string a_mVnsString = 2;
 inline bool IPCFormDataValue::_internal_has_a_mvnsstring() const {
   return content_case() == kAMVnsString;
 }
@@ -1090,7 +1090,7 @@ inline void IPCFormDataValue::set_a_mvnsstring(ArgT0&& arg0, ArgT... args) {
     set_has_a_mvnsstring();
     _impl_.content_.a_mvnsstring_.InitDefault();
   }
-  _impl_.content_.a_mvnsstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  _impl_.content_.a_mvnsstring_.Set( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCFormDataValue.a_mVnsString)
 }
 inline std::string* IPCFormDataValue::mutable_a_mvnsstring() {
@@ -1153,7 +1153,7 @@ inline IPCFormDataValue::ContentCase IPCFormDataValue::content_case() const {
 
 // FormDataTuple
 
-// required bytes a_name = 1;
+// required string a_name = 1;
 inline bool FormDataTuple::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1173,7 +1173,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FormDataTuple::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FormDataTuple.a_name)
 }
 inline std::string* FormDataTuple::mutable_a_name() {
@@ -1513,7 +1513,7 @@ inline void CustomElementFormValue::set_allocated_a_mvblobimpl(std::string* a_mv
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.CustomElementFormValue.a_mVBlobImpl)
 }
 
-// bytes a_mVnsString = 3;
+// string a_mVnsString = 3;
 inline bool CustomElementFormValue::_internal_has_a_mvnsstring() const {
   return content_case() == kAMVnsString;
 }
@@ -1540,7 +1540,7 @@ inline void CustomElementFormValue::set_a_mvnsstring(ArgT0&& arg0, ArgT... args)
     set_has_a_mvnsstring();
     _impl_.content_.a_mvnsstring_.InitDefault();
   }
-  _impl_.content_.a_mvnsstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  _impl_.content_.a_mvnsstring_.Set( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.CustomElementFormValue.a_mVnsString)
 }
 inline std::string* CustomElementFormValue::mutable_a_mvnsstring() {

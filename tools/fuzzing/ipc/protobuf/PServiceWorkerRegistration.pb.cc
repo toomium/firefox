@@ -757,7 +757,7 @@ const char* Msg_Update::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aNewestWorkerScriptUrl = 1;
+      // required string a_aNewestWorkerScriptUrl = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_anewestworkerscripturl();
@@ -797,9 +797,9 @@ uint8_t* Msg_Update::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aNewestWorkerScriptUrl = 1;
+  // required string a_aNewestWorkerScriptUrl = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_anewestworkerscripturl(), target);
   }
 
@@ -815,10 +815,10 @@ size_t Msg_Update::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PServiceWorkerRegistration.Msg_Update)
   size_t total_size = 0;
 
-  // required bytes a_aNewestWorkerScriptUrl = 1;
+  // required string a_aNewestWorkerScriptUrl = 1;
   if (_internal_has_a_anewestworkerscripturl()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_anewestworkerscripturl());
   }
   uint32_t cached_has_bits = 0;
@@ -1191,7 +1191,7 @@ const char* Msg_GetNotifications::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aTag = 1;
+      // required string a_aTag = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_atag();
@@ -1231,9 +1231,9 @@ uint8_t* Msg_GetNotifications::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aTag = 1;
+  // required string a_aTag = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_atag(), target);
   }
 
@@ -1249,10 +1249,10 @@ size_t Msg_GetNotifications::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PServiceWorkerRegistration.Msg_GetNotifications)
   size_t total_size = 0;
 
-  // required bytes a_aTag = 1;
+  // required string a_aTag = 1;
   if (_internal_has_a_atag()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_atag());
   }
   uint32_t cached_has_bits = 0;
@@ -2015,7 +2015,7 @@ const char* Msg_SetNavigationPreloadHeader::_InternalParse(const char* ptr, ::_p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aHeader = 1;
+      // required string a_aHeader = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_aheader();
@@ -2055,9 +2055,9 @@ uint8_t* Msg_SetNavigationPreloadHeader::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aHeader = 1;
+  // required string a_aHeader = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_aheader(), target);
   }
 
@@ -2073,10 +2073,10 @@ size_t Msg_SetNavigationPreloadHeader::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PServiceWorkerRegistration.Msg_SetNavigationPreloadHeader)
   size_t total_size = 0;
 
-  // required bytes a_aHeader = 1;
+  // required string a_aHeader = 1;
   if (_internal_has_a_aheader()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aheader());
   }
   uint32_t cached_has_bits = 0;

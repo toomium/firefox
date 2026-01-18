@@ -2126,7 +2126,7 @@ class Msg_ModifyWakeLock final :
     kAALockAdjustFieldNumber = 2,
     kAAHiddenAdjustFieldNumber = 3,
   };
-  // required bytes a_aTopic = 1;
+  // required string a_aTopic = 1;
   bool has_a_atopic() const;
   private:
   bool _internal_has_a_atopic() const;
@@ -2562,7 +2562,7 @@ class Msg_GetWakeLockInfo final :
   enum : int {
     kAATopicFieldNumber = 1,
   };
-  // required bytes a_aTopic = 1;
+  // required string a_aTopic = 1;
   bool has_a_atopic() const;
   private:
   bool _internal_has_a_atopic() const;
@@ -4766,7 +4766,7 @@ inline void Reply_GetCurrentNetworkInformation::set_allocated_a_anetworkinfo(::p
 
 // Msg_ModifyWakeLock
 
-// required bytes a_aTopic = 1;
+// required string a_aTopic = 1;
 inline bool Msg_ModifyWakeLock::_internal_has_a_atopic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4786,7 +4786,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ModifyWakeLock::set_a_atopic(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_atopic_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_atopic_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock.a_aTopic)
 }
 inline std::string* Msg_ModifyWakeLock::mutable_a_atopic() {
@@ -4982,7 +4982,7 @@ inline void Msg_ModifyWakeLock::set_allocated_a_ahiddenadjust(std::string* a_ahi
 
 // Msg_GetWakeLockInfo
 
-// required bytes a_aTopic = 1;
+// required string a_aTopic = 1;
 inline bool Msg_GetWakeLockInfo::_internal_has_a_atopic() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5002,7 +5002,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetWakeLockInfo::set_a_atopic(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_atopic_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_atopic_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.hal_sandbox.PHal.Msg_GetWakeLockInfo.a_aTopic)
 }
 inline std::string* Msg_GetWakeLockInfo::mutable_a_atopic() {

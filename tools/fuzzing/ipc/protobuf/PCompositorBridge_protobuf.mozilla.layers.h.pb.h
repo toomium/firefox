@@ -331,7 +331,7 @@ class FrameStats final :
   std::string* _internal_mutable_a_scenebuilttime();
   public:
 
-  // required bytes a_url = 13;
+  // required string a_url = 13;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -1098,7 +1098,7 @@ inline void FrameStats::set_a_skippedcomposites(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.a_skippedComposites)
 }
 
-// required bytes a_url = 13;
+// required string a_url = 13;
 inline bool FrameStats::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -1118,7 +1118,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FrameStats::set_a_url(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000100u;
- _impl_.a_url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_url_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.FrameStats.a_url)
 }
 inline std::string* FrameStats::mutable_a_url() {

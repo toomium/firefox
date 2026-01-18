@@ -215,7 +215,7 @@ const char* SelectContentData::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // repeated bytes a_values = 2;
+      // repeated string a_values = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr -= 1;
@@ -264,10 +264,10 @@ uint8_t* SelectContentData::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_indices(i), target);
   }
 
-  // repeated bytes a_values = 2;
+  // repeated string a_values = 2;
   for (int i = 0, n = this->_internal_a_values_size(); i < n; i++) {
     const auto& s = this->_internal_a_values(i);
-    target = stream->WriteBytes(2, s, target);
+    target = stream->WriteString(2, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -295,11 +295,11 @@ size_t SelectContentData::ByteSizeLong() const {
     total_size += data_size;
   }
 
-  // repeated bytes a_values = 2;
+  // repeated string a_values = 2;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_values_.size());
   for (int i = 0, n = _impl_.a_values_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
       _impl_.a_values_.Get(i));
   }
 
@@ -661,7 +661,7 @@ const char* FileContentData::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // bytes a_mVnsString = 2;
+      // string a_mVnsString = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_mvnsstring();
@@ -706,7 +706,7 @@ uint8_t* FileContentData::_InternalSerialize(
       break;
     }
     case kAMVnsString: {
-      target = stream->WriteBytesMaybeAliased(
+      target = stream->WriteStringMaybeAliased(
           2, this->_internal_a_mvnsstring(), target);
       break;
     }
@@ -736,10 +736,10 @@ size_t FileContentData::ByteSizeLong() const {
           this->_internal_a_mvblobimpl());
       break;
     }
-    // bytes a_mVnsString = 2;
+    // string a_mVnsString = 2;
     case kAMVnsString: {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
           this->_internal_a_mvnsstring());
       break;
     }
@@ -907,7 +907,7 @@ const char* TextContentData::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_value = 1;
+      // required string a_value = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_value();
@@ -956,9 +956,9 @@ uint8_t* TextContentData::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_value = 1;
+  // required string a_value = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_value(), target);
   }
 
@@ -981,9 +981,9 @@ size_t TextContentData::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_value()) {
-    // required bytes a_value = 1;
+    // required string a_value = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_value());
   }
 
@@ -999,9 +999,9 @@ size_t TextContentData::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_value = 1;
+    // required string a_value = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_value());
 
     // required bool a_lastValueChangeWasInteractive = 2;

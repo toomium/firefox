@@ -280,7 +280,7 @@ class IPCPaymentMethodData final :
     kASupportedMethodsFieldNumber = 1,
     kADataFieldNumber = 2,
   };
-  // required bytes a_supportedMethods = 1;
+  // required string a_supportedMethods = 1;
   bool has_a_supportedmethods() const;
   private:
   bool _internal_has_a_supportedmethods() const;
@@ -298,7 +298,7 @@ class IPCPaymentMethodData final :
   std::string* _internal_mutable_a_supportedmethods();
   public:
 
-  // required bytes a_data = 2;
+  // required string a_data = 2;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -450,7 +450,7 @@ class IPCPaymentCurrencyAmount final :
     kACurrencyFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required bytes a_currency = 1;
+  // required string a_currency = 1;
   bool has_a_currency() const;
   private:
   bool _internal_has_a_currency() const;
@@ -468,7 +468,7 @@ class IPCPaymentCurrencyAmount final :
   std::string* _internal_mutable_a_currency();
   public:
 
-  // required bytes a_value = 2;
+  // required string a_value = 2;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -621,7 +621,7 @@ class IPCPaymentItem final :
     kAAmountFieldNumber = 2,
     kAPendingFieldNumber = 3,
   };
-  // required bytes a_label = 1;
+  // required string a_label = 1;
   bool has_a_label() const;
   private:
   bool _internal_has_a_label() const;
@@ -826,7 +826,7 @@ class IPCPaymentDetailsModifier final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCPaymentItem >&
       a_additionaldisplayitems() const;
 
-  // required bytes a_supportedMethods = 1;
+  // required string a_supportedMethods = 1;
   bool has_a_supportedmethods() const;
   private:
   bool _internal_has_a_supportedmethods() const;
@@ -844,7 +844,7 @@ class IPCPaymentDetailsModifier final :
   std::string* _internal_mutable_a_supportedmethods();
   public:
 
-  // required bytes a_data = 4;
+  // required string a_data = 4;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -1032,7 +1032,7 @@ class IPCPaymentShippingOption final :
     kAAmountFieldNumber = 3,
     kASelectedFieldNumber = 4,
   };
-  // required bytes a_id = 1;
+  // required string a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -1050,7 +1050,7 @@ class IPCPaymentShippingOption final :
   std::string* _internal_mutable_a_id();
   public:
 
-  // required bytes a_label = 2;
+  // required string a_label = 2;
   bool has_a_label() const;
   private:
   bool _internal_has_a_label() const;
@@ -1296,7 +1296,7 @@ class IPCPaymentDetails final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCPaymentDetailsModifier >&
       a_modifiers() const;
 
-  // required bytes a_id = 1;
+  // required string a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -1314,7 +1314,7 @@ class IPCPaymentDetails final :
   std::string* _internal_mutable_a_id();
   public:
 
-  // required bytes a_error = 6;
+  // required string a_error = 6;
   bool has_a_error() const;
   private:
   bool _internal_has_a_error() const;
@@ -1332,7 +1332,7 @@ class IPCPaymentDetails final :
   std::string* _internal_mutable_a_error();
   public:
 
-  // required bytes a_shippingAddressErrors = 7;
+  // required string a_shippingAddressErrors = 7;
   bool has_a_shippingaddresserrors() const;
   private:
   bool _internal_has_a_shippingaddresserrors() const;
@@ -1350,7 +1350,7 @@ class IPCPaymentDetails final :
   std::string* _internal_mutable_a_shippingaddresserrors();
   public:
 
-  // required bytes a_payerErrors = 8;
+  // required string a_payerErrors = 8;
   bool has_a_payererrors() const;
   private:
   bool _internal_has_a_payererrors() const;
@@ -1368,7 +1368,7 @@ class IPCPaymentDetails final :
   std::string* _internal_mutable_a_payererrors();
   public:
 
-  // required bytes a_paymentMethodErrors = 9;
+  // required string a_paymentMethodErrors = 9;
   bool has_a_paymentmethoderrors() const;
   private:
   bool _internal_has_a_paymentmethoderrors() const;
@@ -1549,7 +1549,7 @@ class IPCPaymentOptions final :
     kARequestShippingFieldNumber = 4,
     kARequestBillingAddressFieldNumber = 5,
   };
-  // required bytes a_shippingType = 6;
+  // required string a_shippingType = 6;
   bool has_a_shippingtype() const;
   private:
   bool _internal_has_a_shippingtype() const;
@@ -1793,7 +1793,7 @@ class IPCPaymentCreateActionRequest final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCPaymentMethodData >&
       a_methoddata() const;
 
-  // required bytes a_requestId = 2;
+  // required string a_requestId = 2;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -1829,7 +1829,7 @@ class IPCPaymentCreateActionRequest final :
   std::string* _internal_mutable_a_toplevelprincipal();
   public:
 
-  // required bytes a_shippingOption = 7;
+  // required string a_shippingOption = 7;
   bool has_a_shippingoption() const;
   private:
   bool _internal_has_a_shippingoption() const;
@@ -2034,7 +2034,7 @@ class IPCPaymentCanMakeActionRequest final :
   enum : int {
     kARequestIdFieldNumber = 1,
   };
-  // required bytes a_requestId = 1;
+  // required string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -2182,7 +2182,7 @@ class IPCPaymentShowActionRequest final :
     kARequestIdFieldNumber = 1,
     kAIsUpdatingFieldNumber = 2,
   };
-  // required bytes a_requestId = 1;
+  // required string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -2346,7 +2346,7 @@ class IPCPaymentAbortActionRequest final :
   enum : int {
     kARequestIdFieldNumber = 1,
   };
-  // required bytes a_requestId = 1;
+  // required string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -2494,7 +2494,7 @@ class IPCPaymentCompleteActionRequest final :
     kARequestIdFieldNumber = 1,
     kACompleteStatusFieldNumber = 2,
   };
-  // required bytes a_requestId = 1;
+  // required string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -2512,7 +2512,7 @@ class IPCPaymentCompleteActionRequest final :
   std::string* _internal_mutable_a_requestid();
   public:
 
-  // required bytes a_completeStatus = 2;
+  // required string a_completeStatus = 2;
   bool has_a_completestatus() const;
   private:
   bool _internal_has_a_completestatus() const;
@@ -2665,7 +2665,7 @@ class IPCPaymentUpdateActionRequest final :
     kAShippingOptionFieldNumber = 3,
     kADetailsFieldNumber = 2,
   };
-  // required bytes a_requestId = 1;
+  // required string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -2683,7 +2683,7 @@ class IPCPaymentUpdateActionRequest final :
   std::string* _internal_mutable_a_requestid();
   public:
 
-  // required bytes a_shippingOption = 3;
+  // required string a_shippingOption = 3;
   bool has_a_shippingoption() const;
   private:
   bool _internal_has_a_shippingoption() const;
@@ -2853,7 +2853,7 @@ class IPCPaymentCloseActionRequest final :
   enum : int {
     kARequestIdFieldNumber = 1,
   };
-  // required bytes a_requestId = 1;
+  // required string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -3004,7 +3004,7 @@ class IPCPaymentRetryActionRequest final :
     kAPaymentMethodErrorsFieldNumber = 4,
     kAShippingAddressErrorsFieldNumber = 5,
   };
-  // required bytes a_requestId = 1;
+  // required string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -3022,7 +3022,7 @@ class IPCPaymentRetryActionRequest final :
   std::string* _internal_mutable_a_requestid();
   public:
 
-  // required bytes a_error = 2;
+  // required string a_error = 2;
   bool has_a_error() const;
   private:
   bool _internal_has_a_error() const;
@@ -3040,7 +3040,7 @@ class IPCPaymentRetryActionRequest final :
   std::string* _internal_mutable_a_error();
   public:
 
-  // required bytes a_payerErrors = 3;
+  // required string a_payerErrors = 3;
   bool has_a_payererrors() const;
   private:
   bool _internal_has_a_payererrors() const;
@@ -3058,7 +3058,7 @@ class IPCPaymentRetryActionRequest final :
   std::string* _internal_mutable_a_payererrors();
   public:
 
-  // required bytes a_paymentMethodErrors = 4;
+  // required string a_paymentMethodErrors = 4;
   bool has_a_paymentmethoderrors() const;
   private:
   bool _internal_has_a_paymentmethoderrors() const;
@@ -3076,7 +3076,7 @@ class IPCPaymentRetryActionRequest final :
   std::string* _internal_mutable_a_paymentmethoderrors();
   public:
 
-  // required bytes a_shippingAddressErrors = 5;
+  // required string a_shippingAddressErrors = 5;
   bool has_a_shippingaddresserrors() const;
   private:
   bool _internal_has_a_shippingaddresserrors() const;
@@ -3548,7 +3548,7 @@ class IPCPaymentCanMakeActionResponse final :
     kARequestIdFieldNumber = 1,
     kAResultFieldNumber = 2,
   };
-  // required bytes a_requestId = 1;
+  // required string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -3722,7 +3722,7 @@ class IPCPaymentAddress final :
     kARecipientFieldNumber = 10,
     kAPhoneFieldNumber = 11,
   };
-  // repeated bytes a_addressLine = 2;
+  // repeated string a_addressLine = 2;
   int a_addressline_size() const;
   private:
   int _internal_a_addressline_size() const;
@@ -3733,12 +3733,12 @@ class IPCPaymentAddress final :
   void set_a_addressline(int index, const std::string& value);
   void set_a_addressline(int index, std::string&& value);
   void set_a_addressline(int index, const char* value);
-  void set_a_addressline(int index, const void* value, size_t size);
+  void set_a_addressline(int index, const char* value, size_t size);
   std::string* add_a_addressline();
   void add_a_addressline(const std::string& value);
   void add_a_addressline(std::string&& value);
   void add_a_addressline(const char* value);
-  void add_a_addressline(const void* value, size_t size);
+  void add_a_addressline(const char* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_addressline() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_addressline();
   private:
@@ -3746,7 +3746,7 @@ class IPCPaymentAddress final :
   std::string* _internal_add_a_addressline();
   public:
 
-  // required bytes a_country = 1;
+  // required string a_country = 1;
   bool has_a_country() const;
   private:
   bool _internal_has_a_country() const;
@@ -3764,7 +3764,7 @@ class IPCPaymentAddress final :
   std::string* _internal_mutable_a_country();
   public:
 
-  // required bytes a_region = 3;
+  // required string a_region = 3;
   bool has_a_region() const;
   private:
   bool _internal_has_a_region() const;
@@ -3782,7 +3782,7 @@ class IPCPaymentAddress final :
   std::string* _internal_mutable_a_region();
   public:
 
-  // required bytes a_regionCode = 4;
+  // required string a_regionCode = 4;
   bool has_a_regioncode() const;
   private:
   bool _internal_has_a_regioncode() const;
@@ -3800,7 +3800,7 @@ class IPCPaymentAddress final :
   std::string* _internal_mutable_a_regioncode();
   public:
 
-  // required bytes a_city = 5;
+  // required string a_city = 5;
   bool has_a_city() const;
   private:
   bool _internal_has_a_city() const;
@@ -3818,7 +3818,7 @@ class IPCPaymentAddress final :
   std::string* _internal_mutable_a_city();
   public:
 
-  // required bytes a_dependentLocality = 6;
+  // required string a_dependentLocality = 6;
   bool has_a_dependentlocality() const;
   private:
   bool _internal_has_a_dependentlocality() const;
@@ -3836,7 +3836,7 @@ class IPCPaymentAddress final :
   std::string* _internal_mutable_a_dependentlocality();
   public:
 
-  // required bytes a_postalCode = 7;
+  // required string a_postalCode = 7;
   bool has_a_postalcode() const;
   private:
   bool _internal_has_a_postalcode() const;
@@ -3854,7 +3854,7 @@ class IPCPaymentAddress final :
   std::string* _internal_mutable_a_postalcode();
   public:
 
-  // required bytes a_sortingCode = 8;
+  // required string a_sortingCode = 8;
   bool has_a_sortingcode() const;
   private:
   bool _internal_has_a_sortingcode() const;
@@ -3872,7 +3872,7 @@ class IPCPaymentAddress final :
   std::string* _internal_mutable_a_sortingcode();
   public:
 
-  // required bytes a_organization = 9;
+  // required string a_organization = 9;
   bool has_a_organization() const;
   private:
   bool _internal_has_a_organization() const;
@@ -3890,7 +3890,7 @@ class IPCPaymentAddress final :
   std::string* _internal_mutable_a_organization();
   public:
 
-  // required bytes a_recipient = 10;
+  // required string a_recipient = 10;
   bool has_a_recipient() const;
   private:
   bool _internal_has_a_recipient() const;
@@ -3908,7 +3908,7 @@ class IPCPaymentAddress final :
   std::string* _internal_mutable_a_recipient();
   public:
 
-  // required bytes a_phone = 11;
+  // required string a_phone = 11;
   bool has_a_phone() const;
   private:
   bool _internal_has_a_phone() const;
@@ -4068,7 +4068,7 @@ class IPCGeneralResponse final :
   enum : int {
     kADataFieldNumber = 1,
   };
-  // required bytes a_data = 1;
+  // required string a_data = 1;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -4220,7 +4220,7 @@ class IPCBasicCardResponse final :
     kACardSecurityCodeFieldNumber = 5,
     kABillingAddressFieldNumber = 6,
   };
-  // required bytes a_cardholderName = 1;
+  // required string a_cardholderName = 1;
   bool has_a_cardholdername() const;
   private:
   bool _internal_has_a_cardholdername() const;
@@ -4238,7 +4238,7 @@ class IPCBasicCardResponse final :
   std::string* _internal_mutable_a_cardholdername();
   public:
 
-  // required bytes a_cardNumber = 2;
+  // required string a_cardNumber = 2;
   bool has_a_cardnumber() const;
   private:
   bool _internal_has_a_cardnumber() const;
@@ -4256,7 +4256,7 @@ class IPCBasicCardResponse final :
   std::string* _internal_mutable_a_cardnumber();
   public:
 
-  // required bytes a_expiryMonth = 3;
+  // required string a_expiryMonth = 3;
   bool has_a_expirymonth() const;
   private:
   bool _internal_has_a_expirymonth() const;
@@ -4274,7 +4274,7 @@ class IPCBasicCardResponse final :
   std::string* _internal_mutable_a_expirymonth();
   public:
 
-  // required bytes a_expiryYear = 4;
+  // required string a_expiryYear = 4;
   bool has_a_expiryyear() const;
   private:
   bool _internal_has_a_expiryyear() const;
@@ -4292,7 +4292,7 @@ class IPCBasicCardResponse final :
   std::string* _internal_mutable_a_expiryyear();
   public:
 
-  // required bytes a_cardSecurityCode = 5;
+  // required string a_cardSecurityCode = 5;
   bool has_a_cardsecuritycode() const;
   private:
   bool _internal_has_a_cardsecuritycode() const;
@@ -4656,7 +4656,7 @@ class IPCPaymentShowActionResponse final :
     kADataFieldNumber = 4,
     kAStatusFieldNumber = 2,
   };
-  // required bytes a_requestId = 1;
+  // required string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -4674,7 +4674,7 @@ class IPCPaymentShowActionResponse final :
   std::string* _internal_mutable_a_requestid();
   public:
 
-  // required bytes a_methodName = 3;
+  // required string a_methodName = 3;
   bool has_a_methodname() const;
   private:
   bool _internal_has_a_methodname() const;
@@ -4692,7 +4692,7 @@ class IPCPaymentShowActionResponse final :
   std::string* _internal_mutable_a_methodname();
   public:
 
-  // required bytes a_payerName = 5;
+  // required string a_payerName = 5;
   bool has_a_payername() const;
   private:
   bool _internal_has_a_payername() const;
@@ -4710,7 +4710,7 @@ class IPCPaymentShowActionResponse final :
   std::string* _internal_mutable_a_payername();
   public:
 
-  // required bytes a_payerEmail = 6;
+  // required string a_payerEmail = 6;
   bool has_a_payeremail() const;
   private:
   bool _internal_has_a_payeremail() const;
@@ -4728,7 +4728,7 @@ class IPCPaymentShowActionResponse final :
   std::string* _internal_mutable_a_payeremail();
   public:
 
-  // required bytes a_payerPhone = 7;
+  // required string a_payerPhone = 7;
   bool has_a_payerphone() const;
   private:
   bool _internal_has_a_payerphone() const;
@@ -4916,7 +4916,7 @@ class IPCPaymentAbortActionResponse final :
     kARequestIdFieldNumber = 1,
     kAIsSucceededFieldNumber = 2,
   };
-  // required bytes a_requestId = 1;
+  // required string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -5081,7 +5081,7 @@ class IPCPaymentCompleteActionResponse final :
     kARequestIdFieldNumber = 1,
     kAIsCompletedFieldNumber = 2,
   };
-  // required bytes a_requestId = 1;
+  // required string a_requestId = 1;
   bool has_a_requestid() const;
   private:
   bool _internal_has_a_requestid() const;
@@ -5474,7 +5474,7 @@ class IPCGeneralChangeDetails final :
   enum : int {
     kADetailsFieldNumber = 1,
   };
-  // required bytes a_details = 1;
+  // required string a_details = 1;
   bool has_a_details() const;
   private:
   bool _internal_has_a_details() const;
@@ -5850,7 +5850,7 @@ class IPCMethodChangeDetails final :
 #endif  // __GNUC__
 // IPCPaymentMethodData
 
-// required bytes a_supportedMethods = 1;
+// required string a_supportedMethods = 1;
 inline bool IPCPaymentMethodData::_internal_has_a_supportedmethods() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5870,7 +5870,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentMethodData::set_a_supportedmethods(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_supportedmethods_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_supportedmethods_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentMethodData.a_supportedMethods)
 }
 inline std::string* IPCPaymentMethodData::mutable_a_supportedmethods() {
@@ -5918,7 +5918,7 @@ inline void IPCPaymentMethodData::set_allocated_a_supportedmethods(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentMethodData.a_supportedMethods)
 }
 
-// required bytes a_data = 2;
+// required string a_data = 2;
 inline bool IPCPaymentMethodData::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5938,7 +5938,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentMethodData::set_a_data(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_data_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentMethodData.a_data)
 }
 inline std::string* IPCPaymentMethodData::mutable_a_data() {
@@ -5990,7 +5990,7 @@ inline void IPCPaymentMethodData::set_allocated_a_data(std::string* a_data) {
 
 // IPCPaymentCurrencyAmount
 
-// required bytes a_currency = 1;
+// required string a_currency = 1;
 inline bool IPCPaymentCurrencyAmount::_internal_has_a_currency() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6010,7 +6010,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentCurrencyAmount::set_a_currency(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_currency_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_currency_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentCurrencyAmount.a_currency)
 }
 inline std::string* IPCPaymentCurrencyAmount::mutable_a_currency() {
@@ -6058,7 +6058,7 @@ inline void IPCPaymentCurrencyAmount::set_allocated_a_currency(std::string* a_cu
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentCurrencyAmount.a_currency)
 }
 
-// required bytes a_value = 2;
+// required string a_value = 2;
 inline bool IPCPaymentCurrencyAmount::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6078,7 +6078,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentCurrencyAmount::set_a_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentCurrencyAmount.a_value)
 }
 inline std::string* IPCPaymentCurrencyAmount::mutable_a_value() {
@@ -6130,7 +6130,7 @@ inline void IPCPaymentCurrencyAmount::set_allocated_a_value(std::string* a_value
 
 // IPCPaymentItem
 
-// required bytes a_label = 1;
+// required string a_label = 1;
 inline bool IPCPaymentItem::_internal_has_a_label() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6150,7 +6150,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentItem::set_a_label(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_label_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_label_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentItem.a_label)
 }
 inline std::string* IPCPaymentItem::mutable_a_label() {
@@ -6320,7 +6320,7 @@ inline void IPCPaymentItem::set_a_pending(bool value) {
 
 // IPCPaymentDetailsModifier
 
-// required bytes a_supportedMethods = 1;
+// required string a_supportedMethods = 1;
 inline bool IPCPaymentDetailsModifier::_internal_has_a_supportedmethods() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6340,7 +6340,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentDetailsModifier::set_a_supportedmethods(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_supportedmethods_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_supportedmethods_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentDetailsModifier.a_supportedMethods)
 }
 inline std::string* IPCPaymentDetailsModifier::mutable_a_supportedmethods() {
@@ -6518,7 +6518,7 @@ IPCPaymentDetailsModifier::a_additionaldisplayitems() const {
   return _impl_.a_additionaldisplayitems_;
 }
 
-// required bytes a_data = 4;
+// required string a_data = 4;
 inline bool IPCPaymentDetailsModifier::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6538,7 +6538,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentDetailsModifier::set_a_data(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_data_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentDetailsModifier.a_data)
 }
 inline std::string* IPCPaymentDetailsModifier::mutable_a_data() {
@@ -6618,7 +6618,7 @@ inline void IPCPaymentDetailsModifier::set_a_additionaldisplayitemspassed(bool v
 
 // IPCPaymentShippingOption
 
-// required bytes a_id = 1;
+// required string a_id = 1;
 inline bool IPCPaymentShippingOption::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6638,7 +6638,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentShippingOption::set_a_id(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentShippingOption.a_id)
 }
 inline std::string* IPCPaymentShippingOption::mutable_a_id() {
@@ -6686,7 +6686,7 @@ inline void IPCPaymentShippingOption::set_allocated_a_id(std::string* a_id) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentShippingOption.a_id)
 }
 
-// required bytes a_label = 2;
+// required string a_label = 2;
 inline bool IPCPaymentShippingOption::_internal_has_a_label() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6706,7 +6706,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentShippingOption::set_a_label(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_label_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_label_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentShippingOption.a_label)
 }
 inline std::string* IPCPaymentShippingOption::mutable_a_label() {
@@ -6876,7 +6876,7 @@ inline void IPCPaymentShippingOption::set_a_selected(bool value) {
 
 // IPCPaymentDetails
 
-// required bytes a_id = 1;
+// required string a_id = 1;
 inline bool IPCPaymentDetails::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6896,7 +6896,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentDetails::set_a_id(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentDetails.a_id)
 }
 inline std::string* IPCPaymentDetails::mutable_a_id() {
@@ -7154,7 +7154,7 @@ IPCPaymentDetails::a_modifiers() const {
   return _impl_.a_modifiers_;
 }
 
-// required bytes a_error = 6;
+// required string a_error = 6;
 inline bool IPCPaymentDetails::_internal_has_a_error() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7174,7 +7174,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentDetails::set_a_error(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_error_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_error_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentDetails.a_error)
 }
 inline std::string* IPCPaymentDetails::mutable_a_error() {
@@ -7222,7 +7222,7 @@ inline void IPCPaymentDetails::set_allocated_a_error(std::string* a_error) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentDetails.a_error)
 }
 
-// required bytes a_shippingAddressErrors = 7;
+// required string a_shippingAddressErrors = 7;
 inline bool IPCPaymentDetails::_internal_has_a_shippingaddresserrors() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -7242,7 +7242,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentDetails::set_a_shippingaddresserrors(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_shippingaddresserrors_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_shippingaddresserrors_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentDetails.a_shippingAddressErrors)
 }
 inline std::string* IPCPaymentDetails::mutable_a_shippingaddresserrors() {
@@ -7290,7 +7290,7 @@ inline void IPCPaymentDetails::set_allocated_a_shippingaddresserrors(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentDetails.a_shippingAddressErrors)
 }
 
-// required bytes a_payerErrors = 8;
+// required string a_payerErrors = 8;
 inline bool IPCPaymentDetails::_internal_has_a_payererrors() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -7310,7 +7310,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentDetails::set_a_payererrors(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_payererrors_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_payererrors_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentDetails.a_payerErrors)
 }
 inline std::string* IPCPaymentDetails::mutable_a_payererrors() {
@@ -7358,7 +7358,7 @@ inline void IPCPaymentDetails::set_allocated_a_payererrors(std::string* a_payere
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentDetails.a_payerErrors)
 }
 
-// required bytes a_paymentMethodErrors = 9;
+// required string a_paymentMethodErrors = 9;
 inline bool IPCPaymentDetails::_internal_has_a_paymentmethoderrors() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -7378,7 +7378,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentDetails::set_a_paymentmethoderrors(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.a_paymentmethoderrors_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_paymentmethoderrors_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentDetails.a_paymentMethodErrors)
 }
 inline std::string* IPCPaymentDetails::mutable_a_paymentmethoderrors() {
@@ -7570,7 +7570,7 @@ inline void IPCPaymentOptions::set_a_requestbillingaddress(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentOptions.a_requestBillingAddress)
 }
 
-// required bytes a_shippingType = 6;
+// required string a_shippingType = 6;
 inline bool IPCPaymentOptions::_internal_has_a_shippingtype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7590,7 +7590,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentOptions::set_a_shippingtype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_shippingtype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_shippingtype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentOptions.a_shippingType)
 }
 inline std::string* IPCPaymentOptions::mutable_a_shippingtype() {
@@ -7670,7 +7670,7 @@ inline void IPCPaymentCreateActionRequest::set_a_topouterwindowid(uint64_t value
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentCreateActionRequest.a_topOuterWindowId)
 }
 
-// required bytes a_requestId = 2;
+// required string a_requestId = 2;
 inline bool IPCPaymentCreateActionRequest::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7690,7 +7690,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentCreateActionRequest::set_a_requestid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_requestid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_requestid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentCreateActionRequest.a_requestId)
 }
 inline std::string* IPCPaymentCreateActionRequest::mutable_a_requestid() {
@@ -8026,7 +8026,7 @@ inline void IPCPaymentCreateActionRequest::set_allocated_a_options(::protobuf::m
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentCreateActionRequest.a_options)
 }
 
-// required bytes a_shippingOption = 7;
+// required string a_shippingOption = 7;
 inline bool IPCPaymentCreateActionRequest::_internal_has_a_shippingoption() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8046,7 +8046,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentCreateActionRequest::set_a_shippingoption(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_shippingoption_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_shippingoption_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentCreateActionRequest.a_shippingOption)
 }
 inline std::string* IPCPaymentCreateActionRequest::mutable_a_shippingoption() {
@@ -8098,7 +8098,7 @@ inline void IPCPaymentCreateActionRequest::set_allocated_a_shippingoption(std::s
 
 // IPCPaymentCanMakeActionRequest
 
-// required bytes a_requestId = 1;
+// required string a_requestId = 1;
 inline bool IPCPaymentCanMakeActionRequest::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8118,7 +8118,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentCanMakeActionRequest::set_a_requestid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_requestid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_requestid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentCanMakeActionRequest.a_requestId)
 }
 inline std::string* IPCPaymentCanMakeActionRequest::mutable_a_requestid() {
@@ -8170,7 +8170,7 @@ inline void IPCPaymentCanMakeActionRequest::set_allocated_a_requestid(std::strin
 
 // IPCPaymentShowActionRequest
 
-// required bytes a_requestId = 1;
+// required string a_requestId = 1;
 inline bool IPCPaymentShowActionRequest::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8190,7 +8190,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentShowActionRequest::set_a_requestid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_requestid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_requestid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentShowActionRequest.a_requestId)
 }
 inline std::string* IPCPaymentShowActionRequest::mutable_a_requestid() {
@@ -8270,7 +8270,7 @@ inline void IPCPaymentShowActionRequest::set_a_isupdating(bool value) {
 
 // IPCPaymentAbortActionRequest
 
-// required bytes a_requestId = 1;
+// required string a_requestId = 1;
 inline bool IPCPaymentAbortActionRequest::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8290,7 +8290,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentAbortActionRequest::set_a_requestid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_requestid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_requestid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentAbortActionRequest.a_requestId)
 }
 inline std::string* IPCPaymentAbortActionRequest::mutable_a_requestid() {
@@ -8342,7 +8342,7 @@ inline void IPCPaymentAbortActionRequest::set_allocated_a_requestid(std::string*
 
 // IPCPaymentCompleteActionRequest
 
-// required bytes a_requestId = 1;
+// required string a_requestId = 1;
 inline bool IPCPaymentCompleteActionRequest::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8362,7 +8362,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentCompleteActionRequest::set_a_requestid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_requestid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_requestid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentCompleteActionRequest.a_requestId)
 }
 inline std::string* IPCPaymentCompleteActionRequest::mutable_a_requestid() {
@@ -8410,7 +8410,7 @@ inline void IPCPaymentCompleteActionRequest::set_allocated_a_requestid(std::stri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentCompleteActionRequest.a_requestId)
 }
 
-// required bytes a_completeStatus = 2;
+// required string a_completeStatus = 2;
 inline bool IPCPaymentCompleteActionRequest::_internal_has_a_completestatus() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8430,7 +8430,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentCompleteActionRequest::set_a_completestatus(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_completestatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_completestatus_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentCompleteActionRequest.a_completeStatus)
 }
 inline std::string* IPCPaymentCompleteActionRequest::mutable_a_completestatus() {
@@ -8482,7 +8482,7 @@ inline void IPCPaymentCompleteActionRequest::set_allocated_a_completestatus(std:
 
 // IPCPaymentUpdateActionRequest
 
-// required bytes a_requestId = 1;
+// required string a_requestId = 1;
 inline bool IPCPaymentUpdateActionRequest::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8502,7 +8502,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentUpdateActionRequest::set_a_requestid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_requestid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_requestid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentUpdateActionRequest.a_requestId)
 }
 inline std::string* IPCPaymentUpdateActionRequest::mutable_a_requestid() {
@@ -8640,7 +8640,7 @@ inline void IPCPaymentUpdateActionRequest::set_allocated_a_details(::protobuf::m
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentUpdateActionRequest.a_details)
 }
 
-// required bytes a_shippingOption = 3;
+// required string a_shippingOption = 3;
 inline bool IPCPaymentUpdateActionRequest::_internal_has_a_shippingoption() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8660,7 +8660,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentUpdateActionRequest::set_a_shippingoption(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_shippingoption_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_shippingoption_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentUpdateActionRequest.a_shippingOption)
 }
 inline std::string* IPCPaymentUpdateActionRequest::mutable_a_shippingoption() {
@@ -8712,7 +8712,7 @@ inline void IPCPaymentUpdateActionRequest::set_allocated_a_shippingoption(std::s
 
 // IPCPaymentCloseActionRequest
 
-// required bytes a_requestId = 1;
+// required string a_requestId = 1;
 inline bool IPCPaymentCloseActionRequest::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8732,7 +8732,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentCloseActionRequest::set_a_requestid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_requestid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_requestid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentCloseActionRequest.a_requestId)
 }
 inline std::string* IPCPaymentCloseActionRequest::mutable_a_requestid() {
@@ -8784,7 +8784,7 @@ inline void IPCPaymentCloseActionRequest::set_allocated_a_requestid(std::string*
 
 // IPCPaymentRetryActionRequest
 
-// required bytes a_requestId = 1;
+// required string a_requestId = 1;
 inline bool IPCPaymentRetryActionRequest::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8804,7 +8804,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentRetryActionRequest::set_a_requestid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_requestid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_requestid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_requestId)
 }
 inline std::string* IPCPaymentRetryActionRequest::mutable_a_requestid() {
@@ -8852,7 +8852,7 @@ inline void IPCPaymentRetryActionRequest::set_allocated_a_requestid(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_requestId)
 }
 
-// required bytes a_error = 2;
+// required string a_error = 2;
 inline bool IPCPaymentRetryActionRequest::_internal_has_a_error() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8872,7 +8872,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentRetryActionRequest::set_a_error(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_error_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_error_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_error)
 }
 inline std::string* IPCPaymentRetryActionRequest::mutable_a_error() {
@@ -8920,7 +8920,7 @@ inline void IPCPaymentRetryActionRequest::set_allocated_a_error(std::string* a_e
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_error)
 }
 
-// required bytes a_payerErrors = 3;
+// required string a_payerErrors = 3;
 inline bool IPCPaymentRetryActionRequest::_internal_has_a_payererrors() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -8940,7 +8940,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentRetryActionRequest::set_a_payererrors(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_payererrors_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_payererrors_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_payerErrors)
 }
 inline std::string* IPCPaymentRetryActionRequest::mutable_a_payererrors() {
@@ -8988,7 +8988,7 @@ inline void IPCPaymentRetryActionRequest::set_allocated_a_payererrors(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_payerErrors)
 }
 
-// required bytes a_paymentMethodErrors = 4;
+// required string a_paymentMethodErrors = 4;
 inline bool IPCPaymentRetryActionRequest::_internal_has_a_paymentmethoderrors() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -9008,7 +9008,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentRetryActionRequest::set_a_paymentmethoderrors(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_paymentmethoderrors_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_paymentmethoderrors_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_paymentMethodErrors)
 }
 inline std::string* IPCPaymentRetryActionRequest::mutable_a_paymentmethoderrors() {
@@ -9056,7 +9056,7 @@ inline void IPCPaymentRetryActionRequest::set_allocated_a_paymentmethoderrors(st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_paymentMethodErrors)
 }
 
-// required bytes a_shippingAddressErrors = 5;
+// required string a_shippingAddressErrors = 5;
 inline bool IPCPaymentRetryActionRequest::_internal_has_a_shippingaddresserrors() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -9076,7 +9076,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentRetryActionRequest::set_a_shippingaddresserrors(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.a_shippingaddresserrors_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_shippingaddresserrors_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_shippingAddressErrors)
 }
 inline std::string* IPCPaymentRetryActionRequest::mutable_a_shippingaddresserrors() {
@@ -9733,7 +9733,7 @@ inline IPCPaymentActionRequest::ContentCase IPCPaymentActionRequest::content_cas
 
 // IPCPaymentCanMakeActionResponse
 
-// required bytes a_requestId = 1;
+// required string a_requestId = 1;
 inline bool IPCPaymentCanMakeActionResponse::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9753,7 +9753,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentCanMakeActionResponse::set_a_requestid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_requestid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_requestid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentCanMakeActionResponse.a_requestId)
 }
 inline std::string* IPCPaymentCanMakeActionResponse::mutable_a_requestid() {
@@ -9833,7 +9833,7 @@ inline void IPCPaymentCanMakeActionResponse::set_a_result(bool value) {
 
 // IPCPaymentAddress
 
-// required bytes a_country = 1;
+// required string a_country = 1;
 inline bool IPCPaymentAddress::_internal_has_a_country() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9853,7 +9853,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentAddress::set_a_country(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_country_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_country_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentAddress.a_country)
 }
 inline std::string* IPCPaymentAddress::mutable_a_country() {
@@ -9901,7 +9901,7 @@ inline void IPCPaymentAddress::set_allocated_a_country(std::string* a_country) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentAddress.a_country)
 }
 
-// repeated bytes a_addressLine = 2;
+// repeated string a_addressLine = 2;
 inline int IPCPaymentAddress::_internal_a_addressline_size() const {
   return _impl_.a_addressline_.size();
 }
@@ -9940,7 +9940,7 @@ inline void IPCPaymentAddress::set_a_addressline(int index, const char* value) {
   _impl_.a_addressline_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.IPCPaymentAddress.a_addressLine)
 }
-inline void IPCPaymentAddress::set_a_addressline(int index, const void* value, size_t size) {
+inline void IPCPaymentAddress::set_a_addressline(int index, const char* value, size_t size) {
   _impl_.a_addressline_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.IPCPaymentAddress.a_addressLine)
@@ -9961,7 +9961,7 @@ inline void IPCPaymentAddress::add_a_addressline(const char* value) {
   _impl_.a_addressline_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.IPCPaymentAddress.a_addressLine)
 }
-inline void IPCPaymentAddress::add_a_addressline(const void* value, size_t size) {
+inline void IPCPaymentAddress::add_a_addressline(const char* value, size_t size) {
   _impl_.a_addressline_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.IPCPaymentAddress.a_addressLine)
 }
@@ -9976,7 +9976,7 @@ IPCPaymentAddress::mutable_a_addressline() {
   return &_impl_.a_addressline_;
 }
 
-// required bytes a_region = 3;
+// required string a_region = 3;
 inline bool IPCPaymentAddress::_internal_has_a_region() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9996,7 +9996,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentAddress::set_a_region(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_region_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_region_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentAddress.a_region)
 }
 inline std::string* IPCPaymentAddress::mutable_a_region() {
@@ -10044,7 +10044,7 @@ inline void IPCPaymentAddress::set_allocated_a_region(std::string* a_region) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentAddress.a_region)
 }
 
-// required bytes a_regionCode = 4;
+// required string a_regionCode = 4;
 inline bool IPCPaymentAddress::_internal_has_a_regioncode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -10064,7 +10064,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentAddress::set_a_regioncode(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_regioncode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_regioncode_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentAddress.a_regionCode)
 }
 inline std::string* IPCPaymentAddress::mutable_a_regioncode() {
@@ -10112,7 +10112,7 @@ inline void IPCPaymentAddress::set_allocated_a_regioncode(std::string* a_regionc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentAddress.a_regionCode)
 }
 
-// required bytes a_city = 5;
+// required string a_city = 5;
 inline bool IPCPaymentAddress::_internal_has_a_city() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -10132,7 +10132,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentAddress::set_a_city(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_city_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_city_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentAddress.a_city)
 }
 inline std::string* IPCPaymentAddress::mutable_a_city() {
@@ -10180,7 +10180,7 @@ inline void IPCPaymentAddress::set_allocated_a_city(std::string* a_city) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentAddress.a_city)
 }
 
-// required bytes a_dependentLocality = 6;
+// required string a_dependentLocality = 6;
 inline bool IPCPaymentAddress::_internal_has_a_dependentlocality() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -10200,7 +10200,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentAddress::set_a_dependentlocality(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.a_dependentlocality_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_dependentlocality_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentAddress.a_dependentLocality)
 }
 inline std::string* IPCPaymentAddress::mutable_a_dependentlocality() {
@@ -10248,7 +10248,7 @@ inline void IPCPaymentAddress::set_allocated_a_dependentlocality(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentAddress.a_dependentLocality)
 }
 
-// required bytes a_postalCode = 7;
+// required string a_postalCode = 7;
 inline bool IPCPaymentAddress::_internal_has_a_postalcode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -10268,7 +10268,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentAddress::set_a_postalcode(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.a_postalcode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_postalcode_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentAddress.a_postalCode)
 }
 inline std::string* IPCPaymentAddress::mutable_a_postalcode() {
@@ -10316,7 +10316,7 @@ inline void IPCPaymentAddress::set_allocated_a_postalcode(std::string* a_postalc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentAddress.a_postalCode)
 }
 
-// required bytes a_sortingCode = 8;
+// required string a_sortingCode = 8;
 inline bool IPCPaymentAddress::_internal_has_a_sortingcode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -10336,7 +10336,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentAddress::set_a_sortingcode(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000040u;
- _impl_.a_sortingcode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_sortingcode_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentAddress.a_sortingCode)
 }
 inline std::string* IPCPaymentAddress::mutable_a_sortingcode() {
@@ -10384,7 +10384,7 @@ inline void IPCPaymentAddress::set_allocated_a_sortingcode(std::string* a_sortin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentAddress.a_sortingCode)
 }
 
-// required bytes a_organization = 9;
+// required string a_organization = 9;
 inline bool IPCPaymentAddress::_internal_has_a_organization() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -10404,7 +10404,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentAddress::set_a_organization(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000080u;
- _impl_.a_organization_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_organization_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentAddress.a_organization)
 }
 inline std::string* IPCPaymentAddress::mutable_a_organization() {
@@ -10452,7 +10452,7 @@ inline void IPCPaymentAddress::set_allocated_a_organization(std::string* a_organ
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentAddress.a_organization)
 }
 
-// required bytes a_recipient = 10;
+// required string a_recipient = 10;
 inline bool IPCPaymentAddress::_internal_has_a_recipient() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -10472,7 +10472,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentAddress::set_a_recipient(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000100u;
- _impl_.a_recipient_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_recipient_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentAddress.a_recipient)
 }
 inline std::string* IPCPaymentAddress::mutable_a_recipient() {
@@ -10520,7 +10520,7 @@ inline void IPCPaymentAddress::set_allocated_a_recipient(std::string* a_recipien
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentAddress.a_recipient)
 }
 
-// required bytes a_phone = 11;
+// required string a_phone = 11;
 inline bool IPCPaymentAddress::_internal_has_a_phone() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -10540,7 +10540,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentAddress::set_a_phone(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000200u;
- _impl_.a_phone_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_phone_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentAddress.a_phone)
 }
 inline std::string* IPCPaymentAddress::mutable_a_phone() {
@@ -10592,7 +10592,7 @@ inline void IPCPaymentAddress::set_allocated_a_phone(std::string* a_phone) {
 
 // IPCGeneralResponse
 
-// required bytes a_data = 1;
+// required string a_data = 1;
 inline bool IPCGeneralResponse::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10612,7 +10612,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCGeneralResponse::set_a_data(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_data_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCGeneralResponse.a_data)
 }
 inline std::string* IPCGeneralResponse::mutable_a_data() {
@@ -10664,7 +10664,7 @@ inline void IPCGeneralResponse::set_allocated_a_data(std::string* a_data) {
 
 // IPCBasicCardResponse
 
-// required bytes a_cardholderName = 1;
+// required string a_cardholderName = 1;
 inline bool IPCBasicCardResponse::_internal_has_a_cardholdername() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10684,7 +10684,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCBasicCardResponse::set_a_cardholdername(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_cardholdername_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_cardholdername_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCBasicCardResponse.a_cardholderName)
 }
 inline std::string* IPCBasicCardResponse::mutable_a_cardholdername() {
@@ -10732,7 +10732,7 @@ inline void IPCBasicCardResponse::set_allocated_a_cardholdername(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCBasicCardResponse.a_cardholderName)
 }
 
-// required bytes a_cardNumber = 2;
+// required string a_cardNumber = 2;
 inline bool IPCBasicCardResponse::_internal_has_a_cardnumber() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10752,7 +10752,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCBasicCardResponse::set_a_cardnumber(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_cardnumber_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_cardnumber_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCBasicCardResponse.a_cardNumber)
 }
 inline std::string* IPCBasicCardResponse::mutable_a_cardnumber() {
@@ -10800,7 +10800,7 @@ inline void IPCBasicCardResponse::set_allocated_a_cardnumber(std::string* a_card
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCBasicCardResponse.a_cardNumber)
 }
 
-// required bytes a_expiryMonth = 3;
+// required string a_expiryMonth = 3;
 inline bool IPCBasicCardResponse::_internal_has_a_expirymonth() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -10820,7 +10820,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCBasicCardResponse::set_a_expirymonth(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_expirymonth_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_expirymonth_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCBasicCardResponse.a_expiryMonth)
 }
 inline std::string* IPCBasicCardResponse::mutable_a_expirymonth() {
@@ -10868,7 +10868,7 @@ inline void IPCBasicCardResponse::set_allocated_a_expirymonth(std::string* a_exp
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCBasicCardResponse.a_expiryMonth)
 }
 
-// required bytes a_expiryYear = 4;
+// required string a_expiryYear = 4;
 inline bool IPCBasicCardResponse::_internal_has_a_expiryyear() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -10888,7 +10888,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCBasicCardResponse::set_a_expiryyear(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_expiryyear_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_expiryyear_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCBasicCardResponse.a_expiryYear)
 }
 inline std::string* IPCBasicCardResponse::mutable_a_expiryyear() {
@@ -10936,7 +10936,7 @@ inline void IPCBasicCardResponse::set_allocated_a_expiryyear(std::string* a_expi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCBasicCardResponse.a_expiryYear)
 }
 
-// required bytes a_cardSecurityCode = 5;
+// required string a_cardSecurityCode = 5;
 inline bool IPCBasicCardResponse::_internal_has_a_cardsecuritycode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -10956,7 +10956,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCBasicCardResponse::set_a_cardsecuritycode(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.a_cardsecuritycode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_cardsecuritycode_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCBasicCardResponse.a_cardSecurityCode)
 }
 inline std::string* IPCBasicCardResponse::mutable_a_cardsecuritycode() {
@@ -11259,7 +11259,7 @@ inline IPCPaymentResponseData::ContentCase IPCPaymentResponseData::content_case(
 
 // IPCPaymentShowActionResponse
 
-// required bytes a_requestId = 1;
+// required string a_requestId = 1;
 inline bool IPCPaymentShowActionResponse::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11279,7 +11279,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentShowActionResponse::set_a_requestid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_requestid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_requestid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_requestId)
 }
 inline std::string* IPCPaymentShowActionResponse::mutable_a_requestid() {
@@ -11355,7 +11355,7 @@ inline void IPCPaymentShowActionResponse::set_a_status(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_status)
 }
 
-// required bytes a_methodName = 3;
+// required string a_methodName = 3;
 inline bool IPCPaymentShowActionResponse::_internal_has_a_methodname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11375,7 +11375,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentShowActionResponse::set_a_methodname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_methodname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_methodname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_methodName)
 }
 inline std::string* IPCPaymentShowActionResponse::mutable_a_methodname() {
@@ -11513,7 +11513,7 @@ inline void IPCPaymentShowActionResponse::set_allocated_a_data(::protobuf::mozil
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_data)
 }
 
-// required bytes a_payerName = 5;
+// required string a_payerName = 5;
 inline bool IPCPaymentShowActionResponse::_internal_has_a_payername() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11533,7 +11533,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentShowActionResponse::set_a_payername(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_payername_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_payername_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_payerName)
 }
 inline std::string* IPCPaymentShowActionResponse::mutable_a_payername() {
@@ -11581,7 +11581,7 @@ inline void IPCPaymentShowActionResponse::set_allocated_a_payername(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_payerName)
 }
 
-// required bytes a_payerEmail = 6;
+// required string a_payerEmail = 6;
 inline bool IPCPaymentShowActionResponse::_internal_has_a_payeremail() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -11601,7 +11601,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentShowActionResponse::set_a_payeremail(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_payeremail_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_payeremail_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_payerEmail)
 }
 inline std::string* IPCPaymentShowActionResponse::mutable_a_payeremail() {
@@ -11649,7 +11649,7 @@ inline void IPCPaymentShowActionResponse::set_allocated_a_payeremail(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_payerEmail)
 }
 
-// required bytes a_payerPhone = 7;
+// required string a_payerPhone = 7;
 inline bool IPCPaymentShowActionResponse::_internal_has_a_payerphone() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -11669,7 +11669,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentShowActionResponse::set_a_payerphone(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.a_payerphone_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_payerphone_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_payerPhone)
 }
 inline std::string* IPCPaymentShowActionResponse::mutable_a_payerphone() {
@@ -11721,7 +11721,7 @@ inline void IPCPaymentShowActionResponse::set_allocated_a_payerphone(std::string
 
 // IPCPaymentAbortActionResponse
 
-// required bytes a_requestId = 1;
+// required string a_requestId = 1;
 inline bool IPCPaymentAbortActionResponse::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11741,7 +11741,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentAbortActionResponse::set_a_requestid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_requestid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_requestid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentAbortActionResponse.a_requestId)
 }
 inline std::string* IPCPaymentAbortActionResponse::mutable_a_requestid() {
@@ -11821,7 +11821,7 @@ inline void IPCPaymentAbortActionResponse::set_a_issucceeded(bool value) {
 
 // IPCPaymentCompleteActionResponse
 
-// required bytes a_requestId = 1;
+// required string a_requestId = 1;
 inline bool IPCPaymentCompleteActionResponse::_internal_has_a_requestid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11841,7 +11841,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCPaymentCompleteActionResponse::set_a_requestid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_requestid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_requestid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCPaymentCompleteActionResponse.a_requestId)
 }
 inline std::string* IPCPaymentCompleteActionResponse::mutable_a_requestid() {
@@ -12230,7 +12230,7 @@ inline IPCPaymentActionResponse::ContentCase IPCPaymentActionResponse::content_c
 
 // IPCGeneralChangeDetails
 
-// required bytes a_details = 1;
+// required string a_details = 1;
 inline bool IPCGeneralChangeDetails::_internal_has_a_details() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12250,7 +12250,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCGeneralChangeDetails::set_a_details(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_details_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_details_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCGeneralChangeDetails.a_details)
 }
 inline std::string* IPCGeneralChangeDetails::mutable_a_details() {

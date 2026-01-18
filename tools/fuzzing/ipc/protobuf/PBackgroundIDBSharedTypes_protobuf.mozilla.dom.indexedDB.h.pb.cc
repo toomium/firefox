@@ -2614,7 +2614,7 @@ const char* DatabaseMetadata::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_name = 1;
+      // required string a_name = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_name();
@@ -2672,9 +2672,9 @@ uint8_t* DatabaseMetadata::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_name = 1;
+  // required string a_name = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_name(), target);
   }
 
@@ -2703,9 +2703,9 @@ size_t DatabaseMetadata::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_name()) {
-    // required bytes a_name = 1;
+    // required string a_name = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_name());
   }
 
@@ -2728,9 +2728,9 @@ size_t DatabaseMetadata::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes a_name = 1;
+    // required string a_name = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_name());
 
     // required bytes a_persistenceType = 3;
@@ -2962,7 +2962,7 @@ const char* ObjectStoreMetadata::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_name = 2;
+      // required string a_name = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_name();
@@ -3026,9 +3026,9 @@ uint8_t* ObjectStoreMetadata::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_id(), target);
   }
 
-  // required bytes a_name = 2;
+  // required string a_name = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_name(), target);
   }
 
@@ -3057,9 +3057,9 @@ size_t ObjectStoreMetadata::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_name()) {
-    // required bytes a_name = 2;
+    // required string a_name = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_name());
   }
 
@@ -3087,9 +3087,9 @@ size_t ObjectStoreMetadata::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required bytes a_name = 2;
+    // required string a_name = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_name());
 
     // required bytes a_keyPath = 3;
@@ -3363,7 +3363,7 @@ const char* IndexMetadata::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_name = 2;
+      // required string a_name = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_name();
@@ -3381,7 +3381,7 @@ const char* IndexMetadata::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_locale = 4;
+      // required string a_locale = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_locale();
@@ -3454,9 +3454,9 @@ uint8_t* IndexMetadata::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_id(), target);
   }
 
-  // required bytes a_name = 2;
+  // required string a_name = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_name(), target);
   }
 
@@ -3466,9 +3466,9 @@ uint8_t* IndexMetadata::_InternalSerialize(
         3, this->_internal_a_keypath(), target);
   }
 
-  // required bytes a_locale = 4;
+  // required string a_locale = 4;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_locale(), target);
   }
 
@@ -3503,9 +3503,9 @@ size_t IndexMetadata::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_name()) {
-    // required bytes a_name = 2;
+    // required string a_name = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_name());
   }
 
@@ -3517,9 +3517,9 @@ size_t IndexMetadata::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_a_locale()) {
-    // required bytes a_locale = 4;
+    // required string a_locale = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_locale());
   }
 
@@ -3550,9 +3550,9 @@ size_t IndexMetadata::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000007f) ^ 0x0000007f) == 0) {  // All required fields are present.
-    // required bytes a_name = 2;
+    // required string a_name = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_name());
 
     // required bytes a_keyPath = 3;
@@ -3560,9 +3560,9 @@ size_t IndexMetadata::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_keypath());
 
-    // required bytes a_locale = 4;
+    // required string a_locale = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_locale());
 
     // required sint64 a_id = 1;

@@ -17,7 +17,7 @@ import "WebrtcProxyConfig.proto";
 
 // Message declarations
 message Msg_GetIceLog {
-  required bytes a_pattern = 1;
+  required string a_pattern = 1;
 }
 
 message Reply_GetIceLog {
@@ -34,7 +34,7 @@ message Msg_ExitPrivateMode {
 }
 
 message Msg_CreateIceCtx {
-  required string a_name = 1;
+  required bytes a_name = 1;
 }
 
 message Msg_SetIceConfig {
@@ -47,14 +47,14 @@ message Msg_SetProxyConfig {
 }
 
 message Msg_EnsureProvisionalTransport {
-  required string a_transportId = 1;
-  required string a_localUfrag = 2;
-  required string a_localPwd = 3;
+  required bytes a_transportId = 1;
+  required bytes a_localUfrag = 2;
+  required bytes a_localPwd = 3;
   required sint32 a_componentCount = 4;
 }
 
 message Msg_SetTargetForDefaultLocalAddressLookup {
-  required string a_targetIp = 1;
+  required bytes a_targetIp = 1;
   required uint32 a_targetPort = 2;
 }
 
@@ -65,12 +65,12 @@ message Msg_StartIceGathering {
 }
 
 message Msg_ActivateTransport {
-  required string a_transportId = 1;
-  required string a_localUfrag = 2;
-  required string a_localPwd = 3;
+  required bytes a_transportId = 1;
+  required bytes a_localUfrag = 2;
+  required bytes a_localPwd = 3;
   required sint32 a_componentCount = 4;
-  required string a_remoteUfrag = 5;
-  required string a_remotePwd = 6;
+  required bytes a_remoteUfrag = 5;
+  required bytes a_remotePwd = 6;
   repeated uint32 a_keyDer = 7;
   repeated uint32 a_certDer = 8;
   required sint32 a_authType = 9;
@@ -89,15 +89,15 @@ message Msg_StartIceChecks {
 }
 
 message Msg_SendPacket {
-  required string a_transportId = 1;
+  required bytes a_transportId = 1;
   required bytes a_packet = 2;
 }
 
 message Msg_AddIceCandidate {
-  required string a_transportId = 1;
-  required string a_candidate = 2;
-  required string a_ufrag = 3;
-  required string a_obfuscatedAddr = 4;
+  required bytes a_transportId = 1;
+  required bytes a_candidate = 2;
+  required bytes a_ufrag = 3;
+  required bytes a_obfuscatedAddr = 4;
 }
 
 message Msg_UpdateNetworkState {
@@ -105,7 +105,7 @@ message Msg_UpdateNetworkState {
 }
 
 message Msg_GetIceStats {
-  required string a_transportId = 1;
+  required bytes a_transportId = 1;
   required double a_now = 2;
 }
 
@@ -114,46 +114,46 @@ message Reply_GetIceStats {
 }
 
 message Msg_OnCandidate {
-  required string a_transportId = 1;
+  required bytes a_transportId = 1;
   required bytes a_candidateInfo = 2;
 }
 
 message Msg_OnAlpnNegotiated {
-  required string a_alpn = 1;
+  required bytes a_alpn = 1;
 }
 
 message Msg_OnGatheringStateChange {
-  required string a_transportId = 1;
+  required bytes a_transportId = 1;
   required sint32 a_state = 2;
 }
 
 message Msg_OnConnectionStateChange {
-  required string a_transportId = 1;
+  required bytes a_transportId = 1;
   required sint32 a_state = 2;
 }
 
 message Msg_OnPacketReceived {
-  required string a_transportId = 1;
+  required bytes a_transportId = 1;
   required bytes a_packet = 2;
 }
 
 message Msg_OnEncryptedSending {
-  required string a_transportId = 1;
+  required bytes a_transportId = 1;
   required bytes a_packet = 2;
 }
 
 message Msg_OnStateChange {
-  required string a_transportId = 1;
+  required bytes a_transportId = 1;
   required sint32 a_state = 2;
 }
 
 message Msg_OnRtcpStateChange {
-  required string a_transportId = 1;
+  required bytes a_transportId = 1;
   required sint32 a_state = 2;
 }
 
 // Parameter mappings stats:
 // Total parameters in this file 58
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 3, "<class 'ipdl.type.BuiltinCType'>": 14, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 39, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 1, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 1}
-// Scalar mappings performed: 41
+// Scalar mappings performed: 18
 // Message structs/unions generated from ipdl structs/unions: 0

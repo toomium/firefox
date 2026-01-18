@@ -348,7 +348,7 @@ const char* NodeIdParts::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_mOrigin = 1;
+      // required string a_mOrigin = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_morigin();
@@ -357,7 +357,7 @@ const char* NodeIdParts::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_mTopLevelOrigin = 2;
+      // required string a_mTopLevelOrigin = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_mtoplevelorigin();
@@ -366,7 +366,7 @@ const char* NodeIdParts::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_mGMPName = 3;
+      // required string a_mGMPName = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_mgmpname();
@@ -406,21 +406,21 @@ uint8_t* NodeIdParts::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_mOrigin = 1;
+  // required string a_mOrigin = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_morigin(), target);
   }
 
-  // required bytes a_mTopLevelOrigin = 2;
+  // required string a_mTopLevelOrigin = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_mtoplevelorigin(), target);
   }
 
-  // required bytes a_mGMPName = 3;
+  // required string a_mGMPName = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_mgmpname(), target);
   }
 
@@ -437,23 +437,23 @@ size_t NodeIdParts::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_morigin()) {
-    // required bytes a_mOrigin = 1;
+    // required string a_mOrigin = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_morigin());
   }
 
   if (_internal_has_a_mtoplevelorigin()) {
-    // required bytes a_mTopLevelOrigin = 2;
+    // required string a_mTopLevelOrigin = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_mtoplevelorigin());
   }
 
   if (_internal_has_a_mgmpname()) {
-    // required bytes a_mGMPName = 3;
+    // required string a_mGMPName = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_mgmpname());
   }
 
@@ -464,19 +464,19 @@ size_t NodeIdParts::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes a_mOrigin = 1;
+    // required string a_mOrigin = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_morigin());
 
-    // required bytes a_mTopLevelOrigin = 2;
+    // required string a_mTopLevelOrigin = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_mtoplevelorigin());
 
-    // required bytes a_mGMPName = 3;
+    // required string a_mGMPName = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_mgmpname());
 
   } else {
@@ -687,7 +687,7 @@ const char* NodeIdVariant::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // bytes a_mVnsCString = 1;
+      // string a_mVnsCString = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_mvnscstring();
@@ -735,7 +735,7 @@ uint8_t* NodeIdVariant::_InternalSerialize(
 
   switch (content_case()) {
     case kAMVnsCString: {
-      target = stream->WriteBytesMaybeAliased(
+      target = stream->WriteStringMaybeAliased(
           1, this->_internal_a_mvnscstring(), target);
       break;
     }
@@ -764,10 +764,10 @@ size_t NodeIdVariant::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // bytes a_mVnsCString = 1;
+    // string a_mVnsCString = 1;
     case kAMVnsCString: {
       total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
           this->_internal_a_mvnscstring());
       break;
     }

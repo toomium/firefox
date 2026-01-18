@@ -18,7 +18,7 @@ message ProfilerInitParams {
   required double a_interval = 4;
   required uint32 a_features = 5;
   required uint64 a_activeTabID = 6;
-  repeated bytes a_filters = 7;
+  repeated string a_filters = 7;
 }
 
 message ProfileBufferChunkMetadata {
@@ -35,7 +35,7 @@ message ProfileBufferChunkManagerUpdate {
 
 message GatherProfileProgress {
   required uint32 a_progressProportionValueUnderlyingType = 1;
-  required bytes a_progressLocation = 2;
+  required string a_progressLocation = 2;
 }
 
 message IPCProfileAndAdditionalInformation {

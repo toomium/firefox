@@ -2686,7 +2686,7 @@ class Msg_DeviceCreateShaderModule final :
   std::string* _internal_mutable_a_bufferid();
   public:
 
-  // required bytes a_label = 3;
+  // required string a_label = 3;
   bool has_a_label() const;
   private:
   bool _internal_has_a_label() const;
@@ -2704,7 +2704,7 @@ class Msg_DeviceCreateShaderModule final :
   std::string* _internal_mutable_a_label();
   public:
 
-  // required bytes a_code = 4;
+  // required string a_code = 4;
   bool has_a_code() const;
   private:
   bool _internal_has_a_code() const;
@@ -8320,7 +8320,7 @@ class Msg_ReportError final :
   std::string* _internal_mutable_a_atype();
   public:
 
-  // required bytes a_message = 3;
+  // required string a_message = 3;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -8491,7 +8491,7 @@ class Msg_UncapturedError final :
   std::string* _internal_mutable_a_adeviceid();
   public:
 
-  // required bytes a_message = 2;
+  // required string a_message = 2;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -8659,7 +8659,7 @@ class Msg_DeviceLost final :
   std::string* _internal_mutable_a_adeviceid();
   public:
 
-  // required bytes a_message = 3;
+  // required string a_message = 3;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -11117,7 +11117,7 @@ inline void Msg_DeviceCreateShaderModule::set_allocated_a_bufferid(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_bufferId)
 }
 
-// required bytes a_label = 3;
+// required string a_label = 3;
 inline bool Msg_DeviceCreateShaderModule::_internal_has_a_label() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -11137,7 +11137,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceCreateShaderModule::set_a_label(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_label_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_label_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_label)
 }
 inline std::string* Msg_DeviceCreateShaderModule::mutable_a_label() {
@@ -11185,7 +11185,7 @@ inline void Msg_DeviceCreateShaderModule::set_allocated_a_label(std::string* a_l
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_label)
 }
 
-// required bytes a_code = 4;
+// required string a_code = 4;
 inline bool Msg_DeviceCreateShaderModule::_internal_has_a_code() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -11205,7 +11205,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceCreateShaderModule::set_a_code(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_code_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_code_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_code)
 }
 inline std::string* Msg_DeviceCreateShaderModule::mutable_a_code() {
@@ -15459,7 +15459,7 @@ inline void Msg_ReportError::set_allocated_a_atype(std::string* a_atype) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_aType)
 }
 
-// required bytes a_message = 3;
+// required string a_message = 3;
 inline bool Msg_ReportError::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -15479,7 +15479,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReportError::set_a_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_message)
 }
 inline std::string* Msg_ReportError::mutable_a_message() {
@@ -15599,7 +15599,7 @@ inline void Msg_UncapturedError::set_allocated_a_adeviceid(std::string* a_adevic
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.a_aDeviceId)
 }
 
-// required bytes a_message = 2;
+// required string a_message = 2;
 inline bool Msg_UncapturedError::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -15619,7 +15619,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UncapturedError::set_a_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.a_message)
 }
 inline std::string* Msg_UncapturedError::mutable_a_message() {
@@ -15767,7 +15767,7 @@ inline void Msg_DeviceLost::set_a_reason(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_reason)
 }
 
-// required bytes a_message = 3;
+// required string a_message = 3;
 inline bool Msg_DeviceLost::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -15787,7 +15787,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceLost::set_a_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_message)
 }
 inline std::string* Msg_DeviceLost::mutable_a_message() {

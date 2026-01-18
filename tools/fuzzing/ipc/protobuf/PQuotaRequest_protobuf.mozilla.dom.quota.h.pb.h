@@ -194,7 +194,7 @@ class StorageNameResponse final :
   enum : int {
     kANameFieldNumber = 1,
   };
-  // required bytes a_name = 1;
+  // required string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -1084,7 +1084,7 @@ class RequestResponse final :
 #endif  // __GNUC__
 // StorageNameResponse
 
-// required bytes a_name = 1;
+// required string a_name = 1;
 inline bool StorageNameResponse::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1104,7 +1104,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void StorageNameResponse::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.StorageNameResponse.a_name)
 }
 inline std::string* StorageNameResponse::mutable_a_name() {

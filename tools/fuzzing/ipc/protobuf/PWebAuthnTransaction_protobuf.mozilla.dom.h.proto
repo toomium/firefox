@@ -13,9 +13,9 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message WebAuthnAuthenticatorSelection {
-  required bytes a_residentKey = 1;
-  required bytes a_userVerificationRequirement = 2;
-  optional bytes a_authenticatorAttachment = 3;
+  required string a_residentKey = 1;
+  required string a_userVerificationRequirement = 2;
+  optional string a_authenticatorAttachment = 3;
 }
 
 message WebAuthnScopedCredential {
@@ -107,13 +107,13 @@ message WebAuthnExtensionResult {
 }
 
 message WebAuthnMakeCredentialRpInfo {
-  required bytes a_Name = 1;
+  required string a_Name = 1;
 }
 
 message WebAuthnMakeCredentialUserInfo {
   repeated uint32 a_Id = 1;
-  required bytes a_Name = 2;
-  required bytes a_DisplayName = 3;
+  required string a_Name = 2;
+  required string a_DisplayName = 3;
 }
 
 message CoseAlg {
@@ -121,7 +121,7 @@ message CoseAlg {
 }
 
 message WebAuthnMakeCredentialInfo {
-  required bytes a_RpId = 1;
+  required string a_RpId = 1;
   repeated uint32 a_Challenge = 2;
   required uint32 a_TimeoutMS = 3;
   repeated protobuf.mozilla.dom.WebAuthnScopedCredential a_ExcludeList = 4;
@@ -130,16 +130,16 @@ message WebAuthnMakeCredentialInfo {
   repeated protobuf.mozilla.dom.CoseAlg a_coseAlgs = 7;
   repeated protobuf.mozilla.dom.WebAuthnExtension a_Extensions = 8;
   required protobuf.mozilla.dom.WebAuthnAuthenticatorSelection a_AuthenticatorSelection = 9;
-  required bytes a_attestationConveyancePreference = 10;
+  required string a_attestationConveyancePreference = 10;
 }
 
 message WebAuthnMakeCredentialResult {
-  required bytes a_ClientDataJSON = 1;
+  required string a_ClientDataJSON = 1;
   repeated uint32 a_AttestationObject = 2;
   repeated uint32 a_KeyHandle = 3;
-  repeated bytes a_Transports = 4;
+  repeated string a_Transports = 4;
   repeated protobuf.mozilla.dom.WebAuthnExtensionResult a_Extensions = 5;
-  optional bytes a_AuthenticatorAttachment = 6;
+  optional string a_AuthenticatorAttachment = 6;
 }
 
 message WebAuthnMakeCredentialResponse {
@@ -150,24 +150,24 @@ message WebAuthnMakeCredentialResponse {
 }
 
 message WebAuthnGetAssertionInfo {
-  required bytes a_RpId = 1;
-  optional bytes a_AppId = 2;
+  required string a_RpId = 1;
+  optional string a_AppId = 2;
   repeated uint32 a_Challenge = 3;
   required uint32 a_TimeoutMS = 4;
   repeated protobuf.mozilla.dom.WebAuthnScopedCredential a_AllowList = 5;
   repeated protobuf.mozilla.dom.WebAuthnExtension a_Extensions = 6;
-  required bytes a_userVerificationRequirement = 7;
+  required string a_userVerificationRequirement = 7;
   required bool a_ConditionallyMediated = 8;
 }
 
 message WebAuthnGetAssertionResult {
-  required bytes a_ClientDataJSON = 1;
+  required string a_ClientDataJSON = 1;
   repeated uint32 a_KeyHandle = 2;
   repeated uint32 a_Signature = 3;
   repeated uint32 a_AuthenticatorData = 4;
   repeated protobuf.mozilla.dom.WebAuthnExtensionResult a_Extensions = 5;
   repeated uint32 a_UserHandle = 6;
-  optional bytes a_AuthenticatorAttachment = 7;
+  optional string a_AuthenticatorAttachment = 7;
 }
 
 message WebAuthnGetAssertionResponse {

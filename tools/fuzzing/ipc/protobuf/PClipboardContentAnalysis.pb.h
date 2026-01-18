@@ -186,7 +186,7 @@ class Msg_GetClipboard final :
     kAAWhichClipboardFieldNumber = 2,
     kAARequestingWindowContextIdFieldNumber = 3,
   };
-  // repeated bytes a_aTypes = 1;
+  // repeated string a_aTypes = 1;
   int a_atypes_size() const;
   private:
   int _internal_a_atypes_size() const;
@@ -197,12 +197,12 @@ class Msg_GetClipboard final :
   void set_a_atypes(int index, const std::string& value);
   void set_a_atypes(int index, std::string&& value);
   void set_a_atypes(int index, const char* value);
-  void set_a_atypes(int index, const void* value, size_t size);
+  void set_a_atypes(int index, const char* value, size_t size);
   std::string* add_a_atypes();
   void add_a_atypes(const std::string& value);
   void add_a_atypes(std::string&& value);
   void add_a_atypes(const char* value);
-  void add_a_atypes(const void* value, size_t size);
+  void add_a_atypes(const char* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_atypes() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_atypes();
   private:
@@ -524,7 +524,7 @@ class Msg_GetAllClipboardDataSync final :
     kAAWhichClipboardFieldNumber = 2,
     kAARequestingWindowContextIdFieldNumber = 3,
   };
-  // repeated bytes a_aTypes = 1;
+  // repeated string a_aTypes = 1;
   int a_atypes_size() const;
   private:
   int _internal_a_atypes_size() const;
@@ -535,12 +535,12 @@ class Msg_GetAllClipboardDataSync final :
   void set_a_atypes(int index, const std::string& value);
   void set_a_atypes(int index, std::string&& value);
   void set_a_atypes(int index, const char* value);
-  void set_a_atypes(int index, const void* value, size_t size);
+  void set_a_atypes(int index, const char* value, size_t size);
   std::string* add_a_atypes();
   void add_a_atypes(const std::string& value);
   void add_a_atypes(std::string&& value);
   void add_a_atypes(const char* value);
-  void add_a_atypes(const void* value, size_t size);
+  void add_a_atypes(const char* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_atypes() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_atypes();
   private:
@@ -757,7 +757,7 @@ class Reply_GetAllClipboardDataSync final :
 #endif  // __GNUC__
 // Msg_GetClipboard
 
-// repeated bytes a_aTypes = 1;
+// repeated string a_aTypes = 1;
 inline int Msg_GetClipboard::_internal_a_atypes_size() const {
   return _impl_.a_atypes_.size();
 }
@@ -796,7 +796,7 @@ inline void Msg_GetClipboard::set_a_atypes(int index, const char* value) {
   _impl_.a_atypes_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetClipboard.a_aTypes)
 }
-inline void Msg_GetClipboard::set_a_atypes(int index, const void* value, size_t size) {
+inline void Msg_GetClipboard::set_a_atypes(int index, const char* value, size_t size) {
   _impl_.a_atypes_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetClipboard.a_aTypes)
@@ -817,7 +817,7 @@ inline void Msg_GetClipboard::add_a_atypes(const char* value) {
   _impl_.a_atypes_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetClipboard.a_aTypes)
 }
-inline void Msg_GetClipboard::add_a_atypes(const void* value, size_t size) {
+inline void Msg_GetClipboard::add_a_atypes(const char* value, size_t size) {
   _impl_.a_atypes_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetClipboard.a_aTypes)
 }
@@ -1023,7 +1023,7 @@ inline void Reply_GetClipboard::set_allocated_a_transferabledataorerror(::protob
 
 // Msg_GetAllClipboardDataSync
 
-// repeated bytes a_aTypes = 1;
+// repeated string a_aTypes = 1;
 inline int Msg_GetAllClipboardDataSync::_internal_a_atypes_size() const {
   return _impl_.a_atypes_.size();
 }
@@ -1062,7 +1062,7 @@ inline void Msg_GetAllClipboardDataSync::set_a_atypes(int index, const char* val
   _impl_.a_atypes_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetAllClipboardDataSync.a_aTypes)
 }
-inline void Msg_GetAllClipboardDataSync::set_a_atypes(int index, const void* value, size_t size) {
+inline void Msg_GetAllClipboardDataSync::set_a_atypes(int index, const char* value, size_t size) {
   _impl_.a_atypes_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetAllClipboardDataSync.a_aTypes)
@@ -1083,7 +1083,7 @@ inline void Msg_GetAllClipboardDataSync::add_a_atypes(const char* value) {
   _impl_.a_atypes_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetAllClipboardDataSync.a_aTypes)
 }
-inline void Msg_GetAllClipboardDataSync::add_a_atypes(const void* value, size_t size) {
+inline void Msg_GetAllClipboardDataSync::add_a_atypes(const char* value, size_t size) {
   _impl_.a_atypes_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.PClipboardContentAnalysis.Msg_GetAllClipboardDataSync.a_aTypes)
 }

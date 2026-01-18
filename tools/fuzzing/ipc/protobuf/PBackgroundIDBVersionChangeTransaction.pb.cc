@@ -1333,7 +1333,7 @@ const char* Msg_RenameObjectStore::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_name = 2;
+      // required string a_name = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_name();
@@ -1379,9 +1379,9 @@ uint8_t* Msg_RenameObjectStore::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_objectstoreid(), target);
   }
 
-  // required bytes a_name = 2;
+  // required string a_name = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_name(), target);
   }
 
@@ -1398,9 +1398,9 @@ size_t Msg_RenameObjectStore::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_name()) {
-    // required bytes a_name = 2;
+    // required string a_name = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_name());
   }
 
@@ -1416,9 +1416,9 @@ size_t Msg_RenameObjectStore::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_name = 2;
+    // required string a_name = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_name());
 
     // required sint64 a_objectStoreId = 1;
@@ -2155,7 +2155,7 @@ const char* Msg_RenameIndex::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_name = 3;
+      // required string a_name = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_name();
@@ -2207,9 +2207,9 @@ uint8_t* Msg_RenameIndex::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_a_indexid(), target);
   }
 
-  // required bytes a_name = 3;
+  // required string a_name = 3;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_name(), target);
   }
 
@@ -2226,9 +2226,9 @@ size_t Msg_RenameIndex::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_name()) {
-    // required bytes a_name = 3;
+    // required string a_name = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_name());
   }
 
@@ -2249,9 +2249,9 @@ size_t Msg_RenameIndex::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes a_name = 3;
+    // required string a_name = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_name());
 
     // required sint64 a_objectStoreId = 1;

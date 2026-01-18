@@ -236,7 +236,7 @@ const char* Msg_LaunchGMP::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_api = 2;
+      // required string a_api = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_api();
@@ -245,7 +245,7 @@ const char* Msg_LaunchGMP::_InternalParse(const char* ptr, ::_pbi::ParseContext*
         } else
           goto handle_unusual;
         continue;
-      // repeated bytes a_tags = 3;
+      // repeated string a_tags = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr -= 1;
@@ -311,16 +311,16 @@ uint8_t* Msg_LaunchGMP::_InternalSerialize(
         _Internal::a_nodeidvariant(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes a_api = 2;
+  // required string a_api = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_api(), target);
   }
 
-  // repeated bytes a_tags = 3;
+  // repeated string a_tags = 3;
   for (int i = 0, n = this->_internal_a_tags_size(); i < n; i++) {
     const auto& s = this->_internal_a_tags(i);
-    target = stream->WriteBytes(3, s, target);
+    target = stream->WriteString(3, s, target);
   }
 
   // repeated bytes a_alreadyBridgedTo = 4;
@@ -342,9 +342,9 @@ size_t Msg_LaunchGMP::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_api()) {
-    // required bytes a_api = 2;
+    // required string a_api = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_api());
   }
 
@@ -362,9 +362,9 @@ size_t Msg_LaunchGMP::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_api = 2;
+    // required string a_api = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_api());
 
     // required .protobuf.mozilla.gmp.NodeIdVariant a_nodeIdVariant = 1;
@@ -379,11 +379,11 @@ size_t Msg_LaunchGMP::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated bytes a_tags = 3;
+  // repeated string a_tags = 3;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_tags_.size());
   for (int i = 0, n = _impl_.a_tags_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
       _impl_.a_tags_.Get(i));
   }
 
@@ -820,7 +820,7 @@ const char* Msg_GetGMPNodeId::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_origin = 1;
+      // required string a_origin = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_origin();
@@ -829,7 +829,7 @@ const char* Msg_GetGMPNodeId::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_topLevelOrigin = 2;
+      // required string a_topLevelOrigin = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_toplevelorigin();
@@ -838,7 +838,7 @@ const char* Msg_GetGMPNodeId::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_gmpName = 3;
+      // required string a_gmpName = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_gmpname();
@@ -878,21 +878,21 @@ uint8_t* Msg_GetGMPNodeId::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_origin = 1;
+  // required string a_origin = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_origin(), target);
   }
 
-  // required bytes a_topLevelOrigin = 2;
+  // required string a_topLevelOrigin = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_toplevelorigin(), target);
   }
 
-  // required bytes a_gmpName = 3;
+  // required string a_gmpName = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_gmpname(), target);
   }
 
@@ -909,23 +909,23 @@ size_t Msg_GetGMPNodeId::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_origin()) {
-    // required bytes a_origin = 1;
+    // required string a_origin = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_origin());
   }
 
   if (_internal_has_a_toplevelorigin()) {
-    // required bytes a_topLevelOrigin = 2;
+    // required string a_topLevelOrigin = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_toplevelorigin());
   }
 
   if (_internal_has_a_gmpname()) {
-    // required bytes a_gmpName = 3;
+    // required string a_gmpName = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_gmpname());
   }
 
@@ -936,19 +936,19 @@ size_t Msg_GetGMPNodeId::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes a_origin = 1;
+    // required string a_origin = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_origin());
 
-    // required bytes a_topLevelOrigin = 2;
+    // required string a_topLevelOrigin = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_toplevelorigin());
 
-    // required bytes a_gmpName = 3;
+    // required string a_gmpName = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_gmpname());
 
   } else {
@@ -1124,7 +1124,7 @@ const char* Reply_GetGMPNodeId::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_id = 1;
+      // required string a_id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_id();
@@ -1164,9 +1164,9 @@ uint8_t* Reply_GetGMPNodeId::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_id = 1;
+  // required string a_id = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_id(), target);
   }
 
@@ -1182,10 +1182,10 @@ size_t Reply_GetGMPNodeId::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.PGMPService.Reply_GetGMPNodeId)
   size_t total_size = 0;
 
-  // required bytes a_id = 1;
+  // required string a_id = 1;
   if (_internal_has_a_id()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_id());
   }
   uint32_t cached_has_bits = 0;

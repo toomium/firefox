@@ -337,7 +337,7 @@ const char* Msg_Register::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aScopeURL = 2;
+      // required string a_aScopeURL = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_ascopeurl();
@@ -346,7 +346,7 @@ const char* Msg_Register::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aScriptURL = 3;
+      // required string a_aScriptURL = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_ascripturl();
@@ -402,15 +402,15 @@ uint8_t* Msg_Register::_InternalSerialize(
         _Internal::a_aclientinfo(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes a_aScopeURL = 2;
+  // required string a_aScopeURL = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_ascopeurl(), target);
   }
 
-  // required bytes a_aScriptURL = 3;
+  // required string a_aScriptURL = 3;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_ascripturl(), target);
   }
 
@@ -433,16 +433,16 @@ size_t Msg_Register::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_ascopeurl()) {
-    // required bytes a_aScopeURL = 2;
+    // required string a_aScopeURL = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_ascopeurl());
   }
 
   if (_internal_has_a_ascripturl()) {
-    // required bytes a_aScriptURL = 3;
+    // required string a_aScriptURL = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_ascripturl());
   }
 
@@ -467,14 +467,14 @@ size_t Msg_Register::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required bytes a_aScopeURL = 2;
+    // required string a_aScopeURL = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_ascopeurl());
 
-    // required bytes a_aScriptURL = 3;
+    // required string a_aScriptURL = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_ascripturl());
 
     // required bytes a_aUpdateViaCache = 4;
@@ -917,7 +917,7 @@ const char* Msg_GetRegistration::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aURL = 2;
+      // required string a_aURL = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_aurl();
@@ -964,9 +964,9 @@ uint8_t* Msg_GetRegistration::_InternalSerialize(
         _Internal::a_aclientinfo(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes a_aURL = 2;
+  // required string a_aURL = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_aurl(), target);
   }
 
@@ -983,9 +983,9 @@ size_t Msg_GetRegistration::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_aurl()) {
-    // required bytes a_aURL = 2;
+    // required string a_aURL = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aurl());
   }
 
@@ -1003,9 +1003,9 @@ size_t Msg_GetRegistration::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aURL = 2;
+    // required string a_aURL = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aurl());
 
     // required .protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;

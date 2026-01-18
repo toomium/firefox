@@ -31,30 +31,30 @@ message Msg_RespondPayment {
 }
 
 message Msg_ChangeShippingAddress {
-  required bytes a_aRequestId = 1;
+  required string a_aRequestId = 1;
   required protobuf.mozilla.dom.IPCPaymentAddress a_aAddress = 2;
 }
 
 message Msg_ChangeShippingOption {
-  required bytes a_aRequestId = 1;
-  required bytes a_aOption = 2;
+  required string a_aRequestId = 1;
+  required string a_aOption = 2;
 }
 
 message Msg_ChangePayerDetail {
-  required bytes a_aRequestId = 1;
-  required bytes a_aPayerName = 2;
-  required bytes a_aPayerEmail = 3;
-  required bytes a_aPayerPhone = 4;
+  required string a_aRequestId = 1;
+  required string a_aPayerName = 2;
+  required string a_aPayerEmail = 3;
+  required string a_aPayerPhone = 4;
 }
 
 message Msg_ChangePaymentMethod {
-  required bytes a_aRequestId = 1;
-  required bytes a_aMethodName = 2;
+  required string a_aRequestId = 1;
+  required string a_aMethodName = 2;
   required protobuf.mozilla.dom.IPCMethodChangeDetails a_aMethodDetails = 3;
 }
 
 // Parameter mappings stats:
 // Total parameters in this file 121
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 6, "<class 'ipdl.type.BuiltinCType'>": 12, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 68, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 31, "<class 'ipdl.type.UnionType'>": 4, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 14
+// Scalar mappings performed: 79
 // Message structs/unions generated from ipdl structs/unions: 28

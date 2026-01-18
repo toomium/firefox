@@ -688,7 +688,7 @@ class Msg_Cancel final :
   std::string* _internal_mutable_a_status();
   public:
 
-  // required bytes a_aReason = 3;
+  // required string a_aReason = 3;
   bool has_a_areason() const;
   private:
   bool _internal_has_a_areason() const;
@@ -706,7 +706,7 @@ class Msg_Cancel final :
   std::string* _internal_mutable_a_areason();
   public:
 
-  // optional bytes a_logString = 4;
+  // optional string a_logString = 4;
   bool has_a_logstring() const;
   private:
   bool _internal_has_a_logstring() const;
@@ -1507,7 +1507,7 @@ class Msg_SetCookies final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::CookieStruct >&
       a_cookies() const;
 
-  // required bytes a_baseDomain = 1;
+  // required string a_baseDomain = 1;
   bool has_a_basedomain() const;
   private:
   bool _internal_has_a_basedomain() const;
@@ -3215,7 +3215,7 @@ class Msg_ReportSecurityMessage final :
     kAMessageTagFieldNumber = 1,
     kAMessageCategoryFieldNumber = 2,
   };
-  // required bytes a_messageTag = 1;
+  // required string a_messageTag = 1;
   bool has_a_messagetag() const;
   private:
   bool _internal_has_a_messagetag() const;
@@ -3233,7 +3233,7 @@ class Msg_ReportSecurityMessage final :
   std::string* _internal_mutable_a_messagetag();
   public:
 
-  // required bytes a_messageCategory = 2;
+  // required string a_messageCategory = 2;
   bool has_a_messagecategory() const;
   private:
   bool _internal_has_a_messagecategory() const;
@@ -3510,7 +3510,7 @@ class Msg_LogBlockedCORSRequest final :
     kACategoryFieldNumber = 2,
     kAIsWarningFieldNumber = 3,
   };
-  // required bytes a_message = 1;
+  // required string a_message = 1;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -3528,7 +3528,7 @@ class Msg_LogBlockedCORSRequest final :
   std::string* _internal_mutable_a_message();
   public:
 
-  // required bytes a_category = 2;
+  // required string a_category = 2;
   bool has_a_category() const;
   private:
   bool _internal_has_a_category() const;
@@ -3696,7 +3696,7 @@ class Msg_LogMimeTypeMismatch final :
     kAContentTypeFieldNumber = 4,
     kAWarningFieldNumber = 2,
   };
-  // required bytes a_messageName = 1;
+  // required string a_messageName = 1;
   bool has_a_messagename() const;
   private:
   bool _internal_has_a_messagename() const;
@@ -3714,7 +3714,7 @@ class Msg_LogMimeTypeMismatch final :
   std::string* _internal_mutable_a_messagename();
   public:
 
-  // required bytes a_url = 3;
+  // required string a_url = 3;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -3732,7 +3732,7 @@ class Msg_LogMimeTypeMismatch final :
   std::string* _internal_mutable_a_url();
   public:
 
-  // required bytes a_contentType = 4;
+  // required string a_contentType = 4;
   bool has_a_contenttype() const;
   private:
   bool _internal_has_a_contenttype() const;
@@ -4260,7 +4260,7 @@ inline void Msg_Cancel::set_a_requestblockingreason(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpChannel.Msg_Cancel.a_requestBlockingReason)
 }
 
-// required bytes a_aReason = 3;
+// required string a_aReason = 3;
 inline bool Msg_Cancel::_internal_has_a_areason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4280,7 +4280,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Cancel::set_a_areason(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_areason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_areason_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpChannel.Msg_Cancel.a_aReason)
 }
 inline std::string* Msg_Cancel::mutable_a_areason() {
@@ -4328,7 +4328,7 @@ inline void Msg_Cancel::set_allocated_a_areason(std::string* a_areason) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpChannel.Msg_Cancel.a_aReason)
 }
 
-// optional bytes a_logString = 4;
+// optional string a_logString = 4;
 inline bool Msg_Cancel::_internal_has_a_logstring() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4348,7 +4348,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Cancel::set_a_logstring(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_logstring_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_logstring_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpChannel.Msg_Cancel.a_logString)
 }
 inline std::string* Msg_Cancel::mutable_a_logstring() {
@@ -5165,7 +5165,7 @@ inline void Msg_RemoveCorsPreflightCacheEntry::set_allocated_a_originattributes(
 
 // Msg_SetCookies
 
-// required bytes a_baseDomain = 1;
+// required string a_baseDomain = 1;
 inline bool Msg_SetCookies::_internal_has_a_basedomain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5185,7 +5185,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetCookies::set_a_basedomain(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_basedomain_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_basedomain_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpChannel.Msg_SetCookies.a_baseDomain)
 }
 inline std::string* Msg_SetCookies::mutable_a_basedomain() {
@@ -6228,7 +6228,7 @@ inline void Msg_RedirectFailed::set_allocated_a_status(std::string* a_status) {
 
 // Msg_ReportSecurityMessage
 
-// required bytes a_messageTag = 1;
+// required string a_messageTag = 1;
 inline bool Msg_ReportSecurityMessage::_internal_has_a_messagetag() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6248,7 +6248,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReportSecurityMessage::set_a_messagetag(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_messagetag_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_messagetag_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpChannel.Msg_ReportSecurityMessage.a_messageTag)
 }
 inline std::string* Msg_ReportSecurityMessage::mutable_a_messagetag() {
@@ -6296,7 +6296,7 @@ inline void Msg_ReportSecurityMessage::set_allocated_a_messagetag(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpChannel.Msg_ReportSecurityMessage.a_messageTag)
 }
 
-// required bytes a_messageCategory = 2;
+// required string a_messageCategory = 2;
 inline bool Msg_ReportSecurityMessage::_internal_has_a_messagecategory() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6316,7 +6316,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReportSecurityMessage::set_a_messagecategory(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_messagecategory_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_messagecategory_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpChannel.Msg_ReportSecurityMessage.a_messageCategory)
 }
 inline std::string* Msg_ReportSecurityMessage::mutable_a_messagecategory() {
@@ -6372,7 +6372,7 @@ inline void Msg_ReportSecurityMessage::set_allocated_a_messagecategory(std::stri
 
 // Msg_LogBlockedCORSRequest
 
-// required bytes a_message = 1;
+// required string a_message = 1;
 inline bool Msg_LogBlockedCORSRequest::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6392,7 +6392,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LogBlockedCORSRequest::set_a_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpChannel.Msg_LogBlockedCORSRequest.a_message)
 }
 inline std::string* Msg_LogBlockedCORSRequest::mutable_a_message() {
@@ -6440,7 +6440,7 @@ inline void Msg_LogBlockedCORSRequest::set_allocated_a_message(std::string* a_me
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpChannel.Msg_LogBlockedCORSRequest.a_message)
 }
 
-// required bytes a_category = 2;
+// required string a_category = 2;
 inline bool Msg_LogBlockedCORSRequest::_internal_has_a_category() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6460,7 +6460,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LogBlockedCORSRequest::set_a_category(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_category_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_category_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpChannel.Msg_LogBlockedCORSRequest.a_category)
 }
 inline std::string* Msg_LogBlockedCORSRequest::mutable_a_category() {
@@ -6540,7 +6540,7 @@ inline void Msg_LogBlockedCORSRequest::set_a_iswarning(bool value) {
 
 // Msg_LogMimeTypeMismatch
 
-// required bytes a_messageName = 1;
+// required string a_messageName = 1;
 inline bool Msg_LogMimeTypeMismatch::_internal_has_a_messagename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6560,7 +6560,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LogMimeTypeMismatch::set_a_messagename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_messagename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_messagename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpChannel.Msg_LogMimeTypeMismatch.a_messageName)
 }
 inline std::string* Msg_LogMimeTypeMismatch::mutable_a_messagename() {
@@ -6636,7 +6636,7 @@ inline void Msg_LogMimeTypeMismatch::set_a_warning(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpChannel.Msg_LogMimeTypeMismatch.a_warning)
 }
 
-// required bytes a_url = 3;
+// required string a_url = 3;
 inline bool Msg_LogMimeTypeMismatch::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6656,7 +6656,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LogMimeTypeMismatch::set_a_url(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_url_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpChannel.Msg_LogMimeTypeMismatch.a_url)
 }
 inline std::string* Msg_LogMimeTypeMismatch::mutable_a_url() {
@@ -6704,7 +6704,7 @@ inline void Msg_LogMimeTypeMismatch::set_allocated_a_url(std::string* a_url) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpChannel.Msg_LogMimeTypeMismatch.a_url)
 }
 
-// required bytes a_contentType = 4;
+// required string a_contentType = 4;
 inline bool Msg_LogMimeTypeMismatch::_internal_has_a_contenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -6724,7 +6724,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LogMimeTypeMismatch::set_a_contenttype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_contenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_contenttype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpChannel.Msg_LogMimeTypeMismatch.a_contentType)
 }
 inline std::string* Msg_LogMimeTypeMismatch::mutable_a_contenttype() {

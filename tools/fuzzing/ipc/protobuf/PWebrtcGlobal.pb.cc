@@ -584,7 +584,7 @@ const char* Msg_PeerConnectionCreated::_InternalParse(const char* ptr, ::_pbi::P
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aPcId = 1;
+      // required string a_aPcId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_apcid();
@@ -633,9 +633,9 @@ uint8_t* Msg_PeerConnectionCreated::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aPcId = 1;
+  // required string a_aPcId = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_apcid(), target);
   }
 
@@ -658,9 +658,9 @@ size_t Msg_PeerConnectionCreated::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_apcid()) {
-    // required bytes a_aPcId = 1;
+    // required string a_aPcId = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_apcid());
   }
 
@@ -676,9 +676,9 @@ size_t Msg_PeerConnectionCreated::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aPcId = 1;
+    // required string a_aPcId = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_apcid());
 
     // required bool a_aIsLongTermStatsDisabled = 2;
@@ -848,7 +848,7 @@ const char* Msg_PeerConnectionDestroyed::_InternalParse(const char* ptr, ::_pbi:
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aPcId = 1;
+      // required string a_aPcId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_apcid();
@@ -888,9 +888,9 @@ uint8_t* Msg_PeerConnectionDestroyed::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aPcId = 1;
+  // required string a_aPcId = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_apcid(), target);
   }
 
@@ -906,10 +906,10 @@ size_t Msg_PeerConnectionDestroyed::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionDestroyed)
   size_t total_size = 0;
 
-  // required bytes a_aPcId = 1;
+  // required string a_aPcId = 1;
   if (_internal_has_a_apcid()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_apcid());
   }
   uint32_t cached_has_bits = 0;
@@ -1282,7 +1282,7 @@ const char* Msg_GetStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aPcIdFilter = 1;
+      // required string a_aPcIdFilter = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_apcidfilter();
@@ -1322,9 +1322,9 @@ uint8_t* Msg_GetStats::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aPcIdFilter = 1;
+  // required string a_aPcIdFilter = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_apcidfilter(), target);
   }
 
@@ -1340,10 +1340,10 @@ size_t Msg_GetStats::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetStats)
   size_t total_size = 0;
 
-  // required bytes a_aPcIdFilter = 1;
+  // required string a_aPcIdFilter = 1;
   if (_internal_has_a_apcidfilter()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_apcidfilter());
   }
   uint32_t cached_has_bits = 0;

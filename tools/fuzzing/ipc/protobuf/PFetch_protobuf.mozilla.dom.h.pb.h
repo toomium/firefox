@@ -188,7 +188,7 @@ class FetchOpArgs final :
     kAIsWorkerRequestFieldNumber = 11,
     kAIsOn3PCBExceptionListFieldNumber = 12,
   };
-  // required bytes a_workerScript = 3;
+  // required string a_workerScript = 3;
   bool has_a_workerscript() const;
   private:
   bool _internal_has_a_workerscript() const;
@@ -588,7 +588,7 @@ inline void FetchOpArgs::set_allocated_a_principalinfo(::protobuf::mozilla::ipc:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FetchOpArgs.a_principalInfo)
 }
 
-// required bytes a_workerScript = 3;
+// required string a_workerScript = 3;
 inline bool FetchOpArgs::_internal_has_a_workerscript() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -608,7 +608,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FetchOpArgs::set_a_workerscript(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_workerscript_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_workerscript_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FetchOpArgs.a_workerScript)
 }
 inline std::string* FetchOpArgs::mutable_a_workerscript() {

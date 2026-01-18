@@ -273,7 +273,7 @@ class WebAuthnAuthenticatorSelection final :
     kAUserVerificationRequirementFieldNumber = 2,
     kAAuthenticatorAttachmentFieldNumber = 3,
   };
-  // required bytes a_residentKey = 1;
+  // required string a_residentKey = 1;
   bool has_a_residentkey() const;
   private:
   bool _internal_has_a_residentkey() const;
@@ -291,7 +291,7 @@ class WebAuthnAuthenticatorSelection final :
   std::string* _internal_mutable_a_residentkey();
   public:
 
-  // required bytes a_userVerificationRequirement = 2;
+  // required string a_userVerificationRequirement = 2;
   bool has_a_userverificationrequirement() const;
   private:
   bool _internal_has_a_userverificationrequirement() const;
@@ -309,7 +309,7 @@ class WebAuthnAuthenticatorSelection final :
   std::string* _internal_mutable_a_userverificationrequirement();
   public:
 
-  // optional bytes a_authenticatorAttachment = 3;
+  // optional string a_authenticatorAttachment = 3;
   bool has_a_authenticatorattachment() const;
   private:
   bool _internal_has_a_authenticatorattachment() const;
@@ -3223,7 +3223,7 @@ class WebAuthnMakeCredentialRpInfo final :
   enum : int {
     kANameFieldNumber = 1,
   };
-  // required bytes a_Name = 1;
+  // required string a_Name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -3394,7 +3394,7 @@ class WebAuthnMakeCredentialUserInfo final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_id();
 
-  // required bytes a_Name = 2;
+  // required string a_Name = 2;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -3412,7 +3412,7 @@ class WebAuthnMakeCredentialUserInfo final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required bytes a_DisplayName = 3;
+  // required string a_DisplayName = 3;
   bool has_a_displayname() const;
   private:
   bool _internal_has_a_displayname() const;
@@ -3791,7 +3791,7 @@ class WebAuthnMakeCredentialInfo final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::WebAuthnExtension >&
       a_extensions() const;
 
-  // required bytes a_RpId = 1;
+  // required string a_RpId = 1;
   bool has_a_rpid() const;
   private:
   bool _internal_has_a_rpid() const;
@@ -3809,7 +3809,7 @@ class WebAuthnMakeCredentialInfo final :
   std::string* _internal_mutable_a_rpid();
   public:
 
-  // required bytes a_attestationConveyancePreference = 10;
+  // required string a_attestationConveyancePreference = 10;
   bool has_a_attestationconveyancepreference() const;
   private:
   bool _internal_has_a_attestationconveyancepreference() const;
@@ -4084,7 +4084,7 @@ class WebAuthnMakeCredentialResult final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_keyhandle();
 
-  // repeated bytes a_Transports = 4;
+  // repeated string a_Transports = 4;
   int a_transports_size() const;
   private:
   int _internal_a_transports_size() const;
@@ -4095,12 +4095,12 @@ class WebAuthnMakeCredentialResult final :
   void set_a_transports(int index, const std::string& value);
   void set_a_transports(int index, std::string&& value);
   void set_a_transports(int index, const char* value);
-  void set_a_transports(int index, const void* value, size_t size);
+  void set_a_transports(int index, const char* value, size_t size);
   std::string* add_a_transports();
   void add_a_transports(const std::string& value);
   void add_a_transports(std::string&& value);
   void add_a_transports(const char* value);
-  void add_a_transports(const void* value, size_t size);
+  void add_a_transports(const char* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_transports() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_transports();
   private:
@@ -4126,7 +4126,7 @@ class WebAuthnMakeCredentialResult final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::WebAuthnExtensionResult >&
       a_extensions() const;
 
-  // required bytes a_ClientDataJSON = 1;
+  // required string a_ClientDataJSON = 1;
   bool has_a_clientdatajson() const;
   private:
   bool _internal_has_a_clientdatajson() const;
@@ -4144,7 +4144,7 @@ class WebAuthnMakeCredentialResult final :
   std::string* _internal_mutable_a_clientdatajson();
   public:
 
-  // optional bytes a_AuthenticatorAttachment = 6;
+  // optional string a_AuthenticatorAttachment = 6;
   bool has_a_authenticatorattachment() const;
   private:
   bool _internal_has_a_authenticatorattachment() const;
@@ -4546,7 +4546,7 @@ class WebAuthnGetAssertionInfo final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::WebAuthnExtension >&
       a_extensions() const;
 
-  // required bytes a_RpId = 1;
+  // required string a_RpId = 1;
   bool has_a_rpid() const;
   private:
   bool _internal_has_a_rpid() const;
@@ -4564,7 +4564,7 @@ class WebAuthnGetAssertionInfo final :
   std::string* _internal_mutable_a_rpid();
   public:
 
-  // optional bytes a_AppId = 2;
+  // optional string a_AppId = 2;
   bool has_a_appid() const;
   private:
   bool _internal_has_a_appid() const;
@@ -4582,7 +4582,7 @@ class WebAuthnGetAssertionInfo final :
   std::string* _internal_mutable_a_appid();
   public:
 
-  // required bytes a_userVerificationRequirement = 7;
+  // required string a_userVerificationRequirement = 7;
   bool has_a_userverificationrequirement() const;
   private:
   bool _internal_has_a_userverificationrequirement() const;
@@ -4877,7 +4877,7 @@ class WebAuthnGetAssertionResult final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_userhandle();
 
-  // required bytes a_ClientDataJSON = 1;
+  // required string a_ClientDataJSON = 1;
   bool has_a_clientdatajson() const;
   private:
   bool _internal_has_a_clientdatajson() const;
@@ -4895,7 +4895,7 @@ class WebAuthnGetAssertionResult final :
   std::string* _internal_mutable_a_clientdatajson();
   public:
 
-  // optional bytes a_AuthenticatorAttachment = 7;
+  // optional string a_AuthenticatorAttachment = 7;
   bool has_a_authenticatorattachment() const;
   private:
   bool _internal_has_a_authenticatorattachment() const;
@@ -5130,7 +5130,7 @@ class WebAuthnGetAssertionResponse final :
 #endif  // __GNUC__
 // WebAuthnAuthenticatorSelection
 
-// required bytes a_residentKey = 1;
+// required string a_residentKey = 1;
 inline bool WebAuthnAuthenticatorSelection::_internal_has_a_residentkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5150,7 +5150,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnAuthenticatorSelection::set_a_residentkey(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_residentkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_residentkey_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection.a_residentKey)
 }
 inline std::string* WebAuthnAuthenticatorSelection::mutable_a_residentkey() {
@@ -5198,7 +5198,7 @@ inline void WebAuthnAuthenticatorSelection::set_allocated_a_residentkey(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection.a_residentKey)
 }
 
-// required bytes a_userVerificationRequirement = 2;
+// required string a_userVerificationRequirement = 2;
 inline bool WebAuthnAuthenticatorSelection::_internal_has_a_userverificationrequirement() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5218,7 +5218,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnAuthenticatorSelection::set_a_userverificationrequirement(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_userverificationrequirement_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_userverificationrequirement_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection.a_userVerificationRequirement)
 }
 inline std::string* WebAuthnAuthenticatorSelection::mutable_a_userverificationrequirement() {
@@ -5266,7 +5266,7 @@ inline void WebAuthnAuthenticatorSelection::set_allocated_a_userverificationrequ
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection.a_userVerificationRequirement)
 }
 
-// optional bytes a_authenticatorAttachment = 3;
+// optional string a_authenticatorAttachment = 3;
 inline bool WebAuthnAuthenticatorSelection::_internal_has_a_authenticatorattachment() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -5286,7 +5286,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnAuthenticatorSelection::set_a_authenticatorattachment(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_authenticatorattachment_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_authenticatorattachment_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection.a_authenticatorAttachment)
 }
 inline std::string* WebAuthnAuthenticatorSelection::mutable_a_authenticatorattachment() {
@@ -7286,7 +7286,7 @@ inline WebAuthnExtensionResult::ContentCase WebAuthnExtensionResult::content_cas
 
 // WebAuthnMakeCredentialRpInfo
 
-// required bytes a_Name = 1;
+// required string a_Name = 1;
 inline bool WebAuthnMakeCredentialRpInfo::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7306,7 +7306,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnMakeCredentialRpInfo::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo.a_Name)
 }
 inline std::string* WebAuthnMakeCredentialRpInfo::mutable_a_name() {
@@ -7405,7 +7405,7 @@ WebAuthnMakeCredentialUserInfo::mutable_a_id() {
   return _internal_mutable_a_id();
 }
 
-// required bytes a_Name = 2;
+// required string a_Name = 2;
 inline bool WebAuthnMakeCredentialUserInfo::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7425,7 +7425,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnMakeCredentialUserInfo::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo.a_Name)
 }
 inline std::string* WebAuthnMakeCredentialUserInfo::mutable_a_name() {
@@ -7473,7 +7473,7 @@ inline void WebAuthnMakeCredentialUserInfo::set_allocated_a_name(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo.a_Name)
 }
 
-// required bytes a_DisplayName = 3;
+// required string a_DisplayName = 3;
 inline bool WebAuthnMakeCredentialUserInfo::_internal_has_a_displayname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7493,7 +7493,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnMakeCredentialUserInfo::set_a_displayname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_displayname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_displayname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo.a_DisplayName)
 }
 inline std::string* WebAuthnMakeCredentialUserInfo::mutable_a_displayname() {
@@ -7577,7 +7577,7 @@ inline void CoseAlg::set_a_alg(int64_t value) {
 
 // WebAuthnMakeCredentialInfo
 
-// required bytes a_RpId = 1;
+// required string a_RpId = 1;
 inline bool WebAuthnMakeCredentialInfo::_internal_has_a_rpid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7597,7 +7597,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnMakeCredentialInfo::set_a_rpid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_rpid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_rpid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_RpId)
 }
 inline std::string* WebAuthnMakeCredentialInfo::mutable_a_rpid() {
@@ -8110,7 +8110,7 @@ inline void WebAuthnMakeCredentialInfo::set_allocated_a_authenticatorselection(:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_AuthenticatorSelection)
 }
 
-// required bytes a_attestationConveyancePreference = 10;
+// required string a_attestationConveyancePreference = 10;
 inline bool WebAuthnMakeCredentialInfo::_internal_has_a_attestationconveyancepreference() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8130,7 +8130,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnMakeCredentialInfo::set_a_attestationconveyancepreference(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_attestationconveyancepreference_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_attestationconveyancepreference_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_attestationConveyancePreference)
 }
 inline std::string* WebAuthnMakeCredentialInfo::mutable_a_attestationconveyancepreference() {
@@ -8182,7 +8182,7 @@ inline void WebAuthnMakeCredentialInfo::set_allocated_a_attestationconveyancepre
 
 // WebAuthnMakeCredentialResult
 
-// required bytes a_ClientDataJSON = 1;
+// required string a_ClientDataJSON = 1;
 inline bool WebAuthnMakeCredentialResult::_internal_has_a_clientdatajson() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8202,7 +8202,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnMakeCredentialResult::set_a_clientdatajson(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_clientdatajson_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_clientdatajson_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnMakeCredentialResult.a_ClientDataJSON)
 }
 inline std::string* WebAuthnMakeCredentialResult::mutable_a_clientdatajson() {
@@ -8344,7 +8344,7 @@ WebAuthnMakeCredentialResult::mutable_a_keyhandle() {
   return _internal_mutable_a_keyhandle();
 }
 
-// repeated bytes a_Transports = 4;
+// repeated string a_Transports = 4;
 inline int WebAuthnMakeCredentialResult::_internal_a_transports_size() const {
   return _impl_.a_transports_.size();
 }
@@ -8383,7 +8383,7 @@ inline void WebAuthnMakeCredentialResult::set_a_transports(int index, const char
   _impl_.a_transports_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.WebAuthnMakeCredentialResult.a_Transports)
 }
-inline void WebAuthnMakeCredentialResult::set_a_transports(int index, const void* value, size_t size) {
+inline void WebAuthnMakeCredentialResult::set_a_transports(int index, const char* value, size_t size) {
   _impl_.a_transports_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.WebAuthnMakeCredentialResult.a_Transports)
@@ -8404,7 +8404,7 @@ inline void WebAuthnMakeCredentialResult::add_a_transports(const char* value) {
   _impl_.a_transports_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.WebAuthnMakeCredentialResult.a_Transports)
 }
-inline void WebAuthnMakeCredentialResult::add_a_transports(const void* value, size_t size) {
+inline void WebAuthnMakeCredentialResult::add_a_transports(const char* value, size_t size) {
   _impl_.a_transports_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.WebAuthnMakeCredentialResult.a_Transports)
 }
@@ -8459,7 +8459,7 @@ WebAuthnMakeCredentialResult::a_extensions() const {
   return _impl_.a_extensions_;
 }
 
-// optional bytes a_AuthenticatorAttachment = 6;
+// optional string a_AuthenticatorAttachment = 6;
 inline bool WebAuthnMakeCredentialResult::_internal_has_a_authenticatorattachment() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8479,7 +8479,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnMakeCredentialResult::set_a_authenticatorattachment(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_authenticatorattachment_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_authenticatorattachment_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnMakeCredentialResult.a_AuthenticatorAttachment)
 }
 inline std::string* WebAuthnMakeCredentialResult::mutable_a_authenticatorattachment() {
@@ -8695,7 +8695,7 @@ inline WebAuthnMakeCredentialResponse::ContentCase WebAuthnMakeCredentialRespons
 
 // WebAuthnGetAssertionInfo
 
-// required bytes a_RpId = 1;
+// required string a_RpId = 1;
 inline bool WebAuthnGetAssertionInfo::_internal_has_a_rpid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8715,7 +8715,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnGetAssertionInfo::set_a_rpid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_rpid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_rpid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnGetAssertionInfo.a_RpId)
 }
 inline std::string* WebAuthnGetAssertionInfo::mutable_a_rpid() {
@@ -8763,7 +8763,7 @@ inline void WebAuthnGetAssertionInfo::set_allocated_a_rpid(std::string* a_rpid) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebAuthnGetAssertionInfo.a_RpId)
 }
 
-// optional bytes a_AppId = 2;
+// optional string a_AppId = 2;
 inline bool WebAuthnGetAssertionInfo::_internal_has_a_appid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8783,7 +8783,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnGetAssertionInfo::set_a_appid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_appid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_appid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnGetAssertionInfo.a_AppId)
 }
 inline std::string* WebAuthnGetAssertionInfo::mutable_a_appid() {
@@ -8986,7 +8986,7 @@ WebAuthnGetAssertionInfo::a_extensions() const {
   return _impl_.a_extensions_;
 }
 
-// required bytes a_userVerificationRequirement = 7;
+// required string a_userVerificationRequirement = 7;
 inline bool WebAuthnGetAssertionInfo::_internal_has_a_userverificationrequirement() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -9006,7 +9006,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnGetAssertionInfo::set_a_userverificationrequirement(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_userverificationrequirement_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_userverificationrequirement_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnGetAssertionInfo.a_userVerificationRequirement)
 }
 inline std::string* WebAuthnGetAssertionInfo::mutable_a_userverificationrequirement() {
@@ -9086,7 +9086,7 @@ inline void WebAuthnGetAssertionInfo::set_a_conditionallymediated(bool value) {
 
 // WebAuthnGetAssertionResult
 
-// required bytes a_ClientDataJSON = 1;
+// required string a_ClientDataJSON = 1;
 inline bool WebAuthnGetAssertionResult::_internal_has_a_clientdatajson() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9106,7 +9106,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnGetAssertionResult::set_a_clientdatajson(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_clientdatajson_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_clientdatajson_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnGetAssertionResult.a_ClientDataJSON)
 }
 inline std::string* WebAuthnGetAssertionResult::mutable_a_clientdatajson() {
@@ -9382,7 +9382,7 @@ WebAuthnGetAssertionResult::mutable_a_userhandle() {
   return _internal_mutable_a_userhandle();
 }
 
-// optional bytes a_AuthenticatorAttachment = 7;
+// optional string a_AuthenticatorAttachment = 7;
 inline bool WebAuthnGetAssertionResult::_internal_has_a_authenticatorattachment() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -9402,7 +9402,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebAuthnGetAssertionResult::set_a_authenticatorattachment(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_authenticatorattachment_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_authenticatorattachment_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WebAuthnGetAssertionResult.a_AuthenticatorAttachment)
 }
 inline std::string* WebAuthnGetAssertionResult::mutable_a_authenticatorattachment() {

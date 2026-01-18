@@ -575,7 +575,7 @@ const char* HttpChannelOnStartRequestArgs::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_altDataType = 5;
+      // required string a_altDataType = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_a_altdatatype();
@@ -584,7 +584,7 @@ const char* HttpChannelOnStartRequestArgs::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // repeated bytes a_cookieHeaders = 6;
+      // repeated string a_cookieHeaders = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr -= 1;
@@ -830,7 +830,7 @@ const char* HttpChannelOnStartRequestArgs::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_protocolVersion = 33;
+      // required string a_protocolVersion = 33;
       case 33:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_protocolversion();
@@ -894,16 +894,16 @@ uint8_t* HttpChannelOnStartRequestArgs::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(4, this->_internal_a_altdatalength(), target);
   }
 
-  // required bytes a_altDataType = 5;
+  // required string a_altDataType = 5;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         5, this->_internal_a_altdatatype(), target);
   }
 
-  // repeated bytes a_cookieHeaders = 6;
+  // repeated string a_cookieHeaders = 6;
   for (int i = 0, n = this->_internal_a_cookieheaders_size(); i < n; i++) {
     const auto& s = this->_internal_a_cookieheaders(i);
-    target = stream->WriteBytes(6, s, target);
+    target = stream->WriteString(6, s, target);
   }
 
   // required bytes a_selfAddr = 7;
@@ -1064,9 +1064,9 @@ uint8_t* HttpChannelOnStartRequestArgs::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(32, this->_internal_a_redirectcount(), target);
   }
 
-  // required bytes a_protocolVersion = 33;
+  // required string a_protocolVersion = 33;
   if (cached_has_bits & 0x00000200u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         33, this->_internal_a_protocolversion(), target);
   }
 
@@ -1097,9 +1097,9 @@ size_t HttpChannelOnStartRequestArgs::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_a_altdatatype()) {
-    // required bytes a_altDataType = 5;
+    // required string a_altDataType = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_altdatatype());
   }
 
@@ -1146,9 +1146,9 @@ size_t HttpChannelOnStartRequestArgs::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_a_protocolversion()) {
-    // required bytes a_protocolVersion = 33;
+    // required string a_protocolVersion = 33;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_protocolversion());
   }
 
@@ -1282,9 +1282,9 @@ size_t HttpChannelOnStartRequestArgs::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_overridereferrerinfo());
 
-    // required bytes a_altDataType = 5;
+    // required string a_altDataType = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_altdatatype());
 
     // required bytes a_selfAddr = 7;
@@ -1317,9 +1317,9 @@ size_t HttpChannelOnStartRequestArgs::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_openerpolicy());
 
-    // required bytes a_protocolVersion = 33;
+    // required string a_protocolVersion = 33;
     total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_protocolversion());
 
     // required .protobuf.mozilla.net.ResourceTimingStructArgs a_timing = 9;
@@ -1400,11 +1400,11 @@ size_t HttpChannelOnStartRequestArgs::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated bytes a_cookieHeaders = 6;
+  // repeated string a_cookieHeaders = 6;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_cookieheaders_.size());
   for (int i = 0, n = _impl_.a_cookieheaders_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
       _impl_.a_cookieheaders_.Get(i));
   }
 

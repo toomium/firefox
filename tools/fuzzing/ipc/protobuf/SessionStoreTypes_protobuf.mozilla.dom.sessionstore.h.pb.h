@@ -350,7 +350,7 @@ class TextField final :
   enum : int {
     kAValueFieldNumber = 1,
   };
-  // required bytes a_value = 1;
+  // required string a_value = 1;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -497,7 +497,7 @@ class FileList final :
   enum : int {
     kAValueListFieldNumber = 1,
   };
-  // repeated bytes a_valueList = 1;
+  // repeated string a_valueList = 1;
   int a_valuelist_size() const;
   private:
   int _internal_a_valuelist_size() const;
@@ -508,12 +508,12 @@ class FileList final :
   void set_a_valuelist(int index, const std::string& value);
   void set_a_valuelist(int index, std::string&& value);
   void set_a_valuelist(int index, const char* value);
-  void set_a_valuelist(int index, const void* value, size_t size);
+  void set_a_valuelist(int index, const char* value, size_t size);
   std::string* add_a_valuelist();
   void add_a_valuelist(const std::string& value);
   void add_a_valuelist(std::string&& value);
   void add_a_valuelist(const char* value);
-  void add_a_valuelist(const void* value, size_t size);
+  void add_a_valuelist(const char* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_valuelist() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_valuelist();
   private:
@@ -650,7 +650,7 @@ class SingleSelect final :
     kAValueFieldNumber = 2,
     kAIndexFieldNumber = 1,
   };
-  // required bytes a_value = 2;
+  // required string a_value = 2;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -814,7 +814,7 @@ class MultipleSelect final :
   enum : int {
     kAValueListFieldNumber = 1,
   };
-  // repeated bytes a_valueList = 1;
+  // repeated string a_valueList = 1;
   int a_valuelist_size() const;
   private:
   int _internal_a_valuelist_size() const;
@@ -825,12 +825,12 @@ class MultipleSelect final :
   void set_a_valuelist(int index, const std::string& value);
   void set_a_valuelist(int index, std::string&& value);
   void set_a_valuelist(int index, const char* value);
-  void set_a_valuelist(int index, const void* value, size_t size);
+  void set_a_valuelist(int index, const char* value, size_t size);
   std::string* add_a_valuelist();
   void add_a_valuelist(const std::string& value);
   void add_a_valuelist(std::string&& value);
   void add_a_valuelist(const char* value);
-  void add_a_valuelist(const void* value, size_t size);
+  void add_a_valuelist(const char* value, size_t size);
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& a_valuelist() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_a_valuelist();
   private:
@@ -1240,7 +1240,7 @@ class FormEntry final :
     kAIdFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required bytes a_id = 1;
+  // required string a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -1449,7 +1449,7 @@ class FormData final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::sessionstore::FormEntry >&
       a_xpath() const;
 
-  // required bytes a_innerHTML = 4;
+  // required string a_innerHTML = 4;
   bool has_a_innerhtml() const;
   private:
   bool _internal_has_a_innerhtml() const;
@@ -1467,7 +1467,7 @@ class FormData final :
   std::string* _internal_mutable_a_innerhtml();
   public:
 
-  // required bytes a_uri = 5;
+  // required string a_uri = 5;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -1653,7 +1653,7 @@ class DocShellRestoreState final :
   std::string* _internal_mutable_a_uri();
   public:
 
-  // required bytes a_docShellCaps = 2;
+  // required string a_docShellCaps = 2;
   bool has_a_docshellcaps() const;
   private:
   bool _internal_has_a_docshellcaps() const;
@@ -1733,7 +1733,7 @@ inline void Checkbox::set_a_value(bool value) {
 
 // TextField
 
-// required bytes a_value = 1;
+// required string a_value = 1;
 inline bool TextField::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1753,7 +1753,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TextField::set_a_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.TextField.a_value)
 }
 inline std::string* TextField::mutable_a_value() {
@@ -1805,7 +1805,7 @@ inline void TextField::set_allocated_a_value(std::string* a_value) {
 
 // FileList
 
-// repeated bytes a_valueList = 1;
+// repeated string a_valueList = 1;
 inline int FileList::_internal_a_valuelist_size() const {
   return _impl_.a_valuelist_.size();
 }
@@ -1844,7 +1844,7 @@ inline void FileList::set_a_valuelist(int index, const char* value) {
   _impl_.a_valuelist_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.sessionstore.FileList.a_valueList)
 }
-inline void FileList::set_a_valuelist(int index, const void* value, size_t size) {
+inline void FileList::set_a_valuelist(int index, const char* value, size_t size) {
   _impl_.a_valuelist_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.sessionstore.FileList.a_valueList)
@@ -1865,7 +1865,7 @@ inline void FileList::add_a_valuelist(const char* value) {
   _impl_.a_valuelist_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.sessionstore.FileList.a_valueList)
 }
-inline void FileList::add_a_valuelist(const void* value, size_t size) {
+inline void FileList::add_a_valuelist(const char* value, size_t size) {
   _impl_.a_valuelist_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.sessionstore.FileList.a_valueList)
 }
@@ -1912,7 +1912,7 @@ inline void SingleSelect::set_a_index(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.SingleSelect.a_index)
 }
 
-// required bytes a_value = 2;
+// required string a_value = 2;
 inline bool SingleSelect::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1932,7 +1932,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SingleSelect::set_a_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.SingleSelect.a_value)
 }
 inline std::string* SingleSelect::mutable_a_value() {
@@ -1984,7 +1984,7 @@ inline void SingleSelect::set_allocated_a_value(std::string* a_value) {
 
 // MultipleSelect
 
-// repeated bytes a_valueList = 1;
+// repeated string a_valueList = 1;
 inline int MultipleSelect::_internal_a_valuelist_size() const {
   return _impl_.a_valuelist_.size();
 }
@@ -2023,7 +2023,7 @@ inline void MultipleSelect::set_a_valuelist(int index, const char* value) {
   _impl_.a_valuelist_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:protobuf.mozilla.dom.sessionstore.MultipleSelect.a_valueList)
 }
-inline void MultipleSelect::set_a_valuelist(int index, const void* value, size_t size) {
+inline void MultipleSelect::set_a_valuelist(int index, const char* value, size_t size) {
   _impl_.a_valuelist_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.dom.sessionstore.MultipleSelect.a_valueList)
@@ -2044,7 +2044,7 @@ inline void MultipleSelect::add_a_valuelist(const char* value) {
   _impl_.a_valuelist_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:protobuf.mozilla.dom.sessionstore.MultipleSelect.a_valueList)
 }
-inline void MultipleSelect::add_a_valuelist(const void* value, size_t size) {
+inline void MultipleSelect::add_a_valuelist(const char* value, size_t size) {
   _impl_.a_valuelist_.Add()->assign(reinterpret_cast<const char*>(value), size);
   // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.dom.sessionstore.MultipleSelect.a_valueList)
 }
@@ -2512,7 +2512,7 @@ inline FormEntryValue::ContentCase FormEntryValue::content_case() const {
 
 // FormEntry
 
-// required bytes a_id = 1;
+// required string a_id = 1;
 inline bool FormEntry::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2532,7 +2532,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FormEntry::set_a_id(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.FormEntry.a_id)
 }
 inline std::string* FormEntry::mutable_a_id() {
@@ -2782,7 +2782,7 @@ FormData::a_xpath() const {
   return _impl_.a_xpath_;
 }
 
-// required bytes a_innerHTML = 4;
+// required string a_innerHTML = 4;
 inline bool FormData::_internal_has_a_innerhtml() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2802,7 +2802,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FormData::set_a_innerhtml(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_innerhtml_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_innerhtml_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.FormData.a_innerHTML)
 }
 inline std::string* FormData::mutable_a_innerhtml() {
@@ -2850,7 +2850,7 @@ inline void FormData::set_allocated_a_innerhtml(std::string* a_innerhtml) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.FormData.a_innerHTML)
 }
 
-// required bytes a_uri = 5;
+// required string a_uri = 5;
 inline bool FormData::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2870,7 +2870,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FormData::set_a_uri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_uri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_uri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.FormData.a_uri)
 }
 inline std::string* FormData::mutable_a_uri() {
@@ -2990,7 +2990,7 @@ inline void DocShellRestoreState::set_allocated_a_uri(std::string* a_uri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.a_URI)
 }
 
-// required bytes a_docShellCaps = 2;
+// required string a_docShellCaps = 2;
 inline bool DocShellRestoreState::_internal_has_a_docshellcaps() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3010,7 +3010,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DocShellRestoreState::set_a_docshellcaps(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_docshellcaps_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_docshellcaps_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.a_docShellCaps)
 }
 inline std::string* DocShellRestoreState::mutable_a_docshellcaps() {

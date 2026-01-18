@@ -834,7 +834,7 @@ class Msg_OpenVRControllerActionPathToVR final :
   enum : int {
     kAAPathFieldNumber = 1,
   };
-  // required bytes a_aPath = 1;
+  // required string a_aPath = 1;
   bool has_a_apath() const;
   private:
   bool _internal_has_a_apath() const;
@@ -1000,7 +1000,7 @@ class Msg_OpenVRControllerManifestPathToVR final :
   std::string* _internal_mutable_a_atype();
   public:
 
-  // required bytes a_aPath = 2;
+  // required string a_aPath = 2;
   bool has_a_apath() const;
   private:
   bool _internal_has_a_apath() const;
@@ -1612,7 +1612,7 @@ class Msg_OpenVRControllerActionPathToParent final :
   enum : int {
     kAAPathFieldNumber = 1,
   };
-  // required bytes a_aPath = 1;
+  // required string a_aPath = 1;
   bool has_a_apath() const;
   private:
   bool _internal_has_a_apath() const;
@@ -1778,7 +1778,7 @@ class Msg_OpenVRControllerManifestPathToParent final :
   std::string* _internal_mutable_a_atype();
   public:
 
-  // required bytes a_aPath = 2;
+  // required string a_aPath = 2;
   bool has_a_apath() const;
   private:
   bool _internal_has_a_apath() const;
@@ -2502,7 +2502,7 @@ inline void Msg_PreferenceUpdate::set_allocated_a_pref(::protobuf::mozilla::dom:
 
 // Msg_OpenVRControllerActionPathToVR
 
-// required bytes a_aPath = 1;
+// required string a_aPath = 1;
 inline bool Msg_OpenVRControllerActionPathToVR::_internal_has_a_apath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2522,7 +2522,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OpenVRControllerActionPathToVR::set_a_apath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_apath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_apath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerActionPathToVR.a_aPath)
 }
 inline std::string* Msg_OpenVRControllerActionPathToVR::mutable_a_apath() {
@@ -2642,7 +2642,7 @@ inline void Msg_OpenVRControllerManifestPathToVR::set_allocated_a_atype(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToVR.a_aType)
 }
 
-// required bytes a_aPath = 2;
+// required string a_aPath = 2;
 inline bool Msg_OpenVRControllerManifestPathToVR::_internal_has_a_apath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2662,7 +2662,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OpenVRControllerManifestPathToVR::set_a_apath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_apath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_apath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToVR.a_aPath)
 }
 inline std::string* Msg_OpenVRControllerManifestPathToVR::mutable_a_apath() {
@@ -2906,7 +2906,7 @@ inline void Reply_RequestMemoryReport::set_a_ageneration(uint32_t value) {
 
 // Msg_OpenVRControllerActionPathToParent
 
-// required bytes a_aPath = 1;
+// required string a_aPath = 1;
 inline bool Msg_OpenVRControllerActionPathToParent::_internal_has_a_apath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2926,7 +2926,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OpenVRControllerActionPathToParent::set_a_apath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_apath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_apath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerActionPathToParent.a_aPath)
 }
 inline std::string* Msg_OpenVRControllerActionPathToParent::mutable_a_apath() {
@@ -3046,7 +3046,7 @@ inline void Msg_OpenVRControllerManifestPathToParent::set_allocated_a_atype(std:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToParent.a_aType)
 }
 
-// required bytes a_aPath = 2;
+// required string a_aPath = 2;
 inline bool Msg_OpenVRControllerManifestPathToParent::_internal_has_a_apath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3066,7 +3066,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OpenVRControllerManifestPathToParent::set_a_apath(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_apath_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_apath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVR.Msg_OpenVRControllerManifestPathToParent.a_aPath)
 }
 inline std::string* Msg_OpenVRControllerManifestPathToParent::mutable_a_apath() {

@@ -224,7 +224,7 @@ const char* TestPartResult::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_filename = 3;
+      // required string a_filename = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_filename();
@@ -242,7 +242,7 @@ const char* TestPartResult::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_summary = 5;
+      // required string a_summary = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_a_summary();
@@ -251,7 +251,7 @@ const char* TestPartResult::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_message = 6;
+      // required string a_message = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_a_message();
@@ -303,9 +303,9 @@ uint8_t* TestPartResult::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_fatal(), target);
   }
 
-  // required bytes a_filename = 3;
+  // required string a_filename = 3;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_filename(), target);
   }
 
@@ -315,15 +315,15 @@ uint8_t* TestPartResult::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_a_linenumber(), target);
   }
 
-  // required bytes a_summary = 5;
+  // required string a_summary = 5;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         5, this->_internal_a_summary(), target);
   }
 
-  // required bytes a_message = 6;
+  // required string a_message = 6;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         6, this->_internal_a_message(), target);
   }
 
@@ -340,23 +340,23 @@ size_t TestPartResult::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_filename()) {
-    // required bytes a_filename = 3;
+    // required string a_filename = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_filename());
   }
 
   if (_internal_has_a_summary()) {
-    // required bytes a_summary = 5;
+    // required string a_summary = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_summary());
   }
 
   if (_internal_has_a_message()) {
-    // required bytes a_message = 6;
+    // required string a_message = 6;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_message());
   }
 
@@ -382,19 +382,19 @@ size_t TestPartResult::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
-    // required bytes a_filename = 3;
+    // required string a_filename = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_filename());
 
-    // required bytes a_summary = 5;
+    // required string a_summary = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_summary());
 
-    // required bytes a_message = 6;
+    // required string a_message = 6;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_message());
 
     // required bool a_failed = 1;

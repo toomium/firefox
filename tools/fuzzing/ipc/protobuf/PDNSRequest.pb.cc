@@ -285,7 +285,7 @@ const char* Msg_CancelDNSRequest::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_hostName = 1;
+      // required string a_hostName = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_hostname();
@@ -294,7 +294,7 @@ const char* Msg_CancelDNSRequest::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_trrServer = 2;
+      // required string a_trrServer = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_trrserver();
@@ -379,15 +379,15 @@ uint8_t* Msg_CancelDNSRequest::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_hostName = 1;
+  // required string a_hostName = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_hostname(), target);
   }
 
-  // required bytes a_trrServer = 2;
+  // required string a_trrServer = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_trrserver(), target);
   }
 
@@ -434,16 +434,16 @@ size_t Msg_CancelDNSRequest::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_hostname()) {
-    // required bytes a_hostName = 1;
+    // required string a_hostName = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_hostname());
   }
 
   if (_internal_has_a_trrserver()) {
-    // required bytes a_trrServer = 2;
+    // required string a_trrServer = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_trrserver());
   }
 
@@ -485,14 +485,14 @@ size_t Msg_CancelDNSRequest::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000007f) ^ 0x0000007f) == 0) {  // All required fields are present.
-    // required bytes a_hostName = 1;
+    // required string a_hostName = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_hostname());
 
-    // required bytes a_trrServer = 2;
+    // required string a_trrServer = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_trrserver());
 
     // required bytes a_originAttributes = 5;

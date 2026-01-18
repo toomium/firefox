@@ -13,8 +13,8 @@ package protobuf.mozilla.devtools;
 
 // Structs and unions declarations
 message OpenedFile {
-  required bytes a_path = 1;
-  required bytes a_snapshotId = 2;
+  required string a_path = 1;
+  required string a_snapshotId = 2;
   required bytes a_descriptor = 3;
 }
 

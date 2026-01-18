@@ -236,7 +236,7 @@ class Msg_FillHandlerInfo final :
     kAAOverrideTypeFieldNumber = 2,
     kAAHandlerInfoDataFieldNumber = 1,
   };
-  // required bytes a_aOverrideType = 2;
+  // required string a_aOverrideType = 2;
   bool has_a_aoverridetype() const;
   private:
   bool _internal_has_a_aoverridetype() const;
@@ -552,7 +552,7 @@ class Msg_ExistsForProtocolOS final :
   enum : int {
     kAAProtocolSchemeFieldNumber = 1,
   };
-  // required bytes a_aProtocolScheme = 1;
+  // required string a_aProtocolScheme = 1;
   bool has_a_aprotocolscheme() const;
   private:
   bool _internal_has_a_aprotocolscheme() const;
@@ -841,7 +841,7 @@ class Msg_ExistsForProtocol final :
   enum : int {
     kAAProtocolSchemeFieldNumber = 1,
   };
-  // required bytes a_aProtocolScheme = 1;
+  // required string a_aProtocolScheme = 1;
   bool has_a_aprotocolscheme() const;
   private:
   bool _internal_has_a_aprotocolscheme() const;
@@ -1419,7 +1419,7 @@ class Msg_GetTypeFromExtension final :
   enum : int {
     kAAFileExtensionFieldNumber = 1,
   };
-  // required bytes a_aFileExtension = 1;
+  // required string a_aFileExtension = 1;
   bool has_a_afileextension() const;
   private:
   bool _internal_has_a_afileextension() const;
@@ -1566,7 +1566,7 @@ class Reply_GetTypeFromExtension final :
   enum : int {
     kATypeFieldNumber = 1,
   };
-  // required bytes a_type = 1;
+  // required string a_type = 1;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -1714,7 +1714,7 @@ class Msg_GetMIMEInfoFromOS final :
     kAAMIMETypeFieldNumber = 1,
     kAAExtensionFieldNumber = 2,
   };
-  // required bytes a_aMIMEType = 1;
+  // required string a_aMIMEType = 1;
   bool has_a_amimetype() const;
   private:
   bool _internal_has_a_amimetype() const;
@@ -1732,7 +1732,7 @@ class Msg_GetMIMEInfoFromOS final :
   std::string* _internal_mutable_a_amimetype();
   public:
 
-  // required bytes a_aExtension = 2;
+  // required string a_aExtension = 2;
   bool has_a_aextension() const;
   private:
   bool _internal_has_a_aextension() const;
@@ -2068,7 +2068,7 @@ class Msg_GetApplicationDescription final :
   enum : int {
     kAASchemeFieldNumber = 1,
   };
-  // required bytes a_aScheme = 1;
+  // required string a_aScheme = 1;
   bool has_a_ascheme() const;
   private:
   bool _internal_has_a_ascheme() const;
@@ -2234,7 +2234,7 @@ class Reply_GetApplicationDescription final :
   std::string* _internal_mutable_a_rv();
   public:
 
-  // required bytes a_description = 2;
+  // required string a_description = 2;
   bool has_a_description() const;
   private:
   bool _internal_has_a_description() const;
@@ -2617,7 +2617,7 @@ inline void Msg_FillHandlerInfo::set_allocated_a_ahandlerinfodata(::protobuf::mo
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PHandlerService.Msg_FillHandlerInfo.a_aHandlerInfoData)
 }
 
-// required bytes a_aOverrideType = 2;
+// required string a_aOverrideType = 2;
 inline bool Msg_FillHandlerInfo::_internal_has_a_aoverridetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2637,7 +2637,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_FillHandlerInfo::set_a_aoverridetype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_aoverridetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_aoverridetype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PHandlerService.Msg_FillHandlerInfo.a_aOverrideType)
 }
 inline std::string* Msg_FillHandlerInfo::mutable_a_aoverridetype() {
@@ -2780,7 +2780,7 @@ inline void Reply_FillHandlerInfo::set_allocated_a_handlerinfodata(::protobuf::m
 
 // Msg_ExistsForProtocolOS
 
-// required bytes a_aProtocolScheme = 1;
+// required string a_aProtocolScheme = 1;
 inline bool Msg_ExistsForProtocolOS::_internal_has_a_aprotocolscheme() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2800,7 +2800,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ExistsForProtocolOS::set_a_aprotocolscheme(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_aprotocolscheme_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_aprotocolscheme_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PHandlerService.Msg_ExistsForProtocolOS.a_aProtocolScheme)
 }
 inline std::string* Msg_ExistsForProtocolOS::mutable_a_aprotocolscheme() {
@@ -2884,7 +2884,7 @@ inline void Reply_ExistsForProtocolOS::set_a_exists(bool value) {
 
 // Msg_ExistsForProtocol
 
-// required bytes a_aProtocolScheme = 1;
+// required string a_aProtocolScheme = 1;
 inline bool Msg_ExistsForProtocol::_internal_has_a_aprotocolscheme() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2904,7 +2904,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ExistsForProtocol::set_a_aprotocolscheme(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_aprotocolscheme_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_aprotocolscheme_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PHandlerService.Msg_ExistsForProtocol.a_aProtocolScheme)
 }
 inline std::string* Msg_ExistsForProtocol::mutable_a_aprotocolscheme() {
@@ -3111,7 +3111,7 @@ inline void Reply_Exists::set_a_exists(bool value) {
 
 // Msg_GetTypeFromExtension
 
-// required bytes a_aFileExtension = 1;
+// required string a_aFileExtension = 1;
 inline bool Msg_GetTypeFromExtension::_internal_has_a_afileextension() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3131,7 +3131,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetTypeFromExtension::set_a_afileextension(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_afileextension_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_afileextension_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PHandlerService.Msg_GetTypeFromExtension.a_aFileExtension)
 }
 inline std::string* Msg_GetTypeFromExtension::mutable_a_afileextension() {
@@ -3183,7 +3183,7 @@ inline void Msg_GetTypeFromExtension::set_allocated_a_afileextension(std::string
 
 // Reply_GetTypeFromExtension
 
-// required bytes a_type = 1;
+// required string a_type = 1;
 inline bool Reply_GetTypeFromExtension::_internal_has_a_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3203,7 +3203,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_GetTypeFromExtension::set_a_type(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_type_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PHandlerService.Reply_GetTypeFromExtension.a_type)
 }
 inline std::string* Reply_GetTypeFromExtension::mutable_a_type() {
@@ -3255,7 +3255,7 @@ inline void Reply_GetTypeFromExtension::set_allocated_a_type(std::string* a_type
 
 // Msg_GetMIMEInfoFromOS
 
-// required bytes a_aMIMEType = 1;
+// required string a_aMIMEType = 1;
 inline bool Msg_GetMIMEInfoFromOS::_internal_has_a_amimetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3275,7 +3275,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetMIMEInfoFromOS::set_a_amimetype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_amimetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_amimetype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PHandlerService.Msg_GetMIMEInfoFromOS.a_aMIMEType)
 }
 inline std::string* Msg_GetMIMEInfoFromOS::mutable_a_amimetype() {
@@ -3323,7 +3323,7 @@ inline void Msg_GetMIMEInfoFromOS::set_allocated_a_amimetype(std::string* a_amim
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PHandlerService.Msg_GetMIMEInfoFromOS.a_aMIMEType)
 }
 
-// required bytes a_aExtension = 2;
+// required string a_aExtension = 2;
 inline bool Msg_GetMIMEInfoFromOS::_internal_has_a_aextension() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3343,7 +3343,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetMIMEInfoFromOS::set_a_aextension(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_aextension_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_aextension_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PHandlerService.Msg_GetMIMEInfoFromOS.a_aExtension)
 }
 inline std::string* Msg_GetMIMEInfoFromOS::mutable_a_aextension() {
@@ -3582,7 +3582,7 @@ inline void Reply_GetMIMEInfoFromOS::set_a_found(bool value) {
 
 // Msg_GetApplicationDescription
 
-// required bytes a_aScheme = 1;
+// required string a_aScheme = 1;
 inline bool Msg_GetApplicationDescription::_internal_has_a_ascheme() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3602,7 +3602,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetApplicationDescription::set_a_ascheme(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_ascheme_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_ascheme_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PHandlerService.Msg_GetApplicationDescription.a_aScheme)
 }
 inline std::string* Msg_GetApplicationDescription::mutable_a_ascheme() {
@@ -3722,7 +3722,7 @@ inline void Reply_GetApplicationDescription::set_allocated_a_rv(std::string* a_r
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PHandlerService.Reply_GetApplicationDescription.a_rv)
 }
 
-// required bytes a_description = 2;
+// required string a_description = 2;
 inline bool Reply_GetApplicationDescription::_internal_has_a_description() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3742,7 +3742,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_GetApplicationDescription::set_a_description(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_description_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_description_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PHandlerService.Reply_GetApplicationDescription.a_description)
 }
 inline std::string* Reply_GetApplicationDescription::mutable_a_description() {

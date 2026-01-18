@@ -329,7 +329,7 @@ const char* Msg_Open::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_defaultFile = 3;
+      // required string a_defaultFile = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_defaultfile();
@@ -338,7 +338,7 @@ const char* Msg_Open::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_defaultExtension = 4;
+      // required string a_defaultExtension = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_defaultextension();
@@ -347,7 +347,7 @@ const char* Msg_Open::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
         } else
           goto handle_unusual;
         continue;
-      // repeated bytes a_filters = 5;
+      // repeated string a_filters = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr -= 1;
@@ -361,7 +361,7 @@ const char* Msg_Open::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
         } else
           goto handle_unusual;
         continue;
-      // repeated bytes a_filterNames = 6;
+      // repeated string a_filterNames = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr -= 1;
@@ -375,7 +375,7 @@ const char* Msg_Open::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
         } else
           goto handle_unusual;
         continue;
-      // repeated bytes a_rawFilters = 7;
+      // repeated string a_rawFilters = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           ptr -= 1;
@@ -389,7 +389,7 @@ const char* Msg_Open::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_displayDirectory = 8;
+      // required string a_displayDirectory = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           auto str = _internal_mutable_a_displaydirectory();
@@ -398,7 +398,7 @@ const char* Msg_Open::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_displaySpecialDirectory = 9;
+      // required string a_displaySpecialDirectory = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           auto str = _internal_mutable_a_displayspecialdirectory();
@@ -407,7 +407,7 @@ const char* Msg_Open::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_okButtonLabel = 10;
+      // required string a_okButtonLabel = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           auto str = _internal_mutable_a_okbuttonlabel();
@@ -468,51 +468,51 @@ uint8_t* Msg_Open::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_addtorecentdocs(), target);
   }
 
-  // required bytes a_defaultFile = 3;
+  // required string a_defaultFile = 3;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_defaultfile(), target);
   }
 
-  // required bytes a_defaultExtension = 4;
+  // required string a_defaultExtension = 4;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_defaultextension(), target);
   }
 
-  // repeated bytes a_filters = 5;
+  // repeated string a_filters = 5;
   for (int i = 0, n = this->_internal_a_filters_size(); i < n; i++) {
     const auto& s = this->_internal_a_filters(i);
-    target = stream->WriteBytes(5, s, target);
+    target = stream->WriteString(5, s, target);
   }
 
-  // repeated bytes a_filterNames = 6;
+  // repeated string a_filterNames = 6;
   for (int i = 0, n = this->_internal_a_filternames_size(); i < n; i++) {
     const auto& s = this->_internal_a_filternames(i);
-    target = stream->WriteBytes(6, s, target);
+    target = stream->WriteString(6, s, target);
   }
 
-  // repeated bytes a_rawFilters = 7;
+  // repeated string a_rawFilters = 7;
   for (int i = 0, n = this->_internal_a_rawfilters_size(); i < n; i++) {
     const auto& s = this->_internal_a_rawfilters(i);
-    target = stream->WriteBytes(7, s, target);
+    target = stream->WriteString(7, s, target);
   }
 
-  // required bytes a_displayDirectory = 8;
+  // required string a_displayDirectory = 8;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         8, this->_internal_a_displaydirectory(), target);
   }
 
-  // required bytes a_displaySpecialDirectory = 9;
+  // required string a_displaySpecialDirectory = 9;
   if (cached_has_bits & 0x00000008u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         9, this->_internal_a_displayspecialdirectory(), target);
   }
 
-  // required bytes a_okButtonLabel = 10;
+  // required string a_okButtonLabel = 10;
   if (cached_has_bits & 0x00000010u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         10, this->_internal_a_okbuttonlabel(), target);
   }
 
@@ -535,37 +535,37 @@ size_t Msg_Open::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_defaultfile()) {
-    // required bytes a_defaultFile = 3;
+    // required string a_defaultFile = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_defaultfile());
   }
 
   if (_internal_has_a_defaultextension()) {
-    // required bytes a_defaultExtension = 4;
+    // required string a_defaultExtension = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_defaultextension());
   }
 
   if (_internal_has_a_displaydirectory()) {
-    // required bytes a_displayDirectory = 8;
+    // required string a_displayDirectory = 8;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_displaydirectory());
   }
 
   if (_internal_has_a_displayspecialdirectory()) {
-    // required bytes a_displaySpecialDirectory = 9;
+    // required string a_displaySpecialDirectory = 9;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_displayspecialdirectory());
   }
 
   if (_internal_has_a_okbuttonlabel()) {
-    // required bytes a_okButtonLabel = 10;
+    // required string a_okButtonLabel = 10;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_okbuttonlabel());
   }
 
@@ -593,29 +593,29 @@ size_t Msg_Open::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x000000ff) ^ 0x000000ff) == 0) {  // All required fields are present.
-    // required bytes a_defaultFile = 3;
+    // required string a_defaultFile = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_defaultfile());
 
-    // required bytes a_defaultExtension = 4;
+    // required string a_defaultExtension = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_defaultextension());
 
-    // required bytes a_displayDirectory = 8;
+    // required string a_displayDirectory = 8;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_displaydirectory());
 
-    // required bytes a_displaySpecialDirectory = 9;
+    // required string a_displaySpecialDirectory = 9;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_displayspecialdirectory());
 
-    // required bytes a_okButtonLabel = 10;
+    // required string a_okButtonLabel = 10;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_okbuttonlabel());
 
     // required bytes a_capture = 11;
@@ -636,27 +636,27 @@ size_t Msg_Open::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated bytes a_filters = 5;
+  // repeated string a_filters = 5;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_filters_.size());
   for (int i = 0, n = _impl_.a_filters_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
       _impl_.a_filters_.Get(i));
   }
 
-  // repeated bytes a_filterNames = 6;
+  // repeated string a_filterNames = 6;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_filternames_.size());
   for (int i = 0, n = _impl_.a_filternames_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
       _impl_.a_filternames_.Get(i));
   }
 
-  // repeated bytes a_rawFilters = 7;
+  // repeated string a_rawFilters = 7;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_rawfilters_.size());
   for (int i = 0, n = _impl_.a_rawfilters_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
       _impl_.a_rawfilters_.Get(i));
   }
 

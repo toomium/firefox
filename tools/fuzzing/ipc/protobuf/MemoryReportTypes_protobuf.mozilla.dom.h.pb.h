@@ -177,7 +177,7 @@ class MemoryReport final :
     kAAmountFieldNumber = 5,
     kAGenerationFieldNumber = 6,
   };
-  // required bytes a_process = 1;
+  // required string a_process = 1;
   bool has_a_process() const;
   private:
   bool _internal_has_a_process() const;
@@ -195,7 +195,7 @@ class MemoryReport final :
   std::string* _internal_mutable_a_process();
   public:
 
-  // required bytes a_path = 2;
+  // required string a_path = 2;
   bool has_a_path() const;
   private:
   bool _internal_has_a_path() const;
@@ -213,7 +213,7 @@ class MemoryReport final :
   std::string* _internal_mutable_a_path();
   public:
 
-  // required bytes a_desc = 7;
+  // required string a_desc = 7;
   bool has_a_desc() const;
   private:
   bool _internal_has_a_desc() const;
@@ -318,7 +318,7 @@ class MemoryReport final :
 #endif  // __GNUC__
 // MemoryReport
 
-// required bytes a_process = 1;
+// required string a_process = 1;
 inline bool MemoryReport::_internal_has_a_process() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -338,7 +338,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void MemoryReport::set_a_process(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_process_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_process_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MemoryReport.a_process)
 }
 inline std::string* MemoryReport::mutable_a_process() {
@@ -386,7 +386,7 @@ inline void MemoryReport::set_allocated_a_process(std::string* a_process) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MemoryReport.a_process)
 }
 
-// required bytes a_path = 2;
+// required string a_path = 2;
 inline bool MemoryReport::_internal_has_a_path() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -406,7 +406,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void MemoryReport::set_a_path(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_path_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_path_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MemoryReport.a_path)
 }
 inline std::string* MemoryReport::mutable_a_path() {
@@ -566,7 +566,7 @@ inline void MemoryReport::set_a_generation(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MemoryReport.a_generation)
 }
 
-// required bytes a_desc = 7;
+// required string a_desc = 7;
 inline bool MemoryReport::_internal_has_a_desc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -586,7 +586,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void MemoryReport::set_a_desc(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_desc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_desc_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MemoryReport.a_desc)
 }
 inline std::string* MemoryReport::mutable_a_desc() {

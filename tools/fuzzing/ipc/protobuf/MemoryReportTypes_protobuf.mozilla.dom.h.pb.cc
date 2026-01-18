@@ -212,7 +212,7 @@ const char* MemoryReport::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_process = 1;
+      // required string a_process = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_process();
@@ -221,7 +221,7 @@ const char* MemoryReport::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_path = 2;
+      // required string a_path = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_path();
@@ -266,7 +266,7 @@ const char* MemoryReport::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_desc = 7;
+      // required string a_desc = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           auto str = _internal_mutable_a_desc();
@@ -306,15 +306,15 @@ uint8_t* MemoryReport::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_process = 1;
+  // required string a_process = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_process(), target);
   }
 
-  // required bytes a_path = 2;
+  // required string a_path = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_path(), target);
   }
 
@@ -342,9 +342,9 @@ uint8_t* MemoryReport::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(6, this->_internal_a_generation(), target);
   }
 
-  // required bytes a_desc = 7;
+  // required string a_desc = 7;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         7, this->_internal_a_desc(), target);
   }
 
@@ -361,23 +361,23 @@ size_t MemoryReport::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_process()) {
-    // required bytes a_process = 1;
+    // required string a_process = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_process());
   }
 
   if (_internal_has_a_path()) {
-    // required bytes a_path = 2;
+    // required string a_path = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_path());
   }
 
   if (_internal_has_a_desc()) {
-    // required bytes a_desc = 7;
+    // required string a_desc = 7;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_desc());
   }
 
@@ -408,19 +408,19 @@ size_t MemoryReport::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000007f) ^ 0x0000007f) == 0) {  // All required fields are present.
-    // required bytes a_process = 1;
+    // required string a_process = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_process());
 
-    // required bytes a_path = 2;
+    // required string a_path = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_path());
 
-    // required bytes a_desc = 7;
+    // required string a_desc = 7;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_desc());
 
     // required sint32 a_kind = 3;

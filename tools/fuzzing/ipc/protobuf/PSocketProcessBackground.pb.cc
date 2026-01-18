@@ -360,7 +360,7 @@ const char* Msg_InitVerifySSLServerCert::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aHostName = 3;
+      // required string a_aHostName = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_ahostname();
@@ -474,9 +474,9 @@ uint8_t* Msg_InitVerifySSLServerCert::_InternalSerialize(
         InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // required bytes a_aHostName = 3;
+  // required string a_aHostName = 3;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_ahostname(), target);
   }
 
@@ -545,9 +545,9 @@ size_t Msg_InitVerifySSLServerCert::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_a_ahostname()) {
-    // required bytes a_aHostName = 3;
+    // required string a_aHostName = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_ahostname());
   }
 
@@ -585,9 +585,9 @@ size_t Msg_InitVerifySSLServerCert::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_aendpoint());
 
-    // required bytes a_aHostName = 3;
+    // required string a_aHostName = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_ahostname());
 
     // required bytes a_aOriginAttributes = 5;
@@ -951,7 +951,7 @@ const char* Msg_InitSelectTLSClientAuthCert::_InternalParse(const char* ptr, ::_
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aHostName = 2;
+      // required string a_aHostName = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_ahostname();
@@ -1063,9 +1063,9 @@ uint8_t* Msg_InitSelectTLSClientAuthCert::_InternalSerialize(
         1, this->_internal_a_aendpoint(), target);
   }
 
-  // required bytes a_aHostName = 2;
+  // required string a_aHostName = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_ahostname(), target);
   }
 
@@ -1134,9 +1134,9 @@ size_t Msg_InitSelectTLSClientAuthCert::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_a_ahostname()) {
-    // required bytes a_aHostName = 2;
+    // required string a_aHostName = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_ahostname());
   }
 
@@ -1186,9 +1186,9 @@ size_t Msg_InitSelectTLSClientAuthCert::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_aendpoint());
 
-    // required bytes a_aHostName = 2;
+    // required string a_aHostName = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_ahostname());
 
     // required bytes a_aOriginAttributes = 3;

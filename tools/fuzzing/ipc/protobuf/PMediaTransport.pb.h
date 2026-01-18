@@ -279,7 +279,7 @@ class Msg_GetIceLog final :
   enum : int {
     kAPatternFieldNumber = 1,
   };
-  // required bytes a_pattern = 1;
+  // required string a_pattern = 1;
   bool has_a_pattern() const;
   private:
   bool _internal_has_a_pattern() const;
@@ -945,7 +945,7 @@ class Msg_CreateIceCtx final :
   enum : int {
     kANameFieldNumber = 1,
   };
-  // required string a_name = 1;
+  // required bytes a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -1415,7 +1415,7 @@ class Msg_EnsureProvisionalTransport final :
     kALocalPwdFieldNumber = 3,
     kAComponentCountFieldNumber = 4,
   };
-  // required string a_transportId = 1;
+  // required bytes a_transportId = 1;
   bool has_a_transportid() const;
   private:
   bool _internal_has_a_transportid() const;
@@ -1433,7 +1433,7 @@ class Msg_EnsureProvisionalTransport final :
   std::string* _internal_mutable_a_transportid();
   public:
 
-  // required string a_localUfrag = 2;
+  // required bytes a_localUfrag = 2;
   bool has_a_localufrag() const;
   private:
   bool _internal_has_a_localufrag() const;
@@ -1451,7 +1451,7 @@ class Msg_EnsureProvisionalTransport final :
   std::string* _internal_mutable_a_localufrag();
   public:
 
-  // required string a_localPwd = 3;
+  // required bytes a_localPwd = 3;
   bool has_a_localpwd() const;
   private:
   bool _internal_has_a_localpwd() const;
@@ -1618,7 +1618,7 @@ class Msg_SetTargetForDefaultLocalAddressLookup final :
     kATargetIpFieldNumber = 1,
     kATargetPortFieldNumber = 2,
   };
-  // required string a_targetIp = 1;
+  // required bytes a_targetIp = 1;
   bool has_a_targetip() const;
   private:
   bool _internal_has_a_targetip() const;
@@ -2017,7 +2017,7 @@ class Msg_ActivateTransport final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_certder();
 
-  // required string a_transportId = 1;
+  // required bytes a_transportId = 1;
   bool has_a_transportid() const;
   private:
   bool _internal_has_a_transportid() const;
@@ -2035,7 +2035,7 @@ class Msg_ActivateTransport final :
   std::string* _internal_mutable_a_transportid();
   public:
 
-  // required string a_localUfrag = 2;
+  // required bytes a_localUfrag = 2;
   bool has_a_localufrag() const;
   private:
   bool _internal_has_a_localufrag() const;
@@ -2053,7 +2053,7 @@ class Msg_ActivateTransport final :
   std::string* _internal_mutable_a_localufrag();
   public:
 
-  // required string a_localPwd = 3;
+  // required bytes a_localPwd = 3;
   bool has_a_localpwd() const;
   private:
   bool _internal_has_a_localpwd() const;
@@ -2071,7 +2071,7 @@ class Msg_ActivateTransport final :
   std::string* _internal_mutable_a_localpwd();
   public:
 
-  // required string a_remoteUfrag = 5;
+  // required bytes a_remoteUfrag = 5;
   bool has_a_remoteufrag() const;
   private:
   bool _internal_has_a_remoteufrag() const;
@@ -2089,7 +2089,7 @@ class Msg_ActivateTransport final :
   std::string* _internal_mutable_a_remoteufrag();
   public:
 
-  // required string a_remotePwd = 6;
+  // required bytes a_remotePwd = 6;
   bool has_a_remotepwd() const;
   private:
   bool _internal_has_a_remotepwd() const;
@@ -2633,7 +2633,7 @@ class Msg_SendPacket final :
     kATransportIdFieldNumber = 1,
     kAPacketFieldNumber = 2,
   };
-  // required string a_transportId = 1;
+  // required bytes a_transportId = 1;
   bool has_a_transportid() const;
   private:
   bool _internal_has_a_transportid() const;
@@ -2805,7 +2805,7 @@ class Msg_AddIceCandidate final :
     kAUfragFieldNumber = 3,
     kAObfuscatedAddrFieldNumber = 4,
   };
-  // required string a_transportId = 1;
+  // required bytes a_transportId = 1;
   bool has_a_transportid() const;
   private:
   bool _internal_has_a_transportid() const;
@@ -2823,7 +2823,7 @@ class Msg_AddIceCandidate final :
   std::string* _internal_mutable_a_transportid();
   public:
 
-  // required string a_candidate = 2;
+  // required bytes a_candidate = 2;
   bool has_a_candidate() const;
   private:
   bool _internal_has_a_candidate() const;
@@ -2841,7 +2841,7 @@ class Msg_AddIceCandidate final :
   std::string* _internal_mutable_a_candidate();
   public:
 
-  // required string a_ufrag = 3;
+  // required bytes a_ufrag = 3;
   bool has_a_ufrag() const;
   private:
   bool _internal_has_a_ufrag() const;
@@ -2859,7 +2859,7 @@ class Msg_AddIceCandidate final :
   std::string* _internal_mutable_a_ufrag();
   public:
 
-  // required string a_obfuscatedAddr = 4;
+  // required bytes a_obfuscatedAddr = 4;
   bool has_a_obfuscatedaddr() const;
   private:
   bool _internal_has_a_obfuscatedaddr() const;
@@ -3155,7 +3155,7 @@ class Msg_GetIceStats final :
     kATransportIdFieldNumber = 1,
     kANowFieldNumber = 2,
   };
-  // required string a_transportId = 1;
+  // required bytes a_transportId = 1;
   bool has_a_transportid() const;
   private:
   bool _internal_has_a_transportid() const;
@@ -3467,7 +3467,7 @@ class Msg_OnCandidate final :
     kATransportIdFieldNumber = 1,
     kACandidateInfoFieldNumber = 2,
   };
-  // required string a_transportId = 1;
+  // required bytes a_transportId = 1;
   bool has_a_transportid() const;
   private:
   bool _internal_has_a_transportid() const;
@@ -3636,7 +3636,7 @@ class Msg_OnAlpnNegotiated final :
   enum : int {
     kAAlpnFieldNumber = 1,
   };
-  // required string a_alpn = 1;
+  // required bytes a_alpn = 1;
   bool has_a_alpn() const;
   private:
   bool _internal_has_a_alpn() const;
@@ -3784,7 +3784,7 @@ class Msg_OnGatheringStateChange final :
     kATransportIdFieldNumber = 1,
     kAStateFieldNumber = 2,
   };
-  // required string a_transportId = 1;
+  // required bytes a_transportId = 1;
   bool has_a_transportid() const;
   private:
   bool _internal_has_a_transportid() const;
@@ -3949,7 +3949,7 @@ class Msg_OnConnectionStateChange final :
     kATransportIdFieldNumber = 1,
     kAStateFieldNumber = 2,
   };
-  // required string a_transportId = 1;
+  // required bytes a_transportId = 1;
   bool has_a_transportid() const;
   private:
   bool _internal_has_a_transportid() const;
@@ -4114,7 +4114,7 @@ class Msg_OnPacketReceived final :
     kATransportIdFieldNumber = 1,
     kAPacketFieldNumber = 2,
   };
-  // required string a_transportId = 1;
+  // required bytes a_transportId = 1;
   bool has_a_transportid() const;
   private:
   bool _internal_has_a_transportid() const;
@@ -4284,7 +4284,7 @@ class Msg_OnEncryptedSending final :
     kATransportIdFieldNumber = 1,
     kAPacketFieldNumber = 2,
   };
-  // required string a_transportId = 1;
+  // required bytes a_transportId = 1;
   bool has_a_transportid() const;
   private:
   bool _internal_has_a_transportid() const;
@@ -4454,7 +4454,7 @@ class Msg_OnStateChange final :
     kATransportIdFieldNumber = 1,
     kAStateFieldNumber = 2,
   };
-  // required string a_transportId = 1;
+  // required bytes a_transportId = 1;
   bool has_a_transportid() const;
   private:
   bool _internal_has_a_transportid() const;
@@ -4619,7 +4619,7 @@ class Msg_OnRtcpStateChange final :
     kATransportIdFieldNumber = 1,
     kAStateFieldNumber = 2,
   };
-  // required string a_transportId = 1;
+  // required bytes a_transportId = 1;
   bool has_a_transportid() const;
   private:
   bool _internal_has_a_transportid() const;
@@ -4680,7 +4680,7 @@ class Msg_OnRtcpStateChange final :
 #endif  // __GNUC__
 // Msg_GetIceLog
 
-// required bytes a_pattern = 1;
+// required string a_pattern = 1;
 inline bool Msg_GetIceLog::_internal_has_a_pattern() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4700,7 +4700,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetIceLog::set_a_pattern(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_pattern_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_pattern_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_GetIceLog.a_pattern)
 }
 inline std::string* Msg_GetIceLog::mutable_a_pattern() {
@@ -4836,7 +4836,7 @@ inline void Reply_GetIceLog::set_allocated_a_loglines(std::string* a_loglines) {
 
 // Msg_CreateIceCtx
 
-// required string a_name = 1;
+// required bytes a_name = 1;
 inline bool Msg_CreateIceCtx::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4856,7 +4856,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CreateIceCtx::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_CreateIceCtx.a_name)
 }
 inline std::string* Msg_CreateIceCtx::mutable_a_name() {
@@ -5146,7 +5146,7 @@ inline void Msg_SetProxyConfig::set_allocated_a_proxyconfig(::protobuf::mozilla:
 
 // Msg_EnsureProvisionalTransport
 
-// required string a_transportId = 1;
+// required bytes a_transportId = 1;
 inline bool Msg_EnsureProvisionalTransport::_internal_has_a_transportid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5166,7 +5166,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_EnsureProvisionalTransport::set_a_transportid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_transportid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_transportid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_EnsureProvisionalTransport.a_transportId)
 }
 inline std::string* Msg_EnsureProvisionalTransport::mutable_a_transportid() {
@@ -5214,7 +5214,7 @@ inline void Msg_EnsureProvisionalTransport::set_allocated_a_transportid(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_EnsureProvisionalTransport.a_transportId)
 }
 
-// required string a_localUfrag = 2;
+// required bytes a_localUfrag = 2;
 inline bool Msg_EnsureProvisionalTransport::_internal_has_a_localufrag() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5234,7 +5234,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_EnsureProvisionalTransport::set_a_localufrag(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_localufrag_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_localufrag_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_EnsureProvisionalTransport.a_localUfrag)
 }
 inline std::string* Msg_EnsureProvisionalTransport::mutable_a_localufrag() {
@@ -5282,7 +5282,7 @@ inline void Msg_EnsureProvisionalTransport::set_allocated_a_localufrag(std::stri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_EnsureProvisionalTransport.a_localUfrag)
 }
 
-// required string a_localPwd = 3;
+// required bytes a_localPwd = 3;
 inline bool Msg_EnsureProvisionalTransport::_internal_has_a_localpwd() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -5302,7 +5302,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_EnsureProvisionalTransport::set_a_localpwd(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_localpwd_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_localpwd_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_EnsureProvisionalTransport.a_localPwd)
 }
 inline std::string* Msg_EnsureProvisionalTransport::mutable_a_localpwd() {
@@ -5382,7 +5382,7 @@ inline void Msg_EnsureProvisionalTransport::set_a_componentcount(int32_t value) 
 
 // Msg_SetTargetForDefaultLocalAddressLookup
 
-// required string a_targetIp = 1;
+// required bytes a_targetIp = 1;
 inline bool Msg_SetTargetForDefaultLocalAddressLookup::_internal_has_a_targetip() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5402,7 +5402,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetTargetForDefaultLocalAddressLookup::set_a_targetip(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_targetip_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_targetip_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_SetTargetForDefaultLocalAddressLookup.a_targetIp)
 }
 inline std::string* Msg_SetTargetForDefaultLocalAddressLookup::mutable_a_targetip() {
@@ -5610,7 +5610,7 @@ inline void Msg_StartIceGathering::set_allocated_a_stunaddrs(std::string* a_stun
 
 // Msg_ActivateTransport
 
-// required string a_transportId = 1;
+// required bytes a_transportId = 1;
 inline bool Msg_ActivateTransport::_internal_has_a_transportid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5630,7 +5630,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ActivateTransport::set_a_transportid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_transportid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_transportid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_ActivateTransport.a_transportId)
 }
 inline std::string* Msg_ActivateTransport::mutable_a_transportid() {
@@ -5678,7 +5678,7 @@ inline void Msg_ActivateTransport::set_allocated_a_transportid(std::string* a_tr
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_ActivateTransport.a_transportId)
 }
 
-// required string a_localUfrag = 2;
+// required bytes a_localUfrag = 2;
 inline bool Msg_ActivateTransport::_internal_has_a_localufrag() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -5698,7 +5698,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ActivateTransport::set_a_localufrag(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_localufrag_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_localufrag_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_ActivateTransport.a_localUfrag)
 }
 inline std::string* Msg_ActivateTransport::mutable_a_localufrag() {
@@ -5746,7 +5746,7 @@ inline void Msg_ActivateTransport::set_allocated_a_localufrag(std::string* a_loc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_ActivateTransport.a_localUfrag)
 }
 
-// required string a_localPwd = 3;
+// required bytes a_localPwd = 3;
 inline bool Msg_ActivateTransport::_internal_has_a_localpwd() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -5766,7 +5766,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ActivateTransport::set_a_localpwd(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_localpwd_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_localpwd_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_ActivateTransport.a_localPwd)
 }
 inline std::string* Msg_ActivateTransport::mutable_a_localpwd() {
@@ -5842,7 +5842,7 @@ inline void Msg_ActivateTransport::set_a_componentcount(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_ActivateTransport.a_componentCount)
 }
 
-// required string a_remoteUfrag = 5;
+// required bytes a_remoteUfrag = 5;
 inline bool Msg_ActivateTransport::_internal_has_a_remoteufrag() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -5862,7 +5862,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ActivateTransport::set_a_remoteufrag(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_remoteufrag_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_remoteufrag_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_ActivateTransport.a_remoteUfrag)
 }
 inline std::string* Msg_ActivateTransport::mutable_a_remoteufrag() {
@@ -5910,7 +5910,7 @@ inline void Msg_ActivateTransport::set_allocated_a_remoteufrag(std::string* a_re
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_ActivateTransport.a_remoteUfrag)
 }
 
-// required string a_remotePwd = 6;
+// required bytes a_remotePwd = 6;
 inline bool Msg_ActivateTransport::_internal_has_a_remotepwd() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -5930,7 +5930,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ActivateTransport::set_a_remotepwd(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.a_remotepwd_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_remotepwd_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_ActivateTransport.a_remotePwd)
 }
 inline std::string* Msg_ActivateTransport::mutable_a_remotepwd() {
@@ -6400,7 +6400,7 @@ inline void Msg_StartIceChecks::set_allocated_a_iceoptions(std::string* a_iceopt
 
 // Msg_SendPacket
 
-// required string a_transportId = 1;
+// required bytes a_transportId = 1;
 inline bool Msg_SendPacket::_internal_has_a_transportid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6420,7 +6420,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SendPacket::set_a_transportid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_transportid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_transportid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_SendPacket.a_transportId)
 }
 inline std::string* Msg_SendPacket::mutable_a_transportid() {
@@ -6540,7 +6540,7 @@ inline void Msg_SendPacket::set_allocated_a_packet(std::string* a_packet) {
 
 // Msg_AddIceCandidate
 
-// required string a_transportId = 1;
+// required bytes a_transportId = 1;
 inline bool Msg_AddIceCandidate::_internal_has_a_transportid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6560,7 +6560,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AddIceCandidate::set_a_transportid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_transportid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_transportid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_AddIceCandidate.a_transportId)
 }
 inline std::string* Msg_AddIceCandidate::mutable_a_transportid() {
@@ -6608,7 +6608,7 @@ inline void Msg_AddIceCandidate::set_allocated_a_transportid(std::string* a_tran
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_AddIceCandidate.a_transportId)
 }
 
-// required string a_candidate = 2;
+// required bytes a_candidate = 2;
 inline bool Msg_AddIceCandidate::_internal_has_a_candidate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6628,7 +6628,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AddIceCandidate::set_a_candidate(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_candidate_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_candidate_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_AddIceCandidate.a_candidate)
 }
 inline std::string* Msg_AddIceCandidate::mutable_a_candidate() {
@@ -6676,7 +6676,7 @@ inline void Msg_AddIceCandidate::set_allocated_a_candidate(std::string* a_candid
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_AddIceCandidate.a_candidate)
 }
 
-// required string a_ufrag = 3;
+// required bytes a_ufrag = 3;
 inline bool Msg_AddIceCandidate::_internal_has_a_ufrag() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -6696,7 +6696,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AddIceCandidate::set_a_ufrag(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_ufrag_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_ufrag_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_AddIceCandidate.a_ufrag)
 }
 inline std::string* Msg_AddIceCandidate::mutable_a_ufrag() {
@@ -6744,7 +6744,7 @@ inline void Msg_AddIceCandidate::set_allocated_a_ufrag(std::string* a_ufrag) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PMediaTransport.Msg_AddIceCandidate.a_ufrag)
 }
 
-// required string a_obfuscatedAddr = 4;
+// required bytes a_obfuscatedAddr = 4;
 inline bool Msg_AddIceCandidate::_internal_has_a_obfuscatedaddr() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -6764,7 +6764,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AddIceCandidate::set_a_obfuscatedaddr(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_obfuscatedaddr_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_obfuscatedaddr_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_AddIceCandidate.a_obfuscatedAddr)
 }
 inline std::string* Msg_AddIceCandidate::mutable_a_obfuscatedaddr() {
@@ -6848,7 +6848,7 @@ inline void Msg_UpdateNetworkState::set_a_online(bool value) {
 
 // Msg_GetIceStats
 
-// required string a_transportId = 1;
+// required bytes a_transportId = 1;
 inline bool Msg_GetIceStats::_internal_has_a_transportid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6868,7 +6868,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetIceStats::set_a_transportid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_transportid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_transportid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_GetIceStats.a_transportId)
 }
 inline std::string* Msg_GetIceStats::mutable_a_transportid() {
@@ -7020,7 +7020,7 @@ inline void Reply_GetIceStats::set_allocated_a_stats(std::string* a_stats) {
 
 // Msg_OnCandidate
 
-// required string a_transportId = 1;
+// required bytes a_transportId = 1;
 inline bool Msg_OnCandidate::_internal_has_a_transportid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7040,7 +7040,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnCandidate::set_a_transportid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_transportid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_transportid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_OnCandidate.a_transportId)
 }
 inline std::string* Msg_OnCandidate::mutable_a_transportid() {
@@ -7160,7 +7160,7 @@ inline void Msg_OnCandidate::set_allocated_a_candidateinfo(std::string* a_candid
 
 // Msg_OnAlpnNegotiated
 
-// required string a_alpn = 1;
+// required bytes a_alpn = 1;
 inline bool Msg_OnAlpnNegotiated::_internal_has_a_alpn() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7180,7 +7180,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnAlpnNegotiated::set_a_alpn(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_alpn_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_alpn_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_OnAlpnNegotiated.a_alpn)
 }
 inline std::string* Msg_OnAlpnNegotiated::mutable_a_alpn() {
@@ -7232,7 +7232,7 @@ inline void Msg_OnAlpnNegotiated::set_allocated_a_alpn(std::string* a_alpn) {
 
 // Msg_OnGatheringStateChange
 
-// required string a_transportId = 1;
+// required bytes a_transportId = 1;
 inline bool Msg_OnGatheringStateChange::_internal_has_a_transportid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7252,7 +7252,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnGatheringStateChange::set_a_transportid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_transportid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_transportid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_OnGatheringStateChange.a_transportId)
 }
 inline std::string* Msg_OnGatheringStateChange::mutable_a_transportid() {
@@ -7332,7 +7332,7 @@ inline void Msg_OnGatheringStateChange::set_a_state(int32_t value) {
 
 // Msg_OnConnectionStateChange
 
-// required string a_transportId = 1;
+// required bytes a_transportId = 1;
 inline bool Msg_OnConnectionStateChange::_internal_has_a_transportid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7352,7 +7352,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnConnectionStateChange::set_a_transportid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_transportid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_transportid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_OnConnectionStateChange.a_transportId)
 }
 inline std::string* Msg_OnConnectionStateChange::mutable_a_transportid() {
@@ -7432,7 +7432,7 @@ inline void Msg_OnConnectionStateChange::set_a_state(int32_t value) {
 
 // Msg_OnPacketReceived
 
-// required string a_transportId = 1;
+// required bytes a_transportId = 1;
 inline bool Msg_OnPacketReceived::_internal_has_a_transportid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7452,7 +7452,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnPacketReceived::set_a_transportid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_transportid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_transportid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_OnPacketReceived.a_transportId)
 }
 inline std::string* Msg_OnPacketReceived::mutable_a_transportid() {
@@ -7572,7 +7572,7 @@ inline void Msg_OnPacketReceived::set_allocated_a_packet(std::string* a_packet) 
 
 // Msg_OnEncryptedSending
 
-// required string a_transportId = 1;
+// required bytes a_transportId = 1;
 inline bool Msg_OnEncryptedSending::_internal_has_a_transportid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7592,7 +7592,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnEncryptedSending::set_a_transportid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_transportid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_transportid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_OnEncryptedSending.a_transportId)
 }
 inline std::string* Msg_OnEncryptedSending::mutable_a_transportid() {
@@ -7712,7 +7712,7 @@ inline void Msg_OnEncryptedSending::set_allocated_a_packet(std::string* a_packet
 
 // Msg_OnStateChange
 
-// required string a_transportId = 1;
+// required bytes a_transportId = 1;
 inline bool Msg_OnStateChange::_internal_has_a_transportid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7732,7 +7732,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnStateChange::set_a_transportid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_transportid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_transportid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_OnStateChange.a_transportId)
 }
 inline std::string* Msg_OnStateChange::mutable_a_transportid() {
@@ -7812,7 +7812,7 @@ inline void Msg_OnStateChange::set_a_state(int32_t value) {
 
 // Msg_OnRtcpStateChange
 
-// required string a_transportId = 1;
+// required bytes a_transportId = 1;
 inline bool Msg_OnRtcpStateChange::_internal_has_a_transportid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7832,7 +7832,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnRtcpStateChange::set_a_transportid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_transportid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_transportid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PMediaTransport.Msg_OnRtcpStateChange.a_transportId)
 }
 inline std::string* Msg_OnRtcpStateChange::mutable_a_transportid() {

@@ -175,7 +175,7 @@ class DummyStruct final :
   enum : int {
     kAXFieldNumber = 1,
   };
-  // required string a_x = 1;
+  // required bytes a_x = 1;
   bool has_a_x() const;
   private:
   bool _internal_has_a_x() const;
@@ -399,7 +399,7 @@ class DummyUnion final :
 #endif  // __GNUC__
 // DummyStruct
 
-// required string a_x = 1;
+// required bytes a_x = 1;
 inline bool DummyStruct::_internal_has_a_x() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -419,7 +419,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DummyStruct::set_a_x(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_x_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_x_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.DummyStruct.a_x)
 }
 inline std::string* DummyStruct::mutable_a_x() {

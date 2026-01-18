@@ -17,7 +17,7 @@ import public "PTCPSocket_protobuf.h.proto";
 
 // Message declarations
 message Msg_Open {
-  required bytes a_host = 1;
+  required string a_host = 1;
   required uint32 a_port = 2;
   required bool a_useSSL = 3;
   required bool a_useArrayBuffers = 4;
@@ -40,7 +40,7 @@ message Msg_Close {
 }
 
 message Msg_Callback {
-  required bytes a_type = 1;
+  required string a_type = 1;
   required protobuf.CallbackData a_data = 2;
   required uint32 a_readyState = 3;
 }
@@ -62,5 +62,5 @@ message Reply___delete__ {
 // Parameter mappings stats:
 // Total parameters in this file 19
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 1, "<class 'ipdl.type.BuiltinCType'>": 2, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 12, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 1, "<class 'ipdl.type.UnionType'>": 3, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 7
+// Scalar mappings performed: 12
 // Message structs/unions generated from ipdl structs/unions: 3

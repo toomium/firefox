@@ -13,5 +13,5 @@ package protobuf.mozilla.dom;
 // Structs and unions declarations
 message IPCNavigationPreloadState {
   required bool a_enabled = 1;
-  required bytes a_headerValue = 2;
+  required string a_headerValue = 2;
 }

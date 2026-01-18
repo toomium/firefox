@@ -258,7 +258,7 @@ class Msg_AsyncOpen final :
   std::string* _internal_mutable_a_auri();
   public:
 
-  // required bytes a_aOrigin = 2;
+  // required string a_aOrigin = 2;
   bool has_a_aorigin() const;
   private:
   bool _internal_has_a_aorigin() const;
@@ -294,7 +294,7 @@ class Msg_AsyncOpen final :
   std::string* _internal_mutable_a_aoriginattributes();
   public:
 
-  // required bytes a_aProtocol = 5;
+  // required string a_aProtocol = 5;
   bool has_a_aprotocol() const;
   private:
   bool _internal_has_a_aprotocol() const;
@@ -330,7 +330,7 @@ class Msg_AsyncOpen final :
   std::string* _internal_mutable_a_aprovider();
   public:
 
-  // required bytes a_aNegotiatedExtensions = 13;
+  // required string a_aNegotiatedExtensions = 13;
   bool has_a_anegotiatedextensions() const;
   private:
   bool _internal_has_a_anegotiatedextensions() const;
@@ -589,7 +589,7 @@ class Msg_Close final :
     kAReasonFieldNumber = 2,
     kACodeFieldNumber = 1,
   };
-  // required bytes a_reason = 2;
+  // required string a_reason = 2;
   bool has_a_reason() const;
   private:
   bool _internal_has_a_reason() const;
@@ -753,7 +753,7 @@ class Msg_SendMsg final :
   enum : int {
     kAAMsgFieldNumber = 1,
   };
-  // required bytes a_aMsg = 1;
+  // required string a_aMsg = 1;
   bool has_a_amsg() const;
   private:
   bool _internal_has_a_amsg() const;
@@ -900,7 +900,7 @@ class Msg_SendBinaryMsg final :
   enum : int {
     kAAMsgFieldNumber = 1,
   };
-  // required bytes a_aMsg = 1;
+  // required string a_aMsg = 1;
   bool has_a_amsg() const;
   private:
   bool _internal_has_a_amsg() const;
@@ -1340,7 +1340,7 @@ class Msg_OnStart final :
     kAAHttpChannelIdFieldNumber = 5,
     kAAEncryptedFieldNumber = 4,
   };
-  // required bytes a_aProtocol = 1;
+  // required string a_aProtocol = 1;
   bool has_a_aprotocol() const;
   private:
   bool _internal_has_a_aprotocol() const;
@@ -1358,7 +1358,7 @@ class Msg_OnStart final :
   std::string* _internal_mutable_a_aprotocol();
   public:
 
-  // required bytes a_aExtensions = 2;
+  // required string a_aExtensions = 2;
   bool has_a_aextensions() const;
   private:
   bool _internal_has_a_aextensions() const;
@@ -1376,7 +1376,7 @@ class Msg_OnStart final :
   std::string* _internal_mutable_a_aextensions();
   public:
 
-  // required bytes a_aEffectiveURL = 3;
+  // required string a_aEffectiveURL = 3;
   bool has_a_aeffectiveurl() const;
   private:
   bool _internal_has_a_aeffectiveurl() const;
@@ -1704,7 +1704,7 @@ class Msg_OnMessageAvailable final :
     kAAMsgFieldNumber = 1,
     kAAMoreDataFieldNumber = 2,
   };
-  // required bytes a_aMsg = 1;
+  // required string a_aMsg = 1;
   bool has_a_amsg() const;
   private:
   bool _internal_has_a_amsg() const;
@@ -1869,7 +1869,7 @@ class Msg_OnBinaryMessageAvailable final :
     kAAMsgFieldNumber = 1,
     kAAMoreDataFieldNumber = 2,
   };
-  // required bytes a_aMsg = 1;
+  // required string a_aMsg = 1;
   bool has_a_amsg() const;
   private:
   bool _internal_has_a_amsg() const;
@@ -2176,7 +2176,7 @@ class Msg_OnServerClose final :
     kAAReasonFieldNumber = 2,
     kACodeFieldNumber = 1,
   };
-  // required bytes a_aReason = 2;
+  // required string a_aReason = 2;
   bool has_a_areason() const;
   private:
   bool _internal_has_a_areason() const;
@@ -2553,7 +2553,7 @@ inline void Msg_AsyncOpen::set_allocated_a_auri(std::string* a_auri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocket.Msg_AsyncOpen.a_aURI)
 }
 
-// required bytes a_aOrigin = 2;
+// required string a_aOrigin = 2;
 inline bool Msg_AsyncOpen::_internal_has_a_aorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2573,7 +2573,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncOpen::set_a_aorigin(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_aorigin_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_aorigin_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_AsyncOpen.a_aOrigin)
 }
 inline std::string* Msg_AsyncOpen::mutable_a_aorigin() {
@@ -2717,7 +2717,7 @@ inline void Msg_AsyncOpen::set_a_ainnerwindowid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_AsyncOpen.a_aInnerWindowID)
 }
 
-// required bytes a_aProtocol = 5;
+// required string a_aProtocol = 5;
 inline bool Msg_AsyncOpen::_internal_has_a_aprotocol() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2737,7 +2737,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncOpen::set_a_aprotocol(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_aprotocol_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_aprotocol_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_AsyncOpen.a_aProtocol)
 }
 inline std::string* Msg_AsyncOpen::mutable_a_aprotocol() {
@@ -3080,7 +3080,7 @@ inline void Msg_AsyncOpen::set_allocated_a_aprovider(std::string* a_aprovider) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocket.Msg_AsyncOpen.a_aProvider)
 }
 
-// required bytes a_aNegotiatedExtensions = 13;
+// required string a_aNegotiatedExtensions = 13;
 inline bool Msg_AsyncOpen::_internal_has_a_anegotiatedextensions() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -3100,7 +3100,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AsyncOpen::set_a_anegotiatedextensions(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.a_anegotiatedextensions_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_anegotiatedextensions_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_AsyncOpen.a_aNegotiatedExtensions)
 }
 inline std::string* Msg_AsyncOpen::mutable_a_anegotiatedextensions() {
@@ -3180,7 +3180,7 @@ inline void Msg_Close::set_a_code(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_Close.a_code)
 }
 
-// required bytes a_reason = 2;
+// required string a_reason = 2;
 inline bool Msg_Close::_internal_has_a_reason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3200,7 +3200,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Close::set_a_reason(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_reason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_reason_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_Close.a_reason)
 }
 inline std::string* Msg_Close::mutable_a_reason() {
@@ -3252,7 +3252,7 @@ inline void Msg_Close::set_allocated_a_reason(std::string* a_reason) {
 
 // Msg_SendMsg
 
-// required bytes a_aMsg = 1;
+// required string a_aMsg = 1;
 inline bool Msg_SendMsg::_internal_has_a_amsg() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3272,7 +3272,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SendMsg::set_a_amsg(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_amsg_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_amsg_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_SendMsg.a_aMsg)
 }
 inline std::string* Msg_SendMsg::mutable_a_amsg() {
@@ -3324,7 +3324,7 @@ inline void Msg_SendMsg::set_allocated_a_amsg(std::string* a_amsg) {
 
 // Msg_SendBinaryMsg
 
-// required bytes a_aMsg = 1;
+// required string a_aMsg = 1;
 inline bool Msg_SendBinaryMsg::_internal_has_a_amsg() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3344,7 +3344,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SendBinaryMsg::set_a_amsg(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_amsg_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_amsg_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_SendBinaryMsg.a_aMsg)
 }
 inline std::string* Msg_SendBinaryMsg::mutable_a_amsg() {
@@ -3519,7 +3519,7 @@ inline void Msg_SendBinaryStream::set_a_alength(uint32_t value) {
 
 // Msg_OnStart
 
-// required bytes a_aProtocol = 1;
+// required string a_aProtocol = 1;
 inline bool Msg_OnStart::_internal_has_a_aprotocol() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3539,7 +3539,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnStart::set_a_aprotocol(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_aprotocol_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_aprotocol_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_OnStart.a_aProtocol)
 }
 inline std::string* Msg_OnStart::mutable_a_aprotocol() {
@@ -3587,7 +3587,7 @@ inline void Msg_OnStart::set_allocated_a_aprotocol(std::string* a_aprotocol) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocket.Msg_OnStart.a_aProtocol)
 }
 
-// required bytes a_aExtensions = 2;
+// required string a_aExtensions = 2;
 inline bool Msg_OnStart::_internal_has_a_aextensions() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -3607,7 +3607,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnStart::set_a_aextensions(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_aextensions_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_aextensions_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_OnStart.a_aExtensions)
 }
 inline std::string* Msg_OnStart::mutable_a_aextensions() {
@@ -3655,7 +3655,7 @@ inline void Msg_OnStart::set_allocated_a_aextensions(std::string* a_aextensions)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PWebSocket.Msg_OnStart.a_aExtensions)
 }
 
-// required bytes a_aEffectiveURL = 3;
+// required string a_aEffectiveURL = 3;
 inline bool Msg_OnStart::_internal_has_a_aeffectiveurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3675,7 +3675,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnStart::set_a_aeffectiveurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_aeffectiveurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_aeffectiveurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_OnStart.a_aEffectiveURL)
 }
 inline std::string* Msg_OnStart::mutable_a_aeffectiveurl() {
@@ -3855,7 +3855,7 @@ inline void Msg_OnStop::set_allocated_a_astatuscode(std::string* a_astatuscode) 
 
 // Msg_OnMessageAvailable
 
-// required bytes a_aMsg = 1;
+// required string a_aMsg = 1;
 inline bool Msg_OnMessageAvailable::_internal_has_a_amsg() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3875,7 +3875,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnMessageAvailable::set_a_amsg(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_amsg_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_amsg_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_OnMessageAvailable.a_aMsg)
 }
 inline std::string* Msg_OnMessageAvailable::mutable_a_amsg() {
@@ -3955,7 +3955,7 @@ inline void Msg_OnMessageAvailable::set_a_amoredata(bool value) {
 
 // Msg_OnBinaryMessageAvailable
 
-// required bytes a_aMsg = 1;
+// required string a_aMsg = 1;
 inline bool Msg_OnBinaryMessageAvailable::_internal_has_a_amsg() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3975,7 +3975,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnBinaryMessageAvailable::set_a_amsg(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_amsg_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_amsg_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_OnBinaryMessageAvailable.a_aMsg)
 }
 inline std::string* Msg_OnBinaryMessageAvailable::mutable_a_amsg() {
@@ -4115,7 +4115,7 @@ inline void Msg_OnServerClose::set_a_code(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_OnServerClose.a_code)
 }
 
-// required bytes a_aReason = 2;
+// required string a_aReason = 2;
 inline bool Msg_OnServerClose::_internal_has_a_areason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4135,7 +4135,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnServerClose::set_a_areason(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_areason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_areason_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PWebSocket.Msg_OnServerClose.a_aReason)
 }
 inline std::string* Msg_OnServerClose::mutable_a_areason() {

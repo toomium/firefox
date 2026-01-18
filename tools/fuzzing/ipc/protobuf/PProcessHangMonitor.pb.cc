@@ -1734,7 +1734,7 @@ const char* Msg_CancelContentJSExecutionIfRunning::_InternalParse(const char* pt
         } else
           goto handle_unusual;
         continue;
-      // optional bytes a_aNavigationURI = 4;
+      // optional string a_aNavigationURI = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_anavigationuri();
@@ -1801,9 +1801,9 @@ uint8_t* Msg_CancelContentJSExecutionIfRunning::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_a_anavigationindex(), target);
   }
 
-  // optional bytes a_aNavigationURI = 4;
+  // optional string a_aNavigationURI = 4;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_anavigationuri(), target);
   }
 
@@ -1879,11 +1879,11 @@ size_t Msg_CancelContentJSExecutionIfRunning::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes a_aNavigationURI = 4;
+  // optional string a_aNavigationURI = 4;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000004u) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_anavigationuri());
   }
 

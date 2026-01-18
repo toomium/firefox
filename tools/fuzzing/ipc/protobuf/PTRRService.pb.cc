@@ -269,7 +269,7 @@ const char* Msg_NotifyNetworkConnectivityServiceObservers::_InternalParse(const 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aTopic = 1;
+      // required string a_aTopic = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_atopic();
@@ -309,9 +309,9 @@ uint8_t* Msg_NotifyNetworkConnectivityServiceObservers::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aTopic = 1;
+  // required string a_aTopic = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_atopic(), target);
   }
 
@@ -327,10 +327,10 @@ size_t Msg_NotifyNetworkConnectivityServiceObservers::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PTRRService.Msg_NotifyNetworkConnectivityServiceObservers)
   size_t total_size = 0;
 
-  // required bytes a_aTopic = 1;
+  // required string a_aTopic = 1;
   if (_internal_has_a_atopic()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_atopic());
   }
   uint32_t cached_has_bits = 0;
@@ -1099,7 +1099,7 @@ const char* Msg_UpdatePlatformDNSInformation::_InternalParse(const char* ptr, ::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated bytes a_aSuffixList = 1;
+      // repeated string a_aSuffixList = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -1142,10 +1142,10 @@ uint8_t* Msg_UpdatePlatformDNSInformation::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated bytes a_aSuffixList = 1;
+  // repeated string a_aSuffixList = 1;
   for (int i = 0, n = this->_internal_a_asuffixlist_size(); i < n; i++) {
     const auto& s = this->_internal_a_asuffixlist(i);
-    target = stream->WriteBytes(1, s, target);
+    target = stream->WriteString(1, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1164,11 +1164,11 @@ size_t Msg_UpdatePlatformDNSInformation::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated bytes a_aSuffixList = 1;
+  // repeated string a_aSuffixList = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_asuffixlist_.size());
   for (int i = 0, n = _impl_.a_asuffixlist_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
       _impl_.a_asuffixlist_.Get(i));
   }
 
@@ -1702,7 +1702,7 @@ const char* Msg_SetDetectedTrrURI::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aURI = 1;
+      // required string a_aURI = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_auri();
@@ -1742,9 +1742,9 @@ uint8_t* Msg_SetDetectedTrrURI::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aURI = 1;
+  // required string a_aURI = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_auri(), target);
   }
 
@@ -1760,10 +1760,10 @@ size_t Msg_SetDetectedTrrURI::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PTRRService.Msg_SetDetectedTrrURI)
   size_t total_size = 0;
 
-  // required bytes a_aURI = 1;
+  // required string a_aURI = 1;
   if (_internal_has_a_auri()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_auri());
   }
   uint32_t cached_has_bits = 0;
@@ -2108,7 +2108,7 @@ const char* Msg_UpdateEtcHosts::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated bytes a_aHosts = 1;
+      // repeated string a_aHosts = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
@@ -2151,10 +2151,10 @@ uint8_t* Msg_UpdateEtcHosts::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated bytes a_aHosts = 1;
+  // repeated string a_aHosts = 1;
   for (int i = 0, n = this->_internal_a_ahosts_size(); i < n; i++) {
     const auto& s = this->_internal_a_ahosts(i);
-    target = stream->WriteBytes(1, s, target);
+    target = stream->WriteString(1, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2173,11 +2173,11 @@ size_t Msg_UpdateEtcHosts::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated bytes a_aHosts = 1;
+  // repeated string a_aHosts = 1;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(_impl_.a_ahosts_.size());
   for (int i = 0, n = _impl_.a_ahosts_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
       _impl_.a_ahosts_.Get(i));
   }
 

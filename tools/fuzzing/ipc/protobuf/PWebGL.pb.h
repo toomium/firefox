@@ -5274,7 +5274,7 @@ class Msg_GetFragDataLocation final :
     kANameFieldNumber = 2,
     kAIdFieldNumber = 1,
   };
-  // required string a_name = 2;
+  // required bytes a_name = 2;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -8449,7 +8449,7 @@ class Reply_GetString final :
   enum : int {
     kARetFieldNumber = 1,
   };
-  // optional string a_ret = 1;
+  // optional bytes a_ret = 1;
   bool has_a_ret() const;
   private:
   bool _internal_has_a_ret() const;
@@ -10039,7 +10039,7 @@ class Msg_JsWarning final :
   enum : int {
     kATextFieldNumber = 1,
   };
-  // required string a_text = 1;
+  // required bytes a_text = 1;
   bool has_a_text() const;
   private:
   bool _internal_has_a_text() const;
@@ -12307,7 +12307,7 @@ inline void Msg_GetFragDataLocation::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation.a_id)
 }
 
-// required string a_name = 2;
+// required bytes a_name = 2;
 inline bool Msg_GetFragDataLocation::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12327,7 +12327,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetFragDataLocation::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_GetFragDataLocation.a_name)
 }
 inline std::string* Msg_GetFragDataLocation::mutable_a_name() {
@@ -13391,7 +13391,7 @@ inline void Msg_GetString::set_a_pname(uint32_t value) {
 
 // Reply_GetString
 
-// optional string a_ret = 1;
+// optional bytes a_ret = 1;
 inline bool Reply_GetString::_internal_has_a_ret() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13411,7 +13411,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_GetString::set_a_ret(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_ret_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_ret_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Reply_GetString.a_ret)
 }
 inline std::string* Reply_GetString::mutable_a_ret() {
@@ -13851,7 +13851,7 @@ inline void Reply_ValidateProgram::set_a_ret(bool value) {
 
 // Msg_JsWarning
 
-// required string a_text = 1;
+// required bytes a_text = 1;
 inline bool Msg_JsWarning::_internal_has_a_text() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13871,7 +13871,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_JsWarning::set_a_text(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_text_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_text_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebGL.Msg_JsWarning.a_text)
 }
 inline std::string* Msg_JsWarning::mutable_a_text() {

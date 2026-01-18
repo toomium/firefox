@@ -20,9 +20,9 @@ message EncodedInputIPDL {
 }
 
 message EncodeInitCompletionIPDL {
-  required bytes a_description = 1;
+  required string a_description = 1;
   required bool a_hardware = 2;
-  required bytes a_hardwareReason = 3;
+  required string a_hardwareReason = 3;
 }
 
 message EncodeInitResultIPDL {

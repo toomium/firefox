@@ -363,7 +363,7 @@ class CookieSubscription final :
     kANameFieldNumber = 1,
     kAUrlFieldNumber = 2,
   };
-  // optional bytes a_name = 1;
+  // optional string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -381,7 +381,7 @@ class CookieSubscription final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required bytes a_url = 2;
+  // required string a_url = 2;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -582,7 +582,7 @@ inline MaybeCookieStruct::ContentCase MaybeCookieStruct::content_case() const {
 
 // CookieSubscription
 
-// optional bytes a_name = 1;
+// optional string a_name = 1;
 inline bool CookieSubscription::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -602,7 +602,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CookieSubscription::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.CookieSubscription.a_name)
 }
 inline std::string* CookieSubscription::mutable_a_name() {
@@ -650,7 +650,7 @@ inline void CookieSubscription::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.CookieSubscription.a_name)
 }
 
-// required bytes a_url = 2;
+// required string a_url = 2;
 inline bool CookieSubscription::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -670,7 +670,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CookieSubscription::set_a_url(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_url_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.CookieSubscription.a_url)
 }
 inline std::string* CookieSubscription::mutable_a_url() {

@@ -13,9 +13,9 @@ package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message RemoteVoice {
-  required bytes a_voiceURI = 1;
-  required bytes a_name = 2;
-  required bytes a_lang = 3;
+  required string a_voiceURI = 1;
+  required string a_name = 2;
+  required string a_lang = 3;
   required bool a_localService = 4;
   required bool a_queued = 5;
 }

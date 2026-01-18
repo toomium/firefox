@@ -537,7 +537,7 @@ const char* Msg_AddIPOverride::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aHost = 1;
+      // required string a_aHost = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_ahost();
@@ -546,7 +546,7 @@ const char* Msg_AddIPOverride::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aIPLiteral = 2;
+      // required string a_aIPLiteral = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_aipliteral();
@@ -586,15 +586,15 @@ uint8_t* Msg_AddIPOverride::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aHost = 1;
+  // required string a_aHost = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_ahost(), target);
   }
 
-  // required bytes a_aIPLiteral = 2;
+  // required string a_aIPLiteral = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_aipliteral(), target);
   }
 
@@ -611,16 +611,16 @@ size_t Msg_AddIPOverride::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_ahost()) {
-    // required bytes a_aHost = 1;
+    // required string a_aHost = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_ahost());
   }
 
   if (_internal_has_a_aipliteral()) {
-    // required bytes a_aIPLiteral = 2;
+    // required string a_aIPLiteral = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aipliteral());
   }
 
@@ -631,14 +631,14 @@ size_t Msg_AddIPOverride::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aHost = 1;
+    // required string a_aHost = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_ahost());
 
-    // required bytes a_aIPLiteral = 2;
+    // required string a_aIPLiteral = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aipliteral());
 
   } else {
@@ -811,7 +811,7 @@ const char* Msg_AddHTTPSRecordOverride::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aHost = 1;
+      // required string a_aHost = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_ahost();
@@ -867,9 +867,9 @@ uint8_t* Msg_AddHTTPSRecordOverride::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aHost = 1;
+  // required string a_aHost = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_ahost(), target);
   }
 
@@ -891,10 +891,10 @@ size_t Msg_AddHTTPSRecordOverride::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride)
   size_t total_size = 0;
 
-  // required bytes a_aHost = 1;
+  // required string a_aHost = 1;
   if (_internal_has_a_ahost()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_ahost());
   }
   uint32_t cached_has_bits = 0;
@@ -1084,7 +1084,7 @@ const char* Msg_SetCnameOverride::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aHost = 1;
+      // required string a_aHost = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_ahost();
@@ -1093,7 +1093,7 @@ const char* Msg_SetCnameOverride::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aCNAME = 2;
+      // required string a_aCNAME = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_acname();
@@ -1133,15 +1133,15 @@ uint8_t* Msg_SetCnameOverride::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aHost = 1;
+  // required string a_aHost = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_ahost(), target);
   }
 
-  // required bytes a_aCNAME = 2;
+  // required string a_aCNAME = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_acname(), target);
   }
 
@@ -1158,16 +1158,16 @@ size_t Msg_SetCnameOverride::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_ahost()) {
-    // required bytes a_aHost = 1;
+    // required string a_aHost = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_ahost());
   }
 
   if (_internal_has_a_acname()) {
-    // required bytes a_aCNAME = 2;
+    // required string a_aCNAME = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_acname());
   }
 
@@ -1178,14 +1178,14 @@ size_t Msg_SetCnameOverride::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aHost = 1;
+    // required string a_aHost = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_ahost());
 
-    // required bytes a_aCNAME = 2;
+    // required string a_aCNAME = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_acname());
 
   } else {
@@ -1354,7 +1354,7 @@ const char* Msg_ClearHostOverride::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aHost = 1;
+      // required string a_aHost = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_ahost();
@@ -1394,9 +1394,9 @@ uint8_t* Msg_ClearHostOverride::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aHost = 1;
+  // required string a_aHost = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_ahost(), target);
   }
 
@@ -1412,10 +1412,10 @@ size_t Msg_ClearHostOverride::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride)
   size_t total_size = 0;
 
-  // required bytes a_aHost = 1;
+  // required string a_aHost = 1;
   if (_internal_has_a_ahost()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_ahost());
   }
   uint32_t cached_has_bits = 0;

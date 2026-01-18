@@ -733,7 +733,7 @@ const char* Msg_Observe::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_documentURI = 3;
+      // required string a_documentURI = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_documenturi();
@@ -742,7 +742,7 @@ const char* Msg_Observe::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_key = 4;
+      // required string a_key = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_key();
@@ -813,15 +813,15 @@ uint8_t* Msg_Observe::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_privatebrowsingid(), target);
   }
 
-  // required bytes a_documentURI = 3;
+  // required string a_documentURI = 3;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_documenturi(), target);
   }
 
-  // required bytes a_key = 4;
+  // required string a_key = 4;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_key(), target);
   }
 
@@ -850,16 +850,16 @@ size_t Msg_Observe::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_documenturi()) {
-    // required bytes a_documentURI = 3;
+    // required string a_documentURI = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_documenturi());
   }
 
   if (_internal_has_a_key()) {
-    // required bytes a_key = 4;
+    // required string a_key = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_key());
   }
 
@@ -896,14 +896,14 @@ size_t Msg_Observe::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
-    // required bytes a_documentURI = 3;
+    // required string a_documentURI = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_documenturi());
 
-    // required bytes a_key = 4;
+    // required string a_key = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_key());
 
     // required bytes a_oldValue = 5;

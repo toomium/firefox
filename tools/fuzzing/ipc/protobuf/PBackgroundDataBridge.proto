@@ -20,7 +20,7 @@ import "NeckoChannelParams.proto";
 message Msg_OnTransportAndData {
   required uint64 a_offset = 1;
   required uint32 a_count = 2;
-  required bytes a_data = 3;
+  required string a_data = 3;
   required bytes a_onDataAvailableStart = 4;
 }
 
@@ -41,5 +41,5 @@ message Reply___delete__ {
 // Parameter mappings stats:
 // Total parameters in this file 9
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 0, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 8, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 1, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 2
+// Scalar mappings performed: 3
 // Message structs/unions generated from ipdl structs/unions: 0

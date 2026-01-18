@@ -2071,7 +2071,7 @@ class FrameScriptInfo final :
     kAUrlFieldNumber = 1,
     kARunInGlobalScopeFieldNumber = 2,
   };
-  // required bytes a_url = 1;
+  // required string a_url = 1;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -2722,7 +2722,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_unstrippeduri();
   public:
 
-  // required bytes a_Target = 14;
+  // required string a_Target = 14;
   bool has_a_target() const;
   private:
   bool _internal_has_a_target() const;
@@ -2740,7 +2740,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_target();
   public:
 
-  // required bytes a_TypeHint = 15;
+  // required string a_TypeHint = 15;
   bool has_a_typehint() const;
   private:
   bool _internal_has_a_typehint() const;
@@ -2758,7 +2758,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_typehint();
   public:
 
-  // required bytes a_FileName = 16;
+  // required string a_FileName = 16;
   bool has_a_filename() const;
   private:
   bool _internal_has_a_filename() const;
@@ -2812,7 +2812,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_targetbrowsingcontext();
   public:
 
-  // required bytes a_TriggeringRemoteType = 19;
+  // required string a_TriggeringRemoteType = 19;
   bool has_a_triggeringremotetype() const;
   private:
   bool _internal_has_a_triggeringremotetype() const;
@@ -2830,7 +2830,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_triggeringremotetype();
   public:
 
-  // required bytes a_SrcdocData = 20;
+  // required string a_SrcdocData = 20;
   bool has_a_srcdocdata() const;
   private:
   bool _internal_has_a_srcdocdata() const;
@@ -2848,7 +2848,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_srcdocdata();
   public:
 
-  // optional bytes a_OriginalURIString = 21;
+  // optional string a_OriginalURIString = 21;
   bool has_a_originaluristring() const;
   private:
   bool _internal_has_a_originaluristring() const;
@@ -2866,7 +2866,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_originaluristring();
   public:
 
-  // optional bytes a_RemoteTypeOverride = 22;
+  // optional string a_RemoteTypeOverride = 22;
   bool has_a_remotetypeoverride() const;
   private:
   bool _internal_has_a_remotetypeoverride() const;
@@ -3585,7 +3585,7 @@ class TimedChannelInfo final :
   std::string* _internal_mutable_a_redirectend();
   public:
 
-  // required bytes a_initiatorType = 7;
+  // required string a_initiatorType = 7;
   bool has_a_initiatortype() const;
   private:
   bool _internal_has_a_initiatortype() const;
@@ -4003,7 +4003,7 @@ class ReplacementChannelConfigInit final :
   std::string* _internal_mutable_a_classofservice();
   public:
 
-  // optional bytes a_method = 4;
+  // optional string a_method = 4;
   bool has_a_method() const;
   private:
   bool _internal_has_a_method() const;
@@ -4057,7 +4057,7 @@ class ReplacementChannelConfigInit final :
   std::string* _internal_mutable_a_uploadstream();
   public:
 
-  // optional bytes a_contentType = 10;
+  // optional string a_contentType = 10;
   bool has_a_contenttype() const;
   private:
   bool _internal_has_a_contenttype() const;
@@ -4075,7 +4075,7 @@ class ReplacementChannelConfigInit final :
   std::string* _internal_mutable_a_contenttype();
   public:
 
-  // optional bytes a_contentLength = 11;
+  // optional string a_contentLength = 11;
   bool has_a_contentlength() const;
   private:
   bool _internal_has_a_contentlength() const;
@@ -4456,7 +4456,7 @@ class IPDLVariantValue final :
   std::string* _internal_mutable_a_mvnsid();
   public:
 
-  // bytes a_mVnsString = 10;
+  // string a_mVnsString = 10;
   bool has_a_mvnsstring() const;
   private:
   bool _internal_has_a_mvnsstring() const;
@@ -4474,7 +4474,7 @@ class IPDLVariantValue final :
   std::string* _internal_mutable_a_mvnsstring();
   public:
 
-  // bytes a_mVnsCString = 11;
+  // string a_mVnsCString = 11;
   bool has_a_mvnscstring() const;
   private:
   bool _internal_has_a_mvnscstring() const;
@@ -4858,7 +4858,7 @@ class IPDLProperty final :
     kANameFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required bytes a_name = 1;
+  // required string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -5032,7 +5032,7 @@ class ParentShowInfo final :
     kADefaultScaleFieldNumber = 6,
     kAWidgetRoundingFieldNumber = 5,
   };
-  // required bytes a_name = 1;
+  // required string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -5648,7 +5648,7 @@ class IPCNotificationAction final :
     kANameFieldNumber = 1,
     kATitleFieldNumber = 2,
   };
-  // required bytes a_name = 1;
+  // required string a_name = 1;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -5666,7 +5666,7 @@ class IPCNotificationAction final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required bytes a_title = 2;
+  // required string a_title = 2;
   bool has_a_title() const;
   private:
   bool _internal_has_a_title() const;
@@ -5867,7 +5867,7 @@ class IPCNotificationOptions final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCNotificationAction >&
       a_actions() const;
 
-  // required bytes a_title = 1;
+  // required string a_title = 1;
   bool has_a_title() const;
   private:
   bool _internal_has_a_title() const;
@@ -5903,7 +5903,7 @@ class IPCNotificationOptions final :
   std::string* _internal_mutable_a_dir();
   public:
 
-  // required bytes a_lang = 3;
+  // required string a_lang = 3;
   bool has_a_lang() const;
   private:
   bool _internal_has_a_lang() const;
@@ -5921,7 +5921,7 @@ class IPCNotificationOptions final :
   std::string* _internal_mutable_a_lang();
   public:
 
-  // required bytes a_body = 4;
+  // required string a_body = 4;
   bool has_a_body() const;
   private:
   bool _internal_has_a_body() const;
@@ -5939,7 +5939,7 @@ class IPCNotificationOptions final :
   std::string* _internal_mutable_a_body();
   public:
 
-  // required bytes a_tag = 5;
+  // required string a_tag = 5;
   bool has_a_tag() const;
   private:
   bool _internal_has_a_tag() const;
@@ -5957,7 +5957,7 @@ class IPCNotificationOptions final :
   std::string* _internal_mutable_a_tag();
   public:
 
-  // required bytes a_icon = 6;
+  // required string a_icon = 6;
   bool has_a_icon() const;
   private:
   bool _internal_has_a_icon() const;
@@ -5975,7 +5975,7 @@ class IPCNotificationOptions final :
   std::string* _internal_mutable_a_icon();
   public:
 
-  // required bytes a_dataSerialized = 10;
+  // required string a_dataSerialized = 10;
   bool has_a_dataserialized() const;
   private:
   bool _internal_has_a_dataserialized() const;
@@ -6162,7 +6162,7 @@ class IPCNotification final :
     kAIdFieldNumber = 1,
     kAOptionsFieldNumber = 2,
   };
-  // required bytes a_id = 1;
+  // required string a_id = 1;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -8455,7 +8455,7 @@ inline void DimensionInfo::set_allocated_a_chromeoffset(std::string* a_chromeoff
 
 // FrameScriptInfo
 
-// required bytes a_url = 1;
+// required string a_url = 1;
 inline bool FrameScriptInfo::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8475,7 +8475,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FrameScriptInfo::set_a_url(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_url_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FrameScriptInfo.a_url)
 }
 inline std::string* FrameScriptInfo::mutable_a_url() {
@@ -9657,7 +9657,7 @@ inline void DocShellLoadStateInit::set_a_loadidentifier(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_LoadIdentifier)
 }
 
-// required bytes a_Target = 14;
+// required string a_Target = 14;
 inline bool DocShellLoadStateInit::_internal_has_a_target() const {
   bool value = (_impl_._has_bits_[0] & 0x00001000u) != 0;
   return value;
@@ -9677,7 +9677,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DocShellLoadStateInit::set_a_target(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00001000u;
- _impl_.a_target_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_target_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_Target)
 }
 inline std::string* DocShellLoadStateInit::mutable_a_target() {
@@ -9725,7 +9725,7 @@ inline void DocShellLoadStateInit::set_allocated_a_target(std::string* a_target)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_Target)
 }
 
-// required bytes a_TypeHint = 15;
+// required string a_TypeHint = 15;
 inline bool DocShellLoadStateInit::_internal_has_a_typehint() const {
   bool value = (_impl_._has_bits_[0] & 0x00002000u) != 0;
   return value;
@@ -9745,7 +9745,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DocShellLoadStateInit::set_a_typehint(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00002000u;
- _impl_.a_typehint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_typehint_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_TypeHint)
 }
 inline std::string* DocShellLoadStateInit::mutable_a_typehint() {
@@ -9793,7 +9793,7 @@ inline void DocShellLoadStateInit::set_allocated_a_typehint(std::string* a_typeh
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_TypeHint)
 }
 
-// required bytes a_FileName = 16;
+// required string a_FileName = 16;
 inline bool DocShellLoadStateInit::_internal_has_a_filename() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
@@ -9813,7 +9813,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DocShellLoadStateInit::set_a_filename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00004000u;
- _impl_.a_filename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_filename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_FileName)
 }
 inline std::string* DocShellLoadStateInit::mutable_a_filename() {
@@ -9997,7 +9997,7 @@ inline void DocShellLoadStateInit::set_allocated_a_targetbrowsingcontext(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_TargetBrowsingContext)
 }
 
-// required bytes a_TriggeringRemoteType = 19;
+// required string a_TriggeringRemoteType = 19;
 inline bool DocShellLoadStateInit::_internal_has_a_triggeringremotetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00020000u) != 0;
   return value;
@@ -10017,7 +10017,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DocShellLoadStateInit::set_a_triggeringremotetype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00020000u;
- _impl_.a_triggeringremotetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_triggeringremotetype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_TriggeringRemoteType)
 }
 inline std::string* DocShellLoadStateInit::mutable_a_triggeringremotetype() {
@@ -10065,7 +10065,7 @@ inline void DocShellLoadStateInit::set_allocated_a_triggeringremotetype(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_TriggeringRemoteType)
 }
 
-// required bytes a_SrcdocData = 20;
+// required string a_SrcdocData = 20;
 inline bool DocShellLoadStateInit::_internal_has_a_srcdocdata() const {
   bool value = (_impl_._has_bits_[0] & 0x00040000u) != 0;
   return value;
@@ -10085,7 +10085,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DocShellLoadStateInit::set_a_srcdocdata(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00040000u;
- _impl_.a_srcdocdata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_srcdocdata_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_SrcdocData)
 }
 inline std::string* DocShellLoadStateInit::mutable_a_srcdocdata() {
@@ -10133,7 +10133,7 @@ inline void DocShellLoadStateInit::set_allocated_a_srcdocdata(std::string* a_src
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_SrcdocData)
 }
 
-// optional bytes a_OriginalURIString = 21;
+// optional string a_OriginalURIString = 21;
 inline bool DocShellLoadStateInit::_internal_has_a_originaluristring() const {
   bool value = (_impl_._has_bits_[0] & 0x00080000u) != 0;
   return value;
@@ -10153,7 +10153,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DocShellLoadStateInit::set_a_originaluristring(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00080000u;
- _impl_.a_originaluristring_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originaluristring_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_OriginalURIString)
 }
 inline std::string* DocShellLoadStateInit::mutable_a_originaluristring() {
@@ -10201,7 +10201,7 @@ inline void DocShellLoadStateInit::set_allocated_a_originaluristring(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_OriginalURIString)
 }
 
-// optional bytes a_RemoteTypeOverride = 22;
+// optional string a_RemoteTypeOverride = 22;
 inline bool DocShellLoadStateInit::_internal_has_a_remotetypeoverride() const {
   bool value = (_impl_._has_bits_[0] & 0x00100000u) != 0;
   return value;
@@ -10221,7 +10221,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DocShellLoadStateInit::set_a_remotetypeoverride(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00100000u;
- _impl_.a_remotetypeoverride_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_remotetypeoverride_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.DocShellLoadStateInit.a_RemoteTypeOverride)
 }
 inline std::string* DocShellLoadStateInit::mutable_a_remotetypeoverride() {
@@ -11641,7 +11641,7 @@ inline void TimedChannelInfo::set_allocated_a_redirectend(std::string* a_redirec
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.TimedChannelInfo.a_redirectEnd)
 }
 
-// required bytes a_initiatorType = 7;
+// required string a_initiatorType = 7;
 inline bool TimedChannelInfo::_internal_has_a_initiatortype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -11661,7 +11661,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TimedChannelInfo::set_a_initiatortype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.a_initiatortype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_initiatortype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.TimedChannelInfo.a_initiatorType)
 }
 inline std::string* TimedChannelInfo::mutable_a_initiatortype() {
@@ -12493,7 +12493,7 @@ inline void ReplacementChannelConfigInit::set_a_privatebrowsing(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ReplacementChannelConfigInit.a_privateBrowsing)
 }
 
-// optional bytes a_method = 4;
+// optional string a_method = 4;
 inline bool ReplacementChannelConfigInit::_internal_has_a_method() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12513,7 +12513,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ReplacementChannelConfigInit::set_a_method(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_method_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_method_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ReplacementChannelConfigInit.a_method)
 }
 inline std::string* ReplacementChannelConfigInit::mutable_a_method() {
@@ -12843,7 +12843,7 @@ inline void ReplacementChannelConfigInit::set_a_uploadstreamhasheaders(bool valu
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ReplacementChannelConfigInit.a_uploadStreamHasHeaders)
 }
 
-// optional bytes a_contentType = 10;
+// optional string a_contentType = 10;
 inline bool ReplacementChannelConfigInit::_internal_has_a_contenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -12863,7 +12863,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ReplacementChannelConfigInit::set_a_contenttype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.a_contenttype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_contenttype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ReplacementChannelConfigInit.a_contentType)
 }
 inline std::string* ReplacementChannelConfigInit::mutable_a_contenttype() {
@@ -12911,7 +12911,7 @@ inline void ReplacementChannelConfigInit::set_allocated_a_contenttype(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ReplacementChannelConfigInit.a_contentType)
 }
 
-// optional bytes a_contentLength = 11;
+// optional string a_contentLength = 11;
 inline bool ReplacementChannelConfigInit::_internal_has_a_contentlength() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -12931,7 +12931,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ReplacementChannelConfigInit::set_a_contentlength(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.a_contentlength_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_contentlength_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ReplacementChannelConfigInit.a_contentLength)
 }
 inline std::string* ReplacementChannelConfigInit::mutable_a_contentlength() {
@@ -13364,7 +13364,7 @@ inline void IPDLVariantValue::set_allocated_a_mvnsid(std::string* a_mvnsid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPDLVariantValue.a_mVnsID)
 }
 
-// bytes a_mVnsString = 10;
+// string a_mVnsString = 10;
 inline bool IPDLVariantValue::_internal_has_a_mvnsstring() const {
   return content_case() == kAMVnsString;
 }
@@ -13391,7 +13391,7 @@ inline void IPDLVariantValue::set_a_mvnsstring(ArgT0&& arg0, ArgT... args) {
     set_has_a_mvnsstring();
     _impl_.content_.a_mvnsstring_.InitDefault();
   }
-  _impl_.content_.a_mvnsstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  _impl_.content_.a_mvnsstring_.Set( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPDLVariantValue.a_mVnsString)
 }
 inline std::string* IPDLVariantValue::mutable_a_mvnsstring() {
@@ -13441,7 +13441,7 @@ inline void IPDLVariantValue::set_allocated_a_mvnsstring(std::string* a_mvnsstri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPDLVariantValue.a_mVnsString)
 }
 
-// bytes a_mVnsCString = 11;
+// string a_mVnsCString = 11;
 inline bool IPDLVariantValue::_internal_has_a_mvnscstring() const {
   return content_case() == kAMVnsCString;
 }
@@ -13468,7 +13468,7 @@ inline void IPDLVariantValue::set_a_mvnscstring(ArgT0&& arg0, ArgT... args) {
     set_has_a_mvnscstring();
     _impl_.content_.a_mvnscstring_.InitDefault();
   }
-  _impl_.content_.a_mvnscstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  _impl_.content_.a_mvnscstring_.Set( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPDLVariantValue.a_mVnsCString)
 }
 inline std::string* IPDLVariantValue::mutable_a_mvnscstring() {
@@ -13807,7 +13807,7 @@ inline void IDPLVariant::set_allocated_a_data(::protobuf::mozilla::dom::IPDLVari
 
 // IPDLProperty
 
-// required bytes a_name = 1;
+// required string a_name = 1;
 inline bool IPDLProperty::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13827,7 +13827,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPDLProperty::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPDLProperty.a_name)
 }
 inline std::string* IPDLProperty::mutable_a_name() {
@@ -13947,7 +13947,7 @@ inline void IPDLProperty::set_allocated_a_value(std::string* a_value) {
 
 // ParentShowInfo
 
-// required bytes a_name = 1;
+// required string a_name = 1;
 inline bool ParentShowInfo::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13967,7 +13967,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ParentShowInfo::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ParentShowInfo.a_name)
 }
 inline std::string* ParentShowInfo::mutable_a_name() {
@@ -14603,7 +14603,7 @@ inline void IPCImage::set_allocated_a_size(std::string* a_size) {
 
 // IPCNotificationAction
 
-// required bytes a_name = 1;
+// required string a_name = 1;
 inline bool IPCNotificationAction::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -14623,7 +14623,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCNotificationAction::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCNotificationAction.a_name)
 }
 inline std::string* IPCNotificationAction::mutable_a_name() {
@@ -14671,7 +14671,7 @@ inline void IPCNotificationAction::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCNotificationAction.a_name)
 }
 
-// required bytes a_title = 2;
+// required string a_title = 2;
 inline bool IPCNotificationAction::_internal_has_a_title() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -14691,7 +14691,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCNotificationAction::set_a_title(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_title_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_title_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCNotificationAction.a_title)
 }
 inline std::string* IPCNotificationAction::mutable_a_title() {
@@ -14743,7 +14743,7 @@ inline void IPCNotificationAction::set_allocated_a_title(std::string* a_title) {
 
 // IPCNotificationOptions
 
-// required bytes a_title = 1;
+// required string a_title = 1;
 inline bool IPCNotificationOptions::_internal_has_a_title() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -14763,7 +14763,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCNotificationOptions::set_a_title(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_title_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_title_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCNotificationOptions.a_title)
 }
 inline std::string* IPCNotificationOptions::mutable_a_title() {
@@ -14879,7 +14879,7 @@ inline void IPCNotificationOptions::set_allocated_a_dir(std::string* a_dir) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCNotificationOptions.a_dir)
 }
 
-// required bytes a_lang = 3;
+// required string a_lang = 3;
 inline bool IPCNotificationOptions::_internal_has_a_lang() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -14899,7 +14899,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCNotificationOptions::set_a_lang(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_lang_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_lang_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCNotificationOptions.a_lang)
 }
 inline std::string* IPCNotificationOptions::mutable_a_lang() {
@@ -14947,7 +14947,7 @@ inline void IPCNotificationOptions::set_allocated_a_lang(std::string* a_lang) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCNotificationOptions.a_lang)
 }
 
-// required bytes a_body = 4;
+// required string a_body = 4;
 inline bool IPCNotificationOptions::_internal_has_a_body() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -14967,7 +14967,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCNotificationOptions::set_a_body(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_body_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_body_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCNotificationOptions.a_body)
 }
 inline std::string* IPCNotificationOptions::mutable_a_body() {
@@ -15015,7 +15015,7 @@ inline void IPCNotificationOptions::set_allocated_a_body(std::string* a_body) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCNotificationOptions.a_body)
 }
 
-// required bytes a_tag = 5;
+// required string a_tag = 5;
 inline bool IPCNotificationOptions::_internal_has_a_tag() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -15035,7 +15035,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCNotificationOptions::set_a_tag(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.a_tag_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_tag_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCNotificationOptions.a_tag)
 }
 inline std::string* IPCNotificationOptions::mutable_a_tag() {
@@ -15083,7 +15083,7 @@ inline void IPCNotificationOptions::set_allocated_a_tag(std::string* a_tag) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCNotificationOptions.a_tag)
 }
 
-// required bytes a_icon = 6;
+// required string a_icon = 6;
 inline bool IPCNotificationOptions::_internal_has_a_icon() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -15103,7 +15103,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCNotificationOptions::set_a_icon(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.a_icon_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_icon_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCNotificationOptions.a_icon)
 }
 inline std::string* IPCNotificationOptions::mutable_a_icon() {
@@ -15254,7 +15254,7 @@ IPCNotificationOptions::mutable_a_vibrate() {
   return _internal_mutable_a_vibrate();
 }
 
-// required bytes a_dataSerialized = 10;
+// required string a_dataSerialized = 10;
 inline bool IPCNotificationOptions::_internal_has_a_dataserialized() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -15274,7 +15274,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCNotificationOptions::set_a_dataserialized(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000040u;
- _impl_.a_dataserialized_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_dataserialized_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCNotificationOptions.a_dataSerialized)
 }
 inline std::string* IPCNotificationOptions::mutable_a_dataserialized() {
@@ -15366,7 +15366,7 @@ IPCNotificationOptions::a_actions() const {
 
 // IPCNotification
 
-// required bytes a_id = 1;
+// required string a_id = 1;
 inline bool IPCNotification::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -15386,7 +15386,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCNotification::set_a_id(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCNotification.a_id)
 }
 inline std::string* IPCNotification::mutable_a_id() {

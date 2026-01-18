@@ -480,7 +480,7 @@ const char* EncodeInitCompletionIPDL::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_description = 1;
+      // required string a_description = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_description();
@@ -498,7 +498,7 @@ const char* EncodeInitCompletionIPDL::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_hardwareReason = 3;
+      // required string a_hardwareReason = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_hardwarereason();
@@ -538,9 +538,9 @@ uint8_t* EncodeInitCompletionIPDL::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_description = 1;
+  // required string a_description = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_description(), target);
   }
 
@@ -550,9 +550,9 @@ uint8_t* EncodeInitCompletionIPDL::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_hardware(), target);
   }
 
-  // required bytes a_hardwareReason = 3;
+  // required string a_hardwareReason = 3;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_hardwarereason(), target);
   }
 
@@ -569,16 +569,16 @@ size_t EncodeInitCompletionIPDL::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_description()) {
-    // required bytes a_description = 1;
+    // required string a_description = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_description());
   }
 
   if (_internal_has_a_hardwarereason()) {
-    // required bytes a_hardwareReason = 3;
+    // required string a_hardwareReason = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_hardwarereason());
   }
 
@@ -594,14 +594,14 @@ size_t EncodeInitCompletionIPDL::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes a_description = 1;
+    // required string a_description = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_description());
 
-    // required bytes a_hardwareReason = 3;
+    // required string a_hardwareReason = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_hardwarereason());
 
     // required bool a_hardware = 2;

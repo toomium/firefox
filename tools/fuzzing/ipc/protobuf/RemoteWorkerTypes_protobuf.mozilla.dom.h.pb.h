@@ -219,7 +219,7 @@ class ServiceWorkerData final :
     kARegistrationDescriptorFieldNumber = 2,
     kALoadFlagsFieldNumber = 4,
   };
-  // required bytes a_cacheName = 3;
+  // required string a_cacheName = 3;
   bool has_a_cachename() const;
   private:
   bool _internal_has_a_cachename() const;
@@ -237,7 +237,7 @@ class ServiceWorkerData final :
   std::string* _internal_mutable_a_cachename();
   public:
 
-  // required bytes a_id = 5;
+  // required string a_id = 5;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -647,7 +647,7 @@ class RemoteWorkerData final :
     kAShouldResistFingerprintingFieldNumber = 17,
     kAIsOn3PCBExceptionListFieldNumber = 19,
   };
-  // required bytes a_originalScriptURL = 1;
+  // required string a_originalScriptURL = 1;
   bool has_a_originalscripturl() const;
   private:
   bool _internal_has_a_originalscripturl() const;
@@ -683,7 +683,7 @@ class RemoteWorkerData final :
   std::string* _internal_mutable_a_workeroptions();
   public:
 
-  // required bytes a_domain = 11;
+  // required string a_domain = 11;
   bool has_a_domain() const;
   private:
   bool _internal_has_a_domain() const;
@@ -791,7 +791,7 @@ class RemoteWorkerData final :
   std::string* _internal_mutable_a_agentclusterid();
   public:
 
-  // required bytes a_remoteType = 23;
+  // required string a_remoteType = 23;
   bool has_a_remotetype() const;
   private:
   bool _internal_has_a_remotetype() const;
@@ -1188,7 +1188,7 @@ class ErrorDataNote final :
     kALineNumberFieldNumber = 1,
     kAColumnNumberFieldNumber = 2,
   };
-  // required bytes a_message = 3;
+  // required string a_message = 3;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -1206,7 +1206,7 @@ class ErrorDataNote final :
   std::string* _internal_mutable_a_message();
   public:
 
-  // required bytes a_filename = 4;
+  // required string a_filename = 4;
   bool has_a_filename() const;
   private:
   bool _internal_has_a_filename() const;
@@ -1408,7 +1408,7 @@ class ErrorData final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::ErrorDataNote >&
       a_notes() const;
 
-  // required bytes a_message = 4;
+  // required string a_message = 4;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -1426,7 +1426,7 @@ class ErrorData final :
   std::string* _internal_mutable_a_message();
   public:
 
-  // required bytes a_filename = 5;
+  // required string a_filename = 5;
   bool has_a_filename() const;
   private:
   bool _internal_has_a_filename() const;
@@ -1620,7 +1620,7 @@ class CSPViolation final :
   enum : int {
     kAJsonFieldNumber = 1,
   };
-  // required bytes a_json = 1;
+  // required string a_json = 1;
   bool has_a_json() const;
   private:
   bool _internal_has_a_json() const;
@@ -2150,7 +2150,7 @@ class RemoteWorkerDebuggerInfo final :
     kAWindowIDFieldNumber = 4,
     kAServiceWorkerIDFieldNumber = 6,
   };
-  // required bytes a_url = 3;
+  // required string a_url = 3;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -2186,7 +2186,7 @@ class RemoteWorkerDebuggerInfo final :
   std::string* _internal_mutable_a_principal();
   public:
 
-  // required bytes a_Id = 7;
+  // required string a_Id = 7;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -2204,7 +2204,7 @@ class RemoteWorkerDebuggerInfo final :
   std::string* _internal_mutable_a_id();
   public:
 
-  // required bytes a_name = 8;
+  // required string a_name = 8;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -2222,7 +2222,7 @@ class RemoteWorkerDebuggerInfo final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required bytes a_parentId = 9;
+  // required string a_parentId = 9;
   bool has_a_parentid() const;
   private:
   bool _internal_has_a_parentid() const;
@@ -2434,7 +2434,7 @@ class RemoteWorkerDebuggerErrorInfo final :
     kAMessageFieldNumber = 3,
     kALineNoFieldNumber = 2,
   };
-  // required bytes a_fileName = 1;
+  // required string a_fileName = 1;
   bool has_a_filename() const;
   private:
   bool _internal_has_a_filename() const;
@@ -2452,7 +2452,7 @@ class RemoteWorkerDebuggerErrorInfo final :
   std::string* _internal_mutable_a_filename();
   public:
 
-  // required bytes a_message = 3;
+  // required string a_message = 3;
   bool has_a_message() const;
   private:
   bool _internal_has_a_message() const;
@@ -2688,7 +2688,7 @@ inline void ServiceWorkerData::set_allocated_a_registrationdescriptor(::protobuf
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerData.a_registrationDescriptor)
 }
 
-// required bytes a_cacheName = 3;
+// required string a_cacheName = 3;
 inline bool ServiceWorkerData::_internal_has_a_cachename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2708,7 +2708,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ServiceWorkerData::set_a_cachename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_cachename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_cachename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerData.a_cacheName)
 }
 inline std::string* ServiceWorkerData::mutable_a_cachename() {
@@ -2784,7 +2784,7 @@ inline void ServiceWorkerData::set_a_loadflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerData.a_loadFlags)
 }
 
-// required bytes a_id = 5;
+// required string a_id = 5;
 inline bool ServiceWorkerData::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2804,7 +2804,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ServiceWorkerData::set_a_id(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerData.a_id)
 }
 inline std::string* ServiceWorkerData::mutable_a_id() {
@@ -3020,7 +3020,7 @@ inline OptionalServiceWorkerData::ContentCase OptionalServiceWorkerData::content
 
 // RemoteWorkerData
 
-// required bytes a_originalScriptURL = 1;
+// required string a_originalScriptURL = 1;
 inline bool RemoteWorkerData::_internal_has_a_originalscripturl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3040,7 +3040,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RemoteWorkerData::set_a_originalscripturl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_originalscripturl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originalscripturl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.a_originalScriptURL)
 }
 inline std::string* RemoteWorkerData::mutable_a_originalscripturl() {
@@ -3734,7 +3734,7 @@ inline void RemoteWorkerData::set_allocated_a_cookiejarsettings(::protobuf::mozi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_cookieJarSettings)
 }
 
-// required bytes a_domain = 11;
+// required string a_domain = 11;
 inline bool RemoteWorkerData::_internal_has_a_domain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3754,7 +3754,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RemoteWorkerData::set_a_domain(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_domain_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_domain_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.a_domain)
 }
 inline std::string* RemoteWorkerData::mutable_a_domain() {
@@ -4431,7 +4431,7 @@ inline void RemoteWorkerData::set_allocated_a_agentclusterid(std::string* a_agen
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_agentClusterId)
 }
 
-// required bytes a_remoteType = 23;
+// required string a_remoteType = 23;
 inline bool RemoteWorkerData::_internal_has_a_remotetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -4451,7 +4451,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RemoteWorkerData::set_a_remotetype(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000100u;
- _impl_.a_remotetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_remotetype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerData.a_remoteType)
 }
 inline std::string* RemoteWorkerData::mutable_a_remotetype() {
@@ -4559,7 +4559,7 @@ inline void ErrorDataNote::set_a_columnnumber(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorDataNote.a_columnNumber)
 }
 
-// required bytes a_message = 3;
+// required string a_message = 3;
 inline bool ErrorDataNote::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4579,7 +4579,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ErrorDataNote::set_a_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorDataNote.a_message)
 }
 inline std::string* ErrorDataNote::mutable_a_message() {
@@ -4627,7 +4627,7 @@ inline void ErrorDataNote::set_allocated_a_message(std::string* a_message) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ErrorDataNote.a_message)
 }
 
-// required bytes a_filename = 4;
+// required string a_filename = 4;
 inline bool ErrorDataNote::_internal_has_a_filename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4647,7 +4647,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ErrorDataNote::set_a_filename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_filename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_filename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorDataNote.a_filename)
 }
 inline std::string* ErrorDataNote::mutable_a_filename() {
@@ -4783,7 +4783,7 @@ inline void ErrorData::set_a_columnnumber(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorData.a_columnNumber)
 }
 
-// required bytes a_message = 4;
+// required string a_message = 4;
 inline bool ErrorData::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4803,7 +4803,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ErrorData::set_a_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorData.a_message)
 }
 inline std::string* ErrorData::mutable_a_message() {
@@ -4851,7 +4851,7 @@ inline void ErrorData::set_allocated_a_message(std::string* a_message) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ErrorData.a_message)
 }
 
-// required bytes a_filename = 5;
+// required string a_filename = 5;
 inline bool ErrorData::_internal_has_a_filename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -4871,7 +4871,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ErrorData::set_a_filename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_filename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_filename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ErrorData.a_filename)
 }
 inline std::string* ErrorData::mutable_a_filename() {
@@ -4963,7 +4963,7 @@ ErrorData::a_notes() const {
 
 // CSPViolation
 
-// required bytes a_json = 1;
+// required string a_json = 1;
 inline bool CSPViolation::_internal_has_a_json() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4983,7 +4983,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CSPViolation::set_a_json(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_json_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_json_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.CSPViolation.a_json)
 }
 inline std::string* CSPViolation::mutable_a_json() {
@@ -5484,7 +5484,7 @@ inline void RemoteWorkerDebuggerInfo::set_a_type(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_type)
 }
 
-// required bytes a_url = 3;
+// required string a_url = 3;
 inline bool RemoteWorkerDebuggerInfo::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5504,7 +5504,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RemoteWorkerDebuggerInfo::set_a_url(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_url_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_url_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_url)
 }
 inline std::string* RemoteWorkerDebuggerInfo::mutable_a_url() {
@@ -5676,7 +5676,7 @@ inline void RemoteWorkerDebuggerInfo::set_a_serviceworkerid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_serviceWorkerID)
 }
 
-// required bytes a_Id = 7;
+// required string a_Id = 7;
 inline bool RemoteWorkerDebuggerInfo::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -5696,7 +5696,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RemoteWorkerDebuggerInfo::set_a_id(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_id_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_Id)
 }
 inline std::string* RemoteWorkerDebuggerInfo::mutable_a_id() {
@@ -5744,7 +5744,7 @@ inline void RemoteWorkerDebuggerInfo::set_allocated_a_id(std::string* a_id) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_Id)
 }
 
-// required bytes a_name = 8;
+// required string a_name = 8;
 inline bool RemoteWorkerDebuggerInfo::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -5764,7 +5764,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RemoteWorkerDebuggerInfo::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_name)
 }
 inline std::string* RemoteWorkerDebuggerInfo::mutable_a_name() {
@@ -5812,7 +5812,7 @@ inline void RemoteWorkerDebuggerInfo::set_allocated_a_name(std::string* a_name) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_name)
 }
 
-// required bytes a_parentId = 9;
+// required string a_parentId = 9;
 inline bool RemoteWorkerDebuggerInfo::_internal_has_a_parentid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -5832,7 +5832,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RemoteWorkerDebuggerInfo::set_a_parentid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.a_parentid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_parentid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_parentId)
 }
 inline std::string* RemoteWorkerDebuggerInfo::mutable_a_parentid() {
@@ -5884,7 +5884,7 @@ inline void RemoteWorkerDebuggerInfo::set_allocated_a_parentid(std::string* a_pa
 
 // RemoteWorkerDebuggerErrorInfo
 
-// required bytes a_fileName = 1;
+// required string a_fileName = 1;
 inline bool RemoteWorkerDebuggerErrorInfo::_internal_has_a_filename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5904,7 +5904,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RemoteWorkerDebuggerErrorInfo::set_a_filename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_filename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_filename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.a_fileName)
 }
 inline std::string* RemoteWorkerDebuggerErrorInfo::mutable_a_filename() {
@@ -5980,7 +5980,7 @@ inline void RemoteWorkerDebuggerErrorInfo::set_a_lineno(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.a_lineNo)
 }
 
-// required bytes a_message = 3;
+// required string a_message = 3;
 inline bool RemoteWorkerDebuggerErrorInfo::_internal_has_a_message() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6000,7 +6000,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RemoteWorkerDebuggerErrorInfo::set_a_message(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_message_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.a_message)
 }
 inline std::string* RemoteWorkerDebuggerErrorInfo::mutable_a_message() {

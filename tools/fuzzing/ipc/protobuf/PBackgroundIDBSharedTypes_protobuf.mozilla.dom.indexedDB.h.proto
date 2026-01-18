@@ -53,23 +53,23 @@ message IndexUpdateInfo {
 }
 
 message DatabaseMetadata {
-  required bytes a_name = 1;
+  required string a_name = 1;
   required uint64 a_version = 2;
   required bytes a_persistenceType = 3;
 }
 
 message ObjectStoreMetadata {
   required sint64 a_id = 1;
-  required bytes a_name = 2;
+  required string a_name = 2;
   required bytes a_keyPath = 3;
   required bool a_autoIncrement = 4;
 }
 
 message IndexMetadata {
   required sint64 a_id = 1;
-  required bytes a_name = 2;
+  required string a_name = 2;
   required bytes a_keyPath = 3;
-  required bytes a_locale = 4;
+  required string a_locale = 4;
   required bool a_unique = 5;
   required bool a_multiEntry = 6;
   required bool a_autoLocale = 7;

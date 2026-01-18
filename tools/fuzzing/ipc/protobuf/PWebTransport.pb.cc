@@ -383,7 +383,7 @@ const char* Msg_Close::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_reason = 2;
+      // required string a_reason = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_reason();
@@ -429,9 +429,9 @@ uint8_t* Msg_Close::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_code(), target);
   }
 
-  // required bytes a_reason = 2;
+  // required string a_reason = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_reason(), target);
   }
 
@@ -448,9 +448,9 @@ size_t Msg_Close::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_reason()) {
-    // required bytes a_reason = 2;
+    // required string a_reason = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_reason());
   }
 
@@ -466,9 +466,9 @@ size_t Msg_Close::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_reason = 2;
+    // required string a_reason = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_reason());
 
     // required uint32 a_code = 1;
@@ -3401,7 +3401,7 @@ const char* Msg_RemoteClosed::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_reason = 3;
+      // required string a_reason = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_reason();
@@ -3453,9 +3453,9 @@ uint8_t* Msg_RemoteClosed::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_code(), target);
   }
 
-  // required bytes a_reason = 3;
+  // required string a_reason = 3;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_reason(), target);
   }
 
@@ -3472,9 +3472,9 @@ size_t Msg_RemoteClosed::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_reason()) {
-    // required bytes a_reason = 3;
+    // required string a_reason = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_reason());
   }
 
@@ -3495,9 +3495,9 @@ size_t Msg_RemoteClosed::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes a_reason = 3;
+    // required string a_reason = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_reason());
 
     // required bool a_cleanly = 1;

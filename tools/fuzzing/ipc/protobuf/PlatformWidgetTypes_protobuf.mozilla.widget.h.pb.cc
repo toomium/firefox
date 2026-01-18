@@ -211,7 +211,7 @@ const char* GtkCompositorWidgetInitData::_InternalParse(const char* ptr, ::_pbi:
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_XDisplayString = 2;
+      // required string a_XDisplayString = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_xdisplaystring();
@@ -275,9 +275,9 @@ uint8_t* GtkCompositorWidgetInitData::_InternalSerialize(
         1, this->_internal_a_xwindow(), target);
   }
 
-  // required bytes a_XDisplayString = 2;
+  // required string a_XDisplayString = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_xdisplaystring(), target);
   }
 
@@ -313,9 +313,9 @@ size_t GtkCompositorWidgetInitData::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_a_xdisplaystring()) {
-    // required bytes a_XDisplayString = 2;
+    // required string a_XDisplayString = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_xdisplaystring());
   }
 
@@ -343,9 +343,9 @@ size_t GtkCompositorWidgetInitData::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_xwindow());
 
-    // required bytes a_XDisplayString = 2;
+    // required string a_XDisplayString = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_xdisplaystring());
 
     // required bytes a_InitialClientSize = 4;

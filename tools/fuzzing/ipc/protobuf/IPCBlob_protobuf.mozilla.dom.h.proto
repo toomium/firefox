@@ -18,17 +18,17 @@ import "IPCBlob_protobuf.mozilla.h.proto";
 
 // Structs and unions declarations
 message IPCFile {
-  required bytes a_name = 1;
+  required string a_name = 1;
   required sint64 a_lastModified = 2;
-  required bytes a_DOMPath = 3;
-  required bytes a_fullPath = 4;
+  required string a_DOMPath = 3;
+  required string a_fullPath = 4;
   required bool a_isDirectory = 5;
 }
 
 message IPCBlob {
-  required bytes a_type = 1;
+  required string a_type = 1;
   required uint64 a_size = 2;
-  required bytes a_blobImplType = 3;
+  required string a_blobImplType = 3;
   required protobuf.mozilla.RemoteLazyStream a_inputStream = 4;
   optional protobuf.mozilla.dom.IPCFile a_file = 5;
   required sint64 a_fileId = 6;

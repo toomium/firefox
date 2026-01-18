@@ -14,8 +14,8 @@ package protobuf.mozilla._ipdltest;
 message TestPartResult {
   required bool a_failed = 1;
   required bool a_fatal = 2;
-  required bytes a_filename = 3;
+  required string a_filename = 3;
   required sint32 a_lineNumber = 4;
-  required bytes a_summary = 5;
-  required bytes a_message = 6;
+  required string a_summary = 5;
+  required string a_message = 6;
 }

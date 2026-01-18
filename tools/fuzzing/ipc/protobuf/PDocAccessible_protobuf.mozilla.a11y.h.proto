@@ -48,7 +48,7 @@ message ReorderEventData {
 
 message TextChangeEventData {
   required uint64 a_ID = 1;
-  required bytes a_Str = 2;
+  required string a_Str = 2;
   required sint32 a_Start = 3;
   required uint32 a_Len = 4;
   required bool a_IsInsert = 5;

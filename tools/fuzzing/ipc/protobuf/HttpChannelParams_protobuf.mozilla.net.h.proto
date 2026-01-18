@@ -20,8 +20,8 @@ message HttpChannelOnStartRequestArgs {
   required bytes a_overrideReferrerInfo = 2;
   required uint64 a_cacheEntryId = 3;
   required sint64 a_altDataLength = 4;
-  required bytes a_altDataType = 5;
-  repeated bytes a_cookieHeaders = 6;
+  required string a_altDataType = 5;
+  repeated string a_cookieHeaders = 6;
   required bytes a_selfAddr = 7;
   required bytes a_peerAddr = 8;
   required protobuf.mozilla.net.ResourceTimingStructArgs a_timing = 9;
@@ -48,7 +48,7 @@ message HttpChannelOnStartRequestArgs {
   required bool a_hasHTTPSRR = 30;
   required bool a_isProxyUsed = 31;
   required uint32 a_redirectCount = 32;
-  required bytes a_protocolVersion = 33;
+  required string a_protocolVersion = 33;
 }
 
 message HttpChannelAltDataStream {

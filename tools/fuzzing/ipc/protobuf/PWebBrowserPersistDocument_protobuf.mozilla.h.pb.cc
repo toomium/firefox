@@ -376,7 +376,7 @@ const char* WebBrowserPersistDocumentAttrs::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_documentURI = 2;
+      // required string a_documentURI = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_documenturi();
@@ -385,7 +385,7 @@ const char* WebBrowserPersistDocumentAttrs::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_baseURI = 3;
+      // required string a_baseURI = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_baseuri();
@@ -394,7 +394,7 @@ const char* WebBrowserPersistDocumentAttrs::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_contentType = 4;
+      // required string a_contentType = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_contenttype();
@@ -403,7 +403,7 @@ const char* WebBrowserPersistDocumentAttrs::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_characterSet = 5;
+      // required string a_characterSet = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_a_characterset();
@@ -412,7 +412,7 @@ const char* WebBrowserPersistDocumentAttrs::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_title = 6;
+      // required string a_title = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_a_title();
@@ -438,7 +438,7 @@ const char* WebBrowserPersistDocumentAttrs::_InternalParse(const char* ptr, ::_p
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_contentDisposition = 9;
+      // required string a_contentDisposition = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           auto str = _internal_mutable_a_contentdisposition();
@@ -510,33 +510,33 @@ uint8_t* WebBrowserPersistDocumentAttrs::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_isprivate(), target);
   }
 
-  // required bytes a_documentURI = 2;
+  // required string a_documentURI = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_documenturi(), target);
   }
 
-  // required bytes a_baseURI = 3;
+  // required string a_baseURI = 3;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_baseuri(), target);
   }
 
-  // required bytes a_contentType = 4;
+  // required string a_contentType = 4;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_contenttype(), target);
   }
 
-  // required bytes a_characterSet = 5;
+  // required string a_characterSet = 5;
   if (cached_has_bits & 0x00000008u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         5, this->_internal_a_characterset(), target);
   }
 
-  // required bytes a_title = 6;
+  // required string a_title = 6;
   if (cached_has_bits & 0x00000010u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         6, this->_internal_a_title(), target);
   }
 
@@ -553,9 +553,9 @@ uint8_t* WebBrowserPersistDocumentAttrs::_InternalSerialize(
         _Internal::a_cookiejarsettings(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes a_contentDisposition = 9;
+  // required string a_contentDisposition = 9;
   if (cached_has_bits & 0x00000040u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         9, this->_internal_a_contentdisposition(), target);
   }
 
@@ -591,37 +591,37 @@ size_t WebBrowserPersistDocumentAttrs::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_documenturi()) {
-    // required bytes a_documentURI = 2;
+    // required string a_documentURI = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_documenturi());
   }
 
   if (_internal_has_a_baseuri()) {
-    // required bytes a_baseURI = 3;
+    // required string a_baseURI = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_baseuri());
   }
 
   if (_internal_has_a_contenttype()) {
-    // required bytes a_contentType = 4;
+    // required string a_contentType = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_contenttype());
   }
 
   if (_internal_has_a_characterset()) {
-    // required bytes a_characterSet = 5;
+    // required string a_characterSet = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_characterset());
   }
 
   if (_internal_has_a_title()) {
-    // required bytes a_title = 6;
+    // required string a_title = 6;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_title());
   }
 
@@ -633,9 +633,9 @@ size_t WebBrowserPersistDocumentAttrs::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_a_contentdisposition()) {
-    // required bytes a_contentDisposition = 9;
+    // required string a_contentDisposition = 9;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_contentdisposition());
   }
 
@@ -675,29 +675,29 @@ size_t WebBrowserPersistDocumentAttrs::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000fff) ^ 0x00000fff) == 0) {  // All required fields are present.
-    // required bytes a_documentURI = 2;
+    // required string a_documentURI = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_documenturi());
 
-    // required bytes a_baseURI = 3;
+    // required string a_baseURI = 3;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_baseuri());
 
-    // required bytes a_contentType = 4;
+    // required string a_contentType = 4;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_contenttype());
 
-    // required bytes a_characterSet = 5;
+    // required string a_characterSet = 5;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_characterset());
 
-    // required bytes a_title = 6;
+    // required string a_title = 6;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_title());
 
     // required bytes a_referrerInfo = 7;
@@ -705,9 +705,9 @@ size_t WebBrowserPersistDocumentAttrs::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_referrerinfo());
 
-    // required bytes a_contentDisposition = 9;
+    // required string a_contentDisposition = 9;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_contentdisposition());
 
     // required .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 8;
@@ -985,7 +985,7 @@ const char* WebBrowserPersistURIMapEntry::_InternalParse(const char* ptr, ::_pbi
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_mapFrom = 1;
+      // required string a_mapFrom = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_mapfrom();
@@ -994,7 +994,7 @@ const char* WebBrowserPersistURIMapEntry::_InternalParse(const char* ptr, ::_pbi
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_mapTo = 2;
+      // required string a_mapTo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_mapto();
@@ -1034,15 +1034,15 @@ uint8_t* WebBrowserPersistURIMapEntry::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_mapFrom = 1;
+  // required string a_mapFrom = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_mapfrom(), target);
   }
 
-  // required bytes a_mapTo = 2;
+  // required string a_mapTo = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_mapto(), target);
   }
 
@@ -1059,16 +1059,16 @@ size_t WebBrowserPersistURIMapEntry::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_mapfrom()) {
-    // required bytes a_mapFrom = 1;
+    // required string a_mapFrom = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_mapfrom());
   }
 
   if (_internal_has_a_mapto()) {
-    // required bytes a_mapTo = 2;
+    // required string a_mapTo = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_mapto());
   }
 
@@ -1079,14 +1079,14 @@ size_t WebBrowserPersistURIMapEntry::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_mapFrom = 1;
+    // required string a_mapFrom = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_mapfrom());
 
-    // required bytes a_mapTo = 2;
+    // required string a_mapTo = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_mapto());
 
   } else {
@@ -1272,7 +1272,7 @@ const char* WebBrowserPersistURIMap::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_targetBaseURI = 2;
+      // required string a_targetBaseURI = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_targetbaseuri();
@@ -1320,9 +1320,9 @@ uint8_t* WebBrowserPersistURIMap::_InternalSerialize(
   }
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_targetBaseURI = 2;
+  // required string a_targetBaseURI = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_targetbaseuri(), target);
   }
 
@@ -1338,10 +1338,10 @@ size_t WebBrowserPersistURIMap::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.WebBrowserPersistURIMap)
   size_t total_size = 0;
 
-  // required bytes a_targetBaseURI = 2;
+  // required string a_targetBaseURI = 2;
   if (_internal_has_a_targetbaseuri()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_targetbaseuri());
   }
   uint32_t cached_has_bits = 0;

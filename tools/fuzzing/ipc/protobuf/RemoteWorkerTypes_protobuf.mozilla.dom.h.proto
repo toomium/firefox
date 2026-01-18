@@ -23,9 +23,9 @@ import "ProtocolTypes.proto";
 message ServiceWorkerData {
   required protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_descriptor = 1;
   required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_registrationDescriptor = 2;
-  required bytes a_cacheName = 3;
+  required string a_cacheName = 3;
   required uint32 a_loadFlags = 4;
-  required bytes a_id = 5;
+  required string a_id = 5;
 }
 
 message OptionalServiceWorkerData {
@@ -36,7 +36,7 @@ message OptionalServiceWorkerData {
 }
 
 message RemoteWorkerData {
-  required bytes a_originalScriptURL = 1;
+  required string a_originalScriptURL = 1;
   required protobuf.mozilla.ipc.URIParams a_baseScriptURL = 2;
   required protobuf.mozilla.ipc.URIParams a_resolvedScriptURL = 3;
   required bytes a_workerOptions = 4;
@@ -46,7 +46,7 @@ message RemoteWorkerData {
   required bool a_useRegularPrincipal = 8;
   required bool a_usingStorageAccess = 9;
   required protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 10;
-  required bytes a_domain = 11;
+  required string a_domain = 11;
   required bool a_isSecureContext = 12;
   optional protobuf.mozilla.dom.IPCClientInfo a_clientInfo = 13;
   required bytes a_referrerInfo = 14;
@@ -58,27 +58,27 @@ message RemoteWorkerData {
   required bytes a_originTrials = 20;
   required protobuf.mozilla.dom.OptionalServiceWorkerData a_serviceWorkerData = 21;
   required bytes a_agentClusterId = 22;
-  required bytes a_remoteType = 23;
+  required string a_remoteType = 23;
 }
 
 message ErrorDataNote {
   required uint32 a_lineNumber = 1;
   required uint32 a_columnNumber = 2;
-  required bytes a_message = 3;
-  required bytes a_filename = 4;
+  required string a_message = 3;
+  required string a_filename = 4;
 }
 
 message ErrorData {
   required bool a_isWarning = 1;
   required uint32 a_lineNumber = 2;
   required uint32 a_columnNumber = 3;
-  required bytes a_message = 4;
-  required bytes a_filename = 5;
+  required string a_message = 4;
+  required string a_filename = 5;
   repeated protobuf.mozilla.dom.ErrorDataNote a_notes = 6;
 }
 
 message CSPViolation {
-  required bytes a_json = 1;
+  required string a_json = 1;
 }
 
 message ErrorMismatchOptions {
@@ -97,17 +97,17 @@ message ErrorValue {
 message RemoteWorkerDebuggerInfo {
   required bool a_isChrome = 1;
   required uint32 a_type = 2;
-  required bytes a_url = 3;
+  required string a_url = 3;
   required uint64 a_windowID = 4;
   required bytes a_principal = 5;
   required uint64 a_serviceWorkerID = 6;
-  required bytes a_Id = 7;
-  required bytes a_name = 8;
-  required bytes a_parentId = 9;
+  required string a_Id = 7;
+  required string a_name = 8;
+  required string a_parentId = 9;
 }
 
 message RemoteWorkerDebuggerErrorInfo {
-  required bytes a_fileName = 1;
+  required string a_fileName = 1;
   required uint32 a_lineNo = 2;
-  required bytes a_message = 3;
+  required string a_message = 3;
 }

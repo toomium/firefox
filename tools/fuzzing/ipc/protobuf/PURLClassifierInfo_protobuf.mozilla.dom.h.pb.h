@@ -177,7 +177,7 @@ class ClassifierInfo final :
     kAProviderFieldNumber = 2,
     kAFullhashFieldNumber = 3,
   };
-  // required bytes a_list = 1;
+  // required string a_list = 1;
   bool has_a_list() const;
   private:
   bool _internal_has_a_list() const;
@@ -195,7 +195,7 @@ class ClassifierInfo final :
   std::string* _internal_mutable_a_list();
   public:
 
-  // required bytes a_provider = 2;
+  // required string a_provider = 2;
   bool has_a_provider() const;
   private:
   bool _internal_has_a_provider() const;
@@ -213,7 +213,7 @@ class ClassifierInfo final :
   std::string* _internal_mutable_a_provider();
   public:
 
-  // required bytes a_fullhash = 3;
+  // required string a_fullhash = 3;
   bool has_a_fullhash() const;
   private:
   bool _internal_has_a_fullhash() const;
@@ -385,7 +385,7 @@ class URLClassifierLocalResult final :
   std::string* _internal_mutable_a_uri();
   public:
 
-  // required bytes a_featureName = 2;
+  // required string a_featureName = 2;
   bool has_a_featurename() const;
   private:
   bool _internal_has_a_featurename() const;
@@ -403,7 +403,7 @@ class URLClassifierLocalResult final :
   std::string* _internal_mutable_a_featurename();
   public:
 
-  // required bytes a_matchingList = 3;
+  // required string a_matchingList = 3;
   bool has_a_matchinglist() const;
   private:
   bool _internal_has_a_matchinglist() const;
@@ -452,7 +452,7 @@ class URLClassifierLocalResult final :
 #endif  // __GNUC__
 // ClassifierInfo
 
-// required bytes a_list = 1;
+// required string a_list = 1;
 inline bool ClassifierInfo::_internal_has_a_list() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -472,7 +472,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ClassifierInfo::set_a_list(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_list_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_list_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClassifierInfo.a_list)
 }
 inline std::string* ClassifierInfo::mutable_a_list() {
@@ -520,7 +520,7 @@ inline void ClassifierInfo::set_allocated_a_list(std::string* a_list) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClassifierInfo.a_list)
 }
 
-// required bytes a_provider = 2;
+// required string a_provider = 2;
 inline bool ClassifierInfo::_internal_has_a_provider() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -540,7 +540,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ClassifierInfo::set_a_provider(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_provider_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_provider_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClassifierInfo.a_provider)
 }
 inline std::string* ClassifierInfo::mutable_a_provider() {
@@ -588,7 +588,7 @@ inline void ClassifierInfo::set_allocated_a_provider(std::string* a_provider) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ClassifierInfo.a_provider)
 }
 
-// required bytes a_fullhash = 3;
+// required string a_fullhash = 3;
 inline bool ClassifierInfo::_internal_has_a_fullhash() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -608,7 +608,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ClassifierInfo::set_a_fullhash(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_fullhash_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_fullhash_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ClassifierInfo.a_fullhash)
 }
 inline std::string* ClassifierInfo::mutable_a_fullhash() {
@@ -728,7 +728,7 @@ inline void URLClassifierLocalResult::set_allocated_a_uri(std::string* a_uri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.URLClassifierLocalResult.a_uri)
 }
 
-// required bytes a_featureName = 2;
+// required string a_featureName = 2;
 inline bool URLClassifierLocalResult::_internal_has_a_featurename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -748,7 +748,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void URLClassifierLocalResult::set_a_featurename(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_featurename_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_featurename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.URLClassifierLocalResult.a_featureName)
 }
 inline std::string* URLClassifierLocalResult::mutable_a_featurename() {
@@ -796,7 +796,7 @@ inline void URLClassifierLocalResult::set_allocated_a_featurename(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.URLClassifierLocalResult.a_featureName)
 }
 
-// required bytes a_matchingList = 3;
+// required string a_matchingList = 3;
 inline bool URLClassifierLocalResult::_internal_has_a_matchinglist() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -816,7 +816,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void URLClassifierLocalResult::set_a_matchinglist(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_matchinglist_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_matchinglist_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.URLClassifierLocalResult.a_matchingList)
 }
 inline std::string* URLClassifierLocalResult::mutable_a_matchinglist() {

@@ -500,7 +500,7 @@ const char* Msg_InitializePrint::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aDocumentTitle = 1;
+      // required string a_aDocumentTitle = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_adocumenttitle();
@@ -558,9 +558,9 @@ uint8_t* Msg_InitializePrint::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aDocumentTitle = 1;
+  // required string a_aDocumentTitle = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_adocumenttitle(), target);
   }
 
@@ -589,9 +589,9 @@ size_t Msg_InitializePrint::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_adocumenttitle()) {
-    // required bytes a_aDocumentTitle = 1;
+    // required string a_aDocumentTitle = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_adocumenttitle());
   }
 
@@ -612,9 +612,9 @@ size_t Msg_InitializePrint::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required bytes a_aDocumentTitle = 1;
+    // required string a_aDocumentTitle = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_adocumenttitle());
 
     // required sint32 a_aStartPage = 2;

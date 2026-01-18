@@ -184,7 +184,7 @@ class KeyValue final :
     kAKeyFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required bytes a_key = 1;
+  // required string a_key = 1;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -744,7 +744,7 @@ class JSONVariant final :
   void _internal_set_a_mvdouble(double value);
   public:
 
-  // bytes a_mVnsString = 6;
+  // string a_mVnsString = 6;
   bool has_a_mvnsstring() const;
   private:
   bool _internal_has_a_mvnsstring() const;
@@ -869,7 +869,7 @@ class JSONVariant final :
 #endif  // __GNUC__
 // KeyValue
 
-// required bytes a_key = 1;
+// required string a_key = 1;
 inline bool KeyValue::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -889,7 +889,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void KeyValue::set_a_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.KeyValue.a_key)
 }
 inline std::string* KeyValue::mutable_a_key() {
@@ -1387,7 +1387,7 @@ inline void JSONVariant::set_a_mvdouble(double value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.JSONVariant.a_mVdouble)
 }
 
-// bytes a_mVnsString = 6;
+// string a_mVnsString = 6;
 inline bool JSONVariant::_internal_has_a_mvnsstring() const {
   return content_case() == kAMVnsString;
 }
@@ -1414,7 +1414,7 @@ inline void JSONVariant::set_a_mvnsstring(ArgT0&& arg0, ArgT... args) {
     set_has_a_mvnsstring();
     _impl_.content_.a_mvnsstring_.InitDefault();
   }
-  _impl_.content_.a_mvnsstring_.SetBytes( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  _impl_.content_.a_mvnsstring_.Set( static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.JSONVariant.a_mVnsString)
 }
 inline std::string* JSONVariant::mutable_a_mvnsstring() {

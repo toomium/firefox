@@ -13,8 +13,8 @@ package protobuf.mozilla.embedding;
 
 // Structs and unions declarations
 message CStringKeyValue {
-  required bytes a_key = 1;
-  required bytes a_value = 2;
+  required string a_key = 1;
+  required string a_value = 2;
 }
 
 message PrintData {
@@ -40,17 +40,17 @@ message PrintData {
   required bool a_showMarginGuides = 20;
   required bool a_printSelectionOnly = 21;
   repeated sint32 a_pageRanges = 22;
-  required bytes a_title = 23;
-  required bytes a_docURL = 24;
-  required bytes a_headerStrLeft = 25;
-  required bytes a_headerStrCenter = 26;
-  required bytes a_headerStrRight = 27;
-  required bytes a_footerStrLeft = 28;
-  required bytes a_footerStrCenter = 29;
-  required bytes a_footerStrRight = 30;
+  required string a_title = 23;
+  required string a_docURL = 24;
+  required string a_headerStrLeft = 25;
+  required string a_headerStrCenter = 26;
+  required string a_headerStrRight = 27;
+  required string a_footerStrLeft = 28;
+  required string a_footerStrCenter = 29;
+  required string a_footerStrRight = 30;
   required bool a_printSilent = 31;
   required bool a_shrinkToFit = 32;
-  required bytes a_paperId = 33;
+  required string a_paperId = 33;
   required double a_paperWidth = 34;
   required double a_paperHeight = 35;
   required sint32 a_paperSizeUnit = 36;
@@ -66,10 +66,10 @@ message PrintData {
   required sint32 a_duplex = 46;
   required bool a_isInitializedFromPrinter = 47;
   required bool a_isInitializedFromPrefs = 48;
-  required bytes a_driverName = 49;
-  required bytes a_deviceName = 50;
+  required string a_driverName = 49;
+  required string a_deviceName = 50;
   repeated uint32 a_devModeData = 51;
   repeated protobuf.mozilla.embedding.CStringKeyValue a_GTKPrintSettings = 52;
-  required bytes a_disposition = 53;
+  required string a_disposition = 53;
   required uint32 a_destination = 54;
 }

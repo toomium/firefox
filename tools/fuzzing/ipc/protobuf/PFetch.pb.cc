@@ -1458,7 +1458,7 @@ const char* Msg_OnCSPViolationEvent::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aJSON = 1;
+      // required string a_aJSON = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_ajson();
@@ -1498,9 +1498,9 @@ uint8_t* Msg_OnCSPViolationEvent::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aJSON = 1;
+  // required string a_aJSON = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_ajson(), target);
   }
 
@@ -1516,10 +1516,10 @@ size_t Msg_OnCSPViolationEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PFetch.Msg_OnCSPViolationEvent)
   size_t total_size = 0;
 
-  // required bytes a_aJSON = 1;
+  // required string a_aJSON = 1;
   if (_internal_has_a_ajson()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_ajson());
   }
   uint32_t cached_has_bits = 0;

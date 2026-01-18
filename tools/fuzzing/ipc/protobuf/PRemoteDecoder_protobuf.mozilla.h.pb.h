@@ -392,7 +392,7 @@ class InitCompletionIPDL final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // required bytes a_decoderDescription = 2;
+  // required string a_decoderDescription = 2;
   bool has_a_decoderdescription() const;
   private:
   bool _internal_has_a_decoderdescription() const;
@@ -410,7 +410,7 @@ class InitCompletionIPDL final :
   std::string* _internal_mutable_a_decoderdescription();
   public:
 
-  // required bytes a_decoderProcessName = 3;
+  // required string a_decoderProcessName = 3;
   bool has_a_decoderprocessname() const;
   private:
   bool _internal_has_a_decoderprocessname() const;
@@ -428,7 +428,7 @@ class InitCompletionIPDL final :
   std::string* _internal_mutable_a_decoderprocessname();
   public:
 
-  // required bytes a_decoderCodecName = 4;
+  // required string a_decoderCodecName = 4;
   bool has_a_decodercodecname() const;
   private:
   bool _internal_has_a_decodercodecname() const;
@@ -446,7 +446,7 @@ class InitCompletionIPDL final :
   std::string* _internal_mutable_a_decodercodecname();
   public:
 
-  // required bytes a_hardwareReason = 6;
+  // required string a_hardwareReason = 6;
   bool has_a_hardwarereason() const;
   private:
   bool _internal_has_a_hardwarereason() const;
@@ -1149,7 +1149,7 @@ inline void InitCompletionIPDL::set_allocated_a_type(std::string* a_type) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.a_type)
 }
 
-// required bytes a_decoderDescription = 2;
+// required string a_decoderDescription = 2;
 inline bool InitCompletionIPDL::_internal_has_a_decoderdescription() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1169,7 +1169,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void InitCompletionIPDL::set_a_decoderdescription(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_decoderdescription_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_decoderdescription_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.a_decoderDescription)
 }
 inline std::string* InitCompletionIPDL::mutable_a_decoderdescription() {
@@ -1217,7 +1217,7 @@ inline void InitCompletionIPDL::set_allocated_a_decoderdescription(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.a_decoderDescription)
 }
 
-// required bytes a_decoderProcessName = 3;
+// required string a_decoderProcessName = 3;
 inline bool InitCompletionIPDL::_internal_has_a_decoderprocessname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1237,7 +1237,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void InitCompletionIPDL::set_a_decoderprocessname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_decoderprocessname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_decoderprocessname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.a_decoderProcessName)
 }
 inline std::string* InitCompletionIPDL::mutable_a_decoderprocessname() {
@@ -1285,7 +1285,7 @@ inline void InitCompletionIPDL::set_allocated_a_decoderprocessname(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.a_decoderProcessName)
 }
 
-// required bytes a_decoderCodecName = 4;
+// required string a_decoderCodecName = 4;
 inline bool InitCompletionIPDL::_internal_has_a_decodercodecname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1305,7 +1305,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void InitCompletionIPDL::set_a_decodercodecname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_decodercodecname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_decodercodecname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.a_decoderCodecName)
 }
 inline std::string* InitCompletionIPDL::mutable_a_decodercodecname() {
@@ -1381,7 +1381,7 @@ inline void InitCompletionIPDL::set_a_hardware(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.a_hardware)
 }
 
-// required bytes a_hardwareReason = 6;
+// required string a_hardwareReason = 6;
 inline bool InitCompletionIPDL::_internal_has_a_hardwarereason() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -1401,7 +1401,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void InitCompletionIPDL::set_a_hardwarereason(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.a_hardwarereason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_hardwarereason_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.a_hardwareReason)
 }
 inline std::string* InitCompletionIPDL::mutable_a_hardwarereason() {

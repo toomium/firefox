@@ -75,7 +75,7 @@ message Msg_ScrollingEvent {
 
 message Msg_AnnouncementEvent {
   required uint64 a_aID = 1;
-  required bytes a_aAnnouncement = 2;
+  required string a_aAnnouncement = 2;
   required uint32 a_aPriority = 3;
 }
 
@@ -126,7 +126,7 @@ message Msg_ScrollToPoint {
 
 message Msg_Announce {
   required uint64 a_aID = 1;
-  required bytes a_aAnnouncement = 2;
+  required string a_aAnnouncement = 2;
   required uint32 a_aPriority = 3;
 }
 
@@ -163,12 +163,12 @@ message Msg_ScrollSubstringToPoint {
 
 message Msg_ReplaceText {
   required uint64 a_aID = 1;
-  required bytes a_aText = 2;
+  required string a_aText = 2;
 }
 
 message Msg_InsertText {
   required uint64 a_aID = 1;
-  required bytes a_aText = 2;
+  required string a_aText = 2;
   required sint32 a_aPosition = 3;
 }
 
@@ -230,5 +230,5 @@ message Msg_AckMutationEvents {
 // Parameter mappings stats:
 // Total parameters in this file 134
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 8, "<class 'ipdl.type.BuiltinCType'>": 13, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 102, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 1, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 9, "<class 'ipdl.type.UnionType'>": 1, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 100
+// Scalar mappings performed: 105
 // Message structs/unions generated from ipdl structs/unions: 8

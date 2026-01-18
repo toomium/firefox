@@ -32,7 +32,7 @@ message Msg_OnTransportAndData {
   required bytes a_transportStatus = 2;
   required uint64 a_offset = 3;
   required uint32 a_count = 4;
-  required bytes a_data = 5;
+  required string a_data = 5;
   required bool a_dataFromSocketProcess = 6;
   required bytes a_onDataAvailableStart = 7;
 }
@@ -93,5 +93,5 @@ message Reply___delete__ {
 // Parameter mappings stats:
 // Total parameters in this file 32
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 2, "<class 'ipdl.type.BuiltinCType'>": 4, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 1, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 18, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 7, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 9
+// Scalar mappings performed: 10
 // Message structs/unions generated from ipdl structs/unions: 0

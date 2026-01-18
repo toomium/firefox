@@ -214,7 +214,7 @@ class GMPLaunchResult final :
   std::string* _internal_mutable_a_pid();
   public:
 
-  // required bytes a_displayName = 4;
+  // required string a_displayName = 4;
   bool has_a_displayname() const;
   private:
   bool _internal_has_a_displayname() const;
@@ -268,7 +268,7 @@ class GMPLaunchResult final :
   std::string* _internal_mutable_a_result();
   public:
 
-  // required bytes a_errorDescription = 7;
+  // required string a_errorDescription = 7;
   bool has_a_errordescription() const;
   private:
   bool _internal_has_a_errordescription() const;
@@ -498,7 +498,7 @@ inline void GMPLaunchResult::set_allocated_a_pid(std::string* a_pid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.GMPLaunchResult.a_pid)
 }
 
-// required bytes a_displayName = 4;
+// required string a_displayName = 4;
 inline bool GMPLaunchResult::_internal_has_a_displayname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -518,7 +518,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GMPLaunchResult::set_a_displayname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_displayname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_displayname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPLaunchResult.a_displayName)
 }
 inline std::string* GMPLaunchResult::mutable_a_displayname() {
@@ -702,7 +702,7 @@ inline void GMPLaunchResult::set_allocated_a_result(std::string* a_result) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.GMPLaunchResult.a_result)
 }
 
-// required bytes a_errorDescription = 7;
+// required string a_errorDescription = 7;
 inline bool GMPLaunchResult::_internal_has_a_errordescription() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -722,7 +722,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GMPLaunchResult::set_a_errordescription(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.a_errordescription_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_errordescription_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPLaunchResult.a_errorDescription)
 }
 inline std::string* GMPLaunchResult::mutable_a_errordescription() {

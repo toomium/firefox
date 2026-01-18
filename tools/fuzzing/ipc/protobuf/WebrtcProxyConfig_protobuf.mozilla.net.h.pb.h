@@ -193,7 +193,7 @@ class WebrtcProxyConfig final :
   std::string* _internal_mutable_a_tabid();
   public:
 
-  // required bytes a_alpn = 2;
+  // required string a_alpn = 2;
   bool has_a_alpn() const;
   private:
   bool _internal_has_a_alpn() const;
@@ -342,7 +342,7 @@ inline void WebrtcProxyConfig::set_allocated_a_tabid(std::string* a_tabid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.WebrtcProxyConfig.a_tabId)
 }
 
-// required bytes a_alpn = 2;
+// required string a_alpn = 2;
 inline bool WebrtcProxyConfig::_internal_has_a_alpn() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -362,7 +362,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WebrtcProxyConfig::set_a_alpn(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_alpn_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_alpn_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.WebrtcProxyConfig.a_alpn)
 }
 inline std::string* WebrtcProxyConfig::mutable_a_alpn() {

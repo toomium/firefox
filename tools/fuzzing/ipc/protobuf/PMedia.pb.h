@@ -356,7 +356,7 @@ class Reply_GetPrincipalKey final :
   enum : int {
     kAAKeyFieldNumber = 1,
   };
-  // required bytes a_aKey = 1;
+  // required string a_aKey = 1;
   bool has_a_akey() const;
   private:
   bool _internal_has_a_akey() const;
@@ -927,7 +927,7 @@ inline void Msg_GetPrincipalKey::set_a_apersist(bool value) {
 
 // Reply_GetPrincipalKey
 
-// required bytes a_aKey = 1;
+// required string a_aKey = 1;
 inline bool Reply_GetPrincipalKey::_internal_has_a_akey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -947,7 +947,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_GetPrincipalKey::set_a_akey(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_akey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_akey_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.media.PMedia.Reply_GetPrincipalKey.a_aKey)
 }
 inline std::string* Reply_GetPrincipalKey::mutable_a_akey() {

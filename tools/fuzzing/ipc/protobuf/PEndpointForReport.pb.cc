@@ -149,7 +149,7 @@ const char* Msg___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_endpointURL = 1;
+      // required string a_endpointURL = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_endpointurl();
@@ -189,9 +189,9 @@ uint8_t* Msg___delete__::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_endpointURL = 1;
+  // required string a_endpointURL = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_endpointurl(), target);
   }
 
@@ -207,10 +207,10 @@ size_t Msg___delete__::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PEndpointForReport.Msg___delete__)
   size_t total_size = 0;
 
-  // required bytes a_endpointURL = 1;
+  // required string a_endpointURL = 1;
   if (_internal_has_a_endpointurl()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_endpointurl());
   }
   uint32_t cached_has_bits = 0;

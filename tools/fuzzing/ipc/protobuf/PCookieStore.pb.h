@@ -289,7 +289,7 @@ class Msg_GetRequest final :
   std::string* _internal_mutable_a_partitionedattrs();
   public:
 
-  // required bytes a_name = 9;
+  // required string a_name = 9;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -307,7 +307,7 @@ class Msg_GetRequest final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required bytes a_path = 10;
+  // required string a_path = 10;
   bool has_a_path() const;
   private:
   bool _internal_has_a_path() const;
@@ -741,7 +741,7 @@ class Msg_SetRequest final :
   std::string* _internal_mutable_a_attrs();
   public:
 
-  // required bytes a_name = 7;
+  // required string a_name = 7;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -759,7 +759,7 @@ class Msg_SetRequest final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required bytes a_value = 8;
+  // required string a_value = 8;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -777,7 +777,7 @@ class Msg_SetRequest final :
   std::string* _internal_mutable_a_value();
   public:
 
-  // required bytes a_domain = 11;
+  // required string a_domain = 11;
   bool has_a_domain() const;
   private:
   bool _internal_has_a_domain() const;
@@ -795,7 +795,7 @@ class Msg_SetRequest final :
   std::string* _internal_mutable_a_domain();
   public:
 
-  // required bytes a_path = 12;
+  // required string a_path = 12;
   bool has_a_path() const;
   private:
   bool _internal_has_a_path() const;
@@ -1269,7 +1269,7 @@ class Msg_DeleteRequest final :
   std::string* _internal_mutable_a_attrs();
   public:
 
-  // required bytes a_name = 7;
+  // required string a_name = 7;
   bool has_a_name() const;
   private:
   bool _internal_has_a_name() const;
@@ -1287,7 +1287,7 @@ class Msg_DeleteRequest final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required bytes a_domain = 8;
+  // required string a_domain = 8;
   bool has_a_domain() const;
   private:
   bool _internal_has_a_domain() const;
@@ -1305,7 +1305,7 @@ class Msg_DeleteRequest final :
   std::string* _internal_mutable_a_domain();
   public:
 
-  // required bytes a_path = 9;
+  // required string a_path = 9;
   bool has_a_path() const;
   private:
   bool _internal_has_a_path() const;
@@ -1691,7 +1691,7 @@ class Msg_GetSubscriptionsRequest final :
     kAScopeURLFieldNumber = 2,
     kAPrincipalInfoFieldNumber = 1,
   };
-  // required bytes a_scopeURL = 2;
+  // required string a_scopeURL = 2;
   bool has_a_scopeurl() const;
   private:
   bool _internal_has_a_scopeurl() const;
@@ -2027,7 +2027,7 @@ class Msg_SubscribeOrUnsubscribeRequest final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::CookieSubscription >&
       a_subscriptions() const;
 
-  // required bytes a_scopeURL = 2;
+  // required string a_scopeURL = 2;
   bool has_a_scopeurl() const;
   private:
   bool _internal_has_a_scopeurl() const;
@@ -2966,7 +2966,7 @@ inline void Msg_GetRequest::set_a_matchname(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_GetRequest.a_matchName)
 }
 
-// required bytes a_name = 9;
+// required string a_name = 9;
 inline bool Msg_GetRequest::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2986,7 +2986,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetRequest::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_GetRequest.a_name)
 }
 inline std::string* Msg_GetRequest::mutable_a_name() {
@@ -3034,7 +3034,7 @@ inline void Msg_GetRequest::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_GetRequest.a_name)
 }
 
-// required bytes a_path = 10;
+// required string a_path = 10;
 inline bool Msg_GetRequest::_internal_has_a_path() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -3054,7 +3054,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetRequest::set_a_path(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.a_path_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_path_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_GetRequest.a_path)
 }
 inline std::string* Msg_GetRequest::mutable_a_path() {
@@ -3423,7 +3423,7 @@ inline void Msg_SetRequest::set_a_ison3pcbexceptionlist(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.a_isOn3PCBExceptionList)
 }
 
-// required bytes a_name = 7;
+// required string a_name = 7;
 inline bool Msg_SetRequest::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -3443,7 +3443,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetRequest::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.a_name)
 }
 inline std::string* Msg_SetRequest::mutable_a_name() {
@@ -3491,7 +3491,7 @@ inline void Msg_SetRequest::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.a_name)
 }
 
-// required bytes a_value = 8;
+// required string a_value = 8;
 inline bool Msg_SetRequest::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -3511,7 +3511,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetRequest::set_a_value(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.a_value)
 }
 inline std::string* Msg_SetRequest::mutable_a_value() {
@@ -3615,7 +3615,7 @@ inline void Msg_SetRequest::set_a_expires(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.a_expires)
 }
 
-// required bytes a_domain = 11;
+// required string a_domain = 11;
 inline bool Msg_SetRequest::_internal_has_a_domain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -3635,7 +3635,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetRequest::set_a_domain(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.a_domain_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_domain_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.a_domain)
 }
 inline std::string* Msg_SetRequest::mutable_a_domain() {
@@ -3683,7 +3683,7 @@ inline void Msg_SetRequest::set_allocated_a_domain(std::string* a_domain) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.a_domain)
 }
 
-// required bytes a_path = 12;
+// required string a_path = 12;
 inline bool Msg_SetRequest::_internal_has_a_path() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -3703,7 +3703,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetRequest::set_a_path(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000020u;
- _impl_.a_path_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_path_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_SetRequest.a_path)
 }
 inline std::string* Msg_SetRequest::mutable_a_path() {
@@ -4159,7 +4159,7 @@ inline void Msg_DeleteRequest::set_a_ison3pcbexceptionlist(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_DeleteRequest.a_isOn3PCBExceptionList)
 }
 
-// required bytes a_name = 7;
+// required string a_name = 7;
 inline bool Msg_DeleteRequest::_internal_has_a_name() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4179,7 +4179,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeleteRequest::set_a_name(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_name_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_DeleteRequest.a_name)
 }
 inline std::string* Msg_DeleteRequest::mutable_a_name() {
@@ -4227,7 +4227,7 @@ inline void Msg_DeleteRequest::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_DeleteRequest.a_name)
 }
 
-// required bytes a_domain = 8;
+// required string a_domain = 8;
 inline bool Msg_DeleteRequest::_internal_has_a_domain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -4247,7 +4247,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeleteRequest::set_a_domain(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_domain_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_domain_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_DeleteRequest.a_domain)
 }
 inline std::string* Msg_DeleteRequest::mutable_a_domain() {
@@ -4295,7 +4295,7 @@ inline void Msg_DeleteRequest::set_allocated_a_domain(std::string* a_domain) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_DeleteRequest.a_domain)
 }
 
-// required bytes a_path = 9;
+// required string a_path = 9;
 inline bool Msg_DeleteRequest::_internal_has_a_path() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -4315,7 +4315,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeleteRequest::set_a_path(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000010u;
- _impl_.a_path_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_path_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_DeleteRequest.a_path)
 }
 inline std::string* Msg_DeleteRequest::mutable_a_path() {
@@ -4582,7 +4582,7 @@ inline void Msg_GetSubscriptionsRequest::set_allocated_a_principalinfo(::protobu
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_GetSubscriptionsRequest.a_principalInfo)
 }
 
-// required bytes a_scopeURL = 2;
+// required string a_scopeURL = 2;
 inline bool Msg_GetSubscriptionsRequest::_internal_has_a_scopeurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4602,7 +4602,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetSubscriptionsRequest::set_a_scopeurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_scopeurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_scopeurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_GetSubscriptionsRequest.a_scopeURL)
 }
 inline std::string* Msg_GetSubscriptionsRequest::mutable_a_scopeurl() {
@@ -4782,7 +4782,7 @@ inline void Msg_SubscribeOrUnsubscribeRequest::set_allocated_a_principalinfo(::p
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PCookieStore.Msg_SubscribeOrUnsubscribeRequest.a_principalInfo)
 }
 
-// required bytes a_scopeURL = 2;
+// required string a_scopeURL = 2;
 inline bool Msg_SubscribeOrUnsubscribeRequest::_internal_has_a_scopeurl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -4802,7 +4802,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SubscribeOrUnsubscribeRequest::set_a_scopeurl(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_scopeurl_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_scopeurl_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PCookieStore.Msg_SubscribeOrUnsubscribeRequest.a_scopeURL)
 }
 inline std::string* Msg_SubscribeOrUnsubscribeRequest::mutable_a_scopeurl() {

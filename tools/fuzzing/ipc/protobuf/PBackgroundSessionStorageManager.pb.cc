@@ -248,7 +248,7 @@ const char* Msg_PBackgroundSessionStorageCacheConstructor::_InternalParse(const 
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aOriginKey = 2;
+      // required string a_aOriginKey = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_aoriginkey();
@@ -295,9 +295,9 @@ uint8_t* Msg_PBackgroundSessionStorageCacheConstructor::_InternalSerialize(
         _Internal::a_aprincipalinfo(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes a_aOriginKey = 2;
+  // required string a_aOriginKey = 2;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_aoriginkey(), target);
   }
 
@@ -314,9 +314,9 @@ size_t Msg_PBackgroundSessionStorageCacheConstructor::RequiredFieldsByteSizeFall
   size_t total_size = 0;
 
   if (_internal_has_a_aoriginkey()) {
-    // required bytes a_aOriginKey = 2;
+    // required string a_aOriginKey = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aoriginkey());
   }
 
@@ -334,9 +334,9 @@ size_t Msg_PBackgroundSessionStorageCacheConstructor::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aOriginKey = 2;
+    // required string a_aOriginKey = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aoriginkey());
 
     // required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 1;
@@ -691,7 +691,7 @@ const char* Msg_ClearStorages::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aOriginScope = 2;
+      // required string a_aOriginScope = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_aoriginscope();
@@ -737,9 +737,9 @@ uint8_t* Msg_ClearStorages::_InternalSerialize(
         1, this->_internal_a_apattern(), target);
   }
 
-  // required bytes a_aOriginScope = 2;
+  // required string a_aOriginScope = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_aoriginscope(), target);
   }
 
@@ -763,9 +763,9 @@ size_t Msg_ClearStorages::RequiredFieldsByteSizeFallback() const {
   }
 
   if (_internal_has_a_aoriginscope()) {
-    // required bytes a_aOriginScope = 2;
+    // required string a_aOriginScope = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aoriginscope());
   }
 
@@ -781,9 +781,9 @@ size_t Msg_ClearStorages::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_apattern());
 
-    // required bytes a_aOriginScope = 2;
+    // required string a_aOriginScope = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aoriginscope());
 
   } else {
@@ -1419,7 +1419,7 @@ const char* Msg_ClearStoragesForOrigin::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aOriginAttrs = 1;
+      // required string a_aOriginAttrs = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_aoriginattrs();
@@ -1428,7 +1428,7 @@ const char* Msg_ClearStoragesForOrigin::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aOriginKey = 2;
+      // required string a_aOriginKey = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_aoriginkey();
@@ -1468,15 +1468,15 @@ uint8_t* Msg_ClearStoragesForOrigin::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aOriginAttrs = 1;
+  // required string a_aOriginAttrs = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_aoriginattrs(), target);
   }
 
-  // required bytes a_aOriginKey = 2;
+  // required string a_aOriginKey = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_aoriginkey(), target);
   }
 
@@ -1493,16 +1493,16 @@ size_t Msg_ClearStoragesForOrigin::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_aoriginattrs()) {
-    // required bytes a_aOriginAttrs = 1;
+    // required string a_aOriginAttrs = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aoriginattrs());
   }
 
   if (_internal_has_a_aoriginkey()) {
-    // required bytes a_aOriginKey = 2;
+    // required string a_aOriginKey = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aoriginkey());
   }
 
@@ -1513,14 +1513,14 @@ size_t Msg_ClearStoragesForOrigin::ByteSizeLong() const {
   size_t total_size = 0;
 
   if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_aOriginAttrs = 1;
+    // required string a_aOriginAttrs = 1;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aoriginattrs());
 
-    // required bytes a_aOriginKey = 2;
+    // required string a_aOriginKey = 2;
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aoriginkey());
 
   } else {

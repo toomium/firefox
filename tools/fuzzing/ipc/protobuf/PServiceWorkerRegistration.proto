@@ -28,7 +28,7 @@ message Reply_Unregister {
 }
 
 message Msg_Update {
-  required bytes a_aNewestWorkerScriptUrl = 1;
+  required string a_aNewestWorkerScriptUrl = 1;
 }
 
 message Reply_Update {
@@ -36,7 +36,7 @@ message Reply_Update {
 }
 
 message Msg_GetNotifications {
-  required bytes a_aTag = 1;
+  required string a_aTag = 1;
 }
 
 message Reply_GetNotifications {
@@ -52,7 +52,7 @@ message Reply_SetNavigationPreloadEnabled {
 }
 
 message Msg_SetNavigationPreloadHeader {
-  required bytes a_aHeader = 1;
+  required string a_aHeader = 1;
 }
 
 message Reply_SetNavigationPreloadHeader {
@@ -82,5 +82,5 @@ message Reply___delete__ {
 // Parameter mappings stats:
 // Total parameters in this file 12
 // Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 4, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 4, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 1, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 1, "<class 'ipdl.type.UnionType'>": 2, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 4
+// Scalar mappings performed: 7
 // Message structs/unions generated from ipdl structs/unions: 0

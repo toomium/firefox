@@ -269,7 +269,7 @@ const char* Msg_SessionStoreUpdate::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // optional bytes a_aDocShellCaps = 1;
+      // optional string a_aDocShellCaps = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_adocshellcaps();
@@ -345,9 +345,9 @@ uint8_t* Msg_SessionStoreUpdate::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // optional bytes a_aDocShellCaps = 1;
+  // optional string a_aDocShellCaps = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteBytesMaybeAliased(
+    target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_adocshellcaps(), target);
   }
 
@@ -429,11 +429,11 @@ size_t Msg_SessionStoreUpdate::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes a_aDocShellCaps = 1;
+  // optional string a_aDocShellCaps = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_adocshellcaps());
   }
 

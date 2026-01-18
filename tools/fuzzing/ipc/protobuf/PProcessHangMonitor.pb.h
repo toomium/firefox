@@ -1309,7 +1309,7 @@ class Msg_CancelContentJSExecutionIfRunning final :
   std::string* _internal_mutable_a_anavigationtype();
   public:
 
-  // optional bytes a_aNavigationURI = 4;
+  // optional string a_aNavigationURI = 4;
   bool has_a_anavigationuri() const;
   private:
   bool _internal_has_a_anavigationuri() const;
@@ -1952,7 +1952,7 @@ inline void Msg_CancelContentJSExecutionIfRunning::set_a_anavigationindex(int32_
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PProcessHangMonitor.Msg_CancelContentJSExecutionIfRunning.a_aNavigationIndex)
 }
 
-// optional bytes a_aNavigationURI = 4;
+// optional string a_aNavigationURI = 4;
 inline bool Msg_CancelContentJSExecutionIfRunning::_internal_has_a_anavigationuri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1972,7 +1972,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CancelContentJSExecutionIfRunning::set_a_anavigationuri(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_anavigationuri_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_anavigationuri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PProcessHangMonitor.Msg_CancelContentJSExecutionIfRunning.a_aNavigationURI)
 }
 inline std::string* Msg_CancelContentJSExecutionIfRunning::mutable_a_anavigationuri() {

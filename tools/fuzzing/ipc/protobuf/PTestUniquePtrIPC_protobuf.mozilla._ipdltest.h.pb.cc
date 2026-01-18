@@ -148,7 +148,7 @@ const char* DummyStruct::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_x = 1;
+      // required bytes a_x = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_x();
@@ -188,9 +188,9 @@ uint8_t* DummyStruct::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_x = 1;
+  // required bytes a_x = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
+    target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_x(), target);
   }
 
@@ -206,10 +206,10 @@ size_t DummyStruct::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.DummyStruct)
   size_t total_size = 0;
 
-  // required string a_x = 1;
+  // required bytes a_x = 1;
   if (_internal_has_a_x()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_x());
   }
   uint32_t cached_has_bits = 0;

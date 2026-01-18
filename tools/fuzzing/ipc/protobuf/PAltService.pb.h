@@ -189,7 +189,7 @@ class Msg_ClearHostMapping final :
     kAOriginAttributesFieldNumber = 3,
     kAPortFieldNumber = 2,
   };
-  // required bytes a_host = 1;
+  // required string a_host = 1;
   bool has_a_host() const;
   private:
   bool _internal_has_a_host() const;
@@ -399,7 +399,7 @@ class Msg_ProcessHeader final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::ProxyInfoCloneArgs >&
       a_proxyinfo() const;
 
-  // required bytes a_buf = 1;
+  // required string a_buf = 1;
   bool has_a_buf() const;
   private:
   bool _internal_has_a_buf() const;
@@ -417,7 +417,7 @@ class Msg_ProcessHeader final :
   std::string* _internal_mutable_a_buf();
   public:
 
-  // required bytes a_originScheme = 2;
+  // required string a_originScheme = 2;
   bool has_a_originscheme() const;
   private:
   bool _internal_has_a_originscheme() const;
@@ -435,7 +435,7 @@ class Msg_ProcessHeader final :
   std::string* _internal_mutable_a_originscheme();
   public:
 
-  // required bytes a_originHost = 3;
+  // required string a_originHost = 3;
   bool has_a_originhost() const;
   private:
   bool _internal_has_a_originhost() const;
@@ -453,7 +453,7 @@ class Msg_ProcessHeader final :
   std::string* _internal_mutable_a_originhost();
   public:
 
-  // required bytes a_username = 5;
+  // required string a_username = 5;
   bool has_a_username() const;
   private:
   bool _internal_has_a_username() const;
@@ -832,7 +832,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_ClearHostMapping
 
-// required bytes a_host = 1;
+// required string a_host = 1;
 inline bool Msg_ClearHostMapping::_internal_has_a_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -852,7 +852,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ClearHostMapping::set_a_host(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_host_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_host_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ClearHostMapping.a_host)
 }
 inline std::string* Msg_ClearHostMapping::mutable_a_host() {
@@ -1000,7 +1000,7 @@ inline void Msg_ClearHostMapping::set_allocated_a_originattributes(std::string* 
 
 // Msg_ProcessHeader
 
-// required bytes a_buf = 1;
+// required string a_buf = 1;
 inline bool Msg_ProcessHeader::_internal_has_a_buf() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1020,7 +1020,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ProcessHeader::set_a_buf(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_buf_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_buf)
 }
 inline std::string* Msg_ProcessHeader::mutable_a_buf() {
@@ -1068,7 +1068,7 @@ inline void Msg_ProcessHeader::set_allocated_a_buf(std::string* a_buf) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_buf)
 }
 
-// required bytes a_originScheme = 2;
+// required string a_originScheme = 2;
 inline bool Msg_ProcessHeader::_internal_has_a_originscheme() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1088,7 +1088,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ProcessHeader::set_a_originscheme(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_originscheme_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originscheme_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originScheme)
 }
 inline std::string* Msg_ProcessHeader::mutable_a_originscheme() {
@@ -1136,7 +1136,7 @@ inline void Msg_ProcessHeader::set_allocated_a_originscheme(std::string* a_origi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originScheme)
 }
 
-// required bytes a_originHost = 3;
+// required string a_originHost = 3;
 inline bool Msg_ProcessHeader::_internal_has_a_originhost() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1156,7 +1156,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ProcessHeader::set_a_originhost(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_originhost_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_originhost_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originHost)
 }
 inline std::string* Msg_ProcessHeader::mutable_a_originhost() {
@@ -1232,7 +1232,7 @@ inline void Msg_ProcessHeader::set_a_originport(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_originPort)
 }
 
-// required bytes a_username = 5;
+// required string a_username = 5;
 inline bool Msg_ProcessHeader::_internal_has_a_username() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -1252,7 +1252,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ProcessHeader::set_a_username(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000008u;
- _impl_.a_username_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_username_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PAltService.Msg_ProcessHeader.a_username)
 }
 inline std::string* Msg_ProcessHeader::mutable_a_username() {

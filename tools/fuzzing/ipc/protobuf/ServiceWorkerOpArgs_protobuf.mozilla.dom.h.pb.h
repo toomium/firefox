@@ -712,7 +712,7 @@ class ServiceWorkerLifeCycleEventOpArgs final :
   enum : int {
     kAEventNameFieldNumber = 1,
   };
-  // required bytes a_eventName = 1;
+  // required string a_eventName = 1;
   bool has_a_eventname() const;
   private:
   bool _internal_has_a_eventname() const;
@@ -1362,7 +1362,7 @@ class ServiceWorkerPushEventOpArgs final :
     kAMessageIdFieldNumber = 1,
     kADataFieldNumber = 2,
   };
-  // required bytes a_messageId = 1;
+  // required string a_messageId = 1;
   bool has_a_messageid() const;
   private:
   bool _internal_has_a_messageid() const;
@@ -1600,7 +1600,7 @@ class PushSubscriptionData final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_appserverkey();
 
-  // required bytes a_endpoint = 1;
+  // required string a_endpoint = 1;
   bool has_a_endpoint() const;
   private:
   bool _internal_has_a_endpoint() const;
@@ -1898,7 +1898,7 @@ class ServiceWorkerNotificationClickEventOpArgs final :
     kAActionFieldNumber = 2,
     kANotificationFieldNumber = 1,
   };
-  // required bytes a_action = 2;
+  // required string a_action = 2;
   bool has_a_action() const;
   private:
   bool _internal_has_a_action() const;
@@ -2400,7 +2400,7 @@ class ServiceWorkerExtensionAPIEventOpArgs final :
     kAApiNamespaceFieldNumber = 1,
     kAApiEventNameFieldNumber = 2,
   };
-  // required bytes a_apiNamespace = 1;
+  // required string a_apiNamespace = 1;
   bool has_a_apinamespace() const;
   private:
   bool _internal_has_a_apinamespace() const;
@@ -2418,7 +2418,7 @@ class ServiceWorkerExtensionAPIEventOpArgs final :
   std::string* _internal_mutable_a_apinamespace();
   public:
 
-  // required bytes a_apiEventName = 2;
+  // required string a_apiEventName = 2;
   bool has_a_apieventname() const;
   private:
   bool _internal_has_a_apieventname() const;
@@ -2745,7 +2745,7 @@ class ServiceWorkerFetchEventOpArgsCommon final :
     kAIsNonSubresourceRequestFieldNumber = 5,
     kAPreloadNavigationFieldNumber = 6,
   };
-  // required bytes a_workerScriptSpec = 1;
+  // required string a_workerScriptSpec = 1;
   bool has_a_workerscriptspec() const;
   private:
   bool _internal_has_a_workerscriptspec() const;
@@ -2763,7 +2763,7 @@ class ServiceWorkerFetchEventOpArgsCommon final :
   std::string* _internal_mutable_a_workerscriptspec();
   public:
 
-  // required bytes a_clientId = 3;
+  // required string a_clientId = 3;
   bool has_a_clientid() const;
   private:
   bool _internal_has_a_clientid() const;
@@ -2781,7 +2781,7 @@ class ServiceWorkerFetchEventOpArgsCommon final :
   std::string* _internal_mutable_a_clientid();
   public:
 
-  // required bytes a_resultingClientId = 4;
+  // required string a_resultingClientId = 4;
   bool has_a_resultingclientid() const;
   private:
   bool _internal_has_a_resultingclientid() const;
@@ -3962,7 +3962,7 @@ class FetchEventRespondWithClosure final :
     kARespondWithLineNumberFieldNumber = 2,
     kARespondWithColumnNumberFieldNumber = 3,
   };
-  // required bytes a_respondWithScriptSpec = 1;
+  // required string a_respondWithScriptSpec = 1;
   bool has_a_respondwithscriptspec() const;
   private:
   bool _internal_has_a_respondwithscriptspec() const;
@@ -6104,7 +6104,7 @@ inline void ServiceWorkerTerminateWorkerOpArgs::set_a_shutdownstateid(uint32_t v
 
 // ServiceWorkerLifeCycleEventOpArgs
 
-// required bytes a_eventName = 1;
+// required string a_eventName = 1;
 inline bool ServiceWorkerLifeCycleEventOpArgs::_internal_has_a_eventname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6124,7 +6124,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ServiceWorkerLifeCycleEventOpArgs::set_a_eventname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_eventname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_eventname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerLifeCycleEventOpArgs.a_eventName)
 }
 inline std::string* ServiceWorkerLifeCycleEventOpArgs::mutable_a_eventname() {
@@ -6510,7 +6510,7 @@ inline OptionalPushData::ContentCase OptionalPushData::content_case() const {
 
 // ServiceWorkerPushEventOpArgs
 
-// required bytes a_messageId = 1;
+// required string a_messageId = 1;
 inline bool ServiceWorkerPushEventOpArgs::_internal_has_a_messageid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6530,7 +6530,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ServiceWorkerPushEventOpArgs::set_a_messageid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_messageid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_messageid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerPushEventOpArgs.a_messageId)
 }
 inline std::string* ServiceWorkerPushEventOpArgs::mutable_a_messageid() {
@@ -6672,7 +6672,7 @@ inline void ServiceWorkerPushEventOpArgs::set_allocated_a_data(::protobuf::mozil
 
 // PushSubscriptionData
 
-// required bytes a_endpoint = 1;
+// required string a_endpoint = 1;
 inline bool PushSubscriptionData::_internal_has_a_endpoint() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6692,7 +6692,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PushSubscriptionData::set_a_endpoint(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_endpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_endpoint_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PushSubscriptionData.a_endpoint)
 }
 inline std::string* PushSubscriptionData::mutable_a_endpoint() {
@@ -7066,7 +7066,7 @@ inline void ServiceWorkerNotificationClickEventOpArgs::set_allocated_a_notificat
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerNotificationClickEventOpArgs.a_notification)
 }
 
-// required bytes a_action = 2;
+// required string a_action = 2;
 inline bool ServiceWorkerNotificationClickEventOpArgs::_internal_has_a_action() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7086,7 +7086,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ServiceWorkerNotificationClickEventOpArgs::set_a_action(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_action_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerNotificationClickEventOpArgs.a_action)
 }
 inline std::string* ServiceWorkerNotificationClickEventOpArgs::mutable_a_action() {
@@ -7390,7 +7390,7 @@ inline ServiceWorkerNotificationEventOpArgs::ContentCase ServiceWorkerNotificati
 
 // ServiceWorkerExtensionAPIEventOpArgs
 
-// required bytes a_apiNamespace = 1;
+// required string a_apiNamespace = 1;
 inline bool ServiceWorkerExtensionAPIEventOpArgs::_internal_has_a_apinamespace() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7410,7 +7410,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ServiceWorkerExtensionAPIEventOpArgs::set_a_apinamespace(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_apinamespace_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_apinamespace_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerExtensionAPIEventOpArgs.a_apiNamespace)
 }
 inline std::string* ServiceWorkerExtensionAPIEventOpArgs::mutable_a_apinamespace() {
@@ -7458,7 +7458,7 @@ inline void ServiceWorkerExtensionAPIEventOpArgs::set_allocated_a_apinamespace(s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerExtensionAPIEventOpArgs.a_apiNamespace)
 }
 
-// required bytes a_apiEventName = 2;
+// required string a_apiEventName = 2;
 inline bool ServiceWorkerExtensionAPIEventOpArgs::_internal_has_a_apieventname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7478,7 +7478,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ServiceWorkerExtensionAPIEventOpArgs::set_a_apieventname(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_apieventname_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_apieventname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerExtensionAPIEventOpArgs.a_apiEventName)
 }
 inline std::string* ServiceWorkerExtensionAPIEventOpArgs::mutable_a_apieventname() {
@@ -7708,7 +7708,7 @@ inline void ServiceWorkerMessageEventOpArgs::set_allocated_a_cloneddata(::protob
 
 // ServiceWorkerFetchEventOpArgsCommon
 
-// required bytes a_workerScriptSpec = 1;
+// required string a_workerScriptSpec = 1;
 inline bool ServiceWorkerFetchEventOpArgsCommon::_internal_has_a_workerscriptspec() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -7728,7 +7728,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ServiceWorkerFetchEventOpArgsCommon::set_a_workerscriptspec(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_workerscriptspec_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_workerscriptspec_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerFetchEventOpArgsCommon.a_workerScriptSpec)
 }
 inline std::string* ServiceWorkerFetchEventOpArgsCommon::mutable_a_workerscriptspec() {
@@ -7863,7 +7863,7 @@ inline void ServiceWorkerFetchEventOpArgsCommon::set_allocated_a_internalrequest
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerFetchEventOpArgsCommon.a_internalRequest)
 }
 
-// required bytes a_clientId = 3;
+// required string a_clientId = 3;
 inline bool ServiceWorkerFetchEventOpArgsCommon::_internal_has_a_clientid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7883,7 +7883,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ServiceWorkerFetchEventOpArgsCommon::set_a_clientid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.a_clientid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_clientid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerFetchEventOpArgsCommon.a_clientId)
 }
 inline std::string* ServiceWorkerFetchEventOpArgsCommon::mutable_a_clientid() {
@@ -7931,7 +7931,7 @@ inline void ServiceWorkerFetchEventOpArgsCommon::set_allocated_a_clientid(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ServiceWorkerFetchEventOpArgsCommon.a_clientId)
 }
 
-// required bytes a_resultingClientId = 4;
+// required string a_resultingClientId = 4;
 inline bool ServiceWorkerFetchEventOpArgsCommon::_internal_has_a_resultingclientid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -7951,7 +7951,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ServiceWorkerFetchEventOpArgsCommon::set_a_resultingclientid(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000004u;
- _impl_.a_resultingclientid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_resultingclientid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ServiceWorkerFetchEventOpArgsCommon.a_resultingClientId)
 }
 inline std::string* ServiceWorkerFetchEventOpArgsCommon::mutable_a_resultingclientid() {
@@ -9770,7 +9770,7 @@ inline ServiceWorkerOpArgs::ContentCase ServiceWorkerOpArgs::content_case() cons
 
 // FetchEventRespondWithClosure
 
-// required bytes a_respondWithScriptSpec = 1;
+// required string a_respondWithScriptSpec = 1;
 inline bool FetchEventRespondWithClosure::_internal_has_a_respondwithscriptspec() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9790,7 +9790,7 @@ template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FetchEventRespondWithClosure::set_a_respondwithscriptspec(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
- _impl_.a_respondwithscriptspec_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+ _impl_.a_respondwithscriptspec_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FetchEventRespondWithClosure.a_respondWithScriptSpec)
 }
 inline std::string* FetchEventRespondWithClosure::mutable_a_respondwithscriptspec() {
