@@ -80,22 +80,22 @@ mozilla::UniquePtr<IPC::Message> LibprotobufMapping::CreateMessageFromPayload(co
     return msg;
 }
 
-nsCString nsCString_ToIPC(std::string& str) {
+nsCString LibprotobufMapping::nsCString_ToIPC(const std::string& str) {
     nsCString res;
     res.Assign(str.data(), str.length());
     return res;
 }
 
-std::string nsCString_ToProtobuf(nsCString& str) {
+std::string LibprotobufMapping::nsCString_ToProtobuf(const nsCString& str) {
     return std::string(str.get(), str.Length());
 }
 
-nsString nsString_ToIPC(std::string& str) {
+nsString LibprotobufMapping::nsString_ToIPC(const std::string& str) {
     NS_ConvertUTF8toUTF16 converter(str.data(), str.length());
     return nsString(converter);
 }
 
-std::string nsString_ToProtobuf(nsString& str) {
+std::string LibprotobufMapping::nsString_ToProtobuf(const nsString& str) {
     NS_ConvertUTF16toUTF8 converter(str);
     return std::string(converter.get(), converter.Length());
 }

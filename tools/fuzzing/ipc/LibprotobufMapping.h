@@ -36,9 +36,9 @@ class LibprotobufMapping {
   static std::string ReadPayloadFromMessage(mozilla::UniquePtr<IPC::Message>& msg);
   static mozilla::UniquePtr<IPC::Message> CreateMessageFromPayload(const std::string& payload);
   static nsCString nsCString_ToIPC(const std::string& str);
-  static std::string nsCString_ToProtobuf(nsCString& str);
+  static std::string nsCString_ToProtobuf(const nsCString& str);
   static nsString nsString_ToIPC(const std::string& str);
-  static std::string nsString_ToProtobuf(nsString& str);
+  static std::string nsString_ToProtobuf(const nsString& str);
   // template<typename T>
   // static IPC::ReadResult<std::string> ReadSerializedParam(IPC::MessageReader* reader);
   // template<typename T>
@@ -154,7 +154,7 @@ class LibprotobufMapping {
   // }
 
   template<typename T>
-static std::string SerializeToStringMove(T* param) {
+static std::string SerializeToStringMove(const T* param) {
     if (!param) return "";
 
     // create dummy
@@ -167,7 +167,7 @@ static std::string SerializeToStringMove(T* param) {
 }
 
   template<typename T>
-static std::string SerializeToString(T* param) {
+static std::string SerializeToString(const T* param) {
     if (!param) return "";
 
     // create dummy

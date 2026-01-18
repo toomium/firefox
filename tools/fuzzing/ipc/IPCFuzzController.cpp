@@ -1555,15 +1555,15 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
                            IPC::StringFromIPCMessageType(aMsg->type()),
                            aMsg->header()->payload_size);
     #ifdef FUZZING_SNAPSHOT_LPM
-    //dumpIPCMessageToFile(aMsg, mIPCDumpCount, true /* aUseNyx */);
+    dumpIPCMessageToFile(aMsg, mIPCDumpCount, true /* aUseNyx */);
     UniquePtr<TypedProtobuf> proto = ConvertIPCMessageToProtobuf(aMsg);
     dumpProtobufMessageToFile(proto, mIPCDumpCount, true);
-    //mIPCDumpCount++;
-    //UniquePtr<IPC::Message> msg = ConvertProtobufToIPCMessage(proto);
-    //auto new_size = msg->header()->payload_size;
-    //memcpy(msg->header(), aMsg->header(), sizeof(IPC::Message::Header));
-    //msg->header()->payload_size = new_size;
-    //dumpIPCMessageToFile(msg, mIPCDumpCount, true);
+    mIPCDumpCount++;
+    UniquePtr<IPC::Message> msg = ConvertProtobufToIPCMessage(proto);
+    auto new_size = msg->header()->payload_size;
+    memcpy(msg->header(), aMsg->header(), sizeof(IPC::Message::Header));
+    msg->header()->payload_size = new_size;
+    dumpIPCMessageToFile(msg, mIPCDumpCount, true);
     MOZ_FUZZING_NYX_PRINT("INFO: [DumpToFile] Message dumped\n");
     #else
     dumpIPCMessageToFile(aMsg, mIPCDumpCount, true /* aUseNyx */);
