@@ -630,6 +630,8 @@ class _ConvertToCxxType(TypeVisitor):
 def _cxxBareType(ipdltype, side, fq=False):
     return ipdltype.accept(_ConvertToCxxType(side, fq))
 
+def _cxxBareTypeWithoutSide(ipdltype, fq=False):
+    return ipdltype.accept(_ConvertToCxxType(None, fq))
 
 def _cxxRefType(ipdltype, side):
     t = _cxxBareType(ipdltype, side)
@@ -2122,7 +2124,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                 CppDirective("include", '"' + _protobufHeaderName(inc.tu) + '.pb.h"')
             )
 
-    def makeMessage(self, md, msgvar, errfn=None, fromActor=None):
+    def makeMessage(self, md, msgvar, errfn=None, fromActor=None, forReply=False):
         writervar = ExprVar("writer__")
         isctor = md.decl.type.isCtor()
         routingId = self.protocol.routingId(fromActor)
@@ -2142,21 +2144,25 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         ]
 
         start = 0
-        if isctor:
-            # serialize the actor as the raw actor ID so that it can be used to
-            # construct the "real" actor on the other side.
-            stmts += [
-                _ParamTraits.checkedWrite(
-                    None,
-                    _actorId(ExprVar("actor")),
-                    ExprAddrOf(writervar),
-                    sentinelKey="actorid",
-                )
-            ]
-            start = 1
+        # if isctor:
+        #     # serialize the actor as the raw actor ID so that it can be used to
+        #     # construct the "real" actor on the other side.
+        #     stmts += [
+        #         _ParamTraits.checkedWrite(
+        #             None,
+        #             _actorId(ExprVar("actor")),
+        #             ExprAddrOf(writervar),
+        #             sentinelKey="actorid",
+        #         )
+        #     ]
+        #     start = 1
 
+        if forReply:
+            params = md.returns
+        else:
+            params = md.params
 
-        for p in md.params[start:]:
+        for p in params[start:]:
             if (_protobufTypeIsMappedToBytes(p.ipdltype)):
                 stmts += [
                     _ParamTraits.checkedWriteBytes(
@@ -2178,7 +2184,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
 
         return stmts
 
-    def deserializeMessage(self, md, side, errfn, errfnSent):
+    def deserializeMessage(self, md, side, errfn, errfnSent, forReply = False):
         msgvar = ExprVar("*ipc_msg")
         msgexpr = ExprAddrOf(msgvar)
         readervar = ExprVar("reader__")
@@ -2189,28 +2195,34 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             # Whitespace.NL,
         ]
 
-        if 0 == len(md.params):
+
+        if forReply:
+            params = md.returns
+        else:
+            params = md.params
+
+        if 0 == len(params):
             return stmts
 
         start, reads = 0, []
-        if isctor:
-            # return the raw actor handle so that its ID can be used
-            # to construct the "real" actor
-            actoridvar = ExprVar("actorid__")
-            actoridtype = _actorIdType()
-            reads = [
-                _ParamTraits.checkedRead(
-                    None,
-                    actoridtype,
-                    actoridvar,
-                    ExprAddrOf(readervar),
-                    errfn,
-                    "'%s'" % actoridtype.name,
-                    sentinelKey="actorid",
-                    errfnSentinel=errfnSent,
-                )
-            ]
-            start = 1
+        # if isctor:
+        #     # return the raw actor handle so that its ID can be used
+        #     # to construct the "real" actor
+        #     actoridvar = ExprVar("actorid__")
+        #     actoridtype = _actorIdType()
+        #     reads = [
+        #         _ParamTraits.checkedRead(
+        #             None,
+        #             actoridtype,
+        #             actoridvar,
+        #             ExprAddrOf(readervar),
+        #             errfn,
+        #             "'%s'" % actoridtype.name,
+        #             sentinelKey="actorid",
+        #             errfnSentinel=errfnSent,
+        #         )
+        #     ]
+        #     start = 1
 
         def maybeTainted(p, side):
             # for fuzzing we "middle-man" the message, so when deserializing we dont want a tainted type
@@ -2221,14 +2233,14 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         def errfnReader(msg):
             return [_ParamTraits.fatalError(readervar, msg, "."), StmtReturn(ExprVar("{}"))]
 
-        for p in md.params[start:]:
+        for p in params[start:]:
             if _protobufTypeIsScalar(p.ipdltype) or _protobufTypeIsStructOrUnion(p.ipdltype) or _protobufTypeIsArray(p.ipdltype) or _protobufTypeIsMaybe(p.ipdltype):
                 # read "normally" as intended
                 reads.extend(
                 [
                     _ParamTraits.checkedRead(
                     p.ipdltype,
-                    maybeTainted(p, "Child"),
+                    maybeTainted(p, side),
                     p.var(),
                     ExprAddrOf(readervar),
                     errfnReader,
@@ -2242,7 +2254,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                 [
                     _ParamTraits.checkedRead(
                     p.ipdltype,
-                    maybeTainted(p, "Child"),
+                    maybeTainted(p, side),
                     p.var(),
                     ExprAddrOf(readervar),
                     errfnReader,
@@ -2251,22 +2263,6 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                     errfnSentinel=errfnSent,
                     readMethod="mozilla::fuzzing::LibprotobufMapping::ReadSerializedParam"
                 )])
-
-        # reads.extend(
-        #     [
-        #         _ParamTraits.checkedRead(
-        #             p.ipdltype,
-        #             maybeTainted(p, "Child"),
-        #             p.var(),
-        #             ExprAddrOf(readervar),
-        #             errfn,
-        #             "'%s'" % p.ipdltype.name(),
-        #             sentinelKey=p.name,
-        #             errfnSentinel=errfnSent,
-        #         )
-        #         for p in md.params[start:]
-        #     ]
-        # )
 
         stmts.extend(
             (
@@ -2457,7 +2453,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             funcs.append(mkOverload(False))
         return funcs
 
-    def _generateProtobufValue(self, ipdltype, readField):
+    def _generateProtobufValue(self, ipdltype, readField, forIPC = True, side = None):
         block = Block()
 
         if _protobufTypeIsStructOrUnion(ipdltype):
@@ -2475,16 +2471,21 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                 method = "SerializeToStringMove"
             else:
                 method = "SerializeToString"
+            readFieldAcc = f"&{readField}"
+            if side != None:
+                ty = _cxxBareType(ipdltype, side)
+            else:
+                ty = _cxxBareTypeWithoutSide(ipdltype)
             return StmtCode(
                 """
-                mozilla::fuzzing::LibprotobufMapping::${method}<${ty}>(&${readField})
+                mozilla::fuzzing::LibprotobufMapping::${method}<${ty}>(${readField})
                 """,
-                ty=_cxxBareType(ipdltype, "Child"),
-                readField=readField,
+                ty=ty,
+                readField=readFieldAcc,
                 method=method,
             )
 
-    def _generateProtobufAssignDecl(self, ipdltype, protoVar, protoField, readField, sep = "->", forIPC = True):
+    def _generateProtobufAssignDecl(self, ipdltype, protoVar, protoField, readField, sep = "->", forIPC = True, side = None):
         block = Block()
         if _protobufTypeIsStructOrUnion(ipdltype):
             block.addcode(
@@ -2494,7 +2495,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                         protoVar=protoVar,
                         protoField=protoField,
                         sep=sep,
-                        readField=self._generateProtobufValue(ipdltype, readField)
+                        readField=self._generateProtobufValue(ipdltype, readField, side=side)
                     )
         elif _protobufTypeIsArray(ipdltype):
             inner = Block()
@@ -2502,7 +2503,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                 inner.addcode(
                     """
                     *${protoVar}${sep}add_${protoField}() = ${readField};""",
-                    readField=self._generateProtobufValue(ipdltype.basetype, "item"),
+                    readField=self._generateProtobufValue(ipdltype.basetype, "item", side=side),
                     protoVar=protoVar,
                     sep=sep,
                     protoField=protoField,
@@ -2511,7 +2512,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                 inner.addcode(
                     """
                     ${protoVar}${sep}add_${protoField}(${readField});""",
-                    readField=self._generateProtobufValue(ipdltype.basetype, "item"),
+                    readField=self._generateProtobufValue(ipdltype.basetype, "item", side=side),
                     protoVar=protoVar,
                     sep=sep,
                     protoField=protoField,
@@ -2528,7 +2529,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         elif _protobufTypeIsMaybe(ipdltype):
             # check wether basetype needs reserialization
             inner = Block()
-            convertedField = self._generateProtobufValue(ipdltype.basetype, "(*" + readField + ")")
+            convertedField = self._generateProtobufValue(ipdltype.basetype, "(*" + readField + ")", side=side)
             if _protobufTypeIsStructOrUnion(ipdltype.basetype):
                 inner.addcode(
                     """
@@ -2566,7 +2567,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                         protoVar=protoVar,
                         protoField=protoField,
                         sep=sep,
-                        readField=self._generateProtobufValue(ipdltype, readField),
+                        readField=self._generateProtobufValue(ipdltype, readField, side=side),
                     )
         else:
             # read as serialized so just set it, if intended for IPC reading
@@ -2589,7 +2590,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                             protoVar=protoVar,
                             protoField=protoField,
                             sep=sep,
-                            readField=self._generateProtobufValue(ipdltype, readField),
+                            readField=self._generateProtobufValue(ipdltype, readField, side=side),
                         )
         return block
 
@@ -2617,16 +2618,32 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             ty=_getNamespacedObject(msgName, ns),
         )
 
-        if not (forReply or md.decl.type.isCtor() or md.decl.type.isDtor()):
+        #pprint(vars(md.direction))
+        if msgName == "Msg_CreateWindowInDifferentProcess":
+            pprint(vars(md))
+
+        # here we try to find out, on which side this message will be received
+        # in order to correctly deserialize actor types.
+        # For INOUT messages, we cannot tell.
+        if forReply:
+            side = "Parent" if isinstance(md.direction, ipdl.ast.IN) else "Child"
+        else:
+            side = "Child" if isinstance(md.direction, ipdl.ast.IN) else "Parent"
+
+        if not (md.decl.type.isCtor() or md.decl.type.isDtor()):
             # standard deserialization routine
             stmts = self.deserializeMessage(
-                md, "Child", errfn=_NyxPrintError, errfnSent=errfnSentinel(ExprVar("{}"))
+                md, side, errfn=_NyxPrintError, errfnSent=errfnSentinel(ExprVar("{}")), forReply=forReply
             )
             func.addstmts(stmts + [Whitespace.NL])
 
             # copy arguments into protobuf object
-            for param in md.params:
-                func.addstmt(self._generateProtobufAssignDecl(param.ipdltype, protoVar, param.protobufVar(), param.name))
+            if forReply:
+                for param in md.returns:
+                    func.addstmt(self._generateProtobufAssignDecl(param.ipdltype, protoVar, param.protobufVar(), param.name, side=side))
+            else:
+                for param in md.params:
+                    func.addstmt(self._generateProtobufAssignDecl(param.ipdltype, protoVar, param.protobufVar(), param.name, side=side))
         else:
             pass
 
@@ -2640,7 +2657,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
 
         return func
 
-    def _generateIPCValue(self, ipdltype, readField):
+    def _generateIPCValue(self, ipdltype, readField, side = None):
         block = Block()
 
         if _protobufTypeIsStructOrUnion(ipdltype):
@@ -2659,16 +2676,20 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                 method = "SerializeToStringMove"
             else:
                 method = "SerializeToString"
+            if side != None:
+                ty = _cxxBareType(ipdltype, side)
+            else:
+                ty = _cxxBareTypeWithoutSide(ipdltype)
             return StmtCode(
                 """
                 mozilla::fuzzing::LibprotobufMapping::DeserializeFromString<${ty}>(${readField})
                 """,
-                ty=_cxxBareType(ipdltype, "Child"),
+                ty=ty,
                 readField=readField,
                 method=method,
             )
 
-    def _generateIPCAssignDecl(self, ipdltype, varName, protoVar, protoField, sep="->", forIPC = True):
+    def _generateIPCAssignDecl(self, ipdltype, varName, protoVar, protoField, sep="->", forIPC = True, side=None):
         block = Block()
         if _protobufTypeIsArray(ipdltype):
             # for "ArrayTypes" we convert the protobuf array to the mozilla array "nsTArray"
@@ -2681,7 +2702,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                     protoVar=protoVar,
                     sep=sep,
                     protoField=protoField,
-                    protoValue=self._generateIPCValue(ipdltype.basetype, f"{protoVar}{sep}{protoField}(i)")
+                    protoValue=self._generateIPCValue(ipdltype.basetype, f"{protoVar}{sep}{protoField}(i)", side)
                 )
             elif _protobufTypeIsStructOrUnion(ipdltype.basetype):
                 inner.addcode("""
@@ -2692,7 +2713,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                     protoVar=protoVar,
                     sep=sep,
                     protoField=protoField,
-                    protoValue=self._generateIPCValue(ipdltype.basetype, "item"),
+                    protoValue=self._generateIPCValue(ipdltype.basetype, "item", side),
                 )
             else:
                 # needs deserialization
@@ -2711,9 +2732,12 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                     protoVar=protoVar,
                     sep=sep,
                     protoField=protoField,
-                    protoValue=self._generateIPCValue(ipdltype.basetype, "item"),
+                    protoValue=self._generateIPCValue(ipdltype.basetype, "item", side),
                 )
-
+            if side != None:
+                ty = _cxxBareType(ipdltype.basetype, side)
+            else:
+                ty = _cxxBareTypeWithoutSide(ipdltype.basetype)
             block.addcode("""
                 nsTArray<${ty}> ${varName};
                 ${varName}.SetCapacity(${protoVar}${sep}${protoField}_size());
@@ -2723,7 +2747,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                 """,
                 varName=varName,
                 protoVar=protoVar,
-                ty=_cxxBareType(ipdltype.basetype, "Child"),
+                ty=ty,
                 sep=sep,
                 inner=inner,
                 protoField=protoField
@@ -2737,7 +2761,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                     ${varName} = mozilla::Some(${protoValue});
                     """,
                     varName=varName,
-                    protoValue=self._generateIPCValue(ipdltype.basetype, f"{protoVar}{sep}{protoField}()")
+                    protoValue=self._generateIPCValue(ipdltype.basetype, f"{protoVar}{sep}{protoField}()", side)
                 )
             else:
                 # if yes, then DeserializeFromString already returns a maybe object
@@ -2745,10 +2769,14 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                     ${varName} = ${protoValue};
                     """,
                     varName=varName,
-                    protoValue=self._generateIPCValue(ipdltype.basetype, f"{protoVar}{sep}{protoField}()")
+                    protoValue=self._generateIPCValue(ipdltype.basetype, f"{protoVar}{sep}{protoField}()", side)
                 )
             # for "MaybeTypes" we first check, whether we got something from the fuzzer.
             # If so, assign is to local variable
+            if side != None:
+                ty = _cxxBareType(ipdltype.basetype, side)
+            else:
+                ty = _cxxBareTypeWithoutSide(ipdltype.basetype)
             block.addcode("""
                 Maybe<${ty}> ${varName};
                 if (${protoVar}${sep}has_${protoField}()) {
@@ -2756,7 +2784,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                 }
                 """,
                 varName=varName,
-                ty=_cxxBareType(ipdltype.basetype, "Child"),
+                ty=ty,
                 sep=sep,
                 protoVar=protoVar,
                 protoField=protoField,
@@ -2769,7 +2797,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                 auto ${varName} = ${protoValue};
                 """,
                 varName=varName,
-                protoValue=self._generateIPCValue(ipdltype, f"{protoVar}{sep}{protoField}()")
+                protoValue=self._generateIPCValue(ipdltype, f"{protoVar}{sep}{protoField}()", side)
             )
         else:
             # otherwise we have a complex type mapped to "bytes".
@@ -2790,11 +2818,11 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                         MOZ_FUZZING_NYX_PRINT("Error deserializing ${protoField}");
                         mozilla::fuzzing::Nyx::instance().release(0);
                     }
-                    auto ${varName} = *maybe_${varName};
+                    auto& ${varName} = *maybe_${varName};
                     """,
                     varName=varName,
                     protoField=protoField,
-                    protoValue=self._generateIPCValue(ipdltype, f"{protoVar}{sep}{protoField}()")
+                    protoValue=self._generateIPCValue(ipdltype, f"{protoVar}{sep}{protoField}()", side)
                 )
 
         return block
@@ -2827,15 +2855,27 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             msgName=_getNamespacedObject(msgName, ns, False),
         )
 
+        # here we try to find out, on which side this message will be received
+        # in order to correctly deserialize actor types.
+        # For INOUT messages, we cannot tell.
+        if forReply:
+            side = "Parent" if isinstance(md.direction, ipdl.ast.IN) else "Child"
+        else:
+            side = "Child" if isinstance(md.direction, ipdl.ast.IN) else "Parent"
+
+
         # skip replies and con-/destructor (contain actors)
-        if not (forReply or md.decl.type.isCtor() or md.decl.type.isDtor()):
+        if not (md.decl.type.isCtor() or md.decl.type.isDtor()):
             # convert protobuf fields to local variables that can be serialized
-            for p in md.params:
-                func.addstmt(self._generateIPCAssignDecl(p.ipdltype, p.var(), protoVar, p.protobufVar()))
+            if forReply:
+                for p in md.returns:
+                    func.addstmt(self._generateIPCAssignDecl(p.ipdltype, p.var(), protoVar, p.protobufVar(), side=side))
+            else:
+                for p in md.params:
+                    func.addstmt(self._generateIPCAssignDecl(p.ipdltype, p.var(), protoVar, p.protobufVar(), side=side))
 
             # standard serialization routine
-            func.addstmts(self.makeMessage(md, ExprVar(ipcVar)))
-            pass
+            func.addstmts(self.makeMessage(md, ExprVar(ipcVar), forReply=forReply))
         else:
             pass
 
@@ -2946,7 +2986,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         func_toProto = FunctionDefn(
             FunctionDecl(
                 sd.name + "_ToProtobuf",
-                params=[Decl(Type(f"{_getNamespacedObject(sd.name, sd.namespaces, False)}", ref=True, const=True), ipcVar)],
+                params=[Decl(Type(f"{_getNamespacedObject(sd.name, sd.namespaces, False)}", ref=True), ipcVar)],
                 ret=Type(f"{_getNamespacedObject(sd.name, sd.namespaces)}"),
             )
         )
@@ -3009,10 +3049,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
 
         for f in sd.fields_ipdl_order():
             block = Block()
-            #pprint(vars(f))
-            getProtoField_var = f"{protoVar}.{f.protobufVar()}()"
-            getIpcField_var = f"{ipcVar}.{f.getMethod().name}()"
-            temp_var = f"{f.memberVar()}"
+            #getIpcField_var = f"{ipcVar}.{f.getMethod().name}()"
             block.addstmt(self._generateIPCAssignDecl(f.ipdltype, f.var(), protoVar, f.protobufVar(), ".", False))
             stmts_toIpc.append(block)
         func_toIPC.addstmts(stmts_toIpc)
@@ -3044,8 +3081,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         # step 3: return
         func_toIPC.addcode(
             """
-            //return ${var};
-            //return {};
+            return ${var};
             """,
             var=ipcVar,
         )

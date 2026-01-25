@@ -154,7 +154,7 @@ class LibprotobufMapping {
   // }
 
   template<typename T>
-static std::string SerializeToStringMove(const T* param) {
+static std::string SerializeToStringMove(T* param) {
     if (!param) return "";
 
     // create dummy
@@ -167,7 +167,7 @@ static std::string SerializeToStringMove(const T* param) {
 }
 
   template<typename T>
-static std::string SerializeToString(const T* param) {
+static std::string SerializeToString(T* param) {
     if (!param) return "";
 
     // create dummy
