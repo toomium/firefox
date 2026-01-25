@@ -45,7 +45,8 @@ message Reply_SetServiceWorkerSkipWaitingFlag {
 }
 
 message Msg_PFetchEventOpProxyConstructor {
-  required protobuf.mozilla.dom.ParentToChildServiceWorkerFetchEventOpArgs a_aArgs = 1;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.dom.ParentToChildServiceWorkerFetchEventOpArgs a_aArgs = 2;
 }
 
 message Reply_PFetchEventOpProxyConstructor {
@@ -70,7 +71,7 @@ message Reply_ExecServiceWorkerOp {
 }
 
 // Parameter mappings stats:
-// Total parameters in this file 9
-// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 4, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 0, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 1, "<class 'ipdl.type.UnionType'>": 4, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 4
+// Total parameters in this file 10
+// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 5, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 0, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 1, "<class 'ipdl.type.UnionType'>": 4, "<class 'ipdl.type.UniquePtrType'>": 0}
+// Scalar mappings performed: 5
 // Message structs/unions generated from ipdl structs/unions: 0

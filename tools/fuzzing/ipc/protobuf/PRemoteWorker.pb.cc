@@ -119,7 +119,8 @@ PROTOBUF_CONSTEXPR Msg_PFetchEventOpProxyConstructor::Msg_PFetchEventOpProxyCons
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_aargs_)*/nullptr} {}
+  , /*decltype(_impl_.a_aargs_)*/nullptr
+  , /*decltype(_impl_.a_actorid_)*/int64_t{0}} {}
 struct Msg_PFetchEventOpProxyConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PFetchEventOpProxyConstructorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -1514,12 +1515,15 @@ std::string Reply_SetServiceWorkerSkipWaitingFlag::GetTypeName() const {
 class Msg_PFetchEventOpProxyConstructor::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_PFetchEventOpProxyConstructor>()._impl_._has_bits_);
+  static void set_has_a_actorid(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
   static const ::protobuf::mozilla::dom::ParentToChildServiceWorkerFetchEventOpArgs& a_aargs(const Msg_PFetchEventOpProxyConstructor* msg);
   static void set_has_a_aargs(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -1543,12 +1547,14 @@ Msg_PFetchEventOpProxyConstructor::Msg_PFetchEventOpProxyConstructor(const Msg_P
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_aargs_){nullptr}};
+    , decltype(_impl_.a_aargs_){nullptr}
+    , decltype(_impl_.a_actorid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_aargs()) {
     _this->_impl_.a_aargs_ = new ::protobuf::mozilla::dom::ParentToChildServiceWorkerFetchEventOpArgs(*from._impl_.a_aargs_);
   }
+  _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PRemoteWorker.Msg_PFetchEventOpProxyConstructor)
 }
 
@@ -1560,6 +1566,7 @@ inline void Msg_PFetchEventOpProxyConstructor::SharedCtor(
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_aargs_){nullptr}
+    , decltype(_impl_.a_actorid_){int64_t{0}}
   };
 }
 
@@ -1592,6 +1599,7 @@ void Msg_PFetchEventOpProxyConstructor::Clear() {
     GOOGLE_DCHECK(_impl_.a_aargs_ != nullptr);
     _impl_.a_aargs_->Clear();
   }
+  _impl_.a_actorid_ = int64_t{0};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -1603,9 +1611,18 @@ const char* Msg_PFetchEventOpProxyConstructor::_InternalParse(const char* ptr, :
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.dom.ParentToChildServiceWorkerFetchEventOpArgs a_aArgs = 1;
+      // required sint64 a_actorid = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_actorid(&has_bits);
+          _impl_.a_actorid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required .protobuf.mozilla.dom.ParentToChildServiceWorkerFetchEventOpArgs a_aArgs = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_aargs(), ptr);
           CHK_(ptr);
         } else
@@ -1642,10 +1659,16 @@ uint8_t* Msg_PFetchEventOpProxyConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.dom.ParentToChildServiceWorkerFetchEventOpArgs a_aArgs = 1;
+  // required sint64 a_actorid = 1;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
+  }
+
+  // required .protobuf.mozilla.dom.ParentToChildServiceWorkerFetchEventOpArgs a_aArgs = 2;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::a_aargs(this),
+      InternalWriteMessage(2, _Internal::a_aargs(this),
         _Internal::a_aargs(this).GetCachedSize(), target, stream);
   }
 
@@ -1657,15 +1680,39 @@ uint8_t* Msg_PFetchEventOpProxyConstructor::_InternalSerialize(
   return target;
 }
 
+size_t Msg_PFetchEventOpProxyConstructor::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.PRemoteWorker.Msg_PFetchEventOpProxyConstructor)
+  size_t total_size = 0;
+
+  if (_internal_has_a_aargs()) {
+    // required .protobuf.mozilla.dom.ParentToChildServiceWorkerFetchEventOpArgs a_aArgs = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_aargs_);
+  }
+
+  if (_internal_has_a_actorid()) {
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+  }
+
+  return total_size;
+}
 size_t Msg_PFetchEventOpProxyConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PRemoteWorker.Msg_PFetchEventOpProxyConstructor)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.dom.ParentToChildServiceWorkerFetchEventOpArgs a_aArgs = 1;
-  if (_internal_has_a_aargs()) {
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required .protobuf.mozilla.dom.ParentToChildServiceWorkerFetchEventOpArgs a_aArgs = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_aargs_);
+
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1692,9 +1739,16 @@ void Msg_PFetchEventOpProxyConstructor::MergeFrom(const Msg_PFetchEventOpProxyCo
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_aargs()) {
-    _this->_internal_mutable_a_aargs()->::protobuf::mozilla::dom::ParentToChildServiceWorkerFetchEventOpArgs::MergeFrom(
-        from._internal_a_aargs());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_a_aargs()->::protobuf::mozilla::dom::ParentToChildServiceWorkerFetchEventOpArgs::MergeFrom(
+          from._internal_a_aargs());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -1718,7 +1772,12 @@ void Msg_PFetchEventOpProxyConstructor::InternalSwap(Msg_PFetchEventOpProxyConst
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.a_aargs_, other->_impl_.a_aargs_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Msg_PFetchEventOpProxyConstructor, _impl_.a_actorid_)
+      + sizeof(Msg_PFetchEventOpProxyConstructor::_impl_.a_actorid_)
+      - PROTOBUF_FIELD_OFFSET(Msg_PFetchEventOpProxyConstructor, _impl_.a_aargs_)>(
+          reinterpret_cast<char*>(&_impl_.a_aargs_),
+          reinterpret_cast<char*>(&other->_impl_.a_aargs_));
 }
 
 std::string Msg_PFetchEventOpProxyConstructor::GetTypeName() const {

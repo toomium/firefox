@@ -49,7 +49,7 @@ message Reply___delete__ {
 }
 
 // Parameter mappings stats:
-// Total parameters in this file 108
-// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 24, "<class 'ipdl.type.BuiltinCType'>": 14, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 33, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 8, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 23, "<class 'ipdl.type.UnionType'>": 6, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 44
+// Total parameters in this file 84
+// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 24, "<class 'ipdl.type.BuiltinCType'>": 14, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 17, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 8, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 19, "<class 'ipdl.type.UnionType'>": 2, "<class 'ipdl.type.UniquePtrType'>": 0}
+// Scalar mappings performed: 50
 // Message structs/unions generated from ipdl structs/unions: 26

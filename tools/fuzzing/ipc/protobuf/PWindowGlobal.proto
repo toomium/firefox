@@ -231,12 +231,14 @@ message Msg_RecordUserActivationForBTP {
 }
 
 message Msg_PWebAuthnTransactionConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PWebAuthnTransactionConstructor {
 }
 
 message Msg_PWebIdentityConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PWebIdentityConstructor {
@@ -248,7 +250,7 @@ message Msg_NotifyPermissionChange {
 }
 
 // Parameter mappings stats:
-// Total parameters in this file 70
-// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 1, "<class 'ipdl.type.BuiltinCType'>": 16, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 38, "<class 'ipdl.type.ManagedEndpointType'>": 1, "<class 'ipdl.type.MaybeType'>": 4, "<class 'ipdl.type.NotNullType'>": 4, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 6, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 34
+// Total parameters in this file 71
+// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 1, "<class 'ipdl.type.BuiltinCType'>": 18, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 38, "<class 'ipdl.type.ManagedEndpointType'>": 1, "<class 'ipdl.type.MaybeType'>": 4, "<class 'ipdl.type.NotNullType'>": 4, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 5, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
+// Scalar mappings performed: 37
 // Message structs/unions generated from ipdl structs/unions: 2

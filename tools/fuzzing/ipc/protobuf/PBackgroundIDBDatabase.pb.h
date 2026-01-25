@@ -602,9 +602,10 @@ class Msg_PBackgroundIDBDatabaseFileConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kABlobFieldNumber = 1,
+    kABlobFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  // required .protobuf.mozilla.dom.IPCBlob a_blob = 2;
   bool has_a_blob() const;
   private:
   bool _internal_has_a_blob() const;
@@ -622,9 +623,25 @@ class Msg_PBackgroundIDBDatabaseFileConstructor final :
       ::protobuf::mozilla::dom::IPCBlob* a_blob);
   ::protobuf::mozilla::dom::IPCBlob* unsafe_arena_release_a_blob();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBDatabaseFileConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -633,6 +650,7 @@ class Msg_PBackgroundIDBDatabaseFileConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::IPCBlob* a_blob_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBDatabase_2eproto;
@@ -873,11 +891,12 @@ class Msg_PBackgroundIDBTransactionConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAObjectStoreNamesFieldNumber = 1,
-    kAModeFieldNumber = 2,
-    kADurabilityFieldNumber = 3,
+    kAObjectStoreNamesFieldNumber = 2,
+    kAModeFieldNumber = 3,
+    kADurabilityFieldNumber = 4,
+    kAActoridFieldNumber = 1,
   };
-  // repeated string a_objectStoreNames = 1;
+  // repeated string a_objectStoreNames = 2;
   int a_objectstorenames_size() const;
   private:
   int _internal_a_objectstorenames_size() const;
@@ -901,7 +920,7 @@ class Msg_PBackgroundIDBTransactionConstructor final :
   std::string* _internal_add_a_objectstorenames();
   public:
 
-  // required bytes a_mode = 2;
+  // required bytes a_mode = 3;
   bool has_a_mode() const;
   private:
   bool _internal_has_a_mode() const;
@@ -919,7 +938,7 @@ class Msg_PBackgroundIDBTransactionConstructor final :
   std::string* _internal_mutable_a_mode();
   public:
 
-  // required bytes a_durability = 3;
+  // required bytes a_durability = 4;
   bool has_a_durability() const;
   private:
   bool _internal_has_a_durability() const;
@@ -935,6 +954,19 @@ class Msg_PBackgroundIDBTransactionConstructor final :
   const std::string& _internal_a_durability() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_durability(const std::string& value);
   std::string* _internal_mutable_a_durability();
+  public:
+
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBTransactionConstructor)
@@ -953,6 +985,7 @@ class Msg_PBackgroundIDBTransactionConstructor final :
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_objectstorenames_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mode_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_durability_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBDatabase_2eproto;
@@ -1846,12 +1879,26 @@ class Msg_PBackgroundIDBVersionChangeTransactionConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kACurrentVersionFieldNumber = 1,
-    kARequestedVersionFieldNumber = 2,
-    kANextObjectStoreIdFieldNumber = 3,
-    kANextIndexIdFieldNumber = 4,
+    kAActoridFieldNumber = 1,
+    kACurrentVersionFieldNumber = 2,
+    kARequestedVersionFieldNumber = 3,
+    kANextObjectStoreIdFieldNumber = 4,
+    kANextIndexIdFieldNumber = 5,
   };
-  // required uint64 a_currentVersion = 1;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required uint64 a_currentVersion = 2;
   bool has_a_currentversion() const;
   private:
   bool _internal_has_a_currentversion() const;
@@ -1864,7 +1911,7 @@ class Msg_PBackgroundIDBVersionChangeTransactionConstructor final :
   void _internal_set_a_currentversion(uint64_t value);
   public:
 
-  // required uint64 a_requestedVersion = 2;
+  // required uint64 a_requestedVersion = 3;
   bool has_a_requestedversion() const;
   private:
   bool _internal_has_a_requestedversion() const;
@@ -1877,7 +1924,7 @@ class Msg_PBackgroundIDBVersionChangeTransactionConstructor final :
   void _internal_set_a_requestedversion(uint64_t value);
   public:
 
-  // required sint64 a_nextObjectStoreId = 3;
+  // required sint64 a_nextObjectStoreId = 4;
   bool has_a_nextobjectstoreid() const;
   private:
   bool _internal_has_a_nextobjectstoreid() const;
@@ -1890,7 +1937,7 @@ class Msg_PBackgroundIDBVersionChangeTransactionConstructor final :
   void _internal_set_a_nextobjectstoreid(int64_t value);
   public:
 
-  // required sint64 a_nextIndexId = 4;
+  // required sint64 a_nextIndexId = 5;
   bool has_a_nextindexid() const;
   private:
   bool _internal_has_a_nextindexid() const;
@@ -1916,6 +1963,7 @@ class Msg_PBackgroundIDBVersionChangeTransactionConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
     uint64_t a_currentversion_;
     uint64_t a_requestedversion_;
     int64_t a_nextobjectstoreid_;
@@ -2071,7 +2119,35 @@ class Reply_PBackgroundIDBVersionChangeTransactionConstructor final :
 
 // Msg_PBackgroundIDBDatabaseFileConstructor
 
-// required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PBackgroundIDBDatabaseFileConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundIDBDatabaseFileConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PBackgroundIDBDatabaseFileConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PBackgroundIDBDatabaseFileConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PBackgroundIDBDatabaseFileConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBDatabaseFileConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PBackgroundIDBDatabaseFileConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PBackgroundIDBDatabaseFileConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBDatabaseFileConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.dom.IPCBlob a_blob = 2;
 inline bool Msg_PBackgroundIDBDatabaseFileConstructor::_internal_has_a_blob() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_blob_ != nullptr);
@@ -2166,7 +2242,35 @@ inline void Msg_PBackgroundIDBDatabaseFileConstructor::set_allocated_a_blob(::pr
 
 // Msg_PBackgroundIDBTransactionConstructor
 
-// repeated string a_objectStoreNames = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PBackgroundIDBTransactionConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundIDBTransactionConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PBackgroundIDBTransactionConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t Msg_PBackgroundIDBTransactionConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PBackgroundIDBTransactionConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBTransactionConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PBackgroundIDBTransactionConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PBackgroundIDBTransactionConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBTransactionConstructor.a_actorid)
+}
+
+// repeated string a_objectStoreNames = 2;
 inline int Msg_PBackgroundIDBTransactionConstructor::_internal_a_objectstorenames_size() const {
   return _impl_.a_objectstorenames_.size();
 }
@@ -2241,7 +2345,7 @@ Msg_PBackgroundIDBTransactionConstructor::mutable_a_objectstorenames() {
   return &_impl_.a_objectstorenames_;
 }
 
-// required bytes a_mode = 2;
+// required bytes a_mode = 3;
 inline bool Msg_PBackgroundIDBTransactionConstructor::_internal_has_a_mode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2309,7 +2413,7 @@ inline void Msg_PBackgroundIDBTransactionConstructor::set_allocated_a_mode(std::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBTransactionConstructor.a_mode)
 }
 
-// required bytes a_durability = 3;
+// required bytes a_durability = 4;
 inline bool Msg_PBackgroundIDBTransactionConstructor::_internal_has_a_durability() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2461,9 +2565,37 @@ inline void Msg_VersionChange::set_a_newversion(uint64_t value) {
 
 // Msg_PBackgroundIDBVersionChangeTransactionConstructor
 
-// required uint64 a_currentVersion = 1;
-inline bool Msg_PBackgroundIDBVersionChangeTransactionConstructor::_internal_has_a_currentversion() const {
+// required sint64 a_actorid = 1;
+inline bool Msg_PBackgroundIDBVersionChangeTransactionConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundIDBVersionChangeTransactionConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PBackgroundIDBVersionChangeTransactionConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PBackgroundIDBVersionChangeTransactionConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBVersionChangeTransactionConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBVersionChangeTransactionConstructor.a_actorid)
+}
+
+// required uint64 a_currentVersion = 2;
+inline bool Msg_PBackgroundIDBVersionChangeTransactionConstructor::_internal_has_a_currentversion() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
 inline bool Msg_PBackgroundIDBVersionChangeTransactionConstructor::has_a_currentversion() const {
@@ -2471,7 +2603,7 @@ inline bool Msg_PBackgroundIDBVersionChangeTransactionConstructor::has_a_current
 }
 inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::clear_a_currentversion() {
   _impl_.a_currentversion_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_PBackgroundIDBVersionChangeTransactionConstructor::_internal_a_currentversion() const {
   return _impl_.a_currentversion_;
@@ -2481,7 +2613,7 @@ inline uint64_t Msg_PBackgroundIDBVersionChangeTransactionConstructor::a_current
   return _internal_a_currentversion();
 }
 inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::_internal_set_a_currentversion(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_currentversion_ = value;
 }
 inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::set_a_currentversion(uint64_t value) {
@@ -2489,9 +2621,9 @@ inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::set_a_current
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBVersionChangeTransactionConstructor.a_currentVersion)
 }
 
-// required uint64 a_requestedVersion = 2;
+// required uint64 a_requestedVersion = 3;
 inline bool Msg_PBackgroundIDBVersionChangeTransactionConstructor::_internal_has_a_requestedversion() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
 inline bool Msg_PBackgroundIDBVersionChangeTransactionConstructor::has_a_requestedversion() const {
@@ -2499,7 +2631,7 @@ inline bool Msg_PBackgroundIDBVersionChangeTransactionConstructor::has_a_request
 }
 inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::clear_a_requestedversion() {
   _impl_.a_requestedversion_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint64_t Msg_PBackgroundIDBVersionChangeTransactionConstructor::_internal_a_requestedversion() const {
   return _impl_.a_requestedversion_;
@@ -2509,7 +2641,7 @@ inline uint64_t Msg_PBackgroundIDBVersionChangeTransactionConstructor::a_request
   return _internal_a_requestedversion();
 }
 inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::_internal_set_a_requestedversion(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_requestedversion_ = value;
 }
 inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::set_a_requestedversion(uint64_t value) {
@@ -2517,9 +2649,9 @@ inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::set_a_request
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBVersionChangeTransactionConstructor.a_requestedVersion)
 }
 
-// required sint64 a_nextObjectStoreId = 3;
+// required sint64 a_nextObjectStoreId = 4;
 inline bool Msg_PBackgroundIDBVersionChangeTransactionConstructor::_internal_has_a_nextobjectstoreid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
 inline bool Msg_PBackgroundIDBVersionChangeTransactionConstructor::has_a_nextobjectstoreid() const {
@@ -2527,7 +2659,7 @@ inline bool Msg_PBackgroundIDBVersionChangeTransactionConstructor::has_a_nextobj
 }
 inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::clear_a_nextobjectstoreid() {
   _impl_.a_nextobjectstoreid_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline int64_t Msg_PBackgroundIDBVersionChangeTransactionConstructor::_internal_a_nextobjectstoreid() const {
   return _impl_.a_nextobjectstoreid_;
@@ -2537,7 +2669,7 @@ inline int64_t Msg_PBackgroundIDBVersionChangeTransactionConstructor::a_nextobje
   return _internal_a_nextobjectstoreid();
 }
 inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::_internal_set_a_nextobjectstoreid(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_nextobjectstoreid_ = value;
 }
 inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::set_a_nextobjectstoreid(int64_t value) {
@@ -2545,9 +2677,9 @@ inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::set_a_nextobj
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBDatabase.Msg_PBackgroundIDBVersionChangeTransactionConstructor.a_nextObjectStoreId)
 }
 
-// required sint64 a_nextIndexId = 4;
+// required sint64 a_nextIndexId = 5;
 inline bool Msg_PBackgroundIDBVersionChangeTransactionConstructor::_internal_has_a_nextindexid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
 inline bool Msg_PBackgroundIDBVersionChangeTransactionConstructor::has_a_nextindexid() const {
@@ -2555,7 +2687,7 @@ inline bool Msg_PBackgroundIDBVersionChangeTransactionConstructor::has_a_nextind
 }
 inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::clear_a_nextindexid() {
   _impl_.a_nextindexid_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline int64_t Msg_PBackgroundIDBVersionChangeTransactionConstructor::_internal_a_nextindexid() const {
   return _impl_.a_nextindexid_;
@@ -2565,7 +2697,7 @@ inline int64_t Msg_PBackgroundIDBVersionChangeTransactionConstructor::a_nextinde
   return _internal_a_nextindexid();
 }
 inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::_internal_set_a_nextindexid(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_nextindexid_ = value;
 }
 inline void Msg_PBackgroundIDBVersionChangeTransactionConstructor::set_a_nextindexid(int64_t value) {

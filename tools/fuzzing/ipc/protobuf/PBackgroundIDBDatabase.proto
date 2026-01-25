@@ -28,16 +28,18 @@ message Msg_Close {
 }
 
 message Msg_PBackgroundIDBDatabaseFileConstructor {
-  required protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.dom.IPCBlob a_blob = 2;
 }
 
 message Reply_PBackgroundIDBDatabaseFileConstructor {
 }
 
 message Msg_PBackgroundIDBTransactionConstructor {
-  repeated string a_objectStoreNames = 1;
-  required bytes a_mode = 2;
-  required bytes a_durability = 3;
+  required sint64 a_actorid = 1;
+  repeated string a_objectStoreNames = 2;
+  required bytes a_mode = 3;
+  required bytes a_durability = 4;
 }
 
 message Reply_PBackgroundIDBTransactionConstructor {
@@ -61,17 +63,18 @@ message Msg_CloseAfterInvalidationComplete {
 }
 
 message Msg_PBackgroundIDBVersionChangeTransactionConstructor {
-  required uint64 a_currentVersion = 1;
-  required uint64 a_requestedVersion = 2;
-  required sint64 a_nextObjectStoreId = 3;
-  required sint64 a_nextIndexId = 4;
+  required sint64 a_actorid = 1;
+  required uint64 a_currentVersion = 2;
+  required uint64 a_requestedVersion = 3;
+  required sint64 a_nextObjectStoreId = 4;
+  required sint64 a_nextIndexId = 5;
 }
 
 message Reply_PBackgroundIDBVersionChangeTransactionConstructor {
 }
 
 // Parameter mappings stats:
-// Total parameters in this file 11
-// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 1, "<class 'ipdl.type.BuiltinCType'>": 0, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 8, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 1, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 1, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 6
+// Total parameters in this file 13
+// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 1, "<class 'ipdl.type.BuiltinCType'>": 3, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 7, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 1, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 1, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
+// Scalar mappings performed: 10
 // Message structs/unions generated from ipdl structs/unions: 0

@@ -178,10 +178,11 @@ class Msg_PRemoteWorkerConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAChildEpFieldNumber = 2,
-    kADataFieldNumber = 1,
+    kAChildEpFieldNumber = 3,
+    kADataFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required bytes a_childEp = 2;
+  // required bytes a_childEp = 3;
   bool has_a_childep() const;
   private:
   bool _internal_has_a_childep() const;
@@ -199,7 +200,7 @@ class Msg_PRemoteWorkerConstructor final :
   std::string* _internal_mutable_a_childep();
   public:
 
-  // required .protobuf.mozilla.dom.RemoteWorkerData a_data = 1;
+  // required .protobuf.mozilla.dom.RemoteWorkerData a_data = 2;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -217,6 +218,19 @@ class Msg_PRemoteWorkerConstructor final :
       ::protobuf::mozilla::dom::RemoteWorkerData* a_data);
   ::protobuf::mozilla::dom::RemoteWorkerData* unsafe_arena_release_a_data();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor)
  private:
   class _Internal;
@@ -232,6 +246,7 @@ class Msg_PRemoteWorkerConstructor final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_childep_;
     ::protobuf::mozilla::dom::RemoteWorkerData* a_data_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteWorkerService_2eproto;
@@ -371,7 +386,35 @@ class Reply_PRemoteWorkerConstructor final :
 #endif  // __GNUC__
 // Msg_PRemoteWorkerConstructor
 
-// required .protobuf.mozilla.dom.RemoteWorkerData a_data = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PRemoteWorkerConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PRemoteWorkerConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PRemoteWorkerConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t Msg_PRemoteWorkerConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PRemoteWorkerConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PRemoteWorkerConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PRemoteWorkerConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.dom.RemoteWorkerData a_data = 2;
 inline bool Msg_PRemoteWorkerConstructor::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_data_ != nullptr);
@@ -458,7 +501,7 @@ inline void Msg_PRemoteWorkerConstructor::set_allocated_a_data(::protobuf::mozil
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor.a_data)
 }
 
-// required bytes a_childEp = 2;
+// required bytes a_childEp = 3;
 inline bool Msg_PRemoteWorkerConstructor::_internal_has_a_childep() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

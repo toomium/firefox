@@ -7814,6 +7814,22 @@ class Msg_PWebAuthnTransactionConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWindowGlobal.Msg_PWebAuthnTransactionConstructor)
  private:
   class _Internal;
@@ -7822,7 +7838,9 @@ class Msg_PWebAuthnTransactionConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWindowGlobal_2eproto;
@@ -8062,6 +8080,22 @@ class Msg_PWebIdentityConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWindowGlobal.Msg_PWebIdentityConstructor)
  private:
   class _Internal;
@@ -8070,7 +8104,9 @@ class Msg_PWebIdentityConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWindowGlobal_2eproto;
@@ -11757,6 +11793,34 @@ Msg_SetCookies::a_cookies() const {
 
 // Msg_PWebAuthnTransactionConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PWebAuthnTransactionConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PWebAuthnTransactionConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PWebAuthnTransactionConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PWebAuthnTransactionConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PWebAuthnTransactionConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWindowGlobal.Msg_PWebAuthnTransactionConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PWebAuthnTransactionConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PWebAuthnTransactionConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWindowGlobal.Msg_PWebAuthnTransactionConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PWebAuthnTransactionConstructor
@@ -11764,6 +11828,34 @@ Msg_SetCookies::a_cookies() const {
 // -------------------------------------------------------------------
 
 // Msg_PWebIdentityConstructor
+
+// required sint64 a_actorid = 1;
+inline bool Msg_PWebIdentityConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PWebIdentityConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PWebIdentityConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PWebIdentityConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PWebIdentityConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWindowGlobal.Msg_PWebIdentityConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PWebIdentityConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PWebIdentityConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWindowGlobal.Msg_PWebIdentityConstructor.a_actorid)
+}
 
 // -------------------------------------------------------------------
 

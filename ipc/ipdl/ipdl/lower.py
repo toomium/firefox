@@ -2144,18 +2144,18 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         ]
 
         start = 0
-        # if isctor:
-        #     # serialize the actor as the raw actor ID so that it can be used to
-        #     # construct the "real" actor on the other side.
-        #     stmts += [
-        #         _ParamTraits.checkedWrite(
-        #             None,
-        #             _actorId(ExprVar("actor")),
-        #             ExprAddrOf(writervar),
-        #             sentinelKey="actorid",
-        #         )
-        #     ]
-        #     start = 1
+        if isctor and not forReply:
+            # serialize the actor as the raw actor ID so that it can be used to
+            # construct the "real" actor on the other side.
+            stmts += [
+                _ParamTraits.checkedWrite(
+                    None,
+                    ExprVar("actorid__"),
+                    ExprAddrOf(writervar),
+                    sentinelKey="actorid",
+                )
+            ]
+            start = 1
 
         if forReply:
             params = md.returns
@@ -2204,25 +2204,28 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         if 0 == len(params):
             return stmts
 
+        def errfnReader(msg):
+            return [_ParamTraits.fatalError(readervar, msg, "."), StmtReturn(ExprVar("{}"))]
+
         start, reads = 0, []
-        # if isctor:
-        #     # return the raw actor handle so that its ID can be used
-        #     # to construct the "real" actor
-        #     actoridvar = ExprVar("actorid__")
-        #     actoridtype = _actorIdType()
-        #     reads = [
-        #         _ParamTraits.checkedRead(
-        #             None,
-        #             actoridtype,
-        #             actoridvar,
-        #             ExprAddrOf(readervar),
-        #             errfn,
-        #             "'%s'" % actoridtype.name,
-        #             sentinelKey="actorid",
-        #             errfnSentinel=errfnSent,
-        #         )
-        #     ]
-        #     start = 1
+        if isctor and not forReply:
+            # return the raw actor handle so that its ID can be used
+            # to construct the "real" actor
+            actoridvar = ExprVar("actorid__")
+            actoridtype = _actorIdType()
+            reads.extend([
+                _ParamTraits.checkedRead(
+                    None,
+                    actoridtype,
+                    actoridvar,
+                    ExprAddrOf(readervar),
+                    errfnReader,
+                    "'%s'" % actoridtype.name,
+                    sentinelKey="actorid",
+                    errfnSentinel=errfnSent,
+                )
+            ])
+            start = 1
 
         def maybeTainted(p, side):
             # for fuzzing we "middle-man" the message, so when deserializing we dont want a tainted type
@@ -2230,8 +2233,6 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             #     return Type("Tainted", T=p.bareType(side))
             return p.bareType(side)
 
-        def errfnReader(msg):
-            return [_ParamTraits.fatalError(readervar, msg, "."), StmtReturn(ExprVar("{}"))]
 
         for p in params[start:]:
             if _protobufTypeIsScalar(p.ipdltype) or _protobufTypeIsStructOrUnion(p.ipdltype) or _protobufTypeIsArray(p.ipdltype) or _protobufTypeIsMaybe(p.ipdltype):
@@ -2619,9 +2620,6 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         )
 
         #pprint(vars(md.direction))
-        if msgName == "Msg_CreateWindowInDifferentProcess":
-            pprint(vars(md))
-
         # here we try to find out, on which side this message will be received
         # in order to correctly deserialize actor types.
         # For INOUT messages, we cannot tell.
@@ -2630,7 +2628,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         else:
             side = "Child" if isinstance(md.direction, ipdl.ast.IN) else "Parent"
 
-        if not (md.decl.type.isCtor() or md.decl.type.isDtor()):
+        if not (md.decl.type.isDtor()):
             # standard deserialization routine
             stmts = self.deserializeMessage(
                 md, side, errfn=_NyxPrintError, errfnSent=errfnSentinel(ExprVar("{}")), forReply=forReply
@@ -2642,7 +2640,15 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                 for param in md.returns:
                     func.addstmt(self._generateProtobufAssignDecl(param.ipdltype, protoVar, param.protobufVar(), param.name, side=side))
             else:
-                for param in md.params:
+                # todo: assign actor
+                start = 0
+                if (md.decl.type.isCtor()):
+                    func.addcode("""
+                        ${protoVar}->set_a_actorid(actorid__);
+                        """,
+                        protoVar=protoVar)
+                    start = 1
+                for param in md.params[start:]:
                     func.addstmt(self._generateProtobufAssignDecl(param.ipdltype, protoVar, param.protobufVar(), param.name, side=side))
         else:
             pass
@@ -2865,13 +2871,20 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
 
 
         # skip replies and con-/destructor (contain actors)
-        if not (md.decl.type.isCtor() or md.decl.type.isDtor()):
+        if not (md.decl.type.isDtor()):
             # convert protobuf fields to local variables that can be serialized
+            start = 0
+            if (md.decl.type.isCtor()) and not forReply:
+                func.addcode("""
+                    auto actorid__ = ${protoVar}->a_actorid();
+                    """,
+                    protoVar=protoVar)
+                start = 1
             if forReply:
-                for p in md.returns:
+                for p in md.returns[start:]:
                     func.addstmt(self._generateIPCAssignDecl(p.ipdltype, p.var(), protoVar, p.protobufVar(), side=side))
             else:
-                for p in md.params:
+                for p in md.params[start:]:
                     func.addstmt(self._generateIPCAssignDecl(p.ipdltype, p.var(), protoVar, p.protobufVar(), side=side))
 
             # standard serialization routine

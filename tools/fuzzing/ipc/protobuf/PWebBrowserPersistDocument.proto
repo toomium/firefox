@@ -33,16 +33,18 @@ message Msg_SetPersistFlags {
 }
 
 message Msg_PWebBrowserPersistResourcesConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PWebBrowserPersistResourcesConstructor {
 }
 
 message Msg_PWebBrowserPersistSerializeConstructor {
-  required protobuf.mozilla.WebBrowserPersistURIMap a_aMap = 1;
-  required string a_aRequestedContentType = 2;
-  required uint32 a_aEncoderFlags = 3;
-  required uint32 a_aWrapColumn = 4;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.WebBrowserPersistURIMap a_aMap = 2;
+  required string a_aRequestedContentType = 3;
+  required uint32 a_aEncoderFlags = 4;
+  required uint32 a_aWrapColumn = 5;
 }
 
 message Reply_PWebBrowserPersistSerializeConstructor {
@@ -55,7 +57,7 @@ message Reply___delete__ {
 }
 
 // Parameter mappings stats:
-// Total parameters in this file 25
-// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 1, "<class 'ipdl.type.BuiltinCType'>": 1, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 17, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 1, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 4, "<class 'ipdl.type.UnionType'>": 1, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 16
+// Total parameters in this file 26
+// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 1, "<class 'ipdl.type.BuiltinCType'>": 3, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 17, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 1, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 3, "<class 'ipdl.type.UnionType'>": 1, "<class 'ipdl.type.UniquePtrType'>": 0}
+// Scalar mappings performed: 18
 // Message structs/unions generated from ipdl structs/unions: 3

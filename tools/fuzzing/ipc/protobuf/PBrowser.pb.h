@@ -1113,11 +1113,12 @@ class Msg_PDocAccessibleConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAAParentDocFieldNumber = 1,
-    kAABrowsingContextFieldNumber = 3,
-    kAAParentAccFieldNumber = 2,
+    kAAParentDocFieldNumber = 2,
+    kAABrowsingContextFieldNumber = 4,
+    kAActoridFieldNumber = 1,
+    kAAParentAccFieldNumber = 3,
   };
-  // required bytes a_aParentDoc = 1;
+  // required bytes a_aParentDoc = 2;
   bool has_a_aparentdoc() const;
   private:
   bool _internal_has_a_aparentdoc() const;
@@ -1135,7 +1136,7 @@ class Msg_PDocAccessibleConstructor final :
   std::string* _internal_mutable_a_aparentdoc();
   public:
 
-  // required bytes a_aBrowsingContext = 3;
+  // required bytes a_aBrowsingContext = 4;
   bool has_a_abrowsingcontext() const;
   private:
   bool _internal_has_a_abrowsingcontext() const;
@@ -1153,7 +1154,20 @@ class Msg_PDocAccessibleConstructor final :
   std::string* _internal_mutable_a_abrowsingcontext();
   public:
 
-  // required uint64 a_aParentAcc = 2;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required uint64 a_aParentAcc = 3;
   bool has_a_aparentacc() const;
   private:
   bool _internal_has_a_aparentacc() const;
@@ -1181,6 +1195,7 @@ class Msg_PDocAccessibleConstructor final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aparentdoc_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_abrowsingcontext_;
+    int64_t a_actorid_;
     uint64_t a_aparentacc_;
   };
   union { Impl_ _impl_; };
@@ -1421,6 +1436,22 @@ class Msg_PPaymentRequestConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowser.Msg_PPaymentRequestConstructor)
  private:
   class _Internal;
@@ -1429,7 +1460,9 @@ class Msg_PPaymentRequestConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowser_2eproto;
@@ -1669,6 +1702,22 @@ class Msg_PVsyncConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowser.Msg_PVsyncConstructor)
  private:
   class _Internal;
@@ -1677,7 +1726,9 @@ class Msg_PVsyncConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowser_2eproto;
@@ -6409,12 +6460,13 @@ class Msg_PColorPickerConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kADefaultColorsFieldNumber = 4,
-    kAABrowsingContextFieldNumber = 1,
-    kATitleFieldNumber = 2,
-    kAInitialColorFieldNumber = 3,
+    kADefaultColorsFieldNumber = 5,
+    kAABrowsingContextFieldNumber = 2,
+    kATitleFieldNumber = 3,
+    kAInitialColorFieldNumber = 4,
+    kAActoridFieldNumber = 1,
   };
-  // repeated string a_defaultColors = 4;
+  // repeated string a_defaultColors = 5;
   int a_defaultcolors_size() const;
   private:
   int _internal_a_defaultcolors_size() const;
@@ -6438,7 +6490,7 @@ class Msg_PColorPickerConstructor final :
   std::string* _internal_add_a_defaultcolors();
   public:
 
-  // required bytes a_aBrowsingContext = 1;
+  // required bytes a_aBrowsingContext = 2;
   bool has_a_abrowsingcontext() const;
   private:
   bool _internal_has_a_abrowsingcontext() const;
@@ -6456,7 +6508,7 @@ class Msg_PColorPickerConstructor final :
   std::string* _internal_mutable_a_abrowsingcontext();
   public:
 
-  // required string a_title = 2;
+  // required string a_title = 3;
   bool has_a_title() const;
   private:
   bool _internal_has_a_title() const;
@@ -6474,7 +6526,7 @@ class Msg_PColorPickerConstructor final :
   std::string* _internal_mutable_a_title();
   public:
 
-  // required string a_initialColor = 3;
+  // required string a_initialColor = 4;
   bool has_a_initialcolor() const;
   private:
   bool _internal_has_a_initialcolor() const;
@@ -6490,6 +6542,19 @@ class Msg_PColorPickerConstructor final :
   const std::string& _internal_a_initialcolor() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_initialcolor(const std::string& value);
   std::string* _internal_mutable_a_initialcolor();
+  public:
+
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowser.Msg_PColorPickerConstructor)
@@ -6509,6 +6574,7 @@ class Msg_PColorPickerConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_abrowsingcontext_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_title_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_initialcolor_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowser_2eproto;
@@ -6749,11 +6815,12 @@ class Msg_PFilePickerConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAATitleFieldNumber = 1,
-    kAAModeFieldNumber = 2,
-    kAABrowsingContextFieldNumber = 3,
+    kAATitleFieldNumber = 2,
+    kAAModeFieldNumber = 3,
+    kAABrowsingContextFieldNumber = 4,
+    kAActoridFieldNumber = 1,
   };
-  // required string a_aTitle = 1;
+  // required string a_aTitle = 2;
   bool has_a_atitle() const;
   private:
   bool _internal_has_a_atitle() const;
@@ -6771,7 +6838,7 @@ class Msg_PFilePickerConstructor final :
   std::string* _internal_mutable_a_atitle();
   public:
 
-  // required bytes a_aMode = 2;
+  // required bytes a_aMode = 3;
   bool has_a_amode() const;
   private:
   bool _internal_has_a_amode() const;
@@ -6789,7 +6856,7 @@ class Msg_PFilePickerConstructor final :
   std::string* _internal_mutable_a_amode();
   public:
 
-  // required bytes a_aBrowsingContext = 3;
+  // required bytes a_aBrowsingContext = 4;
   bool has_a_abrowsingcontext() const;
   private:
   bool _internal_has_a_abrowsingcontext() const;
@@ -6805,6 +6872,19 @@ class Msg_PFilePickerConstructor final :
   const std::string& _internal_a_abrowsingcontext() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_abrowsingcontext(const std::string& value);
   std::string* _internal_mutable_a_abrowsingcontext();
+  public:
+
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowser.Msg_PFilePickerConstructor)
@@ -6823,6 +6903,7 @@ class Msg_PFilePickerConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atitle_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_amode_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_abrowsingcontext_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowser_2eproto;
@@ -31751,6 +31832,22 @@ class Msg_PSessionStoreConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowser.Msg_PSessionStoreConstructor)
  private:
   class _Internal;
@@ -31759,7 +31856,9 @@ class Msg_PSessionStoreConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBrowser_2eproto;
@@ -32388,7 +32487,35 @@ inline void Msg_AsyncMessage::set_allocated_a_adata(::protobuf::mozilla::dom::Cl
 
 // Msg_PDocAccessibleConstructor
 
-// required bytes a_aParentDoc = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PDocAccessibleConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PDocAccessibleConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PDocAccessibleConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t Msg_PDocAccessibleConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PDocAccessibleConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowser.Msg_PDocAccessibleConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PDocAccessibleConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PDocAccessibleConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_PDocAccessibleConstructor.a_actorid)
+}
+
+// required bytes a_aParentDoc = 2;
 inline bool Msg_PDocAccessibleConstructor::_internal_has_a_aparentdoc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -32456,9 +32583,9 @@ inline void Msg_PDocAccessibleConstructor::set_allocated_a_aparentdoc(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_PDocAccessibleConstructor.a_aParentDoc)
 }
 
-// required uint64 a_aParentAcc = 2;
+// required uint64 a_aParentAcc = 3;
 inline bool Msg_PDocAccessibleConstructor::_internal_has_a_aparentacc() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
 inline bool Msg_PDocAccessibleConstructor::has_a_aparentacc() const {
@@ -32466,7 +32593,7 @@ inline bool Msg_PDocAccessibleConstructor::has_a_aparentacc() const {
 }
 inline void Msg_PDocAccessibleConstructor::clear_a_aparentacc() {
   _impl_.a_aparentacc_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint64_t Msg_PDocAccessibleConstructor::_internal_a_aparentacc() const {
   return _impl_.a_aparentacc_;
@@ -32476,7 +32603,7 @@ inline uint64_t Msg_PDocAccessibleConstructor::a_aparentacc() const {
   return _internal_a_aparentacc();
 }
 inline void Msg_PDocAccessibleConstructor::_internal_set_a_aparentacc(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_aparentacc_ = value;
 }
 inline void Msg_PDocAccessibleConstructor::set_a_aparentacc(uint64_t value) {
@@ -32484,7 +32611,7 @@ inline void Msg_PDocAccessibleConstructor::set_a_aparentacc(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_PDocAccessibleConstructor.a_aParentAcc)
 }
 
-// required bytes a_aBrowsingContext = 3;
+// required bytes a_aBrowsingContext = 4;
 inline bool Msg_PDocAccessibleConstructor::_internal_has_a_abrowsingcontext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -32560,6 +32687,34 @@ inline void Msg_PDocAccessibleConstructor::set_allocated_a_abrowsingcontext(std:
 
 // Msg_PPaymentRequestConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PPaymentRequestConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PPaymentRequestConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PPaymentRequestConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PPaymentRequestConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PPaymentRequestConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowser.Msg_PPaymentRequestConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PPaymentRequestConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PPaymentRequestConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_PPaymentRequestConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PPaymentRequestConstructor
@@ -32567,6 +32722,34 @@ inline void Msg_PDocAccessibleConstructor::set_allocated_a_abrowsingcontext(std:
 // -------------------------------------------------------------------
 
 // Msg_PVsyncConstructor
+
+// required sint64 a_actorid = 1;
+inline bool Msg_PVsyncConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PVsyncConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PVsyncConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PVsyncConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PVsyncConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowser.Msg_PVsyncConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PVsyncConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PVsyncConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_PVsyncConstructor.a_actorid)
+}
 
 // -------------------------------------------------------------------
 
@@ -35378,7 +35561,35 @@ inline void Msg_ShowTooltip::set_allocated_a_direction(std::string* a_direction)
 
 // Msg_PColorPickerConstructor
 
-// required bytes a_aBrowsingContext = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PColorPickerConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_PColorPickerConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PColorPickerConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+inline int64_t Msg_PColorPickerConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PColorPickerConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowser.Msg_PColorPickerConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PColorPickerConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PColorPickerConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_PColorPickerConstructor.a_actorid)
+}
+
+// required bytes a_aBrowsingContext = 2;
 inline bool Msg_PColorPickerConstructor::_internal_has_a_abrowsingcontext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -35446,7 +35657,7 @@ inline void Msg_PColorPickerConstructor::set_allocated_a_abrowsingcontext(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_PColorPickerConstructor.a_aBrowsingContext)
 }
 
-// required string a_title = 2;
+// required string a_title = 3;
 inline bool Msg_PColorPickerConstructor::_internal_has_a_title() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -35514,7 +35725,7 @@ inline void Msg_PColorPickerConstructor::set_allocated_a_title(std::string* a_ti
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_PColorPickerConstructor.a_title)
 }
 
-// required string a_initialColor = 3;
+// required string a_initialColor = 4;
 inline bool Msg_PColorPickerConstructor::_internal_has_a_initialcolor() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -35582,7 +35793,7 @@ inline void Msg_PColorPickerConstructor::set_allocated_a_initialcolor(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_PColorPickerConstructor.a_initialColor)
 }
 
-// repeated string a_defaultColors = 4;
+// repeated string a_defaultColors = 5;
 inline int Msg_PColorPickerConstructor::_internal_a_defaultcolors_size() const {
   return _impl_.a_defaultcolors_.size();
 }
@@ -35665,7 +35876,35 @@ Msg_PColorPickerConstructor::mutable_a_defaultcolors() {
 
 // Msg_PFilePickerConstructor
 
-// required string a_aTitle = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PFilePickerConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_PFilePickerConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PFilePickerConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+inline int64_t Msg_PFilePickerConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PFilePickerConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowser.Msg_PFilePickerConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PFilePickerConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PFilePickerConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_PFilePickerConstructor.a_actorid)
+}
+
+// required string a_aTitle = 2;
 inline bool Msg_PFilePickerConstructor::_internal_has_a_atitle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -35733,7 +35972,7 @@ inline void Msg_PFilePickerConstructor::set_allocated_a_atitle(std::string* a_at
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_PFilePickerConstructor.a_aTitle)
 }
 
-// required bytes a_aMode = 2;
+// required bytes a_aMode = 3;
 inline bool Msg_PFilePickerConstructor::_internal_has_a_amode() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -35801,7 +36040,7 @@ inline void Msg_PFilePickerConstructor::set_allocated_a_amode(std::string* a_amo
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_PFilePickerConstructor.a_aMode)
 }
 
-// required bytes a_aBrowsingContext = 3;
+// required bytes a_aBrowsingContext = 4;
 inline bool Msg_PFilePickerConstructor::_internal_has_a_abrowsingcontext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -53589,6 +53828,34 @@ Msg_QueryVisitedState::mutable_a_auris() {
 // -------------------------------------------------------------------
 
 // Msg_PSessionStoreConstructor
+
+// required sint64 a_actorid = 1;
+inline bool Msg_PSessionStoreConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PSessionStoreConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PSessionStoreConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PSessionStoreConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PSessionStoreConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBrowser.Msg_PSessionStoreConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PSessionStoreConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PSessionStoreConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_PSessionStoreConstructor.a_actorid)
+}
 
 // -------------------------------------------------------------------
 

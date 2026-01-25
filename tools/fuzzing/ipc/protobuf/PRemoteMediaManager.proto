@@ -19,18 +19,20 @@ import "PMediaDecoderParams.proto";
 
 // Message declarations
 message Msg_PRemoteDecoderConstructor {
-  required protobuf.mozilla.RemoteDecoderInfoIPDL a_info = 1;
-  required bytes a_options = 2;
-  optional bytes a_identifier = 3;
-  optional uint64 a_mediaEngineId = 4;
-  optional bytes a_trackingId = 5;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.RemoteDecoderInfoIPDL a_info = 2;
+  required bytes a_options = 3;
+  optional bytes a_identifier = 4;
+  optional uint64 a_mediaEngineId = 5;
+  optional bytes a_trackingId = 6;
 }
 
 message Reply_PRemoteDecoderConstructor {
 }
 
 message Msg_PRemoteEncoderConstructor {
-  required bytes a_config = 1;
+  required sint64 a_actorid = 1;
+  required bytes a_config = 2;
 }
 
 message Reply_PRemoteEncoderConstructor {
@@ -49,7 +51,7 @@ message Msg_DeallocateSurfaceDescriptorGPUVideo {
 }
 
 // Parameter mappings stats:
-// Total parameters in this file 13
-// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 1, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 4, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 3, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 1, "<class 'ipdl.type.UnionType'>": 4, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 1
+// Total parameters in this file 15
+// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 3, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 4, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 3, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 1, "<class 'ipdl.type.UnionType'>": 4, "<class 'ipdl.type.UniquePtrType'>": 0}
+// Scalar mappings performed: 4
 // Message structs/unions generated from ipdl structs/unions: 2

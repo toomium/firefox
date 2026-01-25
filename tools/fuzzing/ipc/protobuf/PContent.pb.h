@@ -2185,6 +2185,22 @@ class Msg_PExtensionsConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PExtensionsConstructor)
  private:
   class _Internal;
@@ -2193,7 +2209,9 @@ class Msg_PExtensionsConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PContent_2eproto;
@@ -2729,10 +2747,11 @@ class Msg_PWebBrowserPersistDocumentConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAABrowserFieldNumber = 1,
-    kAAContextFieldNumber = 2,
+    kAABrowserFieldNumber = 2,
+    kAAContextFieldNumber = 3,
+    kAActoridFieldNumber = 1,
   };
-  // required bytes a_aBrowser = 1;
+  // required bytes a_aBrowser = 2;
   bool has_a_abrowser() const;
   private:
   bool _internal_has_a_abrowser() const;
@@ -2750,7 +2769,7 @@ class Msg_PWebBrowserPersistDocumentConstructor final :
   std::string* _internal_mutable_a_abrowser();
   public:
 
-  // required bytes a_aContext = 2;
+  // required bytes a_aContext = 3;
   bool has_a_acontext() const;
   private:
   bool _internal_has_a_acontext() const;
@@ -2768,6 +2787,19 @@ class Msg_PWebBrowserPersistDocumentConstructor final :
   std::string* _internal_mutable_a_acontext();
   public:
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PWebBrowserPersistDocumentConstructor)
  private:
   class _Internal;
@@ -2783,6 +2815,7 @@ class Msg_PWebBrowserPersistDocumentConstructor final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_abrowser_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acontext_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PContent_2eproto;
@@ -5153,11 +5186,12 @@ class Msg_PCycleCollectWithLogsConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAGcLogFieldNumber = 2,
-    kACcLogFieldNumber = 3,
-    kADumpAllTracesFieldNumber = 1,
+    kAGcLogFieldNumber = 3,
+    kACcLogFieldNumber = 4,
+    kAActoridFieldNumber = 1,
+    kADumpAllTracesFieldNumber = 2,
   };
-  // required bytes a_gcLog = 2;
+  // required bytes a_gcLog = 3;
   bool has_a_gclog() const;
   private:
   bool _internal_has_a_gclog() const;
@@ -5175,7 +5209,7 @@ class Msg_PCycleCollectWithLogsConstructor final :
   std::string* _internal_mutable_a_gclog();
   public:
 
-  // required bytes a_ccLog = 3;
+  // required bytes a_ccLog = 4;
   bool has_a_cclog() const;
   private:
   bool _internal_has_a_cclog() const;
@@ -5193,7 +5227,20 @@ class Msg_PCycleCollectWithLogsConstructor final :
   std::string* _internal_mutable_a_cclog();
   public:
 
-  // required bool a_dumpAllTraces = 1;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required bool a_dumpAllTraces = 2;
   bool has_a_dumpalltraces() const;
   private:
   bool _internal_has_a_dumpalltraces() const;
@@ -5221,6 +5268,7 @@ class Msg_PCycleCollectWithLogsConstructor final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_gclog_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_cclog_;
+    int64_t a_actorid_;
     bool a_dumpalltraces_;
   };
   union { Impl_ _impl_; };
@@ -5461,6 +5509,22 @@ class Msg_PTestShellConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PTestShellConstructor)
  private:
   class _Internal;
@@ -5469,7 +5533,9 @@ class Msg_PTestShellConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PContent_2eproto;
@@ -5710,10 +5776,11 @@ class Msg_PScriptCacheConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kACacheFileFieldNumber = 1,
-    kAWantCacheDataFieldNumber = 2,
+    kACacheFileFieldNumber = 2,
+    kAActoridFieldNumber = 1,
+    kAWantCacheDataFieldNumber = 3,
   };
-  // required .protobuf.mozilla.dom.FileDescOrError a_cacheFile = 1;
+  // required .protobuf.mozilla.dom.FileDescOrError a_cacheFile = 2;
   bool has_a_cachefile() const;
   private:
   bool _internal_has_a_cachefile() const;
@@ -5731,7 +5798,20 @@ class Msg_PScriptCacheConstructor final :
       ::protobuf::mozilla::dom::FileDescOrError* a_cachefile);
   ::protobuf::mozilla::dom::FileDescOrError* unsafe_arena_release_a_cachefile();
 
-  // required bool a_wantCacheData = 2;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required bool a_wantCacheData = 3;
   bool has_a_wantcachedata() const;
   private:
   bool _internal_has_a_wantcachedata() const;
@@ -5758,6 +5838,7 @@ class Msg_PScriptCacheConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::FileDescOrError* a_cachefile_;
+    int64_t a_actorid_;
     bool a_wantcachedata_;
   };
   union { Impl_ _impl_; };
@@ -22954,6 +23035,22 @@ class Msg_PRemotePrintJobConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PRemotePrintJobConstructor)
  private:
   class _Internal;
@@ -22962,7 +23059,9 @@ class Msg_PRemotePrintJobConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PContent_2eproto;
@@ -26032,6 +26131,22 @@ class Msg_PRemoteSpellcheckEngineConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PRemoteSpellcheckEngineConstructor)
  private:
   class _Internal;
@@ -26040,7 +26155,9 @@ class Msg_PRemoteSpellcheckEngineConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PContent_2eproto;
@@ -26924,6 +27041,22 @@ class Msg_PHalConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PHalConstructor)
  private:
   class _Internal;
@@ -26932,7 +27065,9 @@ class Msg_PHalConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PContent_2eproto;
@@ -27172,6 +27307,22 @@ class Msg_PHeapSnapshotTempFileHelperConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PHeapSnapshotTempFileHelperConstructor)
  private:
   class _Internal;
@@ -27180,7 +27331,9 @@ class Msg_PHeapSnapshotTempFileHelperConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PContent_2eproto;
@@ -27420,6 +27573,22 @@ class Msg_PNeckoConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PNeckoConstructor)
  private:
   class _Internal;
@@ -27428,7 +27597,9 @@ class Msg_PNeckoConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PContent_2eproto;
@@ -27668,6 +27839,22 @@ class Msg_PSpeechSynthesisConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PSpeechSynthesisConstructor)
  private:
   class _Internal;
@@ -27676,7 +27863,9 @@ class Msg_PSpeechSynthesisConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PContent_2eproto;
@@ -27916,6 +28105,22 @@ class Msg_PMediaConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PMediaConstructor)
  private:
   class _Internal;
@@ -27924,7 +28129,9 @@ class Msg_PMediaConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PContent_2eproto;
@@ -28164,6 +28371,22 @@ class Msg_PWebrtcGlobalConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PWebrtcGlobalConstructor)
  private:
   class _Internal;
@@ -28172,7 +28395,9 @@ class Msg_PWebrtcGlobalConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PContent_2eproto;
@@ -28684,9 +28909,10 @@ class Msg_PURLClassifierConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAPrincipalFieldNumber = 1,
+    kAPrincipalFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required bytes a_principal = 1;
+  // required bytes a_principal = 2;
   bool has_a_principal() const;
   private:
   bool _internal_has_a_principal() const;
@@ -28704,9 +28930,25 @@ class Msg_PURLClassifierConstructor final :
   std::string* _internal_mutable_a_principal();
   public:
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PURLClassifierConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -28715,6 +28957,7 @@ class Msg_PURLClassifierConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_principal_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PContent_2eproto;
@@ -28973,10 +29216,11 @@ class Msg_PURLClassifierLocalConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAFeaturesFieldNumber = 2,
-    kAUriFieldNumber = 1,
+    kAFeaturesFieldNumber = 3,
+    kAUriFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // repeated .protobuf.mozilla.dom.IPCURLClassifierFeature a_features = 2;
+  // repeated .protobuf.mozilla.dom.IPCURLClassifierFeature a_features = 3;
   int a_features_size() const;
   private:
   int _internal_a_features_size() const;
@@ -28994,7 +29238,7 @@ class Msg_PURLClassifierLocalConstructor final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCURLClassifierFeature >&
       a_features() const;
 
-  // required bytes a_uri = 1;
+  // required bytes a_uri = 2;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -29012,9 +29256,25 @@ class Msg_PURLClassifierLocalConstructor final :
   std::string* _internal_mutable_a_uri();
   public:
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PURLClassifierLocalConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -29024,6 +29284,7 @@ class Msg_PURLClassifierLocalConstructor final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCURLClassifierFeature > a_features_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_uri_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PContent_2eproto;
@@ -29264,11 +29525,12 @@ class Msg_PURLClassifierLocalByNameConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAFeatureNamesFieldNumber = 2,
-    kAUriFieldNumber = 1,
-    kAAListTypeFieldNumber = 3,
+    kAFeatureNamesFieldNumber = 3,
+    kAUriFieldNumber = 2,
+    kAAListTypeFieldNumber = 4,
+    kAActoridFieldNumber = 1,
   };
-  // repeated string a_featureNames = 2;
+  // repeated string a_featureNames = 3;
   int a_featurenames_size() const;
   private:
   int _internal_a_featurenames_size() const;
@@ -29292,7 +29554,7 @@ class Msg_PURLClassifierLocalByNameConstructor final :
   std::string* _internal_add_a_featurenames();
   public:
 
-  // required bytes a_uri = 1;
+  // required bytes a_uri = 2;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -29310,7 +29572,7 @@ class Msg_PURLClassifierLocalByNameConstructor final :
   std::string* _internal_mutable_a_uri();
   public:
 
-  // required bytes a_aListType = 3;
+  // required bytes a_aListType = 4;
   bool has_a_alisttype() const;
   private:
   bool _internal_has_a_alisttype() const;
@@ -29326,6 +29588,19 @@ class Msg_PURLClassifierLocalByNameConstructor final :
   const std::string& _internal_a_alisttype() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_alisttype(const std::string& value);
   std::string* _internal_mutable_a_alisttype();
+  public:
+
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PURLClassifierLocalByNameConstructor)
@@ -29344,6 +29619,7 @@ class Msg_PURLClassifierLocalByNameConstructor final :
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_featurenames_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_uri_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_alisttype_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PContent_2eproto;
@@ -29583,6 +29859,22 @@ class Msg_PSessionStorageObserverConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PSessionStorageObserverConstructor)
  private:
   class _Internal;
@@ -29591,7 +29883,9 @@ class Msg_PSessionStorageObserverConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PContent_2eproto;
@@ -31038,19 +31332,20 @@ class Msg_PExternalHelperAppConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAUriFieldNumber = 1,
-    kAAMimeContentTypeFieldNumber = 3,
-    kAAContentDispositionFieldNumber = 4,
-    kAAContentDispositionFilenameFieldNumber = 6,
-    kAAReferrerFieldNumber = 10,
-    kAAContextFieldNumber = 11,
-    kALoadInfoArgsFieldNumber = 2,
-    kAAContentDispositionHintFieldNumber = 5,
-    kAAForceSaveFieldNumber = 7,
-    kAAWasFileChannelFieldNumber = 9,
-    kAAContentLengthFieldNumber = 8,
+    kAUriFieldNumber = 2,
+    kAAMimeContentTypeFieldNumber = 4,
+    kAAContentDispositionFieldNumber = 5,
+    kAAContentDispositionFilenameFieldNumber = 7,
+    kAAReferrerFieldNumber = 11,
+    kAAContextFieldNumber = 12,
+    kALoadInfoArgsFieldNumber = 3,
+    kAActoridFieldNumber = 1,
+    kAAContentDispositionHintFieldNumber = 6,
+    kAAForceSaveFieldNumber = 8,
+    kAAWasFileChannelFieldNumber = 10,
+    kAAContentLengthFieldNumber = 9,
   };
-  // required bytes a_uri = 1;
+  // required bytes a_uri = 2;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -31068,7 +31363,7 @@ class Msg_PExternalHelperAppConstructor final :
   std::string* _internal_mutable_a_uri();
   public:
 
-  // required string a_aMimeContentType = 3;
+  // required string a_aMimeContentType = 4;
   bool has_a_amimecontenttype() const;
   private:
   bool _internal_has_a_amimecontenttype() const;
@@ -31086,7 +31381,7 @@ class Msg_PExternalHelperAppConstructor final :
   std::string* _internal_mutable_a_amimecontenttype();
   public:
 
-  // required string a_aContentDisposition = 4;
+  // required string a_aContentDisposition = 5;
   bool has_a_acontentdisposition() const;
   private:
   bool _internal_has_a_acontentdisposition() const;
@@ -31104,7 +31399,7 @@ class Msg_PExternalHelperAppConstructor final :
   std::string* _internal_mutable_a_acontentdisposition();
   public:
 
-  // required string a_aContentDispositionFilename = 6;
+  // required string a_aContentDispositionFilename = 7;
   bool has_a_acontentdispositionfilename() const;
   private:
   bool _internal_has_a_acontentdispositionfilename() const;
@@ -31122,7 +31417,7 @@ class Msg_PExternalHelperAppConstructor final :
   std::string* _internal_mutable_a_acontentdispositionfilename();
   public:
 
-  // required bytes a_aReferrer = 10;
+  // required bytes a_aReferrer = 11;
   bool has_a_areferrer() const;
   private:
   bool _internal_has_a_areferrer() const;
@@ -31140,7 +31435,7 @@ class Msg_PExternalHelperAppConstructor final :
   std::string* _internal_mutable_a_areferrer();
   public:
 
-  // required bytes a_aContext = 11;
+  // required bytes a_aContext = 12;
   bool has_a_acontext() const;
   private:
   bool _internal_has_a_acontext() const;
@@ -31158,7 +31453,7 @@ class Msg_PExternalHelperAppConstructor final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required .protobuf.mozilla.net.LoadInfoArgs a_loadInfoArgs = 2;
+  // required .protobuf.mozilla.net.LoadInfoArgs a_loadInfoArgs = 3;
   bool has_a_loadinfoargs() const;
   private:
   bool _internal_has_a_loadinfoargs() const;
@@ -31176,7 +31471,20 @@ class Msg_PExternalHelperAppConstructor final :
       ::protobuf::mozilla::net::LoadInfoArgs* a_loadinfoargs);
   ::protobuf::mozilla::net::LoadInfoArgs* unsafe_arena_release_a_loadinfoargs();
 
-  // required uint32 a_aContentDispositionHint = 5;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required uint32 a_aContentDispositionHint = 6;
   bool has_a_acontentdispositionhint() const;
   private:
   bool _internal_has_a_acontentdispositionhint() const;
@@ -31189,7 +31497,7 @@ class Msg_PExternalHelperAppConstructor final :
   void _internal_set_a_acontentdispositionhint(uint32_t value);
   public:
 
-  // required bool a_aForceSave = 7;
+  // required bool a_aForceSave = 8;
   bool has_a_aforcesave() const;
   private:
   bool _internal_has_a_aforcesave() const;
@@ -31202,7 +31510,7 @@ class Msg_PExternalHelperAppConstructor final :
   void _internal_set_a_aforcesave(bool value);
   public:
 
-  // required bool a_aWasFileChannel = 9;
+  // required bool a_aWasFileChannel = 10;
   bool has_a_awasfilechannel() const;
   private:
   bool _internal_has_a_awasfilechannel() const;
@@ -31215,7 +31523,7 @@ class Msg_PExternalHelperAppConstructor final :
   void _internal_set_a_awasfilechannel(bool value);
   public:
 
-  // required sint64 a_aContentLength = 8;
+  // required sint64 a_aContentLength = 9;
   bool has_a_acontentlength() const;
   private:
   bool _internal_has_a_acontentlength() const;
@@ -31248,6 +31556,7 @@ class Msg_PExternalHelperAppConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_areferrer_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acontext_;
     ::protobuf::mozilla::net::LoadInfoArgs* a_loadinfoargs_;
+    int64_t a_actorid_;
     uint32_t a_acontentdispositionhint_;
     bool a_aforcesave_;
     bool a_awasfilechannel_;
@@ -31491,6 +31800,22 @@ class Msg_PHandlerServiceConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PHandlerServiceConstructor)
  private:
   class _Internal;
@@ -31499,7 +31824,9 @@ class Msg_PHandlerServiceConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PContent_2eproto;
@@ -34281,10 +34608,11 @@ class Msg_PClipboardWriteRequestConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAAClipboardTypeFieldNumber = 1,
-    kAASettingWindowContextFieldNumber = 2,
+    kAAClipboardTypeFieldNumber = 2,
+    kAASettingWindowContextFieldNumber = 3,
+    kAActoridFieldNumber = 1,
   };
-  // required bytes a_aClipboardType = 1;
+  // required bytes a_aClipboardType = 2;
   bool has_a_aclipboardtype() const;
   private:
   bool _internal_has_a_aclipboardtype() const;
@@ -34302,7 +34630,7 @@ class Msg_PClipboardWriteRequestConstructor final :
   std::string* _internal_mutable_a_aclipboardtype();
   public:
 
-  // required bytes a_aSettingWindowContext = 2;
+  // required bytes a_aSettingWindowContext = 3;
   bool has_a_asettingwindowcontext() const;
   private:
   bool _internal_has_a_asettingwindowcontext() const;
@@ -34320,6 +34648,19 @@ class Msg_PClipboardWriteRequestConstructor final :
   std::string* _internal_mutable_a_asettingwindowcontext();
   public:
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PClipboardWriteRequestConstructor)
  private:
   class _Internal;
@@ -34335,6 +34676,7 @@ class Msg_PClipboardWriteRequestConstructor final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aclipboardtype_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_asettingwindowcontext_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PContent_2eproto;
@@ -37073,14 +37415,15 @@ class Msg_PContentPermissionRequestConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAARequestsFieldNumber = 1,
-    kAAPrincipalFieldNumber = 2,
-    kAATopLevelPrincipalFieldNumber = 3,
-    kATabIdFieldNumber = 6,
-    kAAIsHandlingUserInputFieldNumber = 4,
-    kAAMaybeUnsafePermissionDelegateFieldNumber = 5,
+    kAARequestsFieldNumber = 2,
+    kAAPrincipalFieldNumber = 3,
+    kAATopLevelPrincipalFieldNumber = 4,
+    kATabIdFieldNumber = 7,
+    kAActoridFieldNumber = 1,
+    kAAIsHandlingUserInputFieldNumber = 5,
+    kAAMaybeUnsafePermissionDelegateFieldNumber = 6,
   };
-  // repeated .protobuf.mozilla.dom.PermissionRequest a_aRequests = 1;
+  // repeated .protobuf.mozilla.dom.PermissionRequest a_aRequests = 2;
   int a_arequests_size() const;
   private:
   int _internal_a_arequests_size() const;
@@ -37098,7 +37441,7 @@ class Msg_PContentPermissionRequestConstructor final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::PermissionRequest >&
       a_arequests() const;
 
-  // required bytes a_aPrincipal = 2;
+  // required bytes a_aPrincipal = 3;
   bool has_a_aprincipal() const;
   private:
   bool _internal_has_a_aprincipal() const;
@@ -37116,7 +37459,7 @@ class Msg_PContentPermissionRequestConstructor final :
   std::string* _internal_mutable_a_aprincipal();
   public:
 
-  // required bytes a_aTopLevelPrincipal = 3;
+  // required bytes a_aTopLevelPrincipal = 4;
   bool has_a_atoplevelprincipal() const;
   private:
   bool _internal_has_a_atoplevelprincipal() const;
@@ -37134,7 +37477,7 @@ class Msg_PContentPermissionRequestConstructor final :
   std::string* _internal_mutable_a_atoplevelprincipal();
   public:
 
-  // required bytes a_tabId = 6;
+  // required bytes a_tabId = 7;
   bool has_a_tabid() const;
   private:
   bool _internal_has_a_tabid() const;
@@ -37152,7 +37495,20 @@ class Msg_PContentPermissionRequestConstructor final :
   std::string* _internal_mutable_a_tabid();
   public:
 
-  // required bool a_aIsHandlingUserInput = 4;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required bool a_aIsHandlingUserInput = 5;
   bool has_a_aishandlinguserinput() const;
   private:
   bool _internal_has_a_aishandlinguserinput() const;
@@ -37165,7 +37521,7 @@ class Msg_PContentPermissionRequestConstructor final :
   void _internal_set_a_aishandlinguserinput(bool value);
   public:
 
-  // required bool a_aMaybeUnsafePermissionDelegate = 5;
+  // required bool a_aMaybeUnsafePermissionDelegate = 6;
   bool has_a_amaybeunsafepermissiondelegate() const;
   private:
   bool _internal_has_a_amaybeunsafepermissiondelegate() const;
@@ -37195,6 +37551,7 @@ class Msg_PContentPermissionRequestConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aprincipal_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atoplevelprincipal_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_tabid_;
+    int64_t a_actorid_;
     bool a_aishandlinguserinput_;
     bool a_amaybeunsafepermissiondelegate_;
   };
@@ -58864,6 +59221,34 @@ inline void Msg_UpdateRemotePrintSettings::set_allocated_a_aprintdata(::protobuf
 
 // Msg_PExtensionsConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PExtensionsConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PExtensionsConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PExtensionsConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PExtensionsConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PExtensionsConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContent.Msg_PExtensionsConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PExtensionsConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PExtensionsConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PExtensionsConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PExtensionsConstructor
@@ -59406,7 +59791,35 @@ inline void Msg_ConstructBrowser::set_a_istoplevel(bool value) {
 
 // Msg_PWebBrowserPersistDocumentConstructor
 
-// required bytes a_aBrowser = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PWebBrowserPersistDocumentConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PWebBrowserPersistDocumentConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PWebBrowserPersistDocumentConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t Msg_PWebBrowserPersistDocumentConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PWebBrowserPersistDocumentConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContent.Msg_PWebBrowserPersistDocumentConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PWebBrowserPersistDocumentConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PWebBrowserPersistDocumentConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PWebBrowserPersistDocumentConstructor.a_actorid)
+}
+
+// required bytes a_aBrowser = 2;
 inline bool Msg_PWebBrowserPersistDocumentConstructor::_internal_has_a_abrowser() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -59474,7 +59887,7 @@ inline void Msg_PWebBrowserPersistDocumentConstructor::set_allocated_a_abrowser(
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PWebBrowserPersistDocumentConstructor.a_aBrowser)
 }
 
-// required bytes a_aContext = 2;
+// required bytes a_aContext = 3;
 inline bool Msg_PWebBrowserPersistDocumentConstructor::_internal_has_a_acontext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -61018,9 +61431,37 @@ inline void Msg_BidiKeyboardNotify::set_a_havebidikeyboards(bool value) {
 
 // Msg_PCycleCollectWithLogsConstructor
 
-// required bool a_dumpAllTraces = 1;
-inline bool Msg_PCycleCollectWithLogsConstructor::_internal_has_a_dumpalltraces() const {
+// required sint64 a_actorid = 1;
+inline bool Msg_PCycleCollectWithLogsConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PCycleCollectWithLogsConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PCycleCollectWithLogsConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t Msg_PCycleCollectWithLogsConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PCycleCollectWithLogsConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContent.Msg_PCycleCollectWithLogsConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PCycleCollectWithLogsConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PCycleCollectWithLogsConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PCycleCollectWithLogsConstructor.a_actorid)
+}
+
+// required bool a_dumpAllTraces = 2;
+inline bool Msg_PCycleCollectWithLogsConstructor::_internal_has_a_dumpalltraces() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
 inline bool Msg_PCycleCollectWithLogsConstructor::has_a_dumpalltraces() const {
@@ -61028,7 +61469,7 @@ inline bool Msg_PCycleCollectWithLogsConstructor::has_a_dumpalltraces() const {
 }
 inline void Msg_PCycleCollectWithLogsConstructor::clear_a_dumpalltraces() {
   _impl_.a_dumpalltraces_ = false;
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline bool Msg_PCycleCollectWithLogsConstructor::_internal_a_dumpalltraces() const {
   return _impl_.a_dumpalltraces_;
@@ -61038,7 +61479,7 @@ inline bool Msg_PCycleCollectWithLogsConstructor::a_dumpalltraces() const {
   return _internal_a_dumpalltraces();
 }
 inline void Msg_PCycleCollectWithLogsConstructor::_internal_set_a_dumpalltraces(bool value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_dumpalltraces_ = value;
 }
 inline void Msg_PCycleCollectWithLogsConstructor::set_a_dumpalltraces(bool value) {
@@ -61046,7 +61487,7 @@ inline void Msg_PCycleCollectWithLogsConstructor::set_a_dumpalltraces(bool value
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PCycleCollectWithLogsConstructor.a_dumpAllTraces)
 }
 
-// required bytes a_gcLog = 2;
+// required bytes a_gcLog = 3;
 inline bool Msg_PCycleCollectWithLogsConstructor::_internal_has_a_gclog() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -61114,7 +61555,7 @@ inline void Msg_PCycleCollectWithLogsConstructor::set_allocated_a_gclog(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PCycleCollectWithLogsConstructor.a_gcLog)
 }
 
-// required bytes a_ccLog = 3;
+// required bytes a_ccLog = 4;
 inline bool Msg_PCycleCollectWithLogsConstructor::_internal_has_a_cclog() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -61190,6 +61631,34 @@ inline void Msg_PCycleCollectWithLogsConstructor::set_allocated_a_cclog(std::str
 
 // Msg_PTestShellConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PTestShellConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PTestShellConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PTestShellConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PTestShellConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PTestShellConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContent.Msg_PTestShellConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PTestShellConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PTestShellConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PTestShellConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PTestShellConstructor
@@ -61198,7 +61667,35 @@ inline void Msg_PCycleCollectWithLogsConstructor::set_allocated_a_cclog(std::str
 
 // Msg_PScriptCacheConstructor
 
-// required .protobuf.mozilla.dom.FileDescOrError a_cacheFile = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PScriptCacheConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PScriptCacheConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PScriptCacheConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PScriptCacheConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PScriptCacheConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContent.Msg_PScriptCacheConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PScriptCacheConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PScriptCacheConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PScriptCacheConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.dom.FileDescOrError a_cacheFile = 2;
 inline bool Msg_PScriptCacheConstructor::_internal_has_a_cachefile() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_cachefile_ != nullptr);
@@ -61285,9 +61782,9 @@ inline void Msg_PScriptCacheConstructor::set_allocated_a_cachefile(::protobuf::m
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PScriptCacheConstructor.a_cacheFile)
 }
 
-// required bool a_wantCacheData = 2;
+// required bool a_wantCacheData = 3;
 inline bool Msg_PScriptCacheConstructor::_internal_has_a_wantcachedata() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
 inline bool Msg_PScriptCacheConstructor::has_a_wantcachedata() const {
@@ -61295,7 +61792,7 @@ inline bool Msg_PScriptCacheConstructor::has_a_wantcachedata() const {
 }
 inline void Msg_PScriptCacheConstructor::clear_a_wantcachedata() {
   _impl_.a_wantcachedata_ = false;
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline bool Msg_PScriptCacheConstructor::_internal_a_wantcachedata() const {
   return _impl_.a_wantcachedata_;
@@ -61305,7 +61802,7 @@ inline bool Msg_PScriptCacheConstructor::a_wantcachedata() const {
   return _internal_a_wantcachedata();
 }
 inline void Msg_PScriptCacheConstructor::_internal_set_a_wantcachedata(bool value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_wantcachedata_ = value;
 }
 inline void Msg_PScriptCacheConstructor::set_a_wantcachedata(bool value) {
@@ -71726,6 +72223,34 @@ inline void Msg_InitNextGenLocalStorageEnabled::set_a_enabled(bool value) {
 
 // Msg_PRemotePrintJobConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PRemotePrintJobConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PRemotePrintJobConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PRemotePrintJobConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PRemotePrintJobConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PRemotePrintJobConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContent.Msg_PRemotePrintJobConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PRemotePrintJobConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PRemotePrintJobConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PRemotePrintJobConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PRemotePrintJobConstructor
@@ -73449,6 +73974,34 @@ inline void Reply_InitStreamFilter::set_allocated_a_aendpoint(std::string* a_aen
 
 // Msg_PRemoteSpellcheckEngineConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PRemoteSpellcheckEngineConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PRemoteSpellcheckEngineConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PRemoteSpellcheckEngineConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PRemoteSpellcheckEngineConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PRemoteSpellcheckEngineConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContent.Msg_PRemoteSpellcheckEngineConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PRemoteSpellcheckEngineConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PRemoteSpellcheckEngineConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PRemoteSpellcheckEngineConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PRemoteSpellcheckEngineConstructor
@@ -73888,6 +74441,34 @@ inline void Msg_AccumulateMixedContentHSTS::set_allocated_a_aoriginattributes(st
 
 // Msg_PHalConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PHalConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PHalConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PHalConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PHalConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PHalConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContent.Msg_PHalConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PHalConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PHalConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PHalConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PHalConstructor
@@ -73895,6 +74476,34 @@ inline void Msg_AccumulateMixedContentHSTS::set_allocated_a_aoriginattributes(st
 // -------------------------------------------------------------------
 
 // Msg_PHeapSnapshotTempFileHelperConstructor
+
+// required sint64 a_actorid = 1;
+inline bool Msg_PHeapSnapshotTempFileHelperConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PHeapSnapshotTempFileHelperConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PHeapSnapshotTempFileHelperConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PHeapSnapshotTempFileHelperConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PHeapSnapshotTempFileHelperConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContent.Msg_PHeapSnapshotTempFileHelperConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PHeapSnapshotTempFileHelperConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PHeapSnapshotTempFileHelperConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PHeapSnapshotTempFileHelperConstructor.a_actorid)
+}
 
 // -------------------------------------------------------------------
 
@@ -73904,6 +74513,34 @@ inline void Msg_AccumulateMixedContentHSTS::set_allocated_a_aoriginattributes(st
 
 // Msg_PNeckoConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PNeckoConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PNeckoConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PNeckoConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PNeckoConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PNeckoConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContent.Msg_PNeckoConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PNeckoConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PNeckoConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PNeckoConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PNeckoConstructor
@@ -73911,6 +74548,34 @@ inline void Msg_AccumulateMixedContentHSTS::set_allocated_a_aoriginattributes(st
 // -------------------------------------------------------------------
 
 // Msg_PSpeechSynthesisConstructor
+
+// required sint64 a_actorid = 1;
+inline bool Msg_PSpeechSynthesisConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PSpeechSynthesisConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PSpeechSynthesisConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PSpeechSynthesisConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PSpeechSynthesisConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContent.Msg_PSpeechSynthesisConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PSpeechSynthesisConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PSpeechSynthesisConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PSpeechSynthesisConstructor.a_actorid)
+}
 
 // -------------------------------------------------------------------
 
@@ -73920,6 +74585,34 @@ inline void Msg_AccumulateMixedContentHSTS::set_allocated_a_aoriginattributes(st
 
 // Msg_PMediaConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PMediaConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PMediaConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PMediaConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PMediaConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PMediaConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContent.Msg_PMediaConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PMediaConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PMediaConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PMediaConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PMediaConstructor
@@ -73927,6 +74620,34 @@ inline void Msg_AccumulateMixedContentHSTS::set_allocated_a_aoriginattributes(st
 // -------------------------------------------------------------------
 
 // Msg_PWebrtcGlobalConstructor
+
+// required sint64 a_actorid = 1;
+inline bool Msg_PWebrtcGlobalConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PWebrtcGlobalConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PWebrtcGlobalConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PWebrtcGlobalConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PWebrtcGlobalConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContent.Msg_PWebrtcGlobalConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PWebrtcGlobalConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PWebrtcGlobalConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PWebrtcGlobalConstructor.a_actorid)
+}
 
 // -------------------------------------------------------------------
 
@@ -74031,7 +74752,35 @@ inline void Reply_CreateAudioIPCConnection::set_allocated_a_fd(::protobuf::mozil
 
 // Msg_PURLClassifierConstructor
 
-// required bytes a_principal = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PURLClassifierConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PURLClassifierConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PURLClassifierConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PURLClassifierConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PURLClassifierConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContent.Msg_PURLClassifierConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PURLClassifierConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PURLClassifierConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PURLClassifierConstructor.a_actorid)
+}
+
+// required bytes a_principal = 2;
 inline bool Msg_PURLClassifierConstructor::_internal_has_a_principal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -74135,7 +74884,35 @@ inline void Reply_PURLClassifierConstructor::set_a_success(bool value) {
 
 // Msg_PURLClassifierLocalConstructor
 
-// required bytes a_uri = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PURLClassifierLocalConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PURLClassifierLocalConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PURLClassifierLocalConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PURLClassifierLocalConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PURLClassifierLocalConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContent.Msg_PURLClassifierLocalConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PURLClassifierLocalConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PURLClassifierLocalConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PURLClassifierLocalConstructor.a_actorid)
+}
+
+// required bytes a_uri = 2;
 inline bool Msg_PURLClassifierLocalConstructor::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -74203,7 +74980,7 @@ inline void Msg_PURLClassifierLocalConstructor::set_allocated_a_uri(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PURLClassifierLocalConstructor.a_uri)
 }
 
-// repeated .protobuf.mozilla.dom.IPCURLClassifierFeature a_features = 2;
+// repeated .protobuf.mozilla.dom.IPCURLClassifierFeature a_features = 3;
 inline int Msg_PURLClassifierLocalConstructor::_internal_a_features_size() const {
   return _impl_.a_features_.size();
 }
@@ -74248,7 +75025,35 @@ Msg_PURLClassifierLocalConstructor::a_features() const {
 
 // Msg_PURLClassifierLocalByNameConstructor
 
-// required bytes a_uri = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PURLClassifierLocalByNameConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PURLClassifierLocalByNameConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PURLClassifierLocalByNameConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t Msg_PURLClassifierLocalByNameConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PURLClassifierLocalByNameConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContent.Msg_PURLClassifierLocalByNameConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PURLClassifierLocalByNameConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PURLClassifierLocalByNameConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PURLClassifierLocalByNameConstructor.a_actorid)
+}
+
+// required bytes a_uri = 2;
 inline bool Msg_PURLClassifierLocalByNameConstructor::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -74316,7 +75121,7 @@ inline void Msg_PURLClassifierLocalByNameConstructor::set_allocated_a_uri(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PURLClassifierLocalByNameConstructor.a_uri)
 }
 
-// repeated string a_featureNames = 2;
+// repeated string a_featureNames = 3;
 inline int Msg_PURLClassifierLocalByNameConstructor::_internal_a_featurenames_size() const {
   return _impl_.a_featurenames_.size();
 }
@@ -74391,7 +75196,7 @@ Msg_PURLClassifierLocalByNameConstructor::mutable_a_featurenames() {
   return &_impl_.a_featurenames_;
 }
 
-// required bytes a_aListType = 3;
+// required bytes a_aListType = 4;
 inline bool Msg_PURLClassifierLocalByNameConstructor::_internal_has_a_alisttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -74466,6 +75271,34 @@ inline void Msg_PURLClassifierLocalByNameConstructor::set_allocated_a_alisttype(
 // -------------------------------------------------------------------
 
 // Msg_PSessionStorageObserverConstructor
+
+// required sint64 a_actorid = 1;
+inline bool Msg_PSessionStorageObserverConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PSessionStorageObserverConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PSessionStorageObserverConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PSessionStorageObserverConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PSessionStorageObserverConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContent.Msg_PSessionStorageObserverConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PSessionStorageObserverConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PSessionStorageObserverConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PSessionStorageObserverConstructor.a_actorid)
+}
 
 // -------------------------------------------------------------------
 
@@ -75424,7 +76257,35 @@ inline void Msg_AddSecurityState::set_a_astateflags(uint32_t value) {
 
 // Msg_PExternalHelperAppConstructor
 
-// required bytes a_uri = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool Msg_PExternalHelperAppConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PExternalHelperAppConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000080u;
+}
+inline int64_t Msg_PExternalHelperAppConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PExternalHelperAppConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PExternalHelperAppConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000080u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PExternalHelperAppConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.a_actorid)
+}
+
+// required bytes a_uri = 2;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -75492,7 +76353,7 @@ inline void Msg_PExternalHelperAppConstructor::set_allocated_a_uri(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.a_uri)
 }
 
-// required .protobuf.mozilla.net.LoadInfoArgs a_loadInfoArgs = 2;
+// required .protobuf.mozilla.net.LoadInfoArgs a_loadInfoArgs = 3;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_loadinfoargs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_loadinfoargs_ != nullptr);
@@ -75579,7 +76440,7 @@ inline void Msg_PExternalHelperAppConstructor::set_allocated_a_loadinfoargs(::pr
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.a_loadInfoArgs)
 }
 
-// required string a_aMimeContentType = 3;
+// required string a_aMimeContentType = 4;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_amimecontenttype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -75647,7 +76508,7 @@ inline void Msg_PExternalHelperAppConstructor::set_allocated_a_amimecontenttype(
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.a_aMimeContentType)
 }
 
-// required string a_aContentDisposition = 4;
+// required string a_aContentDisposition = 5;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_acontentdisposition() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -75715,9 +76576,9 @@ inline void Msg_PExternalHelperAppConstructor::set_allocated_a_acontentdispositi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.a_aContentDisposition)
 }
 
-// required uint32 a_aContentDispositionHint = 5;
+// required uint32 a_aContentDispositionHint = 6;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_acontentdispositionhint() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
 inline bool Msg_PExternalHelperAppConstructor::has_a_acontentdispositionhint() const {
@@ -75725,7 +76586,7 @@ inline bool Msg_PExternalHelperAppConstructor::has_a_acontentdispositionhint() c
 }
 inline void Msg_PExternalHelperAppConstructor::clear_a_acontentdispositionhint() {
   _impl_.a_acontentdispositionhint_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000080u;
+  _impl_._has_bits_[0] &= ~0x00000100u;
 }
 inline uint32_t Msg_PExternalHelperAppConstructor::_internal_a_acontentdispositionhint() const {
   return _impl_.a_acontentdispositionhint_;
@@ -75735,7 +76596,7 @@ inline uint32_t Msg_PExternalHelperAppConstructor::a_acontentdispositionhint() c
   return _internal_a_acontentdispositionhint();
 }
 inline void Msg_PExternalHelperAppConstructor::_internal_set_a_acontentdispositionhint(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000080u;
+  _impl_._has_bits_[0] |= 0x00000100u;
   _impl_.a_acontentdispositionhint_ = value;
 }
 inline void Msg_PExternalHelperAppConstructor::set_a_acontentdispositionhint(uint32_t value) {
@@ -75743,7 +76604,7 @@ inline void Msg_PExternalHelperAppConstructor::set_a_acontentdispositionhint(uin
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.a_aContentDispositionHint)
 }
 
-// required string a_aContentDispositionFilename = 6;
+// required string a_aContentDispositionFilename = 7;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_acontentdispositionfilename() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -75811,9 +76672,9 @@ inline void Msg_PExternalHelperAppConstructor::set_allocated_a_acontentdispositi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.a_aContentDispositionFilename)
 }
 
-// required bool a_aForceSave = 7;
+// required bool a_aForceSave = 8;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_aforcesave() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool Msg_PExternalHelperAppConstructor::has_a_aforcesave() const {
@@ -75821,7 +76682,7 @@ inline bool Msg_PExternalHelperAppConstructor::has_a_aforcesave() const {
 }
 inline void Msg_PExternalHelperAppConstructor::clear_a_aforcesave() {
   _impl_.a_aforcesave_ = false;
-  _impl_._has_bits_[0] &= ~0x00000100u;
+  _impl_._has_bits_[0] &= ~0x00000200u;
 }
 inline bool Msg_PExternalHelperAppConstructor::_internal_a_aforcesave() const {
   return _impl_.a_aforcesave_;
@@ -75831,7 +76692,7 @@ inline bool Msg_PExternalHelperAppConstructor::a_aforcesave() const {
   return _internal_a_aforcesave();
 }
 inline void Msg_PExternalHelperAppConstructor::_internal_set_a_aforcesave(bool value) {
-  _impl_._has_bits_[0] |= 0x00000100u;
+  _impl_._has_bits_[0] |= 0x00000200u;
   _impl_.a_aforcesave_ = value;
 }
 inline void Msg_PExternalHelperAppConstructor::set_a_aforcesave(bool value) {
@@ -75839,9 +76700,9 @@ inline void Msg_PExternalHelperAppConstructor::set_a_aforcesave(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.a_aForceSave)
 }
 
-// required sint64 a_aContentLength = 8;
+// required sint64 a_aContentLength = 9;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_acontentlength() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
 }
 inline bool Msg_PExternalHelperAppConstructor::has_a_acontentlength() const {
@@ -75849,7 +76710,7 @@ inline bool Msg_PExternalHelperAppConstructor::has_a_acontentlength() const {
 }
 inline void Msg_PExternalHelperAppConstructor::clear_a_acontentlength() {
   _impl_.a_acontentlength_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000400u;
+  _impl_._has_bits_[0] &= ~0x00000800u;
 }
 inline int64_t Msg_PExternalHelperAppConstructor::_internal_a_acontentlength() const {
   return _impl_.a_acontentlength_;
@@ -75859,7 +76720,7 @@ inline int64_t Msg_PExternalHelperAppConstructor::a_acontentlength() const {
   return _internal_a_acontentlength();
 }
 inline void Msg_PExternalHelperAppConstructor::_internal_set_a_acontentlength(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000400u;
+  _impl_._has_bits_[0] |= 0x00000800u;
   _impl_.a_acontentlength_ = value;
 }
 inline void Msg_PExternalHelperAppConstructor::set_a_acontentlength(int64_t value) {
@@ -75867,9 +76728,9 @@ inline void Msg_PExternalHelperAppConstructor::set_a_acontentlength(int64_t valu
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.a_aContentLength)
 }
 
-// required bool a_aWasFileChannel = 9;
+// required bool a_aWasFileChannel = 10;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_awasfilechannel() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
 inline bool Msg_PExternalHelperAppConstructor::has_a_awasfilechannel() const {
@@ -75877,7 +76738,7 @@ inline bool Msg_PExternalHelperAppConstructor::has_a_awasfilechannel() const {
 }
 inline void Msg_PExternalHelperAppConstructor::clear_a_awasfilechannel() {
   _impl_.a_awasfilechannel_ = false;
-  _impl_._has_bits_[0] &= ~0x00000200u;
+  _impl_._has_bits_[0] &= ~0x00000400u;
 }
 inline bool Msg_PExternalHelperAppConstructor::_internal_a_awasfilechannel() const {
   return _impl_.a_awasfilechannel_;
@@ -75887,7 +76748,7 @@ inline bool Msg_PExternalHelperAppConstructor::a_awasfilechannel() const {
   return _internal_a_awasfilechannel();
 }
 inline void Msg_PExternalHelperAppConstructor::_internal_set_a_awasfilechannel(bool value) {
-  _impl_._has_bits_[0] |= 0x00000200u;
+  _impl_._has_bits_[0] |= 0x00000400u;
   _impl_.a_awasfilechannel_ = value;
 }
 inline void Msg_PExternalHelperAppConstructor::set_a_awasfilechannel(bool value) {
@@ -75895,7 +76756,7 @@ inline void Msg_PExternalHelperAppConstructor::set_a_awasfilechannel(bool value)
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.a_aWasFileChannel)
 }
 
-// required bytes a_aReferrer = 10;
+// required bytes a_aReferrer = 11;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_areferrer() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -75963,7 +76824,7 @@ inline void Msg_PExternalHelperAppConstructor::set_allocated_a_areferrer(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.a_aReferrer)
 }
 
-// required bytes a_aContext = 11;
+// required bytes a_aContext = 12;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_acontext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -76038,6 +76899,34 @@ inline void Msg_PExternalHelperAppConstructor::set_allocated_a_acontext(std::str
 // -------------------------------------------------------------------
 
 // Msg_PHandlerServiceConstructor
+
+// required sint64 a_actorid = 1;
+inline bool Msg_PHandlerServiceConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PHandlerServiceConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PHandlerServiceConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PHandlerServiceConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PHandlerServiceConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContent.Msg_PHandlerServiceConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PHandlerServiceConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PHandlerServiceConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PHandlerServiceConstructor.a_actorid)
+}
 
 // -------------------------------------------------------------------
 
@@ -78086,7 +78975,35 @@ inline void Reply_ClipboardHasType::set_a_hastype(bool value) {
 
 // Msg_PClipboardWriteRequestConstructor
 
-// required bytes a_aClipboardType = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PClipboardWriteRequestConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PClipboardWriteRequestConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PClipboardWriteRequestConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t Msg_PClipboardWriteRequestConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PClipboardWriteRequestConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContent.Msg_PClipboardWriteRequestConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PClipboardWriteRequestConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PClipboardWriteRequestConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PClipboardWriteRequestConstructor.a_actorid)
+}
+
+// required bytes a_aClipboardType = 2;
 inline bool Msg_PClipboardWriteRequestConstructor::_internal_has_a_aclipboardtype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -78154,7 +79071,7 @@ inline void Msg_PClipboardWriteRequestConstructor::set_allocated_a_aclipboardtyp
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PClipboardWriteRequestConstructor.a_aClipboardType)
 }
 
-// required bytes a_aSettingWindowContext = 2;
+// required bytes a_aSettingWindowContext = 3;
 inline bool Msg_PClipboardWriteRequestConstructor::_internal_has_a_asettingwindowcontext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -79214,7 +80131,35 @@ inline void Msg_RequestAnonymousTemporaryFile::set_a_aid(uint64_t value) {
 
 // Msg_PContentPermissionRequestConstructor
 
-// repeated .protobuf.mozilla.dom.PermissionRequest a_aRequests = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PContentPermissionRequestConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_PContentPermissionRequestConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PContentPermissionRequestConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+inline int64_t Msg_PContentPermissionRequestConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PContentPermissionRequestConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PContent.Msg_PContentPermissionRequestConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PContentPermissionRequestConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PContentPermissionRequestConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PContentPermissionRequestConstructor.a_actorid)
+}
+
+// repeated .protobuf.mozilla.dom.PermissionRequest a_aRequests = 2;
 inline int Msg_PContentPermissionRequestConstructor::_internal_a_arequests_size() const {
   return _impl_.a_arequests_.size();
 }
@@ -79251,7 +80196,7 @@ Msg_PContentPermissionRequestConstructor::a_arequests() const {
   return _impl_.a_arequests_;
 }
 
-// required bytes a_aPrincipal = 2;
+// required bytes a_aPrincipal = 3;
 inline bool Msg_PContentPermissionRequestConstructor::_internal_has_a_aprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -79319,7 +80264,7 @@ inline void Msg_PContentPermissionRequestConstructor::set_allocated_a_aprincipal
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PContentPermissionRequestConstructor.a_aPrincipal)
 }
 
-// required bytes a_aTopLevelPrincipal = 3;
+// required bytes a_aTopLevelPrincipal = 4;
 inline bool Msg_PContentPermissionRequestConstructor::_internal_has_a_atoplevelprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -79387,9 +80332,9 @@ inline void Msg_PContentPermissionRequestConstructor::set_allocated_a_atoplevelp
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PContentPermissionRequestConstructor.a_aTopLevelPrincipal)
 }
 
-// required bool a_aIsHandlingUserInput = 4;
+// required bool a_aIsHandlingUserInput = 5;
 inline bool Msg_PContentPermissionRequestConstructor::_internal_has_a_aishandlinguserinput() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
 inline bool Msg_PContentPermissionRequestConstructor::has_a_aishandlinguserinput() const {
@@ -79397,7 +80342,7 @@ inline bool Msg_PContentPermissionRequestConstructor::has_a_aishandlinguserinput
 }
 inline void Msg_PContentPermissionRequestConstructor::clear_a_aishandlinguserinput() {
   _impl_.a_aishandlinguserinput_ = false;
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline bool Msg_PContentPermissionRequestConstructor::_internal_a_aishandlinguserinput() const {
   return _impl_.a_aishandlinguserinput_;
@@ -79407,7 +80352,7 @@ inline bool Msg_PContentPermissionRequestConstructor::a_aishandlinguserinput() c
   return _internal_a_aishandlinguserinput();
 }
 inline void Msg_PContentPermissionRequestConstructor::_internal_set_a_aishandlinguserinput(bool value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_aishandlinguserinput_ = value;
 }
 inline void Msg_PContentPermissionRequestConstructor::set_a_aishandlinguserinput(bool value) {
@@ -79415,9 +80360,9 @@ inline void Msg_PContentPermissionRequestConstructor::set_a_aishandlinguserinput
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PContentPermissionRequestConstructor.a_aIsHandlingUserInput)
 }
 
-// required bool a_aMaybeUnsafePermissionDelegate = 5;
+// required bool a_aMaybeUnsafePermissionDelegate = 6;
 inline bool Msg_PContentPermissionRequestConstructor::_internal_has_a_amaybeunsafepermissiondelegate() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
 inline bool Msg_PContentPermissionRequestConstructor::has_a_amaybeunsafepermissiondelegate() const {
@@ -79425,7 +80370,7 @@ inline bool Msg_PContentPermissionRequestConstructor::has_a_amaybeunsafepermissi
 }
 inline void Msg_PContentPermissionRequestConstructor::clear_a_amaybeunsafepermissiondelegate() {
   _impl_.a_amaybeunsafepermissiondelegate_ = false;
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline bool Msg_PContentPermissionRequestConstructor::_internal_a_amaybeunsafepermissiondelegate() const {
   return _impl_.a_amaybeunsafepermissiondelegate_;
@@ -79435,7 +80380,7 @@ inline bool Msg_PContentPermissionRequestConstructor::a_amaybeunsafepermissionde
   return _internal_a_amaybeunsafepermissiondelegate();
 }
 inline void Msg_PContentPermissionRequestConstructor::_internal_set_a_amaybeunsafepermissiondelegate(bool value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_amaybeunsafepermissiondelegate_ = value;
 }
 inline void Msg_PContentPermissionRequestConstructor::set_a_amaybeunsafepermissiondelegate(bool value) {
@@ -79443,7 +80388,7 @@ inline void Msg_PContentPermissionRequestConstructor::set_a_amaybeunsafepermissi
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PContentPermissionRequestConstructor.a_aMaybeUnsafePermissionDelegate)
 }
 
-// required bytes a_tabId = 6;
+// required bytes a_tabId = 7;
 inline bool Msg_PContentPermissionRequestConstructor::_internal_has_a_tabid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

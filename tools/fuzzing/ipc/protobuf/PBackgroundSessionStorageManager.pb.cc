@@ -26,7 +26,8 @@ PROTOBUF_CONSTEXPR Msg_PBackgroundSessionStorageCacheConstructor::Msg_PBackgroun
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
   , /*decltype(_impl_.a_aoriginkey_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_aprincipalinfo_)*/nullptr} {}
+  , /*decltype(_impl_.a_aprincipalinfo_)*/nullptr
+  , /*decltype(_impl_.a_actorid_)*/int64_t{0}} {}
 struct Msg_PBackgroundSessionStorageCacheConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PBackgroundSessionStorageCacheConstructorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -128,6 +129,9 @@ namespace PBackgroundSessionStorageManager {
 class Msg_PBackgroundSessionStorageCacheConstructor::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_PBackgroundSessionStorageCacheConstructor>()._impl_._has_bits_);
+  static void set_has_a_actorid(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
   static const ::protobuf::mozilla::ipc::PrincipalInfo& a_aprincipalinfo(const Msg_PBackgroundSessionStorageCacheConstructor* msg);
   static void set_has_a_aprincipalinfo(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
@@ -136,7 +140,7 @@ class Msg_PBackgroundSessionStorageCacheConstructor::_Internal {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -161,7 +165,8 @@ Msg_PBackgroundSessionStorageCacheConstructor::Msg_PBackgroundSessionStorageCach
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_aoriginkey_){}
-    , decltype(_impl_.a_aprincipalinfo_){nullptr}};
+    , decltype(_impl_.a_aprincipalinfo_){nullptr}
+    , decltype(_impl_.a_actorid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_aoriginkey_.InitDefault();
@@ -175,6 +180,7 @@ Msg_PBackgroundSessionStorageCacheConstructor::Msg_PBackgroundSessionStorageCach
   if (from._internal_has_a_aprincipalinfo()) {
     _this->_impl_.a_aprincipalinfo_ = new ::protobuf::mozilla::ipc::PrincipalInfo(*from._impl_.a_aprincipalinfo_);
   }
+  _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PBackgroundSessionStorageManager.Msg_PBackgroundSessionStorageCacheConstructor)
 }
 
@@ -187,6 +193,7 @@ inline void Msg_PBackgroundSessionStorageCacheConstructor::SharedCtor(
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_aoriginkey_){}
     , decltype(_impl_.a_aprincipalinfo_){nullptr}
+    , decltype(_impl_.a_actorid_){int64_t{0}}
   };
   _impl_.a_aoriginkey_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -229,6 +236,7 @@ void Msg_PBackgroundSessionStorageCacheConstructor::Clear() {
       _impl_.a_aprincipalinfo_->Clear();
     }
   }
+  _impl_.a_actorid_ = int64_t{0};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -240,17 +248,26 @@ const char* Msg_PBackgroundSessionStorageCacheConstructor::_InternalParse(const 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 1;
+      // required sint64 a_actorid = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_actorid(&has_bits);
+          _impl_.a_actorid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_aprincipalinfo(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required string a_aOriginKey = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+      // required string a_aOriginKey = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_aoriginkey();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
@@ -288,17 +305,23 @@ uint8_t* Msg_PBackgroundSessionStorageCacheConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 1;
+  // required sint64 a_actorid = 1;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
+  }
+
+  // required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 2;
   if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::a_aprincipalinfo(this),
+      InternalWriteMessage(2, _Internal::a_aprincipalinfo(this),
         _Internal::a_aprincipalinfo(this).GetCachedSize(), target, stream);
   }
 
-  // required string a_aOriginKey = 2;
+  // required string a_aOriginKey = 3;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteStringMaybeAliased(
-        2, this->_internal_a_aoriginkey(), target);
+        3, this->_internal_a_aoriginkey(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -314,17 +337,22 @@ size_t Msg_PBackgroundSessionStorageCacheConstructor::RequiredFieldsByteSizeFall
   size_t total_size = 0;
 
   if (_internal_has_a_aoriginkey()) {
-    // required string a_aOriginKey = 2;
+    // required string a_aOriginKey = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aoriginkey());
   }
 
   if (_internal_has_a_aprincipalinfo()) {
-    // required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 1;
+    // required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_aprincipalinfo_);
+  }
+
+  if (_internal_has_a_actorid()) {
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
   }
 
   return total_size;
@@ -333,16 +361,19 @@ size_t Msg_PBackgroundSessionStorageCacheConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PBackgroundSessionStorageManager.Msg_PBackgroundSessionStorageCacheConstructor)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_aOriginKey = 2;
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+    // required string a_aOriginKey = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_aoriginkey());
 
-    // required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 1;
+    // required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_aprincipalinfo_);
+
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -373,7 +404,7 @@ void Msg_PBackgroundSessionStorageCacheConstructor::MergeFrom(const Msg_PBackgro
   (void) cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
+  if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
       _this->_internal_set_a_aoriginkey(from._internal_a_aoriginkey());
     }
@@ -381,6 +412,10 @@ void Msg_PBackgroundSessionStorageCacheConstructor::MergeFrom(const Msg_PBackgro
       _this->_internal_mutable_a_aprincipalinfo()->::protobuf::mozilla::ipc::PrincipalInfo::MergeFrom(
           from._internal_a_aprincipalinfo());
     }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -410,7 +445,12 @@ void Msg_PBackgroundSessionStorageCacheConstructor::InternalSwap(Msg_PBackground
       &_impl_.a_aoriginkey_, lhs_arena,
       &other->_impl_.a_aoriginkey_, rhs_arena
   );
-  swap(_impl_.a_aprincipalinfo_, other->_impl_.a_aprincipalinfo_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Msg_PBackgroundSessionStorageCacheConstructor, _impl_.a_actorid_)
+      + sizeof(Msg_PBackgroundSessionStorageCacheConstructor::_impl_.a_actorid_)
+      - PROTOBUF_FIELD_OFFSET(Msg_PBackgroundSessionStorageCacheConstructor, _impl_.a_aprincipalinfo_)>(
+          reinterpret_cast<char*>(&_impl_.a_aprincipalinfo_),
+          reinterpret_cast<char*>(&other->_impl_.a_aprincipalinfo_));
 }
 
 std::string Msg_PBackgroundSessionStorageCacheConstructor::GetTypeName() const {

@@ -334,9 +334,10 @@ class Msg_PBackgroundIDBFactoryRequestConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAParamsFieldNumber = 1,
+    kAParamsFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.indexedDB.FactoryRequestParams a_params = 1;
+  // required .protobuf.mozilla.dom.indexedDB.FactoryRequestParams a_params = 2;
   bool has_a_params() const;
   private:
   bool _internal_has_a_params() const;
@@ -354,9 +355,25 @@ class Msg_PBackgroundIDBFactoryRequestConstructor final :
       ::protobuf::mozilla::dom::indexedDB::FactoryRequestParams* a_params);
   ::protobuf::mozilla::dom::indexedDB::FactoryRequestParams* unsafe_arena_release_a_params();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_PBackgroundIDBFactoryRequestConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -365,6 +382,7 @@ class Msg_PBackgroundIDBFactoryRequestConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::indexedDB::FactoryRequestParams* a_params_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBFactory_2eproto;
@@ -1170,10 +1188,11 @@ class Msg_PBackgroundIDBDatabaseConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kARequestFieldNumber = 2,
-    kASpecFieldNumber = 1,
+    kARequestFieldNumber = 3,
+    kASpecFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required bytes a_request = 2;
+  // required bytes a_request = 3;
   bool has_a_request() const;
   private:
   bool _internal_has_a_request() const;
@@ -1191,7 +1210,7 @@ class Msg_PBackgroundIDBDatabaseConstructor final :
   std::string* _internal_mutable_a_request();
   public:
 
-  // required .protobuf.mozilla.dom.indexedDB.DatabaseSpec a_spec = 1;
+  // required .protobuf.mozilla.dom.indexedDB.DatabaseSpec a_spec = 2;
   bool has_a_spec() const;
   private:
   bool _internal_has_a_spec() const;
@@ -1209,6 +1228,19 @@ class Msg_PBackgroundIDBDatabaseConstructor final :
       ::protobuf::mozilla::dom::indexedDB::DatabaseSpec* a_spec);
   ::protobuf::mozilla::dom::indexedDB::DatabaseSpec* unsafe_arena_release_a_spec();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_PBackgroundIDBDatabaseConstructor)
  private:
   class _Internal;
@@ -1224,6 +1256,7 @@ class Msg_PBackgroundIDBDatabaseConstructor final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_request_;
     ::protobuf::mozilla::dom::indexedDB::DatabaseSpec* a_spec_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBFactory_2eproto;
@@ -1367,7 +1400,35 @@ class Reply_PBackgroundIDBDatabaseConstructor final :
 
 // Msg_PBackgroundIDBFactoryRequestConstructor
 
-// required .protobuf.mozilla.dom.indexedDB.FactoryRequestParams a_params = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PBackgroundIDBFactoryRequestConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundIDBFactoryRequestConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PBackgroundIDBFactoryRequestConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PBackgroundIDBFactoryRequestConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PBackgroundIDBFactoryRequestConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_PBackgroundIDBFactoryRequestConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PBackgroundIDBFactoryRequestConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PBackgroundIDBFactoryRequestConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_PBackgroundIDBFactoryRequestConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.dom.indexedDB.FactoryRequestParams a_params = 2;
 inline bool Msg_PBackgroundIDBFactoryRequestConstructor::_internal_has_a_params() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_params_ != nullptr);
@@ -1720,7 +1781,35 @@ inline void Reply_GetDatabases::set_allocated_a_response(::protobuf::mozilla::do
 
 // Msg_PBackgroundIDBDatabaseConstructor
 
-// required .protobuf.mozilla.dom.indexedDB.DatabaseSpec a_spec = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PBackgroundIDBDatabaseConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundIDBDatabaseConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PBackgroundIDBDatabaseConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t Msg_PBackgroundIDBDatabaseConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PBackgroundIDBDatabaseConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_PBackgroundIDBDatabaseConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PBackgroundIDBDatabaseConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PBackgroundIDBDatabaseConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_PBackgroundIDBDatabaseConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.dom.indexedDB.DatabaseSpec a_spec = 2;
 inline bool Msg_PBackgroundIDBDatabaseConstructor::_internal_has_a_spec() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_spec_ != nullptr);
@@ -1807,7 +1896,7 @@ inline void Msg_PBackgroundIDBDatabaseConstructor::set_allocated_a_spec(::protob
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.PBackgroundIDBFactory.Msg_PBackgroundIDBDatabaseConstructor.a_spec)
 }
 
-// required bytes a_request = 2;
+// required bytes a_request = 3;
 inline bool Msg_PBackgroundIDBDatabaseConstructor::_internal_has_a_request() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

@@ -345,9 +345,10 @@ class Msg_PClientHandleConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAAClientInfoFieldNumber = 1,
+    kAAClientInfoFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
+  // required .protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 2;
   bool has_a_aclientinfo() const;
   private:
   bool _internal_has_a_aclientinfo() const;
@@ -365,9 +366,25 @@ class Msg_PClientHandleConstructor final :
       ::protobuf::mozilla::dom::IPCClientInfo* a_aclientinfo);
   ::protobuf::mozilla::dom::IPCClientInfo* unsafe_arena_release_a_aclientinfo();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PClientManager.Msg_PClientHandleConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -376,6 +393,7 @@ class Msg_PClientHandleConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::IPCClientInfo* a_aclientinfo_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PClientManager_2eproto;
@@ -616,9 +634,10 @@ class Msg_PClientManagerOpConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAAArgsFieldNumber = 1,
+    kAAArgsFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.ClientOpConstructorArgs a_aArgs = 1;
+  // required .protobuf.mozilla.dom.ClientOpConstructorArgs a_aArgs = 2;
   bool has_a_aargs() const;
   private:
   bool _internal_has_a_aargs() const;
@@ -636,9 +655,25 @@ class Msg_PClientManagerOpConstructor final :
       ::protobuf::mozilla::dom::ClientOpConstructorArgs* a_aargs);
   ::protobuf::mozilla::dom::ClientOpConstructorArgs* unsafe_arena_release_a_aargs();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PClientManager.Msg_PClientManagerOpConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -647,6 +682,7 @@ class Msg_PClientManagerOpConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::ClientOpConstructorArgs* a_aargs_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PClientManager_2eproto;
@@ -887,9 +923,10 @@ class Msg_PClientSourceConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAAArgsFieldNumber = 1,
+    kAAArgsFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.ClientSourceConstructorArgs a_aArgs = 1;
+  // required .protobuf.mozilla.dom.ClientSourceConstructorArgs a_aArgs = 2;
   bool has_a_aargs() const;
   private:
   bool _internal_has_a_aargs() const;
@@ -907,9 +944,25 @@ class Msg_PClientSourceConstructor final :
       ::protobuf::mozilla::dom::ClientSourceConstructorArgs* a_aargs);
   ::protobuf::mozilla::dom::ClientSourceConstructorArgs* unsafe_arena_release_a_aargs();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PClientManager.Msg_PClientSourceConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -918,6 +971,7 @@ class Msg_PClientSourceConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::ClientSourceConstructorArgs* a_aargs_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PClientManager_2eproto;
@@ -1452,9 +1506,10 @@ class Msg_PClientNavigateOpConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAAArgsFieldNumber = 1,
+    kAAArgsFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.ClientNavigateOpConstructorArgs a_aArgs = 1;
+  // required .protobuf.mozilla.dom.ClientNavigateOpConstructorArgs a_aArgs = 2;
   bool has_a_aargs() const;
   private:
   bool _internal_has_a_aargs() const;
@@ -1472,9 +1527,25 @@ class Msg_PClientNavigateOpConstructor final :
       ::protobuf::mozilla::dom::ClientNavigateOpConstructorArgs* a_aargs);
   ::protobuf::mozilla::dom::ClientNavigateOpConstructorArgs* unsafe_arena_release_a_aargs();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PClientManager.Msg_PClientNavigateOpConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1483,6 +1554,7 @@ class Msg_PClientNavigateOpConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::ClientNavigateOpConstructorArgs* a_aargs_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PClientManager_2eproto;
@@ -1874,7 +1946,35 @@ class Reply___delete__ final :
 
 // Msg_PClientHandleConstructor
 
-// required .protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PClientHandleConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PClientHandleConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PClientHandleConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PClientHandleConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PClientHandleConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PClientManager.Msg_PClientHandleConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PClientHandleConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PClientHandleConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PClientManager.Msg_PClientHandleConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 2;
 inline bool Msg_PClientHandleConstructor::_internal_has_a_aclientinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_aclientinfo_ != nullptr);
@@ -1969,7 +2069,35 @@ inline void Msg_PClientHandleConstructor::set_allocated_a_aclientinfo(::protobuf
 
 // Msg_PClientManagerOpConstructor
 
-// required .protobuf.mozilla.dom.ClientOpConstructorArgs a_aArgs = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PClientManagerOpConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PClientManagerOpConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PClientManagerOpConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PClientManagerOpConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PClientManagerOpConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PClientManager.Msg_PClientManagerOpConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PClientManagerOpConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PClientManagerOpConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PClientManager.Msg_PClientManagerOpConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.dom.ClientOpConstructorArgs a_aArgs = 2;
 inline bool Msg_PClientManagerOpConstructor::_internal_has_a_aargs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_aargs_ != nullptr);
@@ -2064,7 +2192,35 @@ inline void Msg_PClientManagerOpConstructor::set_allocated_a_aargs(::protobuf::m
 
 // Msg_PClientSourceConstructor
 
-// required .protobuf.mozilla.dom.ClientSourceConstructorArgs a_aArgs = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PClientSourceConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PClientSourceConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PClientSourceConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PClientSourceConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PClientSourceConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PClientManager.Msg_PClientSourceConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PClientSourceConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PClientSourceConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PClientManager.Msg_PClientSourceConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.dom.ClientSourceConstructorArgs a_aArgs = 2;
 inline bool Msg_PClientSourceConstructor::_internal_has_a_aargs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_aargs_ != nullptr);
@@ -2341,7 +2497,35 @@ inline void Msg_ForgetFutureClientSource::set_allocated_a_aclientinfo(::protobuf
 
 // Msg_PClientNavigateOpConstructor
 
-// required .protobuf.mozilla.dom.ClientNavigateOpConstructorArgs a_aArgs = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PClientNavigateOpConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PClientNavigateOpConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PClientNavigateOpConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PClientNavigateOpConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PClientNavigateOpConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PClientManager.Msg_PClientNavigateOpConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PClientNavigateOpConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PClientNavigateOpConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PClientManager.Msg_PClientNavigateOpConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.dom.ClientNavigateOpConstructorArgs a_aArgs = 2;
 inline bool Msg_PClientNavigateOpConstructor::_internal_has_a_aargs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_aargs_ != nullptr);

@@ -67,6 +67,7 @@ PROTOBUF_CONSTEXPR Msg_PBackgroundIDBCursorConstructor::Msg_PBackgroundIDBCursor
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
   , /*decltype(_impl_.a_params_)*/nullptr
+  , /*decltype(_impl_.a_actorid_)*/int64_t{0}
   , /*decltype(_impl_.a_requestid_)*/int64_t{0}} {}
 struct Msg_PBackgroundIDBCursorConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PBackgroundIDBCursorConstructorDefaultTypeInternal()
@@ -94,6 +95,7 @@ PROTOBUF_CONSTEXPR Msg_PBackgroundIDBRequestConstructor::Msg_PBackgroundIDBReque
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
   , /*decltype(_impl_.a_params_)*/nullptr
+  , /*decltype(_impl_.a_actorid_)*/int64_t{0}
   , /*decltype(_impl_.a_requestid_)*/int64_t{0}} {}
 struct Msg_PBackgroundIDBRequestConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PBackgroundIDBRequestConstructorDefaultTypeInternal()
@@ -728,15 +730,18 @@ std::string Msg_Abort::GetTypeName() const {
 class Msg_PBackgroundIDBCursorConstructor::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_PBackgroundIDBCursorConstructor>()._impl_._has_bits_);
-  static void set_has_a_requestid(HasBits* has_bits) {
+  static void set_has_a_actorid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_requestid(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
   }
   static const ::protobuf::mozilla::dom::indexedDB::OpenCursorParams& a_params(const Msg_PBackgroundIDBCursorConstructor* msg);
   static void set_has_a_params(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -761,13 +766,16 @@ Msg_PBackgroundIDBCursorConstructor::Msg_PBackgroundIDBCursorConstructor(const M
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_params_){nullptr}
+    , decltype(_impl_.a_actorid_){}
     , decltype(_impl_.a_requestid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_params()) {
     _this->_impl_.a_params_ = new ::protobuf::mozilla::dom::indexedDB::OpenCursorParams(*from._impl_.a_params_);
   }
-  _this->_impl_.a_requestid_ = from._impl_.a_requestid_;
+  ::memcpy(&_impl_.a_actorid_, &from._impl_.a_actorid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_requestid_) -
+    reinterpret_cast<char*>(&_impl_.a_actorid_)) + sizeof(_impl_.a_requestid_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.indexedDB.PBackgroundIDBTransaction.Msg_PBackgroundIDBCursorConstructor)
 }
 
@@ -779,6 +787,7 @@ inline void Msg_PBackgroundIDBCursorConstructor::SharedCtor(
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_params_){nullptr}
+    , decltype(_impl_.a_actorid_){int64_t{0}}
     , decltype(_impl_.a_requestid_){int64_t{0}}
   };
 }
@@ -812,7 +821,11 @@ void Msg_PBackgroundIDBCursorConstructor::Clear() {
     GOOGLE_DCHECK(_impl_.a_params_ != nullptr);
     _impl_.a_params_->Clear();
   }
-  _impl_.a_requestid_ = int64_t{0};
+  if (cached_has_bits & 0x00000006u) {
+    ::memset(&_impl_.a_actorid_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_requestid_) -
+        reinterpret_cast<char*>(&_impl_.a_actorid_)) + sizeof(_impl_.a_requestid_));
+  }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -824,18 +837,27 @@ const char* Msg_PBackgroundIDBCursorConstructor::_InternalParse(const char* ptr,
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint64 a_requestId = 1;
+      // required sint64 a_actorid = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_actorid(&has_bits);
+          _impl_.a_actorid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required sint64 a_requestId = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_requestid(&has_bits);
           _impl_.a_requestid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.dom.indexedDB.OpenCursorParams a_params = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+      // required .protobuf.mozilla.dom.indexedDB.OpenCursorParams a_params = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_params(), ptr);
           CHK_(ptr);
         } else
@@ -872,16 +894,22 @@ uint8_t* Msg_PBackgroundIDBCursorConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint64 a_requestId = 1;
+  // required sint64 a_actorid = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_requestid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
   }
 
-  // required .protobuf.mozilla.dom.indexedDB.OpenCursorParams a_params = 2;
+  // required sint64 a_requestId = 2;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_a_requestid(), target);
+  }
+
+  // required .protobuf.mozilla.dom.indexedDB.OpenCursorParams a_params = 3;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::a_params(this),
+      InternalWriteMessage(3, _Internal::a_params(this),
         _Internal::a_params(this).GetCachedSize(), target, stream);
   }
 
@@ -898,14 +926,19 @@ size_t Msg_PBackgroundIDBCursorConstructor::RequiredFieldsByteSizeFallback() con
   size_t total_size = 0;
 
   if (_internal_has_a_params()) {
-    // required .protobuf.mozilla.dom.indexedDB.OpenCursorParams a_params = 2;
+    // required .protobuf.mozilla.dom.indexedDB.OpenCursorParams a_params = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_params_);
   }
 
+  if (_internal_has_a_actorid()) {
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+  }
+
   if (_internal_has_a_requestid()) {
-    // required sint64 a_requestId = 1;
+    // required sint64 a_requestId = 2;
     total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_requestid());
   }
 
@@ -915,13 +948,16 @@ size_t Msg_PBackgroundIDBCursorConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.indexedDB.PBackgroundIDBTransaction.Msg_PBackgroundIDBCursorConstructor)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required .protobuf.mozilla.dom.indexedDB.OpenCursorParams a_params = 2;
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+    // required .protobuf.mozilla.dom.indexedDB.OpenCursorParams a_params = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_params_);
 
-    // required sint64 a_requestId = 1;
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+
+    // required sint64 a_requestId = 2;
     total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_requestid());
 
   } else {
@@ -953,12 +989,15 @@ void Msg_PBackgroundIDBCursorConstructor::MergeFrom(const Msg_PBackgroundIDBCurs
   (void) cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
+  if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
       _this->_internal_mutable_a_params()->::protobuf::mozilla::dom::indexedDB::OpenCursorParams::MergeFrom(
           from._internal_a_params());
     }
     if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
+    }
+    if (cached_has_bits & 0x00000004u) {
       _this->_impl_.a_requestid_ = from._impl_.a_requestid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
@@ -1151,15 +1190,18 @@ std::string Reply_PBackgroundIDBCursorConstructor::GetTypeName() const {
 class Msg_PBackgroundIDBRequestConstructor::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_PBackgroundIDBRequestConstructor>()._impl_._has_bits_);
-  static void set_has_a_requestid(HasBits* has_bits) {
+  static void set_has_a_actorid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
+  }
+  static void set_has_a_requestid(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
   }
   static const ::protobuf::mozilla::dom::indexedDB::RequestParams& a_params(const Msg_PBackgroundIDBRequestConstructor* msg);
   static void set_has_a_params(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -1184,13 +1226,16 @@ Msg_PBackgroundIDBRequestConstructor::Msg_PBackgroundIDBRequestConstructor(const
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_params_){nullptr}
+    , decltype(_impl_.a_actorid_){}
     , decltype(_impl_.a_requestid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_params()) {
     _this->_impl_.a_params_ = new ::protobuf::mozilla::dom::indexedDB::RequestParams(*from._impl_.a_params_);
   }
-  _this->_impl_.a_requestid_ = from._impl_.a_requestid_;
+  ::memcpy(&_impl_.a_actorid_, &from._impl_.a_actorid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_requestid_) -
+    reinterpret_cast<char*>(&_impl_.a_actorid_)) + sizeof(_impl_.a_requestid_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.indexedDB.PBackgroundIDBTransaction.Msg_PBackgroundIDBRequestConstructor)
 }
 
@@ -1202,6 +1247,7 @@ inline void Msg_PBackgroundIDBRequestConstructor::SharedCtor(
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_params_){nullptr}
+    , decltype(_impl_.a_actorid_){int64_t{0}}
     , decltype(_impl_.a_requestid_){int64_t{0}}
   };
 }
@@ -1235,7 +1281,11 @@ void Msg_PBackgroundIDBRequestConstructor::Clear() {
     GOOGLE_DCHECK(_impl_.a_params_ != nullptr);
     _impl_.a_params_->Clear();
   }
-  _impl_.a_requestid_ = int64_t{0};
+  if (cached_has_bits & 0x00000006u) {
+    ::memset(&_impl_.a_actorid_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_requestid_) -
+        reinterpret_cast<char*>(&_impl_.a_actorid_)) + sizeof(_impl_.a_requestid_));
+  }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -1247,18 +1297,27 @@ const char* Msg_PBackgroundIDBRequestConstructor::_InternalParse(const char* ptr
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint64 a_requestId = 1;
+      // required sint64 a_actorid = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_actorid(&has_bits);
+          _impl_.a_actorid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required sint64 a_requestId = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_requestid(&has_bits);
           _impl_.a_requestid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.dom.indexedDB.RequestParams a_params = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+      // required .protobuf.mozilla.dom.indexedDB.RequestParams a_params = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_params(), ptr);
           CHK_(ptr);
         } else
@@ -1295,16 +1354,22 @@ uint8_t* Msg_PBackgroundIDBRequestConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required sint64 a_requestId = 1;
+  // required sint64 a_actorid = 1;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_requestid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
   }
 
-  // required .protobuf.mozilla.dom.indexedDB.RequestParams a_params = 2;
+  // required sint64 a_requestId = 2;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(2, this->_internal_a_requestid(), target);
+  }
+
+  // required .protobuf.mozilla.dom.indexedDB.RequestParams a_params = 3;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::a_params(this),
+      InternalWriteMessage(3, _Internal::a_params(this),
         _Internal::a_params(this).GetCachedSize(), target, stream);
   }
 
@@ -1321,14 +1386,19 @@ size_t Msg_PBackgroundIDBRequestConstructor::RequiredFieldsByteSizeFallback() co
   size_t total_size = 0;
 
   if (_internal_has_a_params()) {
-    // required .protobuf.mozilla.dom.indexedDB.RequestParams a_params = 2;
+    // required .protobuf.mozilla.dom.indexedDB.RequestParams a_params = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_params_);
   }
 
+  if (_internal_has_a_actorid()) {
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+  }
+
   if (_internal_has_a_requestid()) {
-    // required sint64 a_requestId = 1;
+    // required sint64 a_requestId = 2;
     total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_requestid());
   }
 
@@ -1338,13 +1408,16 @@ size_t Msg_PBackgroundIDBRequestConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.indexedDB.PBackgroundIDBTransaction.Msg_PBackgroundIDBRequestConstructor)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required .protobuf.mozilla.dom.indexedDB.RequestParams a_params = 2;
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+    // required .protobuf.mozilla.dom.indexedDB.RequestParams a_params = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_params_);
 
-    // required sint64 a_requestId = 1;
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+
+    // required sint64 a_requestId = 2;
     total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_requestid());
 
   } else {
@@ -1376,12 +1449,15 @@ void Msg_PBackgroundIDBRequestConstructor::MergeFrom(const Msg_PBackgroundIDBReq
   (void) cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
+  if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
       _this->_internal_mutable_a_params()->::protobuf::mozilla::dom::indexedDB::RequestParams::MergeFrom(
           from._internal_a_params());
     }
     if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
+    }
+    if (cached_has_bits & 0x00000004u) {
       _this->_impl_.a_requestid_ = from._impl_.a_requestid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;

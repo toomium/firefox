@@ -25,19 +25,20 @@ message Reply_Ping {
 }
 
 message Msg_PTextureConstructor {
-  required protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 1;
-  required protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 2;
-  required bytes a_aBackend = 3;
-  required bytes a_aTextureFlags = 4;
-  required bytes a_aContentId = 5;
-  required uint64 a_aSerial = 6;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 2;
+  required protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 3;
+  required bytes a_aBackend = 4;
+  required bytes a_aTextureFlags = 5;
+  required bytes a_aContentId = 6;
+  required uint64 a_aSerial = 7;
 }
 
 message Reply_PTextureConstructor {
 }
 
 // Parameter mappings stats:
-// Total parameters in this file 7
-// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 0, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 5, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 0, "<class 'ipdl.type.UnionType'>": 2, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 1
+// Total parameters in this file 8
+// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 1, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 5, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 0, "<class 'ipdl.type.UnionType'>": 2, "<class 'ipdl.type.UniquePtrType'>": 0}
+// Scalar mappings performed: 2
 // Message structs/unions generated from ipdl structs/unions: 0

@@ -600,9 +600,10 @@ class Msg_PBackgroundTestConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kATestArgFieldNumber = 1,
+    kATestArgFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required string a_testArg = 1;
+  // required string a_testArg = 2;
   bool has_a_testarg() const;
   private:
   bool _internal_has_a_testarg() const;
@@ -620,9 +621,25 @@ class Msg_PBackgroundTestConstructor final :
   std::string* _internal_mutable_a_testarg();
   public:
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundTestConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -631,6 +648,7 @@ class Msg_PBackgroundTestConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_testarg_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -871,10 +889,11 @@ class Msg_PBackgroundIDBFactoryConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kASystemLocaleFieldNumber = 2,
-    kALoggingInfoFieldNumber = 1,
+    kASystemLocaleFieldNumber = 3,
+    kALoggingInfoFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required string a_systemLocale = 2;
+  // required string a_systemLocale = 3;
   bool has_a_systemlocale() const;
   private:
   bool _internal_has_a_systemlocale() const;
@@ -892,7 +911,7 @@ class Msg_PBackgroundIDBFactoryConstructor final :
   std::string* _internal_mutable_a_systemlocale();
   public:
 
-  // required .protobuf.mozilla.dom.indexedDB.LoggingInfo a_loggingInfo = 1;
+  // required .protobuf.mozilla.dom.indexedDB.LoggingInfo a_loggingInfo = 2;
   bool has_a_logginginfo() const;
   private:
   bool _internal_has_a_logginginfo() const;
@@ -910,6 +929,19 @@ class Msg_PBackgroundIDBFactoryConstructor final :
       ::protobuf::mozilla::dom::indexedDB::LoggingInfo* a_logginginfo);
   ::protobuf::mozilla::dom::indexedDB::LoggingInfo* unsafe_arena_release_a_logginginfo();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundIDBFactoryConstructor)
  private:
   class _Internal;
@@ -925,6 +957,7 @@ class Msg_PBackgroundIDBFactoryConstructor final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_systemlocale_;
     ::protobuf::mozilla::dom::indexedDB::LoggingInfo* a_logginginfo_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -1164,6 +1197,22 @@ class Msg_PBackgroundIndexedDBUtilsConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundIndexedDBUtilsConstructor)
  private:
   class _Internal;
@@ -1172,7 +1221,9 @@ class Msg_PBackgroundIndexedDBUtilsConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -1537,10 +1588,11 @@ class Msg_PBackgroundSDBConnectionConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAPersistenceTypeFieldNumber = 1,
-    kAPrincipalInfoFieldNumber = 2,
+    kAPersistenceTypeFieldNumber = 2,
+    kAPrincipalInfoFieldNumber = 3,
+    kAActoridFieldNumber = 1,
   };
-  // required bytes a_persistenceType = 1;
+  // required bytes a_persistenceType = 2;
   bool has_a_persistencetype() const;
   private:
   bool _internal_has_a_persistencetype() const;
@@ -1558,7 +1610,7 @@ class Msg_PBackgroundSDBConnectionConstructor final :
   std::string* _internal_mutable_a_persistencetype();
   public:
 
-  // required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+  // required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 3;
   bool has_a_principalinfo() const;
   private:
   bool _internal_has_a_principalinfo() const;
@@ -1576,6 +1628,19 @@ class Msg_PBackgroundSDBConnectionConstructor final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_principalinfo();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundSDBConnectionConstructor)
  private:
   class _Internal;
@@ -1591,6 +1656,7 @@ class Msg_PBackgroundSDBConnectionConstructor final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_persistencetype_;
     ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -1831,9 +1897,23 @@ class Msg_PBackgroundLSObserverConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAObserverIdFieldNumber = 1,
+    kAActoridFieldNumber = 1,
+    kAObserverIdFieldNumber = 2,
   };
-  // required uint64 a_observerId = 1;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required uint64 a_observerId = 2;
   bool has_a_observerid() const;
   private:
   bool _internal_has_a_observerid() const;
@@ -1850,12 +1930,16 @@ class Msg_PBackgroundLSObserverConstructor final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
     uint64_t a_observerid_;
   };
   union { Impl_ _impl_; };
@@ -2097,9 +2181,10 @@ class Msg_PBackgroundLSRequestConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAParamsFieldNumber = 1,
+    kAParamsFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.LSRequestParams a_params = 1;
+  // required .protobuf.mozilla.dom.LSRequestParams a_params = 2;
   bool has_a_params() const;
   private:
   bool _internal_has_a_params() const;
@@ -2117,9 +2202,25 @@ class Msg_PBackgroundLSRequestConstructor final :
       ::protobuf::mozilla::dom::LSRequestParams* a_params);
   ::protobuf::mozilla::dom::LSRequestParams* unsafe_arena_release_a_params();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundLSRequestConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2128,6 +2229,7 @@ class Msg_PBackgroundLSRequestConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::LSRequestParams* a_params_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -2368,9 +2470,10 @@ class Msg_PBackgroundLSSimpleRequestConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAParamsFieldNumber = 1,
+    kAParamsFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.LSSimpleRequestParams a_params = 1;
+  // required .protobuf.mozilla.dom.LSSimpleRequestParams a_params = 2;
   bool has_a_params() const;
   private:
   bool _internal_has_a_params() const;
@@ -2388,9 +2491,25 @@ class Msg_PBackgroundLSSimpleRequestConstructor final :
       ::protobuf::mozilla::dom::LSSimpleRequestParams* a_params);
   ::protobuf::mozilla::dom::LSSimpleRequestParams* unsafe_arena_release_a_params();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundLSSimpleRequestConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2399,6 +2518,7 @@ class Msg_PBackgroundLSSimpleRequestConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::LSSimpleRequestParams* a_params_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -2639,11 +2759,12 @@ class Msg_PBackgroundLocalStorageCacheConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAOriginKeyFieldNumber = 2,
-    kAPrincipalInfoFieldNumber = 1,
-    kAPrivateBrowsingIdFieldNumber = 3,
+    kAOriginKeyFieldNumber = 3,
+    kAPrincipalInfoFieldNumber = 2,
+    kAActoridFieldNumber = 1,
+    kAPrivateBrowsingIdFieldNumber = 4,
   };
-  // required string a_originKey = 2;
+  // required string a_originKey = 3;
   bool has_a_originkey() const;
   private:
   bool _internal_has_a_originkey() const;
@@ -2661,7 +2782,7 @@ class Msg_PBackgroundLocalStorageCacheConstructor final :
   std::string* _internal_mutable_a_originkey();
   public:
 
-  // required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  // required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
   bool has_a_principalinfo() const;
   private:
   bool _internal_has_a_principalinfo() const;
@@ -2679,7 +2800,20 @@ class Msg_PBackgroundLocalStorageCacheConstructor final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_principalinfo();
 
-  // required uint32 a_privateBrowsingId = 3;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required uint32 a_privateBrowsingId = 4;
   bool has_a_privatebrowsingid() const;
   private:
   bool _internal_has_a_privatebrowsingid() const;
@@ -2707,6 +2841,7 @@ class Msg_PBackgroundLocalStorageCacheConstructor final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_originkey_;
     ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo_;
+    int64_t a_actorid_;
     uint32_t a_privatebrowsingid_;
   };
   union { Impl_ _impl_; };
@@ -2948,9 +3083,23 @@ class Msg_PBackgroundSessionStorageManagerConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAATopContextIdFieldNumber = 1,
+    kAActoridFieldNumber = 1,
+    kAATopContextIdFieldNumber = 2,
   };
-  // required uint64 a_aTopContextId = 1;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required uint64 a_aTopContextId = 2;
   bool has_a_atopcontextid() const;
   private:
   bool _internal_has_a_atopcontextid() const;
@@ -2967,12 +3116,16 @@ class Msg_PBackgroundSessionStorageManagerConstructor final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
     uint64_t a_atopcontextid_;
   };
   union { Impl_ _impl_; };
@@ -3213,6 +3366,22 @@ class Msg_PBackgroundSessionStorageServiceConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundSessionStorageServiceConstructor)
  private:
   class _Internal;
@@ -3221,7 +3390,9 @@ class Msg_PBackgroundSessionStorageServiceConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -3462,10 +3633,11 @@ class Msg_PBackgroundStorageConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAProfilePathFieldNumber = 1,
-    kAPrivateBrowsingIdFieldNumber = 2,
+    kAProfilePathFieldNumber = 2,
+    kAActoridFieldNumber = 1,
+    kAPrivateBrowsingIdFieldNumber = 3,
   };
-  // required string a_profilePath = 1;
+  // required string a_profilePath = 2;
   bool has_a_profilepath() const;
   private:
   bool _internal_has_a_profilepath() const;
@@ -3483,7 +3655,20 @@ class Msg_PBackgroundStorageConstructor final :
   std::string* _internal_mutable_a_profilepath();
   public:
 
-  // required uint32 a_privateBrowsingId = 2;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required uint32 a_privateBrowsingId = 3;
   bool has_a_privatebrowsingid() const;
   private:
   bool _internal_has_a_privatebrowsingid() const;
@@ -3510,6 +3695,7 @@ class Msg_PBackgroundStorageConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_profilepath_;
+    int64_t a_actorid_;
     uint32_t a_privatebrowsingid_;
   };
   union { Impl_ _impl_; };
@@ -4894,6 +5080,22 @@ class Msg_PVsyncConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PVsyncConstructor)
  private:
   class _Internal;
@@ -4902,7 +5104,9 @@ class Msg_PVsyncConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -5142,6 +5346,22 @@ class Msg_PCamerasConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PCamerasConstructor)
  private:
   class _Internal;
@@ -5150,7 +5370,9 @@ class Msg_PCamerasConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -5391,10 +5613,11 @@ class Msg_PUDPSocketConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAFilterFieldNumber = 2,
-    kAPInfoFieldNumber = 1,
+    kAFilterFieldNumber = 3,
+    kAPInfoFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required string a_filter = 2;
+  // required string a_filter = 3;
   bool has_a_filter() const;
   private:
   bool _internal_has_a_filter() const;
@@ -5412,7 +5635,7 @@ class Msg_PUDPSocketConstructor final :
   std::string* _internal_mutable_a_filter();
   public:
 
-  // optional .protobuf.mozilla.ipc.PrincipalInfo a_pInfo = 1;
+  // optional .protobuf.mozilla.ipc.PrincipalInfo a_pInfo = 2;
   bool has_a_pinfo() const;
   private:
   bool _internal_has_a_pinfo() const;
@@ -5430,9 +5653,25 @@ class Msg_PUDPSocketConstructor final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_pinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_pinfo();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PUDPSocketConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5442,6 +5681,7 @@ class Msg_PUDPSocketConstructor final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_filter_;
     ::protobuf::mozilla::ipc::PrincipalInfo* a_pinfo_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -5682,11 +5922,12 @@ class Msg_PBroadcastChannelConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAOriginFieldNumber = 2,
-    kAChannelFieldNumber = 3,
-    kAPInfoFieldNumber = 1,
+    kAOriginFieldNumber = 3,
+    kAChannelFieldNumber = 4,
+    kAPInfoFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required string a_origin = 2;
+  // required string a_origin = 3;
   bool has_a_origin() const;
   private:
   bool _internal_has_a_origin() const;
@@ -5704,7 +5945,7 @@ class Msg_PBroadcastChannelConstructor final :
   std::string* _internal_mutable_a_origin();
   public:
 
-  // required string a_channel = 3;
+  // required string a_channel = 4;
   bool has_a_channel() const;
   private:
   bool _internal_has_a_channel() const;
@@ -5722,7 +5963,7 @@ class Msg_PBroadcastChannelConstructor final :
   std::string* _internal_mutable_a_channel();
   public:
 
-  // required .protobuf.mozilla.ipc.PrincipalInfo a_pInfo = 1;
+  // required .protobuf.mozilla.ipc.PrincipalInfo a_pInfo = 2;
   bool has_a_pinfo() const;
   private:
   bool _internal_has_a_pinfo() const;
@@ -5740,6 +5981,19 @@ class Msg_PBroadcastChannelConstructor final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_pinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_pinfo();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PBroadcastChannelConstructor)
  private:
   class _Internal;
@@ -5756,6 +6010,7 @@ class Msg_PBroadcastChannelConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_origin_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_channel_;
     ::protobuf::mozilla::ipc::PrincipalInfo* a_pinfo_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -5995,6 +6250,22 @@ class Msg_PCookieStoreConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PCookieStoreConstructor)
  private:
   class _Internal;
@@ -6003,7 +6274,9 @@ class Msg_PCookieStoreConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -6243,6 +6516,22 @@ class Msg_PServiceWorkerManagerConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PServiceWorkerManagerConstructor)
  private:
   class _Internal;
@@ -6251,7 +6540,9 @@ class Msg_PServiceWorkerManagerConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -6616,10 +6907,11 @@ class Msg_PCacheStorageConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAANamespaceFieldNumber = 1,
-    kAAPrincipalInfoFieldNumber = 2,
+    kAANamespaceFieldNumber = 2,
+    kAAPrincipalInfoFieldNumber = 3,
+    kAActoridFieldNumber = 1,
   };
-  // required bytes a_aNamespace = 1;
+  // required bytes a_aNamespace = 2;
   bool has_a_anamespace() const;
   private:
   bool _internal_has_a_anamespace() const;
@@ -6637,7 +6929,7 @@ class Msg_PCacheStorageConstructor final :
   std::string* _internal_mutable_a_anamespace();
   public:
 
-  // required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 2;
+  // required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 3;
   bool has_a_aprincipalinfo() const;
   private:
   bool _internal_has_a_aprincipalinfo() const;
@@ -6655,6 +6947,19 @@ class Msg_PCacheStorageConstructor final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_aprincipalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_aprincipalinfo();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PCacheStorageConstructor)
  private:
   class _Internal;
@@ -6670,6 +6975,7 @@ class Msg_PCacheStorageConstructor final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_anamespace_;
     ::protobuf::mozilla::ipc::PrincipalInfo* a_aprincipalinfo_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -6910,11 +7216,12 @@ class Msg_PMessagePortConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAUuidFieldNumber = 1,
-    kADestinationUuidFieldNumber = 2,
-    kASequenceIdFieldNumber = 3,
+    kAUuidFieldNumber = 2,
+    kADestinationUuidFieldNumber = 3,
+    kAActoridFieldNumber = 1,
+    kASequenceIdFieldNumber = 4,
   };
-  // required bytes a_uuid = 1;
+  // required bytes a_uuid = 2;
   bool has_a_uuid() const;
   private:
   bool _internal_has_a_uuid() const;
@@ -6932,7 +7239,7 @@ class Msg_PMessagePortConstructor final :
   std::string* _internal_mutable_a_uuid();
   public:
 
-  // required bytes a_destinationUuid = 2;
+  // required bytes a_destinationUuid = 3;
   bool has_a_destinationuuid() const;
   private:
   bool _internal_has_a_destinationuuid() const;
@@ -6950,7 +7257,20 @@ class Msg_PMessagePortConstructor final :
   std::string* _internal_mutable_a_destinationuuid();
   public:
 
-  // required uint32 a_sequenceId = 3;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required uint32 a_sequenceId = 4;
   bool has_a_sequenceid() const;
   private:
   bool _internal_has_a_sequenceid() const;
@@ -6978,6 +7298,7 @@ class Msg_PMessagePortConstructor final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_uuid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_destinationuuid_;
+    int64_t a_actorid_;
     uint32_t a_sequenceid_;
   };
   union { Impl_ _impl_; };
@@ -7403,6 +7724,22 @@ class Msg_PQuotaConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PQuotaConstructor)
  private:
   class _Internal;
@@ -7411,7 +7748,9 @@ class Msg_PQuotaConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -8697,9 +9036,10 @@ class Msg_PFileSystemRequestConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAParamsFieldNumber = 1,
+    kAParamsFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.FileSystemParams a_params = 1;
+  // required .protobuf.mozilla.dom.FileSystemParams a_params = 2;
   bool has_a_params() const;
   private:
   bool _internal_has_a_params() const;
@@ -8717,9 +9057,25 @@ class Msg_PFileSystemRequestConstructor final :
       ::protobuf::mozilla::dom::FileSystemParams* a_params);
   ::protobuf::mozilla::dom::FileSystemParams* unsafe_arena_release_a_params();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PFileSystemRequestConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -8728,6 +9084,7 @@ class Msg_PFileSystemRequestConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::FileSystemParams* a_params_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -8967,6 +9324,22 @@ class Msg_PGamepadEventChannelConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PGamepadEventChannelConstructor)
  private:
   class _Internal;
@@ -8975,7 +9348,9 @@ class Msg_PGamepadEventChannelConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -9215,6 +9590,22 @@ class Msg_PGamepadTestChannelConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PGamepadTestChannelConstructor)
  private:
   class _Internal;
@@ -9223,7 +9614,9 @@ class Msg_PGamepadTestChannelConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -9464,9 +9857,23 @@ class Msg_PHttpBackgroundChannelConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAChannelIdFieldNumber = 1,
+    kAActoridFieldNumber = 1,
+    kAChannelIdFieldNumber = 2,
   };
-  // required uint64 a_channelId = 1;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required uint64 a_channelId = 2;
   bool has_a_channelid() const;
   private:
   bool _internal_has_a_channelid() const;
@@ -9483,12 +9890,16 @@ class Msg_PHttpBackgroundChannelConstructor final :
  private:
   class _Internal;
 
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
     uint64_t a_channelid_;
   };
   union { Impl_ _impl_; };
@@ -9730,11 +10141,12 @@ class Msg_PSharedWorkerConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kADataFieldNumber = 1,
-    kAPortIdentifierFieldNumber = 3,
-    kAWindowIDFieldNumber = 2,
+    kADataFieldNumber = 2,
+    kAPortIdentifierFieldNumber = 4,
+    kAActoridFieldNumber = 1,
+    kAWindowIDFieldNumber = 3,
   };
-  // required .protobuf.mozilla.dom.RemoteWorkerData a_data = 1;
+  // required .protobuf.mozilla.dom.RemoteWorkerData a_data = 2;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -9752,7 +10164,7 @@ class Msg_PSharedWorkerConstructor final :
       ::protobuf::mozilla::dom::RemoteWorkerData* a_data);
   ::protobuf::mozilla::dom::RemoteWorkerData* unsafe_arena_release_a_data();
 
-  // required .protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 3;
+  // required .protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 4;
   bool has_a_portidentifier() const;
   private:
   bool _internal_has_a_portidentifier() const;
@@ -9770,7 +10182,20 @@ class Msg_PSharedWorkerConstructor final :
       ::protobuf::mozilla::dom::MessagePortIdentifier* a_portidentifier);
   ::protobuf::mozilla::dom::MessagePortIdentifier* unsafe_arena_release_a_portidentifier();
 
-  // required uint64 a_windowID = 2;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required uint64 a_windowID = 3;
   bool has_a_windowid() const;
   private:
   bool _internal_has_a_windowid() const;
@@ -9798,6 +10223,7 @@ class Msg_PSharedWorkerConstructor final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::RemoteWorkerData* a_data_;
     ::protobuf::mozilla::dom::MessagePortIdentifier* a_portidentifier_;
+    int64_t a_actorid_;
     uint64_t a_windowid_;
   };
   union { Impl_ _impl_; };
@@ -10038,6 +10464,22 @@ class Msg_PTemporaryIPCBlobConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PTemporaryIPCBlobConstructor)
  private:
   class _Internal;
@@ -10046,7 +10488,9 @@ class Msg_PTemporaryIPCBlobConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -10287,14 +10731,15 @@ class Msg_PFileCreatorConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAAFullPathFieldNumber = 1,
-    kAATypeFieldNumber = 2,
-    kAANameFieldNumber = 3,
-    kALastModifiedFieldNumber = 4,
-    kAAExistenceCheckFieldNumber = 5,
-    kAAIsFromNsIFileFieldNumber = 6,
+    kAAFullPathFieldNumber = 2,
+    kAATypeFieldNumber = 3,
+    kAANameFieldNumber = 4,
+    kAActoridFieldNumber = 1,
+    kALastModifiedFieldNumber = 5,
+    kAAExistenceCheckFieldNumber = 6,
+    kAAIsFromNsIFileFieldNumber = 7,
   };
-  // required string a_aFullPath = 1;
+  // required string a_aFullPath = 2;
   bool has_a_afullpath() const;
   private:
   bool _internal_has_a_afullpath() const;
@@ -10312,7 +10757,7 @@ class Msg_PFileCreatorConstructor final :
   std::string* _internal_mutable_a_afullpath();
   public:
 
-  // required string a_aType = 2;
+  // required string a_aType = 3;
   bool has_a_atype() const;
   private:
   bool _internal_has_a_atype() const;
@@ -10330,7 +10775,7 @@ class Msg_PFileCreatorConstructor final :
   std::string* _internal_mutable_a_atype();
   public:
 
-  // required string a_aName = 3;
+  // required string a_aName = 4;
   bool has_a_aname() const;
   private:
   bool _internal_has_a_aname() const;
@@ -10348,7 +10793,20 @@ class Msg_PFileCreatorConstructor final :
   std::string* _internal_mutable_a_aname();
   public:
 
-  // optional sint64 a_lastModified = 4;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // optional sint64 a_lastModified = 5;
   bool has_a_lastmodified() const;
   private:
   bool _internal_has_a_lastmodified() const;
@@ -10361,7 +10819,7 @@ class Msg_PFileCreatorConstructor final :
   void _internal_set_a_lastmodified(int64_t value);
   public:
 
-  // required bool a_aExistenceCheck = 5;
+  // required bool a_aExistenceCheck = 6;
   bool has_a_aexistencecheck() const;
   private:
   bool _internal_has_a_aexistencecheck() const;
@@ -10374,7 +10832,7 @@ class Msg_PFileCreatorConstructor final :
   void _internal_set_a_aexistencecheck(bool value);
   public:
 
-  // required bool a_aIsFromNsIFile = 6;
+  // required bool a_aIsFromNsIFile = 7;
   bool has_a_aisfromnsifile() const;
   private:
   bool _internal_has_a_aisfromnsifile() const;
@@ -10403,6 +10861,7 @@ class Msg_PFileCreatorConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_afullpath_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atype_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aname_;
+    int64_t a_actorid_;
     int64_t a_lastmodified_;
     bool a_aexistencecheck_;
     bool a_aisfromnsifile_;
@@ -10645,6 +11104,22 @@ class Msg_PClientManagerConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PClientManagerConstructor)
  private:
   class _Internal;
@@ -10653,7 +11128,9 @@ class Msg_PClientManagerConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -11809,9 +12286,10 @@ class Msg_PServiceWorkerConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAADescriptorFieldNumber = 1,
+    kAADescriptorFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_aDescriptor = 1;
+  // required .protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_aDescriptor = 2;
   bool has_a_adescriptor() const;
   private:
   bool _internal_has_a_adescriptor() const;
@@ -11829,9 +12307,25 @@ class Msg_PServiceWorkerConstructor final :
       ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* a_adescriptor);
   ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* unsafe_arena_release_a_adescriptor();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PServiceWorkerConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -11840,6 +12334,7 @@ class Msg_PServiceWorkerConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor* a_adescriptor_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -12080,9 +12575,10 @@ class Msg_PRemoteWorkerControllerConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAADataFieldNumber = 1,
+    kAADataFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.RemoteWorkerData a_aData = 1;
+  // required .protobuf.mozilla.dom.RemoteWorkerData a_aData = 2;
   bool has_a_adata() const;
   private:
   bool _internal_has_a_adata() const;
@@ -12100,9 +12596,25 @@ class Msg_PRemoteWorkerControllerConstructor final :
       ::protobuf::mozilla::dom::RemoteWorkerData* a_adata);
   ::protobuf::mozilla::dom::RemoteWorkerData* unsafe_arena_release_a_adata();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PRemoteWorkerControllerConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -12111,6 +12623,7 @@ class Msg_PRemoteWorkerControllerConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::RemoteWorkerData* a_adata_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -12350,6 +12863,22 @@ class Msg_PServiceWorkerContainerConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PServiceWorkerContainerConstructor)
  private:
   class _Internal;
@@ -12358,7 +12887,9 @@ class Msg_PServiceWorkerContainerConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -12599,10 +13130,11 @@ class Msg_PServiceWorkerRegistrationConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAADescriptorFieldNumber = 1,
-    kAAForClientFieldNumber = 2,
+    kAADescriptorFieldNumber = 2,
+    kAAForClientFieldNumber = 3,
+    kAActoridFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_aDescriptor = 1;
+  // required .protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_aDescriptor = 2;
   bool has_a_adescriptor() const;
   private:
   bool _internal_has_a_adescriptor() const;
@@ -12620,7 +13152,7 @@ class Msg_PServiceWorkerRegistrationConstructor final :
       ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* a_adescriptor);
   ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* unsafe_arena_release_a_adescriptor();
 
-  // required .protobuf.mozilla.dom.IPCClientInfo a_aForClient = 2;
+  // required .protobuf.mozilla.dom.IPCClientInfo a_aForClient = 3;
   bool has_a_aforclient() const;
   private:
   bool _internal_has_a_aforclient() const;
@@ -12638,6 +13170,19 @@ class Msg_PServiceWorkerRegistrationConstructor final :
       ::protobuf::mozilla::dom::IPCClientInfo* a_aforclient);
   ::protobuf::mozilla::dom::IPCClientInfo* unsafe_arena_release_a_aforclient();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PServiceWorkerRegistrationConstructor)
  private:
   class _Internal;
@@ -12653,6 +13198,7 @@ class Msg_PServiceWorkerRegistrationConstructor final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor* a_adescriptor_;
     ::protobuf::mozilla::dom::IPCClientInfo* a_aforclient_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -12893,10 +13439,11 @@ class Msg_PEndpointForReportConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAAGroupNameFieldNumber = 1,
-    kAAPrincipalInfoFieldNumber = 2,
+    kAAGroupNameFieldNumber = 2,
+    kAAPrincipalInfoFieldNumber = 3,
+    kAActoridFieldNumber = 1,
   };
-  // required string a_aGroupName = 1;
+  // required string a_aGroupName = 2;
   bool has_a_agroupname() const;
   private:
   bool _internal_has_a_agroupname() const;
@@ -12914,7 +13461,7 @@ class Msg_PEndpointForReportConstructor final :
   std::string* _internal_mutable_a_agroupname();
   public:
 
-  // required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 2;
+  // required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 3;
   bool has_a_aprincipalinfo() const;
   private:
   bool _internal_has_a_aprincipalinfo() const;
@@ -12932,6 +13479,19 @@ class Msg_PEndpointForReportConstructor final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_aprincipalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_aprincipalinfo();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PEndpointForReportConstructor)
  private:
   class _Internal;
@@ -12947,6 +13507,7 @@ class Msg_PEndpointForReportConstructor final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_agroupname_;
     ::protobuf::mozilla::ipc::PrincipalInfo* a_aprincipalinfo_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -13376,6 +13937,22 @@ class Msg_PIdleSchedulerConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PIdleSchedulerConstructor)
  private:
   class _Internal;
@@ -13384,7 +13961,9 @@ class Msg_PIdleSchedulerConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -14236,10 +14815,11 @@ class Msg_PLockManagerConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAAPrincipalInfoFieldNumber = 1,
-    kAAClientIdFieldNumber = 2,
+    kAAPrincipalInfoFieldNumber = 2,
+    kAAClientIdFieldNumber = 3,
+    kAActoridFieldNumber = 1,
   };
-  // required bytes a_aPrincipalInfo = 1;
+  // required bytes a_aPrincipalInfo = 2;
   bool has_a_aprincipalinfo() const;
   private:
   bool _internal_has_a_aprincipalinfo() const;
@@ -14257,7 +14837,7 @@ class Msg_PLockManagerConstructor final :
   std::string* _internal_mutable_a_aprincipalinfo();
   public:
 
-  // optional bytes a_aClientId = 2;
+  // optional bytes a_aClientId = 3;
   bool has_a_aclientid() const;
   private:
   bool _internal_has_a_aclientid() const;
@@ -14275,9 +14855,25 @@ class Msg_PLockManagerConstructor final :
   std::string* _internal_mutable_a_aclientid();
   public:
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PLockManagerConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -14287,6 +14883,7 @@ class Msg_PLockManagerConstructor final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aprincipalinfo_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aclientid_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -14526,6 +15123,22 @@ class Msg_PFetchConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PFetchConstructor)
  private:
   class _Internal;
@@ -14534,7 +15147,9 @@ class Msg_PFetchConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -15063,6 +15678,22 @@ class Msg_PCacheConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PCacheConstructor)
  private:
   class _Internal;
@@ -15071,7 +15702,9 @@ class Msg_PCacheConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -15311,6 +15944,22 @@ class Msg_PCacheStreamControlConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PBackground.Msg_PCacheStreamControlConstructor)
  private:
   class _Internal;
@@ -15319,7 +15968,9 @@ class Msg_PCacheStreamControlConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackground_2eproto;
@@ -15459,7 +16110,35 @@ class Reply_PCacheStreamControlConstructor final :
 #endif  // __GNUC__
 // Msg_PBackgroundTestConstructor
 
-// required string a_testArg = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PBackgroundTestConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundTestConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PBackgroundTestConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PBackgroundTestConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PBackgroundTestConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundTestConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PBackgroundTestConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PBackgroundTestConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundTestConstructor.a_actorid)
+}
+
+// required string a_testArg = 2;
 inline bool Msg_PBackgroundTestConstructor::_internal_has_a_testarg() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -15535,7 +16214,35 @@ inline void Msg_PBackgroundTestConstructor::set_allocated_a_testarg(std::string*
 
 // Msg_PBackgroundIDBFactoryConstructor
 
-// required .protobuf.mozilla.dom.indexedDB.LoggingInfo a_loggingInfo = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PBackgroundIDBFactoryConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundIDBFactoryConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PBackgroundIDBFactoryConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t Msg_PBackgroundIDBFactoryConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PBackgroundIDBFactoryConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundIDBFactoryConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PBackgroundIDBFactoryConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PBackgroundIDBFactoryConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundIDBFactoryConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.dom.indexedDB.LoggingInfo a_loggingInfo = 2;
 inline bool Msg_PBackgroundIDBFactoryConstructor::_internal_has_a_logginginfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_logginginfo_ != nullptr);
@@ -15622,7 +16329,7 @@ inline void Msg_PBackgroundIDBFactoryConstructor::set_allocated_a_logginginfo(::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundIDBFactoryConstructor.a_loggingInfo)
 }
 
-// required string a_systemLocale = 2;
+// required string a_systemLocale = 3;
 inline bool Msg_PBackgroundIDBFactoryConstructor::_internal_has_a_systemlocale() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -15698,6 +16405,34 @@ inline void Msg_PBackgroundIDBFactoryConstructor::set_allocated_a_systemlocale(s
 
 // Msg_PBackgroundIndexedDBUtilsConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PBackgroundIndexedDBUtilsConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundIndexedDBUtilsConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PBackgroundIndexedDBUtilsConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PBackgroundIndexedDBUtilsConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PBackgroundIndexedDBUtilsConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundIndexedDBUtilsConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PBackgroundIndexedDBUtilsConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PBackgroundIndexedDBUtilsConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundIndexedDBUtilsConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PBackgroundIndexedDBUtilsConstructor
@@ -15710,7 +16445,35 @@ inline void Msg_PBackgroundIDBFactoryConstructor::set_allocated_a_systemlocale(s
 
 // Msg_PBackgroundSDBConnectionConstructor
 
-// required bytes a_persistenceType = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PBackgroundSDBConnectionConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundSDBConnectionConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PBackgroundSDBConnectionConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t Msg_PBackgroundSDBConnectionConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PBackgroundSDBConnectionConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundSDBConnectionConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PBackgroundSDBConnectionConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PBackgroundSDBConnectionConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundSDBConnectionConstructor.a_actorid)
+}
+
+// required bytes a_persistenceType = 2;
 inline bool Msg_PBackgroundSDBConnectionConstructor::_internal_has_a_persistencetype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -15778,7 +16541,7 @@ inline void Msg_PBackgroundSDBConnectionConstructor::set_allocated_a_persistence
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundSDBConnectionConstructor.a_persistenceType)
 }
 
-// required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+// required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 3;
 inline bool Msg_PBackgroundSDBConnectionConstructor::_internal_has_a_principalinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_principalinfo_ != nullptr);
@@ -15873,9 +16636,37 @@ inline void Msg_PBackgroundSDBConnectionConstructor::set_allocated_a_principalin
 
 // Msg_PBackgroundLSObserverConstructor
 
-// required uint64 a_observerId = 1;
-inline bool Msg_PBackgroundLSObserverConstructor::_internal_has_a_observerid() const {
+// required sint64 a_actorid = 1;
+inline bool Msg_PBackgroundLSObserverConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundLSObserverConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PBackgroundLSObserverConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PBackgroundLSObserverConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PBackgroundLSObserverConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundLSObserverConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PBackgroundLSObserverConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PBackgroundLSObserverConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundLSObserverConstructor.a_actorid)
+}
+
+// required uint64 a_observerId = 2;
+inline bool Msg_PBackgroundLSObserverConstructor::_internal_has_a_observerid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
 inline bool Msg_PBackgroundLSObserverConstructor::has_a_observerid() const {
@@ -15883,7 +16674,7 @@ inline bool Msg_PBackgroundLSObserverConstructor::has_a_observerid() const {
 }
 inline void Msg_PBackgroundLSObserverConstructor::clear_a_observerid() {
   _impl_.a_observerid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_PBackgroundLSObserverConstructor::_internal_a_observerid() const {
   return _impl_.a_observerid_;
@@ -15893,7 +16684,7 @@ inline uint64_t Msg_PBackgroundLSObserverConstructor::a_observerid() const {
   return _internal_a_observerid();
 }
 inline void Msg_PBackgroundLSObserverConstructor::_internal_set_a_observerid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_observerid_ = value;
 }
 inline void Msg_PBackgroundLSObserverConstructor::set_a_observerid(uint64_t value) {
@@ -15909,7 +16700,35 @@ inline void Msg_PBackgroundLSObserverConstructor::set_a_observerid(uint64_t valu
 
 // Msg_PBackgroundLSRequestConstructor
 
-// required .protobuf.mozilla.dom.LSRequestParams a_params = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PBackgroundLSRequestConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundLSRequestConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PBackgroundLSRequestConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PBackgroundLSRequestConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PBackgroundLSRequestConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundLSRequestConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PBackgroundLSRequestConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PBackgroundLSRequestConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundLSRequestConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.dom.LSRequestParams a_params = 2;
 inline bool Msg_PBackgroundLSRequestConstructor::_internal_has_a_params() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_params_ != nullptr);
@@ -16004,7 +16823,35 @@ inline void Msg_PBackgroundLSRequestConstructor::set_allocated_a_params(::protob
 
 // Msg_PBackgroundLSSimpleRequestConstructor
 
-// required .protobuf.mozilla.dom.LSSimpleRequestParams a_params = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PBackgroundLSSimpleRequestConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundLSSimpleRequestConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PBackgroundLSSimpleRequestConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PBackgroundLSSimpleRequestConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PBackgroundLSSimpleRequestConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundLSSimpleRequestConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PBackgroundLSSimpleRequestConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PBackgroundLSSimpleRequestConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundLSSimpleRequestConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.dom.LSSimpleRequestParams a_params = 2;
 inline bool Msg_PBackgroundLSSimpleRequestConstructor::_internal_has_a_params() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_params_ != nullptr);
@@ -16099,7 +16946,35 @@ inline void Msg_PBackgroundLSSimpleRequestConstructor::set_allocated_a_params(::
 
 // Msg_PBackgroundLocalStorageCacheConstructor
 
-// required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PBackgroundLocalStorageCacheConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundLocalStorageCacheConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PBackgroundLocalStorageCacheConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t Msg_PBackgroundLocalStorageCacheConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PBackgroundLocalStorageCacheConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundLocalStorageCacheConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PBackgroundLocalStorageCacheConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PBackgroundLocalStorageCacheConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundLocalStorageCacheConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
 inline bool Msg_PBackgroundLocalStorageCacheConstructor::_internal_has_a_principalinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_principalinfo_ != nullptr);
@@ -16186,7 +17061,7 @@ inline void Msg_PBackgroundLocalStorageCacheConstructor::set_allocated_a_princip
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundLocalStorageCacheConstructor.a_principalInfo)
 }
 
-// required string a_originKey = 2;
+// required string a_originKey = 3;
 inline bool Msg_PBackgroundLocalStorageCacheConstructor::_internal_has_a_originkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -16254,9 +17129,9 @@ inline void Msg_PBackgroundLocalStorageCacheConstructor::set_allocated_a_origink
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundLocalStorageCacheConstructor.a_originKey)
 }
 
-// required uint32 a_privateBrowsingId = 3;
+// required uint32 a_privateBrowsingId = 4;
 inline bool Msg_PBackgroundLocalStorageCacheConstructor::_internal_has_a_privatebrowsingid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
 inline bool Msg_PBackgroundLocalStorageCacheConstructor::has_a_privatebrowsingid() const {
@@ -16264,7 +17139,7 @@ inline bool Msg_PBackgroundLocalStorageCacheConstructor::has_a_privatebrowsingid
 }
 inline void Msg_PBackgroundLocalStorageCacheConstructor::clear_a_privatebrowsingid() {
   _impl_.a_privatebrowsingid_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t Msg_PBackgroundLocalStorageCacheConstructor::_internal_a_privatebrowsingid() const {
   return _impl_.a_privatebrowsingid_;
@@ -16274,7 +17149,7 @@ inline uint32_t Msg_PBackgroundLocalStorageCacheConstructor::a_privatebrowsingid
   return _internal_a_privatebrowsingid();
 }
 inline void Msg_PBackgroundLocalStorageCacheConstructor::_internal_set_a_privatebrowsingid(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_privatebrowsingid_ = value;
 }
 inline void Msg_PBackgroundLocalStorageCacheConstructor::set_a_privatebrowsingid(uint32_t value) {
@@ -16290,9 +17165,37 @@ inline void Msg_PBackgroundLocalStorageCacheConstructor::set_a_privatebrowsingid
 
 // Msg_PBackgroundSessionStorageManagerConstructor
 
-// required uint64 a_aTopContextId = 1;
-inline bool Msg_PBackgroundSessionStorageManagerConstructor::_internal_has_a_atopcontextid() const {
+// required sint64 a_actorid = 1;
+inline bool Msg_PBackgroundSessionStorageManagerConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundSessionStorageManagerConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PBackgroundSessionStorageManagerConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PBackgroundSessionStorageManagerConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PBackgroundSessionStorageManagerConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundSessionStorageManagerConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PBackgroundSessionStorageManagerConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PBackgroundSessionStorageManagerConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundSessionStorageManagerConstructor.a_actorid)
+}
+
+// required uint64 a_aTopContextId = 2;
+inline bool Msg_PBackgroundSessionStorageManagerConstructor::_internal_has_a_atopcontextid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
 inline bool Msg_PBackgroundSessionStorageManagerConstructor::has_a_atopcontextid() const {
@@ -16300,7 +17203,7 @@ inline bool Msg_PBackgroundSessionStorageManagerConstructor::has_a_atopcontextid
 }
 inline void Msg_PBackgroundSessionStorageManagerConstructor::clear_a_atopcontextid() {
   _impl_.a_atopcontextid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_PBackgroundSessionStorageManagerConstructor::_internal_a_atopcontextid() const {
   return _impl_.a_atopcontextid_;
@@ -16310,7 +17213,7 @@ inline uint64_t Msg_PBackgroundSessionStorageManagerConstructor::a_atopcontextid
   return _internal_a_atopcontextid();
 }
 inline void Msg_PBackgroundSessionStorageManagerConstructor::_internal_set_a_atopcontextid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_atopcontextid_ = value;
 }
 inline void Msg_PBackgroundSessionStorageManagerConstructor::set_a_atopcontextid(uint64_t value) {
@@ -16326,6 +17229,34 @@ inline void Msg_PBackgroundSessionStorageManagerConstructor::set_a_atopcontextid
 
 // Msg_PBackgroundSessionStorageServiceConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PBackgroundSessionStorageServiceConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundSessionStorageServiceConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PBackgroundSessionStorageServiceConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PBackgroundSessionStorageServiceConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PBackgroundSessionStorageServiceConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundSessionStorageServiceConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PBackgroundSessionStorageServiceConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PBackgroundSessionStorageServiceConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundSessionStorageServiceConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PBackgroundSessionStorageServiceConstructor
@@ -16334,7 +17265,35 @@ inline void Msg_PBackgroundSessionStorageManagerConstructor::set_a_atopcontextid
 
 // Msg_PBackgroundStorageConstructor
 
-// required string a_profilePath = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PBackgroundStorageConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundStorageConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PBackgroundStorageConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PBackgroundStorageConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PBackgroundStorageConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundStorageConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PBackgroundStorageConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PBackgroundStorageConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundStorageConstructor.a_actorid)
+}
+
+// required string a_profilePath = 2;
 inline bool Msg_PBackgroundStorageConstructor::_internal_has_a_profilepath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -16402,9 +17361,9 @@ inline void Msg_PBackgroundStorageConstructor::set_allocated_a_profilepath(std::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PBackgroundStorageConstructor.a_profilePath)
 }
 
-// required uint32 a_privateBrowsingId = 2;
+// required uint32 a_privateBrowsingId = 3;
 inline bool Msg_PBackgroundStorageConstructor::_internal_has_a_privatebrowsingid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
 inline bool Msg_PBackgroundStorageConstructor::has_a_privatebrowsingid() const {
@@ -16412,7 +17371,7 @@ inline bool Msg_PBackgroundStorageConstructor::has_a_privatebrowsingid() const {
 }
 inline void Msg_PBackgroundStorageConstructor::clear_a_privatebrowsingid() {
   _impl_.a_privatebrowsingid_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_PBackgroundStorageConstructor::_internal_a_privatebrowsingid() const {
   return _impl_.a_privatebrowsingid_;
@@ -16422,7 +17381,7 @@ inline uint32_t Msg_PBackgroundStorageConstructor::a_privatebrowsingid() const {
   return _internal_a_privatebrowsingid();
 }
 inline void Msg_PBackgroundStorageConstructor::_internal_set_a_privatebrowsingid(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_privatebrowsingid_ = value;
 }
 inline void Msg_PBackgroundStorageConstructor::set_a_privatebrowsingid(uint32_t value) {
@@ -17608,6 +18567,34 @@ inline void Reply_CreateNotificationParent::set_a_rv(bool value) {
 
 // Msg_PVsyncConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PVsyncConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PVsyncConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PVsyncConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PVsyncConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PVsyncConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PVsyncConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PVsyncConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PVsyncConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PVsyncConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PVsyncConstructor
@@ -17615,6 +18602,34 @@ inline void Reply_CreateNotificationParent::set_a_rv(bool value) {
 // -------------------------------------------------------------------
 
 // Msg_PCamerasConstructor
+
+// required sint64 a_actorid = 1;
+inline bool Msg_PCamerasConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PCamerasConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PCamerasConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PCamerasConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PCamerasConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PCamerasConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PCamerasConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PCamerasConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PCamerasConstructor.a_actorid)
+}
 
 // -------------------------------------------------------------------
 
@@ -17624,7 +18639,35 @@ inline void Reply_CreateNotificationParent::set_a_rv(bool value) {
 
 // Msg_PUDPSocketConstructor
 
-// optional .protobuf.mozilla.ipc.PrincipalInfo a_pInfo = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PUDPSocketConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PUDPSocketConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PUDPSocketConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t Msg_PUDPSocketConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PUDPSocketConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PUDPSocketConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PUDPSocketConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PUDPSocketConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PUDPSocketConstructor.a_actorid)
+}
+
+// optional .protobuf.mozilla.ipc.PrincipalInfo a_pInfo = 2;
 inline bool Msg_PUDPSocketConstructor::_internal_has_a_pinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_pinfo_ != nullptr);
@@ -17711,7 +18754,7 @@ inline void Msg_PUDPSocketConstructor::set_allocated_a_pinfo(::protobuf::mozilla
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PUDPSocketConstructor.a_pInfo)
 }
 
-// required string a_filter = 2;
+// required string a_filter = 3;
 inline bool Msg_PUDPSocketConstructor::_internal_has_a_filter() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -17787,7 +18830,35 @@ inline void Msg_PUDPSocketConstructor::set_allocated_a_filter(std::string* a_fil
 
 // Msg_PBroadcastChannelConstructor
 
-// required .protobuf.mozilla.ipc.PrincipalInfo a_pInfo = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PBroadcastChannelConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_PBroadcastChannelConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PBroadcastChannelConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+inline int64_t Msg_PBroadcastChannelConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PBroadcastChannelConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PBroadcastChannelConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PBroadcastChannelConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PBroadcastChannelConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PBroadcastChannelConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.ipc.PrincipalInfo a_pInfo = 2;
 inline bool Msg_PBroadcastChannelConstructor::_internal_has_a_pinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_pinfo_ != nullptr);
@@ -17874,7 +18945,7 @@ inline void Msg_PBroadcastChannelConstructor::set_allocated_a_pinfo(::protobuf::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PBroadcastChannelConstructor.a_pInfo)
 }
 
-// required string a_origin = 2;
+// required string a_origin = 3;
 inline bool Msg_PBroadcastChannelConstructor::_internal_has_a_origin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -17942,7 +19013,7 @@ inline void Msg_PBroadcastChannelConstructor::set_allocated_a_origin(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PBroadcastChannelConstructor.a_origin)
 }
 
-// required string a_channel = 3;
+// required string a_channel = 4;
 inline bool Msg_PBroadcastChannelConstructor::_internal_has_a_channel() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -18018,6 +19089,34 @@ inline void Msg_PBroadcastChannelConstructor::set_allocated_a_channel(std::strin
 
 // Msg_PCookieStoreConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PCookieStoreConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PCookieStoreConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PCookieStoreConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PCookieStoreConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PCookieStoreConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PCookieStoreConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PCookieStoreConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PCookieStoreConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PCookieStoreConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PCookieStoreConstructor
@@ -18025,6 +19124,34 @@ inline void Msg_PBroadcastChannelConstructor::set_allocated_a_channel(std::strin
 // -------------------------------------------------------------------
 
 // Msg_PServiceWorkerManagerConstructor
+
+// required sint64 a_actorid = 1;
+inline bool Msg_PServiceWorkerManagerConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PServiceWorkerManagerConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PServiceWorkerManagerConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PServiceWorkerManagerConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PServiceWorkerManagerConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PServiceWorkerManagerConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PServiceWorkerManagerConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PServiceWorkerManagerConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PServiceWorkerManagerConstructor.a_actorid)
+}
 
 // -------------------------------------------------------------------
 
@@ -18038,7 +19165,35 @@ inline void Msg_PBroadcastChannelConstructor::set_allocated_a_channel(std::strin
 
 // Msg_PCacheStorageConstructor
 
-// required bytes a_aNamespace = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PCacheStorageConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PCacheStorageConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PCacheStorageConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t Msg_PCacheStorageConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PCacheStorageConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PCacheStorageConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PCacheStorageConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PCacheStorageConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PCacheStorageConstructor.a_actorid)
+}
+
+// required bytes a_aNamespace = 2;
 inline bool Msg_PCacheStorageConstructor::_internal_has_a_anamespace() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -18106,7 +19261,7 @@ inline void Msg_PCacheStorageConstructor::set_allocated_a_anamespace(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PCacheStorageConstructor.a_aNamespace)
 }
 
-// required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 2;
+// required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 3;
 inline bool Msg_PCacheStorageConstructor::_internal_has_a_aprincipalinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_aprincipalinfo_ != nullptr);
@@ -18201,7 +19356,35 @@ inline void Msg_PCacheStorageConstructor::set_allocated_a_aprincipalinfo(::proto
 
 // Msg_PMessagePortConstructor
 
-// required bytes a_uuid = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PMessagePortConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PMessagePortConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PMessagePortConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t Msg_PMessagePortConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PMessagePortConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PMessagePortConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PMessagePortConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PMessagePortConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PMessagePortConstructor.a_actorid)
+}
+
+// required bytes a_uuid = 2;
 inline bool Msg_PMessagePortConstructor::_internal_has_a_uuid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -18269,7 +19452,7 @@ inline void Msg_PMessagePortConstructor::set_allocated_a_uuid(std::string* a_uui
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PMessagePortConstructor.a_uuid)
 }
 
-// required bytes a_destinationUuid = 2;
+// required bytes a_destinationUuid = 3;
 inline bool Msg_PMessagePortConstructor::_internal_has_a_destinationuuid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -18337,9 +19520,9 @@ inline void Msg_PMessagePortConstructor::set_allocated_a_destinationuuid(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PMessagePortConstructor.a_destinationUuid)
 }
 
-// required uint32 a_sequenceId = 3;
+// required uint32 a_sequenceId = 4;
 inline bool Msg_PMessagePortConstructor::_internal_has_a_sequenceid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
 inline bool Msg_PMessagePortConstructor::has_a_sequenceid() const {
@@ -18347,7 +19530,7 @@ inline bool Msg_PMessagePortConstructor::has_a_sequenceid() const {
 }
 inline void Msg_PMessagePortConstructor::clear_a_sequenceid() {
   _impl_.a_sequenceid_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t Msg_PMessagePortConstructor::_internal_a_sequenceid() const {
   return _impl_.a_sequenceid_;
@@ -18357,7 +19540,7 @@ inline uint32_t Msg_PMessagePortConstructor::a_sequenceid() const {
   return _internal_a_sequenceid();
 }
 inline void Msg_PMessagePortConstructor::_internal_set_a_sequenceid(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_sequenceid_ = value;
 }
 inline void Msg_PMessagePortConstructor::set_a_sequenceid(uint32_t value) {
@@ -18540,6 +19723,34 @@ inline void Msg_MessagePortForceClose::set_a_sequenceid(uint32_t value) {
 // -------------------------------------------------------------------
 
 // Msg_PQuotaConstructor
+
+// required sint64 a_actorid = 1;
+inline bool Msg_PQuotaConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PQuotaConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PQuotaConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PQuotaConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PQuotaConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PQuotaConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PQuotaConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PQuotaConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PQuotaConstructor.a_actorid)
+}
 
 // -------------------------------------------------------------------
 
@@ -18923,7 +20134,35 @@ Msg_LoadSessionStorageManagerData::mutable_a_aorigincachecopy() {
 
 // Msg_PFileSystemRequestConstructor
 
-// required .protobuf.mozilla.dom.FileSystemParams a_params = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PFileSystemRequestConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PFileSystemRequestConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PFileSystemRequestConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PFileSystemRequestConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PFileSystemRequestConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PFileSystemRequestConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PFileSystemRequestConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PFileSystemRequestConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PFileSystemRequestConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.dom.FileSystemParams a_params = 2;
 inline bool Msg_PFileSystemRequestConstructor::_internal_has_a_params() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_params_ != nullptr);
@@ -19018,6 +20257,34 @@ inline void Msg_PFileSystemRequestConstructor::set_allocated_a_params(::protobuf
 
 // Msg_PGamepadEventChannelConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PGamepadEventChannelConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PGamepadEventChannelConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PGamepadEventChannelConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PGamepadEventChannelConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PGamepadEventChannelConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PGamepadEventChannelConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PGamepadEventChannelConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PGamepadEventChannelConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PGamepadEventChannelConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PGamepadEventChannelConstructor
@@ -19025,6 +20292,34 @@ inline void Msg_PFileSystemRequestConstructor::set_allocated_a_params(::protobuf
 // -------------------------------------------------------------------
 
 // Msg_PGamepadTestChannelConstructor
+
+// required sint64 a_actorid = 1;
+inline bool Msg_PGamepadTestChannelConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PGamepadTestChannelConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PGamepadTestChannelConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PGamepadTestChannelConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PGamepadTestChannelConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PGamepadTestChannelConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PGamepadTestChannelConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PGamepadTestChannelConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PGamepadTestChannelConstructor.a_actorid)
+}
 
 // -------------------------------------------------------------------
 
@@ -19034,9 +20329,37 @@ inline void Msg_PFileSystemRequestConstructor::set_allocated_a_params(::protobuf
 
 // Msg_PHttpBackgroundChannelConstructor
 
-// required uint64 a_channelId = 1;
-inline bool Msg_PHttpBackgroundChannelConstructor::_internal_has_a_channelid() const {
+// required sint64 a_actorid = 1;
+inline bool Msg_PHttpBackgroundChannelConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PHttpBackgroundChannelConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PHttpBackgroundChannelConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PHttpBackgroundChannelConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PHttpBackgroundChannelConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PHttpBackgroundChannelConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PHttpBackgroundChannelConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PHttpBackgroundChannelConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PHttpBackgroundChannelConstructor.a_actorid)
+}
+
+// required uint64 a_channelId = 2;
+inline bool Msg_PHttpBackgroundChannelConstructor::_internal_has_a_channelid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
 inline bool Msg_PHttpBackgroundChannelConstructor::has_a_channelid() const {
@@ -19044,7 +20367,7 @@ inline bool Msg_PHttpBackgroundChannelConstructor::has_a_channelid() const {
 }
 inline void Msg_PHttpBackgroundChannelConstructor::clear_a_channelid() {
   _impl_.a_channelid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_PHttpBackgroundChannelConstructor::_internal_a_channelid() const {
   return _impl_.a_channelid_;
@@ -19054,7 +20377,7 @@ inline uint64_t Msg_PHttpBackgroundChannelConstructor::a_channelid() const {
   return _internal_a_channelid();
 }
 inline void Msg_PHttpBackgroundChannelConstructor::_internal_set_a_channelid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_channelid_ = value;
 }
 inline void Msg_PHttpBackgroundChannelConstructor::set_a_channelid(uint64_t value) {
@@ -19070,7 +20393,35 @@ inline void Msg_PHttpBackgroundChannelConstructor::set_a_channelid(uint64_t valu
 
 // Msg_PSharedWorkerConstructor
 
-// required .protobuf.mozilla.dom.RemoteWorkerData a_data = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PSharedWorkerConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PSharedWorkerConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PSharedWorkerConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t Msg_PSharedWorkerConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PSharedWorkerConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PSharedWorkerConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PSharedWorkerConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PSharedWorkerConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PSharedWorkerConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.dom.RemoteWorkerData a_data = 2;
 inline bool Msg_PSharedWorkerConstructor::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_data_ != nullptr);
@@ -19157,9 +20508,9 @@ inline void Msg_PSharedWorkerConstructor::set_allocated_a_data(::protobuf::mozil
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PSharedWorkerConstructor.a_data)
 }
 
-// required uint64 a_windowID = 2;
+// required uint64 a_windowID = 3;
 inline bool Msg_PSharedWorkerConstructor::_internal_has_a_windowid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
 inline bool Msg_PSharedWorkerConstructor::has_a_windowid() const {
@@ -19167,7 +20518,7 @@ inline bool Msg_PSharedWorkerConstructor::has_a_windowid() const {
 }
 inline void Msg_PSharedWorkerConstructor::clear_a_windowid() {
   _impl_.a_windowid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint64_t Msg_PSharedWorkerConstructor::_internal_a_windowid() const {
   return _impl_.a_windowid_;
@@ -19177,7 +20528,7 @@ inline uint64_t Msg_PSharedWorkerConstructor::a_windowid() const {
   return _internal_a_windowid();
 }
 inline void Msg_PSharedWorkerConstructor::_internal_set_a_windowid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_windowid_ = value;
 }
 inline void Msg_PSharedWorkerConstructor::set_a_windowid(uint64_t value) {
@@ -19185,7 +20536,7 @@ inline void Msg_PSharedWorkerConstructor::set_a_windowid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PSharedWorkerConstructor.a_windowID)
 }
 
-// required .protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 3;
+// required .protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 4;
 inline bool Msg_PSharedWorkerConstructor::_internal_has_a_portidentifier() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_portidentifier_ != nullptr);
@@ -19280,6 +20631,34 @@ inline void Msg_PSharedWorkerConstructor::set_allocated_a_portidentifier(::proto
 
 // Msg_PTemporaryIPCBlobConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PTemporaryIPCBlobConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PTemporaryIPCBlobConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PTemporaryIPCBlobConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PTemporaryIPCBlobConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PTemporaryIPCBlobConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PTemporaryIPCBlobConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PTemporaryIPCBlobConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PTemporaryIPCBlobConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PTemporaryIPCBlobConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PTemporaryIPCBlobConstructor
@@ -19288,7 +20667,35 @@ inline void Msg_PSharedWorkerConstructor::set_allocated_a_portidentifier(::proto
 
 // Msg_PFileCreatorConstructor
 
-// required string a_aFullPath = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PFileCreatorConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_PFileCreatorConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PFileCreatorConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+inline int64_t Msg_PFileCreatorConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PFileCreatorConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PFileCreatorConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PFileCreatorConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PFileCreatorConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PFileCreatorConstructor.a_actorid)
+}
+
+// required string a_aFullPath = 2;
 inline bool Msg_PFileCreatorConstructor::_internal_has_a_afullpath() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -19356,7 +20763,7 @@ inline void Msg_PFileCreatorConstructor::set_allocated_a_afullpath(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PFileCreatorConstructor.a_aFullPath)
 }
 
-// required string a_aType = 2;
+// required string a_aType = 3;
 inline bool Msg_PFileCreatorConstructor::_internal_has_a_atype() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -19424,7 +20831,7 @@ inline void Msg_PFileCreatorConstructor::set_allocated_a_atype(std::string* a_at
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PFileCreatorConstructor.a_aType)
 }
 
-// required string a_aName = 3;
+// required string a_aName = 4;
 inline bool Msg_PFileCreatorConstructor::_internal_has_a_aname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -19492,9 +20899,9 @@ inline void Msg_PFileCreatorConstructor::set_allocated_a_aname(std::string* a_an
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PFileCreatorConstructor.a_aName)
 }
 
-// optional sint64 a_lastModified = 4;
+// optional sint64 a_lastModified = 5;
 inline bool Msg_PFileCreatorConstructor::_internal_has_a_lastmodified() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
 inline bool Msg_PFileCreatorConstructor::has_a_lastmodified() const {
@@ -19502,7 +20909,7 @@ inline bool Msg_PFileCreatorConstructor::has_a_lastmodified() const {
 }
 inline void Msg_PFileCreatorConstructor::clear_a_lastmodified() {
   _impl_.a_lastmodified_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline int64_t Msg_PFileCreatorConstructor::_internal_a_lastmodified() const {
   return _impl_.a_lastmodified_;
@@ -19512,7 +20919,7 @@ inline int64_t Msg_PFileCreatorConstructor::a_lastmodified() const {
   return _internal_a_lastmodified();
 }
 inline void Msg_PFileCreatorConstructor::_internal_set_a_lastmodified(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_lastmodified_ = value;
 }
 inline void Msg_PFileCreatorConstructor::set_a_lastmodified(int64_t value) {
@@ -19520,9 +20927,9 @@ inline void Msg_PFileCreatorConstructor::set_a_lastmodified(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PFileCreatorConstructor.a_lastModified)
 }
 
-// required bool a_aExistenceCheck = 5;
+// required bool a_aExistenceCheck = 6;
 inline bool Msg_PFileCreatorConstructor::_internal_has_a_aexistencecheck() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
 inline bool Msg_PFileCreatorConstructor::has_a_aexistencecheck() const {
@@ -19530,7 +20937,7 @@ inline bool Msg_PFileCreatorConstructor::has_a_aexistencecheck() const {
 }
 inline void Msg_PFileCreatorConstructor::clear_a_aexistencecheck() {
   _impl_.a_aexistencecheck_ = false;
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline bool Msg_PFileCreatorConstructor::_internal_a_aexistencecheck() const {
   return _impl_.a_aexistencecheck_;
@@ -19540,7 +20947,7 @@ inline bool Msg_PFileCreatorConstructor::a_aexistencecheck() const {
   return _internal_a_aexistencecheck();
 }
 inline void Msg_PFileCreatorConstructor::_internal_set_a_aexistencecheck(bool value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_aexistencecheck_ = value;
 }
 inline void Msg_PFileCreatorConstructor::set_a_aexistencecheck(bool value) {
@@ -19548,9 +20955,9 @@ inline void Msg_PFileCreatorConstructor::set_a_aexistencecheck(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PFileCreatorConstructor.a_aExistenceCheck)
 }
 
-// required bool a_aIsFromNsIFile = 6;
+// required bool a_aIsFromNsIFile = 7;
 inline bool Msg_PFileCreatorConstructor::_internal_has_a_aisfromnsifile() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
 inline bool Msg_PFileCreatorConstructor::has_a_aisfromnsifile() const {
@@ -19558,7 +20965,7 @@ inline bool Msg_PFileCreatorConstructor::has_a_aisfromnsifile() const {
 }
 inline void Msg_PFileCreatorConstructor::clear_a_aisfromnsifile() {
   _impl_.a_aisfromnsifile_ = false;
-  _impl_._has_bits_[0] &= ~0x00000020u;
+  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline bool Msg_PFileCreatorConstructor::_internal_a_aisfromnsifile() const {
   return _impl_.a_aisfromnsifile_;
@@ -19568,7 +20975,7 @@ inline bool Msg_PFileCreatorConstructor::a_aisfromnsifile() const {
   return _internal_a_aisfromnsifile();
 }
 inline void Msg_PFileCreatorConstructor::_internal_set_a_aisfromnsifile(bool value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  _impl_._has_bits_[0] |= 0x00000040u;
   _impl_.a_aisfromnsifile_ = value;
 }
 inline void Msg_PFileCreatorConstructor::set_a_aisfromnsifile(bool value) {
@@ -19583,6 +20990,34 @@ inline void Msg_PFileCreatorConstructor::set_a_aisfromnsifile(bool value) {
 // -------------------------------------------------------------------
 
 // Msg_PClientManagerConstructor
+
+// required sint64 a_actorid = 1;
+inline bool Msg_PClientManagerConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PClientManagerConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PClientManagerConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PClientManagerConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PClientManagerConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PClientManagerConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PClientManagerConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PClientManagerConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PClientManagerConstructor.a_actorid)
+}
 
 // -------------------------------------------------------------------
 
@@ -20118,7 +21553,35 @@ inline void Msg_StorageActivity::set_allocated_a_principalinfo(::protobuf::mozil
 
 // Msg_PServiceWorkerConstructor
 
-// required .protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_aDescriptor = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PServiceWorkerConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PServiceWorkerConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PServiceWorkerConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PServiceWorkerConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PServiceWorkerConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PServiceWorkerConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PServiceWorkerConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PServiceWorkerConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PServiceWorkerConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_aDescriptor = 2;
 inline bool Msg_PServiceWorkerConstructor::_internal_has_a_adescriptor() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_adescriptor_ != nullptr);
@@ -20213,7 +21676,35 @@ inline void Msg_PServiceWorkerConstructor::set_allocated_a_adescriptor(::protobu
 
 // Msg_PRemoteWorkerControllerConstructor
 
-// required .protobuf.mozilla.dom.RemoteWorkerData a_aData = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PRemoteWorkerControllerConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PRemoteWorkerControllerConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PRemoteWorkerControllerConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PRemoteWorkerControllerConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PRemoteWorkerControllerConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PRemoteWorkerControllerConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PRemoteWorkerControllerConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PRemoteWorkerControllerConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PRemoteWorkerControllerConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.dom.RemoteWorkerData a_aData = 2;
 inline bool Msg_PRemoteWorkerControllerConstructor::_internal_has_a_adata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_adata_ != nullptr);
@@ -20308,6 +21799,34 @@ inline void Msg_PRemoteWorkerControllerConstructor::set_allocated_a_adata(::prot
 
 // Msg_PServiceWorkerContainerConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PServiceWorkerContainerConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PServiceWorkerContainerConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PServiceWorkerContainerConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PServiceWorkerContainerConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PServiceWorkerContainerConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PServiceWorkerContainerConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PServiceWorkerContainerConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PServiceWorkerContainerConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PServiceWorkerContainerConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PServiceWorkerContainerConstructor
@@ -20316,7 +21835,35 @@ inline void Msg_PRemoteWorkerControllerConstructor::set_allocated_a_adata(::prot
 
 // Msg_PServiceWorkerRegistrationConstructor
 
-// required .protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_aDescriptor = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PServiceWorkerRegistrationConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PServiceWorkerRegistrationConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PServiceWorkerRegistrationConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t Msg_PServiceWorkerRegistrationConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PServiceWorkerRegistrationConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PServiceWorkerRegistrationConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PServiceWorkerRegistrationConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PServiceWorkerRegistrationConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PServiceWorkerRegistrationConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_aDescriptor = 2;
 inline bool Msg_PServiceWorkerRegistrationConstructor::_internal_has_a_adescriptor() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_adescriptor_ != nullptr);
@@ -20403,7 +21950,7 @@ inline void Msg_PServiceWorkerRegistrationConstructor::set_allocated_a_adescript
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PServiceWorkerRegistrationConstructor.a_aDescriptor)
 }
 
-// required .protobuf.mozilla.dom.IPCClientInfo a_aForClient = 2;
+// required .protobuf.mozilla.dom.IPCClientInfo a_aForClient = 3;
 inline bool Msg_PServiceWorkerRegistrationConstructor::_internal_has_a_aforclient() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_aforclient_ != nullptr);
@@ -20498,7 +22045,35 @@ inline void Msg_PServiceWorkerRegistrationConstructor::set_allocated_a_aforclien
 
 // Msg_PEndpointForReportConstructor
 
-// required string a_aGroupName = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PEndpointForReportConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PEndpointForReportConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PEndpointForReportConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t Msg_PEndpointForReportConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PEndpointForReportConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PEndpointForReportConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PEndpointForReportConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PEndpointForReportConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PEndpointForReportConstructor.a_actorid)
+}
+
+// required string a_aGroupName = 2;
 inline bool Msg_PEndpointForReportConstructor::_internal_has_a_agroupname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -20566,7 +22141,7 @@ inline void Msg_PEndpointForReportConstructor::set_allocated_a_agroupname(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PEndpointForReportConstructor.a_aGroupName)
 }
 
-// required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 2;
+// required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 3;
 inline bool Msg_PEndpointForReportConstructor::_internal_has_a_aprincipalinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_aprincipalinfo_ != nullptr);
@@ -20887,6 +22462,34 @@ inline void Msg_RemoveEndpoint::set_allocated_a_aprincipalinfo(::protobuf::mozil
 // -------------------------------------------------------------------
 
 // Msg_PIdleSchedulerConstructor
+
+// required sint64 a_actorid = 1;
+inline bool Msg_PIdleSchedulerConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PIdleSchedulerConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PIdleSchedulerConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PIdleSchedulerConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PIdleSchedulerConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PIdleSchedulerConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PIdleSchedulerConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PIdleSchedulerConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PIdleSchedulerConstructor.a_actorid)
+}
 
 // -------------------------------------------------------------------
 
@@ -21252,7 +22855,35 @@ inline void Reply_EnsureUtilityProcessAndCreateBridge::set_allocated_a_aendpoint
 
 // Msg_PLockManagerConstructor
 
-// required bytes a_aPrincipalInfo = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PLockManagerConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PLockManagerConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PLockManagerConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t Msg_PLockManagerConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PLockManagerConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PLockManagerConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PLockManagerConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PLockManagerConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PLockManagerConstructor.a_actorid)
+}
+
+// required bytes a_aPrincipalInfo = 2;
 inline bool Msg_PLockManagerConstructor::_internal_has_a_aprincipalinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -21320,7 +22951,7 @@ inline void Msg_PLockManagerConstructor::set_allocated_a_aprincipalinfo(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_PLockManagerConstructor.a_aPrincipalInfo)
 }
 
-// optional bytes a_aClientId = 2;
+// optional bytes a_aClientId = 3;
 inline bool Msg_PLockManagerConstructor::_internal_has_a_aclientid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -21395,6 +23026,34 @@ inline void Msg_PLockManagerConstructor::set_allocated_a_aclientid(std::string* 
 // -------------------------------------------------------------------
 
 // Msg_PFetchConstructor
+
+// required sint64 a_actorid = 1;
+inline bool Msg_PFetchConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PFetchConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PFetchConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PFetchConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PFetchConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PFetchConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PFetchConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PFetchConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PFetchConstructor.a_actorid)
+}
 
 // -------------------------------------------------------------------
 
@@ -21508,6 +23167,34 @@ inline void Reply_RequestCameraAccess::set_allocated_a_rv(std::string* a_rv) {
 
 // Msg_PCacheConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PCacheConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PCacheConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PCacheConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PCacheConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PCacheConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PCacheConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PCacheConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PCacheConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PCacheConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PCacheConstructor
@@ -21515,6 +23202,34 @@ inline void Reply_RequestCameraAccess::set_allocated_a_rv(std::string* a_rv) {
 // -------------------------------------------------------------------
 
 // Msg_PCacheStreamControlConstructor
+
+// required sint64 a_actorid = 1;
+inline bool Msg_PCacheStreamControlConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PCacheStreamControlConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PCacheStreamControlConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PCacheStreamControlConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PCacheStreamControlConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PBackground.Msg_PCacheStreamControlConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PCacheStreamControlConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PCacheStreamControlConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PBackground.Msg_PCacheStreamControlConstructor.a_actorid)
+}
 
 // -------------------------------------------------------------------
 

@@ -583,9 +583,10 @@ class Msg_PTestShellCommandConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAACommandFieldNumber = 1,
+    kAACommandFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required string a_aCommand = 1;
+  // required string a_aCommand = 2;
   bool has_a_acommand() const;
   private:
   bool _internal_has_a_acommand() const;
@@ -603,9 +604,25 @@ class Msg_PTestShellCommandConstructor final :
   std::string* _internal_mutable_a_acommand();
   public:
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.PTestShell.Msg_PTestShellCommandConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -614,6 +631,7 @@ class Msg_PTestShellCommandConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acommand_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestShell_2eproto;
@@ -833,7 +851,35 @@ inline void Msg_ExecuteCommand::set_allocated_a_acommand(std::string* a_acommand
 
 // Msg_PTestShellCommandConstructor
 
-// required string a_aCommand = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PTestShellCommandConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PTestShellCommandConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PTestShellCommandConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PTestShellCommandConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PTestShellCommandConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.PTestShell.Msg_PTestShellCommandConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PTestShellCommandConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PTestShellCommandConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.PTestShell.Msg_PTestShellCommandConstructor.a_actorid)
+}
+
+// required string a_aCommand = 2;
 inline bool Msg_PTestShellCommandConstructor::_internal_has_a_acommand() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

@@ -203,6 +203,22 @@ class Msg_PCanvasConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PCanvasManager.Msg_PCanvasConstructor)
  private:
   class _Internal;
@@ -211,7 +227,9 @@ class Msg_PCanvasConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCanvasManager_2eproto;
@@ -451,6 +469,22 @@ class Msg_PWebGLConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PCanvasManager.Msg_PWebGLConstructor)
  private:
   class _Internal;
@@ -459,7 +493,9 @@ class Msg_PWebGLConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCanvasManager_2eproto;
@@ -699,6 +735,22 @@ class Msg_PWebGPUConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.PCanvasManager.Msg_PWebGPUConstructor)
  private:
   class _Internal;
@@ -707,7 +759,9 @@ class Msg_PWebGPUConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCanvasManager_2eproto;
@@ -1341,6 +1395,34 @@ class Reply_GetSnapshot final :
 #endif  // __GNUC__
 // Msg_PCanvasConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PCanvasConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PCanvasConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PCanvasConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PCanvasConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PCanvasConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PCanvasManager.Msg_PCanvasConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PCanvasConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PCanvasConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PCanvasManager.Msg_PCanvasConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PCanvasConstructor
@@ -1349,6 +1431,34 @@ class Reply_GetSnapshot final :
 
 // Msg_PWebGLConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PWebGLConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PWebGLConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PWebGLConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PWebGLConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PWebGLConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PCanvasManager.Msg_PWebGLConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PWebGLConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PWebGLConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PCanvasManager.Msg_PWebGLConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PWebGLConstructor
@@ -1356,6 +1466,34 @@ class Reply_GetSnapshot final :
 // -------------------------------------------------------------------
 
 // Msg_PWebGPUConstructor
+
+// required sint64 a_actorid = 1;
+inline bool Msg_PWebGPUConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PWebGPUConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PWebGPUConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PWebGPUConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PWebGPUConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PCanvasManager.Msg_PWebGPUConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PWebGPUConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PWebGPUConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PCanvasManager.Msg_PWebGPUConstructor.a_actorid)
+}
 
 // -------------------------------------------------------------------
 

@@ -28,6 +28,7 @@ PROTOBUF_CONSTEXPR Msg_PRemoteDecoderConstructor::Msg_PRemoteDecoderConstructor(
   , /*decltype(_impl_.a_identifier_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_trackingid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_info_)*/nullptr
+  , /*decltype(_impl_.a_actorid_)*/int64_t{0}
   , /*decltype(_impl_.a_mediaengineid_)*/uint64_t{0u}} {}
 struct Msg_PRemoteDecoderConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PRemoteDecoderConstructorDefaultTypeInternal()
@@ -54,7 +55,8 @@ PROTOBUF_CONSTEXPR Msg_PRemoteEncoderConstructor::Msg_PRemoteEncoderConstructor(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_config_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_config_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_actorid_)*/int64_t{0}} {}
 struct Msg_PRemoteEncoderConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PRemoteEncoderConstructorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -130,6 +132,9 @@ namespace PRemoteMediaManager {
 class Msg_PRemoteDecoderConstructor::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_PRemoteDecoderConstructor>()._impl_._has_bits_);
+  static void set_has_a_actorid(HasBits* has_bits) {
+    (*has_bits)[0] |= 16u;
+  }
   static const ::protobuf::mozilla::RemoteDecoderInfoIPDL& a_info(const Msg_PRemoteDecoderConstructor* msg);
   static void set_has_a_info(HasBits* has_bits) {
     (*has_bits)[0] |= 8u;
@@ -141,13 +146,13 @@ class Msg_PRemoteDecoderConstructor::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static void set_has_a_mediaengineid(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
+    (*has_bits)[0] |= 32u;
   }
   static void set_has_a_trackingid(HasBits* has_bits) {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000009) ^ 0x00000009) != 0;
+    return ((has_bits[0] & 0x00000019) ^ 0x00000019) != 0;
   }
 };
 
@@ -175,6 +180,7 @@ Msg_PRemoteDecoderConstructor::Msg_PRemoteDecoderConstructor(const Msg_PRemoteDe
     , decltype(_impl_.a_identifier_){}
     , decltype(_impl_.a_trackingid_){}
     , decltype(_impl_.a_info_){nullptr}
+    , decltype(_impl_.a_actorid_){}
     , decltype(_impl_.a_mediaengineid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
@@ -205,7 +211,9 @@ Msg_PRemoteDecoderConstructor::Msg_PRemoteDecoderConstructor(const Msg_PRemoteDe
   if (from._internal_has_a_info()) {
     _this->_impl_.a_info_ = new ::protobuf::mozilla::RemoteDecoderInfoIPDL(*from._impl_.a_info_);
   }
-  _this->_impl_.a_mediaengineid_ = from._impl_.a_mediaengineid_;
+  ::memcpy(&_impl_.a_actorid_, &from._impl_.a_actorid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_mediaengineid_) -
+    reinterpret_cast<char*>(&_impl_.a_actorid_)) + sizeof(_impl_.a_mediaengineid_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor)
 }
 
@@ -220,6 +228,7 @@ inline void Msg_PRemoteDecoderConstructor::SharedCtor(
     , decltype(_impl_.a_identifier_){}
     , decltype(_impl_.a_trackingid_){}
     , decltype(_impl_.a_info_){nullptr}
+    , decltype(_impl_.a_actorid_){int64_t{0}}
     , decltype(_impl_.a_mediaengineid_){uint64_t{0u}}
   };
   _impl_.a_options_.InitDefault();
@@ -279,7 +288,11 @@ void Msg_PRemoteDecoderConstructor::Clear() {
       _impl_.a_info_->Clear();
     }
   }
-  _impl_.a_mediaengineid_ = uint64_t{0u};
+  if (cached_has_bits & 0x00000030u) {
+    ::memset(&_impl_.a_actorid_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&_impl_.a_mediaengineid_) -
+        reinterpret_cast<char*>(&_impl_.a_actorid_)) + sizeof(_impl_.a_mediaengineid_));
+  }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -291,44 +304,53 @@ const char* Msg_PRemoteDecoderConstructor::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.RemoteDecoderInfoIPDL a_info = 1;
+      // required sint64 a_actorid = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_actorid(&has_bits);
+          _impl_.a_actorid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required .protobuf.mozilla.RemoteDecoderInfoIPDL a_info = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_info(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_options = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+      // required bytes a_options = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_options();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // optional bytes a_identifier = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+      // optional bytes a_identifier = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_identifier();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // optional uint64 a_mediaEngineId = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+      // optional uint64 a_mediaEngineId = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_mediaengineid(&has_bits);
           _impl_.a_mediaengineid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // optional bytes a_trackingId = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+      // optional bytes a_trackingId = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_a_trackingid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
@@ -366,35 +388,41 @@ uint8_t* Msg_PRemoteDecoderConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.RemoteDecoderInfoIPDL a_info = 1;
+  // required sint64 a_actorid = 1;
+  if (cached_has_bits & 0x00000010u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
+  }
+
+  // required .protobuf.mozilla.RemoteDecoderInfoIPDL a_info = 2;
   if (cached_has_bits & 0x00000008u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::a_info(this),
+      InternalWriteMessage(2, _Internal::a_info(this),
         _Internal::a_info(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes a_options = 2;
+  // required bytes a_options = 3;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_a_options(), target);
+        3, this->_internal_a_options(), target);
   }
 
-  // optional bytes a_identifier = 3;
+  // optional bytes a_identifier = 4;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
-        3, this->_internal_a_identifier(), target);
+        4, this->_internal_a_identifier(), target);
   }
 
-  // optional uint64 a_mediaEngineId = 4;
-  if (cached_has_bits & 0x00000010u) {
+  // optional uint64 a_mediaEngineId = 5;
+  if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(4, this->_internal_a_mediaengineid(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(5, this->_internal_a_mediaengineid(), target);
   }
 
-  // optional bytes a_trackingId = 5;
+  // optional bytes a_trackingId = 6;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
-        5, this->_internal_a_trackingid(), target);
+        6, this->_internal_a_trackingid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -410,17 +438,22 @@ size_t Msg_PRemoteDecoderConstructor::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_options()) {
-    // required bytes a_options = 2;
+    // required bytes a_options = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_options());
   }
 
   if (_internal_has_a_info()) {
-    // required .protobuf.mozilla.RemoteDecoderInfoIPDL a_info = 1;
+    // required .protobuf.mozilla.RemoteDecoderInfoIPDL a_info = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_info_);
+  }
+
+  if (_internal_has_a_actorid()) {
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
   }
 
   return total_size;
@@ -429,16 +462,19 @@ size_t Msg_PRemoteDecoderConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000009) ^ 0x00000009) == 0) {  // All required fields are present.
-    // required bytes a_options = 2;
+  if (((_impl_._has_bits_[0] & 0x00000019) ^ 0x00000019) == 0) {  // All required fields are present.
+    // required bytes a_options = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_options());
 
-    // required .protobuf.mozilla.RemoteDecoderInfoIPDL a_info = 1;
+    // required .protobuf.mozilla.RemoteDecoderInfoIPDL a_info = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_info_);
+
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -449,14 +485,14 @@ size_t Msg_PRemoteDecoderConstructor::ByteSizeLong() const {
 
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000006u) {
-    // optional bytes a_identifier = 3;
+    // optional bytes a_identifier = 4;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
           this->_internal_a_identifier());
     }
 
-    // optional bytes a_trackingId = 5;
+    // optional bytes a_trackingId = 6;
     if (cached_has_bits & 0x00000004u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -464,8 +500,8 @@ size_t Msg_PRemoteDecoderConstructor::ByteSizeLong() const {
     }
 
   }
-  // optional uint64 a_mediaEngineId = 4;
-  if (cached_has_bits & 0x00000010u) {
+  // optional uint64 a_mediaEngineId = 5;
+  if (cached_has_bits & 0x00000020u) {
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_mediaengineid());
   }
 
@@ -491,7 +527,7 @@ void Msg_PRemoteDecoderConstructor::MergeFrom(const Msg_PRemoteDecoderConstructo
   (void) cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
+  if (cached_has_bits & 0x0000003fu) {
     if (cached_has_bits & 0x00000001u) {
       _this->_internal_set_a_options(from._internal_a_options());
     }
@@ -506,6 +542,9 @@ void Msg_PRemoteDecoderConstructor::MergeFrom(const Msg_PRemoteDecoderConstructo
           from._internal_a_info());
     }
     if (cached_has_bits & 0x00000010u) {
+      _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
+    }
+    if (cached_has_bits & 0x00000020u) {
       _this->_impl_.a_mediaengineid_ = from._impl_.a_mediaengineid_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
@@ -712,11 +751,14 @@ std::string Reply_PRemoteDecoderConstructor::GetTypeName() const {
 class Msg_PRemoteEncoderConstructor::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_PRemoteEncoderConstructor>()._impl_._has_bits_);
+  static void set_has_a_actorid(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
   static void set_has_a_config(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -732,7 +774,8 @@ Msg_PRemoteEncoderConstructor::Msg_PRemoteEncoderConstructor(const Msg_PRemoteEn
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_config_){}};
+    , decltype(_impl_.a_config_){}
+    , decltype(_impl_.a_actorid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_config_.InitDefault();
@@ -743,6 +786,7 @@ Msg_PRemoteEncoderConstructor::Msg_PRemoteEncoderConstructor(const Msg_PRemoteEn
     _this->_impl_.a_config_.Set(from._internal_a_config(), 
       _this->GetArenaForAllocation());
   }
+  _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteEncoderConstructor)
 }
 
@@ -754,6 +798,7 @@ inline void Msg_PRemoteEncoderConstructor::SharedCtor(
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_config_){}
+    , decltype(_impl_.a_actorid_){int64_t{0}}
   };
   _impl_.a_config_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -789,6 +834,7 @@ void Msg_PRemoteEncoderConstructor::Clear() {
   if (cached_has_bits & 0x00000001u) {
     _impl_.a_config_.ClearNonDefaultToEmpty();
   }
+  _impl_.a_actorid_ = int64_t{0};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -800,9 +846,18 @@ const char* Msg_PRemoteEncoderConstructor::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_config = 1;
+      // required sint64 a_actorid = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_actorid(&has_bits);
+          _impl_.a_actorid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required bytes a_config = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_config();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
@@ -840,10 +895,16 @@ uint8_t* Msg_PRemoteEncoderConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_config = 1;
+  // required sint64 a_actorid = 1;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
+  }
+
+  // required bytes a_config = 2;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        1, this->_internal_a_config(), target);
+        2, this->_internal_a_config(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -854,15 +915,39 @@ uint8_t* Msg_PRemoteEncoderConstructor::_InternalSerialize(
   return target;
 }
 
+size_t Msg_PRemoteEncoderConstructor::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteEncoderConstructor)
+  size_t total_size = 0;
+
+  if (_internal_has_a_config()) {
+    // required bytes a_config = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_config());
+  }
+
+  if (_internal_has_a_actorid()) {
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+  }
+
+  return total_size;
+}
 size_t Msg_PRemoteEncoderConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteEncoderConstructor)
   size_t total_size = 0;
 
-  // required bytes a_config = 1;
-  if (_internal_has_a_config()) {
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required bytes a_config = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_config());
+
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -889,8 +974,15 @@ void Msg_PRemoteEncoderConstructor::MergeFrom(const Msg_PRemoteEncoderConstructo
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_config()) {
-    _this->_internal_set_a_config(from._internal_a_config());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_set_a_config(from._internal_a_config());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -917,6 +1009,7 @@ void Msg_PRemoteEncoderConstructor::InternalSwap(Msg_PRemoteEncoderConstructor* 
       &_impl_.a_config_, lhs_arena,
       &other->_impl_.a_config_, rhs_arena
   );
+  swap(_impl_.a_actorid_, other->_impl_.a_actorid_);
 }
 
 std::string Msg_PRemoteEncoderConstructor::GetTypeName() const {

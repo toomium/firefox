@@ -57,7 +57,8 @@ message Reply___delete__ {
 }
 
 message Msg_PCompositorWidgetConstructor {
-  required protobuf.mozilla.widget.CompositorWidgetInitData a_aInitData = 1;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.widget.CompositorWidgetInitData a_aInitData = 2;
 }
 
 message Reply_PCompositorWidgetConstructor {
@@ -71,14 +72,16 @@ message Reply_Initialize {
 }
 
 message Msg_PAPZConstructor {
-  required bytes a_layersId = 1;
+  required sint64 a_actorid = 1;
+  required bytes a_layersId = 2;
 }
 
 message Reply_PAPZConstructor {
 }
 
 message Msg_PAPZCTreeManagerConstructor {
-  required bytes a_layersId = 1;
+  required sint64 a_actorid = 1;
+  required bytes a_layersId = 2;
 }
 
 message Reply_PAPZCTreeManagerConstructor {
@@ -175,13 +178,14 @@ message Reply_StopFrameTimeRecording {
 }
 
 message Msg_PTextureConstructor {
-  required protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 1;
-  required protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 2;
-  required bytes a_aBackend = 3;
-  required bytes a_aTextureFlags = 4;
-  required bytes a_id = 5;
-  required uint64 a_aSerial = 6;
-  required bytes a_aExternalImageId = 7;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 2;
+  required protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 3;
+  required bytes a_aBackend = 4;
+  required bytes a_aTextureFlags = 5;
+  required bytes a_id = 6;
+  required uint64 a_aSerial = 7;
+  required bytes a_aExternalImageId = 8;
 }
 
 message Reply_PTextureConstructor {
@@ -194,9 +198,10 @@ message Reply_SyncWithCompositor {
 }
 
 message Msg_PWebRenderBridgeConstructor {
-  required bytes a_pipelineId = 1;
-  required bytes a_aSize = 2;
-  required bytes a_aKind = 3;
+  required sint64 a_actorid = 1;
+  required bytes a_pipelineId = 2;
+  required bytes a_aSize = 3;
+  required bytes a_aKind = 4;
 }
 
 message Reply_PWebRenderBridgeConstructor {
@@ -234,6 +239,6 @@ message Msg_DynamicToolbarOffsetChanged {
 
 // Parameter mappings stats:
 // Total parameters in this file 65
-// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 5, "<class 'ipdl.type.BuiltinCType'>": 6, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 48, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 1, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 1, "<class 'ipdl.type.UnionType'>": 4, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 16
+// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 5, "<class 'ipdl.type.BuiltinCType'>": 10, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 46, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 1, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 0, "<class 'ipdl.type.UnionType'>": 3, "<class 'ipdl.type.UniquePtrType'>": 0}
+// Scalar mappings performed: 21
 // Message structs/unions generated from ipdl structs/unions: 1

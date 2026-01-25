@@ -25,7 +25,8 @@ PROTOBUF_CONSTEXPR Msg_PCompositorBridgeConstructor::Msg_PCompositorBridgeConstr
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_options_)*/nullptr} {}
+  , /*decltype(_impl_.a_options_)*/nullptr
+  , /*decltype(_impl_.a_actorid_)*/int64_t{0}} {}
 struct Msg_PCompositorBridgeConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PCompositorBridgeConstructorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -182,12 +183,15 @@ namespace PCompositorManager {
 class Msg_PCompositorBridgeConstructor::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_PCompositorBridgeConstructor>()._impl_._has_bits_);
+  static void set_has_a_actorid(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
   static const ::protobuf::mozilla::layers::CompositorBridgeOptions& a_options(const Msg_PCompositorBridgeConstructor* msg);
   static void set_has_a_options(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -211,12 +215,14 @@ Msg_PCompositorBridgeConstructor::Msg_PCompositorBridgeConstructor(const Msg_PCo
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_options_){nullptr}};
+    , decltype(_impl_.a_options_){nullptr}
+    , decltype(_impl_.a_actorid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_options()) {
     _this->_impl_.a_options_ = new ::protobuf::mozilla::layers::CompositorBridgeOptions(*from._impl_.a_options_);
   }
+  _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PCompositorManager.Msg_PCompositorBridgeConstructor)
 }
 
@@ -228,6 +234,7 @@ inline void Msg_PCompositorBridgeConstructor::SharedCtor(
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_options_){nullptr}
+    , decltype(_impl_.a_actorid_){int64_t{0}}
   };
 }
 
@@ -260,6 +267,7 @@ void Msg_PCompositorBridgeConstructor::Clear() {
     GOOGLE_DCHECK(_impl_.a_options_ != nullptr);
     _impl_.a_options_->Clear();
   }
+  _impl_.a_actorid_ = int64_t{0};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -271,9 +279,18 @@ const char* Msg_PCompositorBridgeConstructor::_InternalParse(const char* ptr, ::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.layers.CompositorBridgeOptions a_options = 1;
+      // required sint64 a_actorid = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_actorid(&has_bits);
+          _impl_.a_actorid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required .protobuf.mozilla.layers.CompositorBridgeOptions a_options = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_options(), ptr);
           CHK_(ptr);
         } else
@@ -310,10 +327,16 @@ uint8_t* Msg_PCompositorBridgeConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.layers.CompositorBridgeOptions a_options = 1;
+  // required sint64 a_actorid = 1;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
+  }
+
+  // required .protobuf.mozilla.layers.CompositorBridgeOptions a_options = 2;
   if (cached_has_bits & 0x00000001u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::a_options(this),
+      InternalWriteMessage(2, _Internal::a_options(this),
         _Internal::a_options(this).GetCachedSize(), target, stream);
   }
 
@@ -325,15 +348,39 @@ uint8_t* Msg_PCompositorBridgeConstructor::_InternalSerialize(
   return target;
 }
 
+size_t Msg_PCompositorBridgeConstructor::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PCompositorManager.Msg_PCompositorBridgeConstructor)
+  size_t total_size = 0;
+
+  if (_internal_has_a_options()) {
+    // required .protobuf.mozilla.layers.CompositorBridgeOptions a_options = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_options_);
+  }
+
+  if (_internal_has_a_actorid()) {
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+  }
+
+  return total_size;
+}
 size_t Msg_PCompositorBridgeConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PCompositorManager.Msg_PCompositorBridgeConstructor)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.layers.CompositorBridgeOptions a_options = 1;
-  if (_internal_has_a_options()) {
+  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required .protobuf.mozilla.layers.CompositorBridgeOptions a_options = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_options_);
+
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
   }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -360,9 +407,16 @@ void Msg_PCompositorBridgeConstructor::MergeFrom(const Msg_PCompositorBridgeCons
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_options()) {
-    _this->_internal_mutable_a_options()->::protobuf::mozilla::layers::CompositorBridgeOptions::MergeFrom(
-        from._internal_a_options());
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _this->_internal_mutable_a_options()->::protobuf::mozilla::layers::CompositorBridgeOptions::MergeFrom(
+          from._internal_a_options());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -386,7 +440,12 @@ void Msg_PCompositorBridgeConstructor::InternalSwap(Msg_PCompositorBridgeConstru
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  swap(_impl_.a_options_, other->_impl_.a_options_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Msg_PCompositorBridgeConstructor, _impl_.a_actorid_)
+      + sizeof(Msg_PCompositorBridgeConstructor::_impl_.a_actorid_)
+      - PROTOBUF_FIELD_OFFSET(Msg_PCompositorBridgeConstructor, _impl_.a_options_)>(
+          reinterpret_cast<char*>(&_impl_.a_options_),
+          reinterpret_cast<char*>(&other->_impl_.a_options_));
 }
 
 std::string Msg_PCompositorBridgeConstructor::GetTypeName() const {

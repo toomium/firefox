@@ -37,7 +37,9 @@ struct Msg_InitCrashReporterDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_InitCrashReporterDefaultTypeInternal _Msg_InitCrashReporter_default_instance_;
 PROTOBUF_CONSTEXPR Msg_PGMPTimerConstructor::Msg_PGMPTimerConstructor(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_actorid_)*/int64_t{0}} {}
 struct Msg_PGMPTimerConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PGMPTimerConstructorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -61,7 +63,9 @@ struct Reply_PGMPTimerConstructorDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_PGMPTimerConstructorDefaultTypeInternal _Reply_PGMPTimerConstructor_default_instance_;
 PROTOBUF_CONSTEXPR Msg_PGMPStorageConstructor::Msg_PGMPStorageConstructor(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    /*decltype(_impl_._has_bits_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_actorid_)*/int64_t{0}} {}
 struct Msg_PGMPStorageConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PGMPStorageConstructorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -537,6 +541,13 @@ std::string Msg_InitCrashReporter::GetTypeName() const {
 
 class Msg_PGMPTimerConstructor::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_PGMPTimerConstructor>()._impl_._has_bits_);
+  static void set_has_a_actorid(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_PGMPTimerConstructor::Msg_PGMPTimerConstructor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -549,9 +560,12 @@ Msg_PGMPTimerConstructor::Msg_PGMPTimerConstructor(const Msg_PGMPTimerConstructo
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_PGMPTimerConstructor* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_actorid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gmp.PGMP.Msg_PGMPTimerConstructor)
 }
 
@@ -560,7 +574,9 @@ inline void Msg_PGMPTimerConstructor::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_actorid_){int64_t{0}}
   };
 }
 
@@ -587,14 +603,31 @@ void Msg_PGMPTimerConstructor::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_PGMPTimerConstructor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // required sint64 a_actorid = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_actorid(&has_bits);
+          _impl_.a_actorid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
     if ((tag == 0) || ((tag & 7) == 4)) {
       CHK_(ptr);
       ctx->SetLastTag(tag);
@@ -607,6 +640,7 @@ const char* Msg_PGMPTimerConstructor::_InternalParse(const char* ptr, ::_pbi::Pa
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -620,6 +654,13 @@ uint8_t* Msg_PGMPTimerConstructor::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  // required sint64 a_actorid = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -632,6 +673,10 @@ size_t Msg_PGMPTimerConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.PGMP.Msg_PGMPTimerConstructor)
   size_t total_size = 0;
 
+  // required sint64 a_actorid = 1;
+  if (_internal_has_a_actorid()) {
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -657,6 +702,9 @@ void Msg_PGMPTimerConstructor::MergeFrom(const Msg_PGMPTimerConstructor& from) {
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
+  if (from._internal_has_a_actorid()) {
+    _this->_internal_set_a_actorid(from._internal_a_actorid());
+  }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -668,12 +716,15 @@ void Msg_PGMPTimerConstructor::CopyFrom(const Msg_PGMPTimerConstructor& from) {
 }
 
 bool Msg_PGMPTimerConstructor::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Msg_PGMPTimerConstructor::InternalSwap(Msg_PGMPTimerConstructor* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.a_actorid_, other->_impl_.a_actorid_);
 }
 
 std::string Msg_PGMPTimerConstructor::GetTypeName() const {
@@ -833,6 +884,13 @@ std::string Reply_PGMPTimerConstructor::GetTypeName() const {
 
 class Msg_PGMPStorageConstructor::_Internal {
  public:
+  using HasBits = decltype(std::declval<Msg_PGMPStorageConstructor>()._impl_._has_bits_);
+  static void set_has_a_actorid(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static bool MissingRequiredFields(const HasBits& has_bits) {
+    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+  }
 };
 
 Msg_PGMPStorageConstructor::Msg_PGMPStorageConstructor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -845,9 +903,12 @@ Msg_PGMPStorageConstructor::Msg_PGMPStorageConstructor(const Msg_PGMPStorageCons
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_PGMPStorageConstructor* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
+      decltype(_impl_._has_bits_){from._impl_._has_bits_}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_actorid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gmp.PGMP.Msg_PGMPStorageConstructor)
 }
 
@@ -856,7 +917,9 @@ inline void Msg_PGMPStorageConstructor::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
+      decltype(_impl_._has_bits_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_actorid_){int64_t{0}}
   };
 }
 
@@ -883,14 +946,31 @@ void Msg_PGMPStorageConstructor::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_PGMPStorageConstructor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // required sint64 a_actorid = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_actorid(&has_bits);
+          _impl_.a_actorid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
     if ((tag == 0) || ((tag & 7) == 4)) {
       CHK_(ptr);
       ctx->SetLastTag(tag);
@@ -903,6 +983,7 @@ const char* Msg_PGMPStorageConstructor::_InternalParse(const char* ptr, ::_pbi::
     CHK_(ptr != nullptr);
   }  // while
 message_done:
+  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -916,6 +997,13 @@ uint8_t* Msg_PGMPStorageConstructor::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  // required sint64 a_actorid = 1;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
@@ -928,6 +1016,10 @@ size_t Msg_PGMPStorageConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gmp.PGMP.Msg_PGMPStorageConstructor)
   size_t total_size = 0;
 
+  // required sint64 a_actorid = 1;
+  if (_internal_has_a_actorid()) {
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -953,6 +1045,9 @@ void Msg_PGMPStorageConstructor::MergeFrom(const Msg_PGMPStorageConstructor& fro
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
+  if (from._internal_has_a_actorid()) {
+    _this->_internal_set_a_actorid(from._internal_a_actorid());
+  }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
@@ -964,12 +1059,15 @@ void Msg_PGMPStorageConstructor::CopyFrom(const Msg_PGMPStorageConstructor& from
 }
 
 bool Msg_PGMPStorageConstructor::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Msg_PGMPStorageConstructor::InternalSwap(Msg_PGMPStorageConstructor* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  swap(_impl_.a_actorid_, other->_impl_.a_actorid_);
 }
 
 std::string Msg_PGMPStorageConstructor::GetTypeName() const {

@@ -58,8 +58,9 @@ class ProtobufTypeMapper(ipdl.type.TypeVisitor):
     def countParamTypes(self, ipdltype : ipdl.type.Type):
         self.counters[str(type(ipdltype))] += 1
 
-    def mapType(self, type : ipdl.type.Type):
-        self.countParamTypes(type)
+    def mapType(self, type : ipdl.type.Type, countParam=True):
+        if countParam:
+            self.countParamTypes(type)
         mapped_type = type.accept(self)
 
         if isinstance(type, ipdl.type.BuiltinCType) or (isinstance(type, ipdl.type.ImportedCxxType) and mapped_type != "bytes"):
@@ -80,7 +81,7 @@ class ProtobufTypeMapper(ipdl.type.TypeVisitor):
         return "bytes"
 
     def visitArrayType(self, a : ipdl.type.ArrayType, *args):
-        return self.mapType(a.basetype)
+        return self.mapType(a.basetype, countParam=False)
 
     def visitFDType(self, s : ipdl.type.ArrayType, *args):
         return "bytes"
@@ -95,7 +96,8 @@ class ProtobufTypeMapper(ipdl.type.TypeVisitor):
         return "bytes"
 
     def visitMaybeType(self, m : ipdl.type.MaybeType, *args):
-        return m.basetype.accept(self)
+        return self.mapType(m.basetype, countParam=False)
+        #return m.basetype.accept(self)
 
     def visitMessageType(self, m, *args):
         return super().visitMessageType(m, *args)
@@ -178,6 +180,16 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         gen_msgs = []
         send_msg = ast.Message(md.prettyMsgName())
         field_num = 1
+
+        # check if msg is constructor
+        if str(md.prettyMsgName()).endswith("Constructor"):
+            # if so, then add a "long" parameter at the start
+            # since all ctor's carry an actorid at the front
+            field = self.mapParam("actorid", ipdl.type.BuiltinCType("long"))
+            field.number = field_num
+            send_msg.elements.append(field)
+            field_num += 1
+
         # add normal msg including incoming params
         for parm in md.inParams:
             field = self.mapParam(parm.progname, parm.type)
@@ -190,6 +202,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         if md.hasReply():
             field_num = 1
             reply_msg = ast.Message(md.prettyReplyName())
+
             for parm in md.outParams:
                 field = self.mapParam(parm.progname, parm.type)
                 field.number = field_num

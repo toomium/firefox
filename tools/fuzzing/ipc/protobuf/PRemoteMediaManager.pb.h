@@ -196,13 +196,14 @@ class Msg_PRemoteDecoderConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAOptionsFieldNumber = 2,
-    kAIdentifierFieldNumber = 3,
-    kATrackingIdFieldNumber = 5,
-    kAInfoFieldNumber = 1,
-    kAMediaEngineIdFieldNumber = 4,
+    kAOptionsFieldNumber = 3,
+    kAIdentifierFieldNumber = 4,
+    kATrackingIdFieldNumber = 6,
+    kAInfoFieldNumber = 2,
+    kAActoridFieldNumber = 1,
+    kAMediaEngineIdFieldNumber = 5,
   };
-  // required bytes a_options = 2;
+  // required bytes a_options = 3;
   bool has_a_options() const;
   private:
   bool _internal_has_a_options() const;
@@ -220,7 +221,7 @@ class Msg_PRemoteDecoderConstructor final :
   std::string* _internal_mutable_a_options();
   public:
 
-  // optional bytes a_identifier = 3;
+  // optional bytes a_identifier = 4;
   bool has_a_identifier() const;
   private:
   bool _internal_has_a_identifier() const;
@@ -238,7 +239,7 @@ class Msg_PRemoteDecoderConstructor final :
   std::string* _internal_mutable_a_identifier();
   public:
 
-  // optional bytes a_trackingId = 5;
+  // optional bytes a_trackingId = 6;
   bool has_a_trackingid() const;
   private:
   bool _internal_has_a_trackingid() const;
@@ -256,7 +257,7 @@ class Msg_PRemoteDecoderConstructor final :
   std::string* _internal_mutable_a_trackingid();
   public:
 
-  // required .protobuf.mozilla.RemoteDecoderInfoIPDL a_info = 1;
+  // required .protobuf.mozilla.RemoteDecoderInfoIPDL a_info = 2;
   bool has_a_info() const;
   private:
   bool _internal_has_a_info() const;
@@ -274,7 +275,20 @@ class Msg_PRemoteDecoderConstructor final :
       ::protobuf::mozilla::RemoteDecoderInfoIPDL* a_info);
   ::protobuf::mozilla::RemoteDecoderInfoIPDL* unsafe_arena_release_a_info();
 
-  // optional uint64 a_mediaEngineId = 4;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // optional uint64 a_mediaEngineId = 5;
   bool has_a_mediaengineid() const;
   private:
   bool _internal_has_a_mediaengineid() const;
@@ -304,6 +318,7 @@ class Msg_PRemoteDecoderConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_identifier_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_trackingid_;
     ::protobuf::mozilla::RemoteDecoderInfoIPDL* a_info_;
+    int64_t a_actorid_;
     uint64_t a_mediaengineid_;
   };
   union { Impl_ _impl_; };
@@ -545,9 +560,10 @@ class Msg_PRemoteEncoderConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAConfigFieldNumber = 1,
+    kAConfigFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required bytes a_config = 1;
+  // required bytes a_config = 2;
   bool has_a_config() const;
   private:
   bool _internal_has_a_config() const;
@@ -565,9 +581,25 @@ class Msg_PRemoteEncoderConstructor final :
   std::string* _internal_mutable_a_config();
   public:
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteEncoderConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -576,6 +608,7 @@ class Msg_PRemoteEncoderConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_config_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteMediaManager_2eproto;
@@ -1156,7 +1189,35 @@ class Msg_DeallocateSurfaceDescriptorGPUVideo final :
 #endif  // __GNUC__
 // Msg_PRemoteDecoderConstructor
 
-// required .protobuf.mozilla.RemoteDecoderInfoIPDL a_info = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PRemoteDecoderConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool Msg_PRemoteDecoderConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PRemoteDecoderConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000010u;
+}
+inline int64_t Msg_PRemoteDecoderConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PRemoteDecoderConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PRemoteDecoderConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PRemoteDecoderConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.RemoteDecoderInfoIPDL a_info = 2;
 inline bool Msg_PRemoteDecoderConstructor::_internal_has_a_info() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_info_ != nullptr);
@@ -1243,7 +1304,7 @@ inline void Msg_PRemoteDecoderConstructor::set_allocated_a_info(::protobuf::mozi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor.a_info)
 }
 
-// required bytes a_options = 2;
+// required bytes a_options = 3;
 inline bool Msg_PRemoteDecoderConstructor::_internal_has_a_options() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1311,7 +1372,7 @@ inline void Msg_PRemoteDecoderConstructor::set_allocated_a_options(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor.a_options)
 }
 
-// optional bytes a_identifier = 3;
+// optional bytes a_identifier = 4;
 inline bool Msg_PRemoteDecoderConstructor::_internal_has_a_identifier() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1379,9 +1440,9 @@ inline void Msg_PRemoteDecoderConstructor::set_allocated_a_identifier(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor.a_identifier)
 }
 
-// optional uint64 a_mediaEngineId = 4;
+// optional uint64 a_mediaEngineId = 5;
 inline bool Msg_PRemoteDecoderConstructor::_internal_has_a_mediaengineid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
 inline bool Msg_PRemoteDecoderConstructor::has_a_mediaengineid() const {
@@ -1389,7 +1450,7 @@ inline bool Msg_PRemoteDecoderConstructor::has_a_mediaengineid() const {
 }
 inline void Msg_PRemoteDecoderConstructor::clear_a_mediaengineid() {
   _impl_.a_mediaengineid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline uint64_t Msg_PRemoteDecoderConstructor::_internal_a_mediaengineid() const {
   return _impl_.a_mediaengineid_;
@@ -1399,7 +1460,7 @@ inline uint64_t Msg_PRemoteDecoderConstructor::a_mediaengineid() const {
   return _internal_a_mediaengineid();
 }
 inline void Msg_PRemoteDecoderConstructor::_internal_set_a_mediaengineid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_mediaengineid_ = value;
 }
 inline void Msg_PRemoteDecoderConstructor::set_a_mediaengineid(uint64_t value) {
@@ -1407,7 +1468,7 @@ inline void Msg_PRemoteDecoderConstructor::set_a_mediaengineid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor.a_mediaEngineId)
 }
 
-// optional bytes a_trackingId = 5;
+// optional bytes a_trackingId = 6;
 inline bool Msg_PRemoteDecoderConstructor::_internal_has_a_trackingid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -1483,7 +1544,35 @@ inline void Msg_PRemoteDecoderConstructor::set_allocated_a_trackingid(std::strin
 
 // Msg_PRemoteEncoderConstructor
 
-// required bytes a_config = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PRemoteEncoderConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PRemoteEncoderConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PRemoteEncoderConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PRemoteEncoderConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PRemoteEncoderConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteEncoderConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PRemoteEncoderConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PRemoteEncoderConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteEncoderConstructor.a_actorid)
+}
+
+// required bytes a_config = 2;
 inline bool Msg_PRemoteEncoderConstructor::_internal_has_a_config() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

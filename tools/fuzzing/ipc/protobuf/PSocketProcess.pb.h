@@ -1642,9 +1642,10 @@ class Msg_PWebrtcTCPSocketConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kATabIdFieldNumber = 1,
+    kATabIdFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // optional bytes a_tabId = 1;
+  // optional bytes a_tabId = 2;
   bool has_a_tabid() const;
   private:
   bool _internal_has_a_tabid() const;
@@ -1662,6 +1663,19 @@ class Msg_PWebrtcTCPSocketConstructor final :
   std::string* _internal_mutable_a_tabid();
   public:
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_PWebrtcTCPSocketConstructor)
  private:
   class _Internal;
@@ -1673,6 +1687,7 @@ class Msg_PWebrtcTCPSocketConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_tabid_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -2294,6 +2309,22 @@ class Msg_PAltServiceConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_PAltServiceConstructor)
  private:
   class _Internal;
@@ -2302,7 +2333,9 @@ class Msg_PAltServiceConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -2543,10 +2576,11 @@ class Msg_PProxyConfigLookupConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAAUriFieldNumber = 1,
-    kAAFlagsFieldNumber = 2,
+    kAAUriFieldNumber = 2,
+    kAActoridFieldNumber = 1,
+    kAAFlagsFieldNumber = 3,
   };
-  // required bytes a_aUri = 1;
+  // required bytes a_aUri = 2;
   bool has_a_auri() const;
   private:
   bool _internal_has_a_auri() const;
@@ -2564,7 +2598,20 @@ class Msg_PProxyConfigLookupConstructor final :
   std::string* _internal_mutable_a_auri();
   public:
 
-  // required uint32 a_aFlags = 2;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required uint32 a_aFlags = 3;
   bool has_a_aflags() const;
   private:
   bool _internal_has_a_aflags() const;
@@ -2591,6 +2638,7 @@ class Msg_PProxyConfigLookupConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_auri_;
+    int64_t a_actorid_;
     uint32_t a_aflags_;
   };
   union { Impl_ _impl_; };
@@ -4775,6 +4823,22 @@ class Msg_PHttpTransactionConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_PHttpTransactionConstructor)
  private:
   class _Internal;
@@ -4783,7 +4847,9 @@ class Msg_PHttpTransactionConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -5024,9 +5090,10 @@ class Msg_PHttpConnectionMgrConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAAArgsFieldNumber = 1,
+    kAAArgsFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required .protobuf.mozilla.net.HttpHandlerInitArgs a_aArgs = 1;
+  // required .protobuf.mozilla.net.HttpHandlerInitArgs a_aArgs = 2;
   bool has_a_aargs() const;
   private:
   bool _internal_has_a_aargs() const;
@@ -5044,9 +5111,25 @@ class Msg_PHttpConnectionMgrConstructor final :
       ::protobuf::mozilla::net::HttpHandlerInitArgs* a_aargs);
   ::protobuf::mozilla::net::HttpHandlerInitArgs* unsafe_arena_release_a_aargs();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_PHttpConnectionMgrConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5055,6 +5138,7 @@ class Msg_PHttpConnectionMgrConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::net::HttpHandlerInitArgs* a_aargs_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -5868,10 +5952,24 @@ class Msg_PInputChannelThrottleQueueConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAMeanBytesPerSecondFieldNumber = 1,
-    kAMaxBytesPerSecondFieldNumber = 2,
+    kAActoridFieldNumber = 1,
+    kAMeanBytesPerSecondFieldNumber = 2,
+    kAMaxBytesPerSecondFieldNumber = 3,
   };
-  // required uint32 a_meanBytesPerSecond = 1;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required uint32 a_meanBytesPerSecond = 2;
   bool has_a_meanbytespersecond() const;
   private:
   bool _internal_has_a_meanbytespersecond() const;
@@ -5884,7 +5982,7 @@ class Msg_PInputChannelThrottleQueueConstructor final :
   void _internal_set_a_meanbytespersecond(uint32_t value);
   public:
 
-  // required uint32 a_maxBytesPerSecond = 2;
+  // required uint32 a_maxBytesPerSecond = 3;
   bool has_a_maxbytespersecond() const;
   private:
   bool _internal_has_a_maxbytespersecond() const;
@@ -5910,6 +6008,7 @@ class Msg_PInputChannelThrottleQueueConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
     uint32_t a_meanbytespersecond_;
     uint32_t a_maxbytespersecond_;
   };
@@ -6152,10 +6251,11 @@ class Msg_PAltSvcTransactionConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAAConnInfoFieldNumber = 1,
-    kAACapsFieldNumber = 2,
+    kAAConnInfoFieldNumber = 2,
+    kAActoridFieldNumber = 1,
+    kAACapsFieldNumber = 3,
   };
-  // required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aConnInfo = 1;
+  // required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aConnInfo = 2;
   bool has_a_aconninfo() const;
   private:
   bool _internal_has_a_aconninfo() const;
@@ -6173,7 +6273,20 @@ class Msg_PAltSvcTransactionConstructor final :
       ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_aconninfo);
   ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* unsafe_arena_release_a_aconninfo();
 
-  // required uint32 a_aCaps = 2;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required uint32 a_aCaps = 3;
   bool has_a_acaps() const;
   private:
   bool _internal_has_a_acaps() const;
@@ -6200,6 +6313,7 @@ class Msg_PAltSvcTransactionConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_aconninfo_;
+    int64_t a_actorid_;
     uint32_t a_acaps_;
   };
   union { Impl_ _impl_; };
@@ -6712,11 +6826,12 @@ class Msg_PTRRServiceConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAADNSSuffixListFieldNumber = 3,
-    kAACaptiveIsPassedFieldNumber = 1,
-    kAAParentalControlEnabledFieldNumber = 2,
+    kAADNSSuffixListFieldNumber = 4,
+    kAActoridFieldNumber = 1,
+    kAACaptiveIsPassedFieldNumber = 2,
+    kAAParentalControlEnabledFieldNumber = 3,
   };
-  // repeated string a_aDNSSuffixList = 3;
+  // repeated string a_aDNSSuffixList = 4;
   int a_adnssuffixlist_size() const;
   private:
   int _internal_a_adnssuffixlist_size() const;
@@ -6740,7 +6855,20 @@ class Msg_PTRRServiceConstructor final :
   std::string* _internal_add_a_adnssuffixlist();
   public:
 
-  // required bool a_aCaptiveIsPassed = 1;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required bool a_aCaptiveIsPassed = 2;
   bool has_a_acaptiveispassed() const;
   private:
   bool _internal_has_a_acaptiveispassed() const;
@@ -6753,7 +6881,7 @@ class Msg_PTRRServiceConstructor final :
   void _internal_set_a_acaptiveispassed(bool value);
   public:
 
-  // required bool a_aParentalControlEnabled = 2;
+  // required bool a_aParentalControlEnabled = 3;
   bool has_a_aparentalcontrolenabled() const;
   private:
   bool _internal_has_a_aparentalcontrolenabled() const;
@@ -6780,6 +6908,7 @@ class Msg_PTRRServiceConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_adnssuffixlist_;
+    int64_t a_actorid_;
     bool a_acaptiveispassed_;
     bool a_aparentalcontrolenabled_;
   };
@@ -7021,6 +7150,22 @@ class Msg_PNativeDNSResolverOverrideConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PSocketProcess.Msg_PNativeDNSResolverOverrideConstructor)
  private:
   class _Internal;
@@ -7029,7 +7174,9 @@ class Msg_PNativeDNSResolverOverrideConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_2eproto;
@@ -9765,14 +9912,15 @@ class Msg_PDNSRequestConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAHostNameFieldNumber = 1,
-    kATrrServerFieldNumber = 2,
-    kAOriginAttributesFieldNumber = 5,
-    kAFlagsFieldNumber = 6,
-    kAPortFieldNumber = 3,
-    kATypeFieldNumber = 4,
+    kAHostNameFieldNumber = 2,
+    kATrrServerFieldNumber = 3,
+    kAOriginAttributesFieldNumber = 6,
+    kAFlagsFieldNumber = 7,
+    kAActoridFieldNumber = 1,
+    kAPortFieldNumber = 4,
+    kATypeFieldNumber = 5,
   };
-  // required string a_hostName = 1;
+  // required string a_hostName = 2;
   bool has_a_hostname() const;
   private:
   bool _internal_has_a_hostname() const;
@@ -9790,7 +9938,7 @@ class Msg_PDNSRequestConstructor final :
   std::string* _internal_mutable_a_hostname();
   public:
 
-  // required string a_trrServer = 2;
+  // required string a_trrServer = 3;
   bool has_a_trrserver() const;
   private:
   bool _internal_has_a_trrserver() const;
@@ -9808,7 +9956,7 @@ class Msg_PDNSRequestConstructor final :
   std::string* _internal_mutable_a_trrserver();
   public:
 
-  // required bytes a_originAttributes = 5;
+  // required bytes a_originAttributes = 6;
   bool has_a_originattributes() const;
   private:
   bool _internal_has_a_originattributes() const;
@@ -9826,7 +9974,7 @@ class Msg_PDNSRequestConstructor final :
   std::string* _internal_mutable_a_originattributes();
   public:
 
-  // required bytes a_flags = 6;
+  // required bytes a_flags = 7;
   bool has_a_flags() const;
   private:
   bool _internal_has_a_flags() const;
@@ -9844,7 +9992,20 @@ class Msg_PDNSRequestConstructor final :
   std::string* _internal_mutable_a_flags();
   public:
 
-  // required sint32 a_port = 3;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required sint32 a_port = 4;
   bool has_a_port() const;
   private:
   bool _internal_has_a_port() const;
@@ -9857,7 +10018,7 @@ class Msg_PDNSRequestConstructor final :
   void _internal_set_a_port(int32_t value);
   public:
 
-  // required uint32 a_type = 4;
+  // required uint32 a_type = 5;
   bool has_a_type() const;
   private:
   bool _internal_has_a_type() const;
@@ -9887,6 +10048,7 @@ class Msg_PDNSRequestConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_trrserver_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_originattributes_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_flags_;
+    int64_t a_actorid_;
     int32_t a_port_;
     uint32_t a_type_;
   };
@@ -10677,7 +10839,35 @@ inline void Msg_RecordDiscardedData::set_allocated_a_data(std::string* a_data) {
 
 // Msg_PWebrtcTCPSocketConstructor
 
-// optional bytes a_tabId = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PWebrtcTCPSocketConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PWebrtcTCPSocketConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PWebrtcTCPSocketConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PWebrtcTCPSocketConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PWebrtcTCPSocketConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PWebrtcTCPSocketConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PWebrtcTCPSocketConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PWebrtcTCPSocketConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PWebrtcTCPSocketConstructor.a_actorid)
+}
+
+// optional bytes a_tabId = 2;
 inline bool Msg_PWebrtcTCPSocketConstructor::_internal_has_a_tabid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11136,6 +11326,34 @@ inline void Msg_InitSocketBackground::set_allocated_a_aendpoint(std::string* a_a
 
 // Msg_PAltServiceConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PAltServiceConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PAltServiceConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PAltServiceConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PAltServiceConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PAltServiceConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PAltServiceConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PAltServiceConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PAltServiceConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PAltServiceConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PAltServiceConstructor
@@ -11144,7 +11362,35 @@ inline void Msg_InitSocketBackground::set_allocated_a_aendpoint(std::string* a_a
 
 // Msg_PProxyConfigLookupConstructor
 
-// required bytes a_aUri = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PProxyConfigLookupConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PProxyConfigLookupConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PProxyConfigLookupConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PProxyConfigLookupConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PProxyConfigLookupConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PProxyConfigLookupConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PProxyConfigLookupConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PProxyConfigLookupConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PProxyConfigLookupConstructor.a_actorid)
+}
+
+// required bytes a_aUri = 2;
 inline bool Msg_PProxyConfigLookupConstructor::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11212,9 +11458,9 @@ inline void Msg_PProxyConfigLookupConstructor::set_allocated_a_auri(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PProxyConfigLookupConstructor.a_aUri)
 }
 
-// required uint32 a_aFlags = 2;
+// required uint32 a_aFlags = 3;
 inline bool Msg_PProxyConfigLookupConstructor::_internal_has_a_aflags() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
 inline bool Msg_PProxyConfigLookupConstructor::has_a_aflags() const {
@@ -11222,7 +11468,7 @@ inline bool Msg_PProxyConfigLookupConstructor::has_a_aflags() const {
 }
 inline void Msg_PProxyConfigLookupConstructor::clear_a_aflags() {
   _impl_.a_aflags_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_PProxyConfigLookupConstructor::_internal_a_aflags() const {
   return _impl_.a_aflags_;
@@ -11232,7 +11478,7 @@ inline uint32_t Msg_PProxyConfigLookupConstructor::a_aflags() const {
   return _internal_a_aflags();
 }
 inline void Msg_PProxyConfigLookupConstructor::_internal_set_a_aflags(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_aflags_ = value;
 }
 inline void Msg_PProxyConfigLookupConstructor::set_a_aflags(uint32_t value) {
@@ -12205,6 +12451,34 @@ inline void Msg_InitProfiler::set_allocated_a_aendpoint(std::string* a_aendpoint
 
 // Msg_PHttpTransactionConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PHttpTransactionConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PHttpTransactionConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PHttpTransactionConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PHttpTransactionConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PHttpTransactionConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PHttpTransactionConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PHttpTransactionConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PHttpTransactionConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PHttpTransactionConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PHttpTransactionConstructor
@@ -12213,7 +12487,35 @@ inline void Msg_InitProfiler::set_allocated_a_aendpoint(std::string* a_aendpoint
 
 // Msg_PHttpConnectionMgrConstructor
 
-// required .protobuf.mozilla.net.HttpHandlerInitArgs a_aArgs = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PHttpConnectionMgrConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PHttpConnectionMgrConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PHttpConnectionMgrConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PHttpConnectionMgrConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PHttpConnectionMgrConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PHttpConnectionMgrConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PHttpConnectionMgrConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PHttpConnectionMgrConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PHttpConnectionMgrConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.net.HttpHandlerInitArgs a_aArgs = 2;
 inline bool Msg_PHttpConnectionMgrConstructor::_internal_has_a_aargs() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_aargs_ != nullptr);
@@ -12476,9 +12778,37 @@ inline void Msg_OnHttpActivityDistributorObserveConnection::set_a_aisenabled(boo
 
 // Msg_PInputChannelThrottleQueueConstructor
 
-// required uint32 a_meanBytesPerSecond = 1;
-inline bool Msg_PInputChannelThrottleQueueConstructor::_internal_has_a_meanbytespersecond() const {
+// required sint64 a_actorid = 1;
+inline bool Msg_PInputChannelThrottleQueueConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PInputChannelThrottleQueueConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PInputChannelThrottleQueueConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PInputChannelThrottleQueueConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PInputChannelThrottleQueueConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PInputChannelThrottleQueueConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PInputChannelThrottleQueueConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PInputChannelThrottleQueueConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PInputChannelThrottleQueueConstructor.a_actorid)
+}
+
+// required uint32 a_meanBytesPerSecond = 2;
+inline bool Msg_PInputChannelThrottleQueueConstructor::_internal_has_a_meanbytespersecond() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
 inline bool Msg_PInputChannelThrottleQueueConstructor::has_a_meanbytespersecond() const {
@@ -12486,7 +12816,7 @@ inline bool Msg_PInputChannelThrottleQueueConstructor::has_a_meanbytespersecond(
 }
 inline void Msg_PInputChannelThrottleQueueConstructor::clear_a_meanbytespersecond() {
   _impl_.a_meanbytespersecond_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_PInputChannelThrottleQueueConstructor::_internal_a_meanbytespersecond() const {
   return _impl_.a_meanbytespersecond_;
@@ -12496,7 +12826,7 @@ inline uint32_t Msg_PInputChannelThrottleQueueConstructor::a_meanbytespersecond(
   return _internal_a_meanbytespersecond();
 }
 inline void Msg_PInputChannelThrottleQueueConstructor::_internal_set_a_meanbytespersecond(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_meanbytespersecond_ = value;
 }
 inline void Msg_PInputChannelThrottleQueueConstructor::set_a_meanbytespersecond(uint32_t value) {
@@ -12504,9 +12834,9 @@ inline void Msg_PInputChannelThrottleQueueConstructor::set_a_meanbytespersecond(
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PInputChannelThrottleQueueConstructor.a_meanBytesPerSecond)
 }
 
-// required uint32 a_maxBytesPerSecond = 2;
+// required uint32 a_maxBytesPerSecond = 3;
 inline bool Msg_PInputChannelThrottleQueueConstructor::_internal_has_a_maxbytespersecond() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
 inline bool Msg_PInputChannelThrottleQueueConstructor::has_a_maxbytespersecond() const {
@@ -12514,7 +12844,7 @@ inline bool Msg_PInputChannelThrottleQueueConstructor::has_a_maxbytespersecond()
 }
 inline void Msg_PInputChannelThrottleQueueConstructor::clear_a_maxbytespersecond() {
   _impl_.a_maxbytespersecond_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_PInputChannelThrottleQueueConstructor::_internal_a_maxbytespersecond() const {
   return _impl_.a_maxbytespersecond_;
@@ -12524,7 +12854,7 @@ inline uint32_t Msg_PInputChannelThrottleQueueConstructor::a_maxbytespersecond()
   return _internal_a_maxbytespersecond();
 }
 inline void Msg_PInputChannelThrottleQueueConstructor::_internal_set_a_maxbytespersecond(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_maxbytespersecond_ = value;
 }
 inline void Msg_PInputChannelThrottleQueueConstructor::set_a_maxbytespersecond(uint32_t value) {
@@ -12540,7 +12870,35 @@ inline void Msg_PInputChannelThrottleQueueConstructor::set_a_maxbytespersecond(u
 
 // Msg_PAltSvcTransactionConstructor
 
-// required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aConnInfo = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PAltSvcTransactionConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PAltSvcTransactionConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PAltSvcTransactionConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PAltSvcTransactionConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PAltSvcTransactionConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PAltSvcTransactionConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PAltSvcTransactionConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PAltSvcTransactionConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PAltSvcTransactionConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aConnInfo = 2;
 inline bool Msg_PAltSvcTransactionConstructor::_internal_has_a_aconninfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_aconninfo_ != nullptr);
@@ -12627,9 +12985,9 @@ inline void Msg_PAltSvcTransactionConstructor::set_allocated_a_aconninfo(::proto
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PAltSvcTransactionConstructor.a_aConnInfo)
 }
 
-// required uint32 a_aCaps = 2;
+// required uint32 a_aCaps = 3;
 inline bool Msg_PAltSvcTransactionConstructor::_internal_has_a_acaps() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
 inline bool Msg_PAltSvcTransactionConstructor::has_a_acaps() const {
@@ -12637,7 +12995,7 @@ inline bool Msg_PAltSvcTransactionConstructor::has_a_acaps() const {
 }
 inline void Msg_PAltSvcTransactionConstructor::clear_a_acaps() {
   _impl_.a_acaps_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_PAltSvcTransactionConstructor::_internal_a_acaps() const {
   return _impl_.a_acaps_;
@@ -12647,7 +13005,7 @@ inline uint32_t Msg_PAltSvcTransactionConstructor::a_acaps() const {
   return _internal_a_acaps();
 }
 inline void Msg_PAltSvcTransactionConstructor::_internal_set_a_acaps(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_acaps_ = value;
 }
 inline void Msg_PAltSvcTransactionConstructor::set_a_acaps(uint32_t value) {
@@ -12739,9 +13097,37 @@ inline void Reply_ClearSessionCache::set_allocated_a_ok(std::string* a_ok) {
 
 // Msg_PTRRServiceConstructor
 
-// required bool a_aCaptiveIsPassed = 1;
-inline bool Msg_PTRRServiceConstructor::_internal_has_a_acaptiveispassed() const {
+// required sint64 a_actorid = 1;
+inline bool Msg_PTRRServiceConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PTRRServiceConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PTRRServiceConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PTRRServiceConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PTRRServiceConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PTRRServiceConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PTRRServiceConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_actorid)
+}
+
+// required bool a_aCaptiveIsPassed = 2;
+inline bool Msg_PTRRServiceConstructor::_internal_has_a_acaptiveispassed() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
 inline bool Msg_PTRRServiceConstructor::has_a_acaptiveispassed() const {
@@ -12749,7 +13135,7 @@ inline bool Msg_PTRRServiceConstructor::has_a_acaptiveispassed() const {
 }
 inline void Msg_PTRRServiceConstructor::clear_a_acaptiveispassed() {
   _impl_.a_acaptiveispassed_ = false;
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool Msg_PTRRServiceConstructor::_internal_a_acaptiveispassed() const {
   return _impl_.a_acaptiveispassed_;
@@ -12759,7 +13145,7 @@ inline bool Msg_PTRRServiceConstructor::a_acaptiveispassed() const {
   return _internal_a_acaptiveispassed();
 }
 inline void Msg_PTRRServiceConstructor::_internal_set_a_acaptiveispassed(bool value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_acaptiveispassed_ = value;
 }
 inline void Msg_PTRRServiceConstructor::set_a_acaptiveispassed(bool value) {
@@ -12767,9 +13153,9 @@ inline void Msg_PTRRServiceConstructor::set_a_acaptiveispassed(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_aCaptiveIsPassed)
 }
 
-// required bool a_aParentalControlEnabled = 2;
+// required bool a_aParentalControlEnabled = 3;
 inline bool Msg_PTRRServiceConstructor::_internal_has_a_aparentalcontrolenabled() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
 inline bool Msg_PTRRServiceConstructor::has_a_aparentalcontrolenabled() const {
@@ -12777,7 +13163,7 @@ inline bool Msg_PTRRServiceConstructor::has_a_aparentalcontrolenabled() const {
 }
 inline void Msg_PTRRServiceConstructor::clear_a_aparentalcontrolenabled() {
   _impl_.a_aparentalcontrolenabled_ = false;
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline bool Msg_PTRRServiceConstructor::_internal_a_aparentalcontrolenabled() const {
   return _impl_.a_aparentalcontrolenabled_;
@@ -12787,7 +13173,7 @@ inline bool Msg_PTRRServiceConstructor::a_aparentalcontrolenabled() const {
   return _internal_a_aparentalcontrolenabled();
 }
 inline void Msg_PTRRServiceConstructor::_internal_set_a_aparentalcontrolenabled(bool value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_aparentalcontrolenabled_ = value;
 }
 inline void Msg_PTRRServiceConstructor::set_a_aparentalcontrolenabled(bool value) {
@@ -12795,7 +13181,7 @@ inline void Msg_PTRRServiceConstructor::set_a_aparentalcontrolenabled(bool value
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PTRRServiceConstructor.a_aParentalControlEnabled)
 }
 
-// repeated string a_aDNSSuffixList = 3;
+// repeated string a_aDNSSuffixList = 4;
 inline int Msg_PTRRServiceConstructor::_internal_a_adnssuffixlist_size() const {
   return _impl_.a_adnssuffixlist_.size();
 }
@@ -12877,6 +13263,34 @@ Msg_PTRRServiceConstructor::mutable_a_adnssuffixlist() {
 // -------------------------------------------------------------------
 
 // Msg_PNativeDNSResolverOverrideConstructor
+
+// required sint64 a_actorid = 1;
+inline bool Msg_PNativeDNSResolverOverrideConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PNativeDNSResolverOverrideConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PNativeDNSResolverOverrideConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PNativeDNSResolverOverrideConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PNativeDNSResolverOverrideConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PNativeDNSResolverOverrideConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PNativeDNSResolverOverrideConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PNativeDNSResolverOverrideConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PNativeDNSResolverOverrideConstructor.a_actorid)
+}
 
 // -------------------------------------------------------------------
 
@@ -13706,7 +14120,35 @@ inline void Msg_AddNetAddrOverride::set_allocated_a_ato(std::string* a_ato) {
 
 // Msg_PDNSRequestConstructor
 
-// required string a_hostName = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PDNSRequestConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool Msg_PDNSRequestConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PDNSRequestConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000010u;
+}
+inline int64_t Msg_PDNSRequestConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PDNSRequestConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PDNSRequestConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PDNSRequestConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_actorid)
+}
+
+// required string a_hostName = 2;
 inline bool Msg_PDNSRequestConstructor::_internal_has_a_hostname() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13774,7 +14216,7 @@ inline void Msg_PDNSRequestConstructor::set_allocated_a_hostname(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_hostName)
 }
 
-// required string a_trrServer = 2;
+// required string a_trrServer = 3;
 inline bool Msg_PDNSRequestConstructor::_internal_has_a_trrserver() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -13842,9 +14284,9 @@ inline void Msg_PDNSRequestConstructor::set_allocated_a_trrserver(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_trrServer)
 }
 
-// required sint32 a_port = 3;
+// required sint32 a_port = 4;
 inline bool Msg_PDNSRequestConstructor::_internal_has_a_port() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
 inline bool Msg_PDNSRequestConstructor::has_a_port() const {
@@ -13852,7 +14294,7 @@ inline bool Msg_PDNSRequestConstructor::has_a_port() const {
 }
 inline void Msg_PDNSRequestConstructor::clear_a_port() {
   _impl_.a_port_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline int32_t Msg_PDNSRequestConstructor::_internal_a_port() const {
   return _impl_.a_port_;
@@ -13862,7 +14304,7 @@ inline int32_t Msg_PDNSRequestConstructor::a_port() const {
   return _internal_a_port();
 }
 inline void Msg_PDNSRequestConstructor::_internal_set_a_port(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_port_ = value;
 }
 inline void Msg_PDNSRequestConstructor::set_a_port(int32_t value) {
@@ -13870,9 +14312,9 @@ inline void Msg_PDNSRequestConstructor::set_a_port(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_port)
 }
 
-// required uint32 a_type = 4;
+// required uint32 a_type = 5;
 inline bool Msg_PDNSRequestConstructor::_internal_has_a_type() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
 inline bool Msg_PDNSRequestConstructor::has_a_type() const {
@@ -13880,7 +14322,7 @@ inline bool Msg_PDNSRequestConstructor::has_a_type() const {
 }
 inline void Msg_PDNSRequestConstructor::clear_a_type() {
   _impl_.a_type_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000020u;
+  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline uint32_t Msg_PDNSRequestConstructor::_internal_a_type() const {
   return _impl_.a_type_;
@@ -13890,7 +14332,7 @@ inline uint32_t Msg_PDNSRequestConstructor::a_type() const {
   return _internal_a_type();
 }
 inline void Msg_PDNSRequestConstructor::_internal_set_a_type(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  _impl_._has_bits_[0] |= 0x00000040u;
   _impl_.a_type_ = value;
 }
 inline void Msg_PDNSRequestConstructor::set_a_type(uint32_t value) {
@@ -13898,7 +14340,7 @@ inline void Msg_PDNSRequestConstructor::set_a_type(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_type)
 }
 
-// required bytes a_originAttributes = 5;
+// required bytes a_originAttributes = 6;
 inline bool Msg_PDNSRequestConstructor::_internal_has_a_originattributes() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -13966,7 +14408,7 @@ inline void Msg_PDNSRequestConstructor::set_allocated_a_originattributes(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PSocketProcess.Msg_PDNSRequestConstructor.a_originAttributes)
 }
 
-// required bytes a_flags = 6;
+// required bytes a_flags = 7;
 inline bool Msg_PDNSRequestConstructor::_internal_has_a_flags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

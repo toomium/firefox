@@ -16,26 +16,29 @@ package protobuf.mozilla.gmp.PGMPContent;
 
 // Message declarations
 message Msg_PGMPVideoDecoderConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PGMPVideoDecoderConstructor {
 }
 
 message Msg_PGMPVideoEncoderConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PGMPVideoEncoderConstructor {
 }
 
 message Msg_PChromiumCDMConstructor {
-  required string a_aKeySystem = 1;
+  required sint64 a_actorid = 1;
+  required string a_aKeySystem = 2;
 }
 
 message Reply_PChromiumCDMConstructor {
 }
 
 // Parameter mappings stats:
-// Total parameters in this file 1
-// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 0, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 1, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 0, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 1
+// Total parameters in this file 4
+// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 3, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 1, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 0, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 0, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
+// Scalar mappings performed: 4
 // Message structs/unions generated from ipdl structs/unions: 0

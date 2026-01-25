@@ -12,7 +12,7 @@ option optimize_for = LITE_RUNTIME;
 import public "ClientIPCTypes_protobuf.mozilla.dom.h.proto";
 
 // Parameter mappings stats:
-// Total parameters in this file 65
-// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 1, "<class 'ipdl.type.BuiltinCType'>": 2, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 26, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 5, "<class 'ipdl.type.NotNullType'>": 1, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 24, "<class 'ipdl.type.UnionType'>": 6, "<class 'ipdl.type.UniquePtrType'>": 0}
+// Total parameters in this file 64
+// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 1, "<class 'ipdl.type.BuiltinCType'>": 2, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 26, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 5, "<class 'ipdl.type.NotNullType'>": 1, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 23, "<class 'ipdl.type.UnionType'>": 6, "<class 'ipdl.type.UniquePtrType'>": 0}
 // Scalar mappings performed: 11
 // Message structs/unions generated from ipdl structs/unions: 21

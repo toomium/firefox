@@ -32,21 +32,24 @@ message Msg_AsyncMessage {
 }
 
 message Msg_PDocAccessibleConstructor {
-  required bytes a_aParentDoc = 1;
-  required uint64 a_aParentAcc = 2;
-  required bytes a_aBrowsingContext = 3;
+  required sint64 a_actorid = 1;
+  required bytes a_aParentDoc = 2;
+  required uint64 a_aParentAcc = 3;
+  required bytes a_aBrowsingContext = 4;
 }
 
 message Reply_PDocAccessibleConstructor {
 }
 
 message Msg_PPaymentRequestConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PPaymentRequestConstructor {
 }
 
 message Msg_PVsyncConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PVsyncConstructor {
@@ -185,19 +188,21 @@ message Msg_HideTooltip {
 }
 
 message Msg_PColorPickerConstructor {
-  required bytes a_aBrowsingContext = 1;
-  required string a_title = 2;
-  required string a_initialColor = 3;
-  repeated string a_defaultColors = 4;
+  required sint64 a_actorid = 1;
+  required bytes a_aBrowsingContext = 2;
+  required string a_title = 3;
+  required string a_initialColor = 4;
+  repeated string a_defaultColors = 5;
 }
 
 message Reply_PColorPickerConstructor {
 }
 
 message Msg_PFilePickerConstructor {
-  required string a_aTitle = 1;
-  required bytes a_aMode = 2;
-  required bytes a_aBrowsingContext = 3;
+  required sint64 a_actorid = 1;
+  required string a_aTitle = 2;
+  required bytes a_aMode = 3;
+  required bytes a_aBrowsingContext = 4;
 }
 
 message Reply_PFilePickerConstructor {
@@ -964,6 +969,7 @@ message Msg_QueryVisitedState {
 }
 
 message Msg_PSessionStoreConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PSessionStoreConstructor {
@@ -980,7 +986,7 @@ message Msg_UpdateDropEffect {
 }
 
 // Parameter mappings stats:
-// Total parameters in this file 424
-// Parameter types:{"<class 'ipdl.type.ActorType'>": 1, "<class 'ipdl.type.ArrayType'>": 13, "<class 'ipdl.type.BuiltinCType'>": 55, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 304, "<class 'ipdl.type.ManagedEndpointType'>": 1, "<class 'ipdl.type.MaybeType'>": 24, "<class 'ipdl.type.NotNullType'>": 1, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 24, "<class 'ipdl.type.UnionType'>": 1, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 179
+// Total parameters in this file 417
+// Parameter types:{"<class 'ipdl.type.ActorType'>": 1, "<class 'ipdl.type.ArrayType'>": 13, "<class 'ipdl.type.BuiltinCType'>": 61, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 294, "<class 'ipdl.type.ManagedEndpointType'>": 1, "<class 'ipdl.type.MaybeType'>": 24, "<class 'ipdl.type.NotNullType'>": 1, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 21, "<class 'ipdl.type.UnionType'>": 1, "<class 'ipdl.type.UniquePtrType'>": 0}
+// Scalar mappings performed: 198
 // Message structs/unions generated from ipdl structs/unions: 5

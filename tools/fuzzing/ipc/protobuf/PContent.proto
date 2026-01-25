@@ -57,6 +57,7 @@ message Msg_UpdateRemotePrintSettings {
 }
 
 message Msg_PExtensionsConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PExtensionsConstructor {
@@ -75,8 +76,9 @@ message Msg_ConstructBrowser {
 }
 
 message Msg_PWebBrowserPersistDocumentConstructor {
-  required bytes a_aBrowser = 1;
-  required bytes a_aContext = 2;
+  required sint64 a_actorid = 1;
+  required bytes a_aBrowser = 2;
+  required bytes a_aContext = 3;
 }
 
 message Reply_PWebBrowserPersistDocumentConstructor {
@@ -147,23 +149,26 @@ message Msg_BidiKeyboardNotify {
 }
 
 message Msg_PCycleCollectWithLogsConstructor {
-  required bool a_dumpAllTraces = 1;
-  required bytes a_gcLog = 2;
-  required bytes a_ccLog = 3;
+  required sint64 a_actorid = 1;
+  required bool a_dumpAllTraces = 2;
+  required bytes a_gcLog = 3;
+  required bytes a_ccLog = 4;
 }
 
 message Reply_PCycleCollectWithLogsConstructor {
 }
 
 message Msg_PTestShellConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PTestShellConstructor {
 }
 
 message Msg_PScriptCacheConstructor {
-  required protobuf.mozilla.dom.FileDescOrError a_cacheFile = 1;
-  required bool a_wantCacheData = 2;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.dom.FileDescOrError a_cacheFile = 2;
+  required bool a_wantCacheData = 3;
 }
 
 message Reply_PScriptCacheConstructor {
@@ -666,6 +671,7 @@ message Msg_InitNextGenLocalStorageEnabled {
 }
 
 message Msg_PRemotePrintJobConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PRemotePrintJobConstructor {
@@ -753,6 +759,7 @@ message Reply_InitStreamFilter {
 }
 
 message Msg_PRemoteSpellcheckEngineConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PRemoteSpellcheckEngineConstructor {
@@ -778,36 +785,42 @@ message Msg_AccumulateMixedContentHSTS {
 }
 
 message Msg_PHalConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PHalConstructor {
 }
 
 message Msg_PHeapSnapshotTempFileHelperConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PHeapSnapshotTempFileHelperConstructor {
 }
 
 message Msg_PNeckoConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PNeckoConstructor {
 }
 
 message Msg_PSpeechSynthesisConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PSpeechSynthesisConstructor {
 }
 
 message Msg_PMediaConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PMediaConstructor {
 }
 
 message Msg_PWebrtcGlobalConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PWebrtcGlobalConstructor {
@@ -821,7 +834,8 @@ message Reply_CreateAudioIPCConnection {
 }
 
 message Msg_PURLClassifierConstructor {
-  required bytes a_principal = 1;
+  required sint64 a_actorid = 1;
+  required bytes a_principal = 2;
 }
 
 message Reply_PURLClassifierConstructor {
@@ -829,23 +843,26 @@ message Reply_PURLClassifierConstructor {
 }
 
 message Msg_PURLClassifierLocalConstructor {
-  required bytes a_uri = 1;
-  repeated protobuf.mozilla.dom.IPCURLClassifierFeature a_features = 2;
+  required sint64 a_actorid = 1;
+  required bytes a_uri = 2;
+  repeated protobuf.mozilla.dom.IPCURLClassifierFeature a_features = 3;
 }
 
 message Reply_PURLClassifierLocalConstructor {
 }
 
 message Msg_PURLClassifierLocalByNameConstructor {
-  required bytes a_uri = 1;
-  repeated string a_featureNames = 2;
-  required bytes a_aListType = 3;
+  required sint64 a_actorid = 1;
+  required bytes a_uri = 2;
+  repeated string a_featureNames = 3;
+  required bytes a_aListType = 4;
 }
 
 message Reply_PURLClassifierLocalByNameConstructor {
 }
 
 message Msg_PSessionStorageObserverConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PSessionStorageObserverConstructor {
@@ -889,23 +906,25 @@ message Msg_AddSecurityState {
 }
 
 message Msg_PExternalHelperAppConstructor {
-  required bytes a_uri = 1;
-  required protobuf.mozilla.net.LoadInfoArgs a_loadInfoArgs = 2;
-  required string a_aMimeContentType = 3;
-  required string a_aContentDisposition = 4;
-  required uint32 a_aContentDispositionHint = 5;
-  required string a_aContentDispositionFilename = 6;
-  required bool a_aForceSave = 7;
-  required sint64 a_aContentLength = 8;
-  required bool a_aWasFileChannel = 9;
-  required bytes a_aReferrer = 10;
-  required bytes a_aContext = 11;
+  required sint64 a_actorid = 1;
+  required bytes a_uri = 2;
+  required protobuf.mozilla.net.LoadInfoArgs a_loadInfoArgs = 3;
+  required string a_aMimeContentType = 4;
+  required string a_aContentDisposition = 5;
+  required uint32 a_aContentDispositionHint = 6;
+  required string a_aContentDispositionFilename = 7;
+  required bool a_aForceSave = 8;
+  required sint64 a_aContentLength = 9;
+  required bool a_aWasFileChannel = 10;
+  required bytes a_aReferrer = 11;
+  required bytes a_aContext = 12;
 }
 
 message Reply_PExternalHelperAppConstructor {
 }
 
 message Msg_PHandlerServiceConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PHandlerServiceConstructor {
@@ -989,8 +1008,9 @@ message Reply_ClipboardHasType {
 }
 
 message Msg_PClipboardWriteRequestConstructor {
-  required bytes a_aClipboardType = 1;
-  required bytes a_aSettingWindowContext = 2;
+  required sint64 a_actorid = 1;
+  required bytes a_aClipboardType = 2;
+  required bytes a_aSettingWindowContext = 3;
 }
 
 message Reply_PClipboardWriteRequestConstructor {
@@ -1067,12 +1087,13 @@ message Msg_FinishShutdown {
 }
 
 message Msg_PContentPermissionRequestConstructor {
-  repeated protobuf.mozilla.dom.PermissionRequest a_aRequests = 1;
-  required bytes a_aPrincipal = 2;
-  required bytes a_aTopLevelPrincipal = 3;
-  required bool a_aIsHandlingUserInput = 4;
-  required bool a_aMaybeUnsafePermissionDelegate = 5;
-  required bytes a_tabId = 6;
+  required sint64 a_actorid = 1;
+  repeated protobuf.mozilla.dom.PermissionRequest a_aRequests = 2;
+  required bytes a_aPrincipal = 3;
+  required bytes a_aTopLevelPrincipal = 4;
+  required bool a_aIsHandlingUserInput = 5;
+  required bool a_aMaybeUnsafePermissionDelegate = 6;
+  required bytes a_tabId = 7;
 }
 
 message Reply_PContentPermissionRequestConstructor {
@@ -1733,7 +1754,7 @@ message Msg_AttributionConversion {
 }
 
 // Parameter mappings stats:
-// Total parameters in this file 852
-// Parameter types:{"<class 'ipdl.type.ActorType'>": 1, "<class 'ipdl.type.ArrayType'>": 77, "<class 'ipdl.type.BuiltinCType'>": 115, "<class 'ipdl.type.ByteBufType'>": 2, "<class 'ipdl.type.EndpointType'>": 17, "<class 'ipdl.type.FDType'>": 4, "<class 'ipdl.type.ImportedCxxType'>": 506, "<class 'ipdl.type.ManagedEndpointType'>": 5, "<class 'ipdl.type.MaybeType'>": 43, "<class 'ipdl.type.NotNullType'>": 10, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 57, "<class 'ipdl.type.UnionType'>": 14, "<class 'ipdl.type.UniquePtrType'>": 1}
-// Scalar mappings performed: 358
+// Total parameters in this file 796
+// Parameter types:{"<class 'ipdl.type.ActorType'>": 1, "<class 'ipdl.type.ArrayType'>": 77, "<class 'ipdl.type.BuiltinCType'>": 136, "<class 'ipdl.type.ByteBufType'>": 2, "<class 'ipdl.type.EndpointType'>": 16, "<class 'ipdl.type.FDType'>": 4, "<class 'ipdl.type.ImportedCxxType'>": 452, "<class 'ipdl.type.ManagedEndpointType'>": 5, "<class 'ipdl.type.MaybeType'>": 43, "<class 'ipdl.type.NotNullType'>": 10, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 36, "<class 'ipdl.type.UnionType'>": 13, "<class 'ipdl.type.UniquePtrType'>": 1}
+// Scalar mappings performed: 400
 // Message structs/unions generated from ipdl structs/unions: 33

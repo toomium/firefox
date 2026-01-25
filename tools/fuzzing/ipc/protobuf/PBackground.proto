@@ -28,21 +28,24 @@ import "MIDITypes.proto";
 
 // Message declarations
 message Msg_PBackgroundTestConstructor {
-  required string a_testArg = 1;
+  required sint64 a_actorid = 1;
+  required string a_testArg = 2;
 }
 
 message Reply_PBackgroundTestConstructor {
 }
 
 message Msg_PBackgroundIDBFactoryConstructor {
-  required protobuf.mozilla.dom.indexedDB.LoggingInfo a_loggingInfo = 1;
-  required string a_systemLocale = 2;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.dom.indexedDB.LoggingInfo a_loggingInfo = 2;
+  required string a_systemLocale = 3;
 }
 
 message Reply_PBackgroundIDBFactoryConstructor {
 }
 
 message Msg_PBackgroundIndexedDBUtilsConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PBackgroundIndexedDBUtilsConstructor {
@@ -52,59 +55,67 @@ message Msg_FlushPendingFileDeletions {
 }
 
 message Msg_PBackgroundSDBConnectionConstructor {
-  required bytes a_persistenceType = 1;
-  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+  required sint64 a_actorid = 1;
+  required bytes a_persistenceType = 2;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 3;
 }
 
 message Reply_PBackgroundSDBConnectionConstructor {
 }
 
 message Msg_PBackgroundLSObserverConstructor {
-  required uint64 a_observerId = 1;
+  required sint64 a_actorid = 1;
+  required uint64 a_observerId = 2;
 }
 
 message Reply_PBackgroundLSObserverConstructor {
 }
 
 message Msg_PBackgroundLSRequestConstructor {
-  required protobuf.mozilla.dom.LSRequestParams a_params = 1;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.dom.LSRequestParams a_params = 2;
 }
 
 message Reply_PBackgroundLSRequestConstructor {
 }
 
 message Msg_PBackgroundLSSimpleRequestConstructor {
-  required protobuf.mozilla.dom.LSSimpleRequestParams a_params = 1;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.dom.LSSimpleRequestParams a_params = 2;
 }
 
 message Reply_PBackgroundLSSimpleRequestConstructor {
 }
 
 message Msg_PBackgroundLocalStorageCacheConstructor {
-  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
-  required string a_originKey = 2;
-  required uint32 a_privateBrowsingId = 3;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+  required string a_originKey = 3;
+  required uint32 a_privateBrowsingId = 4;
 }
 
 message Reply_PBackgroundLocalStorageCacheConstructor {
 }
 
 message Msg_PBackgroundSessionStorageManagerConstructor {
-  required uint64 a_aTopContextId = 1;
+  required sint64 a_actorid = 1;
+  required uint64 a_aTopContextId = 2;
 }
 
 message Reply_PBackgroundSessionStorageManagerConstructor {
 }
 
 message Msg_PBackgroundSessionStorageServiceConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PBackgroundSessionStorageServiceConstructor {
 }
 
 message Msg_PBackgroundStorageConstructor {
-  required string a_profilePath = 1;
-  required uint32 a_privateBrowsingId = 2;
+  required sint64 a_actorid = 1;
+  required string a_profilePath = 2;
+  required uint32 a_privateBrowsingId = 3;
 }
 
 message Reply_PBackgroundStorageConstructor {
@@ -149,41 +160,47 @@ message Reply_CreateNotificationParent {
 }
 
 message Msg_PVsyncConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PVsyncConstructor {
 }
 
 message Msg_PCamerasConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PCamerasConstructor {
 }
 
 message Msg_PUDPSocketConstructor {
-  optional protobuf.mozilla.ipc.PrincipalInfo a_pInfo = 1;
-  required string a_filter = 2;
+  required sint64 a_actorid = 1;
+  optional protobuf.mozilla.ipc.PrincipalInfo a_pInfo = 2;
+  required string a_filter = 3;
 }
 
 message Reply_PUDPSocketConstructor {
 }
 
 message Msg_PBroadcastChannelConstructor {
-  required protobuf.mozilla.ipc.PrincipalInfo a_pInfo = 1;
-  required string a_origin = 2;
-  required string a_channel = 3;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.ipc.PrincipalInfo a_pInfo = 2;
+  required string a_origin = 3;
+  required string a_channel = 4;
 }
 
 message Reply_PBroadcastChannelConstructor {
 }
 
 message Msg_PCookieStoreConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PCookieStoreConstructor {
 }
 
 message Msg_PServiceWorkerManagerConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PServiceWorkerManagerConstructor {
@@ -193,17 +210,19 @@ message Msg_ShutdownServiceWorkerRegistrar {
 }
 
 message Msg_PCacheStorageConstructor {
-  required bytes a_aNamespace = 1;
-  required protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 2;
+  required sint64 a_actorid = 1;
+  required bytes a_aNamespace = 2;
+  required protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 3;
 }
 
 message Reply_PCacheStorageConstructor {
 }
 
 message Msg_PMessagePortConstructor {
-  required bytes a_uuid = 1;
-  required bytes a_destinationUuid = 2;
-  required uint32 a_sequenceId = 3;
+  required sint64 a_actorid = 1;
+  required bytes a_uuid = 2;
+  required bytes a_destinationUuid = 3;
+  required uint32 a_sequenceId = 4;
 }
 
 message Reply_PMessagePortConstructor {
@@ -216,6 +235,7 @@ message Msg_MessagePortForceClose {
 }
 
 message Msg_PQuotaConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PQuotaConstructor {
@@ -252,59 +272,67 @@ message Msg_LoadSessionStorageManagerData {
 }
 
 message Msg_PFileSystemRequestConstructor {
-  required protobuf.mozilla.dom.FileSystemParams a_params = 1;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.dom.FileSystemParams a_params = 2;
 }
 
 message Reply_PFileSystemRequestConstructor {
 }
 
 message Msg_PGamepadEventChannelConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PGamepadEventChannelConstructor {
 }
 
 message Msg_PGamepadTestChannelConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PGamepadTestChannelConstructor {
 }
 
 message Msg_PHttpBackgroundChannelConstructor {
-  required uint64 a_channelId = 1;
+  required sint64 a_actorid = 1;
+  required uint64 a_channelId = 2;
 }
 
 message Reply_PHttpBackgroundChannelConstructor {
 }
 
 message Msg_PSharedWorkerConstructor {
-  required protobuf.mozilla.dom.RemoteWorkerData a_data = 1;
-  required uint64 a_windowID = 2;
-  required protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 3;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.dom.RemoteWorkerData a_data = 2;
+  required uint64 a_windowID = 3;
+  required protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 4;
 }
 
 message Reply_PSharedWorkerConstructor {
 }
 
 message Msg_PTemporaryIPCBlobConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PTemporaryIPCBlobConstructor {
 }
 
 message Msg_PFileCreatorConstructor {
-  required string a_aFullPath = 1;
-  required string a_aType = 2;
-  required string a_aName = 3;
-  optional sint64 a_lastModified = 4;
-  required bool a_aExistenceCheck = 5;
-  required bool a_aIsFromNsIFile = 6;
+  required sint64 a_actorid = 1;
+  required string a_aFullPath = 2;
+  required string a_aType = 3;
+  required string a_aName = 4;
+  optional sint64 a_lastModified = 5;
+  required bool a_aExistenceCheck = 6;
+  required bool a_aIsFromNsIFile = 7;
 }
 
 message Reply_PFileCreatorConstructor {
 }
 
 message Msg_PClientManagerConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PClientManagerConstructor {
@@ -337,36 +365,41 @@ message Msg_StorageActivity {
 }
 
 message Msg_PServiceWorkerConstructor {
-  required protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_aDescriptor = 1;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_aDescriptor = 2;
 }
 
 message Reply_PServiceWorkerConstructor {
 }
 
 message Msg_PRemoteWorkerControllerConstructor {
-  required protobuf.mozilla.dom.RemoteWorkerData a_aData = 1;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.dom.RemoteWorkerData a_aData = 2;
 }
 
 message Reply_PRemoteWorkerControllerConstructor {
 }
 
 message Msg_PServiceWorkerContainerConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PServiceWorkerContainerConstructor {
 }
 
 message Msg_PServiceWorkerRegistrationConstructor {
-  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_aDescriptor = 1;
-  required protobuf.mozilla.dom.IPCClientInfo a_aForClient = 2;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_aDescriptor = 2;
+  required protobuf.mozilla.dom.IPCClientInfo a_aForClient = 3;
 }
 
 message Reply_PServiceWorkerRegistrationConstructor {
 }
 
 message Msg_PEndpointForReportConstructor {
-  required string a_aGroupName = 1;
-  required protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 2;
+  required sint64 a_actorid = 1;
+  required string a_aGroupName = 2;
+  required protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 3;
 }
 
 message Reply_PEndpointForReportConstructor {
@@ -379,6 +412,7 @@ message Msg_RemoveEndpoint {
 }
 
 message Msg_PIdleSchedulerConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PIdleSchedulerConstructor {
@@ -402,14 +436,16 @@ message Reply_EnsureUtilityProcessAndCreateBridge {
 }
 
 message Msg_PLockManagerConstructor {
-  required bytes a_aPrincipalInfo = 1;
-  optional bytes a_aClientId = 2;
+  required sint64 a_actorid = 1;
+  required bytes a_aPrincipalInfo = 2;
+  optional bytes a_aClientId = 3;
 }
 
 message Reply_PLockManagerConstructor {
 }
 
 message Msg_PFetchConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PFetchConstructor {
@@ -424,19 +460,21 @@ message Reply_RequestCameraAccess {
 }
 
 message Msg_PCacheConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PCacheConstructor {
 }
 
 message Msg_PCacheStreamControlConstructor {
+  required sint64 a_actorid = 1;
 }
 
 message Reply_PCacheStreamControlConstructor {
 }
 
 // Parameter mappings stats:
-// Total parameters in this file 96
-// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 3, "<class 'ipdl.type.BuiltinCType'>": 10, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 8, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 46, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 4, "<class 'ipdl.type.NotNullType'>": 4, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 10, "<class 'ipdl.type.UnionType'>": 11, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 41
+// Total parameters in this file 131
+// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 3, "<class 'ipdl.type.BuiltinCType'>": 48, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 8, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 44, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 4, "<class 'ipdl.type.NotNullType'>": 4, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 9, "<class 'ipdl.type.UnionType'>": 11, "<class 'ipdl.type.UniquePtrType'>": 0}
+// Scalar mappings performed: 80
 // Message structs/unions generated from ipdl structs/unions: 0

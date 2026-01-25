@@ -1521,15 +1521,16 @@ class Msg_PSpeechSynthesisRequestConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAATextFieldNumber = 1,
-    kAAUriFieldNumber = 2,
-    kAALangFieldNumber = 3,
-    kAAVolumeFieldNumber = 4,
-    kAARateFieldNumber = 5,
-    kAAPitchFieldNumber = 6,
-    kAAShouldResistFingerprintingFieldNumber = 7,
+    kAATextFieldNumber = 2,
+    kAAUriFieldNumber = 3,
+    kAALangFieldNumber = 4,
+    kAActoridFieldNumber = 1,
+    kAAVolumeFieldNumber = 5,
+    kAARateFieldNumber = 6,
+    kAAPitchFieldNumber = 7,
+    kAAShouldResistFingerprintingFieldNumber = 8,
   };
-  // required string a_aText = 1;
+  // required string a_aText = 2;
   bool has_a_atext() const;
   private:
   bool _internal_has_a_atext() const;
@@ -1547,7 +1548,7 @@ class Msg_PSpeechSynthesisRequestConstructor final :
   std::string* _internal_mutable_a_atext();
   public:
 
-  // required string a_aUri = 2;
+  // required string a_aUri = 3;
   bool has_a_auri() const;
   private:
   bool _internal_has_a_auri() const;
@@ -1565,7 +1566,7 @@ class Msg_PSpeechSynthesisRequestConstructor final :
   std::string* _internal_mutable_a_auri();
   public:
 
-  // required string a_aLang = 3;
+  // required string a_aLang = 4;
   bool has_a_alang() const;
   private:
   bool _internal_has_a_alang() const;
@@ -1583,7 +1584,20 @@ class Msg_PSpeechSynthesisRequestConstructor final :
   std::string* _internal_mutable_a_alang();
   public:
 
-  // required float a_aVolume = 4;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required float a_aVolume = 5;
   bool has_a_avolume() const;
   private:
   bool _internal_has_a_avolume() const;
@@ -1596,7 +1610,7 @@ class Msg_PSpeechSynthesisRequestConstructor final :
   void _internal_set_a_avolume(float value);
   public:
 
-  // required float a_aRate = 5;
+  // required float a_aRate = 6;
   bool has_a_arate() const;
   private:
   bool _internal_has_a_arate() const;
@@ -1609,7 +1623,7 @@ class Msg_PSpeechSynthesisRequestConstructor final :
   void _internal_set_a_arate(float value);
   public:
 
-  // required float a_aPitch = 6;
+  // required float a_aPitch = 7;
   bool has_a_apitch() const;
   private:
   bool _internal_has_a_apitch() const;
@@ -1622,7 +1636,7 @@ class Msg_PSpeechSynthesisRequestConstructor final :
   void _internal_set_a_apitch(float value);
   public:
 
-  // required bool a_aShouldResistFingerprinting = 7;
+  // required bool a_aShouldResistFingerprinting = 8;
   bool has_a_ashouldresistfingerprinting() const;
   private:
   bool _internal_has_a_ashouldresistfingerprinting() const;
@@ -1651,6 +1665,7 @@ class Msg_PSpeechSynthesisRequestConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atext_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_auri_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_alang_;
+    int64_t a_actorid_;
     float a_avolume_;
     float a_arate_;
     float a_apitch_;
@@ -2317,7 +2332,35 @@ inline void Msg_InitialVoicesAndState::set_a_aisspeaking(bool value) {
 
 // Msg_PSpeechSynthesisRequestConstructor
 
-// required string a_aText = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_PSpeechSynthesisRequestConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PSpeechSynthesisRequestConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+inline int64_t Msg_PSpeechSynthesisRequestConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PSpeechSynthesisRequestConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PSpeechSynthesisRequestConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PSpeechSynthesisRequestConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_actorid)
+}
+
+// required string a_aText = 2;
 inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_atext() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -2385,7 +2428,7 @@ inline void Msg_PSpeechSynthesisRequestConstructor::set_allocated_a_atext(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aText)
 }
 
-// required string a_aUri = 2;
+// required string a_aUri = 3;
 inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2453,7 +2496,7 @@ inline void Msg_PSpeechSynthesisRequestConstructor::set_allocated_a_auri(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aUri)
 }
 
-// required string a_aLang = 3;
+// required string a_aLang = 4;
 inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_alang() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2521,9 +2564,9 @@ inline void Msg_PSpeechSynthesisRequestConstructor::set_allocated_a_alang(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aLang)
 }
 
-// required float a_aVolume = 4;
+// required float a_aVolume = 5;
 inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_avolume() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
 inline bool Msg_PSpeechSynthesisRequestConstructor::has_a_avolume() const {
@@ -2531,7 +2574,7 @@ inline bool Msg_PSpeechSynthesisRequestConstructor::has_a_avolume() const {
 }
 inline void Msg_PSpeechSynthesisRequestConstructor::clear_a_avolume() {
   _impl_.a_avolume_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline float Msg_PSpeechSynthesisRequestConstructor::_internal_a_avolume() const {
   return _impl_.a_avolume_;
@@ -2541,7 +2584,7 @@ inline float Msg_PSpeechSynthesisRequestConstructor::a_avolume() const {
   return _internal_a_avolume();
 }
 inline void Msg_PSpeechSynthesisRequestConstructor::_internal_set_a_avolume(float value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_avolume_ = value;
 }
 inline void Msg_PSpeechSynthesisRequestConstructor::set_a_avolume(float value) {
@@ -2549,9 +2592,9 @@ inline void Msg_PSpeechSynthesisRequestConstructor::set_a_avolume(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aVolume)
 }
 
-// required float a_aRate = 5;
+// required float a_aRate = 6;
 inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_arate() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
 inline bool Msg_PSpeechSynthesisRequestConstructor::has_a_arate() const {
@@ -2559,7 +2602,7 @@ inline bool Msg_PSpeechSynthesisRequestConstructor::has_a_arate() const {
 }
 inline void Msg_PSpeechSynthesisRequestConstructor::clear_a_arate() {
   _impl_.a_arate_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline float Msg_PSpeechSynthesisRequestConstructor::_internal_a_arate() const {
   return _impl_.a_arate_;
@@ -2569,7 +2612,7 @@ inline float Msg_PSpeechSynthesisRequestConstructor::a_arate() const {
   return _internal_a_arate();
 }
 inline void Msg_PSpeechSynthesisRequestConstructor::_internal_set_a_arate(float value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.a_arate_ = value;
 }
 inline void Msg_PSpeechSynthesisRequestConstructor::set_a_arate(float value) {
@@ -2577,9 +2620,9 @@ inline void Msg_PSpeechSynthesisRequestConstructor::set_a_arate(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aRate)
 }
 
-// required float a_aPitch = 6;
+// required float a_aPitch = 7;
 inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_apitch() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
 inline bool Msg_PSpeechSynthesisRequestConstructor::has_a_apitch() const {
@@ -2587,7 +2630,7 @@ inline bool Msg_PSpeechSynthesisRequestConstructor::has_a_apitch() const {
 }
 inline void Msg_PSpeechSynthesisRequestConstructor::clear_a_apitch() {
   _impl_.a_apitch_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000020u;
+  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline float Msg_PSpeechSynthesisRequestConstructor::_internal_a_apitch() const {
   return _impl_.a_apitch_;
@@ -2597,7 +2640,7 @@ inline float Msg_PSpeechSynthesisRequestConstructor::a_apitch() const {
   return _internal_a_apitch();
 }
 inline void Msg_PSpeechSynthesisRequestConstructor::_internal_set_a_apitch(float value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  _impl_._has_bits_[0] |= 0x00000040u;
   _impl_.a_apitch_ = value;
 }
 inline void Msg_PSpeechSynthesisRequestConstructor::set_a_apitch(float value) {
@@ -2605,9 +2648,9 @@ inline void Msg_PSpeechSynthesisRequestConstructor::set_a_apitch(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor.a_aPitch)
 }
 
-// required bool a_aShouldResistFingerprinting = 7;
+// required bool a_aShouldResistFingerprinting = 8;
 inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_has_a_ashouldresistfingerprinting() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
 inline bool Msg_PSpeechSynthesisRequestConstructor::has_a_ashouldresistfingerprinting() const {
@@ -2615,7 +2658,7 @@ inline bool Msg_PSpeechSynthesisRequestConstructor::has_a_ashouldresistfingerpri
 }
 inline void Msg_PSpeechSynthesisRequestConstructor::clear_a_ashouldresistfingerprinting() {
   _impl_.a_ashouldresistfingerprinting_ = false;
-  _impl_._has_bits_[0] &= ~0x00000040u;
+  _impl_._has_bits_[0] &= ~0x00000080u;
 }
 inline bool Msg_PSpeechSynthesisRequestConstructor::_internal_a_ashouldresistfingerprinting() const {
   return _impl_.a_ashouldresistfingerprinting_;
@@ -2625,7 +2668,7 @@ inline bool Msg_PSpeechSynthesisRequestConstructor::a_ashouldresistfingerprintin
   return _internal_a_ashouldresistfingerprinting();
 }
 inline void Msg_PSpeechSynthesisRequestConstructor::_internal_set_a_ashouldresistfingerprinting(bool value) {
-  _impl_._has_bits_[0] |= 0x00000040u;
+  _impl_._has_bits_[0] |= 0x00000080u;
   _impl_.a_ashouldresistfingerprinting_ = value;
 }
 inline void Msg_PSpeechSynthesisRequestConstructor::set_a_ashouldresistfingerprinting(bool value) {

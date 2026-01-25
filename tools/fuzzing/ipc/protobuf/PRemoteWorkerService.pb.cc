@@ -26,7 +26,8 @@ PROTOBUF_CONSTEXPR Msg_PRemoteWorkerConstructor::Msg_PRemoteWorkerConstructor(
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
   , /*decltype(_impl_.a_childep_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_data_)*/nullptr} {}
+  , /*decltype(_impl_.a_data_)*/nullptr
+  , /*decltype(_impl_.a_actorid_)*/int64_t{0}} {}
 struct Msg_PRemoteWorkerConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PRemoteWorkerConstructorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -62,6 +63,9 @@ namespace PRemoteWorkerService {
 class Msg_PRemoteWorkerConstructor::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_PRemoteWorkerConstructor>()._impl_._has_bits_);
+  static void set_has_a_actorid(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
   static const ::protobuf::mozilla::dom::RemoteWorkerData& a_data(const Msg_PRemoteWorkerConstructor* msg);
   static void set_has_a_data(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
@@ -70,7 +74,7 @@ class Msg_PRemoteWorkerConstructor::_Internal {
     (*has_bits)[0] |= 1u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -95,7 +99,8 @@ Msg_PRemoteWorkerConstructor::Msg_PRemoteWorkerConstructor(const Msg_PRemoteWork
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_childep_){}
-    , decltype(_impl_.a_data_){nullptr}};
+    , decltype(_impl_.a_data_){nullptr}
+    , decltype(_impl_.a_actorid_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_childep_.InitDefault();
@@ -109,6 +114,7 @@ Msg_PRemoteWorkerConstructor::Msg_PRemoteWorkerConstructor(const Msg_PRemoteWork
   if (from._internal_has_a_data()) {
     _this->_impl_.a_data_ = new ::protobuf::mozilla::dom::RemoteWorkerData(*from._impl_.a_data_);
   }
+  _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor)
 }
 
@@ -121,6 +127,7 @@ inline void Msg_PRemoteWorkerConstructor::SharedCtor(
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_childep_){}
     , decltype(_impl_.a_data_){nullptr}
+    , decltype(_impl_.a_actorid_){int64_t{0}}
   };
   _impl_.a_childep_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -163,6 +170,7 @@ void Msg_PRemoteWorkerConstructor::Clear() {
       _impl_.a_data_->Clear();
     }
   }
+  _impl_.a_actorid_ = int64_t{0};
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
@@ -174,17 +182,26 @@ const char* Msg_PRemoteWorkerConstructor::_InternalParse(const char* ptr, ::_pbi
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.dom.RemoteWorkerData a_data = 1;
+      // required sint64 a_actorid = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_actorid(&has_bits);
+          _impl_.a_actorid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required .protobuf.mozilla.dom.RemoteWorkerData a_data = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_data(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_childEp = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+      // required bytes a_childEp = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_childep();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
@@ -222,17 +239,23 @@ uint8_t* Msg_PRemoteWorkerConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.dom.RemoteWorkerData a_data = 1;
+  // required sint64 a_actorid = 1;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
+  }
+
+  // required .protobuf.mozilla.dom.RemoteWorkerData a_data = 2;
   if (cached_has_bits & 0x00000002u) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::a_data(this),
+      InternalWriteMessage(2, _Internal::a_data(this),
         _Internal::a_data(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes a_childEp = 2;
+  // required bytes a_childEp = 3;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
-        2, this->_internal_a_childep(), target);
+        3, this->_internal_a_childep(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -248,17 +271,22 @@ size_t Msg_PRemoteWorkerConstructor::RequiredFieldsByteSizeFallback() const {
   size_t total_size = 0;
 
   if (_internal_has_a_childep()) {
-    // required bytes a_childEp = 2;
+    // required bytes a_childEp = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_childep());
   }
 
   if (_internal_has_a_data()) {
-    // required .protobuf.mozilla.dom.RemoteWorkerData a_data = 1;
+    // required .protobuf.mozilla.dom.RemoteWorkerData a_data = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_data_);
+  }
+
+  if (_internal_has_a_actorid()) {
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
   }
 
   return total_size;
@@ -267,16 +295,19 @@ size_t Msg_PRemoteWorkerConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PRemoteWorkerService.Msg_PRemoteWorkerConstructor)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required bytes a_childEp = 2;
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+    // required bytes a_childEp = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_childep());
 
-    // required .protobuf.mozilla.dom.RemoteWorkerData a_data = 1;
+    // required .protobuf.mozilla.dom.RemoteWorkerData a_data = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_data_);
+
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
 
   } else {
     total_size += RequiredFieldsByteSizeFallback();
@@ -307,7 +338,7 @@ void Msg_PRemoteWorkerConstructor::MergeFrom(const Msg_PRemoteWorkerConstructor&
   (void) cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
+  if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
       _this->_internal_set_a_childep(from._internal_a_childep());
     }
@@ -315,6 +346,10 @@ void Msg_PRemoteWorkerConstructor::MergeFrom(const Msg_PRemoteWorkerConstructor&
       _this->_internal_mutable_a_data()->::protobuf::mozilla::dom::RemoteWorkerData::MergeFrom(
           from._internal_a_data());
     }
+    if (cached_has_bits & 0x00000004u) {
+      _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
+    }
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
@@ -344,7 +379,12 @@ void Msg_PRemoteWorkerConstructor::InternalSwap(Msg_PRemoteWorkerConstructor* ot
       &_impl_.a_childep_, lhs_arena,
       &other->_impl_.a_childep_, rhs_arena
   );
-  swap(_impl_.a_data_, other->_impl_.a_data_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Msg_PRemoteWorkerConstructor, _impl_.a_actorid_)
+      + sizeof(Msg_PRemoteWorkerConstructor::_impl_.a_actorid_)
+      - PROTOBUF_FIELD_OFFSET(Msg_PRemoteWorkerConstructor, _impl_.a_data_)>(
+          reinterpret_cast<char*>(&_impl_.a_data_),
+          reinterpret_cast<char*>(&other->_impl_.a_data_));
 }
 
 std::string Msg_PRemoteWorkerConstructor::GetTypeName() const {

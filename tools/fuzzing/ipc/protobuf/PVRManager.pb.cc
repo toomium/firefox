@@ -25,6 +25,7 @@ PROTOBUF_CONSTEXPR Msg_PVRLayerConstructor::Msg_PVRLayerConstructor(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_._has_bits_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_.a_actorid_)*/int64_t{0}
   , /*decltype(_impl_.a_adisplayid_)*/0u
   , /*decltype(_impl_.a_agroup_)*/0u} {}
 struct Msg_PVRLayerConstructorDefaultTypeInternal {
@@ -341,14 +342,17 @@ namespace PVRManager {
 class Msg_PVRLayerConstructor::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_PVRLayerConstructor>()._impl_._has_bits_);
-  static void set_has_a_adisplayid(HasBits* has_bits) {
+  static void set_has_a_actorid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_a_agroup(HasBits* has_bits) {
+  static void set_has_a_adisplayid(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
+  static void set_has_a_agroup(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
+    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
   }
 };
 
@@ -364,13 +368,14 @@ Msg_PVRLayerConstructor::Msg_PVRLayerConstructor(const Msg_PVRLayerConstructor& 
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_actorid_){}
     , decltype(_impl_.a_adisplayid_){}
     , decltype(_impl_.a_agroup_){}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  ::memcpy(&_impl_.a_adisplayid_, &from._impl_.a_adisplayid_,
+  ::memcpy(&_impl_.a_actorid_, &from._impl_.a_actorid_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_agroup_) -
-    reinterpret_cast<char*>(&_impl_.a_adisplayid_)) + sizeof(_impl_.a_agroup_));
+    reinterpret_cast<char*>(&_impl_.a_actorid_)) + sizeof(_impl_.a_agroup_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor)
 }
 
@@ -381,6 +386,7 @@ inline void Msg_PVRLayerConstructor::SharedCtor(
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){}
     , /*decltype(_impl_._cached_size_)*/{}
+    , decltype(_impl_.a_actorid_){int64_t{0}}
     , decltype(_impl_.a_adisplayid_){0u}
     , decltype(_impl_.a_agroup_){0u}
   };
@@ -410,10 +416,10 @@ void Msg_PVRLayerConstructor::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    ::memset(&_impl_.a_adisplayid_, 0, static_cast<size_t>(
+  if (cached_has_bits & 0x00000007u) {
+    ::memset(&_impl_.a_actorid_, 0, static_cast<size_t>(
         reinterpret_cast<char*>(&_impl_.a_agroup_) -
-        reinterpret_cast<char*>(&_impl_.a_adisplayid_)) + sizeof(_impl_.a_agroup_));
+        reinterpret_cast<char*>(&_impl_.a_actorid_)) + sizeof(_impl_.a_agroup_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -426,18 +432,27 @@ const char* Msg_PVRLayerConstructor::_InternalParse(const char* ptr, ::_pbi::Par
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_aDisplayID = 1;
+      // required sint64 a_actorid = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_actorid(&has_bits);
+          _impl_.a_actorid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required uint32 a_aDisplayID = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
           _Internal::set_has_a_adisplayid(&has_bits);
           _impl_.a_adisplayid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_aGroup = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+      // required uint32 a_aGroup = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
           _Internal::set_has_a_agroup(&has_bits);
           _impl_.a_agroup_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
@@ -475,16 +490,22 @@ uint8_t* Msg_PVRLayerConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_aDisplayID = 1;
+  // required sint64 a_actorid = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_adisplayid(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
   }
 
-  // required uint32 a_aGroup = 2;
+  // required uint32 a_aDisplayID = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_agroup(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_adisplayid(), target);
+  }
+
+  // required uint32 a_aGroup = 3;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_agroup(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -499,13 +520,18 @@ size_t Msg_PVRLayerConstructor::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor)
   size_t total_size = 0;
 
+  if (_internal_has_a_actorid()) {
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+  }
+
   if (_internal_has_a_adisplayid()) {
-    // required uint32 a_aDisplayID = 1;
+    // required uint32 a_aDisplayID = 2;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_adisplayid());
   }
 
   if (_internal_has_a_agroup()) {
-    // required uint32 a_aGroup = 2;
+    // required uint32 a_aGroup = 3;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_agroup());
   }
 
@@ -515,11 +541,14 @@ size_t Msg_PVRLayerConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required uint32 a_aDisplayID = 1;
+  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+
+    // required uint32 a_aDisplayID = 2;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_adisplayid());
 
-    // required uint32 a_aGroup = 2;
+    // required uint32 a_aGroup = 3;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_agroup());
 
   } else {
@@ -551,11 +580,14 @@ void Msg_PVRLayerConstructor::MergeFrom(const Msg_PVRLayerConstructor& from) {
   (void) cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
+  if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _this->_impl_.a_adisplayid_ = from._impl_.a_adisplayid_;
+      _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
     }
     if (cached_has_bits & 0x00000002u) {
+      _this->_impl_.a_adisplayid_ = from._impl_.a_adisplayid_;
+    }
+    if (cached_has_bits & 0x00000004u) {
       _this->_impl_.a_agroup_ = from._impl_.a_agroup_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
@@ -582,9 +614,9 @@ void Msg_PVRLayerConstructor::InternalSwap(Msg_PVRLayerConstructor* other) {
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(Msg_PVRLayerConstructor, _impl_.a_agroup_)
       + sizeof(Msg_PVRLayerConstructor::_impl_.a_agroup_)
-      - PROTOBUF_FIELD_OFFSET(Msg_PVRLayerConstructor, _impl_.a_adisplayid_)>(
-          reinterpret_cast<char*>(&_impl_.a_adisplayid_),
-          reinterpret_cast<char*>(&other->_impl_.a_adisplayid_));
+      - PROTOBUF_FIELD_OFFSET(Msg_PVRLayerConstructor, _impl_.a_actorid_)>(
+          reinterpret_cast<char*>(&_impl_.a_actorid_),
+          reinterpret_cast<char*>(&other->_impl_.a_actorid_));
 }
 
 std::string Msg_PVRLayerConstructor::GetTypeName() const {

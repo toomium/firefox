@@ -39,6 +39,7 @@ PROTOBUF_CONSTEXPR Msg_PBackgroundLSSnapshotConstructor::Msg_PBackgroundLSSnapsh
   , /*decltype(_impl_._cached_size_)*/{}
   , /*decltype(_impl_.a_documenturi_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_key_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_actorid_)*/int64_t{0}
   , /*decltype(_impl_.a_minsize_)*/int64_t{0}
   , /*decltype(_impl_.a_increasepeakusage_)*/false} {}
 struct Msg_PBackgroundLSSnapshotConstructorDefaultTypeInternal {
@@ -238,6 +239,9 @@ std::string Msg_AllowToClose::GetTypeName() const {
 class Msg_PBackgroundLSSnapshotConstructor::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_PBackgroundLSSnapshotConstructor>()._impl_._has_bits_);
+  static void set_has_a_actorid(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
   static void set_has_a_documenturi(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -245,13 +249,13 @@ class Msg_PBackgroundLSSnapshotConstructor::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static void set_has_a_increasepeakusage(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
+    (*has_bits)[0] |= 16u;
   }
   static void set_has_a_minsize(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
+    (*has_bits)[0] |= 8u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
+    return ((has_bits[0] & 0x0000001f) ^ 0x0000001f) != 0;
   }
 };
 
@@ -269,6 +273,7 @@ Msg_PBackgroundLSSnapshotConstructor::Msg_PBackgroundLSSnapshotConstructor(const
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_documenturi_){}
     , decltype(_impl_.a_key_){}
+    , decltype(_impl_.a_actorid_){}
     , decltype(_impl_.a_minsize_){}
     , decltype(_impl_.a_increasepeakusage_){}};
 
@@ -289,9 +294,9 @@ Msg_PBackgroundLSSnapshotConstructor::Msg_PBackgroundLSSnapshotConstructor(const
     _this->_impl_.a_key_.Set(from._internal_a_key(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.a_minsize_, &from._impl_.a_minsize_,
+  ::memcpy(&_impl_.a_actorid_, &from._impl_.a_actorid_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_increasepeakusage_) -
-    reinterpret_cast<char*>(&_impl_.a_minsize_)) + sizeof(_impl_.a_increasepeakusage_));
+    reinterpret_cast<char*>(&_impl_.a_actorid_)) + sizeof(_impl_.a_increasepeakusage_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor)
 }
 
@@ -304,6 +309,7 @@ inline void Msg_PBackgroundLSSnapshotConstructor::SharedCtor(
     , /*decltype(_impl_._cached_size_)*/{}
     , decltype(_impl_.a_documenturi_){}
     , decltype(_impl_.a_key_){}
+    , decltype(_impl_.a_actorid_){int64_t{0}}
     , decltype(_impl_.a_minsize_){int64_t{0}}
     , decltype(_impl_.a_increasepeakusage_){false}
   };
@@ -351,10 +357,10 @@ void Msg_PBackgroundLSSnapshotConstructor::Clear() {
       _impl_.a_key_.ClearNonDefaultToEmpty();
     }
   }
-  if (cached_has_bits & 0x0000000cu) {
-    ::memset(&_impl_.a_minsize_, 0, static_cast<size_t>(
+  if (cached_has_bits & 0x0000001cu) {
+    ::memset(&_impl_.a_actorid_, 0, static_cast<size_t>(
         reinterpret_cast<char*>(&_impl_.a_increasepeakusage_) -
-        reinterpret_cast<char*>(&_impl_.a_minsize_)) + sizeof(_impl_.a_increasepeakusage_));
+        reinterpret_cast<char*>(&_impl_.a_actorid_)) + sizeof(_impl_.a_increasepeakusage_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -367,36 +373,45 @@ const char* Msg_PBackgroundLSSnapshotConstructor::_InternalParse(const char* ptr
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_documentURI = 1;
+      // required sint64 a_actorid = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_actorid(&has_bits);
+          _impl_.a_actorid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required string a_documentURI = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_documenturi();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required string a_key = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+      // required string a_key = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_key();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool a_increasePeakUsage = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+      // required bool a_increasePeakUsage = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           _Internal::set_has_a_increasepeakusage(&has_bits);
           _impl_.a_increasepeakusage_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint64 a_minSize = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+      // required sint64 a_minSize = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
           _Internal::set_has_a_minsize(&has_bits);
           _impl_.a_minsize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
@@ -434,28 +449,34 @@ uint8_t* Msg_PBackgroundLSSnapshotConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_documentURI = 1;
-  if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_a_documenturi(), target);
-  }
-
-  // required string a_key = 2;
-  if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_a_key(), target);
-  }
-
-  // required bool a_increasePeakUsage = 3;
-  if (cached_has_bits & 0x00000008u) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_increasepeakusage(), target);
-  }
-
-  // required sint64 a_minSize = 4;
+  // required sint64 a_actorid = 1;
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(4, this->_internal_a_minsize(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
+  }
+
+  // required string a_documentURI = 2;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_a_documenturi(), target);
+  }
+
+  // required string a_key = 3;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_a_key(), target);
+  }
+
+  // required bool a_increasePeakUsage = 4;
+  if (cached_has_bits & 0x00000010u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_increasepeakusage(), target);
+  }
+
+  // required sint64 a_minSize = 5;
+  if (cached_has_bits & 0x00000008u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(5, this->_internal_a_minsize(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -471,26 +492,31 @@ size_t Msg_PBackgroundLSSnapshotConstructor::RequiredFieldsByteSizeFallback() co
   size_t total_size = 0;
 
   if (_internal_has_a_documenturi()) {
-    // required string a_documentURI = 1;
+    // required string a_documentURI = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_documenturi());
   }
 
   if (_internal_has_a_key()) {
-    // required string a_key = 2;
+    // required string a_key = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_key());
   }
 
+  if (_internal_has_a_actorid()) {
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+  }
+
   if (_internal_has_a_minsize()) {
-    // required sint64 a_minSize = 4;
+    // required sint64 a_minSize = 5;
     total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_minsize());
   }
 
   if (_internal_has_a_increasepeakusage()) {
-    // required bool a_increasePeakUsage = 3;
+    // required bool a_increasePeakUsage = 4;
     total_size += 1 + 1;
   }
 
@@ -500,21 +526,24 @@ size_t Msg_PBackgroundLSSnapshotConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required string a_documentURI = 1;
+  if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
+    // required string a_documentURI = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_documenturi());
 
-    // required string a_key = 2;
+    // required string a_key = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_key());
 
-    // required sint64 a_minSize = 4;
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+
+    // required sint64 a_minSize = 5;
     total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_minsize());
 
-    // required bool a_increasePeakUsage = 3;
+    // required bool a_increasePeakUsage = 4;
     total_size += 1 + 1;
 
   } else {
@@ -546,7 +575,7 @@ void Msg_PBackgroundLSSnapshotConstructor::MergeFrom(const Msg_PBackgroundLSSnap
   (void) cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
+  if (cached_has_bits & 0x0000001fu) {
     if (cached_has_bits & 0x00000001u) {
       _this->_internal_set_a_documenturi(from._internal_a_documenturi());
     }
@@ -554,9 +583,12 @@ void Msg_PBackgroundLSSnapshotConstructor::MergeFrom(const Msg_PBackgroundLSSnap
       _this->_internal_set_a_key(from._internal_a_key());
     }
     if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.a_minsize_ = from._impl_.a_minsize_;
+      _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
     }
     if (cached_has_bits & 0x00000008u) {
+      _this->_impl_.a_minsize_ = from._impl_.a_minsize_;
+    }
+    if (cached_has_bits & 0x00000010u) {
       _this->_impl_.a_increasepeakusage_ = from._impl_.a_increasepeakusage_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
@@ -593,9 +625,9 @@ void Msg_PBackgroundLSSnapshotConstructor::InternalSwap(Msg_PBackgroundLSSnapsho
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(Msg_PBackgroundLSSnapshotConstructor, _impl_.a_increasepeakusage_)
       + sizeof(Msg_PBackgroundLSSnapshotConstructor::_impl_.a_increasepeakusage_)
-      - PROTOBUF_FIELD_OFFSET(Msg_PBackgroundLSSnapshotConstructor, _impl_.a_minsize_)>(
-          reinterpret_cast<char*>(&_impl_.a_minsize_),
-          reinterpret_cast<char*>(&other->_impl_.a_minsize_));
+      - PROTOBUF_FIELD_OFFSET(Msg_PBackgroundLSSnapshotConstructor, _impl_.a_actorid_)>(
+          reinterpret_cast<char*>(&_impl_.a_actorid_),
+          reinterpret_cast<char*>(&other->_impl_.a_actorid_));
 }
 
 std::string Msg_PBackgroundLSSnapshotConstructor::GetTypeName() const {

@@ -1655,9 +1655,10 @@ class Msg_PCompositorWidgetConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAAInitDataFieldNumber = 1,
+    kAAInitDataFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required .protobuf.mozilla.widget.CompositorWidgetInitData a_aInitData = 1;
+  // required .protobuf.mozilla.widget.CompositorWidgetInitData a_aInitData = 2;
   bool has_a_ainitdata() const;
   private:
   bool _internal_has_a_ainitdata() const;
@@ -1675,9 +1676,25 @@ class Msg_PCompositorWidgetConstructor final :
       ::protobuf::mozilla::widget::CompositorWidgetInitData* a_ainitdata);
   ::protobuf::mozilla::widget::CompositorWidgetInitData* unsafe_arena_release_a_ainitdata();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PCompositorBridge.Msg_PCompositorWidgetConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1686,6 +1703,7 @@ class Msg_PCompositorWidgetConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::widget::CompositorWidgetInitData* a_ainitdata_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCompositorBridge_2eproto;
@@ -2197,9 +2215,10 @@ class Msg_PAPZConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kALayersIdFieldNumber = 1,
+    kALayersIdFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required bytes a_layersId = 1;
+  // required bytes a_layersId = 2;
   bool has_a_layersid() const;
   private:
   bool _internal_has_a_layersid() const;
@@ -2217,9 +2236,25 @@ class Msg_PAPZConstructor final :
   std::string* _internal_mutable_a_layersid();
   public:
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PCompositorBridge.Msg_PAPZConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2228,6 +2263,7 @@ class Msg_PAPZConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_layersid_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCompositorBridge_2eproto;
@@ -2468,9 +2504,10 @@ class Msg_PAPZCTreeManagerConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kALayersIdFieldNumber = 1,
+    kALayersIdFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required bytes a_layersId = 1;
+  // required bytes a_layersId = 2;
   bool has_a_layersid() const;
   private:
   bool _internal_has_a_layersid() const;
@@ -2488,9 +2525,25 @@ class Msg_PAPZCTreeManagerConstructor final :
   std::string* _internal_mutable_a_layersid();
   public:
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PCompositorBridge.Msg_PAPZCTreeManagerConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2499,6 +2552,7 @@ class Msg_PAPZCTreeManagerConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_layersid_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCompositorBridge_2eproto;
@@ -6172,15 +6226,16 @@ class Msg_PTextureConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAABackendFieldNumber = 3,
-    kAATextureFlagsFieldNumber = 4,
-    kAIdFieldNumber = 5,
-    kAAExternalImageIdFieldNumber = 7,
-    kAASharedDataFieldNumber = 1,
-    kAAReadLockFieldNumber = 2,
-    kAASerialFieldNumber = 6,
+    kAABackendFieldNumber = 4,
+    kAATextureFlagsFieldNumber = 5,
+    kAIdFieldNumber = 6,
+    kAAExternalImageIdFieldNumber = 8,
+    kAASharedDataFieldNumber = 2,
+    kAAReadLockFieldNumber = 3,
+    kAActoridFieldNumber = 1,
+    kAASerialFieldNumber = 7,
   };
-  // required bytes a_aBackend = 3;
+  // required bytes a_aBackend = 4;
   bool has_a_abackend() const;
   private:
   bool _internal_has_a_abackend() const;
@@ -6198,7 +6253,7 @@ class Msg_PTextureConstructor final :
   std::string* _internal_mutable_a_abackend();
   public:
 
-  // required bytes a_aTextureFlags = 4;
+  // required bytes a_aTextureFlags = 5;
   bool has_a_atextureflags() const;
   private:
   bool _internal_has_a_atextureflags() const;
@@ -6216,7 +6271,7 @@ class Msg_PTextureConstructor final :
   std::string* _internal_mutable_a_atextureflags();
   public:
 
-  // required bytes a_id = 5;
+  // required bytes a_id = 6;
   bool has_a_id() const;
   private:
   bool _internal_has_a_id() const;
@@ -6234,7 +6289,7 @@ class Msg_PTextureConstructor final :
   std::string* _internal_mutable_a_id();
   public:
 
-  // required bytes a_aExternalImageId = 7;
+  // required bytes a_aExternalImageId = 8;
   bool has_a_aexternalimageid() const;
   private:
   bool _internal_has_a_aexternalimageid() const;
@@ -6252,7 +6307,7 @@ class Msg_PTextureConstructor final :
   std::string* _internal_mutable_a_aexternalimageid();
   public:
 
-  // required .protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 1;
+  // required .protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 2;
   bool has_a_ashareddata() const;
   private:
   bool _internal_has_a_ashareddata() const;
@@ -6270,7 +6325,7 @@ class Msg_PTextureConstructor final :
       ::protobuf::mozilla::layers::SurfaceDescriptor* a_ashareddata);
   ::protobuf::mozilla::layers::SurfaceDescriptor* unsafe_arena_release_a_ashareddata();
 
-  // required .protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 2;
+  // required .protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 3;
   bool has_a_areadlock() const;
   private:
   bool _internal_has_a_areadlock() const;
@@ -6288,7 +6343,20 @@ class Msg_PTextureConstructor final :
       ::protobuf::mozilla::layers::ReadLockDescriptor* a_areadlock);
   ::protobuf::mozilla::layers::ReadLockDescriptor* unsafe_arena_release_a_areadlock();
 
-  // required uint64 a_aSerial = 6;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required uint64 a_aSerial = 7;
   bool has_a_aserial() const;
   private:
   bool _internal_has_a_aserial() const;
@@ -6320,6 +6388,7 @@ class Msg_PTextureConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aexternalimageid_;
     ::protobuf::mozilla::layers::SurfaceDescriptor* a_ashareddata_;
     ::protobuf::mozilla::layers::ReadLockDescriptor* a_areadlock_;
+    int64_t a_actorid_;
     uint64_t a_aserial_;
   };
   union { Impl_ _impl_; };
@@ -6809,11 +6878,12 @@ class Msg_PWebRenderBridgeConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAPipelineIdFieldNumber = 1,
-    kAASizeFieldNumber = 2,
-    kAAKindFieldNumber = 3,
+    kAPipelineIdFieldNumber = 2,
+    kAASizeFieldNumber = 3,
+    kAAKindFieldNumber = 4,
+    kAActoridFieldNumber = 1,
   };
-  // required bytes a_pipelineId = 1;
+  // required bytes a_pipelineId = 2;
   bool has_a_pipelineid() const;
   private:
   bool _internal_has_a_pipelineid() const;
@@ -6831,7 +6901,7 @@ class Msg_PWebRenderBridgeConstructor final :
   std::string* _internal_mutable_a_pipelineid();
   public:
 
-  // required bytes a_aSize = 2;
+  // required bytes a_aSize = 3;
   bool has_a_asize() const;
   private:
   bool _internal_has_a_asize() const;
@@ -6849,7 +6919,7 @@ class Msg_PWebRenderBridgeConstructor final :
   std::string* _internal_mutable_a_asize();
   public:
 
-  // required bytes a_aKind = 3;
+  // required bytes a_aKind = 4;
   bool has_a_akind() const;
   private:
   bool _internal_has_a_akind() const;
@@ -6865,6 +6935,19 @@ class Msg_PWebRenderBridgeConstructor final :
   const std::string& _internal_a_akind() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_a_akind(const std::string& value);
   std::string* _internal_mutable_a_akind();
+  public:
+
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.layers.PCompositorBridge.Msg_PWebRenderBridgeConstructor)
@@ -6883,6 +6966,7 @@ class Msg_PWebRenderBridgeConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_pipelineid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_asize_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_akind_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PCompositorBridge_2eproto;
@@ -8864,7 +8948,35 @@ Msg_NotifyJankedAnimations::mutable_a_ajankedanimations() {
 
 // Msg_PCompositorWidgetConstructor
 
-// required .protobuf.mozilla.widget.CompositorWidgetInitData a_aInitData = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PCompositorWidgetConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PCompositorWidgetConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PCompositorWidgetConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PCompositorWidgetConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PCompositorWidgetConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PCompositorBridge.Msg_PCompositorWidgetConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PCompositorWidgetConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PCompositorWidgetConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCompositorBridge.Msg_PCompositorWidgetConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.widget.CompositorWidgetInitData a_aInitData = 2;
 inline bool Msg_PCompositorWidgetConstructor::_internal_has_a_ainitdata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_ainitdata_ != nullptr);
@@ -9035,7 +9147,35 @@ inline void Msg_Initialize::set_allocated_a_rootlayertreeid(std::string* a_rootl
 
 // Msg_PAPZConstructor
 
-// required bytes a_layersId = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PAPZConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PAPZConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PAPZConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PAPZConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PAPZConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PCompositorBridge.Msg_PAPZConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PAPZConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PAPZConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCompositorBridge.Msg_PAPZConstructor.a_actorid)
+}
+
+// required bytes a_layersId = 2;
 inline bool Msg_PAPZConstructor::_internal_has_a_layersid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -9111,7 +9251,35 @@ inline void Msg_PAPZConstructor::set_allocated_a_layersid(std::string* a_layersi
 
 // Msg_PAPZCTreeManagerConstructor
 
-// required bytes a_layersId = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PAPZCTreeManagerConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PAPZCTreeManagerConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PAPZCTreeManagerConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PAPZCTreeManagerConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PAPZCTreeManagerConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PCompositorBridge.Msg_PAPZCTreeManagerConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PAPZCTreeManagerConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PAPZCTreeManagerConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCompositorBridge.Msg_PAPZCTreeManagerConstructor.a_actorid)
+}
+
+// required bytes a_layersId = 2;
 inline bool Msg_PAPZCTreeManagerConstructor::_internal_has_a_layersid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10166,7 +10334,35 @@ Reply_StopFrameTimeRecording::mutable_a_intervals() {
 
 // Msg_PTextureConstructor
 
-// required .protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PTextureConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool Msg_PTextureConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PTextureConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000040u;
+}
+inline int64_t Msg_PTextureConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PTextureConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PCompositorBridge.Msg_PTextureConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PTextureConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000040u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PTextureConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCompositorBridge.Msg_PTextureConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 2;
 inline bool Msg_PTextureConstructor::_internal_has_a_ashareddata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_ashareddata_ != nullptr);
@@ -10253,7 +10449,7 @@ inline void Msg_PTextureConstructor::set_allocated_a_ashareddata(::protobuf::moz
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PCompositorBridge.Msg_PTextureConstructor.a_aSharedData)
 }
 
-// required .protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 2;
+// required .protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 3;
 inline bool Msg_PTextureConstructor::_internal_has_a_areadlock() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_areadlock_ != nullptr);
@@ -10340,7 +10536,7 @@ inline void Msg_PTextureConstructor::set_allocated_a_areadlock(::protobuf::mozil
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PCompositorBridge.Msg_PTextureConstructor.a_aReadLock)
 }
 
-// required bytes a_aBackend = 3;
+// required bytes a_aBackend = 4;
 inline bool Msg_PTextureConstructor::_internal_has_a_abackend() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10408,7 +10604,7 @@ inline void Msg_PTextureConstructor::set_allocated_a_abackend(std::string* a_aba
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PCompositorBridge.Msg_PTextureConstructor.a_aBackend)
 }
 
-// required bytes a_aTextureFlags = 4;
+// required bytes a_aTextureFlags = 5;
 inline bool Msg_PTextureConstructor::_internal_has_a_atextureflags() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10476,7 +10672,7 @@ inline void Msg_PTextureConstructor::set_allocated_a_atextureflags(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PCompositorBridge.Msg_PTextureConstructor.a_aTextureFlags)
 }
 
-// required bytes a_id = 5;
+// required bytes a_id = 6;
 inline bool Msg_PTextureConstructor::_internal_has_a_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -10544,9 +10740,9 @@ inline void Msg_PTextureConstructor::set_allocated_a_id(std::string* a_id) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PCompositorBridge.Msg_PTextureConstructor.a_id)
 }
 
-// required uint64 a_aSerial = 6;
+// required uint64 a_aSerial = 7;
 inline bool Msg_PTextureConstructor::_internal_has_a_aserial() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
 inline bool Msg_PTextureConstructor::has_a_aserial() const {
@@ -10554,7 +10750,7 @@ inline bool Msg_PTextureConstructor::has_a_aserial() const {
 }
 inline void Msg_PTextureConstructor::clear_a_aserial() {
   _impl_.a_aserial_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000040u;
+  _impl_._has_bits_[0] &= ~0x00000080u;
 }
 inline uint64_t Msg_PTextureConstructor::_internal_a_aserial() const {
   return _impl_.a_aserial_;
@@ -10564,7 +10760,7 @@ inline uint64_t Msg_PTextureConstructor::a_aserial() const {
   return _internal_a_aserial();
 }
 inline void Msg_PTextureConstructor::_internal_set_a_aserial(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000040u;
+  _impl_._has_bits_[0] |= 0x00000080u;
   _impl_.a_aserial_ = value;
 }
 inline void Msg_PTextureConstructor::set_a_aserial(uint64_t value) {
@@ -10572,7 +10768,7 @@ inline void Msg_PTextureConstructor::set_a_aserial(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCompositorBridge.Msg_PTextureConstructor.a_aSerial)
 }
 
-// required bytes a_aExternalImageId = 7;
+// required bytes a_aExternalImageId = 8;
 inline bool Msg_PTextureConstructor::_internal_has_a_aexternalimageid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -10656,7 +10852,35 @@ inline void Msg_PTextureConstructor::set_allocated_a_aexternalimageid(std::strin
 
 // Msg_PWebRenderBridgeConstructor
 
-// required bytes a_pipelineId = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PWebRenderBridgeConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool Msg_PWebRenderBridgeConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PWebRenderBridgeConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+inline int64_t Msg_PWebRenderBridgeConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PWebRenderBridgeConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PCompositorBridge.Msg_PWebRenderBridgeConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PWebRenderBridgeConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PWebRenderBridgeConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PCompositorBridge.Msg_PWebRenderBridgeConstructor.a_actorid)
+}
+
+// required bytes a_pipelineId = 2;
 inline bool Msg_PWebRenderBridgeConstructor::_internal_has_a_pipelineid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10724,7 +10948,7 @@ inline void Msg_PWebRenderBridgeConstructor::set_allocated_a_pipelineid(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PCompositorBridge.Msg_PWebRenderBridgeConstructor.a_pipelineId)
 }
 
-// required bytes a_aSize = 2;
+// required bytes a_aSize = 3;
 inline bool Msg_PWebRenderBridgeConstructor::_internal_has_a_asize() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10792,7 +11016,7 @@ inline void Msg_PWebRenderBridgeConstructor::set_allocated_a_asize(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PCompositorBridge.Msg_PWebRenderBridgeConstructor.a_aSize)
 }
 
-// required bytes a_aKind = 3;
+// required bytes a_aKind = 4;
 inline bool Msg_PWebRenderBridgeConstructor::_internal_has_a_akind() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

@@ -686,9 +686,10 @@ class Msg_PQuotaRequestConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAParamsFieldNumber = 1,
+    kAParamsFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.quota.RequestParams a_params = 1;
+  // required .protobuf.mozilla.dom.quota.RequestParams a_params = 2;
   bool has_a_params() const;
   private:
   bool _internal_has_a_params() const;
@@ -706,9 +707,25 @@ class Msg_PQuotaRequestConstructor final :
       ::protobuf::mozilla::dom::quota::RequestParams* a_params);
   ::protobuf::mozilla::dom::quota::RequestParams* unsafe_arena_release_a_params();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.quota.PQuota.Msg_PQuotaRequestConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -717,6 +734,7 @@ class Msg_PQuotaRequestConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::quota::RequestParams* a_params_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuota_2eproto;
@@ -9980,7 +9998,35 @@ class Msg_SetThumbnailPrivateIdentityId final :
 
 // Msg_PQuotaRequestConstructor
 
-// required .protobuf.mozilla.dom.quota.RequestParams a_params = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PQuotaRequestConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PQuotaRequestConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PQuotaRequestConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PQuotaRequestConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PQuotaRequestConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.PQuota.Msg_PQuotaRequestConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PQuotaRequestConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PQuotaRequestConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.PQuota.Msg_PQuotaRequestConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.dom.quota.RequestParams a_params = 2;
 inline bool Msg_PQuotaRequestConstructor::_internal_has_a_params() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_params_ != nullptr);

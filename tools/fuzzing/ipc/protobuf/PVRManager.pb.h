@@ -263,10 +263,24 @@ class Msg_PVRLayerConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAADisplayIDFieldNumber = 1,
-    kAAGroupFieldNumber = 2,
+    kAActoridFieldNumber = 1,
+    kAADisplayIDFieldNumber = 2,
+    kAAGroupFieldNumber = 3,
   };
-  // required uint32 a_aDisplayID = 1;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required uint32 a_aDisplayID = 2;
   bool has_a_adisplayid() const;
   private:
   bool _internal_has_a_adisplayid() const;
@@ -279,7 +293,7 @@ class Msg_PVRLayerConstructor final :
   void _internal_set_a_adisplayid(uint32_t value);
   public:
 
-  // required uint32 a_aGroup = 2;
+  // required uint32 a_aGroup = 3;
   bool has_a_agroup() const;
   private:
   bool _internal_has_a_agroup() const;
@@ -305,6 +319,7 @@ class Msg_PVRLayerConstructor final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
     uint32_t a_adisplayid_;
     uint32_t a_agroup_;
   };
@@ -3380,9 +3395,37 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_PVRLayerConstructor
 
-// required uint32 a_aDisplayID = 1;
-inline bool Msg_PVRLayerConstructor::_internal_has_a_adisplayid() const {
+// required sint64 a_actorid = 1;
+inline bool Msg_PVRLayerConstructor::_internal_has_a_actorid() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PVRLayerConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PVRLayerConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PVRLayerConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PVRLayerConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PVRLayerConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PVRLayerConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor.a_actorid)
+}
+
+// required uint32 a_aDisplayID = 2;
+inline bool Msg_PVRLayerConstructor::_internal_has_a_adisplayid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
 inline bool Msg_PVRLayerConstructor::has_a_adisplayid() const {
@@ -3390,7 +3433,7 @@ inline bool Msg_PVRLayerConstructor::has_a_adisplayid() const {
 }
 inline void Msg_PVRLayerConstructor::clear_a_adisplayid() {
   _impl_.a_adisplayid_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_PVRLayerConstructor::_internal_a_adisplayid() const {
   return _impl_.a_adisplayid_;
@@ -3400,7 +3443,7 @@ inline uint32_t Msg_PVRLayerConstructor::a_adisplayid() const {
   return _internal_a_adisplayid();
 }
 inline void Msg_PVRLayerConstructor::_internal_set_a_adisplayid(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_adisplayid_ = value;
 }
 inline void Msg_PVRLayerConstructor::set_a_adisplayid(uint32_t value) {
@@ -3408,9 +3451,9 @@ inline void Msg_PVRLayerConstructor::set_a_adisplayid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.PVRManager.Msg_PVRLayerConstructor.a_aDisplayID)
 }
 
-// required uint32 a_aGroup = 2;
+// required uint32 a_aGroup = 3;
 inline bool Msg_PVRLayerConstructor::_internal_has_a_agroup() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
 inline bool Msg_PVRLayerConstructor::has_a_agroup() const {
@@ -3418,7 +3461,7 @@ inline bool Msg_PVRLayerConstructor::has_a_agroup() const {
 }
 inline void Msg_PVRLayerConstructor::clear_a_agroup() {
   _impl_.a_agroup_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_PVRLayerConstructor::_internal_a_agroup() const {
   return _impl_.a_agroup_;
@@ -3428,7 +3471,7 @@ inline uint32_t Msg_PVRLayerConstructor::a_agroup() const {
   return _internal_a_agroup();
 }
 inline void Msg_PVRLayerConstructor::_internal_set_a_agroup(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_agroup_ = value;
 }
 inline void Msg_PVRLayerConstructor::set_a_agroup(uint32_t value) {

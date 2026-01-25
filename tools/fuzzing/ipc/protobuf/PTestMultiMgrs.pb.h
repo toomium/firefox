@@ -323,6 +323,22 @@ class Msg_PTestMultiMgrsLeftConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestMultiMgrs.Msg_PTestMultiMgrsLeftConstructor)
  private:
   class _Internal;
@@ -331,7 +347,9 @@ class Msg_PTestMultiMgrsLeftConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestMultiMgrs_2eproto;
@@ -571,6 +589,22 @@ class Msg_PTestMultiMgrsRightConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestMultiMgrs.Msg_PTestMultiMgrsRightConstructor)
  private:
   class _Internal;
@@ -579,7 +613,9 @@ class Msg_PTestMultiMgrsRightConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestMultiMgrs_2eproto;
@@ -1095,6 +1131,34 @@ class Reply___delete__ final :
 
 // Msg_PTestMultiMgrsLeftConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PTestMultiMgrsLeftConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PTestMultiMgrsLeftConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PTestMultiMgrsLeftConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PTestMultiMgrsLeftConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PTestMultiMgrsLeftConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestMultiMgrs.Msg_PTestMultiMgrsLeftConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PTestMultiMgrsLeftConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PTestMultiMgrsLeftConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestMultiMgrs.Msg_PTestMultiMgrsLeftConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PTestMultiMgrsLeftConstructor
@@ -1102,6 +1166,34 @@ class Reply___delete__ final :
 // -------------------------------------------------------------------
 
 // Msg_PTestMultiMgrsRightConstructor
+
+// required sint64 a_actorid = 1;
+inline bool Msg_PTestMultiMgrsRightConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PTestMultiMgrsRightConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PTestMultiMgrsRightConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PTestMultiMgrsRightConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PTestMultiMgrsRightConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.PTestMultiMgrs.Msg_PTestMultiMgrsRightConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PTestMultiMgrsRightConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PTestMultiMgrsRightConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestMultiMgrs.Msg_PTestMultiMgrsRightConstructor.a_actorid)
+}
 
 // -------------------------------------------------------------------
 

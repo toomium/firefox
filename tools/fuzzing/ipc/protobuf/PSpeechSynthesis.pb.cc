@@ -151,6 +151,7 @@ PROTOBUF_CONSTEXPR Msg_PSpeechSynthesisRequestConstructor::Msg_PSpeechSynthesisR
   , /*decltype(_impl_.a_atext_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_auri_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_alang_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_actorid_)*/int64_t{0}
   , /*decltype(_impl_.a_avolume_)*/0
   , /*decltype(_impl_.a_arate_)*/0
   , /*decltype(_impl_.a_apitch_)*/0
@@ -2019,6 +2020,9 @@ std::string Reply___delete__::GetTypeName() const {
 class Msg_PSpeechSynthesisRequestConstructor::_Internal {
  public:
   using HasBits = decltype(std::declval<Msg_PSpeechSynthesisRequestConstructor>()._impl_._has_bits_);
+  static void set_has_a_actorid(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
   static void set_has_a_atext(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -2029,19 +2033,19 @@ class Msg_PSpeechSynthesisRequestConstructor::_Internal {
     (*has_bits)[0] |= 4u;
   }
   static void set_has_a_avolume(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_a_arate(HasBits* has_bits) {
     (*has_bits)[0] |= 16u;
   }
-  static void set_has_a_apitch(HasBits* has_bits) {
+  static void set_has_a_arate(HasBits* has_bits) {
     (*has_bits)[0] |= 32u;
   }
-  static void set_has_a_ashouldresistfingerprinting(HasBits* has_bits) {
+  static void set_has_a_apitch(HasBits* has_bits) {
     (*has_bits)[0] |= 64u;
   }
+  static void set_has_a_ashouldresistfingerprinting(HasBits* has_bits) {
+    (*has_bits)[0] |= 128u;
+  }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000007f) ^ 0x0000007f) != 0;
+    return ((has_bits[0] & 0x000000ff) ^ 0x000000ff) != 0;
   }
 };
 
@@ -2060,6 +2064,7 @@ Msg_PSpeechSynthesisRequestConstructor::Msg_PSpeechSynthesisRequestConstructor(c
     , decltype(_impl_.a_atext_){}
     , decltype(_impl_.a_auri_){}
     , decltype(_impl_.a_alang_){}
+    , decltype(_impl_.a_actorid_){}
     , decltype(_impl_.a_avolume_){}
     , decltype(_impl_.a_arate_){}
     , decltype(_impl_.a_apitch_){}
@@ -2090,9 +2095,9 @@ Msg_PSpeechSynthesisRequestConstructor::Msg_PSpeechSynthesisRequestConstructor(c
     _this->_impl_.a_alang_.Set(from._internal_a_alang(), 
       _this->GetArenaForAllocation());
   }
-  ::memcpy(&_impl_.a_avolume_, &from._impl_.a_avolume_,
+  ::memcpy(&_impl_.a_actorid_, &from._impl_.a_actorid_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_ashouldresistfingerprinting_) -
-    reinterpret_cast<char*>(&_impl_.a_avolume_)) + sizeof(_impl_.a_ashouldresistfingerprinting_));
+    reinterpret_cast<char*>(&_impl_.a_actorid_)) + sizeof(_impl_.a_ashouldresistfingerprinting_));
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor)
 }
 
@@ -2106,6 +2111,7 @@ inline void Msg_PSpeechSynthesisRequestConstructor::SharedCtor(
     , decltype(_impl_.a_atext_){}
     , decltype(_impl_.a_auri_){}
     , decltype(_impl_.a_alang_){}
+    , decltype(_impl_.a_actorid_){int64_t{0}}
     , decltype(_impl_.a_avolume_){0}
     , decltype(_impl_.a_arate_){0}
     , decltype(_impl_.a_apitch_){0}
@@ -2163,10 +2169,10 @@ void Msg_PSpeechSynthesisRequestConstructor::Clear() {
       _impl_.a_alang_.ClearNonDefaultToEmpty();
     }
   }
-  if (cached_has_bits & 0x00000078u) {
-    ::memset(&_impl_.a_avolume_, 0, static_cast<size_t>(
+  if (cached_has_bits & 0x000000f8u) {
+    ::memset(&_impl_.a_actorid_, 0, static_cast<size_t>(
         reinterpret_cast<char*>(&_impl_.a_ashouldresistfingerprinting_) -
-        reinterpret_cast<char*>(&_impl_.a_avolume_)) + sizeof(_impl_.a_ashouldresistfingerprinting_));
+        reinterpret_cast<char*>(&_impl_.a_actorid_)) + sizeof(_impl_.a_ashouldresistfingerprinting_));
   }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
@@ -2179,63 +2185,72 @@ const char* Msg_PSpeechSynthesisRequestConstructor::_InternalParse(const char* p
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aText = 1;
+      // required sint64 a_actorid = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _Internal::set_has_a_actorid(&has_bits);
+          _impl_.a_actorid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
+          CHK_(ptr);
+        } else
+          goto handle_unusual;
+        continue;
+      // required string a_aText = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_atext();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required string a_aUri = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+      // required string a_aUri = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_auri();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required string a_aLang = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+      // required string a_aLang = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_alang();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required float a_aVolume = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 37)) {
+      // required float a_aVolume = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 45)) {
           _Internal::set_has_a_avolume(&has_bits);
           _impl_.a_avolume_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
           ptr += sizeof(float);
         } else
           goto handle_unusual;
         continue;
-      // required float a_aRate = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 45)) {
+      // required float a_aRate = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 53)) {
           _Internal::set_has_a_arate(&has_bits);
           _impl_.a_arate_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
           ptr += sizeof(float);
         } else
           goto handle_unusual;
         continue;
-      // required float a_aPitch = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 53)) {
+      // required float a_aPitch = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 61)) {
           _Internal::set_has_a_apitch(&has_bits);
           _impl_.a_apitch_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
           ptr += sizeof(float);
         } else
           goto handle_unusual;
         continue;
-      // required bool a_aShouldResistFingerprinting = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
+      // required bool a_aShouldResistFingerprinting = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
           _Internal::set_has_a_ashouldresistfingerprinting(&has_bits);
           _impl_.a_ashouldresistfingerprinting_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
@@ -2273,46 +2288,52 @@ uint8_t* Msg_PSpeechSynthesisRequestConstructor::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aText = 1;
-  if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_a_atext(), target);
-  }
-
-  // required string a_aUri = 2;
-  if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_a_auri(), target);
-  }
-
-  // required string a_aLang = 3;
-  if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
-        3, this->_internal_a_alang(), target);
-  }
-
-  // required float a_aVolume = 4;
+  // required sint64 a_actorid = 1;
   if (cached_has_bits & 0x00000008u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(4, this->_internal_a_avolume(), target);
+    target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
   }
 
-  // required float a_aRate = 5;
+  // required string a_aText = 2;
+  if (cached_has_bits & 0x00000001u) {
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_a_atext(), target);
+  }
+
+  // required string a_aUri = 3;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_a_auri(), target);
+  }
+
+  // required string a_aLang = 4;
+  if (cached_has_bits & 0x00000004u) {
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_a_alang(), target);
+  }
+
+  // required float a_aVolume = 5;
   if (cached_has_bits & 0x00000010u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(5, this->_internal_a_arate(), target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(5, this->_internal_a_avolume(), target);
   }
 
-  // required float a_aPitch = 6;
+  // required float a_aRate = 6;
   if (cached_has_bits & 0x00000020u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(6, this->_internal_a_apitch(), target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(6, this->_internal_a_arate(), target);
   }
 
-  // required bool a_aShouldResistFingerprinting = 7;
+  // required float a_aPitch = 7;
   if (cached_has_bits & 0x00000040u) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(7, this->_internal_a_ashouldresistfingerprinting(), target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(7, this->_internal_a_apitch(), target);
+  }
+
+  // required bool a_aShouldResistFingerprinting = 8;
+  if (cached_has_bits & 0x00000080u) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_a_ashouldresistfingerprinting(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2328,43 +2349,48 @@ size_t Msg_PSpeechSynthesisRequestConstructor::RequiredFieldsByteSizeFallback() 
   size_t total_size = 0;
 
   if (_internal_has_a_atext()) {
-    // required string a_aText = 1;
+    // required string a_aText = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_atext());
   }
 
   if (_internal_has_a_auri()) {
-    // required string a_aUri = 2;
+    // required string a_aUri = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_auri());
   }
 
   if (_internal_has_a_alang()) {
-    // required string a_aLang = 3;
+    // required string a_aLang = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_alang());
   }
 
+  if (_internal_has_a_actorid()) {
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+  }
+
   if (_internal_has_a_avolume()) {
-    // required float a_aVolume = 4;
+    // required float a_aVolume = 5;
     total_size += 1 + 4;
   }
 
   if (_internal_has_a_arate()) {
-    // required float a_aRate = 5;
+    // required float a_aRate = 6;
     total_size += 1 + 4;
   }
 
   if (_internal_has_a_apitch()) {
-    // required float a_aPitch = 6;
+    // required float a_aPitch = 7;
     total_size += 1 + 4;
   }
 
   if (_internal_has_a_ashouldresistfingerprinting()) {
-    // required bool a_aShouldResistFingerprinting = 7;
+    // required bool a_aShouldResistFingerprinting = 8;
     total_size += 1 + 1;
   }
 
@@ -2374,32 +2400,35 @@ size_t Msg_PSpeechSynthesisRequestConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PSpeechSynthesis.Msg_PSpeechSynthesisRequestConstructor)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000007f) ^ 0x0000007f) == 0) {  // All required fields are present.
-    // required string a_aText = 1;
+  if (((_impl_._has_bits_[0] & 0x000000ff) ^ 0x000000ff) == 0) {  // All required fields are present.
+    // required string a_aText = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_atext());
 
-    // required string a_aUri = 2;
+    // required string a_aUri = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_auri());
 
-    // required string a_aLang = 3;
+    // required string a_aLang = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_alang());
 
-    // required float a_aVolume = 4;
+    // required sint64 a_actorid = 1;
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+
+    // required float a_aVolume = 5;
     total_size += 1 + 4;
 
-    // required float a_aRate = 5;
+    // required float a_aRate = 6;
     total_size += 1 + 4;
 
-    // required float a_aPitch = 6;
+    // required float a_aPitch = 7;
     total_size += 1 + 4;
 
-    // required bool a_aShouldResistFingerprinting = 7;
+    // required bool a_aShouldResistFingerprinting = 8;
     total_size += 1 + 1;
 
   } else {
@@ -2431,7 +2460,7 @@ void Msg_PSpeechSynthesisRequestConstructor::MergeFrom(const Msg_PSpeechSynthesi
   (void) cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000007fu) {
+  if (cached_has_bits & 0x000000ffu) {
     if (cached_has_bits & 0x00000001u) {
       _this->_internal_set_a_atext(from._internal_a_atext());
     }
@@ -2442,15 +2471,18 @@ void Msg_PSpeechSynthesisRequestConstructor::MergeFrom(const Msg_PSpeechSynthesi
       _this->_internal_set_a_alang(from._internal_a_alang());
     }
     if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.a_avolume_ = from._impl_.a_avolume_;
+      _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
     }
     if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.a_arate_ = from._impl_.a_arate_;
+      _this->_impl_.a_avolume_ = from._impl_.a_avolume_;
     }
     if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.a_apitch_ = from._impl_.a_apitch_;
+      _this->_impl_.a_arate_ = from._impl_.a_arate_;
     }
     if (cached_has_bits & 0x00000040u) {
+      _this->_impl_.a_apitch_ = from._impl_.a_apitch_;
+    }
+    if (cached_has_bits & 0x00000080u) {
       _this->_impl_.a_ashouldresistfingerprinting_ = from._impl_.a_ashouldresistfingerprinting_;
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
@@ -2491,9 +2523,9 @@ void Msg_PSpeechSynthesisRequestConstructor::InternalSwap(Msg_PSpeechSynthesisRe
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(Msg_PSpeechSynthesisRequestConstructor, _impl_.a_ashouldresistfingerprinting_)
       + sizeof(Msg_PSpeechSynthesisRequestConstructor::_impl_.a_ashouldresistfingerprinting_)
-      - PROTOBUF_FIELD_OFFSET(Msg_PSpeechSynthesisRequestConstructor, _impl_.a_avolume_)>(
-          reinterpret_cast<char*>(&_impl_.a_avolume_),
-          reinterpret_cast<char*>(&other->_impl_.a_avolume_));
+      - PROTOBUF_FIELD_OFFSET(Msg_PSpeechSynthesisRequestConstructor, _impl_.a_actorid_)>(
+          reinterpret_cast<char*>(&_impl_.a_actorid_),
+          reinterpret_cast<char*>(&other->_impl_.a_actorid_));
 }
 
 std::string Msg_PSpeechSynthesisRequestConstructor::GetTypeName() const {

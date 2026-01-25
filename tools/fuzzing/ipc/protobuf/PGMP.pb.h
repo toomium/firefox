@@ -404,6 +404,22 @@ class Msg_PGMPTimerConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMP.Msg_PGMPTimerConstructor)
  private:
   class _Internal;
@@ -412,7 +428,9 @@ class Msg_PGMPTimerConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMP_2eproto;
@@ -652,6 +670,22 @@ class Msg_PGMPStorageConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMP.Msg_PGMPStorageConstructor)
  private:
   class _Internal;
@@ -660,7 +694,9 @@ class Msg_PGMPStorageConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMP_2eproto;
@@ -3224,6 +3260,34 @@ inline void Msg_InitCrashReporter::set_allocated_a_ainitargs(::protobuf::CrashRe
 
 // Msg_PGMPTimerConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PGMPTimerConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PGMPTimerConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PGMPTimerConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PGMPTimerConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PGMPTimerConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMP.Msg_PGMPTimerConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PGMPTimerConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PGMPTimerConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMP.Msg_PGMPTimerConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PGMPTimerConstructor
@@ -3231,6 +3295,34 @@ inline void Msg_InitCrashReporter::set_allocated_a_ainitargs(::protobuf::CrashRe
 // -------------------------------------------------------------------
 
 // Msg_PGMPStorageConstructor
+
+// required sint64 a_actorid = 1;
+inline bool Msg_PGMPStorageConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PGMPStorageConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PGMPStorageConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PGMPStorageConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PGMPStorageConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMP.Msg_PGMPStorageConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PGMPStorageConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PGMPStorageConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMP.Msg_PGMPStorageConstructor.a_actorid)
+}
 
 // -------------------------------------------------------------------
 

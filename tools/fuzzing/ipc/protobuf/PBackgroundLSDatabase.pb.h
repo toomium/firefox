@@ -310,12 +310,13 @@ class Msg_PBackgroundLSSnapshotConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kADocumentURIFieldNumber = 1,
-    kAKeyFieldNumber = 2,
-    kAMinSizeFieldNumber = 4,
-    kAIncreasePeakUsageFieldNumber = 3,
+    kADocumentURIFieldNumber = 2,
+    kAKeyFieldNumber = 3,
+    kAActoridFieldNumber = 1,
+    kAMinSizeFieldNumber = 5,
+    kAIncreasePeakUsageFieldNumber = 4,
   };
-  // required string a_documentURI = 1;
+  // required string a_documentURI = 2;
   bool has_a_documenturi() const;
   private:
   bool _internal_has_a_documenturi() const;
@@ -333,7 +334,7 @@ class Msg_PBackgroundLSSnapshotConstructor final :
   std::string* _internal_mutable_a_documenturi();
   public:
 
-  // required string a_key = 2;
+  // required string a_key = 3;
   bool has_a_key() const;
   private:
   bool _internal_has_a_key() const;
@@ -351,7 +352,20 @@ class Msg_PBackgroundLSSnapshotConstructor final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required sint64 a_minSize = 4;
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
+  // required sint64 a_minSize = 5;
   bool has_a_minsize() const;
   private:
   bool _internal_has_a_minsize() const;
@@ -364,7 +378,7 @@ class Msg_PBackgroundLSSnapshotConstructor final :
   void _internal_set_a_minsize(int64_t value);
   public:
 
-  // required bool a_increasePeakUsage = 3;
+  // required bool a_increasePeakUsage = 4;
   bool has_a_increasepeakusage() const;
   private:
   bool _internal_has_a_increasepeakusage() const;
@@ -392,6 +406,7 @@ class Msg_PBackgroundLSSnapshotConstructor final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_documenturi_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    int64_t a_actorid_;
     int64_t a_minsize_;
     bool a_increasepeakusage_;
   };
@@ -684,7 +699,35 @@ class Msg_RequestAllowToClose final :
 
 // Msg_PBackgroundLSSnapshotConstructor
 
-// required string a_documentURI = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundLSSnapshotConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PBackgroundLSSnapshotConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t Msg_PBackgroundLSSnapshotConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PBackgroundLSSnapshotConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PBackgroundLSSnapshotConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PBackgroundLSSnapshotConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_actorid)
+}
+
+// required string a_documentURI = 2;
 inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_a_documenturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -752,7 +795,7 @@ inline void Msg_PBackgroundLSSnapshotConstructor::set_allocated_a_documenturi(st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_documentURI)
 }
 
-// required string a_key = 2;
+// required string a_key = 3;
 inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_a_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -820,9 +863,9 @@ inline void Msg_PBackgroundLSSnapshotConstructor::set_allocated_a_key(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_key)
 }
 
-// required bool a_increasePeakUsage = 3;
+// required bool a_increasePeakUsage = 4;
 inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_a_increasepeakusage() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
 inline bool Msg_PBackgroundLSSnapshotConstructor::has_a_increasepeakusage() const {
@@ -830,7 +873,7 @@ inline bool Msg_PBackgroundLSSnapshotConstructor::has_a_increasepeakusage() cons
 }
 inline void Msg_PBackgroundLSSnapshotConstructor::clear_a_increasepeakusage() {
   _impl_.a_increasepeakusage_ = false;
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_a_increasepeakusage() const {
   return _impl_.a_increasepeakusage_;
@@ -840,7 +883,7 @@ inline bool Msg_PBackgroundLSSnapshotConstructor::a_increasepeakusage() const {
   return _internal_a_increasepeakusage();
 }
 inline void Msg_PBackgroundLSSnapshotConstructor::_internal_set_a_increasepeakusage(bool value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.a_increasepeakusage_ = value;
 }
 inline void Msg_PBackgroundLSSnapshotConstructor::set_a_increasepeakusage(bool value) {
@@ -848,9 +891,9 @@ inline void Msg_PBackgroundLSSnapshotConstructor::set_a_increasepeakusage(bool v
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_increasePeakUsage)
 }
 
-// required sint64 a_minSize = 4;
+// required sint64 a_minSize = 5;
 inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_a_minsize() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
 inline bool Msg_PBackgroundLSSnapshotConstructor::has_a_minsize() const {
@@ -858,7 +901,7 @@ inline bool Msg_PBackgroundLSSnapshotConstructor::has_a_minsize() const {
 }
 inline void Msg_PBackgroundLSSnapshotConstructor::clear_a_minsize() {
   _impl_.a_minsize_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline int64_t Msg_PBackgroundLSSnapshotConstructor::_internal_a_minsize() const {
   return _impl_.a_minsize_;
@@ -868,7 +911,7 @@ inline int64_t Msg_PBackgroundLSSnapshotConstructor::a_minsize() const {
   return _internal_a_minsize();
 }
 inline void Msg_PBackgroundLSSnapshotConstructor::_internal_set_a_minsize(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_minsize_ = value;
 }
 inline void Msg_PBackgroundLSSnapshotConstructor::set_a_minsize(int64_t value) {

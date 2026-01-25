@@ -191,6 +191,22 @@ class Msg_PGMPVideoDecoderConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPContent.Msg_PGMPVideoDecoderConstructor)
  private:
   class _Internal;
@@ -199,7 +215,9 @@ class Msg_PGMPVideoDecoderConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPContent_2eproto;
@@ -439,6 +457,22 @@ class Msg_PGMPVideoEncoderConstructor final :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kAActoridFieldNumber = 1,
+  };
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPContent.Msg_PGMPVideoEncoderConstructor)
  private:
   class _Internal;
@@ -447,7 +481,9 @@ class Msg_PGMPVideoEncoderConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPContent_2eproto;
@@ -688,9 +724,10 @@ class Msg_PChromiumCDMConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAAKeySystemFieldNumber = 1,
+    kAAKeySystemFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required string a_aKeySystem = 1;
+  // required string a_aKeySystem = 2;
   bool has_a_akeysystem() const;
   private:
   bool _internal_has_a_akeysystem() const;
@@ -708,9 +745,25 @@ class Msg_PChromiumCDMConstructor final :
   std::string* _internal_mutable_a_akeysystem();
   public:
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -719,6 +772,7 @@ class Msg_PChromiumCDMConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_akeysystem_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPContent_2eproto;
@@ -858,6 +912,34 @@ class Reply_PChromiumCDMConstructor final :
 #endif  // __GNUC__
 // Msg_PGMPVideoDecoderConstructor
 
+// required sint64 a_actorid = 1;
+inline bool Msg_PGMPVideoDecoderConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PGMPVideoDecoderConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PGMPVideoDecoderConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PGMPVideoDecoderConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PGMPVideoDecoderConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPContent.Msg_PGMPVideoDecoderConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PGMPVideoDecoderConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PGMPVideoDecoderConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPContent.Msg_PGMPVideoDecoderConstructor.a_actorid)
+}
+
 // -------------------------------------------------------------------
 
 // Reply_PGMPVideoDecoderConstructor
@@ -865,6 +947,34 @@ class Reply_PChromiumCDMConstructor final :
 // -------------------------------------------------------------------
 
 // Msg_PGMPVideoEncoderConstructor
+
+// required sint64 a_actorid = 1;
+inline bool Msg_PGMPVideoEncoderConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool Msg_PGMPVideoEncoderConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PGMPVideoEncoderConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline int64_t Msg_PGMPVideoEncoderConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PGMPVideoEncoderConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPContent.Msg_PGMPVideoEncoderConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PGMPVideoEncoderConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PGMPVideoEncoderConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPContent.Msg_PGMPVideoEncoderConstructor.a_actorid)
+}
 
 // -------------------------------------------------------------------
 
@@ -874,7 +984,35 @@ class Reply_PChromiumCDMConstructor final :
 
 // Msg_PChromiumCDMConstructor
 
-// required string a_aKeySystem = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PChromiumCDMConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PChromiumCDMConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PChromiumCDMConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PChromiumCDMConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PChromiumCDMConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PChromiumCDMConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PChromiumCDMConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor.a_actorid)
+}
+
+// required string a_aKeySystem = 2;
 inline bool Msg_PChromiumCDMConstructor::_internal_has_a_akeysystem() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

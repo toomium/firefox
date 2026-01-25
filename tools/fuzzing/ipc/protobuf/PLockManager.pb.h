@@ -467,9 +467,10 @@ class Msg_PLockRequestConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAARequestFieldNumber = 1,
+    kAARequestFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.locks.IPCLockRequest a_aRequest = 1;
+  // required .protobuf.mozilla.dom.locks.IPCLockRequest a_aRequest = 2;
   bool has_a_arequest() const;
   private:
   bool _internal_has_a_arequest() const;
@@ -487,9 +488,25 @@ class Msg_PLockRequestConstructor final :
       ::protobuf::mozilla::dom::locks::IPCLockRequest* a_arequest);
   ::protobuf::mozilla::dom::locks::IPCLockRequest* unsafe_arena_release_a_arequest();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -498,6 +515,7 @@ class Msg_PLockRequestConstructor final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::locks::IPCLockRequest* a_arequest_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PLockManager_2eproto;
@@ -961,7 +979,35 @@ inline void Reply_Query::set_allocated_a_snapshot(std::string* a_snapshot) {
 
 // Msg_PLockRequestConstructor
 
-// required .protobuf.mozilla.dom.locks.IPCLockRequest a_aRequest = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PLockRequestConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_PLockRequestConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PLockRequestConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline int64_t Msg_PLockRequestConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PLockRequestConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PLockRequestConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PLockRequestConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.locks.PLockManager.Msg_PLockRequestConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.dom.locks.IPCLockRequest a_aRequest = 2;
 inline bool Msg_PLockRequestConstructor::_internal_has_a_arequest() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_arequest_ != nullptr);

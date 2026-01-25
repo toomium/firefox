@@ -22,7 +22,8 @@ message Msg_DeleteMe {
 }
 
 message Msg_PBackgroundIDBFactoryRequestConstructor {
-  required protobuf.mozilla.dom.indexedDB.FactoryRequestParams a_params = 1;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.dom.indexedDB.FactoryRequestParams a_params = 2;
 }
 
 message Reply_PBackgroundIDBFactoryRequestConstructor {
@@ -44,15 +45,16 @@ message Reply___delete__ {
 }
 
 message Msg_PBackgroundIDBDatabaseConstructor {
-  required protobuf.mozilla.dom.indexedDB.DatabaseSpec a_spec = 1;
-  required bytes a_request = 2;
+  required sint64 a_actorid = 1;
+  required protobuf.mozilla.dom.indexedDB.DatabaseSpec a_spec = 2;
+  required bytes a_request = 3;
 }
 
 message Reply_PBackgroundIDBDatabaseConstructor {
 }
 
 // Parameter mappings stats:
-// Total parameters in this file 15
-// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 1, "<class 'ipdl.type.BuiltinCType'>": 0, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 2, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 1, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 7, "<class 'ipdl.type.UnionType'>": 4, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 0
+// Total parameters in this file 16
+// Parameter types:{"<class 'ipdl.type.ActorType'>": 0, "<class 'ipdl.type.ArrayType'>": 1, "<class 'ipdl.type.BuiltinCType'>": 2, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 2, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 1, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 6, "<class 'ipdl.type.UnionType'>": 4, "<class 'ipdl.type.UniquePtrType'>": 0}
+// Scalar mappings performed: 2
 // Message structs/unions generated from ipdl structs/unions: 5

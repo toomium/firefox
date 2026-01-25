@@ -197,10 +197,11 @@ class Msg_PBackgroundSessionStorageCacheConstructor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAAOriginKeyFieldNumber = 2,
-    kAAPrincipalInfoFieldNumber = 1,
+    kAAOriginKeyFieldNumber = 3,
+    kAAPrincipalInfoFieldNumber = 2,
+    kAActoridFieldNumber = 1,
   };
-  // required string a_aOriginKey = 2;
+  // required string a_aOriginKey = 3;
   bool has_a_aoriginkey() const;
   private:
   bool _internal_has_a_aoriginkey() const;
@@ -218,7 +219,7 @@ class Msg_PBackgroundSessionStorageCacheConstructor final :
   std::string* _internal_mutable_a_aoriginkey();
   public:
 
-  // required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 1;
+  // required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 2;
   bool has_a_aprincipalinfo() const;
   private:
   bool _internal_has_a_aprincipalinfo() const;
@@ -236,6 +237,19 @@ class Msg_PBackgroundSessionStorageCacheConstructor final :
       ::protobuf::mozilla::ipc::PrincipalInfo* a_aprincipalinfo);
   ::protobuf::mozilla::ipc::PrincipalInfo* unsafe_arena_release_a_aprincipalinfo();
 
+  // required sint64 a_actorid = 1;
+  bool has_a_actorid() const;
+  private:
+  bool _internal_has_a_actorid() const;
+  public:
+  void clear_a_actorid();
+  int64_t a_actorid() const;
+  void set_a_actorid(int64_t value);
+  private:
+  int64_t _internal_a_actorid() const;
+  void _internal_set_a_actorid(int64_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBackgroundSessionStorageManager.Msg_PBackgroundSessionStorageCacheConstructor)
  private:
   class _Internal;
@@ -251,6 +265,7 @@ class Msg_PBackgroundSessionStorageCacheConstructor final :
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoriginkey_;
     ::protobuf::mozilla::ipc::PrincipalInfo* a_aprincipalinfo_;
+    int64_t a_actorid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundSessionStorageManager_2eproto;
@@ -1102,7 +1117,35 @@ class Msg_ClearStoragesForOrigin final :
 #endif  // __GNUC__
 // Msg_PBackgroundSessionStorageCacheConstructor
 
-// required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 1;
+// required sint64 a_actorid = 1;
+inline bool Msg_PBackgroundSessionStorageCacheConstructor::_internal_has_a_actorid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool Msg_PBackgroundSessionStorageCacheConstructor::has_a_actorid() const {
+  return _internal_has_a_actorid();
+}
+inline void Msg_PBackgroundSessionStorageCacheConstructor::clear_a_actorid() {
+  _impl_.a_actorid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline int64_t Msg_PBackgroundSessionStorageCacheConstructor::_internal_a_actorid() const {
+  return _impl_.a_actorid_;
+}
+inline int64_t Msg_PBackgroundSessionStorageCacheConstructor::a_actorid() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundSessionStorageManager.Msg_PBackgroundSessionStorageCacheConstructor.a_actorid)
+  return _internal_a_actorid();
+}
+inline void Msg_PBackgroundSessionStorageCacheConstructor::_internal_set_a_actorid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.a_actorid_ = value;
+}
+inline void Msg_PBackgroundSessionStorageCacheConstructor::set_a_actorid(int64_t value) {
+  _internal_set_a_actorid(value);
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundSessionStorageManager.Msg_PBackgroundSessionStorageCacheConstructor.a_actorid)
+}
+
+// required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 2;
 inline bool Msg_PBackgroundSessionStorageCacheConstructor::_internal_has_a_aprincipalinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_aprincipalinfo_ != nullptr);
@@ -1189,7 +1232,7 @@ inline void Msg_PBackgroundSessionStorageCacheConstructor::set_allocated_a_aprin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundSessionStorageManager.Msg_PBackgroundSessionStorageCacheConstructor.a_aPrincipalInfo)
 }
 
-// required string a_aOriginKey = 2;
+// required string a_aOriginKey = 3;
 inline bool Msg_PBackgroundSessionStorageCacheConstructor::_internal_has_a_aoriginkey() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

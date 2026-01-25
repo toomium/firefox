@@ -16,7 +16,8 @@ package protobuf.mozilla._ipdltest.PTestDescendant;
 
 // Message declarations
 message Msg_PTestDescendantSubConstructor {
-  required bytes a_dummy = 1;
+  required sint64 a_actorid = 1;
+  required bytes a_dummy = 2;
 }
 
 message Reply_PTestDescendantSubConstructor {
@@ -37,7 +38,7 @@ message Msg_Ok {
 }
 
 // Parameter mappings stats:
-// Total parameters in this file 3
-// Parameter types:{"<class 'ipdl.type.ActorType'>": 1, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 0, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 0, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 2, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 0, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
-// Scalar mappings performed: 0
+// Total parameters in this file 4
+// Parameter types:{"<class 'ipdl.type.ActorType'>": 1, "<class 'ipdl.type.ArrayType'>": 0, "<class 'ipdl.type.BuiltinCType'>": 1, "<class 'ipdl.type.ByteBufType'>": 0, "<class 'ipdl.type.EndpointType'>": 0, "<class 'ipdl.type.FDType'>": 0, "<class 'ipdl.type.ImportedCxxType'>": 0, "<class 'ipdl.type.ManagedEndpointType'>": 0, "<class 'ipdl.type.MaybeType'>": 0, "<class 'ipdl.type.NotNullType'>": 2, "<class 'ipdl.type.ProtocolType'>": 0, "<class 'ipdl.type.ShmemType'>": 0, "<class 'ipdl.type.StructType'>": 0, "<class 'ipdl.type.UnionType'>": 0, "<class 'ipdl.type.UniquePtrType'>": 0}
+// Scalar mappings performed: 1
 // Message structs/unions generated from ipdl structs/unions: 0
