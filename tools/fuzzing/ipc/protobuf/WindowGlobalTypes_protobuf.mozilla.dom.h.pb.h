@@ -201,7 +201,7 @@ class WindowGlobalInit final :
   std::string* _internal_mutable_a_context();
   public:
 
-  // required bytes a_principal = 2;
+  // optional bytes a_principal = 2;
   bool has_a_principal() const;
   private:
   bool _internal_has_a_principal() const;
@@ -219,7 +219,7 @@ class WindowGlobalInit final :
   std::string* _internal_mutable_a_principal();
   public:
 
-  // required bytes a_storagePrincipal = 3;
+  // optional bytes a_storagePrincipal = 3;
   bool has_a_storageprincipal() const;
   private:
   bool _internal_has_a_storageprincipal() const;
@@ -237,7 +237,7 @@ class WindowGlobalInit final :
   std::string* _internal_mutable_a_storageprincipal();
   public:
 
-  // required bytes a_documentURI = 4;
+  // optional bytes a_documentURI = 4;
   bool has_a_documenturi() const;
   private:
   bool _internal_has_a_documenturi() const;
@@ -255,7 +255,7 @@ class WindowGlobalInit final :
   std::string* _internal_mutable_a_documenturi();
   public:
 
-  // required bytes a_securityInfo = 11;
+  // optional bytes a_securityInfo = 11;
   bool has_a_securityinfo() const;
   private:
   bool _internal_has_a_securityinfo() const;
@@ -463,7 +463,7 @@ inline void WindowGlobalInit::set_allocated_a_context(std::string* a_context) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WindowGlobalInit.a_context)
 }
 
-// required bytes a_principal = 2;
+// optional bytes a_principal = 2;
 inline bool WindowGlobalInit::_internal_has_a_principal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -531,7 +531,7 @@ inline void WindowGlobalInit::set_allocated_a_principal(std::string* a_principal
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WindowGlobalInit.a_principal)
 }
 
-// required bytes a_storagePrincipal = 3;
+// optional bytes a_storagePrincipal = 3;
 inline bool WindowGlobalInit::_internal_has_a_storageprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -599,7 +599,7 @@ inline void WindowGlobalInit::set_allocated_a_storageprincipal(std::string* a_st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WindowGlobalInit.a_storagePrincipal)
 }
 
-// required bytes a_documentURI = 4;
+// optional bytes a_documentURI = 4;
 inline bool WindowGlobalInit::_internal_has_a_documenturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -894,7 +894,7 @@ inline void WindowGlobalInit::set_a_httpsonlystatus(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WindowGlobalInit.a_httpsOnlyStatus)
 }
 
-// required bytes a_securityInfo = 11;
+// optional bytes a_securityInfo = 11;
 inline bool WindowGlobalInit::_internal_has_a_securityinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;

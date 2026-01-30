@@ -16,8 +16,8 @@ import "IPCStream.proto";
 
 // Structs and unions declarations
 message HttpChannelOnStartRequestArgs {
-  required bytes a_securityInfo = 1;
-  required bytes a_overrideReferrerInfo = 2;
+  optional bytes a_securityInfo = 1;
+  optional bytes a_overrideReferrerInfo = 2;
   required uint64 a_cacheEntryId = 3;
   required sint64 a_altDataLength = 4;
   required string a_altDataType = 5;

@@ -740,7 +740,7 @@ class EncodeCompletionIPDL final :
     kASamplesFieldNumber = 1,
     kATicketIdFieldNumber = 2,
   };
-  // required bytes a_samples = 1;
+  // optional bytes a_samples = 1;
   bool has_a_samples() const;
   private:
   bool _internal_has_a_samples() const;
@@ -774,9 +774,6 @@ class EncodeCompletionIPDL final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.EncodeCompletionIPDL)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1485,7 +1482,7 @@ inline EncodeInitResultIPDL::ContentCase EncodeInitResultIPDL::content_case() co
 
 // EncodeCompletionIPDL
 
-// required bytes a_samples = 1;
+// optional bytes a_samples = 1;
 inline bool EncodeCompletionIPDL::_internal_has_a_samples() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

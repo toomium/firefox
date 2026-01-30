@@ -261,7 +261,7 @@ class AccessibleData final :
   std::string* _internal_mutable_a_generictypes();
   public:
 
-  // required bytes a_CacheFields = 8;
+  // optional bytes a_CacheFields = 8;
   bool has_a_cachefields() const;
   private:
   bool _internal_has_a_cachefields() const;
@@ -2031,7 +2031,7 @@ inline void AccessibleData::set_a_rolemapentryindex(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.AccessibleData.a_RoleMapEntryIndex)
 }
 
-// required bytes a_CacheFields = 8;
+// optional bytes a_CacheFields = 8;
 inline bool AccessibleData::_internal_has_a_cachefields() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

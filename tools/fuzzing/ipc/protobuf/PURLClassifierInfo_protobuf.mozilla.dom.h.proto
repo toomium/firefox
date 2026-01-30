@@ -18,7 +18,7 @@ message ClassifierInfo {
 }
 
 message URLClassifierLocalResult {
-  required bytes a_uri = 1;
+  optional bytes a_uri = 1;
   required string a_featureName = 2;
   required string a_matchingList = 3;
 }

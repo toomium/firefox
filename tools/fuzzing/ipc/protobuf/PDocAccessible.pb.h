@@ -6523,7 +6523,7 @@ class Msg_VerifyCache final :
     kAAIDFieldNumber = 1,
     kAACacheDomainFieldNumber = 2,
   };
-  // required bytes a_aFields = 3;
+  // optional bytes a_aFields = 3;
   bool has_a_afields() const;
   private:
   bool _internal_has_a_afields() const;
@@ -9890,7 +9890,7 @@ inline void Msg_VerifyCache::set_a_acachedomain(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.a_aCacheDomain)
 }
 
-// required bytes a_aFields = 3;
+// optional bytes a_aFields = 3;
 inline bool Msg_VerifyCache::_internal_has_a_afields() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

@@ -3254,7 +3254,7 @@ class IPCPaymentCreateActionRequest::_Internal {
     (*has_bits)[0] |= 4u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000003f) ^ 0x0000003f) != 0;
+    return ((has_bits[0] & 0x0000003d) ^ 0x0000003d) != 0;
   }
 };
 
@@ -3430,7 +3430,7 @@ const char* IPCPaymentCreateActionRequest::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_topLevelPrincipal = 3;
+      // optional bytes a_topLevelPrincipal = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_toplevelprincipal();
@@ -3520,7 +3520,7 @@ uint8_t* IPCPaymentCreateActionRequest::_InternalSerialize(
         2, this->_internal_a_requestid(), target);
   }
 
-  // required bytes a_topLevelPrincipal = 3;
+  // optional bytes a_topLevelPrincipal = 3;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
         3, this->_internal_a_toplevelprincipal(), target);
@@ -3573,13 +3573,6 @@ size_t IPCPaymentCreateActionRequest::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_requestid());
   }
 
-  if (_internal_has_a_toplevelprincipal()) {
-    // required bytes a_topLevelPrincipal = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_toplevelprincipal());
-  }
-
   if (_internal_has_a_shippingoption()) {
     // required string a_shippingOption = 7;
     total_size += 1 +
@@ -3612,16 +3605,11 @@ size_t IPCPaymentCreateActionRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPaymentCreateActionRequest)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x0000003d) ^ 0x0000003d) == 0) {  // All required fields are present.
     // required string a_requestId = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_requestid());
-
-    // required bytes a_topLevelPrincipal = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_toplevelprincipal());
 
     // required string a_shippingOption = 7;
     total_size += 1 +
@@ -3653,6 +3641,14 @@ size_t IPCPaymentCreateActionRequest::ByteSizeLong() const {
   for (const auto& msg : this->_impl_.a_methoddata_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // optional bytes a_topLevelPrincipal = 3;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_toplevelprincipal());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {

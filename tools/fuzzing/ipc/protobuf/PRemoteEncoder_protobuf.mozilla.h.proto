@@ -33,7 +33,7 @@ message EncodeInitResultIPDL {
 }
 
 message EncodeCompletionIPDL {
-  required bytes a_samples = 1;
+  optional bytes a_samples = 1;
   required uint32 a_ticketId = 2;
 }
 

@@ -4470,9 +4470,6 @@ void Msg_TestStructWithActor::CopyFrom(const Msg_TestStructWithActor& from) {
 
 bool Msg_TestStructWithActor::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_a1()) {
-    if (!_impl_.a_a1_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -4687,9 +4684,6 @@ void Reply_TestStructWithActor::CopyFrom(const Reply_TestStructWithActor& from) 
 
 bool Reply_TestStructWithActor::IsInitialized() const {
   if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_o1()) {
-    if (!_impl_.a_o1_->IsInitialized()) return false;
-  }
   return true;
 }
 

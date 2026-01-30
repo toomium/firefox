@@ -28,11 +28,11 @@ message UInt64Response {
 }
 
 message CStringArrayResponse {
-  message _mVArrayOfnsCString {
+  message a_type_mVArrayOfnsCString {
     repeated string a_mVArrayOfnsCString = 1;
   }
   oneof content {
     bytes a_mVnsresult = 1;
-    _mVArrayOfnsCString mVArrayOfnsCString = 2;
+    a_type_mVArrayOfnsCString a_mVArrayOfnsCString = 2;
   }
 }

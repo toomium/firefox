@@ -53,9 +53,9 @@ extern FileContentDataDefaultTypeInternal _FileContentData_default_instance_;
 class PresContentData;
 struct PresContentDataDefaultTypeInternal;
 extern PresContentDataDefaultTypeInternal _PresContentData_default_instance_;
-class PresContentData__mVArrayOfFileContentData;
-struct PresContentData__mVArrayOfFileContentDataDefaultTypeInternal;
-extern PresContentData__mVArrayOfFileContentDataDefaultTypeInternal _PresContentData__mVArrayOfFileContentData_default_instance_;
+class PresContentData_a_type_mVArrayOfFileContentData;
+struct PresContentData_a_type_mVArrayOfFileContentDataDefaultTypeInternal;
+extern PresContentData_a_type_mVArrayOfFileContentDataDefaultTypeInternal _PresContentData_a_type_mVArrayOfFileContentData_default_instance_;
 class PresState;
 struct PresStateDefaultTypeInternal;
 extern PresStateDefaultTypeInternal _PresState_default_instance_;
@@ -71,7 +71,7 @@ PROTOBUF_NAMESPACE_OPEN
 template<> ::protobuf::mozilla::CheckedContentData* Arena::CreateMaybeMessage<::protobuf::mozilla::CheckedContentData>(Arena*);
 template<> ::protobuf::mozilla::FileContentData* Arena::CreateMaybeMessage<::protobuf::mozilla::FileContentData>(Arena*);
 template<> ::protobuf::mozilla::PresContentData* Arena::CreateMaybeMessage<::protobuf::mozilla::PresContentData>(Arena*);
-template<> ::protobuf::mozilla::PresContentData__mVArrayOfFileContentData* Arena::CreateMaybeMessage<::protobuf::mozilla::PresContentData__mVArrayOfFileContentData>(Arena*);
+template<> ::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData* Arena::CreateMaybeMessage<::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData>(Arena*);
 template<> ::protobuf::mozilla::PresState* Arena::CreateMaybeMessage<::protobuf::mozilla::PresState>(Arena*);
 template<> ::protobuf::mozilla::SelectContentData* Arena::CreateMaybeMessage<::protobuf::mozilla::SelectContentData>(Arena*);
 template<> ::protobuf::mozilla::TextContentData* Arena::CreateMaybeMessage<::protobuf::mozilla::TextContentData>(Arena*);
@@ -749,24 +749,24 @@ class TextContentData final :
 };
 // -------------------------------------------------------------------
 
-class PresContentData__mVArrayOfFileContentData final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PresContentData._mVArrayOfFileContentData) */ {
+class PresContentData_a_type_mVArrayOfFileContentData final :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PresContentData.a_type_mVArrayOfFileContentData) */ {
  public:
-  inline PresContentData__mVArrayOfFileContentData() : PresContentData__mVArrayOfFileContentData(nullptr) {}
-  ~PresContentData__mVArrayOfFileContentData() override;
-  explicit PROTOBUF_CONSTEXPR PresContentData__mVArrayOfFileContentData(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline PresContentData_a_type_mVArrayOfFileContentData() : PresContentData_a_type_mVArrayOfFileContentData(nullptr) {}
+  ~PresContentData_a_type_mVArrayOfFileContentData() override;
+  explicit PROTOBUF_CONSTEXPR PresContentData_a_type_mVArrayOfFileContentData(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  PresContentData__mVArrayOfFileContentData(const PresContentData__mVArrayOfFileContentData& from);
-  PresContentData__mVArrayOfFileContentData(PresContentData__mVArrayOfFileContentData&& from) noexcept
-    : PresContentData__mVArrayOfFileContentData() {
+  PresContentData_a_type_mVArrayOfFileContentData(const PresContentData_a_type_mVArrayOfFileContentData& from);
+  PresContentData_a_type_mVArrayOfFileContentData(PresContentData_a_type_mVArrayOfFileContentData&& from) noexcept
+    : PresContentData_a_type_mVArrayOfFileContentData() {
     *this = ::std::move(from);
   }
 
-  inline PresContentData__mVArrayOfFileContentData& operator=(const PresContentData__mVArrayOfFileContentData& from) {
+  inline PresContentData_a_type_mVArrayOfFileContentData& operator=(const PresContentData_a_type_mVArrayOfFileContentData& from) {
     CopyFrom(from);
     return *this;
   }
-  inline PresContentData__mVArrayOfFileContentData& operator=(PresContentData__mVArrayOfFileContentData&& from) noexcept {
+  inline PresContentData_a_type_mVArrayOfFileContentData& operator=(PresContentData_a_type_mVArrayOfFileContentData&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -787,20 +787,20 @@ class PresContentData__mVArrayOfFileContentData final :
     return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
-  static const PresContentData__mVArrayOfFileContentData& default_instance() {
+  static const PresContentData_a_type_mVArrayOfFileContentData& default_instance() {
     return *internal_default_instance();
   }
-  static inline const PresContentData__mVArrayOfFileContentData* internal_default_instance() {
-    return reinterpret_cast<const PresContentData__mVArrayOfFileContentData*>(
-               &_PresContentData__mVArrayOfFileContentData_default_instance_);
+  static inline const PresContentData_a_type_mVArrayOfFileContentData* internal_default_instance() {
+    return reinterpret_cast<const PresContentData_a_type_mVArrayOfFileContentData*>(
+               &_PresContentData_a_type_mVArrayOfFileContentData_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     4;
 
-  friend void swap(PresContentData__mVArrayOfFileContentData& a, PresContentData__mVArrayOfFileContentData& b) {
+  friend void swap(PresContentData_a_type_mVArrayOfFileContentData& a, PresContentData_a_type_mVArrayOfFileContentData& b) {
     a.Swap(&b);
   }
-  inline void Swap(PresContentData__mVArrayOfFileContentData* other) {
+  inline void Swap(PresContentData_a_type_mVArrayOfFileContentData* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -813,7 +813,7 @@ class PresContentData__mVArrayOfFileContentData final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(PresContentData__mVArrayOfFileContentData* other) {
+  void UnsafeArenaSwap(PresContentData_a_type_mVArrayOfFileContentData* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -821,12 +821,12 @@ class PresContentData__mVArrayOfFileContentData final :
 
   // implements Message ----------------------------------------------
 
-  PresContentData__mVArrayOfFileContentData* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<PresContentData__mVArrayOfFileContentData>(arena);
+  PresContentData_a_type_mVArrayOfFileContentData* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<PresContentData_a_type_mVArrayOfFileContentData>(arena);
   }
   void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const PresContentData__mVArrayOfFileContentData& from);
-  void MergeFrom(const PresContentData__mVArrayOfFileContentData& from);
+  void CopyFrom(const PresContentData_a_type_mVArrayOfFileContentData& from);
+  void MergeFrom(const PresContentData_a_type_mVArrayOfFileContentData& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -840,15 +840,15 @@ class PresContentData__mVArrayOfFileContentData final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const;
-  void InternalSwap(PresContentData__mVArrayOfFileContentData* other);
+  void InternalSwap(PresContentData_a_type_mVArrayOfFileContentData* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "protobuf.mozilla.PresContentData._mVArrayOfFileContentData";
+    return "protobuf.mozilla.PresContentData.a_type_mVArrayOfFileContentData";
   }
   protected:
-  explicit PresContentData__mVArrayOfFileContentData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit PresContentData_a_type_mVArrayOfFileContentData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -879,7 +879,7 @@ class PresContentData__mVArrayOfFileContentData final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::FileContentData >&
       a_mvarrayoffilecontentdata() const;
 
-  // @@protoc_insertion_point(class_scope:protobuf.mozilla.PresContentData._mVArrayOfFileContentData)
+  // @@protoc_insertion_point(class_scope:protobuf.mozilla.PresContentData.a_type_mVArrayOfFileContentData)
  private:
   class _Internal;
 
@@ -941,7 +941,7 @@ class PresContentData final :
     kAMVTextContentData = 2,
     kAMVSelectContentData = 3,
     kAMVCheckedContentData = 4,
-    kMVArrayOfFileContentData = 5,
+    kAMVArrayOfFileContentData = 5,
     kAMVCustomElementTuple = 6,
     CONTENT_NOT_SET = 0,
   };
@@ -1012,7 +1012,7 @@ class PresContentData final :
 
   // nested types ----------------------------------------------------
 
-  typedef PresContentData__mVArrayOfFileContentData _mVArrayOfFileContentData;
+  typedef PresContentData_a_type_mVArrayOfFileContentData a_type_mVArrayOfFileContentData;
 
   // accessors -------------------------------------------------------
 
@@ -1021,7 +1021,7 @@ class PresContentData final :
     kAMVTextContentDataFieldNumber = 2,
     kAMVSelectContentDataFieldNumber = 3,
     kAMVCheckedContentDataFieldNumber = 4,
-    kMVArrayOfFileContentDataFieldNumber = 5,
+    kAMVArrayOfFileContentDataFieldNumber = 5,
     kAMVCustomElementTupleFieldNumber = 6,
   };
   // bytes a_mVvoid_t = 1;
@@ -1096,23 +1096,23 @@ class PresContentData final :
       ::protobuf::mozilla::CheckedContentData* a_mvcheckedcontentdata);
   ::protobuf::mozilla::CheckedContentData* unsafe_arena_release_a_mvcheckedcontentdata();
 
-  // .protobuf.mozilla.PresContentData._mVArrayOfFileContentData mVArrayOfFileContentData = 5;
-  bool has_mvarrayoffilecontentdata() const;
+  // .protobuf.mozilla.PresContentData.a_type_mVArrayOfFileContentData a_mVArrayOfFileContentData = 5;
+  bool has_a_mvarrayoffilecontentdata() const;
   private:
-  bool _internal_has_mvarrayoffilecontentdata() const;
+  bool _internal_has_a_mvarrayoffilecontentdata() const;
   public:
-  void clear_mvarrayoffilecontentdata();
-  const ::protobuf::mozilla::PresContentData__mVArrayOfFileContentData& mvarrayoffilecontentdata() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::PresContentData__mVArrayOfFileContentData* release_mvarrayoffilecontentdata();
-  ::protobuf::mozilla::PresContentData__mVArrayOfFileContentData* mutable_mvarrayoffilecontentdata();
-  void set_allocated_mvarrayoffilecontentdata(::protobuf::mozilla::PresContentData__mVArrayOfFileContentData* mvarrayoffilecontentdata);
+  void clear_a_mvarrayoffilecontentdata();
+  const ::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData& a_mvarrayoffilecontentdata() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData* release_a_mvarrayoffilecontentdata();
+  ::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData* mutable_a_mvarrayoffilecontentdata();
+  void set_allocated_a_mvarrayoffilecontentdata(::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData* a_mvarrayoffilecontentdata);
   private:
-  const ::protobuf::mozilla::PresContentData__mVArrayOfFileContentData& _internal_mvarrayoffilecontentdata() const;
-  ::protobuf::mozilla::PresContentData__mVArrayOfFileContentData* _internal_mutable_mvarrayoffilecontentdata();
+  const ::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData& _internal_a_mvarrayoffilecontentdata() const;
+  ::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData* _internal_mutable_a_mvarrayoffilecontentdata();
   public:
-  void unsafe_arena_set_allocated_mvarrayoffilecontentdata(
-      ::protobuf::mozilla::PresContentData__mVArrayOfFileContentData* mvarrayoffilecontentdata);
-  ::protobuf::mozilla::PresContentData__mVArrayOfFileContentData* unsafe_arena_release_mvarrayoffilecontentdata();
+  void unsafe_arena_set_allocated_a_mvarrayoffilecontentdata(
+      ::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData* a_mvarrayoffilecontentdata);
+  ::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData* unsafe_arena_release_a_mvarrayoffilecontentdata();
 
   // .protobuf.mozilla.dom.CustomElementTuple a_mVCustomElementTuple = 6;
   bool has_a_mvcustomelementtuple() const;
@@ -1141,7 +1141,7 @@ class PresContentData final :
   void set_has_a_mvtextcontentdata();
   void set_has_a_mvselectcontentdata();
   void set_has_a_mvcheckedcontentdata();
-  void set_has_mvarrayoffilecontentdata();
+  void set_has_a_mvarrayoffilecontentdata();
   void set_has_a_mvcustomelementtuple();
 
   inline bool has_content() const;
@@ -1158,7 +1158,7 @@ class PresContentData final :
       ::protobuf::mozilla::TextContentData* a_mvtextcontentdata_;
       ::protobuf::mozilla::SelectContentData* a_mvselectcontentdata_;
       ::protobuf::mozilla::CheckedContentData* a_mvcheckedcontentdata_;
-      ::protobuf::mozilla::PresContentData__mVArrayOfFileContentData* mvarrayoffilecontentdata_;
+      ::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData* a_mvarrayoffilecontentdata_;
       ::protobuf::mozilla::dom::CustomElementTuple* a_mvcustomelementtuple_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -1847,45 +1847,45 @@ inline void TextContentData::set_a_lastvaluechangewasinteractive(bool value) {
 
 // -------------------------------------------------------------------
 
-// PresContentData__mVArrayOfFileContentData
+// PresContentData_a_type_mVArrayOfFileContentData
 
 // repeated .protobuf.mozilla.FileContentData a_mVArrayOfFileContentData = 1;
-inline int PresContentData__mVArrayOfFileContentData::_internal_a_mvarrayoffilecontentdata_size() const {
+inline int PresContentData_a_type_mVArrayOfFileContentData::_internal_a_mvarrayoffilecontentdata_size() const {
   return _impl_.a_mvarrayoffilecontentdata_.size();
 }
-inline int PresContentData__mVArrayOfFileContentData::a_mvarrayoffilecontentdata_size() const {
+inline int PresContentData_a_type_mVArrayOfFileContentData::a_mvarrayoffilecontentdata_size() const {
   return _internal_a_mvarrayoffilecontentdata_size();
 }
-inline void PresContentData__mVArrayOfFileContentData::clear_a_mvarrayoffilecontentdata() {
+inline void PresContentData_a_type_mVArrayOfFileContentData::clear_a_mvarrayoffilecontentdata() {
   _impl_.a_mvarrayoffilecontentdata_.Clear();
 }
-inline ::protobuf::mozilla::FileContentData* PresContentData__mVArrayOfFileContentData::mutable_a_mvarrayoffilecontentdata(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PresContentData._mVArrayOfFileContentData.a_mVArrayOfFileContentData)
+inline ::protobuf::mozilla::FileContentData* PresContentData_a_type_mVArrayOfFileContentData::mutable_a_mvarrayoffilecontentdata(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PresContentData.a_type_mVArrayOfFileContentData.a_mVArrayOfFileContentData)
   return _impl_.a_mvarrayoffilecontentdata_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::FileContentData >*
-PresContentData__mVArrayOfFileContentData::mutable_a_mvarrayoffilecontentdata() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.PresContentData._mVArrayOfFileContentData.a_mVArrayOfFileContentData)
+PresContentData_a_type_mVArrayOfFileContentData::mutable_a_mvarrayoffilecontentdata() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.PresContentData.a_type_mVArrayOfFileContentData.a_mVArrayOfFileContentData)
   return &_impl_.a_mvarrayoffilecontentdata_;
 }
-inline const ::protobuf::mozilla::FileContentData& PresContentData__mVArrayOfFileContentData::_internal_a_mvarrayoffilecontentdata(int index) const {
+inline const ::protobuf::mozilla::FileContentData& PresContentData_a_type_mVArrayOfFileContentData::_internal_a_mvarrayoffilecontentdata(int index) const {
   return _impl_.a_mvarrayoffilecontentdata_.Get(index);
 }
-inline const ::protobuf::mozilla::FileContentData& PresContentData__mVArrayOfFileContentData::a_mvarrayoffilecontentdata(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PresContentData._mVArrayOfFileContentData.a_mVArrayOfFileContentData)
+inline const ::protobuf::mozilla::FileContentData& PresContentData_a_type_mVArrayOfFileContentData::a_mvarrayoffilecontentdata(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PresContentData.a_type_mVArrayOfFileContentData.a_mVArrayOfFileContentData)
   return _internal_a_mvarrayoffilecontentdata(index);
 }
-inline ::protobuf::mozilla::FileContentData* PresContentData__mVArrayOfFileContentData::_internal_add_a_mvarrayoffilecontentdata() {
+inline ::protobuf::mozilla::FileContentData* PresContentData_a_type_mVArrayOfFileContentData::_internal_add_a_mvarrayoffilecontentdata() {
   return _impl_.a_mvarrayoffilecontentdata_.Add();
 }
-inline ::protobuf::mozilla::FileContentData* PresContentData__mVArrayOfFileContentData::add_a_mvarrayoffilecontentdata() {
+inline ::protobuf::mozilla::FileContentData* PresContentData_a_type_mVArrayOfFileContentData::add_a_mvarrayoffilecontentdata() {
   ::protobuf::mozilla::FileContentData* _add = _internal_add_a_mvarrayoffilecontentdata();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.PresContentData._mVArrayOfFileContentData.a_mVArrayOfFileContentData)
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.PresContentData.a_type_mVArrayOfFileContentData.a_mVArrayOfFileContentData)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::FileContentData >&
-PresContentData__mVArrayOfFileContentData::a_mvarrayoffilecontentdata() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.PresContentData._mVArrayOfFileContentData.a_mVArrayOfFileContentData)
+PresContentData_a_type_mVArrayOfFileContentData::a_mvarrayoffilecontentdata() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.PresContentData.a_type_mVArrayOfFileContentData.a_mVArrayOfFileContentData)
   return _impl_.a_mvarrayoffilecontentdata_;
 }
 
@@ -2192,77 +2192,77 @@ inline ::protobuf::mozilla::CheckedContentData* PresContentData::mutable_a_mvche
   return _msg;
 }
 
-// .protobuf.mozilla.PresContentData._mVArrayOfFileContentData mVArrayOfFileContentData = 5;
-inline bool PresContentData::_internal_has_mvarrayoffilecontentdata() const {
-  return content_case() == kMVArrayOfFileContentData;
+// .protobuf.mozilla.PresContentData.a_type_mVArrayOfFileContentData a_mVArrayOfFileContentData = 5;
+inline bool PresContentData::_internal_has_a_mvarrayoffilecontentdata() const {
+  return content_case() == kAMVArrayOfFileContentData;
 }
-inline bool PresContentData::has_mvarrayoffilecontentdata() const {
-  return _internal_has_mvarrayoffilecontentdata();
+inline bool PresContentData::has_a_mvarrayoffilecontentdata() const {
+  return _internal_has_a_mvarrayoffilecontentdata();
 }
-inline void PresContentData::set_has_mvarrayoffilecontentdata() {
-  _impl_._oneof_case_[0] = kMVArrayOfFileContentData;
+inline void PresContentData::set_has_a_mvarrayoffilecontentdata() {
+  _impl_._oneof_case_[0] = kAMVArrayOfFileContentData;
 }
-inline void PresContentData::clear_mvarrayoffilecontentdata() {
-  if (_internal_has_mvarrayoffilecontentdata()) {
+inline void PresContentData::clear_a_mvarrayoffilecontentdata() {
+  if (_internal_has_a_mvarrayoffilecontentdata()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvarrayoffilecontentdata_;
+      delete _impl_.content_.a_mvarrayoffilecontentdata_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::PresContentData__mVArrayOfFileContentData* PresContentData::release_mvarrayoffilecontentdata() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.PresContentData.mVArrayOfFileContentData)
-  if (_internal_has_mvarrayoffilecontentdata()) {
+inline ::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData* PresContentData::release_a_mvarrayoffilecontentdata() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.PresContentData.a_mVArrayOfFileContentData)
+  if (_internal_has_a_mvarrayoffilecontentdata()) {
     clear_has_content();
-    ::protobuf::mozilla::PresContentData__mVArrayOfFileContentData* temp = _impl_.content_.mvarrayoffilecontentdata_;
+    ::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData* temp = _impl_.content_.a_mvarrayoffilecontentdata_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvarrayoffilecontentdata_ = nullptr;
+    _impl_.content_.a_mvarrayoffilecontentdata_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::PresContentData__mVArrayOfFileContentData& PresContentData::_internal_mvarrayoffilecontentdata() const {
-  return _internal_has_mvarrayoffilecontentdata()
-      ? *_impl_.content_.mvarrayoffilecontentdata_
-      : reinterpret_cast< ::protobuf::mozilla::PresContentData__mVArrayOfFileContentData&>(::protobuf::mozilla::_PresContentData__mVArrayOfFileContentData_default_instance_);
+inline const ::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData& PresContentData::_internal_a_mvarrayoffilecontentdata() const {
+  return _internal_has_a_mvarrayoffilecontentdata()
+      ? *_impl_.content_.a_mvarrayoffilecontentdata_
+      : reinterpret_cast< ::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData&>(::protobuf::mozilla::_PresContentData_a_type_mVArrayOfFileContentData_default_instance_);
 }
-inline const ::protobuf::mozilla::PresContentData__mVArrayOfFileContentData& PresContentData::mvarrayoffilecontentdata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.PresContentData.mVArrayOfFileContentData)
-  return _internal_mvarrayoffilecontentdata();
+inline const ::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData& PresContentData::a_mvarrayoffilecontentdata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.PresContentData.a_mVArrayOfFileContentData)
+  return _internal_a_mvarrayoffilecontentdata();
 }
-inline ::protobuf::mozilla::PresContentData__mVArrayOfFileContentData* PresContentData::unsafe_arena_release_mvarrayoffilecontentdata() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.PresContentData.mVArrayOfFileContentData)
-  if (_internal_has_mvarrayoffilecontentdata()) {
+inline ::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData* PresContentData::unsafe_arena_release_a_mvarrayoffilecontentdata() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.PresContentData.a_mVArrayOfFileContentData)
+  if (_internal_has_a_mvarrayoffilecontentdata()) {
     clear_has_content();
-    ::protobuf::mozilla::PresContentData__mVArrayOfFileContentData* temp = _impl_.content_.mvarrayoffilecontentdata_;
-    _impl_.content_.mvarrayoffilecontentdata_ = nullptr;
+    ::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData* temp = _impl_.content_.a_mvarrayoffilecontentdata_;
+    _impl_.content_.a_mvarrayoffilecontentdata_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void PresContentData::unsafe_arena_set_allocated_mvarrayoffilecontentdata(::protobuf::mozilla::PresContentData__mVArrayOfFileContentData* mvarrayoffilecontentdata) {
+inline void PresContentData::unsafe_arena_set_allocated_a_mvarrayoffilecontentdata(::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData* a_mvarrayoffilecontentdata) {
   clear_content();
-  if (mvarrayoffilecontentdata) {
-    set_has_mvarrayoffilecontentdata();
-    _impl_.content_.mvarrayoffilecontentdata_ = mvarrayoffilecontentdata;
+  if (a_mvarrayoffilecontentdata) {
+    set_has_a_mvarrayoffilecontentdata();
+    _impl_.content_.a_mvarrayoffilecontentdata_ = a_mvarrayoffilecontentdata;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PresContentData.mVArrayOfFileContentData)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PresContentData.a_mVArrayOfFileContentData)
 }
-inline ::protobuf::mozilla::PresContentData__mVArrayOfFileContentData* PresContentData::_internal_mutable_mvarrayoffilecontentdata() {
-  if (!_internal_has_mvarrayoffilecontentdata()) {
+inline ::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData* PresContentData::_internal_mutable_a_mvarrayoffilecontentdata() {
+  if (!_internal_has_a_mvarrayoffilecontentdata()) {
     clear_content();
-    set_has_mvarrayoffilecontentdata();
-    _impl_.content_.mvarrayoffilecontentdata_ = CreateMaybeMessage< ::protobuf::mozilla::PresContentData__mVArrayOfFileContentData >(GetArenaForAllocation());
+    set_has_a_mvarrayoffilecontentdata();
+    _impl_.content_.a_mvarrayoffilecontentdata_ = CreateMaybeMessage< ::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvarrayoffilecontentdata_;
+  return _impl_.content_.a_mvarrayoffilecontentdata_;
 }
-inline ::protobuf::mozilla::PresContentData__mVArrayOfFileContentData* PresContentData::mutable_mvarrayoffilecontentdata() {
-  ::protobuf::mozilla::PresContentData__mVArrayOfFileContentData* _msg = _internal_mutable_mvarrayoffilecontentdata();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PresContentData.mVArrayOfFileContentData)
+inline ::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData* PresContentData::mutable_a_mvarrayoffilecontentdata() {
+  ::protobuf::mozilla::PresContentData_a_type_mVArrayOfFileContentData* _msg = _internal_mutable_a_mvarrayoffilecontentdata();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.PresContentData.a_mVArrayOfFileContentData)
   return _msg;
 }
 

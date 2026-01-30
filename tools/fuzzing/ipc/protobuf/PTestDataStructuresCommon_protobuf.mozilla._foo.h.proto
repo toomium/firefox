@@ -25,16 +25,16 @@ message SIntDouble {
 }
 
 message IntDoubleArrays {
-  message _mVArrayOfint {
+  message a_type_mVArrayOfint {
     repeated sint32 a_mVArrayOfint = 1;
   }
-  message _mVArrayOfdouble {
+  message a_type_mVArrayOfdouble {
     repeated double a_mVArrayOfdouble = 1;
   }
   oneof content {
     sint32 a_mVint = 1;
-    _mVArrayOfint mVArrayOfint = 2;
-    _mVArrayOfdouble mVArrayOfdouble = 3;
+    a_type_mVArrayOfint a_mVArrayOfint = 2;
+    a_type_mVArrayOfdouble a_mVArrayOfdouble = 3;
   }
 }
 
@@ -45,20 +45,20 @@ message SIntDoubleArrays {
 }
 
 message ActorWrapper {
-  required bytes a_actor = 1;
+  optional bytes a_actor = 1;
 }
 
 message Actors {
-  message _mVArrayOfint {
+  message a_type_mVArrayOfint {
     repeated sint32 a_mVArrayOfint = 1;
   }
-  message _mVArrayOfPTestDataStructuresSub {
+  message a_type_mVArrayOfPTestDataStructuresSub {
     repeated bytes a_mVArrayOfPTestDataStructuresSub = 1;
   }
   oneof content {
     sint32 a_mVint = 1;
-    _mVArrayOfint mVArrayOfint = 2;
-    _mVArrayOfPTestDataStructuresSub mVArrayOfPTestDataStructuresSub = 3;
+    a_type_mVArrayOfint a_mVArrayOfint = 2;
+    a_type_mVArrayOfPTestDataStructuresSub a_mVArrayOfPTestDataStructuresSub = 3;
   }
 }
 
@@ -69,20 +69,20 @@ message SActors {
 }
 
 message Unions {
-  message _mVArrayOfint {
+  message a_type_mVArrayOfint {
     repeated sint32 a_mVArrayOfint = 1;
   }
-  message _mVArrayOfPTestDataStructuresSub {
+  message a_type_mVArrayOfPTestDataStructuresSub {
     repeated bytes a_mVArrayOfPTestDataStructuresSub = 1;
   }
-  message _mVArrayOfActors {
+  message a_type_mVArrayOfActors {
     repeated protobuf.mozilla._foo.Actors a_mVArrayOfActors = 1;
   }
   oneof content {
     sint32 a_mVint = 1;
-    _mVArrayOfint mVArrayOfint = 2;
-    _mVArrayOfPTestDataStructuresSub mVArrayOfPTestDataStructuresSub = 3;
-    _mVArrayOfActors mVArrayOfActors = 4;
+    a_type_mVArrayOfint a_mVArrayOfint = 2;
+    a_type_mVArrayOfPTestDataStructuresSub a_mVArrayOfPTestDataStructuresSub = 3;
+    a_type_mVArrayOfActors a_mVArrayOfActors = 4;
   }
 }
 
@@ -94,24 +94,24 @@ message Structs {
 }
 
 message WithStructs {
-  message _mVArrayOfint {
+  message a_type_mVArrayOfint {
     repeated sint32 a_mVArrayOfint = 1;
   }
-  message _mVArrayOfPTestDataStructuresSub {
+  message a_type_mVArrayOfPTestDataStructuresSub {
     repeated bytes a_mVArrayOfPTestDataStructuresSub = 1;
   }
-  message _mVArrayOfSActors {
+  message a_type_mVArrayOfSActors {
     repeated protobuf.mozilla._foo.SActors a_mVArrayOfSActors = 1;
   }
-  message _mVArrayOfStructs {
+  message a_type_mVArrayOfStructs {
     repeated protobuf.mozilla._foo.Structs a_mVArrayOfStructs = 1;
   }
   oneof content {
     sint32 a_mVint = 1;
-    _mVArrayOfint mVArrayOfint = 2;
-    _mVArrayOfPTestDataStructuresSub mVArrayOfPTestDataStructuresSub = 3;
-    _mVArrayOfSActors mVArrayOfSActors = 4;
-    _mVArrayOfStructs mVArrayOfStructs = 5;
+    a_type_mVArrayOfint a_mVArrayOfint = 2;
+    a_type_mVArrayOfPTestDataStructuresSub a_mVArrayOfPTestDataStructuresSub = 3;
+    a_type_mVArrayOfSActors a_mVArrayOfSActors = 4;
+    a_type_mVArrayOfStructs a_mVArrayOfStructs = 5;
   }
 }
 

@@ -234,7 +234,7 @@ class HttpChannelOnStartRequestArgs final :
   std::string* _internal_add_a_cookieheaders();
   public:
 
-  // required bytes a_securityInfo = 1;
+  // optional bytes a_securityInfo = 1;
   bool has_a_securityinfo() const;
   private:
   bool _internal_has_a_securityinfo() const;
@@ -252,7 +252,7 @@ class HttpChannelOnStartRequestArgs final :
   std::string* _internal_mutable_a_securityinfo();
   public:
 
-  // required bytes a_overrideReferrerInfo = 2;
+  // optional bytes a_overrideReferrerInfo = 2;
   bool has_a_overridereferrerinfo() const;
   private:
   bool _internal_has_a_overridereferrerinfo() const;
@@ -918,7 +918,7 @@ class HttpChannelAltDataStream final :
 #endif  // __GNUC__
 // HttpChannelOnStartRequestArgs
 
-// required bytes a_securityInfo = 1;
+// optional bytes a_securityInfo = 1;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_securityinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -986,7 +986,7 @@ inline void HttpChannelOnStartRequestArgs::set_allocated_a_securityinfo(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOnStartRequestArgs.a_securityInfo)
 }
 
-// required bytes a_overrideReferrerInfo = 2;
+// optional bytes a_overrideReferrerInfo = 2;
 inline bool HttpChannelOnStartRequestArgs::_internal_has_a_overridereferrerinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

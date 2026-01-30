@@ -280,7 +280,7 @@ class WebBrowserPersistDocumentAttrs final :
   std::string* _internal_mutable_a_title();
   public:
 
-  // required bytes a_referrerInfo = 7;
+  // optional bytes a_referrerInfo = 7;
   bool has_a_referrerinfo() const;
   private:
   bool _internal_has_a_referrerinfo() const;
@@ -1136,7 +1136,7 @@ inline void WebBrowserPersistDocumentAttrs::set_allocated_a_title(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.WebBrowserPersistDocumentAttrs.a_title)
 }
 
-// required bytes a_referrerInfo = 7;
+// optional bytes a_referrerInfo = 7;
 inline bool WebBrowserPersistDocumentAttrs::_internal_has_a_referrerinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;

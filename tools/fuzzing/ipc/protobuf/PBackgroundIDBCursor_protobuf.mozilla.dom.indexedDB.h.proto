@@ -57,24 +57,24 @@ message IndexKeyCursorResponse {
 }
 
 message CursorResponse {
-  message _mVArrayOfObjectStoreCursorResponse {
+  message a_type_mVArrayOfObjectStoreCursorResponse {
     repeated protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse a_mVArrayOfObjectStoreCursorResponse = 1;
   }
-  message _mVArrayOfObjectStoreKeyCursorResponse {
+  message a_type_mVArrayOfObjectStoreKeyCursorResponse {
     repeated protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse a_mVArrayOfObjectStoreKeyCursorResponse = 1;
   }
-  message _mVArrayOfIndexCursorResponse {
+  message a_type_mVArrayOfIndexCursorResponse {
     repeated protobuf.mozilla.dom.indexedDB.IndexCursorResponse a_mVArrayOfIndexCursorResponse = 1;
   }
-  message _mVArrayOfIndexKeyCursorResponse {
+  message a_type_mVArrayOfIndexKeyCursorResponse {
     repeated protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse a_mVArrayOfIndexKeyCursorResponse = 1;
   }
   oneof content {
     bytes a_mVvoid_t = 1;
     bytes a_mVnsresult = 2;
-    _mVArrayOfObjectStoreCursorResponse mVArrayOfObjectStoreCursorResponse = 3;
-    _mVArrayOfObjectStoreKeyCursorResponse mVArrayOfObjectStoreKeyCursorResponse = 4;
-    _mVArrayOfIndexCursorResponse mVArrayOfIndexCursorResponse = 5;
-    _mVArrayOfIndexKeyCursorResponse mVArrayOfIndexKeyCursorResponse = 6;
+    a_type_mVArrayOfObjectStoreCursorResponse a_mVArrayOfObjectStoreCursorResponse = 3;
+    a_type_mVArrayOfObjectStoreKeyCursorResponse a_mVArrayOfObjectStoreKeyCursorResponse = 4;
+    a_type_mVArrayOfIndexCursorResponse a_mVArrayOfIndexCursorResponse = 5;
+    a_type_mVArrayOfIndexKeyCursorResponse a_mVArrayOfIndexKeyCursorResponse = 6;
   }
 }

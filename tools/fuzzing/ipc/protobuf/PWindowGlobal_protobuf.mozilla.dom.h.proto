@@ -26,5 +26,5 @@ message JSActorMessageMeta {
 message IPCWebShareData {
   required string a_title = 1;
   required string a_text = 2;
-  required bytes a_url = 3;
+  optional bytes a_url = 3;
 }

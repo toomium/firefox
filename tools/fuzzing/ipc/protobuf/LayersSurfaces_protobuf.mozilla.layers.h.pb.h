@@ -263,7 +263,7 @@ class SurfaceDescriptorD3D10 final :
     kAArrayIndexFieldNumber = 3,
     kAHasKeyedMutexFieldNumber = 8,
   };
-  // required bytes a_handle = 1;
+  // optional bytes a_handle = 1;
   bool has_a_handle() const;
   private:
   bool _internal_has_a_handle() const;
@@ -564,7 +564,7 @@ class SurfaceDescriptorDXGIYCbCr final :
     kAColorRangeFieldNumber = 9,
     kAFencesHolderIdFieldNumber = 10,
   };
-  // required bytes a_handleY = 1;
+  // optional bytes a_handleY = 1;
   bool has_a_handley() const;
   private:
   bool _internal_has_a_handley() const;
@@ -582,7 +582,7 @@ class SurfaceDescriptorDXGIYCbCr final :
   std::string* _internal_mutable_a_handley();
   public:
 
-  // required bytes a_handleCb = 2;
+  // optional bytes a_handleCb = 2;
   bool has_a_handlecb() const;
   private:
   bool _internal_has_a_handlecb() const;
@@ -600,7 +600,7 @@ class SurfaceDescriptorDXGIYCbCr final :
   std::string* _internal_mutable_a_handlecb();
   public:
 
-  // required bytes a_handleCr = 3;
+  // optional bytes a_handleCr = 3;
   bool has_a_handlecr() const;
   private:
   bool _internal_has_a_handlecr() const;
@@ -906,7 +906,7 @@ class SurfaceDescriptorMacIOSurface final :
   std::string* _internal_mutable_a_yuvcolorspace();
   public:
 
-  // required bytes a_gpuFence = 4;
+  // optional bytes a_gpuFence = 4;
   bool has_a_gpufence() const;
   private:
   bool _internal_has_a_gpufence() const;
@@ -1425,7 +1425,7 @@ class SurfaceDescriptorDMABuf final :
   std::string* _internal_mutable_a_transferfunction();
   public:
 
-  // required bytes a_semaphoreFd = 21;
+  // optional bytes a_semaphoreFd = 21;
   bool has_a_semaphorefd() const;
   private:
   bool _internal_has_a_semaphorefd() const;
@@ -5504,7 +5504,7 @@ class SurfaceDescriptor final :
 #endif  // __GNUC__
 // SurfaceDescriptorD3D10
 
-// required bytes a_handle = 1;
+// optional bytes a_handle = 1;
 inline bool SurfaceDescriptorD3D10::_internal_has_a_handle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6040,7 +6040,7 @@ inline void SurfaceDescriptorD3D10::set_allocated_a_fencesholderid(std::string* 
 
 // SurfaceDescriptorDXGIYCbCr
 
-// required bytes a_handleY = 1;
+// optional bytes a_handleY = 1;
 inline bool SurfaceDescriptorDXGIYCbCr::_internal_has_a_handley() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -6108,7 +6108,7 @@ inline void SurfaceDescriptorDXGIYCbCr::set_allocated_a_handley(std::string* a_h
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr.a_handleY)
 }
 
-// required bytes a_handleCb = 2;
+// optional bytes a_handleCb = 2;
 inline bool SurfaceDescriptorDXGIYCbCr::_internal_has_a_handlecb() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -6176,7 +6176,7 @@ inline void SurfaceDescriptorDXGIYCbCr::set_allocated_a_handlecb(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr.a_handleCb)
 }
 
-// required bytes a_handleCr = 3;
+// optional bytes a_handleCr = 3;
 inline bool SurfaceDescriptorDXGIYCbCr::_internal_has_a_handlecr() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -6848,7 +6848,7 @@ inline void SurfaceDescriptorMacIOSurface::set_allocated_a_yuvcolorspace(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface.a_yUVColorSpace)
 }
 
-// required bytes a_gpuFence = 4;
+// optional bytes a_gpuFence = 4;
 inline bool SurfaceDescriptorMacIOSurface::_internal_has_a_gpufence() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7933,7 +7933,7 @@ SurfaceDescriptorDMABuf::mutable_a_refcount() {
   return &_impl_.a_refcount_;
 }
 
-// required bytes a_semaphoreFd = 21;
+// optional bytes a_semaphoreFd = 21;
 inline bool SurfaceDescriptorDMABuf::_internal_has_a_semaphorefd() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;

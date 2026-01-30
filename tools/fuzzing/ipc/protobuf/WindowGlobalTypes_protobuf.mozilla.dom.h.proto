@@ -16,14 +16,14 @@ import "DOMTypes.proto";
 // Structs and unions declarations
 message WindowGlobalInit {
   required bytes a_context = 1;
-  required bytes a_principal = 2;
-  required bytes a_storagePrincipal = 3;
-  required bytes a_documentURI = 4;
+  optional bytes a_principal = 2;
+  optional bytes a_storagePrincipal = 3;
+  optional bytes a_documentURI = 4;
   required bool a_isInitialDocument = 5;
   required bool a_blockAllMixedContent = 6;
   required bool a_upgradeInsecureRequests = 7;
   required uint32 a_sandboxFlags = 8;
   required protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 9;
   required uint32 a_httpsOnlyStatus = 10;
-  required bytes a_securityInfo = 11;
+  optional bytes a_securityInfo = 11;
 }

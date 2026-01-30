@@ -1635,7 +1635,7 @@ class DocShellRestoreState final :
     kAURIFieldNumber = 1,
     kADocShellCapsFieldNumber = 2,
   };
-  // required bytes a_URI = 1;
+  // optional bytes a_URI = 1;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -1674,9 +1674,6 @@ class DocShellRestoreState final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.sessionstore.DocShellRestoreState)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -2922,7 +2919,7 @@ inline void FormData::set_allocated_a_uri(std::string* a_uri) {
 
 // DocShellRestoreState
 
-// required bytes a_URI = 1;
+// optional bytes a_URI = 1;
 inline bool DocShellRestoreState::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

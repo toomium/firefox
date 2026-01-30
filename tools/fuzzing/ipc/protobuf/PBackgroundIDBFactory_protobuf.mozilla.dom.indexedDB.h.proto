@@ -35,11 +35,11 @@ message FactoryRequestParams {
 }
 
 message GetDatabasesResponse {
-  message _mVArrayOfDatabaseMetadata {
+  message a_type_mVArrayOfDatabaseMetadata {
     repeated protobuf.mozilla.dom.indexedDB.DatabaseMetadata a_mVArrayOfDatabaseMetadata = 1;
   }
   oneof content {
     bytes a_mVnsresult = 1;
-    _mVArrayOfDatabaseMetadata mVArrayOfDatabaseMetadata = 2;
+    a_type_mVArrayOfDatabaseMetadata a_mVArrayOfDatabaseMetadata = 2;
   }
 }

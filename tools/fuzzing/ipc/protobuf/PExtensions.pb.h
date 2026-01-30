@@ -468,7 +468,7 @@ class Msg_DocumentChange final :
   std::string* _internal_mutable_a_bc();
   public:
 
-  // required bytes a_location = 3;
+  // optional bytes a_location = 3;
   bool has_a_location() const;
   private:
   bool _internal_has_a_location() const;
@@ -660,7 +660,7 @@ class Msg_HistoryChange final :
   std::string* _internal_mutable_a_bc();
   public:
 
-  // required bytes a_location = 3;
+  // optional bytes a_location = 3;
   bool has_a_location() const;
   private:
   bool _internal_has_a_location() const;
@@ -879,7 +879,7 @@ class Msg_StateChange final :
   std::string* _internal_mutable_a_bc();
   public:
 
-  // required bytes a_requestURI = 2;
+  // optional bytes a_requestURI = 2;
   bool has_a_requesturi() const;
   private:
   bool _internal_has_a_requesturi() const;
@@ -1272,7 +1272,7 @@ class Msg_DOMContentLoaded final :
   std::string* _internal_mutable_a_bc();
   public:
 
-  // required bytes a_documentURI = 2;
+  // optional bytes a_documentURI = 2;
   bool has_a_documenturi() const;
   private:
   bool _internal_has_a_documenturi() const;
@@ -1293,9 +1293,6 @@ class Msg_DOMContentLoaded final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1483,7 +1480,7 @@ inline void Msg_DocumentChange::set_allocated_a_transitiondata(::protobuf::mozil
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_DocumentChange.a_transitionData)
 }
 
-// required bytes a_location = 3;
+// optional bytes a_location = 3;
 inline bool Msg_DocumentChange::_internal_has_a_location() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1710,7 +1707,7 @@ inline void Msg_HistoryChange::set_allocated_a_transitiondata(::protobuf::mozill
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_HistoryChange.a_transitionData)
 }
 
-// required bytes a_location = 3;
+// optional bytes a_location = 3;
 inline bool Msg_HistoryChange::_internal_has_a_location() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1906,7 +1903,7 @@ inline void Msg_StateChange::set_allocated_a_bc(std::string* a_bc) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_StateChange.a_bc)
 }
 
-// required bytes a_requestURI = 2;
+// optional bytes a_requestURI = 2;
 inline bool Msg_StateChange::_internal_has_a_requesturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -2350,7 +2347,7 @@ inline void Msg_DOMContentLoaded::set_allocated_a_bc(std::string* a_bc) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.extensions.PExtensions.Msg_DOMContentLoaded.a_bc)
 }
 
-// required bytes a_documentURI = 2;
+// optional bytes a_documentURI = 2;
 inline bool Msg_DOMContentLoaded::_internal_has_a_documenturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

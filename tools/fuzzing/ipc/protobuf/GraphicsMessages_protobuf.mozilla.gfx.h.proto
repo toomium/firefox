@@ -47,7 +47,7 @@ message GPUDeviceData {
 }
 
 message GfxVarValue {
-  message _mVArrayOfuint64_t {
+  message a_type_mVArrayOfuint64_t {
     repeated uint64 a_mVArrayOfuint64_t = 1;
   }
   oneof content {
@@ -60,7 +60,7 @@ message GfxVarValue {
     sint32 a_mVint32_t = 7;
     uint64 a_mVuint64_t = 8;
     float a_mVfloat = 9;
-    _mVArrayOfuint64_t mVArrayOfuint64_t = 10;
+    a_type_mVArrayOfuint64_t a_mVArrayOfuint64_t = 10;
   }
 }
 

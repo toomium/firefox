@@ -22,7 +22,7 @@ message WebBrowserPersistDocumentAttrs {
   required string a_contentType = 4;
   required string a_characterSet = 5;
   required string a_title = 6;
-  required bytes a_referrerInfo = 7;
+  optional bytes a_referrerInfo = 7;
   required protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 8;
   required string a_contentDisposition = 9;
   required uint32 a_sessionHistoryCacheKey = 10;

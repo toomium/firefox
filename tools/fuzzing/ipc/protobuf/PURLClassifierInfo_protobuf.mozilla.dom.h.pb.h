@@ -367,7 +367,7 @@ class URLClassifierLocalResult final :
     kAFeatureNameFieldNumber = 2,
     kAMatchingListFieldNumber = 3,
   };
-  // required bytes a_uri = 1;
+  // optional bytes a_uri = 1;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -660,7 +660,7 @@ inline void ClassifierInfo::set_allocated_a_fullhash(std::string* a_fullhash) {
 
 // URLClassifierLocalResult
 
-// required bytes a_uri = 1;
+// optional bytes a_uri = 1;
 inline bool URLClassifierLocalResult::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

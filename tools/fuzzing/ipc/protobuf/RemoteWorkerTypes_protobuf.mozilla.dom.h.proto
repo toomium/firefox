@@ -49,7 +49,7 @@ message RemoteWorkerData {
   required string a_domain = 11;
   required bool a_isSecureContext = 12;
   optional protobuf.mozilla.dom.IPCClientInfo a_clientInfo = 13;
-  required bytes a_referrerInfo = 14;
+  optional bytes a_referrerInfo = 14;
   required bytes a_storageAccess = 15;
   required bool a_isThirdPartyContext = 16;
   required bool a_shouldResistFingerprinting = 17;

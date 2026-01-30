@@ -10805,7 +10805,7 @@ class Msg_RegisterProtocolHandler final :
   std::string* _internal_mutable_a_scheme();
   public:
 
-  // required bytes a_handlerURI = 2;
+  // optional bytes a_handlerURI = 2;
   bool has_a_handleruri() const;
   private:
   bool _internal_has_a_handleruri() const;
@@ -10841,7 +10841,7 @@ class Msg_RegisterProtocolHandler final :
   std::string* _internal_mutable_a_title();
   public:
 
-  // required bytes a_documentURI = 4;
+  // optional bytes a_documentURI = 4;
   bool has_a_documenturi() const;
   private:
   bool _internal_has_a_documenturi() const;
@@ -11226,7 +11226,7 @@ class Msg_OnLocationChange final :
     kAACanGoBackIgnoringUserInteractionFieldNumber = 6,
     kAACanGoForwardFieldNumber = 7,
   };
-  // required bytes a_aLocation = 3;
+  // optional bytes a_aLocation = 3;
   bool has_a_alocation() const;
   private:
   bool _internal_has_a_alocation() const;
@@ -15645,7 +15645,7 @@ class Msg_InvokeDragSession final :
   std::string* _internal_mutable_a_dragrect();
   public:
 
-  // required bytes a_principal = 7;
+  // optional bytes a_principal = 7;
   bool has_a_principal() const;
   private:
   bool _internal_has_a_principal() const;
@@ -15663,7 +15663,7 @@ class Msg_InvokeDragSession final :
   std::string* _internal_mutable_a_principal();
   public:
 
-  // required bytes a_csp = 8;
+  // optional bytes a_csp = 8;
   bool has_a_csp() const;
   private:
   bool _internal_has_a_csp() const;
@@ -18501,7 +18501,7 @@ class Msg_CreateAboutBlankDocumentViewer final :
     kAPrincipalFieldNumber = 1,
     kAPartitionedPrincipalFieldNumber = 2,
   };
-  // required bytes a_principal = 1;
+  // optional bytes a_principal = 1;
   bool has_a_principal() const;
   private:
   bool _internal_has_a_principal() const;
@@ -18519,7 +18519,7 @@ class Msg_CreateAboutBlankDocumentViewer final :
   std::string* _internal_mutable_a_principal();
   public:
 
-  // required bytes a_partitionedPrincipal = 2;
+  // optional bytes a_partitionedPrincipal = 2;
   bool has_a_partitionedprincipal() const;
   private:
   bool _internal_has_a_partitionedprincipal() const;
@@ -18540,9 +18540,6 @@ class Msg_CreateAboutBlankDocumentViewer final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowser.Msg_CreateAboutBlankDocumentViewer)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -24822,7 +24819,7 @@ class Msg_RealDragEvent final :
   std::string* _internal_mutable_a_aevent();
   public:
 
-  // required bytes a_aPrincipal = 4;
+  // optional bytes a_aPrincipal = 4;
   bool has_a_aprincipal() const;
   private:
   bool _internal_has_a_aprincipal() const;
@@ -24840,7 +24837,7 @@ class Msg_RealDragEvent final :
   std::string* _internal_mutable_a_aprincipal();
   public:
 
-  // required bytes a_csp = 5;
+  // optional bytes a_csp = 5;
   bool has_a_csp() const;
   private:
   bool _internal_has_a_csp() const;
@@ -29963,7 +29960,7 @@ class Msg_InvokeChildDragSession final :
   std::string* _internal_mutable_a_asourcetopwindowcontext();
   public:
 
-  // required bytes a_aPrincipal = 3;
+  // optional bytes a_aPrincipal = 3;
   bool has_a_aprincipal() const;
   private:
   bool _internal_has_a_aprincipal() const;
@@ -30150,7 +30147,7 @@ class Msg_UpdateDragSession final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCTransferableData >&
       a_transfers() const;
 
-  // required bytes a_aPrincipal = 1;
+  // optional bytes a_aPrincipal = 1;
   bool has_a_aprincipal() const;
   private:
   bool _internal_has_a_aprincipal() const;
@@ -30189,9 +30186,6 @@ class Msg_UpdateDragSession final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PBrowser.Msg_UpdateDragSession)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -30552,7 +30546,7 @@ class Msg_StoreDropTargetAndDelayEndDragSession final :
   std::string* _internal_mutable_a_apt();
   public:
 
-  // required bytes a_aPrincipal = 4;
+  // optional bytes a_aPrincipal = 4;
   bool has_a_aprincipal() const;
   private:
   bool _internal_has_a_aprincipal() const;
@@ -30570,7 +30564,7 @@ class Msg_StoreDropTargetAndDelayEndDragSession final :
   std::string* _internal_mutable_a_aprincipal();
   public:
 
-  // required bytes a_aCsp = 5;
+  // optional bytes a_aCsp = 5;
   bool has_a_acsp() const;
   private:
   bool _internal_has_a_acsp() const;
@@ -31486,7 +31480,7 @@ class Msg_VisitURI final :
     kAABrowserIdFieldNumber = 4,
     kAAFlagsFieldNumber = 3,
   };
-  // required bytes a_aURI = 1;
+  // optional bytes a_aURI = 1;
   bool has_a_auri() const;
   private:
   bool _internal_has_a_auri() const;
@@ -31504,7 +31498,7 @@ class Msg_VisitURI final :
   std::string* _internal_mutable_a_auri();
   public:
 
-  // required bytes a_aLastVisitedURI = 2;
+  // optional bytes a_aLastVisitedURI = 2;
   bool has_a_alastvisiteduri() const;
   private:
   bool _internal_has_a_alastvisiteduri() const;
@@ -38962,7 +38956,7 @@ inline void Msg_RegisterProtocolHandler::set_allocated_a_scheme(std::string* a_s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_RegisterProtocolHandler.a_scheme)
 }
 
-// required bytes a_handlerURI = 2;
+// optional bytes a_handlerURI = 2;
 inline bool Msg_RegisterProtocolHandler::_internal_has_a_handleruri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -39098,7 +39092,7 @@ inline void Msg_RegisterProtocolHandler::set_allocated_a_title(std::string* a_ti
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_RegisterProtocolHandler.a_title)
 }
 
-// required bytes a_documentURI = 4;
+// optional bytes a_documentURI = 4;
 inline bool Msg_RegisterProtocolHandler::_internal_has_a_documenturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -39705,7 +39699,7 @@ inline void Msg_OnLocationChange::set_allocated_a_arequestdata(::protobuf::mozil
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_OnLocationChange.a_aRequestData)
 }
 
-// required bytes a_aLocation = 3;
+// optional bytes a_aLocation = 3;
 inline bool Msg_OnLocationChange::_internal_has_a_alocation() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -42021,7 +42015,7 @@ inline void Msg_InvokeDragSession::set_allocated_a_dragrect(std::string* a_dragr
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_InvokeDragSession.a_dragRect)
 }
 
-// required bytes a_principal = 7;
+// optional bytes a_principal = 7;
 inline bool Msg_InvokeDragSession::_internal_has_a_principal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -42089,7 +42083,7 @@ inline void Msg_InvokeDragSession::set_allocated_a_principal(std::string* a_prin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_InvokeDragSession.a_principal)
 }
 
-// required bytes a_csp = 8;
+// optional bytes a_csp = 8;
 inline bool Msg_InvokeDragSession::_internal_has_a_csp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -43873,7 +43867,7 @@ inline void Msg_LoadURL::set_allocated_a_info(::protobuf::mozilla::dom::ParentSh
 
 // Msg_CreateAboutBlankDocumentViewer
 
-// required bytes a_principal = 1;
+// optional bytes a_principal = 1;
 inline bool Msg_CreateAboutBlankDocumentViewer::_internal_has_a_principal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -43941,7 +43935,7 @@ inline void Msg_CreateAboutBlankDocumentViewer::set_allocated_a_principal(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_CreateAboutBlankDocumentViewer.a_principal)
 }
 
-// required bytes a_partitionedPrincipal = 2;
+// optional bytes a_partitionedPrincipal = 2;
 inline bool Msg_CreateAboutBlankDocumentViewer::_internal_has_a_partitionedprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -49675,7 +49669,7 @@ inline void Msg_RealDragEvent::set_a_adropeffect(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_RealDragEvent.a_aDropEffect)
 }
 
-// required bytes a_aPrincipal = 4;
+// optional bytes a_aPrincipal = 4;
 inline bool Msg_RealDragEvent::_internal_has_a_aprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -49743,7 +49737,7 @@ inline void Msg_RealDragEvent::set_allocated_a_aprincipal(std::string* a_aprinci
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_RealDragEvent.a_aPrincipal)
 }
 
-// required bytes a_csp = 5;
+// optional bytes a_csp = 5;
 inline bool Msg_RealDragEvent::_internal_has_a_csp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -52564,7 +52558,7 @@ inline void Msg_InvokeChildDragSession::set_allocated_a_asourcetopwindowcontext(
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_InvokeChildDragSession.a_aSourceTopWindowContext)
 }
 
-// required bytes a_aPrincipal = 3;
+// optional bytes a_aPrincipal = 3;
 inline bool Msg_InvokeChildDragSession::_internal_has_a_aprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -52701,7 +52695,7 @@ inline void Msg_InvokeChildDragSession::set_a_action(uint32_t value) {
 
 // Msg_UpdateDragSession
 
-// required bytes a_aPrincipal = 1;
+// optional bytes a_aPrincipal = 1;
 inline bool Msg_UpdateDragSession::_internal_has_a_aprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -53186,7 +53180,7 @@ inline void Msg_StoreDropTargetAndDelayEndDragSession::set_a_adragaction(uint32_
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBrowser.Msg_StoreDropTargetAndDelayEndDragSession.a_aDragAction)
 }
 
-// required bytes a_aPrincipal = 4;
+// optional bytes a_aPrincipal = 4;
 inline bool Msg_StoreDropTargetAndDelayEndDragSession::_internal_has_a_aprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -53254,7 +53248,7 @@ inline void Msg_StoreDropTargetAndDelayEndDragSession::set_allocated_a_aprincipa
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_StoreDropTargetAndDelayEndDragSession.a_aPrincipal)
 }
 
-// required bytes a_aCsp = 5;
+// optional bytes a_aCsp = 5;
 inline bool Msg_StoreDropTargetAndDelayEndDragSession::_internal_has_a_acsp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -53554,7 +53548,7 @@ inline void Reply_IsWindowSupportingWebVR::set_a_issupported(bool value) {
 
 // Msg_VisitURI
 
-// required bytes a_aURI = 1;
+// optional bytes a_aURI = 1;
 inline bool Msg_VisitURI::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -53622,7 +53616,7 @@ inline void Msg_VisitURI::set_allocated_a_auri(std::string* a_auri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBrowser.Msg_VisitURI.a_aURI)
 }
 
-// required bytes a_aLastVisitedURI = 2;
+// optional bytes a_aLastVisitedURI = 2;
 inline bool Msg_VisitURI::_internal_has_a_alastvisiteduri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

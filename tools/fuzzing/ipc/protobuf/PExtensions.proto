@@ -26,20 +26,20 @@ message Reply___delete__ {
 message Msg_DocumentChange {
   required bytes a_bc = 1;
   required protobuf.mozilla.extensions.FrameTransitionData a_transitionData = 2;
-  required bytes a_location = 3;
+  optional bytes a_location = 3;
 }
 
 message Msg_HistoryChange {
   required bytes a_bc = 1;
   required protobuf.mozilla.extensions.FrameTransitionData a_transitionData = 2;
-  required bytes a_location = 3;
+  optional bytes a_location = 3;
   required bool a_isHistoryStateUpdated = 4;
   required bool a_isReferenceFragmentUpdated = 5;
 }
 
 message Msg_StateChange {
   required bytes a_bc = 1;
-  required bytes a_requestURI = 2;
+  optional bytes a_requestURI = 2;
   required bytes a_status = 3;
   required uint32 a_stateFlags = 4;
 }
@@ -52,7 +52,7 @@ message Msg_CreatedNavigationTarget {
 
 message Msg_DOMContentLoaded {
   required bytes a_bc = 1;
-  required bytes a_documentURI = 2;
+  optional bytes a_documentURI = 2;
 }
 
 // Parameter mappings stats:

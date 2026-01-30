@@ -47,9 +47,9 @@ namespace dom {
 class CustomElementFormValue;
 struct CustomElementFormValueDefaultTypeInternal;
 extern CustomElementFormValueDefaultTypeInternal _CustomElementFormValue_default_instance_;
-class CustomElementFormValue__mVArrayOfFormDataTuple;
-struct CustomElementFormValue__mVArrayOfFormDataTupleDefaultTypeInternal;
-extern CustomElementFormValue__mVArrayOfFormDataTupleDefaultTypeInternal _CustomElementFormValue__mVArrayOfFormDataTuple_default_instance_;
+class CustomElementFormValue_a_type_mVArrayOfFormDataTuple;
+struct CustomElementFormValue_a_type_mVArrayOfFormDataTupleDefaultTypeInternal;
+extern CustomElementFormValue_a_type_mVArrayOfFormDataTupleDefaultTypeInternal _CustomElementFormValue_a_type_mVArrayOfFormDataTuple_default_instance_;
 class CustomElementTuple;
 struct CustomElementTupleDefaultTypeInternal;
 extern CustomElementTupleDefaultTypeInternal _CustomElementTuple_default_instance_;
@@ -64,7 +64,7 @@ extern IPCFormDataValueDefaultTypeInternal _IPCFormDataValue_default_instance_;
 }  // namespace protobuf
 PROTOBUF_NAMESPACE_OPEN
 template<> ::protobuf::mozilla::dom::CustomElementFormValue* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::CustomElementFormValue>(Arena*);
-template<> ::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple>(Arena*);
+template<> ::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple>(Arena*);
 template<> ::protobuf::mozilla::dom::CustomElementTuple* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::CustomElementTuple>(Arena*);
 template<> ::protobuf::mozilla::dom::FormDataTuple* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::FormDataTuple>(Arena*);
 template<> ::protobuf::mozilla::dom::IPCFormDataValue* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::IPCFormDataValue>(Arena*);
@@ -430,24 +430,24 @@ class FormDataTuple final :
 };
 // -------------------------------------------------------------------
 
-class CustomElementFormValue__mVArrayOfFormDataTuple final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.CustomElementFormValue._mVArrayOfFormDataTuple) */ {
+class CustomElementFormValue_a_type_mVArrayOfFormDataTuple final :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.CustomElementFormValue.a_type_mVArrayOfFormDataTuple) */ {
  public:
-  inline CustomElementFormValue__mVArrayOfFormDataTuple() : CustomElementFormValue__mVArrayOfFormDataTuple(nullptr) {}
-  ~CustomElementFormValue__mVArrayOfFormDataTuple() override;
-  explicit PROTOBUF_CONSTEXPR CustomElementFormValue__mVArrayOfFormDataTuple(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline CustomElementFormValue_a_type_mVArrayOfFormDataTuple() : CustomElementFormValue_a_type_mVArrayOfFormDataTuple(nullptr) {}
+  ~CustomElementFormValue_a_type_mVArrayOfFormDataTuple() override;
+  explicit PROTOBUF_CONSTEXPR CustomElementFormValue_a_type_mVArrayOfFormDataTuple(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  CustomElementFormValue__mVArrayOfFormDataTuple(const CustomElementFormValue__mVArrayOfFormDataTuple& from);
-  CustomElementFormValue__mVArrayOfFormDataTuple(CustomElementFormValue__mVArrayOfFormDataTuple&& from) noexcept
-    : CustomElementFormValue__mVArrayOfFormDataTuple() {
+  CustomElementFormValue_a_type_mVArrayOfFormDataTuple(const CustomElementFormValue_a_type_mVArrayOfFormDataTuple& from);
+  CustomElementFormValue_a_type_mVArrayOfFormDataTuple(CustomElementFormValue_a_type_mVArrayOfFormDataTuple&& from) noexcept
+    : CustomElementFormValue_a_type_mVArrayOfFormDataTuple() {
     *this = ::std::move(from);
   }
 
-  inline CustomElementFormValue__mVArrayOfFormDataTuple& operator=(const CustomElementFormValue__mVArrayOfFormDataTuple& from) {
+  inline CustomElementFormValue_a_type_mVArrayOfFormDataTuple& operator=(const CustomElementFormValue_a_type_mVArrayOfFormDataTuple& from) {
     CopyFrom(from);
     return *this;
   }
-  inline CustomElementFormValue__mVArrayOfFormDataTuple& operator=(CustomElementFormValue__mVArrayOfFormDataTuple&& from) noexcept {
+  inline CustomElementFormValue_a_type_mVArrayOfFormDataTuple& operator=(CustomElementFormValue_a_type_mVArrayOfFormDataTuple&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -468,20 +468,20 @@ class CustomElementFormValue__mVArrayOfFormDataTuple final :
     return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
-  static const CustomElementFormValue__mVArrayOfFormDataTuple& default_instance() {
+  static const CustomElementFormValue_a_type_mVArrayOfFormDataTuple& default_instance() {
     return *internal_default_instance();
   }
-  static inline const CustomElementFormValue__mVArrayOfFormDataTuple* internal_default_instance() {
-    return reinterpret_cast<const CustomElementFormValue__mVArrayOfFormDataTuple*>(
-               &_CustomElementFormValue__mVArrayOfFormDataTuple_default_instance_);
+  static inline const CustomElementFormValue_a_type_mVArrayOfFormDataTuple* internal_default_instance() {
+    return reinterpret_cast<const CustomElementFormValue_a_type_mVArrayOfFormDataTuple*>(
+               &_CustomElementFormValue_a_type_mVArrayOfFormDataTuple_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     2;
 
-  friend void swap(CustomElementFormValue__mVArrayOfFormDataTuple& a, CustomElementFormValue__mVArrayOfFormDataTuple& b) {
+  friend void swap(CustomElementFormValue_a_type_mVArrayOfFormDataTuple& a, CustomElementFormValue_a_type_mVArrayOfFormDataTuple& b) {
     a.Swap(&b);
   }
-  inline void Swap(CustomElementFormValue__mVArrayOfFormDataTuple* other) {
+  inline void Swap(CustomElementFormValue_a_type_mVArrayOfFormDataTuple* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -494,7 +494,7 @@ class CustomElementFormValue__mVArrayOfFormDataTuple final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(CustomElementFormValue__mVArrayOfFormDataTuple* other) {
+  void UnsafeArenaSwap(CustomElementFormValue_a_type_mVArrayOfFormDataTuple* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -502,12 +502,12 @@ class CustomElementFormValue__mVArrayOfFormDataTuple final :
 
   // implements Message ----------------------------------------------
 
-  CustomElementFormValue__mVArrayOfFormDataTuple* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<CustomElementFormValue__mVArrayOfFormDataTuple>(arena);
+  CustomElementFormValue_a_type_mVArrayOfFormDataTuple* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CustomElementFormValue_a_type_mVArrayOfFormDataTuple>(arena);
   }
   void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const CustomElementFormValue__mVArrayOfFormDataTuple& from);
-  void MergeFrom(const CustomElementFormValue__mVArrayOfFormDataTuple& from);
+  void CopyFrom(const CustomElementFormValue_a_type_mVArrayOfFormDataTuple& from);
+  void MergeFrom(const CustomElementFormValue_a_type_mVArrayOfFormDataTuple& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -521,15 +521,15 @@ class CustomElementFormValue__mVArrayOfFormDataTuple final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const;
-  void InternalSwap(CustomElementFormValue__mVArrayOfFormDataTuple* other);
+  void InternalSwap(CustomElementFormValue_a_type_mVArrayOfFormDataTuple* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "protobuf.mozilla.dom.CustomElementFormValue._mVArrayOfFormDataTuple";
+    return "protobuf.mozilla.dom.CustomElementFormValue.a_type_mVArrayOfFormDataTuple";
   }
   protected:
-  explicit CustomElementFormValue__mVArrayOfFormDataTuple(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit CustomElementFormValue_a_type_mVArrayOfFormDataTuple(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -560,7 +560,7 @@ class CustomElementFormValue__mVArrayOfFormDataTuple final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::FormDataTuple >&
       a_mvarrayofformdatatuple() const;
 
-  // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.CustomElementFormValue._mVArrayOfFormDataTuple)
+  // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.CustomElementFormValue.a_type_mVArrayOfFormDataTuple)
  private:
   class _Internal;
 
@@ -621,7 +621,7 @@ class CustomElementFormValue final :
     kAMVvoidT = 1,
     kAMVBlobImpl = 2,
     kAMVnsString = 3,
-    kMVArrayOfFormDataTuple = 4,
+    kAMVArrayOfFormDataTuple = 4,
     CONTENT_NOT_SET = 0,
   };
 
@@ -691,7 +691,7 @@ class CustomElementFormValue final :
 
   // nested types ----------------------------------------------------
 
-  typedef CustomElementFormValue__mVArrayOfFormDataTuple _mVArrayOfFormDataTuple;
+  typedef CustomElementFormValue_a_type_mVArrayOfFormDataTuple a_type_mVArrayOfFormDataTuple;
 
   // accessors -------------------------------------------------------
 
@@ -699,7 +699,7 @@ class CustomElementFormValue final :
     kAMVvoidTFieldNumber = 1,
     kAMVBlobImplFieldNumber = 2,
     kAMVnsStringFieldNumber = 3,
-    kMVArrayOfFormDataTupleFieldNumber = 4,
+    kAMVArrayOfFormDataTupleFieldNumber = 4,
   };
   // bytes a_mVvoid_t = 1;
   bool has_a_mvvoid_t() const;
@@ -755,23 +755,23 @@ class CustomElementFormValue final :
   std::string* _internal_mutable_a_mvnsstring();
   public:
 
-  // .protobuf.mozilla.dom.CustomElementFormValue._mVArrayOfFormDataTuple mVArrayOfFormDataTuple = 4;
-  bool has_mvarrayofformdatatuple() const;
+  // .protobuf.mozilla.dom.CustomElementFormValue.a_type_mVArrayOfFormDataTuple a_mVArrayOfFormDataTuple = 4;
+  bool has_a_mvarrayofformdatatuple() const;
   private:
-  bool _internal_has_mvarrayofformdatatuple() const;
+  bool _internal_has_a_mvarrayofformdatatuple() const;
   public:
-  void clear_mvarrayofformdatatuple();
-  const ::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple& mvarrayofformdatatuple() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple* release_mvarrayofformdatatuple();
-  ::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple* mutable_mvarrayofformdatatuple();
-  void set_allocated_mvarrayofformdatatuple(::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple* mvarrayofformdatatuple);
+  void clear_a_mvarrayofformdatatuple();
+  const ::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple& a_mvarrayofformdatatuple() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple* release_a_mvarrayofformdatatuple();
+  ::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple* mutable_a_mvarrayofformdatatuple();
+  void set_allocated_a_mvarrayofformdatatuple(::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple* a_mvarrayofformdatatuple);
   private:
-  const ::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple& _internal_mvarrayofformdatatuple() const;
-  ::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple* _internal_mutable_mvarrayofformdatatuple();
+  const ::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple& _internal_a_mvarrayofformdatatuple() const;
+  ::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple* _internal_mutable_a_mvarrayofformdatatuple();
   public:
-  void unsafe_arena_set_allocated_mvarrayofformdatatuple(
-      ::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple* mvarrayofformdatatuple);
-  ::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple* unsafe_arena_release_mvarrayofformdatatuple();
+  void unsafe_arena_set_allocated_a_mvarrayofformdatatuple(
+      ::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple* a_mvarrayofformdatatuple);
+  ::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple* unsafe_arena_release_a_mvarrayofformdatatuple();
 
   void clear_content();
   ContentCase content_case() const;
@@ -781,7 +781,7 @@ class CustomElementFormValue final :
   void set_has_a_mvvoid_t();
   void set_has_a_mvblobimpl();
   void set_has_a_mvnsstring();
-  void set_has_mvarrayofformdatatuple();
+  void set_has_a_mvarrayofformdatatuple();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -796,7 +796,7 @@ class CustomElementFormValue final :
       ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvvoid_t_;
       ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvblobimpl_;
       ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsstring_;
-      ::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple* mvarrayofformdatatuple_;
+      ::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple* a_mvarrayofformdatatuple_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -1313,45 +1313,45 @@ inline void FormDataTuple::set_allocated_a_value(::protobuf::mozilla::dom::IPCFo
 
 // -------------------------------------------------------------------
 
-// CustomElementFormValue__mVArrayOfFormDataTuple
+// CustomElementFormValue_a_type_mVArrayOfFormDataTuple
 
 // repeated .protobuf.mozilla.dom.FormDataTuple a_mVArrayOfFormDataTuple = 1;
-inline int CustomElementFormValue__mVArrayOfFormDataTuple::_internal_a_mvarrayofformdatatuple_size() const {
+inline int CustomElementFormValue_a_type_mVArrayOfFormDataTuple::_internal_a_mvarrayofformdatatuple_size() const {
   return _impl_.a_mvarrayofformdatatuple_.size();
 }
-inline int CustomElementFormValue__mVArrayOfFormDataTuple::a_mvarrayofformdatatuple_size() const {
+inline int CustomElementFormValue_a_type_mVArrayOfFormDataTuple::a_mvarrayofformdatatuple_size() const {
   return _internal_a_mvarrayofformdatatuple_size();
 }
-inline void CustomElementFormValue__mVArrayOfFormDataTuple::clear_a_mvarrayofformdatatuple() {
+inline void CustomElementFormValue_a_type_mVArrayOfFormDataTuple::clear_a_mvarrayofformdatatuple() {
   _impl_.a_mvarrayofformdatatuple_.Clear();
 }
-inline ::protobuf::mozilla::dom::FormDataTuple* CustomElementFormValue__mVArrayOfFormDataTuple::mutable_a_mvarrayofformdatatuple(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.CustomElementFormValue._mVArrayOfFormDataTuple.a_mVArrayOfFormDataTuple)
+inline ::protobuf::mozilla::dom::FormDataTuple* CustomElementFormValue_a_type_mVArrayOfFormDataTuple::mutable_a_mvarrayofformdatatuple(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.CustomElementFormValue.a_type_mVArrayOfFormDataTuple.a_mVArrayOfFormDataTuple)
   return _impl_.a_mvarrayofformdatatuple_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::FormDataTuple >*
-CustomElementFormValue__mVArrayOfFormDataTuple::mutable_a_mvarrayofformdatatuple() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.CustomElementFormValue._mVArrayOfFormDataTuple.a_mVArrayOfFormDataTuple)
+CustomElementFormValue_a_type_mVArrayOfFormDataTuple::mutable_a_mvarrayofformdatatuple() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.CustomElementFormValue.a_type_mVArrayOfFormDataTuple.a_mVArrayOfFormDataTuple)
   return &_impl_.a_mvarrayofformdatatuple_;
 }
-inline const ::protobuf::mozilla::dom::FormDataTuple& CustomElementFormValue__mVArrayOfFormDataTuple::_internal_a_mvarrayofformdatatuple(int index) const {
+inline const ::protobuf::mozilla::dom::FormDataTuple& CustomElementFormValue_a_type_mVArrayOfFormDataTuple::_internal_a_mvarrayofformdatatuple(int index) const {
   return _impl_.a_mvarrayofformdatatuple_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::FormDataTuple& CustomElementFormValue__mVArrayOfFormDataTuple::a_mvarrayofformdatatuple(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.CustomElementFormValue._mVArrayOfFormDataTuple.a_mVArrayOfFormDataTuple)
+inline const ::protobuf::mozilla::dom::FormDataTuple& CustomElementFormValue_a_type_mVArrayOfFormDataTuple::a_mvarrayofformdatatuple(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.CustomElementFormValue.a_type_mVArrayOfFormDataTuple.a_mVArrayOfFormDataTuple)
   return _internal_a_mvarrayofformdatatuple(index);
 }
-inline ::protobuf::mozilla::dom::FormDataTuple* CustomElementFormValue__mVArrayOfFormDataTuple::_internal_add_a_mvarrayofformdatatuple() {
+inline ::protobuf::mozilla::dom::FormDataTuple* CustomElementFormValue_a_type_mVArrayOfFormDataTuple::_internal_add_a_mvarrayofformdatatuple() {
   return _impl_.a_mvarrayofformdatatuple_.Add();
 }
-inline ::protobuf::mozilla::dom::FormDataTuple* CustomElementFormValue__mVArrayOfFormDataTuple::add_a_mvarrayofformdatatuple() {
+inline ::protobuf::mozilla::dom::FormDataTuple* CustomElementFormValue_a_type_mVArrayOfFormDataTuple::add_a_mvarrayofformdatatuple() {
   ::protobuf::mozilla::dom::FormDataTuple* _add = _internal_add_a_mvarrayofformdatatuple();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.CustomElementFormValue._mVArrayOfFormDataTuple.a_mVArrayOfFormDataTuple)
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.CustomElementFormValue.a_type_mVArrayOfFormDataTuple.a_mVArrayOfFormDataTuple)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::FormDataTuple >&
-CustomElementFormValue__mVArrayOfFormDataTuple::a_mvarrayofformdatatuple() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.CustomElementFormValue._mVArrayOfFormDataTuple.a_mVArrayOfFormDataTuple)
+CustomElementFormValue_a_type_mVArrayOfFormDataTuple::a_mvarrayofformdatatuple() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.CustomElementFormValue.a_type_mVArrayOfFormDataTuple.a_mVArrayOfFormDataTuple)
   return _impl_.a_mvarrayofformdatatuple_;
 }
 
@@ -1590,77 +1590,77 @@ inline void CustomElementFormValue::set_allocated_a_mvnsstring(std::string* a_mv
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.CustomElementFormValue.a_mVnsString)
 }
 
-// .protobuf.mozilla.dom.CustomElementFormValue._mVArrayOfFormDataTuple mVArrayOfFormDataTuple = 4;
-inline bool CustomElementFormValue::_internal_has_mvarrayofformdatatuple() const {
-  return content_case() == kMVArrayOfFormDataTuple;
+// .protobuf.mozilla.dom.CustomElementFormValue.a_type_mVArrayOfFormDataTuple a_mVArrayOfFormDataTuple = 4;
+inline bool CustomElementFormValue::_internal_has_a_mvarrayofformdatatuple() const {
+  return content_case() == kAMVArrayOfFormDataTuple;
 }
-inline bool CustomElementFormValue::has_mvarrayofformdatatuple() const {
-  return _internal_has_mvarrayofformdatatuple();
+inline bool CustomElementFormValue::has_a_mvarrayofformdatatuple() const {
+  return _internal_has_a_mvarrayofformdatatuple();
 }
-inline void CustomElementFormValue::set_has_mvarrayofformdatatuple() {
-  _impl_._oneof_case_[0] = kMVArrayOfFormDataTuple;
+inline void CustomElementFormValue::set_has_a_mvarrayofformdatatuple() {
+  _impl_._oneof_case_[0] = kAMVArrayOfFormDataTuple;
 }
-inline void CustomElementFormValue::clear_mvarrayofformdatatuple() {
-  if (_internal_has_mvarrayofformdatatuple()) {
+inline void CustomElementFormValue::clear_a_mvarrayofformdatatuple() {
+  if (_internal_has_a_mvarrayofformdatatuple()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvarrayofformdatatuple_;
+      delete _impl_.content_.a_mvarrayofformdatatuple_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple* CustomElementFormValue::release_mvarrayofformdatatuple() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.CustomElementFormValue.mVArrayOfFormDataTuple)
-  if (_internal_has_mvarrayofformdatatuple()) {
+inline ::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple* CustomElementFormValue::release_a_mvarrayofformdatatuple() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.CustomElementFormValue.a_mVArrayOfFormDataTuple)
+  if (_internal_has_a_mvarrayofformdatatuple()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple* temp = _impl_.content_.mvarrayofformdatatuple_;
+    ::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple* temp = _impl_.content_.a_mvarrayofformdatatuple_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvarrayofformdatatuple_ = nullptr;
+    _impl_.content_.a_mvarrayofformdatatuple_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple& CustomElementFormValue::_internal_mvarrayofformdatatuple() const {
-  return _internal_has_mvarrayofformdatatuple()
-      ? *_impl_.content_.mvarrayofformdatatuple_
-      : reinterpret_cast< ::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple&>(::protobuf::mozilla::dom::_CustomElementFormValue__mVArrayOfFormDataTuple_default_instance_);
+inline const ::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple& CustomElementFormValue::_internal_a_mvarrayofformdatatuple() const {
+  return _internal_has_a_mvarrayofformdatatuple()
+      ? *_impl_.content_.a_mvarrayofformdatatuple_
+      : reinterpret_cast< ::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple&>(::protobuf::mozilla::dom::_CustomElementFormValue_a_type_mVArrayOfFormDataTuple_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple& CustomElementFormValue::mvarrayofformdatatuple() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.CustomElementFormValue.mVArrayOfFormDataTuple)
-  return _internal_mvarrayofformdatatuple();
+inline const ::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple& CustomElementFormValue::a_mvarrayofformdatatuple() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.CustomElementFormValue.a_mVArrayOfFormDataTuple)
+  return _internal_a_mvarrayofformdatatuple();
 }
-inline ::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple* CustomElementFormValue::unsafe_arena_release_mvarrayofformdatatuple() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.CustomElementFormValue.mVArrayOfFormDataTuple)
-  if (_internal_has_mvarrayofformdatatuple()) {
+inline ::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple* CustomElementFormValue::unsafe_arena_release_a_mvarrayofformdatatuple() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.CustomElementFormValue.a_mVArrayOfFormDataTuple)
+  if (_internal_has_a_mvarrayofformdatatuple()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple* temp = _impl_.content_.mvarrayofformdatatuple_;
-    _impl_.content_.mvarrayofformdatatuple_ = nullptr;
+    ::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple* temp = _impl_.content_.a_mvarrayofformdatatuple_;
+    _impl_.content_.a_mvarrayofformdatatuple_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void CustomElementFormValue::unsafe_arena_set_allocated_mvarrayofformdatatuple(::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple* mvarrayofformdatatuple) {
+inline void CustomElementFormValue::unsafe_arena_set_allocated_a_mvarrayofformdatatuple(::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple* a_mvarrayofformdatatuple) {
   clear_content();
-  if (mvarrayofformdatatuple) {
-    set_has_mvarrayofformdatatuple();
-    _impl_.content_.mvarrayofformdatatuple_ = mvarrayofformdatatuple;
+  if (a_mvarrayofformdatatuple) {
+    set_has_a_mvarrayofformdatatuple();
+    _impl_.content_.a_mvarrayofformdatatuple_ = a_mvarrayofformdatatuple;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.CustomElementFormValue.mVArrayOfFormDataTuple)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.CustomElementFormValue.a_mVArrayOfFormDataTuple)
 }
-inline ::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple* CustomElementFormValue::_internal_mutable_mvarrayofformdatatuple() {
-  if (!_internal_has_mvarrayofformdatatuple()) {
+inline ::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple* CustomElementFormValue::_internal_mutable_a_mvarrayofformdatatuple() {
+  if (!_internal_has_a_mvarrayofformdatatuple()) {
     clear_content();
-    set_has_mvarrayofformdatatuple();
-    _impl_.content_.mvarrayofformdatatuple_ = CreateMaybeMessage< ::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple >(GetArenaForAllocation());
+    set_has_a_mvarrayofformdatatuple();
+    _impl_.content_.a_mvarrayofformdatatuple_ = CreateMaybeMessage< ::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvarrayofformdatatuple_;
+  return _impl_.content_.a_mvarrayofformdatatuple_;
 }
-inline ::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple* CustomElementFormValue::mutable_mvarrayofformdatatuple() {
-  ::protobuf::mozilla::dom::CustomElementFormValue__mVArrayOfFormDataTuple* _msg = _internal_mutable_mvarrayofformdatatuple();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.CustomElementFormValue.mVArrayOfFormDataTuple)
+inline ::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple* CustomElementFormValue::mutable_a_mvarrayofformdatatuple() {
+  ::protobuf::mozilla::dom::CustomElementFormValue_a_type_mVArrayOfFormDataTuple* _msg = _internal_mutable_a_mvarrayofformdatatuple();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.CustomElementFormValue.a_mVArrayOfFormDataTuple)
   return _msg;
 }
 

@@ -19,14 +19,14 @@ import "NeckoChannelParams.proto";
 message Msg_SetCookies {
   required string a_baseDomain = 1;
   required bytes a_attrs = 2;
-  required bytes a_host = 3;
+  optional bytes a_host = 3;
   required bool a_fromHttp = 4;
   required bool a_isThirdParty = 5;
   repeated protobuf.mozilla.net.CookieStruct a_cookies = 6;
 }
 
 message Msg_GetCookieList {
-  required bytes a_host = 1;
+  optional bytes a_host = 1;
   required bool a_isForeign = 2;
   required bool a_isThirdPartyTrackingResource = 3;
   required bool a_isThirdPartySocialTrackingResource = 4;

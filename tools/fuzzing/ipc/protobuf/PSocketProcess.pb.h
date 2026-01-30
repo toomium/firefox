@@ -2580,7 +2580,7 @@ class Msg_PProxyConfigLookupConstructor final :
     kAActoridFieldNumber = 1,
     kAAFlagsFieldNumber = 3,
   };
-  // required bytes a_aUri = 2;
+  // optional bytes a_aUri = 2;
   bool has_a_auri() const;
   private:
   bool _internal_has_a_auri() const;
@@ -11390,7 +11390,7 @@ inline void Msg_PProxyConfigLookupConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PSocketProcess.Msg_PProxyConfigLookupConstructor.a_actorid)
 }
 
-// required bytes a_aUri = 2;
+// optional bytes a_aUri = 2;
 inline bool Msg_PProxyConfigLookupConstructor::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

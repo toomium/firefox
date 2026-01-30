@@ -701,7 +701,7 @@ class RemoteWorkerData final :
   std::string* _internal_mutable_a_domain();
   public:
 
-  // required bytes a_referrerInfo = 14;
+  // optional bytes a_referrerInfo = 14;
   bool has_a_referrerinfo() const;
   private:
   bool _internal_has_a_referrerinfo() const;
@@ -3917,7 +3917,7 @@ inline void RemoteWorkerData::set_allocated_a_clientinfo(::protobuf::mozilla::do
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RemoteWorkerData.a_clientInfo)
 }
 
-// required bytes a_referrerInfo = 14;
+// optional bytes a_referrerInfo = 14;
 inline bool RemoteWorkerData::_internal_has_a_referrerinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;

@@ -15,7 +15,7 @@ import "PBackgroundSharedTypes.proto";
 // Structs and unions declarations
 message UnidirectionalStream {
   required uint64 a_streamId = 1;
-  required bytes a_outStream = 2;
+  optional bytes a_outStream = 2;
 }
 
 message UnidirectionalStreamResponse {
@@ -27,8 +27,8 @@ message UnidirectionalStreamResponse {
 
 message BidirectionalStream {
   required uint64 a_streamId = 1;
-  required bytes a_inStream = 2;
-  required bytes a_outStream = 3;
+  optional bytes a_inStream = 2;
+  optional bytes a_outStream = 3;
 }
 
 message BidirectionalStreamResponse {

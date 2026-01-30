@@ -24,7 +24,7 @@ message CacheQueryParams {
 
 message CacheReadStream {
   required bytes a_id = 1;
-  required bytes a_control = 2;
+  optional bytes a_control = 2;
   optional protobuf.mozilla.ipc.IPCStream a_stream = 3;
 }
 
@@ -63,7 +63,7 @@ message CacheResponse {
   required bytes a_headersGuard = 6;
   optional protobuf.mozilla.dom.cache.CacheReadStream a_body = 7;
   required sint64 a_bodyDiskSize = 8;
-  required bytes a_securityInfo = 9;
+  optional bytes a_securityInfo = 9;
   optional protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 10;
   required uint32 a_paddingInfo = 11;
   required sint64 a_paddingSize = 12;
@@ -166,7 +166,7 @@ message StorageHasResult {
 }
 
 message StorageOpenResult {
-  required bytes a_actor = 1;
+  optional bytes a_actor = 1;
   required bytes a_ns = 2;
 }
 

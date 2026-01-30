@@ -93,18 +93,18 @@ message CreatedWindowInfo {
 }
 
 message DocShellLoadStateInit {
-  required bytes a_URI = 1;
-  required bytes a_OriginalURI = 2;
-  required bytes a_ResultPrincipalURI = 3;
-  required bytes a_TriggeringPrincipal = 4;
-  required bytes a_ReferrerInfo = 5;
-  required bytes a_PrincipalToInherit = 6;
-  required bytes a_PartitionedPrincipalToInherit = 7;
-  required bytes a_BaseURI = 8;
-  required bytes a_Csp = 9;
-  required bytes a_PostDataStream = 10;
-  required bytes a_HeadersStream = 11;
-  required bytes a_UnstrippedURI = 12;
+  optional bytes a_URI = 1;
+  optional bytes a_OriginalURI = 2;
+  optional bytes a_ResultPrincipalURI = 3;
+  optional bytes a_TriggeringPrincipal = 4;
+  optional bytes a_ReferrerInfo = 5;
+  optional bytes a_PrincipalToInherit = 6;
+  optional bytes a_PartitionedPrincipalToInherit = 7;
+  optional bytes a_BaseURI = 8;
+  optional bytes a_Csp = 9;
+  optional bytes a_PostDataStream = 10;
+  optional bytes a_HeadersStream = 11;
+  optional bytes a_UnstrippedURI = 12;
   required uint64 a_LoadIdentifier = 13;
   required string a_Target = 14;
   required string a_TypeHint = 15;
@@ -174,9 +174,9 @@ message ReplacementChannelConfigInit {
   required bytes a_classOfService = 2;
   optional bool a_privateBrowsing = 3;
   optional string a_method = 4;
-  required bytes a_referrerInfo = 5;
+  optional bytes a_referrerInfo = 5;
   optional protobuf.mozilla.dom.TimedChannelInfo a_timedChannelInfo = 6;
-  required bytes a_uploadStream = 7;
+  optional bytes a_uploadStream = 7;
   required uint64 a_uploadStreamLength = 8;
   required bool a_uploadStreamHasHeaders = 9;
   optional string a_contentType = 10;
@@ -208,7 +208,7 @@ message IDPLVariant {
 
 message IPDLProperty {
   required string a_name = 1;
-  required bytes a_value = 2;
+  optional bytes a_value = 2;
 }
 
 message ParentShowInfo {
@@ -258,11 +258,11 @@ message IPCNotification {
 }
 
 message IPCNotificationsOrError {
-  message _mVArrayOfIPCNotification {
+  message a_type_mVArrayOfIPCNotification {
     repeated protobuf.mozilla.dom.IPCNotification a_mVArrayOfIPCNotification = 1;
   }
   oneof content {
-    _mVArrayOfIPCNotification mVArrayOfIPCNotification = 1;
+    a_type_mVArrayOfIPCNotification a_mVArrayOfIPCNotification = 1;
     bytes a_mVnsresult = 2;
   }
 }

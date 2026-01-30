@@ -21,7 +21,7 @@ message AccessibleData {
   required bytes a_Type = 5;
   required bytes a_GenericTypes = 6;
   required uint32 a_RoleMapEntryIndex = 7;
-  required bytes a_CacheFields = 8;
+  optional bytes a_CacheFields = 8;
 }
 
 message CacheEventData {

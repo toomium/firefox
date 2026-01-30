@@ -59,9 +59,9 @@ extern FactoryRequestParamsDefaultTypeInternal _FactoryRequestParams_default_ins
 class GetDatabasesResponse;
 struct GetDatabasesResponseDefaultTypeInternal;
 extern GetDatabasesResponseDefaultTypeInternal _GetDatabasesResponse_default_instance_;
-class GetDatabasesResponse__mVArrayOfDatabaseMetadata;
-struct GetDatabasesResponse__mVArrayOfDatabaseMetadataDefaultTypeInternal;
-extern GetDatabasesResponse__mVArrayOfDatabaseMetadataDefaultTypeInternal _GetDatabasesResponse__mVArrayOfDatabaseMetadata_default_instance_;
+class GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata;
+struct GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadataDefaultTypeInternal;
+extern GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadataDefaultTypeInternal _GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata_default_instance_;
 class OpenDatabaseRequestParams;
 struct OpenDatabaseRequestParamsDefaultTypeInternal;
 extern OpenDatabaseRequestParamsDefaultTypeInternal _OpenDatabaseRequestParams_default_instance_;
@@ -74,7 +74,7 @@ template<> ::protobuf::mozilla::dom::indexedDB::CommonFactoryRequestParams* Aren
 template<> ::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestParams>(Arena*);
 template<> ::protobuf::mozilla::dom::indexedDB::FactoryRequestParams* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::FactoryRequestParams>(Arena*);
 template<> ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse>(Arena*);
-template<> ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata>(Arena*);
+template<> ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata>(Arena*);
 template<> ::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestParams>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace protobuf {
@@ -733,24 +733,24 @@ class FactoryRequestParams final :
 };
 // -------------------------------------------------------------------
 
-class GetDatabasesResponse__mVArrayOfDatabaseMetadata final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata) */ {
+class GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata final :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.a_type_mVArrayOfDatabaseMetadata) */ {
  public:
-  inline GetDatabasesResponse__mVArrayOfDatabaseMetadata() : GetDatabasesResponse__mVArrayOfDatabaseMetadata(nullptr) {}
-  ~GetDatabasesResponse__mVArrayOfDatabaseMetadata() override;
-  explicit PROTOBUF_CONSTEXPR GetDatabasesResponse__mVArrayOfDatabaseMetadata(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata() : GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata(nullptr) {}
+  ~GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata() override;
+  explicit PROTOBUF_CONSTEXPR GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  GetDatabasesResponse__mVArrayOfDatabaseMetadata(const GetDatabasesResponse__mVArrayOfDatabaseMetadata& from);
-  GetDatabasesResponse__mVArrayOfDatabaseMetadata(GetDatabasesResponse__mVArrayOfDatabaseMetadata&& from) noexcept
-    : GetDatabasesResponse__mVArrayOfDatabaseMetadata() {
+  GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata(const GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata& from);
+  GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata(GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata&& from) noexcept
+    : GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata() {
     *this = ::std::move(from);
   }
 
-  inline GetDatabasesResponse__mVArrayOfDatabaseMetadata& operator=(const GetDatabasesResponse__mVArrayOfDatabaseMetadata& from) {
+  inline GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata& operator=(const GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata& from) {
     CopyFrom(from);
     return *this;
   }
-  inline GetDatabasesResponse__mVArrayOfDatabaseMetadata& operator=(GetDatabasesResponse__mVArrayOfDatabaseMetadata&& from) noexcept {
+  inline GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata& operator=(GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -771,20 +771,20 @@ class GetDatabasesResponse__mVArrayOfDatabaseMetadata final :
     return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
-  static const GetDatabasesResponse__mVArrayOfDatabaseMetadata& default_instance() {
+  static const GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata& default_instance() {
     return *internal_default_instance();
   }
-  static inline const GetDatabasesResponse__mVArrayOfDatabaseMetadata* internal_default_instance() {
-    return reinterpret_cast<const GetDatabasesResponse__mVArrayOfDatabaseMetadata*>(
-               &_GetDatabasesResponse__mVArrayOfDatabaseMetadata_default_instance_);
+  static inline const GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata* internal_default_instance() {
+    return reinterpret_cast<const GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata*>(
+               &_GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     4;
 
-  friend void swap(GetDatabasesResponse__mVArrayOfDatabaseMetadata& a, GetDatabasesResponse__mVArrayOfDatabaseMetadata& b) {
+  friend void swap(GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata& a, GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata& b) {
     a.Swap(&b);
   }
-  inline void Swap(GetDatabasesResponse__mVArrayOfDatabaseMetadata* other) {
+  inline void Swap(GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -797,7 +797,7 @@ class GetDatabasesResponse__mVArrayOfDatabaseMetadata final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(GetDatabasesResponse__mVArrayOfDatabaseMetadata* other) {
+  void UnsafeArenaSwap(GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -805,12 +805,12 @@ class GetDatabasesResponse__mVArrayOfDatabaseMetadata final :
 
   // implements Message ----------------------------------------------
 
-  GetDatabasesResponse__mVArrayOfDatabaseMetadata* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<GetDatabasesResponse__mVArrayOfDatabaseMetadata>(arena);
+  GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata>(arena);
   }
   void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const GetDatabasesResponse__mVArrayOfDatabaseMetadata& from);
-  void MergeFrom(const GetDatabasesResponse__mVArrayOfDatabaseMetadata& from);
+  void CopyFrom(const GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata& from);
+  void MergeFrom(const GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -824,15 +824,15 @@ class GetDatabasesResponse__mVArrayOfDatabaseMetadata final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const;
-  void InternalSwap(GetDatabasesResponse__mVArrayOfDatabaseMetadata* other);
+  void InternalSwap(GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata";
+    return "protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.a_type_mVArrayOfDatabaseMetadata";
   }
   protected:
-  explicit GetDatabasesResponse__mVArrayOfDatabaseMetadata(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -863,7 +863,7 @@ class GetDatabasesResponse__mVArrayOfDatabaseMetadata final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata >&
       a_mvarrayofdatabasemetadata() const;
 
-  // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata)
+  // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.a_type_mVArrayOfDatabaseMetadata)
  private:
   class _Internal;
 
@@ -922,7 +922,7 @@ class GetDatabasesResponse final :
   }
   enum ContentCase {
     kAMVnsresult = 1,
-    kMVArrayOfDatabaseMetadata = 2,
+    kAMVArrayOfDatabaseMetadata = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -992,13 +992,13 @@ class GetDatabasesResponse final :
 
   // nested types ----------------------------------------------------
 
-  typedef GetDatabasesResponse__mVArrayOfDatabaseMetadata _mVArrayOfDatabaseMetadata;
+  typedef GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata a_type_mVArrayOfDatabaseMetadata;
 
   // accessors -------------------------------------------------------
 
   enum : int {
     kAMVnsresultFieldNumber = 1,
-    kMVArrayOfDatabaseMetadataFieldNumber = 2,
+    kAMVArrayOfDatabaseMetadataFieldNumber = 2,
   };
   // bytes a_mVnsresult = 1;
   bool has_a_mvnsresult() const;
@@ -1018,23 +1018,23 @@ class GetDatabasesResponse final :
   std::string* _internal_mutable_a_mvnsresult();
   public:
 
-  // .protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata mVArrayOfDatabaseMetadata = 2;
-  bool has_mvarrayofdatabasemetadata() const;
+  // .protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.a_type_mVArrayOfDatabaseMetadata a_mVArrayOfDatabaseMetadata = 2;
+  bool has_a_mvarrayofdatabasemetadata() const;
   private:
-  bool _internal_has_mvarrayofdatabasemetadata() const;
+  bool _internal_has_a_mvarrayofdatabasemetadata() const;
   public:
-  void clear_mvarrayofdatabasemetadata();
-  const ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata& mvarrayofdatabasemetadata() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata* release_mvarrayofdatabasemetadata();
-  ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata* mutable_mvarrayofdatabasemetadata();
-  void set_allocated_mvarrayofdatabasemetadata(::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata* mvarrayofdatabasemetadata);
+  void clear_a_mvarrayofdatabasemetadata();
+  const ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata& a_mvarrayofdatabasemetadata() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata* release_a_mvarrayofdatabasemetadata();
+  ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata* mutable_a_mvarrayofdatabasemetadata();
+  void set_allocated_a_mvarrayofdatabasemetadata(::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata* a_mvarrayofdatabasemetadata);
   private:
-  const ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata& _internal_mvarrayofdatabasemetadata() const;
-  ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata* _internal_mutable_mvarrayofdatabasemetadata();
+  const ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata& _internal_a_mvarrayofdatabasemetadata() const;
+  ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata* _internal_mutable_a_mvarrayofdatabasemetadata();
   public:
-  void unsafe_arena_set_allocated_mvarrayofdatabasemetadata(
-      ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata* mvarrayofdatabasemetadata);
-  ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata* unsafe_arena_release_mvarrayofdatabasemetadata();
+  void unsafe_arena_set_allocated_a_mvarrayofdatabasemetadata(
+      ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata* a_mvarrayofdatabasemetadata);
+  ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata* unsafe_arena_release_a_mvarrayofdatabasemetadata();
 
   void clear_content();
   ContentCase content_case() const;
@@ -1042,7 +1042,7 @@ class GetDatabasesResponse final :
  private:
   class _Internal;
   void set_has_a_mvnsresult();
-  void set_has_mvarrayofdatabasemetadata();
+  void set_has_a_mvarrayofdatabasemetadata();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -1055,7 +1055,7 @@ class GetDatabasesResponse final :
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
       ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
-      ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata* mvarrayofdatabasemetadata_;
+      ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata* a_mvarrayofdatabasemetadata_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -1600,42 +1600,42 @@ inline FactoryRequestParams::ContentCase FactoryRequestParams::content_case() co
 }
 // -------------------------------------------------------------------
 
-// GetDatabasesResponse__mVArrayOfDatabaseMetadata
+// GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata
 
 // repeated .protobuf.mozilla.dom.indexedDB.DatabaseMetadata a_mVArrayOfDatabaseMetadata = 1;
-inline int GetDatabasesResponse__mVArrayOfDatabaseMetadata::_internal_a_mvarrayofdatabasemetadata_size() const {
+inline int GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata::_internal_a_mvarrayofdatabasemetadata_size() const {
   return _impl_.a_mvarrayofdatabasemetadata_.size();
 }
-inline int GetDatabasesResponse__mVArrayOfDatabaseMetadata::a_mvarrayofdatabasemetadata_size() const {
+inline int GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata::a_mvarrayofdatabasemetadata_size() const {
   return _internal_a_mvarrayofdatabasemetadata_size();
 }
-inline ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* GetDatabasesResponse__mVArrayOfDatabaseMetadata::mutable_a_mvarrayofdatabasemetadata(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata.a_mVArrayOfDatabaseMetadata)
+inline ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata::mutable_a_mvarrayofdatabasemetadata(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.a_type_mVArrayOfDatabaseMetadata.a_mVArrayOfDatabaseMetadata)
   return _impl_.a_mvarrayofdatabasemetadata_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata >*
-GetDatabasesResponse__mVArrayOfDatabaseMetadata::mutable_a_mvarrayofdatabasemetadata() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata.a_mVArrayOfDatabaseMetadata)
+GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata::mutable_a_mvarrayofdatabasemetadata() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.a_type_mVArrayOfDatabaseMetadata.a_mVArrayOfDatabaseMetadata)
   return &_impl_.a_mvarrayofdatabasemetadata_;
 }
-inline const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata& GetDatabasesResponse__mVArrayOfDatabaseMetadata::_internal_a_mvarrayofdatabasemetadata(int index) const {
+inline const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata& GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata::_internal_a_mvarrayofdatabasemetadata(int index) const {
   return _impl_.a_mvarrayofdatabasemetadata_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata& GetDatabasesResponse__mVArrayOfDatabaseMetadata::a_mvarrayofdatabasemetadata(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata.a_mVArrayOfDatabaseMetadata)
+inline const ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata& GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata::a_mvarrayofdatabasemetadata(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.a_type_mVArrayOfDatabaseMetadata.a_mVArrayOfDatabaseMetadata)
   return _internal_a_mvarrayofdatabasemetadata(index);
 }
-inline ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* GetDatabasesResponse__mVArrayOfDatabaseMetadata::_internal_add_a_mvarrayofdatabasemetadata() {
+inline ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata::_internal_add_a_mvarrayofdatabasemetadata() {
   return _impl_.a_mvarrayofdatabasemetadata_.Add();
 }
-inline ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* GetDatabasesResponse__mVArrayOfDatabaseMetadata::add_a_mvarrayofdatabasemetadata() {
+inline ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata::add_a_mvarrayofdatabasemetadata() {
   ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata* _add = _internal_add_a_mvarrayofdatabasemetadata();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata.a_mVArrayOfDatabaseMetadata)
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.a_type_mVArrayOfDatabaseMetadata.a_mVArrayOfDatabaseMetadata)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::DatabaseMetadata >&
-GetDatabasesResponse__mVArrayOfDatabaseMetadata::a_mvarrayofdatabasemetadata() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata.a_mVArrayOfDatabaseMetadata)
+GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata::a_mvarrayofdatabasemetadata() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.a_type_mVArrayOfDatabaseMetadata.a_mVArrayOfDatabaseMetadata)
   return _impl_.a_mvarrayofdatabasemetadata_;
 }
 
@@ -1720,77 +1720,77 @@ inline void GetDatabasesResponse::set_allocated_a_mvnsresult(std::string* a_mvns
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.a_mVnsresult)
 }
 
-// .protobuf.mozilla.dom.indexedDB.GetDatabasesResponse._mVArrayOfDatabaseMetadata mVArrayOfDatabaseMetadata = 2;
-inline bool GetDatabasesResponse::_internal_has_mvarrayofdatabasemetadata() const {
-  return content_case() == kMVArrayOfDatabaseMetadata;
+// .protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.a_type_mVArrayOfDatabaseMetadata a_mVArrayOfDatabaseMetadata = 2;
+inline bool GetDatabasesResponse::_internal_has_a_mvarrayofdatabasemetadata() const {
+  return content_case() == kAMVArrayOfDatabaseMetadata;
 }
-inline bool GetDatabasesResponse::has_mvarrayofdatabasemetadata() const {
-  return _internal_has_mvarrayofdatabasemetadata();
+inline bool GetDatabasesResponse::has_a_mvarrayofdatabasemetadata() const {
+  return _internal_has_a_mvarrayofdatabasemetadata();
 }
-inline void GetDatabasesResponse::set_has_mvarrayofdatabasemetadata() {
-  _impl_._oneof_case_[0] = kMVArrayOfDatabaseMetadata;
+inline void GetDatabasesResponse::set_has_a_mvarrayofdatabasemetadata() {
+  _impl_._oneof_case_[0] = kAMVArrayOfDatabaseMetadata;
 }
-inline void GetDatabasesResponse::clear_mvarrayofdatabasemetadata() {
-  if (_internal_has_mvarrayofdatabasemetadata()) {
+inline void GetDatabasesResponse::clear_a_mvarrayofdatabasemetadata() {
+  if (_internal_has_a_mvarrayofdatabasemetadata()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvarrayofdatabasemetadata_;
+      delete _impl_.content_.a_mvarrayofdatabasemetadata_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata* GetDatabasesResponse::release_mvarrayofdatabasemetadata() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.mVArrayOfDatabaseMetadata)
-  if (_internal_has_mvarrayofdatabasemetadata()) {
+inline ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata* GetDatabasesResponse::release_a_mvarrayofdatabasemetadata() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.a_mVArrayOfDatabaseMetadata)
+  if (_internal_has_a_mvarrayofdatabasemetadata()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata* temp = _impl_.content_.mvarrayofdatabasemetadata_;
+    ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata* temp = _impl_.content_.a_mvarrayofdatabasemetadata_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvarrayofdatabasemetadata_ = nullptr;
+    _impl_.content_.a_mvarrayofdatabasemetadata_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata& GetDatabasesResponse::_internal_mvarrayofdatabasemetadata() const {
-  return _internal_has_mvarrayofdatabasemetadata()
-      ? *_impl_.content_.mvarrayofdatabasemetadata_
-      : reinterpret_cast< ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata&>(::protobuf::mozilla::dom::indexedDB::_GetDatabasesResponse__mVArrayOfDatabaseMetadata_default_instance_);
+inline const ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata& GetDatabasesResponse::_internal_a_mvarrayofdatabasemetadata() const {
+  return _internal_has_a_mvarrayofdatabasemetadata()
+      ? *_impl_.content_.a_mvarrayofdatabasemetadata_
+      : reinterpret_cast< ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata&>(::protobuf::mozilla::dom::indexedDB::_GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata& GetDatabasesResponse::mvarrayofdatabasemetadata() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.mVArrayOfDatabaseMetadata)
-  return _internal_mvarrayofdatabasemetadata();
+inline const ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata& GetDatabasesResponse::a_mvarrayofdatabasemetadata() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.a_mVArrayOfDatabaseMetadata)
+  return _internal_a_mvarrayofdatabasemetadata();
 }
-inline ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata* GetDatabasesResponse::unsafe_arena_release_mvarrayofdatabasemetadata() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.mVArrayOfDatabaseMetadata)
-  if (_internal_has_mvarrayofdatabasemetadata()) {
+inline ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata* GetDatabasesResponse::unsafe_arena_release_a_mvarrayofdatabasemetadata() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.a_mVArrayOfDatabaseMetadata)
+  if (_internal_has_a_mvarrayofdatabasemetadata()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata* temp = _impl_.content_.mvarrayofdatabasemetadata_;
-    _impl_.content_.mvarrayofdatabasemetadata_ = nullptr;
+    ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata* temp = _impl_.content_.a_mvarrayofdatabasemetadata_;
+    _impl_.content_.a_mvarrayofdatabasemetadata_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void GetDatabasesResponse::unsafe_arena_set_allocated_mvarrayofdatabasemetadata(::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata* mvarrayofdatabasemetadata) {
+inline void GetDatabasesResponse::unsafe_arena_set_allocated_a_mvarrayofdatabasemetadata(::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata* a_mvarrayofdatabasemetadata) {
   clear_content();
-  if (mvarrayofdatabasemetadata) {
-    set_has_mvarrayofdatabasemetadata();
-    _impl_.content_.mvarrayofdatabasemetadata_ = mvarrayofdatabasemetadata;
+  if (a_mvarrayofdatabasemetadata) {
+    set_has_a_mvarrayofdatabasemetadata();
+    _impl_.content_.a_mvarrayofdatabasemetadata_ = a_mvarrayofdatabasemetadata;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.mVArrayOfDatabaseMetadata)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.a_mVArrayOfDatabaseMetadata)
 }
-inline ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata* GetDatabasesResponse::_internal_mutable_mvarrayofdatabasemetadata() {
-  if (!_internal_has_mvarrayofdatabasemetadata()) {
+inline ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata* GetDatabasesResponse::_internal_mutable_a_mvarrayofdatabasemetadata() {
+  if (!_internal_has_a_mvarrayofdatabasemetadata()) {
     clear_content();
-    set_has_mvarrayofdatabasemetadata();
-    _impl_.content_.mvarrayofdatabasemetadata_ = CreateMaybeMessage< ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata >(GetArenaForAllocation());
+    set_has_a_mvarrayofdatabasemetadata();
+    _impl_.content_.a_mvarrayofdatabasemetadata_ = CreateMaybeMessage< ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvarrayofdatabasemetadata_;
+  return _impl_.content_.a_mvarrayofdatabasemetadata_;
 }
-inline ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata* GetDatabasesResponse::mutable_mvarrayofdatabasemetadata() {
-  ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse__mVArrayOfDatabaseMetadata* _msg = _internal_mutable_mvarrayofdatabasemetadata();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.mVArrayOfDatabaseMetadata)
+inline ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata* GetDatabasesResponse::mutable_a_mvarrayofdatabasemetadata() {
+  ::protobuf::mozilla::dom::indexedDB::GetDatabasesResponse_a_type_mVArrayOfDatabaseMetadata* _msg = _internal_mutable_a_mvarrayofdatabasemetadata();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.GetDatabasesResponse.a_mVArrayOfDatabaseMetadata)
   return _msg;
 }
 

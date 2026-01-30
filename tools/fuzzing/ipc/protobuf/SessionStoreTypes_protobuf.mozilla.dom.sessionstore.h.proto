@@ -60,6 +60,6 @@ message FormData {
 }
 
 message DocShellRestoreState {
-  required bytes a_URI = 1;
+  optional bytes a_URI = 1;
   required string a_docShellCaps = 2;
 }

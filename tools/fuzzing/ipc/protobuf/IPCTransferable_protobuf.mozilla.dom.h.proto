@@ -64,8 +64,8 @@ message IPCTransferableDataOrError {
 message IPCTransferable {
   required protobuf.mozilla.dom.IPCTransferableData a_data = 1;
   required bool a_isPrivateData = 2;
-  required bytes a_dataPrincipal = 3;
+  optional bytes a_dataPrincipal = 3;
   optional protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 4;
   required bytes a_contentPolicyType = 5;
-  required bytes a_referrerInfo = 6;
+  optional bytes a_referrerInfo = 6;
 }

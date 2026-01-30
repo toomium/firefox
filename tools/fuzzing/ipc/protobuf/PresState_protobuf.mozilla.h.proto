@@ -35,7 +35,7 @@ message TextContentData {
 }
 
 message PresContentData {
-  message _mVArrayOfFileContentData {
+  message a_type_mVArrayOfFileContentData {
     repeated protobuf.mozilla.FileContentData a_mVArrayOfFileContentData = 1;
   }
   oneof content {
@@ -43,7 +43,7 @@ message PresContentData {
     protobuf.mozilla.TextContentData a_mVTextContentData = 2;
     protobuf.mozilla.SelectContentData a_mVSelectContentData = 3;
     protobuf.mozilla.CheckedContentData a_mVCheckedContentData = 4;
-    _mVArrayOfFileContentData mVArrayOfFileContentData = 5;
+    a_type_mVArrayOfFileContentData a_mVArrayOfFileContentData = 5;
     protobuf.mozilla.dom.CustomElementTuple a_mVCustomElementTuple = 6;
   }
 }

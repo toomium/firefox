@@ -61,13 +61,13 @@ message Msg_SetSendOrder {
 
 message Msg_IncomingUnidirectionalStream {
   required uint64 a_streamId = 1;
-  required bytes a_receive = 2;
+  optional bytes a_receive = 2;
 }
 
 message Msg_IncomingBidirectionalStream {
   required uint64 a_streamId = 1;
-  required bytes a_receive = 2;
-  required bytes a_send = 3;
+  optional bytes a_receive = 2;
+  optional bytes a_send = 3;
 }
 
 message Msg_IncomingDatagram {

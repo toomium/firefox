@@ -1811,7 +1811,7 @@ class IPCPaymentCreateActionRequest final :
   std::string* _internal_mutable_a_requestid();
   public:
 
-  // required bytes a_topLevelPrincipal = 3;
+  // optional bytes a_topLevelPrincipal = 3;
   bool has_a_toplevelprincipal() const;
   private:
   bool _internal_has_a_toplevelprincipal() const;
@@ -7738,7 +7738,7 @@ inline void IPCPaymentCreateActionRequest::set_allocated_a_requestid(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCPaymentCreateActionRequest.a_requestId)
 }
 
-// required bytes a_topLevelPrincipal = 3;
+// optional bytes a_topLevelPrincipal = 3;
 inline bool IPCPaymentCreateActionRequest::_internal_has_a_toplevelprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

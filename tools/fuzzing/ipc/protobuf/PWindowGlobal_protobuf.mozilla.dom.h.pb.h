@@ -422,7 +422,7 @@ class IPCWebShareData final :
   std::string* _internal_mutable_a_text();
   public:
 
-  // required bytes a_url = 3;
+  // optional bytes a_url = 3;
   bool has_a_url() const;
   private:
   bool _internal_has_a_url() const;
@@ -843,7 +843,7 @@ inline void IPCWebShareData::set_allocated_a_text(std::string* a_text) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCWebShareData.a_text)
 }
 
-// required bytes a_url = 3;
+// optional bytes a_url = 3;
 inline bool IPCWebShareData::_internal_has_a_url() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

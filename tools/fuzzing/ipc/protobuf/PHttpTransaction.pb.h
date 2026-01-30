@@ -307,7 +307,7 @@ class Msg_OnStartRequest final :
   std::string* _internal_mutable_a_responsehead();
   public:
 
-  // required bytes a_securityInfo = 3;
+  // optional bytes a_securityInfo = 3;
   bool has_a_securityinfo() const;
   private:
   bool _internal_has_a_securityinfo() const;
@@ -3212,7 +3212,7 @@ inline void Msg_OnStartRequest::set_allocated_a_responsehead(std::string* a_resp
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpTransaction.Msg_OnStartRequest.a_responseHead)
 }
 
-// required bytes a_securityInfo = 3;
+// optional bytes a_securityInfo = 3;
 inline bool Msg_OnStartRequest::_internal_has_a_securityinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

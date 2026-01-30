@@ -772,7 +772,7 @@ class Msg_Decode final :
   enum : int {
     kADataFieldNumber = 1,
   };
-  // required bytes a_data = 1;
+  // optional bytes a_data = 1;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -2337,7 +2337,7 @@ inline void Reply_Init::set_allocated_a_result(::protobuf::mozilla::InitResultIP
 
 // Msg_Decode
 
-// required bytes a_data = 1;
+// optional bytes a_data = 1;
 inline bool Msg_Decode::_internal_has_a_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

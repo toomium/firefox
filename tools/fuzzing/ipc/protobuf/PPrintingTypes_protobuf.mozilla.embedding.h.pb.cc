@@ -561,7 +561,7 @@ class PrintData::_Internal {
     (*has_bits)[1] |= 262144u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return (((has_bits[0] & 0xffffffff) ^ 0xffffffff)
+    return (((has_bits[0] & 0xfffffffe) ^ 0xfffffffe)
        | ((has_bits[1] & 0x0007ffff) ^ 0x0007ffff)) != 0;
   }
 };
@@ -987,7 +987,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_remotePrintJob = 1;
+      // optional bytes a_remotePrintJob = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_remoteprintjob();
@@ -1521,7 +1521,7 @@ uint8_t* PrintData::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_remotePrintJob = 1;
+  // optional bytes a_remotePrintJob = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_remoteprintjob(), target);
@@ -1866,13 +1866,6 @@ size_t PrintData::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.embedding.PrintData)
   size_t total_size = 0;
 
-  if (_internal_has_a_remoteprintjob()) {
-    // required bytes a_remotePrintJob = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_remoteprintjob());
-  }
-
   if (_internal_has_a_title()) {
     // required string a_title = 23;
     total_size += 2 +
@@ -2173,13 +2166,8 @@ size_t PrintData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.embedding.PrintData)
   size_t total_size = 0;
 
-  if ((((_impl_._has_bits_[0] & 0xffffffff) ^ 0xffffffff)
+  if ((((_impl_._has_bits_[0] & 0xfffffffe) ^ 0xfffffffe)
        | ((_impl_._has_bits_[1] & 0x0007ffff) ^ 0x0007ffff)) == 0) {  // All required fields are present.
-    // required bytes a_remotePrintJob = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_remoteprintjob());
-
     // required string a_title = 23;
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
@@ -2404,6 +2392,14 @@ size_t PrintData::ByteSizeLong() const {
   for (const auto& msg : this->_impl_.a_gtkprintsettings_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // optional bytes a_remotePrintJob = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_remoteprintjob());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {

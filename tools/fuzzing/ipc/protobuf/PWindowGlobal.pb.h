@@ -2338,7 +2338,7 @@ class Msg_RestoreTabContent final :
   enum : int {
     kAADataFieldNumber = 1,
   };
-  // required bytes a_aData = 1;
+  // optional bytes a_aData = 1;
   bool has_a_adata() const;
   private:
   bool _internal_has_a_adata() const;
@@ -3294,7 +3294,7 @@ class Msg_UpdateDocumentPrincipal final :
     kAAPrincipalFieldNumber = 1,
     kAAStoragePrincipalFieldNumber = 2,
   };
-  // required bytes a_aPrincipal = 1;
+  // optional bytes a_aPrincipal = 1;
   bool has_a_aprincipal() const;
   private:
   bool _internal_has_a_aprincipal() const;
@@ -3312,7 +3312,7 @@ class Msg_UpdateDocumentPrincipal final :
   std::string* _internal_mutable_a_aprincipal();
   public:
 
-  // required bytes a_aStoragePrincipal = 2;
+  // optional bytes a_aStoragePrincipal = 2;
   bool has_a_astorageprincipal() const;
   private:
   bool _internal_has_a_astorageprincipal() const;
@@ -3333,9 +3333,6 @@ class Msg_UpdateDocumentPrincipal final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWindowGlobal.Msg_UpdateDocumentPrincipal)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4343,7 +4340,7 @@ class Msg_UpdateDocumentSecurityInfo final :
   enum : int {
     kAASecurityInfoFieldNumber = 1,
   };
-  // required bytes a_aSecurityInfo = 1;
+  // optional bytes a_aSecurityInfo = 1;
   bool has_a_asecurityinfo() const;
   private:
   bool _internal_has_a_asecurityinfo() const;
@@ -7388,7 +7385,7 @@ class Msg_SetCookies final :
   std::string* _internal_mutable_a_attrs();
   public:
 
-  // required bytes a_host = 3;
+  // optional bytes a_host = 3;
   bool has_a_host() const;
   private:
   bool _internal_has_a_host() const;
@@ -9370,7 +9367,7 @@ inline void Reply_RestoreDocShellState::set_a_success(bool value) {
 
 // Msg_RestoreTabContent
 
-// required bytes a_aData = 1;
+// optional bytes a_aData = 1;
 inline bool Msg_RestoreTabContent::_internal_has_a_adata() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10051,7 +10048,7 @@ inline void Msg_UpdateDocumentURI::set_allocated_a_auri(std::string* a_auri) {
 
 // Msg_UpdateDocumentPrincipal
 
-// required bytes a_aPrincipal = 1;
+// optional bytes a_aPrincipal = 1;
 inline bool Msg_UpdateDocumentPrincipal::_internal_has_a_aprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10119,7 +10116,7 @@ inline void Msg_UpdateDocumentPrincipal::set_allocated_a_aprincipal(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWindowGlobal.Msg_UpdateDocumentPrincipal.a_aPrincipal)
 }
 
-// required bytes a_aStoragePrincipal = 2;
+// optional bytes a_aStoragePrincipal = 2;
 inline bool Msg_UpdateDocumentPrincipal::_internal_has_a_astorageprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -10510,7 +10507,7 @@ inline void Msg_UpdateDocumentTitle::set_allocated_a_atitle(std::string* a_atitl
 
 // Msg_UpdateDocumentSecurityInfo
 
-// required bytes a_aSecurityInfo = 1;
+// optional bytes a_aSecurityInfo = 1;
 inline bool Msg_UpdateDocumentSecurityInfo::_internal_has_a_asecurityinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11620,7 +11617,7 @@ inline void Msg_SetCookies::set_allocated_a_attrs(std::string* a_attrs) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWindowGlobal.Msg_SetCookies.a_attrs)
 }
 
-// required bytes a_host = 3;
+// optional bytes a_host = 3;
 inline bool Msg_SetCookies::_internal_has_a_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

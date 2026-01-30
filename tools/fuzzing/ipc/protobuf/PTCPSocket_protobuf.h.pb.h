@@ -48,9 +48,9 @@ extern CallbackDataDefaultTypeInternal _CallbackData_default_instance_;
 class SendableData;
 struct SendableDataDefaultTypeInternal;
 extern SendableDataDefaultTypeInternal _SendableData_default_instance_;
-class SendableData__mVArrayOfuint8_t;
-struct SendableData__mVArrayOfuint8_tDefaultTypeInternal;
-extern SendableData__mVArrayOfuint8_tDefaultTypeInternal _SendableData__mVArrayOfuint8_t_default_instance_;
+class SendableData_a_type_mVArrayOfuint8_t;
+struct SendableData_a_type_mVArrayOfuint8_tDefaultTypeInternal;
+extern SendableData_a_type_mVArrayOfuint8_tDefaultTypeInternal _SendableData_a_type_mVArrayOfuint8_t_default_instance_;
 class TCPError;
 struct TCPErrorDefaultTypeInternal;
 extern TCPErrorDefaultTypeInternal _TCPError_default_instance_;
@@ -58,7 +58,7 @@ extern TCPErrorDefaultTypeInternal _TCPError_default_instance_;
 PROTOBUF_NAMESPACE_OPEN
 template<> ::protobuf::CallbackData* Arena::CreateMaybeMessage<::protobuf::CallbackData>(Arena*);
 template<> ::protobuf::SendableData* Arena::CreateMaybeMessage<::protobuf::SendableData>(Arena*);
-template<> ::protobuf::SendableData__mVArrayOfuint8_t* Arena::CreateMaybeMessage<::protobuf::SendableData__mVArrayOfuint8_t>(Arena*);
+template<> ::protobuf::SendableData_a_type_mVArrayOfuint8_t* Arena::CreateMaybeMessage<::protobuf::SendableData_a_type_mVArrayOfuint8_t>(Arena*);
 template<> ::protobuf::TCPError* Arena::CreateMaybeMessage<::protobuf::TCPError>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace protobuf {
@@ -255,24 +255,24 @@ class TCPError final :
 };
 // -------------------------------------------------------------------
 
-class SendableData__mVArrayOfuint8_t final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.SendableData._mVArrayOfuint8_t) */ {
+class SendableData_a_type_mVArrayOfuint8_t final :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.SendableData.a_type_mVArrayOfuint8_t) */ {
  public:
-  inline SendableData__mVArrayOfuint8_t() : SendableData__mVArrayOfuint8_t(nullptr) {}
-  ~SendableData__mVArrayOfuint8_t() override;
-  explicit PROTOBUF_CONSTEXPR SendableData__mVArrayOfuint8_t(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline SendableData_a_type_mVArrayOfuint8_t() : SendableData_a_type_mVArrayOfuint8_t(nullptr) {}
+  ~SendableData_a_type_mVArrayOfuint8_t() override;
+  explicit PROTOBUF_CONSTEXPR SendableData_a_type_mVArrayOfuint8_t(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  SendableData__mVArrayOfuint8_t(const SendableData__mVArrayOfuint8_t& from);
-  SendableData__mVArrayOfuint8_t(SendableData__mVArrayOfuint8_t&& from) noexcept
-    : SendableData__mVArrayOfuint8_t() {
+  SendableData_a_type_mVArrayOfuint8_t(const SendableData_a_type_mVArrayOfuint8_t& from);
+  SendableData_a_type_mVArrayOfuint8_t(SendableData_a_type_mVArrayOfuint8_t&& from) noexcept
+    : SendableData_a_type_mVArrayOfuint8_t() {
     *this = ::std::move(from);
   }
 
-  inline SendableData__mVArrayOfuint8_t& operator=(const SendableData__mVArrayOfuint8_t& from) {
+  inline SendableData_a_type_mVArrayOfuint8_t& operator=(const SendableData_a_type_mVArrayOfuint8_t& from) {
     CopyFrom(from);
     return *this;
   }
-  inline SendableData__mVArrayOfuint8_t& operator=(SendableData__mVArrayOfuint8_t&& from) noexcept {
+  inline SendableData_a_type_mVArrayOfuint8_t& operator=(SendableData_a_type_mVArrayOfuint8_t&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -293,20 +293,20 @@ class SendableData__mVArrayOfuint8_t final :
     return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
-  static const SendableData__mVArrayOfuint8_t& default_instance() {
+  static const SendableData_a_type_mVArrayOfuint8_t& default_instance() {
     return *internal_default_instance();
   }
-  static inline const SendableData__mVArrayOfuint8_t* internal_default_instance() {
-    return reinterpret_cast<const SendableData__mVArrayOfuint8_t*>(
-               &_SendableData__mVArrayOfuint8_t_default_instance_);
+  static inline const SendableData_a_type_mVArrayOfuint8_t* internal_default_instance() {
+    return reinterpret_cast<const SendableData_a_type_mVArrayOfuint8_t*>(
+               &_SendableData_a_type_mVArrayOfuint8_t_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     1;
 
-  friend void swap(SendableData__mVArrayOfuint8_t& a, SendableData__mVArrayOfuint8_t& b) {
+  friend void swap(SendableData_a_type_mVArrayOfuint8_t& a, SendableData_a_type_mVArrayOfuint8_t& b) {
     a.Swap(&b);
   }
-  inline void Swap(SendableData__mVArrayOfuint8_t* other) {
+  inline void Swap(SendableData_a_type_mVArrayOfuint8_t* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -319,7 +319,7 @@ class SendableData__mVArrayOfuint8_t final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(SendableData__mVArrayOfuint8_t* other) {
+  void UnsafeArenaSwap(SendableData_a_type_mVArrayOfuint8_t* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -327,12 +327,12 @@ class SendableData__mVArrayOfuint8_t final :
 
   // implements Message ----------------------------------------------
 
-  SendableData__mVArrayOfuint8_t* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<SendableData__mVArrayOfuint8_t>(arena);
+  SendableData_a_type_mVArrayOfuint8_t* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<SendableData_a_type_mVArrayOfuint8_t>(arena);
   }
   void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const SendableData__mVArrayOfuint8_t& from);
-  void MergeFrom(const SendableData__mVArrayOfuint8_t& from);
+  void CopyFrom(const SendableData_a_type_mVArrayOfuint8_t& from);
+  void MergeFrom(const SendableData_a_type_mVArrayOfuint8_t& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -346,15 +346,15 @@ class SendableData__mVArrayOfuint8_t final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const;
-  void InternalSwap(SendableData__mVArrayOfuint8_t* other);
+  void InternalSwap(SendableData_a_type_mVArrayOfuint8_t* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "protobuf.SendableData._mVArrayOfuint8_t";
+    return "protobuf.SendableData.a_type_mVArrayOfuint8_t";
   }
   protected:
-  explicit SendableData__mVArrayOfuint8_t(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit SendableData_a_type_mVArrayOfuint8_t(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -389,7 +389,7 @@ class SendableData__mVArrayOfuint8_t final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_mvarrayofuint8_t();
 
-  // @@protoc_insertion_point(class_scope:protobuf.SendableData._mVArrayOfuint8_t)
+  // @@protoc_insertion_point(class_scope:protobuf.SendableData.a_type_mVArrayOfuint8_t)
  private:
   class _Internal;
 
@@ -447,7 +447,7 @@ class SendableData final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVArrayOfuint8T = 1,
+    kAMVArrayOfuint8T = 1,
     kAMVnsCString = 2,
     CONTENT_NOT_SET = 0,
   };
@@ -518,31 +518,31 @@ class SendableData final :
 
   // nested types ----------------------------------------------------
 
-  typedef SendableData__mVArrayOfuint8_t _mVArrayOfuint8_t;
+  typedef SendableData_a_type_mVArrayOfuint8_t a_type_mVArrayOfuint8_t;
 
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfuint8TFieldNumber = 1,
+    kAMVArrayOfuint8TFieldNumber = 1,
     kAMVnsCStringFieldNumber = 2,
   };
-  // .protobuf.SendableData._mVArrayOfuint8_t mVArrayOfuint8_t = 1;
-  bool has_mvarrayofuint8_t() const;
+  // .protobuf.SendableData.a_type_mVArrayOfuint8_t a_mVArrayOfuint8_t = 1;
+  bool has_a_mvarrayofuint8_t() const;
   private:
-  bool _internal_has_mvarrayofuint8_t() const;
+  bool _internal_has_a_mvarrayofuint8_t() const;
   public:
-  void clear_mvarrayofuint8_t();
-  const ::protobuf::SendableData__mVArrayOfuint8_t& mvarrayofuint8_t() const;
-  PROTOBUF_NODISCARD ::protobuf::SendableData__mVArrayOfuint8_t* release_mvarrayofuint8_t();
-  ::protobuf::SendableData__mVArrayOfuint8_t* mutable_mvarrayofuint8_t();
-  void set_allocated_mvarrayofuint8_t(::protobuf::SendableData__mVArrayOfuint8_t* mvarrayofuint8_t);
+  void clear_a_mvarrayofuint8_t();
+  const ::protobuf::SendableData_a_type_mVArrayOfuint8_t& a_mvarrayofuint8_t() const;
+  PROTOBUF_NODISCARD ::protobuf::SendableData_a_type_mVArrayOfuint8_t* release_a_mvarrayofuint8_t();
+  ::protobuf::SendableData_a_type_mVArrayOfuint8_t* mutable_a_mvarrayofuint8_t();
+  void set_allocated_a_mvarrayofuint8_t(::protobuf::SendableData_a_type_mVArrayOfuint8_t* a_mvarrayofuint8_t);
   private:
-  const ::protobuf::SendableData__mVArrayOfuint8_t& _internal_mvarrayofuint8_t() const;
-  ::protobuf::SendableData__mVArrayOfuint8_t* _internal_mutable_mvarrayofuint8_t();
+  const ::protobuf::SendableData_a_type_mVArrayOfuint8_t& _internal_a_mvarrayofuint8_t() const;
+  ::protobuf::SendableData_a_type_mVArrayOfuint8_t* _internal_mutable_a_mvarrayofuint8_t();
   public:
-  void unsafe_arena_set_allocated_mvarrayofuint8_t(
-      ::protobuf::SendableData__mVArrayOfuint8_t* mvarrayofuint8_t);
-  ::protobuf::SendableData__mVArrayOfuint8_t* unsafe_arena_release_mvarrayofuint8_t();
+  void unsafe_arena_set_allocated_a_mvarrayofuint8_t(
+      ::protobuf::SendableData_a_type_mVArrayOfuint8_t* a_mvarrayofuint8_t);
+  ::protobuf::SendableData_a_type_mVArrayOfuint8_t* unsafe_arena_release_a_mvarrayofuint8_t();
 
   // string a_mVnsCString = 2;
   bool has_a_mvnscstring() const;
@@ -567,7 +567,7 @@ class SendableData final :
   // @@protoc_insertion_point(class_scope:protobuf.SendableData)
  private:
   class _Internal;
-  void set_has_mvarrayofuint8_t();
+  void set_has_a_mvarrayofuint8_t();
   void set_has_a_mvnscstring();
 
   inline bool has_content() const;
@@ -580,7 +580,7 @@ class SendableData final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::SendableData__mVArrayOfuint8_t* mvarrayofuint8_t_;
+      ::protobuf::SendableData_a_type_mVArrayOfuint8_t* a_mvarrayofuint8_t_;
       ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnscstring_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -1014,52 +1014,52 @@ inline void TCPError::set_allocated_a_errorcode(std::string* a_errorcode) {
 
 // -------------------------------------------------------------------
 
-// SendableData__mVArrayOfuint8_t
+// SendableData_a_type_mVArrayOfuint8_t
 
 // repeated uint32 a_mVArrayOfuint8_t = 1;
-inline int SendableData__mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t_size() const {
+inline int SendableData_a_type_mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t_size() const {
   return _impl_.a_mvarrayofuint8_t_.size();
 }
-inline int SendableData__mVArrayOfuint8_t::a_mvarrayofuint8_t_size() const {
+inline int SendableData_a_type_mVArrayOfuint8_t::a_mvarrayofuint8_t_size() const {
   return _internal_a_mvarrayofuint8_t_size();
 }
-inline void SendableData__mVArrayOfuint8_t::clear_a_mvarrayofuint8_t() {
+inline void SendableData_a_type_mVArrayOfuint8_t::clear_a_mvarrayofuint8_t() {
   _impl_.a_mvarrayofuint8_t_.Clear();
 }
-inline uint32_t SendableData__mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t(int index) const {
+inline uint32_t SendableData_a_type_mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t(int index) const {
   return _impl_.a_mvarrayofuint8_t_.Get(index);
 }
-inline uint32_t SendableData__mVArrayOfuint8_t::a_mvarrayofuint8_t(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.SendableData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
+inline uint32_t SendableData_a_type_mVArrayOfuint8_t::a_mvarrayofuint8_t(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.SendableData.a_type_mVArrayOfuint8_t.a_mVArrayOfuint8_t)
   return _internal_a_mvarrayofuint8_t(index);
 }
-inline void SendableData__mVArrayOfuint8_t::set_a_mvarrayofuint8_t(int index, uint32_t value) {
+inline void SendableData_a_type_mVArrayOfuint8_t::set_a_mvarrayofuint8_t(int index, uint32_t value) {
   _impl_.a_mvarrayofuint8_t_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.SendableData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
+  // @@protoc_insertion_point(field_set:protobuf.SendableData.a_type_mVArrayOfuint8_t.a_mVArrayOfuint8_t)
 }
-inline void SendableData__mVArrayOfuint8_t::_internal_add_a_mvarrayofuint8_t(uint32_t value) {
+inline void SendableData_a_type_mVArrayOfuint8_t::_internal_add_a_mvarrayofuint8_t(uint32_t value) {
   _impl_.a_mvarrayofuint8_t_.Add(value);
 }
-inline void SendableData__mVArrayOfuint8_t::add_a_mvarrayofuint8_t(uint32_t value) {
+inline void SendableData_a_type_mVArrayOfuint8_t::add_a_mvarrayofuint8_t(uint32_t value) {
   _internal_add_a_mvarrayofuint8_t(value);
-  // @@protoc_insertion_point(field_add:protobuf.SendableData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
+  // @@protoc_insertion_point(field_add:protobuf.SendableData.a_type_mVArrayOfuint8_t.a_mVArrayOfuint8_t)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-SendableData__mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t() const {
+SendableData_a_type_mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t() const {
   return _impl_.a_mvarrayofuint8_t_;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-SendableData__mVArrayOfuint8_t::a_mvarrayofuint8_t() const {
-  // @@protoc_insertion_point(field_list:protobuf.SendableData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
+SendableData_a_type_mVArrayOfuint8_t::a_mvarrayofuint8_t() const {
+  // @@protoc_insertion_point(field_list:protobuf.SendableData.a_type_mVArrayOfuint8_t.a_mVArrayOfuint8_t)
   return _internal_a_mvarrayofuint8_t();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-SendableData__mVArrayOfuint8_t::_internal_mutable_a_mvarrayofuint8_t() {
+SendableData_a_type_mVArrayOfuint8_t::_internal_mutable_a_mvarrayofuint8_t() {
   return &_impl_.a_mvarrayofuint8_t_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-SendableData__mVArrayOfuint8_t::mutable_a_mvarrayofuint8_t() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.SendableData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
+SendableData_a_type_mVArrayOfuint8_t::mutable_a_mvarrayofuint8_t() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.SendableData.a_type_mVArrayOfuint8_t.a_mVArrayOfuint8_t)
   return _internal_mutable_a_mvarrayofuint8_t();
 }
 
@@ -1067,77 +1067,77 @@ SendableData__mVArrayOfuint8_t::mutable_a_mvarrayofuint8_t() {
 
 // SendableData
 
-// .protobuf.SendableData._mVArrayOfuint8_t mVArrayOfuint8_t = 1;
-inline bool SendableData::_internal_has_mvarrayofuint8_t() const {
-  return content_case() == kMVArrayOfuint8T;
+// .protobuf.SendableData.a_type_mVArrayOfuint8_t a_mVArrayOfuint8_t = 1;
+inline bool SendableData::_internal_has_a_mvarrayofuint8_t() const {
+  return content_case() == kAMVArrayOfuint8T;
 }
-inline bool SendableData::has_mvarrayofuint8_t() const {
-  return _internal_has_mvarrayofuint8_t();
+inline bool SendableData::has_a_mvarrayofuint8_t() const {
+  return _internal_has_a_mvarrayofuint8_t();
 }
-inline void SendableData::set_has_mvarrayofuint8_t() {
-  _impl_._oneof_case_[0] = kMVArrayOfuint8T;
+inline void SendableData::set_has_a_mvarrayofuint8_t() {
+  _impl_._oneof_case_[0] = kAMVArrayOfuint8T;
 }
-inline void SendableData::clear_mvarrayofuint8_t() {
-  if (_internal_has_mvarrayofuint8_t()) {
+inline void SendableData::clear_a_mvarrayofuint8_t() {
+  if (_internal_has_a_mvarrayofuint8_t()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvarrayofuint8_t_;
+      delete _impl_.content_.a_mvarrayofuint8_t_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::SendableData__mVArrayOfuint8_t* SendableData::release_mvarrayofuint8_t() {
-  // @@protoc_insertion_point(field_release:protobuf.SendableData.mVArrayOfuint8_t)
-  if (_internal_has_mvarrayofuint8_t()) {
+inline ::protobuf::SendableData_a_type_mVArrayOfuint8_t* SendableData::release_a_mvarrayofuint8_t() {
+  // @@protoc_insertion_point(field_release:protobuf.SendableData.a_mVArrayOfuint8_t)
+  if (_internal_has_a_mvarrayofuint8_t()) {
     clear_has_content();
-    ::protobuf::SendableData__mVArrayOfuint8_t* temp = _impl_.content_.mvarrayofuint8_t_;
+    ::protobuf::SendableData_a_type_mVArrayOfuint8_t* temp = _impl_.content_.a_mvarrayofuint8_t_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvarrayofuint8_t_ = nullptr;
+    _impl_.content_.a_mvarrayofuint8_t_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::SendableData__mVArrayOfuint8_t& SendableData::_internal_mvarrayofuint8_t() const {
-  return _internal_has_mvarrayofuint8_t()
-      ? *_impl_.content_.mvarrayofuint8_t_
-      : reinterpret_cast< ::protobuf::SendableData__mVArrayOfuint8_t&>(::protobuf::_SendableData__mVArrayOfuint8_t_default_instance_);
+inline const ::protobuf::SendableData_a_type_mVArrayOfuint8_t& SendableData::_internal_a_mvarrayofuint8_t() const {
+  return _internal_has_a_mvarrayofuint8_t()
+      ? *_impl_.content_.a_mvarrayofuint8_t_
+      : reinterpret_cast< ::protobuf::SendableData_a_type_mVArrayOfuint8_t&>(::protobuf::_SendableData_a_type_mVArrayOfuint8_t_default_instance_);
 }
-inline const ::protobuf::SendableData__mVArrayOfuint8_t& SendableData::mvarrayofuint8_t() const {
-  // @@protoc_insertion_point(field_get:protobuf.SendableData.mVArrayOfuint8_t)
-  return _internal_mvarrayofuint8_t();
+inline const ::protobuf::SendableData_a_type_mVArrayOfuint8_t& SendableData::a_mvarrayofuint8_t() const {
+  // @@protoc_insertion_point(field_get:protobuf.SendableData.a_mVArrayOfuint8_t)
+  return _internal_a_mvarrayofuint8_t();
 }
-inline ::protobuf::SendableData__mVArrayOfuint8_t* SendableData::unsafe_arena_release_mvarrayofuint8_t() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.SendableData.mVArrayOfuint8_t)
-  if (_internal_has_mvarrayofuint8_t()) {
+inline ::protobuf::SendableData_a_type_mVArrayOfuint8_t* SendableData::unsafe_arena_release_a_mvarrayofuint8_t() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.SendableData.a_mVArrayOfuint8_t)
+  if (_internal_has_a_mvarrayofuint8_t()) {
     clear_has_content();
-    ::protobuf::SendableData__mVArrayOfuint8_t* temp = _impl_.content_.mvarrayofuint8_t_;
-    _impl_.content_.mvarrayofuint8_t_ = nullptr;
+    ::protobuf::SendableData_a_type_mVArrayOfuint8_t* temp = _impl_.content_.a_mvarrayofuint8_t_;
+    _impl_.content_.a_mvarrayofuint8_t_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void SendableData::unsafe_arena_set_allocated_mvarrayofuint8_t(::protobuf::SendableData__mVArrayOfuint8_t* mvarrayofuint8_t) {
+inline void SendableData::unsafe_arena_set_allocated_a_mvarrayofuint8_t(::protobuf::SendableData_a_type_mVArrayOfuint8_t* a_mvarrayofuint8_t) {
   clear_content();
-  if (mvarrayofuint8_t) {
-    set_has_mvarrayofuint8_t();
-    _impl_.content_.mvarrayofuint8_t_ = mvarrayofuint8_t;
+  if (a_mvarrayofuint8_t) {
+    set_has_a_mvarrayofuint8_t();
+    _impl_.content_.a_mvarrayofuint8_t_ = a_mvarrayofuint8_t;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.SendableData.mVArrayOfuint8_t)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.SendableData.a_mVArrayOfuint8_t)
 }
-inline ::protobuf::SendableData__mVArrayOfuint8_t* SendableData::_internal_mutable_mvarrayofuint8_t() {
-  if (!_internal_has_mvarrayofuint8_t()) {
+inline ::protobuf::SendableData_a_type_mVArrayOfuint8_t* SendableData::_internal_mutable_a_mvarrayofuint8_t() {
+  if (!_internal_has_a_mvarrayofuint8_t()) {
     clear_content();
-    set_has_mvarrayofuint8_t();
-    _impl_.content_.mvarrayofuint8_t_ = CreateMaybeMessage< ::protobuf::SendableData__mVArrayOfuint8_t >(GetArenaForAllocation());
+    set_has_a_mvarrayofuint8_t();
+    _impl_.content_.a_mvarrayofuint8_t_ = CreateMaybeMessage< ::protobuf::SendableData_a_type_mVArrayOfuint8_t >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvarrayofuint8_t_;
+  return _impl_.content_.a_mvarrayofuint8_t_;
 }
-inline ::protobuf::SendableData__mVArrayOfuint8_t* SendableData::mutable_mvarrayofuint8_t() {
-  ::protobuf::SendableData__mVArrayOfuint8_t* _msg = _internal_mutable_mvarrayofuint8_t();
-  // @@protoc_insertion_point(field_mutable:protobuf.SendableData.mVArrayOfuint8_t)
+inline ::protobuf::SendableData_a_type_mVArrayOfuint8_t* SendableData::mutable_a_mvarrayofuint8_t() {
+  ::protobuf::SendableData_a_type_mVArrayOfuint8_t* _msg = _internal_mutable_a_mvarrayofuint8_t();
+  // @@protoc_insertion_point(field_mutable:protobuf.SendableData.a_mVArrayOfuint8_t)
   return _msg;
 }
 

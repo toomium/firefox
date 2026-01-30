@@ -460,7 +460,7 @@ class PrintData final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::embedding::CStringKeyValue >&
       a_gtkprintsettings() const;
 
-  // required bytes a_remotePrintJob = 1;
+  // optional bytes a_remotePrintJob = 1;
   bool has_a_remoteprintjob() const;
   private:
   bool _internal_has_a_remoteprintjob() const;
@@ -1410,7 +1410,7 @@ inline void CStringKeyValue::set_allocated_a_value(std::string* a_value) {
 
 // PrintData
 
-// required bytes a_remotePrintJob = 1;
+// optional bytes a_remotePrintJob = 1;
 inline bool PrintData::_internal_has_a_remoteprintjob() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

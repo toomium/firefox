@@ -47,19 +47,19 @@ struct UDPSocketAddrDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UDPSocketAddrDefaultTypeInternal _UDPSocketAddr_default_instance_;
-PROTOBUF_CONSTEXPR UDPData__mVArrayOfuint8_t::UDPData__mVArrayOfuint8_t(
+PROTOBUF_CONSTEXPR UDPData_a_type_mVArrayOfuint8_t::UDPData_a_type_mVArrayOfuint8_t(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.a_mvarrayofuint8_t_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
-struct UDPData__mVArrayOfuint8_tDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR UDPData__mVArrayOfuint8_tDefaultTypeInternal()
+struct UDPData_a_type_mVArrayOfuint8_tDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR UDPData_a_type_mVArrayOfuint8_tDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~UDPData__mVArrayOfuint8_tDefaultTypeInternal() {}
+  ~UDPData_a_type_mVArrayOfuint8_tDefaultTypeInternal() {}
   union {
-    UDPData__mVArrayOfuint8_t _instance;
+    UDPData_a_type_mVArrayOfuint8_t _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UDPData__mVArrayOfuint8_tDefaultTypeInternal _UDPData__mVArrayOfuint8_t_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UDPData_a_type_mVArrayOfuint8_tDefaultTypeInternal _UDPData_a_type_mVArrayOfuint8_t_default_instance_;
 PROTOBUF_CONSTEXPR UDPData::UDPData(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.content_)*/{}
@@ -648,28 +648,28 @@ std::string UDPSocketAddr::GetTypeName() const {
 
 // ===================================================================
 
-class UDPData__mVArrayOfuint8_t::_Internal {
+class UDPData_a_type_mVArrayOfuint8_t::_Internal {
  public:
 };
 
-UDPData__mVArrayOfuint8_t::UDPData__mVArrayOfuint8_t(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+UDPData_a_type_mVArrayOfuint8_t::UDPData_a_type_mVArrayOfuint8_t(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:protobuf.UDPData._mVArrayOfuint8_t)
+  // @@protoc_insertion_point(arena_constructor:protobuf.UDPData.a_type_mVArrayOfuint8_t)
 }
-UDPData__mVArrayOfuint8_t::UDPData__mVArrayOfuint8_t(const UDPData__mVArrayOfuint8_t& from)
+UDPData_a_type_mVArrayOfuint8_t::UDPData_a_type_mVArrayOfuint8_t(const UDPData_a_type_mVArrayOfuint8_t& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
-  UDPData__mVArrayOfuint8_t* const _this = this; (void)_this;
+  UDPData_a_type_mVArrayOfuint8_t* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_mvarrayofuint8_t_){from._impl_.a_mvarrayofuint8_t_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:protobuf.UDPData._mVArrayOfuint8_t)
+  // @@protoc_insertion_point(copy_constructor:protobuf.UDPData.a_type_mVArrayOfuint8_t)
 }
 
-inline void UDPData__mVArrayOfuint8_t::SharedCtor(
+inline void UDPData_a_type_mVArrayOfuint8_t::SharedCtor(
     ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
   (void)is_message_owned;
@@ -679,8 +679,8 @@ inline void UDPData__mVArrayOfuint8_t::SharedCtor(
   };
 }
 
-UDPData__mVArrayOfuint8_t::~UDPData__mVArrayOfuint8_t() {
-  // @@protoc_insertion_point(destructor:protobuf.UDPData._mVArrayOfuint8_t)
+UDPData_a_type_mVArrayOfuint8_t::~UDPData_a_type_mVArrayOfuint8_t() {
+  // @@protoc_insertion_point(destructor:protobuf.UDPData.a_type_mVArrayOfuint8_t)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
@@ -688,17 +688,17 @@ UDPData__mVArrayOfuint8_t::~UDPData__mVArrayOfuint8_t() {
   SharedDtor();
 }
 
-inline void UDPData__mVArrayOfuint8_t::SharedDtor() {
+inline void UDPData_a_type_mVArrayOfuint8_t::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.a_mvarrayofuint8_t_.~RepeatedField();
 }
 
-void UDPData__mVArrayOfuint8_t::SetCachedSize(int size) const {
+void UDPData_a_type_mVArrayOfuint8_t::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void UDPData__mVArrayOfuint8_t::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.UDPData._mVArrayOfuint8_t)
+void UDPData_a_type_mVArrayOfuint8_t::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.UDPData.a_type_mVArrayOfuint8_t)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -707,7 +707,7 @@ void UDPData__mVArrayOfuint8_t::Clear() {
   _internal_metadata_.Clear<std::string>();
 }
 
-const char* UDPData__mVArrayOfuint8_t::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* UDPData_a_type_mVArrayOfuint8_t::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -752,9 +752,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* UDPData__mVArrayOfuint8_t::_InternalSerialize(
+uint8_t* UDPData_a_type_mVArrayOfuint8_t::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.UDPData._mVArrayOfuint8_t)
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.UDPData.a_type_mVArrayOfuint8_t)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -768,12 +768,12 @@ uint8_t* UDPData__mVArrayOfuint8_t::_InternalSerialize(
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.UDPData._mVArrayOfuint8_t)
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.UDPData.a_type_mVArrayOfuint8_t)
   return target;
 }
 
-size_t UDPData__mVArrayOfuint8_t::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.UDPData._mVArrayOfuint8_t)
+size_t UDPData_a_type_mVArrayOfuint8_t::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.UDPData.a_type_mVArrayOfuint8_t)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -797,15 +797,15 @@ size_t UDPData__mVArrayOfuint8_t::ByteSizeLong() const {
   return total_size;
 }
 
-void UDPData__mVArrayOfuint8_t::CheckTypeAndMergeFrom(
+void UDPData_a_type_mVArrayOfuint8_t::CheckTypeAndMergeFrom(
     const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const UDPData__mVArrayOfuint8_t*>(
+  MergeFrom(*::_pbi::DownCast<const UDPData_a_type_mVArrayOfuint8_t*>(
       &from));
 }
 
-void UDPData__mVArrayOfuint8_t::MergeFrom(const UDPData__mVArrayOfuint8_t& from) {
-  UDPData__mVArrayOfuint8_t* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.UDPData._mVArrayOfuint8_t)
+void UDPData_a_type_mVArrayOfuint8_t::MergeFrom(const UDPData_a_type_mVArrayOfuint8_t& from) {
+  UDPData_a_type_mVArrayOfuint8_t* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.UDPData.a_type_mVArrayOfuint8_t)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -814,25 +814,25 @@ void UDPData__mVArrayOfuint8_t::MergeFrom(const UDPData__mVArrayOfuint8_t& from)
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
-void UDPData__mVArrayOfuint8_t::CopyFrom(const UDPData__mVArrayOfuint8_t& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.UDPData._mVArrayOfuint8_t)
+void UDPData_a_type_mVArrayOfuint8_t::CopyFrom(const UDPData_a_type_mVArrayOfuint8_t& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.UDPData.a_type_mVArrayOfuint8_t)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool UDPData__mVArrayOfuint8_t::IsInitialized() const {
+bool UDPData_a_type_mVArrayOfuint8_t::IsInitialized() const {
   return true;
 }
 
-void UDPData__mVArrayOfuint8_t::InternalSwap(UDPData__mVArrayOfuint8_t* other) {
+void UDPData_a_type_mVArrayOfuint8_t::InternalSwap(UDPData_a_type_mVArrayOfuint8_t* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   _impl_.a_mvarrayofuint8_t_.InternalSwap(&other->_impl_.a_mvarrayofuint8_t_);
 }
 
-std::string UDPData__mVArrayOfuint8_t::GetTypeName() const {
-  return "protobuf.UDPData._mVArrayOfuint8_t";
+std::string UDPData_a_type_mVArrayOfuint8_t::GetTypeName() const {
+  return "protobuf.UDPData.a_type_mVArrayOfuint8_t";
 }
 
 
@@ -840,32 +840,32 @@ std::string UDPData__mVArrayOfuint8_t::GetTypeName() const {
 
 class UDPData::_Internal {
  public:
-  static const ::protobuf::UDPData__mVArrayOfuint8_t& mvarrayofuint8_t(const UDPData* msg);
+  static const ::protobuf::UDPData_a_type_mVArrayOfuint8_t& a_mvarrayofuint8_t(const UDPData* msg);
   static const ::protobuf::mozilla::ipc::IPCStream& a_mvipcstream(const UDPData* msg);
 };
 
-const ::protobuf::UDPData__mVArrayOfuint8_t&
-UDPData::_Internal::mvarrayofuint8_t(const UDPData* msg) {
-  return *msg->_impl_.content_.mvarrayofuint8_t_;
+const ::protobuf::UDPData_a_type_mVArrayOfuint8_t&
+UDPData::_Internal::a_mvarrayofuint8_t(const UDPData* msg) {
+  return *msg->_impl_.content_.a_mvarrayofuint8_t_;
 }
 const ::protobuf::mozilla::ipc::IPCStream&
 UDPData::_Internal::a_mvipcstream(const UDPData* msg) {
   return *msg->_impl_.content_.a_mvipcstream_;
 }
-void UDPData::set_allocated_mvarrayofuint8_t(::protobuf::UDPData__mVArrayOfuint8_t* mvarrayofuint8_t) {
+void UDPData::set_allocated_a_mvarrayofuint8_t(::protobuf::UDPData_a_type_mVArrayOfuint8_t* a_mvarrayofuint8_t) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvarrayofuint8_t) {
+  if (a_mvarrayofuint8_t) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvarrayofuint8_t);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvarrayofuint8_t);
     if (message_arena != submessage_arena) {
-      mvarrayofuint8_t = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvarrayofuint8_t, submessage_arena);
+      a_mvarrayofuint8_t = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvarrayofuint8_t, submessage_arena);
     }
-    set_has_mvarrayofuint8_t();
-    _impl_.content_.mvarrayofuint8_t_ = mvarrayofuint8_t;
+    set_has_a_mvarrayofuint8_t();
+    _impl_.content_.a_mvarrayofuint8_t_ = a_mvarrayofuint8_t;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.UDPData.mVArrayOfuint8_t)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.UDPData.a_mVArrayOfuint8_t)
 }
 void UDPData::set_allocated_a_mvipcstream(::protobuf::mozilla::ipc::IPCStream* a_mvipcstream) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
@@ -908,9 +908,9 @@ UDPData::UDPData(const UDPData& from)
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
-    case kMVArrayOfuint8T: {
-      _this->_internal_mutable_mvarrayofuint8_t()->::protobuf::UDPData__mVArrayOfuint8_t::MergeFrom(
-          from._internal_mvarrayofuint8_t());
+    case kAMVArrayOfuint8T: {
+      _this->_internal_mutable_a_mvarrayofuint8_t()->::protobuf::UDPData_a_type_mVArrayOfuint8_t::MergeFrom(
+          from._internal_a_mvarrayofuint8_t());
       break;
     }
     case kAMVIPCStream: {
@@ -960,9 +960,9 @@ void UDPData::SetCachedSize(int size) const {
 void UDPData::clear_content() {
 // @@protoc_insertion_point(one_of_clear_start:protobuf.UDPData)
   switch (content_case()) {
-    case kMVArrayOfuint8T: {
+    case kAMVArrayOfuint8T: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvarrayofuint8_t_;
+        delete _impl_.content_.a_mvarrayofuint8_t_;
       }
       break;
     }
@@ -996,10 +996,10 @@ const char* UDPData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .protobuf.UDPData._mVArrayOfuint8_t mVArrayOfuint8_t = 1;
+      // .protobuf.UDPData.a_type_mVArrayOfuint8_t a_mVArrayOfuint8_t = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvarrayofuint8_t(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvarrayofuint8_t(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1042,10 +1042,10 @@ uint8_t* UDPData::_InternalSerialize(
   (void) cached_has_bits;
 
   switch (content_case()) {
-    case kMVArrayOfuint8T: {
+    case kAMVArrayOfuint8T: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::mvarrayofuint8_t(this),
-          _Internal::mvarrayofuint8_t(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(1, _Internal::a_mvarrayofuint8_t(this),
+          _Internal::a_mvarrayofuint8_t(this).GetCachedSize(), target, stream);
       break;
     }
     case kAMVIPCStream: {
@@ -1073,11 +1073,11 @@ size_t UDPData::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (content_case()) {
-    // .protobuf.UDPData._mVArrayOfuint8_t mVArrayOfuint8_t = 1;
-    case kMVArrayOfuint8T: {
+    // .protobuf.UDPData.a_type_mVArrayOfuint8_t a_mVArrayOfuint8_t = 1;
+    case kAMVArrayOfuint8T: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvarrayofuint8_t_);
+          *_impl_.content_.a_mvarrayofuint8_t_);
       break;
     }
     // .protobuf.mozilla.ipc.IPCStream a_mVIPCStream = 2;
@@ -1113,9 +1113,9 @@ void UDPData::MergeFrom(const UDPData& from) {
   (void) cached_has_bits;
 
   switch (from.content_case()) {
-    case kMVArrayOfuint8T: {
-      _this->_internal_mutable_mvarrayofuint8_t()->::protobuf::UDPData__mVArrayOfuint8_t::MergeFrom(
-          from._internal_mvarrayofuint8_t());
+    case kAMVArrayOfuint8T: {
+      _this->_internal_mutable_a_mvarrayofuint8_t()->::protobuf::UDPData_a_type_mVArrayOfuint8_t::MergeFrom(
+          from._internal_a_mvarrayofuint8_t());
       break;
     }
     case kAMVIPCStream: {
@@ -1139,7 +1139,7 @@ void UDPData::CopyFrom(const UDPData& from) {
 
 bool UDPData::IsInitialized() const {
   switch (content_case()) {
-    case kMVArrayOfuint8T: {
+    case kAMVArrayOfuint8T: {
       break;
     }
     case kAMVIPCStream: {
@@ -1178,9 +1178,9 @@ template<> PROTOBUF_NOINLINE ::protobuf::UDPSocketAddr*
 Arena::CreateMaybeMessage< ::protobuf::UDPSocketAddr >(Arena* arena) {
   return Arena::CreateMessageInternal< ::protobuf::UDPSocketAddr >(arena);
 }
-template<> PROTOBUF_NOINLINE ::protobuf::UDPData__mVArrayOfuint8_t*
-Arena::CreateMaybeMessage< ::protobuf::UDPData__mVArrayOfuint8_t >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::protobuf::UDPData__mVArrayOfuint8_t >(arena);
+template<> PROTOBUF_NOINLINE ::protobuf::UDPData_a_type_mVArrayOfuint8_t*
+Arena::CreateMaybeMessage< ::protobuf::UDPData_a_type_mVArrayOfuint8_t >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::protobuf::UDPData_a_type_mVArrayOfuint8_t >(arena);
 }
 template<> PROTOBUF_NOINLINE ::protobuf::UDPData*
 Arena::CreateMaybeMessage< ::protobuf::UDPData >(Arena* arena) {

@@ -14,7 +14,7 @@ package protobuf.mozilla.net.PWebSocketConnection;
 
 // Message declarations
 message Msg_OnTransportAvailable {
-  required bytes a_aSecurityInfo = 1;
+  optional bytes a_aSecurityInfo = 1;
 }
 
 message Msg_OnError {

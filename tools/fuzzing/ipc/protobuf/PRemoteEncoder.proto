@@ -39,7 +39,7 @@ message Reply_Encode {
 }
 
 message Msg_Reconfigure {
-  required bytes a_configurationChanges = 1;
+  optional bytes a_configurationChanges = 1;
 }
 
 message Reply_Reconfigure {

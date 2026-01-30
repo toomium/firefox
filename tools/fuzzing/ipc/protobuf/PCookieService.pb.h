@@ -270,7 +270,7 @@ class Msg_SetCookies final :
   std::string* _internal_mutable_a_attrs();
   public:
 
-  // required bytes a_host = 3;
+  // optional bytes a_host = 3;
   bool has_a_host() const;
   private:
   bool _internal_has_a_host() const;
@@ -484,7 +484,7 @@ class Msg_GetCookieList final :
   std::string* _internal_add_a_attrslist();
   public:
 
-  // required bytes a_host = 1;
+  // optional bytes a_host = 1;
   bool has_a_host() const;
   private:
   bool _internal_has_a_host() const;
@@ -1996,7 +1996,7 @@ inline void Msg_SetCookies::set_allocated_a_attrs(std::string* a_attrs) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PCookieService.Msg_SetCookies.a_attrs)
 }
 
-// required bytes a_host = 3;
+// optional bytes a_host = 3;
 inline bool Msg_SetCookies::_internal_has_a_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2161,7 +2161,7 @@ Msg_SetCookies::a_cookies() const {
 
 // Msg_GetCookieList
 
-// required bytes a_host = 1;
+// optional bytes a_host = 1;
 inline bool Msg_GetCookieList::_internal_has_a_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

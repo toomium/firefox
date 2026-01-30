@@ -169,7 +169,7 @@ message XPCOMInitData {
   repeated string a_dictionaries = 6;
   required protobuf.mozilla.dom.ClipboardCapabilities a_clipboardCaps = 7;
   required protobuf.mozilla.dom.DomainPolicyClone a_domainPolicy = 8;
-  required bytes a_userContentSheetURL = 9;
+  optional bytes a_userContentSheetURL = 9;
   repeated protobuf.mozilla.gfx.GfxVarUpdate a_gfxNonDefaultVarUpdates = 10;
   required protobuf.mozilla.gfx.ContentDeviceData a_contentDeviceData = 11;
   repeated protobuf.mozilla.gfx.GfxInfoFeatureStatus a_gfxFeatureStatus = 12;
@@ -184,7 +184,7 @@ message XPCOMInitData {
 }
 
 message VisitedQueryResult {
-  required bytes a_uri = 1;
+  optional bytes a_uri = 1;
   required bool a_visited = 2;
 }
 
@@ -202,10 +202,10 @@ message PostMessageData {
   required bytes a_source = 1;
   required string a_origin = 2;
   required string a_targetOrigin = 3;
-  required bytes a_targetOriginURI = 4;
-  required bytes a_callerPrincipal = 5;
-  required bytes a_subjectPrincipal = 6;
-  required bytes a_callerURI = 7;
+  optional bytes a_targetOriginURI = 4;
+  optional bytes a_callerPrincipal = 5;
+  optional bytes a_subjectPrincipal = 6;
+  optional bytes a_callerURI = 7;
   required bool a_isFromPrivateWindow = 8;
   required string a_scriptLocation = 9;
   required uint64 a_innerWindowId = 10;
@@ -261,5 +261,5 @@ message ClipboardReadRequestOrError {
 
 message BroadcastBlobURLUnregistrationRequest {
   required string a_url = 1;
-  required bytes a_principal = 2;
+  optional bytes a_principal = 2;
 }

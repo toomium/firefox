@@ -33,7 +33,7 @@ message Reply_Init {
 }
 
 message Msg_Decode {
-  required bytes a_data = 1;
+  optional bytes a_data = 1;
 }
 
 message Reply_Decode {

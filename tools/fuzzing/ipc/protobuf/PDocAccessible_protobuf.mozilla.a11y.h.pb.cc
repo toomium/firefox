@@ -190,7 +190,7 @@ class AccessibleData::_Internal {
     (*has_bits)[0] |= 8u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x000000ff) ^ 0x000000ff) != 0;
+    return ((has_bits[0] & 0x000000f7) ^ 0x000000f7) != 0;
   }
 };
 
@@ -409,7 +409,7 @@ const char* AccessibleData::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_CacheFields = 8;
+      // optional bytes a_CacheFields = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           auto str = _internal_mutable_a_cachefields();
@@ -491,7 +491,7 @@ uint8_t* AccessibleData::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(7, this->_internal_a_rolemapentryindex(), target);
   }
 
-  // required bytes a_CacheFields = 8;
+  // optional bytes a_CacheFields = 8;
   if (cached_has_bits & 0x00000008u) {
     target = stream->WriteBytesMaybeAliased(
         8, this->_internal_a_cachefields(), target);
@@ -530,13 +530,6 @@ size_t AccessibleData::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_generictypes());
   }
 
-  if (_internal_has_a_cachefields()) {
-    // required bytes a_CacheFields = 8;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_cachefields());
-  }
-
   if (_internal_has_a_id()) {
     // required uint64 a_ID = 1;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_id());
@@ -563,7 +556,7 @@ size_t AccessibleData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.a11y.AccessibleData)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x000000ff) ^ 0x000000ff) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x000000f7) ^ 0x000000f7) == 0) {  // All required fields are present.
     // required bytes a_Role = 2;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -578,11 +571,6 @@ size_t AccessibleData::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_generictypes());
-
-    // required bytes a_CacheFields = 8;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_cachefields());
 
     // required uint64 a_ID = 1;
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_id());
@@ -602,6 +590,14 @@ size_t AccessibleData::ByteSizeLong() const {
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bytes a_CacheFields = 8;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000008u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_cachefields());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();

@@ -67,7 +67,7 @@ message IPCPaymentOptions {
 message IPCPaymentCreateActionRequest {
   required uint64 a_topOuterWindowId = 1;
   required string a_requestId = 2;
-  required bytes a_topLevelPrincipal = 3;
+  optional bytes a_topLevelPrincipal = 3;
   repeated protobuf.mozilla.dom.IPCPaymentMethodData a_methodData = 4;
   required protobuf.mozilla.dom.IPCPaymentDetails a_details = 5;
   required protobuf.mozilla.dom.IPCPaymentOptions a_options = 6;

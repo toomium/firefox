@@ -86,9 +86,9 @@ extern IPCNotificationOptionsDefaultTypeInternal _IPCNotificationOptions_default
 class IPCNotificationsOrError;
 struct IPCNotificationsOrErrorDefaultTypeInternal;
 extern IPCNotificationsOrErrorDefaultTypeInternal _IPCNotificationsOrError_default_instance_;
-class IPCNotificationsOrError__mVArrayOfIPCNotification;
-struct IPCNotificationsOrError__mVArrayOfIPCNotificationDefaultTypeInternal;
-extern IPCNotificationsOrError__mVArrayOfIPCNotificationDefaultTypeInternal _IPCNotificationsOrError__mVArrayOfIPCNotification_default_instance_;
+class IPCNotificationsOrError_a_type_mVArrayOfIPCNotification;
+struct IPCNotificationsOrError_a_type_mVArrayOfIPCNotificationDefaultTypeInternal;
+extern IPCNotificationsOrError_a_type_mVArrayOfIPCNotificationDefaultTypeInternal _IPCNotificationsOrError_a_type_mVArrayOfIPCNotification_default_instance_;
 class IPDLProperty;
 struct IPDLPropertyDefaultTypeInternal;
 extern IPDLPropertyDefaultTypeInternal _IPDLProperty_default_instance_;
@@ -139,7 +139,7 @@ template<> ::protobuf::mozilla::dom::IPCNotification* Arena::CreateMaybeMessage<
 template<> ::protobuf::mozilla::dom::IPCNotificationAction* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::IPCNotificationAction>(Arena*);
 template<> ::protobuf::mozilla::dom::IPCNotificationOptions* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::IPCNotificationOptions>(Arena*);
 template<> ::protobuf::mozilla::dom::IPCNotificationsOrError* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::IPCNotificationsOrError>(Arena*);
-template<> ::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification>(Arena*);
+template<> ::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification>(Arena*);
 template<> ::protobuf::mozilla::dom::IPDLProperty* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::IPDLProperty>(Arena*);
 template<> ::protobuf::mozilla::dom::IPDLVariantValue* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::IPDLVariantValue>(Arena*);
 template<> ::protobuf::mozilla::dom::MessageData* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::MessageData>(Arena*);
@@ -2506,7 +2506,7 @@ class DocShellLoadStateInit final :
     kATryToReplaceWithSessionHistoryLoadFieldNumber = 51,
     kAIsMetaRefreshFieldNumber = 52,
   };
-  // required bytes a_URI = 1;
+  // optional bytes a_URI = 1;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -2524,7 +2524,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_uri();
   public:
 
-  // required bytes a_OriginalURI = 2;
+  // optional bytes a_OriginalURI = 2;
   bool has_a_originaluri() const;
   private:
   bool _internal_has_a_originaluri() const;
@@ -2542,7 +2542,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_originaluri();
   public:
 
-  // required bytes a_ResultPrincipalURI = 3;
+  // optional bytes a_ResultPrincipalURI = 3;
   bool has_a_resultprincipaluri() const;
   private:
   bool _internal_has_a_resultprincipaluri() const;
@@ -2560,7 +2560,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_resultprincipaluri();
   public:
 
-  // required bytes a_TriggeringPrincipal = 4;
+  // optional bytes a_TriggeringPrincipal = 4;
   bool has_a_triggeringprincipal() const;
   private:
   bool _internal_has_a_triggeringprincipal() const;
@@ -2578,7 +2578,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_triggeringprincipal();
   public:
 
-  // required bytes a_ReferrerInfo = 5;
+  // optional bytes a_ReferrerInfo = 5;
   bool has_a_referrerinfo() const;
   private:
   bool _internal_has_a_referrerinfo() const;
@@ -2596,7 +2596,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_referrerinfo();
   public:
 
-  // required bytes a_PrincipalToInherit = 6;
+  // optional bytes a_PrincipalToInherit = 6;
   bool has_a_principaltoinherit() const;
   private:
   bool _internal_has_a_principaltoinherit() const;
@@ -2614,7 +2614,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_principaltoinherit();
   public:
 
-  // required bytes a_PartitionedPrincipalToInherit = 7;
+  // optional bytes a_PartitionedPrincipalToInherit = 7;
   bool has_a_partitionedprincipaltoinherit() const;
   private:
   bool _internal_has_a_partitionedprincipaltoinherit() const;
@@ -2632,7 +2632,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_partitionedprincipaltoinherit();
   public:
 
-  // required bytes a_BaseURI = 8;
+  // optional bytes a_BaseURI = 8;
   bool has_a_baseuri() const;
   private:
   bool _internal_has_a_baseuri() const;
@@ -2650,7 +2650,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_baseuri();
   public:
 
-  // required bytes a_Csp = 9;
+  // optional bytes a_Csp = 9;
   bool has_a_csp() const;
   private:
   bool _internal_has_a_csp() const;
@@ -2668,7 +2668,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_csp();
   public:
 
-  // required bytes a_PostDataStream = 10;
+  // optional bytes a_PostDataStream = 10;
   bool has_a_postdatastream() const;
   private:
   bool _internal_has_a_postdatastream() const;
@@ -2686,7 +2686,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_postdatastream();
   public:
 
-  // required bytes a_HeadersStream = 11;
+  // optional bytes a_HeadersStream = 11;
   bool has_a_headersstream() const;
   private:
   bool _internal_has_a_headersstream() const;
@@ -2704,7 +2704,7 @@ class DocShellLoadStateInit final :
   std::string* _internal_mutable_a_headersstream();
   public:
 
-  // required bytes a_UnstrippedURI = 12;
+  // optional bytes a_UnstrippedURI = 12;
   bool has_a_unstrippeduri() const;
   private:
   bool _internal_has_a_unstrippeduri() const;
@@ -4021,7 +4021,7 @@ class ReplacementChannelConfigInit final :
   std::string* _internal_mutable_a_method();
   public:
 
-  // required bytes a_referrerInfo = 5;
+  // optional bytes a_referrerInfo = 5;
   bool has_a_referrerinfo() const;
   private:
   bool _internal_has_a_referrerinfo() const;
@@ -4039,7 +4039,7 @@ class ReplacementChannelConfigInit final :
   std::string* _internal_mutable_a_referrerinfo();
   public:
 
-  // required bytes a_uploadStream = 7;
+  // optional bytes a_uploadStream = 7;
   bool has_a_uploadstream() const;
   private:
   bool _internal_has_a_uploadstream() const;
@@ -4876,7 +4876,7 @@ class IPDLProperty final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required bytes a_value = 2;
+  // optional bytes a_value = 2;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -4897,9 +4897,6 @@ class IPDLProperty final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPDLProperty)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6219,24 +6216,24 @@ class IPCNotification final :
 };
 // -------------------------------------------------------------------
 
-class IPCNotificationsOrError__mVArrayOfIPCNotification final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.IPCNotificationsOrError._mVArrayOfIPCNotification) */ {
+class IPCNotificationsOrError_a_type_mVArrayOfIPCNotification final :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.IPCNotificationsOrError.a_type_mVArrayOfIPCNotification) */ {
  public:
-  inline IPCNotificationsOrError__mVArrayOfIPCNotification() : IPCNotificationsOrError__mVArrayOfIPCNotification(nullptr) {}
-  ~IPCNotificationsOrError__mVArrayOfIPCNotification() override;
-  explicit PROTOBUF_CONSTEXPR IPCNotificationsOrError__mVArrayOfIPCNotification(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline IPCNotificationsOrError_a_type_mVArrayOfIPCNotification() : IPCNotificationsOrError_a_type_mVArrayOfIPCNotification(nullptr) {}
+  ~IPCNotificationsOrError_a_type_mVArrayOfIPCNotification() override;
+  explicit PROTOBUF_CONSTEXPR IPCNotificationsOrError_a_type_mVArrayOfIPCNotification(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  IPCNotificationsOrError__mVArrayOfIPCNotification(const IPCNotificationsOrError__mVArrayOfIPCNotification& from);
-  IPCNotificationsOrError__mVArrayOfIPCNotification(IPCNotificationsOrError__mVArrayOfIPCNotification&& from) noexcept
-    : IPCNotificationsOrError__mVArrayOfIPCNotification() {
+  IPCNotificationsOrError_a_type_mVArrayOfIPCNotification(const IPCNotificationsOrError_a_type_mVArrayOfIPCNotification& from);
+  IPCNotificationsOrError_a_type_mVArrayOfIPCNotification(IPCNotificationsOrError_a_type_mVArrayOfIPCNotification&& from) noexcept
+    : IPCNotificationsOrError_a_type_mVArrayOfIPCNotification() {
     *this = ::std::move(from);
   }
 
-  inline IPCNotificationsOrError__mVArrayOfIPCNotification& operator=(const IPCNotificationsOrError__mVArrayOfIPCNotification& from) {
+  inline IPCNotificationsOrError_a_type_mVArrayOfIPCNotification& operator=(const IPCNotificationsOrError_a_type_mVArrayOfIPCNotification& from) {
     CopyFrom(from);
     return *this;
   }
-  inline IPCNotificationsOrError__mVArrayOfIPCNotification& operator=(IPCNotificationsOrError__mVArrayOfIPCNotification&& from) noexcept {
+  inline IPCNotificationsOrError_a_type_mVArrayOfIPCNotification& operator=(IPCNotificationsOrError_a_type_mVArrayOfIPCNotification&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -6257,20 +6254,20 @@ class IPCNotificationsOrError__mVArrayOfIPCNotification final :
     return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
-  static const IPCNotificationsOrError__mVArrayOfIPCNotification& default_instance() {
+  static const IPCNotificationsOrError_a_type_mVArrayOfIPCNotification& default_instance() {
     return *internal_default_instance();
   }
-  static inline const IPCNotificationsOrError__mVArrayOfIPCNotification* internal_default_instance() {
-    return reinterpret_cast<const IPCNotificationsOrError__mVArrayOfIPCNotification*>(
-               &_IPCNotificationsOrError__mVArrayOfIPCNotification_default_instance_);
+  static inline const IPCNotificationsOrError_a_type_mVArrayOfIPCNotification* internal_default_instance() {
+    return reinterpret_cast<const IPCNotificationsOrError_a_type_mVArrayOfIPCNotification*>(
+               &_IPCNotificationsOrError_a_type_mVArrayOfIPCNotification_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     23;
 
-  friend void swap(IPCNotificationsOrError__mVArrayOfIPCNotification& a, IPCNotificationsOrError__mVArrayOfIPCNotification& b) {
+  friend void swap(IPCNotificationsOrError_a_type_mVArrayOfIPCNotification& a, IPCNotificationsOrError_a_type_mVArrayOfIPCNotification& b) {
     a.Swap(&b);
   }
-  inline void Swap(IPCNotificationsOrError__mVArrayOfIPCNotification* other) {
+  inline void Swap(IPCNotificationsOrError_a_type_mVArrayOfIPCNotification* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -6283,7 +6280,7 @@ class IPCNotificationsOrError__mVArrayOfIPCNotification final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(IPCNotificationsOrError__mVArrayOfIPCNotification* other) {
+  void UnsafeArenaSwap(IPCNotificationsOrError_a_type_mVArrayOfIPCNotification* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -6291,12 +6288,12 @@ class IPCNotificationsOrError__mVArrayOfIPCNotification final :
 
   // implements Message ----------------------------------------------
 
-  IPCNotificationsOrError__mVArrayOfIPCNotification* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<IPCNotificationsOrError__mVArrayOfIPCNotification>(arena);
+  IPCNotificationsOrError_a_type_mVArrayOfIPCNotification* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<IPCNotificationsOrError_a_type_mVArrayOfIPCNotification>(arena);
   }
   void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const IPCNotificationsOrError__mVArrayOfIPCNotification& from);
-  void MergeFrom(const IPCNotificationsOrError__mVArrayOfIPCNotification& from);
+  void CopyFrom(const IPCNotificationsOrError_a_type_mVArrayOfIPCNotification& from);
+  void MergeFrom(const IPCNotificationsOrError_a_type_mVArrayOfIPCNotification& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -6310,15 +6307,15 @@ class IPCNotificationsOrError__mVArrayOfIPCNotification final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const;
-  void InternalSwap(IPCNotificationsOrError__mVArrayOfIPCNotification* other);
+  void InternalSwap(IPCNotificationsOrError_a_type_mVArrayOfIPCNotification* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "protobuf.mozilla.dom.IPCNotificationsOrError._mVArrayOfIPCNotification";
+    return "protobuf.mozilla.dom.IPCNotificationsOrError.a_type_mVArrayOfIPCNotification";
   }
   protected:
-  explicit IPCNotificationsOrError__mVArrayOfIPCNotification(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit IPCNotificationsOrError_a_type_mVArrayOfIPCNotification(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -6349,7 +6346,7 @@ class IPCNotificationsOrError__mVArrayOfIPCNotification final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCNotification >&
       a_mvarrayofipcnotification() const;
 
-  // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCNotificationsOrError._mVArrayOfIPCNotification)
+  // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCNotificationsOrError.a_type_mVArrayOfIPCNotification)
  private:
   class _Internal;
 
@@ -6407,7 +6404,7 @@ class IPCNotificationsOrError final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVArrayOfIPCNotification = 1,
+    kAMVArrayOfIPCNotification = 1,
     kAMVnsresult = 2,
     CONTENT_NOT_SET = 0,
   };
@@ -6478,31 +6475,31 @@ class IPCNotificationsOrError final :
 
   // nested types ----------------------------------------------------
 
-  typedef IPCNotificationsOrError__mVArrayOfIPCNotification _mVArrayOfIPCNotification;
+  typedef IPCNotificationsOrError_a_type_mVArrayOfIPCNotification a_type_mVArrayOfIPCNotification;
 
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfIPCNotificationFieldNumber = 1,
+    kAMVArrayOfIPCNotificationFieldNumber = 1,
     kAMVnsresultFieldNumber = 2,
   };
-  // .protobuf.mozilla.dom.IPCNotificationsOrError._mVArrayOfIPCNotification mVArrayOfIPCNotification = 1;
-  bool has_mvarrayofipcnotification() const;
+  // .protobuf.mozilla.dom.IPCNotificationsOrError.a_type_mVArrayOfIPCNotification a_mVArrayOfIPCNotification = 1;
+  bool has_a_mvarrayofipcnotification() const;
   private:
-  bool _internal_has_mvarrayofipcnotification() const;
+  bool _internal_has_a_mvarrayofipcnotification() const;
   public:
-  void clear_mvarrayofipcnotification();
-  const ::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification& mvarrayofipcnotification() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification* release_mvarrayofipcnotification();
-  ::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification* mutable_mvarrayofipcnotification();
-  void set_allocated_mvarrayofipcnotification(::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification* mvarrayofipcnotification);
+  void clear_a_mvarrayofipcnotification();
+  const ::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification& a_mvarrayofipcnotification() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification* release_a_mvarrayofipcnotification();
+  ::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification* mutable_a_mvarrayofipcnotification();
+  void set_allocated_a_mvarrayofipcnotification(::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification* a_mvarrayofipcnotification);
   private:
-  const ::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification& _internal_mvarrayofipcnotification() const;
-  ::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification* _internal_mutable_mvarrayofipcnotification();
+  const ::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification& _internal_a_mvarrayofipcnotification() const;
+  ::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification* _internal_mutable_a_mvarrayofipcnotification();
   public:
-  void unsafe_arena_set_allocated_mvarrayofipcnotification(
-      ::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification* mvarrayofipcnotification);
-  ::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification* unsafe_arena_release_mvarrayofipcnotification();
+  void unsafe_arena_set_allocated_a_mvarrayofipcnotification(
+      ::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification* a_mvarrayofipcnotification);
+  ::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification* unsafe_arena_release_a_mvarrayofipcnotification();
 
   // bytes a_mVnsresult = 2;
   bool has_a_mvnsresult() const;
@@ -6527,7 +6524,7 @@ class IPCNotificationsOrError final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCNotificationsOrError)
  private:
   class _Internal;
-  void set_has_mvarrayofipcnotification();
+  void set_has_a_mvarrayofipcnotification();
   void set_has_a_mvnsresult();
 
   inline bool has_content() const;
@@ -6540,7 +6537,7 @@ class IPCNotificationsOrError final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification* mvarrayofipcnotification_;
+      ::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification* a_mvarrayofipcnotification_;
       ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -8813,7 +8810,7 @@ inline void CreatedWindowInfo::set_allocated_a_dimensions(::protobuf::mozilla::d
 
 // DocShellLoadStateInit
 
-// required bytes a_URI = 1;
+// optional bytes a_URI = 1;
 inline bool DocShellLoadStateInit::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -8881,7 +8878,7 @@ inline void DocShellLoadStateInit::set_allocated_a_uri(std::string* a_uri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_URI)
 }
 
-// required bytes a_OriginalURI = 2;
+// optional bytes a_OriginalURI = 2;
 inline bool DocShellLoadStateInit::_internal_has_a_originaluri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -8949,7 +8946,7 @@ inline void DocShellLoadStateInit::set_allocated_a_originaluri(std::string* a_or
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_OriginalURI)
 }
 
-// required bytes a_ResultPrincipalURI = 3;
+// optional bytes a_ResultPrincipalURI = 3;
 inline bool DocShellLoadStateInit::_internal_has_a_resultprincipaluri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -9017,7 +9014,7 @@ inline void DocShellLoadStateInit::set_allocated_a_resultprincipaluri(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_ResultPrincipalURI)
 }
 
-// required bytes a_TriggeringPrincipal = 4;
+// optional bytes a_TriggeringPrincipal = 4;
 inline bool DocShellLoadStateInit::_internal_has_a_triggeringprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -9085,7 +9082,7 @@ inline void DocShellLoadStateInit::set_allocated_a_triggeringprincipal(std::stri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_TriggeringPrincipal)
 }
 
-// required bytes a_ReferrerInfo = 5;
+// optional bytes a_ReferrerInfo = 5;
 inline bool DocShellLoadStateInit::_internal_has_a_referrerinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -9153,7 +9150,7 @@ inline void DocShellLoadStateInit::set_allocated_a_referrerinfo(std::string* a_r
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_ReferrerInfo)
 }
 
-// required bytes a_PrincipalToInherit = 6;
+// optional bytes a_PrincipalToInherit = 6;
 inline bool DocShellLoadStateInit::_internal_has_a_principaltoinherit() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -9221,7 +9218,7 @@ inline void DocShellLoadStateInit::set_allocated_a_principaltoinherit(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_PrincipalToInherit)
 }
 
-// required bytes a_PartitionedPrincipalToInherit = 7;
+// optional bytes a_PartitionedPrincipalToInherit = 7;
 inline bool DocShellLoadStateInit::_internal_has_a_partitionedprincipaltoinherit() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -9289,7 +9286,7 @@ inline void DocShellLoadStateInit::set_allocated_a_partitionedprincipaltoinherit
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_PartitionedPrincipalToInherit)
 }
 
-// required bytes a_BaseURI = 8;
+// optional bytes a_BaseURI = 8;
 inline bool DocShellLoadStateInit::_internal_has_a_baseuri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -9357,7 +9354,7 @@ inline void DocShellLoadStateInit::set_allocated_a_baseuri(std::string* a_baseur
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_BaseURI)
 }
 
-// required bytes a_Csp = 9;
+// optional bytes a_Csp = 9;
 inline bool DocShellLoadStateInit::_internal_has_a_csp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -9425,7 +9422,7 @@ inline void DocShellLoadStateInit::set_allocated_a_csp(std::string* a_csp) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_Csp)
 }
 
-// required bytes a_PostDataStream = 10;
+// optional bytes a_PostDataStream = 10;
 inline bool DocShellLoadStateInit::_internal_has_a_postdatastream() const {
   bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
@@ -9493,7 +9490,7 @@ inline void DocShellLoadStateInit::set_allocated_a_postdatastream(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_PostDataStream)
 }
 
-// required bytes a_HeadersStream = 11;
+// optional bytes a_HeadersStream = 11;
 inline bool DocShellLoadStateInit::_internal_has_a_headersstream() const {
   bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
@@ -9561,7 +9558,7 @@ inline void DocShellLoadStateInit::set_allocated_a_headersstream(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.DocShellLoadStateInit.a_HeadersStream)
 }
 
-// required bytes a_UnstrippedURI = 12;
+// optional bytes a_UnstrippedURI = 12;
 inline bool DocShellLoadStateInit::_internal_has_a_unstrippeduri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
   return value;
@@ -12561,7 +12558,7 @@ inline void ReplacementChannelConfigInit::set_allocated_a_method(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ReplacementChannelConfigInit.a_method)
 }
 
-// required bytes a_referrerInfo = 5;
+// optional bytes a_referrerInfo = 5;
 inline bool ReplacementChannelConfigInit::_internal_has_a_referrerinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -12719,7 +12716,7 @@ inline void ReplacementChannelConfigInit::set_allocated_a_timedchannelinfo(::pro
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.ReplacementChannelConfigInit.a_timedChannelInfo)
 }
 
-// required bytes a_uploadStream = 7;
+// optional bytes a_uploadStream = 7;
 inline bool ReplacementChannelConfigInit::_internal_has_a_uploadstream() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -13875,7 +13872,7 @@ inline void IPDLProperty::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPDLProperty.a_name)
 }
 
-// required bytes a_value = 2;
+// optional bytes a_value = 2;
 inline bool IPDLProperty::_internal_has_a_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -15526,45 +15523,45 @@ inline void IPCNotification::set_allocated_a_options(::protobuf::mozilla::dom::I
 
 // -------------------------------------------------------------------
 
-// IPCNotificationsOrError__mVArrayOfIPCNotification
+// IPCNotificationsOrError_a_type_mVArrayOfIPCNotification
 
 // repeated .protobuf.mozilla.dom.IPCNotification a_mVArrayOfIPCNotification = 1;
-inline int IPCNotificationsOrError__mVArrayOfIPCNotification::_internal_a_mvarrayofipcnotification_size() const {
+inline int IPCNotificationsOrError_a_type_mVArrayOfIPCNotification::_internal_a_mvarrayofipcnotification_size() const {
   return _impl_.a_mvarrayofipcnotification_.size();
 }
-inline int IPCNotificationsOrError__mVArrayOfIPCNotification::a_mvarrayofipcnotification_size() const {
+inline int IPCNotificationsOrError_a_type_mVArrayOfIPCNotification::a_mvarrayofipcnotification_size() const {
   return _internal_a_mvarrayofipcnotification_size();
 }
-inline void IPCNotificationsOrError__mVArrayOfIPCNotification::clear_a_mvarrayofipcnotification() {
+inline void IPCNotificationsOrError_a_type_mVArrayOfIPCNotification::clear_a_mvarrayofipcnotification() {
   _impl_.a_mvarrayofipcnotification_.Clear();
 }
-inline ::protobuf::mozilla::dom::IPCNotification* IPCNotificationsOrError__mVArrayOfIPCNotification::mutable_a_mvarrayofipcnotification(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCNotificationsOrError._mVArrayOfIPCNotification.a_mVArrayOfIPCNotification)
+inline ::protobuf::mozilla::dom::IPCNotification* IPCNotificationsOrError_a_type_mVArrayOfIPCNotification::mutable_a_mvarrayofipcnotification(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCNotificationsOrError.a_type_mVArrayOfIPCNotification.a_mVArrayOfIPCNotification)
   return _impl_.a_mvarrayofipcnotification_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCNotification >*
-IPCNotificationsOrError__mVArrayOfIPCNotification::mutable_a_mvarrayofipcnotification() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.IPCNotificationsOrError._mVArrayOfIPCNotification.a_mVArrayOfIPCNotification)
+IPCNotificationsOrError_a_type_mVArrayOfIPCNotification::mutable_a_mvarrayofipcnotification() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.IPCNotificationsOrError.a_type_mVArrayOfIPCNotification.a_mVArrayOfIPCNotification)
   return &_impl_.a_mvarrayofipcnotification_;
 }
-inline const ::protobuf::mozilla::dom::IPCNotification& IPCNotificationsOrError__mVArrayOfIPCNotification::_internal_a_mvarrayofipcnotification(int index) const {
+inline const ::protobuf::mozilla::dom::IPCNotification& IPCNotificationsOrError_a_type_mVArrayOfIPCNotification::_internal_a_mvarrayofipcnotification(int index) const {
   return _impl_.a_mvarrayofipcnotification_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::IPCNotification& IPCNotificationsOrError__mVArrayOfIPCNotification::a_mvarrayofipcnotification(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCNotificationsOrError._mVArrayOfIPCNotification.a_mVArrayOfIPCNotification)
+inline const ::protobuf::mozilla::dom::IPCNotification& IPCNotificationsOrError_a_type_mVArrayOfIPCNotification::a_mvarrayofipcnotification(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCNotificationsOrError.a_type_mVArrayOfIPCNotification.a_mVArrayOfIPCNotification)
   return _internal_a_mvarrayofipcnotification(index);
 }
-inline ::protobuf::mozilla::dom::IPCNotification* IPCNotificationsOrError__mVArrayOfIPCNotification::_internal_add_a_mvarrayofipcnotification() {
+inline ::protobuf::mozilla::dom::IPCNotification* IPCNotificationsOrError_a_type_mVArrayOfIPCNotification::_internal_add_a_mvarrayofipcnotification() {
   return _impl_.a_mvarrayofipcnotification_.Add();
 }
-inline ::protobuf::mozilla::dom::IPCNotification* IPCNotificationsOrError__mVArrayOfIPCNotification::add_a_mvarrayofipcnotification() {
+inline ::protobuf::mozilla::dom::IPCNotification* IPCNotificationsOrError_a_type_mVArrayOfIPCNotification::add_a_mvarrayofipcnotification() {
   ::protobuf::mozilla::dom::IPCNotification* _add = _internal_add_a_mvarrayofipcnotification();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.IPCNotificationsOrError._mVArrayOfIPCNotification.a_mVArrayOfIPCNotification)
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.IPCNotificationsOrError.a_type_mVArrayOfIPCNotification.a_mVArrayOfIPCNotification)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCNotification >&
-IPCNotificationsOrError__mVArrayOfIPCNotification::a_mvarrayofipcnotification() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.IPCNotificationsOrError._mVArrayOfIPCNotification.a_mVArrayOfIPCNotification)
+IPCNotificationsOrError_a_type_mVArrayOfIPCNotification::a_mvarrayofipcnotification() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.IPCNotificationsOrError.a_type_mVArrayOfIPCNotification.a_mVArrayOfIPCNotification)
   return _impl_.a_mvarrayofipcnotification_;
 }
 
@@ -15572,77 +15569,77 @@ IPCNotificationsOrError__mVArrayOfIPCNotification::a_mvarrayofipcnotification() 
 
 // IPCNotificationsOrError
 
-// .protobuf.mozilla.dom.IPCNotificationsOrError._mVArrayOfIPCNotification mVArrayOfIPCNotification = 1;
-inline bool IPCNotificationsOrError::_internal_has_mvarrayofipcnotification() const {
-  return content_case() == kMVArrayOfIPCNotification;
+// .protobuf.mozilla.dom.IPCNotificationsOrError.a_type_mVArrayOfIPCNotification a_mVArrayOfIPCNotification = 1;
+inline bool IPCNotificationsOrError::_internal_has_a_mvarrayofipcnotification() const {
+  return content_case() == kAMVArrayOfIPCNotification;
 }
-inline bool IPCNotificationsOrError::has_mvarrayofipcnotification() const {
-  return _internal_has_mvarrayofipcnotification();
+inline bool IPCNotificationsOrError::has_a_mvarrayofipcnotification() const {
+  return _internal_has_a_mvarrayofipcnotification();
 }
-inline void IPCNotificationsOrError::set_has_mvarrayofipcnotification() {
-  _impl_._oneof_case_[0] = kMVArrayOfIPCNotification;
+inline void IPCNotificationsOrError::set_has_a_mvarrayofipcnotification() {
+  _impl_._oneof_case_[0] = kAMVArrayOfIPCNotification;
 }
-inline void IPCNotificationsOrError::clear_mvarrayofipcnotification() {
-  if (_internal_has_mvarrayofipcnotification()) {
+inline void IPCNotificationsOrError::clear_a_mvarrayofipcnotification() {
+  if (_internal_has_a_mvarrayofipcnotification()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvarrayofipcnotification_;
+      delete _impl_.content_.a_mvarrayofipcnotification_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification* IPCNotificationsOrError::release_mvarrayofipcnotification() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCNotificationsOrError.mVArrayOfIPCNotification)
-  if (_internal_has_mvarrayofipcnotification()) {
+inline ::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification* IPCNotificationsOrError::release_a_mvarrayofipcnotification() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCNotificationsOrError.a_mVArrayOfIPCNotification)
+  if (_internal_has_a_mvarrayofipcnotification()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification* temp = _impl_.content_.mvarrayofipcnotification_;
+    ::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification* temp = _impl_.content_.a_mvarrayofipcnotification_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvarrayofipcnotification_ = nullptr;
+    _impl_.content_.a_mvarrayofipcnotification_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification& IPCNotificationsOrError::_internal_mvarrayofipcnotification() const {
-  return _internal_has_mvarrayofipcnotification()
-      ? *_impl_.content_.mvarrayofipcnotification_
-      : reinterpret_cast< ::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification&>(::protobuf::mozilla::dom::_IPCNotificationsOrError__mVArrayOfIPCNotification_default_instance_);
+inline const ::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification& IPCNotificationsOrError::_internal_a_mvarrayofipcnotification() const {
+  return _internal_has_a_mvarrayofipcnotification()
+      ? *_impl_.content_.a_mvarrayofipcnotification_
+      : reinterpret_cast< ::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification&>(::protobuf::mozilla::dom::_IPCNotificationsOrError_a_type_mVArrayOfIPCNotification_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification& IPCNotificationsOrError::mvarrayofipcnotification() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCNotificationsOrError.mVArrayOfIPCNotification)
-  return _internal_mvarrayofipcnotification();
+inline const ::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification& IPCNotificationsOrError::a_mvarrayofipcnotification() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCNotificationsOrError.a_mVArrayOfIPCNotification)
+  return _internal_a_mvarrayofipcnotification();
 }
-inline ::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification* IPCNotificationsOrError::unsafe_arena_release_mvarrayofipcnotification() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.IPCNotificationsOrError.mVArrayOfIPCNotification)
-  if (_internal_has_mvarrayofipcnotification()) {
+inline ::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification* IPCNotificationsOrError::unsafe_arena_release_a_mvarrayofipcnotification() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.IPCNotificationsOrError.a_mVArrayOfIPCNotification)
+  if (_internal_has_a_mvarrayofipcnotification()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification* temp = _impl_.content_.mvarrayofipcnotification_;
-    _impl_.content_.mvarrayofipcnotification_ = nullptr;
+    ::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification* temp = _impl_.content_.a_mvarrayofipcnotification_;
+    _impl_.content_.a_mvarrayofipcnotification_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void IPCNotificationsOrError::unsafe_arena_set_allocated_mvarrayofipcnotification(::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification* mvarrayofipcnotification) {
+inline void IPCNotificationsOrError::unsafe_arena_set_allocated_a_mvarrayofipcnotification(::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification* a_mvarrayofipcnotification) {
   clear_content();
-  if (mvarrayofipcnotification) {
-    set_has_mvarrayofipcnotification();
-    _impl_.content_.mvarrayofipcnotification_ = mvarrayofipcnotification;
+  if (a_mvarrayofipcnotification) {
+    set_has_a_mvarrayofipcnotification();
+    _impl_.content_.a_mvarrayofipcnotification_ = a_mvarrayofipcnotification;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCNotificationsOrError.mVArrayOfIPCNotification)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCNotificationsOrError.a_mVArrayOfIPCNotification)
 }
-inline ::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification* IPCNotificationsOrError::_internal_mutable_mvarrayofipcnotification() {
-  if (!_internal_has_mvarrayofipcnotification()) {
+inline ::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification* IPCNotificationsOrError::_internal_mutable_a_mvarrayofipcnotification() {
+  if (!_internal_has_a_mvarrayofipcnotification()) {
     clear_content();
-    set_has_mvarrayofipcnotification();
-    _impl_.content_.mvarrayofipcnotification_ = CreateMaybeMessage< ::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification >(GetArenaForAllocation());
+    set_has_a_mvarrayofipcnotification();
+    _impl_.content_.a_mvarrayofipcnotification_ = CreateMaybeMessage< ::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvarrayofipcnotification_;
+  return _impl_.content_.a_mvarrayofipcnotification_;
 }
-inline ::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification* IPCNotificationsOrError::mutable_mvarrayofipcnotification() {
-  ::protobuf::mozilla::dom::IPCNotificationsOrError__mVArrayOfIPCNotification* _msg = _internal_mutable_mvarrayofipcnotification();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCNotificationsOrError.mVArrayOfIPCNotification)
+inline ::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification* IPCNotificationsOrError::mutable_a_mvarrayofipcnotification() {
+  ::protobuf::mozilla::dom::IPCNotificationsOrError_a_type_mVArrayOfIPCNotification* _msg = _internal_mutable_a_mvarrayofipcnotification();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.IPCNotificationsOrError.a_mVArrayOfIPCNotification)
   return _msg;
 }
 

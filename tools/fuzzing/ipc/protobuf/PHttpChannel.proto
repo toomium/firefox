@@ -44,8 +44,8 @@ message Msg_Redirect2Verify {
   required uint32 a_sourceRequestBlockingReason = 3;
   optional protobuf.mozilla.net.ChildLoadInfoForwarderArgs a_targetLoadInfoForwarder = 4;
   required uint32 a_loadFlags = 5;
-  required bytes a_referrerInfo = 6;
-  required bytes a_apiRedirectTo = 7;
+  optional bytes a_referrerInfo = 6;
+  optional bytes a_apiRedirectTo = 7;
   optional protobuf.mozilla.net.CorsPreflightArgs a_corsPreflightArgs = 8;
 }
 
@@ -54,7 +54,7 @@ message Msg_DocumentChannelCleanup {
 }
 
 message Msg_RemoveCorsPreflightCacheEntry {
-  required bytes a_uri = 1;
+  optional bytes a_uri = 1;
   required protobuf.mozilla.ipc.PrincipalInfo a_requestingPrincipal = 2;
   required bytes a_originAttributes = 3;
 }
@@ -62,7 +62,7 @@ message Msg_RemoveCorsPreflightCacheEntry {
 message Msg_SetCookies {
   required string a_baseDomain = 1;
   required bytes a_attrs = 2;
-  required bytes a_host = 3;
+  optional bytes a_host = 3;
   required bool a_fromHttp = 4;
   required bool a_isThirdParty = 5;
   repeated protobuf.mozilla.net.CookieStruct a_cookies = 6;
@@ -93,12 +93,12 @@ message Msg_OnStartRequestSent {
 
 message Msg_Redirect1Begin {
   required uint32 a_registrarId = 1;
-  required bytes a_newOriginalUri = 2;
+  optional bytes a_newOriginalUri = 2;
   required uint32 a_newLoadFlags = 3;
   required uint32 a_redirectFlags = 4;
   required protobuf.mozilla.net.ParentLoadInfoForwarderArgs a_loadInfoForwarder = 5;
   required bytes a_responseHead = 6;
-  required bytes a_securityInfo = 7;
+  optional bytes a_securityInfo = 7;
   required uint64 a_channelId = 8;
   required bytes a_oldPeerAddr = 9;
   required protobuf.mozilla.net.ResourceTimingStructArgs a_timing = 10;

@@ -448,7 +448,7 @@ class SurfaceDescriptorD3D10::_Internal {
     (*has_bits)[0] |= 64u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x000001bd) ^ 0x000001bd) != 0;
+    return ((has_bits[0] & 0x000001bc) ^ 0x000001bc) != 0;
   }
 };
 
@@ -651,7 +651,7 @@ const char* SurfaceDescriptorD3D10::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_handle = 1;
+      // optional bytes a_handle = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_handle();
@@ -763,7 +763,7 @@ uint8_t* SurfaceDescriptorD3D10::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_handle = 1;
+  // optional bytes a_handle = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_handle(), target);
@@ -829,13 +829,6 @@ size_t SurfaceDescriptorD3D10::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.SurfaceDescriptorD3D10)
   size_t total_size = 0;
 
-  if (_internal_has_a_handle()) {
-    // required bytes a_handle = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_handle());
-  }
-
   if (_internal_has_a_format()) {
     // required bytes a_format = 4;
     total_size += 1 +
@@ -880,12 +873,7 @@ size_t SurfaceDescriptorD3D10::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.SurfaceDescriptorD3D10)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x000001bd) ^ 0x000001bd) == 0) {  // All required fields are present.
-    // required bytes a_handle = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_handle());
-
+  if (((_impl_._has_bits_[0] & 0x000001bc) ^ 0x000001bc) == 0) {  // All required fields are present.
     // required bytes a_format = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -919,14 +907,23 @@ size_t SurfaceDescriptorD3D10::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes a_gpuProcessTextureId = 2;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000002u) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_gpuprocesstextureid());
-  }
+  if (cached_has_bits & 0x00000003u) {
+    // optional bytes a_handle = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_a_handle());
+    }
 
+    // optional bytes a_gpuProcessTextureId = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_a_gpuprocesstextureid());
+    }
+
+  }
   // optional bytes a_fencesHolderId = 9;
   if (cached_has_bits & 0x00000040u) {
     total_size += 1 +
@@ -1084,7 +1081,7 @@ class SurfaceDescriptorDXGIYCbCr::_Internal {
     (*has_bits)[0] |= 512u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x000003ff) ^ 0x000003ff) != 0;
+    return ((has_bits[0] & 0x000003f8) ^ 0x000003f8) != 0;
   }
 };
 
@@ -1334,7 +1331,7 @@ const char* SurfaceDescriptorDXGIYCbCr::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_handleY = 1;
+      // optional bytes a_handleY = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_handley();
@@ -1343,7 +1340,7 @@ const char* SurfaceDescriptorDXGIYCbCr::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_handleCb = 2;
+      // optional bytes a_handleCb = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_handlecb();
@@ -1352,7 +1349,7 @@ const char* SurfaceDescriptorDXGIYCbCr::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_handleCr = 3;
+      // optional bytes a_handleCr = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_handlecr();
@@ -1455,19 +1452,19 @@ uint8_t* SurfaceDescriptorDXGIYCbCr::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_handleY = 1;
+  // optional bytes a_handleY = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_handley(), target);
   }
 
-  // required bytes a_handleCb = 2;
+  // optional bytes a_handleCb = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_handlecb(), target);
   }
 
-  // required bytes a_handleCr = 3;
+  // optional bytes a_handleCr = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
         3, this->_internal_a_handlecr(), target);
@@ -1527,27 +1524,6 @@ size_t SurfaceDescriptorDXGIYCbCr::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr)
   size_t total_size = 0;
 
-  if (_internal_has_a_handley()) {
-    // required bytes a_handleY = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_handley());
-  }
-
-  if (_internal_has_a_handlecb()) {
-    // required bytes a_handleCb = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_handlecb());
-  }
-
-  if (_internal_has_a_handlecr()) {
-    // required bytes a_handleCr = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_handlecr());
-  }
-
   if (_internal_has_a_size()) {
     // required bytes a_size = 4;
     total_size += 1 +
@@ -1603,22 +1579,7 @@ size_t SurfaceDescriptorDXGIYCbCr::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x000003ff) ^ 0x000003ff) == 0) {  // All required fields are present.
-    // required bytes a_handleY = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_handley());
-
-    // required bytes a_handleCb = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_handlecb());
-
-    // required bytes a_handleCr = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_handlecr());
-
+  if (((_impl_._has_bits_[0] & 0x000003f8) ^ 0x000003f8) == 0) {  // All required fields are present.
     // required bytes a_size = 4;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -1661,6 +1622,30 @@ size_t SurfaceDescriptorDXGIYCbCr::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // optional bytes a_handleY = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_a_handley());
+    }
+
+    // optional bytes a_handleCb = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_a_handlecb());
+    }
+
+    // optional bytes a_handleCr = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_a_handlecr());
+    }
+
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
   }
@@ -1803,7 +1788,7 @@ class SurfaceDescriptorMacIOSurface::_Internal {
     (*has_bits)[0] |= 2u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
+    return ((has_bits[0] & 0x0000000d) ^ 0x0000000d) != 0;
   }
 };
 
@@ -1946,7 +1931,7 @@ const char* SurfaceDescriptorMacIOSurface::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_gpuFence = 4;
+      // optional bytes a_gpuFence = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_gpufence();
@@ -2004,7 +1989,7 @@ uint8_t* SurfaceDescriptorMacIOSurface::_InternalSerialize(
         3, this->_internal_a_yuvcolorspace(), target);
   }
 
-  // required bytes a_gpuFence = 4;
+  // optional bytes a_gpuFence = 4;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
         4, this->_internal_a_gpufence(), target);
@@ -2029,13 +2014,6 @@ size_t SurfaceDescriptorMacIOSurface::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_yuvcolorspace());
   }
 
-  if (_internal_has_a_gpufence()) {
-    // required bytes a_gpuFence = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_gpufence());
-  }
-
   if (_internal_has_a_surfaceid()) {
     // required uint32 a_surfaceId = 1;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_surfaceid());
@@ -2052,16 +2030,11 @@ size_t SurfaceDescriptorMacIOSurface::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x0000000d) ^ 0x0000000d) == 0) {  // All required fields are present.
     // required bytes a_yUVColorSpace = 3;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_yuvcolorspace());
-
-    // required bytes a_gpuFence = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_gpufence());
 
     // required uint32 a_surfaceId = 1;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_surfaceid());
@@ -2075,6 +2048,14 @@ size_t SurfaceDescriptorMacIOSurface::ByteSizeLong() const {
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // optional bytes a_gpuFence = 4;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000002u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_gpufence());
+  }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
@@ -2191,7 +2172,7 @@ class SurfaceDescriptorDMABuf::_Internal {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x000003ff) ^ 0x000003ff) != 0;
+    return ((has_bits[0] & 0x000003ef) ^ 0x000003ef) != 0;
   }
 };
 
@@ -2667,7 +2648,7 @@ const char* SurfaceDescriptorDMABuf::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_semaphoreFd = 21;
+      // optional bytes a_semaphoreFd = 21;
       case 21:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 170)) {
           auto str = _internal_mutable_a_semaphorefd();
@@ -2827,7 +2808,7 @@ uint8_t* SurfaceDescriptorDMABuf::_InternalSerialize(
     target = stream->WriteBytes(20, s, target);
   }
 
-  // required bytes a_semaphoreFd = 21;
+  // optional bytes a_semaphoreFd = 21;
   if (cached_has_bits & 0x00000010u) {
     target = stream->WriteBytesMaybeAliased(
         21, this->_internal_a_semaphorefd(), target);
@@ -2873,13 +2854,6 @@ size_t SurfaceDescriptorDMABuf::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_transferfunction());
   }
 
-  if (_internal_has_a_semaphorefd()) {
-    // required bytes a_semaphoreFd = 21;
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_semaphorefd());
-  }
-
   if (_internal_has_a_buffertype()) {
     // required uint32 a_bufferType = 1;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_buffertype());
@@ -2915,7 +2889,7 @@ size_t SurfaceDescriptorDMABuf::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.SurfaceDescriptorDMABuf)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x000003ff) ^ 0x000003ff) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x000003ef) ^ 0x000003ef) == 0) {  // All required fields are present.
     // required bytes a_yUVColorSpace = 13;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -2935,11 +2909,6 @@ size_t SurfaceDescriptorDMABuf::ByteSizeLong() const {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_transferfunction());
-
-    // required bytes a_semaphoreFd = 21;
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_semaphorefd());
 
     // required uint32 a_bufferType = 1;
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_buffertype());
@@ -3061,6 +3030,14 @@ size_t SurfaceDescriptorDMABuf::ByteSizeLong() const {
   for (int i = 0, n = _impl_.a_refcount_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.a_refcount_.Get(i));
+  }
+
+  // optional bytes a_semaphoreFd = 21;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000010u) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_semaphorefd());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {

@@ -18,10 +18,10 @@ message KeyValue {
 }
 
 message JSONVariant {
-  message _mVArrayOfKeyValue {
+  message a_type_mVArrayOfKeyValue {
     repeated protobuf.mozilla._ipdltest.KeyValue a_mVArrayOfKeyValue = 1;
   }
-  message _mVArrayOfJSONVariant {
+  message a_type_mVArrayOfJSONVariant {
     repeated protobuf.mozilla._ipdltest.JSONVariant a_mVArrayOfJSONVariant = 1;
   }
   oneof content {
@@ -32,7 +32,7 @@ message JSONVariant {
     double a_mVdouble = 5;
     string a_mVnsString = 6;
     bytes a_mVPTestJSONHandle = 7;
-    _mVArrayOfKeyValue mVArrayOfKeyValue = 8;
-    _mVArrayOfJSONVariant mVArrayOfJSONVariant = 9;
+    a_type_mVArrayOfKeyValue a_mVArrayOfKeyValue = 8;
+    a_type_mVArrayOfJSONVariant a_mVArrayOfJSONVariant = 9;
   }
 }

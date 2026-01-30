@@ -76,7 +76,7 @@ message Reply_RestoreDocShellState {
 }
 
 message Msg_RestoreTabContent {
-  required bytes a_aData = 1;
+  optional bytes a_aData = 1;
 }
 
 message Reply_RestoreTabContent {
@@ -104,8 +104,8 @@ message Msg_UpdateDocumentURI {
 }
 
 message Msg_UpdateDocumentPrincipal {
-  required bytes a_aPrincipal = 1;
-  required bytes a_aStoragePrincipal = 2;
+  optional bytes a_aPrincipal = 1;
+  optional bytes a_aStoragePrincipal = 2;
 }
 
 message Msg_UpdateDocumentHasLoaded {
@@ -134,7 +134,7 @@ message Msg_UpdateDocumentTitle {
 }
 
 message Msg_UpdateDocumentSecurityInfo {
-  required bytes a_aSecurityInfo = 1;
+  optional bytes a_aSecurityInfo = 1;
 }
 
 message Msg_UpdateHttpsOnlyStatus {
@@ -218,7 +218,7 @@ message Reply_GetStorageAccessPermission {
 message Msg_SetCookies {
   required string a_baseDomain = 1;
   required bytes a_attrs = 2;
-  required bytes a_host = 3;
+  optional bytes a_host = 3;
   required bool a_fromHttp = 4;
   required bool a_isThirdParty = 5;
   repeated protobuf.mozilla.net.CookieStruct a_cookies = 6;

@@ -48,19 +48,19 @@ struct UInt64ResponseDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UInt64ResponseDefaultTypeInternal _UInt64Response_default_instance_;
-PROTOBUF_CONSTEXPR CStringArrayResponse__mVArrayOfnsCString::CStringArrayResponse__mVArrayOfnsCString(
+PROTOBUF_CONSTEXPR CStringArrayResponse_a_type_mVArrayOfnsCString::CStringArrayResponse_a_type_mVArrayOfnsCString(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.a_mvarrayofnscstring_)*/{}
   , /*decltype(_impl_._cached_size_)*/{}} {}
-struct CStringArrayResponse__mVArrayOfnsCStringDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CStringArrayResponse__mVArrayOfnsCStringDefaultTypeInternal()
+struct CStringArrayResponse_a_type_mVArrayOfnsCStringDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CStringArrayResponse_a_type_mVArrayOfnsCStringDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~CStringArrayResponse__mVArrayOfnsCStringDefaultTypeInternal() {}
+  ~CStringArrayResponse_a_type_mVArrayOfnsCStringDefaultTypeInternal() {}
   union {
-    CStringArrayResponse__mVArrayOfnsCString _instance;
+    CStringArrayResponse_a_type_mVArrayOfnsCString _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CStringArrayResponse__mVArrayOfnsCStringDefaultTypeInternal _CStringArrayResponse__mVArrayOfnsCString_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CStringArrayResponse_a_type_mVArrayOfnsCStringDefaultTypeInternal _CStringArrayResponse_a_type_mVArrayOfnsCString_default_instance_;
 PROTOBUF_CONSTEXPR CStringArrayResponse::CStringArrayResponse(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.content_)*/{}
@@ -598,28 +598,28 @@ std::string UInt64Response::GetTypeName() const {
 
 // ===================================================================
 
-class CStringArrayResponse__mVArrayOfnsCString::_Internal {
+class CStringArrayResponse_a_type_mVArrayOfnsCString::_Internal {
  public:
 };
 
-CStringArrayResponse__mVArrayOfnsCString::CStringArrayResponse__mVArrayOfnsCString(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+CStringArrayResponse_a_type_mVArrayOfnsCString::CStringArrayResponse_a_type_mVArrayOfnsCString(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString)
+  // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString)
 }
-CStringArrayResponse__mVArrayOfnsCString::CStringArrayResponse__mVArrayOfnsCString(const CStringArrayResponse__mVArrayOfnsCString& from)
+CStringArrayResponse_a_type_mVArrayOfnsCString::CStringArrayResponse_a_type_mVArrayOfnsCString(const CStringArrayResponse_a_type_mVArrayOfnsCString& from)
   : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
-  CStringArrayResponse__mVArrayOfnsCString* const _this = this; (void)_this;
+  CStringArrayResponse_a_type_mVArrayOfnsCString* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_mvarrayofnscstring_){from._impl_.a_mvarrayofnscstring_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString)
+  // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString)
 }
 
-inline void CStringArrayResponse__mVArrayOfnsCString::SharedCtor(
+inline void CStringArrayResponse_a_type_mVArrayOfnsCString::SharedCtor(
     ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
   (void)is_message_owned;
@@ -629,8 +629,8 @@ inline void CStringArrayResponse__mVArrayOfnsCString::SharedCtor(
   };
 }
 
-CStringArrayResponse__mVArrayOfnsCString::~CStringArrayResponse__mVArrayOfnsCString() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString)
+CStringArrayResponse_a_type_mVArrayOfnsCString::~CStringArrayResponse_a_type_mVArrayOfnsCString() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
@@ -638,17 +638,17 @@ CStringArrayResponse__mVArrayOfnsCString::~CStringArrayResponse__mVArrayOfnsCStr
   SharedDtor();
 }
 
-inline void CStringArrayResponse__mVArrayOfnsCString::SharedDtor() {
+inline void CStringArrayResponse_a_type_mVArrayOfnsCString::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.a_mvarrayofnscstring_.~RepeatedPtrField();
 }
 
-void CStringArrayResponse__mVArrayOfnsCString::SetCachedSize(int size) const {
+void CStringArrayResponse_a_type_mVArrayOfnsCString::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void CStringArrayResponse__mVArrayOfnsCString::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString)
+void CStringArrayResponse_a_type_mVArrayOfnsCString::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -657,7 +657,7 @@ void CStringArrayResponse__mVArrayOfnsCString::Clear() {
   _internal_metadata_.Clear<std::string>();
 }
 
-const char* CStringArrayResponse__mVArrayOfnsCString::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* CStringArrayResponse_a_type_mVArrayOfnsCString::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -700,9 +700,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* CStringArrayResponse__mVArrayOfnsCString::_InternalSerialize(
+uint8_t* CStringArrayResponse_a_type_mVArrayOfnsCString::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString)
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -716,12 +716,12 @@ uint8_t* CStringArrayResponse__mVArrayOfnsCString::_InternalSerialize(
     target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
         static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString)
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString)
   return target;
 }
 
-size_t CStringArrayResponse__mVArrayOfnsCString::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString)
+size_t CStringArrayResponse_a_type_mVArrayOfnsCString::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -744,15 +744,15 @@ size_t CStringArrayResponse__mVArrayOfnsCString::ByteSizeLong() const {
   return total_size;
 }
 
-void CStringArrayResponse__mVArrayOfnsCString::CheckTypeAndMergeFrom(
+void CStringArrayResponse_a_type_mVArrayOfnsCString::CheckTypeAndMergeFrom(
     const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const CStringArrayResponse__mVArrayOfnsCString*>(
+  MergeFrom(*::_pbi::DownCast<const CStringArrayResponse_a_type_mVArrayOfnsCString*>(
       &from));
 }
 
-void CStringArrayResponse__mVArrayOfnsCString::MergeFrom(const CStringArrayResponse__mVArrayOfnsCString& from) {
-  CStringArrayResponse__mVArrayOfnsCString* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString)
+void CStringArrayResponse_a_type_mVArrayOfnsCString::MergeFrom(const CStringArrayResponse_a_type_mVArrayOfnsCString& from) {
+  CStringArrayResponse_a_type_mVArrayOfnsCString* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -761,25 +761,25 @@ void CStringArrayResponse__mVArrayOfnsCString::MergeFrom(const CStringArrayRespo
   _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
-void CStringArrayResponse__mVArrayOfnsCString::CopyFrom(const CStringArrayResponse__mVArrayOfnsCString& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString)
+void CStringArrayResponse_a_type_mVArrayOfnsCString::CopyFrom(const CStringArrayResponse_a_type_mVArrayOfnsCString& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool CStringArrayResponse__mVArrayOfnsCString::IsInitialized() const {
+bool CStringArrayResponse_a_type_mVArrayOfnsCString::IsInitialized() const {
   return true;
 }
 
-void CStringArrayResponse__mVArrayOfnsCString::InternalSwap(CStringArrayResponse__mVArrayOfnsCString* other) {
+void CStringArrayResponse_a_type_mVArrayOfnsCString::InternalSwap(CStringArrayResponse_a_type_mVArrayOfnsCString* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   _impl_.a_mvarrayofnscstring_.InternalSwap(&other->_impl_.a_mvarrayofnscstring_);
 }
 
-std::string CStringArrayResponse__mVArrayOfnsCString::GetTypeName() const {
-  return "protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString";
+std::string CStringArrayResponse_a_type_mVArrayOfnsCString::GetTypeName() const {
+  return "protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString";
 }
 
 
@@ -787,27 +787,27 @@ std::string CStringArrayResponse__mVArrayOfnsCString::GetTypeName() const {
 
 class CStringArrayResponse::_Internal {
  public:
-  static const ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString& mvarrayofnscstring(const CStringArrayResponse* msg);
+  static const ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString& a_mvarrayofnscstring(const CStringArrayResponse* msg);
 };
 
-const ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString&
-CStringArrayResponse::_Internal::mvarrayofnscstring(const CStringArrayResponse* msg) {
-  return *msg->_impl_.content_.mvarrayofnscstring_;
+const ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString&
+CStringArrayResponse::_Internal::a_mvarrayofnscstring(const CStringArrayResponse* msg) {
+  return *msg->_impl_.content_.a_mvarrayofnscstring_;
 }
-void CStringArrayResponse::set_allocated_mvarrayofnscstring(::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString* mvarrayofnscstring) {
+void CStringArrayResponse::set_allocated_a_mvarrayofnscstring(::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString* a_mvarrayofnscstring) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_content();
-  if (mvarrayofnscstring) {
+  if (a_mvarrayofnscstring) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(mvarrayofnscstring);
+      ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(a_mvarrayofnscstring);
     if (message_arena != submessage_arena) {
-      mvarrayofnscstring = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, mvarrayofnscstring, submessage_arena);
+      a_mvarrayofnscstring = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, a_mvarrayofnscstring, submessage_arena);
     }
-    set_has_mvarrayofnscstring();
-    _impl_.content_.mvarrayofnscstring_ = mvarrayofnscstring;
+    set_has_a_mvarrayofnscstring();
+    _impl_.content_.a_mvarrayofnscstring_ = a_mvarrayofnscstring;
   }
-  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.CStringArrayResponse.mVArrayOfnsCString)
+  // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.CStringArrayResponse.a_mVArrayOfnsCString)
 }
 CStringArrayResponse::CStringArrayResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -830,9 +830,9 @@ CStringArrayResponse::CStringArrayResponse(const CStringArrayResponse& from)
       _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVArrayOfnsCString: {
-      _this->_internal_mutable_mvarrayofnscstring()->::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString::MergeFrom(
-          from._internal_mvarrayofnscstring());
+    case kAMVArrayOfnsCString: {
+      _this->_internal_mutable_a_mvarrayofnscstring()->::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString::MergeFrom(
+          from._internal_a_mvarrayofnscstring());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -881,9 +881,9 @@ void CStringArrayResponse::clear_content() {
       _impl_.content_.a_mvnsresult_.Destroy();
       break;
     }
-    case kMVArrayOfnsCString: {
+    case kAMVArrayOfnsCString: {
       if (GetArenaForAllocation() == nullptr) {
-        delete _impl_.content_.mvarrayofnscstring_;
+        delete _impl_.content_.a_mvarrayofnscstring_;
       }
       break;
     }
@@ -920,10 +920,10 @@ const char* CStringArrayResponse::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // .protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString mVArrayOfnsCString = 2;
+      // .protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString a_mVArrayOfnsCString = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mvarrayofnscstring(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_a_mvarrayofnscstring(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -963,10 +963,10 @@ uint8_t* CStringArrayResponse::_InternalSerialize(
           1, this->_internal_a_mvnsresult(), target);
       break;
     }
-    case kMVArrayOfnsCString: {
+    case kAMVArrayOfnsCString: {
       target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::mvarrayofnscstring(this),
-          _Internal::mvarrayofnscstring(this).GetCachedSize(), target, stream);
+        InternalWriteMessage(2, _Internal::a_mvarrayofnscstring(this),
+          _Internal::a_mvarrayofnscstring(this).GetCachedSize(), target, stream);
       break;
     }
     default: ;
@@ -995,11 +995,11 @@ size_t CStringArrayResponse::ByteSizeLong() const {
           this->_internal_a_mvnsresult());
       break;
     }
-    // .protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString mVArrayOfnsCString = 2;
-    case kMVArrayOfnsCString: {
+    // .protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString a_mVArrayOfnsCString = 2;
+    case kAMVArrayOfnsCString: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *_impl_.content_.mvarrayofnscstring_);
+          *_impl_.content_.a_mvarrayofnscstring_);
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1032,9 +1032,9 @@ void CStringArrayResponse::MergeFrom(const CStringArrayResponse& from) {
       _this->_internal_set_a_mvnsresult(from._internal_a_mvnsresult());
       break;
     }
-    case kMVArrayOfnsCString: {
-      _this->_internal_mutable_mvarrayofnscstring()->::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString::MergeFrom(
-          from._internal_mvarrayofnscstring());
+    case kAMVArrayOfnsCString: {
+      _this->_internal_mutable_a_mvarrayofnscstring()->::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString::MergeFrom(
+          from._internal_a_mvarrayofnscstring());
       break;
     }
     case CONTENT_NOT_SET: {
@@ -1080,9 +1080,9 @@ template<> PROTOBUF_NOINLINE ::protobuf::mozilla::ipc::UInt64Response*
 Arena::CreateMaybeMessage< ::protobuf::mozilla::ipc::UInt64Response >(Arena* arena) {
   return Arena::CreateMessageInternal< ::protobuf::mozilla::ipc::UInt64Response >(arena);
 }
-template<> PROTOBUF_NOINLINE ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString*
-Arena::CreateMaybeMessage< ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString >(arena);
+template<> PROTOBUF_NOINLINE ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString*
+Arena::CreateMaybeMessage< ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString >(arena);
 }
 template<> PROTOBUF_NOINLINE ::protobuf::mozilla::ipc::CStringArrayResponse*
 Arena::CreateMaybeMessage< ::protobuf::mozilla::ipc::CStringArrayResponse >(Arena* arena) {

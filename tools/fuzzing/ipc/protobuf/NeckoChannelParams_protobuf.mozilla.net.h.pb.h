@@ -1757,7 +1757,7 @@ class LoadInfoArgs final :
   std::string* _internal_mutable_a_loadingembedderpolicy();
   public:
 
-  // required bytes a_unstrippedURI = 80;
+  // optional bytes a_unstrippedURI = 80;
   bool has_a_unstrippeduri() const;
   private:
   bool _internal_has_a_unstrippeduri() const;
@@ -3037,7 +3037,7 @@ class ParentLoadInfoForwarderArgs final :
   std::string* _internal_mutable_a_overriddenfingerprintingsettings();
   public:
 
-  // required bytes a_unstrippedURI = 30;
+  // optional bytes a_unstrippedURI = 30;
   bool has_a_unstrippeduri() const;
   private:
   bool _internal_has_a_unstrippeduri() const;
@@ -3971,7 +3971,7 @@ class HttpChannelOpenArgs final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::PreferredAlternativeDataTypeParams >&
       a_preferredalternativetypes() const;
 
-  // required bytes a_uri = 1;
+  // optional bytes a_uri = 1;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -3989,7 +3989,7 @@ class HttpChannelOpenArgs final :
   std::string* _internal_mutable_a_uri();
   public:
 
-  // required bytes a_original = 2;
+  // optional bytes a_original = 2;
   bool has_a_original() const;
   private:
   bool _internal_has_a_original() const;
@@ -4007,7 +4007,7 @@ class HttpChannelOpenArgs final :
   std::string* _internal_mutable_a_original();
   public:
 
-  // required bytes a_doc = 3;
+  // optional bytes a_doc = 3;
   bool has_a_doc() const;
   private:
   bool _internal_has_a_doc() const;
@@ -4025,7 +4025,7 @@ class HttpChannelOpenArgs final :
   std::string* _internal_mutable_a_doc();
   public:
 
-  // required bytes a_referrerInfo = 4;
+  // optional bytes a_referrerInfo = 4;
   bool has_a_referrerinfo() const;
   private:
   bool _internal_has_a_referrerinfo() const;
@@ -4043,7 +4043,7 @@ class HttpChannelOpenArgs final :
   std::string* _internal_mutable_a_referrerinfo();
   public:
 
-  // required bytes a_apiRedirectTo = 5;
+  // optional bytes a_apiRedirectTo = 5;
   bool has_a_apiredirectto() const;
   private:
   bool _internal_has_a_apiredirectto() const;
@@ -4061,7 +4061,7 @@ class HttpChannelOpenArgs final :
   std::string* _internal_mutable_a_apiredirectto();
   public:
 
-  // required bytes a_topWindowURI = 6;
+  // optional bytes a_topWindowURI = 6;
   bool has_a_topwindowuri() const;
   private:
   bool _internal_has_a_topwindowuri() const;
@@ -7636,7 +7636,7 @@ class DocumentChannelCreationArgs final :
   std::string* _internal_mutable_a_asyncopentime();
   public:
 
-  // required bytes a_timing = 5;
+  // optional bytes a_timing = 5;
   bool has_a_timing() const;
   private:
   bool _internal_has_a_timing() const;
@@ -8073,7 +8073,7 @@ class RedirectToRealChannelArgs final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::net::EarlyHintConnectArgs >&
       a_earlyhints() const;
 
-  // required bytes a_uri = 2;
+  // optional bytes a_uri = 2;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -8091,7 +8091,7 @@ class RedirectToRealChannelArgs final :
   std::string* _internal_mutable_a_uri();
   public:
 
-  // required bytes a_originalURI = 7;
+  // optional bytes a_originalURI = 7;
   bool has_a_originaluri() const;
   private:
   bool _internal_has_a_originaluri() const;
@@ -8127,7 +8127,7 @@ class RedirectToRealChannelArgs final :
   std::string* _internal_mutable_a_contentdispositionfilename();
   public:
 
-  // required bytes a_properties = 12;
+  // optional bytes a_properties = 12;
   bool has_a_properties() const;
   private:
   bool _internal_has_a_properties() const;
@@ -8145,7 +8145,7 @@ class RedirectToRealChannelArgs final :
   std::string* _internal_mutable_a_properties();
   public:
 
-  // required bytes a_timing = 16;
+  // optional bytes a_timing = 16;
   bool has_a_timing() const;
   private:
   bool _internal_has_a_timing() const;
@@ -8181,7 +8181,7 @@ class RedirectToRealChannelArgs final :
   std::string* _internal_mutable_a_srcdocdata();
   public:
 
-  // required bytes a_baseUri = 18;
+  // optional bytes a_baseUri = 18;
   bool has_a_baseuri() const;
   private:
   bool _internal_has_a_baseuri() const;
@@ -10912,7 +10912,7 @@ class FileChannelInfo final :
     kAChannelIdFieldNumber = 6,
     kALoadFlagsFieldNumber = 3,
   };
-  // required bytes a_uri = 1;
+  // optional bytes a_uri = 1;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -10930,7 +10930,7 @@ class FileChannelInfo final :
   std::string* _internal_mutable_a_uri();
   public:
 
-  // required bytes a_originalURI = 2;
+  // optional bytes a_originalURI = 2;
   bool has_a_originaluri() const;
   private:
   bool _internal_has_a_originaluri() const;
@@ -11149,7 +11149,7 @@ class RemoteStreamInfo final :
     kAContentTypeFieldNumber = 2,
     kAContentLengthFieldNumber = 3,
   };
-  // required bytes a_inputStream = 1;
+  // optional bytes a_inputStream = 1;
   bool has_a_inputstream() const;
   private:
   bool _internal_has_a_inputstream() const;
@@ -15879,7 +15879,7 @@ inline void LoadInfoArgs::set_a_origintrialcoepcredentiallessenabledfortoplevel(
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.LoadInfoArgs.a_originTrialCoepCredentiallessEnabledForTopLevel)
 }
 
-// required bytes a_unstrippedURI = 80;
+// optional bytes a_unstrippedURI = 80;
 inline bool LoadInfoArgs::_internal_has_a_unstrippeduri() const {
   bool value = (_impl_._has_bits_[0] & 0x00004000u) != 0;
   return value;
@@ -17310,7 +17310,7 @@ inline void ParentLoadInfoForwarderArgs::set_a_ison3pcbexceptionlist(bool value)
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.ParentLoadInfoForwarderArgs.a_isOn3PCBExceptionList)
 }
 
-// required bytes a_unstrippedURI = 30;
+// optional bytes a_unstrippedURI = 30;
 inline bool ParentLoadInfoForwarderArgs::_internal_has_a_unstrippeduri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -17822,7 +17822,7 @@ CorsPreflightArgs::mutable_a_unsafeheaders() {
 
 // HttpChannelOpenArgs
 
-// required bytes a_uri = 1;
+// optional bytes a_uri = 1;
 inline bool HttpChannelOpenArgs::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -17890,7 +17890,7 @@ inline void HttpChannelOpenArgs::set_allocated_a_uri(std::string* a_uri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOpenArgs.a_uri)
 }
 
-// required bytes a_original = 2;
+// optional bytes a_original = 2;
 inline bool HttpChannelOpenArgs::_internal_has_a_original() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -17958,7 +17958,7 @@ inline void HttpChannelOpenArgs::set_allocated_a_original(std::string* a_origina
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOpenArgs.a_original)
 }
 
-// required bytes a_doc = 3;
+// optional bytes a_doc = 3;
 inline bool HttpChannelOpenArgs::_internal_has_a_doc() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -18026,7 +18026,7 @@ inline void HttpChannelOpenArgs::set_allocated_a_doc(std::string* a_doc) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOpenArgs.a_doc)
 }
 
-// required bytes a_referrerInfo = 4;
+// optional bytes a_referrerInfo = 4;
 inline bool HttpChannelOpenArgs::_internal_has_a_referrerinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -18094,7 +18094,7 @@ inline void HttpChannelOpenArgs::set_allocated_a_referrerinfo(std::string* a_ref
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOpenArgs.a_referrerInfo)
 }
 
-// required bytes a_apiRedirectTo = 5;
+// optional bytes a_apiRedirectTo = 5;
 inline bool HttpChannelOpenArgs::_internal_has_a_apiredirectto() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -18162,7 +18162,7 @@ inline void HttpChannelOpenArgs::set_allocated_a_apiredirectto(std::string* a_ap
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpChannelOpenArgs.a_apiRedirectTo)
 }
 
-// required bytes a_topWindowURI = 6;
+// optional bytes a_topWindowURI = 6;
 inline bool HttpChannelOpenArgs::_internal_has_a_topwindowuri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -24006,7 +24006,7 @@ inline void DocumentChannelCreationArgs::set_a_cachekey(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.DocumentChannelCreationArgs.a_cacheKey)
 }
 
-// required bytes a_timing = 5;
+// optional bytes a_timing = 5;
 inline bool DocumentChannelCreationArgs::_internal_has_a_timing() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -24411,7 +24411,7 @@ inline void RedirectToRealChannelArgs::set_a_registrarid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.RedirectToRealChannelArgs.a_registrarId)
 }
 
-// required bytes a_uri = 2;
+// optional bytes a_uri = 2;
 inline bool RedirectToRealChannelArgs::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -24712,7 +24712,7 @@ inline void RedirectToRealChannelArgs::set_a_channelid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.RedirectToRealChannelArgs.a_channelId)
 }
 
-// required bytes a_originalURI = 7;
+// optional bytes a_originalURI = 7;
 inline bool RedirectToRealChannelArgs::_internal_has_a_originaluri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -24932,7 +24932,7 @@ inline void RedirectToRealChannelArgs::set_allocated_a_contentdispositionfilenam
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.RedirectToRealChannelArgs.a_contentDispositionFilename)
 }
 
-// required bytes a_properties = 12;
+// optional bytes a_properties = 12;
 inline bool RedirectToRealChannelArgs::_internal_has_a_properties() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -25084,7 +25084,7 @@ inline void RedirectToRealChannelArgs::set_a_loadstateloadtype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.RedirectToRealChannelArgs.a_loadStateLoadType)
 }
 
-// required bytes a_timing = 16;
+// optional bytes a_timing = 16;
 inline bool RedirectToRealChannelArgs::_internal_has_a_timing() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -25220,7 +25220,7 @@ inline void RedirectToRealChannelArgs::set_allocated_a_srcdocdata(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.RedirectToRealChannelArgs.a_srcdocData)
 }
 
-// required bytes a_baseUri = 18;
+// optional bytes a_baseUri = 18;
 inline bool RedirectToRealChannelArgs::_internal_has_a_baseuri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -28696,7 +28696,7 @@ inline GIOChannelCreationArgs::ContentCase GIOChannelCreationArgs::content_case(
 
 // FileChannelInfo
 
-// required bytes a_uri = 1;
+// optional bytes a_uri = 1;
 inline bool FileChannelInfo::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -28764,7 +28764,7 @@ inline void FileChannelInfo::set_allocated_a_uri(std::string* a_uri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.FileChannelInfo.a_uri)
 }
 
-// required bytes a_originalURI = 2;
+// optional bytes a_originalURI = 2;
 inline bool FileChannelInfo::_internal_has_a_originaluri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -29050,7 +29050,7 @@ inline void FileChannelInfo::set_a_channelid(uint64_t value) {
 
 // RemoteStreamInfo
 
-// required bytes a_inputStream = 1;
+// optional bytes a_inputStream = 1;
 inline bool RemoteStreamInfo::_internal_has_a_inputstream() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

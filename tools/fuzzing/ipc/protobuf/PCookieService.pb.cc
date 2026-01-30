@@ -201,7 +201,7 @@ class Msg_SetCookies::_Internal {
     (*has_bits)[0] |= 16u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000001f) ^ 0x0000001f) != 0;
+    return ((has_bits[0] & 0x0000001b) ^ 0x0000001b) != 0;
   }
 };
 
@@ -358,7 +358,7 @@ const char* Msg_SetCookies::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_host = 3;
+      // optional bytes a_host = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_host();
@@ -441,7 +441,7 @@ uint8_t* Msg_SetCookies::_InternalSerialize(
         2, this->_internal_a_attrs(), target);
   }
 
-  // required bytes a_host = 3;
+  // optional bytes a_host = 3;
   if (cached_has_bits & 0x00000004u) {
     target = stream->WriteBytesMaybeAliased(
         3, this->_internal_a_host(), target);
@@ -493,13 +493,6 @@ size_t Msg_SetCookies::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_attrs());
   }
 
-  if (_internal_has_a_host()) {
-    // required bytes a_host = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_host());
-  }
-
   if (_internal_has_a_fromhttp()) {
     // required bool a_fromHttp = 4;
     total_size += 1 + 1;
@@ -516,7 +509,7 @@ size_t Msg_SetCookies::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PCookieService.Msg_SetCookies)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x0000001b) ^ 0x0000001b) == 0) {  // All required fields are present.
     // required string a_baseDomain = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
@@ -526,11 +519,6 @@ size_t Msg_SetCookies::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_attrs());
-
-    // required bytes a_host = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_host());
 
     // required bool a_fromHttp = 4;
     total_size += 1 + 1;
@@ -550,6 +538,14 @@ size_t Msg_SetCookies::ByteSizeLong() const {
   for (const auto& msg : this->_impl_.a_cookies_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // optional bytes a_host = 3;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000004u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_host());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -675,7 +671,7 @@ class Msg_GetCookieList::_Internal {
     (*has_bits)[0] |= 256u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x000001ff) ^ 0x000001ff) != 0;
+    return ((has_bits[0] & 0x000001fe) ^ 0x000001fe) != 0;
   }
 };
 
@@ -788,7 +784,7 @@ const char* Msg_GetCookieList::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_host = 1;
+      // optional bytes a_host = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_host();
@@ -914,7 +910,7 @@ uint8_t* Msg_GetCookieList::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_host = 1;
+  // optional bytes a_host = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_host(), target);
@@ -986,13 +982,6 @@ size_t Msg_GetCookieList::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PCookieService.Msg_GetCookieList)
   size_t total_size = 0;
 
-  if (_internal_has_a_host()) {
-    // required bytes a_host = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_host());
-  }
-
   if (_internal_has_a_isforeign()) {
     // required bool a_isForeign = 2;
     total_size += 1 + 1;
@@ -1039,12 +1028,7 @@ size_t Msg_GetCookieList::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PCookieService.Msg_GetCookieList)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x000001ff) ^ 0x000001ff) == 0) {  // All required fields are present.
-    // required bytes a_host = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_host());
-
+  if (((_impl_._has_bits_[0] & 0x000001fe) ^ 0x000001fe) == 0) {  // All required fields are present.
     // required bool a_isForeign = 2;
     total_size += 1 + 1;
 
@@ -1082,6 +1066,14 @@ size_t Msg_GetCookieList::ByteSizeLong() const {
   for (int i = 0, n = _impl_.a_attrslist_.size(); i < n; i++) {
     total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
       _impl_.a_attrslist_.Get(i));
+  }
+
+  // optional bytes a_host = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_host());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {

@@ -19,11 +19,11 @@ message TCPError {
 }
 
 message SendableData {
-  message _mVArrayOfuint8_t {
+  message a_type_mVArrayOfuint8_t {
     repeated uint32 a_mVArrayOfuint8_t = 1;
   }
   oneof content {
-    _mVArrayOfuint8_t mVArrayOfuint8_t = 1;
+    a_type_mVArrayOfuint8_t a_mVArrayOfuint8_t = 1;
     string a_mVnsCString = 2;
   }
 }

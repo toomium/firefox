@@ -240,7 +240,7 @@ class Msg_AsyncOpen final :
     kAAClientSetPingTimeoutFieldNumber = 10,
     kAAPingTimeoutFieldNumber = 9,
   };
-  // required bytes a_aURI = 1;
+  // optional bytes a_aURI = 1;
   bool has_a_auri() const;
   private:
   bool _internal_has_a_auri() const;
@@ -2485,7 +2485,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_AsyncOpen
 
-// required bytes a_aURI = 1;
+// optional bytes a_aURI = 1;
 inline bool Msg_AsyncOpen::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

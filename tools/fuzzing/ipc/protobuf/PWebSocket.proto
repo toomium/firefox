@@ -18,7 +18,7 @@ import "NeckoChannelParams.proto";
 
 // Message declarations
 message Msg_AsyncOpen {
-  required bytes a_aURI = 1;
+  optional bytes a_aURI = 1;
   required string a_aOrigin = 2;
   required bytes a_aOriginAttributes = 3;
   required uint64 a_aInnerWindowID = 4;

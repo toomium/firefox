@@ -333,9 +333,9 @@ message Msg_AccessKeyNotHandled {
 
 message Msg_RegisterProtocolHandler {
   required string a_scheme = 1;
-  required bytes a_handlerURI = 2;
+  optional bytes a_handlerURI = 2;
   required string a_title = 3;
-  required bytes a_documentURI = 4;
+  optional bytes a_documentURI = 4;
 }
 
 message Msg_OnStateChange {
@@ -349,7 +349,7 @@ message Msg_OnStateChange {
 message Msg_OnLocationChange {
   required protobuf.mozilla.dom.WebProgressData a_aWebProgressData = 1;
   required protobuf.mozilla.dom.RequestData a_aRequestData = 2;
-  required bytes a_aLocation = 3;
+  optional bytes a_aLocation = 3;
   required uint32 a_aFlags = 4;
   required bool a_aCanGoBack = 5;
   required bool a_aCanGoBackIgnoringUserInteraction = 6;
@@ -477,8 +477,8 @@ message Msg_InvokeDragSession {
   required uint32 a_stride = 4;
   required bytes a_format = 5;
   required bytes a_dragRect = 6;
-  required bytes a_principal = 7;
-  required bytes a_csp = 8;
+  optional bytes a_principal = 7;
+  optional bytes a_csp = 8;
   required protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 9;
   required bytes a_sourceWindowContext = 10;
   required bytes a_sourceTopWindowContext = 11;
@@ -559,8 +559,8 @@ message Msg_LoadURL {
 }
 
 message Msg_CreateAboutBlankDocumentViewer {
-  required bytes a_principal = 1;
-  required bytes a_partitionedPrincipal = 2;
+  optional bytes a_principal = 1;
+  optional bytes a_partitionedPrincipal = 2;
 }
 
 message Msg_ResumeLoad {
@@ -762,8 +762,8 @@ message Msg_RealDragEvent {
   required bytes a_aEvent = 1;
   required uint32 a_aDragAction = 2;
   required uint32 a_aDropEffect = 3;
-  required bytes a_aPrincipal = 4;
-  required bytes a_csp = 5;
+  optional bytes a_aPrincipal = 4;
+  optional bytes a_csp = 5;
 }
 
 message Msg_SynthesizedEventResponse {
@@ -909,13 +909,13 @@ message Msg_WillChangeProcess {
 message Msg_InvokeChildDragSession {
   required bytes a_aSourceWindowContext = 1;
   required bytes a_aSourceTopWindowContext = 2;
-  required bytes a_aPrincipal = 3;
+  optional bytes a_aPrincipal = 3;
   repeated protobuf.mozilla.dom.IPCTransferableData a_transfers = 4;
   required uint32 a_action = 5;
 }
 
 message Msg_UpdateDragSession {
-  required bytes a_aPrincipal = 1;
+  optional bytes a_aPrincipal = 1;
   repeated protobuf.mozilla.dom.IPCTransferableData a_transfers = 2;
   required bytes a_message = 3;
 }
@@ -932,8 +932,8 @@ message Msg_StoreDropTargetAndDelayEndDragSession {
   required bytes a_aPt = 1;
   required uint32 a_aDropEffect = 2;
   required uint32 a_aDragAction = 3;
-  required bytes a_aPrincipal = 4;
-  required bytes a_aCsp = 5;
+  optional bytes a_aPrincipal = 4;
+  optional bytes a_aCsp = 5;
 }
 
 message Msg_DispatchToDropTargetAndResumeEndDragSession {
@@ -958,8 +958,8 @@ message Reply_IsWindowSupportingWebVR {
 }
 
 message Msg_VisitURI {
-  required bytes a_aURI = 1;
-  required bytes a_aLastVisitedURI = 2;
+  optional bytes a_aURI = 1;
+  optional bytes a_aLastVisitedURI = 2;
   required uint32 a_aFlags = 3;
   required uint64 a_aBrowserId = 4;
 }

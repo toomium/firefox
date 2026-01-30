@@ -195,7 +195,7 @@ class Msg_PTestDescendantSubConstructor final :
     kADummyFieldNumber = 2,
     kAActoridFieldNumber = 1,
   };
-  // required bytes a_dummy = 2;
+  // optional bytes a_dummy = 2;
   bool has_a_dummy() const;
   private:
   bool _internal_has_a_dummy() const;
@@ -229,9 +229,6 @@ class Msg_PTestDescendantSubConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.PTestDescendant.Msg_PTestDescendantSubConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -950,7 +947,7 @@ inline void Msg_PTestDescendantSubConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.PTestDescendant.Msg_PTestDescendantSubConstructor.a_actorid)
 }
 
-// required bytes a_dummy = 2;
+// optional bytes a_dummy = 2;
 inline bool Msg_PTestDescendantSubConstructor::_internal_has_a_dummy() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

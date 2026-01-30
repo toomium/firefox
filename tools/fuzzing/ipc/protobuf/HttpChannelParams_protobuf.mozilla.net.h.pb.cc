@@ -191,7 +191,7 @@ class HttpChannelOnStartRequestArgs::_Internal {
     (*has_bits)[0] |= 512u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0xfffdffff) ^ 0xfffdffff) != 0;
+    return ((has_bits[0] & 0xfffdfffc) ^ 0xfffdfffc) != 0;
   }
 };
 
@@ -539,7 +539,7 @@ const char* HttpChannelOnStartRequestArgs::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_securityInfo = 1;
+      // optional bytes a_securityInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_securityinfo();
@@ -548,7 +548,7 @@ const char* HttpChannelOnStartRequestArgs::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_overrideReferrerInfo = 2;
+      // optional bytes a_overrideReferrerInfo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_overridereferrerinfo();
@@ -870,13 +870,13 @@ uint8_t* HttpChannelOnStartRequestArgs::_InternalSerialize(
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_securityInfo = 1;
+  // optional bytes a_securityInfo = 1;
   if (cached_has_bits & 0x00000001u) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_securityinfo(), target);
   }
 
-  // required bytes a_overrideReferrerInfo = 2;
+  // optional bytes a_overrideReferrerInfo = 2;
   if (cached_has_bits & 0x00000002u) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_overridereferrerinfo(), target);
@@ -1082,20 +1082,6 @@ size_t HttpChannelOnStartRequestArgs::RequiredFieldsByteSizeFallback() const {
 // @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.HttpChannelOnStartRequestArgs)
   size_t total_size = 0;
 
-  if (_internal_has_a_securityinfo()) {
-    // required bytes a_securityInfo = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_securityinfo());
-  }
-
-  if (_internal_has_a_overridereferrerinfo()) {
-    // required bytes a_overrideReferrerInfo = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_overridereferrerinfo());
-  }
-
   if (_internal_has_a_altdatatype()) {
     // required string a_altDataType = 5;
     total_size += 1 +
@@ -1271,17 +1257,7 @@ size_t HttpChannelOnStartRequestArgs::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.HttpChannelOnStartRequestArgs)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0xfffdffff) ^ 0xfffdffff) == 0) {  // All required fields are present.
-    // required bytes a_securityInfo = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_securityinfo());
-
-    // required bytes a_overrideReferrerInfo = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_overridereferrerinfo());
-
+  if (((_impl_._has_bits_[0] & 0xfffdfffc) ^ 0xfffdfffc) == 0) {  // All required fields are present.
     // required string a_altDataType = 5;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
@@ -1408,8 +1384,24 @@ size_t HttpChannelOnStartRequestArgs::ByteSizeLong() const {
       _impl_.a_cookieheaders_.Get(i));
   }
 
-  // optional uint32 a_multiPartID = 17;
   cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // optional bytes a_securityInfo = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_a_securityinfo());
+    }
+
+    // optional bytes a_overrideReferrerInfo = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+          this->_internal_a_overridereferrerinfo());
+    }
+
+  }
+  // optional uint32 a_multiPartID = 17;
   if (cached_has_bits & 0x00020000u) {
     total_size += 2 +
       ::_pbi::WireFormatLite::UInt32Size(

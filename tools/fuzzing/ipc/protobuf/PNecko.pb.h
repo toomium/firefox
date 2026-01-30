@@ -945,7 +945,7 @@ class Msg_PHttpChannelConstructor final :
     kAArgsFieldNumber = 4,
     kAActoridFieldNumber = 1,
   };
-  // required bytes a_browser = 2;
+  // optional bytes a_browser = 2;
   bool has_a_browser() const;
   private:
   bool _internal_has_a_browser() const;
@@ -1274,7 +1274,7 @@ class Msg_PWebSocketConstructor final :
     kAActoridFieldNumber = 1,
     kAASerialIDFieldNumber = 4,
   };
-  // required bytes a_browser = 2;
+  // optional bytes a_browser = 2;
   bool has_a_browser() const;
   private:
   bool _internal_has_a_browser() const;
@@ -1911,7 +1911,7 @@ class Msg_PUDPSocketConstructor final :
     kAFilterFieldNumber = 3,
     kAActoridFieldNumber = 1,
   };
-  // required bytes a_principal = 2;
+  // optional bytes a_principal = 2;
   bool has_a_principal() const;
   private:
   bool _internal_has_a_principal() const;
@@ -3194,7 +3194,7 @@ class Msg_PredPredict final :
     kAReasonFieldNumber = 3,
     kAHasVerifierFieldNumber = 5,
   };
-  // required bytes a_targetURI = 1;
+  // optional bytes a_targetURI = 1;
   bool has_a_targeturi() const;
   private:
   bool _internal_has_a_targeturi() const;
@@ -3212,7 +3212,7 @@ class Msg_PredPredict final :
   std::string* _internal_mutable_a_targeturi();
   public:
 
-  // required bytes a_sourceURI = 2;
+  // optional bytes a_sourceURI = 2;
   bool has_a_sourceuri() const;
   private:
   bool _internal_has_a_sourceuri() const;
@@ -3413,7 +3413,7 @@ class Msg_PredLearn final :
     kAOriginAttributesFieldNumber = 4,
     kAReasonFieldNumber = 3,
   };
-  // required bytes a_targetURI = 1;
+  // optional bytes a_targetURI = 1;
   bool has_a_targeturi() const;
   private:
   bool _internal_has_a_targeturi() const;
@@ -3431,7 +3431,7 @@ class Msg_PredLearn final :
   std::string* _internal_mutable_a_targeturi();
   public:
 
-  // required bytes a_sourceURI = 2;
+  // optional bytes a_sourceURI = 2;
   bool has_a_sourceuri() const;
   private:
   bool _internal_has_a_sourceuri() const;
@@ -3742,7 +3742,7 @@ class Msg_SpeculativeConnect final :
     kAOriginAttributesFieldNumber = 3,
     kAAnonymousFieldNumber = 4,
   };
-  // required bytes a_uri = 1;
+  // optional bytes a_uri = 1;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -3760,7 +3760,7 @@ class Msg_SpeculativeConnect final :
   std::string* _internal_mutable_a_uri();
   public:
 
-  // required bytes a_principal = 2;
+  // optional bytes a_principal = 2;
   bool has_a_principal() const;
   private:
   bool _internal_has_a_principal() const;
@@ -3812,9 +3812,6 @@ class Msg_SpeculativeConnect final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PNecko.Msg_SpeculativeConnect)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -4661,7 +4658,7 @@ class Msg_PGIOChannelConstructor final :
     kAArgsFieldNumber = 4,
     kAActoridFieldNumber = 1,
   };
-  // required bytes a_browser = 2;
+  // optional bytes a_browser = 2;
   bool has_a_browser() const;
   private:
   bool _internal_has_a_browser() const;
@@ -6839,7 +6836,7 @@ class Msg_GetExtensionStream final :
   enum : int {
     kAUriFieldNumber = 1,
   };
-  // required bytes a_uri = 1;
+  // optional bytes a_uri = 1;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -6986,7 +6983,7 @@ class Reply_GetExtensionStream final :
   enum : int {
     kAStreamFieldNumber = 1,
   };
-  // required bytes a_stream = 1;
+  // optional bytes a_stream = 1;
   bool has_a_stream() const;
   private:
   bool _internal_has_a_stream() const;
@@ -7133,7 +7130,7 @@ class Msg_GetExtensionFD final :
   enum : int {
     kAUriFieldNumber = 1,
   };
-  // required bytes a_uri = 1;
+  // optional bytes a_uri = 1;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -8089,7 +8086,7 @@ class Msg_GetPageThumbStream final :
     kAUriFieldNumber = 1,
     kALoadInfoFieldNumber = 2,
   };
-  // required bytes a_uri = 1;
+  // optional bytes a_uri = 1;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -8128,9 +8125,6 @@ class Msg_GetPageThumbStream final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PNecko.Msg_GetPageThumbStream)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -8406,7 +8400,7 @@ class Msg_GetPageIconStream final :
     kAUriFieldNumber = 1,
     kALoadInfoFieldNumber = 2,
   };
-  // required bytes a_uri = 1;
+  // optional bytes a_uri = 1;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -8445,9 +8439,6 @@ class Msg_GetPageIconStream final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PNecko.Msg_GetPageIconStream)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -8723,7 +8714,7 @@ class Msg_PredOnPredictPrefetch final :
     kAUriFieldNumber = 1,
     kAHttpStatusFieldNumber = 2,
   };
-  // required bytes a_uri = 1;
+  // optional bytes a_uri = 1;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -8757,9 +8748,6 @@ class Msg_PredOnPredictPrefetch final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PNecko.Msg_PredOnPredictPrefetch)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -8887,7 +8875,7 @@ class Msg_PredOnPredictPreconnect final :
   enum : int {
     kAUriFieldNumber = 1,
   };
-  // required bytes a_uri = 1;
+  // optional bytes a_uri = 1;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -9034,7 +9022,7 @@ class Msg_PredOnPredictDNS final :
   enum : int {
     kAUriFieldNumber = 1,
   };
-  // required bytes a_uri = 1;
+  // optional bytes a_uri = 1;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -10138,7 +10126,7 @@ inline void Msg_PHttpChannelConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNecko.Msg_PHttpChannelConstructor.a_actorid)
 }
 
-// required bytes a_browser = 2;
+// optional bytes a_browser = 2;
 inline bool Msg_PHttpChannelConstructor::_internal_has_a_browser() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10397,7 +10385,7 @@ inline void Msg_PWebSocketConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNecko.Msg_PWebSocketConstructor.a_actorid)
 }
 
-// required bytes a_browser = 2;
+// optional bytes a_browser = 2;
 inline bool Msg_PWebSocketConstructor::_internal_has_a_browser() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -10717,7 +10705,7 @@ inline void Msg_PUDPSocketConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNecko.Msg_PUDPSocketConstructor.a_actorid)
 }
 
-// required bytes a_principal = 2;
+// optional bytes a_principal = 2;
 inline bool Msg_PUDPSocketConstructor::_internal_has_a_principal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11480,7 +11468,7 @@ inline void Msg_PWebSocketEventListenerConstructor::set_a_ainnerwindowid(uint64_
 
 // Msg_PredPredict
 
-// required bytes a_targetURI = 1;
+// optional bytes a_targetURI = 1;
 inline bool Msg_PredPredict::_internal_has_a_targeturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11548,7 +11536,7 @@ inline void Msg_PredPredict::set_allocated_a_targeturi(std::string* a_targeturi)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PNecko.Msg_PredPredict.a_targetURI)
 }
 
-// required bytes a_sourceURI = 2;
+// optional bytes a_sourceURI = 2;
 inline bool Msg_PredPredict::_internal_has_a_sourceuri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11744,7 +11732,7 @@ inline void Msg_PredPredict::set_a_hasverifier(bool value) {
 
 // Msg_PredLearn
 
-// required bytes a_targetURI = 1;
+// optional bytes a_targetURI = 1;
 inline bool Msg_PredLearn::_internal_has_a_targeturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11812,7 +11800,7 @@ inline void Msg_PredLearn::set_allocated_a_targeturi(std::string* a_targeturi) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PNecko.Msg_PredLearn.a_targetURI)
 }
 
-// required bytes a_sourceURI = 2;
+// optional bytes a_sourceURI = 2;
 inline bool Msg_PredLearn::_internal_has_a_sourceuri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -11984,7 +11972,7 @@ inline void Msg_PredLearn::set_allocated_a_originattributes(std::string* a_origi
 
 // Msg_SpeculativeConnect
 
-// required bytes a_uri = 1;
+// optional bytes a_uri = 1;
 inline bool Msg_SpeculativeConnect::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12052,7 +12040,7 @@ inline void Msg_SpeculativeConnect::set_allocated_a_uri(std::string* a_uri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PNecko.Msg_SpeculativeConnect.a_uri)
 }
 
-// required bytes a_principal = 2;
+// optional bytes a_principal = 2;
 inline bool Msg_SpeculativeConnect::_internal_has_a_principal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -12852,7 +12840,7 @@ inline void Msg_PGIOChannelConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PNecko.Msg_PGIOChannelConstructor.a_actorid)
 }
 
-// required bytes a_browser = 2;
+// optional bytes a_browser = 2;
 inline bool Msg_PGIOChannelConstructor::_internal_has_a_browser() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13619,7 +13607,7 @@ inline void Msg_PWebrtcTCPSocketConstructor::set_allocated_a_tabid(std::string* 
 
 // Msg_GetExtensionStream
 
-// required bytes a_uri = 1;
+// optional bytes a_uri = 1;
 inline bool Msg_GetExtensionStream::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13691,7 +13679,7 @@ inline void Msg_GetExtensionStream::set_allocated_a_uri(std::string* a_uri) {
 
 // Reply_GetExtensionStream
 
-// required bytes a_stream = 1;
+// optional bytes a_stream = 1;
 inline bool Reply_GetExtensionStream::_internal_has_a_stream() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -13763,7 +13751,7 @@ inline void Reply_GetExtensionStream::set_allocated_a_stream(std::string* a_stre
 
 // Msg_GetExtensionFD
 
-// required bytes a_uri = 1;
+// optional bytes a_uri = 1;
 inline bool Msg_GetExtensionFD::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -14023,7 +14011,7 @@ inline void Reply_EnsureHSTSData::set_a_result(bool value) {
 
 // Msg_GetPageThumbStream
 
-// required bytes a_uri = 1;
+// optional bytes a_uri = 1;
 inline bool Msg_GetPageThumbStream::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -14273,7 +14261,7 @@ inline void Reply_GetPageThumbStream::set_allocated_a_info(::protobuf::mozilla::
 
 // Msg_GetPageIconStream
 
-// required bytes a_uri = 1;
+// optional bytes a_uri = 1;
 inline bool Msg_GetPageIconStream::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -14523,7 +14511,7 @@ inline void Reply_GetPageIconStream::set_allocated_a_info(::protobuf::mozilla::n
 
 // Msg_PredOnPredictPrefetch
 
-// required bytes a_uri = 1;
+// optional bytes a_uri = 1;
 inline bool Msg_PredOnPredictPrefetch::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -14623,7 +14611,7 @@ inline void Msg_PredOnPredictPrefetch::set_a_httpstatus(uint32_t value) {
 
 // Msg_PredOnPredictPreconnect
 
-// required bytes a_uri = 1;
+// optional bytes a_uri = 1;
 inline bool Msg_PredOnPredictPreconnect::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -14695,7 +14683,7 @@ inline void Msg_PredOnPredictPreconnect::set_allocated_a_uri(std::string* a_uri)
 
 // Msg_PredOnPredictDNS
 
-// required bytes a_uri = 1;
+// optional bytes a_uri = 1;
 inline bool Msg_PredOnPredictDNS::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

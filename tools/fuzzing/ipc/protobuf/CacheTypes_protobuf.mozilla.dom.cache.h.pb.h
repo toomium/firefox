@@ -514,7 +514,7 @@ class CacheReadStream final :
   std::string* _internal_mutable_a_id();
   public:
 
-  // required bytes a_control = 2;
+  // optional bytes a_control = 2;
   bool has_a_control() const;
   private:
   bool _internal_has_a_control() const;
@@ -553,9 +553,6 @@ class CacheReadStream final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.cache.CacheReadStream)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1447,7 +1444,7 @@ class CacheResponse final :
   std::string* _internal_mutable_a_headersguard();
   public:
 
-  // required bytes a_securityInfo = 9;
+  // optional bytes a_securityInfo = 9;
   bool has_a_securityinfo() const;
   private:
   bool _internal_has_a_securityinfo() const;
@@ -4882,7 +4879,7 @@ class StorageOpenResult final :
     kAActorFieldNumber = 1,
     kANsFieldNumber = 2,
   };
-  // required bytes a_actor = 1;
+  // optional bytes a_actor = 1;
   bool has_a_actor() const;
   private:
   bool _internal_has_a_actor() const;
@@ -4921,9 +4918,6 @@ class StorageOpenResult final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.cache.StorageOpenResult)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5877,7 +5871,7 @@ inline void CacheReadStream::set_allocated_a_id(std::string* a_id) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.cache.CacheReadStream.a_id)
 }
 
-// required bytes a_control = 2;
+// optional bytes a_control = 2;
 inline bool CacheReadStream::_internal_has_a_control() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -7842,7 +7836,7 @@ inline void CacheResponse::set_a_bodydisksize(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.cache.CacheResponse.a_bodyDiskSize)
 }
 
-// required bytes a_securityInfo = 9;
+// optional bytes a_securityInfo = 9;
 inline bool CacheResponse::_internal_has_a_securityinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -10862,7 +10856,7 @@ inline void StorageHasResult::set_a_success(bool value) {
 
 // StorageOpenResult
 
-// required bytes a_actor = 1;
+// optional bytes a_actor = 1;
 inline bool StorageOpenResult::_internal_has_a_actor() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

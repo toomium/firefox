@@ -1855,7 +1855,7 @@ class InternalResponseMetadata final :
   std::string* _internal_mutable_a_alternativedatatype();
   public:
 
-  // required bytes a_securityInfo = 9;
+  // optional bytes a_securityInfo = 9;
   bool has_a_securityinfo() const;
   private:
   bool _internal_has_a_securityinfo() const;
@@ -5748,7 +5748,7 @@ inline void InternalResponseMetadata::set_allocated_a_alternativedatatype(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.InternalResponseMetadata.a_alternativeDataType)
 }
 
-// required bytes a_securityInfo = 9;
+// optional bytes a_securityInfo = 9;
 inline bool InternalResponseMetadata::_internal_has_a_securityinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;

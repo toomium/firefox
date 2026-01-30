@@ -47,12 +47,12 @@ namespace _ipdltest {
 class JSONVariant;
 struct JSONVariantDefaultTypeInternal;
 extern JSONVariantDefaultTypeInternal _JSONVariant_default_instance_;
-class JSONVariant__mVArrayOfJSONVariant;
-struct JSONVariant__mVArrayOfJSONVariantDefaultTypeInternal;
-extern JSONVariant__mVArrayOfJSONVariantDefaultTypeInternal _JSONVariant__mVArrayOfJSONVariant_default_instance_;
-class JSONVariant__mVArrayOfKeyValue;
-struct JSONVariant__mVArrayOfKeyValueDefaultTypeInternal;
-extern JSONVariant__mVArrayOfKeyValueDefaultTypeInternal _JSONVariant__mVArrayOfKeyValue_default_instance_;
+class JSONVariant_a_type_mVArrayOfJSONVariant;
+struct JSONVariant_a_type_mVArrayOfJSONVariantDefaultTypeInternal;
+extern JSONVariant_a_type_mVArrayOfJSONVariantDefaultTypeInternal _JSONVariant_a_type_mVArrayOfJSONVariant_default_instance_;
+class JSONVariant_a_type_mVArrayOfKeyValue;
+struct JSONVariant_a_type_mVArrayOfKeyValueDefaultTypeInternal;
+extern JSONVariant_a_type_mVArrayOfKeyValueDefaultTypeInternal _JSONVariant_a_type_mVArrayOfKeyValue_default_instance_;
 class KeyValue;
 struct KeyValueDefaultTypeInternal;
 extern KeyValueDefaultTypeInternal _KeyValue_default_instance_;
@@ -61,8 +61,8 @@ extern KeyValueDefaultTypeInternal _KeyValue_default_instance_;
 }  // namespace protobuf
 PROTOBUF_NAMESPACE_OPEN
 template<> ::protobuf::mozilla::_ipdltest::JSONVariant* Arena::CreateMaybeMessage<::protobuf::mozilla::_ipdltest::JSONVariant>(Arena*);
-template<> ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant* Arena::CreateMaybeMessage<::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant>(Arena*);
-template<> ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue* Arena::CreateMaybeMessage<::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue>(Arena*);
+template<> ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant* Arena::CreateMaybeMessage<::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant>(Arena*);
+template<> ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue* Arena::CreateMaybeMessage<::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue>(Arena*);
 template<> ::protobuf::mozilla::_ipdltest::KeyValue* Arena::CreateMaybeMessage<::protobuf::mozilla::_ipdltest::KeyValue>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace protobuf {
@@ -241,24 +241,24 @@ class KeyValue final :
 };
 // -------------------------------------------------------------------
 
-class JSONVariant__mVArrayOfKeyValue final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue) */ {
+class JSONVariant_a_type_mVArrayOfKeyValue final :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfKeyValue) */ {
  public:
-  inline JSONVariant__mVArrayOfKeyValue() : JSONVariant__mVArrayOfKeyValue(nullptr) {}
-  ~JSONVariant__mVArrayOfKeyValue() override;
-  explicit PROTOBUF_CONSTEXPR JSONVariant__mVArrayOfKeyValue(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline JSONVariant_a_type_mVArrayOfKeyValue() : JSONVariant_a_type_mVArrayOfKeyValue(nullptr) {}
+  ~JSONVariant_a_type_mVArrayOfKeyValue() override;
+  explicit PROTOBUF_CONSTEXPR JSONVariant_a_type_mVArrayOfKeyValue(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  JSONVariant__mVArrayOfKeyValue(const JSONVariant__mVArrayOfKeyValue& from);
-  JSONVariant__mVArrayOfKeyValue(JSONVariant__mVArrayOfKeyValue&& from) noexcept
-    : JSONVariant__mVArrayOfKeyValue() {
+  JSONVariant_a_type_mVArrayOfKeyValue(const JSONVariant_a_type_mVArrayOfKeyValue& from);
+  JSONVariant_a_type_mVArrayOfKeyValue(JSONVariant_a_type_mVArrayOfKeyValue&& from) noexcept
+    : JSONVariant_a_type_mVArrayOfKeyValue() {
     *this = ::std::move(from);
   }
 
-  inline JSONVariant__mVArrayOfKeyValue& operator=(const JSONVariant__mVArrayOfKeyValue& from) {
+  inline JSONVariant_a_type_mVArrayOfKeyValue& operator=(const JSONVariant_a_type_mVArrayOfKeyValue& from) {
     CopyFrom(from);
     return *this;
   }
-  inline JSONVariant__mVArrayOfKeyValue& operator=(JSONVariant__mVArrayOfKeyValue&& from) noexcept {
+  inline JSONVariant_a_type_mVArrayOfKeyValue& operator=(JSONVariant_a_type_mVArrayOfKeyValue&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -279,20 +279,20 @@ class JSONVariant__mVArrayOfKeyValue final :
     return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
-  static const JSONVariant__mVArrayOfKeyValue& default_instance() {
+  static const JSONVariant_a_type_mVArrayOfKeyValue& default_instance() {
     return *internal_default_instance();
   }
-  static inline const JSONVariant__mVArrayOfKeyValue* internal_default_instance() {
-    return reinterpret_cast<const JSONVariant__mVArrayOfKeyValue*>(
-               &_JSONVariant__mVArrayOfKeyValue_default_instance_);
+  static inline const JSONVariant_a_type_mVArrayOfKeyValue* internal_default_instance() {
+    return reinterpret_cast<const JSONVariant_a_type_mVArrayOfKeyValue*>(
+               &_JSONVariant_a_type_mVArrayOfKeyValue_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     1;
 
-  friend void swap(JSONVariant__mVArrayOfKeyValue& a, JSONVariant__mVArrayOfKeyValue& b) {
+  friend void swap(JSONVariant_a_type_mVArrayOfKeyValue& a, JSONVariant_a_type_mVArrayOfKeyValue& b) {
     a.Swap(&b);
   }
-  inline void Swap(JSONVariant__mVArrayOfKeyValue* other) {
+  inline void Swap(JSONVariant_a_type_mVArrayOfKeyValue* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -305,7 +305,7 @@ class JSONVariant__mVArrayOfKeyValue final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(JSONVariant__mVArrayOfKeyValue* other) {
+  void UnsafeArenaSwap(JSONVariant_a_type_mVArrayOfKeyValue* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -313,12 +313,12 @@ class JSONVariant__mVArrayOfKeyValue final :
 
   // implements Message ----------------------------------------------
 
-  JSONVariant__mVArrayOfKeyValue* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<JSONVariant__mVArrayOfKeyValue>(arena);
+  JSONVariant_a_type_mVArrayOfKeyValue* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<JSONVariant_a_type_mVArrayOfKeyValue>(arena);
   }
   void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const JSONVariant__mVArrayOfKeyValue& from);
-  void MergeFrom(const JSONVariant__mVArrayOfKeyValue& from);
+  void CopyFrom(const JSONVariant_a_type_mVArrayOfKeyValue& from);
+  void MergeFrom(const JSONVariant_a_type_mVArrayOfKeyValue& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -332,15 +332,15 @@ class JSONVariant__mVArrayOfKeyValue final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const;
-  void InternalSwap(JSONVariant__mVArrayOfKeyValue* other);
+  void InternalSwap(JSONVariant_a_type_mVArrayOfKeyValue* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue";
+    return "protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfKeyValue";
   }
   protected:
-  explicit JSONVariant__mVArrayOfKeyValue(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit JSONVariant_a_type_mVArrayOfKeyValue(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -371,7 +371,7 @@ class JSONVariant__mVArrayOfKeyValue final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_ipdltest::KeyValue >&
       a_mvarrayofkeyvalue() const;
 
-  // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue)
+  // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfKeyValue)
  private:
   class _Internal;
 
@@ -387,24 +387,24 @@ class JSONVariant__mVArrayOfKeyValue final :
 };
 // -------------------------------------------------------------------
 
-class JSONVariant__mVArrayOfJSONVariant final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfJSONVariant) */ {
+class JSONVariant_a_type_mVArrayOfJSONVariant final :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfJSONVariant) */ {
  public:
-  inline JSONVariant__mVArrayOfJSONVariant() : JSONVariant__mVArrayOfJSONVariant(nullptr) {}
-  ~JSONVariant__mVArrayOfJSONVariant() override;
-  explicit PROTOBUF_CONSTEXPR JSONVariant__mVArrayOfJSONVariant(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline JSONVariant_a_type_mVArrayOfJSONVariant() : JSONVariant_a_type_mVArrayOfJSONVariant(nullptr) {}
+  ~JSONVariant_a_type_mVArrayOfJSONVariant() override;
+  explicit PROTOBUF_CONSTEXPR JSONVariant_a_type_mVArrayOfJSONVariant(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  JSONVariant__mVArrayOfJSONVariant(const JSONVariant__mVArrayOfJSONVariant& from);
-  JSONVariant__mVArrayOfJSONVariant(JSONVariant__mVArrayOfJSONVariant&& from) noexcept
-    : JSONVariant__mVArrayOfJSONVariant() {
+  JSONVariant_a_type_mVArrayOfJSONVariant(const JSONVariant_a_type_mVArrayOfJSONVariant& from);
+  JSONVariant_a_type_mVArrayOfJSONVariant(JSONVariant_a_type_mVArrayOfJSONVariant&& from) noexcept
+    : JSONVariant_a_type_mVArrayOfJSONVariant() {
     *this = ::std::move(from);
   }
 
-  inline JSONVariant__mVArrayOfJSONVariant& operator=(const JSONVariant__mVArrayOfJSONVariant& from) {
+  inline JSONVariant_a_type_mVArrayOfJSONVariant& operator=(const JSONVariant_a_type_mVArrayOfJSONVariant& from) {
     CopyFrom(from);
     return *this;
   }
-  inline JSONVariant__mVArrayOfJSONVariant& operator=(JSONVariant__mVArrayOfJSONVariant&& from) noexcept {
+  inline JSONVariant_a_type_mVArrayOfJSONVariant& operator=(JSONVariant_a_type_mVArrayOfJSONVariant&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -425,20 +425,20 @@ class JSONVariant__mVArrayOfJSONVariant final :
     return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
-  static const JSONVariant__mVArrayOfJSONVariant& default_instance() {
+  static const JSONVariant_a_type_mVArrayOfJSONVariant& default_instance() {
     return *internal_default_instance();
   }
-  static inline const JSONVariant__mVArrayOfJSONVariant* internal_default_instance() {
-    return reinterpret_cast<const JSONVariant__mVArrayOfJSONVariant*>(
-               &_JSONVariant__mVArrayOfJSONVariant_default_instance_);
+  static inline const JSONVariant_a_type_mVArrayOfJSONVariant* internal_default_instance() {
+    return reinterpret_cast<const JSONVariant_a_type_mVArrayOfJSONVariant*>(
+               &_JSONVariant_a_type_mVArrayOfJSONVariant_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     2;
 
-  friend void swap(JSONVariant__mVArrayOfJSONVariant& a, JSONVariant__mVArrayOfJSONVariant& b) {
+  friend void swap(JSONVariant_a_type_mVArrayOfJSONVariant& a, JSONVariant_a_type_mVArrayOfJSONVariant& b) {
     a.Swap(&b);
   }
-  inline void Swap(JSONVariant__mVArrayOfJSONVariant* other) {
+  inline void Swap(JSONVariant_a_type_mVArrayOfJSONVariant* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -451,7 +451,7 @@ class JSONVariant__mVArrayOfJSONVariant final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(JSONVariant__mVArrayOfJSONVariant* other) {
+  void UnsafeArenaSwap(JSONVariant_a_type_mVArrayOfJSONVariant* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -459,12 +459,12 @@ class JSONVariant__mVArrayOfJSONVariant final :
 
   // implements Message ----------------------------------------------
 
-  JSONVariant__mVArrayOfJSONVariant* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<JSONVariant__mVArrayOfJSONVariant>(arena);
+  JSONVariant_a_type_mVArrayOfJSONVariant* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<JSONVariant_a_type_mVArrayOfJSONVariant>(arena);
   }
   void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const JSONVariant__mVArrayOfJSONVariant& from);
-  void MergeFrom(const JSONVariant__mVArrayOfJSONVariant& from);
+  void CopyFrom(const JSONVariant_a_type_mVArrayOfJSONVariant& from);
+  void MergeFrom(const JSONVariant_a_type_mVArrayOfJSONVariant& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -478,15 +478,15 @@ class JSONVariant__mVArrayOfJSONVariant final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const;
-  void InternalSwap(JSONVariant__mVArrayOfJSONVariant* other);
+  void InternalSwap(JSONVariant_a_type_mVArrayOfJSONVariant* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfJSONVariant";
+    return "protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfJSONVariant";
   }
   protected:
-  explicit JSONVariant__mVArrayOfJSONVariant(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit JSONVariant_a_type_mVArrayOfJSONVariant(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -517,7 +517,7 @@ class JSONVariant__mVArrayOfJSONVariant final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_ipdltest::JSONVariant >&
       a_mvarrayofjsonvariant() const;
 
-  // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfJSONVariant)
+  // @@protoc_insertion_point(class_scope:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfJSONVariant)
  private:
   class _Internal;
 
@@ -582,8 +582,8 @@ class JSONVariant final :
     kAMVdouble = 5,
     kAMVnsString = 6,
     kAMVPTestJSONHandle = 7,
-    kMVArrayOfKeyValue = 8,
-    kMVArrayOfJSONVariant = 9,
+    kAMVArrayOfKeyValue = 8,
+    kAMVArrayOfJSONVariant = 9,
     CONTENT_NOT_SET = 0,
   };
 
@@ -653,8 +653,8 @@ class JSONVariant final :
 
   // nested types ----------------------------------------------------
 
-  typedef JSONVariant__mVArrayOfKeyValue _mVArrayOfKeyValue;
-  typedef JSONVariant__mVArrayOfJSONVariant _mVArrayOfJSONVariant;
+  typedef JSONVariant_a_type_mVArrayOfKeyValue a_type_mVArrayOfKeyValue;
+  typedef JSONVariant_a_type_mVArrayOfJSONVariant a_type_mVArrayOfJSONVariant;
 
   // accessors -------------------------------------------------------
 
@@ -666,8 +666,8 @@ class JSONVariant final :
     kAMVdoubleFieldNumber = 5,
     kAMVnsStringFieldNumber = 6,
     kAMVPTestJSONHandleFieldNumber = 7,
-    kMVArrayOfKeyValueFieldNumber = 8,
-    kMVArrayOfJSONVariantFieldNumber = 9,
+    kAMVArrayOfKeyValueFieldNumber = 8,
+    kAMVArrayOfJSONVariantFieldNumber = 9,
   };
   // bytes a_mVvoid_t = 1;
   bool has_a_mvvoid_t() const;
@@ -780,41 +780,41 @@ class JSONVariant final :
   std::string* _internal_mutable_a_mvptestjsonhandle();
   public:
 
-  // .protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue mVArrayOfKeyValue = 8;
-  bool has_mvarrayofkeyvalue() const;
+  // .protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfKeyValue a_mVArrayOfKeyValue = 8;
+  bool has_a_mvarrayofkeyvalue() const;
   private:
-  bool _internal_has_mvarrayofkeyvalue() const;
+  bool _internal_has_a_mvarrayofkeyvalue() const;
   public:
-  void clear_mvarrayofkeyvalue();
-  const ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue& mvarrayofkeyvalue() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue* release_mvarrayofkeyvalue();
-  ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue* mutable_mvarrayofkeyvalue();
-  void set_allocated_mvarrayofkeyvalue(::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue* mvarrayofkeyvalue);
+  void clear_a_mvarrayofkeyvalue();
+  const ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue& a_mvarrayofkeyvalue() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue* release_a_mvarrayofkeyvalue();
+  ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue* mutable_a_mvarrayofkeyvalue();
+  void set_allocated_a_mvarrayofkeyvalue(::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue* a_mvarrayofkeyvalue);
   private:
-  const ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue& _internal_mvarrayofkeyvalue() const;
-  ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue* _internal_mutable_mvarrayofkeyvalue();
+  const ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue& _internal_a_mvarrayofkeyvalue() const;
+  ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue* _internal_mutable_a_mvarrayofkeyvalue();
   public:
-  void unsafe_arena_set_allocated_mvarrayofkeyvalue(
-      ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue* mvarrayofkeyvalue);
-  ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue* unsafe_arena_release_mvarrayofkeyvalue();
+  void unsafe_arena_set_allocated_a_mvarrayofkeyvalue(
+      ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue* a_mvarrayofkeyvalue);
+  ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue* unsafe_arena_release_a_mvarrayofkeyvalue();
 
-  // .protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfJSONVariant mVArrayOfJSONVariant = 9;
-  bool has_mvarrayofjsonvariant() const;
+  // .protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfJSONVariant a_mVArrayOfJSONVariant = 9;
+  bool has_a_mvarrayofjsonvariant() const;
   private:
-  bool _internal_has_mvarrayofjsonvariant() const;
+  bool _internal_has_a_mvarrayofjsonvariant() const;
   public:
-  void clear_mvarrayofjsonvariant();
-  const ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant& mvarrayofjsonvariant() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant* release_mvarrayofjsonvariant();
-  ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant* mutable_mvarrayofjsonvariant();
-  void set_allocated_mvarrayofjsonvariant(::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant* mvarrayofjsonvariant);
+  void clear_a_mvarrayofjsonvariant();
+  const ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant& a_mvarrayofjsonvariant() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant* release_a_mvarrayofjsonvariant();
+  ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant* mutable_a_mvarrayofjsonvariant();
+  void set_allocated_a_mvarrayofjsonvariant(::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant* a_mvarrayofjsonvariant);
   private:
-  const ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant& _internal_mvarrayofjsonvariant() const;
-  ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant* _internal_mutable_mvarrayofjsonvariant();
+  const ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant& _internal_a_mvarrayofjsonvariant() const;
+  ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant* _internal_mutable_a_mvarrayofjsonvariant();
   public:
-  void unsafe_arena_set_allocated_mvarrayofjsonvariant(
-      ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant* mvarrayofjsonvariant);
-  ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant* unsafe_arena_release_mvarrayofjsonvariant();
+  void unsafe_arena_set_allocated_a_mvarrayofjsonvariant(
+      ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant* a_mvarrayofjsonvariant);
+  ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant* unsafe_arena_release_a_mvarrayofjsonvariant();
 
   void clear_content();
   ContentCase content_case() const;
@@ -828,8 +828,8 @@ class JSONVariant final :
   void set_has_a_mvdouble();
   void set_has_a_mvnsstring();
   void set_has_a_mvptestjsonhandle();
-  void set_has_mvarrayofkeyvalue();
-  void set_has_mvarrayofjsonvariant();
+  void set_has_a_mvarrayofkeyvalue();
+  void set_has_a_mvarrayofjsonvariant();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -848,8 +848,8 @@ class JSONVariant final :
       double a_mvdouble_;
       ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsstring_;
       ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvptestjsonhandle_;
-      ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue* mvarrayofkeyvalue_;
-      ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant* mvarrayofjsonvariant_;
+      ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue* a_mvarrayofkeyvalue_;
+      ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant* a_mvarrayofjsonvariant_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -1029,89 +1029,89 @@ inline void KeyValue::set_allocated_a_value(::protobuf::mozilla::_ipdltest::JSON
 
 // -------------------------------------------------------------------
 
-// JSONVariant__mVArrayOfKeyValue
+// JSONVariant_a_type_mVArrayOfKeyValue
 
 // repeated .protobuf.mozilla._ipdltest.KeyValue a_mVArrayOfKeyValue = 1;
-inline int JSONVariant__mVArrayOfKeyValue::_internal_a_mvarrayofkeyvalue_size() const {
+inline int JSONVariant_a_type_mVArrayOfKeyValue::_internal_a_mvarrayofkeyvalue_size() const {
   return _impl_.a_mvarrayofkeyvalue_.size();
 }
-inline int JSONVariant__mVArrayOfKeyValue::a_mvarrayofkeyvalue_size() const {
+inline int JSONVariant_a_type_mVArrayOfKeyValue::a_mvarrayofkeyvalue_size() const {
   return _internal_a_mvarrayofkeyvalue_size();
 }
-inline void JSONVariant__mVArrayOfKeyValue::clear_a_mvarrayofkeyvalue() {
+inline void JSONVariant_a_type_mVArrayOfKeyValue::clear_a_mvarrayofkeyvalue() {
   _impl_.a_mvarrayofkeyvalue_.Clear();
 }
-inline ::protobuf::mozilla::_ipdltest::KeyValue* JSONVariant__mVArrayOfKeyValue::mutable_a_mvarrayofkeyvalue(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue.a_mVArrayOfKeyValue)
+inline ::protobuf::mozilla::_ipdltest::KeyValue* JSONVariant_a_type_mVArrayOfKeyValue::mutable_a_mvarrayofkeyvalue(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfKeyValue.a_mVArrayOfKeyValue)
   return _impl_.a_mvarrayofkeyvalue_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_ipdltest::KeyValue >*
-JSONVariant__mVArrayOfKeyValue::mutable_a_mvarrayofkeyvalue() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue.a_mVArrayOfKeyValue)
+JSONVariant_a_type_mVArrayOfKeyValue::mutable_a_mvarrayofkeyvalue() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfKeyValue.a_mVArrayOfKeyValue)
   return &_impl_.a_mvarrayofkeyvalue_;
 }
-inline const ::protobuf::mozilla::_ipdltest::KeyValue& JSONVariant__mVArrayOfKeyValue::_internal_a_mvarrayofkeyvalue(int index) const {
+inline const ::protobuf::mozilla::_ipdltest::KeyValue& JSONVariant_a_type_mVArrayOfKeyValue::_internal_a_mvarrayofkeyvalue(int index) const {
   return _impl_.a_mvarrayofkeyvalue_.Get(index);
 }
-inline const ::protobuf::mozilla::_ipdltest::KeyValue& JSONVariant__mVArrayOfKeyValue::a_mvarrayofkeyvalue(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue.a_mVArrayOfKeyValue)
+inline const ::protobuf::mozilla::_ipdltest::KeyValue& JSONVariant_a_type_mVArrayOfKeyValue::a_mvarrayofkeyvalue(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfKeyValue.a_mVArrayOfKeyValue)
   return _internal_a_mvarrayofkeyvalue(index);
 }
-inline ::protobuf::mozilla::_ipdltest::KeyValue* JSONVariant__mVArrayOfKeyValue::_internal_add_a_mvarrayofkeyvalue() {
+inline ::protobuf::mozilla::_ipdltest::KeyValue* JSONVariant_a_type_mVArrayOfKeyValue::_internal_add_a_mvarrayofkeyvalue() {
   return _impl_.a_mvarrayofkeyvalue_.Add();
 }
-inline ::protobuf::mozilla::_ipdltest::KeyValue* JSONVariant__mVArrayOfKeyValue::add_a_mvarrayofkeyvalue() {
+inline ::protobuf::mozilla::_ipdltest::KeyValue* JSONVariant_a_type_mVArrayOfKeyValue::add_a_mvarrayofkeyvalue() {
   ::protobuf::mozilla::_ipdltest::KeyValue* _add = _internal_add_a_mvarrayofkeyvalue();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue.a_mVArrayOfKeyValue)
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfKeyValue.a_mVArrayOfKeyValue)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_ipdltest::KeyValue >&
-JSONVariant__mVArrayOfKeyValue::a_mvarrayofkeyvalue() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue.a_mVArrayOfKeyValue)
+JSONVariant_a_type_mVArrayOfKeyValue::a_mvarrayofkeyvalue() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfKeyValue.a_mVArrayOfKeyValue)
   return _impl_.a_mvarrayofkeyvalue_;
 }
 
 // -------------------------------------------------------------------
 
-// JSONVariant__mVArrayOfJSONVariant
+// JSONVariant_a_type_mVArrayOfJSONVariant
 
 // repeated .protobuf.mozilla._ipdltest.JSONVariant a_mVArrayOfJSONVariant = 1;
-inline int JSONVariant__mVArrayOfJSONVariant::_internal_a_mvarrayofjsonvariant_size() const {
+inline int JSONVariant_a_type_mVArrayOfJSONVariant::_internal_a_mvarrayofjsonvariant_size() const {
   return _impl_.a_mvarrayofjsonvariant_.size();
 }
-inline int JSONVariant__mVArrayOfJSONVariant::a_mvarrayofjsonvariant_size() const {
+inline int JSONVariant_a_type_mVArrayOfJSONVariant::a_mvarrayofjsonvariant_size() const {
   return _internal_a_mvarrayofjsonvariant_size();
 }
-inline void JSONVariant__mVArrayOfJSONVariant::clear_a_mvarrayofjsonvariant() {
+inline void JSONVariant_a_type_mVArrayOfJSONVariant::clear_a_mvarrayofjsonvariant() {
   _impl_.a_mvarrayofjsonvariant_.Clear();
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant* JSONVariant__mVArrayOfJSONVariant::mutable_a_mvarrayofjsonvariant(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfJSONVariant.a_mVArrayOfJSONVariant)
+inline ::protobuf::mozilla::_ipdltest::JSONVariant* JSONVariant_a_type_mVArrayOfJSONVariant::mutable_a_mvarrayofjsonvariant(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfJSONVariant.a_mVArrayOfJSONVariant)
   return _impl_.a_mvarrayofjsonvariant_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_ipdltest::JSONVariant >*
-JSONVariant__mVArrayOfJSONVariant::mutable_a_mvarrayofjsonvariant() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfJSONVariant.a_mVArrayOfJSONVariant)
+JSONVariant_a_type_mVArrayOfJSONVariant::mutable_a_mvarrayofjsonvariant() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfJSONVariant.a_mVArrayOfJSONVariant)
   return &_impl_.a_mvarrayofjsonvariant_;
 }
-inline const ::protobuf::mozilla::_ipdltest::JSONVariant& JSONVariant__mVArrayOfJSONVariant::_internal_a_mvarrayofjsonvariant(int index) const {
+inline const ::protobuf::mozilla::_ipdltest::JSONVariant& JSONVariant_a_type_mVArrayOfJSONVariant::_internal_a_mvarrayofjsonvariant(int index) const {
   return _impl_.a_mvarrayofjsonvariant_.Get(index);
 }
-inline const ::protobuf::mozilla::_ipdltest::JSONVariant& JSONVariant__mVArrayOfJSONVariant::a_mvarrayofjsonvariant(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfJSONVariant.a_mVArrayOfJSONVariant)
+inline const ::protobuf::mozilla::_ipdltest::JSONVariant& JSONVariant_a_type_mVArrayOfJSONVariant::a_mvarrayofjsonvariant(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfJSONVariant.a_mVArrayOfJSONVariant)
   return _internal_a_mvarrayofjsonvariant(index);
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant* JSONVariant__mVArrayOfJSONVariant::_internal_add_a_mvarrayofjsonvariant() {
+inline ::protobuf::mozilla::_ipdltest::JSONVariant* JSONVariant_a_type_mVArrayOfJSONVariant::_internal_add_a_mvarrayofjsonvariant() {
   return _impl_.a_mvarrayofjsonvariant_.Add();
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant* JSONVariant__mVArrayOfJSONVariant::add_a_mvarrayofjsonvariant() {
+inline ::protobuf::mozilla::_ipdltest::JSONVariant* JSONVariant_a_type_mVArrayOfJSONVariant::add_a_mvarrayofjsonvariant() {
   ::protobuf::mozilla::_ipdltest::JSONVariant* _add = _internal_add_a_mvarrayofjsonvariant();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfJSONVariant.a_mVArrayOfJSONVariant)
+  // @@protoc_insertion_point(field_add:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfJSONVariant.a_mVArrayOfJSONVariant)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::_ipdltest::JSONVariant >&
-JSONVariant__mVArrayOfJSONVariant::a_mvarrayofjsonvariant() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfJSONVariant.a_mVArrayOfJSONVariant)
+JSONVariant_a_type_mVArrayOfJSONVariant::a_mvarrayofjsonvariant() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfJSONVariant.a_mVArrayOfJSONVariant)
   return _impl_.a_mvarrayofjsonvariant_;
 }
 
@@ -1541,151 +1541,151 @@ inline void JSONVariant::set_allocated_a_mvptestjsonhandle(std::string* a_mvptes
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.JSONVariant.a_mVPTestJSONHandle)
 }
 
-// .protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfKeyValue mVArrayOfKeyValue = 8;
-inline bool JSONVariant::_internal_has_mvarrayofkeyvalue() const {
-  return content_case() == kMVArrayOfKeyValue;
+// .protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfKeyValue a_mVArrayOfKeyValue = 8;
+inline bool JSONVariant::_internal_has_a_mvarrayofkeyvalue() const {
+  return content_case() == kAMVArrayOfKeyValue;
 }
-inline bool JSONVariant::has_mvarrayofkeyvalue() const {
-  return _internal_has_mvarrayofkeyvalue();
+inline bool JSONVariant::has_a_mvarrayofkeyvalue() const {
+  return _internal_has_a_mvarrayofkeyvalue();
 }
-inline void JSONVariant::set_has_mvarrayofkeyvalue() {
-  _impl_._oneof_case_[0] = kMVArrayOfKeyValue;
+inline void JSONVariant::set_has_a_mvarrayofkeyvalue() {
+  _impl_._oneof_case_[0] = kAMVArrayOfKeyValue;
 }
-inline void JSONVariant::clear_mvarrayofkeyvalue() {
-  if (_internal_has_mvarrayofkeyvalue()) {
+inline void JSONVariant::clear_a_mvarrayofkeyvalue() {
+  if (_internal_has_a_mvarrayofkeyvalue()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvarrayofkeyvalue_;
+      delete _impl_.content_.a_mvarrayofkeyvalue_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue* JSONVariant::release_mvarrayofkeyvalue() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.JSONVariant.mVArrayOfKeyValue)
-  if (_internal_has_mvarrayofkeyvalue()) {
+inline ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue* JSONVariant::release_a_mvarrayofkeyvalue() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.JSONVariant.a_mVArrayOfKeyValue)
+  if (_internal_has_a_mvarrayofkeyvalue()) {
     clear_has_content();
-    ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue* temp = _impl_.content_.mvarrayofkeyvalue_;
+    ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue* temp = _impl_.content_.a_mvarrayofkeyvalue_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvarrayofkeyvalue_ = nullptr;
+    _impl_.content_.a_mvarrayofkeyvalue_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue& JSONVariant::_internal_mvarrayofkeyvalue() const {
-  return _internal_has_mvarrayofkeyvalue()
-      ? *_impl_.content_.mvarrayofkeyvalue_
-      : reinterpret_cast< ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue&>(::protobuf::mozilla::_ipdltest::_JSONVariant__mVArrayOfKeyValue_default_instance_);
+inline const ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue& JSONVariant::_internal_a_mvarrayofkeyvalue() const {
+  return _internal_has_a_mvarrayofkeyvalue()
+      ? *_impl_.content_.a_mvarrayofkeyvalue_
+      : reinterpret_cast< ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue&>(::protobuf::mozilla::_ipdltest::_JSONVariant_a_type_mVArrayOfKeyValue_default_instance_);
 }
-inline const ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue& JSONVariant::mvarrayofkeyvalue() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant.mVArrayOfKeyValue)
-  return _internal_mvarrayofkeyvalue();
+inline const ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue& JSONVariant::a_mvarrayofkeyvalue() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant.a_mVArrayOfKeyValue)
+  return _internal_a_mvarrayofkeyvalue();
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue* JSONVariant::unsafe_arena_release_mvarrayofkeyvalue() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla._ipdltest.JSONVariant.mVArrayOfKeyValue)
-  if (_internal_has_mvarrayofkeyvalue()) {
+inline ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue* JSONVariant::unsafe_arena_release_a_mvarrayofkeyvalue() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla._ipdltest.JSONVariant.a_mVArrayOfKeyValue)
+  if (_internal_has_a_mvarrayofkeyvalue()) {
     clear_has_content();
-    ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue* temp = _impl_.content_.mvarrayofkeyvalue_;
-    _impl_.content_.mvarrayofkeyvalue_ = nullptr;
+    ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue* temp = _impl_.content_.a_mvarrayofkeyvalue_;
+    _impl_.content_.a_mvarrayofkeyvalue_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void JSONVariant::unsafe_arena_set_allocated_mvarrayofkeyvalue(::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue* mvarrayofkeyvalue) {
+inline void JSONVariant::unsafe_arena_set_allocated_a_mvarrayofkeyvalue(::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue* a_mvarrayofkeyvalue) {
   clear_content();
-  if (mvarrayofkeyvalue) {
-    set_has_mvarrayofkeyvalue();
-    _impl_.content_.mvarrayofkeyvalue_ = mvarrayofkeyvalue;
+  if (a_mvarrayofkeyvalue) {
+    set_has_a_mvarrayofkeyvalue();
+    _impl_.content_.a_mvarrayofkeyvalue_ = a_mvarrayofkeyvalue;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._ipdltest.JSONVariant.mVArrayOfKeyValue)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._ipdltest.JSONVariant.a_mVArrayOfKeyValue)
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue* JSONVariant::_internal_mutable_mvarrayofkeyvalue() {
-  if (!_internal_has_mvarrayofkeyvalue()) {
+inline ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue* JSONVariant::_internal_mutable_a_mvarrayofkeyvalue() {
+  if (!_internal_has_a_mvarrayofkeyvalue()) {
     clear_content();
-    set_has_mvarrayofkeyvalue();
-    _impl_.content_.mvarrayofkeyvalue_ = CreateMaybeMessage< ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue >(GetArenaForAllocation());
+    set_has_a_mvarrayofkeyvalue();
+    _impl_.content_.a_mvarrayofkeyvalue_ = CreateMaybeMessage< ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvarrayofkeyvalue_;
+  return _impl_.content_.a_mvarrayofkeyvalue_;
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue* JSONVariant::mutable_mvarrayofkeyvalue() {
-  ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfKeyValue* _msg = _internal_mutable_mvarrayofkeyvalue();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.JSONVariant.mVArrayOfKeyValue)
+inline ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue* JSONVariant::mutable_a_mvarrayofkeyvalue() {
+  ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue* _msg = _internal_mutable_a_mvarrayofkeyvalue();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.JSONVariant.a_mVArrayOfKeyValue)
   return _msg;
 }
 
-// .protobuf.mozilla._ipdltest.JSONVariant._mVArrayOfJSONVariant mVArrayOfJSONVariant = 9;
-inline bool JSONVariant::_internal_has_mvarrayofjsonvariant() const {
-  return content_case() == kMVArrayOfJSONVariant;
+// .protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfJSONVariant a_mVArrayOfJSONVariant = 9;
+inline bool JSONVariant::_internal_has_a_mvarrayofjsonvariant() const {
+  return content_case() == kAMVArrayOfJSONVariant;
 }
-inline bool JSONVariant::has_mvarrayofjsonvariant() const {
-  return _internal_has_mvarrayofjsonvariant();
+inline bool JSONVariant::has_a_mvarrayofjsonvariant() const {
+  return _internal_has_a_mvarrayofjsonvariant();
 }
-inline void JSONVariant::set_has_mvarrayofjsonvariant() {
-  _impl_._oneof_case_[0] = kMVArrayOfJSONVariant;
+inline void JSONVariant::set_has_a_mvarrayofjsonvariant() {
+  _impl_._oneof_case_[0] = kAMVArrayOfJSONVariant;
 }
-inline void JSONVariant::clear_mvarrayofjsonvariant() {
-  if (_internal_has_mvarrayofjsonvariant()) {
+inline void JSONVariant::clear_a_mvarrayofjsonvariant() {
+  if (_internal_has_a_mvarrayofjsonvariant()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvarrayofjsonvariant_;
+      delete _impl_.content_.a_mvarrayofjsonvariant_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant* JSONVariant::release_mvarrayofjsonvariant() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.JSONVariant.mVArrayOfJSONVariant)
-  if (_internal_has_mvarrayofjsonvariant()) {
+inline ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant* JSONVariant::release_a_mvarrayofjsonvariant() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.JSONVariant.a_mVArrayOfJSONVariant)
+  if (_internal_has_a_mvarrayofjsonvariant()) {
     clear_has_content();
-    ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant* temp = _impl_.content_.mvarrayofjsonvariant_;
+    ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant* temp = _impl_.content_.a_mvarrayofjsonvariant_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvarrayofjsonvariant_ = nullptr;
+    _impl_.content_.a_mvarrayofjsonvariant_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant& JSONVariant::_internal_mvarrayofjsonvariant() const {
-  return _internal_has_mvarrayofjsonvariant()
-      ? *_impl_.content_.mvarrayofjsonvariant_
-      : reinterpret_cast< ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant&>(::protobuf::mozilla::_ipdltest::_JSONVariant__mVArrayOfJSONVariant_default_instance_);
+inline const ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant& JSONVariant::_internal_a_mvarrayofjsonvariant() const {
+  return _internal_has_a_mvarrayofjsonvariant()
+      ? *_impl_.content_.a_mvarrayofjsonvariant_
+      : reinterpret_cast< ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant&>(::protobuf::mozilla::_ipdltest::_JSONVariant_a_type_mVArrayOfJSONVariant_default_instance_);
 }
-inline const ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant& JSONVariant::mvarrayofjsonvariant() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant.mVArrayOfJSONVariant)
-  return _internal_mvarrayofjsonvariant();
+inline const ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant& JSONVariant::a_mvarrayofjsonvariant() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.JSONVariant.a_mVArrayOfJSONVariant)
+  return _internal_a_mvarrayofjsonvariant();
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant* JSONVariant::unsafe_arena_release_mvarrayofjsonvariant() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla._ipdltest.JSONVariant.mVArrayOfJSONVariant)
-  if (_internal_has_mvarrayofjsonvariant()) {
+inline ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant* JSONVariant::unsafe_arena_release_a_mvarrayofjsonvariant() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla._ipdltest.JSONVariant.a_mVArrayOfJSONVariant)
+  if (_internal_has_a_mvarrayofjsonvariant()) {
     clear_has_content();
-    ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant* temp = _impl_.content_.mvarrayofjsonvariant_;
-    _impl_.content_.mvarrayofjsonvariant_ = nullptr;
+    ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant* temp = _impl_.content_.a_mvarrayofjsonvariant_;
+    _impl_.content_.a_mvarrayofjsonvariant_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void JSONVariant::unsafe_arena_set_allocated_mvarrayofjsonvariant(::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant* mvarrayofjsonvariant) {
+inline void JSONVariant::unsafe_arena_set_allocated_a_mvarrayofjsonvariant(::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant* a_mvarrayofjsonvariant) {
   clear_content();
-  if (mvarrayofjsonvariant) {
-    set_has_mvarrayofjsonvariant();
-    _impl_.content_.mvarrayofjsonvariant_ = mvarrayofjsonvariant;
+  if (a_mvarrayofjsonvariant) {
+    set_has_a_mvarrayofjsonvariant();
+    _impl_.content_.a_mvarrayofjsonvariant_ = a_mvarrayofjsonvariant;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._ipdltest.JSONVariant.mVArrayOfJSONVariant)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._ipdltest.JSONVariant.a_mVArrayOfJSONVariant)
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant* JSONVariant::_internal_mutable_mvarrayofjsonvariant() {
-  if (!_internal_has_mvarrayofjsonvariant()) {
+inline ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant* JSONVariant::_internal_mutable_a_mvarrayofjsonvariant() {
+  if (!_internal_has_a_mvarrayofjsonvariant()) {
     clear_content();
-    set_has_mvarrayofjsonvariant();
-    _impl_.content_.mvarrayofjsonvariant_ = CreateMaybeMessage< ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant >(GetArenaForAllocation());
+    set_has_a_mvarrayofjsonvariant();
+    _impl_.content_.a_mvarrayofjsonvariant_ = CreateMaybeMessage< ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvarrayofjsonvariant_;
+  return _impl_.content_.a_mvarrayofjsonvariant_;
 }
-inline ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant* JSONVariant::mutable_mvarrayofjsonvariant() {
-  ::protobuf::mozilla::_ipdltest::JSONVariant__mVArrayOfJSONVariant* _msg = _internal_mutable_mvarrayofjsonvariant();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.JSONVariant.mVArrayOfJSONVariant)
+inline ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant* JSONVariant::mutable_a_mvarrayofjsonvariant() {
+  ::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant* _msg = _internal_mutable_a_mvarrayofjsonvariant();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla._ipdltest.JSONVariant.a_mVArrayOfJSONVariant)
   return _msg;
 }
 

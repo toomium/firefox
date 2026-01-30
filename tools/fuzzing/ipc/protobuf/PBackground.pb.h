@@ -4299,7 +4299,7 @@ class Msg_CreateWebTransportParent final :
   std::string* _internal_mutable_a_aurl();
   public:
 
-  // required bytes a_aPrincipal = 2;
+  // optional bytes a_aPrincipal = 2;
   bool has_a_aprincipal() const;
   private:
   bool _internal_has_a_aprincipal() const;
@@ -17696,7 +17696,7 @@ inline void Msg_CreateWebTransportParent::set_allocated_a_aurl(std::string* a_au
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.PBackground.Msg_CreateWebTransportParent.a_aURL)
 }
 
-// required bytes a_aPrincipal = 2;
+// optional bytes a_aPrincipal = 2;
 inline bool Msg_CreateWebTransportParent::_internal_has_a_aprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

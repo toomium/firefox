@@ -221,7 +221,7 @@ message Msg_TakeFocus {
 message Msg_VerifyCache {
   required uint64 a_aID = 1;
   required uint64 a_aCacheDomain = 2;
-  required bytes a_aFields = 3;
+  optional bytes a_aFields = 3;
 }
 
 message Msg_AckMutationEvents {

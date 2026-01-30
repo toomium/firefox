@@ -172,7 +172,7 @@ class CacheData final :
     kAFieldsFieldNumber = 2,
     kAIDFieldNumber = 1,
   };
-  // required bytes a_Fields = 2;
+  // optional bytes a_Fields = 2;
   bool has_a_fields() const;
   private:
   bool _internal_has_a_fields() const;
@@ -206,9 +206,6 @@ class CacheData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.CacheData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -261,7 +258,7 @@ inline void CacheData::set_a_id(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.CacheData.a_ID)
 }
 
-// required bytes a_Fields = 2;
+// optional bytes a_Fields = 2;
 inline bool CacheData::_internal_has_a_fields() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

@@ -51,9 +51,9 @@ extern BoolResponseDefaultTypeInternal _BoolResponse_default_instance_;
 class CStringArrayResponse;
 struct CStringArrayResponseDefaultTypeInternal;
 extern CStringArrayResponseDefaultTypeInternal _CStringArrayResponse_default_instance_;
-class CStringArrayResponse__mVArrayOfnsCString;
-struct CStringArrayResponse__mVArrayOfnsCStringDefaultTypeInternal;
-extern CStringArrayResponse__mVArrayOfnsCStringDefaultTypeInternal _CStringArrayResponse__mVArrayOfnsCString_default_instance_;
+class CStringArrayResponse_a_type_mVArrayOfnsCString;
+struct CStringArrayResponse_a_type_mVArrayOfnsCStringDefaultTypeInternal;
+extern CStringArrayResponse_a_type_mVArrayOfnsCStringDefaultTypeInternal _CStringArrayResponse_a_type_mVArrayOfnsCString_default_instance_;
 class UInt64Response;
 struct UInt64ResponseDefaultTypeInternal;
 extern UInt64ResponseDefaultTypeInternal _UInt64Response_default_instance_;
@@ -63,7 +63,7 @@ extern UInt64ResponseDefaultTypeInternal _UInt64Response_default_instance_;
 PROTOBUF_NAMESPACE_OPEN
 template<> ::protobuf::mozilla::ipc::BoolResponse* Arena::CreateMaybeMessage<::protobuf::mozilla::ipc::BoolResponse>(Arena*);
 template<> ::protobuf::mozilla::ipc::CStringArrayResponse* Arena::CreateMaybeMessage<::protobuf::mozilla::ipc::CStringArrayResponse>(Arena*);
-template<> ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString* Arena::CreateMaybeMessage<::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString>(Arena*);
+template<> ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString* Arena::CreateMaybeMessage<::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString>(Arena*);
 template<> ::protobuf::mozilla::ipc::UInt64Response* Arena::CreateMaybeMessage<::protobuf::mozilla::ipc::UInt64Response>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace protobuf {
@@ -432,24 +432,24 @@ class UInt64Response final :
 };
 // -------------------------------------------------------------------
 
-class CStringArrayResponse__mVArrayOfnsCString final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString) */ {
+class CStringArrayResponse_a_type_mVArrayOfnsCString final :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString) */ {
  public:
-  inline CStringArrayResponse__mVArrayOfnsCString() : CStringArrayResponse__mVArrayOfnsCString(nullptr) {}
-  ~CStringArrayResponse__mVArrayOfnsCString() override;
-  explicit PROTOBUF_CONSTEXPR CStringArrayResponse__mVArrayOfnsCString(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline CStringArrayResponse_a_type_mVArrayOfnsCString() : CStringArrayResponse_a_type_mVArrayOfnsCString(nullptr) {}
+  ~CStringArrayResponse_a_type_mVArrayOfnsCString() override;
+  explicit PROTOBUF_CONSTEXPR CStringArrayResponse_a_type_mVArrayOfnsCString(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  CStringArrayResponse__mVArrayOfnsCString(const CStringArrayResponse__mVArrayOfnsCString& from);
-  CStringArrayResponse__mVArrayOfnsCString(CStringArrayResponse__mVArrayOfnsCString&& from) noexcept
-    : CStringArrayResponse__mVArrayOfnsCString() {
+  CStringArrayResponse_a_type_mVArrayOfnsCString(const CStringArrayResponse_a_type_mVArrayOfnsCString& from);
+  CStringArrayResponse_a_type_mVArrayOfnsCString(CStringArrayResponse_a_type_mVArrayOfnsCString&& from) noexcept
+    : CStringArrayResponse_a_type_mVArrayOfnsCString() {
     *this = ::std::move(from);
   }
 
-  inline CStringArrayResponse__mVArrayOfnsCString& operator=(const CStringArrayResponse__mVArrayOfnsCString& from) {
+  inline CStringArrayResponse_a_type_mVArrayOfnsCString& operator=(const CStringArrayResponse_a_type_mVArrayOfnsCString& from) {
     CopyFrom(from);
     return *this;
   }
-  inline CStringArrayResponse__mVArrayOfnsCString& operator=(CStringArrayResponse__mVArrayOfnsCString&& from) noexcept {
+  inline CStringArrayResponse_a_type_mVArrayOfnsCString& operator=(CStringArrayResponse_a_type_mVArrayOfnsCString&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -470,20 +470,20 @@ class CStringArrayResponse__mVArrayOfnsCString final :
     return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
-  static const CStringArrayResponse__mVArrayOfnsCString& default_instance() {
+  static const CStringArrayResponse_a_type_mVArrayOfnsCString& default_instance() {
     return *internal_default_instance();
   }
-  static inline const CStringArrayResponse__mVArrayOfnsCString* internal_default_instance() {
-    return reinterpret_cast<const CStringArrayResponse__mVArrayOfnsCString*>(
-               &_CStringArrayResponse__mVArrayOfnsCString_default_instance_);
+  static inline const CStringArrayResponse_a_type_mVArrayOfnsCString* internal_default_instance() {
+    return reinterpret_cast<const CStringArrayResponse_a_type_mVArrayOfnsCString*>(
+               &_CStringArrayResponse_a_type_mVArrayOfnsCString_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     2;
 
-  friend void swap(CStringArrayResponse__mVArrayOfnsCString& a, CStringArrayResponse__mVArrayOfnsCString& b) {
+  friend void swap(CStringArrayResponse_a_type_mVArrayOfnsCString& a, CStringArrayResponse_a_type_mVArrayOfnsCString& b) {
     a.Swap(&b);
   }
-  inline void Swap(CStringArrayResponse__mVArrayOfnsCString* other) {
+  inline void Swap(CStringArrayResponse_a_type_mVArrayOfnsCString* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -496,7 +496,7 @@ class CStringArrayResponse__mVArrayOfnsCString final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(CStringArrayResponse__mVArrayOfnsCString* other) {
+  void UnsafeArenaSwap(CStringArrayResponse_a_type_mVArrayOfnsCString* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -504,12 +504,12 @@ class CStringArrayResponse__mVArrayOfnsCString final :
 
   // implements Message ----------------------------------------------
 
-  CStringArrayResponse__mVArrayOfnsCString* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<CStringArrayResponse__mVArrayOfnsCString>(arena);
+  CStringArrayResponse_a_type_mVArrayOfnsCString* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CStringArrayResponse_a_type_mVArrayOfnsCString>(arena);
   }
   void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const CStringArrayResponse__mVArrayOfnsCString& from);
-  void MergeFrom(const CStringArrayResponse__mVArrayOfnsCString& from);
+  void CopyFrom(const CStringArrayResponse_a_type_mVArrayOfnsCString& from);
+  void MergeFrom(const CStringArrayResponse_a_type_mVArrayOfnsCString& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -523,15 +523,15 @@ class CStringArrayResponse__mVArrayOfnsCString final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const;
-  void InternalSwap(CStringArrayResponse__mVArrayOfnsCString* other);
+  void InternalSwap(CStringArrayResponse_a_type_mVArrayOfnsCString* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString";
+    return "protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString";
   }
   protected:
-  explicit CStringArrayResponse__mVArrayOfnsCString(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit CStringArrayResponse_a_type_mVArrayOfnsCString(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -568,7 +568,7 @@ class CStringArrayResponse__mVArrayOfnsCString final :
   std::string* _internal_add_a_mvarrayofnscstring();
   public:
 
-  // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString)
+  // @@protoc_insertion_point(class_scope:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString)
  private:
   class _Internal;
 
@@ -627,7 +627,7 @@ class CStringArrayResponse final :
   }
   enum ContentCase {
     kAMVnsresult = 1,
-    kMVArrayOfnsCString = 2,
+    kAMVArrayOfnsCString = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -697,13 +697,13 @@ class CStringArrayResponse final :
 
   // nested types ----------------------------------------------------
 
-  typedef CStringArrayResponse__mVArrayOfnsCString _mVArrayOfnsCString;
+  typedef CStringArrayResponse_a_type_mVArrayOfnsCString a_type_mVArrayOfnsCString;
 
   // accessors -------------------------------------------------------
 
   enum : int {
     kAMVnsresultFieldNumber = 1,
-    kMVArrayOfnsCStringFieldNumber = 2,
+    kAMVArrayOfnsCStringFieldNumber = 2,
   };
   // bytes a_mVnsresult = 1;
   bool has_a_mvnsresult() const;
@@ -723,23 +723,23 @@ class CStringArrayResponse final :
   std::string* _internal_mutable_a_mvnsresult();
   public:
 
-  // .protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString mVArrayOfnsCString = 2;
-  bool has_mvarrayofnscstring() const;
+  // .protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString a_mVArrayOfnsCString = 2;
+  bool has_a_mvarrayofnscstring() const;
   private:
-  bool _internal_has_mvarrayofnscstring() const;
+  bool _internal_has_a_mvarrayofnscstring() const;
   public:
-  void clear_mvarrayofnscstring();
-  const ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString& mvarrayofnscstring() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString* release_mvarrayofnscstring();
-  ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString* mutable_mvarrayofnscstring();
-  void set_allocated_mvarrayofnscstring(::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString* mvarrayofnscstring);
+  void clear_a_mvarrayofnscstring();
+  const ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString& a_mvarrayofnscstring() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString* release_a_mvarrayofnscstring();
+  ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString* mutable_a_mvarrayofnscstring();
+  void set_allocated_a_mvarrayofnscstring(::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString* a_mvarrayofnscstring);
   private:
-  const ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString& _internal_mvarrayofnscstring() const;
-  ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString* _internal_mutable_mvarrayofnscstring();
+  const ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString& _internal_a_mvarrayofnscstring() const;
+  ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString* _internal_mutable_a_mvarrayofnscstring();
   public:
-  void unsafe_arena_set_allocated_mvarrayofnscstring(
-      ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString* mvarrayofnscstring);
-  ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString* unsafe_arena_release_mvarrayofnscstring();
+  void unsafe_arena_set_allocated_a_mvarrayofnscstring(
+      ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString* a_mvarrayofnscstring);
+  ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString* unsafe_arena_release_a_mvarrayofnscstring();
 
   void clear_content();
   ContentCase content_case() const;
@@ -747,7 +747,7 @@ class CStringArrayResponse final :
  private:
   class _Internal;
   void set_has_a_mvnsresult();
-  void set_has_mvarrayofnscstring();
+  void set_has_a_mvarrayofnscstring();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -760,7 +760,7 @@ class CStringArrayResponse final :
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
       ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
-      ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString* mvarrayofnscstring_;
+      ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString* a_mvarrayofnscstring_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -1034,80 +1034,80 @@ inline UInt64Response::ContentCase UInt64Response::content_case() const {
 }
 // -------------------------------------------------------------------
 
-// CStringArrayResponse__mVArrayOfnsCString
+// CStringArrayResponse_a_type_mVArrayOfnsCString
 
 // repeated string a_mVArrayOfnsCString = 1;
-inline int CStringArrayResponse__mVArrayOfnsCString::_internal_a_mvarrayofnscstring_size() const {
+inline int CStringArrayResponse_a_type_mVArrayOfnsCString::_internal_a_mvarrayofnscstring_size() const {
   return _impl_.a_mvarrayofnscstring_.size();
 }
-inline int CStringArrayResponse__mVArrayOfnsCString::a_mvarrayofnscstring_size() const {
+inline int CStringArrayResponse_a_type_mVArrayOfnsCString::a_mvarrayofnscstring_size() const {
   return _internal_a_mvarrayofnscstring_size();
 }
-inline void CStringArrayResponse__mVArrayOfnsCString::clear_a_mvarrayofnscstring() {
+inline void CStringArrayResponse_a_type_mVArrayOfnsCString::clear_a_mvarrayofnscstring() {
   _impl_.a_mvarrayofnscstring_.Clear();
 }
-inline std::string* CStringArrayResponse__mVArrayOfnsCString::add_a_mvarrayofnscstring() {
+inline std::string* CStringArrayResponse_a_type_mVArrayOfnsCString::add_a_mvarrayofnscstring() {
   std::string* _s = _internal_add_a_mvarrayofnscstring();
-  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString.a_mVArrayOfnsCString)
+  // @@protoc_insertion_point(field_add_mutable:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString.a_mVArrayOfnsCString)
   return _s;
 }
-inline const std::string& CStringArrayResponse__mVArrayOfnsCString::_internal_a_mvarrayofnscstring(int index) const {
+inline const std::string& CStringArrayResponse_a_type_mVArrayOfnsCString::_internal_a_mvarrayofnscstring(int index) const {
   return _impl_.a_mvarrayofnscstring_.Get(index);
 }
-inline const std::string& CStringArrayResponse__mVArrayOfnsCString::a_mvarrayofnscstring(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString.a_mVArrayOfnsCString)
+inline const std::string& CStringArrayResponse_a_type_mVArrayOfnsCString::a_mvarrayofnscstring(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString.a_mVArrayOfnsCString)
   return _internal_a_mvarrayofnscstring(index);
 }
-inline std::string* CStringArrayResponse__mVArrayOfnsCString::mutable_a_mvarrayofnscstring(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString.a_mVArrayOfnsCString)
+inline std::string* CStringArrayResponse_a_type_mVArrayOfnsCString::mutable_a_mvarrayofnscstring(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString.a_mVArrayOfnsCString)
   return _impl_.a_mvarrayofnscstring_.Mutable(index);
 }
-inline void CStringArrayResponse__mVArrayOfnsCString::set_a_mvarrayofnscstring(int index, const std::string& value) {
+inline void CStringArrayResponse_a_type_mVArrayOfnsCString::set_a_mvarrayofnscstring(int index, const std::string& value) {
   _impl_.a_mvarrayofnscstring_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString.a_mVArrayOfnsCString)
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString.a_mVArrayOfnsCString)
 }
-inline void CStringArrayResponse__mVArrayOfnsCString::set_a_mvarrayofnscstring(int index, std::string&& value) {
+inline void CStringArrayResponse_a_type_mVArrayOfnsCString::set_a_mvarrayofnscstring(int index, std::string&& value) {
   _impl_.a_mvarrayofnscstring_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString.a_mVArrayOfnsCString)
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString.a_mVArrayOfnsCString)
 }
-inline void CStringArrayResponse__mVArrayOfnsCString::set_a_mvarrayofnscstring(int index, const char* value) {
+inline void CStringArrayResponse_a_type_mVArrayOfnsCString::set_a_mvarrayofnscstring(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   _impl_.a_mvarrayofnscstring_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString.a_mVArrayOfnsCString)
+  // @@protoc_insertion_point(field_set_char:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString.a_mVArrayOfnsCString)
 }
-inline void CStringArrayResponse__mVArrayOfnsCString::set_a_mvarrayofnscstring(int index, const char* value, size_t size) {
+inline void CStringArrayResponse_a_type_mVArrayOfnsCString::set_a_mvarrayofnscstring(int index, const char* value, size_t size) {
   _impl_.a_mvarrayofnscstring_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString.a_mVArrayOfnsCString)
+  // @@protoc_insertion_point(field_set_pointer:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString.a_mVArrayOfnsCString)
 }
-inline std::string* CStringArrayResponse__mVArrayOfnsCString::_internal_add_a_mvarrayofnscstring() {
+inline std::string* CStringArrayResponse_a_type_mVArrayOfnsCString::_internal_add_a_mvarrayofnscstring() {
   return _impl_.a_mvarrayofnscstring_.Add();
 }
-inline void CStringArrayResponse__mVArrayOfnsCString::add_a_mvarrayofnscstring(const std::string& value) {
+inline void CStringArrayResponse_a_type_mVArrayOfnsCString::add_a_mvarrayofnscstring(const std::string& value) {
   _impl_.a_mvarrayofnscstring_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString.a_mVArrayOfnsCString)
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString.a_mVArrayOfnsCString)
 }
-inline void CStringArrayResponse__mVArrayOfnsCString::add_a_mvarrayofnscstring(std::string&& value) {
+inline void CStringArrayResponse_a_type_mVArrayOfnsCString::add_a_mvarrayofnscstring(std::string&& value) {
   _impl_.a_mvarrayofnscstring_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString.a_mVArrayOfnsCString)
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString.a_mVArrayOfnsCString)
 }
-inline void CStringArrayResponse__mVArrayOfnsCString::add_a_mvarrayofnscstring(const char* value) {
+inline void CStringArrayResponse_a_type_mVArrayOfnsCString::add_a_mvarrayofnscstring(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   _impl_.a_mvarrayofnscstring_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString.a_mVArrayOfnsCString)
+  // @@protoc_insertion_point(field_add_char:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString.a_mVArrayOfnsCString)
 }
-inline void CStringArrayResponse__mVArrayOfnsCString::add_a_mvarrayofnscstring(const char* value, size_t size) {
+inline void CStringArrayResponse_a_type_mVArrayOfnsCString::add_a_mvarrayofnscstring(const char* value, size_t size) {
   _impl_.a_mvarrayofnscstring_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString.a_mVArrayOfnsCString)
+  // @@protoc_insertion_point(field_add_pointer:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString.a_mVArrayOfnsCString)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-CStringArrayResponse__mVArrayOfnsCString::a_mvarrayofnscstring() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString.a_mVArrayOfnsCString)
+CStringArrayResponse_a_type_mVArrayOfnsCString::a_mvarrayofnscstring() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString.a_mVArrayOfnsCString)
   return _impl_.a_mvarrayofnscstring_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-CStringArrayResponse__mVArrayOfnsCString::mutable_a_mvarrayofnscstring() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString.a_mVArrayOfnsCString)
+CStringArrayResponse_a_type_mVArrayOfnsCString::mutable_a_mvarrayofnscstring() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString.a_mVArrayOfnsCString)
   return &_impl_.a_mvarrayofnscstring_;
 }
 
@@ -1192,77 +1192,77 @@ inline void CStringArrayResponse::set_allocated_a_mvnsresult(std::string* a_mvns
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.CStringArrayResponse.a_mVnsresult)
 }
 
-// .protobuf.mozilla.ipc.CStringArrayResponse._mVArrayOfnsCString mVArrayOfnsCString = 2;
-inline bool CStringArrayResponse::_internal_has_mvarrayofnscstring() const {
-  return content_case() == kMVArrayOfnsCString;
+// .protobuf.mozilla.ipc.CStringArrayResponse.a_type_mVArrayOfnsCString a_mVArrayOfnsCString = 2;
+inline bool CStringArrayResponse::_internal_has_a_mvarrayofnscstring() const {
+  return content_case() == kAMVArrayOfnsCString;
 }
-inline bool CStringArrayResponse::has_mvarrayofnscstring() const {
-  return _internal_has_mvarrayofnscstring();
+inline bool CStringArrayResponse::has_a_mvarrayofnscstring() const {
+  return _internal_has_a_mvarrayofnscstring();
 }
-inline void CStringArrayResponse::set_has_mvarrayofnscstring() {
-  _impl_._oneof_case_[0] = kMVArrayOfnsCString;
+inline void CStringArrayResponse::set_has_a_mvarrayofnscstring() {
+  _impl_._oneof_case_[0] = kAMVArrayOfnsCString;
 }
-inline void CStringArrayResponse::clear_mvarrayofnscstring() {
-  if (_internal_has_mvarrayofnscstring()) {
+inline void CStringArrayResponse::clear_a_mvarrayofnscstring() {
+  if (_internal_has_a_mvarrayofnscstring()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvarrayofnscstring_;
+      delete _impl_.content_.a_mvarrayofnscstring_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString* CStringArrayResponse::release_mvarrayofnscstring() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.CStringArrayResponse.mVArrayOfnsCString)
-  if (_internal_has_mvarrayofnscstring()) {
+inline ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString* CStringArrayResponse::release_a_mvarrayofnscstring() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.CStringArrayResponse.a_mVArrayOfnsCString)
+  if (_internal_has_a_mvarrayofnscstring()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString* temp = _impl_.content_.mvarrayofnscstring_;
+    ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString* temp = _impl_.content_.a_mvarrayofnscstring_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvarrayofnscstring_ = nullptr;
+    _impl_.content_.a_mvarrayofnscstring_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString& CStringArrayResponse::_internal_mvarrayofnscstring() const {
-  return _internal_has_mvarrayofnscstring()
-      ? *_impl_.content_.mvarrayofnscstring_
-      : reinterpret_cast< ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString&>(::protobuf::mozilla::ipc::_CStringArrayResponse__mVArrayOfnsCString_default_instance_);
+inline const ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString& CStringArrayResponse::_internal_a_mvarrayofnscstring() const {
+  return _internal_has_a_mvarrayofnscstring()
+      ? *_impl_.content_.a_mvarrayofnscstring_
+      : reinterpret_cast< ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString&>(::protobuf::mozilla::ipc::_CStringArrayResponse_a_type_mVArrayOfnsCString_default_instance_);
 }
-inline const ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString& CStringArrayResponse::mvarrayofnscstring() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.CStringArrayResponse.mVArrayOfnsCString)
-  return _internal_mvarrayofnscstring();
+inline const ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString& CStringArrayResponse::a_mvarrayofnscstring() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.CStringArrayResponse.a_mVArrayOfnsCString)
+  return _internal_a_mvarrayofnscstring();
 }
-inline ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString* CStringArrayResponse::unsafe_arena_release_mvarrayofnscstring() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.CStringArrayResponse.mVArrayOfnsCString)
-  if (_internal_has_mvarrayofnscstring()) {
+inline ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString* CStringArrayResponse::unsafe_arena_release_a_mvarrayofnscstring() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.ipc.CStringArrayResponse.a_mVArrayOfnsCString)
+  if (_internal_has_a_mvarrayofnscstring()) {
     clear_has_content();
-    ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString* temp = _impl_.content_.mvarrayofnscstring_;
-    _impl_.content_.mvarrayofnscstring_ = nullptr;
+    ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString* temp = _impl_.content_.a_mvarrayofnscstring_;
+    _impl_.content_.a_mvarrayofnscstring_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void CStringArrayResponse::unsafe_arena_set_allocated_mvarrayofnscstring(::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString* mvarrayofnscstring) {
+inline void CStringArrayResponse::unsafe_arena_set_allocated_a_mvarrayofnscstring(::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString* a_mvarrayofnscstring) {
   clear_content();
-  if (mvarrayofnscstring) {
-    set_has_mvarrayofnscstring();
-    _impl_.content_.mvarrayofnscstring_ = mvarrayofnscstring;
+  if (a_mvarrayofnscstring) {
+    set_has_a_mvarrayofnscstring();
+    _impl_.content_.a_mvarrayofnscstring_ = a_mvarrayofnscstring;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.CStringArrayResponse.mVArrayOfnsCString)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.CStringArrayResponse.a_mVArrayOfnsCString)
 }
-inline ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString* CStringArrayResponse::_internal_mutable_mvarrayofnscstring() {
-  if (!_internal_has_mvarrayofnscstring()) {
+inline ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString* CStringArrayResponse::_internal_mutable_a_mvarrayofnscstring() {
+  if (!_internal_has_a_mvarrayofnscstring()) {
     clear_content();
-    set_has_mvarrayofnscstring();
-    _impl_.content_.mvarrayofnscstring_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString >(GetArenaForAllocation());
+    set_has_a_mvarrayofnscstring();
+    _impl_.content_.a_mvarrayofnscstring_ = CreateMaybeMessage< ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvarrayofnscstring_;
+  return _impl_.content_.a_mvarrayofnscstring_;
 }
-inline ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString* CStringArrayResponse::mutable_mvarrayofnscstring() {
-  ::protobuf::mozilla::ipc::CStringArrayResponse__mVArrayOfnsCString* _msg = _internal_mutable_mvarrayofnscstring();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.CStringArrayResponse.mVArrayOfnsCString)
+inline ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString* CStringArrayResponse::mutable_a_mvarrayofnscstring() {
+  ::protobuf::mozilla::ipc::CStringArrayResponse_a_type_mVArrayOfnsCString* _msg = _internal_mutable_a_mvarrayofnscstring();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.ipc.CStringArrayResponse.a_mVArrayOfnsCString)
   return _msg;
 }
 

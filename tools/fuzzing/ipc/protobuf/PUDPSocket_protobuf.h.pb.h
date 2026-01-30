@@ -49,9 +49,9 @@ extern UDPAddressInfoDefaultTypeInternal _UDPAddressInfo_default_instance_;
 class UDPData;
 struct UDPDataDefaultTypeInternal;
 extern UDPDataDefaultTypeInternal _UDPData_default_instance_;
-class UDPData__mVArrayOfuint8_t;
-struct UDPData__mVArrayOfuint8_tDefaultTypeInternal;
-extern UDPData__mVArrayOfuint8_tDefaultTypeInternal _UDPData__mVArrayOfuint8_t_default_instance_;
+class UDPData_a_type_mVArrayOfuint8_t;
+struct UDPData_a_type_mVArrayOfuint8_tDefaultTypeInternal;
+extern UDPData_a_type_mVArrayOfuint8_tDefaultTypeInternal _UDPData_a_type_mVArrayOfuint8_t_default_instance_;
 class UDPSocketAddr;
 struct UDPSocketAddrDefaultTypeInternal;
 extern UDPSocketAddrDefaultTypeInternal _UDPSocketAddr_default_instance_;
@@ -59,7 +59,7 @@ extern UDPSocketAddrDefaultTypeInternal _UDPSocketAddr_default_instance_;
 PROTOBUF_NAMESPACE_OPEN
 template<> ::protobuf::UDPAddressInfo* Arena::CreateMaybeMessage<::protobuf::UDPAddressInfo>(Arena*);
 template<> ::protobuf::UDPData* Arena::CreateMaybeMessage<::protobuf::UDPData>(Arena*);
-template<> ::protobuf::UDPData__mVArrayOfuint8_t* Arena::CreateMaybeMessage<::protobuf::UDPData__mVArrayOfuint8_t>(Arena*);
+template<> ::protobuf::UDPData_a_type_mVArrayOfuint8_t* Arena::CreateMaybeMessage<::protobuf::UDPData_a_type_mVArrayOfuint8_t>(Arena*);
 template<> ::protobuf::UDPSocketAddr* Arena::CreateMaybeMessage<::protobuf::UDPSocketAddr>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace protobuf {
@@ -416,24 +416,24 @@ class UDPSocketAddr final :
 };
 // -------------------------------------------------------------------
 
-class UDPData__mVArrayOfuint8_t final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.UDPData._mVArrayOfuint8_t) */ {
+class UDPData_a_type_mVArrayOfuint8_t final :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.UDPData.a_type_mVArrayOfuint8_t) */ {
  public:
-  inline UDPData__mVArrayOfuint8_t() : UDPData__mVArrayOfuint8_t(nullptr) {}
-  ~UDPData__mVArrayOfuint8_t() override;
-  explicit PROTOBUF_CONSTEXPR UDPData__mVArrayOfuint8_t(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline UDPData_a_type_mVArrayOfuint8_t() : UDPData_a_type_mVArrayOfuint8_t(nullptr) {}
+  ~UDPData_a_type_mVArrayOfuint8_t() override;
+  explicit PROTOBUF_CONSTEXPR UDPData_a_type_mVArrayOfuint8_t(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  UDPData__mVArrayOfuint8_t(const UDPData__mVArrayOfuint8_t& from);
-  UDPData__mVArrayOfuint8_t(UDPData__mVArrayOfuint8_t&& from) noexcept
-    : UDPData__mVArrayOfuint8_t() {
+  UDPData_a_type_mVArrayOfuint8_t(const UDPData_a_type_mVArrayOfuint8_t& from);
+  UDPData_a_type_mVArrayOfuint8_t(UDPData_a_type_mVArrayOfuint8_t&& from) noexcept
+    : UDPData_a_type_mVArrayOfuint8_t() {
     *this = ::std::move(from);
   }
 
-  inline UDPData__mVArrayOfuint8_t& operator=(const UDPData__mVArrayOfuint8_t& from) {
+  inline UDPData_a_type_mVArrayOfuint8_t& operator=(const UDPData_a_type_mVArrayOfuint8_t& from) {
     CopyFrom(from);
     return *this;
   }
-  inline UDPData__mVArrayOfuint8_t& operator=(UDPData__mVArrayOfuint8_t&& from) noexcept {
+  inline UDPData_a_type_mVArrayOfuint8_t& operator=(UDPData_a_type_mVArrayOfuint8_t&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -454,20 +454,20 @@ class UDPData__mVArrayOfuint8_t final :
     return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
-  static const UDPData__mVArrayOfuint8_t& default_instance() {
+  static const UDPData_a_type_mVArrayOfuint8_t& default_instance() {
     return *internal_default_instance();
   }
-  static inline const UDPData__mVArrayOfuint8_t* internal_default_instance() {
-    return reinterpret_cast<const UDPData__mVArrayOfuint8_t*>(
-               &_UDPData__mVArrayOfuint8_t_default_instance_);
+  static inline const UDPData_a_type_mVArrayOfuint8_t* internal_default_instance() {
+    return reinterpret_cast<const UDPData_a_type_mVArrayOfuint8_t*>(
+               &_UDPData_a_type_mVArrayOfuint8_t_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     2;
 
-  friend void swap(UDPData__mVArrayOfuint8_t& a, UDPData__mVArrayOfuint8_t& b) {
+  friend void swap(UDPData_a_type_mVArrayOfuint8_t& a, UDPData_a_type_mVArrayOfuint8_t& b) {
     a.Swap(&b);
   }
-  inline void Swap(UDPData__mVArrayOfuint8_t* other) {
+  inline void Swap(UDPData_a_type_mVArrayOfuint8_t* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -480,7 +480,7 @@ class UDPData__mVArrayOfuint8_t final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(UDPData__mVArrayOfuint8_t* other) {
+  void UnsafeArenaSwap(UDPData_a_type_mVArrayOfuint8_t* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -488,12 +488,12 @@ class UDPData__mVArrayOfuint8_t final :
 
   // implements Message ----------------------------------------------
 
-  UDPData__mVArrayOfuint8_t* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<UDPData__mVArrayOfuint8_t>(arena);
+  UDPData_a_type_mVArrayOfuint8_t* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<UDPData_a_type_mVArrayOfuint8_t>(arena);
   }
   void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const UDPData__mVArrayOfuint8_t& from);
-  void MergeFrom(const UDPData__mVArrayOfuint8_t& from);
+  void CopyFrom(const UDPData_a_type_mVArrayOfuint8_t& from);
+  void MergeFrom(const UDPData_a_type_mVArrayOfuint8_t& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -507,15 +507,15 @@ class UDPData__mVArrayOfuint8_t final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const;
-  void InternalSwap(UDPData__mVArrayOfuint8_t* other);
+  void InternalSwap(UDPData_a_type_mVArrayOfuint8_t* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "protobuf.UDPData._mVArrayOfuint8_t";
+    return "protobuf.UDPData.a_type_mVArrayOfuint8_t";
   }
   protected:
-  explicit UDPData__mVArrayOfuint8_t(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit UDPData_a_type_mVArrayOfuint8_t(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -550,7 +550,7 @@ class UDPData__mVArrayOfuint8_t final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_mvarrayofuint8_t();
 
-  // @@protoc_insertion_point(class_scope:protobuf.UDPData._mVArrayOfuint8_t)
+  // @@protoc_insertion_point(class_scope:protobuf.UDPData.a_type_mVArrayOfuint8_t)
  private:
   class _Internal;
 
@@ -608,7 +608,7 @@ class UDPData final :
     return *internal_default_instance();
   }
   enum ContentCase {
-    kMVArrayOfuint8T = 1,
+    kAMVArrayOfuint8T = 1,
     kAMVIPCStream = 2,
     CONTENT_NOT_SET = 0,
   };
@@ -679,31 +679,31 @@ class UDPData final :
 
   // nested types ----------------------------------------------------
 
-  typedef UDPData__mVArrayOfuint8_t _mVArrayOfuint8_t;
+  typedef UDPData_a_type_mVArrayOfuint8_t a_type_mVArrayOfuint8_t;
 
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMVArrayOfuint8TFieldNumber = 1,
+    kAMVArrayOfuint8TFieldNumber = 1,
     kAMVIPCStreamFieldNumber = 2,
   };
-  // .protobuf.UDPData._mVArrayOfuint8_t mVArrayOfuint8_t = 1;
-  bool has_mvarrayofuint8_t() const;
+  // .protobuf.UDPData.a_type_mVArrayOfuint8_t a_mVArrayOfuint8_t = 1;
+  bool has_a_mvarrayofuint8_t() const;
   private:
-  bool _internal_has_mvarrayofuint8_t() const;
+  bool _internal_has_a_mvarrayofuint8_t() const;
   public:
-  void clear_mvarrayofuint8_t();
-  const ::protobuf::UDPData__mVArrayOfuint8_t& mvarrayofuint8_t() const;
-  PROTOBUF_NODISCARD ::protobuf::UDPData__mVArrayOfuint8_t* release_mvarrayofuint8_t();
-  ::protobuf::UDPData__mVArrayOfuint8_t* mutable_mvarrayofuint8_t();
-  void set_allocated_mvarrayofuint8_t(::protobuf::UDPData__mVArrayOfuint8_t* mvarrayofuint8_t);
+  void clear_a_mvarrayofuint8_t();
+  const ::protobuf::UDPData_a_type_mVArrayOfuint8_t& a_mvarrayofuint8_t() const;
+  PROTOBUF_NODISCARD ::protobuf::UDPData_a_type_mVArrayOfuint8_t* release_a_mvarrayofuint8_t();
+  ::protobuf::UDPData_a_type_mVArrayOfuint8_t* mutable_a_mvarrayofuint8_t();
+  void set_allocated_a_mvarrayofuint8_t(::protobuf::UDPData_a_type_mVArrayOfuint8_t* a_mvarrayofuint8_t);
   private:
-  const ::protobuf::UDPData__mVArrayOfuint8_t& _internal_mvarrayofuint8_t() const;
-  ::protobuf::UDPData__mVArrayOfuint8_t* _internal_mutable_mvarrayofuint8_t();
+  const ::protobuf::UDPData_a_type_mVArrayOfuint8_t& _internal_a_mvarrayofuint8_t() const;
+  ::protobuf::UDPData_a_type_mVArrayOfuint8_t* _internal_mutable_a_mvarrayofuint8_t();
   public:
-  void unsafe_arena_set_allocated_mvarrayofuint8_t(
-      ::protobuf::UDPData__mVArrayOfuint8_t* mvarrayofuint8_t);
-  ::protobuf::UDPData__mVArrayOfuint8_t* unsafe_arena_release_mvarrayofuint8_t();
+  void unsafe_arena_set_allocated_a_mvarrayofuint8_t(
+      ::protobuf::UDPData_a_type_mVArrayOfuint8_t* a_mvarrayofuint8_t);
+  ::protobuf::UDPData_a_type_mVArrayOfuint8_t* unsafe_arena_release_a_mvarrayofuint8_t();
 
   // .protobuf.mozilla.ipc.IPCStream a_mVIPCStream = 2;
   bool has_a_mvipcstream() const;
@@ -728,7 +728,7 @@ class UDPData final :
   // @@protoc_insertion_point(class_scope:protobuf.UDPData)
  private:
   class _Internal;
-  void set_has_mvarrayofuint8_t();
+  void set_has_a_mvarrayofuint8_t();
   void set_has_a_mvipcstream();
 
   inline bool has_content() const;
@@ -741,7 +741,7 @@ class UDPData final :
     union ContentUnion {
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
-      ::protobuf::UDPData__mVArrayOfuint8_t* mvarrayofuint8_t_;
+      ::protobuf::UDPData_a_type_mVArrayOfuint8_t* a_mvarrayofuint8_t_;
       ::protobuf::mozilla::ipc::IPCStream* a_mvipcstream_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -1024,52 +1024,52 @@ inline UDPSocketAddr::ContentCase UDPSocketAddr::content_case() const {
 }
 // -------------------------------------------------------------------
 
-// UDPData__mVArrayOfuint8_t
+// UDPData_a_type_mVArrayOfuint8_t
 
 // repeated uint32 a_mVArrayOfuint8_t = 1;
-inline int UDPData__mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t_size() const {
+inline int UDPData_a_type_mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t_size() const {
   return _impl_.a_mvarrayofuint8_t_.size();
 }
-inline int UDPData__mVArrayOfuint8_t::a_mvarrayofuint8_t_size() const {
+inline int UDPData_a_type_mVArrayOfuint8_t::a_mvarrayofuint8_t_size() const {
   return _internal_a_mvarrayofuint8_t_size();
 }
-inline void UDPData__mVArrayOfuint8_t::clear_a_mvarrayofuint8_t() {
+inline void UDPData_a_type_mVArrayOfuint8_t::clear_a_mvarrayofuint8_t() {
   _impl_.a_mvarrayofuint8_t_.Clear();
 }
-inline uint32_t UDPData__mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t(int index) const {
+inline uint32_t UDPData_a_type_mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t(int index) const {
   return _impl_.a_mvarrayofuint8_t_.Get(index);
 }
-inline uint32_t UDPData__mVArrayOfuint8_t::a_mvarrayofuint8_t(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.UDPData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
+inline uint32_t UDPData_a_type_mVArrayOfuint8_t::a_mvarrayofuint8_t(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.UDPData.a_type_mVArrayOfuint8_t.a_mVArrayOfuint8_t)
   return _internal_a_mvarrayofuint8_t(index);
 }
-inline void UDPData__mVArrayOfuint8_t::set_a_mvarrayofuint8_t(int index, uint32_t value) {
+inline void UDPData_a_type_mVArrayOfuint8_t::set_a_mvarrayofuint8_t(int index, uint32_t value) {
   _impl_.a_mvarrayofuint8_t_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.UDPData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
+  // @@protoc_insertion_point(field_set:protobuf.UDPData.a_type_mVArrayOfuint8_t.a_mVArrayOfuint8_t)
 }
-inline void UDPData__mVArrayOfuint8_t::_internal_add_a_mvarrayofuint8_t(uint32_t value) {
+inline void UDPData_a_type_mVArrayOfuint8_t::_internal_add_a_mvarrayofuint8_t(uint32_t value) {
   _impl_.a_mvarrayofuint8_t_.Add(value);
 }
-inline void UDPData__mVArrayOfuint8_t::add_a_mvarrayofuint8_t(uint32_t value) {
+inline void UDPData_a_type_mVArrayOfuint8_t::add_a_mvarrayofuint8_t(uint32_t value) {
   _internal_add_a_mvarrayofuint8_t(value);
-  // @@protoc_insertion_point(field_add:protobuf.UDPData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
+  // @@protoc_insertion_point(field_add:protobuf.UDPData.a_type_mVArrayOfuint8_t.a_mVArrayOfuint8_t)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-UDPData__mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t() const {
+UDPData_a_type_mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t() const {
   return _impl_.a_mvarrayofuint8_t_;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-UDPData__mVArrayOfuint8_t::a_mvarrayofuint8_t() const {
-  // @@protoc_insertion_point(field_list:protobuf.UDPData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
+UDPData_a_type_mVArrayOfuint8_t::a_mvarrayofuint8_t() const {
+  // @@protoc_insertion_point(field_list:protobuf.UDPData.a_type_mVArrayOfuint8_t.a_mVArrayOfuint8_t)
   return _internal_a_mvarrayofuint8_t();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-UDPData__mVArrayOfuint8_t::_internal_mutable_a_mvarrayofuint8_t() {
+UDPData_a_type_mVArrayOfuint8_t::_internal_mutable_a_mvarrayofuint8_t() {
   return &_impl_.a_mvarrayofuint8_t_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-UDPData__mVArrayOfuint8_t::mutable_a_mvarrayofuint8_t() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.UDPData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
+UDPData_a_type_mVArrayOfuint8_t::mutable_a_mvarrayofuint8_t() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.UDPData.a_type_mVArrayOfuint8_t.a_mVArrayOfuint8_t)
   return _internal_mutable_a_mvarrayofuint8_t();
 }
 
@@ -1077,77 +1077,77 @@ UDPData__mVArrayOfuint8_t::mutable_a_mvarrayofuint8_t() {
 
 // UDPData
 
-// .protobuf.UDPData._mVArrayOfuint8_t mVArrayOfuint8_t = 1;
-inline bool UDPData::_internal_has_mvarrayofuint8_t() const {
-  return content_case() == kMVArrayOfuint8T;
+// .protobuf.UDPData.a_type_mVArrayOfuint8_t a_mVArrayOfuint8_t = 1;
+inline bool UDPData::_internal_has_a_mvarrayofuint8_t() const {
+  return content_case() == kAMVArrayOfuint8T;
 }
-inline bool UDPData::has_mvarrayofuint8_t() const {
-  return _internal_has_mvarrayofuint8_t();
+inline bool UDPData::has_a_mvarrayofuint8_t() const {
+  return _internal_has_a_mvarrayofuint8_t();
 }
-inline void UDPData::set_has_mvarrayofuint8_t() {
-  _impl_._oneof_case_[0] = kMVArrayOfuint8T;
+inline void UDPData::set_has_a_mvarrayofuint8_t() {
+  _impl_._oneof_case_[0] = kAMVArrayOfuint8T;
 }
-inline void UDPData::clear_mvarrayofuint8_t() {
-  if (_internal_has_mvarrayofuint8_t()) {
+inline void UDPData::clear_a_mvarrayofuint8_t() {
+  if (_internal_has_a_mvarrayofuint8_t()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvarrayofuint8_t_;
+      delete _impl_.content_.a_mvarrayofuint8_t_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::UDPData__mVArrayOfuint8_t* UDPData::release_mvarrayofuint8_t() {
-  // @@protoc_insertion_point(field_release:protobuf.UDPData.mVArrayOfuint8_t)
-  if (_internal_has_mvarrayofuint8_t()) {
+inline ::protobuf::UDPData_a_type_mVArrayOfuint8_t* UDPData::release_a_mvarrayofuint8_t() {
+  // @@protoc_insertion_point(field_release:protobuf.UDPData.a_mVArrayOfuint8_t)
+  if (_internal_has_a_mvarrayofuint8_t()) {
     clear_has_content();
-    ::protobuf::UDPData__mVArrayOfuint8_t* temp = _impl_.content_.mvarrayofuint8_t_;
+    ::protobuf::UDPData_a_type_mVArrayOfuint8_t* temp = _impl_.content_.a_mvarrayofuint8_t_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvarrayofuint8_t_ = nullptr;
+    _impl_.content_.a_mvarrayofuint8_t_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::UDPData__mVArrayOfuint8_t& UDPData::_internal_mvarrayofuint8_t() const {
-  return _internal_has_mvarrayofuint8_t()
-      ? *_impl_.content_.mvarrayofuint8_t_
-      : reinterpret_cast< ::protobuf::UDPData__mVArrayOfuint8_t&>(::protobuf::_UDPData__mVArrayOfuint8_t_default_instance_);
+inline const ::protobuf::UDPData_a_type_mVArrayOfuint8_t& UDPData::_internal_a_mvarrayofuint8_t() const {
+  return _internal_has_a_mvarrayofuint8_t()
+      ? *_impl_.content_.a_mvarrayofuint8_t_
+      : reinterpret_cast< ::protobuf::UDPData_a_type_mVArrayOfuint8_t&>(::protobuf::_UDPData_a_type_mVArrayOfuint8_t_default_instance_);
 }
-inline const ::protobuf::UDPData__mVArrayOfuint8_t& UDPData::mvarrayofuint8_t() const {
-  // @@protoc_insertion_point(field_get:protobuf.UDPData.mVArrayOfuint8_t)
-  return _internal_mvarrayofuint8_t();
+inline const ::protobuf::UDPData_a_type_mVArrayOfuint8_t& UDPData::a_mvarrayofuint8_t() const {
+  // @@protoc_insertion_point(field_get:protobuf.UDPData.a_mVArrayOfuint8_t)
+  return _internal_a_mvarrayofuint8_t();
 }
-inline ::protobuf::UDPData__mVArrayOfuint8_t* UDPData::unsafe_arena_release_mvarrayofuint8_t() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.UDPData.mVArrayOfuint8_t)
-  if (_internal_has_mvarrayofuint8_t()) {
+inline ::protobuf::UDPData_a_type_mVArrayOfuint8_t* UDPData::unsafe_arena_release_a_mvarrayofuint8_t() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.UDPData.a_mVArrayOfuint8_t)
+  if (_internal_has_a_mvarrayofuint8_t()) {
     clear_has_content();
-    ::protobuf::UDPData__mVArrayOfuint8_t* temp = _impl_.content_.mvarrayofuint8_t_;
-    _impl_.content_.mvarrayofuint8_t_ = nullptr;
+    ::protobuf::UDPData_a_type_mVArrayOfuint8_t* temp = _impl_.content_.a_mvarrayofuint8_t_;
+    _impl_.content_.a_mvarrayofuint8_t_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void UDPData::unsafe_arena_set_allocated_mvarrayofuint8_t(::protobuf::UDPData__mVArrayOfuint8_t* mvarrayofuint8_t) {
+inline void UDPData::unsafe_arena_set_allocated_a_mvarrayofuint8_t(::protobuf::UDPData_a_type_mVArrayOfuint8_t* a_mvarrayofuint8_t) {
   clear_content();
-  if (mvarrayofuint8_t) {
-    set_has_mvarrayofuint8_t();
-    _impl_.content_.mvarrayofuint8_t_ = mvarrayofuint8_t;
+  if (a_mvarrayofuint8_t) {
+    set_has_a_mvarrayofuint8_t();
+    _impl_.content_.a_mvarrayofuint8_t_ = a_mvarrayofuint8_t;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.UDPData.mVArrayOfuint8_t)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.UDPData.a_mVArrayOfuint8_t)
 }
-inline ::protobuf::UDPData__mVArrayOfuint8_t* UDPData::_internal_mutable_mvarrayofuint8_t() {
-  if (!_internal_has_mvarrayofuint8_t()) {
+inline ::protobuf::UDPData_a_type_mVArrayOfuint8_t* UDPData::_internal_mutable_a_mvarrayofuint8_t() {
+  if (!_internal_has_a_mvarrayofuint8_t()) {
     clear_content();
-    set_has_mvarrayofuint8_t();
-    _impl_.content_.mvarrayofuint8_t_ = CreateMaybeMessage< ::protobuf::UDPData__mVArrayOfuint8_t >(GetArenaForAllocation());
+    set_has_a_mvarrayofuint8_t();
+    _impl_.content_.a_mvarrayofuint8_t_ = CreateMaybeMessage< ::protobuf::UDPData_a_type_mVArrayOfuint8_t >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvarrayofuint8_t_;
+  return _impl_.content_.a_mvarrayofuint8_t_;
 }
-inline ::protobuf::UDPData__mVArrayOfuint8_t* UDPData::mutable_mvarrayofuint8_t() {
-  ::protobuf::UDPData__mVArrayOfuint8_t* _msg = _internal_mutable_mvarrayofuint8_t();
-  // @@protoc_insertion_point(field_mutable:protobuf.UDPData.mVArrayOfuint8_t)
+inline ::protobuf::UDPData_a_type_mVArrayOfuint8_t* UDPData::mutable_a_mvarrayofuint8_t() {
+  ::protobuf::UDPData_a_type_mVArrayOfuint8_t* _msg = _internal_mutable_a_mvarrayofuint8_t();
+  // @@protoc_insertion_point(field_mutable:protobuf.UDPData.a_mVArrayOfuint8_t)
   return _msg;
 }
 

@@ -68,9 +68,9 @@ extern GfxVarUpdateDefaultTypeInternal _GfxVarUpdate_default_instance_;
 class GfxVarValue;
 struct GfxVarValueDefaultTypeInternal;
 extern GfxVarValueDefaultTypeInternal _GfxVarValue_default_instance_;
-class GfxVarValue__mVArrayOfuint64_t;
-struct GfxVarValue__mVArrayOfuint64_tDefaultTypeInternal;
-extern GfxVarValue__mVArrayOfuint64_tDefaultTypeInternal _GfxVarValue__mVArrayOfuint64_t_default_instance_;
+class GfxVarValue_a_type_mVArrayOfuint64_t;
+struct GfxVarValue_a_type_mVArrayOfuint64_tDefaultTypeInternal;
+extern GfxVarValue_a_type_mVArrayOfuint64_tDefaultTypeInternal _GfxVarValue_a_type_mVArrayOfuint64_t_default_instance_;
 }  // namespace gfx
 }  // namespace mozilla
 }  // namespace protobuf
@@ -83,7 +83,7 @@ template<> ::protobuf::mozilla::gfx::GPUDeviceData* Arena::CreateMaybeMessage<::
 template<> ::protobuf::mozilla::gfx::GfxInfoFeatureStatus* Arena::CreateMaybeMessage<::protobuf::mozilla::gfx::GfxInfoFeatureStatus>(Arena*);
 template<> ::protobuf::mozilla::gfx::GfxVarUpdate* Arena::CreateMaybeMessage<::protobuf::mozilla::gfx::GfxVarUpdate>(Arena*);
 template<> ::protobuf::mozilla::gfx::GfxVarValue* Arena::CreateMaybeMessage<::protobuf::mozilla::gfx::GfxVarValue>(Arena*);
-template<> ::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t* Arena::CreateMaybeMessage<::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t>(Arena*);
+template<> ::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t* Arena::CreateMaybeMessage<::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace protobuf {
 namespace mozilla {
@@ -1122,24 +1122,24 @@ class GPUDeviceData final :
 };
 // -------------------------------------------------------------------
 
-class GfxVarValue__mVArrayOfuint64_t final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t) */ {
+class GfxVarValue_a_type_mVArrayOfuint64_t final :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gfx.GfxVarValue.a_type_mVArrayOfuint64_t) */ {
  public:
-  inline GfxVarValue__mVArrayOfuint64_t() : GfxVarValue__mVArrayOfuint64_t(nullptr) {}
-  ~GfxVarValue__mVArrayOfuint64_t() override;
-  explicit PROTOBUF_CONSTEXPR GfxVarValue__mVArrayOfuint64_t(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline GfxVarValue_a_type_mVArrayOfuint64_t() : GfxVarValue_a_type_mVArrayOfuint64_t(nullptr) {}
+  ~GfxVarValue_a_type_mVArrayOfuint64_t() override;
+  explicit PROTOBUF_CONSTEXPR GfxVarValue_a_type_mVArrayOfuint64_t(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  GfxVarValue__mVArrayOfuint64_t(const GfxVarValue__mVArrayOfuint64_t& from);
-  GfxVarValue__mVArrayOfuint64_t(GfxVarValue__mVArrayOfuint64_t&& from) noexcept
-    : GfxVarValue__mVArrayOfuint64_t() {
+  GfxVarValue_a_type_mVArrayOfuint64_t(const GfxVarValue_a_type_mVArrayOfuint64_t& from);
+  GfxVarValue_a_type_mVArrayOfuint64_t(GfxVarValue_a_type_mVArrayOfuint64_t&& from) noexcept
+    : GfxVarValue_a_type_mVArrayOfuint64_t() {
     *this = ::std::move(from);
   }
 
-  inline GfxVarValue__mVArrayOfuint64_t& operator=(const GfxVarValue__mVArrayOfuint64_t& from) {
+  inline GfxVarValue_a_type_mVArrayOfuint64_t& operator=(const GfxVarValue_a_type_mVArrayOfuint64_t& from) {
     CopyFrom(from);
     return *this;
   }
-  inline GfxVarValue__mVArrayOfuint64_t& operator=(GfxVarValue__mVArrayOfuint64_t&& from) noexcept {
+  inline GfxVarValue_a_type_mVArrayOfuint64_t& operator=(GfxVarValue_a_type_mVArrayOfuint64_t&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1160,20 +1160,20 @@ class GfxVarValue__mVArrayOfuint64_t final :
     return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
-  static const GfxVarValue__mVArrayOfuint64_t& default_instance() {
+  static const GfxVarValue_a_type_mVArrayOfuint64_t& default_instance() {
     return *internal_default_instance();
   }
-  static inline const GfxVarValue__mVArrayOfuint64_t* internal_default_instance() {
-    return reinterpret_cast<const GfxVarValue__mVArrayOfuint64_t*>(
-               &_GfxVarValue__mVArrayOfuint64_t_default_instance_);
+  static inline const GfxVarValue_a_type_mVArrayOfuint64_t* internal_default_instance() {
+    return reinterpret_cast<const GfxVarValue_a_type_mVArrayOfuint64_t*>(
+               &_GfxVarValue_a_type_mVArrayOfuint64_t_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     5;
 
-  friend void swap(GfxVarValue__mVArrayOfuint64_t& a, GfxVarValue__mVArrayOfuint64_t& b) {
+  friend void swap(GfxVarValue_a_type_mVArrayOfuint64_t& a, GfxVarValue_a_type_mVArrayOfuint64_t& b) {
     a.Swap(&b);
   }
-  inline void Swap(GfxVarValue__mVArrayOfuint64_t* other) {
+  inline void Swap(GfxVarValue_a_type_mVArrayOfuint64_t* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1186,7 +1186,7 @@ class GfxVarValue__mVArrayOfuint64_t final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(GfxVarValue__mVArrayOfuint64_t* other) {
+  void UnsafeArenaSwap(GfxVarValue_a_type_mVArrayOfuint64_t* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1194,12 +1194,12 @@ class GfxVarValue__mVArrayOfuint64_t final :
 
   // implements Message ----------------------------------------------
 
-  GfxVarValue__mVArrayOfuint64_t* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<GfxVarValue__mVArrayOfuint64_t>(arena);
+  GfxVarValue_a_type_mVArrayOfuint64_t* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GfxVarValue_a_type_mVArrayOfuint64_t>(arena);
   }
   void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const GfxVarValue__mVArrayOfuint64_t& from);
-  void MergeFrom(const GfxVarValue__mVArrayOfuint64_t& from);
+  void CopyFrom(const GfxVarValue_a_type_mVArrayOfuint64_t& from);
+  void MergeFrom(const GfxVarValue_a_type_mVArrayOfuint64_t& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1213,15 +1213,15 @@ class GfxVarValue__mVArrayOfuint64_t final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const;
-  void InternalSwap(GfxVarValue__mVArrayOfuint64_t* other);
+  void InternalSwap(GfxVarValue_a_type_mVArrayOfuint64_t* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t";
+    return "protobuf.mozilla.gfx.GfxVarValue.a_type_mVArrayOfuint64_t";
   }
   protected:
-  explicit GfxVarValue__mVArrayOfuint64_t(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit GfxVarValue_a_type_mVArrayOfuint64_t(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1256,7 +1256,7 @@ class GfxVarValue__mVArrayOfuint64_t final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
       mutable_a_mvarrayofuint64_t();
 
-  // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t)
+  // @@protoc_insertion_point(class_scope:protobuf.mozilla.gfx.GfxVarValue.a_type_mVArrayOfuint64_t)
  private:
   class _Internal;
 
@@ -1323,7 +1323,7 @@ class GfxVarValue final :
     kAMVint32T = 7,
     kAMVuint64T = 8,
     kAMVfloat = 9,
-    kMVArrayOfuint64T = 10,
+    kAMVArrayOfuint64T = 10,
     CONTENT_NOT_SET = 0,
   };
 
@@ -1393,7 +1393,7 @@ class GfxVarValue final :
 
   // nested types ----------------------------------------------------
 
-  typedef GfxVarValue__mVArrayOfuint64_t _mVArrayOfuint64_t;
+  typedef GfxVarValue_a_type_mVArrayOfuint64_t a_type_mVArrayOfuint64_t;
 
   // accessors -------------------------------------------------------
 
@@ -1407,7 +1407,7 @@ class GfxVarValue final :
     kAMVint32TFieldNumber = 7,
     kAMVuint64TFieldNumber = 8,
     kAMVfloatFieldNumber = 9,
-    kMVArrayOfuint64TFieldNumber = 10,
+    kAMVArrayOfuint64TFieldNumber = 10,
   };
   // bytes a_mVBackendType = 1;
   bool has_a_mvbackendtype() const;
@@ -1551,23 +1551,23 @@ class GfxVarValue final :
   void _internal_set_a_mvfloat(float value);
   public:
 
-  // .protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t mVArrayOfuint64_t = 10;
-  bool has_mvarrayofuint64_t() const;
+  // .protobuf.mozilla.gfx.GfxVarValue.a_type_mVArrayOfuint64_t a_mVArrayOfuint64_t = 10;
+  bool has_a_mvarrayofuint64_t() const;
   private:
-  bool _internal_has_mvarrayofuint64_t() const;
+  bool _internal_has_a_mvarrayofuint64_t() const;
   public:
-  void clear_mvarrayofuint64_t();
-  const ::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t& mvarrayofuint64_t() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t* release_mvarrayofuint64_t();
-  ::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t* mutable_mvarrayofuint64_t();
-  void set_allocated_mvarrayofuint64_t(::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t* mvarrayofuint64_t);
+  void clear_a_mvarrayofuint64_t();
+  const ::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t& a_mvarrayofuint64_t() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t* release_a_mvarrayofuint64_t();
+  ::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t* mutable_a_mvarrayofuint64_t();
+  void set_allocated_a_mvarrayofuint64_t(::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t* a_mvarrayofuint64_t);
   private:
-  const ::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t& _internal_mvarrayofuint64_t() const;
-  ::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t* _internal_mutable_mvarrayofuint64_t();
+  const ::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t& _internal_a_mvarrayofuint64_t() const;
+  ::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t* _internal_mutable_a_mvarrayofuint64_t();
   public:
-  void unsafe_arena_set_allocated_mvarrayofuint64_t(
-      ::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t* mvarrayofuint64_t);
-  ::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t* unsafe_arena_release_mvarrayofuint64_t();
+  void unsafe_arena_set_allocated_a_mvarrayofuint64_t(
+      ::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t* a_mvarrayofuint64_t);
+  ::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t* unsafe_arena_release_a_mvarrayofuint64_t();
 
   void clear_content();
   ContentCase content_case() const;
@@ -1583,7 +1583,7 @@ class GfxVarValue final :
   void set_has_a_mvint32_t();
   void set_has_a_mvuint64_t();
   void set_has_a_mvfloat();
-  void set_has_mvarrayofuint64_t();
+  void set_has_a_mvarrayofuint64_t();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -1604,7 +1604,7 @@ class GfxVarValue final :
       int32_t a_mvint32_t_;
       uint64_t a_mvuint64_t_;
       float a_mvfloat_;
-      ::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t* mvarrayofuint64_t_;
+      ::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t* a_mvarrayofuint64_t_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -3276,52 +3276,52 @@ inline void GPUDeviceData::set_allocated_a_gpudevice(::protobuf::mozilla::gfx::D
 
 // -------------------------------------------------------------------
 
-// GfxVarValue__mVArrayOfuint64_t
+// GfxVarValue_a_type_mVArrayOfuint64_t
 
 // repeated uint64 a_mVArrayOfuint64_t = 1;
-inline int GfxVarValue__mVArrayOfuint64_t::_internal_a_mvarrayofuint64_t_size() const {
+inline int GfxVarValue_a_type_mVArrayOfuint64_t::_internal_a_mvarrayofuint64_t_size() const {
   return _impl_.a_mvarrayofuint64_t_.size();
 }
-inline int GfxVarValue__mVArrayOfuint64_t::a_mvarrayofuint64_t_size() const {
+inline int GfxVarValue_a_type_mVArrayOfuint64_t::a_mvarrayofuint64_t_size() const {
   return _internal_a_mvarrayofuint64_t_size();
 }
-inline void GfxVarValue__mVArrayOfuint64_t::clear_a_mvarrayofuint64_t() {
+inline void GfxVarValue_a_type_mVArrayOfuint64_t::clear_a_mvarrayofuint64_t() {
   _impl_.a_mvarrayofuint64_t_.Clear();
 }
-inline uint64_t GfxVarValue__mVArrayOfuint64_t::_internal_a_mvarrayofuint64_t(int index) const {
+inline uint64_t GfxVarValue_a_type_mVArrayOfuint64_t::_internal_a_mvarrayofuint64_t(int index) const {
   return _impl_.a_mvarrayofuint64_t_.Get(index);
 }
-inline uint64_t GfxVarValue__mVArrayOfuint64_t::a_mvarrayofuint64_t(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t.a_mVArrayOfuint64_t)
+inline uint64_t GfxVarValue_a_type_mVArrayOfuint64_t::a_mvarrayofuint64_t(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue.a_type_mVArrayOfuint64_t.a_mVArrayOfuint64_t)
   return _internal_a_mvarrayofuint64_t(index);
 }
-inline void GfxVarValue__mVArrayOfuint64_t::set_a_mvarrayofuint64_t(int index, uint64_t value) {
+inline void GfxVarValue_a_type_mVArrayOfuint64_t::set_a_mvarrayofuint64_t(int index, uint64_t value) {
   _impl_.a_mvarrayofuint64_t_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t.a_mVArrayOfuint64_t)
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.a_type_mVArrayOfuint64_t.a_mVArrayOfuint64_t)
 }
-inline void GfxVarValue__mVArrayOfuint64_t::_internal_add_a_mvarrayofuint64_t(uint64_t value) {
+inline void GfxVarValue_a_type_mVArrayOfuint64_t::_internal_add_a_mvarrayofuint64_t(uint64_t value) {
   _impl_.a_mvarrayofuint64_t_.Add(value);
 }
-inline void GfxVarValue__mVArrayOfuint64_t::add_a_mvarrayofuint64_t(uint64_t value) {
+inline void GfxVarValue_a_type_mVArrayOfuint64_t::add_a_mvarrayofuint64_t(uint64_t value) {
   _internal_add_a_mvarrayofuint64_t(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t.a_mVArrayOfuint64_t)
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.gfx.GfxVarValue.a_type_mVArrayOfuint64_t.a_mVArrayOfuint64_t)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-GfxVarValue__mVArrayOfuint64_t::_internal_a_mvarrayofuint64_t() const {
+GfxVarValue_a_type_mVArrayOfuint64_t::_internal_a_mvarrayofuint64_t() const {
   return _impl_.a_mvarrayofuint64_t_;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >&
-GfxVarValue__mVArrayOfuint64_t::a_mvarrayofuint64_t() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t.a_mVArrayOfuint64_t)
+GfxVarValue_a_type_mVArrayOfuint64_t::a_mvarrayofuint64_t() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.gfx.GfxVarValue.a_type_mVArrayOfuint64_t.a_mVArrayOfuint64_t)
   return _internal_a_mvarrayofuint64_t();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-GfxVarValue__mVArrayOfuint64_t::_internal_mutable_a_mvarrayofuint64_t() {
+GfxVarValue_a_type_mVArrayOfuint64_t::_internal_mutable_a_mvarrayofuint64_t() {
   return &_impl_.a_mvarrayofuint64_t_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
-GfxVarValue__mVArrayOfuint64_t::mutable_a_mvarrayofuint64_t() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t.a_mVArrayOfuint64_t)
+GfxVarValue_a_type_mVArrayOfuint64_t::mutable_a_mvarrayofuint64_t() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.gfx.GfxVarValue.a_type_mVArrayOfuint64_t.a_mVArrayOfuint64_t)
   return _internal_mutable_a_mvarrayofuint64_t();
 }
 
@@ -3866,77 +3866,77 @@ inline void GfxVarValue::set_a_mvfloat(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.GfxVarValue.a_mVfloat)
 }
 
-// .protobuf.mozilla.gfx.GfxVarValue._mVArrayOfuint64_t mVArrayOfuint64_t = 10;
-inline bool GfxVarValue::_internal_has_mvarrayofuint64_t() const {
-  return content_case() == kMVArrayOfuint64T;
+// .protobuf.mozilla.gfx.GfxVarValue.a_type_mVArrayOfuint64_t a_mVArrayOfuint64_t = 10;
+inline bool GfxVarValue::_internal_has_a_mvarrayofuint64_t() const {
+  return content_case() == kAMVArrayOfuint64T;
 }
-inline bool GfxVarValue::has_mvarrayofuint64_t() const {
-  return _internal_has_mvarrayofuint64_t();
+inline bool GfxVarValue::has_a_mvarrayofuint64_t() const {
+  return _internal_has_a_mvarrayofuint64_t();
 }
-inline void GfxVarValue::set_has_mvarrayofuint64_t() {
-  _impl_._oneof_case_[0] = kMVArrayOfuint64T;
+inline void GfxVarValue::set_has_a_mvarrayofuint64_t() {
+  _impl_._oneof_case_[0] = kAMVArrayOfuint64T;
 }
-inline void GfxVarValue::clear_mvarrayofuint64_t() {
-  if (_internal_has_mvarrayofuint64_t()) {
+inline void GfxVarValue::clear_a_mvarrayofuint64_t() {
+  if (_internal_has_a_mvarrayofuint64_t()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvarrayofuint64_t_;
+      delete _impl_.content_.a_mvarrayofuint64_t_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t* GfxVarValue::release_mvarrayofuint64_t() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GfxVarValue.mVArrayOfuint64_t)
-  if (_internal_has_mvarrayofuint64_t()) {
+inline ::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t* GfxVarValue::release_a_mvarrayofuint64_t() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.GfxVarValue.a_mVArrayOfuint64_t)
+  if (_internal_has_a_mvarrayofuint64_t()) {
     clear_has_content();
-    ::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t* temp = _impl_.content_.mvarrayofuint64_t_;
+    ::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t* temp = _impl_.content_.a_mvarrayofuint64_t_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvarrayofuint64_t_ = nullptr;
+    _impl_.content_.a_mvarrayofuint64_t_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t& GfxVarValue::_internal_mvarrayofuint64_t() const {
-  return _internal_has_mvarrayofuint64_t()
-      ? *_impl_.content_.mvarrayofuint64_t_
-      : reinterpret_cast< ::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t&>(::protobuf::mozilla::gfx::_GfxVarValue__mVArrayOfuint64_t_default_instance_);
+inline const ::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t& GfxVarValue::_internal_a_mvarrayofuint64_t() const {
+  return _internal_has_a_mvarrayofuint64_t()
+      ? *_impl_.content_.a_mvarrayofuint64_t_
+      : reinterpret_cast< ::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t&>(::protobuf::mozilla::gfx::_GfxVarValue_a_type_mVArrayOfuint64_t_default_instance_);
 }
-inline const ::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t& GfxVarValue::mvarrayofuint64_t() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue.mVArrayOfuint64_t)
-  return _internal_mvarrayofuint64_t();
+inline const ::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t& GfxVarValue::a_mvarrayofuint64_t() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.GfxVarValue.a_mVArrayOfuint64_t)
+  return _internal_a_mvarrayofuint64_t();
 }
-inline ::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t* GfxVarValue::unsafe_arena_release_mvarrayofuint64_t() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.gfx.GfxVarValue.mVArrayOfuint64_t)
-  if (_internal_has_mvarrayofuint64_t()) {
+inline ::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t* GfxVarValue::unsafe_arena_release_a_mvarrayofuint64_t() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.gfx.GfxVarValue.a_mVArrayOfuint64_t)
+  if (_internal_has_a_mvarrayofuint64_t()) {
     clear_has_content();
-    ::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t* temp = _impl_.content_.mvarrayofuint64_t_;
-    _impl_.content_.mvarrayofuint64_t_ = nullptr;
+    ::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t* temp = _impl_.content_.a_mvarrayofuint64_t_;
+    _impl_.content_.a_mvarrayofuint64_t_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void GfxVarValue::unsafe_arena_set_allocated_mvarrayofuint64_t(::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t* mvarrayofuint64_t) {
+inline void GfxVarValue::unsafe_arena_set_allocated_a_mvarrayofuint64_t(::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t* a_mvarrayofuint64_t) {
   clear_content();
-  if (mvarrayofuint64_t) {
-    set_has_mvarrayofuint64_t();
-    _impl_.content_.mvarrayofuint64_t_ = mvarrayofuint64_t;
+  if (a_mvarrayofuint64_t) {
+    set_has_a_mvarrayofuint64_t();
+    _impl_.content_.a_mvarrayofuint64_t_ = a_mvarrayofuint64_t;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gfx.GfxVarValue.mVArrayOfuint64_t)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gfx.GfxVarValue.a_mVArrayOfuint64_t)
 }
-inline ::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t* GfxVarValue::_internal_mutable_mvarrayofuint64_t() {
-  if (!_internal_has_mvarrayofuint64_t()) {
+inline ::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t* GfxVarValue::_internal_mutable_a_mvarrayofuint64_t() {
+  if (!_internal_has_a_mvarrayofuint64_t()) {
     clear_content();
-    set_has_mvarrayofuint64_t();
-    _impl_.content_.mvarrayofuint64_t_ = CreateMaybeMessage< ::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t >(GetArenaForAllocation());
+    set_has_a_mvarrayofuint64_t();
+    _impl_.content_.a_mvarrayofuint64_t_ = CreateMaybeMessage< ::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvarrayofuint64_t_;
+  return _impl_.content_.a_mvarrayofuint64_t_;
 }
-inline ::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t* GfxVarValue::mutable_mvarrayofuint64_t() {
-  ::protobuf::mozilla::gfx::GfxVarValue__mVArrayOfuint64_t* _msg = _internal_mutable_mvarrayofuint64_t();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GfxVarValue.mVArrayOfuint64_t)
+inline ::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t* GfxVarValue::mutable_a_mvarrayofuint64_t() {
+  ::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t* _msg = _internal_mutable_a_mvarrayofuint64_t();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.gfx.GfxVarValue.a_mVArrayOfuint64_t)
   return _msg;
 }
 

@@ -1072,7 +1072,7 @@ class Msg_Reconfigure final :
   enum : int {
     kAConfigurationChangesFieldNumber = 1,
   };
-  // required bytes a_configurationChanges = 1;
+  // optional bytes a_configurationChanges = 1;
   bool has_a_configurationchanges() const;
   private:
   bool _internal_has_a_configurationchanges() const;
@@ -2832,7 +2832,7 @@ inline void Reply_Encode::set_allocated_a_result(::protobuf::mozilla::EncodeResu
 
 // Msg_Reconfigure
 
-// required bytes a_configurationChanges = 1;
+// optional bytes a_configurationChanges = 1;
 inline bool Msg_Reconfigure::_internal_has_a_configurationchanges() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

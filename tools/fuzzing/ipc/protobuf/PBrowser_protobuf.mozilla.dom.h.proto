@@ -28,8 +28,8 @@ message WebProgressData {
 }
 
 message RequestData {
-  required bytes a_requestURI = 1;
-  required bytes a_originalRequestURI = 2;
+  optional bytes a_requestURI = 1;
+  optional bytes a_originalRequestURI = 2;
   required string a_matchedList = 3;
   required string a_canceledReason = 4;
 }
@@ -39,7 +39,7 @@ message WebProgressStateChangeData {
   required bool a_mayEnableCharacterEncodingMenu = 2;
   required string a_contentType = 3;
   required string a_charset = 4;
-  required bytes a_documentURI = 5;
+  optional bytes a_documentURI = 5;
 }
 
 message WebProgressLocationChangeData {
@@ -49,11 +49,11 @@ message WebProgressLocationChangeData {
   required string a_contentType = 4;
   required string a_title = 5;
   required string a_charset = 6;
-  required bytes a_documentURI = 7;
-  required bytes a_contentPrincipal = 8;
-  required bytes a_contentPartitionedPrincipal = 9;
-  required bytes a_csp = 10;
-  required bytes a_referrerInfo = 11;
+  optional bytes a_documentURI = 7;
+  optional bytes a_contentPrincipal = 8;
+  optional bytes a_contentPartitionedPrincipal = 9;
+  optional bytes a_csp = 10;
+  optional bytes a_referrerInfo = 11;
   optional uint64 a_requestContextID = 12;
 }
 

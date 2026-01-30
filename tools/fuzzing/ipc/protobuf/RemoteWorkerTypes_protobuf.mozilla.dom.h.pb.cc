@@ -1035,7 +1035,7 @@ class RemoteWorkerData::_Internal {
     (*has_bits)[0] |= 256u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x007f7fdf) ^ 0x007f7fdf) != 0;
+    return ((has_bits[0] & 0x007f7fd7) ^ 0x007f7fd7) != 0;
   }
 };
 
@@ -1537,7 +1537,7 @@ const char* RemoteWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_referrerInfo = 14;
+      // optional bytes a_referrerInfo = 14;
       case 14:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 114)) {
           auto str = _internal_mutable_a_referrerinfo();
@@ -1742,7 +1742,7 @@ uint8_t* RemoteWorkerData::_InternalSerialize(
         _Internal::a_clientinfo(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes a_referrerInfo = 14;
+  // optional bytes a_referrerInfo = 14;
   if (cached_has_bits & 0x00000008u) {
     target = stream->WriteBytesMaybeAliased(
         14, this->_internal_a_referrerinfo(), target);
@@ -1834,13 +1834,6 @@ size_t RemoteWorkerData::RequiredFieldsByteSizeFallback() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_domain());
-  }
-
-  if (_internal_has_a_referrerinfo()) {
-    // required bytes a_referrerInfo = 14;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_referrerinfo());
   }
 
   if (_internal_has_a_storageaccess()) {
@@ -1956,7 +1949,7 @@ size_t RemoteWorkerData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.RemoteWorkerData)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x007f7fdf) ^ 0x007f7fdf) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x007f7fd7) ^ 0x007f7fd7) == 0) {  // All required fields are present.
     // required string a_originalScriptURL = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
@@ -1971,11 +1964,6 @@ size_t RemoteWorkerData::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_domain());
-
-    // required bytes a_referrerInfo = 14;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_referrerinfo());
 
     // required bytes a_storageAccess = 15;
     total_size += 1 +
@@ -2057,8 +2045,15 @@ size_t RemoteWorkerData::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // optional bytes a_overriddenFingerprintingSettings = 18;
+  // optional bytes a_referrerInfo = 14;
   cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000008u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_referrerinfo());
+  }
+
+  // optional bytes a_overriddenFingerprintingSettings = 18;
   if (cached_has_bits & 0x00000020u) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(

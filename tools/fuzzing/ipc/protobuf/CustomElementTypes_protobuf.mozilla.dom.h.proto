@@ -24,14 +24,14 @@ message FormDataTuple {
 }
 
 message CustomElementFormValue {
-  message _mVArrayOfFormDataTuple {
+  message a_type_mVArrayOfFormDataTuple {
     repeated protobuf.mozilla.dom.FormDataTuple a_mVArrayOfFormDataTuple = 1;
   }
   oneof content {
     bytes a_mVvoid_t = 1;
     bytes a_mVBlobImpl = 2;
     string a_mVnsString = 3;
-    _mVArrayOfFormDataTuple mVArrayOfFormDataTuple = 4;
+    a_type_mVArrayOfFormDataTuple a_mVArrayOfFormDataTuple = 4;
   }
 }
 

@@ -18,7 +18,7 @@ message CStringKeyValue {
 }
 
 message PrintData {
-  required bytes a_remotePrintJob = 1;
+  optional bytes a_remotePrintJob = 1;
   required double a_edgeTop = 2;
   required double a_edgeLeft = 3;
   required double a_edgeBottom = 4;

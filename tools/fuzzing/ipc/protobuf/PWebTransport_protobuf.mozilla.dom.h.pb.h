@@ -197,7 +197,7 @@ class UnidirectionalStream final :
     kAOutStreamFieldNumber = 2,
     kAStreamIdFieldNumber = 1,
   };
-  // required bytes a_outStream = 2;
+  // optional bytes a_outStream = 2;
   bool has_a_outstream() const;
   private:
   bool _internal_has_a_outstream() const;
@@ -231,9 +231,6 @@ class UnidirectionalStream final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.UnidirectionalStream)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -548,7 +545,7 @@ class BidirectionalStream final :
     kAOutStreamFieldNumber = 3,
     kAStreamIdFieldNumber = 1,
   };
-  // required bytes a_inStream = 2;
+  // optional bytes a_inStream = 2;
   bool has_a_instream() const;
   private:
   bool _internal_has_a_instream() const;
@@ -566,7 +563,7 @@ class BidirectionalStream final :
   std::string* _internal_mutable_a_instream();
   public:
 
-  // required bytes a_outStream = 3;
+  // optional bytes a_outStream = 3;
   bool has_a_outstream() const;
   private:
   bool _internal_has_a_outstream() const;
@@ -600,9 +597,6 @@ class BidirectionalStream final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.BidirectionalStream)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1320,7 +1314,7 @@ inline void UnidirectionalStream::set_a_streamid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.UnidirectionalStream.a_streamId)
 }
 
-// required bytes a_outStream = 2;
+// optional bytes a_outStream = 2;
 inline bool UnidirectionalStream::_internal_has_a_outstream() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1584,7 +1578,7 @@ inline void BidirectionalStream::set_a_streamid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.BidirectionalStream.a_streamId)
 }
 
-// required bytes a_inStream = 2;
+// optional bytes a_inStream = 2;
 inline bool BidirectionalStream::_internal_has_a_instream() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1652,7 +1646,7 @@ inline void BidirectionalStream::set_allocated_a_instream(std::string* a_instrea
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.BidirectionalStream.a_inStream)
 }
 
-// required bytes a_outStream = 3;
+// optional bytes a_outStream = 3;
 inline bool BidirectionalStream::_internal_has_a_outstream() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

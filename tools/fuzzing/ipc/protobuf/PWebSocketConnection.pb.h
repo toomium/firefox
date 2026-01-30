@@ -210,7 +210,7 @@ class Msg_OnTransportAvailable final :
   enum : int {
     kAASecurityInfoFieldNumber = 1,
   };
-  // required bytes a_aSecurityInfo = 1;
+  // optional bytes a_aSecurityInfo = 1;
   bool has_a_asecurityinfo() const;
   private:
   bool _internal_has_a_asecurityinfo() const;
@@ -1468,7 +1468,7 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_OnTransportAvailable
 
-// required bytes a_aSecurityInfo = 1;
+// optional bytes a_aSecurityInfo = 1;
 inline bool Msg_OnTransportAvailable::_internal_has_a_asecurityinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

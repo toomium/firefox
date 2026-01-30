@@ -1702,7 +1702,7 @@ class IPCTransferable final :
     kACookieJarSettingsFieldNumber = 4,
     kAIsPrivateDataFieldNumber = 2,
   };
-  // required bytes a_dataPrincipal = 3;
+  // optional bytes a_dataPrincipal = 3;
   bool has_a_dataprincipal() const;
   private:
   bool _internal_has_a_dataprincipal() const;
@@ -1738,7 +1738,7 @@ class IPCTransferable final :
   std::string* _internal_mutable_a_contentpolicytype();
   public:
 
-  // required bytes a_referrerInfo = 6;
+  // optional bytes a_referrerInfo = 6;
   bool has_a_referrerinfo() const;
   private:
   bool _internal_has_a_referrerinfo() const;
@@ -3108,7 +3108,7 @@ inline void IPCTransferable::set_a_isprivatedata(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCTransferable.a_isPrivateData)
 }
 
-// required bytes a_dataPrincipal = 3;
+// optional bytes a_dataPrincipal = 3;
 inline bool IPCTransferable::_internal_has_a_dataprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3331,7 +3331,7 @@ inline void IPCTransferable::set_allocated_a_contentpolicytype(std::string* a_co
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCTransferable.a_contentPolicyType)
 }
 
-// required bytes a_referrerInfo = 6;
+// optional bytes a_referrerInfo = 6;
 inline bool IPCTransferable::_internal_has_a_referrerinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

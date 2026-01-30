@@ -2751,7 +2751,7 @@ class Msg_PWebBrowserPersistDocumentConstructor final :
     kAAContextFieldNumber = 3,
     kAActoridFieldNumber = 1,
   };
-  // required bytes a_aBrowser = 2;
+  // optional bytes a_aBrowser = 2;
   bool has_a_abrowser() const;
   private:
   bool _internal_has_a_abrowser() const;
@@ -9056,7 +9056,7 @@ class Msg_GeolocationUpdate final :
   enum : int {
     kAAPositionFieldNumber = 1,
   };
-  // required bytes a_aPosition = 1;
+  // optional bytes a_aPosition = 1;
   bool has_a_aposition() const;
   private:
   bool _internal_has_a_aposition() const;
@@ -14547,7 +14547,7 @@ class Msg_LoadAndRegisterSheet final :
     kAUriFieldNumber = 1,
     kATypeFieldNumber = 2,
   };
-  // required bytes a_uri = 1;
+  // optional bytes a_uri = 1;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -14581,9 +14581,6 @@ class Msg_LoadAndRegisterSheet final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_LoadAndRegisterSheet)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -14712,7 +14709,7 @@ class Msg_UnregisterSheet final :
     kAUriFieldNumber = 1,
     kATypeFieldNumber = 2,
   };
-  // required bytes a_uri = 1;
+  // optional bytes a_uri = 1;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -14746,9 +14743,6 @@ class Msg_UnregisterSheet final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_UnregisterSheet)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -15063,7 +15057,7 @@ class Msg_DomainSetChanged final :
     kAASetTypeFieldNumber = 1,
     kAAChangeTypeFieldNumber = 2,
   };
-  // required bytes a_aDomain = 3;
+  // optional bytes a_aDomain = 3;
   bool has_a_adomain() const;
   private:
   bool _internal_has_a_adomain() const;
@@ -15927,7 +15921,7 @@ class Msg_Push final :
   std::string* _internal_mutable_a_scope();
   public:
 
-  // required bytes a_principal = 2;
+  // optional bytes a_principal = 2;
   bool has_a_principal() const;
   private:
   bool _internal_has_a_principal() const;
@@ -16140,7 +16134,7 @@ class Msg_PushWithData final :
   std::string* _internal_mutable_a_scope();
   public:
 
-  // required bytes a_principal = 2;
+  // optional bytes a_principal = 2;
   bool has_a_principal() const;
   private:
   bool _internal_has_a_principal() const;
@@ -16502,7 +16496,7 @@ class Msg_BlobURLRegistration final :
   std::string* _internal_mutable_a_auri();
   public:
 
-  // required bytes a_aPrincipal = 3;
+  // optional bytes a_aPrincipal = 3;
   bool has_a_aprincipal() const;
   private:
   bool _internal_has_a_aprincipal() const;
@@ -22119,7 +22113,7 @@ class Reply_GetLayoutHistoryState final :
     kAAStateFieldNumber = 1,
     kAAWireframeFieldNumber = 2,
   };
-  // required bytes a_aState = 1;
+  // optional bytes a_aState = 1;
   bool has_a_astate() const;
   private:
   bool _internal_has_a_astate() const;
@@ -23470,7 +23464,7 @@ class Msg_SynchronizeLayoutHistoryState final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required bytes a_aState = 2;
+  // optional bytes a_aState = 2;
   bool has_a_astate() const;
   private:
   bool _internal_has_a_astate() const;
@@ -23491,9 +23485,6 @@ class Msg_SynchronizeLayoutHistoryState final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_SynchronizeLayoutHistoryState)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -26548,7 +26539,7 @@ class Msg_IsSecureURI final :
     kAAURIFieldNumber = 1,
     kAAOriginAttributesFieldNumber = 2,
   };
-  // required bytes a_aURI = 1;
+  // optional bytes a_aURI = 1;
   bool has_a_auri() const;
   private:
   bool _internal_has_a_auri() const;
@@ -26587,9 +26578,6 @@ class Msg_IsSecureURI final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_IsSecureURI)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -26861,7 +26849,7 @@ class Msg_AccumulateMixedContentHSTS final :
     kAAOriginAttributesFieldNumber = 3,
     kAAActiveFieldNumber = 2,
   };
-  // required bytes a_aURI = 1;
+  // optional bytes a_aURI = 1;
   bool has_a_auri() const;
   private:
   bool _internal_has_a_auri() const;
@@ -28912,7 +28900,7 @@ class Msg_PURLClassifierConstructor final :
     kAPrincipalFieldNumber = 2,
     kAActoridFieldNumber = 1,
   };
-  // required bytes a_principal = 2;
+  // optional bytes a_principal = 2;
   bool has_a_principal() const;
   private:
   bool _internal_has_a_principal() const;
@@ -28946,9 +28934,6 @@ class Msg_PURLClassifierConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PURLClassifierConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -29238,7 +29223,7 @@ class Msg_PURLClassifierLocalConstructor final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::IPCURLClassifierFeature >&
       a_features() const;
 
-  // required bytes a_uri = 2;
+  // optional bytes a_uri = 2;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -29272,9 +29257,6 @@ class Msg_PURLClassifierLocalConstructor final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_PURLClassifierLocalConstructor)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -29554,7 +29536,7 @@ class Msg_PURLClassifierLocalByNameConstructor final :
   std::string* _internal_add_a_featurenames();
   public:
 
-  // required bytes a_uri = 2;
+  // optional bytes a_uri = 2;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -30281,7 +30263,7 @@ class Msg_SetURITitle final :
     kAUriFieldNumber = 1,
     kATitleFieldNumber = 2,
   };
-  // required bytes a_uri = 1;
+  // optional bytes a_uri = 1;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -30320,9 +30302,6 @@ class Msg_SetURITitle final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_SetURITitle)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -30456,7 +30435,7 @@ class Msg_LoadURIExternal final :
     kAHasValidUserGestureActivationFieldNumber = 6,
     kANewWindowTargetFieldNumber = 7,
   };
-  // required bytes a_uri = 1;
+  // optional bytes a_uri = 1;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -30474,7 +30453,7 @@ class Msg_LoadURIExternal final :
   std::string* _internal_mutable_a_uri();
   public:
 
-  // required bytes a_triggeringPrincipal = 2;
+  // optional bytes a_triggeringPrincipal = 2;
   bool has_a_triggeringprincipal() const;
   private:
   bool _internal_has_a_triggeringprincipal() const;
@@ -30492,7 +30471,7 @@ class Msg_LoadURIExternal final :
   std::string* _internal_mutable_a_triggeringprincipal();
   public:
 
-  // required bytes a_redirectPrincipal = 3;
+  // optional bytes a_redirectPrincipal = 3;
   bool has_a_redirectprincipal() const;
   private:
   bool _internal_has_a_redirectprincipal() const;
@@ -31345,7 +31324,7 @@ class Msg_PExternalHelperAppConstructor final :
     kAAWasFileChannelFieldNumber = 10,
     kAAContentLengthFieldNumber = 9,
   };
-  // required bytes a_uri = 2;
+  // optional bytes a_uri = 2;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -31417,7 +31396,7 @@ class Msg_PExternalHelperAppConstructor final :
   std::string* _internal_mutable_a_acontentdispositionfilename();
   public:
 
-  // required bytes a_aReferrer = 11;
+  // optional bytes a_aReferrer = 11;
   bool has_a_areferrer() const;
   private:
   bool _internal_has_a_areferrer() const;
@@ -35360,7 +35339,7 @@ class Msg_CopyFavicon final :
     kANewURIFieldNumber = 2,
     kAIsPrivateFieldNumber = 3,
   };
-  // required bytes a_oldURI = 1;
+  // optional bytes a_oldURI = 1;
   bool has_a_olduri() const;
   private:
   bool _internal_has_a_olduri() const;
@@ -35378,7 +35357,7 @@ class Msg_CopyFavicon final :
   std::string* _internal_mutable_a_olduri();
   public:
 
-  // required bytes a_newURI = 2;
+  // optional bytes a_newURI = 2;
   bool has_a_newuri() const;
   private:
   bool _internal_has_a_newuri() const;
@@ -35412,9 +35391,6 @@ class Msg_CopyFavicon final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_CopyFavicon)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -37441,7 +37417,7 @@ class Msg_PContentPermissionRequestConstructor final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::PermissionRequest >&
       a_arequests() const;
 
-  // required bytes a_aPrincipal = 3;
+  // optional bytes a_aPrincipal = 3;
   bool has_a_aprincipal() const;
   private:
   bool _internal_has_a_aprincipal() const;
@@ -37459,7 +37435,7 @@ class Msg_PContentPermissionRequestConstructor final :
   std::string* _internal_mutable_a_aprincipal();
   public:
 
-  // required bytes a_aTopLevelPrincipal = 4;
+  // optional bytes a_aTopLevelPrincipal = 4;
   bool has_a_atoplevelprincipal() const;
   private:
   bool _internal_has_a_atoplevelprincipal() const;
@@ -39543,7 +39519,7 @@ class Msg_GetHyphDict final :
   enum : int {
     kAAURIFieldNumber = 1,
   };
-  // required bytes a_aURI = 1;
+  // optional bytes a_aURI = 1;
   bool has_a_auri() const;
   private:
   bool _internal_has_a_auri() const;
@@ -39907,7 +39883,7 @@ class Msg_CreateWindow final :
   std::string* _internal_mutable_a_anewtab();
   public:
 
-  // required bytes a_aURIToLoad = 9;
+  // optional bytes a_aURIToLoad = 9;
   bool has_a_auritoload() const;
   private:
   bool _internal_has_a_auritoload() const;
@@ -39961,7 +39937,7 @@ class Msg_CreateWindow final :
   std::string* _internal_mutable_a_amodifiers();
   public:
 
-  // required bytes a_aTriggeringPrincipal = 12;
+  // optional bytes a_aTriggeringPrincipal = 12;
   bool has_a_atriggeringprincipal() const;
   private:
   bool _internal_has_a_atriggeringprincipal() const;
@@ -39979,7 +39955,7 @@ class Msg_CreateWindow final :
   std::string* _internal_mutable_a_atriggeringprincipal();
   public:
 
-  // required bytes a_aCsp = 13;
+  // optional bytes a_aCsp = 13;
   bool has_a_acsp() const;
   private:
   bool _internal_has_a_acsp() const;
@@ -39997,7 +39973,7 @@ class Msg_CreateWindow final :
   std::string* _internal_mutable_a_acsp();
   public:
 
-  // required bytes a_aReferrerInfo = 14;
+  // optional bytes a_aReferrerInfo = 14;
   bool has_a_areferrerinfo() const;
   private:
   bool _internal_has_a_areferrerinfo() const;
@@ -40469,7 +40445,7 @@ class Msg_CreateWindowInDifferentProcess final :
   std::string* _internal_mutable_a_aparent();
   public:
 
-  // required bytes a_aURIToLoad = 6;
+  // optional bytes a_aURIToLoad = 6;
   bool has_a_auritoload() const;
   private:
   bool _internal_has_a_auritoload() const;
@@ -40541,7 +40517,7 @@ class Msg_CreateWindowInDifferentProcess final :
   std::string* _internal_mutable_a_aname();
   public:
 
-  // required bytes a_aTriggeringPrincipal = 10;
+  // optional bytes a_aTriggeringPrincipal = 10;
   bool has_a_atriggeringprincipal() const;
   private:
   bool _internal_has_a_atriggeringprincipal() const;
@@ -40559,7 +40535,7 @@ class Msg_CreateWindowInDifferentProcess final :
   std::string* _internal_mutable_a_atriggeringprincipal();
   public:
 
-  // required bytes a_aCsp = 11;
+  // optional bytes a_aCsp = 11;
   bool has_a_acsp() const;
   private:
   bool _internal_has_a_acsp() const;
@@ -40577,7 +40553,7 @@ class Msg_CreateWindowInDifferentProcess final :
   std::string* _internal_mutable_a_acsp();
   public:
 
-  // required bytes a_aReferrerInfo = 12;
+  // optional bytes a_aReferrerInfo = 12;
   bool has_a_areferrerinfo() const;
   private:
   bool _internal_has_a_areferrerinfo() const;
@@ -40844,7 +40820,7 @@ class Msg_NotifyPushObservers final :
   std::string* _internal_mutable_a_scope();
   public:
 
-  // required bytes a_principal = 2;
+  // optional bytes a_principal = 2;
   bool has_a_principal() const;
   private:
   bool _internal_has_a_principal() const;
@@ -41057,7 +41033,7 @@ class Msg_NotifyPushObserversWithData final :
   std::string* _internal_mutable_a_scope();
   public:
 
-  // required bytes a_principal = 2;
+  // optional bytes a_principal = 2;
   bool has_a_principal() const;
   private:
   bool _internal_has_a_principal() const;
@@ -41587,7 +41563,7 @@ class Msg_StoreAndBroadcastBlobURLRegistration final :
   std::string* _internal_mutable_a_url();
   public:
 
-  // required bytes a_principal = 3;
+  // optional bytes a_principal = 3;
   bool has_a_principal() const;
   private:
   bool _internal_has_a_principal() const;
@@ -43274,7 +43250,7 @@ class Msg_AddCertException final :
     kAAPortFieldNumber = 3,
     kAAIsTemporaryFieldNumber = 5,
   };
-  // required bytes a_aCert = 1;
+  // optional bytes a_aCert = 1;
   bool has_a_acert() const;
   private:
   bool _internal_has_a_acert() const;
@@ -43637,7 +43613,7 @@ class Msg_AutomaticStorageAccessPermissionCanBeGranted final :
   enum : int {
     kAAPrincipalFieldNumber = 1,
   };
-  // required bytes a_aPrincipal = 1;
+  // optional bytes a_aPrincipal = 1;
   bool has_a_aprincipal() const;
   private:
   bool _internal_has_a_aprincipal() const;
@@ -43950,7 +43926,7 @@ class Msg_StorageAccessPermissionGrantedForOrigin final :
   std::string* _internal_mutable_a_aparentcontext();
   public:
 
-  // required bytes a_aTrackingPrincipal = 3;
+  // optional bytes a_aTrackingPrincipal = 3;
   bool has_a_atrackingprincipal() const;
   private:
   bool _internal_has_a_atrackingprincipal() const;
@@ -44346,7 +44322,7 @@ class Msg_CompleteAllowAccessFor final :
   std::string* _internal_mutable_a_aparentcontext();
   public:
 
-  // required bytes a_aTrackingPrincipal = 3;
+  // optional bytes a_aTrackingPrincipal = 3;
   bool has_a_atrackingprincipal() const;
   private:
   bool _internal_has_a_atrackingprincipal() const;
@@ -44711,7 +44687,7 @@ class Msg_SetAllowStorageAccessRequestFlag final :
     kAAEmbeddingPrincipalFieldNumber = 1,
     kAAEmbeddedOriginFieldNumber = 2,
   };
-  // required bytes a_aEmbeddingPrincipal = 1;
+  // optional bytes a_aEmbeddingPrincipal = 1;
   bool has_a_aembeddingprincipal() const;
   private:
   bool _internal_has_a_aembeddingprincipal() const;
@@ -44729,7 +44705,7 @@ class Msg_SetAllowStorageAccessRequestFlag final :
   std::string* _internal_mutable_a_aembeddingprincipal();
   public:
 
-  // required bytes a_aEmbeddedOrigin = 2;
+  // optional bytes a_aEmbeddedOrigin = 2;
   bool has_a_aembeddedorigin() const;
   private:
   bool _internal_has_a_aembeddedorigin() const;
@@ -44750,9 +44726,6 @@ class Msg_SetAllowStorageAccessRequestFlag final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_SetAllowStorageAccessRequestFlag)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -45023,7 +44996,7 @@ class Msg_TestAllowStorageAccessRequestFlag final :
     kAAEmbeddedPrincipalFieldNumber = 1,
     kAAEmbeddingOriginFieldNumber = 2,
   };
-  // required bytes a_aEmbeddedPrincipal = 1;
+  // optional bytes a_aEmbeddedPrincipal = 1;
   bool has_a_aembeddedprincipal() const;
   private:
   bool _internal_has_a_aembeddedprincipal() const;
@@ -45041,7 +45014,7 @@ class Msg_TestAllowStorageAccessRequestFlag final :
   std::string* _internal_mutable_a_aembeddedprincipal();
   public:
 
-  // required bytes a_aEmbeddingOrigin = 2;
+  // optional bytes a_aEmbeddingOrigin = 2;
   bool has_a_aembeddingorigin() const;
   private:
   bool _internal_has_a_aembeddingorigin() const;
@@ -45062,9 +45035,6 @@ class Msg_TestAllowStorageAccessRequestFlag final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_TestAllowStorageAccessRequestFlag)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -45334,7 +45304,7 @@ class Msg_StoreUserInteractionAsPermission final :
   enum : int {
     kAAPrincipalFieldNumber = 1,
   };
-  // required bytes a_aPrincipal = 1;
+  // optional bytes a_aPrincipal = 1;
   bool has_a_aprincipal() const;
   private:
   bool _internal_has_a_aprincipal() const;
@@ -45500,7 +45470,7 @@ class Msg_TestCookiePermissionDecided final :
   std::string* _internal_mutable_a_acontext();
   public:
 
-  // required bytes a_aPrincipal = 2;
+  // optional bytes a_aPrincipal = 2;
   bool has_a_aprincipal() const;
   private:
   bool _internal_has_a_aprincipal() const;
@@ -45521,9 +45491,6 @@ class Msg_TestCookiePermissionDecided final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_TestCookiePermissionDecided)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -45794,7 +45761,7 @@ class Msg_TestStorageAccessPermission final :
     kAAEmbeddingPrincipalFieldNumber = 1,
     kAAEmbeddedOriginFieldNumber = 2,
   };
-  // required bytes a_aEmbeddingPrincipal = 1;
+  // optional bytes a_aEmbeddingPrincipal = 1;
   bool has_a_aembeddingprincipal() const;
   private:
   bool _internal_has_a_aembeddingprincipal() const;
@@ -45833,9 +45800,6 @@ class Msg_TestStorageAccessPermission final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_TestStorageAccessPermission)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -48846,7 +48810,7 @@ class Msg_HistoryCommit final :
   std::string* _internal_mutable_a_achangeid();
   public:
 
-  // required bytes a_aPartitionedPrincipal = 8;
+  // optional bytes a_aPartitionedPrincipal = 8;
   bool has_a_apartitionedprincipal() const;
   private:
   bool _internal_has_a_apartitionedprincipal() const;
@@ -49461,7 +49425,7 @@ class Msg_BlobURLDataRequest final :
   std::string* _internal_mutable_a_atriggeringprincipal();
   public:
 
-  // required bytes a_aLoadingPrincipal = 3;
+  // optional bytes a_aLoadingPrincipal = 3;
   bool has_a_aloadingprincipal() const;
   private:
   bool _internal_has_a_aloadingprincipal() const;
@@ -51545,7 +51509,7 @@ class Msg_NotifyPushSubscriptionModifiedObservers final :
   std::string* _internal_mutable_a_scope();
   public:
 
-  // required bytes a_principal = 2;
+  // optional bytes a_principal = 2;
   bool has_a_principal() const;
   private:
   bool _internal_has_a_principal() const;
@@ -51566,9 +51530,6 @@ class Msg_NotifyPushSubscriptionModifiedObservers final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PContent.Msg_NotifyPushSubscriptionModifiedObservers)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -51717,7 +51678,7 @@ class Msg_PushError final :
   std::string* _internal_mutable_a_scope();
   public:
 
-  // required bytes a_principal = 2;
+  // optional bytes a_principal = 2;
   bool has_a_principal() const;
   private:
   bool _internal_has_a_principal() const;
@@ -57028,7 +56989,7 @@ class Msg_GetSystemIcon final :
   enum : int {
     kAAURIFieldNumber = 1,
   };
-  // required bytes a_aURI = 1;
+  // optional bytes a_aURI = 1;
   bool has_a_auri() const;
   private:
   bool _internal_has_a_auri() const;
@@ -59819,7 +59780,7 @@ inline void Msg_PWebBrowserPersistDocumentConstructor::set_a_actorid(int64_t val
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PWebBrowserPersistDocumentConstructor.a_actorid)
 }
 
-// required bytes a_aBrowser = 2;
+// optional bytes a_aBrowser = 2;
 inline bool Msg_PWebBrowserPersistDocumentConstructor::_internal_has_a_abrowser() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -63964,7 +63925,7 @@ inline void Reply_CollectScrollingMetrics::set_a_scrolldurationms(uint32_t value
 
 // Msg_GeolocationUpdate
 
-// required bytes a_aPosition = 1;
+// optional bytes a_aPosition = 1;
 inline bool Msg_GeolocationUpdate::_internal_has_a_aposition() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -66956,7 +66917,7 @@ inline void Msg_NotifyProcessPriorityChanged::set_allocated_a_priority(std::stri
 
 // Msg_LoadAndRegisterSheet
 
-// required bytes a_uri = 1;
+// optional bytes a_uri = 1;
 inline bool Msg_LoadAndRegisterSheet::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -67056,7 +67017,7 @@ inline void Msg_LoadAndRegisterSheet::set_a_type(uint32_t value) {
 
 // Msg_UnregisterSheet
 
-// required bytes a_uri = 1;
+// optional bytes a_uri = 1;
 inline bool Msg_UnregisterSheet::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -67380,7 +67341,7 @@ inline void Msg_DomainSetChanged::set_a_achangetype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_DomainSetChanged.a_aChangeType)
 }
 
-// required bytes a_aDomain = 3;
+// optional bytes a_aDomain = 3;
 inline bool Msg_DomainSetChanged::_internal_has_a_adomain() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -67676,7 +67637,7 @@ inline void Msg_Push::set_allocated_a_scope(std::string* a_scope) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_Push.a_scope)
 }
 
-// required bytes a_principal = 2;
+// optional bytes a_principal = 2;
 inline bool Msg_Push::_internal_has_a_principal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -67884,7 +67845,7 @@ inline void Msg_PushWithData::set_allocated_a_scope(std::string* a_scope) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PushWithData.a_scope)
 }
 
-// required bytes a_principal = 2;
+// optional bytes a_principal = 2;
 inline bool Msg_PushWithData::_internal_has_a_principal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -68385,7 +68346,7 @@ inline void Msg_BlobURLRegistration::set_allocated_a_ablob(::protobuf::mozilla::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_BlobURLRegistration.a_aBlob)
 }
 
-// required bytes a_aPrincipal = 3;
+// optional bytes a_aPrincipal = 3;
 inline bool Msg_BlobURLRegistration::_internal_has_a_aprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -71695,7 +71656,7 @@ inline void Msg_GetLayoutHistoryState::set_allocated_a_acontext(std::string* a_a
 
 // Reply_GetLayoutHistoryState
 
-// required bytes a_aState = 1;
+// optional bytes a_aState = 1;
 inline bool Reply_GetLayoutHistoryState::_internal_has_a_astate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -72399,7 +72360,7 @@ inline void Msg_SynchronizeLayoutHistoryState::set_allocated_a_acontext(std::str
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_SynchronizeLayoutHistoryState.a_aContext)
 }
 
-// required bytes a_aState = 2;
+// optional bytes a_aState = 2;
 inline bool Msg_SynchronizeLayoutHistoryState::_internal_has_a_astate() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -74101,7 +74062,7 @@ inline void Msg_InitCrashReporter::set_allocated_a_ainitargs(::protobuf::CrashRe
 
 // Msg_IsSecureURI
 
-// required bytes a_aURI = 1;
+// optional bytes a_aURI = 1;
 inline bool Msg_IsSecureURI::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -74273,7 +74234,7 @@ inline void Reply_IsSecureURI::set_a_issecureuri(bool value) {
 
 // Msg_AccumulateMixedContentHSTS
 
-// required bytes a_aURI = 1;
+// optional bytes a_aURI = 1;
 inline bool Msg_AccumulateMixedContentHSTS::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -74780,7 +74741,7 @@ inline void Msg_PURLClassifierConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PURLClassifierConstructor.a_actorid)
 }
 
-// required bytes a_principal = 2;
+// optional bytes a_principal = 2;
 inline bool Msg_PURLClassifierConstructor::_internal_has_a_principal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -74912,7 +74873,7 @@ inline void Msg_PURLClassifierLocalConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PURLClassifierLocalConstructor.a_actorid)
 }
 
-// required bytes a_uri = 2;
+// optional bytes a_uri = 2;
 inline bool Msg_PURLClassifierLocalConstructor::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -75053,7 +75014,7 @@ inline void Msg_PURLClassifierLocalByNameConstructor::set_a_actorid(int64_t valu
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PURLClassifierLocalByNameConstructor.a_actorid)
 }
 
-// required bytes a_uri = 2;
+// optional bytes a_uri = 2;
 inline bool Msg_PURLClassifierLocalByNameConstructor::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -75387,7 +75348,7 @@ Msg_StartVisitedQueries::mutable_a_uri() {
 
 // Msg_SetURITitle
 
-// required bytes a_uri = 1;
+// optional bytes a_uri = 1;
 inline bool Msg_SetURITitle::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -75527,7 +75488,7 @@ inline void Msg_SetURITitle::set_allocated_a_title(std::string* a_title) {
 
 // Msg_LoadURIExternal
 
-// required bytes a_uri = 1;
+// optional bytes a_uri = 1;
 inline bool Msg_LoadURIExternal::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -75595,7 +75556,7 @@ inline void Msg_LoadURIExternal::set_allocated_a_uri(std::string* a_uri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_LoadURIExternal.a_uri)
 }
 
-// required bytes a_triggeringPrincipal = 2;
+// optional bytes a_triggeringPrincipal = 2;
 inline bool Msg_LoadURIExternal::_internal_has_a_triggeringprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -75663,7 +75624,7 @@ inline void Msg_LoadURIExternal::set_allocated_a_triggeringprincipal(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_LoadURIExternal.a_triggeringPrincipal)
 }
 
-// required bytes a_redirectPrincipal = 3;
+// optional bytes a_redirectPrincipal = 3;
 inline bool Msg_LoadURIExternal::_internal_has_a_redirectprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -76285,7 +76246,7 @@ inline void Msg_PExternalHelperAppConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.a_actorid)
 }
 
-// required bytes a_uri = 2;
+// optional bytes a_uri = 2;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -76756,7 +76717,7 @@ inline void Msg_PExternalHelperAppConstructor::set_a_awasfilechannel(bool value)
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_PExternalHelperAppConstructor.a_aWasFileChannel)
 }
 
-// required bytes a_aReferrer = 11;
+// optional bytes a_aReferrer = 11;
 inline bool Msg_PExternalHelperAppConstructor::_internal_has_a_areferrer() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -79302,7 +79263,7 @@ Reply_GetIconForExtension::mutable_a_bits() {
 
 // Msg_CopyFavicon
 
-// required bytes a_oldURI = 1;
+// optional bytes a_oldURI = 1;
 inline bool Msg_CopyFavicon::_internal_has_a_olduri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -79370,7 +79331,7 @@ inline void Msg_CopyFavicon::set_allocated_a_olduri(std::string* a_olduri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CopyFavicon.a_oldURI)
 }
 
-// required bytes a_newURI = 2;
+// optional bytes a_newURI = 2;
 inline bool Msg_CopyFavicon::_internal_has_a_newuri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -80196,7 +80157,7 @@ Msg_PContentPermissionRequestConstructor::a_arequests() const {
   return _impl_.a_arequests_;
 }
 
-// required bytes a_aPrincipal = 3;
+// optional bytes a_aPrincipal = 3;
 inline bool Msg_PContentPermissionRequestConstructor::_internal_has_a_aprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -80264,7 +80225,7 @@ inline void Msg_PContentPermissionRequestConstructor::set_allocated_a_aprincipal
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PContentPermissionRequestConstructor.a_aPrincipal)
 }
 
-// required bytes a_aTopLevelPrincipal = 4;
+// optional bytes a_aTopLevelPrincipal = 4;
 inline bool Msg_PContentPermissionRequestConstructor::_internal_has_a_atoplevelprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -81256,7 +81217,7 @@ inline void Msg_StartCmapLoading::set_a_astartindex(uint32_t value) {
 
 // Msg_GetHyphDict
 
-// required bytes a_aURI = 1;
+// optional bytes a_aURI = 1;
 inline bool Msg_GetHyphDict::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -81744,7 +81705,7 @@ inline void Msg_CreateWindow::set_a_atoplevelcreatedbycontent(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_CreateWindow.a_aTopLevelCreatedByContent)
 }
 
-// required bytes a_aURIToLoad = 9;
+// optional bytes a_aURIToLoad = 9;
 inline bool Msg_CreateWindow::_internal_has_a_auritoload() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -81948,7 +81909,7 @@ inline void Msg_CreateWindow::set_allocated_a_amodifiers(std::string* a_amodifie
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CreateWindow.a_aModifiers)
 }
 
-// required bytes a_aTriggeringPrincipal = 12;
+// optional bytes a_aTriggeringPrincipal = 12;
 inline bool Msg_CreateWindow::_internal_has_a_atriggeringprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -82016,7 +81977,7 @@ inline void Msg_CreateWindow::set_allocated_a_atriggeringprincipal(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CreateWindow.a_aTriggeringPrincipal)
 }
 
-// required bytes a_aCsp = 13;
+// optional bytes a_aCsp = 13;
 inline bool Msg_CreateWindow::_internal_has_a_acsp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -82084,7 +82045,7 @@ inline void Msg_CreateWindow::set_allocated_a_acsp(std::string* a_acsp) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CreateWindow.a_aCsp)
 }
 
-// required bytes a_aReferrerInfo = 14;
+// optional bytes a_aReferrerInfo = 14;
 inline bool Msg_CreateWindow::_internal_has_a_areferrerinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -82591,7 +82552,7 @@ inline void Msg_CreateWindowInDifferentProcess::set_a_atoplevelcreatedbycontent(
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_CreateWindowInDifferentProcess.a_aTopLevelCreatedByContent)
 }
 
-// required bytes a_aURIToLoad = 6;
+// optional bytes a_aURIToLoad = 6;
 inline bool Msg_CreateWindowInDifferentProcess::_internal_has_a_auritoload() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -82863,7 +82824,7 @@ inline void Msg_CreateWindowInDifferentProcess::set_allocated_a_aname(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CreateWindowInDifferentProcess.a_aName)
 }
 
-// required bytes a_aTriggeringPrincipal = 10;
+// optional bytes a_aTriggeringPrincipal = 10;
 inline bool Msg_CreateWindowInDifferentProcess::_internal_has_a_atriggeringprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -82931,7 +82892,7 @@ inline void Msg_CreateWindowInDifferentProcess::set_allocated_a_atriggeringprinc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CreateWindowInDifferentProcess.a_aTriggeringPrincipal)
 }
 
-// required bytes a_aCsp = 11;
+// optional bytes a_aCsp = 11;
 inline bool Msg_CreateWindowInDifferentProcess::_internal_has_a_acsp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
@@ -82999,7 +82960,7 @@ inline void Msg_CreateWindowInDifferentProcess::set_allocated_a_acsp(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_CreateWindowInDifferentProcess.a_aCsp)
 }
 
-// required bytes a_aReferrerInfo = 12;
+// optional bytes a_aReferrerInfo = 12;
 inline bool Msg_CreateWindowInDifferentProcess::_internal_has_a_areferrerinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
@@ -83263,7 +83224,7 @@ inline void Msg_NotifyPushObservers::set_allocated_a_scope(std::string* a_scope)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_NotifyPushObservers.a_scope)
 }
 
-// required bytes a_principal = 2;
+// optional bytes a_principal = 2;
 inline bool Msg_NotifyPushObservers::_internal_has_a_principal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -83471,7 +83432,7 @@ inline void Msg_NotifyPushObserversWithData::set_allocated_a_scope(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_NotifyPushObserversWithData.a_scope)
 }
 
-// required bytes a_principal = 2;
+// optional bytes a_principal = 2;
 inline bool Msg_NotifyPushObserversWithData::_internal_has_a_principal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -84060,7 +84021,7 @@ inline void Msg_StoreAndBroadcastBlobURLRegistration::set_allocated_a_blob(::pro
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_StoreAndBroadcastBlobURLRegistration.a_blob)
 }
 
-// required bytes a_principal = 3;
+// optional bytes a_principal = 3;
 inline bool Msg_StoreAndBroadcastBlobURLRegistration::_internal_has_a_principal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -84962,7 +84923,7 @@ inline void Msg_BHRThreadHang::set_allocated_a_ahangdetails(::protobuf::mozilla:
 
 // Msg_AddCertException
 
-// required bytes a_aCert = 1;
+// optional bytes a_aCert = 1;
 inline bool Msg_AddCertException::_internal_has_a_acert() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -85298,7 +85259,7 @@ inline void Reply_AddCertException::set_allocated_a_success(std::string* a_succe
 
 // Msg_AutomaticStorageAccessPermissionCanBeGranted
 
-// required bytes a_aPrincipal = 1;
+// optional bytes a_aPrincipal = 1;
 inline bool Msg_AutomaticStorageAccessPermissionCanBeGranted::_internal_has_a_aprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -85498,7 +85459,7 @@ inline void Msg_StorageAccessPermissionGrantedForOrigin::set_allocated_a_aparent
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_StorageAccessPermissionGrantedForOrigin.a_aParentContext)
 }
 
-// required bytes a_aTrackingPrincipal = 3;
+// optional bytes a_aTrackingPrincipal = 3;
 inline bool Msg_StorageAccessPermissionGrantedForOrigin::_internal_has_a_atrackingprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -85890,7 +85851,7 @@ inline void Msg_CompleteAllowAccessFor::set_a_atoplevelwindowid(uint64_t value) 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_CompleteAllowAccessFor.a_aTopLevelWindowId)
 }
 
-// required bytes a_aTrackingPrincipal = 3;
+// optional bytes a_aTrackingPrincipal = 3;
 inline bool Msg_CompleteAllowAccessFor::_internal_has_a_atrackingprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -86198,7 +86159,7 @@ inline void Reply_CompleteAllowAccessFor::set_allocated_a_choice(std::string* a_
 
 // Msg_SetAllowStorageAccessRequestFlag
 
-// required bytes a_aEmbeddingPrincipal = 1;
+// optional bytes a_aEmbeddingPrincipal = 1;
 inline bool Msg_SetAllowStorageAccessRequestFlag::_internal_has_a_aembeddingprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -86266,7 +86227,7 @@ inline void Msg_SetAllowStorageAccessRequestFlag::set_allocated_a_aembeddingprin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_SetAllowStorageAccessRequestFlag.a_aEmbeddingPrincipal)
 }
 
-// required bytes a_aEmbeddedOrigin = 2;
+// optional bytes a_aEmbeddedOrigin = 2;
 inline bool Msg_SetAllowStorageAccessRequestFlag::_internal_has_a_aembeddedorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -86370,7 +86331,7 @@ inline void Reply_SetAllowStorageAccessRequestFlag::set_a_success(bool value) {
 
 // Msg_TestAllowStorageAccessRequestFlag
 
-// required bytes a_aEmbeddedPrincipal = 1;
+// optional bytes a_aEmbeddedPrincipal = 1;
 inline bool Msg_TestAllowStorageAccessRequestFlag::_internal_has_a_aembeddedprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -86438,7 +86399,7 @@ inline void Msg_TestAllowStorageAccessRequestFlag::set_allocated_a_aembeddedprin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_TestAllowStorageAccessRequestFlag.a_aEmbeddedPrincipal)
 }
 
-// required bytes a_aEmbeddingOrigin = 2;
+// optional bytes a_aEmbeddingOrigin = 2;
 inline bool Msg_TestAllowStorageAccessRequestFlag::_internal_has_a_aembeddingorigin() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -86542,7 +86503,7 @@ inline void Reply_TestAllowStorageAccessRequestFlag::set_a_success(bool value) {
 
 // Msg_StoreUserInteractionAsPermission
 
-// required bytes a_aPrincipal = 1;
+// optional bytes a_aPrincipal = 1;
 inline bool Msg_StoreUserInteractionAsPermission::_internal_has_a_aprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -86682,7 +86643,7 @@ inline void Msg_TestCookiePermissionDecided::set_allocated_a_acontext(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_TestCookiePermissionDecided.a_aContext)
 }
 
-// required bytes a_aPrincipal = 2;
+// optional bytes a_aPrincipal = 2;
 inline bool Msg_TestCookiePermissionDecided::_internal_has_a_aprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -86786,7 +86747,7 @@ inline void Reply_TestCookiePermissionDecided::set_a_allowed(bool value) {
 
 // Msg_TestStorageAccessPermission
 
-// required bytes a_aEmbeddingPrincipal = 1;
+// optional bytes a_aEmbeddingPrincipal = 1;
 inline bool Msg_TestStorageAccessPermission::_internal_has_a_aembeddingprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -89210,7 +89171,7 @@ inline void Msg_HistoryCommit::set_a_acachekey(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PContent.Msg_HistoryCommit.a_aCacheKey)
 }
 
-// required bytes a_aPartitionedPrincipal = 8;
+// optional bytes a_aPartitionedPrincipal = 8;
 inline bool Msg_HistoryCommit::_internal_has_a_apartitionedprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -89634,7 +89595,7 @@ inline void Msg_BlobURLDataRequest::set_allocated_a_atriggeringprincipal(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_BlobURLDataRequest.a_aTriggeringPrincipal)
 }
 
-// required bytes a_aLoadingPrincipal = 3;
+// optional bytes a_aLoadingPrincipal = 3;
 inline bool Msg_BlobURLDataRequest::_internal_has_a_aloadingprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -91743,7 +91704,7 @@ inline void Msg_NotifyPushSubscriptionModifiedObservers::set_allocated_a_scope(s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_NotifyPushSubscriptionModifiedObservers.a_scope)
 }
 
-// required bytes a_principal = 2;
+// optional bytes a_principal = 2;
 inline bool Msg_NotifyPushSubscriptionModifiedObservers::_internal_has_a_principal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -91883,7 +91844,7 @@ inline void Msg_PushError::set_allocated_a_scope(std::string* a_scope) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PContent.Msg_PushError.a_scope)
 }
 
-// required bytes a_principal = 2;
+// optional bytes a_principal = 2;
 inline bool Msg_PushError::_internal_has_a_principal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -95757,7 +95718,7 @@ inline void Msg_SetContainerFeaturePolicy::set_allocated_a_acontainerfeaturepoli
 
 // Msg_GetSystemIcon
 
-// required bytes a_aURI = 1;
+// optional bytes a_aURI = 1;
 inline bool Msg_GetSystemIcon::_internal_has_a_auri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;

@@ -3177,7 +3177,7 @@ class InternalResponseMetadata::_Internal {
     (*has_bits)[0] |= 256u;
   }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x000005ff) ^ 0x000005ff) != 0;
+    return ((has_bits[0] & 0x000005df) ^ 0x000005df) != 0;
   }
 };
 
@@ -3520,7 +3520,7 @@ const char* InternalResponseMetadata::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_securityInfo = 9;
+      // optional bytes a_securityInfo = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           auto str = _internal_mutable_a_securityinfo();
@@ -3645,7 +3645,7 @@ uint8_t* InternalResponseMetadata::_InternalSerialize(
         8, this->_internal_a_alternativedatatype(), target);
   }
 
-  // required bytes a_securityInfo = 9;
+  // optional bytes a_securityInfo = 9;
   if (cached_has_bits & 0x00000020u) {
     target = stream->WriteBytesMaybeAliased(
         9, this->_internal_a_securityinfo(), target);
@@ -3723,13 +3723,6 @@ size_t InternalResponseMetadata::RequiredFieldsByteSizeFallback() const {
         this->_internal_a_alternativedatatype());
   }
 
-  if (_internal_has_a_securityinfo()) {
-    // required bytes a_securityInfo = 9;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_securityinfo());
-  }
-
   if (_internal_has_a_bodybloburispec()) {
     // required string a_bodyBlobURISpec = 11;
     total_size += 1 +
@@ -3762,7 +3755,7 @@ size_t InternalResponseMetadata::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.InternalResponseMetadata)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x000005ff) ^ 0x000005ff) == 0) {  // All required fields are present.
+  if (((_impl_._has_bits_[0] & 0x000005df) ^ 0x000005df) == 0) {  // All required fields are present.
     // required bytes a_type = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
@@ -3787,11 +3780,6 @@ size_t InternalResponseMetadata::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_a_alternativedatatype());
-
-    // required bytes a_securityInfo = 9;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_securityinfo());
 
     // required string a_bodyBlobURISpec = 11;
     total_size += 1 +
@@ -3833,8 +3821,15 @@ size_t InternalResponseMetadata::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // optional .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 10;
+  // optional bytes a_securityInfo = 9;
   cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000020u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_securityinfo());
+  }
+
+  // optional .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 10;
   if (cached_has_bits & 0x00000200u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(

@@ -61,18 +61,18 @@ extern CursorRequestParamsDefaultTypeInternal _CursorRequestParams_default_insta
 class CursorResponse;
 struct CursorResponseDefaultTypeInternal;
 extern CursorResponseDefaultTypeInternal _CursorResponse_default_instance_;
-class CursorResponse__mVArrayOfIndexCursorResponse;
-struct CursorResponse__mVArrayOfIndexCursorResponseDefaultTypeInternal;
-extern CursorResponse__mVArrayOfIndexCursorResponseDefaultTypeInternal _CursorResponse__mVArrayOfIndexCursorResponse_default_instance_;
-class CursorResponse__mVArrayOfIndexKeyCursorResponse;
-struct CursorResponse__mVArrayOfIndexKeyCursorResponseDefaultTypeInternal;
-extern CursorResponse__mVArrayOfIndexKeyCursorResponseDefaultTypeInternal _CursorResponse__mVArrayOfIndexKeyCursorResponse_default_instance_;
-class CursorResponse__mVArrayOfObjectStoreCursorResponse;
-struct CursorResponse__mVArrayOfObjectStoreCursorResponseDefaultTypeInternal;
-extern CursorResponse__mVArrayOfObjectStoreCursorResponseDefaultTypeInternal _CursorResponse__mVArrayOfObjectStoreCursorResponse_default_instance_;
-class CursorResponse__mVArrayOfObjectStoreKeyCursorResponse;
-struct CursorResponse__mVArrayOfObjectStoreKeyCursorResponseDefaultTypeInternal;
-extern CursorResponse__mVArrayOfObjectStoreKeyCursorResponseDefaultTypeInternal _CursorResponse__mVArrayOfObjectStoreKeyCursorResponse_default_instance_;
+class CursorResponse_a_type_mVArrayOfIndexCursorResponse;
+struct CursorResponse_a_type_mVArrayOfIndexCursorResponseDefaultTypeInternal;
+extern CursorResponse_a_type_mVArrayOfIndexCursorResponseDefaultTypeInternal _CursorResponse_a_type_mVArrayOfIndexCursorResponse_default_instance_;
+class CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse;
+struct CursorResponse_a_type_mVArrayOfIndexKeyCursorResponseDefaultTypeInternal;
+extern CursorResponse_a_type_mVArrayOfIndexKeyCursorResponseDefaultTypeInternal _CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse_default_instance_;
+class CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse;
+struct CursorResponse_a_type_mVArrayOfObjectStoreCursorResponseDefaultTypeInternal;
+extern CursorResponse_a_type_mVArrayOfObjectStoreCursorResponseDefaultTypeInternal _CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse_default_instance_;
+class CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse;
+struct CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponseDefaultTypeInternal;
+extern CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponseDefaultTypeInternal _CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse_default_instance_;
 class IndexCursorResponse;
 struct IndexCursorResponseDefaultTypeInternal;
 extern IndexCursorResponseDefaultTypeInternal _IndexCursorResponse_default_instance_;
@@ -95,10 +95,10 @@ template<> ::protobuf::mozilla::dom::indexedDB::ContinueParams* Arena::CreateMay
 template<> ::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::ContinuePrimaryKeyParams>(Arena*);
 template<> ::protobuf::mozilla::dom::indexedDB::CursorRequestParams* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::CursorRequestParams>(Arena*);
 template<> ::protobuf::mozilla::dom::indexedDB::CursorResponse* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::CursorResponse>(Arena*);
-template<> ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse>(Arena*);
-template<> ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse>(Arena*);
-template<> ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse>(Arena*);
-template<> ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse>(Arena*);
+template<> ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse>(Arena*);
+template<> ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse>(Arena*);
+template<> ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse>(Arena*);
+template<> ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse>(Arena*);
 template<> ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::IndexCursorResponse>(Arena*);
 template<> ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse>(Arena*);
 template<> ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse>(Arena*);
@@ -1494,24 +1494,24 @@ class IndexKeyCursorResponse final :
 };
 // -------------------------------------------------------------------
 
-class CursorResponse__mVArrayOfObjectStoreCursorResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse) */ {
+class CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreCursorResponse) */ {
  public:
-  inline CursorResponse__mVArrayOfObjectStoreCursorResponse() : CursorResponse__mVArrayOfObjectStoreCursorResponse(nullptr) {}
-  ~CursorResponse__mVArrayOfObjectStoreCursorResponse() override;
-  explicit PROTOBUF_CONSTEXPR CursorResponse__mVArrayOfObjectStoreCursorResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse() : CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse(nullptr) {}
+  ~CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse() override;
+  explicit PROTOBUF_CONSTEXPR CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  CursorResponse__mVArrayOfObjectStoreCursorResponse(const CursorResponse__mVArrayOfObjectStoreCursorResponse& from);
-  CursorResponse__mVArrayOfObjectStoreCursorResponse(CursorResponse__mVArrayOfObjectStoreCursorResponse&& from) noexcept
-    : CursorResponse__mVArrayOfObjectStoreCursorResponse() {
+  CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse(const CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse& from);
+  CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse(CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse&& from) noexcept
+    : CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse() {
     *this = ::std::move(from);
   }
 
-  inline CursorResponse__mVArrayOfObjectStoreCursorResponse& operator=(const CursorResponse__mVArrayOfObjectStoreCursorResponse& from) {
+  inline CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse& operator=(const CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline CursorResponse__mVArrayOfObjectStoreCursorResponse& operator=(CursorResponse__mVArrayOfObjectStoreCursorResponse&& from) noexcept {
+  inline CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse& operator=(CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1532,20 +1532,20 @@ class CursorResponse__mVArrayOfObjectStoreCursorResponse final :
     return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
-  static const CursorResponse__mVArrayOfObjectStoreCursorResponse& default_instance() {
+  static const CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const CursorResponse__mVArrayOfObjectStoreCursorResponse* internal_default_instance() {
-    return reinterpret_cast<const CursorResponse__mVArrayOfObjectStoreCursorResponse*>(
-               &_CursorResponse__mVArrayOfObjectStoreCursorResponse_default_instance_);
+  static inline const CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* internal_default_instance() {
+    return reinterpret_cast<const CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse*>(
+               &_CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     8;
 
-  friend void swap(CursorResponse__mVArrayOfObjectStoreCursorResponse& a, CursorResponse__mVArrayOfObjectStoreCursorResponse& b) {
+  friend void swap(CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse& a, CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(CursorResponse__mVArrayOfObjectStoreCursorResponse* other) {
+  inline void Swap(CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1558,7 +1558,7 @@ class CursorResponse__mVArrayOfObjectStoreCursorResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(CursorResponse__mVArrayOfObjectStoreCursorResponse* other) {
+  void UnsafeArenaSwap(CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1566,12 +1566,12 @@ class CursorResponse__mVArrayOfObjectStoreCursorResponse final :
 
   // implements Message ----------------------------------------------
 
-  CursorResponse__mVArrayOfObjectStoreCursorResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<CursorResponse__mVArrayOfObjectStoreCursorResponse>(arena);
+  CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse>(arena);
   }
   void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const CursorResponse__mVArrayOfObjectStoreCursorResponse& from);
-  void MergeFrom(const CursorResponse__mVArrayOfObjectStoreCursorResponse& from);
+  void CopyFrom(const CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse& from);
+  void MergeFrom(const CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1585,15 +1585,15 @@ class CursorResponse__mVArrayOfObjectStoreCursorResponse final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const;
-  void InternalSwap(CursorResponse__mVArrayOfObjectStoreCursorResponse* other);
+  void InternalSwap(CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse";
+    return "protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreCursorResponse";
   }
   protected:
-  explicit CursorResponse__mVArrayOfObjectStoreCursorResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1624,7 +1624,7 @@ class CursorResponse__mVArrayOfObjectStoreCursorResponse final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse >&
       a_mvarrayofobjectstorecursorresponse() const;
 
-  // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse)
+  // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreCursorResponse)
  private:
   class _Internal;
 
@@ -1640,24 +1640,24 @@ class CursorResponse__mVArrayOfObjectStoreCursorResponse final :
 };
 // -------------------------------------------------------------------
 
-class CursorResponse__mVArrayOfObjectStoreKeyCursorResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreKeyCursorResponse) */ {
+class CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreKeyCursorResponse) */ {
  public:
-  inline CursorResponse__mVArrayOfObjectStoreKeyCursorResponse() : CursorResponse__mVArrayOfObjectStoreKeyCursorResponse(nullptr) {}
-  ~CursorResponse__mVArrayOfObjectStoreKeyCursorResponse() override;
-  explicit PROTOBUF_CONSTEXPR CursorResponse__mVArrayOfObjectStoreKeyCursorResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse() : CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse(nullptr) {}
+  ~CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse() override;
+  explicit PROTOBUF_CONSTEXPR CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  CursorResponse__mVArrayOfObjectStoreKeyCursorResponse(const CursorResponse__mVArrayOfObjectStoreKeyCursorResponse& from);
-  CursorResponse__mVArrayOfObjectStoreKeyCursorResponse(CursorResponse__mVArrayOfObjectStoreKeyCursorResponse&& from) noexcept
-    : CursorResponse__mVArrayOfObjectStoreKeyCursorResponse() {
+  CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse(const CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse& from);
+  CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse(CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse&& from) noexcept
+    : CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse() {
     *this = ::std::move(from);
   }
 
-  inline CursorResponse__mVArrayOfObjectStoreKeyCursorResponse& operator=(const CursorResponse__mVArrayOfObjectStoreKeyCursorResponse& from) {
+  inline CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse& operator=(const CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline CursorResponse__mVArrayOfObjectStoreKeyCursorResponse& operator=(CursorResponse__mVArrayOfObjectStoreKeyCursorResponse&& from) noexcept {
+  inline CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse& operator=(CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1678,20 +1678,20 @@ class CursorResponse__mVArrayOfObjectStoreKeyCursorResponse final :
     return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
-  static const CursorResponse__mVArrayOfObjectStoreKeyCursorResponse& default_instance() {
+  static const CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* internal_default_instance() {
-    return reinterpret_cast<const CursorResponse__mVArrayOfObjectStoreKeyCursorResponse*>(
-               &_CursorResponse__mVArrayOfObjectStoreKeyCursorResponse_default_instance_);
+  static inline const CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* internal_default_instance() {
+    return reinterpret_cast<const CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse*>(
+               &_CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     9;
 
-  friend void swap(CursorResponse__mVArrayOfObjectStoreKeyCursorResponse& a, CursorResponse__mVArrayOfObjectStoreKeyCursorResponse& b) {
+  friend void swap(CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse& a, CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* other) {
+  inline void Swap(CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1704,7 +1704,7 @@ class CursorResponse__mVArrayOfObjectStoreKeyCursorResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* other) {
+  void UnsafeArenaSwap(CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1712,12 +1712,12 @@ class CursorResponse__mVArrayOfObjectStoreKeyCursorResponse final :
 
   // implements Message ----------------------------------------------
 
-  CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<CursorResponse__mVArrayOfObjectStoreKeyCursorResponse>(arena);
+  CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse>(arena);
   }
   void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const CursorResponse__mVArrayOfObjectStoreKeyCursorResponse& from);
-  void MergeFrom(const CursorResponse__mVArrayOfObjectStoreKeyCursorResponse& from);
+  void CopyFrom(const CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse& from);
+  void MergeFrom(const CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1731,15 +1731,15 @@ class CursorResponse__mVArrayOfObjectStoreKeyCursorResponse final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const;
-  void InternalSwap(CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* other);
+  void InternalSwap(CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreKeyCursorResponse";
+    return "protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreKeyCursorResponse";
   }
   protected:
-  explicit CursorResponse__mVArrayOfObjectStoreKeyCursorResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1770,7 +1770,7 @@ class CursorResponse__mVArrayOfObjectStoreKeyCursorResponse final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse >&
       a_mvarrayofobjectstorekeycursorresponse() const;
 
-  // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreKeyCursorResponse)
+  // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreKeyCursorResponse)
  private:
   class _Internal;
 
@@ -1786,24 +1786,24 @@ class CursorResponse__mVArrayOfObjectStoreKeyCursorResponse final :
 };
 // -------------------------------------------------------------------
 
-class CursorResponse__mVArrayOfIndexCursorResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexCursorResponse) */ {
+class CursorResponse_a_type_mVArrayOfIndexCursorResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexCursorResponse) */ {
  public:
-  inline CursorResponse__mVArrayOfIndexCursorResponse() : CursorResponse__mVArrayOfIndexCursorResponse(nullptr) {}
-  ~CursorResponse__mVArrayOfIndexCursorResponse() override;
-  explicit PROTOBUF_CONSTEXPR CursorResponse__mVArrayOfIndexCursorResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline CursorResponse_a_type_mVArrayOfIndexCursorResponse() : CursorResponse_a_type_mVArrayOfIndexCursorResponse(nullptr) {}
+  ~CursorResponse_a_type_mVArrayOfIndexCursorResponse() override;
+  explicit PROTOBUF_CONSTEXPR CursorResponse_a_type_mVArrayOfIndexCursorResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  CursorResponse__mVArrayOfIndexCursorResponse(const CursorResponse__mVArrayOfIndexCursorResponse& from);
-  CursorResponse__mVArrayOfIndexCursorResponse(CursorResponse__mVArrayOfIndexCursorResponse&& from) noexcept
-    : CursorResponse__mVArrayOfIndexCursorResponse() {
+  CursorResponse_a_type_mVArrayOfIndexCursorResponse(const CursorResponse_a_type_mVArrayOfIndexCursorResponse& from);
+  CursorResponse_a_type_mVArrayOfIndexCursorResponse(CursorResponse_a_type_mVArrayOfIndexCursorResponse&& from) noexcept
+    : CursorResponse_a_type_mVArrayOfIndexCursorResponse() {
     *this = ::std::move(from);
   }
 
-  inline CursorResponse__mVArrayOfIndexCursorResponse& operator=(const CursorResponse__mVArrayOfIndexCursorResponse& from) {
+  inline CursorResponse_a_type_mVArrayOfIndexCursorResponse& operator=(const CursorResponse_a_type_mVArrayOfIndexCursorResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline CursorResponse__mVArrayOfIndexCursorResponse& operator=(CursorResponse__mVArrayOfIndexCursorResponse&& from) noexcept {
+  inline CursorResponse_a_type_mVArrayOfIndexCursorResponse& operator=(CursorResponse_a_type_mVArrayOfIndexCursorResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1824,20 +1824,20 @@ class CursorResponse__mVArrayOfIndexCursorResponse final :
     return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
-  static const CursorResponse__mVArrayOfIndexCursorResponse& default_instance() {
+  static const CursorResponse_a_type_mVArrayOfIndexCursorResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const CursorResponse__mVArrayOfIndexCursorResponse* internal_default_instance() {
-    return reinterpret_cast<const CursorResponse__mVArrayOfIndexCursorResponse*>(
-               &_CursorResponse__mVArrayOfIndexCursorResponse_default_instance_);
+  static inline const CursorResponse_a_type_mVArrayOfIndexCursorResponse* internal_default_instance() {
+    return reinterpret_cast<const CursorResponse_a_type_mVArrayOfIndexCursorResponse*>(
+               &_CursorResponse_a_type_mVArrayOfIndexCursorResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     10;
 
-  friend void swap(CursorResponse__mVArrayOfIndexCursorResponse& a, CursorResponse__mVArrayOfIndexCursorResponse& b) {
+  friend void swap(CursorResponse_a_type_mVArrayOfIndexCursorResponse& a, CursorResponse_a_type_mVArrayOfIndexCursorResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(CursorResponse__mVArrayOfIndexCursorResponse* other) {
+  inline void Swap(CursorResponse_a_type_mVArrayOfIndexCursorResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1850,7 +1850,7 @@ class CursorResponse__mVArrayOfIndexCursorResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(CursorResponse__mVArrayOfIndexCursorResponse* other) {
+  void UnsafeArenaSwap(CursorResponse_a_type_mVArrayOfIndexCursorResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1858,12 +1858,12 @@ class CursorResponse__mVArrayOfIndexCursorResponse final :
 
   // implements Message ----------------------------------------------
 
-  CursorResponse__mVArrayOfIndexCursorResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<CursorResponse__mVArrayOfIndexCursorResponse>(arena);
+  CursorResponse_a_type_mVArrayOfIndexCursorResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CursorResponse_a_type_mVArrayOfIndexCursorResponse>(arena);
   }
   void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const CursorResponse__mVArrayOfIndexCursorResponse& from);
-  void MergeFrom(const CursorResponse__mVArrayOfIndexCursorResponse& from);
+  void CopyFrom(const CursorResponse_a_type_mVArrayOfIndexCursorResponse& from);
+  void MergeFrom(const CursorResponse_a_type_mVArrayOfIndexCursorResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1877,15 +1877,15 @@ class CursorResponse__mVArrayOfIndexCursorResponse final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const;
-  void InternalSwap(CursorResponse__mVArrayOfIndexCursorResponse* other);
+  void InternalSwap(CursorResponse_a_type_mVArrayOfIndexCursorResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexCursorResponse";
+    return "protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexCursorResponse";
   }
   protected:
-  explicit CursorResponse__mVArrayOfIndexCursorResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit CursorResponse_a_type_mVArrayOfIndexCursorResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1916,7 +1916,7 @@ class CursorResponse__mVArrayOfIndexCursorResponse final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse >&
       a_mvarrayofindexcursorresponse() const;
 
-  // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexCursorResponse)
+  // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexCursorResponse)
  private:
   class _Internal;
 
@@ -1932,24 +1932,24 @@ class CursorResponse__mVArrayOfIndexCursorResponse final :
 };
 // -------------------------------------------------------------------
 
-class CursorResponse__mVArrayOfIndexKeyCursorResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexKeyCursorResponse) */ {
+class CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexKeyCursorResponse) */ {
  public:
-  inline CursorResponse__mVArrayOfIndexKeyCursorResponse() : CursorResponse__mVArrayOfIndexKeyCursorResponse(nullptr) {}
-  ~CursorResponse__mVArrayOfIndexKeyCursorResponse() override;
-  explicit PROTOBUF_CONSTEXPR CursorResponse__mVArrayOfIndexKeyCursorResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse() : CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse(nullptr) {}
+  ~CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse() override;
+  explicit PROTOBUF_CONSTEXPR CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  CursorResponse__mVArrayOfIndexKeyCursorResponse(const CursorResponse__mVArrayOfIndexKeyCursorResponse& from);
-  CursorResponse__mVArrayOfIndexKeyCursorResponse(CursorResponse__mVArrayOfIndexKeyCursorResponse&& from) noexcept
-    : CursorResponse__mVArrayOfIndexKeyCursorResponse() {
+  CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse(const CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse& from);
+  CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse(CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse&& from) noexcept
+    : CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse() {
     *this = ::std::move(from);
   }
 
-  inline CursorResponse__mVArrayOfIndexKeyCursorResponse& operator=(const CursorResponse__mVArrayOfIndexKeyCursorResponse& from) {
+  inline CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse& operator=(const CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline CursorResponse__mVArrayOfIndexKeyCursorResponse& operator=(CursorResponse__mVArrayOfIndexKeyCursorResponse&& from) noexcept {
+  inline CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse& operator=(CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1970,20 +1970,20 @@ class CursorResponse__mVArrayOfIndexKeyCursorResponse final :
     return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
-  static const CursorResponse__mVArrayOfIndexKeyCursorResponse& default_instance() {
+  static const CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const CursorResponse__mVArrayOfIndexKeyCursorResponse* internal_default_instance() {
-    return reinterpret_cast<const CursorResponse__mVArrayOfIndexKeyCursorResponse*>(
-               &_CursorResponse__mVArrayOfIndexKeyCursorResponse_default_instance_);
+  static inline const CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* internal_default_instance() {
+    return reinterpret_cast<const CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse*>(
+               &_CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     11;
 
-  friend void swap(CursorResponse__mVArrayOfIndexKeyCursorResponse& a, CursorResponse__mVArrayOfIndexKeyCursorResponse& b) {
+  friend void swap(CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse& a, CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(CursorResponse__mVArrayOfIndexKeyCursorResponse* other) {
+  inline void Swap(CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1996,7 +1996,7 @@ class CursorResponse__mVArrayOfIndexKeyCursorResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(CursorResponse__mVArrayOfIndexKeyCursorResponse* other) {
+  void UnsafeArenaSwap(CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2004,12 +2004,12 @@ class CursorResponse__mVArrayOfIndexKeyCursorResponse final :
 
   // implements Message ----------------------------------------------
 
-  CursorResponse__mVArrayOfIndexKeyCursorResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<CursorResponse__mVArrayOfIndexKeyCursorResponse>(arena);
+  CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse>(arena);
   }
   void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const CursorResponse__mVArrayOfIndexKeyCursorResponse& from);
-  void MergeFrom(const CursorResponse__mVArrayOfIndexKeyCursorResponse& from);
+  void CopyFrom(const CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse& from);
+  void MergeFrom(const CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2023,15 +2023,15 @@ class CursorResponse__mVArrayOfIndexKeyCursorResponse final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const;
-  void InternalSwap(CursorResponse__mVArrayOfIndexKeyCursorResponse* other);
+  void InternalSwap(CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexKeyCursorResponse";
+    return "protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexKeyCursorResponse";
   }
   protected:
-  explicit CursorResponse__mVArrayOfIndexKeyCursorResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2062,7 +2062,7 @@ class CursorResponse__mVArrayOfIndexKeyCursorResponse final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse >&
       a_mvarrayofindexkeycursorresponse() const;
 
-  // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexKeyCursorResponse)
+  // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexKeyCursorResponse)
  private:
   class _Internal;
 
@@ -2122,10 +2122,10 @@ class CursorResponse final :
   enum ContentCase {
     kAMVvoidT = 1,
     kAMVnsresult = 2,
-    kMVArrayOfObjectStoreCursorResponse = 3,
-    kMVArrayOfObjectStoreKeyCursorResponse = 4,
-    kMVArrayOfIndexCursorResponse = 5,
-    kMVArrayOfIndexKeyCursorResponse = 6,
+    kAMVArrayOfObjectStoreCursorResponse = 3,
+    kAMVArrayOfObjectStoreKeyCursorResponse = 4,
+    kAMVArrayOfIndexCursorResponse = 5,
+    kAMVArrayOfIndexKeyCursorResponse = 6,
     CONTENT_NOT_SET = 0,
   };
 
@@ -2195,20 +2195,20 @@ class CursorResponse final :
 
   // nested types ----------------------------------------------------
 
-  typedef CursorResponse__mVArrayOfObjectStoreCursorResponse _mVArrayOfObjectStoreCursorResponse;
-  typedef CursorResponse__mVArrayOfObjectStoreKeyCursorResponse _mVArrayOfObjectStoreKeyCursorResponse;
-  typedef CursorResponse__mVArrayOfIndexCursorResponse _mVArrayOfIndexCursorResponse;
-  typedef CursorResponse__mVArrayOfIndexKeyCursorResponse _mVArrayOfIndexKeyCursorResponse;
+  typedef CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse a_type_mVArrayOfObjectStoreCursorResponse;
+  typedef CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse a_type_mVArrayOfObjectStoreKeyCursorResponse;
+  typedef CursorResponse_a_type_mVArrayOfIndexCursorResponse a_type_mVArrayOfIndexCursorResponse;
+  typedef CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse a_type_mVArrayOfIndexKeyCursorResponse;
 
   // accessors -------------------------------------------------------
 
   enum : int {
     kAMVvoidTFieldNumber = 1,
     kAMVnsresultFieldNumber = 2,
-    kMVArrayOfObjectStoreCursorResponseFieldNumber = 3,
-    kMVArrayOfObjectStoreKeyCursorResponseFieldNumber = 4,
-    kMVArrayOfIndexCursorResponseFieldNumber = 5,
-    kMVArrayOfIndexKeyCursorResponseFieldNumber = 6,
+    kAMVArrayOfObjectStoreCursorResponseFieldNumber = 3,
+    kAMVArrayOfObjectStoreKeyCursorResponseFieldNumber = 4,
+    kAMVArrayOfIndexCursorResponseFieldNumber = 5,
+    kAMVArrayOfIndexKeyCursorResponseFieldNumber = 6,
   };
   // bytes a_mVvoid_t = 1;
   bool has_a_mvvoid_t() const;
@@ -2246,77 +2246,77 @@ class CursorResponse final :
   std::string* _internal_mutable_a_mvnsresult();
   public:
 
-  // .protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse mVArrayOfObjectStoreCursorResponse = 3;
-  bool has_mvarrayofobjectstorecursorresponse() const;
+  // .protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreCursorResponse a_mVArrayOfObjectStoreCursorResponse = 3;
+  bool has_a_mvarrayofobjectstorecursorresponse() const;
   private:
-  bool _internal_has_mvarrayofobjectstorecursorresponse() const;
+  bool _internal_has_a_mvarrayofobjectstorecursorresponse() const;
   public:
-  void clear_mvarrayofobjectstorecursorresponse();
-  const ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse& mvarrayofobjectstorecursorresponse() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse* release_mvarrayofobjectstorecursorresponse();
-  ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse* mutable_mvarrayofobjectstorecursorresponse();
-  void set_allocated_mvarrayofobjectstorecursorresponse(::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse* mvarrayofobjectstorecursorresponse);
+  void clear_a_mvarrayofobjectstorecursorresponse();
+  const ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse& a_mvarrayofobjectstorecursorresponse() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* release_a_mvarrayofobjectstorecursorresponse();
+  ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* mutable_a_mvarrayofobjectstorecursorresponse();
+  void set_allocated_a_mvarrayofobjectstorecursorresponse(::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* a_mvarrayofobjectstorecursorresponse);
   private:
-  const ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse& _internal_mvarrayofobjectstorecursorresponse() const;
-  ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse* _internal_mutable_mvarrayofobjectstorecursorresponse();
+  const ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse& _internal_a_mvarrayofobjectstorecursorresponse() const;
+  ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* _internal_mutable_a_mvarrayofobjectstorecursorresponse();
   public:
-  void unsafe_arena_set_allocated_mvarrayofobjectstorecursorresponse(
-      ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse* mvarrayofobjectstorecursorresponse);
-  ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse* unsafe_arena_release_mvarrayofobjectstorecursorresponse();
+  void unsafe_arena_set_allocated_a_mvarrayofobjectstorecursorresponse(
+      ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* a_mvarrayofobjectstorecursorresponse);
+  ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* unsafe_arena_release_a_mvarrayofobjectstorecursorresponse();
 
-  // .protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreKeyCursorResponse mVArrayOfObjectStoreKeyCursorResponse = 4;
-  bool has_mvarrayofobjectstorekeycursorresponse() const;
+  // .protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreKeyCursorResponse a_mVArrayOfObjectStoreKeyCursorResponse = 4;
+  bool has_a_mvarrayofobjectstorekeycursorresponse() const;
   private:
-  bool _internal_has_mvarrayofobjectstorekeycursorresponse() const;
+  bool _internal_has_a_mvarrayofobjectstorekeycursorresponse() const;
   public:
-  void clear_mvarrayofobjectstorekeycursorresponse();
-  const ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse& mvarrayofobjectstorekeycursorresponse() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* release_mvarrayofobjectstorekeycursorresponse();
-  ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* mutable_mvarrayofobjectstorekeycursorresponse();
-  void set_allocated_mvarrayofobjectstorekeycursorresponse(::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* mvarrayofobjectstorekeycursorresponse);
+  void clear_a_mvarrayofobjectstorekeycursorresponse();
+  const ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse& a_mvarrayofobjectstorekeycursorresponse() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* release_a_mvarrayofobjectstorekeycursorresponse();
+  ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* mutable_a_mvarrayofobjectstorekeycursorresponse();
+  void set_allocated_a_mvarrayofobjectstorekeycursorresponse(::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* a_mvarrayofobjectstorekeycursorresponse);
   private:
-  const ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse& _internal_mvarrayofobjectstorekeycursorresponse() const;
-  ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* _internal_mutable_mvarrayofobjectstorekeycursorresponse();
+  const ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse& _internal_a_mvarrayofobjectstorekeycursorresponse() const;
+  ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* _internal_mutable_a_mvarrayofobjectstorekeycursorresponse();
   public:
-  void unsafe_arena_set_allocated_mvarrayofobjectstorekeycursorresponse(
-      ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* mvarrayofobjectstorekeycursorresponse);
-  ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* unsafe_arena_release_mvarrayofobjectstorekeycursorresponse();
+  void unsafe_arena_set_allocated_a_mvarrayofobjectstorekeycursorresponse(
+      ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* a_mvarrayofobjectstorekeycursorresponse);
+  ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* unsafe_arena_release_a_mvarrayofobjectstorekeycursorresponse();
 
-  // .protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexCursorResponse mVArrayOfIndexCursorResponse = 5;
-  bool has_mvarrayofindexcursorresponse() const;
+  // .protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexCursorResponse a_mVArrayOfIndexCursorResponse = 5;
+  bool has_a_mvarrayofindexcursorresponse() const;
   private:
-  bool _internal_has_mvarrayofindexcursorresponse() const;
+  bool _internal_has_a_mvarrayofindexcursorresponse() const;
   public:
-  void clear_mvarrayofindexcursorresponse();
-  const ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse& mvarrayofindexcursorresponse() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse* release_mvarrayofindexcursorresponse();
-  ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse* mutable_mvarrayofindexcursorresponse();
-  void set_allocated_mvarrayofindexcursorresponse(::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse* mvarrayofindexcursorresponse);
+  void clear_a_mvarrayofindexcursorresponse();
+  const ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse& a_mvarrayofindexcursorresponse() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse* release_a_mvarrayofindexcursorresponse();
+  ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse* mutable_a_mvarrayofindexcursorresponse();
+  void set_allocated_a_mvarrayofindexcursorresponse(::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse* a_mvarrayofindexcursorresponse);
   private:
-  const ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse& _internal_mvarrayofindexcursorresponse() const;
-  ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse* _internal_mutable_mvarrayofindexcursorresponse();
+  const ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse& _internal_a_mvarrayofindexcursorresponse() const;
+  ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse* _internal_mutable_a_mvarrayofindexcursorresponse();
   public:
-  void unsafe_arena_set_allocated_mvarrayofindexcursorresponse(
-      ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse* mvarrayofindexcursorresponse);
-  ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse* unsafe_arena_release_mvarrayofindexcursorresponse();
+  void unsafe_arena_set_allocated_a_mvarrayofindexcursorresponse(
+      ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse* a_mvarrayofindexcursorresponse);
+  ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse* unsafe_arena_release_a_mvarrayofindexcursorresponse();
 
-  // .protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexKeyCursorResponse mVArrayOfIndexKeyCursorResponse = 6;
-  bool has_mvarrayofindexkeycursorresponse() const;
+  // .protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexKeyCursorResponse a_mVArrayOfIndexKeyCursorResponse = 6;
+  bool has_a_mvarrayofindexkeycursorresponse() const;
   private:
-  bool _internal_has_mvarrayofindexkeycursorresponse() const;
+  bool _internal_has_a_mvarrayofindexkeycursorresponse() const;
   public:
-  void clear_mvarrayofindexkeycursorresponse();
-  const ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse& mvarrayofindexkeycursorresponse() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse* release_mvarrayofindexkeycursorresponse();
-  ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse* mutable_mvarrayofindexkeycursorresponse();
-  void set_allocated_mvarrayofindexkeycursorresponse(::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse* mvarrayofindexkeycursorresponse);
+  void clear_a_mvarrayofindexkeycursorresponse();
+  const ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse& a_mvarrayofindexkeycursorresponse() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* release_a_mvarrayofindexkeycursorresponse();
+  ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* mutable_a_mvarrayofindexkeycursorresponse();
+  void set_allocated_a_mvarrayofindexkeycursorresponse(::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* a_mvarrayofindexkeycursorresponse);
   private:
-  const ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse& _internal_mvarrayofindexkeycursorresponse() const;
-  ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse* _internal_mutable_mvarrayofindexkeycursorresponse();
+  const ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse& _internal_a_mvarrayofindexkeycursorresponse() const;
+  ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* _internal_mutable_a_mvarrayofindexkeycursorresponse();
   public:
-  void unsafe_arena_set_allocated_mvarrayofindexkeycursorresponse(
-      ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse* mvarrayofindexkeycursorresponse);
-  ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse* unsafe_arena_release_mvarrayofindexkeycursorresponse();
+  void unsafe_arena_set_allocated_a_mvarrayofindexkeycursorresponse(
+      ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* a_mvarrayofindexkeycursorresponse);
+  ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* unsafe_arena_release_a_mvarrayofindexkeycursorresponse();
 
   void clear_content();
   ContentCase content_case() const;
@@ -2325,10 +2325,10 @@ class CursorResponse final :
   class _Internal;
   void set_has_a_mvvoid_t();
   void set_has_a_mvnsresult();
-  void set_has_mvarrayofobjectstorecursorresponse();
-  void set_has_mvarrayofobjectstorekeycursorresponse();
-  void set_has_mvarrayofindexcursorresponse();
-  void set_has_mvarrayofindexkeycursorresponse();
+  void set_has_a_mvarrayofobjectstorecursorresponse();
+  void set_has_a_mvarrayofobjectstorekeycursorresponse();
+  void set_has_a_mvarrayofindexcursorresponse();
+  void set_has_a_mvarrayofindexkeycursorresponse();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -2342,10 +2342,10 @@ class CursorResponse final :
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
       ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvvoid_t_;
       ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvnsresult_;
-      ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse* mvarrayofobjectstorecursorresponse_;
-      ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* mvarrayofobjectstorekeycursorresponse_;
-      ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse* mvarrayofindexcursorresponse_;
-      ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse* mvarrayofindexkeycursorresponse_;
+      ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* a_mvarrayofobjectstorecursorresponse_;
+      ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* a_mvarrayofobjectstorekeycursorresponse_;
+      ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse* a_mvarrayofindexcursorresponse_;
+      ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* a_mvarrayofindexkeycursorresponse_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -3576,177 +3576,177 @@ inline void IndexKeyCursorResponse::set_allocated_a_objectkey(std::string* a_obj
 
 // -------------------------------------------------------------------
 
-// CursorResponse__mVArrayOfObjectStoreCursorResponse
+// CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse
 
 // repeated .protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse a_mVArrayOfObjectStoreCursorResponse = 1;
-inline int CursorResponse__mVArrayOfObjectStoreCursorResponse::_internal_a_mvarrayofobjectstorecursorresponse_size() const {
+inline int CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse::_internal_a_mvarrayofobjectstorecursorresponse_size() const {
   return _impl_.a_mvarrayofobjectstorecursorresponse_.size();
 }
-inline int CursorResponse__mVArrayOfObjectStoreCursorResponse::a_mvarrayofobjectstorecursorresponse_size() const {
+inline int CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse::a_mvarrayofobjectstorecursorresponse_size() const {
   return _internal_a_mvarrayofobjectstorecursorresponse_size();
 }
-inline void CursorResponse__mVArrayOfObjectStoreCursorResponse::clear_a_mvarrayofobjectstorecursorresponse() {
+inline void CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse::clear_a_mvarrayofobjectstorecursorresponse() {
   _impl_.a_mvarrayofobjectstorecursorresponse_.Clear();
 }
-inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* CursorResponse__mVArrayOfObjectStoreCursorResponse::mutable_a_mvarrayofobjectstorecursorresponse(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse.a_mVArrayOfObjectStoreCursorResponse)
+inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse::mutable_a_mvarrayofobjectstorecursorresponse(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreCursorResponse.a_mVArrayOfObjectStoreCursorResponse)
   return _impl_.a_mvarrayofobjectstorecursorresponse_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse >*
-CursorResponse__mVArrayOfObjectStoreCursorResponse::mutable_a_mvarrayofobjectstorecursorresponse() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse.a_mVArrayOfObjectStoreCursorResponse)
+CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse::mutable_a_mvarrayofobjectstorecursorresponse() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreCursorResponse.a_mVArrayOfObjectStoreCursorResponse)
   return &_impl_.a_mvarrayofobjectstorecursorresponse_;
 }
-inline const ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse& CursorResponse__mVArrayOfObjectStoreCursorResponse::_internal_a_mvarrayofobjectstorecursorresponse(int index) const {
+inline const ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse& CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse::_internal_a_mvarrayofobjectstorecursorresponse(int index) const {
   return _impl_.a_mvarrayofobjectstorecursorresponse_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse& CursorResponse__mVArrayOfObjectStoreCursorResponse::a_mvarrayofobjectstorecursorresponse(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse.a_mVArrayOfObjectStoreCursorResponse)
+inline const ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse& CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse::a_mvarrayofobjectstorecursorresponse(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreCursorResponse.a_mVArrayOfObjectStoreCursorResponse)
   return _internal_a_mvarrayofobjectstorecursorresponse(index);
 }
-inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* CursorResponse__mVArrayOfObjectStoreCursorResponse::_internal_add_a_mvarrayofobjectstorecursorresponse() {
+inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse::_internal_add_a_mvarrayofobjectstorecursorresponse() {
   return _impl_.a_mvarrayofobjectstorecursorresponse_.Add();
 }
-inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* CursorResponse__mVArrayOfObjectStoreCursorResponse::add_a_mvarrayofobjectstorecursorresponse() {
+inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse::add_a_mvarrayofobjectstorecursorresponse() {
   ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse* _add = _internal_add_a_mvarrayofobjectstorecursorresponse();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse.a_mVArrayOfObjectStoreCursorResponse)
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreCursorResponse.a_mVArrayOfObjectStoreCursorResponse)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::ObjectStoreCursorResponse >&
-CursorResponse__mVArrayOfObjectStoreCursorResponse::a_mvarrayofobjectstorecursorresponse() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse.a_mVArrayOfObjectStoreCursorResponse)
+CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse::a_mvarrayofobjectstorecursorresponse() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreCursorResponse.a_mVArrayOfObjectStoreCursorResponse)
   return _impl_.a_mvarrayofobjectstorecursorresponse_;
 }
 
 // -------------------------------------------------------------------
 
-// CursorResponse__mVArrayOfObjectStoreKeyCursorResponse
+// CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse
 
 // repeated .protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse a_mVArrayOfObjectStoreKeyCursorResponse = 1;
-inline int CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::_internal_a_mvarrayofobjectstorekeycursorresponse_size() const {
+inline int CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse::_internal_a_mvarrayofobjectstorekeycursorresponse_size() const {
   return _impl_.a_mvarrayofobjectstorekeycursorresponse_.size();
 }
-inline int CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::a_mvarrayofobjectstorekeycursorresponse_size() const {
+inline int CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse::a_mvarrayofobjectstorekeycursorresponse_size() const {
   return _internal_a_mvarrayofobjectstorekeycursorresponse_size();
 }
-inline void CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::clear_a_mvarrayofobjectstorekeycursorresponse() {
+inline void CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse::clear_a_mvarrayofobjectstorekeycursorresponse() {
   _impl_.a_mvarrayofobjectstorekeycursorresponse_.Clear();
 }
-inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse* CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::mutable_a_mvarrayofobjectstorekeycursorresponse(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreKeyCursorResponse.a_mVArrayOfObjectStoreKeyCursorResponse)
+inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse* CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse::mutable_a_mvarrayofobjectstorekeycursorresponse(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreKeyCursorResponse.a_mVArrayOfObjectStoreKeyCursorResponse)
   return _impl_.a_mvarrayofobjectstorekeycursorresponse_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse >*
-CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::mutable_a_mvarrayofobjectstorekeycursorresponse() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreKeyCursorResponse.a_mVArrayOfObjectStoreKeyCursorResponse)
+CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse::mutable_a_mvarrayofobjectstorekeycursorresponse() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreKeyCursorResponse.a_mVArrayOfObjectStoreKeyCursorResponse)
   return &_impl_.a_mvarrayofobjectstorekeycursorresponse_;
 }
-inline const ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse& CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::_internal_a_mvarrayofobjectstorekeycursorresponse(int index) const {
+inline const ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse& CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse::_internal_a_mvarrayofobjectstorekeycursorresponse(int index) const {
   return _impl_.a_mvarrayofobjectstorekeycursorresponse_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse& CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::a_mvarrayofobjectstorekeycursorresponse(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreKeyCursorResponse.a_mVArrayOfObjectStoreKeyCursorResponse)
+inline const ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse& CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse::a_mvarrayofobjectstorekeycursorresponse(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreKeyCursorResponse.a_mVArrayOfObjectStoreKeyCursorResponse)
   return _internal_a_mvarrayofobjectstorekeycursorresponse(index);
 }
-inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse* CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::_internal_add_a_mvarrayofobjectstorekeycursorresponse() {
+inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse* CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse::_internal_add_a_mvarrayofobjectstorekeycursorresponse() {
   return _impl_.a_mvarrayofobjectstorekeycursorresponse_.Add();
 }
-inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse* CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::add_a_mvarrayofobjectstorekeycursorresponse() {
+inline ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse* CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse::add_a_mvarrayofobjectstorekeycursorresponse() {
   ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse* _add = _internal_add_a_mvarrayofobjectstorekeycursorresponse();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreKeyCursorResponse.a_mVArrayOfObjectStoreKeyCursorResponse)
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreKeyCursorResponse.a_mVArrayOfObjectStoreKeyCursorResponse)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::ObjectStoreKeyCursorResponse >&
-CursorResponse__mVArrayOfObjectStoreKeyCursorResponse::a_mvarrayofobjectstorekeycursorresponse() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreKeyCursorResponse.a_mVArrayOfObjectStoreKeyCursorResponse)
+CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse::a_mvarrayofobjectstorekeycursorresponse() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreKeyCursorResponse.a_mVArrayOfObjectStoreKeyCursorResponse)
   return _impl_.a_mvarrayofobjectstorekeycursorresponse_;
 }
 
 // -------------------------------------------------------------------
 
-// CursorResponse__mVArrayOfIndexCursorResponse
+// CursorResponse_a_type_mVArrayOfIndexCursorResponse
 
 // repeated .protobuf.mozilla.dom.indexedDB.IndexCursorResponse a_mVArrayOfIndexCursorResponse = 1;
-inline int CursorResponse__mVArrayOfIndexCursorResponse::_internal_a_mvarrayofindexcursorresponse_size() const {
+inline int CursorResponse_a_type_mVArrayOfIndexCursorResponse::_internal_a_mvarrayofindexcursorresponse_size() const {
   return _impl_.a_mvarrayofindexcursorresponse_.size();
 }
-inline int CursorResponse__mVArrayOfIndexCursorResponse::a_mvarrayofindexcursorresponse_size() const {
+inline int CursorResponse_a_type_mVArrayOfIndexCursorResponse::a_mvarrayofindexcursorresponse_size() const {
   return _internal_a_mvarrayofindexcursorresponse_size();
 }
-inline void CursorResponse__mVArrayOfIndexCursorResponse::clear_a_mvarrayofindexcursorresponse() {
+inline void CursorResponse_a_type_mVArrayOfIndexCursorResponse::clear_a_mvarrayofindexcursorresponse() {
   _impl_.a_mvarrayofindexcursorresponse_.Clear();
 }
-inline ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* CursorResponse__mVArrayOfIndexCursorResponse::mutable_a_mvarrayofindexcursorresponse(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexCursorResponse.a_mVArrayOfIndexCursorResponse)
+inline ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* CursorResponse_a_type_mVArrayOfIndexCursorResponse::mutable_a_mvarrayofindexcursorresponse(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexCursorResponse.a_mVArrayOfIndexCursorResponse)
   return _impl_.a_mvarrayofindexcursorresponse_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse >*
-CursorResponse__mVArrayOfIndexCursorResponse::mutable_a_mvarrayofindexcursorresponse() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexCursorResponse.a_mVArrayOfIndexCursorResponse)
+CursorResponse_a_type_mVArrayOfIndexCursorResponse::mutable_a_mvarrayofindexcursorresponse() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexCursorResponse.a_mVArrayOfIndexCursorResponse)
   return &_impl_.a_mvarrayofindexcursorresponse_;
 }
-inline const ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse& CursorResponse__mVArrayOfIndexCursorResponse::_internal_a_mvarrayofindexcursorresponse(int index) const {
+inline const ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse& CursorResponse_a_type_mVArrayOfIndexCursorResponse::_internal_a_mvarrayofindexcursorresponse(int index) const {
   return _impl_.a_mvarrayofindexcursorresponse_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse& CursorResponse__mVArrayOfIndexCursorResponse::a_mvarrayofindexcursorresponse(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexCursorResponse.a_mVArrayOfIndexCursorResponse)
+inline const ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse& CursorResponse_a_type_mVArrayOfIndexCursorResponse::a_mvarrayofindexcursorresponse(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexCursorResponse.a_mVArrayOfIndexCursorResponse)
   return _internal_a_mvarrayofindexcursorresponse(index);
 }
-inline ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* CursorResponse__mVArrayOfIndexCursorResponse::_internal_add_a_mvarrayofindexcursorresponse() {
+inline ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* CursorResponse_a_type_mVArrayOfIndexCursorResponse::_internal_add_a_mvarrayofindexcursorresponse() {
   return _impl_.a_mvarrayofindexcursorresponse_.Add();
 }
-inline ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* CursorResponse__mVArrayOfIndexCursorResponse::add_a_mvarrayofindexcursorresponse() {
+inline ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* CursorResponse_a_type_mVArrayOfIndexCursorResponse::add_a_mvarrayofindexcursorresponse() {
   ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse* _add = _internal_add_a_mvarrayofindexcursorresponse();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexCursorResponse.a_mVArrayOfIndexCursorResponse)
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexCursorResponse.a_mVArrayOfIndexCursorResponse)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::IndexCursorResponse >&
-CursorResponse__mVArrayOfIndexCursorResponse::a_mvarrayofindexcursorresponse() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexCursorResponse.a_mVArrayOfIndexCursorResponse)
+CursorResponse_a_type_mVArrayOfIndexCursorResponse::a_mvarrayofindexcursorresponse() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexCursorResponse.a_mVArrayOfIndexCursorResponse)
   return _impl_.a_mvarrayofindexcursorresponse_;
 }
 
 // -------------------------------------------------------------------
 
-// CursorResponse__mVArrayOfIndexKeyCursorResponse
+// CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse
 
 // repeated .protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse a_mVArrayOfIndexKeyCursorResponse = 1;
-inline int CursorResponse__mVArrayOfIndexKeyCursorResponse::_internal_a_mvarrayofindexkeycursorresponse_size() const {
+inline int CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse::_internal_a_mvarrayofindexkeycursorresponse_size() const {
   return _impl_.a_mvarrayofindexkeycursorresponse_.size();
 }
-inline int CursorResponse__mVArrayOfIndexKeyCursorResponse::a_mvarrayofindexkeycursorresponse_size() const {
+inline int CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse::a_mvarrayofindexkeycursorresponse_size() const {
   return _internal_a_mvarrayofindexkeycursorresponse_size();
 }
-inline void CursorResponse__mVArrayOfIndexKeyCursorResponse::clear_a_mvarrayofindexkeycursorresponse() {
+inline void CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse::clear_a_mvarrayofindexkeycursorresponse() {
   _impl_.a_mvarrayofindexkeycursorresponse_.Clear();
 }
-inline ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* CursorResponse__mVArrayOfIndexKeyCursorResponse::mutable_a_mvarrayofindexkeycursorresponse(int index) {
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexKeyCursorResponse.a_mVArrayOfIndexKeyCursorResponse)
+inline ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse::mutable_a_mvarrayofindexkeycursorresponse(int index) {
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexKeyCursorResponse.a_mVArrayOfIndexKeyCursorResponse)
   return _impl_.a_mvarrayofindexkeycursorresponse_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse >*
-CursorResponse__mVArrayOfIndexKeyCursorResponse::mutable_a_mvarrayofindexkeycursorresponse() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexKeyCursorResponse.a_mVArrayOfIndexKeyCursorResponse)
+CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse::mutable_a_mvarrayofindexkeycursorresponse() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexKeyCursorResponse.a_mVArrayOfIndexKeyCursorResponse)
   return &_impl_.a_mvarrayofindexkeycursorresponse_;
 }
-inline const ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse& CursorResponse__mVArrayOfIndexKeyCursorResponse::_internal_a_mvarrayofindexkeycursorresponse(int index) const {
+inline const ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse& CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse::_internal_a_mvarrayofindexkeycursorresponse(int index) const {
   return _impl_.a_mvarrayofindexkeycursorresponse_.Get(index);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse& CursorResponse__mVArrayOfIndexKeyCursorResponse::a_mvarrayofindexkeycursorresponse(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexKeyCursorResponse.a_mVArrayOfIndexKeyCursorResponse)
+inline const ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse& CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse::a_mvarrayofindexkeycursorresponse(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexKeyCursorResponse.a_mVArrayOfIndexKeyCursorResponse)
   return _internal_a_mvarrayofindexkeycursorresponse(index);
 }
-inline ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* CursorResponse__mVArrayOfIndexKeyCursorResponse::_internal_add_a_mvarrayofindexkeycursorresponse() {
+inline ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse::_internal_add_a_mvarrayofindexkeycursorresponse() {
   return _impl_.a_mvarrayofindexkeycursorresponse_.Add();
 }
-inline ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* CursorResponse__mVArrayOfIndexKeyCursorResponse::add_a_mvarrayofindexkeycursorresponse() {
+inline ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse::add_a_mvarrayofindexkeycursorresponse() {
   ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse* _add = _internal_add_a_mvarrayofindexkeycursorresponse();
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexKeyCursorResponse.a_mVArrayOfIndexKeyCursorResponse)
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexKeyCursorResponse.a_mVArrayOfIndexKeyCursorResponse)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::indexedDB::IndexKeyCursorResponse >&
-CursorResponse__mVArrayOfIndexKeyCursorResponse::a_mvarrayofindexkeycursorresponse() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexKeyCursorResponse.a_mVArrayOfIndexKeyCursorResponse)
+CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse::a_mvarrayofindexkeycursorresponse() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexKeyCursorResponse.a_mVArrayOfIndexKeyCursorResponse)
   return _impl_.a_mvarrayofindexkeycursorresponse_;
 }
 
@@ -3908,299 +3908,299 @@ inline void CursorResponse::set_allocated_a_mvnsresult(std::string* a_mvnsresult
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVnsresult)
 }
 
-// .protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreCursorResponse mVArrayOfObjectStoreCursorResponse = 3;
-inline bool CursorResponse::_internal_has_mvarrayofobjectstorecursorresponse() const {
-  return content_case() == kMVArrayOfObjectStoreCursorResponse;
+// .protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreCursorResponse a_mVArrayOfObjectStoreCursorResponse = 3;
+inline bool CursorResponse::_internal_has_a_mvarrayofobjectstorecursorresponse() const {
+  return content_case() == kAMVArrayOfObjectStoreCursorResponse;
 }
-inline bool CursorResponse::has_mvarrayofobjectstorecursorresponse() const {
-  return _internal_has_mvarrayofobjectstorecursorresponse();
+inline bool CursorResponse::has_a_mvarrayofobjectstorecursorresponse() const {
+  return _internal_has_a_mvarrayofobjectstorecursorresponse();
 }
-inline void CursorResponse::set_has_mvarrayofobjectstorecursorresponse() {
-  _impl_._oneof_case_[0] = kMVArrayOfObjectStoreCursorResponse;
+inline void CursorResponse::set_has_a_mvarrayofobjectstorecursorresponse() {
+  _impl_._oneof_case_[0] = kAMVArrayOfObjectStoreCursorResponse;
 }
-inline void CursorResponse::clear_mvarrayofobjectstorecursorresponse() {
-  if (_internal_has_mvarrayofobjectstorecursorresponse()) {
+inline void CursorResponse::clear_a_mvarrayofobjectstorecursorresponse() {
+  if (_internal_has_a_mvarrayofobjectstorecursorresponse()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvarrayofobjectstorecursorresponse_;
+      delete _impl_.content_.a_mvarrayofobjectstorecursorresponse_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse* CursorResponse::release_mvarrayofobjectstorecursorresponse() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CursorResponse.mVArrayOfObjectStoreCursorResponse)
-  if (_internal_has_mvarrayofobjectstorecursorresponse()) {
+inline ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* CursorResponse::release_a_mvarrayofobjectstorecursorresponse() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVArrayOfObjectStoreCursorResponse)
+  if (_internal_has_a_mvarrayofobjectstorecursorresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse* temp = _impl_.content_.mvarrayofobjectstorecursorresponse_;
+    ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* temp = _impl_.content_.a_mvarrayofobjectstorecursorresponse_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvarrayofobjectstorecursorresponse_ = nullptr;
+    _impl_.content_.a_mvarrayofobjectstorecursorresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse& CursorResponse::_internal_mvarrayofobjectstorecursorresponse() const {
-  return _internal_has_mvarrayofobjectstorecursorresponse()
-      ? *_impl_.content_.mvarrayofobjectstorecursorresponse_
-      : reinterpret_cast< ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse&>(::protobuf::mozilla::dom::indexedDB::_CursorResponse__mVArrayOfObjectStoreCursorResponse_default_instance_);
+inline const ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse& CursorResponse::_internal_a_mvarrayofobjectstorecursorresponse() const {
+  return _internal_has_a_mvarrayofobjectstorecursorresponse()
+      ? *_impl_.content_.a_mvarrayofobjectstorecursorresponse_
+      : reinterpret_cast< ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse&>(::protobuf::mozilla::dom::indexedDB::_CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse& CursorResponse::mvarrayofobjectstorecursorresponse() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse.mVArrayOfObjectStoreCursorResponse)
-  return _internal_mvarrayofobjectstorecursorresponse();
+inline const ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse& CursorResponse::a_mvarrayofobjectstorecursorresponse() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVArrayOfObjectStoreCursorResponse)
+  return _internal_a_mvarrayofobjectstorecursorresponse();
 }
-inline ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse* CursorResponse::unsafe_arena_release_mvarrayofobjectstorecursorresponse() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.indexedDB.CursorResponse.mVArrayOfObjectStoreCursorResponse)
-  if (_internal_has_mvarrayofobjectstorecursorresponse()) {
+inline ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* CursorResponse::unsafe_arena_release_a_mvarrayofobjectstorecursorresponse() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVArrayOfObjectStoreCursorResponse)
+  if (_internal_has_a_mvarrayofobjectstorecursorresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse* temp = _impl_.content_.mvarrayofobjectstorecursorresponse_;
-    _impl_.content_.mvarrayofobjectstorecursorresponse_ = nullptr;
+    ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* temp = _impl_.content_.a_mvarrayofobjectstorecursorresponse_;
+    _impl_.content_.a_mvarrayofobjectstorecursorresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void CursorResponse::unsafe_arena_set_allocated_mvarrayofobjectstorecursorresponse(::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse* mvarrayofobjectstorecursorresponse) {
+inline void CursorResponse::unsafe_arena_set_allocated_a_mvarrayofobjectstorecursorresponse(::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* a_mvarrayofobjectstorecursorresponse) {
   clear_content();
-  if (mvarrayofobjectstorecursorresponse) {
-    set_has_mvarrayofobjectstorecursorresponse();
-    _impl_.content_.mvarrayofobjectstorecursorresponse_ = mvarrayofobjectstorecursorresponse;
+  if (a_mvarrayofobjectstorecursorresponse) {
+    set_has_a_mvarrayofobjectstorecursorresponse();
+    _impl_.content_.a_mvarrayofobjectstorecursorresponse_ = a_mvarrayofobjectstorecursorresponse;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.CursorResponse.mVArrayOfObjectStoreCursorResponse)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVArrayOfObjectStoreCursorResponse)
 }
-inline ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse* CursorResponse::_internal_mutable_mvarrayofobjectstorecursorresponse() {
-  if (!_internal_has_mvarrayofobjectstorecursorresponse()) {
+inline ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* CursorResponse::_internal_mutable_a_mvarrayofobjectstorecursorresponse() {
+  if (!_internal_has_a_mvarrayofobjectstorecursorresponse()) {
     clear_content();
-    set_has_mvarrayofobjectstorecursorresponse();
-    _impl_.content_.mvarrayofobjectstorecursorresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse >(GetArenaForAllocation());
+    set_has_a_mvarrayofobjectstorecursorresponse();
+    _impl_.content_.a_mvarrayofobjectstorecursorresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvarrayofobjectstorecursorresponse_;
+  return _impl_.content_.a_mvarrayofobjectstorecursorresponse_;
 }
-inline ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse* CursorResponse::mutable_mvarrayofobjectstorecursorresponse() {
-  ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreCursorResponse* _msg = _internal_mutable_mvarrayofobjectstorecursorresponse();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse.mVArrayOfObjectStoreCursorResponse)
+inline ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* CursorResponse::mutable_a_mvarrayofobjectstorecursorresponse() {
+  ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* _msg = _internal_mutable_a_mvarrayofobjectstorecursorresponse();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVArrayOfObjectStoreCursorResponse)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfObjectStoreKeyCursorResponse mVArrayOfObjectStoreKeyCursorResponse = 4;
-inline bool CursorResponse::_internal_has_mvarrayofobjectstorekeycursorresponse() const {
-  return content_case() == kMVArrayOfObjectStoreKeyCursorResponse;
+// .protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreKeyCursorResponse a_mVArrayOfObjectStoreKeyCursorResponse = 4;
+inline bool CursorResponse::_internal_has_a_mvarrayofobjectstorekeycursorresponse() const {
+  return content_case() == kAMVArrayOfObjectStoreKeyCursorResponse;
 }
-inline bool CursorResponse::has_mvarrayofobjectstorekeycursorresponse() const {
-  return _internal_has_mvarrayofobjectstorekeycursorresponse();
+inline bool CursorResponse::has_a_mvarrayofobjectstorekeycursorresponse() const {
+  return _internal_has_a_mvarrayofobjectstorekeycursorresponse();
 }
-inline void CursorResponse::set_has_mvarrayofobjectstorekeycursorresponse() {
-  _impl_._oneof_case_[0] = kMVArrayOfObjectStoreKeyCursorResponse;
+inline void CursorResponse::set_has_a_mvarrayofobjectstorekeycursorresponse() {
+  _impl_._oneof_case_[0] = kAMVArrayOfObjectStoreKeyCursorResponse;
 }
-inline void CursorResponse::clear_mvarrayofobjectstorekeycursorresponse() {
-  if (_internal_has_mvarrayofobjectstorekeycursorresponse()) {
+inline void CursorResponse::clear_a_mvarrayofobjectstorekeycursorresponse() {
+  if (_internal_has_a_mvarrayofobjectstorekeycursorresponse()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvarrayofobjectstorekeycursorresponse_;
+      delete _impl_.content_.a_mvarrayofobjectstorekeycursorresponse_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* CursorResponse::release_mvarrayofobjectstorekeycursorresponse() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CursorResponse.mVArrayOfObjectStoreKeyCursorResponse)
-  if (_internal_has_mvarrayofobjectstorekeycursorresponse()) {
+inline ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* CursorResponse::release_a_mvarrayofobjectstorekeycursorresponse() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVArrayOfObjectStoreKeyCursorResponse)
+  if (_internal_has_a_mvarrayofobjectstorekeycursorresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* temp = _impl_.content_.mvarrayofobjectstorekeycursorresponse_;
+    ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* temp = _impl_.content_.a_mvarrayofobjectstorekeycursorresponse_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvarrayofobjectstorekeycursorresponse_ = nullptr;
+    _impl_.content_.a_mvarrayofobjectstorekeycursorresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse& CursorResponse::_internal_mvarrayofobjectstorekeycursorresponse() const {
-  return _internal_has_mvarrayofobjectstorekeycursorresponse()
-      ? *_impl_.content_.mvarrayofobjectstorekeycursorresponse_
-      : reinterpret_cast< ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse&>(::protobuf::mozilla::dom::indexedDB::_CursorResponse__mVArrayOfObjectStoreKeyCursorResponse_default_instance_);
+inline const ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse& CursorResponse::_internal_a_mvarrayofobjectstorekeycursorresponse() const {
+  return _internal_has_a_mvarrayofobjectstorekeycursorresponse()
+      ? *_impl_.content_.a_mvarrayofobjectstorekeycursorresponse_
+      : reinterpret_cast< ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse&>(::protobuf::mozilla::dom::indexedDB::_CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse& CursorResponse::mvarrayofobjectstorekeycursorresponse() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse.mVArrayOfObjectStoreKeyCursorResponse)
-  return _internal_mvarrayofobjectstorekeycursorresponse();
+inline const ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse& CursorResponse::a_mvarrayofobjectstorekeycursorresponse() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVArrayOfObjectStoreKeyCursorResponse)
+  return _internal_a_mvarrayofobjectstorekeycursorresponse();
 }
-inline ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* CursorResponse::unsafe_arena_release_mvarrayofobjectstorekeycursorresponse() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.indexedDB.CursorResponse.mVArrayOfObjectStoreKeyCursorResponse)
-  if (_internal_has_mvarrayofobjectstorekeycursorresponse()) {
+inline ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* CursorResponse::unsafe_arena_release_a_mvarrayofobjectstorekeycursorresponse() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVArrayOfObjectStoreKeyCursorResponse)
+  if (_internal_has_a_mvarrayofobjectstorekeycursorresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* temp = _impl_.content_.mvarrayofobjectstorekeycursorresponse_;
-    _impl_.content_.mvarrayofobjectstorekeycursorresponse_ = nullptr;
+    ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* temp = _impl_.content_.a_mvarrayofobjectstorekeycursorresponse_;
+    _impl_.content_.a_mvarrayofobjectstorekeycursorresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void CursorResponse::unsafe_arena_set_allocated_mvarrayofobjectstorekeycursorresponse(::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* mvarrayofobjectstorekeycursorresponse) {
+inline void CursorResponse::unsafe_arena_set_allocated_a_mvarrayofobjectstorekeycursorresponse(::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* a_mvarrayofobjectstorekeycursorresponse) {
   clear_content();
-  if (mvarrayofobjectstorekeycursorresponse) {
-    set_has_mvarrayofobjectstorekeycursorresponse();
-    _impl_.content_.mvarrayofobjectstorekeycursorresponse_ = mvarrayofobjectstorekeycursorresponse;
+  if (a_mvarrayofobjectstorekeycursorresponse) {
+    set_has_a_mvarrayofobjectstorekeycursorresponse();
+    _impl_.content_.a_mvarrayofobjectstorekeycursorresponse_ = a_mvarrayofobjectstorekeycursorresponse;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.CursorResponse.mVArrayOfObjectStoreKeyCursorResponse)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVArrayOfObjectStoreKeyCursorResponse)
 }
-inline ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* CursorResponse::_internal_mutable_mvarrayofobjectstorekeycursorresponse() {
-  if (!_internal_has_mvarrayofobjectstorekeycursorresponse()) {
+inline ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* CursorResponse::_internal_mutable_a_mvarrayofobjectstorekeycursorresponse() {
+  if (!_internal_has_a_mvarrayofobjectstorekeycursorresponse()) {
     clear_content();
-    set_has_mvarrayofobjectstorekeycursorresponse();
-    _impl_.content_.mvarrayofobjectstorekeycursorresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse >(GetArenaForAllocation());
+    set_has_a_mvarrayofobjectstorekeycursorresponse();
+    _impl_.content_.a_mvarrayofobjectstorekeycursorresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvarrayofobjectstorekeycursorresponse_;
+  return _impl_.content_.a_mvarrayofobjectstorekeycursorresponse_;
 }
-inline ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* CursorResponse::mutable_mvarrayofobjectstorekeycursorresponse() {
-  ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfObjectStoreKeyCursorResponse* _msg = _internal_mutable_mvarrayofobjectstorekeycursorresponse();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse.mVArrayOfObjectStoreKeyCursorResponse)
+inline ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* CursorResponse::mutable_a_mvarrayofobjectstorekeycursorresponse() {
+  ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* _msg = _internal_mutable_a_mvarrayofobjectstorekeycursorresponse();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVArrayOfObjectStoreKeyCursorResponse)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexCursorResponse mVArrayOfIndexCursorResponse = 5;
-inline bool CursorResponse::_internal_has_mvarrayofindexcursorresponse() const {
-  return content_case() == kMVArrayOfIndexCursorResponse;
+// .protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexCursorResponse a_mVArrayOfIndexCursorResponse = 5;
+inline bool CursorResponse::_internal_has_a_mvarrayofindexcursorresponse() const {
+  return content_case() == kAMVArrayOfIndexCursorResponse;
 }
-inline bool CursorResponse::has_mvarrayofindexcursorresponse() const {
-  return _internal_has_mvarrayofindexcursorresponse();
+inline bool CursorResponse::has_a_mvarrayofindexcursorresponse() const {
+  return _internal_has_a_mvarrayofindexcursorresponse();
 }
-inline void CursorResponse::set_has_mvarrayofindexcursorresponse() {
-  _impl_._oneof_case_[0] = kMVArrayOfIndexCursorResponse;
+inline void CursorResponse::set_has_a_mvarrayofindexcursorresponse() {
+  _impl_._oneof_case_[0] = kAMVArrayOfIndexCursorResponse;
 }
-inline void CursorResponse::clear_mvarrayofindexcursorresponse() {
-  if (_internal_has_mvarrayofindexcursorresponse()) {
+inline void CursorResponse::clear_a_mvarrayofindexcursorresponse() {
+  if (_internal_has_a_mvarrayofindexcursorresponse()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvarrayofindexcursorresponse_;
+      delete _impl_.content_.a_mvarrayofindexcursorresponse_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse* CursorResponse::release_mvarrayofindexcursorresponse() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CursorResponse.mVArrayOfIndexCursorResponse)
-  if (_internal_has_mvarrayofindexcursorresponse()) {
+inline ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse* CursorResponse::release_a_mvarrayofindexcursorresponse() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVArrayOfIndexCursorResponse)
+  if (_internal_has_a_mvarrayofindexcursorresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse* temp = _impl_.content_.mvarrayofindexcursorresponse_;
+    ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse* temp = _impl_.content_.a_mvarrayofindexcursorresponse_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvarrayofindexcursorresponse_ = nullptr;
+    _impl_.content_.a_mvarrayofindexcursorresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse& CursorResponse::_internal_mvarrayofindexcursorresponse() const {
-  return _internal_has_mvarrayofindexcursorresponse()
-      ? *_impl_.content_.mvarrayofindexcursorresponse_
-      : reinterpret_cast< ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse&>(::protobuf::mozilla::dom::indexedDB::_CursorResponse__mVArrayOfIndexCursorResponse_default_instance_);
+inline const ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse& CursorResponse::_internal_a_mvarrayofindexcursorresponse() const {
+  return _internal_has_a_mvarrayofindexcursorresponse()
+      ? *_impl_.content_.a_mvarrayofindexcursorresponse_
+      : reinterpret_cast< ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse&>(::protobuf::mozilla::dom::indexedDB::_CursorResponse_a_type_mVArrayOfIndexCursorResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse& CursorResponse::mvarrayofindexcursorresponse() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse.mVArrayOfIndexCursorResponse)
-  return _internal_mvarrayofindexcursorresponse();
+inline const ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse& CursorResponse::a_mvarrayofindexcursorresponse() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVArrayOfIndexCursorResponse)
+  return _internal_a_mvarrayofindexcursorresponse();
 }
-inline ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse* CursorResponse::unsafe_arena_release_mvarrayofindexcursorresponse() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.indexedDB.CursorResponse.mVArrayOfIndexCursorResponse)
-  if (_internal_has_mvarrayofindexcursorresponse()) {
+inline ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse* CursorResponse::unsafe_arena_release_a_mvarrayofindexcursorresponse() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVArrayOfIndexCursorResponse)
+  if (_internal_has_a_mvarrayofindexcursorresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse* temp = _impl_.content_.mvarrayofindexcursorresponse_;
-    _impl_.content_.mvarrayofindexcursorresponse_ = nullptr;
+    ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse* temp = _impl_.content_.a_mvarrayofindexcursorresponse_;
+    _impl_.content_.a_mvarrayofindexcursorresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void CursorResponse::unsafe_arena_set_allocated_mvarrayofindexcursorresponse(::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse* mvarrayofindexcursorresponse) {
+inline void CursorResponse::unsafe_arena_set_allocated_a_mvarrayofindexcursorresponse(::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse* a_mvarrayofindexcursorresponse) {
   clear_content();
-  if (mvarrayofindexcursorresponse) {
-    set_has_mvarrayofindexcursorresponse();
-    _impl_.content_.mvarrayofindexcursorresponse_ = mvarrayofindexcursorresponse;
+  if (a_mvarrayofindexcursorresponse) {
+    set_has_a_mvarrayofindexcursorresponse();
+    _impl_.content_.a_mvarrayofindexcursorresponse_ = a_mvarrayofindexcursorresponse;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.CursorResponse.mVArrayOfIndexCursorResponse)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVArrayOfIndexCursorResponse)
 }
-inline ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse* CursorResponse::_internal_mutable_mvarrayofindexcursorresponse() {
-  if (!_internal_has_mvarrayofindexcursorresponse()) {
+inline ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse* CursorResponse::_internal_mutable_a_mvarrayofindexcursorresponse() {
+  if (!_internal_has_a_mvarrayofindexcursorresponse()) {
     clear_content();
-    set_has_mvarrayofindexcursorresponse();
-    _impl_.content_.mvarrayofindexcursorresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse >(GetArenaForAllocation());
+    set_has_a_mvarrayofindexcursorresponse();
+    _impl_.content_.a_mvarrayofindexcursorresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvarrayofindexcursorresponse_;
+  return _impl_.content_.a_mvarrayofindexcursorresponse_;
 }
-inline ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse* CursorResponse::mutable_mvarrayofindexcursorresponse() {
-  ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexCursorResponse* _msg = _internal_mutable_mvarrayofindexcursorresponse();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse.mVArrayOfIndexCursorResponse)
+inline ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse* CursorResponse::mutable_a_mvarrayofindexcursorresponse() {
+  ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexCursorResponse* _msg = _internal_mutable_a_mvarrayofindexcursorresponse();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVArrayOfIndexCursorResponse)
   return _msg;
 }
 
-// .protobuf.mozilla.dom.indexedDB.CursorResponse._mVArrayOfIndexKeyCursorResponse mVArrayOfIndexKeyCursorResponse = 6;
-inline bool CursorResponse::_internal_has_mvarrayofindexkeycursorresponse() const {
-  return content_case() == kMVArrayOfIndexKeyCursorResponse;
+// .protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexKeyCursorResponse a_mVArrayOfIndexKeyCursorResponse = 6;
+inline bool CursorResponse::_internal_has_a_mvarrayofindexkeycursorresponse() const {
+  return content_case() == kAMVArrayOfIndexKeyCursorResponse;
 }
-inline bool CursorResponse::has_mvarrayofindexkeycursorresponse() const {
-  return _internal_has_mvarrayofindexkeycursorresponse();
+inline bool CursorResponse::has_a_mvarrayofindexkeycursorresponse() const {
+  return _internal_has_a_mvarrayofindexkeycursorresponse();
 }
-inline void CursorResponse::set_has_mvarrayofindexkeycursorresponse() {
-  _impl_._oneof_case_[0] = kMVArrayOfIndexKeyCursorResponse;
+inline void CursorResponse::set_has_a_mvarrayofindexkeycursorresponse() {
+  _impl_._oneof_case_[0] = kAMVArrayOfIndexKeyCursorResponse;
 }
-inline void CursorResponse::clear_mvarrayofindexkeycursorresponse() {
-  if (_internal_has_mvarrayofindexkeycursorresponse()) {
+inline void CursorResponse::clear_a_mvarrayofindexkeycursorresponse() {
+  if (_internal_has_a_mvarrayofindexkeycursorresponse()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvarrayofindexkeycursorresponse_;
+      delete _impl_.content_.a_mvarrayofindexkeycursorresponse_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse* CursorResponse::release_mvarrayofindexkeycursorresponse() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CursorResponse.mVArrayOfIndexKeyCursorResponse)
-  if (_internal_has_mvarrayofindexkeycursorresponse()) {
+inline ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* CursorResponse::release_a_mvarrayofindexkeycursorresponse() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVArrayOfIndexKeyCursorResponse)
+  if (_internal_has_a_mvarrayofindexkeycursorresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse* temp = _impl_.content_.mvarrayofindexkeycursorresponse_;
+    ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* temp = _impl_.content_.a_mvarrayofindexkeycursorresponse_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvarrayofindexkeycursorresponse_ = nullptr;
+    _impl_.content_.a_mvarrayofindexkeycursorresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse& CursorResponse::_internal_mvarrayofindexkeycursorresponse() const {
-  return _internal_has_mvarrayofindexkeycursorresponse()
-      ? *_impl_.content_.mvarrayofindexkeycursorresponse_
-      : reinterpret_cast< ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse&>(::protobuf::mozilla::dom::indexedDB::_CursorResponse__mVArrayOfIndexKeyCursorResponse_default_instance_);
+inline const ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse& CursorResponse::_internal_a_mvarrayofindexkeycursorresponse() const {
+  return _internal_has_a_mvarrayofindexkeycursorresponse()
+      ? *_impl_.content_.a_mvarrayofindexkeycursorresponse_
+      : reinterpret_cast< ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse&>(::protobuf::mozilla::dom::indexedDB::_CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse& CursorResponse::mvarrayofindexkeycursorresponse() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse.mVArrayOfIndexKeyCursorResponse)
-  return _internal_mvarrayofindexkeycursorresponse();
+inline const ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse& CursorResponse::a_mvarrayofindexkeycursorresponse() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVArrayOfIndexKeyCursorResponse)
+  return _internal_a_mvarrayofindexkeycursorresponse();
 }
-inline ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse* CursorResponse::unsafe_arena_release_mvarrayofindexkeycursorresponse() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.indexedDB.CursorResponse.mVArrayOfIndexKeyCursorResponse)
-  if (_internal_has_mvarrayofindexkeycursorresponse()) {
+inline ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* CursorResponse::unsafe_arena_release_a_mvarrayofindexkeycursorresponse() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVArrayOfIndexKeyCursorResponse)
+  if (_internal_has_a_mvarrayofindexkeycursorresponse()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse* temp = _impl_.content_.mvarrayofindexkeycursorresponse_;
-    _impl_.content_.mvarrayofindexkeycursorresponse_ = nullptr;
+    ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* temp = _impl_.content_.a_mvarrayofindexkeycursorresponse_;
+    _impl_.content_.a_mvarrayofindexkeycursorresponse_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void CursorResponse::unsafe_arena_set_allocated_mvarrayofindexkeycursorresponse(::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse* mvarrayofindexkeycursorresponse) {
+inline void CursorResponse::unsafe_arena_set_allocated_a_mvarrayofindexkeycursorresponse(::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* a_mvarrayofindexkeycursorresponse) {
   clear_content();
-  if (mvarrayofindexkeycursorresponse) {
-    set_has_mvarrayofindexkeycursorresponse();
-    _impl_.content_.mvarrayofindexkeycursorresponse_ = mvarrayofindexkeycursorresponse;
+  if (a_mvarrayofindexkeycursorresponse) {
+    set_has_a_mvarrayofindexkeycursorresponse();
+    _impl_.content_.a_mvarrayofindexkeycursorresponse_ = a_mvarrayofindexkeycursorresponse;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.CursorResponse.mVArrayOfIndexKeyCursorResponse)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVArrayOfIndexKeyCursorResponse)
 }
-inline ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse* CursorResponse::_internal_mutable_mvarrayofindexkeycursorresponse() {
-  if (!_internal_has_mvarrayofindexkeycursorresponse()) {
+inline ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* CursorResponse::_internal_mutable_a_mvarrayofindexkeycursorresponse() {
+  if (!_internal_has_a_mvarrayofindexkeycursorresponse()) {
     clear_content();
-    set_has_mvarrayofindexkeycursorresponse();
-    _impl_.content_.mvarrayofindexkeycursorresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse >(GetArenaForAllocation());
+    set_has_a_mvarrayofindexkeycursorresponse();
+    _impl_.content_.a_mvarrayofindexkeycursorresponse_ = CreateMaybeMessage< ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvarrayofindexkeycursorresponse_;
+  return _impl_.content_.a_mvarrayofindexkeycursorresponse_;
 }
-inline ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse* CursorResponse::mutable_mvarrayofindexkeycursorresponse() {
-  ::protobuf::mozilla::dom::indexedDB::CursorResponse__mVArrayOfIndexKeyCursorResponse* _msg = _internal_mutable_mvarrayofindexkeycursorresponse();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse.mVArrayOfIndexKeyCursorResponse)
+inline ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* CursorResponse::mutable_a_mvarrayofindexkeycursorresponse() {
+  ::protobuf::mozilla::dom::indexedDB::CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* _msg = _internal_mutable_a_mvarrayofindexkeycursorresponse();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.indexedDB.CursorResponse.a_mVArrayOfIndexKeyCursorResponse)
   return _msg;
 }
 

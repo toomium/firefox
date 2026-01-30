@@ -136,7 +136,7 @@ message LoadInfoArgs {
   required bool a_isMetaRefresh = 77;
   required bytes a_loadingEmbedderPolicy = 78;
   required bool a_originTrialCoepCredentiallessEnabledForTopLevel = 79;
-  required bytes a_unstrippedURI = 80;
+  optional bytes a_unstrippedURI = 80;
   optional protobuf.mozilla.net.InterceptionInfoArg a_interceptionInfo = 81;
   required bool a_isNewWindowTarget = 82;
   required bytes a_userNavigationInvolvement = 83;
@@ -172,7 +172,7 @@ message ParentLoadInfoForwarderArgs {
   optional bool a_isThirdPartyContextToTopWindow = 27;
   required bool a_isInThirdPartyContext = 28;
   required bool a_isOn3PCBExceptionList = 29;
-  required bytes a_unstrippedURI = 30;
+  optional bytes a_unstrippedURI = 30;
   required bytes a_userNavigationInvolvement = 31;
 }
 
@@ -188,12 +188,12 @@ message CorsPreflightArgs {
 }
 
 message HttpChannelOpenArgs {
-  required bytes a_uri = 1;
-  required bytes a_original = 2;
-  required bytes a_doc = 3;
-  required bytes a_referrerInfo = 4;
-  required bytes a_apiRedirectTo = 5;
-  required bytes a_topWindowURI = 6;
+  optional bytes a_uri = 1;
+  optional bytes a_original = 2;
+  optional bytes a_doc = 3;
+  optional bytes a_referrerInfo = 4;
+  optional bytes a_apiRedirectTo = 5;
+  optional bytes a_topWindowURI = 6;
   required bytes a_requestHeaders = 7;
   repeated protobuf.mozilla.net.PreferredAlternativeDataTypeParams a_preferredAlternativeTypes = 8;
   required bytes a_launchServiceWorkerStart = 9;
@@ -359,7 +359,7 @@ message DocumentChannelCreationArgs {
   required bytes a_asyncOpenTime = 2;
   required uint64 a_channelId = 3;
   required uint32 a_cacheKey = 4;
-  required bytes a_timing = 5;
+  optional bytes a_timing = 5;
   optional protobuf.mozilla.dom.IPCClientInfo a_initialClientInfo = 6;
   required protobuf.mozilla.net.DocumentChannelElementCreationArgs a_elementCreationArgs = 7;
   required uint64 a_parentInitiatedNavigationEpoch = 8;
@@ -372,23 +372,23 @@ message EarlyHintConnectArgs {
 
 message RedirectToRealChannelArgs {
   required uint32 a_registrarId = 1;
-  required bytes a_uri = 2;
+  optional bytes a_uri = 2;
   required uint32 a_newLoadFlags = 3;
   optional protobuf.mozilla.dom.ReplacementChannelConfigInit a_init = 4;
   required protobuf.mozilla.net.LoadInfoArgs a_loadInfo = 5;
   required uint64 a_channelId = 6;
-  required bytes a_originalURI = 7;
+  optional bytes a_originalURI = 7;
   required uint32 a_redirectMode = 8;
   required uint32 a_redirectFlags = 9;
   optional uint32 a_contentDisposition = 10;
   optional string a_contentDispositionFilename = 11;
-  required bytes a_properties = 12;
+  optional bytes a_properties = 12;
   required uint32 a_loadStateExternalLoadFlags = 13;
   required uint32 a_loadStateInternalLoadFlags = 14;
   required uint32 a_loadStateLoadType = 15;
-  required bytes a_timing = 16;
+  optional bytes a_timing = 16;
   required string a_srcdocData = 17;
-  required bytes a_baseUri = 18;
+  optional bytes a_baseUri = 18;
   optional bytes a_loadingSessionHistoryInfo = 19;
   required uint64 a_loadIdentifier = 20;
   optional string a_originalUriString = 21;
@@ -486,8 +486,8 @@ message GIOChannelCreationArgs {
 }
 
 message FileChannelInfo {
-  required bytes a_uri = 1;
-  required bytes a_originalURI = 2;
+  optional bytes a_uri = 1;
+  optional bytes a_originalURI = 2;
   required uint32 a_loadFlags = 3;
   required protobuf.mozilla.net.LoadInfoArgs a_loadInfo = 4;
   required string a_contentType = 5;
@@ -495,7 +495,7 @@ message FileChannelInfo {
 }
 
 message RemoteStreamInfo {
-  required bytes a_inputStream = 1;
+  optional bytes a_inputStream = 1;
   required string a_contentType = 2;
   required sint64 a_contentLength = 3;
 }

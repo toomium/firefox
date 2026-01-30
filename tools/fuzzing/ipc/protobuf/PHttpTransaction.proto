@@ -21,7 +21,7 @@ import "NeckoChannelParams.proto";
 message Msg_OnStartRequest {
   required bytes a_status = 1;
   optional bytes a_responseHead = 2;
-  required bytes a_securityInfo = 3;
+  optional bytes a_securityInfo = 3;
   required bool a_proxyConnectFailed = 4;
   required protobuf.mozilla.net.TimingStructArgs a_timings = 5;
   required sint32 a_proxyConnectResponseCode = 6;

@@ -4136,7 +4136,7 @@ class XPCOMInitData final :
   std::string* _internal_add_a_dynamicscalardefs();
   public:
 
-  // required bytes a_userContentSheetURL = 9;
+  // optional bytes a_userContentSheetURL = 9;
   bool has_a_usercontentsheeturl() const;
   private:
   bool _internal_has_a_usercontentsheeturl() const;
@@ -4497,7 +4497,7 @@ class VisitedQueryResult final :
     kAUriFieldNumber = 1,
     kAVisitedFieldNumber = 2,
   };
-  // required bytes a_uri = 1;
+  // optional bytes a_uri = 1;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -4531,9 +4531,6 @@ class VisitedQueryResult final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.VisitedQueryResult)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -5067,7 +5064,7 @@ class PostMessageData final :
   std::string* _internal_mutable_a_targetorigin();
   public:
 
-  // required bytes a_targetOriginURI = 4;
+  // optional bytes a_targetOriginURI = 4;
   bool has_a_targetoriginuri() const;
   private:
   bool _internal_has_a_targetoriginuri() const;
@@ -5085,7 +5082,7 @@ class PostMessageData final :
   std::string* _internal_mutable_a_targetoriginuri();
   public:
 
-  // required bytes a_callerPrincipal = 5;
+  // optional bytes a_callerPrincipal = 5;
   bool has_a_callerprincipal() const;
   private:
   bool _internal_has_a_callerprincipal() const;
@@ -5103,7 +5100,7 @@ class PostMessageData final :
   std::string* _internal_mutable_a_callerprincipal();
   public:
 
-  // required bytes a_subjectPrincipal = 6;
+  // optional bytes a_subjectPrincipal = 6;
   bool has_a_subjectprincipal() const;
   private:
   bool _internal_has_a_subjectprincipal() const;
@@ -5121,7 +5118,7 @@ class PostMessageData final :
   std::string* _internal_mutable_a_subjectprincipal();
   public:
 
-  // required bytes a_callerURI = 7;
+  // optional bytes a_callerURI = 7;
   bool has_a_calleruri() const;
   private:
   bool _internal_has_a_calleruri() const;
@@ -6758,7 +6755,7 @@ class BroadcastBlobURLUnregistrationRequest final :
   std::string* _internal_mutable_a_url();
   public:
 
-  // required bytes a_principal = 2;
+  // optional bytes a_principal = 2;
   bool has_a_principal() const;
   private:
   bool _internal_has_a_principal() const;
@@ -6779,9 +6776,6 @@ class BroadcastBlobURLUnregistrationRequest final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.BroadcastBlobURLUnregistrationRequest)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -10935,7 +10929,7 @@ inline void XPCOMInitData::set_allocated_a_domainpolicy(::protobuf::mozilla::dom
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.XPCOMInitData.a_domainPolicy)
 }
 
-// required bytes a_userContentSheetURL = 9;
+// optional bytes a_userContentSheetURL = 9;
 inline bool XPCOMInitData::_internal_has_a_usercontentsheeturl() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -11705,7 +11699,7 @@ inline void XPCOMInitData::set_allocated_a_trrmodefrompref(std::string* a_trrmod
 
 // VisitedQueryResult
 
-// required bytes a_uri = 1;
+// optional bytes a_uri = 1;
 inline bool VisitedQueryResult::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -12296,7 +12290,7 @@ inline void PostMessageData::set_allocated_a_targetorigin(std::string* a_targeto
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PostMessageData.a_targetOrigin)
 }
 
-// required bytes a_targetOriginURI = 4;
+// optional bytes a_targetOriginURI = 4;
 inline bool PostMessageData::_internal_has_a_targetoriginuri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -12364,7 +12358,7 @@ inline void PostMessageData::set_allocated_a_targetoriginuri(std::string* a_targ
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PostMessageData.a_targetOriginURI)
 }
 
-// required bytes a_callerPrincipal = 5;
+// optional bytes a_callerPrincipal = 5;
 inline bool PostMessageData::_internal_has_a_callerprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -12432,7 +12426,7 @@ inline void PostMessageData::set_allocated_a_callerprincipal(std::string* a_call
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PostMessageData.a_callerPrincipal)
 }
 
-// required bytes a_subjectPrincipal = 6;
+// optional bytes a_subjectPrincipal = 6;
 inline bool PostMessageData::_internal_has_a_subjectprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -12500,7 +12494,7 @@ inline void PostMessageData::set_allocated_a_subjectprincipal(std::string* a_sub
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PostMessageData.a_subjectPrincipal)
 }
 
-// required bytes a_callerURI = 7;
+// optional bytes a_callerURI = 7;
 inline bool PostMessageData::_internal_has_a_calleruri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -13881,7 +13875,7 @@ inline void BroadcastBlobURLUnregistrationRequest::set_allocated_a_url(std::stri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.BroadcastBlobURLUnregistrationRequest.a_url)
 }
 
-// required bytes a_principal = 2;
+// optional bytes a_principal = 2;
 inline bool BroadcastBlobURLUnregistrationRequest::_internal_has_a_principal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

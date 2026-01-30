@@ -365,7 +365,7 @@ class RequestData final :
     kAMatchedListFieldNumber = 3,
     kACanceledReasonFieldNumber = 4,
   };
-  // required bytes a_requestURI = 1;
+  // optional bytes a_requestURI = 1;
   bool has_a_requesturi() const;
   private:
   bool _internal_has_a_requesturi() const;
@@ -383,7 +383,7 @@ class RequestData final :
   std::string* _internal_mutable_a_requesturi();
   public:
 
-  // required bytes a_originalRequestURI = 2;
+  // optional bytes a_originalRequestURI = 2;
   bool has_a_originalrequesturi() const;
   private:
   bool _internal_has_a_originalrequesturi() const;
@@ -612,7 +612,7 @@ class WebProgressStateChangeData final :
   std::string* _internal_mutable_a_charset();
   public:
 
-  // required bytes a_documentURI = 5;
+  // optional bytes a_documentURI = 5;
   bool has_a_documenturi() const;
   private:
   bool _internal_has_a_documenturi() const;
@@ -857,7 +857,7 @@ class WebProgressLocationChangeData final :
   std::string* _internal_mutable_a_charset();
   public:
 
-  // required bytes a_documentURI = 7;
+  // optional bytes a_documentURI = 7;
   bool has_a_documenturi() const;
   private:
   bool _internal_has_a_documenturi() const;
@@ -875,7 +875,7 @@ class WebProgressLocationChangeData final :
   std::string* _internal_mutable_a_documenturi();
   public:
 
-  // required bytes a_contentPrincipal = 8;
+  // optional bytes a_contentPrincipal = 8;
   bool has_a_contentprincipal() const;
   private:
   bool _internal_has_a_contentprincipal() const;
@@ -893,7 +893,7 @@ class WebProgressLocationChangeData final :
   std::string* _internal_mutable_a_contentprincipal();
   public:
 
-  // required bytes a_contentPartitionedPrincipal = 9;
+  // optional bytes a_contentPartitionedPrincipal = 9;
   bool has_a_contentpartitionedprincipal() const;
   private:
   bool _internal_has_a_contentpartitionedprincipal() const;
@@ -911,7 +911,7 @@ class WebProgressLocationChangeData final :
   std::string* _internal_mutable_a_contentpartitionedprincipal();
   public:
 
-  // required bytes a_csp = 10;
+  // optional bytes a_csp = 10;
   bool has_a_csp() const;
   private:
   bool _internal_has_a_csp() const;
@@ -929,7 +929,7 @@ class WebProgressLocationChangeData final :
   std::string* _internal_mutable_a_csp();
   public:
 
-  // required bytes a_referrerInfo = 11;
+  // optional bytes a_referrerInfo = 11;
   bool has_a_referrerinfo() const;
   private:
   bool _internal_has_a_referrerinfo() const;
@@ -1389,7 +1389,7 @@ inline void WebProgressData::set_a_loadtype(uint32_t value) {
 
 // RequestData
 
-// required bytes a_requestURI = 1;
+// optional bytes a_requestURI = 1;
 inline bool RequestData::_internal_has_a_requesturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -1457,7 +1457,7 @@ inline void RequestData::set_allocated_a_requesturi(std::string* a_requesturi) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.RequestData.a_requestURI)
 }
 
-// required bytes a_originalRequestURI = 2;
+// optional bytes a_originalRequestURI = 2;
 inline bool RequestData::_internal_has_a_originalrequesturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
@@ -1857,7 +1857,7 @@ inline void WebProgressStateChangeData::set_allocated_a_charset(std::string* a_c
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebProgressStateChangeData.a_charset)
 }
 
-// required bytes a_documentURI = 5;
+// optional bytes a_documentURI = 5;
 inline bool WebProgressStateChangeData::_internal_has_a_documenturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -2217,7 +2217,7 @@ inline void WebProgressLocationChangeData::set_allocated_a_charset(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebProgressLocationChangeData.a_charset)
 }
 
-// required bytes a_documentURI = 7;
+// optional bytes a_documentURI = 7;
 inline bool WebProgressLocationChangeData::_internal_has_a_documenturi() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -2285,7 +2285,7 @@ inline void WebProgressLocationChangeData::set_allocated_a_documenturi(std::stri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebProgressLocationChangeData.a_documentURI)
 }
 
-// required bytes a_contentPrincipal = 8;
+// optional bytes a_contentPrincipal = 8;
 inline bool WebProgressLocationChangeData::_internal_has_a_contentprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
@@ -2353,7 +2353,7 @@ inline void WebProgressLocationChangeData::set_allocated_a_contentprincipal(std:
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebProgressLocationChangeData.a_contentPrincipal)
 }
 
-// required bytes a_contentPartitionedPrincipal = 9;
+// optional bytes a_contentPartitionedPrincipal = 9;
 inline bool WebProgressLocationChangeData::_internal_has_a_contentpartitionedprincipal() const {
   bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
@@ -2421,7 +2421,7 @@ inline void WebProgressLocationChangeData::set_allocated_a_contentpartitionedpri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebProgressLocationChangeData.a_contentPartitionedPrincipal)
 }
 
-// required bytes a_csp = 10;
+// optional bytes a_csp = 10;
 inline bool WebProgressLocationChangeData::_internal_has_a_csp() const {
   bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
@@ -2489,7 +2489,7 @@ inline void WebProgressLocationChangeData::set_allocated_a_csp(std::string* a_cs
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WebProgressLocationChangeData.a_csp)
 }
 
-// required bytes a_referrerInfo = 11;
+// optional bytes a_referrerInfo = 11;
 inline bool WebProgressLocationChangeData::_internal_has_a_referrerinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;

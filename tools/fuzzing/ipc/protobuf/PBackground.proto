@@ -132,7 +132,7 @@ message Reply_CreateFileSystemManagerParent {
 
 message Msg_CreateWebTransportParent {
   required string a_aURL = 1;
-  required bytes a_aPrincipal = 2;
+  optional bytes a_aPrincipal = 2;
   optional protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 3;
   required bool a_aDedicated = 4;
   required bool a_aRequireUnreliable = 5;

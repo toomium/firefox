@@ -915,7 +915,7 @@ class Msg_Redirect2Verify final :
   std::string* _internal_mutable_a_changedheaders();
   public:
 
-  // required bytes a_referrerInfo = 6;
+  // optional bytes a_referrerInfo = 6;
   bool has_a_referrerinfo() const;
   private:
   bool _internal_has_a_referrerinfo() const;
@@ -933,7 +933,7 @@ class Msg_Redirect2Verify final :
   std::string* _internal_mutable_a_referrerinfo();
   public:
 
-  // required bytes a_apiRedirectTo = 7;
+  // optional bytes a_apiRedirectTo = 7;
   bool has_a_apiredirectto() const;
   private:
   bool _internal_has_a_apiredirectto() const;
@@ -1296,7 +1296,7 @@ class Msg_RemoveCorsPreflightCacheEntry final :
     kAOriginAttributesFieldNumber = 3,
     kARequestingPrincipalFieldNumber = 2,
   };
-  // required bytes a_uri = 1;
+  // optional bytes a_uri = 1;
   bool has_a_uri() const;
   private:
   bool _internal_has_a_uri() const;
@@ -1543,7 +1543,7 @@ class Msg_SetCookies final :
   std::string* _internal_mutable_a_attrs();
   public:
 
-  // required bytes a_host = 3;
+  // optional bytes a_host = 3;
   bool has_a_host() const;
   private:
   bool _internal_has_a_host() const;
@@ -2642,7 +2642,7 @@ class Msg_Redirect1Begin final :
     kAChannelIdFieldNumber = 8,
     kARedirectFlagsFieldNumber = 4,
   };
-  // required bytes a_newOriginalUri = 2;
+  // optional bytes a_newOriginalUri = 2;
   bool has_a_neworiginaluri() const;
   private:
   bool _internal_has_a_neworiginaluri() const;
@@ -2678,7 +2678,7 @@ class Msg_Redirect1Begin final :
   std::string* _internal_mutable_a_responsehead();
   public:
 
-  // required bytes a_securityInfo = 7;
+  // optional bytes a_securityInfo = 7;
   bool has_a_securityinfo() const;
   private:
   bool _internal_has_a_securityinfo() const;
@@ -4679,7 +4679,7 @@ inline void Msg_Redirect2Verify::set_a_loadflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpChannel.Msg_Redirect2Verify.a_loadFlags)
 }
 
-// required bytes a_referrerInfo = 6;
+// optional bytes a_referrerInfo = 6;
 inline bool Msg_Redirect2Verify::_internal_has_a_referrerinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -4747,7 +4747,7 @@ inline void Msg_Redirect2Verify::set_allocated_a_referrerinfo(std::string* a_ref
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpChannel.Msg_Redirect2Verify.a_referrerInfo)
 }
 
-// required bytes a_apiRedirectTo = 7;
+// optional bytes a_apiRedirectTo = 7;
 inline bool Msg_Redirect2Verify::_internal_has_a_apiredirectto() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
@@ -4938,7 +4938,7 @@ inline void Msg_DocumentChannelCleanup::set_a_clearcacheentry(bool value) {
 
 // Msg_RemoveCorsPreflightCacheEntry
 
-// required bytes a_uri = 1;
+// optional bytes a_uri = 1;
 inline bool Msg_RemoveCorsPreflightCacheEntry::_internal_has_a_uri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5301,7 +5301,7 @@ inline void Msg_SetCookies::set_allocated_a_attrs(std::string* a_attrs) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpChannel.Msg_SetCookies.a_attrs)
 }
 
-// required bytes a_host = 3;
+// optional bytes a_host = 3;
 inline bool Msg_SetCookies::_internal_has_a_host() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
@@ -5618,7 +5618,7 @@ inline void Msg_Redirect1Begin::set_a_registrarid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpChannel.Msg_Redirect1Begin.a_registrarId)
 }
 
-// required bytes a_newOriginalUri = 2;
+// optional bytes a_newOriginalUri = 2;
 inline bool Msg_Redirect1Begin::_internal_has_a_neworiginaluri() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -5897,7 +5897,7 @@ inline void Msg_Redirect1Begin::set_allocated_a_responsehead(std::string* a_resp
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpChannel.Msg_Redirect1Begin.a_responseHead)
 }
 
-// required bytes a_securityInfo = 7;
+// optional bytes a_securityInfo = 7;
 inline bool Msg_Redirect1Begin::_internal_has_a_securityinfo() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;

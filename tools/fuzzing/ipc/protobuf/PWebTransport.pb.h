@@ -1725,7 +1725,7 @@ class Msg_IncomingUnidirectionalStream final :
     kAReceiveFieldNumber = 2,
     kAStreamIdFieldNumber = 1,
   };
-  // required bytes a_receive = 2;
+  // optional bytes a_receive = 2;
   bool has_a_receive() const;
   private:
   bool _internal_has_a_receive() const;
@@ -1759,9 +1759,6 @@ class Msg_IncomingUnidirectionalStream final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebTransport.Msg_IncomingUnidirectionalStream)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1891,7 +1888,7 @@ class Msg_IncomingBidirectionalStream final :
     kASendFieldNumber = 3,
     kAStreamIdFieldNumber = 1,
   };
-  // required bytes a_receive = 2;
+  // optional bytes a_receive = 2;
   bool has_a_receive() const;
   private:
   bool _internal_has_a_receive() const;
@@ -1909,7 +1906,7 @@ class Msg_IncomingBidirectionalStream final :
   std::string* _internal_mutable_a_receive();
   public:
 
-  // required bytes a_send = 3;
+  // optional bytes a_send = 3;
   bool has_a_send() const;
   private:
   bool _internal_has_a_send() const;
@@ -1943,9 +1940,6 @@ class Msg_IncomingBidirectionalStream final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.PWebTransport.Msg_IncomingBidirectionalStream)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -3419,7 +3413,7 @@ inline void Msg_IncomingUnidirectionalStream::set_a_streamid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebTransport.Msg_IncomingUnidirectionalStream.a_streamId)
 }
 
-// required bytes a_receive = 2;
+// optional bytes a_receive = 2;
 inline bool Msg_IncomingUnidirectionalStream::_internal_has_a_receive() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3519,7 +3513,7 @@ inline void Msg_IncomingBidirectionalStream::set_a_streamid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebTransport.Msg_IncomingBidirectionalStream.a_streamId)
 }
 
-// required bytes a_receive = 2;
+// optional bytes a_receive = 2;
 inline bool Msg_IncomingBidirectionalStream::_internal_has_a_receive() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
@@ -3587,7 +3581,7 @@ inline void Msg_IncomingBidirectionalStream::set_allocated_a_receive(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebTransport.Msg_IncomingBidirectionalStream.a_receive)
 }
 
-// required bytes a_send = 3;
+// optional bytes a_send = 3;
 inline bool Msg_IncomingBidirectionalStream::_internal_has_a_send() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;

@@ -82,7 +82,7 @@ message InternalResponseMetadata {
   repeated protobuf.mozilla.dom.HeadersEntry a_headers = 6;
   required bytes a_errorCode = 7;
   required string a_alternativeDataType = 8;
-  required bytes a_securityInfo = 9;
+  optional bytes a_securityInfo = 9;
   optional protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 10;
   required string a_bodyBlobURISpec = 11;
   required string a_bodyLocalPath = 12;

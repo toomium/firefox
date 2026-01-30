@@ -66,9 +66,9 @@ extern FetchEventTimeStampsDefaultTypeInternal _FetchEventTimeStamps_default_ins
 class OptionalPushData;
 struct OptionalPushDataDefaultTypeInternal;
 extern OptionalPushDataDefaultTypeInternal _OptionalPushData_default_instance_;
-class OptionalPushData__mVArrayOfuint8_t;
-struct OptionalPushData__mVArrayOfuint8_tDefaultTypeInternal;
-extern OptionalPushData__mVArrayOfuint8_tDefaultTypeInternal _OptionalPushData__mVArrayOfuint8_t_default_instance_;
+class OptionalPushData_a_type_mVArrayOfuint8_t;
+struct OptionalPushData_a_type_mVArrayOfuint8_tDefaultTypeInternal;
+extern OptionalPushData_a_type_mVArrayOfuint8_tDefaultTypeInternal _OptionalPushData_a_type_mVArrayOfuint8_t_default_instance_;
 class ParentToChildServiceWorkerFetchEventOpArgs;
 struct ParentToChildServiceWorkerFetchEventOpArgsDefaultTypeInternal;
 extern ParentToChildServiceWorkerFetchEventOpArgsDefaultTypeInternal _ParentToChildServiceWorkerFetchEventOpArgs_default_instance_;
@@ -154,7 +154,7 @@ template<> ::protobuf::mozilla::dom::ChildToParentSynthesizeResponseArgs* Arena:
 template<> ::protobuf::mozilla::dom::FetchEventRespondWithClosure* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::FetchEventRespondWithClosure>(Arena*);
 template<> ::protobuf::mozilla::dom::FetchEventTimeStamps* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::FetchEventTimeStamps>(Arena*);
 template<> ::protobuf::mozilla::dom::OptionalPushData* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::OptionalPushData>(Arena*);
-template<> ::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t>(Arena*);
+template<> ::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t>(Arena*);
 template<> ::protobuf::mozilla::dom::ParentToChildServiceWorkerFetchEventOpArgs* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::ParentToChildServiceWorkerFetchEventOpArgs>(Arena*);
 template<> ::protobuf::mozilla::dom::ParentToParentFetchEventRespondWithResult* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::ParentToParentFetchEventRespondWithResult>(Arena*);
 template<> ::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs* Arena::CreateMaybeMessage<::protobuf::mozilla::dom::ParentToParentServiceWorkerFetchEventOpArgs>(Arena*);
@@ -912,24 +912,24 @@ class ServiceWorkerCookieChangeEventOpArgs final :
 };
 // -------------------------------------------------------------------
 
-class OptionalPushData__mVArrayOfuint8_t final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.OptionalPushData._mVArrayOfuint8_t) */ {
+class OptionalPushData_a_type_mVArrayOfuint8_t final :
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.OptionalPushData.a_type_mVArrayOfuint8_t) */ {
  public:
-  inline OptionalPushData__mVArrayOfuint8_t() : OptionalPushData__mVArrayOfuint8_t(nullptr) {}
-  ~OptionalPushData__mVArrayOfuint8_t() override;
-  explicit PROTOBUF_CONSTEXPR OptionalPushData__mVArrayOfuint8_t(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline OptionalPushData_a_type_mVArrayOfuint8_t() : OptionalPushData_a_type_mVArrayOfuint8_t(nullptr) {}
+  ~OptionalPushData_a_type_mVArrayOfuint8_t() override;
+  explicit PROTOBUF_CONSTEXPR OptionalPushData_a_type_mVArrayOfuint8_t(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  OptionalPushData__mVArrayOfuint8_t(const OptionalPushData__mVArrayOfuint8_t& from);
-  OptionalPushData__mVArrayOfuint8_t(OptionalPushData__mVArrayOfuint8_t&& from) noexcept
-    : OptionalPushData__mVArrayOfuint8_t() {
+  OptionalPushData_a_type_mVArrayOfuint8_t(const OptionalPushData_a_type_mVArrayOfuint8_t& from);
+  OptionalPushData_a_type_mVArrayOfuint8_t(OptionalPushData_a_type_mVArrayOfuint8_t&& from) noexcept
+    : OptionalPushData_a_type_mVArrayOfuint8_t() {
     *this = ::std::move(from);
   }
 
-  inline OptionalPushData__mVArrayOfuint8_t& operator=(const OptionalPushData__mVArrayOfuint8_t& from) {
+  inline OptionalPushData_a_type_mVArrayOfuint8_t& operator=(const OptionalPushData_a_type_mVArrayOfuint8_t& from) {
     CopyFrom(from);
     return *this;
   }
-  inline OptionalPushData__mVArrayOfuint8_t& operator=(OptionalPushData__mVArrayOfuint8_t&& from) noexcept {
+  inline OptionalPushData_a_type_mVArrayOfuint8_t& operator=(OptionalPushData_a_type_mVArrayOfuint8_t&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -950,20 +950,20 @@ class OptionalPushData__mVArrayOfuint8_t final :
     return _internal_metadata_.mutable_unknown_fields<std::string>();
   }
 
-  static const OptionalPushData__mVArrayOfuint8_t& default_instance() {
+  static const OptionalPushData_a_type_mVArrayOfuint8_t& default_instance() {
     return *internal_default_instance();
   }
-  static inline const OptionalPushData__mVArrayOfuint8_t* internal_default_instance() {
-    return reinterpret_cast<const OptionalPushData__mVArrayOfuint8_t*>(
-               &_OptionalPushData__mVArrayOfuint8_t_default_instance_);
+  static inline const OptionalPushData_a_type_mVArrayOfuint8_t* internal_default_instance() {
+    return reinterpret_cast<const OptionalPushData_a_type_mVArrayOfuint8_t*>(
+               &_OptionalPushData_a_type_mVArrayOfuint8_t_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     5;
 
-  friend void swap(OptionalPushData__mVArrayOfuint8_t& a, OptionalPushData__mVArrayOfuint8_t& b) {
+  friend void swap(OptionalPushData_a_type_mVArrayOfuint8_t& a, OptionalPushData_a_type_mVArrayOfuint8_t& b) {
     a.Swap(&b);
   }
-  inline void Swap(OptionalPushData__mVArrayOfuint8_t* other) {
+  inline void Swap(OptionalPushData_a_type_mVArrayOfuint8_t* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -976,7 +976,7 @@ class OptionalPushData__mVArrayOfuint8_t final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(OptionalPushData__mVArrayOfuint8_t* other) {
+  void UnsafeArenaSwap(OptionalPushData_a_type_mVArrayOfuint8_t* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -984,12 +984,12 @@ class OptionalPushData__mVArrayOfuint8_t final :
 
   // implements Message ----------------------------------------------
 
-  OptionalPushData__mVArrayOfuint8_t* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<OptionalPushData__mVArrayOfuint8_t>(arena);
+  OptionalPushData_a_type_mVArrayOfuint8_t* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<OptionalPushData_a_type_mVArrayOfuint8_t>(arena);
   }
   void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const OptionalPushData__mVArrayOfuint8_t& from);
-  void MergeFrom(const OptionalPushData__mVArrayOfuint8_t& from);
+  void CopyFrom(const OptionalPushData_a_type_mVArrayOfuint8_t& from);
+  void MergeFrom(const OptionalPushData_a_type_mVArrayOfuint8_t& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1003,15 +1003,15 @@ class OptionalPushData__mVArrayOfuint8_t final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const;
-  void InternalSwap(OptionalPushData__mVArrayOfuint8_t* other);
+  void InternalSwap(OptionalPushData_a_type_mVArrayOfuint8_t* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "protobuf.mozilla.dom.OptionalPushData._mVArrayOfuint8_t";
+    return "protobuf.mozilla.dom.OptionalPushData.a_type_mVArrayOfuint8_t";
   }
   protected:
-  explicit OptionalPushData__mVArrayOfuint8_t(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit OptionalPushData_a_type_mVArrayOfuint8_t(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1046,7 +1046,7 @@ class OptionalPushData__mVArrayOfuint8_t final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_mvarrayofuint8_t();
 
-  // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.OptionalPushData._mVArrayOfuint8_t)
+  // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.OptionalPushData.a_type_mVArrayOfuint8_t)
  private:
   class _Internal;
 
@@ -1105,7 +1105,7 @@ class OptionalPushData final :
   }
   enum ContentCase {
     kAMVvoidT = 1,
-    kMVArrayOfuint8T = 2,
+    kAMVArrayOfuint8T = 2,
     CONTENT_NOT_SET = 0,
   };
 
@@ -1175,13 +1175,13 @@ class OptionalPushData final :
 
   // nested types ----------------------------------------------------
 
-  typedef OptionalPushData__mVArrayOfuint8_t _mVArrayOfuint8_t;
+  typedef OptionalPushData_a_type_mVArrayOfuint8_t a_type_mVArrayOfuint8_t;
 
   // accessors -------------------------------------------------------
 
   enum : int {
     kAMVvoidTFieldNumber = 1,
-    kMVArrayOfuint8TFieldNumber = 2,
+    kAMVArrayOfuint8TFieldNumber = 2,
   };
   // bytes a_mVvoid_t = 1;
   bool has_a_mvvoid_t() const;
@@ -1201,23 +1201,23 @@ class OptionalPushData final :
   std::string* _internal_mutable_a_mvvoid_t();
   public:
 
-  // .protobuf.mozilla.dom.OptionalPushData._mVArrayOfuint8_t mVArrayOfuint8_t = 2;
-  bool has_mvarrayofuint8_t() const;
+  // .protobuf.mozilla.dom.OptionalPushData.a_type_mVArrayOfuint8_t a_mVArrayOfuint8_t = 2;
+  bool has_a_mvarrayofuint8_t() const;
   private:
-  bool _internal_has_mvarrayofuint8_t() const;
+  bool _internal_has_a_mvarrayofuint8_t() const;
   public:
-  void clear_mvarrayofuint8_t();
-  const ::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t& mvarrayofuint8_t() const;
-  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t* release_mvarrayofuint8_t();
-  ::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t* mutable_mvarrayofuint8_t();
-  void set_allocated_mvarrayofuint8_t(::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t* mvarrayofuint8_t);
+  void clear_a_mvarrayofuint8_t();
+  const ::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t& a_mvarrayofuint8_t() const;
+  PROTOBUF_NODISCARD ::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t* release_a_mvarrayofuint8_t();
+  ::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t* mutable_a_mvarrayofuint8_t();
+  void set_allocated_a_mvarrayofuint8_t(::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t* a_mvarrayofuint8_t);
   private:
-  const ::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t& _internal_mvarrayofuint8_t() const;
-  ::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t* _internal_mutable_mvarrayofuint8_t();
+  const ::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t& _internal_a_mvarrayofuint8_t() const;
+  ::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t* _internal_mutable_a_mvarrayofuint8_t();
   public:
-  void unsafe_arena_set_allocated_mvarrayofuint8_t(
-      ::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t* mvarrayofuint8_t);
-  ::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t* unsafe_arena_release_mvarrayofuint8_t();
+  void unsafe_arena_set_allocated_a_mvarrayofuint8_t(
+      ::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t* a_mvarrayofuint8_t);
+  ::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t* unsafe_arena_release_a_mvarrayofuint8_t();
 
   void clear_content();
   ContentCase content_case() const;
@@ -1225,7 +1225,7 @@ class OptionalPushData final :
  private:
   class _Internal;
   void set_has_a_mvvoid_t();
-  void set_has_mvarrayofuint8_t();
+  void set_has_a_mvarrayofuint8_t();
 
   inline bool has_content() const;
   inline void clear_has_content();
@@ -1238,7 +1238,7 @@ class OptionalPushData final :
       constexpr ContentUnion() : _constinit_{} {}
         ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized _constinit_;
       ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mvvoid_t_;
-      ::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t* mvarrayofuint8_t_;
+      ::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t* a_mvarrayofuint8_t_;
     } content_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t _oneof_case_[1];
@@ -6293,52 +6293,52 @@ inline void ServiceWorkerCookieChangeEventOpArgs::set_a_deleted(bool value) {
 
 // -------------------------------------------------------------------
 
-// OptionalPushData__mVArrayOfuint8_t
+// OptionalPushData_a_type_mVArrayOfuint8_t
 
 // repeated uint32 a_mVArrayOfuint8_t = 1;
-inline int OptionalPushData__mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t_size() const {
+inline int OptionalPushData_a_type_mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t_size() const {
   return _impl_.a_mvarrayofuint8_t_.size();
 }
-inline int OptionalPushData__mVArrayOfuint8_t::a_mvarrayofuint8_t_size() const {
+inline int OptionalPushData_a_type_mVArrayOfuint8_t::a_mvarrayofuint8_t_size() const {
   return _internal_a_mvarrayofuint8_t_size();
 }
-inline void OptionalPushData__mVArrayOfuint8_t::clear_a_mvarrayofuint8_t() {
+inline void OptionalPushData_a_type_mVArrayOfuint8_t::clear_a_mvarrayofuint8_t() {
   _impl_.a_mvarrayofuint8_t_.Clear();
 }
-inline uint32_t OptionalPushData__mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t(int index) const {
+inline uint32_t OptionalPushData_a_type_mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t(int index) const {
   return _impl_.a_mvarrayofuint8_t_.Get(index);
 }
-inline uint32_t OptionalPushData__mVArrayOfuint8_t::a_mvarrayofuint8_t(int index) const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.OptionalPushData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
+inline uint32_t OptionalPushData_a_type_mVArrayOfuint8_t::a_mvarrayofuint8_t(int index) const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.OptionalPushData.a_type_mVArrayOfuint8_t.a_mVArrayOfuint8_t)
   return _internal_a_mvarrayofuint8_t(index);
 }
-inline void OptionalPushData__mVArrayOfuint8_t::set_a_mvarrayofuint8_t(int index, uint32_t value) {
+inline void OptionalPushData_a_type_mVArrayOfuint8_t::set_a_mvarrayofuint8_t(int index, uint32_t value) {
   _impl_.a_mvarrayofuint8_t_.Set(index, value);
-  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.OptionalPushData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
+  // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.OptionalPushData.a_type_mVArrayOfuint8_t.a_mVArrayOfuint8_t)
 }
-inline void OptionalPushData__mVArrayOfuint8_t::_internal_add_a_mvarrayofuint8_t(uint32_t value) {
+inline void OptionalPushData_a_type_mVArrayOfuint8_t::_internal_add_a_mvarrayofuint8_t(uint32_t value) {
   _impl_.a_mvarrayofuint8_t_.Add(value);
 }
-inline void OptionalPushData__mVArrayOfuint8_t::add_a_mvarrayofuint8_t(uint32_t value) {
+inline void OptionalPushData_a_type_mVArrayOfuint8_t::add_a_mvarrayofuint8_t(uint32_t value) {
   _internal_add_a_mvarrayofuint8_t(value);
-  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.OptionalPushData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
+  // @@protoc_insertion_point(field_add:protobuf.mozilla.dom.OptionalPushData.a_type_mVArrayOfuint8_t.a_mVArrayOfuint8_t)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-OptionalPushData__mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t() const {
+OptionalPushData_a_type_mVArrayOfuint8_t::_internal_a_mvarrayofuint8_t() const {
   return _impl_.a_mvarrayofuint8_t_;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >&
-OptionalPushData__mVArrayOfuint8_t::a_mvarrayofuint8_t() const {
-  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.OptionalPushData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
+OptionalPushData_a_type_mVArrayOfuint8_t::a_mvarrayofuint8_t() const {
+  // @@protoc_insertion_point(field_list:protobuf.mozilla.dom.OptionalPushData.a_type_mVArrayOfuint8_t.a_mVArrayOfuint8_t)
   return _internal_a_mvarrayofuint8_t();
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-OptionalPushData__mVArrayOfuint8_t::_internal_mutable_a_mvarrayofuint8_t() {
+OptionalPushData_a_type_mVArrayOfuint8_t::_internal_mutable_a_mvarrayofuint8_t() {
   return &_impl_.a_mvarrayofuint8_t_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
-OptionalPushData__mVArrayOfuint8_t::mutable_a_mvarrayofuint8_t() {
-  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.OptionalPushData._mVArrayOfuint8_t.a_mVArrayOfuint8_t)
+OptionalPushData_a_type_mVArrayOfuint8_t::mutable_a_mvarrayofuint8_t() {
+  // @@protoc_insertion_point(field_mutable_list:protobuf.mozilla.dom.OptionalPushData.a_type_mVArrayOfuint8_t.a_mVArrayOfuint8_t)
   return _internal_mutable_a_mvarrayofuint8_t();
 }
 
@@ -6423,77 +6423,77 @@ inline void OptionalPushData::set_allocated_a_mvvoid_t(std::string* a_mvvoid_t) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.OptionalPushData.a_mVvoid_t)
 }
 
-// .protobuf.mozilla.dom.OptionalPushData._mVArrayOfuint8_t mVArrayOfuint8_t = 2;
-inline bool OptionalPushData::_internal_has_mvarrayofuint8_t() const {
-  return content_case() == kMVArrayOfuint8T;
+// .protobuf.mozilla.dom.OptionalPushData.a_type_mVArrayOfuint8_t a_mVArrayOfuint8_t = 2;
+inline bool OptionalPushData::_internal_has_a_mvarrayofuint8_t() const {
+  return content_case() == kAMVArrayOfuint8T;
 }
-inline bool OptionalPushData::has_mvarrayofuint8_t() const {
-  return _internal_has_mvarrayofuint8_t();
+inline bool OptionalPushData::has_a_mvarrayofuint8_t() const {
+  return _internal_has_a_mvarrayofuint8_t();
 }
-inline void OptionalPushData::set_has_mvarrayofuint8_t() {
-  _impl_._oneof_case_[0] = kMVArrayOfuint8T;
+inline void OptionalPushData::set_has_a_mvarrayofuint8_t() {
+  _impl_._oneof_case_[0] = kAMVArrayOfuint8T;
 }
-inline void OptionalPushData::clear_mvarrayofuint8_t() {
-  if (_internal_has_mvarrayofuint8_t()) {
+inline void OptionalPushData::clear_a_mvarrayofuint8_t() {
+  if (_internal_has_a_mvarrayofuint8_t()) {
     if (GetArenaForAllocation() == nullptr) {
-      delete _impl_.content_.mvarrayofuint8_t_;
+      delete _impl_.content_.a_mvarrayofuint8_t_;
     }
     clear_has_content();
   }
 }
-inline ::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t* OptionalPushData::release_mvarrayofuint8_t() {
-  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.OptionalPushData.mVArrayOfuint8_t)
-  if (_internal_has_mvarrayofuint8_t()) {
+inline ::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t* OptionalPushData::release_a_mvarrayofuint8_t() {
+  // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.OptionalPushData.a_mVArrayOfuint8_t)
+  if (_internal_has_a_mvarrayofuint8_t()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t* temp = _impl_.content_.mvarrayofuint8_t_;
+    ::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t* temp = _impl_.content_.a_mvarrayofuint8_t_;
     if (GetArenaForAllocation() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.content_.mvarrayofuint8_t_ = nullptr;
+    _impl_.content_.a_mvarrayofuint8_t_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t& OptionalPushData::_internal_mvarrayofuint8_t() const {
-  return _internal_has_mvarrayofuint8_t()
-      ? *_impl_.content_.mvarrayofuint8_t_
-      : reinterpret_cast< ::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t&>(::protobuf::mozilla::dom::_OptionalPushData__mVArrayOfuint8_t_default_instance_);
+inline const ::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t& OptionalPushData::_internal_a_mvarrayofuint8_t() const {
+  return _internal_has_a_mvarrayofuint8_t()
+      ? *_impl_.content_.a_mvarrayofuint8_t_
+      : reinterpret_cast< ::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t&>(::protobuf::mozilla::dom::_OptionalPushData_a_type_mVArrayOfuint8_t_default_instance_);
 }
-inline const ::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t& OptionalPushData::mvarrayofuint8_t() const {
-  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.OptionalPushData.mVArrayOfuint8_t)
-  return _internal_mvarrayofuint8_t();
+inline const ::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t& OptionalPushData::a_mvarrayofuint8_t() const {
+  // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.OptionalPushData.a_mVArrayOfuint8_t)
+  return _internal_a_mvarrayofuint8_t();
 }
-inline ::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t* OptionalPushData::unsafe_arena_release_mvarrayofuint8_t() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.OptionalPushData.mVArrayOfuint8_t)
-  if (_internal_has_mvarrayofuint8_t()) {
+inline ::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t* OptionalPushData::unsafe_arena_release_a_mvarrayofuint8_t() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:protobuf.mozilla.dom.OptionalPushData.a_mVArrayOfuint8_t)
+  if (_internal_has_a_mvarrayofuint8_t()) {
     clear_has_content();
-    ::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t* temp = _impl_.content_.mvarrayofuint8_t_;
-    _impl_.content_.mvarrayofuint8_t_ = nullptr;
+    ::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t* temp = _impl_.content_.a_mvarrayofuint8_t_;
+    _impl_.content_.a_mvarrayofuint8_t_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void OptionalPushData::unsafe_arena_set_allocated_mvarrayofuint8_t(::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t* mvarrayofuint8_t) {
+inline void OptionalPushData::unsafe_arena_set_allocated_a_mvarrayofuint8_t(::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t* a_mvarrayofuint8_t) {
   clear_content();
-  if (mvarrayofuint8_t) {
-    set_has_mvarrayofuint8_t();
-    _impl_.content_.mvarrayofuint8_t_ = mvarrayofuint8_t;
+  if (a_mvarrayofuint8_t) {
+    set_has_a_mvarrayofuint8_t();
+    _impl_.content_.a_mvarrayofuint8_t_ = a_mvarrayofuint8_t;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.OptionalPushData.mVArrayOfuint8_t)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.OptionalPushData.a_mVArrayOfuint8_t)
 }
-inline ::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t* OptionalPushData::_internal_mutable_mvarrayofuint8_t() {
-  if (!_internal_has_mvarrayofuint8_t()) {
+inline ::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t* OptionalPushData::_internal_mutable_a_mvarrayofuint8_t() {
+  if (!_internal_has_a_mvarrayofuint8_t()) {
     clear_content();
-    set_has_mvarrayofuint8_t();
-    _impl_.content_.mvarrayofuint8_t_ = CreateMaybeMessage< ::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t >(GetArenaForAllocation());
+    set_has_a_mvarrayofuint8_t();
+    _impl_.content_.a_mvarrayofuint8_t_ = CreateMaybeMessage< ::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t >(GetArenaForAllocation());
   }
-  return _impl_.content_.mvarrayofuint8_t_;
+  return _impl_.content_.a_mvarrayofuint8_t_;
 }
-inline ::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t* OptionalPushData::mutable_mvarrayofuint8_t() {
-  ::protobuf::mozilla::dom::OptionalPushData__mVArrayOfuint8_t* _msg = _internal_mutable_mvarrayofuint8_t();
-  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.OptionalPushData.mVArrayOfuint8_t)
+inline ::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t* OptionalPushData::mutable_a_mvarrayofuint8_t() {
+  ::protobuf::mozilla::dom::OptionalPushData_a_type_mVArrayOfuint8_t* _msg = _internal_mutable_a_mvarrayofuint8_t();
+  // @@protoc_insertion_point(field_mutable:protobuf.mozilla.dom.OptionalPushData.a_mVArrayOfuint8_t)
   return _msg;
 }
 
