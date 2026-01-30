@@ -85,7 +85,7 @@ class LibprotobufMapping {
     // read parameter
     auto readResult = IPC::ReadParam<T>(reader);
     if (!readResult) {
-        MOZ_FUZZING_NYX_ABORT("Reading serialized parameter failed\n");
+        MOZ_FUZZING_NYX_PRINT("ERROR: Reading serialized parameter failed due to empty read result\n");
         return {};
     }
 
@@ -95,80 +95,36 @@ class LibprotobufMapping {
                     offset_after);
     size_t serialized_size = offset_after - offset_before;
 
-    // dump from raw buffer
-    // Vector<char, 256, InfallibleAllocPolicy> dumpBuffer;
-    // if (!dumpBuffer.initLengthUninitialized(serialized_size)) {
-    //   MOZ_FUZZING_NYX_ABORT("dumpBuffer.initLengthUninitialized failed\n");
-    //   return {};
-    // }
-    // if (!reader->message_.Buffers().ReadBytes(
-    //         iter_before,
-    //         reinterpret_cast<char*>(dumpBuffer.begin()),
-    //         serialized_size)) {
-    //   MOZ_FUZZING_NYX_ABORT("ReadBytes failed\n");
-    //   return {};
-    // }
-
-    // std::string result = std::string(dumpBuffer.begin(), dumpBuffer.length());
-
     std::string result;
     result.resize(serialized_size);
 
-    // 5. Die Rohdaten direkt aus den Buffern der Message kopieren
-    // Wir nutzen das gespeicherte iter_before, um am Anfang des Parameters zu lesen
     if (!reader->message_.Buffers().ReadBytes(
             iter_before,
             result.data(), // write into string buffer
             serialized_size)) {
-        MOZ_FUZZING_NYX_ABORT("ReadBytes failed to copy serialized data\n");
+        MOZ_FUZZING_NYX_PRINT("ERROR: ReadBytes failed to copy serialized data\n");
         return {};
     }
 
     return {std::move(result)};
   }
 
-  // template<typename T>
-  // static std::string SerializeToString(const T* param) {
-  //   // create dummy msg
-  //   mozilla::UniquePtr<IPC::Message> dummy_msg = mozilla::dom::PContent::Msg_SetCharacterMap(0);
-  //   IPC::MessageWriter writer__{
-  //                 (*(dummy_msg))};
-  //   // let ParamTraits serialize the parameter into the dummy msg
-  //   IPC::WriteParam((&(writer__)), *param);
-
-  //   // read entire payload of dummy msg and return as string
-  //   return LibprotobufMapping::ReadPayloadFromMessage(dummy_msg);
-  // }
-
-  // template<typename T>
-  // static std::string SerializeToString(T** param) {
-  //   // create dummy msg
-  //   mozilla::UniquePtr<IPC::Message> dummy_msg = mozilla::dom::PContent::Msg_SetCharacterMap(0);
-  //   IPC::MessageWriter writer__{
-  //                 (*(dummy_msg))};
-  //   // let ParamTraits serialize the parameter into the dummy msg
-  //   IPC::WriteParam((&(writer__)), std::move(param));
-
-  //   // read entire payload of dummy msg and return as string
-  //   return LibprotobufMapping::ReadPayloadFromMessage(dummy_msg);
-  // }
-
   template<typename T>
-static std::string SerializeToStringMove(T* param) {
-    if (!param) return "";
+static std::string SerializeToStringMove(T& param) { //TT* param
+    //if (!param) return "";
 
     // create dummy
     mozilla::UniquePtr<IPC::Message> dummy_msg = mozilla::dom::PContent::Msg_SetCharacterMap(0);
     IPC::MessageWriter writer__{(*(dummy_msg))};
 
-    IPC::WriteParam(&writer__, std::move(*param));
+    IPC::WriteParam(&writer__, std::move(param)); //*param
 
     return LibprotobufMapping::ReadPayloadFromMessage(dummy_msg);
 }
 
   template<typename T>
-static std::string SerializeToString(T* param) {
-    if (!param) return "";
+static std::string SerializeToString(T& param) { //T* param
+    //if (!param) return "";
 
     // create dummy
     mozilla::UniquePtr<IPC::Message> dummy_msg = mozilla::dom::PContent::Msg_SetCharacterMap(0);
@@ -177,7 +133,8 @@ static std::string SerializeToString(T* param) {
     // check for some moveonly types
     // if constexpr (std::is_same_v<T, mozilla::ipc::BigBuffer> ||
     //               std::is_same_v<T, mozilla::ipc::Shmem>) {
-    IPC::WriteParam(&writer__, *param);
+    //IPC::WriteParam(&writer__, *param);
+    IPC::WriteParam(&writer__, param);
 
     return LibprotobufMapping::ReadPayloadFromMessage(dummy_msg);
 }

@@ -6,6 +6,7 @@ import ipdl.lower
 from ipdl.protobuf.parser.proto_schema_parser import ast, generator
 import ipdl.type
 
+USE_PROTO3 = False
 
 _NL = ast.Comment("")
 
@@ -30,6 +31,41 @@ def getNamespace(sep : str, namespaces: list[ipdl.ast.Namespace], addParent=True
         parts.append(ns.name)
 
     return sep.join(parts)
+
+def getProtobufVarName(name: str):
+    # append "a_" as prefix to avoid reserved names like "descriptor"
+    return "a_" + name
+
+def getUnionArrayMemberType(name: str):
+    # returns the type of the dummy message constructed for array types inside unions
+    return getProtobufVarName("type_" + name)
+
+def getUnionEnumName(name: str):
+    # name is protobuf variable name
+    # analogue to protoc behaviours, see: https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/compiler/cpp/helpers.cc
+    result = ""
+    cap_next = True
+    for char in name:
+        if 'a' <= char <= 'z':
+            if cap_next:
+                result += char.upper()
+            else:
+                result += char
+            cap_next = False
+        elif 'A' <= char <= 'Z':
+            result += char
+            cap_next = False
+        elif '0' <= char <= '9':
+            result += char
+            cap_next = True
+        else:
+            cap_next = True
+    return "k" + result
+    # parts = name.split('_')
+    # ret = "k"
+    # for part in parts:
+    #     ret += part[0].upper() + part[1:]
+    # return ret
 
 class ProtobufTypeMapper(ipdl.type.TypeVisitor):
 
@@ -166,15 +202,16 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
     def mapParam(self, param_name, ipdltype : ipdl.type.Type) -> ast.Field:
         mapped_type = self.typeVisitor.mapType(ipdltype)
 
-        cardinality = ast.FieldCardinality.REQUIRED
-        if isinstance(ipdltype, ipdl.type.MaybeType):
+        if USE_PROTO3:
+            cardinality = None
+        else:
+            cardinality = ast.FieldCardinality.REQUIRED
+        if isinstance(ipdltype, ipdl.type.MaybeType) or ipdltype.isRefcounted():
             cardinality = ast.FieldCardinality.OPTIONAL
         elif isinstance(ipdltype, ipdl.type.ArrayType):
             cardinality = ast.FieldCardinality.REPEATED
 
-        # append "a_" as prefix to avoid reserved names like "descriptor"
-        return ast.Field("a_" + param_name, 0, mapped_type, cardinality)
-
+        return ast.Field(getProtobufVarName(param_name), 0, mapped_type, cardinality)
 
     def visitMessageDecl(self, md : 'ipdl.lower.MessageDecl'):
         gen_msgs = []
@@ -192,6 +229,11 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
 
         # add normal msg including incoming params
         for parm in md.inParams:
+            if md.prettyMsgName() == "Msg_PDocAccessibleConstructor":
+                pprint(vars(parm))
+                pprint(vars(parm.type))
+                if isinstance(parm.type, ipdl.type.ActorType):
+                    pprint(vars(parm.type.protocol))
             field = self.mapParam(parm.progname, parm.type)
             field.number = field_num
             send_msg.elements.append(field)
@@ -217,6 +259,9 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         new_struct = ast.Message(struct.name)
         field_number = 1
         for f in struct.fields:
+            # if struct.name == "WindowGlobalInit":
+            #     pprint(vars(f))
+            #     pprint(vars(f.ipdltype))
             field = self.mapParam(f.name, f.ipdltype)
             field.number = field_number
             field_number += 1
@@ -232,12 +277,12 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             field = self.mapParam(f.name, f.ipdltype)
             if field.cardinality == ast.FieldCardinality.REPEATED:
                 # add param to nested message instead
-                msg = ast.Message("_" + f.name)
+                msg = ast.Message(getUnionArrayMemberType(f.name))
                 field.number = 1
                 msg.elements.append(field)
                 new_union.elements.append(msg)
                 # add dummy to one-of pointing to this nested message
-                dummy_field = ast.Field(f.name, field_number, "_" + f.name)
+                dummy_field = ast.Field(getProtobufVarName(f.name), field_number, getUnionArrayMemberType(f.name))
                 field_number += 1
                 oneof_elements.append(dummy_field)
             else:
@@ -256,7 +301,10 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
 
     def buildMainProtofile(self, mf : ast.File, tu : ipdl.ast.TranslationUnit):
         # import all namespaced proto files publicly
-        mf.syntax = "proto2"
+        if USE_PROTO3:
+            mf.syntax = "proto3"
+        else:
+            mf.syntax = "proto2"
         option_runtime = ast.Comment("option optimize_for = LITE_RUNTIME;")
         self.addElement(mf, option_runtime)
         self.addNL(mf)

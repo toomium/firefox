@@ -101,23 +101,32 @@ std::string LibprotobufMapping::nsString_ToProtobuf(const nsString& str) {
 }
 
 std::string LibprotobufMapping::ReadPayloadFromMessage(mozilla::UniquePtr<IPC::Message>& msg) {
-    Pickle::BufferList::IterImpl iter(msg->Buffers());
 
-    Vector<char, 256, InfallibleAllocPolicy> dumpBuffer;
-    if (!dumpBuffer.initLengthUninitialized(msg->Buffers().Size())) {
-        MOZ_FUZZING_NYX_ABORT("dumpBuffer.initLengthUninitialized failed\n");
+    std::string ret;
+    ret.resize(msg->header()->payload_size);
+
+    Pickle::BufferList::IterImpl iter(msg->Buffers());
+    if (! iter.AdvanceAcrossSegments(msg->Buffers(), sizeof(IPC::Message::Header))) {
+        MOZ_FUZZING_NYX_ABORT("ReadPayloadFromMessage: Skipping header failed\n");
     }
+
+
+    // Vector<char, 256, InfallibleAllocPolicy> dumpBuffer;
+    // if (!dumpBuffer.initLengthUninitialized(msg->Buffers().Size())) {
+    //     MOZ_FUZZING_NYX_ABORT("dumpBuffer.initLengthUninitialized failed\n");
+    // }
 
     // copy from buffer but skip header
-    if (!msg->Buffers().ReadBytes(
-                                    iter,
-                                    reinterpret_cast<char*>(dumpBuffer.begin() + sizeof(IPC::Message::Header)),
-                                    dumpBuffer.length() - sizeof(IPC::Message::Header))) {
-        MOZ_FUZZING_NYX_ABORT("ReadBytes failed\n");
+    if (! msg->Buffers().ReadBytes(
+            iter,
+            ret.data(),
+            msg->header()->payload_size)) {
+        MOZ_FUZZING_NYX_ABORT("ReadPayloadFromMessage: ReadBytes failed\n");
     }
 
-    return std::string(reinterpret_cast<char*>(dumpBuffer.begin()),
-               dumpBuffer.length());
+    return ret;
+    // return std::string(reinterpret_cast<char*>(dumpBuffer.begin() + sizeof(IPC::Message::Header)),
+    //            dumpBuffer.length() - sizeof(IPC::Message::Header));
 }
 
 
