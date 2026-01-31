@@ -1953,7 +1953,9 @@ bool MessageChannel::MaybeHandleError(Result code, const Message& aMsg,
           "Value error: message was deserialized, but contained an illegal "
           "value";
       break;
-
+    case MsgProtobufParseError:
+      errorMsg = "Payload error: protobuf message could not be parsed";
+      break;
     default:
       MOZ_CRASH("unknown Result code");
       return false;
