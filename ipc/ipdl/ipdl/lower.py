@@ -6366,15 +6366,44 @@ class _GenerateProtocolActorCode(ipdl.ast.Visitor):
         return method, movemethod
 
     def genCtorRecvCase(self, md):
+        # lbl = CaseLabel(md.pqMsgId())
+        # case = StmtBlock()
+
+        # stmts = self.deserializeMessage(
+        #     md, self.side, errfnRecv, errfnSent=errfnSentinel(_Result.ValuError)
+        # )
+
+        # idvar, saveIdStmts = self.saveActorId(md)
+        # case.addstmts(
+        #     stmts
+        #     + [
+        #         StmtDecl(Decl(r.bareType(self.side), r.var().name), initargs=[])
+        #         for r in md.returns
+        #     ]
+        #     # alloc the actor, register it under the foreign ID
+        #     + [self.callAllocActor(md, retsems="in", side=self.side)]
+        #     + self.bindManagedActor(
+        #         md.actorDecl(), errfn=_Result.ValuError, idexpr=self.actoridvar
+        #     )
+        #     + [Whitespace.NL]
+        #     + saveIdStmts
+        #     + self.invokeRecvHandler(md)
+        #     + self.makeReply(md, errfnRecv, idvar)
+        #     + [Whitespace.NL, StmtReturn(_Result.Processed)]
+        # )
+
+        # return lbl, case
+
         lbl = CaseLabel(md.pqMsgId())
         case = StmtBlock()
+        if_stmt = StmtIf(ExprVar("! msg__.IsFuzzMsg()"))
 
         stmts = self.deserializeMessage(
             md, self.side, errfnRecv, errfnSent=errfnSentinel(_Result.ValuError)
         )
 
         idvar, saveIdStmts = self.saveActorId(md)
-        case.addstmts(
+        if_stmt.addifstmts(
             stmts
             + [
                 StmtDecl(Decl(r.bareType(self.side), r.var().name), initargs=[])
@@ -6389,6 +6418,31 @@ class _GenerateProtocolActorCode(ipdl.ast.Visitor):
             + saveIdStmts
             + self.invokeRecvHandler(md)
             + self.makeReply(md, errfnRecv, idvar)
+        )
+
+        fuzz_stmts = self.deserializeMessageFuzzing(
+            md, self.side, errfnRecv, errfnSent=errfnSentinel(_Result.ValuError)
+        )
+
+        if_stmt.addelsestmts(
+            [fuzz_stmts]
+            + [
+                StmtDecl(Decl(r.bareType(self.side), r.var().name), initargs=[])
+                for r in md.returns
+            ]
+            # alloc the actor, register it under the foreign ID
+            + [self.callAllocActor(md, retsems="in", side=self.side)]
+            + self.bindManagedActor(
+                md.actorDecl(), errfn=_Result.ValuError, idexpr=self.actoridvar
+            )
+            + [Whitespace.NL]
+            + saveIdStmts
+            + self.invokeRecvHandler(md)
+            + self.makeReply(md, errfnRecv, idvar)
+        )
+
+        case.addstmts(
+            [if_stmt]
             + [Whitespace.NL, StmtReturn(_Result.Processed)]
         )
 
@@ -6790,17 +6844,14 @@ class _GenerateProtocolActorCode(ipdl.ast.Visitor):
         # convert msg to proto
         func.addcode("""
             auto ${var} = mozilla::fuzzing::LibprotobufMapping::ParseProtobufMessage<${ty}>(${msgVar});
+            if (! proto) {
+                return MsgProtobufParseError;
+            }
             """,
             var=protoVar,
             ty=_getNamespacedObject(msgName, ns),
             msgVar="msg__"
         )
-
-        def maybeTainted(p, side):
-            if md.decl.type.tainted and "NoTaint" not in p.attributes:
-                return Type("Tainted", T=p.bareType(side))
-            return p.bareType(side)
-
 
         # skip replies and con-/destructor (contain actors)
         if not (md.decl.type.isDtor()):
