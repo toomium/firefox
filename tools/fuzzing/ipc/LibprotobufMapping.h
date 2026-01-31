@@ -33,7 +33,7 @@ class LibprotobufMapping {
   // Used for protobuf-based fuzzing
   // static UniquePtr<IPC::Message> ConvertProtobufToIPCMessage(UniquePtr<TypedProtobuf>& protobuf);
   // static UniquePtr<TypedProtobuf> ConvertIPCMessageToProtobuf(UniquePtr<IPC::Message>& msg);
-  static std::string ReadPayloadFromMessage(mozilla::UniquePtr<IPC::Message>& msg);
+  static std::string ReadPayloadFromMessage(const IPC::Message& msg);
   static mozilla::UniquePtr<IPC::Message> CreateMessageFromPayload(const std::string& payload);
   static nsCString nsCString_ToIPC(const std::string& str);
   static std::string nsCString_ToProtobuf(const nsCString& str);
@@ -49,11 +49,23 @@ class LibprotobufMapping {
   // static UniquePtr<T> ParseTypedProtobuf(UniquePtr<TypedProtobuf> proto);
   // template<typename T>
   // static UniquePtr<TypedProtobuf> SerializeTypedProtobuf(UniquePtr<T> proto, IPC::IPCMessages type);
+
+  template<typename T>
+  static UniquePtr<T> ParseProtobufMessage(const IPC::Message& msg) {
+    UniquePtr<TypedProtobuf> typedProto = mozilla::MakeUnique<TypedProtobuf>();
+    typedProto->type = msg.type();
+    typedProto->serialized_data = LibprotobufMapping::ReadPayloadFromMessage(msg);
+    return LibprotobufMapping::ParseTypedProtobuf<T>(typedProto);
+  }
+
   template<typename T>
   static UniquePtr<T> ParseTypedProtobuf(UniquePtr<TypedProtobuf>& proto) {
       auto input = mozilla::MakeUnique<T>();
       if (input->ParseFromString(proto->serialized_data)) {
-          return input;
+        if (!!getenv("MOZ_FUZZ_DEBUG")) {
+          MOZ_FUZZING_NYX_PRINTF("DEBUG: Parsed protobuf object:\n%s\n", input->DebugString().c_str());
+        }
+        return input;
       }
       MOZ_FUZZING_NYX_PRINT("ERROR: Protobuf parsing failed - returning empty pointer\n");
       return {};
@@ -119,7 +131,7 @@ static std::string SerializeToStringMove(T& param) { //TT* param
 
     IPC::WriteParam(&writer__, std::move(param)); //*param
 
-    return LibprotobufMapping::ReadPayloadFromMessage(dummy_msg);
+    return LibprotobufMapping::ReadPayloadFromMessage(*dummy_msg);
 }
 
   template<typename T>
@@ -136,7 +148,7 @@ static std::string SerializeToString(T& param) { //T* param
     //IPC::WriteParam(&writer__, *param);
     IPC::WriteParam(&writer__, param);
 
-    return LibprotobufMapping::ReadPayloadFromMessage(dummy_msg);
+    return LibprotobufMapping::ReadPayloadFromMessage(*dummy_msg);
 }
 
 template<typename T>

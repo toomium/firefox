@@ -100,13 +100,13 @@ std::string LibprotobufMapping::nsString_ToProtobuf(const nsString& str) {
     return std::string(converter.get(), converter.Length());
 }
 
-std::string LibprotobufMapping::ReadPayloadFromMessage(mozilla::UniquePtr<IPC::Message>& msg) {
+std::string LibprotobufMapping::ReadPayloadFromMessage(const IPC::Message& msg) {
 
     std::string ret;
-    ret.resize(msg->header()->payload_size);
+    ret.resize(msg.header()->payload_size);
 
-    Pickle::BufferList::IterImpl iter(msg->Buffers());
-    if (! iter.AdvanceAcrossSegments(msg->Buffers(), sizeof(IPC::Message::Header))) {
+    Pickle::BufferList::IterImpl iter(msg.Buffers());
+    if (! iter.AdvanceAcrossSegments(msg.Buffers(), sizeof(IPC::Message::Header))) {
         MOZ_FUZZING_NYX_ABORT("ReadPayloadFromMessage: Skipping header failed\n");
     }
 
@@ -117,10 +117,10 @@ std::string LibprotobufMapping::ReadPayloadFromMessage(mozilla::UniquePtr<IPC::M
     // }
 
     // copy from buffer but skip header
-    if (! msg->Buffers().ReadBytes(
+    if (! msg.Buffers().ReadBytes(
             iter,
             ret.data(),
-            msg->header()->payload_size)) {
+            msg.header()->payload_size)) {
         MOZ_FUZZING_NYX_ABORT("ReadPayloadFromMessage: ReadBytes failed\n");
     }
 

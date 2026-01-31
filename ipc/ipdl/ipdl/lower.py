@@ -1906,6 +1906,15 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         for inc in builtinHeaderIncludes:
             self.visitBuiltinCxxInclude(inc)
 
+        self.hdrfile.addthing(Whitespace.NL)
+        self.hdrfile.addthings([Whitespace("// Headers for protobuf-based fuzzing"), Whitespace.NL])
+        self.hdrfile.addthing(
+                CppDirective("include", '"' + _namespacedHeaderName(tu.name, tu.namespaces) + '.h"')
+        )
+        self.hdrfile.addthing(
+                CppDirective("include", '"' + _protobufHeaderName(tu) + '.pb.h"')
+        )
+
         # Compute the set of includes we need for declared structure/union
         # classes for this protocol.
         typesToIncludes = {}
@@ -1929,15 +1938,17 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
 
             aggregateTypeIncludes.update(typedeps.includeHeaders)
 
+        includeTypedefs = []
         if len(aggregateTypeIncludes) != 0:
-            hf.addthing(Whitespace.NL)
-            hf.addthings([Whitespace("// Headers for typedefs"), Whitespace.NL])
+            includeTypedefs.append((Whitespace.NL))
+            includeTypedefs.extend([Whitespace("// Headers for typedefs"), Whitespace.NL])
 
             for headername in sorted(iter(aggregateTypeIncludes)):
-                hf.addthing(CppDirective("include", '"' + headername + '"'))
+                includeTypedefs.append(CppDirective("include", '"' + headername + '"'))
 
 
-        self.generateProtobufIncludes(tu)
+        protobufIncludes = self.generateProtobufIncludes(tu)
+
         for cxxInc in tu.cxxIncludes:
             cxxInc.accept(self)
         for inc in tu.includes:
@@ -1977,6 +1988,10 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                     CppDirective("include", '"' + h + '"')
                     for h in self.cppIncludeHeaders
                 ]
+                + [Whitespace.NL]
+                + includeTypedefs
+                + [Whitespace.NL]
+                + protobufIncludes
                 + [Whitespace.NL]
                 + [
                     CppDirective("include", '"%s.h"' % (inc))
@@ -2109,21 +2124,23 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         #     ]
 
     def generateProtobufIncludes(self, tu):
-        self.hdrfile.addthing(Whitespace.NL)
-        self.hdrfile.addthings([Whitespace("// Headers for protobuf-based fuzzing"), Whitespace.NL])
-        self.hdrfile.addthing(
+        protoIncludes = []
+        protoIncludes.append(Whitespace.NL)
+        protoIncludes.extend([Whitespace("// Headers for protobuf-based fuzzing"), Whitespace.NL])
+        protoIncludes.append(
                 CppDirective("include", '"' + _namespacedHeaderName(tu.name, tu.namespaces) + '.h"')
         )
-        self.hdrfile.addthing(
+        protoIncludes.append(
                 CppDirective("include", '"' + _protobufHeaderName(tu) + '.pb.h"')
         )
         for inc in tu.includes:
-            self.hdrfile.addthing(
+            protoIncludes.append(
                 CppDirective("include", '"' + _namespacedHeaderName(inc.tu.name, inc.tu.namespaces) + 'Protobuf.h"')
             )
-            self.hdrfile.addthing(
+            protoIncludes.append(
                 CppDirective("include", '"' + _protobufHeaderName(inc.tu) + '.pb.h"')
             )
+        return protoIncludes
 
     def makeMessage(self, md, msgvar, errfn=None, fromActor=None, forReply=False):
         writervar = ExprVar("writer__")
@@ -5051,12 +5068,44 @@ class _GenerateProtocolActorCode(ipdl.ast.Visitor):
             )
         )
 
+        # build fuzzing includes
+        fuzzingIncludes = self.generateProtobufIncludes(tu)
+        if fuzzingIncludes:
+            cf.addthings(
+                (
+                    [Whitespace.NL]
+                    + [CppDirective("include", '"mozilla/fuzzing/LibprotobufMapping.h"')]
+                    + fuzzingIncludes
+                    + [Whitespace.NL]
+                )
+            )
+
         cppns = makeNamespace(self.protocol, cf)
         cppns.addstmts(
             [Whitespace.NL, Whitespace.NL, clsdefn, Whitespace.NL, Whitespace.NL]
         )
 
         cf.addthing(traitsdefn)
+
+    def generateProtobufIncludes(self, tu):
+        includes = []
+        # includes.append(
+        #         CppDirective("include", '"' + _namespacedHeaderName(tu.name, tu.namespaces) + '.h"')
+        # )
+        includes.append(
+                CppDirective("include", '"' + _protobufHeaderName(tu) + '.pb.h"')
+        )
+        includes.append(
+                CppDirective("include", '"' + _namespacedHeaderName(tu.name, tu.namespaces) + 'Protobuf.h"')
+        )
+        for inc in tu.includes:
+            includes.append(
+                CppDirective("include", '"' + _namespacedHeaderName(inc.tu.name, inc.tu.namespaces) + 'Protobuf.h"')
+            )
+            # includes.append(
+            #     CppDirective("include", '"' + _protobufHeaderName(inc.tu) + '.pb.h"')
+            # )
+        return includes
 
     def visitUsingStmt(self, using):
         if using.decl.fullname is not None:
@@ -6372,9 +6421,36 @@ class _GenerateProtocolActorCode(ipdl.ast.Visitor):
         return lbl, case
 
     def genRecvCase(self, md):
+        # lbl = CaseLabel(md.pqMsgId())
+        # case = StmtBlock()
+
+        # stmts = self.deserializeMessage(
+        #     md, self.side, errfn=errfnRecv, errfnSent=errfnSentinel(_Result.ValuError)
+        # )
+
+        # idvar, saveIdStmts = self.saveActorId(md)
+        # declstmts = [
+        #     StmtDecl(Decl(r.bareType(self.side), r.var().name), initargs=[])
+        #     for r in md.returns
+        # ]
+        # if md.decl.type.isAsync() and md.returns:
+        #     declstmts = self.makeResolver(md, errfnRecv, routingId=idvar)
+        # case.addstmts(
+        #     stmts
+        #     + saveIdStmts
+        #     + declstmts
+        #     + self.invokeRecvHandler(md)
+        #     + [Whitespace.NL]
+        #     + self.makeReply(md, errfnRecv, routingId=idvar)
+        #     + [StmtReturn(_Result.Processed)]
+        # )
+
         lbl = CaseLabel(md.pqMsgId())
         case = StmtBlock()
 
+        if_stmt = StmtIf(ExprVar("! msg__.IsFuzzMsg()"))
+
+        # normal routine in if block
         stmts = self.deserializeMessage(
             md, self.side, errfn=errfnRecv, errfnSent=errfnSentinel(_Result.ValuError)
         )
@@ -6386,19 +6462,366 @@ class _GenerateProtocolActorCode(ipdl.ast.Visitor):
         ]
         if md.decl.type.isAsync() and md.returns:
             declstmts = self.makeResolver(md, errfnRecv, routingId=idvar)
-        case.addstmts(
+
+        if_stmt.addifstmts(
             stmts
             + saveIdStmts
             + declstmts
             + self.invokeRecvHandler(md)
             + [Whitespace.NL]
             + self.makeReply(md, errfnRecv, routingId=idvar)
+        )
+
+        # now onto the fuzzing routine
+        fuzz_stmts = self.deserializeMessageFuzzing(
+            md, self.side, errfn=errfnRecv, errfnSent=errfnSentinel(_Result.ValuError)
+        )
+
+        if_stmt.addelsestmts(
+            [fuzz_stmts]
+            + saveIdStmts
+            + declstmts
+            + self.invokeRecvHandler(md)
+            + [Whitespace.NL]
+            + self.makeReply(md, errfnRecv, routingId=idvar)
+        )
+
+        case.addstmts(
+            [if_stmt]
             + [StmtReturn(_Result.Processed)]
         )
 
         return lbl, case
 
     # helper methods
+
+    def _generateIPCValue(self, ipdltype, readField, side = None):
+        if _protobufTypeIsStructOrUnion(ipdltype):
+            ns = Namespace(ipdltype.name() + "Protobuf")
+            namespaces = ipdltype._ast.namespaces + [ns]
+            return ExprCall(ExprVar(f"{_getNamespacedObject(ipdltype.name(), namespaces, False)}_ToIPC"), [ExprVar(readField)])
+        elif _protobufTypeIsScalar(ipdltype):
+            if _protobufTypeNeedsCast(ipdltype):
+                return ExprCast(ExprVar(readField), _cxxBareType(ipdltype, "Child"), static=True)
+            elif _protobufTypeIsConvertible(ipdltype):
+                return ExprCall(ExprVar(f"mozilla::fuzzing::LibprotobufMapping::{ipdltype.name()}_ToIPC"), [ExprVar(readField)])
+            else:
+                return ExprVar(f"{readField}")
+        else:
+            if _cxxTypeNeedsMoveForSend(ipdltype):
+                method = "SerializeToStringMove"
+            else:
+                method = "SerializeToString"
+            # if side != None:
+            #     ty = _cxxBareType(ipdltype, side)
+            # else:
+            #     ty = _cxxBareTypeWithoutSide(ipdltype)
+            ty = _cxxBareType(ipdltype, side)
+            return StmtCode(
+                """
+                mozilla::fuzzing::LibprotobufMapping::DeserializeFromString<${ty}>(${readField})
+                """,
+                ty=ty,
+                readField=readField,
+                method=method,
+            )
+
+    def _generateIPCAssignDecl(self, ipdltype, varName, protoVar, protoField, isTainted, sep="->", forIPC = True, side=None, errReturn="{}", errfn="//test"):
+        block = Block()
+
+        errBlock = Block()
+        if errfn == None:
+            errBlock.addcode("""
+                MOZ_FUZZING_NYX_PRINT("Error deserializing {protoField}");
+                return {errReturn};""",
+                protoField=protoField,
+                errReturn=errReturn)
+        else:
+            errBlock.addstmts(errfn(f"Error deserializing {protoField}"))
+
+        if _protobufTypeIsArray(ipdltype):
+            # for "ArrayTypes" we convert the protobuf array to the mozilla array "nsTArray"
+            inner = Block()
+            if _protobufTypeIsScalar(ipdltype.basetype):
+                inner.addcode("""
+                    ${varName}.AppendElement(${protoValue});
+                    """,
+                    varName=varName,
+                    protoVar=protoVar,
+                    sep=sep,
+                    protoField=protoField,
+                    protoValue=self._generateIPCValue(ipdltype.basetype, f"{protoVar}{sep}{protoField}(i)", side)
+                )
+            # elif _protobufTypeIsStructOrUnion(ipdltype.basetype):
+            #     inner.addcode("""
+            #         auto& item = ${protoVar}${sep}${protoField}(i);
+            #         auto& maybe_ipc_struct = ${protoValue};
+            #         if (maybe_ipc_struct) {
+            #             ${varName}.AppendElement(*maybe_ipc_struct);
+            #         }
+            #         """,
+            #         varName=varName,
+            #         protoVar=protoVar,
+            #         sep=sep,
+            #         protoField=protoField,
+            #         protoValue=self._generateIPCValue(ipdltype.basetype, "item", side),
+            #     )
+            else:
+                # needs deserialization
+                inner.addcode("""
+                    auto& item = ${protoVar}${sep}${protoField}(i);
+                    auto maybeItem = ${protoValue};
+
+                    if (maybeItem.isSome()) {
+                        ${varName}.AppendElement(std::move(maybeItem.ref()));
+                    }
+                    else {
+                        ${errBlock}
+                    }
+                    """,
+                    varName=varName,
+                    protoVar=protoVar,
+                    sep=sep,
+                    errBlock=errBlock,
+                    errReturn=errReturn,
+                    protoField=protoField,
+                    protoValue=self._generateIPCValue(ipdltype.basetype, "item", side),
+                )
+
+            ty = _cxxBareType(ipdltype.basetype, side)
+
+            block.addcode("""
+                nsTArray<${ty}> ${varName};
+                ${varName}.SetCapacity(${protoVar}${sep}${protoField}_size());
+                for (int i = 0; i < ${protoVar}${sep}${protoField}_size(); ++i) {
+                    ${inner}
+                }
+                """,
+                varName=varName,
+                protoVar=protoVar,
+                ty=ty,
+                sep=sep,
+                inner=inner,
+                protoField=protoField
+            )
+        elif _protobufTypeIsMaybe(ipdltype):
+            # check if basetype will be deserialized in the inner block
+            inner = Block()
+            # if _protobufTypeIsStructOrUnion(ipdltype.basetype):
+            #     inner.addcode("""
+            #         auto& maybe_ipc_struct = ${protoValue};
+            #         if (maybe_ipc_struct.isSome()) {
+            #             ${varName} = maybe_ipc_struct; //mozilla::Some(*maybe_ipc_struct);
+            #         }
+            #         else {
+            #             MOZ_FUZZING_NYX_PRINT("Error deserializing ${protoField}");
+            #             return ${errReturn};
+            #         }
+            #         """,
+            #         varName=varName,
+            #         errReturn=errReturn,
+            #         protoValue=self._generateIPCValue(ipdltype.basetype, f"{protoVar}{sep}{protoField}()", side)
+            #     )
+            if _protobufTypeIsScalar(ipdltype.basetype):
+                # if not, then we need a mozilla::Some() wrapper
+                inner.addcode("""
+                    ${varName} = mozilla::Some(${protoValue});
+                    """,
+                    varName=varName,
+                    protoValue=self._generateIPCValue(ipdltype.basetype, f"{protoVar}{sep}{protoField}()", side)
+                )
+            else:
+                # if yes, then DeserializeFromString already returns a maybe object
+                inner.addcode("""
+                    auto maybe_${varName} = ${protoValue};
+                    if (maybe_${varName}.isSome()) {
+                        ${varName} = mozilla::Some(std::move(*maybe_${varName}));
+                    }
+                    else {
+                        ${errBlock}
+                    }
+                    """,
+                    varName=varName,
+                    errReturn=errReturn,
+                    protoField=protoField,
+                    errBlock=errBlock,
+                    protoValue=self._generateIPCValue(ipdltype.basetype, f"{protoVar}{sep}{protoField}()", side)
+                )
+                # inner.addcode("""
+                #     ${varName} = ${protoValue};
+                #     """,
+                #     varName=varName,
+                #     protoValue=self._generateIPCValue(ipdltype.basetype, f"{protoVar}{sep}{protoField}()", side)
+                # )
+            # for "MaybeTypes" we first check, whether we got something from the fuzzer.
+            # If so, assign is to local variable
+            if side != None:
+                ty = _cxxBareType(ipdltype.basetype, side)
+            else:
+                ty = _cxxBareTypeWithoutSide(ipdltype.basetype)
+            block.addcode("""
+                Maybe<${ty}> ${varName};
+                if (${protoVar}${sep}has_${protoField}()) {
+                    ${inner}
+                }
+                """,
+                varName=varName,
+                ty=ty,
+                sep=sep,
+                protoVar=protoVar,
+                protoField=protoField,
+                inner=inner,
+            )
+        elif _protobufTypeIsScalar(ipdltype):
+            # for scalar types, we might need a static cast in case
+            # the c++ type is more narrow than the protobuf type it was mapped to
+            ty = _cxxBareType(ipdltype, side)
+            if isTainted:
+                ty = Type("Tainted", T = ty)
+                block.addcode("""
+                    ${ty} ${varName}(${protoValue});
+                    """,
+                    varName=varName,
+                    ty=ty,
+                    protoValue=self._generateIPCValue(ipdltype, f"{protoVar}{sep}{protoField}()", side)
+                )
+            else:
+                block.addcode("""
+                    ${ty} ${varName} = ${protoValue};
+                    """,
+                    varName=varName,
+                    ty=ty,
+                    protoValue=self._generateIPCValue(ipdltype, f"{protoVar}{sep}{protoField}()", side)
+                )
+        elif _protobufTypeIsStructOrUnion(ipdltype):
+            block.addcode("""
+                auto maybe_${varName} = ${protoValue};
+                if (! maybe_${varName}.isSome()) {
+                    ${errBlock}
+                }
+                auto& ${varName} = *maybe_${varName};
+                """,
+                varName=varName,
+                protoField=protoField,
+                errReturn=errReturn,
+                errBlock=errBlock,
+                protoValue=self._generateIPCValue(ipdltype, f"{protoVar}{sep}{protoField}()", side)
+            )
+        else:
+            # here we handle all other ipdl types mapped to "bytes"
+            if ipdltype.isRefcounted():
+                # if type is refcounted / nullable, then check if there is something given by protobuf
+                # if not, then set to nullptr
+                block.addcode("""
+                    ${ty} ${varName} = nullptr;
+                    if (${protoVar}${sep}has_${protoField}()) {
+                        auto maybe_${varName} = ${protoValue};
+                        if (! maybe_${varName}.isSome()) {
+                            ${errBlock}
+                        }
+                        ${varName} = *maybe_${varName};
+                    }
+                    """,
+                    varName=varName,
+                    ty=_cxxBareType(ipdltype, side),
+                    protoField=protoField,
+                    errReturn=errReturn,
+                    protoVar=protoVar,
+                    sep=sep,
+                    errBlock=errBlock,
+                    protoValue=self._generateIPCValue(ipdltype, f"{protoVar}{sep}{protoField}()", side)
+                )
+            else:
+                bareType = _cxxBareType(ipdltype, side)
+                if isTainted:
+                    taintedType = Type("Tainted", T = bareType)
+                    block.addcode("""
+                        Maybe<${bareType}> maybe_${varName} = ${protoValue};
+                        if (! maybe_${varName}.isSome()) {
+                            ${errBlock}
+                        }
+                        ${taintedType} ${varName}(*maybe_${varName});
+                        """,
+                        varName=varName,
+                        protoField=protoField,
+                        errfn=errfn,
+                        bareType=bareType,
+                        taintedType=taintedType,
+                        errReturn=errReturn,
+                        errBlock=errBlock,
+                        protoValue=self._generateIPCValue(ipdltype, f"{protoVar}{sep}{protoField}()", side)
+                    )
+                else:
+                    block.addcode("""
+                        Maybe<${bareType}> maybe_${varName} = ${protoValue};
+                        if (! maybe_${varName}.isSome()) {
+                            ${errBlock}
+                        }
+                        auto& ${varName}(*maybe_${varName});
+                        """,
+                        varName=varName,
+                        protoField=protoField,
+                        errfn=errfn,
+                        bareType=bareType,
+                        errReturn=errReturn,
+                        errBlock=errBlock,
+                        protoValue=self._generateIPCValue(ipdltype, f"{protoVar}{sep}{protoField}()", side)
+                    )
+
+        return block
+
+    def deserializeMessageFuzzing(self, md, side, errfn, errfnSent, forReply=False):
+        protoVar = "proto"
+
+        func = Block()
+
+        # if md.msgCtorFunc() == "Msg_AsyncMessage":
+        #     pprint(vars(md.protocolDecl.type._ast))
+
+        #ns = md.protocolDecl.namespaces + [ipdl.ast.Namespace(loc="", namespace=md.namespace)]
+        ns = md.protocolDecl.type._ast.namespaces + [ipdl.ast.Namespace(loc="", namespace=md.namespace)]
+        if forReply:
+            msgName = md.replyCtorFunc()
+        else:
+            msgName = md.msgCtorFunc()
+
+        protoVar = "proto"
+
+        # convert msg to proto
+        func.addcode("""
+            auto ${var} = mozilla::fuzzing::LibprotobufMapping::ParseProtobufMessage<${ty}>(${msgVar});
+            """,
+            var=protoVar,
+            ty=_getNamespacedObject(msgName, ns),
+            msgVar="msg__"
+        )
+
+        def maybeTainted(p, side):
+            if md.decl.type.tainted and "NoTaint" not in p.attributes:
+                return Type("Tainted", T=p.bareType(side))
+            return p.bareType(side)
+
+
+        # skip replies and con-/destructor (contain actors)
+        if not (md.decl.type.isDtor()):
+            # convert protobuf fields to local variables
+            start = 0
+            if (md.decl.type.isCtor()) and not forReply:
+                func.addcode("""
+                    auto actorid__ = ${protoVar}->a_actorid();
+                    """,
+                    protoVar=protoVar)
+                start = 1
+            if forReply:
+                for p in md.returns[start:]:
+                    func.addstmt(self._generateIPCAssignDecl(p.ipdltype, p.var(), protoVar, p.protobufVar(), side=side, errfn=errfn, isTainted=(md.decl.type.tainted and "NoTaint" not in p.attributes)))
+            else:
+                for p in md.params[start:]:
+                    func.addstmt(self._generateIPCAssignDecl(p.ipdltype, p.var(), protoVar, p.protobufVar(), side=side, errfn=errfn, isTainted=(md.decl.type.tainted and "NoTaint" not in p.attributes)))
+        else:
+            pass
+
+        return func
 
     def makeMessage(self, md, errfn, fromActor=None):
         msgvar = self.msgvar
@@ -7007,17 +7430,6 @@ class _GenerateProtocolChildCode(_GenerateProtocolActorCode):
 
     def receivesMessage(self, md):
         return md.decl.type.isInout() or md.decl.type.isOut()
-
-
-class _GenerateProtocolProtobufCode(_GenerateProtocolActorCode):
-    def __init__(self):
-        _GenerateProtocolActorCode.__init__(self, "protobuftest")
-
-    def sendsMessage(self, md):
-        return not md.decl.type.isIn()
-
-    def receivesMessage(self, md):
-        return md.decl.type.isInout() or md.decl.type.isIn()
 
 
 
