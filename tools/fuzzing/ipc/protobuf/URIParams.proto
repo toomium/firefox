@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/ipc/glue/URIParams.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 // Importing all namespaced protobuf children headers
 import public "URIParams_protobuf.mozilla.ipc.h.proto";

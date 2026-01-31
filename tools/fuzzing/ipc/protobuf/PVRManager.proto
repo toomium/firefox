@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/gfx/vr/ipc/PVRManager.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.gfx.PVRManager;
 
@@ -19,9 +18,9 @@ import "GamepadEventTypes.proto";
 
 // Message declarations
 message Msg_PVRLayerConstructor {
-  required sint64 a_actorid = 1;
-  required uint32 a_aDisplayID = 2;
-  required uint32 a_aGroup = 3;
+  sint64 a_actorid = 1;
+  uint32 a_aDisplayID = 2;
+  uint32 a_aGroup = 3;
 }
 
 message Reply_PVRLayerConstructor {
@@ -34,12 +33,12 @@ message Msg_RefreshDisplays {
 }
 
 message Msg_SetGroupMask {
-  required uint32 a_aDisplayID = 1;
-  required uint32 a_aGroupMask = 2;
+  uint32 a_aDisplayID = 1;
+  uint32 a_aGroupMask = 2;
 }
 
 message Msg_SetHaveEventListener {
-  required bool a_aHaveEventListener = 1;
+  bool a_aHaveEventListener = 1;
 }
 
 message Msg_ControllerListenerAdded {
@@ -49,24 +48,24 @@ message Msg_ControllerListenerRemoved {
 }
 
 message Msg_VibrateHaptic {
-  required bytes a_aGamepadHandle = 1;
-  required uint32 a_aHapticIndex = 2;
-  required double a_aIntensity = 3;
-  required double a_aDuration = 4;
-  required uint32 a_aPromiseID = 5;
+  bytes a_aGamepadHandle = 1;
+  uint32 a_aHapticIndex = 2;
+  double a_aIntensity = 3;
+  double a_aDuration = 4;
+  uint32 a_aPromiseID = 5;
 }
 
 message Msg_StopVibrateHaptic {
-  required bytes a_aGamepadHandle = 1;
+  bytes a_aGamepadHandle = 1;
 }
 
 message Msg_StartVRNavigation {
-  required uint32 a_aDeviceID = 1;
+  uint32 a_aDeviceID = 1;
 }
 
 message Msg_StopVRNavigation {
-  required uint32 a_aDeviceID = 1;
-  required bytes a_aDuration = 2;
+  uint32 a_aDeviceID = 1;
+  bytes a_aDuration = 2;
 }
 
 message Msg_StartActivity {
@@ -83,19 +82,19 @@ message Msg_ResetPuppet {
 }
 
 message Msg_UpdateDisplayInfo {
-  required bytes a_aDisplayInfo = 1;
+  bytes a_aDisplayInfo = 1;
 }
 
 message Msg_UpdateRuntimeCapabilities {
-  required bytes a_aCapabilities = 1;
+  bytes a_aCapabilities = 1;
 }
 
 message Msg_ReplyGamepadVibrateHaptic {
-  required uint32 a_aPromiseID = 1;
+  uint32 a_aPromiseID = 1;
 }
 
 message Msg_NotifyPuppetCommandBufferCompleted {
-  required bool a_aSuccess = 1;
+  bool a_aSuccess = 1;
 }
 
 message Msg_NotifyPuppetResetComplete {

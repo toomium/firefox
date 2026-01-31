@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/webgpu/ipc/PWebGPUTypes.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 // Importing all namespaced protobuf children headers
 import public "PWebGPUTypes_protobuf.mozilla.webgpu.h.proto";

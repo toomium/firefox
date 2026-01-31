@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/ipc/PFilePicker.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom;
 
@@ -18,7 +17,7 @@ message InputBlobs {
 }
 
 message InputDirectory {
-  required string a_directoryPath = 1;
+  string a_directoryPath = 1;
   repeated protobuf.mozilla.dom.IPCBlob a_blobsInWebKitDirectory = 2;
 }
 

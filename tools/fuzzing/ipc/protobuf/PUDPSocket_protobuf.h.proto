@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/network/PUDPSocket.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf;
 
@@ -14,8 +13,8 @@ import "IPCStream.proto";
 
 // Structs and unions declarations
 message UDPAddressInfo {
-  required string a_addr = 1;
-  required uint32 a_port = 2;
+  string a_addr = 1;
+  uint32 a_port = 2;
 }
 
 message UDPSocketAddr {

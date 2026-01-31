@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/file/ipc/PFileCreator.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom;
 
@@ -14,11 +13,11 @@ import "IPCBlob.proto";
 
 // Structs and unions declarations
 message FileCreationSuccessResult {
-  required protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  protobuf.mozilla.dom.IPCBlob a_blob = 1;
 }
 
 message FileCreationErrorResult {
-  required bytes a_errorCode = 1;
+  bytes a_errorCode = 1;
 }
 
 message FileCreationResult {

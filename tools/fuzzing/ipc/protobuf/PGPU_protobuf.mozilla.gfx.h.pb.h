@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "CrashReporterInitArgs.pb.h"
 #include "GraphicsMessages.pb.h"
 #include "MemoryReportTypes.pb.h"
@@ -46,6 +48,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PGPU_5fprotobuf_2emozilla_2egfx_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PGPU_5fprotobuf_2emozilla_2egfx_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace gfx {
@@ -65,7 +68,7 @@ namespace gfx {
 // ===================================================================
 
 class LayerTreeIdMapping final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gfx.LayerTreeIdMapping) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gfx.LayerTreeIdMapping) */ {
  public:
   inline LayerTreeIdMapping() : LayerTreeIdMapping(nullptr) {}
   ~LayerTreeIdMapping() override;
@@ -95,13 +98,15 @@ class LayerTreeIdMapping final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const LayerTreeIdMapping& default_instance() {
     return *internal_default_instance();
   }
@@ -139,9 +144,15 @@ class LayerTreeIdMapping final :
   LayerTreeIdMapping* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<LayerTreeIdMapping>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const LayerTreeIdMapping& from);
-  void MergeFrom(const LayerTreeIdMapping& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const LayerTreeIdMapping& from) {
+    LayerTreeIdMapping::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -154,7 +165,7 @@ class LayerTreeIdMapping final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(LayerTreeIdMapping* other);
 
   private:
@@ -167,7 +178,10 @@ class LayerTreeIdMapping final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -177,11 +191,7 @@ class LayerTreeIdMapping final :
     kALayersIdFieldNumber = 1,
     kAOwnerIdFieldNumber = 2,
   };
-  // required bytes a_layersId = 1;
-  bool has_a_layersid() const;
-  private:
-  bool _internal_has_a_layersid() const;
-  public:
+  // bytes a_layersId = 1;
   void clear_a_layersid();
   const std::string& a_layersid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -195,11 +205,7 @@ class LayerTreeIdMapping final :
   std::string* _internal_mutable_a_layersid();
   public:
 
-  // required bytes a_ownerId = 2;
-  bool has_a_ownerid() const;
-  private:
-  bool _internal_has_a_ownerid() const;
-  public:
+  // bytes a_ownerId = 2;
   void clear_a_ownerid();
   const std::string& a_ownerid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -217,17 +223,13 @@ class LayerTreeIdMapping final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_layersid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ownerid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGPU_5fprotobuf_2emozilla_2egfx_2eh_2eproto;
@@ -243,17 +245,9 @@ class LayerTreeIdMapping final :
 #endif  // __GNUC__
 // LayerTreeIdMapping
 
-// required bytes a_layersId = 1;
-inline bool LayerTreeIdMapping::_internal_has_a_layersid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool LayerTreeIdMapping::has_a_layersid() const {
-  return _internal_has_a_layersid();
-}
+// bytes a_layersId = 1;
 inline void LayerTreeIdMapping::clear_a_layersid() {
   _impl_.a_layersid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& LayerTreeIdMapping::a_layersid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.LayerTreeIdMapping.a_layersId)
@@ -262,7 +256,7 @@ inline const std::string& LayerTreeIdMapping::a_layersid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LayerTreeIdMapping::set_a_layersid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_layersid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.LayerTreeIdMapping.a_layersId)
 }
@@ -275,32 +269,22 @@ inline const std::string& LayerTreeIdMapping::_internal_a_layersid() const {
   return _impl_.a_layersid_.Get();
 }
 inline void LayerTreeIdMapping::_internal_set_a_layersid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_layersid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* LayerTreeIdMapping::_internal_mutable_a_layersid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_layersid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LayerTreeIdMapping::release_a_layersid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.LayerTreeIdMapping.a_layersId)
-  if (!_internal_has_a_layersid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_layersid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_layersid_.IsDefault()) {
-    _impl_.a_layersid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_layersid_.Release();
 }
 inline void LayerTreeIdMapping::set_allocated_a_layersid(std::string* a_layersid) {
   if (a_layersid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_layersid_.SetAllocated(a_layersid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -311,17 +295,9 @@ inline void LayerTreeIdMapping::set_allocated_a_layersid(std::string* a_layersid
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gfx.LayerTreeIdMapping.a_layersId)
 }
 
-// required bytes a_ownerId = 2;
-inline bool LayerTreeIdMapping::_internal_has_a_ownerid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool LayerTreeIdMapping::has_a_ownerid() const {
-  return _internal_has_a_ownerid();
-}
+// bytes a_ownerId = 2;
 inline void LayerTreeIdMapping::clear_a_ownerid() {
   _impl_.a_ownerid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& LayerTreeIdMapping::a_ownerid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gfx.LayerTreeIdMapping.a_ownerId)
@@ -330,7 +306,7 @@ inline const std::string& LayerTreeIdMapping::a_ownerid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LayerTreeIdMapping::set_a_ownerid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_ownerid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gfx.LayerTreeIdMapping.a_ownerId)
 }
@@ -343,32 +319,22 @@ inline const std::string& LayerTreeIdMapping::_internal_a_ownerid() const {
   return _impl_.a_ownerid_.Get();
 }
 inline void LayerTreeIdMapping::_internal_set_a_ownerid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_ownerid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* LayerTreeIdMapping::_internal_mutable_a_ownerid() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_ownerid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LayerTreeIdMapping::release_a_ownerid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gfx.LayerTreeIdMapping.a_ownerId)
-  if (!_internal_has_a_ownerid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_ownerid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_ownerid_.IsDefault()) {
-    _impl_.a_ownerid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_ownerid_.Release();
 }
 inline void LayerTreeIdMapping::set_allocated_a_ownerid(std::string* a_ownerid) {
   if (a_ownerid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_ownerid_.SetAllocated(a_ownerid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

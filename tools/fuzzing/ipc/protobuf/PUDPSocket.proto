@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/network/PUDPSocket.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.net.PUDPSocket;
 
@@ -18,30 +17,30 @@ import "IPCStream.proto";
 
 // Message declarations
 message Msg_Bind {
-  required protobuf.UDPAddressInfo a_addressInfo = 1;
-  required bool a_addressReuse = 2;
-  required bool a_loopback = 3;
-  required uint32 a_recvBufferSize = 4;
-  required uint32 a_sendBufferSize = 5;
+  protobuf.UDPAddressInfo a_addressInfo = 1;
+  bool a_addressReuse = 2;
+  bool a_loopback = 3;
+  uint32 a_recvBufferSize = 4;
+  uint32 a_sendBufferSize = 5;
 }
 
 message Msg_Connect {
-  required protobuf.UDPAddressInfo a_addressInfo = 1;
+  protobuf.UDPAddressInfo a_addressInfo = 1;
 }
 
 message Msg_OutgoingData {
-  required protobuf.UDPData a_data = 1;
-  required protobuf.UDPSocketAddr a_addr = 2;
+  protobuf.UDPData a_data = 1;
+  protobuf.UDPSocketAddr a_addr = 2;
 }
 
 message Msg_JoinMulticast {
-  required string a_multicastAddress = 1;
-  required string a_iface = 2;
+  string a_multicastAddress = 1;
+  string a_iface = 2;
 }
 
 message Msg_LeaveMulticast {
-  required string a_multicastAddress = 1;
-  required string a_iface = 2;
+  string a_multicastAddress = 1;
+  string a_iface = 2;
 }
 
 message Msg_Close {
@@ -51,25 +50,25 @@ message Msg_RequestDelete {
 }
 
 message Msg_CallbackOpened {
-  required protobuf.UDPAddressInfo a_addressInfo = 1;
+  protobuf.UDPAddressInfo a_addressInfo = 1;
 }
 
 message Msg_CallbackConnected {
-  required protobuf.UDPAddressInfo a_addressInfo = 1;
+  protobuf.UDPAddressInfo a_addressInfo = 1;
 }
 
 message Msg_CallbackClosed {
 }
 
 message Msg_CallbackReceivedData {
-  required protobuf.UDPAddressInfo a_addressInfo = 1;
+  protobuf.UDPAddressInfo a_addressInfo = 1;
   repeated uint32 a_data = 2;
 }
 
 message Msg_CallbackError {
-  required string a_message = 1;
-  required string a_filename = 2;
-  required uint32 a_lineNumber = 3;
+  string a_message = 1;
+  string a_filename = 2;
+  uint32 a_lineNumber = 3;
 }
 
 message Msg___delete__ {

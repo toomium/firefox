@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/ipc/testshell/PTestShell.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.ipc.PTestShell;
 
@@ -22,12 +21,12 @@ message Reply___delete__ {
 }
 
 message Msg_ExecuteCommand {
-  required string a_aCommand = 1;
+  string a_aCommand = 1;
 }
 
 message Msg_PTestShellCommandConstructor {
-  required sint64 a_actorid = 1;
-  required string a_aCommand = 2;
+  sint64 a_actorid = 1;
+  string a_aCommand = 2;
 }
 
 message Reply_PTestShellCommandConstructor {

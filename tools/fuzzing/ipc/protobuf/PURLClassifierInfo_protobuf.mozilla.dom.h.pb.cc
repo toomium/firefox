@@ -8,7 +8,10 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -22,11 +25,10 @@ namespace mozilla {
 namespace dom {
 PROTOBUF_CONSTEXPR ClassifierInfo::ClassifierInfo(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_list_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.a_list_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_provider_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_fullhash_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_fullhash_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ClassifierInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ClassifierInfoDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -55,6 +57,67 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
+static ::_pb::Metadata file_level_metadata_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto[2];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
+
+const uint32_t TableStruct_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ClassifierInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ClassifierInfo, _impl_.a_list_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ClassifierInfo, _impl_.a_provider_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ClassifierInfo, _impl_.a_fullhash_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::URLClassifierLocalResult, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::URLClassifierLocalResult, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::URLClassifierLocalResult, _impl_.a_uri_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::URLClassifierLocalResult, _impl_.a_featurename_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::URLClassifierLocalResult, _impl_.a_matchinglist_),
+  0,
+  ~0u,
+  ~0u,
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::protobuf::mozilla::dom::ClassifierInfo)},
+  { 9, 18, -1, sizeof(::protobuf::mozilla::dom::URLClassifierLocalResult)},
+};
+
+static const ::_pb::Message* const file_default_instances[] = {
+  &::protobuf::mozilla::dom::_ClassifierInfo_default_instance_._instance,
+  &::protobuf::mozilla::dom::_URLClassifierLocalResult_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n/PURLClassifierInfo_protobuf.mozilla.do"
+  "m.h.proto\022\024protobuf.mozilla.dom\"H\n\016Class"
+  "ifierInfo\022\016\n\006a_list\030\001 \001(\t\022\022\n\na_provider\030"
+  "\002 \001(\t\022\022\n\na_fullhash\030\003 \001(\t\"g\n\030URLClassifi"
+  "erLocalResult\022\022\n\005a_uri\030\001 \001(\014H\000\210\001\001\022\025\n\ra_f"
+  "eatureName\030\002 \001(\t\022\026\n\016a_matchingList\030\003 \001(\t"
+  "B\010\n\006_a_urib\006proto3"
+  ;
+static ::_pbi::once_flag descriptor_table_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto = {
+    false, false, 258, descriptor_table_protodef_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto,
+    "PURLClassifierInfo_protobuf.mozilla.dom.h.proto",
+    &descriptor_table_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto_once, nullptr, 0, 2,
+    schemas, file_default_instances, TableStruct_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets,
+    file_level_metadata_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto, file_level_enum_descriptors_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto,
+    file_level_service_descriptors_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter() {
+  return &descriptor_table_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto;
+}
+
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto(&descriptor_table_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -63,43 +126,29 @@ namespace dom {
 
 class ClassifierInfo::_Internal {
  public:
-  using HasBits = decltype(std::declval<ClassifierInfo>()._impl_._has_bits_);
-  static void set_has_a_list(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_provider(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_a_fullhash(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
-  }
 };
 
 ClassifierInfo::ClassifierInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.ClassifierInfo)
 }
 ClassifierInfo::ClassifierInfo(const ClassifierInfo& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   ClassifierInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_list_){}
+      decltype(_impl_.a_list_){}
     , decltype(_impl_.a_provider_){}
-    , decltype(_impl_.a_fullhash_){}};
+    , decltype(_impl_.a_fullhash_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_list_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_list_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_list()) {
+  if (!from._internal_a_list().empty()) {
     _this->_impl_.a_list_.Set(from._internal_a_list(), 
       _this->GetArenaForAllocation());
   }
@@ -107,7 +156,7 @@ ClassifierInfo::ClassifierInfo(const ClassifierInfo& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_provider_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_provider()) {
+  if (!from._internal_a_provider().empty()) {
     _this->_impl_.a_provider_.Set(from._internal_a_provider(), 
       _this->GetArenaForAllocation());
   }
@@ -115,7 +164,7 @@ ClassifierInfo::ClassifierInfo(const ClassifierInfo& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_fullhash_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_fullhash()) {
+  if (!from._internal_a_fullhash().empty()) {
     _this->_impl_.a_fullhash_.Set(from._internal_a_fullhash(), 
       _this->GetArenaForAllocation());
   }
@@ -127,11 +176,10 @@ inline void ClassifierInfo::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_list_){}
+      decltype(_impl_.a_list_){}
     , decltype(_impl_.a_provider_){}
     , decltype(_impl_.a_fullhash_){}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_list_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -149,7 +197,7 @@ inline void ClassifierInfo::SharedCtor(
 
 ClassifierInfo::~ClassifierInfo() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.ClassifierInfo)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -173,53 +221,45 @@ void ClassifierInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_list_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_provider_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _impl_.a_fullhash_.ClearNonDefaultToEmpty();
-    }
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_list_.ClearToEmpty();
+  _impl_.a_provider_.ClearToEmpty();
+  _impl_.a_fullhash_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* ClassifierInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_list = 1;
+      // string a_list = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_list();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.ClassifierInfo.a_list"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_provider = 2;
+      // string a_provider = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_provider();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.ClassifierInfo.a_provider"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_fullhash = 3;
+      // string a_fullhash = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_fullhash();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.ClassifierInfo.a_fullhash"));
         } else
           goto handle_unusual;
         continue;
@@ -234,12 +274,11 @@ const char* ClassifierInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -253,121 +292,101 @@ uint8_t* ClassifierInfo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_list = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_list = 1;
+  if (!this->_internal_a_list().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_list().data(), static_cast<int>(this->_internal_a_list().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.ClassifierInfo.a_list");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_list(), target);
   }
 
-  // required string a_provider = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // string a_provider = 2;
+  if (!this->_internal_a_provider().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_provider().data(), static_cast<int>(this->_internal_a_provider().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.ClassifierInfo.a_provider");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_provider(), target);
   }
 
-  // required string a_fullhash = 3;
-  if (cached_has_bits & 0x00000004u) {
+  // string a_fullhash = 3;
+  if (!this->_internal_a_fullhash().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_fullhash().data(), static_cast<int>(this->_internal_a_fullhash().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.ClassifierInfo.a_fullhash");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_fullhash(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.ClassifierInfo)
   return target;
 }
 
-size_t ClassifierInfo::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.ClassifierInfo)
-  size_t total_size = 0;
-
-  if (_internal_has_a_list()) {
-    // required string a_list = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_list());
-  }
-
-  if (_internal_has_a_provider()) {
-    // required string a_provider = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_provider());
-  }
-
-  if (_internal_has_a_fullhash()) {
-    // required string a_fullhash = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_fullhash());
-  }
-
-  return total_size;
-}
 size_t ClassifierInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.ClassifierInfo)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string a_list = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_list());
-
-    // required string a_provider = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_provider());
-
-    // required string a_fullhash = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_fullhash());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_list = 1;
+  if (!this->_internal_a_list().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_list());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // string a_provider = 2;
+  if (!this->_internal_a_provider().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_provider());
+  }
+
+  // string a_fullhash = 3;
+  if (!this->_internal_a_fullhash().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_fullhash());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ClassifierInfo::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const ClassifierInfo*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ClassifierInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ClassifierInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ClassifierInfo::GetClassData() const { return &_class_data_; }
 
-void ClassifierInfo::MergeFrom(const ClassifierInfo& from) {
-  ClassifierInfo* const _this = this;
+
+void ClassifierInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ClassifierInfo*>(&to_msg);
+  auto& from = static_cast<const ClassifierInfo&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.ClassifierInfo)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_list(from._internal_a_list());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_provider(from._internal_a_provider());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_a_fullhash(from._internal_a_fullhash());
-    }
+  if (!from._internal_a_list().empty()) {
+    _this->_internal_set_a_list(from._internal_a_list());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_provider().empty()) {
+    _this->_internal_set_a_provider(from._internal_a_provider());
+  }
+  if (!from._internal_a_fullhash().empty()) {
+    _this->_internal_set_a_fullhash(from._internal_a_fullhash());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ClassifierInfo::CopyFrom(const ClassifierInfo& from) {
@@ -378,7 +397,6 @@ void ClassifierInfo::CopyFrom(const ClassifierInfo& from) {
 }
 
 bool ClassifierInfo::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -387,7 +405,6 @@ void ClassifierInfo::InternalSwap(ClassifierInfo* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_list_, lhs_arena,
       &other->_impl_.a_list_, rhs_arena
@@ -402,10 +419,11 @@ void ClassifierInfo::InternalSwap(ClassifierInfo* other) {
   );
 }
 
-std::string ClassifierInfo::GetTypeName() const {
-  return "protobuf.mozilla.dom.ClassifierInfo";
+::PROTOBUF_NAMESPACE_ID::Metadata ClassifierInfo::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -415,25 +433,16 @@ class URLClassifierLocalResult::_Internal {
   static void set_has_a_uri(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_a_featurename(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_a_matchinglist(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000006) ^ 0x00000006) != 0;
-  }
 };
 
 URLClassifierLocalResult::URLClassifierLocalResult(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.URLClassifierLocalResult)
 }
 URLClassifierLocalResult::URLClassifierLocalResult(const URLClassifierLocalResult& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   URLClassifierLocalResult* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -442,7 +451,7 @@ URLClassifierLocalResult::URLClassifierLocalResult(const URLClassifierLocalResul
     , decltype(_impl_.a_featurename_){}
     , decltype(_impl_.a_matchinglist_){}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_uri_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_uri_.Set("", GetArenaForAllocation());
@@ -455,7 +464,7 @@ URLClassifierLocalResult::URLClassifierLocalResult(const URLClassifierLocalResul
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_featurename_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_featurename()) {
+  if (!from._internal_a_featurename().empty()) {
     _this->_impl_.a_featurename_.Set(from._internal_a_featurename(), 
       _this->GetArenaForAllocation());
   }
@@ -463,7 +472,7 @@ URLClassifierLocalResult::URLClassifierLocalResult(const URLClassifierLocalResul
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_matchinglist_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_matchinglist()) {
+  if (!from._internal_a_matchinglist().empty()) {
     _this->_impl_.a_matchinglist_.Set(from._internal_a_matchinglist(), 
       _this->GetArenaForAllocation());
   }
@@ -497,7 +506,7 @@ inline void URLClassifierLocalResult::SharedCtor(
 
 URLClassifierLocalResult::~URLClassifierLocalResult() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.URLClassifierLocalResult)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -522,19 +531,13 @@ void URLClassifierLocalResult::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_uri_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_featurename_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _impl_.a_matchinglist_.ClearNonDefaultToEmpty();
-    }
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_uri_.ClearNonDefaultToEmpty();
   }
+  _impl_.a_featurename_.ClearToEmpty();
+  _impl_.a_matchinglist_.ClearToEmpty();
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* URLClassifierLocalResult::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -553,21 +556,23 @@ const char* URLClassifierLocalResult::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required string a_featureName = 2;
+      // string a_featureName = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_featurename();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.URLClassifierLocalResult.a_featureName"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_matchingList = 3;
+      // string a_matchingList = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_matchinglist();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.URLClassifierLocalResult.a_matchingList"));
         } else
           goto handle_unusual;
         continue;
@@ -582,7 +587,7 @@ const char* URLClassifierLocalResult::_InternalParse(const char* ptr, ::_pbi::Pa
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -601,71 +606,44 @@ uint8_t* URLClassifierLocalResult::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
   // optional bytes a_uri = 1;
-  if (cached_has_bits & 0x00000001u) {
+  if (_internal_has_a_uri()) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_uri(), target);
   }
 
-  // required string a_featureName = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // string a_featureName = 2;
+  if (!this->_internal_a_featurename().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_featurename().data(), static_cast<int>(this->_internal_a_featurename().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.URLClassifierLocalResult.a_featureName");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_featurename(), target);
   }
 
-  // required string a_matchingList = 3;
-  if (cached_has_bits & 0x00000004u) {
+  // string a_matchingList = 3;
+  if (!this->_internal_a_matchinglist().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_matchinglist().data(), static_cast<int>(this->_internal_a_matchinglist().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.URLClassifierLocalResult.a_matchingList");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_matchinglist(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.URLClassifierLocalResult)
   return target;
 }
 
-size_t URLClassifierLocalResult::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.URLClassifierLocalResult)
-  size_t total_size = 0;
-
-  if (_internal_has_a_featurename()) {
-    // required string a_featureName = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_featurename());
-  }
-
-  if (_internal_has_a_matchinglist()) {
-    // required string a_matchingList = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_matchinglist());
-  }
-
-  return total_size;
-}
 size_t URLClassifierLocalResult::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.URLClassifierLocalResult)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000006) ^ 0x00000006) == 0) {  // All required fields are present.
-    // required string a_featureName = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_featurename());
-
-    // required string a_matchingList = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_matchinglist());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -678,40 +656,48 @@ size_t URLClassifierLocalResult::ByteSizeLong() const {
         this->_internal_a_uri());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_featureName = 2;
+  if (!this->_internal_a_featurename().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_featurename());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // string a_matchingList = 3;
+  if (!this->_internal_a_matchinglist().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_matchinglist());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void URLClassifierLocalResult::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const URLClassifierLocalResult*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData URLClassifierLocalResult::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    URLClassifierLocalResult::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*URLClassifierLocalResult::GetClassData() const { return &_class_data_; }
 
-void URLClassifierLocalResult::MergeFrom(const URLClassifierLocalResult& from) {
-  URLClassifierLocalResult* const _this = this;
+
+void URLClassifierLocalResult::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<URLClassifierLocalResult*>(&to_msg);
+  auto& from = static_cast<const URLClassifierLocalResult&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.URLClassifierLocalResult)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_uri(from._internal_a_uri());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_featurename(from._internal_a_featurename());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_a_matchinglist(from._internal_a_matchinglist());
-    }
+  if (from._internal_has_a_uri()) {
+    _this->_internal_set_a_uri(from._internal_a_uri());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_featurename().empty()) {
+    _this->_internal_set_a_featurename(from._internal_a_featurename());
+  }
+  if (!from._internal_a_matchinglist().empty()) {
+    _this->_internal_set_a_matchinglist(from._internal_a_matchinglist());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void URLClassifierLocalResult::CopyFrom(const URLClassifierLocalResult& from) {
@@ -722,7 +708,6 @@ void URLClassifierLocalResult::CopyFrom(const URLClassifierLocalResult& from) {
 }
 
 bool URLClassifierLocalResult::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -746,10 +731,11 @@ void URLClassifierLocalResult::InternalSwap(URLClassifierLocalResult* other) {
   );
 }
 
-std::string URLClassifierLocalResult::GetTypeName() const {
-  return "protobuf.mozilla.dom.URLClassifierLocalResult";
+::PROTOBUF_NAMESPACE_ID::Metadata URLClassifierLocalResult::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PURLClassifierInfo_5fprotobuf_2emozilla_2edom_2eh_2eproto[1]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace dom

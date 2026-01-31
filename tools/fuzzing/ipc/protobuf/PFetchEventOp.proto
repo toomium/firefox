@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/serviceworkers/PFetchEventOp.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PFetchEventOp;
 
@@ -18,31 +17,31 @@ import "FetchTypes.proto";
 
 // Message declarations
 message Msg_PreloadResponse {
-  required protobuf.mozilla.dom.ParentToParentInternalResponse a_aResponse = 1;
+  protobuf.mozilla.dom.ParentToParentInternalResponse a_aResponse = 1;
 }
 
 message Msg_PreloadResponseTiming {
-  required protobuf.mozilla.dom.ResponseTiming a_aTiming = 1;
+  protobuf.mozilla.dom.ResponseTiming a_aTiming = 1;
 }
 
 message Msg_PreloadResponseEnd {
-  required protobuf.mozilla.dom.ResponseEndArgs a_aArgs = 1;
+  protobuf.mozilla.dom.ResponseEndArgs a_aArgs = 1;
 }
 
 message Msg_AsyncLog {
-  required string a_aScriptSpec = 1;
-  required uint32 a_aLineNumber = 2;
-  required uint32 a_aColumnNumber = 3;
-  required string a_aMessageName = 4;
+  string a_aScriptSpec = 1;
+  uint32 a_aLineNumber = 2;
+  uint32 a_aColumnNumber = 3;
+  string a_aMessageName = 4;
   repeated string a_aParams = 5;
 }
 
 message Msg_RespondWith {
-  required protobuf.mozilla.dom.ParentToParentFetchEventRespondWithResult a_aResult = 1;
+  protobuf.mozilla.dom.ParentToParentFetchEventRespondWithResult a_aResult = 1;
 }
 
 message Msg___delete__ {
-  required protobuf.mozilla.dom.ServiceWorkerFetchEventOpResult a_aResult = 1;
+  protobuf.mozilla.dom.ServiceWorkerFetchEventOpResult a_aResult = 1;
 }
 
 message Reply___delete__ {

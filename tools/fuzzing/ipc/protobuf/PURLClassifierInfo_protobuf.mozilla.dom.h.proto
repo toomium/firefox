@@ -5,20 +5,19 @@
 
 // Generated from /home/tmittendorf/firefox/dom/ipc/PURLClassifierInfo.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message ClassifierInfo {
-  required string a_list = 1;
-  required string a_provider = 2;
-  required string a_fullhash = 3;
+  string a_list = 1;
+  string a_provider = 2;
+  string a_fullhash = 3;
 }
 
 message URLClassifierLocalResult {
   optional bytes a_uri = 1;
-  required string a_featureName = 2;
-  required string a_matchingList = 3;
+  string a_featureName = 2;
+  string a_matchingList = 3;
 }

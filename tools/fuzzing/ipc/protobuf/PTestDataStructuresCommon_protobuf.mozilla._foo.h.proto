@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/ipc/ipdl/test/gtest/PTestDataStructuresCommon.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla._foo;
 
@@ -20,8 +19,8 @@ message IntDouble {
 }
 
 message SIntDouble {
-  required sint32 a_i = 1;
-  required double a_d = 2;
+  sint32 a_i = 1;
+  double a_d = 2;
 }
 
 message IntDoubleArrays {
@@ -39,7 +38,7 @@ message IntDoubleArrays {
 }
 
 message SIntDoubleArrays {
-  required sint32 a_i = 1;
+  sint32 a_i = 1;
   repeated sint32 a_ai = 2;
   repeated double a_ad = 3;
 }
@@ -63,7 +62,7 @@ message Actors {
 }
 
 message SActors {
-  required sint32 a_i = 1;
+  sint32 a_i = 1;
   repeated sint32 a_ai = 2;
   repeated bytes a_ap = 3;
 }
@@ -87,7 +86,7 @@ message Unions {
 }
 
 message Structs {
-  required sint32 a_i = 1;
+  sint32 a_i = 1;
   repeated sint32 a_ai = 2;
   repeated bytes a_ap = 3;
   repeated protobuf.mozilla._foo.SActors a_aa = 4;
@@ -116,7 +115,7 @@ message WithStructs {
 }
 
 message WithUnions {
-  required sint32 a_i = 1;
+  sint32 a_i = 1;
   repeated sint32 a_ai = 2;
   repeated bytes a_ap = 3;
   repeated protobuf.mozilla._foo.Actors a_aa = 4;
@@ -124,15 +123,15 @@ message WithUnions {
 }
 
 message CommonAttrs {
-  required bool a_dummy = 1;
+  bool a_dummy = 1;
 }
 
 message FooAttrs {
-  required sint32 a_dummy = 1;
+  sint32 a_dummy = 1;
 }
 
 message BarAttrs {
-  required float a_dummy = 1;
+  float a_dummy = 1;
 }
 
 message SpecificAttrs {
@@ -143,13 +142,13 @@ message SpecificAttrs {
 }
 
 message Attrs {
-  required protobuf.mozilla._foo.CommonAttrs a_common = 1;
-  required protobuf.mozilla._foo.SpecificAttrs a_specific = 2;
+  protobuf.mozilla._foo.CommonAttrs a_common = 1;
+  protobuf.mozilla._foo.SpecificAttrs a_specific = 2;
 }
 
 message SetAttrs {
-  required bytes a_x = 1;
-  required protobuf.mozilla._foo.Attrs a_attrs = 2;
+  bytes a_x = 1;
+  protobuf.mozilla._foo.Attrs a_attrs = 2;
 }
 
 message Op {
@@ -160,8 +159,8 @@ message Op {
 }
 
 message ShmemStruct {
-  required sint32 a_i = 1;
-  required bytes a_mem = 2;
+  sint32 a_i = 1;
+  bytes a_mem = 2;
 }
 
 message ShmemUnion {

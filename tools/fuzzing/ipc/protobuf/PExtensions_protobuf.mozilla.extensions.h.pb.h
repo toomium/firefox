@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "DOMTypes.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -42,6 +44,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace extensions {
@@ -61,7 +64,7 @@ namespace extensions {
 // ===================================================================
 
 class FrameTransitionData final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.extensions.FrameTransitionData) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.extensions.FrameTransitionData) */ {
  public:
   inline FrameTransitionData() : FrameTransitionData(nullptr) {}
   ~FrameTransitionData() override;
@@ -91,13 +94,15 @@ class FrameTransitionData final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const FrameTransitionData& default_instance() {
     return *internal_default_instance();
   }
@@ -135,9 +140,15 @@ class FrameTransitionData final :
   FrameTransitionData* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<FrameTransitionData>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const FrameTransitionData& from);
-  void MergeFrom(const FrameTransitionData& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const FrameTransitionData& from) {
+    FrameTransitionData::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -150,7 +161,7 @@ class FrameTransitionData final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(FrameTransitionData* other);
 
   private:
@@ -163,7 +174,10 @@ class FrameTransitionData final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -176,11 +190,7 @@ class FrameTransitionData final :
     kAReloadFieldNumber = 4,
     kAServerRedirectFieldNumber = 5,
   };
-  // required bool a_clientRedirect = 1;
-  bool has_a_clientredirect() const;
-  private:
-  bool _internal_has_a_clientredirect() const;
-  public:
+  // bool a_clientRedirect = 1;
   void clear_a_clientredirect();
   bool a_clientredirect() const;
   void set_a_clientredirect(bool value);
@@ -189,11 +199,7 @@ class FrameTransitionData final :
   void _internal_set_a_clientredirect(bool value);
   public:
 
-  // required bool a_formSubmit = 2;
-  bool has_a_formsubmit() const;
-  private:
-  bool _internal_has_a_formsubmit() const;
-  public:
+  // bool a_formSubmit = 2;
   void clear_a_formsubmit();
   bool a_formsubmit() const;
   void set_a_formsubmit(bool value);
@@ -202,11 +208,7 @@ class FrameTransitionData final :
   void _internal_set_a_formsubmit(bool value);
   public:
 
-  // required bool a_forwardBack = 3;
-  bool has_a_forwardback() const;
-  private:
-  bool _internal_has_a_forwardback() const;
-  public:
+  // bool a_forwardBack = 3;
   void clear_a_forwardback();
   bool a_forwardback() const;
   void set_a_forwardback(bool value);
@@ -215,11 +217,7 @@ class FrameTransitionData final :
   void _internal_set_a_forwardback(bool value);
   public:
 
-  // required bool a_reload = 4;
-  bool has_a_reload() const;
-  private:
-  bool _internal_has_a_reload() const;
-  public:
+  // bool a_reload = 4;
   void clear_a_reload();
   bool a_reload() const;
   void set_a_reload(bool value);
@@ -228,11 +226,7 @@ class FrameTransitionData final :
   void _internal_set_a_reload(bool value);
   public:
 
-  // required bool a_serverRedirect = 5;
-  bool has_a_serverredirect() const;
-  private:
-  bool _internal_has_a_serverredirect() const;
-  public:
+  // bool a_serverRedirect = 5;
   void clear_a_serverredirect();
   bool a_serverredirect() const;
   void set_a_serverredirect(bool value);
@@ -245,20 +239,16 @@ class FrameTransitionData final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     bool a_clientredirect_;
     bool a_formsubmit_;
     bool a_forwardback_;
     bool a_reload_;
     bool a_serverredirect_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto;
@@ -274,17 +264,9 @@ class FrameTransitionData final :
 #endif  // __GNUC__
 // FrameTransitionData
 
-// required bool a_clientRedirect = 1;
-inline bool FrameTransitionData::_internal_has_a_clientredirect() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool FrameTransitionData::has_a_clientredirect() const {
-  return _internal_has_a_clientredirect();
-}
+// bool a_clientRedirect = 1;
 inline void FrameTransitionData::clear_a_clientredirect() {
   _impl_.a_clientredirect_ = false;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool FrameTransitionData::_internal_a_clientredirect() const {
   return _impl_.a_clientredirect_;
@@ -294,7 +276,7 @@ inline bool FrameTransitionData::a_clientredirect() const {
   return _internal_a_clientredirect();
 }
 inline void FrameTransitionData::_internal_set_a_clientredirect(bool value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_clientredirect_ = value;
 }
 inline void FrameTransitionData::set_a_clientredirect(bool value) {
@@ -302,17 +284,9 @@ inline void FrameTransitionData::set_a_clientredirect(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.FrameTransitionData.a_clientRedirect)
 }
 
-// required bool a_formSubmit = 2;
-inline bool FrameTransitionData::_internal_has_a_formsubmit() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool FrameTransitionData::has_a_formsubmit() const {
-  return _internal_has_a_formsubmit();
-}
+// bool a_formSubmit = 2;
 inline void FrameTransitionData::clear_a_formsubmit() {
   _impl_.a_formsubmit_ = false;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool FrameTransitionData::_internal_a_formsubmit() const {
   return _impl_.a_formsubmit_;
@@ -322,7 +296,7 @@ inline bool FrameTransitionData::a_formsubmit() const {
   return _internal_a_formsubmit();
 }
 inline void FrameTransitionData::_internal_set_a_formsubmit(bool value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_formsubmit_ = value;
 }
 inline void FrameTransitionData::set_a_formsubmit(bool value) {
@@ -330,17 +304,9 @@ inline void FrameTransitionData::set_a_formsubmit(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.FrameTransitionData.a_formSubmit)
 }
 
-// required bool a_forwardBack = 3;
-inline bool FrameTransitionData::_internal_has_a_forwardback() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool FrameTransitionData::has_a_forwardback() const {
-  return _internal_has_a_forwardback();
-}
+// bool a_forwardBack = 3;
 inline void FrameTransitionData::clear_a_forwardback() {
   _impl_.a_forwardback_ = false;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline bool FrameTransitionData::_internal_a_forwardback() const {
   return _impl_.a_forwardback_;
@@ -350,7 +316,7 @@ inline bool FrameTransitionData::a_forwardback() const {
   return _internal_a_forwardback();
 }
 inline void FrameTransitionData::_internal_set_a_forwardback(bool value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_forwardback_ = value;
 }
 inline void FrameTransitionData::set_a_forwardback(bool value) {
@@ -358,17 +324,9 @@ inline void FrameTransitionData::set_a_forwardback(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.FrameTransitionData.a_forwardBack)
 }
 
-// required bool a_reload = 4;
-inline bool FrameTransitionData::_internal_has_a_reload() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool FrameTransitionData::has_a_reload() const {
-  return _internal_has_a_reload();
-}
+// bool a_reload = 4;
 inline void FrameTransitionData::clear_a_reload() {
   _impl_.a_reload_ = false;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline bool FrameTransitionData::_internal_a_reload() const {
   return _impl_.a_reload_;
@@ -378,7 +336,7 @@ inline bool FrameTransitionData::a_reload() const {
   return _internal_a_reload();
 }
 inline void FrameTransitionData::_internal_set_a_reload(bool value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_reload_ = value;
 }
 inline void FrameTransitionData::set_a_reload(bool value) {
@@ -386,17 +344,9 @@ inline void FrameTransitionData::set_a_reload(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.extensions.FrameTransitionData.a_reload)
 }
 
-// required bool a_serverRedirect = 5;
-inline bool FrameTransitionData::_internal_has_a_serverredirect() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool FrameTransitionData::has_a_serverredirect() const {
-  return _internal_has_a_serverredirect();
-}
+// bool a_serverRedirect = 5;
 inline void FrameTransitionData::clear_a_serverredirect() {
   _impl_.a_serverredirect_ = false;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline bool FrameTransitionData::_internal_a_serverredirect() const {
   return _impl_.a_serverredirect_;
@@ -406,7 +356,7 @@ inline bool FrameTransitionData::a_serverredirect() const {
   return _internal_a_serverredirect();
 }
 inline void FrameTransitionData::_internal_set_a_serverredirect(bool value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_serverredirect_ = value;
 }
 inline void FrameTransitionData::set_a_serverredirect(bool value) {

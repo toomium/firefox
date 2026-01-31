@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/ipc/ipdl/test/gtest/PTestAsyncReturns.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla._ipdltest.PTestAsyncReturns;
 
@@ -17,22 +16,22 @@ message Msg_Ping {
 }
 
 message Reply_Ping {
-  required bool a_one = 1;
+  bool a_one = 1;
 }
 
 message Msg_NoReturn {
 }
 
 message Reply_NoReturn {
-  required bool a_unused = 1;
+  bool a_unused = 1;
 }
 
 message Msg_Pong {
 }
 
 message Reply_Pong {
-  required uint32 a_param1 = 1;
-  required uint32 a_param2 = 2;
+  uint32 a_param1 = 1;
+  uint32 a_param2 = 2;
 }
 
 // Parameter mappings stats:

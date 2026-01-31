@@ -5,14 +5,13 @@
 
 // Generated from /home/tmittendorf/firefox/ipc/ipdl/test/gtest/PTestUniquePtrIPC.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla._ipdltest;
 
 // Structs and unions declarations
 message DummyStruct {
-  required bytes a_x = 1;
+  bytes a_x = 1;
 }
 
 message DummyUnion {

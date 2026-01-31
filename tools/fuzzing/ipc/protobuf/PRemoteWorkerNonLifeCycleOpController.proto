@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/workers/remoteworkers/PRemoteWorkerNonLifeCycleOpController.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PRemoteWorkerNonLifeCycleOpController;
 
@@ -22,19 +21,19 @@ message Msg_Terminated {
 }
 
 message Msg_Error {
-  required protobuf.mozilla.dom.ErrorValue a_aValue = 1;
+  protobuf.mozilla.dom.ErrorValue a_aValue = 1;
 }
 
 message Msg_ExecOp {
-  required protobuf.mozilla.dom.SharedWorkerOpArgs a_aOpArgs = 1;
+  protobuf.mozilla.dom.SharedWorkerOpArgs a_aOpArgs = 1;
 }
 
 message Msg_ExecServiceWorkerOp {
-  required protobuf.mozilla.dom.ServiceWorkerOpArgs a_aOpArgs = 1;
+  protobuf.mozilla.dom.ServiceWorkerOpArgs a_aOpArgs = 1;
 }
 
 message Reply_ExecServiceWorkerOp {
-  required protobuf.mozilla.dom.ServiceWorkerOpResult a_aResult = 1;
+  protobuf.mozilla.dom.ServiceWorkerOpResult a_aResult = 1;
 }
 
 message Msg_Shutdown {

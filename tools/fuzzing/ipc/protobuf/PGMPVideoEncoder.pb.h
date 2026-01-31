@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "GMPTypes.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -42,6 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PGMPVideoEncoder_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PGMPVideoEncoder_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace gmp {
@@ -112,7 +116,7 @@ namespace PGMPVideoEncoder {
 // ===================================================================
 
 class Msg_InitEncode final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode) */ {
  public:
   inline Msg_InitEncode() : Msg_InitEncode(nullptr) {}
   ~Msg_InitEncode() override;
@@ -142,13 +146,15 @@ class Msg_InitEncode final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_InitEncode& default_instance() {
     return *internal_default_instance();
   }
@@ -186,9 +192,15 @@ class Msg_InitEncode final :
   Msg_InitEncode* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_InitEncode>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_InitEncode& from);
-  void MergeFrom(const Msg_InitEncode& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_InitEncode& from) {
+    Msg_InitEncode::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -201,7 +213,7 @@ class Msg_InitEncode final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_InitEncode* other);
 
   private:
@@ -214,7 +226,10 @@ class Msg_InitEncode final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -248,11 +263,7 @@ class Msg_InitEncode final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_acodecspecific();
 
-  // required bytes a_aCodecSettings = 1;
-  bool has_a_acodecsettings() const;
-  private:
-  bool _internal_has_a_acodecsettings() const;
-  public:
+  // bytes a_aCodecSettings = 1;
   void clear_a_acodecsettings();
   const std::string& a_acodecsettings() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -266,11 +277,7 @@ class Msg_InitEncode final :
   std::string* _internal_mutable_a_acodecsettings();
   public:
 
-  // required sint32 a_aNumberOfCores = 3;
-  bool has_a_anumberofcores() const;
-  private:
-  bool _internal_has_a_anumberofcores() const;
-  public:
+  // sint32 a_aNumberOfCores = 3;
   void clear_a_anumberofcores();
   int32_t a_anumberofcores() const;
   void set_a_anumberofcores(int32_t value);
@@ -279,11 +286,7 @@ class Msg_InitEncode final :
   void _internal_set_a_anumberofcores(int32_t value);
   public:
 
-  // required uint32 a_aMaxPayloadSize = 4;
-  bool has_a_amaxpayloadsize() const;
-  private:
-  bool _internal_has_a_amaxpayloadsize() const;
-  public:
+  // uint32 a_aMaxPayloadSize = 4;
   void clear_a_amaxpayloadsize();
   uint32_t a_amaxpayloadsize() const;
   void set_a_amaxpayloadsize(uint32_t value);
@@ -296,19 +299,16 @@ class Msg_InitEncode final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_acodecspecific_;
+    mutable std::atomic<int> _a_acodecspecific_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acodecsettings_;
     int32_t a_anumberofcores_;
     uint32_t a_amaxpayloadsize_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
@@ -316,7 +316,7 @@ class Msg_InitEncode final :
 // -------------------------------------------------------------------
 
 class Msg_GiveShmem final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_GiveShmem) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_GiveShmem) */ {
  public:
   inline Msg_GiveShmem() : Msg_GiveShmem(nullptr) {}
   ~Msg_GiveShmem() override;
@@ -346,13 +346,15 @@ class Msg_GiveShmem final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_GiveShmem& default_instance() {
     return *internal_default_instance();
   }
@@ -390,9 +392,15 @@ class Msg_GiveShmem final :
   Msg_GiveShmem* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_GiveShmem>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_GiveShmem& from);
-  void MergeFrom(const Msg_GiveShmem& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_GiveShmem& from) {
+    Msg_GiveShmem::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -405,7 +413,7 @@ class Msg_GiveShmem final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_GiveShmem* other);
 
   private:
@@ -418,7 +426,10 @@ class Msg_GiveShmem final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -427,11 +438,7 @@ class Msg_GiveShmem final :
   enum : int {
     kAAOutputShmemFieldNumber = 1,
   };
-  // required bytes a_aOutputShmem = 1;
-  bool has_a_aoutputshmem() const;
-  private:
-  bool _internal_has_a_aoutputshmem() const;
-  public:
+  // bytes a_aOutputShmem = 1;
   void clear_a_aoutputshmem();
   const std::string& a_aoutputshmem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -453,9 +460,8 @@ class Msg_GiveShmem final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoutputshmem_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
@@ -463,7 +469,7 @@ class Msg_GiveShmem final :
 // -------------------------------------------------------------------
 
 class Msg_Encode final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode) */ {
  public:
   inline Msg_Encode() : Msg_Encode(nullptr) {}
   ~Msg_Encode() override;
@@ -493,13 +499,15 @@ class Msg_Encode final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_Encode& default_instance() {
     return *internal_default_instance();
   }
@@ -537,9 +545,15 @@ class Msg_Encode final :
   Msg_Encode* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_Encode>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_Encode& from);
-  void MergeFrom(const Msg_Encode& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_Encode& from) {
+    Msg_Encode::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -552,7 +566,7 @@ class Msg_Encode final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_Encode* other);
 
   private:
@@ -565,7 +579,10 @@ class Msg_Encode final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -623,11 +640,7 @@ class Msg_Encode final :
   std::string* _internal_add_a_aframetypes();
   public:
 
-  // required bytes a_aInputShmem = 2;
-  bool has_a_ainputshmem() const;
-  private:
-  bool _internal_has_a_ainputshmem() const;
-  public:
+  // bytes a_aInputShmem = 2;
   void clear_a_ainputshmem();
   const std::string& a_ainputshmem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -641,7 +654,7 @@ class Msg_Encode final :
   std::string* _internal_mutable_a_ainputshmem();
   public:
 
-  // required .protobuf.mozilla.gmp.GMPVideoi420FrameData a_aInputFrame = 1;
+  // .protobuf.mozilla.gmp.GMPVideoi420FrameData a_aInputFrame = 1;
   bool has_a_ainputframe() const;
   private:
   bool _internal_has_a_ainputframe() const;
@@ -663,19 +676,16 @@ class Msg_Encode final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_acodecspecificinfo_;
+    mutable std::atomic<int> _a_acodecspecificinfo_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_aframetypes_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ainputshmem_;
     ::protobuf::mozilla::gmp::GMPVideoi420FrameData* a_ainputframe_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
@@ -683,7 +693,7 @@ class Msg_Encode final :
 // -------------------------------------------------------------------
 
 class Msg_SetChannelParameters final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetChannelParameters) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetChannelParameters) */ {
  public:
   inline Msg_SetChannelParameters() : Msg_SetChannelParameters(nullptr) {}
   ~Msg_SetChannelParameters() override;
@@ -713,13 +723,15 @@ class Msg_SetChannelParameters final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SetChannelParameters& default_instance() {
     return *internal_default_instance();
   }
@@ -757,9 +769,15 @@ class Msg_SetChannelParameters final :
   Msg_SetChannelParameters* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SetChannelParameters>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SetChannelParameters& from);
-  void MergeFrom(const Msg_SetChannelParameters& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SetChannelParameters& from) {
+    Msg_SetChannelParameters::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -772,7 +790,7 @@ class Msg_SetChannelParameters final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SetChannelParameters* other);
 
   private:
@@ -785,7 +803,10 @@ class Msg_SetChannelParameters final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -795,11 +816,7 @@ class Msg_SetChannelParameters final :
     kAAPacketLossFieldNumber = 1,
     kAARTTFieldNumber = 2,
   };
-  // required uint32 a_aPacketLoss = 1;
-  bool has_a_apacketloss() const;
-  private:
-  bool _internal_has_a_apacketloss() const;
-  public:
+  // uint32 a_aPacketLoss = 1;
   void clear_a_apacketloss();
   uint32_t a_apacketloss() const;
   void set_a_apacketloss(uint32_t value);
@@ -808,11 +825,7 @@ class Msg_SetChannelParameters final :
   void _internal_set_a_apacketloss(uint32_t value);
   public:
 
-  // required uint32 a_aRTT = 2;
-  bool has_a_artt() const;
-  private:
-  bool _internal_has_a_artt() const;
-  public:
+  // uint32 a_aRTT = 2;
   void clear_a_artt();
   uint32_t a_artt() const;
   void set_a_artt(uint32_t value);
@@ -825,17 +838,13 @@ class Msg_SetChannelParameters final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_apacketloss_;
     uint32_t a_artt_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
@@ -843,7 +852,7 @@ class Msg_SetChannelParameters final :
 // -------------------------------------------------------------------
 
 class Msg_SetRates final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetRates) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetRates) */ {
  public:
   inline Msg_SetRates() : Msg_SetRates(nullptr) {}
   ~Msg_SetRates() override;
@@ -873,13 +882,15 @@ class Msg_SetRates final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SetRates& default_instance() {
     return *internal_default_instance();
   }
@@ -917,9 +928,15 @@ class Msg_SetRates final :
   Msg_SetRates* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SetRates>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SetRates& from);
-  void MergeFrom(const Msg_SetRates& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SetRates& from) {
+    Msg_SetRates::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -932,7 +949,7 @@ class Msg_SetRates final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SetRates* other);
 
   private:
@@ -945,7 +962,10 @@ class Msg_SetRates final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -955,11 +975,7 @@ class Msg_SetRates final :
     kAANewBitRateFieldNumber = 1,
     kAAFrameRateFieldNumber = 2,
   };
-  // required uint32 a_aNewBitRate = 1;
-  bool has_a_anewbitrate() const;
-  private:
-  bool _internal_has_a_anewbitrate() const;
-  public:
+  // uint32 a_aNewBitRate = 1;
   void clear_a_anewbitrate();
   uint32_t a_anewbitrate() const;
   void set_a_anewbitrate(uint32_t value);
@@ -968,11 +984,7 @@ class Msg_SetRates final :
   void _internal_set_a_anewbitrate(uint32_t value);
   public:
 
-  // required uint32 a_aFrameRate = 2;
-  bool has_a_aframerate() const;
-  private:
-  bool _internal_has_a_aframerate() const;
-  public:
+  // uint32 a_aFrameRate = 2;
   void clear_a_aframerate();
   uint32_t a_aframerate() const;
   void set_a_aframerate(uint32_t value);
@@ -985,17 +997,13 @@ class Msg_SetRates final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_anewbitrate_;
     uint32_t a_aframerate_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
@@ -1003,7 +1011,7 @@ class Msg_SetRates final :
 // -------------------------------------------------------------------
 
 class Msg_SetPeriodicKeyFrames final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetPeriodicKeyFrames) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetPeriodicKeyFrames) */ {
  public:
   inline Msg_SetPeriodicKeyFrames() : Msg_SetPeriodicKeyFrames(nullptr) {}
   ~Msg_SetPeriodicKeyFrames() override;
@@ -1033,13 +1041,15 @@ class Msg_SetPeriodicKeyFrames final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SetPeriodicKeyFrames& default_instance() {
     return *internal_default_instance();
   }
@@ -1077,9 +1087,15 @@ class Msg_SetPeriodicKeyFrames final :
   Msg_SetPeriodicKeyFrames* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SetPeriodicKeyFrames>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SetPeriodicKeyFrames& from);
-  void MergeFrom(const Msg_SetPeriodicKeyFrames& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SetPeriodicKeyFrames& from) {
+    Msg_SetPeriodicKeyFrames::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1092,7 +1108,7 @@ class Msg_SetPeriodicKeyFrames final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SetPeriodicKeyFrames* other);
 
   private:
@@ -1105,7 +1121,10 @@ class Msg_SetPeriodicKeyFrames final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1114,11 +1133,7 @@ class Msg_SetPeriodicKeyFrames final :
   enum : int {
     kAAEnableFieldNumber = 1,
   };
-  // required bool a_aEnable = 1;
-  bool has_a_aenable() const;
-  private:
-  bool _internal_has_a_aenable() const;
-  public:
+  // bool a_aEnable = 1;
   void clear_a_aenable();
   bool a_aenable() const;
   void set_a_aenable(bool value);
@@ -1135,9 +1150,8 @@ class Msg_SetPeriodicKeyFrames final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     bool a_aenable_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
@@ -1145,10 +1159,9 @@ class Msg_SetPeriodicKeyFrames final :
 // -------------------------------------------------------------------
 
 class Msg___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg___delete__) */ {
  public:
   inline Msg___delete__() : Msg___delete__(nullptr) {}
-  ~Msg___delete__() override;
   explicit PROTOBUF_CONSTEXPR Msg___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg___delete__(const Msg___delete__& from);
@@ -1175,13 +1188,15 @@ class Msg___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -1219,23 +1234,15 @@ class Msg___delete__ final :
   Msg___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg___delete__& from);
-  void MergeFrom(const Msg___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1247,7 +1254,10 @@ class Msg___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1261,18 +1271,15 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Reply___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Reply___delete__) */ {
  public:
   inline Reply___delete__() : Reply___delete__(nullptr) {}
-  ~Reply___delete__() override;
   explicit PROTOBUF_CONSTEXPR Reply___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply___delete__(const Reply___delete__& from);
@@ -1299,13 +1306,15 @@ class Reply___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -1343,23 +1352,15 @@ class Reply___delete__ final :
   Reply___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply___delete__& from);
-  void MergeFrom(const Reply___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1371,7 +1372,10 @@ class Reply___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1385,15 +1389,13 @@ class Reply___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_ReturnShmem final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_ReturnShmem) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_ReturnShmem) */ {
  public:
   inline Msg_ReturnShmem() : Msg_ReturnShmem(nullptr) {}
   ~Msg_ReturnShmem() override;
@@ -1423,13 +1425,15 @@ class Msg_ReturnShmem final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_ReturnShmem& default_instance() {
     return *internal_default_instance();
   }
@@ -1467,9 +1471,15 @@ class Msg_ReturnShmem final :
   Msg_ReturnShmem* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ReturnShmem>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_ReturnShmem& from);
-  void MergeFrom(const Msg_ReturnShmem& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_ReturnShmem& from) {
+    Msg_ReturnShmem::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1482,7 +1492,7 @@ class Msg_ReturnShmem final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_ReturnShmem* other);
 
   private:
@@ -1495,7 +1505,10 @@ class Msg_ReturnShmem final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1504,11 +1517,7 @@ class Msg_ReturnShmem final :
   enum : int {
     kAAInputShmemFieldNumber = 1,
   };
-  // required bytes a_aInputShmem = 1;
-  bool has_a_ainputshmem() const;
-  private:
-  bool _internal_has_a_ainputshmem() const;
-  public:
+  // bytes a_aInputShmem = 1;
   void clear_a_ainputshmem();
   const std::string& a_ainputshmem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1530,9 +1539,8 @@ class Msg_ReturnShmem final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ainputshmem_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
@@ -1540,7 +1548,7 @@ class Msg_ReturnShmem final :
 // -------------------------------------------------------------------
 
 class Msg_EncodedShmem final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem) */ {
  public:
   inline Msg_EncodedShmem() : Msg_EncodedShmem(nullptr) {}
   ~Msg_EncodedShmem() override;
@@ -1570,13 +1578,15 @@ class Msg_EncodedShmem final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_EncodedShmem& default_instance() {
     return *internal_default_instance();
   }
@@ -1614,9 +1624,15 @@ class Msg_EncodedShmem final :
   Msg_EncodedShmem* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_EncodedShmem>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_EncodedShmem& from);
-  void MergeFrom(const Msg_EncodedShmem& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_EncodedShmem& from) {
+    Msg_EncodedShmem::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1629,7 +1645,7 @@ class Msg_EncodedShmem final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_EncodedShmem* other);
 
   private:
@@ -1642,7 +1658,10 @@ class Msg_EncodedShmem final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1675,11 +1694,7 @@ class Msg_EncodedShmem final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_acodecspecificinfo();
 
-  // required bytes a_aEncodedShmem = 2;
-  bool has_a_aencodedshmem() const;
-  private:
-  bool _internal_has_a_aencodedshmem() const;
-  public:
+  // bytes a_aEncodedShmem = 2;
   void clear_a_aencodedshmem();
   const std::string& a_aencodedshmem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1693,7 +1708,7 @@ class Msg_EncodedShmem final :
   std::string* _internal_mutable_a_aencodedshmem();
   public:
 
-  // required .protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aEncodedFrame = 1;
+  // .protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aEncodedFrame = 1;
   bool has_a_aencodedframe() const;
   private:
   bool _internal_has_a_aencodedframe() const;
@@ -1715,18 +1730,15 @@ class Msg_EncodedShmem final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_acodecspecificinfo_;
+    mutable std::atomic<int> _a_acodecspecificinfo_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aencodedshmem_;
     ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* a_aencodedframe_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
@@ -1734,7 +1746,7 @@ class Msg_EncodedShmem final :
 // -------------------------------------------------------------------
 
 class Msg_EncodedData final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData) */ {
  public:
   inline Msg_EncodedData() : Msg_EncodedData(nullptr) {}
   ~Msg_EncodedData() override;
@@ -1764,13 +1776,15 @@ class Msg_EncodedData final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_EncodedData& default_instance() {
     return *internal_default_instance();
   }
@@ -1808,9 +1822,15 @@ class Msg_EncodedData final :
   Msg_EncodedData* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_EncodedData>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_EncodedData& from);
-  void MergeFrom(const Msg_EncodedData& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_EncodedData& from) {
+    Msg_EncodedData::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1823,7 +1843,7 @@ class Msg_EncodedData final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_EncodedData* other);
 
   private:
@@ -1836,7 +1856,10 @@ class Msg_EncodedData final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1891,7 +1914,7 @@ class Msg_EncodedData final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_acodecspecificinfo();
 
-  // required .protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aEncodedFrame = 1;
+  // .protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aEncodedFrame = 1;
   bool has_a_aencodedframe() const;
   private:
   bool _internal_has_a_aencodedframe() const;
@@ -1917,11 +1940,12 @@ class Msg_EncodedData final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_aencodeddata_;
+    mutable std::atomic<int> _a_aencodeddata_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_acodecspecificinfo_;
+    mutable std::atomic<int> _a_acodecspecificinfo_cached_byte_size_;
     ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* a_aencodedframe_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
@@ -1929,7 +1953,7 @@ class Msg_EncodedData final :
 // -------------------------------------------------------------------
 
 class Msg_Error final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Error) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Error) */ {
  public:
   inline Msg_Error() : Msg_Error(nullptr) {}
   ~Msg_Error() override;
@@ -1959,13 +1983,15 @@ class Msg_Error final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_Error& default_instance() {
     return *internal_default_instance();
   }
@@ -2003,9 +2029,15 @@ class Msg_Error final :
   Msg_Error* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_Error>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_Error& from);
-  void MergeFrom(const Msg_Error& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_Error& from) {
+    Msg_Error::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2018,7 +2050,7 @@ class Msg_Error final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_Error* other);
 
   private:
@@ -2031,7 +2063,10 @@ class Msg_Error final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2040,11 +2075,7 @@ class Msg_Error final :
   enum : int {
     kAAErrFieldNumber = 1,
   };
-  // required bytes a_aErr = 1;
-  bool has_a_aerr() const;
-  private:
-  bool _internal_has_a_aerr() const;
-  public:
+  // bytes a_aErr = 1;
   void clear_a_aerr();
   const std::string& a_aerr() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2066,9 +2097,8 @@ class Msg_Error final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aerr_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
@@ -2076,10 +2106,9 @@ class Msg_Error final :
 // -------------------------------------------------------------------
 
 class Msg_Shutdown final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Shutdown) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Shutdown) */ {
  public:
   inline Msg_Shutdown() : Msg_Shutdown(nullptr) {}
-  ~Msg_Shutdown() override;
   explicit PROTOBUF_CONSTEXPR Msg_Shutdown(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_Shutdown(const Msg_Shutdown& from);
@@ -2106,13 +2135,15 @@ class Msg_Shutdown final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_Shutdown& default_instance() {
     return *internal_default_instance();
   }
@@ -2150,23 +2181,15 @@ class Msg_Shutdown final :
   Msg_Shutdown* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_Shutdown>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_Shutdown& from);
-  void MergeFrom(const Msg_Shutdown& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_Shutdown* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_Shutdown& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_Shutdown& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -2178,7 +2201,10 @@ class Msg_Shutdown final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2192,9 +2218,7 @@ class Msg_Shutdown final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPVideoEncoder_2eproto;
 };
 // ===================================================================
@@ -2208,17 +2232,9 @@ class Msg_Shutdown final :
 #endif  // __GNUC__
 // Msg_InitEncode
 
-// required bytes a_aCodecSettings = 1;
-inline bool Msg_InitEncode::_internal_has_a_acodecsettings() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_InitEncode::has_a_acodecsettings() const {
-  return _internal_has_a_acodecsettings();
-}
+// bytes a_aCodecSettings = 1;
 inline void Msg_InitEncode::clear_a_acodecsettings() {
   _impl_.a_acodecsettings_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_InitEncode::a_acodecsettings() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.a_aCodecSettings)
@@ -2227,7 +2243,7 @@ inline const std::string& Msg_InitEncode::a_acodecsettings() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_InitEncode::set_a_acodecsettings(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_acodecsettings_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.a_aCodecSettings)
 }
@@ -2240,32 +2256,22 @@ inline const std::string& Msg_InitEncode::_internal_a_acodecsettings() const {
   return _impl_.a_acodecsettings_.Get();
 }
 inline void Msg_InitEncode::_internal_set_a_acodecsettings(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_acodecsettings_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_InitEncode::_internal_mutable_a_acodecsettings() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_acodecsettings_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_InitEncode::release_a_acodecsettings() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.a_aCodecSettings)
-  if (!_internal_has_a_acodecsettings()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_acodecsettings_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_acodecsettings_.IsDefault()) {
-    _impl_.a_acodecsettings_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_acodecsettings_.Release();
 }
 inline void Msg_InitEncode::set_allocated_a_acodecsettings(std::string* a_acodecsettings) {
   if (a_acodecsettings != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_acodecsettings_.SetAllocated(a_acodecsettings, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2323,17 +2329,9 @@ Msg_InitEncode::mutable_a_acodecspecific() {
   return _internal_mutable_a_acodecspecific();
 }
 
-// required sint32 a_aNumberOfCores = 3;
-inline bool Msg_InitEncode::_internal_has_a_anumberofcores() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_InitEncode::has_a_anumberofcores() const {
-  return _internal_has_a_anumberofcores();
-}
+// sint32 a_aNumberOfCores = 3;
 inline void Msg_InitEncode::clear_a_anumberofcores() {
   _impl_.a_anumberofcores_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int32_t Msg_InitEncode::_internal_a_anumberofcores() const {
   return _impl_.a_anumberofcores_;
@@ -2343,7 +2341,7 @@ inline int32_t Msg_InitEncode::a_anumberofcores() const {
   return _internal_a_anumberofcores();
 }
 inline void Msg_InitEncode::_internal_set_a_anumberofcores(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_anumberofcores_ = value;
 }
 inline void Msg_InitEncode::set_a_anumberofcores(int32_t value) {
@@ -2351,17 +2349,9 @@ inline void Msg_InitEncode::set_a_anumberofcores(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_InitEncode.a_aNumberOfCores)
 }
 
-// required uint32 a_aMaxPayloadSize = 4;
-inline bool Msg_InitEncode::_internal_has_a_amaxpayloadsize() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_InitEncode::has_a_amaxpayloadsize() const {
-  return _internal_has_a_amaxpayloadsize();
-}
+// uint32 a_aMaxPayloadSize = 4;
 inline void Msg_InitEncode::clear_a_amaxpayloadsize() {
   _impl_.a_amaxpayloadsize_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_InitEncode::_internal_a_amaxpayloadsize() const {
   return _impl_.a_amaxpayloadsize_;
@@ -2371,7 +2361,7 @@ inline uint32_t Msg_InitEncode::a_amaxpayloadsize() const {
   return _internal_a_amaxpayloadsize();
 }
 inline void Msg_InitEncode::_internal_set_a_amaxpayloadsize(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_amaxpayloadsize_ = value;
 }
 inline void Msg_InitEncode::set_a_amaxpayloadsize(uint32_t value) {
@@ -2383,17 +2373,9 @@ inline void Msg_InitEncode::set_a_amaxpayloadsize(uint32_t value) {
 
 // Msg_GiveShmem
 
-// required bytes a_aOutputShmem = 1;
-inline bool Msg_GiveShmem::_internal_has_a_aoutputshmem() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_GiveShmem::has_a_aoutputshmem() const {
-  return _internal_has_a_aoutputshmem();
-}
+// bytes a_aOutputShmem = 1;
 inline void Msg_GiveShmem::clear_a_aoutputshmem() {
   _impl_.a_aoutputshmem_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_GiveShmem::a_aoutputshmem() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_GiveShmem.a_aOutputShmem)
@@ -2402,7 +2384,7 @@ inline const std::string& Msg_GiveShmem::a_aoutputshmem() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GiveShmem::set_a_aoutputshmem(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_aoutputshmem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_GiveShmem.a_aOutputShmem)
 }
@@ -2415,32 +2397,22 @@ inline const std::string& Msg_GiveShmem::_internal_a_aoutputshmem() const {
   return _impl_.a_aoutputshmem_.Get();
 }
 inline void Msg_GiveShmem::_internal_set_a_aoutputshmem(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aoutputshmem_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_GiveShmem::_internal_mutable_a_aoutputshmem() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_aoutputshmem_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_GiveShmem::release_a_aoutputshmem() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_GiveShmem.a_aOutputShmem)
-  if (!_internal_has_a_aoutputshmem()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_aoutputshmem_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_aoutputshmem_.IsDefault()) {
-    _impl_.a_aoutputshmem_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_aoutputshmem_.Release();
 }
 inline void Msg_GiveShmem::set_allocated_a_aoutputshmem(std::string* a_aoutputshmem) {
   if (a_aoutputshmem != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_aoutputshmem_.SetAllocated(a_aoutputshmem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2455,11 +2427,9 @@ inline void Msg_GiveShmem::set_allocated_a_aoutputshmem(std::string* a_aoutputsh
 
 // Msg_Encode
 
-// required .protobuf.mozilla.gmp.GMPVideoi420FrameData a_aInputFrame = 1;
+// .protobuf.mozilla.gmp.GMPVideoi420FrameData a_aInputFrame = 1;
 inline bool Msg_Encode::_internal_has_a_ainputframe() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_ainputframe_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_ainputframe_ != nullptr;
 }
 inline bool Msg_Encode::has_a_ainputframe() const {
   return _internal_has_a_ainputframe();
@@ -2480,14 +2450,14 @@ inline void Msg_Encode::unsafe_arena_set_allocated_a_ainputframe(
   }
   _impl_.a_ainputframe_ = a_ainputframe;
   if (a_ainputframe) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aInputFrame)
 }
 inline ::protobuf::mozilla::gmp::GMPVideoi420FrameData* Msg_Encode::release_a_ainputframe() {
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::gmp::GMPVideoi420FrameData* temp = _impl_.a_ainputframe_;
   _impl_.a_ainputframe_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -2503,13 +2473,13 @@ inline ::protobuf::mozilla::gmp::GMPVideoi420FrameData* Msg_Encode::release_a_ai
 }
 inline ::protobuf::mozilla::gmp::GMPVideoi420FrameData* Msg_Encode::unsafe_arena_release_a_ainputframe() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aInputFrame)
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::gmp::GMPVideoi420FrameData* temp = _impl_.a_ainputframe_;
   _impl_.a_ainputframe_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::gmp::GMPVideoi420FrameData* Msg_Encode::_internal_mutable_a_ainputframe() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   if (_impl_.a_ainputframe_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gmp::GMPVideoi420FrameData>(GetArenaForAllocation());
     _impl_.a_ainputframe_ = p;
@@ -2534,25 +2504,17 @@ inline void Msg_Encode::set_allocated_a_ainputframe(::protobuf::mozilla::gmp::GM
       a_ainputframe = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_ainputframe, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_ainputframe_ = a_ainputframe;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aInputFrame)
 }
 
-// required bytes a_aInputShmem = 2;
-inline bool Msg_Encode::_internal_has_a_ainputshmem() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_Encode::has_a_ainputshmem() const {
-  return _internal_has_a_ainputshmem();
-}
+// bytes a_aInputShmem = 2;
 inline void Msg_Encode::clear_a_ainputshmem() {
   _impl_.a_ainputshmem_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_Encode::a_ainputshmem() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aInputShmem)
@@ -2561,7 +2523,7 @@ inline const std::string& Msg_Encode::a_ainputshmem() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Encode::set_a_ainputshmem(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_ainputshmem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aInputShmem)
 }
@@ -2574,32 +2536,22 @@ inline const std::string& Msg_Encode::_internal_a_ainputshmem() const {
   return _impl_.a_ainputshmem_.Get();
 }
 inline void Msg_Encode::_internal_set_a_ainputshmem(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_ainputshmem_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_Encode::_internal_mutable_a_ainputshmem() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_ainputshmem_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_Encode::release_a_ainputshmem() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Encode.a_aInputShmem)
-  if (!_internal_has_a_ainputshmem()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_ainputshmem_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_ainputshmem_.IsDefault()) {
-    _impl_.a_ainputshmem_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_ainputshmem_.Release();
 }
 inline void Msg_Encode::set_allocated_a_ainputshmem(std::string* a_ainputshmem) {
   if (a_ainputshmem != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_ainputshmem_.SetAllocated(a_ainputshmem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2736,17 +2688,9 @@ Msg_Encode::mutable_a_aframetypes() {
 
 // Msg_SetChannelParameters
 
-// required uint32 a_aPacketLoss = 1;
-inline bool Msg_SetChannelParameters::_internal_has_a_apacketloss() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_SetChannelParameters::has_a_apacketloss() const {
-  return _internal_has_a_apacketloss();
-}
+// uint32 a_aPacketLoss = 1;
 inline void Msg_SetChannelParameters::clear_a_apacketloss() {
   _impl_.a_apacketloss_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_SetChannelParameters::_internal_a_apacketloss() const {
   return _impl_.a_apacketloss_;
@@ -2756,7 +2700,7 @@ inline uint32_t Msg_SetChannelParameters::a_apacketloss() const {
   return _internal_a_apacketloss();
 }
 inline void Msg_SetChannelParameters::_internal_set_a_apacketloss(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_apacketloss_ = value;
 }
 inline void Msg_SetChannelParameters::set_a_apacketloss(uint32_t value) {
@@ -2764,17 +2708,9 @@ inline void Msg_SetChannelParameters::set_a_apacketloss(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetChannelParameters.a_aPacketLoss)
 }
 
-// required uint32 a_aRTT = 2;
-inline bool Msg_SetChannelParameters::_internal_has_a_artt() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_SetChannelParameters::has_a_artt() const {
-  return _internal_has_a_artt();
-}
+// uint32 a_aRTT = 2;
 inline void Msg_SetChannelParameters::clear_a_artt() {
   _impl_.a_artt_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_SetChannelParameters::_internal_a_artt() const {
   return _impl_.a_artt_;
@@ -2784,7 +2720,7 @@ inline uint32_t Msg_SetChannelParameters::a_artt() const {
   return _internal_a_artt();
 }
 inline void Msg_SetChannelParameters::_internal_set_a_artt(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_artt_ = value;
 }
 inline void Msg_SetChannelParameters::set_a_artt(uint32_t value) {
@@ -2796,17 +2732,9 @@ inline void Msg_SetChannelParameters::set_a_artt(uint32_t value) {
 
 // Msg_SetRates
 
-// required uint32 a_aNewBitRate = 1;
-inline bool Msg_SetRates::_internal_has_a_anewbitrate() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_SetRates::has_a_anewbitrate() const {
-  return _internal_has_a_anewbitrate();
-}
+// uint32 a_aNewBitRate = 1;
 inline void Msg_SetRates::clear_a_anewbitrate() {
   _impl_.a_anewbitrate_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_SetRates::_internal_a_anewbitrate() const {
   return _impl_.a_anewbitrate_;
@@ -2816,7 +2744,7 @@ inline uint32_t Msg_SetRates::a_anewbitrate() const {
   return _internal_a_anewbitrate();
 }
 inline void Msg_SetRates::_internal_set_a_anewbitrate(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_anewbitrate_ = value;
 }
 inline void Msg_SetRates::set_a_anewbitrate(uint32_t value) {
@@ -2824,17 +2752,9 @@ inline void Msg_SetRates::set_a_anewbitrate(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_SetRates.a_aNewBitRate)
 }
 
-// required uint32 a_aFrameRate = 2;
-inline bool Msg_SetRates::_internal_has_a_aframerate() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_SetRates::has_a_aframerate() const {
-  return _internal_has_a_aframerate();
-}
+// uint32 a_aFrameRate = 2;
 inline void Msg_SetRates::clear_a_aframerate() {
   _impl_.a_aframerate_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_SetRates::_internal_a_aframerate() const {
   return _impl_.a_aframerate_;
@@ -2844,7 +2764,7 @@ inline uint32_t Msg_SetRates::a_aframerate() const {
   return _internal_a_aframerate();
 }
 inline void Msg_SetRates::_internal_set_a_aframerate(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aframerate_ = value;
 }
 inline void Msg_SetRates::set_a_aframerate(uint32_t value) {
@@ -2856,17 +2776,9 @@ inline void Msg_SetRates::set_a_aframerate(uint32_t value) {
 
 // Msg_SetPeriodicKeyFrames
 
-// required bool a_aEnable = 1;
-inline bool Msg_SetPeriodicKeyFrames::_internal_has_a_aenable() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_SetPeriodicKeyFrames::has_a_aenable() const {
-  return _internal_has_a_aenable();
-}
+// bool a_aEnable = 1;
 inline void Msg_SetPeriodicKeyFrames::clear_a_aenable() {
   _impl_.a_aenable_ = false;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Msg_SetPeriodicKeyFrames::_internal_a_aenable() const {
   return _impl_.a_aenable_;
@@ -2876,7 +2788,7 @@ inline bool Msg_SetPeriodicKeyFrames::a_aenable() const {
   return _internal_a_aenable();
 }
 inline void Msg_SetPeriodicKeyFrames::_internal_set_a_aenable(bool value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aenable_ = value;
 }
 inline void Msg_SetPeriodicKeyFrames::set_a_aenable(bool value) {
@@ -2896,17 +2808,9 @@ inline void Msg_SetPeriodicKeyFrames::set_a_aenable(bool value) {
 
 // Msg_ReturnShmem
 
-// required bytes a_aInputShmem = 1;
-inline bool Msg_ReturnShmem::_internal_has_a_ainputshmem() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_ReturnShmem::has_a_ainputshmem() const {
-  return _internal_has_a_ainputshmem();
-}
+// bytes a_aInputShmem = 1;
 inline void Msg_ReturnShmem::clear_a_ainputshmem() {
   _impl_.a_ainputshmem_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_ReturnShmem::a_ainputshmem() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_ReturnShmem.a_aInputShmem)
@@ -2915,7 +2819,7 @@ inline const std::string& Msg_ReturnShmem::a_ainputshmem() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReturnShmem::set_a_ainputshmem(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_ainputshmem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_ReturnShmem.a_aInputShmem)
 }
@@ -2928,32 +2832,22 @@ inline const std::string& Msg_ReturnShmem::_internal_a_ainputshmem() const {
   return _impl_.a_ainputshmem_.Get();
 }
 inline void Msg_ReturnShmem::_internal_set_a_ainputshmem(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_ainputshmem_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ReturnShmem::_internal_mutable_a_ainputshmem() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_ainputshmem_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ReturnShmem::release_a_ainputshmem() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_ReturnShmem.a_aInputShmem)
-  if (!_internal_has_a_ainputshmem()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_ainputshmem_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_ainputshmem_.IsDefault()) {
-    _impl_.a_ainputshmem_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_ainputshmem_.Release();
 }
 inline void Msg_ReturnShmem::set_allocated_a_ainputshmem(std::string* a_ainputshmem) {
   if (a_ainputshmem != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_ainputshmem_.SetAllocated(a_ainputshmem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2968,11 +2862,9 @@ inline void Msg_ReturnShmem::set_allocated_a_ainputshmem(std::string* a_ainputsh
 
 // Msg_EncodedShmem
 
-// required .protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aEncodedFrame = 1;
+// .protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aEncodedFrame = 1;
 inline bool Msg_EncodedShmem::_internal_has_a_aencodedframe() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_aencodedframe_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_aencodedframe_ != nullptr;
 }
 inline bool Msg_EncodedShmem::has_a_aencodedframe() const {
   return _internal_has_a_aencodedframe();
@@ -2993,14 +2885,14 @@ inline void Msg_EncodedShmem::unsafe_arena_set_allocated_a_aencodedframe(
   }
   _impl_.a_aencodedframe_ = a_aencodedframe;
   if (a_aencodedframe) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.a_aEncodedFrame)
 }
 inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedShmem::release_a_aencodedframe() {
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* temp = _impl_.a_aencodedframe_;
   _impl_.a_aencodedframe_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -3016,13 +2908,13 @@ inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedShmem::rel
 }
 inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedShmem::unsafe_arena_release_a_aencodedframe() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.a_aEncodedFrame)
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* temp = _impl_.a_aencodedframe_;
   _impl_.a_aencodedframe_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedShmem::_internal_mutable_a_aencodedframe() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   if (_impl_.a_aencodedframe_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gmp::GMPVideoEncodedFrameData>(GetArenaForAllocation());
     _impl_.a_aencodedframe_ = p;
@@ -3047,25 +2939,17 @@ inline void Msg_EncodedShmem::set_allocated_a_aencodedframe(::protobuf::mozilla:
       a_aencodedframe = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_aencodedframe, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_aencodedframe_ = a_aencodedframe;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.a_aEncodedFrame)
 }
 
-// required bytes a_aEncodedShmem = 2;
-inline bool Msg_EncodedShmem::_internal_has_a_aencodedshmem() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_EncodedShmem::has_a_aencodedshmem() const {
-  return _internal_has_a_aencodedshmem();
-}
+// bytes a_aEncodedShmem = 2;
 inline void Msg_EncodedShmem::clear_a_aencodedshmem() {
   _impl_.a_aencodedshmem_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_EncodedShmem::a_aencodedshmem() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.a_aEncodedShmem)
@@ -3074,7 +2958,7 @@ inline const std::string& Msg_EncodedShmem::a_aencodedshmem() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_EncodedShmem::set_a_aencodedshmem(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_aencodedshmem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.a_aEncodedShmem)
 }
@@ -3087,32 +2971,22 @@ inline const std::string& Msg_EncodedShmem::_internal_a_aencodedshmem() const {
   return _impl_.a_aencodedshmem_.Get();
 }
 inline void Msg_EncodedShmem::_internal_set_a_aencodedshmem(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aencodedshmem_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_EncodedShmem::_internal_mutable_a_aencodedshmem() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_aencodedshmem_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_EncodedShmem::release_a_aencodedshmem() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedShmem.a_aEncodedShmem)
-  if (!_internal_has_a_aencodedshmem()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_aencodedshmem_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_aencodedshmem_.IsDefault()) {
-    _impl_.a_aencodedshmem_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_aencodedshmem_.Release();
 }
 inline void Msg_EncodedShmem::set_allocated_a_aencodedshmem(std::string* a_aencodedshmem) {
   if (a_aencodedshmem != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_aencodedshmem_.SetAllocated(a_aencodedshmem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3174,11 +3048,9 @@ Msg_EncodedShmem::mutable_a_acodecspecificinfo() {
 
 // Msg_EncodedData
 
-// required .protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aEncodedFrame = 1;
+// .protobuf.mozilla.gmp.GMPVideoEncodedFrameData a_aEncodedFrame = 1;
 inline bool Msg_EncodedData::_internal_has_a_aencodedframe() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_aencodedframe_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_aencodedframe_ != nullptr;
 }
 inline bool Msg_EncodedData::has_a_aencodedframe() const {
   return _internal_has_a_aencodedframe();
@@ -3199,14 +3071,14 @@ inline void Msg_EncodedData::unsafe_arena_set_allocated_a_aencodedframe(
   }
   _impl_.a_aencodedframe_ = a_aencodedframe;
   if (a_aencodedframe) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.a_aEncodedFrame)
 }
 inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedData::release_a_aencodedframe() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* temp = _impl_.a_aencodedframe_;
   _impl_.a_aencodedframe_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -3222,13 +3094,13 @@ inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedData::rele
 }
 inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedData::unsafe_arena_release_a_aencodedframe() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.a_aEncodedFrame)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* temp = _impl_.a_aencodedframe_;
   _impl_.a_aencodedframe_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::gmp::GMPVideoEncodedFrameData* Msg_EncodedData::_internal_mutable_a_aencodedframe() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_aencodedframe_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gmp::GMPVideoEncodedFrameData>(GetArenaForAllocation());
     _impl_.a_aencodedframe_ = p;
@@ -3253,9 +3125,9 @@ inline void Msg_EncodedData::set_allocated_a_aencodedframe(::protobuf::mozilla::
       a_aencodedframe = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_aencodedframe, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_aencodedframe_ = a_aencodedframe;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_EncodedData.a_aEncodedFrame)
@@ -3359,17 +3231,9 @@ Msg_EncodedData::mutable_a_acodecspecificinfo() {
 
 // Msg_Error
 
-// required bytes a_aErr = 1;
-inline bool Msg_Error::_internal_has_a_aerr() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_Error::has_a_aerr() const {
-  return _internal_has_a_aerr();
-}
+// bytes a_aErr = 1;
 inline void Msg_Error::clear_a_aerr() {
   _impl_.a_aerr_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_Error::a_aerr() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Error.a_aErr)
@@ -3378,7 +3242,7 @@ inline const std::string& Msg_Error::a_aerr() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Error::set_a_aerr(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_aerr_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Error.a_aErr)
 }
@@ -3391,32 +3255,22 @@ inline const std::string& Msg_Error::_internal_a_aerr() const {
   return _impl_.a_aerr_.Get();
 }
 inline void Msg_Error::_internal_set_a_aerr(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aerr_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_Error::_internal_mutable_a_aerr() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_aerr_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_Error::release_a_aerr() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPVideoEncoder.Msg_Error.a_aErr)
-  if (!_internal_has_a_aerr()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_aerr_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_aerr_.IsDefault()) {
-    _impl_.a_aerr_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_aerr_.Release();
 }
 inline void Msg_Error::set_allocated_a_aerr(std::string* a_aerr) {
   if (a_aerr != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_aerr_.SetAllocated(a_aerr, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

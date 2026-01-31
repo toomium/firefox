@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "NeckoChannelParams.pb.h"
 #include "DOMTypes.pb.h"
 // @@protoc_insertion_point(includes)
@@ -43,6 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -62,7 +65,7 @@ namespace dom {
 // ===================================================================
 
 class WindowGlobalInit final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WindowGlobalInit) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WindowGlobalInit) */ {
  public:
   inline WindowGlobalInit() : WindowGlobalInit(nullptr) {}
   ~WindowGlobalInit() override;
@@ -92,13 +95,15 @@ class WindowGlobalInit final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const WindowGlobalInit& default_instance() {
     return *internal_default_instance();
   }
@@ -136,9 +141,15 @@ class WindowGlobalInit final :
   WindowGlobalInit* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WindowGlobalInit>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const WindowGlobalInit& from);
-  void MergeFrom(const WindowGlobalInit& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const WindowGlobalInit& from) {
+    WindowGlobalInit::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -151,7 +162,7 @@ class WindowGlobalInit final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(WindowGlobalInit* other);
 
   private:
@@ -164,7 +175,10 @@ class WindowGlobalInit final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -183,11 +197,7 @@ class WindowGlobalInit final :
     kASandboxFlagsFieldNumber = 8,
     kAHttpsOnlyStatusFieldNumber = 10,
   };
-  // required bytes a_context = 1;
-  bool has_a_context() const;
-  private:
-  bool _internal_has_a_context() const;
-  public:
+  // bytes a_context = 1;
   void clear_a_context();
   const std::string& a_context() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -273,7 +283,7 @@ class WindowGlobalInit final :
   std::string* _internal_mutable_a_securityinfo();
   public:
 
-  // required .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 9;
+  // .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 9;
   bool has_a_cookiejarsettings() const;
   private:
   bool _internal_has_a_cookiejarsettings() const;
@@ -291,11 +301,7 @@ class WindowGlobalInit final :
       ::protobuf::mozilla::net::CookieJarSettingsArgs* a_cookiejarsettings);
   ::protobuf::mozilla::net::CookieJarSettingsArgs* unsafe_arena_release_a_cookiejarsettings();
 
-  // required bool a_isInitialDocument = 5;
-  bool has_a_isinitialdocument() const;
-  private:
-  bool _internal_has_a_isinitialdocument() const;
-  public:
+  // bool a_isInitialDocument = 5;
   void clear_a_isinitialdocument();
   bool a_isinitialdocument() const;
   void set_a_isinitialdocument(bool value);
@@ -304,11 +310,7 @@ class WindowGlobalInit final :
   void _internal_set_a_isinitialdocument(bool value);
   public:
 
-  // required bool a_blockAllMixedContent = 6;
-  bool has_a_blockallmixedcontent() const;
-  private:
-  bool _internal_has_a_blockallmixedcontent() const;
-  public:
+  // bool a_blockAllMixedContent = 6;
   void clear_a_blockallmixedcontent();
   bool a_blockallmixedcontent() const;
   void set_a_blockallmixedcontent(bool value);
@@ -317,11 +319,7 @@ class WindowGlobalInit final :
   void _internal_set_a_blockallmixedcontent(bool value);
   public:
 
-  // required bool a_upgradeInsecureRequests = 7;
-  bool has_a_upgradeinsecurerequests() const;
-  private:
-  bool _internal_has_a_upgradeinsecurerequests() const;
-  public:
+  // bool a_upgradeInsecureRequests = 7;
   void clear_a_upgradeinsecurerequests();
   bool a_upgradeinsecurerequests() const;
   void set_a_upgradeinsecurerequests(bool value);
@@ -330,11 +328,7 @@ class WindowGlobalInit final :
   void _internal_set_a_upgradeinsecurerequests(bool value);
   public:
 
-  // required uint32 a_sandboxFlags = 8;
-  bool has_a_sandboxflags() const;
-  private:
-  bool _internal_has_a_sandboxflags() const;
-  public:
+  // uint32 a_sandboxFlags = 8;
   void clear_a_sandboxflags();
   uint32_t a_sandboxflags() const;
   void set_a_sandboxflags(uint32_t value);
@@ -343,11 +337,7 @@ class WindowGlobalInit final :
   void _internal_set_a_sandboxflags(uint32_t value);
   public:
 
-  // required uint32 a_httpsOnlyStatus = 10;
-  bool has_a_httpsonlystatus() const;
-  private:
-  bool _internal_has_a_httpsonlystatus() const;
-  public:
+  // uint32 a_httpsOnlyStatus = 10;
   void clear_a_httpsonlystatus();
   uint32_t a_httpsonlystatus() const;
   void set_a_httpsonlystatus(uint32_t value);
@@ -359,9 +349,6 @@ class WindowGlobalInit final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.WindowGlobalInit)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -395,17 +382,9 @@ class WindowGlobalInit final :
 #endif  // __GNUC__
 // WindowGlobalInit
 
-// required bytes a_context = 1;
-inline bool WindowGlobalInit::_internal_has_a_context() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool WindowGlobalInit::has_a_context() const {
-  return _internal_has_a_context();
-}
+// bytes a_context = 1;
 inline void WindowGlobalInit::clear_a_context() {
   _impl_.a_context_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& WindowGlobalInit::a_context() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WindowGlobalInit.a_context)
@@ -414,7 +393,7 @@ inline const std::string& WindowGlobalInit::a_context() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WindowGlobalInit::set_a_context(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_context_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WindowGlobalInit.a_context)
 }
@@ -427,32 +406,22 @@ inline const std::string& WindowGlobalInit::_internal_a_context() const {
   return _impl_.a_context_.Get();
 }
 inline void WindowGlobalInit::_internal_set_a_context(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_context_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WindowGlobalInit::_internal_mutable_a_context() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_context_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WindowGlobalInit::release_a_context() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WindowGlobalInit.a_context)
-  if (!_internal_has_a_context()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_context_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_context_.IsDefault()) {
-    _impl_.a_context_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_context_.Release();
 }
 inline void WindowGlobalInit::set_allocated_a_context(std::string* a_context) {
   if (a_context != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_context_.SetAllocated(a_context, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -465,7 +434,7 @@ inline void WindowGlobalInit::set_allocated_a_context(std::string* a_context) {
 
 // optional bytes a_principal = 2;
 inline bool WindowGlobalInit::_internal_has_a_principal() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
 inline bool WindowGlobalInit::has_a_principal() const {
@@ -473,7 +442,7 @@ inline bool WindowGlobalInit::has_a_principal() const {
 }
 inline void WindowGlobalInit::clear_a_principal() {
   _impl_.a_principal_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& WindowGlobalInit::a_principal() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WindowGlobalInit.a_principal)
@@ -482,7 +451,7 @@ inline const std::string& WindowGlobalInit::a_principal() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WindowGlobalInit::set_a_principal(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_principal_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WindowGlobalInit.a_principal)
 }
@@ -495,11 +464,11 @@ inline const std::string& WindowGlobalInit::_internal_a_principal() const {
   return _impl_.a_principal_.Get();
 }
 inline void WindowGlobalInit::_internal_set_a_principal(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_principal_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WindowGlobalInit::_internal_mutable_a_principal() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_principal_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WindowGlobalInit::release_a_principal() {
@@ -507,7 +476,7 @@ inline std::string* WindowGlobalInit::release_a_principal() {
   if (!_internal_has_a_principal()) {
     return nullptr;
   }
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
   auto* p = _impl_.a_principal_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (_impl_.a_principal_.IsDefault()) {
@@ -518,9 +487,9 @@ inline std::string* WindowGlobalInit::release_a_principal() {
 }
 inline void WindowGlobalInit::set_allocated_a_principal(std::string* a_principal) {
   if (a_principal != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_principal_.SetAllocated(a_principal, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -533,7 +502,7 @@ inline void WindowGlobalInit::set_allocated_a_principal(std::string* a_principal
 
 // optional bytes a_storagePrincipal = 3;
 inline bool WindowGlobalInit::_internal_has_a_storageprincipal() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
 inline bool WindowGlobalInit::has_a_storageprincipal() const {
@@ -541,7 +510,7 @@ inline bool WindowGlobalInit::has_a_storageprincipal() const {
 }
 inline void WindowGlobalInit::clear_a_storageprincipal() {
   _impl_.a_storageprincipal_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& WindowGlobalInit::a_storageprincipal() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WindowGlobalInit.a_storagePrincipal)
@@ -550,7 +519,7 @@ inline const std::string& WindowGlobalInit::a_storageprincipal() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WindowGlobalInit::set_a_storageprincipal(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_storageprincipal_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WindowGlobalInit.a_storagePrincipal)
 }
@@ -563,11 +532,11 @@ inline const std::string& WindowGlobalInit::_internal_a_storageprincipal() const
   return _impl_.a_storageprincipal_.Get();
 }
 inline void WindowGlobalInit::_internal_set_a_storageprincipal(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_storageprincipal_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WindowGlobalInit::_internal_mutable_a_storageprincipal() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_storageprincipal_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WindowGlobalInit::release_a_storageprincipal() {
@@ -575,7 +544,7 @@ inline std::string* WindowGlobalInit::release_a_storageprincipal() {
   if (!_internal_has_a_storageprincipal()) {
     return nullptr;
   }
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
   auto* p = _impl_.a_storageprincipal_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (_impl_.a_storageprincipal_.IsDefault()) {
@@ -586,9 +555,9 @@ inline std::string* WindowGlobalInit::release_a_storageprincipal() {
 }
 inline void WindowGlobalInit::set_allocated_a_storageprincipal(std::string* a_storageprincipal) {
   if (a_storageprincipal != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_storageprincipal_.SetAllocated(a_storageprincipal, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -601,7 +570,7 @@ inline void WindowGlobalInit::set_allocated_a_storageprincipal(std::string* a_st
 
 // optional bytes a_documentURI = 4;
 inline bool WindowGlobalInit::_internal_has_a_documenturi() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
 inline bool WindowGlobalInit::has_a_documenturi() const {
@@ -609,7 +578,7 @@ inline bool WindowGlobalInit::has_a_documenturi() const {
 }
 inline void WindowGlobalInit::clear_a_documenturi() {
   _impl_.a_documenturi_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& WindowGlobalInit::a_documenturi() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WindowGlobalInit.a_documentURI)
@@ -618,7 +587,7 @@ inline const std::string& WindowGlobalInit::a_documenturi() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WindowGlobalInit::set_a_documenturi(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000008u;
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.a_documenturi_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WindowGlobalInit.a_documentURI)
 }
@@ -631,11 +600,11 @@ inline const std::string& WindowGlobalInit::_internal_a_documenturi() const {
   return _impl_.a_documenturi_.Get();
 }
 inline void WindowGlobalInit::_internal_set_a_documenturi(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_documenturi_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WindowGlobalInit::_internal_mutable_a_documenturi() {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.a_documenturi_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WindowGlobalInit::release_a_documenturi() {
@@ -643,7 +612,7 @@ inline std::string* WindowGlobalInit::release_a_documenturi() {
   if (!_internal_has_a_documenturi()) {
     return nullptr;
   }
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
   auto* p = _impl_.a_documenturi_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (_impl_.a_documenturi_.IsDefault()) {
@@ -654,9 +623,9 @@ inline std::string* WindowGlobalInit::release_a_documenturi() {
 }
 inline void WindowGlobalInit::set_allocated_a_documenturi(std::string* a_documenturi) {
   if (a_documenturi != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.a_documenturi_.SetAllocated(a_documenturi, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -667,17 +636,9 @@ inline void WindowGlobalInit::set_allocated_a_documenturi(std::string* a_documen
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WindowGlobalInit.a_documentURI)
 }
 
-// required bool a_isInitialDocument = 5;
-inline bool WindowGlobalInit::_internal_has_a_isinitialdocument() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool WindowGlobalInit::has_a_isinitialdocument() const {
-  return _internal_has_a_isinitialdocument();
-}
+// bool a_isInitialDocument = 5;
 inline void WindowGlobalInit::clear_a_isinitialdocument() {
   _impl_.a_isinitialdocument_ = false;
-  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline bool WindowGlobalInit::_internal_a_isinitialdocument() const {
   return _impl_.a_isinitialdocument_;
@@ -687,7 +648,7 @@ inline bool WindowGlobalInit::a_isinitialdocument() const {
   return _internal_a_isinitialdocument();
 }
 inline void WindowGlobalInit::_internal_set_a_isinitialdocument(bool value) {
-  _impl_._has_bits_[0] |= 0x00000040u;
+  
   _impl_.a_isinitialdocument_ = value;
 }
 inline void WindowGlobalInit::set_a_isinitialdocument(bool value) {
@@ -695,17 +656,9 @@ inline void WindowGlobalInit::set_a_isinitialdocument(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WindowGlobalInit.a_isInitialDocument)
 }
 
-// required bool a_blockAllMixedContent = 6;
-inline bool WindowGlobalInit::_internal_has_a_blockallmixedcontent() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
-  return value;
-}
-inline bool WindowGlobalInit::has_a_blockallmixedcontent() const {
-  return _internal_has_a_blockallmixedcontent();
-}
+// bool a_blockAllMixedContent = 6;
 inline void WindowGlobalInit::clear_a_blockallmixedcontent() {
   _impl_.a_blockallmixedcontent_ = false;
-  _impl_._has_bits_[0] &= ~0x00000080u;
 }
 inline bool WindowGlobalInit::_internal_a_blockallmixedcontent() const {
   return _impl_.a_blockallmixedcontent_;
@@ -715,7 +668,7 @@ inline bool WindowGlobalInit::a_blockallmixedcontent() const {
   return _internal_a_blockallmixedcontent();
 }
 inline void WindowGlobalInit::_internal_set_a_blockallmixedcontent(bool value) {
-  _impl_._has_bits_[0] |= 0x00000080u;
+  
   _impl_.a_blockallmixedcontent_ = value;
 }
 inline void WindowGlobalInit::set_a_blockallmixedcontent(bool value) {
@@ -723,17 +676,9 @@ inline void WindowGlobalInit::set_a_blockallmixedcontent(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WindowGlobalInit.a_blockAllMixedContent)
 }
 
-// required bool a_upgradeInsecureRequests = 7;
-inline bool WindowGlobalInit::_internal_has_a_upgradeinsecurerequests() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
-  return value;
-}
-inline bool WindowGlobalInit::has_a_upgradeinsecurerequests() const {
-  return _internal_has_a_upgradeinsecurerequests();
-}
+// bool a_upgradeInsecureRequests = 7;
 inline void WindowGlobalInit::clear_a_upgradeinsecurerequests() {
   _impl_.a_upgradeinsecurerequests_ = false;
-  _impl_._has_bits_[0] &= ~0x00000100u;
 }
 inline bool WindowGlobalInit::_internal_a_upgradeinsecurerequests() const {
   return _impl_.a_upgradeinsecurerequests_;
@@ -743,7 +688,7 @@ inline bool WindowGlobalInit::a_upgradeinsecurerequests() const {
   return _internal_a_upgradeinsecurerequests();
 }
 inline void WindowGlobalInit::_internal_set_a_upgradeinsecurerequests(bool value) {
-  _impl_._has_bits_[0] |= 0x00000100u;
+  
   _impl_.a_upgradeinsecurerequests_ = value;
 }
 inline void WindowGlobalInit::set_a_upgradeinsecurerequests(bool value) {
@@ -751,17 +696,9 @@ inline void WindowGlobalInit::set_a_upgradeinsecurerequests(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WindowGlobalInit.a_upgradeInsecureRequests)
 }
 
-// required uint32 a_sandboxFlags = 8;
-inline bool WindowGlobalInit::_internal_has_a_sandboxflags() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
-  return value;
-}
-inline bool WindowGlobalInit::has_a_sandboxflags() const {
-  return _internal_has_a_sandboxflags();
-}
+// uint32 a_sandboxFlags = 8;
 inline void WindowGlobalInit::clear_a_sandboxflags() {
   _impl_.a_sandboxflags_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000200u;
 }
 inline uint32_t WindowGlobalInit::_internal_a_sandboxflags() const {
   return _impl_.a_sandboxflags_;
@@ -771,7 +708,7 @@ inline uint32_t WindowGlobalInit::a_sandboxflags() const {
   return _internal_a_sandboxflags();
 }
 inline void WindowGlobalInit::_internal_set_a_sandboxflags(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000200u;
+  
   _impl_.a_sandboxflags_ = value;
 }
 inline void WindowGlobalInit::set_a_sandboxflags(uint32_t value) {
@@ -779,11 +716,9 @@ inline void WindowGlobalInit::set_a_sandboxflags(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WindowGlobalInit.a_sandboxFlags)
 }
 
-// required .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 9;
+// .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 9;
 inline bool WindowGlobalInit::_internal_has_a_cookiejarsettings() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_cookiejarsettings_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_cookiejarsettings_ != nullptr;
 }
 inline bool WindowGlobalInit::has_a_cookiejarsettings() const {
   return _internal_has_a_cookiejarsettings();
@@ -804,14 +739,14 @@ inline void WindowGlobalInit::unsafe_arena_set_allocated_a_cookiejarsettings(
   }
   _impl_.a_cookiejarsettings_ = a_cookiejarsettings;
   if (a_cookiejarsettings) {
-    _impl_._has_bits_[0] |= 0x00000020u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000020u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.WindowGlobalInit.a_cookieJarSettings)
 }
 inline ::protobuf::mozilla::net::CookieJarSettingsArgs* WindowGlobalInit::release_a_cookiejarsettings() {
-  _impl_._has_bits_[0] &= ~0x00000020u;
+  
   ::protobuf::mozilla::net::CookieJarSettingsArgs* temp = _impl_.a_cookiejarsettings_;
   _impl_.a_cookiejarsettings_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -827,13 +762,13 @@ inline ::protobuf::mozilla::net::CookieJarSettingsArgs* WindowGlobalInit::releas
 }
 inline ::protobuf::mozilla::net::CookieJarSettingsArgs* WindowGlobalInit::unsafe_arena_release_a_cookiejarsettings() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.WindowGlobalInit.a_cookieJarSettings)
-  _impl_._has_bits_[0] &= ~0x00000020u;
+  
   ::protobuf::mozilla::net::CookieJarSettingsArgs* temp = _impl_.a_cookiejarsettings_;
   _impl_.a_cookiejarsettings_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::net::CookieJarSettingsArgs* WindowGlobalInit::_internal_mutable_a_cookiejarsettings() {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   if (_impl_.a_cookiejarsettings_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::CookieJarSettingsArgs>(GetArenaForAllocation());
     _impl_.a_cookiejarsettings_ = p;
@@ -858,25 +793,17 @@ inline void WindowGlobalInit::set_allocated_a_cookiejarsettings(::protobuf::mozi
       a_cookiejarsettings = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_cookiejarsettings, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000020u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000020u;
+    
   }
   _impl_.a_cookiejarsettings_ = a_cookiejarsettings;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.WindowGlobalInit.a_cookieJarSettings)
 }
 
-// required uint32 a_httpsOnlyStatus = 10;
-inline bool WindowGlobalInit::_internal_has_a_httpsonlystatus() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
-  return value;
-}
-inline bool WindowGlobalInit::has_a_httpsonlystatus() const {
-  return _internal_has_a_httpsonlystatus();
-}
+// uint32 a_httpsOnlyStatus = 10;
 inline void WindowGlobalInit::clear_a_httpsonlystatus() {
   _impl_.a_httpsonlystatus_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000400u;
 }
 inline uint32_t WindowGlobalInit::_internal_a_httpsonlystatus() const {
   return _impl_.a_httpsonlystatus_;
@@ -886,7 +813,7 @@ inline uint32_t WindowGlobalInit::a_httpsonlystatus() const {
   return _internal_a_httpsonlystatus();
 }
 inline void WindowGlobalInit::_internal_set_a_httpsonlystatus(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000400u;
+  
   _impl_.a_httpsonlystatus_ = value;
 }
 inline void WindowGlobalInit::set_a_httpsonlystatus(uint32_t value) {
@@ -896,7 +823,7 @@ inline void WindowGlobalInit::set_a_httpsonlystatus(uint32_t value) {
 
 // optional bytes a_securityInfo = 11;
 inline bool WindowGlobalInit::_internal_has_a_securityinfo() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
 inline bool WindowGlobalInit::has_a_securityinfo() const {
@@ -904,7 +831,7 @@ inline bool WindowGlobalInit::has_a_securityinfo() const {
 }
 inline void WindowGlobalInit::clear_a_securityinfo() {
   _impl_.a_securityinfo_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& WindowGlobalInit::a_securityinfo() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.WindowGlobalInit.a_securityInfo)
@@ -913,7 +840,7 @@ inline const std::string& WindowGlobalInit::a_securityinfo() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void WindowGlobalInit::set_a_securityinfo(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000010u;
+ _impl_._has_bits_[0] |= 0x00000008u;
  _impl_.a_securityinfo_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.WindowGlobalInit.a_securityInfo)
 }
@@ -926,11 +853,11 @@ inline const std::string& WindowGlobalInit::_internal_a_securityinfo() const {
   return _impl_.a_securityinfo_.Get();
 }
 inline void WindowGlobalInit::_internal_set_a_securityinfo(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.a_securityinfo_.Set(value, GetArenaForAllocation());
 }
 inline std::string* WindowGlobalInit::_internal_mutable_a_securityinfo() {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_._has_bits_[0] |= 0x00000008u;
   return _impl_.a_securityinfo_.Mutable(GetArenaForAllocation());
 }
 inline std::string* WindowGlobalInit::release_a_securityinfo() {
@@ -938,7 +865,7 @@ inline std::string* WindowGlobalInit::release_a_securityinfo() {
   if (!_internal_has_a_securityinfo()) {
     return nullptr;
   }
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
   auto* p = _impl_.a_securityinfo_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (_impl_.a_securityinfo_.IsDefault()) {
@@ -949,9 +876,9 @@ inline std::string* WindowGlobalInit::release_a_securityinfo() {
 }
 inline void WindowGlobalInit::set_allocated_a_securityinfo(std::string* a_securityinfo) {
   if (a_securityinfo != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000010u;
+    _impl_._has_bits_[0] |= 0x00000008u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000010u;
+    _impl_._has_bits_[0] &= ~0x00000008u;
   }
   _impl_.a_securityinfo_.SetAllocated(a_securityinfo, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

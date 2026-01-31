@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/clients/manager/PClientHandle.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PClientHandle;
 
@@ -20,15 +19,15 @@ message Msg_Teardown {
 }
 
 message Msg_PClientHandleOpConstructor {
-  required sint64 a_actorid = 1;
-  required protobuf.mozilla.dom.ClientOpConstructorArgs a_aArgs = 2;
+  sint64 a_actorid = 1;
+  protobuf.mozilla.dom.ClientOpConstructorArgs a_aArgs = 2;
 }
 
 message Reply_PClientHandleOpConstructor {
 }
 
 message Msg_ExecutionReady {
-  required protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
+  protobuf.mozilla.dom.IPCClientInfo a_aClientInfo = 1;
 }
 
 message Msg___delete__ {

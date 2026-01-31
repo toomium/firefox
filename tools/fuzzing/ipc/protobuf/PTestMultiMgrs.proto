@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/ipc/ipdl/test/gtest/PTestMultiMgrs.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla._ipdltest.PTestMultiMgrs;
 
@@ -19,14 +18,14 @@ message Msg_OK {
 }
 
 message Msg_PTestMultiMgrsLeftConstructor {
-  required sint64 a_actorid = 1;
+  sint64 a_actorid = 1;
 }
 
 message Reply_PTestMultiMgrsLeftConstructor {
 }
 
 message Msg_PTestMultiMgrsRightConstructor {
-  required sint64 a_actorid = 1;
+  sint64 a_actorid = 1;
 }
 
 message Reply_PTestMultiMgrsRightConstructor {

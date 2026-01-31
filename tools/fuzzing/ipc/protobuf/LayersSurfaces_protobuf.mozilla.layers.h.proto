@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/gfx/layers/ipc/LayersSurfaces.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.layers;
 
@@ -14,12 +13,12 @@ package protobuf.mozilla.layers;
 message SurfaceDescriptorD3D10 {
   optional bytes a_handle = 1;
   optional bytes a_gpuProcessTextureId = 2;
-  required uint32 a_arrayIndex = 3;
-  required bytes a_format = 4;
-  required bytes a_size = 5;
-  required bytes a_colorSpace = 6;
-  required bytes a_colorRange = 7;
-  required bool a_hasKeyedMutex = 8;
+  uint32 a_arrayIndex = 3;
+  bytes a_format = 4;
+  bytes a_size = 5;
+  bytes a_colorSpace = 6;
+  bytes a_colorRange = 7;
+  bool a_hasKeyedMutex = 8;
   optional bytes a_fencesHolderId = 9;
 }
 
@@ -27,27 +26,27 @@ message SurfaceDescriptorDXGIYCbCr {
   optional bytes a_handleY = 1;
   optional bytes a_handleCb = 2;
   optional bytes a_handleCr = 3;
-  required bytes a_size = 4;
-  required bytes a_sizeY = 5;
-  required bytes a_sizeCbCr = 6;
-  required bytes a_colorDepth = 7;
-  required bytes a_yUVColorSpace = 8;
-  required bytes a_colorRange = 9;
-  required bytes a_fencesHolderId = 10;
+  bytes a_size = 4;
+  bytes a_sizeY = 5;
+  bytes a_sizeCbCr = 6;
+  bytes a_colorDepth = 7;
+  bytes a_yUVColorSpace = 8;
+  bytes a_colorRange = 9;
+  bytes a_fencesHolderId = 10;
 }
 
 message SurfaceDescriptorMacIOSurface {
-  required uint32 a_surfaceId = 1;
-  required bool a_isOpaque = 2;
-  required bytes a_yUVColorSpace = 3;
+  uint32 a_surfaceId = 1;
+  bool a_isOpaque = 2;
+  bytes a_yUVColorSpace = 3;
   optional bytes a_gpuFence = 4;
 }
 
 message SurfaceDescriptorDMABuf {
-  required uint32 a_bufferType = 1;
-  required uint32 a_fourccFormat = 2;
+  uint32 a_bufferType = 1;
+  uint32 a_fourccFormat = 2;
   repeated uint64 a_modifier = 3;
-  required uint32 a_flags = 4;
+  uint32 a_flags = 4;
   repeated bytes a_fds = 5;
   repeated uint32 a_width = 6;
   repeated uint32 a_height = 7;
@@ -56,51 +55,51 @@ message SurfaceDescriptorDMABuf {
   repeated uint32 a_format = 10;
   repeated uint32 a_strides = 11;
   repeated uint32 a_offsets = 12;
-  required bytes a_yUVColorSpace = 13;
-  required bytes a_colorRange = 14;
-  required bytes a_colorPrimaries = 15;
-  required bytes a_transferFunction = 16;
+  bytes a_yUVColorSpace = 13;
+  bytes a_colorRange = 14;
+  bytes a_colorPrimaries = 15;
+  bytes a_transferFunction = 16;
   repeated bytes a_fence = 17;
-  required uint32 a_uid = 18;
-  required uint32 a_pid = 19;
+  uint32 a_uid = 18;
+  uint32 a_pid = 19;
   repeated bytes a_refCount = 20;
   optional bytes a_semaphoreFd = 21;
 }
 
 message SurfaceTextureDescriptor {
-  required uint64 a_handle = 1;
-  required bytes a_size = 2;
-  required bytes a_format = 3;
-  required bool a_continuous = 4;
-  required bool a_forceBT709ColorSpace = 5;
+  uint64 a_handle = 1;
+  bytes a_size = 2;
+  bytes a_format = 3;
+  bool a_continuous = 4;
+  bool a_forceBT709ColorSpace = 5;
   optional bytes a_transformOverride = 6;
 }
 
 message SurfaceDescriptorAndroidHardwareBuffer {
-  required uint64 a_bufferId = 1;
-  required bytes a_size = 2;
-  required bytes a_format = 3;
+  uint64 a_bufferId = 1;
+  bytes a_size = 2;
+  bytes a_format = 3;
 }
 
 message EGLImageDescriptor {
-  required bytes a_image = 1;
-  required bytes a_fence = 2;
-  required bytes a_size = 3;
-  required bool a_hasAlpha = 4;
+  bytes a_image = 1;
+  bytes a_fence = 2;
+  bytes a_size = 3;
+  bool a_hasAlpha = 4;
 }
 
 message SurfaceDescriptorSharedGLTexture {
-  required uint32 a_texture = 1;
-  required uint32 a_target = 2;
-  required bytes a_fence = 3;
-  required bytes a_size = 4;
-  required bool a_hasAlpha = 5;
+  uint32 a_texture = 1;
+  uint32 a_target = 2;
+  bytes a_fence = 3;
+  bytes a_size = 4;
+  bool a_hasAlpha = 5;
 }
 
 message SurfaceDescriptorDcompSurface {
-  required bytes a_handle = 1;
-  required bytes a_size = 2;
-  required bytes a_format = 3;
+  bytes a_handle = 1;
+  bytes a_size = 2;
+  bytes a_format = 3;
 }
 
 message RemoteDecoderVideoSubDescriptor {
@@ -115,10 +114,10 @@ message RemoteDecoderVideoSubDescriptor {
 }
 
 message SurfaceDescriptorRemoteDecoder {
-  required uint64 a_handle = 1;
-  required protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor a_subdesc = 2;
-  required bytes a_source = 3;
-  required bytes a_id = 4;
+  uint64 a_handle = 1;
+  protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor a_subdesc = 2;
+  bytes a_source = 3;
+  bytes a_id = 4;
 }
 
 message SurfaceDescriptorGPUVideo {
@@ -128,24 +127,24 @@ message SurfaceDescriptorGPUVideo {
 }
 
 message RGBDescriptor {
-  required bytes a_size = 1;
-  required bytes a_format = 2;
+  bytes a_size = 1;
+  bytes a_format = 2;
 }
 
 message YCbCrDescriptor {
-  required bytes a_display = 1;
-  required bytes a_ySize = 2;
-  required uint32 a_yStride = 3;
-  required bytes a_cbCrSize = 4;
-  required uint32 a_cbCrStride = 5;
-  required uint32 a_yOffset = 6;
-  required uint32 a_cbOffset = 7;
-  required uint32 a_crOffset = 8;
-  required bytes a_stereoMode = 9;
-  required bytes a_colorDepth = 10;
-  required bytes a_yUVColorSpace = 11;
-  required bytes a_colorRange = 12;
-  required bytes a_chromaSubsampling = 13;
+  bytes a_display = 1;
+  bytes a_ySize = 2;
+  uint32 a_yStride = 3;
+  bytes a_cbCrSize = 4;
+  uint32 a_cbCrStride = 5;
+  uint32 a_yOffset = 6;
+  uint32 a_cbOffset = 7;
+  uint32 a_crOffset = 8;
+  bytes a_stereoMode = 9;
+  bytes a_colorDepth = 10;
+  bytes a_yUVColorSpace = 11;
+  bytes a_colorRange = 12;
+  bytes a_chromaSubsampling = 13;
 }
 
 message BufferDescriptor {
@@ -163,31 +162,31 @@ message MemoryOrShmem {
 }
 
 message SurfaceDescriptorBuffer {
-  required protobuf.mozilla.layers.BufferDescriptor a_desc = 1;
-  required protobuf.mozilla.layers.MemoryOrShmem a_data = 2;
+  protobuf.mozilla.layers.BufferDescriptor a_desc = 1;
+  protobuf.mozilla.layers.MemoryOrShmem a_data = 2;
 }
 
 message SurfaceDescriptorShared {
-  required bytes a_size = 1;
-  required sint32 a_stride = 2;
-  required bytes a_format = 3;
-  required bytes a_handle = 4;
+  bytes a_size = 1;
+  sint32 a_stride = 2;
+  bytes a_format = 3;
+  bytes a_handle = 4;
 }
 
 message SurfaceDescriptorExternalImage {
-  required bytes a_source = 1;
-  required bytes a_id = 2;
+  bytes a_source = 1;
+  bytes a_id = 2;
 }
 
 message SurfaceDescriptorRemoteTexture {
-  required bytes a_textureId = 1;
-  required bytes a_ownerId = 2;
+  bytes a_textureId = 1;
+  bytes a_ownerId = 2;
 }
 
 message SurfaceDescriptorCanvasSurface {
-  required uint32 a_managerId = 1;
-  required bytes a_canvasId = 2;
-  required bytes a_surfaceId = 3;
+  uint32 a_managerId = 1;
+  bytes a_canvasId = 2;
+  bytes a_surfaceId = 3;
 }
 
 message SurfaceDescriptor {

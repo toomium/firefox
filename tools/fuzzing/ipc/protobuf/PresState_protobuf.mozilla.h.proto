@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/layout/base/PresState.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla;
 
@@ -19,7 +18,7 @@ message SelectContentData {
 }
 
 message CheckedContentData {
-  required bool a_checked = 1;
+  bool a_checked = 1;
 }
 
 message FileContentData {
@@ -30,8 +29,8 @@ message FileContentData {
 }
 
 message TextContentData {
-  required string a_value = 1;
-  required bool a_lastValueChangeWasInteractive = 2;
+  string a_value = 1;
+  bool a_lastValueChangeWasInteractive = 2;
 }
 
 message PresContentData {
@@ -49,11 +48,11 @@ message PresContentData {
 }
 
 message PresState {
-  required protobuf.mozilla.PresContentData a_contentData = 1;
-  required bytes a_scrollState = 2;
-  required bool a_allowScrollOriginDowngrade = 3;
-  required float a_resolution = 4;
-  required bool a_disabledSet = 5;
-  required bool a_disabled = 6;
-  required bool a_droppedDown = 7;
+  protobuf.mozilla.PresContentData a_contentData = 1;
+  bytes a_scrollState = 2;
+  bool a_allowScrollOriginDowngrade = 3;
+  float a_resolution = 4;
+  bool a_disabledSet = 5;
+  bool a_disabled = 6;
+  bool a_droppedDown = 7;
 }

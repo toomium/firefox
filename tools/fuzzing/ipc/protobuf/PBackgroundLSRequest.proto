@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/localstorage/PBackgroundLSRequest.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PBackgroundLSRequest;
 
@@ -23,7 +22,7 @@ message Msg_Finish {
 }
 
 message Msg___delete__ {
-  required protobuf.mozilla.dom.LSRequestResponse a_response = 1;
+  protobuf.mozilla.dom.LSRequestResponse a_response = 1;
 }
 
 message Reply___delete__ {

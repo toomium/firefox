@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/indexedDB/PBackgroundIDBSharedTypes.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.indexedDB;
 
@@ -16,11 +15,11 @@ import "ProtocolTypes.proto";
 
 // Structs and unions declarations
 message SerializedKeyRange {
-  required bytes a_lower = 1;
-  required bytes a_upper = 2;
-  required bool a_lowerOpen = 3;
-  required bool a_upperOpen = 4;
-  required bool a_isOnly = 5;
+  bytes a_lower = 1;
+  bytes a_upper = 2;
+  bool a_lowerOpen = 3;
+  bool a_upperOpen = 4;
+  bool a_isOnly = 5;
 }
 
 message NullableBlob {
@@ -31,85 +30,85 @@ message NullableBlob {
 }
 
 message SerializedStructuredCloneFile {
-  required protobuf.mozilla.dom.indexedDB.NullableBlob a_file = 1;
-  required bytes a_type = 2;
+  protobuf.mozilla.dom.indexedDB.NullableBlob a_file = 1;
+  bytes a_type = 2;
 }
 
 message SerializedStructuredCloneReadInfo {
-  required bytes a_data = 1;
+  bytes a_data = 1;
   repeated protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneFile a_files = 2;
-  required bool a_hasPreprocessInfo = 3;
+  bool a_hasPreprocessInfo = 3;
 }
 
 message SerializedStructuredCloneWriteInfo {
-  required bytes a_data = 1;
-  required uint64 a_offsetToKeyProp = 2;
+  bytes a_data = 1;
+  uint64 a_offsetToKeyProp = 2;
 }
 
 message IndexUpdateInfo {
-  required sint64 a_indexId = 1;
-  required bytes a_value = 2;
-  required bytes a_localizedValue = 3;
+  sint64 a_indexId = 1;
+  bytes a_value = 2;
+  bytes a_localizedValue = 3;
 }
 
 message DatabaseMetadata {
-  required string a_name = 1;
-  required uint64 a_version = 2;
-  required bytes a_persistenceType = 3;
+  string a_name = 1;
+  uint64 a_version = 2;
+  bytes a_persistenceType = 3;
 }
 
 message ObjectStoreMetadata {
-  required sint64 a_id = 1;
-  required string a_name = 2;
-  required bytes a_keyPath = 3;
-  required bool a_autoIncrement = 4;
+  sint64 a_id = 1;
+  string a_name = 2;
+  bytes a_keyPath = 3;
+  bool a_autoIncrement = 4;
 }
 
 message IndexMetadata {
-  required sint64 a_id = 1;
-  required string a_name = 2;
-  required bytes a_keyPath = 3;
-  required string a_locale = 4;
-  required bool a_unique = 5;
-  required bool a_multiEntry = 6;
-  required bool a_autoLocale = 7;
+  sint64 a_id = 1;
+  string a_name = 2;
+  bytes a_keyPath = 3;
+  string a_locale = 4;
+  bool a_unique = 5;
+  bool a_multiEntry = 6;
+  bool a_autoLocale = 7;
 }
 
 message DatabaseSpec {
-  required protobuf.mozilla.dom.indexedDB.DatabaseMetadata a_metadata = 1;
+  protobuf.mozilla.dom.indexedDB.DatabaseMetadata a_metadata = 1;
   repeated protobuf.mozilla.dom.indexedDB.ObjectStoreSpec a_objectStores = 2;
 }
 
 message ObjectStoreSpec {
-  required protobuf.mozilla.dom.indexedDB.ObjectStoreMetadata a_metadata = 1;
+  protobuf.mozilla.dom.indexedDB.ObjectStoreMetadata a_metadata = 1;
   repeated protobuf.mozilla.dom.indexedDB.IndexMetadata a_indexes = 2;
 }
 
 message CommonOpenCursorParams {
-  required sint64 a_objectStoreId = 1;
+  sint64 a_objectStoreId = 1;
   optional protobuf.mozilla.dom.indexedDB.SerializedKeyRange a_optionalKeyRange = 2;
-  required bytes a_direction = 3;
+  bytes a_direction = 3;
 }
 
 message ObjectStoreOpenCursorParams {
-  required protobuf.mozilla.dom.indexedDB.CommonOpenCursorParams a_commonParams = 1;
+  protobuf.mozilla.dom.indexedDB.CommonOpenCursorParams a_commonParams = 1;
 }
 
 message ObjectStoreOpenKeyCursorParams {
-  required protobuf.mozilla.dom.indexedDB.CommonOpenCursorParams a_commonParams = 1;
+  protobuf.mozilla.dom.indexedDB.CommonOpenCursorParams a_commonParams = 1;
 }
 
 message CommonIndexOpenCursorParams {
-  required protobuf.mozilla.dom.indexedDB.CommonOpenCursorParams a_commonParams = 1;
-  required sint64 a_indexId = 2;
+  protobuf.mozilla.dom.indexedDB.CommonOpenCursorParams a_commonParams = 1;
+  sint64 a_indexId = 2;
 }
 
 message IndexOpenCursorParams {
-  required protobuf.mozilla.dom.indexedDB.CommonIndexOpenCursorParams a_commonIndexParams = 1;
+  protobuf.mozilla.dom.indexedDB.CommonIndexOpenCursorParams a_commonIndexParams = 1;
 }
 
 message IndexOpenKeyCursorParams {
-  required protobuf.mozilla.dom.indexedDB.CommonIndexOpenCursorParams a_commonIndexParams = 1;
+  protobuf.mozilla.dom.indexedDB.CommonIndexOpenCursorParams a_commonIndexParams = 1;
 }
 
 message OpenCursorParams {
@@ -122,91 +121,91 @@ message OpenCursorParams {
 }
 
 message FileAddInfo {
-  required bytes a_file = 1;
-  required bytes a_type = 2;
+  bytes a_file = 1;
+  bytes a_type = 2;
 }
 
 message ObjectStoreAddPutParams {
-  required sint64 a_objectStoreId = 1;
-  required protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneWriteInfo a_cloneInfo = 2;
-  required bytes a_key = 3;
+  sint64 a_objectStoreId = 1;
+  protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneWriteInfo a_cloneInfo = 2;
+  bytes a_key = 3;
   repeated protobuf.mozilla.dom.indexedDB.IndexUpdateInfo a_indexUpdateInfos = 4;
   repeated protobuf.mozilla.dom.indexedDB.FileAddInfo a_fileAddInfos = 5;
 }
 
 message ObjectStoreAddParams {
-  required protobuf.mozilla.dom.indexedDB.ObjectStoreAddPutParams a_commonParams = 1;
+  protobuf.mozilla.dom.indexedDB.ObjectStoreAddPutParams a_commonParams = 1;
 }
 
 message ObjectStorePutParams {
-  required protobuf.mozilla.dom.indexedDB.ObjectStoreAddPutParams a_commonParams = 1;
+  protobuf.mozilla.dom.indexedDB.ObjectStoreAddPutParams a_commonParams = 1;
 }
 
 message ObjectStoreGetParams {
-  required sint64 a_objectStoreId = 1;
-  required protobuf.mozilla.dom.indexedDB.SerializedKeyRange a_keyRange = 2;
+  sint64 a_objectStoreId = 1;
+  protobuf.mozilla.dom.indexedDB.SerializedKeyRange a_keyRange = 2;
 }
 
 message ObjectStoreGetKeyParams {
-  required sint64 a_objectStoreId = 1;
-  required protobuf.mozilla.dom.indexedDB.SerializedKeyRange a_keyRange = 2;
+  sint64 a_objectStoreId = 1;
+  protobuf.mozilla.dom.indexedDB.SerializedKeyRange a_keyRange = 2;
 }
 
 message ObjectStoreGetAllParams {
-  required sint64 a_objectStoreId = 1;
+  sint64 a_objectStoreId = 1;
   optional protobuf.mozilla.dom.indexedDB.SerializedKeyRange a_optionalKeyRange = 2;
-  required uint32 a_limit = 3;
+  uint32 a_limit = 3;
 }
 
 message ObjectStoreGetAllKeysParams {
-  required sint64 a_objectStoreId = 1;
+  sint64 a_objectStoreId = 1;
   optional protobuf.mozilla.dom.indexedDB.SerializedKeyRange a_optionalKeyRange = 2;
-  required uint32 a_limit = 3;
+  uint32 a_limit = 3;
 }
 
 message ObjectStoreDeleteParams {
-  required sint64 a_objectStoreId = 1;
-  required protobuf.mozilla.dom.indexedDB.SerializedKeyRange a_keyRange = 2;
+  sint64 a_objectStoreId = 1;
+  protobuf.mozilla.dom.indexedDB.SerializedKeyRange a_keyRange = 2;
 }
 
 message ObjectStoreClearParams {
-  required sint64 a_objectStoreId = 1;
+  sint64 a_objectStoreId = 1;
 }
 
 message ObjectStoreCountParams {
-  required sint64 a_objectStoreId = 1;
+  sint64 a_objectStoreId = 1;
   optional protobuf.mozilla.dom.indexedDB.SerializedKeyRange a_optionalKeyRange = 2;
 }
 
 message IndexGetParams {
-  required sint64 a_objectStoreId = 1;
-  required sint64 a_indexId = 2;
-  required protobuf.mozilla.dom.indexedDB.SerializedKeyRange a_keyRange = 3;
+  sint64 a_objectStoreId = 1;
+  sint64 a_indexId = 2;
+  protobuf.mozilla.dom.indexedDB.SerializedKeyRange a_keyRange = 3;
 }
 
 message IndexGetKeyParams {
-  required sint64 a_objectStoreId = 1;
-  required sint64 a_indexId = 2;
-  required protobuf.mozilla.dom.indexedDB.SerializedKeyRange a_keyRange = 3;
+  sint64 a_objectStoreId = 1;
+  sint64 a_indexId = 2;
+  protobuf.mozilla.dom.indexedDB.SerializedKeyRange a_keyRange = 3;
 }
 
 message IndexGetAllParams {
-  required sint64 a_objectStoreId = 1;
-  required sint64 a_indexId = 2;
+  sint64 a_objectStoreId = 1;
+  sint64 a_indexId = 2;
   optional protobuf.mozilla.dom.indexedDB.SerializedKeyRange a_optionalKeyRange = 3;
-  required uint32 a_limit = 4;
+  uint32 a_limit = 4;
 }
 
 message IndexGetAllKeysParams {
-  required sint64 a_objectStoreId = 1;
-  required sint64 a_indexId = 2;
+  sint64 a_objectStoreId = 1;
+  sint64 a_indexId = 2;
   optional protobuf.mozilla.dom.indexedDB.SerializedKeyRange a_optionalKeyRange = 3;
-  required uint32 a_limit = 4;
+  uint32 a_limit = 4;
 }
 
 message IndexCountParams {
-  required sint64 a_objectStoreId = 1;
-  required sint64 a_indexId = 2;
+  sint64 a_objectStoreId = 1;
+  sint64 a_indexId = 2;
   optional protobuf.mozilla.dom.indexedDB.SerializedKeyRange a_optionalKeyRange = 3;
 }
 
@@ -230,8 +229,8 @@ message RequestParams {
 }
 
 message LoggingInfo {
-  required bytes a_backgroundChildLoggingId = 1;
-  required sint64 a_nextTransactionSerialNumber = 2;
-  required sint64 a_nextVersionChangeTransactionSerialNumber = 3;
-  required uint64 a_nextRequestSerialNumber = 4;
+  bytes a_backgroundChildLoggingId = 1;
+  sint64 a_nextTransactionSerialNumber = 2;
+  sint64 a_nextVersionChangeTransactionSerialNumber = 3;
+  uint64 a_nextRequestSerialNumber = 4;
 }

@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/netwerk/protocol/http/PBackgroundDataBridge.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.net.PBackgroundDataBridge;
 
@@ -18,18 +17,18 @@ import "NeckoChannelParams.proto";
 
 // Message declarations
 message Msg_OnTransportAndData {
-  required uint64 a_offset = 1;
-  required uint32 a_count = 2;
-  required string a_data = 3;
-  required bytes a_onDataAvailableStart = 4;
+  uint64 a_offset = 1;
+  uint32 a_count = 2;
+  string a_data = 3;
+  bytes a_onDataAvailableStart = 4;
 }
 
 message Msg_OnStopRequest {
-  required bytes a_aStatus = 1;
-  required protobuf.mozilla.net.ResourceTimingStructArgs a_timing = 2;
-  required bytes a_lastActiveTabOptimization = 3;
-  required bytes a_responseTrailers = 4;
-  required bytes a_onStopRequestStart = 5;
+  bytes a_aStatus = 1;
+  protobuf.mozilla.net.ResourceTimingStructArgs a_timing = 2;
+  bytes a_lastActiveTabOptimization = 3;
+  bytes a_responseTrailers = 4;
+  bytes a_onStopRequestStart = 5;
 }
 
 message Msg___delete__ {

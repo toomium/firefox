@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "IPCStream.pb.h"
 #include "NeckoChannelParams.pb.h"
 // @@protoc_insertion_point(includes)
@@ -43,6 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PHttpTransaction_5fprotobuf_2emozilla_2enet_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PHttpTransaction_5fprotobuf_2emozilla_2enet_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace net {
@@ -62,7 +65,7 @@ namespace net {
 // ===================================================================
 
 class NetworkAddressArg final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.NetworkAddressArg) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.NetworkAddressArg) */ {
  public:
   inline NetworkAddressArg() : NetworkAddressArg(nullptr) {}
   ~NetworkAddressArg() override;
@@ -92,13 +95,15 @@ class NetworkAddressArg final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const NetworkAddressArg& default_instance() {
     return *internal_default_instance();
   }
@@ -136,9 +141,15 @@ class NetworkAddressArg final :
   NetworkAddressArg* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<NetworkAddressArg>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const NetworkAddressArg& from);
-  void MergeFrom(const NetworkAddressArg& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const NetworkAddressArg& from) {
+    NetworkAddressArg::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -151,7 +162,7 @@ class NetworkAddressArg final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(NetworkAddressArg* other);
 
   private:
@@ -164,7 +175,10 @@ class NetworkAddressArg final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -178,11 +192,7 @@ class NetworkAddressArg final :
     kAResolvedByTRRFieldNumber = 3,
     kAEchConfigUsedFieldNumber = 6,
   };
-  // required bytes a_selfAddr = 1;
-  bool has_a_selfaddr() const;
-  private:
-  bool _internal_has_a_selfaddr() const;
-  public:
+  // bytes a_selfAddr = 1;
   void clear_a_selfaddr();
   const std::string& a_selfaddr() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -196,11 +206,7 @@ class NetworkAddressArg final :
   std::string* _internal_mutable_a_selfaddr();
   public:
 
-  // required bytes a_peerAddr = 2;
-  bool has_a_peeraddr() const;
-  private:
-  bool _internal_has_a_peeraddr() const;
-  public:
+  // bytes a_peerAddr = 2;
   void clear_a_peeraddr();
   const std::string& a_peeraddr() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -214,11 +220,7 @@ class NetworkAddressArg final :
   std::string* _internal_mutable_a_peeraddr();
   public:
 
-  // required bytes a_mode = 4;
-  bool has_a_mode() const;
-  private:
-  bool _internal_has_a_mode() const;
-  public:
+  // bytes a_mode = 4;
   void clear_a_mode();
   const std::string& a_mode() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -232,11 +234,7 @@ class NetworkAddressArg final :
   std::string* _internal_mutable_a_mode();
   public:
 
-  // required bytes a_trrSkipReason = 5;
-  bool has_a_trrskipreason() const;
-  private:
-  bool _internal_has_a_trrskipreason() const;
-  public:
+  // bytes a_trrSkipReason = 5;
   void clear_a_trrskipreason();
   const std::string& a_trrskipreason() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -250,11 +248,7 @@ class NetworkAddressArg final :
   std::string* _internal_mutable_a_trrskipreason();
   public:
 
-  // required bool a_resolvedByTRR = 3;
-  bool has_a_resolvedbytrr() const;
-  private:
-  bool _internal_has_a_resolvedbytrr() const;
-  public:
+  // bool a_resolvedByTRR = 3;
   void clear_a_resolvedbytrr();
   bool a_resolvedbytrr() const;
   void set_a_resolvedbytrr(bool value);
@@ -263,11 +257,7 @@ class NetworkAddressArg final :
   void _internal_set_a_resolvedbytrr(bool value);
   public:
 
-  // required bool a_echConfigUsed = 6;
-  bool has_a_echconfigused() const;
-  private:
-  bool _internal_has_a_echconfigused() const;
-  public:
+  // bool a_echConfigUsed = 6;
   void clear_a_echconfigused();
   bool a_echconfigused() const;
   void set_a_echconfigused(bool value);
@@ -280,21 +270,17 @@ class NetworkAddressArg final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfaddr_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_peeraddr_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mode_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_trrskipreason_;
     bool a_resolvedbytrr_;
     bool a_echconfigused_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHttpTransaction_5fprotobuf_2emozilla_2enet_2eh_2eproto;
@@ -310,17 +296,9 @@ class NetworkAddressArg final :
 #endif  // __GNUC__
 // NetworkAddressArg
 
-// required bytes a_selfAddr = 1;
-inline bool NetworkAddressArg::_internal_has_a_selfaddr() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool NetworkAddressArg::has_a_selfaddr() const {
-  return _internal_has_a_selfaddr();
-}
+// bytes a_selfAddr = 1;
 inline void NetworkAddressArg::clear_a_selfaddr() {
   _impl_.a_selfaddr_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& NetworkAddressArg::a_selfaddr() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.NetworkAddressArg.a_selfAddr)
@@ -329,7 +307,7 @@ inline const std::string& NetworkAddressArg::a_selfaddr() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void NetworkAddressArg::set_a_selfaddr(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfaddr_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.NetworkAddressArg.a_selfAddr)
 }
@@ -342,32 +320,22 @@ inline const std::string& NetworkAddressArg::_internal_a_selfaddr() const {
   return _impl_.a_selfaddr_.Get();
 }
 inline void NetworkAddressArg::_internal_set_a_selfaddr(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfaddr_.Set(value, GetArenaForAllocation());
 }
 inline std::string* NetworkAddressArg::_internal_mutable_a_selfaddr() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfaddr_.Mutable(GetArenaForAllocation());
 }
 inline std::string* NetworkAddressArg::release_a_selfaddr() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.NetworkAddressArg.a_selfAddr)
-  if (!_internal_has_a_selfaddr()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfaddr_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfaddr_.IsDefault()) {
-    _impl_.a_selfaddr_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfaddr_.Release();
 }
 inline void NetworkAddressArg::set_allocated_a_selfaddr(std::string* a_selfaddr) {
   if (a_selfaddr != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfaddr_.SetAllocated(a_selfaddr, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -378,17 +346,9 @@ inline void NetworkAddressArg::set_allocated_a_selfaddr(std::string* a_selfaddr)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.NetworkAddressArg.a_selfAddr)
 }
 
-// required bytes a_peerAddr = 2;
-inline bool NetworkAddressArg::_internal_has_a_peeraddr() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool NetworkAddressArg::has_a_peeraddr() const {
-  return _internal_has_a_peeraddr();
-}
+// bytes a_peerAddr = 2;
 inline void NetworkAddressArg::clear_a_peeraddr() {
   _impl_.a_peeraddr_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& NetworkAddressArg::a_peeraddr() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.NetworkAddressArg.a_peerAddr)
@@ -397,7 +357,7 @@ inline const std::string& NetworkAddressArg::a_peeraddr() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void NetworkAddressArg::set_a_peeraddr(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_peeraddr_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.NetworkAddressArg.a_peerAddr)
 }
@@ -410,32 +370,22 @@ inline const std::string& NetworkAddressArg::_internal_a_peeraddr() const {
   return _impl_.a_peeraddr_.Get();
 }
 inline void NetworkAddressArg::_internal_set_a_peeraddr(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_peeraddr_.Set(value, GetArenaForAllocation());
 }
 inline std::string* NetworkAddressArg::_internal_mutable_a_peeraddr() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_peeraddr_.Mutable(GetArenaForAllocation());
 }
 inline std::string* NetworkAddressArg::release_a_peeraddr() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.NetworkAddressArg.a_peerAddr)
-  if (!_internal_has_a_peeraddr()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_peeraddr_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_peeraddr_.IsDefault()) {
-    _impl_.a_peeraddr_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_peeraddr_.Release();
 }
 inline void NetworkAddressArg::set_allocated_a_peeraddr(std::string* a_peeraddr) {
   if (a_peeraddr != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_peeraddr_.SetAllocated(a_peeraddr, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -446,17 +396,9 @@ inline void NetworkAddressArg::set_allocated_a_peeraddr(std::string* a_peeraddr)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.NetworkAddressArg.a_peerAddr)
 }
 
-// required bool a_resolvedByTRR = 3;
-inline bool NetworkAddressArg::_internal_has_a_resolvedbytrr() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool NetworkAddressArg::has_a_resolvedbytrr() const {
-  return _internal_has_a_resolvedbytrr();
-}
+// bool a_resolvedByTRR = 3;
 inline void NetworkAddressArg::clear_a_resolvedbytrr() {
   _impl_.a_resolvedbytrr_ = false;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline bool NetworkAddressArg::_internal_a_resolvedbytrr() const {
   return _impl_.a_resolvedbytrr_;
@@ -466,7 +408,7 @@ inline bool NetworkAddressArg::a_resolvedbytrr() const {
   return _internal_a_resolvedbytrr();
 }
 inline void NetworkAddressArg::_internal_set_a_resolvedbytrr(bool value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_resolvedbytrr_ = value;
 }
 inline void NetworkAddressArg::set_a_resolvedbytrr(bool value) {
@@ -474,17 +416,9 @@ inline void NetworkAddressArg::set_a_resolvedbytrr(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.NetworkAddressArg.a_resolvedByTRR)
 }
 
-// required bytes a_mode = 4;
-inline bool NetworkAddressArg::_internal_has_a_mode() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool NetworkAddressArg::has_a_mode() const {
-  return _internal_has_a_mode();
-}
+// bytes a_mode = 4;
 inline void NetworkAddressArg::clear_a_mode() {
   _impl_.a_mode_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& NetworkAddressArg::a_mode() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.NetworkAddressArg.a_mode)
@@ -493,7 +427,7 @@ inline const std::string& NetworkAddressArg::a_mode() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void NetworkAddressArg::set_a_mode(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_mode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.NetworkAddressArg.a_mode)
 }
@@ -506,32 +440,22 @@ inline const std::string& NetworkAddressArg::_internal_a_mode() const {
   return _impl_.a_mode_.Get();
 }
 inline void NetworkAddressArg::_internal_set_a_mode(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_mode_.Set(value, GetArenaForAllocation());
 }
 inline std::string* NetworkAddressArg::_internal_mutable_a_mode() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_mode_.Mutable(GetArenaForAllocation());
 }
 inline std::string* NetworkAddressArg::release_a_mode() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.NetworkAddressArg.a_mode)
-  if (!_internal_has_a_mode()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_mode_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_mode_.IsDefault()) {
-    _impl_.a_mode_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_mode_.Release();
 }
 inline void NetworkAddressArg::set_allocated_a_mode(std::string* a_mode) {
   if (a_mode != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_mode_.SetAllocated(a_mode, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -542,17 +466,9 @@ inline void NetworkAddressArg::set_allocated_a_mode(std::string* a_mode) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.NetworkAddressArg.a_mode)
 }
 
-// required bytes a_trrSkipReason = 5;
-inline bool NetworkAddressArg::_internal_has_a_trrskipreason() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool NetworkAddressArg::has_a_trrskipreason() const {
-  return _internal_has_a_trrskipreason();
-}
+// bytes a_trrSkipReason = 5;
 inline void NetworkAddressArg::clear_a_trrskipreason() {
   _impl_.a_trrskipreason_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& NetworkAddressArg::a_trrskipreason() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.NetworkAddressArg.a_trrSkipReason)
@@ -561,7 +477,7 @@ inline const std::string& NetworkAddressArg::a_trrskipreason() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void NetworkAddressArg::set_a_trrskipreason(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000008u;
+ 
  _impl_.a_trrskipreason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.NetworkAddressArg.a_trrSkipReason)
 }
@@ -574,32 +490,22 @@ inline const std::string& NetworkAddressArg::_internal_a_trrskipreason() const {
   return _impl_.a_trrskipreason_.Get();
 }
 inline void NetworkAddressArg::_internal_set_a_trrskipreason(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_trrskipreason_.Set(value, GetArenaForAllocation());
 }
 inline std::string* NetworkAddressArg::_internal_mutable_a_trrskipreason() {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   return _impl_.a_trrskipreason_.Mutable(GetArenaForAllocation());
 }
 inline std::string* NetworkAddressArg::release_a_trrskipreason() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.NetworkAddressArg.a_trrSkipReason)
-  if (!_internal_has_a_trrskipreason()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.a_trrskipreason_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_trrskipreason_.IsDefault()) {
-    _impl_.a_trrskipreason_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_trrskipreason_.Release();
 }
 inline void NetworkAddressArg::set_allocated_a_trrskipreason(std::string* a_trrskipreason) {
   if (a_trrskipreason != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    
   }
   _impl_.a_trrskipreason_.SetAllocated(a_trrskipreason, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -610,17 +516,9 @@ inline void NetworkAddressArg::set_allocated_a_trrskipreason(std::string* a_trrs
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.NetworkAddressArg.a_trrSkipReason)
 }
 
-// required bool a_echConfigUsed = 6;
-inline bool NetworkAddressArg::_internal_has_a_echconfigused() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool NetworkAddressArg::has_a_echconfigused() const {
-  return _internal_has_a_echconfigused();
-}
+// bool a_echConfigUsed = 6;
 inline void NetworkAddressArg::clear_a_echconfigused() {
   _impl_.a_echconfigused_ = false;
-  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline bool NetworkAddressArg::_internal_a_echconfigused() const {
   return _impl_.a_echconfigused_;
@@ -630,7 +528,7 @@ inline bool NetworkAddressArg::a_echconfigused() const {
   return _internal_a_echconfigused();
 }
 inline void NetworkAddressArg::_internal_set_a_echconfigused(bool value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   _impl_.a_echconfigused_ = value;
 }
 inline void NetworkAddressArg::set_a_echconfigused(bool value) {

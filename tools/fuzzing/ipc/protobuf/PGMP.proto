@@ -5,8 +5,7 @@
 
 // Generated from PGMP.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.gmp.PGMP;
 
@@ -18,18 +17,18 @@ import "PrefsTypes.proto";
 
 // Message declarations
 message Msg_InitCrashReporter {
-  required protobuf.CrashReporter.CrashReporterInitArgs a_aInitArgs = 1;
+  protobuf.CrashReporter.CrashReporterInitArgs a_aInitArgs = 1;
 }
 
 message Msg_PGMPTimerConstructor {
-  required sint64 a_actorid = 1;
+  sint64 a_actorid = 1;
 }
 
 message Reply_PGMPTimerConstructor {
 }
 
 message Msg_PGMPStorageConstructor {
-  required sint64 a_actorid = 1;
+  sint64 a_actorid = 1;
 }
 
 message Reply_PGMPStorageConstructor {
@@ -39,61 +38,61 @@ message Msg_PGMPContentChildDestroyed {
 }
 
 message Msg_FOGData {
-  required bytes a_buf = 1;
+  bytes a_buf = 1;
 }
 
 message Msg_CrashPluginNow {
 }
 
 message Msg_StartPlugin {
-  required string a_adapter = 1;
+  string a_adapter = 1;
 }
 
 message Reply_StartPlugin {
 }
 
 message Msg_ProvideStorageId {
-  required string a_storageId = 1;
+  string a_storageId = 1;
 }
 
 message Msg_PreloadLibs {
-  required string a_libs = 1;
+  string a_libs = 1;
 }
 
 message Msg_CloseActive {
 }
 
 message Msg_InitGMPContentChild {
-  required bytes a_endpoint = 1;
+  bytes a_endpoint = 1;
 }
 
 message Msg_InitProfiler {
-  required bytes a_endpoint = 1;
+  bytes a_endpoint = 1;
 }
 
 message Msg_PreferenceUpdate {
-  required protobuf.mozilla.dom.Pref a_pref = 1;
+  protobuf.mozilla.dom.Pref a_pref = 1;
 }
 
 message Msg_FlushFOGData {
 }
 
 message Reply_FlushFOGData {
-  required bytes a_buf = 1;
+  bytes a_buf = 1;
 }
 
 message Msg_TestTriggerMetrics {
 }
 
 message Reply_TestTriggerMetrics {
-  required bool a_unused = 1;
+  bool a_unused = 1;
 }
 
 message Msg_Shutdown {
 }
 
 message Reply_Shutdown {
-  required string a_profile = 1;
+  string a_profile = 1;
 }
 
 // Parameter mappings stats:

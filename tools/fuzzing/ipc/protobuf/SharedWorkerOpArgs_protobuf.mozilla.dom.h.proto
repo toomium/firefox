@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/workers/sharedworkers/SharedWorkerOpArgs.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom;
 
@@ -29,15 +28,15 @@ message SharedWorkerTerminateOpArgs {
 }
 
 message SharedWorkerPortIdentifierOpArgs {
-  required protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 1;
+  protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 1;
 }
 
 message SharedWorkerAddWindowIDOpArgs {
-  required uint64 a_windowID = 1;
+  uint64 a_windowID = 1;
 }
 
 message SharedWorkerRemoveWindowIDOpArgs {
-  required uint64 a_windowID = 1;
+  uint64 a_windowID = 1;
 }
 
 message SharedWorkerOpArgs {

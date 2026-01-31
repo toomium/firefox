@@ -8,7 +8,10 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -22,9 +25,8 @@ namespace mozilla {
 namespace dom {
 PROTOBUF_CONSTEXPR FileSystemFileResponse::FileSystemFileResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_blob_)*/nullptr} {}
+    /*decltype(_impl_.a_blob_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FileSystemFileResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemFileResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -36,9 +38,8 @@ struct FileSystemFileResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 FileSystemFileResponseDefaultTypeInternal _FileSystemFileResponse_default_instance_;
 PROTOBUF_CONSTEXPR FileSystemDirectoryResponse::FileSystemDirectoryResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_realpath_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_realpath_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FileSystemDirectoryResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemDirectoryResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -50,9 +51,8 @@ struct FileSystemDirectoryResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 FileSystemDirectoryResponseDefaultTypeInternal _FileSystemDirectoryResponse_default_instance_;
 PROTOBUF_CONSTEXPR FileSystemDirectoryListingResponseFile::FileSystemDirectoryListingResponseFile(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_blob_)*/nullptr} {}
+    /*decltype(_impl_.a_blob_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FileSystemDirectoryListingResponseFileDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemDirectoryListingResponseFileDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -64,9 +64,8 @@ struct FileSystemDirectoryListingResponseFileDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 FileSystemDirectoryListingResponseFileDefaultTypeInternal _FileSystemDirectoryListingResponseFile_default_instance_;
 PROTOBUF_CONSTEXPR FileSystemDirectoryListingResponseDirectory::FileSystemDirectoryListingResponseDirectory(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_directoryrealpath_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_directoryrealpath_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FileSystemDirectoryListingResponseDirectoryDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemDirectoryListingResponseDirectoryDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -118,9 +117,8 @@ struct FileSystemFilesResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 FileSystemFilesResponseDefaultTypeInternal _FileSystemFilesResponse_default_instance_;
 PROTOBUF_CONSTEXPR FileSystemErrorResponse::FileSystemErrorResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_error_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_error_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FileSystemErrorResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FileSystemErrorResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -147,6 +145,162 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
+static ::_pb::Metadata file_level_metadata_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[9];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
+
+const uint32_t TableStruct_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileSystemFileResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileSystemFileResponse, _impl_.a_blob_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileSystemDirectoryResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileSystemDirectoryResponse, _impl_.a_realpath_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile, _impl_.a_blob_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory, _impl_.a_directoryrealpath_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData, _impl_._oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData, _impl_.content_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileSystemDirectoryListingResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileSystemDirectoryListingResponse, _impl_.a_data_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileSystemFilesResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileSystemFilesResponse, _impl_.a_data_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileSystemErrorResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileSystemErrorResponse, _impl_.a_error_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileSystemResponseValue, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileSystemResponseValue, _impl_._oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileSystemResponseValue, _impl_.content_),
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::protobuf::mozilla::dom::FileSystemFileResponse)},
+  { 7, -1, -1, sizeof(::protobuf::mozilla::dom::FileSystemDirectoryResponse)},
+  { 14, -1, -1, sizeof(::protobuf::mozilla::dom::FileSystemDirectoryListingResponseFile)},
+  { 21, -1, -1, sizeof(::protobuf::mozilla::dom::FileSystemDirectoryListingResponseDirectory)},
+  { 28, -1, -1, sizeof(::protobuf::mozilla::dom::FileSystemDirectoryListingResponseData)},
+  { 37, -1, -1, sizeof(::protobuf::mozilla::dom::FileSystemDirectoryListingResponse)},
+  { 44, -1, -1, sizeof(::protobuf::mozilla::dom::FileSystemFilesResponse)},
+  { 51, -1, -1, sizeof(::protobuf::mozilla::dom::FileSystemErrorResponse)},
+  { 58, -1, -1, sizeof(::protobuf::mozilla::dom::FileSystemResponseValue)},
+};
+
+static const ::_pb::Message* const file_default_instances[] = {
+  &::protobuf::mozilla::dom::_FileSystemFileResponse_default_instance_._instance,
+  &::protobuf::mozilla::dom::_FileSystemDirectoryResponse_default_instance_._instance,
+  &::protobuf::mozilla::dom::_FileSystemDirectoryListingResponseFile_default_instance_._instance,
+  &::protobuf::mozilla::dom::_FileSystemDirectoryListingResponseDirectory_default_instance_._instance,
+  &::protobuf::mozilla::dom::_FileSystemDirectoryListingResponseData_default_instance_._instance,
+  &::protobuf::mozilla::dom::_FileSystemDirectoryListingResponse_default_instance_._instance,
+  &::protobuf::mozilla::dom::_FileSystemFilesResponse_default_instance_._instance,
+  &::protobuf::mozilla::dom::_FileSystemErrorResponse_default_instance_._instance,
+  &::protobuf::mozilla::dom::_FileSystemResponseValue_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n/PFileSystemRequest_protobuf.mozilla.do"
+  "m.h.proto\022\024protobuf.mozilla.dom\032\rIPCBlob"
+  ".proto\"G\n\026FileSystemFileResponse\022-\n\006a_bl"
+  "ob\030\001 \001(\0132\035.protobuf.mozilla.dom.IPCBlob\""
+  "1\n\033FileSystemDirectoryResponse\022\022\n\na_real"
+  "Path\030\001 \001(\t\"W\n&FileSystemDirectoryListing"
+  "ResponseFile\022-\n\006a_blob\030\001 \001(\0132\035.protobuf."
+  "mozilla.dom.IPCBlob\"J\n+FileSystemDirecto"
+  "ryListingResponseDirectory\022\033\n\023a_director"
+  "yRealPath\030\001 \001(\t\"\245\002\n&FileSystemDirectoryL"
+  "istingResponseData\022r\n*a_mVFileSystemDire"
+  "ctoryListingResponseFile\030\001 \001(\0132<.protobu"
+  "f.mozilla.dom.FileSystemDirectoryListing"
+  "ResponseFileH\000\022|\n/a_mVFileSystemDirector"
+  "yListingResponseDirectory\030\002 \001(\0132A.protob"
+  "uf.mozilla.dom.FileSystemDirectoryListin"
+  "gResponseDirectoryH\000B\t\n\007content\"r\n\"FileS"
+  "ystemDirectoryListingResponse\022L\n\006a_data\030"
+  "\001 \003(\0132<.protobuf.mozilla.dom.FileSystemD"
+  "irectoryListingResponseData\"W\n\027FileSyste"
+  "mFilesResponse\022<\n\006a_data\030\001 \003(\0132,.protobu"
+  "f.mozilla.dom.FileSystemFileResponse\"*\n\027"
+  "FileSystemErrorResponse\022\017\n\007a_error\030\001 \001(\014"
+  "\"\356\003\n\027FileSystemResponseValue\022\\\n\037a_mVFile"
+  "SystemDirectoryResponse\030\001 \001(\01321.protobuf"
+  ".mozilla.dom.FileSystemDirectoryResponse"
+  "H\000\022j\n&a_mVFileSystemDirectoryListingResp"
+  "onse\030\002 \001(\01328.protobuf.mozilla.dom.FileSy"
+  "stemDirectoryListingResponseH\000\022R\n\032a_mVFi"
+  "leSystemFileResponse\030\003 \001(\0132,.protobuf.mo"
+  "zilla.dom.FileSystemFileResponseH\000\022T\n\033a_"
+  "mVFileSystemFilesResponse\030\004 \001(\0132-.protob"
+  "uf.mozilla.dom.FileSystemFilesResponseH\000"
+  "\022T\n\033a_mVFileSystemErrorResponse\030\005 \001(\0132-."
+  "protobuf.mozilla.dom.FileSystemErrorResp"
+  "onseH\000B\t\n\007contentb\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_deps[1] = {
+  &::descriptor_table_IPCBlob_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto = {
+    false, false, 1425, descriptor_table_protodef_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto,
+    "PFileSystemRequest_protobuf.mozilla.dom.h.proto",
+    &descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once, descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_deps, 1, 9,
+    schemas, file_default_instances, TableStruct_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets,
+    file_level_metadata_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto, file_level_enum_descriptors_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto,
+    file_level_service_descriptors_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter() {
+  return &descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
+}
+
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto(&descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -155,14 +309,7 @@ namespace dom {
 
 class FileSystemFileResponse::_Internal {
  public:
-  using HasBits = decltype(std::declval<FileSystemFileResponse>()._impl_._has_bits_);
   static const ::protobuf::mozilla::dom::IPCBlob& a_blob(const FileSystemFileResponse* msg);
-  static void set_has_a_blob(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 const ::protobuf::mozilla::dom::IPCBlob&
@@ -170,24 +317,25 @@ FileSystemFileResponse::_Internal::a_blob(const FileSystemFileResponse* msg) {
   return *msg->_impl_.a_blob_;
 }
 void FileSystemFileResponse::clear_a_blob() {
-  if (_impl_.a_blob_ != nullptr) _impl_.a_blob_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_blob_ != nullptr) {
+    delete _impl_.a_blob_;
+  }
+  _impl_.a_blob_ = nullptr;
 }
 FileSystemFileResponse::FileSystemFileResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.FileSystemFileResponse)
 }
 FileSystemFileResponse::FileSystemFileResponse(const FileSystemFileResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   FileSystemFileResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_blob_){nullptr}};
+      decltype(_impl_.a_blob_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_a_blob()) {
     _this->_impl_.a_blob_ = new ::protobuf::mozilla::dom::IPCBlob(*from._impl_.a_blob_);
   }
@@ -199,15 +347,14 @@ inline void FileSystemFileResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_blob_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_blob_){nullptr}
   };
 }
 
 FileSystemFileResponse::~FileSystemFileResponse() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.FileSystemFileResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -229,23 +376,20 @@ void FileSystemFileResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.a_blob_ != nullptr);
-    _impl_.a_blob_->Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_blob_ != nullptr) {
+    delete _impl_.a_blob_;
   }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_blob_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* FileSystemFileResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+      // .protobuf.mozilla.dom.IPCBlob a_blob = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_blob(), ptr);
@@ -264,12 +408,11 @@ const char* FileSystemFileResponse::_InternalParse(const char* ptr, ::_pbi::Pars
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -283,17 +426,16 @@ uint8_t* FileSystemFileResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  if (this->_internal_has_a_blob()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_blob(this),
         _Internal::a_blob(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.FileSystemFileResponse)
   return target;
@@ -303,32 +445,30 @@ size_t FileSystemFileResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.FileSystemFileResponse)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
-  if (_internal_has_a_blob()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_blob_);
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  if (this->_internal_has_a_blob()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_blob_);
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void FileSystemFileResponse::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const FileSystemFileResponse*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FileSystemFileResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    FileSystemFileResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FileSystemFileResponse::GetClassData() const { return &_class_data_; }
 
-void FileSystemFileResponse::MergeFrom(const FileSystemFileResponse& from) {
-  FileSystemFileResponse* const _this = this;
+
+void FileSystemFileResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<FileSystemFileResponse*>(&to_msg);
+  auto& from = static_cast<const FileSystemFileResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.FileSystemFileResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -338,7 +478,7 @@ void FileSystemFileResponse::MergeFrom(const FileSystemFileResponse& from) {
     _this->_internal_mutable_a_blob()->::protobuf::mozilla::dom::IPCBlob::MergeFrom(
         from._internal_a_blob());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void FileSystemFileResponse::CopyFrom(const FileSystemFileResponse& from) {
@@ -349,58 +489,46 @@ void FileSystemFileResponse::CopyFrom(const FileSystemFileResponse& from) {
 }
 
 bool FileSystemFileResponse::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_blob()) {
-    if (!_impl_.a_blob_->IsInitialized()) return false;
-  }
   return true;
 }
 
 void FileSystemFileResponse::InternalSwap(FileSystemFileResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_blob_, other->_impl_.a_blob_);
 }
 
-std::string FileSystemFileResponse::GetTypeName() const {
-  return "protobuf.mozilla.dom.FileSystemFileResponse";
+::PROTOBUF_NAMESPACE_ID::Metadata FileSystemFileResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[0]);
 }
-
 
 // ===================================================================
 
 class FileSystemDirectoryResponse::_Internal {
  public:
-  using HasBits = decltype(std::declval<FileSystemDirectoryResponse>()._impl_._has_bits_);
-  static void set_has_a_realpath(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 FileSystemDirectoryResponse::FileSystemDirectoryResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.FileSystemDirectoryResponse)
 }
 FileSystemDirectoryResponse::FileSystemDirectoryResponse(const FileSystemDirectoryResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   FileSystemDirectoryResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_realpath_){}};
+      decltype(_impl_.a_realpath_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_realpath_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_realpath_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_realpath()) {
+  if (!from._internal_a_realpath().empty()) {
     _this->_impl_.a_realpath_.Set(from._internal_a_realpath(), 
       _this->GetArenaForAllocation());
   }
@@ -412,9 +540,8 @@ inline void FileSystemDirectoryResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_realpath_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_realpath_){}
   };
   _impl_.a_realpath_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -424,7 +551,7 @@ inline void FileSystemDirectoryResponse::SharedCtor(
 
 FileSystemDirectoryResponse::~FileSystemDirectoryResponse() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.FileSystemDirectoryResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -446,27 +573,23 @@ void FileSystemDirectoryResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_realpath_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_realpath_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* FileSystemDirectoryResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_realPath = 1;
+      // string a_realPath = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_realpath();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.FileSystemDirectoryResponse.a_realPath"));
         } else
           goto handle_unusual;
         continue;
@@ -481,12 +604,11 @@ const char* FileSystemDirectoryResponse::_InternalParse(const char* ptr, ::_pbi:
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -500,16 +622,19 @@ uint8_t* FileSystemDirectoryResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_realPath = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_realPath = 1;
+  if (!this->_internal_a_realpath().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_realpath().data(), static_cast<int>(this->_internal_a_realpath().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.FileSystemDirectoryResponse.a_realPath");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_realpath(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.FileSystemDirectoryResponse)
   return target;
@@ -519,41 +644,39 @@ size_t FileSystemDirectoryResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.FileSystemDirectoryResponse)
   size_t total_size = 0;
 
-  // required string a_realPath = 1;
-  if (_internal_has_a_realpath()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_realpath());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_realPath = 1;
+  if (!this->_internal_a_realpath().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_realpath());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void FileSystemDirectoryResponse::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const FileSystemDirectoryResponse*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FileSystemDirectoryResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    FileSystemDirectoryResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FileSystemDirectoryResponse::GetClassData() const { return &_class_data_; }
 
-void FileSystemDirectoryResponse::MergeFrom(const FileSystemDirectoryResponse& from) {
-  FileSystemDirectoryResponse* const _this = this;
+
+void FileSystemDirectoryResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<FileSystemDirectoryResponse*>(&to_msg);
+  auto& from = static_cast<const FileSystemDirectoryResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.FileSystemDirectoryResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_realpath()) {
+  if (!from._internal_a_realpath().empty()) {
     _this->_internal_set_a_realpath(from._internal_a_realpath());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void FileSystemDirectoryResponse::CopyFrom(const FileSystemDirectoryResponse& from) {
@@ -564,7 +687,6 @@ void FileSystemDirectoryResponse::CopyFrom(const FileSystemDirectoryResponse& fr
 }
 
 bool FileSystemDirectoryResponse::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -573,30 +695,23 @@ void FileSystemDirectoryResponse::InternalSwap(FileSystemDirectoryResponse* othe
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_realpath_, lhs_arena,
       &other->_impl_.a_realpath_, rhs_arena
   );
 }
 
-std::string FileSystemDirectoryResponse::GetTypeName() const {
-  return "protobuf.mozilla.dom.FileSystemDirectoryResponse";
+::PROTOBUF_NAMESPACE_ID::Metadata FileSystemDirectoryResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[1]);
 }
-
 
 // ===================================================================
 
 class FileSystemDirectoryListingResponseFile::_Internal {
  public:
-  using HasBits = decltype(std::declval<FileSystemDirectoryListingResponseFile>()._impl_._has_bits_);
   static const ::protobuf::mozilla::dom::IPCBlob& a_blob(const FileSystemDirectoryListingResponseFile* msg);
-  static void set_has_a_blob(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 const ::protobuf::mozilla::dom::IPCBlob&
@@ -604,24 +719,25 @@ FileSystemDirectoryListingResponseFile::_Internal::a_blob(const FileSystemDirect
   return *msg->_impl_.a_blob_;
 }
 void FileSystemDirectoryListingResponseFile::clear_a_blob() {
-  if (_impl_.a_blob_ != nullptr) _impl_.a_blob_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_blob_ != nullptr) {
+    delete _impl_.a_blob_;
+  }
+  _impl_.a_blob_ = nullptr;
 }
 FileSystemDirectoryListingResponseFile::FileSystemDirectoryListingResponseFile(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile)
 }
 FileSystemDirectoryListingResponseFile::FileSystemDirectoryListingResponseFile(const FileSystemDirectoryListingResponseFile& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   FileSystemDirectoryListingResponseFile* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_blob_){nullptr}};
+      decltype(_impl_.a_blob_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_a_blob()) {
     _this->_impl_.a_blob_ = new ::protobuf::mozilla::dom::IPCBlob(*from._impl_.a_blob_);
   }
@@ -633,15 +749,14 @@ inline void FileSystemDirectoryListingResponseFile::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_blob_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_blob_){nullptr}
   };
 }
 
 FileSystemDirectoryListingResponseFile::~FileSystemDirectoryListingResponseFile() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -663,23 +778,20 @@ void FileSystemDirectoryListingResponseFile::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.a_blob_ != nullptr);
-    _impl_.a_blob_->Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_blob_ != nullptr) {
+    delete _impl_.a_blob_;
   }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_blob_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* FileSystemDirectoryListingResponseFile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+      // .protobuf.mozilla.dom.IPCBlob a_blob = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_blob(), ptr);
@@ -698,12 +810,11 @@ const char* FileSystemDirectoryListingResponseFile::_InternalParse(const char* p
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -717,17 +828,16 @@ uint8_t* FileSystemDirectoryListingResponseFile::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  if (this->_internal_has_a_blob()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_blob(this),
         _Internal::a_blob(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile)
   return target;
@@ -737,32 +847,30 @@ size_t FileSystemDirectoryListingResponseFile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
-  if (_internal_has_a_blob()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_blob_);
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  if (this->_internal_has_a_blob()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_blob_);
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void FileSystemDirectoryListingResponseFile::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const FileSystemDirectoryListingResponseFile*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FileSystemDirectoryListingResponseFile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    FileSystemDirectoryListingResponseFile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FileSystemDirectoryListingResponseFile::GetClassData() const { return &_class_data_; }
 
-void FileSystemDirectoryListingResponseFile::MergeFrom(const FileSystemDirectoryListingResponseFile& from) {
-  FileSystemDirectoryListingResponseFile* const _this = this;
+
+void FileSystemDirectoryListingResponseFile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<FileSystemDirectoryListingResponseFile*>(&to_msg);
+  auto& from = static_cast<const FileSystemDirectoryListingResponseFile&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -772,7 +880,7 @@ void FileSystemDirectoryListingResponseFile::MergeFrom(const FileSystemDirectory
     _this->_internal_mutable_a_blob()->::protobuf::mozilla::dom::IPCBlob::MergeFrom(
         from._internal_a_blob());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void FileSystemDirectoryListingResponseFile::CopyFrom(const FileSystemDirectoryListingResponseFile& from) {
@@ -783,58 +891,46 @@ void FileSystemDirectoryListingResponseFile::CopyFrom(const FileSystemDirectoryL
 }
 
 bool FileSystemDirectoryListingResponseFile::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_blob()) {
-    if (!_impl_.a_blob_->IsInitialized()) return false;
-  }
   return true;
 }
 
 void FileSystemDirectoryListingResponseFile::InternalSwap(FileSystemDirectoryListingResponseFile* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_blob_, other->_impl_.a_blob_);
 }
 
-std::string FileSystemDirectoryListingResponseFile::GetTypeName() const {
-  return "protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile";
+::PROTOBUF_NAMESPACE_ID::Metadata FileSystemDirectoryListingResponseFile::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[2]);
 }
-
 
 // ===================================================================
 
 class FileSystemDirectoryListingResponseDirectory::_Internal {
  public:
-  using HasBits = decltype(std::declval<FileSystemDirectoryListingResponseDirectory>()._impl_._has_bits_);
-  static void set_has_a_directoryrealpath(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 FileSystemDirectoryListingResponseDirectory::FileSystemDirectoryListingResponseDirectory(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory)
 }
 FileSystemDirectoryListingResponseDirectory::FileSystemDirectoryListingResponseDirectory(const FileSystemDirectoryListingResponseDirectory& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   FileSystemDirectoryListingResponseDirectory* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_directoryrealpath_){}};
+      decltype(_impl_.a_directoryrealpath_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_directoryrealpath_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_directoryrealpath_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_directoryrealpath()) {
+  if (!from._internal_a_directoryrealpath().empty()) {
     _this->_impl_.a_directoryrealpath_.Set(from._internal_a_directoryrealpath(), 
       _this->GetArenaForAllocation());
   }
@@ -846,9 +942,8 @@ inline void FileSystemDirectoryListingResponseDirectory::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_directoryrealpath_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_directoryrealpath_){}
   };
   _impl_.a_directoryrealpath_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -858,7 +953,7 @@ inline void FileSystemDirectoryListingResponseDirectory::SharedCtor(
 
 FileSystemDirectoryListingResponseDirectory::~FileSystemDirectoryListingResponseDirectory() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -880,27 +975,23 @@ void FileSystemDirectoryListingResponseDirectory::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_directoryrealpath_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_directoryrealpath_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* FileSystemDirectoryListingResponseDirectory::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_directoryRealPath = 1;
+      // string a_directoryRealPath = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_directoryrealpath();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory.a_directoryRealPath"));
         } else
           goto handle_unusual;
         continue;
@@ -915,12 +1006,11 @@ const char* FileSystemDirectoryListingResponseDirectory::_InternalParse(const ch
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -934,16 +1024,19 @@ uint8_t* FileSystemDirectoryListingResponseDirectory::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_directoryRealPath = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_directoryRealPath = 1;
+  if (!this->_internal_a_directoryrealpath().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_directoryrealpath().data(), static_cast<int>(this->_internal_a_directoryrealpath().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory.a_directoryRealPath");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_directoryrealpath(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory)
   return target;
@@ -953,41 +1046,39 @@ size_t FileSystemDirectoryListingResponseDirectory::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory)
   size_t total_size = 0;
 
-  // required string a_directoryRealPath = 1;
-  if (_internal_has_a_directoryrealpath()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_directoryrealpath());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_directoryRealPath = 1;
+  if (!this->_internal_a_directoryrealpath().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_directoryrealpath());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void FileSystemDirectoryListingResponseDirectory::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const FileSystemDirectoryListingResponseDirectory*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FileSystemDirectoryListingResponseDirectory::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    FileSystemDirectoryListingResponseDirectory::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FileSystemDirectoryListingResponseDirectory::GetClassData() const { return &_class_data_; }
 
-void FileSystemDirectoryListingResponseDirectory::MergeFrom(const FileSystemDirectoryListingResponseDirectory& from) {
-  FileSystemDirectoryListingResponseDirectory* const _this = this;
+
+void FileSystemDirectoryListingResponseDirectory::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<FileSystemDirectoryListingResponseDirectory*>(&to_msg);
+  auto& from = static_cast<const FileSystemDirectoryListingResponseDirectory&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_directoryrealpath()) {
+  if (!from._internal_a_directoryrealpath().empty()) {
     _this->_internal_set_a_directoryrealpath(from._internal_a_directoryrealpath());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void FileSystemDirectoryListingResponseDirectory::CopyFrom(const FileSystemDirectoryListingResponseDirectory& from) {
@@ -998,7 +1089,6 @@ void FileSystemDirectoryListingResponseDirectory::CopyFrom(const FileSystemDirec
 }
 
 bool FileSystemDirectoryListingResponseDirectory::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1007,17 +1097,17 @@ void FileSystemDirectoryListingResponseDirectory::InternalSwap(FileSystemDirecto
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_directoryrealpath_, lhs_arena,
       &other->_impl_.a_directoryrealpath_, rhs_arena
   );
 }
 
-std::string FileSystemDirectoryListingResponseDirectory::GetTypeName() const {
-  return "protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory";
+::PROTOBUF_NAMESPACE_ID::Metadata FileSystemDirectoryListingResponseDirectory::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[3]);
 }
-
 
 // ===================================================================
 
@@ -1067,19 +1157,19 @@ void FileSystemDirectoryListingResponseData::set_allocated_a_mvfilesystemdirecto
 }
 FileSystemDirectoryListingResponseData::FileSystemDirectoryListingResponseData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData)
 }
 FileSystemDirectoryListingResponseData::FileSystemDirectoryListingResponseData(const FileSystemDirectoryListingResponseData& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   FileSystemDirectoryListingResponseData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVFileSystemDirectoryListingResponseFile: {
@@ -1113,7 +1203,7 @@ inline void FileSystemDirectoryListingResponseData::SharedCtor(
 
 FileSystemDirectoryListingResponseData::~FileSystemDirectoryListingResponseData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -1161,7 +1251,7 @@ void FileSystemDirectoryListingResponseData::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* FileSystemDirectoryListingResponseData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1197,7 +1287,7 @@ const char* FileSystemDirectoryListingResponseData::_InternalParse(const char* p
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1215,24 +1305,23 @@ uint8_t* FileSystemDirectoryListingResponseData::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  switch (content_case()) {
-    case kAMVFileSystemDirectoryListingResponseFile: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::a_mvfilesystemdirectorylistingresponsefile(this),
-          _Internal::a_mvfilesystemdirectorylistingresponsefile(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVFileSystemDirectoryListingResponseDirectory: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::a_mvfilesystemdirectorylistingresponsedirectory(this),
-          _Internal::a_mvfilesystemdirectorylistingresponsedirectory(this).GetCachedSize(), target, stream);
-      break;
-    }
-    default: ;
+  // .protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile a_mVFileSystemDirectoryListingResponseFile = 1;
+  if (_internal_has_a_mvfilesystemdirectorylistingresponsefile()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::a_mvfilesystemdirectorylistingresponsefile(this),
+        _Internal::a_mvfilesystemdirectorylistingresponsefile(this).GetCachedSize(), target, stream);
   }
+
+  // .protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory a_mVFileSystemDirectoryListingResponseDirectory = 2;
+  if (_internal_has_a_mvfilesystemdirectorylistingresponsedirectory()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::a_mvfilesystemdirectorylistingresponsedirectory(this),
+        _Internal::a_mvfilesystemdirectorylistingresponsedirectory(this).GetCachedSize(), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData)
   return target;
@@ -1265,22 +1354,19 @@ size_t FileSystemDirectoryListingResponseData::ByteSizeLong() const {
       break;
     }
   }
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void FileSystemDirectoryListingResponseData::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const FileSystemDirectoryListingResponseData*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FileSystemDirectoryListingResponseData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    FileSystemDirectoryListingResponseData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FileSystemDirectoryListingResponseData::GetClassData() const { return &_class_data_; }
 
-void FileSystemDirectoryListingResponseData::MergeFrom(const FileSystemDirectoryListingResponseData& from) {
-  FileSystemDirectoryListingResponseData* const _this = this;
+
+void FileSystemDirectoryListingResponseData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<FileSystemDirectoryListingResponseData*>(&to_msg);
+  auto& from = static_cast<const FileSystemDirectoryListingResponseData&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1301,7 +1387,7 @@ void FileSystemDirectoryListingResponseData::MergeFrom(const FileSystemDirectory
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void FileSystemDirectoryListingResponseData::CopyFrom(const FileSystemDirectoryListingResponseData& from) {
@@ -1312,23 +1398,6 @@ void FileSystemDirectoryListingResponseData::CopyFrom(const FileSystemDirectoryL
 }
 
 bool FileSystemDirectoryListingResponseData::IsInitialized() const {
-  switch (content_case()) {
-    case kAMVFileSystemDirectoryListingResponseFile: {
-      if (_internal_has_a_mvfilesystemdirectorylistingresponsefile()) {
-        if (!_impl_.content_.a_mvfilesystemdirectorylistingresponsefile_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVFileSystemDirectoryListingResponseDirectory: {
-      if (_internal_has_a_mvfilesystemdirectorylistingresponsedirectory()) {
-        if (!_impl_.content_.a_mvfilesystemdirectorylistingresponsedirectory_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case CONTENT_NOT_SET: {
-      break;
-    }
-  }
   return true;
 }
 
@@ -1339,10 +1408,11 @@ void FileSystemDirectoryListingResponseData::InternalSwap(FileSystemDirectoryLis
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-std::string FileSystemDirectoryListingResponseData::GetTypeName() const {
-  return "protobuf.mozilla.dom.FileSystemDirectoryListingResponseData";
+::PROTOBUF_NAMESPACE_ID::Metadata FileSystemDirectoryListingResponseData::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[4]);
 }
-
 
 // ===================================================================
 
@@ -1352,18 +1422,18 @@ class FileSystemDirectoryListingResponse::_Internal {
 
 FileSystemDirectoryListingResponse::FileSystemDirectoryListingResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.FileSystemDirectoryListingResponse)
 }
 FileSystemDirectoryListingResponse::FileSystemDirectoryListingResponse(const FileSystemDirectoryListingResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   FileSystemDirectoryListingResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_data_){from._impl_.a_data_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.FileSystemDirectoryListingResponse)
 }
 
@@ -1379,7 +1449,7 @@ inline void FileSystemDirectoryListingResponse::SharedCtor(
 
 FileSystemDirectoryListingResponse::~FileSystemDirectoryListingResponse() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.FileSystemDirectoryListingResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -1402,7 +1472,7 @@ void FileSystemDirectoryListingResponse::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_data_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* FileSystemDirectoryListingResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1435,7 +1505,7 @@ const char* FileSystemDirectoryListingResponse::_InternalParse(const char* ptr, 
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1462,8 +1532,8 @@ uint8_t* FileSystemDirectoryListingResponse::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.FileSystemDirectoryListingResponse)
   return target;
@@ -1484,29 +1554,26 @@ size_t FileSystemDirectoryListingResponse::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void FileSystemDirectoryListingResponse::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const FileSystemDirectoryListingResponse*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FileSystemDirectoryListingResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    FileSystemDirectoryListingResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FileSystemDirectoryListingResponse::GetClassData() const { return &_class_data_; }
 
-void FileSystemDirectoryListingResponse::MergeFrom(const FileSystemDirectoryListingResponse& from) {
-  FileSystemDirectoryListingResponse* const _this = this;
+
+void FileSystemDirectoryListingResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<FileSystemDirectoryListingResponse*>(&to_msg);
+  auto& from = static_cast<const FileSystemDirectoryListingResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.FileSystemDirectoryListingResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_data_.MergeFrom(from._impl_.a_data_);
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void FileSystemDirectoryListingResponse::CopyFrom(const FileSystemDirectoryListingResponse& from) {
@@ -1517,8 +1584,6 @@ void FileSystemDirectoryListingResponse::CopyFrom(const FileSystemDirectoryListi
 }
 
 bool FileSystemDirectoryListingResponse::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_data_))
-    return false;
   return true;
 }
 
@@ -1528,10 +1593,11 @@ void FileSystemDirectoryListingResponse::InternalSwap(FileSystemDirectoryListing
   _impl_.a_data_.InternalSwap(&other->_impl_.a_data_);
 }
 
-std::string FileSystemDirectoryListingResponse::GetTypeName() const {
-  return "protobuf.mozilla.dom.FileSystemDirectoryListingResponse";
+::PROTOBUF_NAMESPACE_ID::Metadata FileSystemDirectoryListingResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[5]);
 }
-
 
 // ===================================================================
 
@@ -1541,18 +1607,18 @@ class FileSystemFilesResponse::_Internal {
 
 FileSystemFilesResponse::FileSystemFilesResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.FileSystemFilesResponse)
 }
 FileSystemFilesResponse::FileSystemFilesResponse(const FileSystemFilesResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   FileSystemFilesResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_data_){from._impl_.a_data_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.FileSystemFilesResponse)
 }
 
@@ -1568,7 +1634,7 @@ inline void FileSystemFilesResponse::SharedCtor(
 
 FileSystemFilesResponse::~FileSystemFilesResponse() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.FileSystemFilesResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -1591,7 +1657,7 @@ void FileSystemFilesResponse::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_data_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* FileSystemFilesResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1624,7 +1690,7 @@ const char* FileSystemFilesResponse::_InternalParse(const char* ptr, ::_pbi::Par
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1651,8 +1717,8 @@ uint8_t* FileSystemFilesResponse::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.FileSystemFilesResponse)
   return target;
@@ -1673,29 +1739,26 @@ size_t FileSystemFilesResponse::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void FileSystemFilesResponse::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const FileSystemFilesResponse*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FileSystemFilesResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    FileSystemFilesResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FileSystemFilesResponse::GetClassData() const { return &_class_data_; }
 
-void FileSystemFilesResponse::MergeFrom(const FileSystemFilesResponse& from) {
-  FileSystemFilesResponse* const _this = this;
+
+void FileSystemFilesResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<FileSystemFilesResponse*>(&to_msg);
+  auto& from = static_cast<const FileSystemFilesResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.FileSystemFilesResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_data_.MergeFrom(from._impl_.a_data_);
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void FileSystemFilesResponse::CopyFrom(const FileSystemFilesResponse& from) {
@@ -1706,8 +1769,6 @@ void FileSystemFilesResponse::CopyFrom(const FileSystemFilesResponse& from) {
 }
 
 bool FileSystemFilesResponse::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_data_))
-    return false;
   return true;
 }
 
@@ -1717,44 +1778,37 @@ void FileSystemFilesResponse::InternalSwap(FileSystemFilesResponse* other) {
   _impl_.a_data_.InternalSwap(&other->_impl_.a_data_);
 }
 
-std::string FileSystemFilesResponse::GetTypeName() const {
-  return "protobuf.mozilla.dom.FileSystemFilesResponse";
+::PROTOBUF_NAMESPACE_ID::Metadata FileSystemFilesResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[6]);
 }
-
 
 // ===================================================================
 
 class FileSystemErrorResponse::_Internal {
  public:
-  using HasBits = decltype(std::declval<FileSystemErrorResponse>()._impl_._has_bits_);
-  static void set_has_a_error(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 FileSystemErrorResponse::FileSystemErrorResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.FileSystemErrorResponse)
 }
 FileSystemErrorResponse::FileSystemErrorResponse(const FileSystemErrorResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   FileSystemErrorResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_error_){}};
+      decltype(_impl_.a_error_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_error_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_error_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_error()) {
+  if (!from._internal_a_error().empty()) {
     _this->_impl_.a_error_.Set(from._internal_a_error(), 
       _this->GetArenaForAllocation());
   }
@@ -1766,9 +1820,8 @@ inline void FileSystemErrorResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_error_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_error_){}
   };
   _impl_.a_error_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1778,7 +1831,7 @@ inline void FileSystemErrorResponse::SharedCtor(
 
 FileSystemErrorResponse::~FileSystemErrorResponse() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.FileSystemErrorResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -1800,22 +1853,17 @@ void FileSystemErrorResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_error_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_error_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* FileSystemErrorResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_error = 1;
+      // bytes a_error = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_error();
@@ -1835,12 +1883,11 @@ const char* FileSystemErrorResponse::_InternalParse(const char* ptr, ::_pbi::Par
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1854,16 +1901,15 @@ uint8_t* FileSystemErrorResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_error = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // bytes a_error = 1;
+  if (!this->_internal_a_error().empty()) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_error(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.FileSystemErrorResponse)
   return target;
@@ -1873,41 +1919,39 @@ size_t FileSystemErrorResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.FileSystemErrorResponse)
   size_t total_size = 0;
 
-  // required bytes a_error = 1;
-  if (_internal_has_a_error()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_error());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // bytes a_error = 1;
+  if (!this->_internal_a_error().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_error());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void FileSystemErrorResponse::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const FileSystemErrorResponse*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FileSystemErrorResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    FileSystemErrorResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FileSystemErrorResponse::GetClassData() const { return &_class_data_; }
 
-void FileSystemErrorResponse::MergeFrom(const FileSystemErrorResponse& from) {
-  FileSystemErrorResponse* const _this = this;
+
+void FileSystemErrorResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<FileSystemErrorResponse*>(&to_msg);
+  auto& from = static_cast<const FileSystemErrorResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.FileSystemErrorResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_error()) {
+  if (!from._internal_a_error().empty()) {
     _this->_internal_set_a_error(from._internal_a_error());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void FileSystemErrorResponse::CopyFrom(const FileSystemErrorResponse& from) {
@@ -1918,7 +1962,6 @@ void FileSystemErrorResponse::CopyFrom(const FileSystemErrorResponse& from) {
 }
 
 bool FileSystemErrorResponse::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1927,17 +1970,17 @@ void FileSystemErrorResponse::InternalSwap(FileSystemErrorResponse* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_error_, lhs_arena,
       &other->_impl_.a_error_, rhs_arena
   );
 }
 
-std::string FileSystemErrorResponse::GetTypeName() const {
-  return "protobuf.mozilla.dom.FileSystemErrorResponse";
+::PROTOBUF_NAMESPACE_ID::Metadata FileSystemErrorResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[7]);
 }
-
 
 // ===================================================================
 
@@ -2047,19 +2090,19 @@ void FileSystemResponseValue::set_allocated_a_mvfilesystemerrorresponse(::protob
 }
 FileSystemResponseValue::FileSystemResponseValue(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.FileSystemResponseValue)
 }
 FileSystemResponseValue::FileSystemResponseValue(const FileSystemResponseValue& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   FileSystemResponseValue* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVFileSystemDirectoryResponse: {
@@ -2108,7 +2151,7 @@ inline void FileSystemResponseValue::SharedCtor(
 
 FileSystemResponseValue::~FileSystemResponseValue() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.FileSystemResponseValue)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -2174,7 +2217,7 @@ void FileSystemResponseValue::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* FileSystemResponseValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -2234,7 +2277,7 @@ const char* FileSystemResponseValue::_InternalParse(const char* ptr, ::_pbi::Par
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -2252,42 +2295,44 @@ uint8_t* FileSystemResponseValue::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  switch (content_case()) {
-    case kAMVFileSystemDirectoryResponse: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::a_mvfilesystemdirectoryresponse(this),
-          _Internal::a_mvfilesystemdirectoryresponse(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVFileSystemDirectoryListingResponse: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::a_mvfilesystemdirectorylistingresponse(this),
-          _Internal::a_mvfilesystemdirectorylistingresponse(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVFileSystemFileResponse: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(3, _Internal::a_mvfilesystemfileresponse(this),
-          _Internal::a_mvfilesystemfileresponse(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVFileSystemFilesResponse: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(4, _Internal::a_mvfilesystemfilesresponse(this),
-          _Internal::a_mvfilesystemfilesresponse(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVFileSystemErrorResponse: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(5, _Internal::a_mvfilesystemerrorresponse(this),
-          _Internal::a_mvfilesystemerrorresponse(this).GetCachedSize(), target, stream);
-      break;
-    }
-    default: ;
+  // .protobuf.mozilla.dom.FileSystemDirectoryResponse a_mVFileSystemDirectoryResponse = 1;
+  if (_internal_has_a_mvfilesystemdirectoryresponse()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::a_mvfilesystemdirectoryresponse(this),
+        _Internal::a_mvfilesystemdirectoryresponse(this).GetCachedSize(), target, stream);
   }
+
+  // .protobuf.mozilla.dom.FileSystemDirectoryListingResponse a_mVFileSystemDirectoryListingResponse = 2;
+  if (_internal_has_a_mvfilesystemdirectorylistingresponse()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::a_mvfilesystemdirectorylistingresponse(this),
+        _Internal::a_mvfilesystemdirectorylistingresponse(this).GetCachedSize(), target, stream);
+  }
+
+  // .protobuf.mozilla.dom.FileSystemFileResponse a_mVFileSystemFileResponse = 3;
+  if (_internal_has_a_mvfilesystemfileresponse()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::a_mvfilesystemfileresponse(this),
+        _Internal::a_mvfilesystemfileresponse(this).GetCachedSize(), target, stream);
+  }
+
+  // .protobuf.mozilla.dom.FileSystemFilesResponse a_mVFileSystemFilesResponse = 4;
+  if (_internal_has_a_mvfilesystemfilesresponse()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, _Internal::a_mvfilesystemfilesresponse(this),
+        _Internal::a_mvfilesystemfilesresponse(this).GetCachedSize(), target, stream);
+  }
+
+  // .protobuf.mozilla.dom.FileSystemErrorResponse a_mVFileSystemErrorResponse = 5;
+  if (_internal_has_a_mvfilesystemerrorresponse()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(5, _Internal::a_mvfilesystemerrorresponse(this),
+        _Internal::a_mvfilesystemerrorresponse(this).GetCachedSize(), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.FileSystemResponseValue)
   return target;
@@ -2341,22 +2386,19 @@ size_t FileSystemResponseValue::ByteSizeLong() const {
       break;
     }
   }
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void FileSystemResponseValue::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const FileSystemResponseValue*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FileSystemResponseValue::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    FileSystemResponseValue::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FileSystemResponseValue::GetClassData() const { return &_class_data_; }
 
-void FileSystemResponseValue::MergeFrom(const FileSystemResponseValue& from) {
-  FileSystemResponseValue* const _this = this;
+
+void FileSystemResponseValue::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<FileSystemResponseValue*>(&to_msg);
+  auto& from = static_cast<const FileSystemResponseValue&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.FileSystemResponseValue)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2392,7 +2434,7 @@ void FileSystemResponseValue::MergeFrom(const FileSystemResponseValue& from) {
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void FileSystemResponseValue::CopyFrom(const FileSystemResponseValue& from) {
@@ -2403,41 +2445,6 @@ void FileSystemResponseValue::CopyFrom(const FileSystemResponseValue& from) {
 }
 
 bool FileSystemResponseValue::IsInitialized() const {
-  switch (content_case()) {
-    case kAMVFileSystemDirectoryResponse: {
-      if (_internal_has_a_mvfilesystemdirectoryresponse()) {
-        if (!_impl_.content_.a_mvfilesystemdirectoryresponse_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVFileSystemDirectoryListingResponse: {
-      if (_internal_has_a_mvfilesystemdirectorylistingresponse()) {
-        if (!_impl_.content_.a_mvfilesystemdirectorylistingresponse_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVFileSystemFileResponse: {
-      if (_internal_has_a_mvfilesystemfileresponse()) {
-        if (!_impl_.content_.a_mvfilesystemfileresponse_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVFileSystemFilesResponse: {
-      if (_internal_has_a_mvfilesystemfilesresponse()) {
-        if (!_impl_.content_.a_mvfilesystemfilesresponse_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVFileSystemErrorResponse: {
-      if (_internal_has_a_mvfilesystemerrorresponse()) {
-        if (!_impl_.content_.a_mvfilesystemerrorresponse_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case CONTENT_NOT_SET: {
-      break;
-    }
-  }
   return true;
 }
 
@@ -2448,10 +2455,11 @@ void FileSystemResponseValue::InternalSwap(FileSystemResponseValue* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-std::string FileSystemResponseValue::GetTypeName() const {
-  return "protobuf.mozilla.dom.FileSystemResponseValue";
+::PROTOBUF_NAMESPACE_ID::Metadata FileSystemResponseValue::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[8]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace dom

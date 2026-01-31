@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_PIPDLUnitTest_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto
@@ -41,6 +43,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PIPDLUnitTest_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PIPDLUnitTest_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace _ipdltest {
@@ -60,7 +63,7 @@ namespace _ipdltest {
 // ===================================================================
 
 class TestPartResult final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.TestPartResult) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.TestPartResult) */ {
  public:
   inline TestPartResult() : TestPartResult(nullptr) {}
   ~TestPartResult() override;
@@ -90,13 +93,15 @@ class TestPartResult final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const TestPartResult& default_instance() {
     return *internal_default_instance();
   }
@@ -134,9 +139,15 @@ class TestPartResult final :
   TestPartResult* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<TestPartResult>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const TestPartResult& from);
-  void MergeFrom(const TestPartResult& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const TestPartResult& from) {
+    TestPartResult::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -149,7 +160,7 @@ class TestPartResult final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(TestPartResult* other);
 
   private:
@@ -162,7 +173,10 @@ class TestPartResult final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -176,11 +190,7 @@ class TestPartResult final :
     kAFatalFieldNumber = 2,
     kALineNumberFieldNumber = 4,
   };
-  // required string a_filename = 3;
-  bool has_a_filename() const;
-  private:
-  bool _internal_has_a_filename() const;
-  public:
+  // string a_filename = 3;
   void clear_a_filename();
   const std::string& a_filename() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -194,11 +204,7 @@ class TestPartResult final :
   std::string* _internal_mutable_a_filename();
   public:
 
-  // required string a_summary = 5;
-  bool has_a_summary() const;
-  private:
-  bool _internal_has_a_summary() const;
-  public:
+  // string a_summary = 5;
   void clear_a_summary();
   const std::string& a_summary() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -212,11 +218,7 @@ class TestPartResult final :
   std::string* _internal_mutable_a_summary();
   public:
 
-  // required string a_message = 6;
-  bool has_a_message() const;
-  private:
-  bool _internal_has_a_message() const;
-  public:
+  // string a_message = 6;
   void clear_a_message();
   const std::string& a_message() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -230,11 +232,7 @@ class TestPartResult final :
   std::string* _internal_mutable_a_message();
   public:
 
-  // required bool a_failed = 1;
-  bool has_a_failed() const;
-  private:
-  bool _internal_has_a_failed() const;
-  public:
+  // bool a_failed = 1;
   void clear_a_failed();
   bool a_failed() const;
   void set_a_failed(bool value);
@@ -243,11 +241,7 @@ class TestPartResult final :
   void _internal_set_a_failed(bool value);
   public:
 
-  // required bool a_fatal = 2;
-  bool has_a_fatal() const;
-  private:
-  bool _internal_has_a_fatal() const;
-  public:
+  // bool a_fatal = 2;
   void clear_a_fatal();
   bool a_fatal() const;
   void set_a_fatal(bool value);
@@ -256,11 +250,7 @@ class TestPartResult final :
   void _internal_set_a_fatal(bool value);
   public:
 
-  // required sint32 a_lineNumber = 4;
-  bool has_a_linenumber() const;
-  private:
-  bool _internal_has_a_linenumber() const;
-  public:
+  // sint32 a_lineNumber = 4;
   void clear_a_linenumber();
   int32_t a_linenumber() const;
   void set_a_linenumber(int32_t value);
@@ -273,21 +263,17 @@ class TestPartResult final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_filename_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_summary_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_message_;
     bool a_failed_;
     bool a_fatal_;
     int32_t a_linenumber_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PIPDLUnitTest_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto;
@@ -303,17 +289,9 @@ class TestPartResult final :
 #endif  // __GNUC__
 // TestPartResult
 
-// required bool a_failed = 1;
-inline bool TestPartResult::_internal_has_a_failed() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool TestPartResult::has_a_failed() const {
-  return _internal_has_a_failed();
-}
+// bool a_failed = 1;
 inline void TestPartResult::clear_a_failed() {
   _impl_.a_failed_ = false;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline bool TestPartResult::_internal_a_failed() const {
   return _impl_.a_failed_;
@@ -323,7 +301,7 @@ inline bool TestPartResult::a_failed() const {
   return _internal_a_failed();
 }
 inline void TestPartResult::_internal_set_a_failed(bool value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_failed_ = value;
 }
 inline void TestPartResult::set_a_failed(bool value) {
@@ -331,17 +309,9 @@ inline void TestPartResult::set_a_failed(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.TestPartResult.a_failed)
 }
 
-// required bool a_fatal = 2;
-inline bool TestPartResult::_internal_has_a_fatal() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool TestPartResult::has_a_fatal() const {
-  return _internal_has_a_fatal();
-}
+// bool a_fatal = 2;
 inline void TestPartResult::clear_a_fatal() {
   _impl_.a_fatal_ = false;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline bool TestPartResult::_internal_a_fatal() const {
   return _impl_.a_fatal_;
@@ -351,7 +321,7 @@ inline bool TestPartResult::a_fatal() const {
   return _internal_a_fatal();
 }
 inline void TestPartResult::_internal_set_a_fatal(bool value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_fatal_ = value;
 }
 inline void TestPartResult::set_a_fatal(bool value) {
@@ -359,17 +329,9 @@ inline void TestPartResult::set_a_fatal(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.TestPartResult.a_fatal)
 }
 
-// required string a_filename = 3;
-inline bool TestPartResult::_internal_has_a_filename() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool TestPartResult::has_a_filename() const {
-  return _internal_has_a_filename();
-}
+// string a_filename = 3;
 inline void TestPartResult::clear_a_filename() {
   _impl_.a_filename_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& TestPartResult::a_filename() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.TestPartResult.a_filename)
@@ -378,7 +340,7 @@ inline const std::string& TestPartResult::a_filename() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TestPartResult::set_a_filename(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_filename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.TestPartResult.a_filename)
 }
@@ -391,32 +353,22 @@ inline const std::string& TestPartResult::_internal_a_filename() const {
   return _impl_.a_filename_.Get();
 }
 inline void TestPartResult::_internal_set_a_filename(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_filename_.Set(value, GetArenaForAllocation());
 }
 inline std::string* TestPartResult::_internal_mutable_a_filename() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_filename_.Mutable(GetArenaForAllocation());
 }
 inline std::string* TestPartResult::release_a_filename() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.TestPartResult.a_filename)
-  if (!_internal_has_a_filename()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_filename_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_filename_.IsDefault()) {
-    _impl_.a_filename_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_filename_.Release();
 }
 inline void TestPartResult::set_allocated_a_filename(std::string* a_filename) {
   if (a_filename != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_filename_.SetAllocated(a_filename, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -427,17 +379,9 @@ inline void TestPartResult::set_allocated_a_filename(std::string* a_filename) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.TestPartResult.a_filename)
 }
 
-// required sint32 a_lineNumber = 4;
-inline bool TestPartResult::_internal_has_a_linenumber() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool TestPartResult::has_a_linenumber() const {
-  return _internal_has_a_linenumber();
-}
+// sint32 a_lineNumber = 4;
 inline void TestPartResult::clear_a_linenumber() {
   _impl_.a_linenumber_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline int32_t TestPartResult::_internal_a_linenumber() const {
   return _impl_.a_linenumber_;
@@ -447,7 +391,7 @@ inline int32_t TestPartResult::a_linenumber() const {
   return _internal_a_linenumber();
 }
 inline void TestPartResult::_internal_set_a_linenumber(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   _impl_.a_linenumber_ = value;
 }
 inline void TestPartResult::set_a_linenumber(int32_t value) {
@@ -455,17 +399,9 @@ inline void TestPartResult::set_a_linenumber(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.TestPartResult.a_lineNumber)
 }
 
-// required string a_summary = 5;
-inline bool TestPartResult::_internal_has_a_summary() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool TestPartResult::has_a_summary() const {
-  return _internal_has_a_summary();
-}
+// string a_summary = 5;
 inline void TestPartResult::clear_a_summary() {
   _impl_.a_summary_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& TestPartResult::a_summary() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.TestPartResult.a_summary)
@@ -474,7 +410,7 @@ inline const std::string& TestPartResult::a_summary() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TestPartResult::set_a_summary(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_summary_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.TestPartResult.a_summary)
 }
@@ -487,32 +423,22 @@ inline const std::string& TestPartResult::_internal_a_summary() const {
   return _impl_.a_summary_.Get();
 }
 inline void TestPartResult::_internal_set_a_summary(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_summary_.Set(value, GetArenaForAllocation());
 }
 inline std::string* TestPartResult::_internal_mutable_a_summary() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_summary_.Mutable(GetArenaForAllocation());
 }
 inline std::string* TestPartResult::release_a_summary() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.TestPartResult.a_summary)
-  if (!_internal_has_a_summary()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_summary_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_summary_.IsDefault()) {
-    _impl_.a_summary_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_summary_.Release();
 }
 inline void TestPartResult::set_allocated_a_summary(std::string* a_summary) {
   if (a_summary != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_summary_.SetAllocated(a_summary, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -523,17 +449,9 @@ inline void TestPartResult::set_allocated_a_summary(std::string* a_summary) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.TestPartResult.a_summary)
 }
 
-// required string a_message = 6;
-inline bool TestPartResult::_internal_has_a_message() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool TestPartResult::has_a_message() const {
-  return _internal_has_a_message();
-}
+// string a_message = 6;
 inline void TestPartResult::clear_a_message() {
   _impl_.a_message_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& TestPartResult::a_message() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.TestPartResult.a_message)
@@ -542,7 +460,7 @@ inline const std::string& TestPartResult::a_message() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TestPartResult::set_a_message(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.TestPartResult.a_message)
 }
@@ -555,32 +473,22 @@ inline const std::string& TestPartResult::_internal_a_message() const {
   return _impl_.a_message_.Get();
 }
 inline void TestPartResult::_internal_set_a_message(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_message_.Set(value, GetArenaForAllocation());
 }
 inline std::string* TestPartResult::_internal_mutable_a_message() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_message_.Mutable(GetArenaForAllocation());
 }
 inline std::string* TestPartResult::release_a_message() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.TestPartResult.a_message)
-  if (!_internal_has_a_message()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_message_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_message_.IsDefault()) {
-    _impl_.a_message_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_message_.Release();
 }
 inline void TestPartResult::set_allocated_a_message(std::string* a_message) {
   if (a_message != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_message_.SetAllocated(a_message, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

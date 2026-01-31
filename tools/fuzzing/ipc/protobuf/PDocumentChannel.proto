@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/netwerk/ipc/PDocumentChannel.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.net.PDocumentChannel;
 
@@ -22,8 +21,8 @@ import "DOMTypes.proto";
 
 // Message declarations
 message Msg_Cancel {
-  required bytes a_status = 1;
-  required string a_reason = 2;
+  bytes a_status = 1;
+  string a_reason = 2;
 }
 
 message Msg___delete__ {
@@ -33,29 +32,29 @@ message Reply___delete__ {
 }
 
 message Msg_FailedAsyncOpen {
-  required bytes a_status = 1;
+  bytes a_status = 1;
 }
 
 message Msg_DisconnectChildListeners {
-  required bytes a_aStatus = 1;
-  required bytes a_aLoadGroupReason = 2;
-  required bool a_aContinueNavigating = 3;
+  bytes a_aStatus = 1;
+  bytes a_aLoadGroupReason = 2;
+  bool a_aContinueNavigating = 3;
 }
 
 message Msg_RedirectToRealChannel {
-  required protobuf.mozilla.net.RedirectToRealChannelArgs a_args = 1;
+  protobuf.mozilla.net.RedirectToRealChannelArgs a_args = 1;
   repeated bytes a_aEndpoint = 2;
 }
 
 message Reply_RedirectToRealChannel {
-  required bytes a_rv = 1;
+  bytes a_rv = 1;
 }
 
 message Msg_UpgradeObjectLoad {
 }
 
 message Reply_UpgradeObjectLoad {
-  required bytes a_frameContext = 1;
+  bytes a_frameContext = 1;
 }
 
 // Parameter mappings stats:

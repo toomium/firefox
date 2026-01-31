@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/gfx/layers/ipc/PTexture.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.layers.PTexture;
 
@@ -26,7 +25,7 @@ message Msg_Destroy {
 }
 
 message Msg_RecycleTexture {
-  required bytes a_aTextureFlags = 1;
+  bytes a_aTextureFlags = 1;
 }
 
 // Parameter mappings stats:

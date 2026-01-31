@@ -8,7 +8,10 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -22,11 +25,10 @@ namespace mozilla {
 namespace webgpu {
 PROTOBUF_CONSTEXPR BufferMapSuccess::BufferMapSuccess(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_offset_)*/uint64_t{0u}
+    /*decltype(_impl_.a_offset_)*/uint64_t{0u}
   , /*decltype(_impl_.a_size_)*/uint64_t{0u}
-  , /*decltype(_impl_.a_writable_)*/false} {}
+  , /*decltype(_impl_.a_writable_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct BufferMapSuccessDefaultTypeInternal {
   PROTOBUF_CONSTEXPR BufferMapSuccessDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -38,9 +40,8 @@ struct BufferMapSuccessDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 BufferMapSuccessDefaultTypeInternal _BufferMapSuccess_default_instance_;
 PROTOBUF_CONSTEXPR BufferMapError::BufferMapError(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct BufferMapErrorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR BufferMapErrorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -67,6 +68,76 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace webgpu
 }  // namespace mozilla
 }  // namespace protobuf
+static ::_pb::Metadata file_level_metadata_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto[3];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto = nullptr;
+
+const uint32_t TableStruct_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::webgpu::BufferMapSuccess, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::webgpu::BufferMapSuccess, _impl_.a_offset_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::webgpu::BufferMapSuccess, _impl_.a_size_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::webgpu::BufferMapSuccess, _impl_.a_writable_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::webgpu::BufferMapError, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::webgpu::BufferMapError, _impl_.a_message_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::webgpu::BufferMapResult, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::webgpu::BufferMapResult, _impl_._oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::webgpu::BufferMapResult, _impl_.content_),
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::protobuf::mozilla::webgpu::BufferMapSuccess)},
+  { 9, -1, -1, sizeof(::protobuf::mozilla::webgpu::BufferMapError)},
+  { 16, -1, -1, sizeof(::protobuf::mozilla::webgpu::BufferMapResult)},
+};
+
+static const ::_pb::Message* const file_default_instances[] = {
+  &::protobuf::mozilla::webgpu::_BufferMapSuccess_default_instance_._instance,
+  &::protobuf::mozilla::webgpu::_BufferMapError_default_instance_._instance,
+  &::protobuf::mozilla::webgpu::_BufferMapResult_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n,PWebGPUTypes_protobuf.mozilla.webgpu.h"
+  ".proto\022\027protobuf.mozilla.webgpu\"H\n\020Buffe"
+  "rMapSuccess\022\020\n\010a_offset\030\001 \001(\004\022\016\n\006a_size\030"
+  "\002 \001(\004\022\022\n\na_writable\030\003 \001(\010\"#\n\016BufferMapEr"
+  "ror\022\021\n\ta_message\030\001 \001(\t\"\256\001\n\017BufferMapResu"
+  "lt\022I\n\024a_mVBufferMapSuccess\030\001 \001(\0132).proto"
+  "buf.mozilla.webgpu.BufferMapSuccessH\000\022E\n"
+  "\022a_mVBufferMapError\030\002 \001(\0132\'.protobuf.moz"
+  "illa.webgpu.BufferMapErrorH\000B\t\n\007contentb"
+  "\006proto3"
+  ;
+static ::_pbi::once_flag descriptor_table_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto = {
+    false, false, 367, descriptor_table_protodef_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto,
+    "PWebGPUTypes_protobuf.mozilla.webgpu.h.proto",
+    &descriptor_table_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto_once, nullptr, 0, 3,
+    schemas, file_default_instances, TableStruct_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto::offsets,
+    file_level_metadata_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto, file_level_enum_descriptors_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto,
+    file_level_service_descriptors_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto_getter() {
+  return &descriptor_table_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto;
+}
+
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto(&descriptor_table_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace webgpu {
@@ -75,38 +146,24 @@ namespace webgpu {
 
 class BufferMapSuccess::_Internal {
  public:
-  using HasBits = decltype(std::declval<BufferMapSuccess>()._impl_._has_bits_);
-  static void set_has_a_offset(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_size(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_a_writable(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
-  }
 };
 
 BufferMapSuccess::BufferMapSuccess(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.webgpu.BufferMapSuccess)
 }
 BufferMapSuccess::BufferMapSuccess(const BufferMapSuccess& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   BufferMapSuccess* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_offset_){}
+      decltype(_impl_.a_offset_){}
     , decltype(_impl_.a_size_){}
-    , decltype(_impl_.a_writable_){}};
+    , decltype(_impl_.a_writable_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::memcpy(&_impl_.a_offset_, &from._impl_.a_offset_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_writable_) -
     reinterpret_cast<char*>(&_impl_.a_offset_)) + sizeof(_impl_.a_writable_));
@@ -118,17 +175,16 @@ inline void BufferMapSuccess::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_offset_){uint64_t{0u}}
+      decltype(_impl_.a_offset_){uint64_t{0u}}
     , decltype(_impl_.a_size_){uint64_t{0u}}
     , decltype(_impl_.a_writable_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
 
 BufferMapSuccess::~BufferMapSuccess() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.webgpu.BufferMapSuccess)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -149,45 +205,37 @@ void BufferMapSuccess::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    ::memset(&_impl_.a_offset_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.a_writable_) -
-        reinterpret_cast<char*>(&_impl_.a_offset_)) + sizeof(_impl_.a_writable_));
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  ::memset(&_impl_.a_offset_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.a_writable_) -
+      reinterpret_cast<char*>(&_impl_.a_offset_)) + sizeof(_impl_.a_writable_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* BufferMapSuccess::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 a_offset = 1;
+      // uint64 a_offset = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_a_offset(&has_bits);
           _impl_.a_offset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_size = 2;
+      // uint64 a_size = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_a_size(&has_bits);
           _impl_.a_size_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool a_writable = 3;
+      // bool a_writable = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_a_writable(&has_bits);
           _impl_.a_writable_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -204,12 +252,11 @@ const char* BufferMapSuccess::_InternalParse(const char* ptr, ::_pbi::ParseConte
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -223,110 +270,83 @@ uint8_t* BufferMapSuccess::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 a_offset = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // uint64 a_offset = 1;
+  if (this->_internal_a_offset() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_offset(), target);
   }
 
-  // required uint64 a_size = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // uint64 a_size = 2;
+  if (this->_internal_a_size() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_a_size(), target);
   }
 
-  // required bool a_writable = 3;
-  if (cached_has_bits & 0x00000004u) {
+  // bool a_writable = 3;
+  if (this->_internal_a_writable() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_writable(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.webgpu.BufferMapSuccess)
   return target;
 }
 
-size_t BufferMapSuccess::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.webgpu.BufferMapSuccess)
-  size_t total_size = 0;
-
-  if (_internal_has_a_offset()) {
-    // required uint64 a_offset = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_offset());
-  }
-
-  if (_internal_has_a_size()) {
-    // required uint64 a_size = 2;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_size());
-  }
-
-  if (_internal_has_a_writable()) {
-    // required bool a_writable = 3;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t BufferMapSuccess::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.webgpu.BufferMapSuccess)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required uint64 a_offset = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_offset());
-
-    // required uint64 a_size = 2;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_size());
-
-    // required bool a_writable = 3;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // uint64 a_offset = 1;
+  if (this->_internal_a_offset() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_offset());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // uint64 a_size = 2;
+  if (this->_internal_a_size() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_size());
+  }
+
+  // bool a_writable = 3;
+  if (this->_internal_a_writable() != 0) {
+    total_size += 1 + 1;
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void BufferMapSuccess::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const BufferMapSuccess*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BufferMapSuccess::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    BufferMapSuccess::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BufferMapSuccess::GetClassData() const { return &_class_data_; }
 
-void BufferMapSuccess::MergeFrom(const BufferMapSuccess& from) {
-  BufferMapSuccess* const _this = this;
+
+void BufferMapSuccess::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<BufferMapSuccess*>(&to_msg);
+  auto& from = static_cast<const BufferMapSuccess&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.webgpu.BufferMapSuccess)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_impl_.a_offset_ = from._impl_.a_offset_;
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.a_size_ = from._impl_.a_size_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.a_writable_ = from._impl_.a_writable_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (from._internal_a_offset() != 0) {
+    _this->_internal_set_a_offset(from._internal_a_offset());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (from._internal_a_size() != 0) {
+    _this->_internal_set_a_size(from._internal_a_size());
+  }
+  if (from._internal_a_writable() != 0) {
+    _this->_internal_set_a_writable(from._internal_a_writable());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void BufferMapSuccess::CopyFrom(const BufferMapSuccess& from) {
@@ -337,14 +357,12 @@ void BufferMapSuccess::CopyFrom(const BufferMapSuccess& from) {
 }
 
 bool BufferMapSuccess::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void BufferMapSuccess::InternalSwap(BufferMapSuccess* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(BufferMapSuccess, _impl_.a_writable_)
       + sizeof(BufferMapSuccess::_impl_.a_writable_)
@@ -353,44 +371,37 @@ void BufferMapSuccess::InternalSwap(BufferMapSuccess* other) {
           reinterpret_cast<char*>(&other->_impl_.a_offset_));
 }
 
-std::string BufferMapSuccess::GetTypeName() const {
-  return "protobuf.mozilla.webgpu.BufferMapSuccess";
+::PROTOBUF_NAMESPACE_ID::Metadata BufferMapSuccess::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto_getter, &descriptor_table_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto_once,
+      file_level_metadata_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto[0]);
 }
-
 
 // ===================================================================
 
 class BufferMapError::_Internal {
  public:
-  using HasBits = decltype(std::declval<BufferMapError>()._impl_._has_bits_);
-  static void set_has_a_message(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 BufferMapError::BufferMapError(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.webgpu.BufferMapError)
 }
 BufferMapError::BufferMapError(const BufferMapError& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   BufferMapError* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_message_){}};
+      decltype(_impl_.a_message_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_message_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_message_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_message()) {
+  if (!from._internal_a_message().empty()) {
     _this->_impl_.a_message_.Set(from._internal_a_message(), 
       _this->GetArenaForAllocation());
   }
@@ -402,9 +413,8 @@ inline void BufferMapError::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_message_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_message_){}
   };
   _impl_.a_message_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -414,7 +424,7 @@ inline void BufferMapError::SharedCtor(
 
 BufferMapError::~BufferMapError() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.webgpu.BufferMapError)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -436,27 +446,23 @@ void BufferMapError::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_message_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_message_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* BufferMapError::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_message = 1;
+      // string a_message = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_message();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.webgpu.BufferMapError.a_message"));
         } else
           goto handle_unusual;
         continue;
@@ -471,12 +477,11 @@ const char* BufferMapError::_InternalParse(const char* ptr, ::_pbi::ParseContext
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -490,16 +495,19 @@ uint8_t* BufferMapError::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_message = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_message = 1;
+  if (!this->_internal_a_message().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_message().data(), static_cast<int>(this->_internal_a_message().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.webgpu.BufferMapError.a_message");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_message(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.webgpu.BufferMapError)
   return target;
@@ -509,41 +517,39 @@ size_t BufferMapError::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.webgpu.BufferMapError)
   size_t total_size = 0;
 
-  // required string a_message = 1;
-  if (_internal_has_a_message()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_message());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_message = 1;
+  if (!this->_internal_a_message().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_message());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void BufferMapError::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const BufferMapError*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BufferMapError::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    BufferMapError::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BufferMapError::GetClassData() const { return &_class_data_; }
 
-void BufferMapError::MergeFrom(const BufferMapError& from) {
-  BufferMapError* const _this = this;
+
+void BufferMapError::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<BufferMapError*>(&to_msg);
+  auto& from = static_cast<const BufferMapError&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.webgpu.BufferMapError)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_message()) {
+  if (!from._internal_a_message().empty()) {
     _this->_internal_set_a_message(from._internal_a_message());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void BufferMapError::CopyFrom(const BufferMapError& from) {
@@ -554,7 +560,6 @@ void BufferMapError::CopyFrom(const BufferMapError& from) {
 }
 
 bool BufferMapError::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -563,17 +568,17 @@ void BufferMapError::InternalSwap(BufferMapError* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_message_, lhs_arena,
       &other->_impl_.a_message_, rhs_arena
   );
 }
 
-std::string BufferMapError::GetTypeName() const {
-  return "protobuf.mozilla.webgpu.BufferMapError";
+::PROTOBUF_NAMESPACE_ID::Metadata BufferMapError::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto_getter, &descriptor_table_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto_once,
+      file_level_metadata_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto[1]);
 }
-
 
 // ===================================================================
 
@@ -623,19 +628,19 @@ void BufferMapResult::set_allocated_a_mvbuffermaperror(::protobuf::mozilla::webg
 }
 BufferMapResult::BufferMapResult(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.webgpu.BufferMapResult)
 }
 BufferMapResult::BufferMapResult(const BufferMapResult& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   BufferMapResult* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVBufferMapSuccess: {
@@ -669,7 +674,7 @@ inline void BufferMapResult::SharedCtor(
 
 BufferMapResult::~BufferMapResult() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.webgpu.BufferMapResult)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -717,7 +722,7 @@ void BufferMapResult::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* BufferMapResult::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -753,7 +758,7 @@ const char* BufferMapResult::_InternalParse(const char* ptr, ::_pbi::ParseContex
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -771,24 +776,23 @@ uint8_t* BufferMapResult::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  switch (content_case()) {
-    case kAMVBufferMapSuccess: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::a_mvbuffermapsuccess(this),
-          _Internal::a_mvbuffermapsuccess(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVBufferMapError: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::a_mvbuffermaperror(this),
-          _Internal::a_mvbuffermaperror(this).GetCachedSize(), target, stream);
-      break;
-    }
-    default: ;
+  // .protobuf.mozilla.webgpu.BufferMapSuccess a_mVBufferMapSuccess = 1;
+  if (_internal_has_a_mvbuffermapsuccess()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::a_mvbuffermapsuccess(this),
+        _Internal::a_mvbuffermapsuccess(this).GetCachedSize(), target, stream);
   }
+
+  // .protobuf.mozilla.webgpu.BufferMapError a_mVBufferMapError = 2;
+  if (_internal_has_a_mvbuffermaperror()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::a_mvbuffermaperror(this),
+        _Internal::a_mvbuffermaperror(this).GetCachedSize(), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.webgpu.BufferMapResult)
   return target;
@@ -821,22 +825,19 @@ size_t BufferMapResult::ByteSizeLong() const {
       break;
     }
   }
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void BufferMapResult::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const BufferMapResult*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BufferMapResult::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    BufferMapResult::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BufferMapResult::GetClassData() const { return &_class_data_; }
 
-void BufferMapResult::MergeFrom(const BufferMapResult& from) {
-  BufferMapResult* const _this = this;
+
+void BufferMapResult::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<BufferMapResult*>(&to_msg);
+  auto& from = static_cast<const BufferMapResult&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.webgpu.BufferMapResult)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -857,7 +858,7 @@ void BufferMapResult::MergeFrom(const BufferMapResult& from) {
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void BufferMapResult::CopyFrom(const BufferMapResult& from) {
@@ -868,23 +869,6 @@ void BufferMapResult::CopyFrom(const BufferMapResult& from) {
 }
 
 bool BufferMapResult::IsInitialized() const {
-  switch (content_case()) {
-    case kAMVBufferMapSuccess: {
-      if (_internal_has_a_mvbuffermapsuccess()) {
-        if (!_impl_.content_.a_mvbuffermapsuccess_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVBufferMapError: {
-      if (_internal_has_a_mvbuffermaperror()) {
-        if (!_impl_.content_.a_mvbuffermaperror_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case CONTENT_NOT_SET: {
-      break;
-    }
-  }
   return true;
 }
 
@@ -895,10 +879,11 @@ void BufferMapResult::InternalSwap(BufferMapResult* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-std::string BufferMapResult::GetTypeName() const {
-  return "protobuf.mozilla.webgpu.BufferMapResult";
+::PROTOBUF_NAMESPACE_ID::Metadata BufferMapResult::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto_getter, &descriptor_table_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto_once,
+      file_level_metadata_PWebGPUTypes_5fprotobuf_2emozilla_2ewebgpu_2eh_2eproto[2]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace webgpu

@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/ipc/ipdl/test/gtest/PTestHangs.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla._ipdltest.PTestHangs;
 
@@ -14,19 +13,19 @@ package protobuf.mozilla._ipdltest.PTestHangs;
 
 // Message declarations
 message Msg_Hang {
-  required uint32 a_hangMode = 1;
-  required bytes a_timeout = 2;
+  uint32 a_hangMode = 1;
+  bytes a_timeout = 2;
 }
 
 message Reply_Hang {
 }
 
 message Msg_Start {
-  required uint32 a_hangMode = 1;
+  uint32 a_hangMode = 1;
 }
 
 message Reply_Start {
-  required bool a_detectedHang = 1;
+  bool a_detectedHang = 1;
 }
 
 // Parameter mappings stats:

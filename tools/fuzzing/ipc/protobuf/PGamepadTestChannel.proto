@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/gamepad/ipc/PGamepadTestChannel.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PGamepadTestChannel;
 
@@ -17,8 +16,8 @@ import "GamepadEventTypes.proto";
 
 // Message declarations
 message Msg_GamepadTestEvent {
-  required uint32 a_aID = 1;
-  required protobuf.mozilla.dom.GamepadChangeEvent a_aGamepadEvent = 2;
+  uint32 a_aID = 1;
+  protobuf.mozilla.dom.GamepadChangeEvent a_aGamepadEvent = 2;
 }
 
 message Msg___delete__ {
@@ -28,8 +27,8 @@ message Reply___delete__ {
 }
 
 message Msg_ReplyGamepadHandle {
-  required uint32 a_aID = 1;
-  required bytes a_aHandle = 2;
+  uint32 a_aID = 1;
+  bytes a_aHandle = 2;
 }
 
 // Parameter mappings stats:

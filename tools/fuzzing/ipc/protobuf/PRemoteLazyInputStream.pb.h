@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "IPCStream.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -42,6 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PRemoteLazyInputStream_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PRemoteLazyInputStream_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace PRemoteLazyInputStream {
@@ -81,7 +85,7 @@ namespace PRemoteLazyInputStream {
 // ===================================================================
 
 class Msg_Clone final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteLazyInputStream.Msg_Clone) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteLazyInputStream.Msg_Clone) */ {
  public:
   inline Msg_Clone() : Msg_Clone(nullptr) {}
   ~Msg_Clone() override;
@@ -111,13 +115,15 @@ class Msg_Clone final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_Clone& default_instance() {
     return *internal_default_instance();
   }
@@ -155,9 +161,15 @@ class Msg_Clone final :
   Msg_Clone* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_Clone>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_Clone& from);
-  void MergeFrom(const Msg_Clone& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_Clone& from) {
+    Msg_Clone::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -170,7 +182,7 @@ class Msg_Clone final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_Clone* other);
 
   private:
@@ -183,7 +195,10 @@ class Msg_Clone final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -192,11 +207,7 @@ class Msg_Clone final :
   enum : int {
     kAACloneEndpointFieldNumber = 1,
   };
-  // required bytes a_aCloneEndpoint = 1;
-  bool has_a_acloneendpoint() const;
-  private:
-  bool _internal_has_a_acloneendpoint() const;
-  public:
+  // bytes a_aCloneEndpoint = 1;
   void clear_a_acloneendpoint();
   const std::string& a_acloneendpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -218,9 +229,8 @@ class Msg_Clone final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acloneendpoint_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteLazyInputStream_2eproto;
@@ -228,7 +238,7 @@ class Msg_Clone final :
 // -------------------------------------------------------------------
 
 class Msg_StreamNeeded final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteLazyInputStream.Msg_StreamNeeded) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteLazyInputStream.Msg_StreamNeeded) */ {
  public:
   inline Msg_StreamNeeded() : Msg_StreamNeeded(nullptr) {}
   ~Msg_StreamNeeded() override;
@@ -258,13 +268,15 @@ class Msg_StreamNeeded final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_StreamNeeded& default_instance() {
     return *internal_default_instance();
   }
@@ -302,9 +314,15 @@ class Msg_StreamNeeded final :
   Msg_StreamNeeded* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_StreamNeeded>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_StreamNeeded& from);
-  void MergeFrom(const Msg_StreamNeeded& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_StreamNeeded& from) {
+    Msg_StreamNeeded::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -317,7 +335,7 @@ class Msg_StreamNeeded final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_StreamNeeded* other);
 
   private:
@@ -330,7 +348,10 @@ class Msg_StreamNeeded final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -340,11 +361,7 @@ class Msg_StreamNeeded final :
     kAAStartFieldNumber = 1,
     kAALengthFieldNumber = 2,
   };
-  // required uint64 a_aStart = 1;
-  bool has_a_astart() const;
-  private:
-  bool _internal_has_a_astart() const;
-  public:
+  // uint64 a_aStart = 1;
   void clear_a_astart();
   uint64_t a_astart() const;
   void set_a_astart(uint64_t value);
@@ -353,11 +370,7 @@ class Msg_StreamNeeded final :
   void _internal_set_a_astart(uint64_t value);
   public:
 
-  // required uint64 a_aLength = 2;
-  bool has_a_alength() const;
-  private:
-  bool _internal_has_a_alength() const;
-  public:
+  // uint64 a_aLength = 2;
   void clear_a_alength();
   uint64_t a_alength() const;
   void set_a_alength(uint64_t value);
@@ -370,17 +383,13 @@ class Msg_StreamNeeded final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_astart_;
     uint64_t a_alength_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteLazyInputStream_2eproto;
@@ -388,7 +397,7 @@ class Msg_StreamNeeded final :
 // -------------------------------------------------------------------
 
 class Reply_StreamNeeded final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteLazyInputStream.Reply_StreamNeeded) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteLazyInputStream.Reply_StreamNeeded) */ {
  public:
   inline Reply_StreamNeeded() : Reply_StreamNeeded(nullptr) {}
   ~Reply_StreamNeeded() override;
@@ -418,13 +427,15 @@ class Reply_StreamNeeded final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_StreamNeeded& default_instance() {
     return *internal_default_instance();
   }
@@ -462,9 +473,15 @@ class Reply_StreamNeeded final :
   Reply_StreamNeeded* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_StreamNeeded>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_StreamNeeded& from);
-  void MergeFrom(const Reply_StreamNeeded& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_StreamNeeded& from) {
+    Reply_StreamNeeded::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -477,7 +494,7 @@ class Reply_StreamNeeded final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_StreamNeeded* other);
 
   private:
@@ -490,7 +507,10 @@ class Reply_StreamNeeded final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -535,10 +555,9 @@ class Reply_StreamNeeded final :
 // -------------------------------------------------------------------
 
 class Msg_LengthNeeded final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteLazyInputStream.Msg_LengthNeeded) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteLazyInputStream.Msg_LengthNeeded) */ {
  public:
   inline Msg_LengthNeeded() : Msg_LengthNeeded(nullptr) {}
-  ~Msg_LengthNeeded() override;
   explicit PROTOBUF_CONSTEXPR Msg_LengthNeeded(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_LengthNeeded(const Msg_LengthNeeded& from);
@@ -565,13 +584,15 @@ class Msg_LengthNeeded final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_LengthNeeded& default_instance() {
     return *internal_default_instance();
   }
@@ -609,23 +630,15 @@ class Msg_LengthNeeded final :
   Msg_LengthNeeded* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_LengthNeeded>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_LengthNeeded& from);
-  void MergeFrom(const Msg_LengthNeeded& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_LengthNeeded* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_LengthNeeded& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_LengthNeeded& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -637,7 +650,10 @@ class Msg_LengthNeeded final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -651,15 +667,13 @@ class Msg_LengthNeeded final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteLazyInputStream_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply_LengthNeeded final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteLazyInputStream.Reply_LengthNeeded) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteLazyInputStream.Reply_LengthNeeded) */ {
  public:
   inline Reply_LengthNeeded() : Reply_LengthNeeded(nullptr) {}
   ~Reply_LengthNeeded() override;
@@ -689,13 +703,15 @@ class Reply_LengthNeeded final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_LengthNeeded& default_instance() {
     return *internal_default_instance();
   }
@@ -733,9 +749,15 @@ class Reply_LengthNeeded final :
   Reply_LengthNeeded* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_LengthNeeded>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_LengthNeeded& from);
-  void MergeFrom(const Reply_LengthNeeded& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_LengthNeeded& from) {
+    Reply_LengthNeeded::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -748,7 +770,7 @@ class Reply_LengthNeeded final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_LengthNeeded* other);
 
   private:
@@ -761,7 +783,10 @@ class Reply_LengthNeeded final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -770,11 +795,7 @@ class Reply_LengthNeeded final :
   enum : int {
     kALengthFieldNumber = 1,
   };
-  // required sint64 a_length = 1;
-  bool has_a_length() const;
-  private:
-  bool _internal_has_a_length() const;
-  public:
+  // sint64 a_length = 1;
   void clear_a_length();
   int64_t a_length() const;
   void set_a_length(int64_t value);
@@ -791,9 +812,8 @@ class Reply_LengthNeeded final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     int64_t a_length_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteLazyInputStream_2eproto;
@@ -801,10 +821,9 @@ class Reply_LengthNeeded final :
 // -------------------------------------------------------------------
 
 class Msg_Goodbye final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteLazyInputStream.Msg_Goodbye) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteLazyInputStream.Msg_Goodbye) */ {
  public:
   inline Msg_Goodbye() : Msg_Goodbye(nullptr) {}
-  ~Msg_Goodbye() override;
   explicit PROTOBUF_CONSTEXPR Msg_Goodbye(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_Goodbye(const Msg_Goodbye& from);
@@ -831,13 +850,15 @@ class Msg_Goodbye final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_Goodbye& default_instance() {
     return *internal_default_instance();
   }
@@ -875,23 +896,15 @@ class Msg_Goodbye final :
   Msg_Goodbye* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_Goodbye>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_Goodbye& from);
-  void MergeFrom(const Msg_Goodbye& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_Goodbye* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_Goodbye& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_Goodbye& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -903,7 +916,10 @@ class Msg_Goodbye final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -917,9 +933,7 @@ class Msg_Goodbye final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteLazyInputStream_2eproto;
 };
 // ===================================================================
@@ -933,17 +947,9 @@ class Msg_Goodbye final :
 #endif  // __GNUC__
 // Msg_Clone
 
-// required bytes a_aCloneEndpoint = 1;
-inline bool Msg_Clone::_internal_has_a_acloneendpoint() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_Clone::has_a_acloneendpoint() const {
-  return _internal_has_a_acloneendpoint();
-}
+// bytes a_aCloneEndpoint = 1;
 inline void Msg_Clone::clear_a_acloneendpoint() {
   _impl_.a_acloneendpoint_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_Clone::a_acloneendpoint() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteLazyInputStream.Msg_Clone.a_aCloneEndpoint)
@@ -952,7 +958,7 @@ inline const std::string& Msg_Clone::a_acloneendpoint() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Clone::set_a_acloneendpoint(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_acloneendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteLazyInputStream.Msg_Clone.a_aCloneEndpoint)
 }
@@ -965,32 +971,22 @@ inline const std::string& Msg_Clone::_internal_a_acloneendpoint() const {
   return _impl_.a_acloneendpoint_.Get();
 }
 inline void Msg_Clone::_internal_set_a_acloneendpoint(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_acloneendpoint_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_Clone::_internal_mutable_a_acloneendpoint() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_acloneendpoint_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_Clone::release_a_acloneendpoint() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteLazyInputStream.Msg_Clone.a_aCloneEndpoint)
-  if (!_internal_has_a_acloneendpoint()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_acloneendpoint_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_acloneendpoint_.IsDefault()) {
-    _impl_.a_acloneendpoint_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_acloneendpoint_.Release();
 }
 inline void Msg_Clone::set_allocated_a_acloneendpoint(std::string* a_acloneendpoint) {
   if (a_acloneendpoint != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_acloneendpoint_.SetAllocated(a_acloneendpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1005,17 +1001,9 @@ inline void Msg_Clone::set_allocated_a_acloneendpoint(std::string* a_acloneendpo
 
 // Msg_StreamNeeded
 
-// required uint64 a_aStart = 1;
-inline bool Msg_StreamNeeded::_internal_has_a_astart() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_StreamNeeded::has_a_astart() const {
-  return _internal_has_a_astart();
-}
+// uint64 a_aStart = 1;
 inline void Msg_StreamNeeded::clear_a_astart() {
   _impl_.a_astart_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_StreamNeeded::_internal_a_astart() const {
   return _impl_.a_astart_;
@@ -1025,7 +1013,7 @@ inline uint64_t Msg_StreamNeeded::a_astart() const {
   return _internal_a_astart();
 }
 inline void Msg_StreamNeeded::_internal_set_a_astart(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_astart_ = value;
 }
 inline void Msg_StreamNeeded::set_a_astart(uint64_t value) {
@@ -1033,17 +1021,9 @@ inline void Msg_StreamNeeded::set_a_astart(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteLazyInputStream.Msg_StreamNeeded.a_aStart)
 }
 
-// required uint64 a_aLength = 2;
-inline bool Msg_StreamNeeded::_internal_has_a_alength() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_StreamNeeded::has_a_alength() const {
-  return _internal_has_a_alength();
-}
+// uint64 a_aLength = 2;
 inline void Msg_StreamNeeded::clear_a_alength() {
   _impl_.a_alength_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_StreamNeeded::_internal_a_alength() const {
   return _impl_.a_alength_;
@@ -1053,7 +1033,7 @@ inline uint64_t Msg_StreamNeeded::a_alength() const {
   return _internal_a_alength();
 }
 inline void Msg_StreamNeeded::_internal_set_a_alength(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_alength_ = value;
 }
 inline void Msg_StreamNeeded::set_a_alength(uint64_t value) {
@@ -1160,17 +1140,9 @@ inline void Reply_StreamNeeded::set_allocated_a_stream(::protobuf::mozilla::ipc:
 
 // Reply_LengthNeeded
 
-// required sint64 a_length = 1;
-inline bool Reply_LengthNeeded::_internal_has_a_length() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Reply_LengthNeeded::has_a_length() const {
-  return _internal_has_a_length();
-}
+// sint64 a_length = 1;
 inline void Reply_LengthNeeded::clear_a_length() {
   _impl_.a_length_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline int64_t Reply_LengthNeeded::_internal_a_length() const {
   return _impl_.a_length_;
@@ -1180,7 +1152,7 @@ inline int64_t Reply_LengthNeeded::a_length() const {
   return _internal_a_length();
 }
 inline void Reply_LengthNeeded::_internal_set_a_length(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_length_ = value;
 }
 inline void Reply_LengthNeeded::set_a_length(int64_t value) {

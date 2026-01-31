@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/broadcastchannel/PBroadcastChannel.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PBroadcastChannel;
 
@@ -17,19 +16,19 @@ import "DOMTypes.proto";
 
 // Message declarations
 message Msg_PostMessage {
-  required protobuf.mozilla.dom.MessageData a_message = 1;
+  protobuf.mozilla.dom.MessageData a_message = 1;
 }
 
 message Msg_Close {
 }
 
 message Msg_Notify {
-  required protobuf.mozilla.dom.MessageData a_message = 1;
+  protobuf.mozilla.dom.MessageData a_message = 1;
 }
 
 message Msg_RefMessageDelivered {
-  required bytes a_messageID = 1;
-  required uint32 a_actorsOnSamePid = 2;
+  bytes a_messageID = 1;
+  uint32 a_actorsOnSamePid = 2;
 }
 
 message Msg___delete__ {

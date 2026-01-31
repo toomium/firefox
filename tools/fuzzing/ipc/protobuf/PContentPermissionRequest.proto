@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/ipc/PContentPermissionRequest.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PContentPermissionRequest;
 
@@ -23,7 +22,7 @@ message Msg_Destroy {
 }
 
 message Msg_NotifyResult {
-  required bool a_allow = 1;
+  bool a_allow = 1;
   repeated protobuf.mozilla.dom.PermissionChoice a_choices = 2;
 }
 

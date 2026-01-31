@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/gfx/layers/ipc/WebRenderMessages.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.layers;
 
@@ -15,49 +14,49 @@ import "LayersMessages.proto";
 
 // Structs and unions declarations
 message RefCountedShmem {
-  required bytes a_buffer = 1;
+  bytes a_buffer = 1;
 }
 
 message OpAddSharedExternalImage {
-  required bytes a_externalImageId = 1;
-  required bytes a_key = 2;
+  bytes a_externalImageId = 1;
+  bytes a_key = 2;
 }
 
 message OpPushExternalImageForTexture {
-  required bytes a_externalImageId = 1;
-  required bytes a_key = 2;
-  required bytes a_texture = 3;
-  required bool a_isUpdate = 4;
+  bytes a_externalImageId = 1;
+  bytes a_key = 2;
+  bytes a_texture = 3;
+  bool a_isUpdate = 4;
 }
 
 message OpAddCompositorAnimations {
-  required protobuf.mozilla.layers.CompositorAnimations a_data = 1;
+  protobuf.mozilla.layers.CompositorAnimations a_data = 1;
 }
 
 message OpAddPipelineIdForCompositable {
-  required bytes a_pipelineId = 1;
-  required bytes a_handle = 2;
-  required bytes a_owner = 3;
+  bytes a_pipelineId = 1;
+  bytes a_handle = 2;
+  bytes a_owner = 3;
 }
 
 message OpRemovePipelineIdForCompositable {
-  required bytes a_pipelineId = 1;
+  bytes a_pipelineId = 1;
 }
 
 message OpReleaseTextureOfImage {
-  required bytes a_key = 1;
+  bytes a_key = 1;
 }
 
 message OpUpdateAsyncImagePipeline {
-  required bytes a_pipelineId = 1;
-  required bytes a_scBounds = 2;
-  required bytes a_rotation = 3;
-  required bytes a_filter = 4;
-  required bytes a_mixBlendMode = 5;
+  bytes a_pipelineId = 1;
+  bytes a_scBounds = 2;
+  bytes a_rotation = 3;
+  bytes a_filter = 4;
+  bytes a_mixBlendMode = 5;
 }
 
 message OpUpdatedAsyncImagePipeline {
-  required bytes a_pipelineId = 1;
+  bytes a_pipelineId = 1;
 }
 
 message WebRenderParentCommand {
@@ -73,94 +72,94 @@ message WebRenderParentCommand {
 }
 
 message OffsetRange {
-  required uint32 a_source = 1;
-  required uint32 a_start = 2;
-  required uint32 a_length = 3;
+  uint32 a_source = 1;
+  uint32 a_start = 2;
+  uint32 a_length = 3;
 }
 
 message OpAddImage {
-  required bytes a_descriptor = 1;
-  required protobuf.mozilla.layers.OffsetRange a_bytes = 2;
-  required uint32 a_tiling = 3;
-  required bytes a_key = 4;
+  bytes a_descriptor = 1;
+  protobuf.mozilla.layers.OffsetRange a_bytes = 2;
+  uint32 a_tiling = 3;
+  bytes a_key = 4;
 }
 
 message OpAddBlobImage {
-  required bytes a_descriptor = 1;
-  required protobuf.mozilla.layers.OffsetRange a_bytes = 2;
-  required bytes a_visibleRect = 3;
-  required uint32 a_tiling = 4;
-  required bytes a_key = 5;
+  bytes a_descriptor = 1;
+  protobuf.mozilla.layers.OffsetRange a_bytes = 2;
+  bytes a_visibleRect = 3;
+  uint32 a_tiling = 4;
+  bytes a_key = 5;
 }
 
 message OpAddSnapshotImage {
-  required bytes a_key = 1;
+  bytes a_key = 1;
 }
 
 message OpUpdateImage {
-  required bytes a_descriptor = 1;
-  required protobuf.mozilla.layers.OffsetRange a_bytes = 2;
-  required bytes a_key = 3;
+  bytes a_descriptor = 1;
+  protobuf.mozilla.layers.OffsetRange a_bytes = 2;
+  bytes a_key = 3;
 }
 
 message OpUpdateBlobImage {
-  required bytes a_descriptor = 1;
-  required protobuf.mozilla.layers.OffsetRange a_bytes = 2;
-  required bytes a_key = 3;
-  required bytes a_visibleRect = 4;
-  required bytes a_dirtyRect = 5;
+  bytes a_descriptor = 1;
+  protobuf.mozilla.layers.OffsetRange a_bytes = 2;
+  bytes a_key = 3;
+  bytes a_visibleRect = 4;
+  bytes a_dirtyRect = 5;
 }
 
 message OpSetBlobImageVisibleArea {
-  required bytes a_area = 1;
-  required bytes a_key = 2;
+  bytes a_area = 1;
+  bytes a_key = 2;
 }
 
 message OpUpdateSharedExternalImage {
-  required bytes a_externalImageId = 1;
-  required bytes a_key = 2;
-  required bytes a_dirtyRect = 3;
+  bytes a_externalImageId = 1;
+  bytes a_key = 2;
+  bytes a_dirtyRect = 3;
 }
 
 message OpDeleteImage {
-  required bytes a_key = 1;
+  bytes a_key = 1;
 }
 
 message OpDeleteSnapshotImage {
-  required bytes a_key = 1;
+  bytes a_key = 1;
 }
 
 message OpDeleteBlobImage {
-  required bytes a_key = 1;
+  bytes a_key = 1;
 }
 
 message OpAddRawFont {
-  required protobuf.mozilla.layers.OffsetRange a_bytes = 1;
-  required uint32 a_fontIndex = 2;
-  required bytes a_key = 3;
+  protobuf.mozilla.layers.OffsetRange a_bytes = 1;
+  uint32 a_fontIndex = 2;
+  bytes a_key = 3;
 }
 
 message OpAddFontDescriptor {
-  required protobuf.mozilla.layers.OffsetRange a_bytes = 1;
-  required uint32 a_fontIndex = 2;
-  required bytes a_key = 3;
+  protobuf.mozilla.layers.OffsetRange a_bytes = 1;
+  uint32 a_fontIndex = 2;
+  bytes a_key = 3;
 }
 
 message OpDeleteFont {
-  required bytes a_key = 1;
+  bytes a_key = 1;
 }
 
 message OpAddFontInstance {
-  required bytes a_options = 1;
-  required bytes a_platformOptions = 2;
-  required protobuf.mozilla.layers.OffsetRange a_variations = 3;
-  required bytes a_instanceKey = 4;
-  required bytes a_fontKey = 5;
-  required float a_glyphSize = 6;
+  bytes a_options = 1;
+  bytes a_platformOptions = 2;
+  protobuf.mozilla.layers.OffsetRange a_variations = 3;
+  bytes a_instanceKey = 4;
+  bytes a_fontKey = 5;
+  float a_glyphSize = 6;
 }
 
 message OpDeleteFontInstance {
-  required bytes a_key = 1;
+  bytes a_key = 1;
 }
 
 message OpUpdateResource {

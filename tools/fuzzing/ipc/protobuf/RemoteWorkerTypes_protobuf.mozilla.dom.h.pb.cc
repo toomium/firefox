@@ -8,7 +8,10 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -22,13 +25,12 @@ namespace mozilla {
 namespace dom {
 PROTOBUF_CONSTEXPR ServiceWorkerData::ServiceWorkerData(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_cachename_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.a_cachename_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_descriptor_)*/nullptr
   , /*decltype(_impl_.a_registrationdescriptor_)*/nullptr
-  , /*decltype(_impl_.a_loadflags_)*/0u} {}
+  , /*decltype(_impl_.a_loadflags_)*/0u
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ServiceWorkerDataDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ServiceWorkerDataDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -90,12 +92,11 @@ struct RemoteWorkerDataDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RemoteWorkerDataDefaultTypeInternal _RemoteWorkerData_default_instance_;
 PROTOBUF_CONSTEXPR ErrorDataNote::ErrorDataNote(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.a_message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_filename_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_linenumber_)*/0u
-  , /*decltype(_impl_.a_columnnumber_)*/0u} {}
+  , /*decltype(_impl_.a_columnnumber_)*/0u
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ErrorDataNoteDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ErrorDataNoteDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -107,14 +108,13 @@ struct ErrorDataNoteDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ErrorDataNoteDefaultTypeInternal _ErrorDataNote_default_instance_;
 PROTOBUF_CONSTEXPR ErrorData::ErrorData(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_notes_)*/{}
+    /*decltype(_impl_.a_notes_)*/{}
   , /*decltype(_impl_.a_message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_filename_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_iswarning_)*/false
   , /*decltype(_impl_.a_linenumber_)*/0u
-  , /*decltype(_impl_.a_columnnumber_)*/0u} {}
+  , /*decltype(_impl_.a_columnnumber_)*/0u
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ErrorDataDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ErrorDataDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -126,9 +126,8 @@ struct ErrorDataDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ErrorDataDefaultTypeInternal _ErrorData_default_instance_;
 PROTOBUF_CONSTEXPR CSPViolation::CSPViolation(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_json_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_json_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CSPViolationDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CSPViolationDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -139,8 +138,7 @@ struct CSPViolationDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CSPViolationDefaultTypeInternal _CSPViolation_default_instance_;
 PROTOBUF_CONSTEXPR ErrorMismatchOptions::ErrorMismatchOptions(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct ErrorMismatchOptionsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ErrorMismatchOptionsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -166,9 +164,7 @@ struct ErrorValueDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ErrorValueDefaultTypeInternal _ErrorValue_default_instance_;
 PROTOBUF_CONSTEXPR RemoteWorkerDebuggerInfo::RemoteWorkerDebuggerInfo(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_url_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.a_url_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_principal_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
@@ -176,7 +172,8 @@ PROTOBUF_CONSTEXPR RemoteWorkerDebuggerInfo::RemoteWorkerDebuggerInfo(
   , /*decltype(_impl_.a_ischrome_)*/false
   , /*decltype(_impl_.a_type_)*/0u
   , /*decltype(_impl_.a_windowid_)*/uint64_t{0u}
-  , /*decltype(_impl_.a_serviceworkerid_)*/uint64_t{0u}} {}
+  , /*decltype(_impl_.a_serviceworkerid_)*/uint64_t{0u}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RemoteWorkerDebuggerInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR RemoteWorkerDebuggerInfoDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -188,11 +185,10 @@ struct RemoteWorkerDebuggerInfoDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RemoteWorkerDebuggerInfoDefaultTypeInternal _RemoteWorkerDebuggerInfo_default_instance_;
 PROTOBUF_CONSTEXPR RemoteWorkerDebuggerErrorInfo::RemoteWorkerDebuggerErrorInfo(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_filename_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.a_filename_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_lineno_)*/0u} {}
+  , /*decltype(_impl_.a_lineno_)*/0u
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RemoteWorkerDebuggerErrorInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR RemoteWorkerDebuggerErrorInfoDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -205,6 +201,274 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
+static ::_pb::Metadata file_level_metadata_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[10];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
+
+const uint32_t TableStruct_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ServiceWorkerData, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ServiceWorkerData, _impl_.a_descriptor_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ServiceWorkerData, _impl_.a_registrationdescriptor_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ServiceWorkerData, _impl_.a_cachename_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ServiceWorkerData, _impl_.a_loadflags_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ServiceWorkerData, _impl_.a_id_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::OptionalServiceWorkerData, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::OptionalServiceWorkerData, _impl_._oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::OptionalServiceWorkerData, _impl_.content_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_originalscripturl_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_basescripturl_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_resolvedscripturl_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_workeroptions_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_loadingprincipalinfo_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_principalinfo_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_partitionedprincipalinfo_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_useregularprincipal_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_usingstorageaccess_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_cookiejarsettings_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_domain_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_issecurecontext_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_clientinfo_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_referrerinfo_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_storageaccess_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_isthirdpartycontext_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_shouldresistfingerprinting_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_overriddenfingerprintingsettings_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_ison3pcbexceptionlist_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_origintrials_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_serviceworkerdata_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_agentclusterid_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerData, _impl_.a_remotetype_),
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  2,
+  0,
+  ~0u,
+  ~0u,
+  ~0u,
+  1,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ErrorDataNote, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ErrorDataNote, _impl_.a_linenumber_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ErrorDataNote, _impl_.a_columnnumber_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ErrorDataNote, _impl_.a_message_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ErrorDataNote, _impl_.a_filename_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ErrorData, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ErrorData, _impl_.a_iswarning_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ErrorData, _impl_.a_linenumber_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ErrorData, _impl_.a_columnnumber_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ErrorData, _impl_.a_message_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ErrorData, _impl_.a_filename_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ErrorData, _impl_.a_notes_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::CSPViolation, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::CSPViolation, _impl_.a_json_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ErrorMismatchOptions, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ErrorValue, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ErrorValue, _impl_._oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ErrorValue, _impl_.content_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo, _impl_.a_ischrome_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo, _impl_.a_type_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo, _impl_.a_url_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo, _impl_.a_windowid_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo, _impl_.a_principal_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo, _impl_.a_serviceworkerid_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo, _impl_.a_id_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo, _impl_.a_name_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo, _impl_.a_parentid_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerDebuggerErrorInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerDebuggerErrorInfo, _impl_.a_filename_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerDebuggerErrorInfo, _impl_.a_lineno_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RemoteWorkerDebuggerErrorInfo, _impl_.a_message_),
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::protobuf::mozilla::dom::ServiceWorkerData)},
+  { 11, -1, -1, sizeof(::protobuf::mozilla::dom::OptionalServiceWorkerData)},
+  { 20, 49, -1, sizeof(::protobuf::mozilla::dom::RemoteWorkerData)},
+  { 72, -1, -1, sizeof(::protobuf::mozilla::dom::ErrorDataNote)},
+  { 82, -1, -1, sizeof(::protobuf::mozilla::dom::ErrorData)},
+  { 94, -1, -1, sizeof(::protobuf::mozilla::dom::CSPViolation)},
+  { 101, -1, -1, sizeof(::protobuf::mozilla::dom::ErrorMismatchOptions)},
+  { 107, -1, -1, sizeof(::protobuf::mozilla::dom::ErrorValue)},
+  { 119, -1, -1, sizeof(::protobuf::mozilla::dom::RemoteWorkerDebuggerInfo)},
+  { 134, -1, -1, sizeof(::protobuf::mozilla::dom::RemoteWorkerDebuggerErrorInfo)},
+};
+
+static const ::_pb::Message* const file_default_instances[] = {
+  &::protobuf::mozilla::dom::_ServiceWorkerData_default_instance_._instance,
+  &::protobuf::mozilla::dom::_OptionalServiceWorkerData_default_instance_._instance,
+  &::protobuf::mozilla::dom::_RemoteWorkerData_default_instance_._instance,
+  &::protobuf::mozilla::dom::_ErrorDataNote_default_instance_._instance,
+  &::protobuf::mozilla::dom::_ErrorData_default_instance_._instance,
+  &::protobuf::mozilla::dom::_CSPViolation_default_instance_._instance,
+  &::protobuf::mozilla::dom::_ErrorMismatchOptions_default_instance_._instance,
+  &::protobuf::mozilla::dom::_ErrorValue_default_instance_._instance,
+  &::protobuf::mozilla::dom::_RemoteWorkerDebuggerInfo_default_instance_._instance,
+  &::protobuf::mozilla::dom::_RemoteWorkerDebuggerErrorInfo_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n.RemoteWorkerTypes_protobuf.mozilla.dom"
+  ".h.proto\022\024protobuf.mozilla.dom\032\024ClientIP"
+  "CTypes.proto\032 IPCServiceWorkerDescriptor"
+  ".proto\032,IPCServiceWorkerRegistrationDesc"
+  "riptor.proto\032\034PBackgroundSharedTypes.pro"
+  "to\032\017URIParams.proto\032\016DOMTypes.proto\032\030Nec"
+  "koChannelParams.proto\032\023ProtocolTypes.pro"
+  "to\"\363\001\n\021ServiceWorkerData\022F\n\014a_descriptor"
+  "\030\001 \001(\01320.protobuf.mozilla.dom.IPCService"
+  "WorkerDescriptor\022^\n\030a_registrationDescri"
+  "ptor\030\002 \001(\0132<.protobuf.mozilla.dom.IPCSer"
+  "viceWorkerRegistrationDescriptor\022\023\n\013a_ca"
+  "cheName\030\003 \001(\t\022\023\n\013a_loadFlags\030\004 \001(\r\022\014\n\004a_"
+  "id\030\005 \001(\t\"\206\001\n\031OptionalServiceWorkerData\022\024"
+  "\n\na_mVvoid_t\030\001 \001(\014H\000\022H\n\025a_mVServiceWorke"
+  "rData\030\002 \001(\0132\'.protobuf.mozilla.dom.Servi"
+  "ceWorkerDataH\000B\t\n\007content\"\256\010\n\020RemoteWork"
+  "erData\022\033\n\023a_originalScriptURL\030\001 \001(\t\0228\n\017a"
+  "_baseScriptURL\030\002 \001(\0132\037.protobuf.mozilla."
+  "ipc.URIParams\022<\n\023a_resolvedScriptURL\030\003 \001"
+  "(\0132\037.protobuf.mozilla.ipc.URIParams\022\027\n\017a"
+  "_workerOptions\030\004 \001(\014\022C\n\026a_loadingPrincip"
+  "alInfo\030\005 \001(\0132#.protobuf.mozilla.ipc.Prin"
+  "cipalInfo\022<\n\017a_principalInfo\030\006 \001(\0132#.pro"
+  "tobuf.mozilla.ipc.PrincipalInfo\022G\n\032a_par"
+  "titionedPrincipalInfo\030\007 \001(\0132#.protobuf.m"
+  "ozilla.ipc.PrincipalInfo\022\035\n\025a_useRegular"
+  "Principal\030\010 \001(\010\022\034\n\024a_usingStorageAccess\030"
+  "\t \001(\010\022H\n\023a_cookieJarSettings\030\n \001(\0132+.pro"
+  "tobuf.mozilla.net.CookieJarSettingsArgs\022"
+  "\020\n\010a_domain\030\013 \001(\t\022\031\n\021a_isSecureContext\030\014"
+  " \001(\010\022>\n\014a_clientInfo\030\r \001(\0132#.protobuf.mo"
+  "zilla.dom.IPCClientInfoH\000\210\001\001\022\033\n\016a_referr"
+  "erInfo\030\016 \001(\014H\001\210\001\001\022\027\n\017a_storageAccess\030\017 \001"
+  "(\014\022\035\n\025a_isThirdPartyContext\030\020 \001(\010\022$\n\034a_s"
+  "houldResistFingerprinting\030\021 \001(\010\022/\n\"a_ove"
+  "rriddenFingerprintingSettings\030\022 \001(\014H\002\210\001\001"
+  "\022\037\n\027a_isOn3PCBExceptionList\030\023 \001(\010\022\026\n\016a_o"
+  "riginTrials\030\024 \001(\014\022L\n\023a_serviceWorkerData"
+  "\030\025 \001(\0132/.protobuf.mozilla.dom.OptionalSe"
+  "rviceWorkerData\022\030\n\020a_agentClusterId\030\026 \001("
+  "\014\022\024\n\014a_remoteType\030\027 \001(\tB\017\n\r_a_clientInfo"
+  "B\021\n\017_a_referrerInfoB%\n#_a_overriddenFing"
+  "erprintingSettings\"d\n\rErrorDataNote\022\024\n\014a"
+  "_lineNumber\030\001 \001(\r\022\026\n\016a_columnNumber\030\002 \001("
+  "\r\022\021\n\ta_message\030\003 \001(\t\022\022\n\na_filename\030\004 \001(\t"
+  "\"\253\001\n\tErrorData\022\023\n\013a_isWarning\030\001 \001(\010\022\024\n\014a"
+  "_lineNumber\030\002 \001(\r\022\026\n\016a_columnNumber\030\003 \001("
+  "\r\022\021\n\ta_message\030\004 \001(\t\022\022\n\na_filename\030\005 \001(\t"
+  "\0224\n\007a_notes\030\006 \003(\0132#.protobuf.mozilla.dom"
+  ".ErrorDataNote\"\036\n\014CSPViolation\022\016\n\006a_json"
+  "\030\001 \001(\t\"\026\n\024ErrorMismatchOptions\"\217\002\n\nError"
+  "Value\022\026\n\014a_mVnsresult\030\001 \001(\014H\000\0228\n\ra_mVErr"
+  "orData\030\002 \001(\0132\037.protobuf.mozilla.dom.Erro"
+  "rDataH\000\022>\n\020a_mVCSPViolation\030\003 \001(\0132\".prot"
+  "obuf.mozilla.dom.CSPViolationH\000\022N\n\030a_mVE"
+  "rrorMismatchOptions\030\004 \001(\0132*.protobuf.moz"
+  "illa.dom.ErrorMismatchOptionsH\000\022\024\n\na_mVv"
+  "oid_t\030\005 \001(\014H\000B\t\n\007content\"\303\001\n\030RemoteWorke"
+  "rDebuggerInfo\022\022\n\na_isChrome\030\001 \001(\010\022\016\n\006a_t"
+  "ype\030\002 \001(\r\022\r\n\005a_url\030\003 \001(\t\022\022\n\na_windowID\030\004"
+  " \001(\004\022\023\n\013a_principal\030\005 \001(\014\022\031\n\021a_serviceWo"
+  "rkerID\030\006 \001(\004\022\014\n\004a_Id\030\007 \001(\t\022\016\n\006a_name\030\010 \001"
+  "(\t\022\022\n\na_parentId\030\t \001(\t\"X\n\035RemoteWorkerDe"
+  "buggerErrorInfo\022\022\n\na_fileName\030\001 \001(\t\022\020\n\010a"
+  "_lineNo\030\002 \001(\r\022\021\n\ta_message\030\003 \001(\tb\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_deps[8] = {
+  &::descriptor_table_ClientIPCTypes_2eproto,
+  &::descriptor_table_DOMTypes_2eproto,
+  &::descriptor_table_IPCServiceWorkerDescriptor_2eproto,
+  &::descriptor_table_IPCServiceWorkerRegistrationDescriptor_2eproto,
+  &::descriptor_table_NeckoChannelParams_2eproto,
+  &::descriptor_table_PBackgroundSharedTypes_2eproto,
+  &::descriptor_table_ProtocolTypes_2eproto,
+  &::descriptor_table_URIParams_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto = {
+    false, false, 2640, descriptor_table_protodef_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto,
+    "RemoteWorkerTypes_protobuf.mozilla.dom.h.proto",
+    &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once, descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_deps, 8, 10,
+    schemas, file_default_instances, TableStruct_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets,
+    file_level_metadata_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto, file_level_enum_descriptors_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto,
+    file_level_service_descriptors_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter() {
+  return &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
+}
+
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto(&descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -213,27 +477,8 @@ namespace dom {
 
 class ServiceWorkerData::_Internal {
  public:
-  using HasBits = decltype(std::declval<ServiceWorkerData>()._impl_._has_bits_);
   static const ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor& a_descriptor(const ServiceWorkerData* msg);
-  static void set_has_a_descriptor(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
   static const ::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor& a_registrationdescriptor(const ServiceWorkerData* msg);
-  static void set_has_a_registrationdescriptor(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_a_cachename(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_loadflags(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static void set_has_a_id(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000001f) ^ 0x0000001f) != 0;
-  }
 };
 
 const ::protobuf::mozilla::dom::IPCServiceWorkerDescriptor&
@@ -245,37 +490,40 @@ ServiceWorkerData::_Internal::a_registrationdescriptor(const ServiceWorkerData* 
   return *msg->_impl_.a_registrationdescriptor_;
 }
 void ServiceWorkerData::clear_a_descriptor() {
-  if (_impl_.a_descriptor_ != nullptr) _impl_.a_descriptor_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_descriptor_ != nullptr) {
+    delete _impl_.a_descriptor_;
+  }
+  _impl_.a_descriptor_ = nullptr;
 }
 void ServiceWorkerData::clear_a_registrationdescriptor() {
-  if (_impl_.a_registrationdescriptor_ != nullptr) _impl_.a_registrationdescriptor_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_registrationdescriptor_ != nullptr) {
+    delete _impl_.a_registrationdescriptor_;
+  }
+  _impl_.a_registrationdescriptor_ = nullptr;
 }
 ServiceWorkerData::ServiceWorkerData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.ServiceWorkerData)
 }
 ServiceWorkerData::ServiceWorkerData(const ServiceWorkerData& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   ServiceWorkerData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_cachename_){}
+      decltype(_impl_.a_cachename_){}
     , decltype(_impl_.a_id_){}
     , decltype(_impl_.a_descriptor_){nullptr}
     , decltype(_impl_.a_registrationdescriptor_){nullptr}
-    , decltype(_impl_.a_loadflags_){}};
+    , decltype(_impl_.a_loadflags_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_cachename_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_cachename_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_cachename()) {
+  if (!from._internal_a_cachename().empty()) {
     _this->_impl_.a_cachename_.Set(from._internal_a_cachename(), 
       _this->GetArenaForAllocation());
   }
@@ -283,7 +531,7 @@ ServiceWorkerData::ServiceWorkerData(const ServiceWorkerData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_id_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_id()) {
+  if (!from._internal_a_id().empty()) {
     _this->_impl_.a_id_.Set(from._internal_a_id(), 
       _this->GetArenaForAllocation());
   }
@@ -302,13 +550,12 @@ inline void ServiceWorkerData::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_cachename_){}
+      decltype(_impl_.a_cachename_){}
     , decltype(_impl_.a_id_){}
     , decltype(_impl_.a_descriptor_){nullptr}
     , decltype(_impl_.a_registrationdescriptor_){nullptr}
     , decltype(_impl_.a_loadflags_){0u}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_cachename_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -322,7 +569,7 @@ inline void ServiceWorkerData::SharedCtor(
 
 ServiceWorkerData::~ServiceWorkerData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.ServiceWorkerData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -347,36 +594,27 @@ void ServiceWorkerData::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_cachename_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_id_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      GOOGLE_DCHECK(_impl_.a_descriptor_ != nullptr);
-      _impl_.a_descriptor_->Clear();
-    }
-    if (cached_has_bits & 0x00000008u) {
-      GOOGLE_DCHECK(_impl_.a_registrationdescriptor_ != nullptr);
-      _impl_.a_registrationdescriptor_->Clear();
-    }
+  _impl_.a_cachename_.ClearToEmpty();
+  _impl_.a_id_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_descriptor_ != nullptr) {
+    delete _impl_.a_descriptor_;
   }
+  _impl_.a_descriptor_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_registrationdescriptor_ != nullptr) {
+    delete _impl_.a_registrationdescriptor_;
+  }
+  _impl_.a_registrationdescriptor_ = nullptr;
   _impl_.a_loadflags_ = 0u;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* ServiceWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_descriptor = 1;
+      // .protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_descriptor = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_descriptor(), ptr);
@@ -384,7 +622,7 @@ const char* ServiceWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_registrationDescriptor = 2;
+      // .protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_registrationDescriptor = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_registrationdescriptor(), ptr);
@@ -392,30 +630,31 @@ const char* ServiceWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required string a_cacheName = 3;
+      // string a_cacheName = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_cachename();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.ServiceWorkerData.a_cacheName"));
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_loadFlags = 4;
+      // uint32 a_loadFlags = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_a_loadflags(&has_bits);
           _impl_.a_loadflags_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required string a_id = 5;
+      // string a_id = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_a_id();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.ServiceWorkerData.a_id"));
         } else
           goto handle_unusual;
         continue;
@@ -430,12 +669,11 @@ const char* ServiceWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseCont
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -449,164 +687,131 @@ uint8_t* ServiceWorkerData::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_descriptor = 1;
-  if (cached_has_bits & 0x00000004u) {
+  // .protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_descriptor = 1;
+  if (this->_internal_has_a_descriptor()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_descriptor(this),
         _Internal::a_descriptor(this).GetCachedSize(), target, stream);
   }
 
-  // required .protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_registrationDescriptor = 2;
-  if (cached_has_bits & 0x00000008u) {
+  // .protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_registrationDescriptor = 2;
+  if (this->_internal_has_a_registrationdescriptor()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::a_registrationdescriptor(this),
         _Internal::a_registrationdescriptor(this).GetCachedSize(), target, stream);
   }
 
-  // required string a_cacheName = 3;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_cacheName = 3;
+  if (!this->_internal_a_cachename().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_cachename().data(), static_cast<int>(this->_internal_a_cachename().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.ServiceWorkerData.a_cacheName");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_cachename(), target);
   }
 
-  // required uint32 a_loadFlags = 4;
-  if (cached_has_bits & 0x00000010u) {
+  // uint32 a_loadFlags = 4;
+  if (this->_internal_a_loadflags() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(4, this->_internal_a_loadflags(), target);
   }
 
-  // required string a_id = 5;
-  if (cached_has_bits & 0x00000002u) {
+  // string a_id = 5;
+  if (!this->_internal_a_id().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_id().data(), static_cast<int>(this->_internal_a_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.ServiceWorkerData.a_id");
     target = stream->WriteStringMaybeAliased(
         5, this->_internal_a_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.ServiceWorkerData)
   return target;
 }
 
-size_t ServiceWorkerData::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.ServiceWorkerData)
-  size_t total_size = 0;
-
-  if (_internal_has_a_cachename()) {
-    // required string a_cacheName = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_cachename());
-  }
-
-  if (_internal_has_a_id()) {
-    // required string a_id = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_id());
-  }
-
-  if (_internal_has_a_descriptor()) {
-    // required .protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_descriptor = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_descriptor_);
-  }
-
-  if (_internal_has_a_registrationdescriptor()) {
-    // required .protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_registrationDescriptor = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_registrationdescriptor_);
-  }
-
-  if (_internal_has_a_loadflags()) {
-    // required uint32 a_loadFlags = 4;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_loadflags());
-  }
-
-  return total_size;
-}
 size_t ServiceWorkerData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.ServiceWorkerData)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
-    // required string a_cacheName = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_cachename());
-
-    // required string a_id = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_id());
-
-    // required .protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_descriptor = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_descriptor_);
-
-    // required .protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_registrationDescriptor = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_registrationdescriptor_);
-
-    // required uint32 a_loadFlags = 4;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_loadflags());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_cacheName = 3;
+  if (!this->_internal_a_cachename().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_cachename());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // string a_id = 5;
+  if (!this->_internal_a_id().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_id());
+  }
+
+  // .protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_descriptor = 1;
+  if (this->_internal_has_a_descriptor()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_descriptor_);
+  }
+
+  // .protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_registrationDescriptor = 2;
+  if (this->_internal_has_a_registrationdescriptor()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_registrationdescriptor_);
+  }
+
+  // uint32 a_loadFlags = 4;
+  if (this->_internal_a_loadflags() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_loadflags());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ServiceWorkerData::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const ServiceWorkerData*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ServiceWorkerData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ServiceWorkerData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ServiceWorkerData::GetClassData() const { return &_class_data_; }
 
-void ServiceWorkerData::MergeFrom(const ServiceWorkerData& from) {
-  ServiceWorkerData* const _this = this;
+
+void ServiceWorkerData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ServiceWorkerData*>(&to_msg);
+  auto& from = static_cast<const ServiceWorkerData&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.ServiceWorkerData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_cachename(from._internal_a_cachename());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_id(from._internal_a_id());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_mutable_a_descriptor()->::protobuf::mozilla::dom::IPCServiceWorkerDescriptor::MergeFrom(
-          from._internal_a_descriptor());
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_internal_mutable_a_registrationdescriptor()->::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor::MergeFrom(
-          from._internal_a_registrationdescriptor());
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.a_loadflags_ = from._impl_.a_loadflags_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_cachename().empty()) {
+    _this->_internal_set_a_cachename(from._internal_a_cachename());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_id().empty()) {
+    _this->_internal_set_a_id(from._internal_a_id());
+  }
+  if (from._internal_has_a_descriptor()) {
+    _this->_internal_mutable_a_descriptor()->::protobuf::mozilla::dom::IPCServiceWorkerDescriptor::MergeFrom(
+        from._internal_a_descriptor());
+  }
+  if (from._internal_has_a_registrationdescriptor()) {
+    _this->_internal_mutable_a_registrationdescriptor()->::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor::MergeFrom(
+        from._internal_a_registrationdescriptor());
+  }
+  if (from._internal_a_loadflags() != 0) {
+    _this->_internal_set_a_loadflags(from._internal_a_loadflags());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ServiceWorkerData::CopyFrom(const ServiceWorkerData& from) {
@@ -617,13 +822,6 @@ void ServiceWorkerData::CopyFrom(const ServiceWorkerData& from) {
 }
 
 bool ServiceWorkerData::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_descriptor()) {
-    if (!_impl_.a_descriptor_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_registrationdescriptor()) {
-    if (!_impl_.a_registrationdescriptor_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -632,7 +830,6 @@ void ServiceWorkerData::InternalSwap(ServiceWorkerData* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_cachename_, lhs_arena,
       &other->_impl_.a_cachename_, rhs_arena
@@ -649,10 +846,11 @@ void ServiceWorkerData::InternalSwap(ServiceWorkerData* other) {
           reinterpret_cast<char*>(&other->_impl_.a_descriptor_));
 }
 
-std::string ServiceWorkerData::GetTypeName() const {
-  return "protobuf.mozilla.dom.ServiceWorkerData";
+::PROTOBUF_NAMESPACE_ID::Metadata ServiceWorkerData::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -682,19 +880,19 @@ void OptionalServiceWorkerData::set_allocated_a_mvserviceworkerdata(::protobuf::
 }
 OptionalServiceWorkerData::OptionalServiceWorkerData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.OptionalServiceWorkerData)
 }
 OptionalServiceWorkerData::OptionalServiceWorkerData(const OptionalServiceWorkerData& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   OptionalServiceWorkerData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVvoidT: {
@@ -727,7 +925,7 @@ inline void OptionalServiceWorkerData::SharedCtor(
 
 OptionalServiceWorkerData::~OptionalServiceWorkerData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.OptionalServiceWorkerData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -773,7 +971,7 @@ void OptionalServiceWorkerData::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* OptionalServiceWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -810,7 +1008,7 @@ const char* OptionalServiceWorkerData::_InternalParse(const char* ptr, ::_pbi::P
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -828,23 +1026,22 @@ uint8_t* OptionalServiceWorkerData::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  switch (content_case()) {
-    case kAMVvoidT: {
-      target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_a_mvvoid_t(), target);
-      break;
-    }
-    case kAMVServiceWorkerData: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::a_mvserviceworkerdata(this),
-          _Internal::a_mvserviceworkerdata(this).GetCachedSize(), target, stream);
-      break;
-    }
-    default: ;
+  // bytes a_mVvoid_t = 1;
+  if (_internal_has_a_mvvoid_t()) {
+    target = stream->WriteBytesMaybeAliased(
+        1, this->_internal_a_mvvoid_t(), target);
   }
+
+  // .protobuf.mozilla.dom.ServiceWorkerData a_mVServiceWorkerData = 2;
+  if (_internal_has_a_mvserviceworkerdata()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::a_mvserviceworkerdata(this),
+        _Internal::a_mvserviceworkerdata(this).GetCachedSize(), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.OptionalServiceWorkerData)
   return target;
@@ -877,22 +1074,19 @@ size_t OptionalServiceWorkerData::ByteSizeLong() const {
       break;
     }
   }
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void OptionalServiceWorkerData::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const OptionalServiceWorkerData*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData OptionalServiceWorkerData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    OptionalServiceWorkerData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*OptionalServiceWorkerData::GetClassData() const { return &_class_data_; }
 
-void OptionalServiceWorkerData::MergeFrom(const OptionalServiceWorkerData& from) {
-  OptionalServiceWorkerData* const _this = this;
+
+void OptionalServiceWorkerData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<OptionalServiceWorkerData*>(&to_msg);
+  auto& from = static_cast<const OptionalServiceWorkerData&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.OptionalServiceWorkerData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -912,7 +1106,7 @@ void OptionalServiceWorkerData::MergeFrom(const OptionalServiceWorkerData& from)
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void OptionalServiceWorkerData::CopyFrom(const OptionalServiceWorkerData& from) {
@@ -923,20 +1117,6 @@ void OptionalServiceWorkerData::CopyFrom(const OptionalServiceWorkerData& from) 
 }
 
 bool OptionalServiceWorkerData::IsInitialized() const {
-  switch (content_case()) {
-    case kAMVvoidT: {
-      break;
-    }
-    case kAMVServiceWorkerData: {
-      if (_internal_has_a_mvserviceworkerdata()) {
-        if (!_impl_.content_.a_mvserviceworkerdata_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case CONTENT_NOT_SET: {
-      break;
-    }
-  }
   return true;
 }
 
@@ -947,96 +1127,34 @@ void OptionalServiceWorkerData::InternalSwap(OptionalServiceWorkerData* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-std::string OptionalServiceWorkerData::GetTypeName() const {
-  return "protobuf.mozilla.dom.OptionalServiceWorkerData";
+::PROTOBUF_NAMESPACE_ID::Metadata OptionalServiceWorkerData::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[1]);
 }
-
 
 // ===================================================================
 
 class RemoteWorkerData::_Internal {
  public:
   using HasBits = decltype(std::declval<RemoteWorkerData>()._impl_._has_bits_);
-  static void set_has_a_originalscripturl(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
   static const ::protobuf::mozilla::ipc::URIParams& a_basescripturl(const RemoteWorkerData* msg);
-  static void set_has_a_basescripturl(HasBits* has_bits) {
-    (*has_bits)[0] |= 512u;
-  }
   static const ::protobuf::mozilla::ipc::URIParams& a_resolvedscripturl(const RemoteWorkerData* msg);
-  static void set_has_a_resolvedscripturl(HasBits* has_bits) {
-    (*has_bits)[0] |= 1024u;
-  }
-  static void set_has_a_workeroptions(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
   static const ::protobuf::mozilla::ipc::PrincipalInfo& a_loadingprincipalinfo(const RemoteWorkerData* msg);
-  static void set_has_a_loadingprincipalinfo(HasBits* has_bits) {
-    (*has_bits)[0] |= 2048u;
-  }
   static const ::protobuf::mozilla::ipc::PrincipalInfo& a_principalinfo(const RemoteWorkerData* msg);
-  static void set_has_a_principalinfo(HasBits* has_bits) {
-    (*has_bits)[0] |= 4096u;
-  }
   static const ::protobuf::mozilla::ipc::PrincipalInfo& a_partitionedprincipalinfo(const RemoteWorkerData* msg);
-  static void set_has_a_partitionedprincipalinfo(HasBits* has_bits) {
-    (*has_bits)[0] |= 8192u;
-  }
-  static void set_has_a_useregularprincipal(HasBits* has_bits) {
-    (*has_bits)[0] |= 131072u;
-  }
-  static void set_has_a_usingstorageaccess(HasBits* has_bits) {
-    (*has_bits)[0] |= 262144u;
-  }
   static const ::protobuf::mozilla::net::CookieJarSettingsArgs& a_cookiejarsettings(const RemoteWorkerData* msg);
-  static void set_has_a_cookiejarsettings(HasBits* has_bits) {
-    (*has_bits)[0] |= 16384u;
-  }
-  static void set_has_a_domain(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_a_issecurecontext(HasBits* has_bits) {
-    (*has_bits)[0] |= 524288u;
-  }
   static const ::protobuf::mozilla::dom::IPCClientInfo& a_clientinfo(const RemoteWorkerData* msg);
   static void set_has_a_clientinfo(HasBits* has_bits) {
-    (*has_bits)[0] |= 32768u;
+    (*has_bits)[0] |= 4u;
   }
   static void set_has_a_referrerinfo(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_a_storageaccess(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static void set_has_a_isthirdpartycontext(HasBits* has_bits) {
-    (*has_bits)[0] |= 1048576u;
-  }
-  static void set_has_a_shouldresistfingerprinting(HasBits* has_bits) {
-    (*has_bits)[0] |= 2097152u;
+    (*has_bits)[0] |= 1u;
   }
   static void set_has_a_overriddenfingerprintingsettings(HasBits* has_bits) {
-    (*has_bits)[0] |= 32u;
-  }
-  static void set_has_a_ison3pcbexceptionlist(HasBits* has_bits) {
-    (*has_bits)[0] |= 4194304u;
-  }
-  static void set_has_a_origintrials(HasBits* has_bits) {
-    (*has_bits)[0] |= 64u;
+    (*has_bits)[0] |= 2u;
   }
   static const ::protobuf::mozilla::dom::OptionalServiceWorkerData& a_serviceworkerdata(const RemoteWorkerData* msg);
-  static void set_has_a_serviceworkerdata(HasBits* has_bits) {
-    (*has_bits)[0] |= 65536u;
-  }
-  static void set_has_a_agentclusterid(HasBits* has_bits) {
-    (*has_bits)[0] |= 128u;
-  }
-  static void set_has_a_remotetype(HasBits* has_bits) {
-    (*has_bits)[0] |= 256u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x007f7fd7) ^ 0x007f7fd7) != 0;
-  }
 };
 
 const ::protobuf::mozilla::ipc::URIParams&
@@ -1072,41 +1190,53 @@ RemoteWorkerData::_Internal::a_serviceworkerdata(const RemoteWorkerData* msg) {
   return *msg->_impl_.a_serviceworkerdata_;
 }
 void RemoteWorkerData::clear_a_basescripturl() {
-  if (_impl_.a_basescripturl_ != nullptr) _impl_.a_basescripturl_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000200u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_basescripturl_ != nullptr) {
+    delete _impl_.a_basescripturl_;
+  }
+  _impl_.a_basescripturl_ = nullptr;
 }
 void RemoteWorkerData::clear_a_resolvedscripturl() {
-  if (_impl_.a_resolvedscripturl_ != nullptr) _impl_.a_resolvedscripturl_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000400u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_resolvedscripturl_ != nullptr) {
+    delete _impl_.a_resolvedscripturl_;
+  }
+  _impl_.a_resolvedscripturl_ = nullptr;
 }
 void RemoteWorkerData::clear_a_loadingprincipalinfo() {
-  if (_impl_.a_loadingprincipalinfo_ != nullptr) _impl_.a_loadingprincipalinfo_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000800u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_loadingprincipalinfo_ != nullptr) {
+    delete _impl_.a_loadingprincipalinfo_;
+  }
+  _impl_.a_loadingprincipalinfo_ = nullptr;
 }
 void RemoteWorkerData::clear_a_principalinfo() {
-  if (_impl_.a_principalinfo_ != nullptr) _impl_.a_principalinfo_->Clear();
-  _impl_._has_bits_[0] &= ~0x00001000u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_principalinfo_ != nullptr) {
+    delete _impl_.a_principalinfo_;
+  }
+  _impl_.a_principalinfo_ = nullptr;
 }
 void RemoteWorkerData::clear_a_partitionedprincipalinfo() {
-  if (_impl_.a_partitionedprincipalinfo_ != nullptr) _impl_.a_partitionedprincipalinfo_->Clear();
-  _impl_._has_bits_[0] &= ~0x00002000u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_partitionedprincipalinfo_ != nullptr) {
+    delete _impl_.a_partitionedprincipalinfo_;
+  }
+  _impl_.a_partitionedprincipalinfo_ = nullptr;
 }
 void RemoteWorkerData::clear_a_cookiejarsettings() {
-  if (_impl_.a_cookiejarsettings_ != nullptr) _impl_.a_cookiejarsettings_->Clear();
-  _impl_._has_bits_[0] &= ~0x00004000u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_cookiejarsettings_ != nullptr) {
+    delete _impl_.a_cookiejarsettings_;
+  }
+  _impl_.a_cookiejarsettings_ = nullptr;
 }
 void RemoteWorkerData::clear_a_clientinfo() {
   if (_impl_.a_clientinfo_ != nullptr) _impl_.a_clientinfo_->Clear();
-  _impl_._has_bits_[0] &= ~0x00008000u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 RemoteWorkerData::RemoteWorkerData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.RemoteWorkerData)
 }
 RemoteWorkerData::RemoteWorkerData(const RemoteWorkerData& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   RemoteWorkerData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -1135,12 +1265,12 @@ RemoteWorkerData::RemoteWorkerData(const RemoteWorkerData& from)
     , decltype(_impl_.a_shouldresistfingerprinting_){}
     , decltype(_impl_.a_ison3pcbexceptionlist_){}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_originalscripturl_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_originalscripturl_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_originalscripturl()) {
+  if (!from._internal_a_originalscripturl().empty()) {
     _this->_impl_.a_originalscripturl_.Set(from._internal_a_originalscripturl(), 
       _this->GetArenaForAllocation());
   }
@@ -1148,7 +1278,7 @@ RemoteWorkerData::RemoteWorkerData(const RemoteWorkerData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_workeroptions_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_workeroptions()) {
+  if (!from._internal_a_workeroptions().empty()) {
     _this->_impl_.a_workeroptions_.Set(from._internal_a_workeroptions(), 
       _this->GetArenaForAllocation());
   }
@@ -1156,7 +1286,7 @@ RemoteWorkerData::RemoteWorkerData(const RemoteWorkerData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_domain_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_domain()) {
+  if (!from._internal_a_domain().empty()) {
     _this->_impl_.a_domain_.Set(from._internal_a_domain(), 
       _this->GetArenaForAllocation());
   }
@@ -1172,7 +1302,7 @@ RemoteWorkerData::RemoteWorkerData(const RemoteWorkerData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_storageaccess_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_storageaccess()) {
+  if (!from._internal_a_storageaccess().empty()) {
     _this->_impl_.a_storageaccess_.Set(from._internal_a_storageaccess(), 
       _this->GetArenaForAllocation());
   }
@@ -1188,7 +1318,7 @@ RemoteWorkerData::RemoteWorkerData(const RemoteWorkerData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_origintrials_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_origintrials()) {
+  if (!from._internal_a_origintrials().empty()) {
     _this->_impl_.a_origintrials_.Set(from._internal_a_origintrials(), 
       _this->GetArenaForAllocation());
   }
@@ -1196,7 +1326,7 @@ RemoteWorkerData::RemoteWorkerData(const RemoteWorkerData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_agentclusterid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_agentclusterid()) {
+  if (!from._internal_a_agentclusterid().empty()) {
     _this->_impl_.a_agentclusterid_.Set(from._internal_a_agentclusterid(), 
       _this->GetArenaForAllocation());
   }
@@ -1204,7 +1334,7 @@ RemoteWorkerData::RemoteWorkerData(const RemoteWorkerData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_remotetype_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_remotetype()) {
+  if (!from._internal_a_remotetype().empty()) {
     _this->_impl_.a_remotetype_.Set(from._internal_a_remotetype(), 
       _this->GetArenaForAllocation());
   }
@@ -1309,7 +1439,7 @@ inline void RemoteWorkerData::SharedCtor(
 
 RemoteWorkerData::~RemoteWorkerData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.RemoteWorkerData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -1347,77 +1477,57 @@ void RemoteWorkerData::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  _impl_.a_originalscripturl_.ClearToEmpty();
+  _impl_.a_workeroptions_.ClearToEmpty();
+  _impl_.a_domain_.ClearToEmpty();
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x000000ffu) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_originalscripturl_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_workeroptions_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _impl_.a_domain_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _impl_.a_referrerinfo_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _impl_.a_storageaccess_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000020u) {
-      _impl_.a_overriddenfingerprintingsettings_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000040u) {
-      _impl_.a_origintrials_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000080u) {
-      _impl_.a_agentclusterid_.ClearNonDefaultToEmpty();
-    }
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_referrerinfo_.ClearNonDefaultToEmpty();
   }
-  if (cached_has_bits & 0x0000ff00u) {
-    if (cached_has_bits & 0x00000100u) {
-      _impl_.a_remotetype_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000200u) {
-      GOOGLE_DCHECK(_impl_.a_basescripturl_ != nullptr);
-      _impl_.a_basescripturl_->Clear();
-    }
-    if (cached_has_bits & 0x00000400u) {
-      GOOGLE_DCHECK(_impl_.a_resolvedscripturl_ != nullptr);
-      _impl_.a_resolvedscripturl_->Clear();
-    }
-    if (cached_has_bits & 0x00000800u) {
-      GOOGLE_DCHECK(_impl_.a_loadingprincipalinfo_ != nullptr);
-      _impl_.a_loadingprincipalinfo_->Clear();
-    }
-    if (cached_has_bits & 0x00001000u) {
-      GOOGLE_DCHECK(_impl_.a_principalinfo_ != nullptr);
-      _impl_.a_principalinfo_->Clear();
-    }
-    if (cached_has_bits & 0x00002000u) {
-      GOOGLE_DCHECK(_impl_.a_partitionedprincipalinfo_ != nullptr);
-      _impl_.a_partitionedprincipalinfo_->Clear();
-    }
-    if (cached_has_bits & 0x00004000u) {
-      GOOGLE_DCHECK(_impl_.a_cookiejarsettings_ != nullptr);
-      _impl_.a_cookiejarsettings_->Clear();
-    }
-    if (cached_has_bits & 0x00008000u) {
-      GOOGLE_DCHECK(_impl_.a_clientinfo_ != nullptr);
-      _impl_.a_clientinfo_->Clear();
-    }
+  _impl_.a_storageaccess_.ClearToEmpty();
+  if (cached_has_bits & 0x00000002u) {
+    _impl_.a_overriddenfingerprintingsettings_.ClearNonDefaultToEmpty();
   }
-  if (cached_has_bits & 0x00010000u) {
-    GOOGLE_DCHECK(_impl_.a_serviceworkerdata_ != nullptr);
-    _impl_.a_serviceworkerdata_->Clear();
+  _impl_.a_origintrials_.ClearToEmpty();
+  _impl_.a_agentclusterid_.ClearToEmpty();
+  _impl_.a_remotetype_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_basescripturl_ != nullptr) {
+    delete _impl_.a_basescripturl_;
   }
-  if (cached_has_bits & 0x007e0000u) {
-    ::memset(&_impl_.a_useregularprincipal_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.a_ison3pcbexceptionlist_) -
-        reinterpret_cast<char*>(&_impl_.a_useregularprincipal_)) + sizeof(_impl_.a_ison3pcbexceptionlist_));
+  _impl_.a_basescripturl_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_resolvedscripturl_ != nullptr) {
+    delete _impl_.a_resolvedscripturl_;
   }
+  _impl_.a_resolvedscripturl_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_loadingprincipalinfo_ != nullptr) {
+    delete _impl_.a_loadingprincipalinfo_;
+  }
+  _impl_.a_loadingprincipalinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_principalinfo_ != nullptr) {
+    delete _impl_.a_principalinfo_;
+  }
+  _impl_.a_principalinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_partitionedprincipalinfo_ != nullptr) {
+    delete _impl_.a_partitionedprincipalinfo_;
+  }
+  _impl_.a_partitionedprincipalinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_cookiejarsettings_ != nullptr) {
+    delete _impl_.a_cookiejarsettings_;
+  }
+  _impl_.a_cookiejarsettings_ = nullptr;
+  if (cached_has_bits & 0x00000004u) {
+    GOOGLE_DCHECK(_impl_.a_clientinfo_ != nullptr);
+    _impl_.a_clientinfo_->Clear();
+  }
+  if (GetArenaForAllocation() == nullptr && _impl_.a_serviceworkerdata_ != nullptr) {
+    delete _impl_.a_serviceworkerdata_;
+  }
+  _impl_.a_serviceworkerdata_ = nullptr;
+  ::memset(&_impl_.a_useregularprincipal_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.a_ison3pcbexceptionlist_) -
+      reinterpret_cast<char*>(&_impl_.a_useregularprincipal_)) + sizeof(_impl_.a_ison3pcbexceptionlist_));
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* RemoteWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1427,16 +1537,17 @@ const char* RemoteWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_originalScriptURL = 1;
+      // string a_originalScriptURL = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_originalscripturl();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.RemoteWorkerData.a_originalScriptURL"));
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.ipc.URIParams a_baseScriptURL = 2;
+      // .protobuf.mozilla.ipc.URIParams a_baseScriptURL = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_basescripturl(), ptr);
@@ -1444,7 +1555,7 @@ const char* RemoteWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.ipc.URIParams a_resolvedScriptURL = 3;
+      // .protobuf.mozilla.ipc.URIParams a_resolvedScriptURL = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_resolvedscripturl(), ptr);
@@ -1452,7 +1563,7 @@ const char* RemoteWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_workerOptions = 4;
+      // bytes a_workerOptions = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_workeroptions();
@@ -1461,7 +1572,7 @@ const char* RemoteWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.ipc.PrincipalInfo a_loadingPrincipalInfo = 5;
+      // .protobuf.mozilla.ipc.PrincipalInfo a_loadingPrincipalInfo = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_loadingprincipalinfo(), ptr);
@@ -1469,7 +1580,7 @@ const char* RemoteWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 6;
+      // .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_principalinfo(), ptr);
@@ -1477,7 +1588,7 @@ const char* RemoteWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.ipc.PrincipalInfo a_partitionedPrincipalInfo = 7;
+      // .protobuf.mozilla.ipc.PrincipalInfo a_partitionedPrincipalInfo = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_partitionedprincipalinfo(), ptr);
@@ -1485,25 +1596,23 @@ const char* RemoteWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required bool a_useRegularPrincipal = 8;
+      // bool a_useRegularPrincipal = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
-          _Internal::set_has_a_useregularprincipal(&has_bits);
           _impl_.a_useregularprincipal_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool a_usingStorageAccess = 9;
+      // bool a_usingStorageAccess = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
-          _Internal::set_has_a_usingstorageaccess(&has_bits);
           _impl_.a_usingstorageaccess_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 10;
+      // .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_cookiejarsettings(), ptr);
@@ -1511,19 +1620,19 @@ const char* RemoteWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required string a_domain = 11;
+      // string a_domain = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 90)) {
           auto str = _internal_mutable_a_domain();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.RemoteWorkerData.a_domain"));
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isSecureContext = 12;
+      // bool a_isSecureContext = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
-          _Internal::set_has_a_issecurecontext(&has_bits);
           _impl_.a_issecurecontext_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -1546,7 +1655,7 @@ const char* RemoteWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_storageAccess = 15;
+      // bytes a_storageAccess = 15;
       case 15:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 122)) {
           auto str = _internal_mutable_a_storageaccess();
@@ -1555,19 +1664,17 @@ const char* RemoteWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isThirdPartyContext = 16;
+      // bool a_isThirdPartyContext = 16;
       case 16:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 128)) {
-          _Internal::set_has_a_isthirdpartycontext(&has_bits);
           _impl_.a_isthirdpartycontext_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool a_shouldResistFingerprinting = 17;
+      // bool a_shouldResistFingerprinting = 17;
       case 17:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 136)) {
-          _Internal::set_has_a_shouldresistfingerprinting(&has_bits);
           _impl_.a_shouldresistfingerprinting_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -1582,16 +1689,15 @@ const char* RemoteWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isOn3PCBExceptionList = 19;
+      // bool a_isOn3PCBExceptionList = 19;
       case 19:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 152)) {
-          _Internal::set_has_a_ison3pcbexceptionlist(&has_bits);
           _impl_.a_ison3pcbexceptionlist_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_originTrials = 20;
+      // bytes a_originTrials = 20;
       case 20:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 162)) {
           auto str = _internal_mutable_a_origintrials();
@@ -1600,7 +1706,7 @@ const char* RemoteWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.dom.OptionalServiceWorkerData a_serviceWorkerData = 21;
+      // .protobuf.mozilla.dom.OptionalServiceWorkerData a_serviceWorkerData = 21;
       case 21:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 170)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_serviceworkerdata(), ptr);
@@ -1608,7 +1714,7 @@ const char* RemoteWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_agentClusterId = 22;
+      // bytes a_agentClusterId = 22;
       case 22:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 178)) {
           auto str = _internal_mutable_a_agentclusterid();
@@ -1617,12 +1723,13 @@ const char* RemoteWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseConte
         } else
           goto handle_unusual;
         continue;
-      // required string a_remoteType = 23;
+      // string a_remoteType = 23;
       case 23:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 186)) {
           auto str = _internal_mutable_a_remotetype();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.RemoteWorkerData.a_remoteType"));
         } else
           goto handle_unusual;
         continue;
@@ -1637,7 +1744,7 @@ const char* RemoteWorkerData::_InternalParse(const char* ptr, ::_pbi::ParseConte
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1656,524 +1763,426 @@ uint8_t* RemoteWorkerData::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_originalScriptURL = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_originalScriptURL = 1;
+  if (!this->_internal_a_originalscripturl().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_originalscripturl().data(), static_cast<int>(this->_internal_a_originalscripturl().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.RemoteWorkerData.a_originalScriptURL");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_originalscripturl(), target);
   }
 
-  // required .protobuf.mozilla.ipc.URIParams a_baseScriptURL = 2;
-  if (cached_has_bits & 0x00000200u) {
+  // .protobuf.mozilla.ipc.URIParams a_baseScriptURL = 2;
+  if (this->_internal_has_a_basescripturl()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::a_basescripturl(this),
         _Internal::a_basescripturl(this).GetCachedSize(), target, stream);
   }
 
-  // required .protobuf.mozilla.ipc.URIParams a_resolvedScriptURL = 3;
-  if (cached_has_bits & 0x00000400u) {
+  // .protobuf.mozilla.ipc.URIParams a_resolvedScriptURL = 3;
+  if (this->_internal_has_a_resolvedscripturl()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(3, _Internal::a_resolvedscripturl(this),
         _Internal::a_resolvedscripturl(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes a_workerOptions = 4;
-  if (cached_has_bits & 0x00000002u) {
+  // bytes a_workerOptions = 4;
+  if (!this->_internal_a_workeroptions().empty()) {
     target = stream->WriteBytesMaybeAliased(
         4, this->_internal_a_workeroptions(), target);
   }
 
-  // required .protobuf.mozilla.ipc.PrincipalInfo a_loadingPrincipalInfo = 5;
-  if (cached_has_bits & 0x00000800u) {
+  // .protobuf.mozilla.ipc.PrincipalInfo a_loadingPrincipalInfo = 5;
+  if (this->_internal_has_a_loadingprincipalinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(5, _Internal::a_loadingprincipalinfo(this),
         _Internal::a_loadingprincipalinfo(this).GetCachedSize(), target, stream);
   }
 
-  // required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 6;
-  if (cached_has_bits & 0x00001000u) {
+  // .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 6;
+  if (this->_internal_has_a_principalinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(6, _Internal::a_principalinfo(this),
         _Internal::a_principalinfo(this).GetCachedSize(), target, stream);
   }
 
-  // required .protobuf.mozilla.ipc.PrincipalInfo a_partitionedPrincipalInfo = 7;
-  if (cached_has_bits & 0x00002000u) {
+  // .protobuf.mozilla.ipc.PrincipalInfo a_partitionedPrincipalInfo = 7;
+  if (this->_internal_has_a_partitionedprincipalinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(7, _Internal::a_partitionedprincipalinfo(this),
         _Internal::a_partitionedprincipalinfo(this).GetCachedSize(), target, stream);
   }
 
-  // required bool a_useRegularPrincipal = 8;
-  if (cached_has_bits & 0x00020000u) {
+  // bool a_useRegularPrincipal = 8;
+  if (this->_internal_a_useregularprincipal() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(8, this->_internal_a_useregularprincipal(), target);
   }
 
-  // required bool a_usingStorageAccess = 9;
-  if (cached_has_bits & 0x00040000u) {
+  // bool a_usingStorageAccess = 9;
+  if (this->_internal_a_usingstorageaccess() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(9, this->_internal_a_usingstorageaccess(), target);
   }
 
-  // required .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 10;
-  if (cached_has_bits & 0x00004000u) {
+  // .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 10;
+  if (this->_internal_has_a_cookiejarsettings()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(10, _Internal::a_cookiejarsettings(this),
         _Internal::a_cookiejarsettings(this).GetCachedSize(), target, stream);
   }
 
-  // required string a_domain = 11;
-  if (cached_has_bits & 0x00000004u) {
+  // string a_domain = 11;
+  if (!this->_internal_a_domain().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_domain().data(), static_cast<int>(this->_internal_a_domain().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.RemoteWorkerData.a_domain");
     target = stream->WriteStringMaybeAliased(
         11, this->_internal_a_domain(), target);
   }
 
-  // required bool a_isSecureContext = 12;
-  if (cached_has_bits & 0x00080000u) {
+  // bool a_isSecureContext = 12;
+  if (this->_internal_a_issecurecontext() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(12, this->_internal_a_issecurecontext(), target);
   }
 
   // optional .protobuf.mozilla.dom.IPCClientInfo a_clientInfo = 13;
-  if (cached_has_bits & 0x00008000u) {
+  if (_internal_has_a_clientinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(13, _Internal::a_clientinfo(this),
         _Internal::a_clientinfo(this).GetCachedSize(), target, stream);
   }
 
   // optional bytes a_referrerInfo = 14;
-  if (cached_has_bits & 0x00000008u) {
+  if (_internal_has_a_referrerinfo()) {
     target = stream->WriteBytesMaybeAliased(
         14, this->_internal_a_referrerinfo(), target);
   }
 
-  // required bytes a_storageAccess = 15;
-  if (cached_has_bits & 0x00000010u) {
+  // bytes a_storageAccess = 15;
+  if (!this->_internal_a_storageaccess().empty()) {
     target = stream->WriteBytesMaybeAliased(
         15, this->_internal_a_storageaccess(), target);
   }
 
-  // required bool a_isThirdPartyContext = 16;
-  if (cached_has_bits & 0x00100000u) {
+  // bool a_isThirdPartyContext = 16;
+  if (this->_internal_a_isthirdpartycontext() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(16, this->_internal_a_isthirdpartycontext(), target);
   }
 
-  // required bool a_shouldResistFingerprinting = 17;
-  if (cached_has_bits & 0x00200000u) {
+  // bool a_shouldResistFingerprinting = 17;
+  if (this->_internal_a_shouldresistfingerprinting() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(17, this->_internal_a_shouldresistfingerprinting(), target);
   }
 
   // optional bytes a_overriddenFingerprintingSettings = 18;
-  if (cached_has_bits & 0x00000020u) {
+  if (_internal_has_a_overriddenfingerprintingsettings()) {
     target = stream->WriteBytesMaybeAliased(
         18, this->_internal_a_overriddenfingerprintingsettings(), target);
   }
 
-  // required bool a_isOn3PCBExceptionList = 19;
-  if (cached_has_bits & 0x00400000u) {
+  // bool a_isOn3PCBExceptionList = 19;
+  if (this->_internal_a_ison3pcbexceptionlist() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(19, this->_internal_a_ison3pcbexceptionlist(), target);
   }
 
-  // required bytes a_originTrials = 20;
-  if (cached_has_bits & 0x00000040u) {
+  // bytes a_originTrials = 20;
+  if (!this->_internal_a_origintrials().empty()) {
     target = stream->WriteBytesMaybeAliased(
         20, this->_internal_a_origintrials(), target);
   }
 
-  // required .protobuf.mozilla.dom.OptionalServiceWorkerData a_serviceWorkerData = 21;
-  if (cached_has_bits & 0x00010000u) {
+  // .protobuf.mozilla.dom.OptionalServiceWorkerData a_serviceWorkerData = 21;
+  if (this->_internal_has_a_serviceworkerdata()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(21, _Internal::a_serviceworkerdata(this),
         _Internal::a_serviceworkerdata(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes a_agentClusterId = 22;
-  if (cached_has_bits & 0x00000080u) {
+  // bytes a_agentClusterId = 22;
+  if (!this->_internal_a_agentclusterid().empty()) {
     target = stream->WriteBytesMaybeAliased(
         22, this->_internal_a_agentclusterid(), target);
   }
 
-  // required string a_remoteType = 23;
-  if (cached_has_bits & 0x00000100u) {
+  // string a_remoteType = 23;
+  if (!this->_internal_a_remotetype().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_remotetype().data(), static_cast<int>(this->_internal_a_remotetype().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.RemoteWorkerData.a_remoteType");
     target = stream->WriteStringMaybeAliased(
         23, this->_internal_a_remotetype(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.RemoteWorkerData)
   return target;
 }
 
-size_t RemoteWorkerData::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.RemoteWorkerData)
-  size_t total_size = 0;
-
-  if (_internal_has_a_originalscripturl()) {
-    // required string a_originalScriptURL = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_originalscripturl());
-  }
-
-  if (_internal_has_a_workeroptions()) {
-    // required bytes a_workerOptions = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_workeroptions());
-  }
-
-  if (_internal_has_a_domain()) {
-    // required string a_domain = 11;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_domain());
-  }
-
-  if (_internal_has_a_storageaccess()) {
-    // required bytes a_storageAccess = 15;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_storageaccess());
-  }
-
-  if (_internal_has_a_origintrials()) {
-    // required bytes a_originTrials = 20;
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_origintrials());
-  }
-
-  if (_internal_has_a_agentclusterid()) {
-    // required bytes a_agentClusterId = 22;
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_agentclusterid());
-  }
-
-  if (_internal_has_a_remotetype()) {
-    // required string a_remoteType = 23;
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_remotetype());
-  }
-
-  if (_internal_has_a_basescripturl()) {
-    // required .protobuf.mozilla.ipc.URIParams a_baseScriptURL = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_basescripturl_);
-  }
-
-  if (_internal_has_a_resolvedscripturl()) {
-    // required .protobuf.mozilla.ipc.URIParams a_resolvedScriptURL = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_resolvedscripturl_);
-  }
-
-  if (_internal_has_a_loadingprincipalinfo()) {
-    // required .protobuf.mozilla.ipc.PrincipalInfo a_loadingPrincipalInfo = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_loadingprincipalinfo_);
-  }
-
-  if (_internal_has_a_principalinfo()) {
-    // required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_principalinfo_);
-  }
-
-  if (_internal_has_a_partitionedprincipalinfo()) {
-    // required .protobuf.mozilla.ipc.PrincipalInfo a_partitionedPrincipalInfo = 7;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_partitionedprincipalinfo_);
-  }
-
-  if (_internal_has_a_cookiejarsettings()) {
-    // required .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 10;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_cookiejarsettings_);
-  }
-
-  if (_internal_has_a_serviceworkerdata()) {
-    // required .protobuf.mozilla.dom.OptionalServiceWorkerData a_serviceWorkerData = 21;
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_serviceworkerdata_);
-  }
-
-  if (_internal_has_a_useregularprincipal()) {
-    // required bool a_useRegularPrincipal = 8;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_usingstorageaccess()) {
-    // required bool a_usingStorageAccess = 9;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_issecurecontext()) {
-    // required bool a_isSecureContext = 12;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_isthirdpartycontext()) {
-    // required bool a_isThirdPartyContext = 16;
-    total_size += 2 + 1;
-  }
-
-  if (_internal_has_a_shouldresistfingerprinting()) {
-    // required bool a_shouldResistFingerprinting = 17;
-    total_size += 2 + 1;
-  }
-
-  if (_internal_has_a_ison3pcbexceptionlist()) {
-    // required bool a_isOn3PCBExceptionList = 19;
-    total_size += 2 + 1;
-  }
-
-  return total_size;
-}
 size_t RemoteWorkerData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.RemoteWorkerData)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x007f7fd7) ^ 0x007f7fd7) == 0) {  // All required fields are present.
-    // required string a_originalScriptURL = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_originalscripturl());
-
-    // required bytes a_workerOptions = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_workeroptions());
-
-    // required string a_domain = 11;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_domain());
-
-    // required bytes a_storageAccess = 15;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_storageaccess());
-
-    // required bytes a_originTrials = 20;
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_origintrials());
-
-    // required bytes a_agentClusterId = 22;
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_agentclusterid());
-
-    // required string a_remoteType = 23;
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_remotetype());
-
-    // required .protobuf.mozilla.ipc.URIParams a_baseScriptURL = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_basescripturl_);
-
-    // required .protobuf.mozilla.ipc.URIParams a_resolvedScriptURL = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_resolvedscripturl_);
-
-    // required .protobuf.mozilla.ipc.PrincipalInfo a_loadingPrincipalInfo = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_loadingprincipalinfo_);
-
-    // required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_principalinfo_);
-
-    // required .protobuf.mozilla.ipc.PrincipalInfo a_partitionedPrincipalInfo = 7;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_partitionedprincipalinfo_);
-
-    // required .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 10;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_cookiejarsettings_);
-
-    // required .protobuf.mozilla.dom.OptionalServiceWorkerData a_serviceWorkerData = 21;
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_serviceworkerdata_);
-
-    // required bool a_useRegularPrincipal = 8;
-    total_size += 1 + 1;
-
-    // required bool a_usingStorageAccess = 9;
-    total_size += 1 + 1;
-
-    // required bool a_isSecureContext = 12;
-    total_size += 1 + 1;
-
-    // required bool a_isThirdPartyContext = 16;
-    total_size += 2 + 1;
-
-    // required bool a_shouldResistFingerprinting = 17;
-    total_size += 2 + 1;
-
-    // required bool a_isOn3PCBExceptionList = 19;
-    total_size += 2 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  // string a_originalScriptURL = 1;
+  if (!this->_internal_a_originalscripturl().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_originalscripturl());
+  }
+
+  // bytes a_workerOptions = 4;
+  if (!this->_internal_a_workeroptions().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_workeroptions());
+  }
+
+  // string a_domain = 11;
+  if (!this->_internal_a_domain().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_domain());
+  }
+
   // optional bytes a_referrerInfo = 14;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000008u) {
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_referrerinfo());
   }
 
+  // bytes a_storageAccess = 15;
+  if (!this->_internal_a_storageaccess().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_storageaccess());
+  }
+
   // optional bytes a_overriddenFingerprintingSettings = 18;
-  if (cached_has_bits & 0x00000020u) {
+  if (cached_has_bits & 0x00000002u) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_overriddenfingerprintingsettings());
   }
 
+  // bytes a_originTrials = 20;
+  if (!this->_internal_a_origintrials().empty()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_origintrials());
+  }
+
+  // bytes a_agentClusterId = 22;
+  if (!this->_internal_a_agentclusterid().empty()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_agentclusterid());
+  }
+
+  // string a_remoteType = 23;
+  if (!this->_internal_a_remotetype().empty()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_remotetype());
+  }
+
+  // .protobuf.mozilla.ipc.URIParams a_baseScriptURL = 2;
+  if (this->_internal_has_a_basescripturl()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_basescripturl_);
+  }
+
+  // .protobuf.mozilla.ipc.URIParams a_resolvedScriptURL = 3;
+  if (this->_internal_has_a_resolvedscripturl()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_resolvedscripturl_);
+  }
+
+  // .protobuf.mozilla.ipc.PrincipalInfo a_loadingPrincipalInfo = 5;
+  if (this->_internal_has_a_loadingprincipalinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_loadingprincipalinfo_);
+  }
+
+  // .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 6;
+  if (this->_internal_has_a_principalinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_principalinfo_);
+  }
+
+  // .protobuf.mozilla.ipc.PrincipalInfo a_partitionedPrincipalInfo = 7;
+  if (this->_internal_has_a_partitionedprincipalinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_partitionedprincipalinfo_);
+  }
+
+  // .protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 10;
+  if (this->_internal_has_a_cookiejarsettings()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_cookiejarsettings_);
+  }
+
   // optional .protobuf.mozilla.dom.IPCClientInfo a_clientInfo = 13;
-  if (cached_has_bits & 0x00008000u) {
+  if (cached_has_bits & 0x00000004u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.a_clientinfo_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // .protobuf.mozilla.dom.OptionalServiceWorkerData a_serviceWorkerData = 21;
+  if (this->_internal_has_a_serviceworkerdata()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_serviceworkerdata_);
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // bool a_useRegularPrincipal = 8;
+  if (this->_internal_a_useregularprincipal() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool a_usingStorageAccess = 9;
+  if (this->_internal_a_usingstorageaccess() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool a_isSecureContext = 12;
+  if (this->_internal_a_issecurecontext() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool a_isThirdPartyContext = 16;
+  if (this->_internal_a_isthirdpartycontext() != 0) {
+    total_size += 2 + 1;
+  }
+
+  // bool a_shouldResistFingerprinting = 17;
+  if (this->_internal_a_shouldresistfingerprinting() != 0) {
+    total_size += 2 + 1;
+  }
+
+  // bool a_isOn3PCBExceptionList = 19;
+  if (this->_internal_a_ison3pcbexceptionlist() != 0) {
+    total_size += 2 + 1;
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RemoteWorkerData::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const RemoteWorkerData*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RemoteWorkerData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RemoteWorkerData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RemoteWorkerData::GetClassData() const { return &_class_data_; }
 
-void RemoteWorkerData::MergeFrom(const RemoteWorkerData& from) {
-  RemoteWorkerData* const _this = this;
+
+void RemoteWorkerData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RemoteWorkerData*>(&to_msg);
+  auto& from = static_cast<const RemoteWorkerData&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.RemoteWorkerData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x000000ffu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_originalscripturl(from._internal_a_originalscripturl());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_workeroptions(from._internal_a_workeroptions());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_a_domain(from._internal_a_domain());
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_internal_set_a_referrerinfo(from._internal_a_referrerinfo());
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_internal_set_a_storageaccess(from._internal_a_storageaccess());
-    }
-    if (cached_has_bits & 0x00000020u) {
-      _this->_internal_set_a_overriddenfingerprintingsettings(from._internal_a_overriddenfingerprintingsettings());
-    }
-    if (cached_has_bits & 0x00000040u) {
-      _this->_internal_set_a_origintrials(from._internal_a_origintrials());
-    }
-    if (cached_has_bits & 0x00000080u) {
-      _this->_internal_set_a_agentclusterid(from._internal_a_agentclusterid());
-    }
+  if (!from._internal_a_originalscripturl().empty()) {
+    _this->_internal_set_a_originalscripturl(from._internal_a_originalscripturl());
   }
-  if (cached_has_bits & 0x0000ff00u) {
-    if (cached_has_bits & 0x00000100u) {
-      _this->_internal_set_a_remotetype(from._internal_a_remotetype());
-    }
-    if (cached_has_bits & 0x00000200u) {
-      _this->_internal_mutable_a_basescripturl()->::protobuf::mozilla::ipc::URIParams::MergeFrom(
-          from._internal_a_basescripturl());
-    }
-    if (cached_has_bits & 0x00000400u) {
-      _this->_internal_mutable_a_resolvedscripturl()->::protobuf::mozilla::ipc::URIParams::MergeFrom(
-          from._internal_a_resolvedscripturl());
-    }
-    if (cached_has_bits & 0x00000800u) {
-      _this->_internal_mutable_a_loadingprincipalinfo()->::protobuf::mozilla::ipc::PrincipalInfo::MergeFrom(
-          from._internal_a_loadingprincipalinfo());
-    }
-    if (cached_has_bits & 0x00001000u) {
-      _this->_internal_mutable_a_principalinfo()->::protobuf::mozilla::ipc::PrincipalInfo::MergeFrom(
-          from._internal_a_principalinfo());
-    }
-    if (cached_has_bits & 0x00002000u) {
-      _this->_internal_mutable_a_partitionedprincipalinfo()->::protobuf::mozilla::ipc::PrincipalInfo::MergeFrom(
-          from._internal_a_partitionedprincipalinfo());
-    }
-    if (cached_has_bits & 0x00004000u) {
-      _this->_internal_mutable_a_cookiejarsettings()->::protobuf::mozilla::net::CookieJarSettingsArgs::MergeFrom(
-          from._internal_a_cookiejarsettings());
-    }
-    if (cached_has_bits & 0x00008000u) {
-      _this->_internal_mutable_a_clientinfo()->::protobuf::mozilla::dom::IPCClientInfo::MergeFrom(
-          from._internal_a_clientinfo());
-    }
+  if (!from._internal_a_workeroptions().empty()) {
+    _this->_internal_set_a_workeroptions(from._internal_a_workeroptions());
   }
-  if (cached_has_bits & 0x007f0000u) {
-    if (cached_has_bits & 0x00010000u) {
-      _this->_internal_mutable_a_serviceworkerdata()->::protobuf::mozilla::dom::OptionalServiceWorkerData::MergeFrom(
-          from._internal_a_serviceworkerdata());
-    }
-    if (cached_has_bits & 0x00020000u) {
-      _this->_impl_.a_useregularprincipal_ = from._impl_.a_useregularprincipal_;
-    }
-    if (cached_has_bits & 0x00040000u) {
-      _this->_impl_.a_usingstorageaccess_ = from._impl_.a_usingstorageaccess_;
-    }
-    if (cached_has_bits & 0x00080000u) {
-      _this->_impl_.a_issecurecontext_ = from._impl_.a_issecurecontext_;
-    }
-    if (cached_has_bits & 0x00100000u) {
-      _this->_impl_.a_isthirdpartycontext_ = from._impl_.a_isthirdpartycontext_;
-    }
-    if (cached_has_bits & 0x00200000u) {
-      _this->_impl_.a_shouldresistfingerprinting_ = from._impl_.a_shouldresistfingerprinting_;
-    }
-    if (cached_has_bits & 0x00400000u) {
-      _this->_impl_.a_ison3pcbexceptionlist_ = from._impl_.a_ison3pcbexceptionlist_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_domain().empty()) {
+    _this->_internal_set_a_domain(from._internal_a_domain());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (from._internal_has_a_referrerinfo()) {
+    _this->_internal_set_a_referrerinfo(from._internal_a_referrerinfo());
+  }
+  if (!from._internal_a_storageaccess().empty()) {
+    _this->_internal_set_a_storageaccess(from._internal_a_storageaccess());
+  }
+  if (from._internal_has_a_overriddenfingerprintingsettings()) {
+    _this->_internal_set_a_overriddenfingerprintingsettings(from._internal_a_overriddenfingerprintingsettings());
+  }
+  if (!from._internal_a_origintrials().empty()) {
+    _this->_internal_set_a_origintrials(from._internal_a_origintrials());
+  }
+  if (!from._internal_a_agentclusterid().empty()) {
+    _this->_internal_set_a_agentclusterid(from._internal_a_agentclusterid());
+  }
+  if (!from._internal_a_remotetype().empty()) {
+    _this->_internal_set_a_remotetype(from._internal_a_remotetype());
+  }
+  if (from._internal_has_a_basescripturl()) {
+    _this->_internal_mutable_a_basescripturl()->::protobuf::mozilla::ipc::URIParams::MergeFrom(
+        from._internal_a_basescripturl());
+  }
+  if (from._internal_has_a_resolvedscripturl()) {
+    _this->_internal_mutable_a_resolvedscripturl()->::protobuf::mozilla::ipc::URIParams::MergeFrom(
+        from._internal_a_resolvedscripturl());
+  }
+  if (from._internal_has_a_loadingprincipalinfo()) {
+    _this->_internal_mutable_a_loadingprincipalinfo()->::protobuf::mozilla::ipc::PrincipalInfo::MergeFrom(
+        from._internal_a_loadingprincipalinfo());
+  }
+  if (from._internal_has_a_principalinfo()) {
+    _this->_internal_mutable_a_principalinfo()->::protobuf::mozilla::ipc::PrincipalInfo::MergeFrom(
+        from._internal_a_principalinfo());
+  }
+  if (from._internal_has_a_partitionedprincipalinfo()) {
+    _this->_internal_mutable_a_partitionedprincipalinfo()->::protobuf::mozilla::ipc::PrincipalInfo::MergeFrom(
+        from._internal_a_partitionedprincipalinfo());
+  }
+  if (from._internal_has_a_cookiejarsettings()) {
+    _this->_internal_mutable_a_cookiejarsettings()->::protobuf::mozilla::net::CookieJarSettingsArgs::MergeFrom(
+        from._internal_a_cookiejarsettings());
+  }
+  if (from._internal_has_a_clientinfo()) {
+    _this->_internal_mutable_a_clientinfo()->::protobuf::mozilla::dom::IPCClientInfo::MergeFrom(
+        from._internal_a_clientinfo());
+  }
+  if (from._internal_has_a_serviceworkerdata()) {
+    _this->_internal_mutable_a_serviceworkerdata()->::protobuf::mozilla::dom::OptionalServiceWorkerData::MergeFrom(
+        from._internal_a_serviceworkerdata());
+  }
+  if (from._internal_a_useregularprincipal() != 0) {
+    _this->_internal_set_a_useregularprincipal(from._internal_a_useregularprincipal());
+  }
+  if (from._internal_a_usingstorageaccess() != 0) {
+    _this->_internal_set_a_usingstorageaccess(from._internal_a_usingstorageaccess());
+  }
+  if (from._internal_a_issecurecontext() != 0) {
+    _this->_internal_set_a_issecurecontext(from._internal_a_issecurecontext());
+  }
+  if (from._internal_a_isthirdpartycontext() != 0) {
+    _this->_internal_set_a_isthirdpartycontext(from._internal_a_isthirdpartycontext());
+  }
+  if (from._internal_a_shouldresistfingerprinting() != 0) {
+    _this->_internal_set_a_shouldresistfingerprinting(from._internal_a_shouldresistfingerprinting());
+  }
+  if (from._internal_a_ison3pcbexceptionlist() != 0) {
+    _this->_internal_set_a_ison3pcbexceptionlist(from._internal_a_ison3pcbexceptionlist());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RemoteWorkerData::CopyFrom(const RemoteWorkerData& from) {
@@ -2184,31 +2193,6 @@ void RemoteWorkerData::CopyFrom(const RemoteWorkerData& from) {
 }
 
 bool RemoteWorkerData::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_basescripturl()) {
-    if (!_impl_.a_basescripturl_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_resolvedscripturl()) {
-    if (!_impl_.a_resolvedscripturl_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_loadingprincipalinfo()) {
-    if (!_impl_.a_loadingprincipalinfo_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_principalinfo()) {
-    if (!_impl_.a_principalinfo_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_partitionedprincipalinfo()) {
-    if (!_impl_.a_partitionedprincipalinfo_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_cookiejarsettings()) {
-    if (!_impl_.a_cookiejarsettings_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_clientinfo()) {
-    if (!_impl_.a_clientinfo_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_serviceworkerdata()) {
-    if (!_impl_.a_serviceworkerdata_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -2262,56 +2246,40 @@ void RemoteWorkerData::InternalSwap(RemoteWorkerData* other) {
           reinterpret_cast<char*>(&other->_impl_.a_basescripturl_));
 }
 
-std::string RemoteWorkerData::GetTypeName() const {
-  return "protobuf.mozilla.dom.RemoteWorkerData";
+::PROTOBUF_NAMESPACE_ID::Metadata RemoteWorkerData::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[2]);
 }
-
 
 // ===================================================================
 
 class ErrorDataNote::_Internal {
  public:
-  using HasBits = decltype(std::declval<ErrorDataNote>()._impl_._has_bits_);
-  static void set_has_a_linenumber(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_a_columnnumber(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_a_message(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_filename(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
-  }
 };
 
 ErrorDataNote::ErrorDataNote(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.ErrorDataNote)
 }
 ErrorDataNote::ErrorDataNote(const ErrorDataNote& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   ErrorDataNote* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_message_){}
+      decltype(_impl_.a_message_){}
     , decltype(_impl_.a_filename_){}
     , decltype(_impl_.a_linenumber_){}
-    , decltype(_impl_.a_columnnumber_){}};
+    , decltype(_impl_.a_columnnumber_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_message_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_message_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_message()) {
+  if (!from._internal_a_message().empty()) {
     _this->_impl_.a_message_.Set(from._internal_a_message(), 
       _this->GetArenaForAllocation());
   }
@@ -2319,7 +2287,7 @@ ErrorDataNote::ErrorDataNote(const ErrorDataNote& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_filename_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_filename()) {
+  if (!from._internal_a_filename().empty()) {
     _this->_impl_.a_filename_.Set(from._internal_a_filename(), 
       _this->GetArenaForAllocation());
   }
@@ -2334,12 +2302,11 @@ inline void ErrorDataNote::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_message_){}
+      decltype(_impl_.a_message_){}
     , decltype(_impl_.a_filename_){}
     , decltype(_impl_.a_linenumber_){0u}
     , decltype(_impl_.a_columnnumber_){0u}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_message_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2353,7 +2320,7 @@ inline void ErrorDataNote::SharedCtor(
 
 ErrorDataNote::~ErrorDataNote() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.ErrorDataNote)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -2376,64 +2343,53 @@ void ErrorDataNote::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_message_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_filename_.ClearNonDefaultToEmpty();
-    }
-  }
-  if (cached_has_bits & 0x0000000cu) {
-    ::memset(&_impl_.a_linenumber_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.a_columnnumber_) -
-        reinterpret_cast<char*>(&_impl_.a_linenumber_)) + sizeof(_impl_.a_columnnumber_));
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_message_.ClearToEmpty();
+  _impl_.a_filename_.ClearToEmpty();
+  ::memset(&_impl_.a_linenumber_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.a_columnnumber_) -
+      reinterpret_cast<char*>(&_impl_.a_linenumber_)) + sizeof(_impl_.a_columnnumber_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* ErrorDataNote::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_lineNumber = 1;
+      // uint32 a_lineNumber = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_a_linenumber(&has_bits);
           _impl_.a_linenumber_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_columnNumber = 2;
+      // uint32 a_columnNumber = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_a_columnnumber(&has_bits);
           _impl_.a_columnnumber_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required string a_message = 3;
+      // string a_message = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_message();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.ErrorDataNote.a_message"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_filename = 4;
+      // string a_filename = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_filename();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.ErrorDataNote.a_filename"));
         } else
           goto handle_unusual;
         continue;
@@ -2448,12 +2404,11 @@ const char* ErrorDataNote::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2467,135 +2422,109 @@ uint8_t* ErrorDataNote::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_lineNumber = 1;
-  if (cached_has_bits & 0x00000004u) {
+  // uint32 a_lineNumber = 1;
+  if (this->_internal_a_linenumber() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_linenumber(), target);
   }
 
-  // required uint32 a_columnNumber = 2;
-  if (cached_has_bits & 0x00000008u) {
+  // uint32 a_columnNumber = 2;
+  if (this->_internal_a_columnnumber() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_columnnumber(), target);
   }
 
-  // required string a_message = 3;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_message = 3;
+  if (!this->_internal_a_message().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_message().data(), static_cast<int>(this->_internal_a_message().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.ErrorDataNote.a_message");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_message(), target);
   }
 
-  // required string a_filename = 4;
-  if (cached_has_bits & 0x00000002u) {
+  // string a_filename = 4;
+  if (!this->_internal_a_filename().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_filename().data(), static_cast<int>(this->_internal_a_filename().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.ErrorDataNote.a_filename");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_filename(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.ErrorDataNote)
   return target;
 }
 
-size_t ErrorDataNote::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.ErrorDataNote)
-  size_t total_size = 0;
-
-  if (_internal_has_a_message()) {
-    // required string a_message = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_message());
-  }
-
-  if (_internal_has_a_filename()) {
-    // required string a_filename = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_filename());
-  }
-
-  if (_internal_has_a_linenumber()) {
-    // required uint32 a_lineNumber = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_linenumber());
-  }
-
-  if (_internal_has_a_columnnumber()) {
-    // required uint32 a_columnNumber = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_columnnumber());
-  }
-
-  return total_size;
-}
 size_t ErrorDataNote::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.ErrorDataNote)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required string a_message = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_message());
-
-    // required string a_filename = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_filename());
-
-    // required uint32 a_lineNumber = 1;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_linenumber());
-
-    // required uint32 a_columnNumber = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_columnnumber());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_message = 3;
+  if (!this->_internal_a_message().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_message());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // string a_filename = 4;
+  if (!this->_internal_a_filename().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_filename());
+  }
+
+  // uint32 a_lineNumber = 1;
+  if (this->_internal_a_linenumber() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_linenumber());
+  }
+
+  // uint32 a_columnNumber = 2;
+  if (this->_internal_a_columnnumber() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_columnnumber());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ErrorDataNote::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const ErrorDataNote*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ErrorDataNote::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ErrorDataNote::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ErrorDataNote::GetClassData() const { return &_class_data_; }
 
-void ErrorDataNote::MergeFrom(const ErrorDataNote& from) {
-  ErrorDataNote* const _this = this;
+
+void ErrorDataNote::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ErrorDataNote*>(&to_msg);
+  auto& from = static_cast<const ErrorDataNote&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.ErrorDataNote)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_message(from._internal_a_message());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_filename(from._internal_a_filename());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.a_linenumber_ = from._impl_.a_linenumber_;
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.a_columnnumber_ = from._impl_.a_columnnumber_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_message().empty()) {
+    _this->_internal_set_a_message(from._internal_a_message());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_filename().empty()) {
+    _this->_internal_set_a_filename(from._internal_a_filename());
+  }
+  if (from._internal_a_linenumber() != 0) {
+    _this->_internal_set_a_linenumber(from._internal_a_linenumber());
+  }
+  if (from._internal_a_columnnumber() != 0) {
+    _this->_internal_set_a_columnnumber(from._internal_a_columnnumber());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ErrorDataNote::CopyFrom(const ErrorDataNote& from) {
@@ -2606,7 +2535,6 @@ void ErrorDataNote::CopyFrom(const ErrorDataNote& from) {
 }
 
 bool ErrorDataNote::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2615,7 +2543,6 @@ void ErrorDataNote::InternalSwap(ErrorDataNote* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_message_, lhs_arena,
       &other->_impl_.a_message_, rhs_arena
@@ -2632,61 +2559,42 @@ void ErrorDataNote::InternalSwap(ErrorDataNote* other) {
           reinterpret_cast<char*>(&other->_impl_.a_linenumber_));
 }
 
-std::string ErrorDataNote::GetTypeName() const {
-  return "protobuf.mozilla.dom.ErrorDataNote";
+::PROTOBUF_NAMESPACE_ID::Metadata ErrorDataNote::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[3]);
 }
-
 
 // ===================================================================
 
 class ErrorData::_Internal {
  public:
-  using HasBits = decltype(std::declval<ErrorData>()._impl_._has_bits_);
-  static void set_has_a_iswarning(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_a_linenumber(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_a_columnnumber(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static void set_has_a_message(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_filename(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000001f) ^ 0x0000001f) != 0;
-  }
 };
 
 ErrorData::ErrorData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.ErrorData)
 }
 ErrorData::ErrorData(const ErrorData& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   ErrorData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_notes_){from._impl_.a_notes_}
+      decltype(_impl_.a_notes_){from._impl_.a_notes_}
     , decltype(_impl_.a_message_){}
     , decltype(_impl_.a_filename_){}
     , decltype(_impl_.a_iswarning_){}
     , decltype(_impl_.a_linenumber_){}
-    , decltype(_impl_.a_columnnumber_){}};
+    , decltype(_impl_.a_columnnumber_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_message_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_message_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_message()) {
+  if (!from._internal_a_message().empty()) {
     _this->_impl_.a_message_.Set(from._internal_a_message(), 
       _this->GetArenaForAllocation());
   }
@@ -2694,7 +2602,7 @@ ErrorData::ErrorData(const ErrorData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_filename_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_filename()) {
+  if (!from._internal_a_filename().empty()) {
     _this->_impl_.a_filename_.Set(from._internal_a_filename(), 
       _this->GetArenaForAllocation());
   }
@@ -2709,14 +2617,13 @@ inline void ErrorData::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_notes_){arena}
+      decltype(_impl_.a_notes_){arena}
     , decltype(_impl_.a_message_){}
     , decltype(_impl_.a_filename_){}
     , decltype(_impl_.a_iswarning_){false}
     , decltype(_impl_.a_linenumber_){0u}
     , decltype(_impl_.a_columnnumber_){0u}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_message_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2730,7 +2637,7 @@ inline void ErrorData::SharedCtor(
 
 ErrorData::~ErrorData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.ErrorData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -2755,73 +2662,61 @@ void ErrorData::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_notes_.Clear();
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_message_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_filename_.ClearNonDefaultToEmpty();
-    }
-  }
-  if (cached_has_bits & 0x0000001cu) {
-    ::memset(&_impl_.a_iswarning_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.a_columnnumber_) -
-        reinterpret_cast<char*>(&_impl_.a_iswarning_)) + sizeof(_impl_.a_columnnumber_));
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_message_.ClearToEmpty();
+  _impl_.a_filename_.ClearToEmpty();
+  ::memset(&_impl_.a_iswarning_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.a_columnnumber_) -
+      reinterpret_cast<char*>(&_impl_.a_iswarning_)) + sizeof(_impl_.a_columnnumber_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* ErrorData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_isWarning = 1;
+      // bool a_isWarning = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_a_iswarning(&has_bits);
           _impl_.a_iswarning_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_lineNumber = 2;
+      // uint32 a_lineNumber = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_a_linenumber(&has_bits);
           _impl_.a_linenumber_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_columnNumber = 3;
+      // uint32 a_columnNumber = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_a_columnnumber(&has_bits);
           _impl_.a_columnnumber_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required string a_message = 4;
+      // string a_message = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_message();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.ErrorData.a_message"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_filename = 5;
+      // string a_filename = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_a_filename();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.ErrorData.a_filename"));
         } else
           goto handle_unusual;
         continue;
@@ -2849,12 +2744,11 @@ const char* ErrorData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2868,33 +2762,40 @@ uint8_t* ErrorData::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_isWarning = 1;
-  if (cached_has_bits & 0x00000004u) {
+  // bool a_isWarning = 1;
+  if (this->_internal_a_iswarning() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_iswarning(), target);
   }
 
-  // required uint32 a_lineNumber = 2;
-  if (cached_has_bits & 0x00000008u) {
+  // uint32 a_lineNumber = 2;
+  if (this->_internal_a_linenumber() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_linenumber(), target);
   }
 
-  // required uint32 a_columnNumber = 3;
-  if (cached_has_bits & 0x00000010u) {
+  // uint32 a_columnNumber = 3;
+  if (this->_internal_a_columnnumber() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_columnnumber(), target);
   }
 
-  // required string a_message = 4;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_message = 4;
+  if (!this->_internal_a_message().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_message().data(), static_cast<int>(this->_internal_a_message().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.ErrorData.a_message");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_message(), target);
   }
 
-  // required string a_filename = 5;
-  if (cached_has_bits & 0x00000002u) {
+  // string a_filename = 5;
+  if (!this->_internal_a_filename().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_filename().data(), static_cast<int>(this->_internal_a_filename().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.ErrorData.a_filename");
     target = stream->WriteStringMaybeAliased(
         5, this->_internal_a_filename(), target);
   }
@@ -2908,75 +2809,17 @@ uint8_t* ErrorData::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.ErrorData)
   return target;
 }
 
-size_t ErrorData::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.ErrorData)
-  size_t total_size = 0;
-
-  if (_internal_has_a_message()) {
-    // required string a_message = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_message());
-  }
-
-  if (_internal_has_a_filename()) {
-    // required string a_filename = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_filename());
-  }
-
-  if (_internal_has_a_iswarning()) {
-    // required bool a_isWarning = 1;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_linenumber()) {
-    // required uint32 a_lineNumber = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_linenumber());
-  }
-
-  if (_internal_has_a_columnnumber()) {
-    // required uint32 a_columnNumber = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_columnnumber());
-  }
-
-  return total_size;
-}
 size_t ErrorData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.ErrorData)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
-    // required string a_message = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_message());
-
-    // required string a_filename = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_filename());
-
-    // required bool a_isWarning = 1;
-    total_size += 1 + 1;
-
-    // required uint32 a_lineNumber = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_linenumber());
-
-    // required uint32 a_columnNumber = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_columnnumber());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2988,48 +2831,70 @@ size_t ErrorData::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_message = 4;
+  if (!this->_internal_a_message().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_message());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // string a_filename = 5;
+  if (!this->_internal_a_filename().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_filename());
+  }
+
+  // bool a_isWarning = 1;
+  if (this->_internal_a_iswarning() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // uint32 a_lineNumber = 2;
+  if (this->_internal_a_linenumber() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_linenumber());
+  }
+
+  // uint32 a_columnNumber = 3;
+  if (this->_internal_a_columnnumber() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_columnnumber());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ErrorData::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const ErrorData*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ErrorData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ErrorData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ErrorData::GetClassData() const { return &_class_data_; }
 
-void ErrorData::MergeFrom(const ErrorData& from) {
-  ErrorData* const _this = this;
+
+void ErrorData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ErrorData*>(&to_msg);
+  auto& from = static_cast<const ErrorData&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.ErrorData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_notes_.MergeFrom(from._impl_.a_notes_);
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_message(from._internal_a_message());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_filename(from._internal_a_filename());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.a_iswarning_ = from._impl_.a_iswarning_;
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.a_linenumber_ = from._impl_.a_linenumber_;
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.a_columnnumber_ = from._impl_.a_columnnumber_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_message().empty()) {
+    _this->_internal_set_a_message(from._internal_a_message());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_filename().empty()) {
+    _this->_internal_set_a_filename(from._internal_a_filename());
+  }
+  if (from._internal_a_iswarning() != 0) {
+    _this->_internal_set_a_iswarning(from._internal_a_iswarning());
+  }
+  if (from._internal_a_linenumber() != 0) {
+    _this->_internal_set_a_linenumber(from._internal_a_linenumber());
+  }
+  if (from._internal_a_columnnumber() != 0) {
+    _this->_internal_set_a_columnnumber(from._internal_a_columnnumber());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ErrorData::CopyFrom(const ErrorData& from) {
@@ -3040,9 +2905,6 @@ void ErrorData::CopyFrom(const ErrorData& from) {
 }
 
 bool ErrorData::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_notes_))
-    return false;
   return true;
 }
 
@@ -3051,7 +2913,6 @@ void ErrorData::InternalSwap(ErrorData* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_notes_.InternalSwap(&other->_impl_.a_notes_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_message_, lhs_arena,
@@ -3069,44 +2930,37 @@ void ErrorData::InternalSwap(ErrorData* other) {
           reinterpret_cast<char*>(&other->_impl_.a_iswarning_));
 }
 
-std::string ErrorData::GetTypeName() const {
-  return "protobuf.mozilla.dom.ErrorData";
+::PROTOBUF_NAMESPACE_ID::Metadata ErrorData::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[4]);
 }
-
 
 // ===================================================================
 
 class CSPViolation::_Internal {
  public:
-  using HasBits = decltype(std::declval<CSPViolation>()._impl_._has_bits_);
-  static void set_has_a_json(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 CSPViolation::CSPViolation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.CSPViolation)
 }
 CSPViolation::CSPViolation(const CSPViolation& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   CSPViolation* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_json_){}};
+      decltype(_impl_.a_json_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_json_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_json_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_json()) {
+  if (!from._internal_a_json().empty()) {
     _this->_impl_.a_json_.Set(from._internal_a_json(), 
       _this->GetArenaForAllocation());
   }
@@ -3118,9 +2972,8 @@ inline void CSPViolation::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_json_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_json_){}
   };
   _impl_.a_json_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3130,7 +2983,7 @@ inline void CSPViolation::SharedCtor(
 
 CSPViolation::~CSPViolation() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.CSPViolation)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -3152,27 +3005,23 @@ void CSPViolation::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_json_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_json_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* CSPViolation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_json = 1;
+      // string a_json = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_json();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.CSPViolation.a_json"));
         } else
           goto handle_unusual;
         continue;
@@ -3187,12 +3036,11 @@ const char* CSPViolation::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -3206,16 +3054,19 @@ uint8_t* CSPViolation::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_json = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_json = 1;
+  if (!this->_internal_a_json().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_json().data(), static_cast<int>(this->_internal_a_json().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.CSPViolation.a_json");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_json(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.CSPViolation)
   return target;
@@ -3225,41 +3076,39 @@ size_t CSPViolation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.CSPViolation)
   size_t total_size = 0;
 
-  // required string a_json = 1;
-  if (_internal_has_a_json()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_json());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_json = 1;
+  if (!this->_internal_a_json().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_json());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CSPViolation::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const CSPViolation*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CSPViolation::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CSPViolation::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CSPViolation::GetClassData() const { return &_class_data_; }
 
-void CSPViolation::MergeFrom(const CSPViolation& from) {
-  CSPViolation* const _this = this;
+
+void CSPViolation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CSPViolation*>(&to_msg);
+  auto& from = static_cast<const CSPViolation&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.CSPViolation)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_json()) {
+  if (!from._internal_a_json().empty()) {
     _this->_internal_set_a_json(from._internal_a_json());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CSPViolation::CopyFrom(const CSPViolation& from) {
@@ -3270,7 +3119,6 @@ void CSPViolation::CopyFrom(const CSPViolation& from) {
 }
 
 bool CSPViolation::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -3279,17 +3127,17 @@ void CSPViolation::InternalSwap(CSPViolation* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_json_, lhs_arena,
       &other->_impl_.a_json_, rhs_arena
   );
 }
 
-std::string CSPViolation::GetTypeName() const {
-  return "protobuf.mozilla.dom.CSPViolation";
+::PROTOBUF_NAMESPACE_ID::Metadata CSPViolation::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[5]);
 }
-
 
 // ===================================================================
 
@@ -3299,145 +3147,37 @@ class ErrorMismatchOptions::_Internal {
 
 ErrorMismatchOptions::ErrorMismatchOptions(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.ErrorMismatchOptions)
 }
 ErrorMismatchOptions::ErrorMismatchOptions(const ErrorMismatchOptions& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   ErrorMismatchOptions* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.ErrorMismatchOptions)
 }
 
-inline void ErrorMismatchOptions::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ErrorMismatchOptions::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ErrorMismatchOptions::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata ErrorMismatchOptions::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[6]);
 }
-
-ErrorMismatchOptions::~ErrorMismatchOptions() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.ErrorMismatchOptions)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void ErrorMismatchOptions::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void ErrorMismatchOptions::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void ErrorMismatchOptions::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.dom.ErrorMismatchOptions)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* ErrorMismatchOptions::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* ErrorMismatchOptions::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.dom.ErrorMismatchOptions)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.ErrorMismatchOptions)
-  return target;
-}
-
-size_t ErrorMismatchOptions::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.ErrorMismatchOptions)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void ErrorMismatchOptions::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const ErrorMismatchOptions*>(
-      &from));
-}
-
-void ErrorMismatchOptions::MergeFrom(const ErrorMismatchOptions& from) {
-  ErrorMismatchOptions* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.ErrorMismatchOptions)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void ErrorMismatchOptions::CopyFrom(const ErrorMismatchOptions& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.dom.ErrorMismatchOptions)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool ErrorMismatchOptions::IsInitialized() const {
-  return true;
-}
-
-void ErrorMismatchOptions::InternalSwap(ErrorMismatchOptions* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string ErrorMismatchOptions::GetTypeName() const {
-  return "protobuf.mozilla.dom.ErrorMismatchOptions";
-}
-
 
 // ===================================================================
 
@@ -3507,19 +3247,19 @@ void ErrorValue::set_allocated_a_mverrormismatchoptions(::protobuf::mozilla::dom
 }
 ErrorValue::ErrorValue(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.ErrorValue)
 }
 ErrorValue::ErrorValue(const ErrorValue& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   ErrorValue* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVnsresult: {
@@ -3566,7 +3306,7 @@ inline void ErrorValue::SharedCtor(
 
 ErrorValue::~ErrorValue() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.ErrorValue)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -3628,7 +3368,7 @@ void ErrorValue::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* ErrorValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -3690,7 +3430,7 @@ const char* ErrorValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -3708,40 +3448,42 @@ uint8_t* ErrorValue::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  switch (content_case()) {
-    case kAMVnsresult: {
-      target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_a_mvnsresult(), target);
-      break;
-    }
-    case kAMVErrorData: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::a_mverrordata(this),
-          _Internal::a_mverrordata(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVCSPViolation: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(3, _Internal::a_mvcspviolation(this),
-          _Internal::a_mvcspviolation(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVErrorMismatchOptions: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(4, _Internal::a_mverrormismatchoptions(this),
-          _Internal::a_mverrormismatchoptions(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVvoidT: {
-      target = stream->WriteBytesMaybeAliased(
-          5, this->_internal_a_mvvoid_t(), target);
-      break;
-    }
-    default: ;
+  // bytes a_mVnsresult = 1;
+  if (_internal_has_a_mvnsresult()) {
+    target = stream->WriteBytesMaybeAliased(
+        1, this->_internal_a_mvnsresult(), target);
   }
+
+  // .protobuf.mozilla.dom.ErrorData a_mVErrorData = 2;
+  if (_internal_has_a_mverrordata()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::a_mverrordata(this),
+        _Internal::a_mverrordata(this).GetCachedSize(), target, stream);
+  }
+
+  // .protobuf.mozilla.dom.CSPViolation a_mVCSPViolation = 3;
+  if (_internal_has_a_mvcspviolation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::a_mvcspviolation(this),
+        _Internal::a_mvcspviolation(this).GetCachedSize(), target, stream);
+  }
+
+  // .protobuf.mozilla.dom.ErrorMismatchOptions a_mVErrorMismatchOptions = 4;
+  if (_internal_has_a_mverrormismatchoptions()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, _Internal::a_mverrormismatchoptions(this),
+        _Internal::a_mverrormismatchoptions(this).GetCachedSize(), target, stream);
+  }
+
+  // bytes a_mVvoid_t = 5;
+  if (_internal_has_a_mvvoid_t()) {
+    target = stream->WriteBytesMaybeAliased(
+        5, this->_internal_a_mvvoid_t(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.ErrorValue)
   return target;
@@ -3795,22 +3537,19 @@ size_t ErrorValue::ByteSizeLong() const {
       break;
     }
   }
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ErrorValue::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const ErrorValue*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ErrorValue::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ErrorValue::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ErrorValue::GetClassData() const { return &_class_data_; }
 
-void ErrorValue::MergeFrom(const ErrorValue& from) {
-  ErrorValue* const _this = this;
+
+void ErrorValue::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ErrorValue*>(&to_msg);
+  auto& from = static_cast<const ErrorValue&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.ErrorValue)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -3844,7 +3583,7 @@ void ErrorValue::MergeFrom(const ErrorValue& from) {
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ErrorValue::CopyFrom(const ErrorValue& from) {
@@ -3855,32 +3594,6 @@ void ErrorValue::CopyFrom(const ErrorValue& from) {
 }
 
 bool ErrorValue::IsInitialized() const {
-  switch (content_case()) {
-    case kAMVnsresult: {
-      break;
-    }
-    case kAMVErrorData: {
-      if (_internal_has_a_mverrordata()) {
-        if (!_impl_.content_.a_mverrordata_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVCSPViolation: {
-      if (_internal_has_a_mvcspviolation()) {
-        if (!_impl_.content_.a_mvcspviolation_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVErrorMismatchOptions: {
-      break;
-    }
-    case kAMVvoidT: {
-      break;
-    }
-    case CONTENT_NOT_SET: {
-      break;
-    }
-  }
   return true;
 }
 
@@ -3891,61 +3604,29 @@ void ErrorValue::InternalSwap(ErrorValue* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-std::string ErrorValue::GetTypeName() const {
-  return "protobuf.mozilla.dom.ErrorValue";
+::PROTOBUF_NAMESPACE_ID::Metadata ErrorValue::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[7]);
 }
-
 
 // ===================================================================
 
 class RemoteWorkerDebuggerInfo::_Internal {
  public:
-  using HasBits = decltype(std::declval<RemoteWorkerDebuggerInfo>()._impl_._has_bits_);
-  static void set_has_a_ischrome(HasBits* has_bits) {
-    (*has_bits)[0] |= 32u;
-  }
-  static void set_has_a_type(HasBits* has_bits) {
-    (*has_bits)[0] |= 64u;
-  }
-  static void set_has_a_url(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_windowid(HasBits* has_bits) {
-    (*has_bits)[0] |= 128u;
-  }
-  static void set_has_a_principal(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_a_serviceworkerid(HasBits* has_bits) {
-    (*has_bits)[0] |= 256u;
-  }
-  static void set_has_a_id(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_a_name(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_a_parentid(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x000001ff) ^ 0x000001ff) != 0;
-  }
 };
 
 RemoteWorkerDebuggerInfo::RemoteWorkerDebuggerInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo)
 }
 RemoteWorkerDebuggerInfo::RemoteWorkerDebuggerInfo(const RemoteWorkerDebuggerInfo& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   RemoteWorkerDebuggerInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_url_){}
+      decltype(_impl_.a_url_){}
     , decltype(_impl_.a_principal_){}
     , decltype(_impl_.a_id_){}
     , decltype(_impl_.a_name_){}
@@ -3953,14 +3634,15 @@ RemoteWorkerDebuggerInfo::RemoteWorkerDebuggerInfo(const RemoteWorkerDebuggerInf
     , decltype(_impl_.a_ischrome_){}
     , decltype(_impl_.a_type_){}
     , decltype(_impl_.a_windowid_){}
-    , decltype(_impl_.a_serviceworkerid_){}};
+    , decltype(_impl_.a_serviceworkerid_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_url_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_url()) {
+  if (!from._internal_a_url().empty()) {
     _this->_impl_.a_url_.Set(from._internal_a_url(), 
       _this->GetArenaForAllocation());
   }
@@ -3968,7 +3650,7 @@ RemoteWorkerDebuggerInfo::RemoteWorkerDebuggerInfo(const RemoteWorkerDebuggerInf
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_principal_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_principal()) {
+  if (!from._internal_a_principal().empty()) {
     _this->_impl_.a_principal_.Set(from._internal_a_principal(), 
       _this->GetArenaForAllocation());
   }
@@ -3976,7 +3658,7 @@ RemoteWorkerDebuggerInfo::RemoteWorkerDebuggerInfo(const RemoteWorkerDebuggerInf
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_id_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_id()) {
+  if (!from._internal_a_id().empty()) {
     _this->_impl_.a_id_.Set(from._internal_a_id(), 
       _this->GetArenaForAllocation());
   }
@@ -3984,7 +3666,7 @@ RemoteWorkerDebuggerInfo::RemoteWorkerDebuggerInfo(const RemoteWorkerDebuggerInf
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_name()) {
+  if (!from._internal_a_name().empty()) {
     _this->_impl_.a_name_.Set(from._internal_a_name(), 
       _this->GetArenaForAllocation());
   }
@@ -3992,7 +3674,7 @@ RemoteWorkerDebuggerInfo::RemoteWorkerDebuggerInfo(const RemoteWorkerDebuggerInf
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_parentid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_parentid()) {
+  if (!from._internal_a_parentid().empty()) {
     _this->_impl_.a_parentid_.Set(from._internal_a_parentid(), 
       _this->GetArenaForAllocation());
   }
@@ -4007,9 +3689,7 @@ inline void RemoteWorkerDebuggerInfo::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_url_){}
+      decltype(_impl_.a_url_){}
     , decltype(_impl_.a_principal_){}
     , decltype(_impl_.a_id_){}
     , decltype(_impl_.a_name_){}
@@ -4018,6 +3698,7 @@ inline void RemoteWorkerDebuggerInfo::SharedCtor(
     , decltype(_impl_.a_type_){0u}
     , decltype(_impl_.a_windowid_){uint64_t{0u}}
     , decltype(_impl_.a_serviceworkerid_){uint64_t{0u}}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_url_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4043,7 +3724,7 @@ inline void RemoteWorkerDebuggerInfo::SharedCtor(
 
 RemoteWorkerDebuggerInfo::~RemoteWorkerDebuggerInfo() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -4069,78 +3750,58 @@ void RemoteWorkerDebuggerInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_url_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_principal_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _impl_.a_id_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _impl_.a_name_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _impl_.a_parentid_.ClearNonDefaultToEmpty();
-    }
-  }
-  if (cached_has_bits & 0x000000e0u) {
-    ::memset(&_impl_.a_ischrome_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.a_windowid_) -
-        reinterpret_cast<char*>(&_impl_.a_ischrome_)) + sizeof(_impl_.a_windowid_));
-  }
-  _impl_.a_serviceworkerid_ = uint64_t{0u};
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_url_.ClearToEmpty();
+  _impl_.a_principal_.ClearToEmpty();
+  _impl_.a_id_.ClearToEmpty();
+  _impl_.a_name_.ClearToEmpty();
+  _impl_.a_parentid_.ClearToEmpty();
+  ::memset(&_impl_.a_ischrome_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.a_serviceworkerid_) -
+      reinterpret_cast<char*>(&_impl_.a_ischrome_)) + sizeof(_impl_.a_serviceworkerid_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* RemoteWorkerDebuggerInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_isChrome = 1;
+      // bool a_isChrome = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_a_ischrome(&has_bits);
           _impl_.a_ischrome_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_type = 2;
+      // uint32 a_type = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_a_type(&has_bits);
           _impl_.a_type_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required string a_url = 3;
+      // string a_url = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_url();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_url"));
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_windowID = 4;
+      // uint64 a_windowID = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_a_windowid(&has_bits);
           _impl_.a_windowid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_principal = 5;
+      // bytes a_principal = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_a_principal();
@@ -4149,39 +3810,41 @@ const char* RemoteWorkerDebuggerInfo::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_serviceWorkerID = 6;
+      // uint64 a_serviceWorkerID = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
-          _Internal::set_has_a_serviceworkerid(&has_bits);
           _impl_.a_serviceworkerid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required string a_Id = 7;
+      // string a_Id = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           auto str = _internal_mutable_a_id();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_Id"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_name = 8;
+      // string a_name = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           auto str = _internal_mutable_a_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_name"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_parentId = 9;
+      // string a_parentId = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           auto str = _internal_mutable_a_parentid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_parentId"));
         } else
           goto handle_unusual;
         continue;
@@ -4196,12 +3859,11 @@ const char* RemoteWorkerDebuggerInfo::_InternalParse(const char* ptr, ::_pbi::Pa
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -4215,232 +3877,193 @@ uint8_t* RemoteWorkerDebuggerInfo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_isChrome = 1;
-  if (cached_has_bits & 0x00000020u) {
+  // bool a_isChrome = 1;
+  if (this->_internal_a_ischrome() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_ischrome(), target);
   }
 
-  // required uint32 a_type = 2;
-  if (cached_has_bits & 0x00000040u) {
+  // uint32 a_type = 2;
+  if (this->_internal_a_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_type(), target);
   }
 
-  // required string a_url = 3;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_url = 3;
+  if (!this->_internal_a_url().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_url().data(), static_cast<int>(this->_internal_a_url().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_url");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_url(), target);
   }
 
-  // required uint64 a_windowID = 4;
-  if (cached_has_bits & 0x00000080u) {
+  // uint64 a_windowID = 4;
+  if (this->_internal_a_windowid() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(4, this->_internal_a_windowid(), target);
   }
 
-  // required bytes a_principal = 5;
-  if (cached_has_bits & 0x00000002u) {
+  // bytes a_principal = 5;
+  if (!this->_internal_a_principal().empty()) {
     target = stream->WriteBytesMaybeAliased(
         5, this->_internal_a_principal(), target);
   }
 
-  // required uint64 a_serviceWorkerID = 6;
-  if (cached_has_bits & 0x00000100u) {
+  // uint64 a_serviceWorkerID = 6;
+  if (this->_internal_a_serviceworkerid() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(6, this->_internal_a_serviceworkerid(), target);
   }
 
-  // required string a_Id = 7;
-  if (cached_has_bits & 0x00000004u) {
+  // string a_Id = 7;
+  if (!this->_internal_a_id().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_id().data(), static_cast<int>(this->_internal_a_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_Id");
     target = stream->WriteStringMaybeAliased(
         7, this->_internal_a_id(), target);
   }
 
-  // required string a_name = 8;
-  if (cached_has_bits & 0x00000008u) {
+  // string a_name = 8;
+  if (!this->_internal_a_name().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_name().data(), static_cast<int>(this->_internal_a_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_name");
     target = stream->WriteStringMaybeAliased(
         8, this->_internal_a_name(), target);
   }
 
-  // required string a_parentId = 9;
-  if (cached_has_bits & 0x00000010u) {
+  // string a_parentId = 9;
+  if (!this->_internal_a_parentid().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_parentid().data(), static_cast<int>(this->_internal_a_parentid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.RemoteWorkerDebuggerInfo.a_parentId");
     target = stream->WriteStringMaybeAliased(
         9, this->_internal_a_parentid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo)
   return target;
 }
 
-size_t RemoteWorkerDebuggerInfo::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo)
-  size_t total_size = 0;
-
-  if (_internal_has_a_url()) {
-    // required string a_url = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_url());
-  }
-
-  if (_internal_has_a_principal()) {
-    // required bytes a_principal = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_principal());
-  }
-
-  if (_internal_has_a_id()) {
-    // required string a_Id = 7;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_id());
-  }
-
-  if (_internal_has_a_name()) {
-    // required string a_name = 8;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_name());
-  }
-
-  if (_internal_has_a_parentid()) {
-    // required string a_parentId = 9;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_parentid());
-  }
-
-  if (_internal_has_a_ischrome()) {
-    // required bool a_isChrome = 1;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_type()) {
-    // required uint32 a_type = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_type());
-  }
-
-  if (_internal_has_a_windowid()) {
-    // required uint64 a_windowID = 4;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_windowid());
-  }
-
-  if (_internal_has_a_serviceworkerid()) {
-    // required uint64 a_serviceWorkerID = 6;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_serviceworkerid());
-  }
-
-  return total_size;
-}
 size_t RemoteWorkerDebuggerInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x000001ff) ^ 0x000001ff) == 0) {  // All required fields are present.
-    // required string a_url = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_url());
-
-    // required bytes a_principal = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_principal());
-
-    // required string a_Id = 7;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_id());
-
-    // required string a_name = 8;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_name());
-
-    // required string a_parentId = 9;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_parentid());
-
-    // required bool a_isChrome = 1;
-    total_size += 1 + 1;
-
-    // required uint32 a_type = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_type());
-
-    // required uint64 a_windowID = 4;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_windowid());
-
-    // required uint64 a_serviceWorkerID = 6;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_serviceworkerid());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_url = 3;
+  if (!this->_internal_a_url().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_url());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // bytes a_principal = 5;
+  if (!this->_internal_a_principal().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_principal());
+  }
+
+  // string a_Id = 7;
+  if (!this->_internal_a_id().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_id());
+  }
+
+  // string a_name = 8;
+  if (!this->_internal_a_name().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_name());
+  }
+
+  // string a_parentId = 9;
+  if (!this->_internal_a_parentid().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_parentid());
+  }
+
+  // bool a_isChrome = 1;
+  if (this->_internal_a_ischrome() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // uint32 a_type = 2;
+  if (this->_internal_a_type() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_type());
+  }
+
+  // uint64 a_windowID = 4;
+  if (this->_internal_a_windowid() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_windowid());
+  }
+
+  // uint64 a_serviceWorkerID = 6;
+  if (this->_internal_a_serviceworkerid() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_serviceworkerid());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RemoteWorkerDebuggerInfo::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const RemoteWorkerDebuggerInfo*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RemoteWorkerDebuggerInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RemoteWorkerDebuggerInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RemoteWorkerDebuggerInfo::GetClassData() const { return &_class_data_; }
 
-void RemoteWorkerDebuggerInfo::MergeFrom(const RemoteWorkerDebuggerInfo& from) {
-  RemoteWorkerDebuggerInfo* const _this = this;
+
+void RemoteWorkerDebuggerInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RemoteWorkerDebuggerInfo*>(&to_msg);
+  auto& from = static_cast<const RemoteWorkerDebuggerInfo&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.RemoteWorkerDebuggerInfo)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x000000ffu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_url(from._internal_a_url());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_principal(from._internal_a_principal());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_a_id(from._internal_a_id());
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_internal_set_a_name(from._internal_a_name());
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_internal_set_a_parentid(from._internal_a_parentid());
-    }
-    if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.a_ischrome_ = from._impl_.a_ischrome_;
-    }
-    if (cached_has_bits & 0x00000040u) {
-      _this->_impl_.a_type_ = from._impl_.a_type_;
-    }
-    if (cached_has_bits & 0x00000080u) {
-      _this->_impl_.a_windowid_ = from._impl_.a_windowid_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_url().empty()) {
+    _this->_internal_set_a_url(from._internal_a_url());
   }
-  if (cached_has_bits & 0x00000100u) {
+  if (!from._internal_a_principal().empty()) {
+    _this->_internal_set_a_principal(from._internal_a_principal());
+  }
+  if (!from._internal_a_id().empty()) {
+    _this->_internal_set_a_id(from._internal_a_id());
+  }
+  if (!from._internal_a_name().empty()) {
+    _this->_internal_set_a_name(from._internal_a_name());
+  }
+  if (!from._internal_a_parentid().empty()) {
+    _this->_internal_set_a_parentid(from._internal_a_parentid());
+  }
+  if (from._internal_a_ischrome() != 0) {
+    _this->_internal_set_a_ischrome(from._internal_a_ischrome());
+  }
+  if (from._internal_a_type() != 0) {
+    _this->_internal_set_a_type(from._internal_a_type());
+  }
+  if (from._internal_a_windowid() != 0) {
+    _this->_internal_set_a_windowid(from._internal_a_windowid());
+  }
+  if (from._internal_a_serviceworkerid() != 0) {
     _this->_internal_set_a_serviceworkerid(from._internal_a_serviceworkerid());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RemoteWorkerDebuggerInfo::CopyFrom(const RemoteWorkerDebuggerInfo& from) {
@@ -4451,7 +4074,6 @@ void RemoteWorkerDebuggerInfo::CopyFrom(const RemoteWorkerDebuggerInfo& from) {
 }
 
 bool RemoteWorkerDebuggerInfo::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -4460,7 +4082,6 @@ void RemoteWorkerDebuggerInfo::InternalSwap(RemoteWorkerDebuggerInfo* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_url_, lhs_arena,
       &other->_impl_.a_url_, rhs_arena
@@ -4489,52 +4110,39 @@ void RemoteWorkerDebuggerInfo::InternalSwap(RemoteWorkerDebuggerInfo* other) {
           reinterpret_cast<char*>(&other->_impl_.a_ischrome_));
 }
 
-std::string RemoteWorkerDebuggerInfo::GetTypeName() const {
-  return "protobuf.mozilla.dom.RemoteWorkerDebuggerInfo";
+::PROTOBUF_NAMESPACE_ID::Metadata RemoteWorkerDebuggerInfo::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[8]);
 }
-
 
 // ===================================================================
 
 class RemoteWorkerDebuggerErrorInfo::_Internal {
  public:
-  using HasBits = decltype(std::declval<RemoteWorkerDebuggerErrorInfo>()._impl_._has_bits_);
-  static void set_has_a_filename(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_lineno(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_a_message(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
-  }
 };
 
 RemoteWorkerDebuggerErrorInfo::RemoteWorkerDebuggerErrorInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo)
 }
 RemoteWorkerDebuggerErrorInfo::RemoteWorkerDebuggerErrorInfo(const RemoteWorkerDebuggerErrorInfo& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   RemoteWorkerDebuggerErrorInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_filename_){}
+      decltype(_impl_.a_filename_){}
     , decltype(_impl_.a_message_){}
-    , decltype(_impl_.a_lineno_){}};
+    , decltype(_impl_.a_lineno_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_filename_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_filename_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_filename()) {
+  if (!from._internal_a_filename().empty()) {
     _this->_impl_.a_filename_.Set(from._internal_a_filename(), 
       _this->GetArenaForAllocation());
   }
@@ -4542,7 +4150,7 @@ RemoteWorkerDebuggerErrorInfo::RemoteWorkerDebuggerErrorInfo(const RemoteWorkerD
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_message_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_message()) {
+  if (!from._internal_a_message().empty()) {
     _this->_impl_.a_message_.Set(from._internal_a_message(), 
       _this->GetArenaForAllocation());
   }
@@ -4555,11 +4163,10 @@ inline void RemoteWorkerDebuggerErrorInfo::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_filename_){}
+      decltype(_impl_.a_filename_){}
     , decltype(_impl_.a_message_){}
     , decltype(_impl_.a_lineno_){0u}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_filename_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4573,7 +4180,7 @@ inline void RemoteWorkerDebuggerErrorInfo::SharedCtor(
 
 RemoteWorkerDebuggerErrorInfo::~RemoteWorkerDebuggerErrorInfo() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -4596,51 +4203,43 @@ void RemoteWorkerDebuggerErrorInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_filename_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_message_.ClearNonDefaultToEmpty();
-    }
-  }
+  _impl_.a_filename_.ClearToEmpty();
+  _impl_.a_message_.ClearToEmpty();
   _impl_.a_lineno_ = 0u;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* RemoteWorkerDebuggerErrorInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_fileName = 1;
+      // string a_fileName = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_filename();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.a_fileName"));
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_lineNo = 2;
+      // uint32 a_lineNo = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_a_lineno(&has_bits);
           _impl_.a_lineno_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required string a_message = 3;
+      // string a_message = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_message();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.a_message"));
         } else
           goto handle_unusual;
         continue;
@@ -4655,12 +4254,11 @@ const char* RemoteWorkerDebuggerErrorInfo::_InternalParse(const char* ptr, ::_pb
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -4674,118 +4272,95 @@ uint8_t* RemoteWorkerDebuggerErrorInfo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_fileName = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_fileName = 1;
+  if (!this->_internal_a_filename().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_filename().data(), static_cast<int>(this->_internal_a_filename().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.a_fileName");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_filename(), target);
   }
 
-  // required uint32 a_lineNo = 2;
-  if (cached_has_bits & 0x00000004u) {
+  // uint32 a_lineNo = 2;
+  if (this->_internal_a_lineno() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_lineno(), target);
   }
 
-  // required string a_message = 3;
-  if (cached_has_bits & 0x00000002u) {
+  // string a_message = 3;
+  if (!this->_internal_a_message().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_message().data(), static_cast<int>(this->_internal_a_message().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo.a_message");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_message(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo)
   return target;
 }
 
-size_t RemoteWorkerDebuggerErrorInfo::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo)
-  size_t total_size = 0;
-
-  if (_internal_has_a_filename()) {
-    // required string a_fileName = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_filename());
-  }
-
-  if (_internal_has_a_message()) {
-    // required string a_message = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_message());
-  }
-
-  if (_internal_has_a_lineno()) {
-    // required uint32 a_lineNo = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_lineno());
-  }
-
-  return total_size;
-}
 size_t RemoteWorkerDebuggerErrorInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string a_fileName = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_filename());
-
-    // required string a_message = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_message());
-
-    // required uint32 a_lineNo = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_lineno());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_fileName = 1;
+  if (!this->_internal_a_filename().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_filename());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // string a_message = 3;
+  if (!this->_internal_a_message().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_message());
+  }
+
+  // uint32 a_lineNo = 2;
+  if (this->_internal_a_lineno() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_lineno());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RemoteWorkerDebuggerErrorInfo::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const RemoteWorkerDebuggerErrorInfo*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RemoteWorkerDebuggerErrorInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RemoteWorkerDebuggerErrorInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RemoteWorkerDebuggerErrorInfo::GetClassData() const { return &_class_data_; }
 
-void RemoteWorkerDebuggerErrorInfo::MergeFrom(const RemoteWorkerDebuggerErrorInfo& from) {
-  RemoteWorkerDebuggerErrorInfo* const _this = this;
+
+void RemoteWorkerDebuggerErrorInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RemoteWorkerDebuggerErrorInfo*>(&to_msg);
+  auto& from = static_cast<const RemoteWorkerDebuggerErrorInfo&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_filename(from._internal_a_filename());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_message(from._internal_a_message());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.a_lineno_ = from._impl_.a_lineno_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_filename().empty()) {
+    _this->_internal_set_a_filename(from._internal_a_filename());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_message().empty()) {
+    _this->_internal_set_a_message(from._internal_a_message());
+  }
+  if (from._internal_a_lineno() != 0) {
+    _this->_internal_set_a_lineno(from._internal_a_lineno());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RemoteWorkerDebuggerErrorInfo::CopyFrom(const RemoteWorkerDebuggerErrorInfo& from) {
@@ -4796,7 +4371,6 @@ void RemoteWorkerDebuggerErrorInfo::CopyFrom(const RemoteWorkerDebuggerErrorInfo
 }
 
 bool RemoteWorkerDebuggerErrorInfo::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -4805,7 +4379,6 @@ void RemoteWorkerDebuggerErrorInfo::InternalSwap(RemoteWorkerDebuggerErrorInfo* 
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_filename_, lhs_arena,
       &other->_impl_.a_filename_, rhs_arena
@@ -4817,10 +4390,11 @@ void RemoteWorkerDebuggerErrorInfo::InternalSwap(RemoteWorkerDebuggerErrorInfo* 
   swap(_impl_.a_lineno_, other->_impl_.a_lineno_);
 }
 
-std::string RemoteWorkerDebuggerErrorInfo::GetTypeName() const {
-  return "protobuf.mozilla.dom.RemoteWorkerDebuggerErrorInfo";
+::PROTOBUF_NAMESPACE_ID::Metadata RemoteWorkerDebuggerErrorInfo::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_RemoteWorkerTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[9]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace dom

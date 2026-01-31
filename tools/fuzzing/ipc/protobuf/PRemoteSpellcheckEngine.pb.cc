@@ -8,7 +8,10 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -21,8 +24,7 @@ namespace protobuf {
 namespace mozilla {
 namespace PRemoteSpellcheckEngine {
 PROTOBUF_CONSTEXPR Msg___delete__::Msg___delete__(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg___delete__DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg___delete__DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -33,8 +35,7 @@ struct Msg___delete__DefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg___delete__DefaultTypeInternal _Msg___delete___default_instance_;
 PROTOBUF_CONSTEXPR Reply___delete__::Reply___delete__(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Reply___delete__DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply___delete__DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -72,9 +73,8 @@ struct Reply_CheckAsyncDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_CheckAsyncDefaultTypeInternal _Reply_CheckAsync_default_instance_;
 PROTOBUF_CONSTEXPR Msg_SetDictionary::Msg_SetDictionary(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_adictionary_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_adictionary_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_SetDictionaryDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SetDictionaryDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -86,9 +86,8 @@ struct Msg_SetDictionaryDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_SetDictionaryDefaultTypeInternal _Msg_SetDictionary_default_instance_;
 PROTOBUF_CONSTEXPR Reply_SetDictionary::Reply_SetDictionary(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_success_)*/false} {}
+    /*decltype(_impl_.a_success_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Reply_SetDictionaryDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_SetDictionaryDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -113,9 +112,8 @@ struct Msg_SetDictionariesDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_SetDictionariesDefaultTypeInternal _Msg_SetDictionaries_default_instance_;
 PROTOBUF_CONSTEXPR Reply_SetDictionaries::Reply_SetDictionaries(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_success_)*/false} {}
+    /*decltype(_impl_.a_success_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Reply_SetDictionariesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_SetDictionariesDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -127,10 +125,9 @@ struct Reply_SetDictionariesDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_SetDictionariesDefaultTypeInternal _Reply_SetDictionaries_default_instance_;
 PROTOBUF_CONSTEXPR Msg_Suggest::Msg_Suggest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_aword_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_acount_)*/0u} {}
+    /*decltype(_impl_.a_aword_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_acount_)*/0u
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_SuggestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SuggestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -168,10 +165,9 @@ struct Msg_SetDictionaryFromListDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_SetDictionaryFromListDefaultTypeInternal _Msg_SetDictionaryFromList_default_instance_;
 PROTOBUF_CONSTEXPR Reply_SetDictionaryFromList::Reply_SetDictionaryFromList(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_adictionary_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_asuccess_)*/false} {}
+    /*decltype(_impl_.a_adictionary_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_asuccess_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Reply_SetDictionaryFromListDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_SetDictionaryFromListDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -184,6 +180,158 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace PRemoteSpellcheckEngine
 }  // namespace mozilla
 }  // namespace protobuf
+static ::_pb::Metadata file_level_metadata_PRemoteSpellcheckEngine_2eproto[12];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PRemoteSpellcheckEngine_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PRemoteSpellcheckEngine_2eproto = nullptr;
+
+const uint32_t TableStruct_PRemoteSpellcheckEngine_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Msg___delete__, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Reply___delete__, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Msg_CheckAsync, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Msg_CheckAsync, _impl_.a_aword_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Reply_CheckAsync, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Reply_CheckAsync, _impl_.a_aismisspelled_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Msg_SetDictionary, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Msg_SetDictionary, _impl_.a_adictionary_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Reply_SetDictionary, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Reply_SetDictionary, _impl_.a_success_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Msg_SetDictionaries, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Msg_SetDictionaries, _impl_.a_adictionaries_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Reply_SetDictionaries, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Reply_SetDictionaries, _impl_.a_success_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Msg_Suggest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Msg_Suggest, _impl_.a_aword_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Msg_Suggest, _impl_.a_acount_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Reply_Suggest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Reply_Suggest, _impl_.a_asuggestions_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Msg_SetDictionaryFromList, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Msg_SetDictionaryFromList, _impl_.a_alist_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Reply_SetDictionaryFromList, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Reply_SetDictionaryFromList, _impl_.a_asuccess_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::PRemoteSpellcheckEngine::Reply_SetDictionaryFromList, _impl_.a_adictionary_),
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::protobuf::mozilla::PRemoteSpellcheckEngine::Msg___delete__)},
+  { 6, -1, -1, sizeof(::protobuf::mozilla::PRemoteSpellcheckEngine::Reply___delete__)},
+  { 12, -1, -1, sizeof(::protobuf::mozilla::PRemoteSpellcheckEngine::Msg_CheckAsync)},
+  { 19, -1, -1, sizeof(::protobuf::mozilla::PRemoteSpellcheckEngine::Reply_CheckAsync)},
+  { 26, -1, -1, sizeof(::protobuf::mozilla::PRemoteSpellcheckEngine::Msg_SetDictionary)},
+  { 33, -1, -1, sizeof(::protobuf::mozilla::PRemoteSpellcheckEngine::Reply_SetDictionary)},
+  { 40, -1, -1, sizeof(::protobuf::mozilla::PRemoteSpellcheckEngine::Msg_SetDictionaries)},
+  { 47, -1, -1, sizeof(::protobuf::mozilla::PRemoteSpellcheckEngine::Reply_SetDictionaries)},
+  { 54, -1, -1, sizeof(::protobuf::mozilla::PRemoteSpellcheckEngine::Msg_Suggest)},
+  { 62, -1, -1, sizeof(::protobuf::mozilla::PRemoteSpellcheckEngine::Reply_Suggest)},
+  { 69, -1, -1, sizeof(::protobuf::mozilla::PRemoteSpellcheckEngine::Msg_SetDictionaryFromList)},
+  { 76, -1, -1, sizeof(::protobuf::mozilla::PRemoteSpellcheckEngine::Reply_SetDictionaryFromList)},
+};
+
+static const ::_pb::Message* const file_default_instances[] = {
+  &::protobuf::mozilla::PRemoteSpellcheckEngine::_Msg___delete___default_instance_._instance,
+  &::protobuf::mozilla::PRemoteSpellcheckEngine::_Reply___delete___default_instance_._instance,
+  &::protobuf::mozilla::PRemoteSpellcheckEngine::_Msg_CheckAsync_default_instance_._instance,
+  &::protobuf::mozilla::PRemoteSpellcheckEngine::_Reply_CheckAsync_default_instance_._instance,
+  &::protobuf::mozilla::PRemoteSpellcheckEngine::_Msg_SetDictionary_default_instance_._instance,
+  &::protobuf::mozilla::PRemoteSpellcheckEngine::_Reply_SetDictionary_default_instance_._instance,
+  &::protobuf::mozilla::PRemoteSpellcheckEngine::_Msg_SetDictionaries_default_instance_._instance,
+  &::protobuf::mozilla::PRemoteSpellcheckEngine::_Reply_SetDictionaries_default_instance_._instance,
+  &::protobuf::mozilla::PRemoteSpellcheckEngine::_Msg_Suggest_default_instance_._instance,
+  &::protobuf::mozilla::PRemoteSpellcheckEngine::_Reply_Suggest_default_instance_._instance,
+  &::protobuf::mozilla::PRemoteSpellcheckEngine::_Msg_SetDictionaryFromList_default_instance_._instance,
+  &::protobuf::mozilla::PRemoteSpellcheckEngine::_Reply_SetDictionaryFromList_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_PRemoteSpellcheckEngine_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\035PRemoteSpellcheckEngine.proto\022(protobu"
+  "f.mozilla.PRemoteSpellcheckEngine\"\020\n\016Msg"
+  "___delete__\"\022\n\020Reply___delete__\"!\n\016Msg_C"
+  "heckAsync\022\017\n\007a_aWord\030\001 \003(\t\"+\n\020Reply_Chec"
+  "kAsync\022\027\n\017a_aIsMisspelled\030\001 \003(\010\"*\n\021Msg_S"
+  "etDictionary\022\025\n\ra_aDictionary\030\001 \001(\t\"(\n\023R"
+  "eply_SetDictionary\022\021\n\ta_success\030\001 \001(\010\".\n"
+  "\023Msg_SetDictionaries\022\027\n\017a_aDictionaries\030"
+  "\001 \003(\t\"*\n\025Reply_SetDictionaries\022\021\n\ta_succ"
+  "ess\030\001 \001(\010\"0\n\013Msg_Suggest\022\017\n\007a_aWord\030\001 \001("
+  "\t\022\020\n\010a_aCount\030\002 \001(\r\"\'\n\rReply_Suggest\022\026\n\016"
+  "a_aSuggestions\030\001 \003(\t\",\n\031Msg_SetDictionar"
+  "yFromList\022\017\n\007a_aList\030\001 \003(\t\"H\n\033Reply_SetD"
+  "ictionaryFromList\022\022\n\na_aSuccess\030\001 \001(\010\022\025\n"
+  "\ra_aDictionary\030\002 \001(\tb\006proto3"
+  ;
+static ::_pbi::once_flag descriptor_table_PRemoteSpellcheckEngine_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_PRemoteSpellcheckEngine_2eproto = {
+    false, false, 588, descriptor_table_protodef_PRemoteSpellcheckEngine_2eproto,
+    "PRemoteSpellcheckEngine.proto",
+    &descriptor_table_PRemoteSpellcheckEngine_2eproto_once, nullptr, 0, 12,
+    schemas, file_default_instances, TableStruct_PRemoteSpellcheckEngine_2eproto::offsets,
+    file_level_metadata_PRemoteSpellcheckEngine_2eproto, file_level_enum_descriptors_PRemoteSpellcheckEngine_2eproto,
+    file_level_service_descriptors_PRemoteSpellcheckEngine_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PRemoteSpellcheckEngine_2eproto_getter() {
+  return &descriptor_table_PRemoteSpellcheckEngine_2eproto;
+}
+
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PRemoteSpellcheckEngine_2eproto(&descriptor_table_PRemoteSpellcheckEngine_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace PRemoteSpellcheckEngine {
@@ -196,145 +344,37 @@ class Msg___delete__::_Internal {
 
 Msg___delete__::Msg___delete__(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.PRemoteSpellcheckEngine.Msg___delete__)
 }
 Msg___delete__::Msg___delete__(const Msg___delete__& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg___delete__* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.PRemoteSpellcheckEngine.Msg___delete__)
 }
 
-inline void Msg___delete__::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg___delete__::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg___delete__::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg___delete__::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PRemoteSpellcheckEngine_2eproto_getter, &descriptor_table_PRemoteSpellcheckEngine_2eproto_once,
+      file_level_metadata_PRemoteSpellcheckEngine_2eproto[0]);
 }
-
-Msg___delete__::~Msg___delete__() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.PRemoteSpellcheckEngine.Msg___delete__)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg___delete__::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg___delete__::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg___delete__::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.PRemoteSpellcheckEngine.Msg___delete__)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg___delete__::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.PRemoteSpellcheckEngine.Msg___delete__)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.PRemoteSpellcheckEngine.Msg___delete__)
-  return target;
-}
-
-size_t Msg___delete__::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteSpellcheckEngine.Msg___delete__)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg___delete__::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg___delete__*>(
-      &from));
-}
-
-void Msg___delete__::MergeFrom(const Msg___delete__& from) {
-  Msg___delete__* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.PRemoteSpellcheckEngine.Msg___delete__)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg___delete__::CopyFrom(const Msg___delete__& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.PRemoteSpellcheckEngine.Msg___delete__)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg___delete__::IsInitialized() const {
-  return true;
-}
-
-void Msg___delete__::InternalSwap(Msg___delete__* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg___delete__::GetTypeName() const {
-  return "protobuf.mozilla.PRemoteSpellcheckEngine.Msg___delete__";
-}
-
 
 // ===================================================================
 
@@ -344,145 +384,37 @@ class Reply___delete__::_Internal {
 
 Reply___delete__::Reply___delete__(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.PRemoteSpellcheckEngine.Reply___delete__)
 }
 Reply___delete__::Reply___delete__(const Reply___delete__& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Reply___delete__* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.PRemoteSpellcheckEngine.Reply___delete__)
 }
 
-inline void Reply___delete__::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply___delete__::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply___delete__::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Reply___delete__::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PRemoteSpellcheckEngine_2eproto_getter, &descriptor_table_PRemoteSpellcheckEngine_2eproto_once,
+      file_level_metadata_PRemoteSpellcheckEngine_2eproto[1]);
 }
-
-Reply___delete__::~Reply___delete__() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.PRemoteSpellcheckEngine.Reply___delete__)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Reply___delete__::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Reply___delete__::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Reply___delete__::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.PRemoteSpellcheckEngine.Reply___delete__)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Reply___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Reply___delete__::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.PRemoteSpellcheckEngine.Reply___delete__)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.PRemoteSpellcheckEngine.Reply___delete__)
-  return target;
-}
-
-size_t Reply___delete__::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteSpellcheckEngine.Reply___delete__)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Reply___delete__::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply___delete__*>(
-      &from));
-}
-
-void Reply___delete__::MergeFrom(const Reply___delete__& from) {
-  Reply___delete__* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.PRemoteSpellcheckEngine.Reply___delete__)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Reply___delete__::CopyFrom(const Reply___delete__& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.PRemoteSpellcheckEngine.Reply___delete__)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Reply___delete__::IsInitialized() const {
-  return true;
-}
-
-void Reply___delete__::InternalSwap(Reply___delete__* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Reply___delete__::GetTypeName() const {
-  return "protobuf.mozilla.PRemoteSpellcheckEngine.Reply___delete__";
-}
-
 
 // ===================================================================
 
@@ -492,18 +424,18 @@ class Msg_CheckAsync::_Internal {
 
 Msg_CheckAsync::Msg_CheckAsync(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_CheckAsync)
 }
 Msg_CheckAsync::Msg_CheckAsync(const Msg_CheckAsync& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_CheckAsync* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_aword_){from._impl_.a_aword_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_CheckAsync)
 }
 
@@ -519,7 +451,7 @@ inline void Msg_CheckAsync::SharedCtor(
 
 Msg_CheckAsync::~Msg_CheckAsync() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_CheckAsync)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -542,7 +474,7 @@ void Msg_CheckAsync::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_aword_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_CheckAsync::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -560,6 +492,7 @@ const char* Msg_CheckAsync::_InternalParse(const char* ptr, ::_pbi::ParseContext
             auto str = _internal_add_a_aword();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
+            CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.PRemoteSpellcheckEngine.Msg_CheckAsync.a_aWord"));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -576,7 +509,7 @@ const char* Msg_CheckAsync::_InternalParse(const char* ptr, ::_pbi::ParseContext
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -597,12 +530,16 @@ uint8_t* Msg_CheckAsync::_InternalSerialize(
   // repeated string a_aWord = 1;
   for (int i = 0, n = this->_internal_a_aword_size(); i < n; i++) {
     const auto& s = this->_internal_a_aword(i);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      s.data(), static_cast<int>(s.length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.PRemoteSpellcheckEngine.Msg_CheckAsync.a_aWord");
     target = stream->WriteString(1, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_CheckAsync)
   return target;
@@ -624,29 +561,26 @@ size_t Msg_CheckAsync::ByteSizeLong() const {
       _impl_.a_aword_.Get(i));
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_CheckAsync::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_CheckAsync*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_CheckAsync::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_CheckAsync::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_CheckAsync::GetClassData() const { return &_class_data_; }
 
-void Msg_CheckAsync::MergeFrom(const Msg_CheckAsync& from) {
-  Msg_CheckAsync* const _this = this;
+
+void Msg_CheckAsync::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_CheckAsync*>(&to_msg);
+  auto& from = static_cast<const Msg_CheckAsync&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_CheckAsync)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_aword_.MergeFrom(from._impl_.a_aword_);
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_CheckAsync::CopyFrom(const Msg_CheckAsync& from) {
@@ -666,10 +600,11 @@ void Msg_CheckAsync::InternalSwap(Msg_CheckAsync* other) {
   _impl_.a_aword_.InternalSwap(&other->_impl_.a_aword_);
 }
 
-std::string Msg_CheckAsync::GetTypeName() const {
-  return "protobuf.mozilla.PRemoteSpellcheckEngine.Msg_CheckAsync";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_CheckAsync::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PRemoteSpellcheckEngine_2eproto_getter, &descriptor_table_PRemoteSpellcheckEngine_2eproto_once,
+      file_level_metadata_PRemoteSpellcheckEngine_2eproto[2]);
 }
-
 
 // ===================================================================
 
@@ -679,18 +614,18 @@ class Reply_CheckAsync::_Internal {
 
 Reply_CheckAsync::Reply_CheckAsync(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_CheckAsync)
 }
 Reply_CheckAsync::Reply_CheckAsync(const Reply_CheckAsync& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Reply_CheckAsync* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_aismisspelled_){from._impl_.a_aismisspelled_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_CheckAsync)
 }
 
@@ -706,7 +641,7 @@ inline void Reply_CheckAsync::SharedCtor(
 
 Reply_CheckAsync::~Reply_CheckAsync() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_CheckAsync)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -729,7 +664,7 @@ void Reply_CheckAsync::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_aismisspelled_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Reply_CheckAsync::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -740,16 +675,11 @@ const char* Reply_CheckAsync::_InternalParse(const char* ptr, ::_pbi::ParseConte
     switch (tag >> 3) {
       // repeated bool a_aIsMisspelled = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            _internal_add_a_aismisspelled(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
-        } else if (static_cast<uint8_t>(tag) == 10) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedBoolParser(_internal_mutable_a_aismisspelled(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 8) {
+          _internal_add_a_aismisspelled(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -765,7 +695,7 @@ const char* Reply_CheckAsync::_InternalParse(const char* ptr, ::_pbi::ParseConte
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -784,14 +714,13 @@ uint8_t* Reply_CheckAsync::_InternalSerialize(
   (void) cached_has_bits;
 
   // repeated bool a_aIsMisspelled = 1;
-  for (int i = 0, n = this->_internal_a_aismisspelled_size(); i < n; i++) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_aismisspelled(i), target);
+  if (this->_internal_a_aismisspelled_size() > 0) {
+    target = stream->WriteFixedPacked(1, _internal_a_aismisspelled(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_CheckAsync)
   return target;
@@ -809,34 +738,33 @@ size_t Reply_CheckAsync::ByteSizeLong() const {
   {
     unsigned int count = static_cast<unsigned int>(this->_internal_a_aismisspelled_size());
     size_t data_size = 1UL * count;
-    total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_a_aismisspelled_size());
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
     total_size += data_size;
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Reply_CheckAsync::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply_CheckAsync*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_CheckAsync::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Reply_CheckAsync::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_CheckAsync::GetClassData() const { return &_class_data_; }
 
-void Reply_CheckAsync::MergeFrom(const Reply_CheckAsync& from) {
-  Reply_CheckAsync* const _this = this;
+
+void Reply_CheckAsync::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Reply_CheckAsync*>(&to_msg);
+  auto& from = static_cast<const Reply_CheckAsync&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_CheckAsync)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_aismisspelled_.MergeFrom(from._impl_.a_aismisspelled_);
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Reply_CheckAsync::CopyFrom(const Reply_CheckAsync& from) {
@@ -856,44 +784,37 @@ void Reply_CheckAsync::InternalSwap(Reply_CheckAsync* other) {
   _impl_.a_aismisspelled_.InternalSwap(&other->_impl_.a_aismisspelled_);
 }
 
-std::string Reply_CheckAsync::GetTypeName() const {
-  return "protobuf.mozilla.PRemoteSpellcheckEngine.Reply_CheckAsync";
+::PROTOBUF_NAMESPACE_ID::Metadata Reply_CheckAsync::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PRemoteSpellcheckEngine_2eproto_getter, &descriptor_table_PRemoteSpellcheckEngine_2eproto_once,
+      file_level_metadata_PRemoteSpellcheckEngine_2eproto[3]);
 }
-
 
 // ===================================================================
 
 class Msg_SetDictionary::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_SetDictionary>()._impl_._has_bits_);
-  static void set_has_a_adictionary(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_SetDictionary::Msg_SetDictionary(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionary)
 }
 Msg_SetDictionary::Msg_SetDictionary(const Msg_SetDictionary& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_SetDictionary* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_adictionary_){}};
+      decltype(_impl_.a_adictionary_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_adictionary_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_adictionary_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_adictionary()) {
+  if (!from._internal_a_adictionary().empty()) {
     _this->_impl_.a_adictionary_.Set(from._internal_a_adictionary(), 
       _this->GetArenaForAllocation());
   }
@@ -905,9 +826,8 @@ inline void Msg_SetDictionary::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_adictionary_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_adictionary_){}
   };
   _impl_.a_adictionary_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -917,7 +837,7 @@ inline void Msg_SetDictionary::SharedCtor(
 
 Msg_SetDictionary::~Msg_SetDictionary() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionary)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -939,27 +859,23 @@ void Msg_SetDictionary::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_adictionary_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_adictionary_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_SetDictionary::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aDictionary = 1;
+      // string a_aDictionary = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_adictionary();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionary.a_aDictionary"));
         } else
           goto handle_unusual;
         continue;
@@ -974,12 +890,11 @@ const char* Msg_SetDictionary::_InternalParse(const char* ptr, ::_pbi::ParseCont
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -993,16 +908,19 @@ uint8_t* Msg_SetDictionary::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aDictionary = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_aDictionary = 1;
+  if (!this->_internal_a_adictionary().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_adictionary().data(), static_cast<int>(this->_internal_a_adictionary().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionary.a_aDictionary");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_adictionary(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionary)
   return target;
@@ -1012,41 +930,39 @@ size_t Msg_SetDictionary::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionary)
   size_t total_size = 0;
 
-  // required string a_aDictionary = 1;
-  if (_internal_has_a_adictionary()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_adictionary());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_aDictionary = 1;
+  if (!this->_internal_a_adictionary().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_adictionary());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_SetDictionary::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_SetDictionary*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_SetDictionary::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_SetDictionary::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_SetDictionary::GetClassData() const { return &_class_data_; }
 
-void Msg_SetDictionary::MergeFrom(const Msg_SetDictionary& from) {
-  Msg_SetDictionary* const _this = this;
+
+void Msg_SetDictionary::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_SetDictionary*>(&to_msg);
+  auto& from = static_cast<const Msg_SetDictionary&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionary)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_adictionary()) {
+  if (!from._internal_a_adictionary().empty()) {
     _this->_internal_set_a_adictionary(from._internal_a_adictionary());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_SetDictionary::CopyFrom(const Msg_SetDictionary& from) {
@@ -1057,7 +973,6 @@ void Msg_SetDictionary::CopyFrom(const Msg_SetDictionary& from) {
 }
 
 bool Msg_SetDictionary::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1066,46 +981,38 @@ void Msg_SetDictionary::InternalSwap(Msg_SetDictionary* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_adictionary_, lhs_arena,
       &other->_impl_.a_adictionary_, rhs_arena
   );
 }
 
-std::string Msg_SetDictionary::GetTypeName() const {
-  return "protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionary";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_SetDictionary::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PRemoteSpellcheckEngine_2eproto_getter, &descriptor_table_PRemoteSpellcheckEngine_2eproto_once,
+      file_level_metadata_PRemoteSpellcheckEngine_2eproto[4]);
 }
-
 
 // ===================================================================
 
 class Reply_SetDictionary::_Internal {
  public:
-  using HasBits = decltype(std::declval<Reply_SetDictionary>()._impl_._has_bits_);
-  static void set_has_a_success(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_SetDictionary::Reply_SetDictionary(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionary)
 }
 Reply_SetDictionary::Reply_SetDictionary(const Reply_SetDictionary& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Reply_SetDictionary* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_success_){}};
+      decltype(_impl_.a_success_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _this->_impl_.a_success_ = from._impl_.a_success_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionary)
 }
@@ -1115,15 +1022,14 @@ inline void Reply_SetDictionary::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_success_){false}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_success_){false}
   };
 }
 
 Reply_SetDictionary::~Reply_SetDictionary() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionary)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -1145,21 +1051,18 @@ void Reply_SetDictionary::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_success_ = false;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Reply_SetDictionary::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_success = 1;
+      // bool a_success = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_a_success(&has_bits);
           _impl_.a_success_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -1176,12 +1079,11 @@ const char* Reply_SetDictionary::_InternalParse(const char* ptr, ::_pbi::ParseCo
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1195,16 +1097,15 @@ uint8_t* Reply_SetDictionary::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_success = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // bool a_success = 1;
+  if (this->_internal_a_success() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_success(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionary)
   return target;
@@ -1214,39 +1115,37 @@ size_t Reply_SetDictionary::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionary)
   size_t total_size = 0;
 
-  // required bool a_success = 1;
-  if (_internal_has_a_success()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // bool a_success = 1;
+  if (this->_internal_a_success() != 0) {
+    total_size += 1 + 1;
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Reply_SetDictionary::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply_SetDictionary*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_SetDictionary::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Reply_SetDictionary::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_SetDictionary::GetClassData() const { return &_class_data_; }
 
-void Reply_SetDictionary::MergeFrom(const Reply_SetDictionary& from) {
-  Reply_SetDictionary* const _this = this;
+
+void Reply_SetDictionary::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Reply_SetDictionary*>(&to_msg);
+  auto& from = static_cast<const Reply_SetDictionary&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionary)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_success()) {
+  if (from._internal_a_success() != 0) {
     _this->_internal_set_a_success(from._internal_a_success());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Reply_SetDictionary::CopyFrom(const Reply_SetDictionary& from) {
@@ -1257,21 +1156,20 @@ void Reply_SetDictionary::CopyFrom(const Reply_SetDictionary& from) {
 }
 
 bool Reply_SetDictionary::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Reply_SetDictionary::InternalSwap(Reply_SetDictionary* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_success_, other->_impl_.a_success_);
 }
 
-std::string Reply_SetDictionary::GetTypeName() const {
-  return "protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionary";
+::PROTOBUF_NAMESPACE_ID::Metadata Reply_SetDictionary::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PRemoteSpellcheckEngine_2eproto_getter, &descriptor_table_PRemoteSpellcheckEngine_2eproto_once,
+      file_level_metadata_PRemoteSpellcheckEngine_2eproto[5]);
 }
-
 
 // ===================================================================
 
@@ -1281,18 +1179,18 @@ class Msg_SetDictionaries::_Internal {
 
 Msg_SetDictionaries::Msg_SetDictionaries(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaries)
 }
 Msg_SetDictionaries::Msg_SetDictionaries(const Msg_SetDictionaries& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_SetDictionaries* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_adictionaries_){from._impl_.a_adictionaries_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaries)
 }
 
@@ -1308,7 +1206,7 @@ inline void Msg_SetDictionaries::SharedCtor(
 
 Msg_SetDictionaries::~Msg_SetDictionaries() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaries)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -1331,7 +1229,7 @@ void Msg_SetDictionaries::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_adictionaries_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_SetDictionaries::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1349,6 +1247,7 @@ const char* Msg_SetDictionaries::_InternalParse(const char* ptr, ::_pbi::ParseCo
             auto str = _internal_add_a_adictionaries();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
+            CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaries.a_aDictionaries"));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -1365,7 +1264,7 @@ const char* Msg_SetDictionaries::_InternalParse(const char* ptr, ::_pbi::ParseCo
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1386,12 +1285,16 @@ uint8_t* Msg_SetDictionaries::_InternalSerialize(
   // repeated string a_aDictionaries = 1;
   for (int i = 0, n = this->_internal_a_adictionaries_size(); i < n; i++) {
     const auto& s = this->_internal_a_adictionaries(i);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      s.data(), static_cast<int>(s.length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaries.a_aDictionaries");
     target = stream->WriteString(1, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaries)
   return target;
@@ -1413,29 +1316,26 @@ size_t Msg_SetDictionaries::ByteSizeLong() const {
       _impl_.a_adictionaries_.Get(i));
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_SetDictionaries::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_SetDictionaries*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_SetDictionaries::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_SetDictionaries::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_SetDictionaries::GetClassData() const { return &_class_data_; }
 
-void Msg_SetDictionaries::MergeFrom(const Msg_SetDictionaries& from) {
-  Msg_SetDictionaries* const _this = this;
+
+void Msg_SetDictionaries::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_SetDictionaries*>(&to_msg);
+  auto& from = static_cast<const Msg_SetDictionaries&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaries)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_adictionaries_.MergeFrom(from._impl_.a_adictionaries_);
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_SetDictionaries::CopyFrom(const Msg_SetDictionaries& from) {
@@ -1455,39 +1355,32 @@ void Msg_SetDictionaries::InternalSwap(Msg_SetDictionaries* other) {
   _impl_.a_adictionaries_.InternalSwap(&other->_impl_.a_adictionaries_);
 }
 
-std::string Msg_SetDictionaries::GetTypeName() const {
-  return "protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaries";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_SetDictionaries::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PRemoteSpellcheckEngine_2eproto_getter, &descriptor_table_PRemoteSpellcheckEngine_2eproto_once,
+      file_level_metadata_PRemoteSpellcheckEngine_2eproto[6]);
 }
-
 
 // ===================================================================
 
 class Reply_SetDictionaries::_Internal {
  public:
-  using HasBits = decltype(std::declval<Reply_SetDictionaries>()._impl_._has_bits_);
-  static void set_has_a_success(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_SetDictionaries::Reply_SetDictionaries(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaries)
 }
 Reply_SetDictionaries::Reply_SetDictionaries(const Reply_SetDictionaries& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Reply_SetDictionaries* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_success_){}};
+      decltype(_impl_.a_success_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _this->_impl_.a_success_ = from._impl_.a_success_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaries)
 }
@@ -1497,15 +1390,14 @@ inline void Reply_SetDictionaries::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_success_){false}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_success_){false}
   };
 }
 
 Reply_SetDictionaries::~Reply_SetDictionaries() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaries)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -1527,21 +1419,18 @@ void Reply_SetDictionaries::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_success_ = false;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Reply_SetDictionaries::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_success = 1;
+      // bool a_success = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_a_success(&has_bits);
           _impl_.a_success_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -1558,12 +1447,11 @@ const char* Reply_SetDictionaries::_InternalParse(const char* ptr, ::_pbi::Parse
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1577,16 +1465,15 @@ uint8_t* Reply_SetDictionaries::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_success = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // bool a_success = 1;
+  if (this->_internal_a_success() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_success(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaries)
   return target;
@@ -1596,39 +1483,37 @@ size_t Reply_SetDictionaries::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaries)
   size_t total_size = 0;
 
-  // required bool a_success = 1;
-  if (_internal_has_a_success()) {
-    total_size += 1 + 1;
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // bool a_success = 1;
+  if (this->_internal_a_success() != 0) {
+    total_size += 1 + 1;
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Reply_SetDictionaries::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply_SetDictionaries*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_SetDictionaries::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Reply_SetDictionaries::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_SetDictionaries::GetClassData() const { return &_class_data_; }
 
-void Reply_SetDictionaries::MergeFrom(const Reply_SetDictionaries& from) {
-  Reply_SetDictionaries* const _this = this;
+
+void Reply_SetDictionaries::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Reply_SetDictionaries*>(&to_msg);
+  auto& from = static_cast<const Reply_SetDictionaries&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaries)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_success()) {
+  if (from._internal_a_success() != 0) {
     _this->_internal_set_a_success(from._internal_a_success());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Reply_SetDictionaries::CopyFrom(const Reply_SetDictionaries& from) {
@@ -1639,59 +1524,47 @@ void Reply_SetDictionaries::CopyFrom(const Reply_SetDictionaries& from) {
 }
 
 bool Reply_SetDictionaries::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Reply_SetDictionaries::InternalSwap(Reply_SetDictionaries* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_success_, other->_impl_.a_success_);
 }
 
-std::string Reply_SetDictionaries::GetTypeName() const {
-  return "protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaries";
+::PROTOBUF_NAMESPACE_ID::Metadata Reply_SetDictionaries::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PRemoteSpellcheckEngine_2eproto_getter, &descriptor_table_PRemoteSpellcheckEngine_2eproto_once,
+      file_level_metadata_PRemoteSpellcheckEngine_2eproto[7]);
 }
-
 
 // ===================================================================
 
 class Msg_Suggest::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_Suggest>()._impl_._has_bits_);
-  static void set_has_a_aword(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_acount(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 Msg_Suggest::Msg_Suggest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest)
 }
 Msg_Suggest::Msg_Suggest(const Msg_Suggest& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_Suggest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_aword_){}
-    , decltype(_impl_.a_acount_){}};
+      decltype(_impl_.a_aword_){}
+    , decltype(_impl_.a_acount_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_aword_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_aword_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_aword()) {
+  if (!from._internal_a_aword().empty()) {
     _this->_impl_.a_aword_.Set(from._internal_a_aword(), 
       _this->GetArenaForAllocation());
   }
@@ -1704,10 +1577,9 @@ inline void Msg_Suggest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_aword_){}
+      decltype(_impl_.a_aword_){}
     , decltype(_impl_.a_acount_){0u}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_aword_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1717,7 +1589,7 @@ inline void Msg_Suggest::SharedCtor(
 
 Msg_Suggest::~Msg_Suggest() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -1739,35 +1611,30 @@ void Msg_Suggest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_aword_.ClearNonDefaultToEmpty();
-  }
+  _impl_.a_aword_.ClearToEmpty();
   _impl_.a_acount_ = 0u;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_Suggest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aWord = 1;
+      // string a_aWord = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_aword();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest.a_aWord"));
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_aCount = 2;
+      // uint32 a_aCount = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_a_acount(&has_bits);
           _impl_.a_acount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -1784,12 +1651,11 @@ const char* Msg_Suggest::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1803,97 +1669,75 @@ uint8_t* Msg_Suggest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aWord = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_aWord = 1;
+  if (!this->_internal_a_aword().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_aword().data(), static_cast<int>(this->_internal_a_aword().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest.a_aWord");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_aword(), target);
   }
 
-  // required uint32 a_aCount = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // uint32 a_aCount = 2;
+  if (this->_internal_a_acount() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_acount(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest)
   return target;
 }
 
-size_t Msg_Suggest::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest)
-  size_t total_size = 0;
-
-  if (_internal_has_a_aword()) {
-    // required string a_aWord = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_aword());
-  }
-
-  if (_internal_has_a_acount()) {
-    // required uint32 a_aCount = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acount());
-  }
-
-  return total_size;
-}
 size_t Msg_Suggest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_aWord = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_aword());
-
-    // required uint32 a_aCount = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acount());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_aWord = 1;
+  if (!this->_internal_a_aword().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_aword());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // uint32 a_aCount = 2;
+  if (this->_internal_a_acount() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acount());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_Suggest::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_Suggest*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_Suggest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_Suggest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_Suggest::GetClassData() const { return &_class_data_; }
 
-void Msg_Suggest::MergeFrom(const Msg_Suggest& from) {
-  Msg_Suggest* const _this = this;
+
+void Msg_Suggest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_Suggest*>(&to_msg);
+  auto& from = static_cast<const Msg_Suggest&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_aword(from._internal_a_aword());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.a_acount_ = from._impl_.a_acount_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_aword().empty()) {
+    _this->_internal_set_a_aword(from._internal_a_aword());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (from._internal_a_acount() != 0) {
+    _this->_internal_set_a_acount(from._internal_a_acount());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_Suggest::CopyFrom(const Msg_Suggest& from) {
@@ -1904,7 +1748,6 @@ void Msg_Suggest::CopyFrom(const Msg_Suggest& from) {
 }
 
 bool Msg_Suggest::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1913,7 +1756,6 @@ void Msg_Suggest::InternalSwap(Msg_Suggest* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_aword_, lhs_arena,
       &other->_impl_.a_aword_, rhs_arena
@@ -1921,10 +1763,11 @@ void Msg_Suggest::InternalSwap(Msg_Suggest* other) {
   swap(_impl_.a_acount_, other->_impl_.a_acount_);
 }
 
-std::string Msg_Suggest::GetTypeName() const {
-  return "protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_Suggest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PRemoteSpellcheckEngine_2eproto_getter, &descriptor_table_PRemoteSpellcheckEngine_2eproto_once,
+      file_level_metadata_PRemoteSpellcheckEngine_2eproto[8]);
 }
-
 
 // ===================================================================
 
@@ -1934,18 +1777,18 @@ class Reply_Suggest::_Internal {
 
 Reply_Suggest::Reply_Suggest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_Suggest)
 }
 Reply_Suggest::Reply_Suggest(const Reply_Suggest& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Reply_Suggest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_asuggestions_){from._impl_.a_asuggestions_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_Suggest)
 }
 
@@ -1961,7 +1804,7 @@ inline void Reply_Suggest::SharedCtor(
 
 Reply_Suggest::~Reply_Suggest() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_Suggest)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -1984,7 +1827,7 @@ void Reply_Suggest::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_asuggestions_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Reply_Suggest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -2002,6 +1845,7 @@ const char* Reply_Suggest::_InternalParse(const char* ptr, ::_pbi::ParseContext*
             auto str = _internal_add_a_asuggestions();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
+            CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.PRemoteSpellcheckEngine.Reply_Suggest.a_aSuggestions"));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -2018,7 +1862,7 @@ const char* Reply_Suggest::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -2039,12 +1883,16 @@ uint8_t* Reply_Suggest::_InternalSerialize(
   // repeated string a_aSuggestions = 1;
   for (int i = 0, n = this->_internal_a_asuggestions_size(); i < n; i++) {
     const auto& s = this->_internal_a_asuggestions(i);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      s.data(), static_cast<int>(s.length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.PRemoteSpellcheckEngine.Reply_Suggest.a_aSuggestions");
     target = stream->WriteString(1, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_Suggest)
   return target;
@@ -2066,29 +1914,26 @@ size_t Reply_Suggest::ByteSizeLong() const {
       _impl_.a_asuggestions_.Get(i));
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Reply_Suggest::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply_Suggest*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_Suggest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Reply_Suggest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_Suggest::GetClassData() const { return &_class_data_; }
 
-void Reply_Suggest::MergeFrom(const Reply_Suggest& from) {
-  Reply_Suggest* const _this = this;
+
+void Reply_Suggest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Reply_Suggest*>(&to_msg);
+  auto& from = static_cast<const Reply_Suggest&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_Suggest)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_asuggestions_.MergeFrom(from._impl_.a_asuggestions_);
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Reply_Suggest::CopyFrom(const Reply_Suggest& from) {
@@ -2108,10 +1953,11 @@ void Reply_Suggest::InternalSwap(Reply_Suggest* other) {
   _impl_.a_asuggestions_.InternalSwap(&other->_impl_.a_asuggestions_);
 }
 
-std::string Reply_Suggest::GetTypeName() const {
-  return "protobuf.mozilla.PRemoteSpellcheckEngine.Reply_Suggest";
+::PROTOBUF_NAMESPACE_ID::Metadata Reply_Suggest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PRemoteSpellcheckEngine_2eproto_getter, &descriptor_table_PRemoteSpellcheckEngine_2eproto_once,
+      file_level_metadata_PRemoteSpellcheckEngine_2eproto[9]);
 }
-
 
 // ===================================================================
 
@@ -2121,18 +1967,18 @@ class Msg_SetDictionaryFromList::_Internal {
 
 Msg_SetDictionaryFromList::Msg_SetDictionaryFromList(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaryFromList)
 }
 Msg_SetDictionaryFromList::Msg_SetDictionaryFromList(const Msg_SetDictionaryFromList& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_SetDictionaryFromList* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_alist_){from._impl_.a_alist_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaryFromList)
 }
 
@@ -2148,7 +1994,7 @@ inline void Msg_SetDictionaryFromList::SharedCtor(
 
 Msg_SetDictionaryFromList::~Msg_SetDictionaryFromList() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaryFromList)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -2171,7 +2017,7 @@ void Msg_SetDictionaryFromList::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_alist_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_SetDictionaryFromList::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -2189,6 +2035,7 @@ const char* Msg_SetDictionaryFromList::_InternalParse(const char* ptr, ::_pbi::P
             auto str = _internal_add_a_alist();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
+            CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaryFromList.a_aList"));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -2205,7 +2052,7 @@ const char* Msg_SetDictionaryFromList::_InternalParse(const char* ptr, ::_pbi::P
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -2226,12 +2073,16 @@ uint8_t* Msg_SetDictionaryFromList::_InternalSerialize(
   // repeated string a_aList = 1;
   for (int i = 0, n = this->_internal_a_alist_size(); i < n; i++) {
     const auto& s = this->_internal_a_alist(i);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      s.data(), static_cast<int>(s.length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaryFromList.a_aList");
     target = stream->WriteString(1, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaryFromList)
   return target;
@@ -2253,29 +2104,26 @@ size_t Msg_SetDictionaryFromList::ByteSizeLong() const {
       _impl_.a_alist_.Get(i));
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_SetDictionaryFromList::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_SetDictionaryFromList*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_SetDictionaryFromList::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_SetDictionaryFromList::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_SetDictionaryFromList::GetClassData() const { return &_class_data_; }
 
-void Msg_SetDictionaryFromList::MergeFrom(const Msg_SetDictionaryFromList& from) {
-  Msg_SetDictionaryFromList* const _this = this;
+
+void Msg_SetDictionaryFromList::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_SetDictionaryFromList*>(&to_msg);
+  auto& from = static_cast<const Msg_SetDictionaryFromList&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaryFromList)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_alist_.MergeFrom(from._impl_.a_alist_);
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_SetDictionaryFromList::CopyFrom(const Msg_SetDictionaryFromList& from) {
@@ -2295,48 +2143,38 @@ void Msg_SetDictionaryFromList::InternalSwap(Msg_SetDictionaryFromList* other) {
   _impl_.a_alist_.InternalSwap(&other->_impl_.a_alist_);
 }
 
-std::string Msg_SetDictionaryFromList::GetTypeName() const {
-  return "protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaryFromList";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_SetDictionaryFromList::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PRemoteSpellcheckEngine_2eproto_getter, &descriptor_table_PRemoteSpellcheckEngine_2eproto_once,
+      file_level_metadata_PRemoteSpellcheckEngine_2eproto[10]);
 }
-
 
 // ===================================================================
 
 class Reply_SetDictionaryFromList::_Internal {
  public:
-  using HasBits = decltype(std::declval<Reply_SetDictionaryFromList>()._impl_._has_bits_);
-  static void set_has_a_asuccess(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_a_adictionary(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 Reply_SetDictionaryFromList::Reply_SetDictionaryFromList(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList)
 }
 Reply_SetDictionaryFromList::Reply_SetDictionaryFromList(const Reply_SetDictionaryFromList& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Reply_SetDictionaryFromList* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_adictionary_){}
-    , decltype(_impl_.a_asuccess_){}};
+      decltype(_impl_.a_adictionary_){}
+    , decltype(_impl_.a_asuccess_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_adictionary_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_adictionary_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_adictionary()) {
+  if (!from._internal_a_adictionary().empty()) {
     _this->_impl_.a_adictionary_.Set(from._internal_a_adictionary(), 
       _this->GetArenaForAllocation());
   }
@@ -2349,10 +2187,9 @@ inline void Reply_SetDictionaryFromList::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_adictionary_){}
+      decltype(_impl_.a_adictionary_){}
     , decltype(_impl_.a_asuccess_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_adictionary_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2362,7 +2199,7 @@ inline void Reply_SetDictionaryFromList::SharedCtor(
 
 Reply_SetDictionaryFromList::~Reply_SetDictionaryFromList() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -2384,37 +2221,32 @@ void Reply_SetDictionaryFromList::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_adictionary_.ClearNonDefaultToEmpty();
-  }
+  _impl_.a_adictionary_.ClearToEmpty();
   _impl_.a_asuccess_ = false;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Reply_SetDictionaryFromList::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_aSuccess = 1;
+      // bool a_aSuccess = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_a_asuccess(&has_bits);
           _impl_.a_asuccess_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required string a_aDictionary = 2;
+      // string a_aDictionary = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_adictionary();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList.a_aDictionary"));
         } else
           goto handle_unusual;
         continue;
@@ -2429,12 +2261,11 @@ const char* Reply_SetDictionaryFromList::_InternalParse(const char* ptr, ::_pbi:
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2448,97 +2279,75 @@ uint8_t* Reply_SetDictionaryFromList::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_aSuccess = 1;
-  if (cached_has_bits & 0x00000002u) {
+  // bool a_aSuccess = 1;
+  if (this->_internal_a_asuccess() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_asuccess(), target);
   }
 
-  // required string a_aDictionary = 2;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_aDictionary = 2;
+  if (!this->_internal_a_adictionary().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_adictionary().data(), static_cast<int>(this->_internal_a_adictionary().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList.a_aDictionary");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_adictionary(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList)
   return target;
 }
 
-size_t Reply_SetDictionaryFromList::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList)
-  size_t total_size = 0;
-
-  if (_internal_has_a_adictionary()) {
-    // required string a_aDictionary = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_adictionary());
-  }
-
-  if (_internal_has_a_asuccess()) {
-    // required bool a_aSuccess = 1;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t Reply_SetDictionaryFromList::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_aDictionary = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_adictionary());
-
-    // required bool a_aSuccess = 1;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_aDictionary = 2;
+  if (!this->_internal_a_adictionary().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_adictionary());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // bool a_aSuccess = 1;
+  if (this->_internal_a_asuccess() != 0) {
+    total_size += 1 + 1;
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Reply_SetDictionaryFromList::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply_SetDictionaryFromList*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_SetDictionaryFromList::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Reply_SetDictionaryFromList::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_SetDictionaryFromList::GetClassData() const { return &_class_data_; }
 
-void Reply_SetDictionaryFromList::MergeFrom(const Reply_SetDictionaryFromList& from) {
-  Reply_SetDictionaryFromList* const _this = this;
+
+void Reply_SetDictionaryFromList::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Reply_SetDictionaryFromList*>(&to_msg);
+  auto& from = static_cast<const Reply_SetDictionaryFromList&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_adictionary(from._internal_a_adictionary());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.a_asuccess_ = from._impl_.a_asuccess_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_adictionary().empty()) {
+    _this->_internal_set_a_adictionary(from._internal_a_adictionary());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (from._internal_a_asuccess() != 0) {
+    _this->_internal_set_a_asuccess(from._internal_a_asuccess());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Reply_SetDictionaryFromList::CopyFrom(const Reply_SetDictionaryFromList& from) {
@@ -2549,7 +2358,6 @@ void Reply_SetDictionaryFromList::CopyFrom(const Reply_SetDictionaryFromList& fr
 }
 
 bool Reply_SetDictionaryFromList::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -2558,7 +2366,6 @@ void Reply_SetDictionaryFromList::InternalSwap(Reply_SetDictionaryFromList* othe
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_adictionary_, lhs_arena,
       &other->_impl_.a_adictionary_, rhs_arena
@@ -2566,10 +2373,11 @@ void Reply_SetDictionaryFromList::InternalSwap(Reply_SetDictionaryFromList* othe
   swap(_impl_.a_asuccess_, other->_impl_.a_asuccess_);
 }
 
-std::string Reply_SetDictionaryFromList::GetTypeName() const {
-  return "protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList";
+::PROTOBUF_NAMESPACE_ID::Metadata Reply_SetDictionaryFromList::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PRemoteSpellcheckEngine_2eproto_getter, &descriptor_table_PRemoteSpellcheckEngine_2eproto_once,
+      file_level_metadata_PRemoteSpellcheckEngine_2eproto[11]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace PRemoteSpellcheckEngine

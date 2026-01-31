@@ -5,15 +5,14 @@
 
 // Generated from /home/tmittendorf/firefox/dom/ipc/PProcessHangMonitor.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla;
 
 // Structs and unions declarations
 message SlowScriptData {
-  required bytes a_tabId = 1;
-  required string a_filename = 2;
-  required string a_addonId = 3;
-  required double a_duration = 4;
+  bytes a_tabId = 1;
+  string a_filename = 2;
+  string a_addonId = 3;
+  double a_duration = 4;
 }

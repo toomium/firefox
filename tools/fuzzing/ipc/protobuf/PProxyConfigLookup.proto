@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/netwerk/ipc/PProxyConfigLookup.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.net.PProxyConfigLookup;
 
@@ -18,7 +17,7 @@ import "NeckoChannelParams.proto";
 // Message declarations
 message Msg___delete__ {
   repeated protobuf.mozilla.net.ProxyInfoCloneArgs a_aProxyInfo = 1;
-  required bytes a_aResult = 2;
+  bytes a_aResult = 2;
 }
 
 message Reply___delete__ {

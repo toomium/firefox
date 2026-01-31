@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto
@@ -41,6 +43,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -63,7 +66,7 @@ namespace locks {
 // ===================================================================
 
 class IPCLockRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.locks.IPCLockRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.locks.IPCLockRequest) */ {
  public:
   inline IPCLockRequest() : IPCLockRequest(nullptr) {}
   ~IPCLockRequest() override;
@@ -93,13 +96,15 @@ class IPCLockRequest final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const IPCLockRequest& default_instance() {
     return *internal_default_instance();
   }
@@ -137,9 +142,15 @@ class IPCLockRequest final :
   IPCLockRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<IPCLockRequest>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const IPCLockRequest& from);
-  void MergeFrom(const IPCLockRequest& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const IPCLockRequest& from) {
+    IPCLockRequest::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -152,7 +163,7 @@ class IPCLockRequest final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(IPCLockRequest* other);
 
   private:
@@ -165,7 +176,10 @@ class IPCLockRequest final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -177,11 +191,7 @@ class IPCLockRequest final :
     kAIfAvailableFieldNumber = 3,
     kAStealFieldNumber = 4,
   };
-  // required string a_name = 1;
-  bool has_a_name() const;
-  private:
-  bool _internal_has_a_name() const;
-  public:
+  // string a_name = 1;
   void clear_a_name();
   const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -195,11 +205,7 @@ class IPCLockRequest final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required bytes a_lockMode = 2;
-  bool has_a_lockmode() const;
-  private:
-  bool _internal_has_a_lockmode() const;
-  public:
+  // bytes a_lockMode = 2;
   void clear_a_lockmode();
   const std::string& a_lockmode() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -213,11 +219,7 @@ class IPCLockRequest final :
   std::string* _internal_mutable_a_lockmode();
   public:
 
-  // required bool a_ifAvailable = 3;
-  bool has_a_ifavailable() const;
-  private:
-  bool _internal_has_a_ifavailable() const;
-  public:
+  // bool a_ifAvailable = 3;
   void clear_a_ifavailable();
   bool a_ifavailable() const;
   void set_a_ifavailable(bool value);
@@ -226,11 +228,7 @@ class IPCLockRequest final :
   void _internal_set_a_ifavailable(bool value);
   public:
 
-  // required bool a_steal = 4;
-  bool has_a_steal() const;
-  private:
-  bool _internal_has_a_steal() const;
-  public:
+  // bool a_steal = 4;
   void clear_a_steal();
   bool a_steal() const;
   void set_a_steal(bool value);
@@ -243,19 +241,15 @@ class IPCLockRequest final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_lockmode_;
     bool a_ifavailable_;
     bool a_steal_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto;
@@ -271,17 +265,9 @@ class IPCLockRequest final :
 #endif  // __GNUC__
 // IPCLockRequest
 
-// required string a_name = 1;
-inline bool IPCLockRequest::_internal_has_a_name() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool IPCLockRequest::has_a_name() const {
-  return _internal_has_a_name();
-}
+// string a_name = 1;
 inline void IPCLockRequest::clear_a_name() {
   _impl_.a_name_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& IPCLockRequest::a_name() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.locks.IPCLockRequest.a_name)
@@ -290,7 +276,7 @@ inline const std::string& IPCLockRequest::a_name() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCLockRequest::set_a_name(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.locks.IPCLockRequest.a_name)
 }
@@ -303,32 +289,22 @@ inline const std::string& IPCLockRequest::_internal_a_name() const {
   return _impl_.a_name_.Get();
 }
 inline void IPCLockRequest::_internal_set_a_name(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCLockRequest::_internal_mutable_a_name() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCLockRequest::release_a_name() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.locks.IPCLockRequest.a_name)
-  if (!_internal_has_a_name()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_name_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_name_.IsDefault()) {
-    _impl_.a_name_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_name_.Release();
 }
 inline void IPCLockRequest::set_allocated_a_name(std::string* a_name) {
   if (a_name != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -339,17 +315,9 @@ inline void IPCLockRequest::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.locks.IPCLockRequest.a_name)
 }
 
-// required bytes a_lockMode = 2;
-inline bool IPCLockRequest::_internal_has_a_lockmode() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool IPCLockRequest::has_a_lockmode() const {
-  return _internal_has_a_lockmode();
-}
+// bytes a_lockMode = 2;
 inline void IPCLockRequest::clear_a_lockmode() {
   _impl_.a_lockmode_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& IPCLockRequest::a_lockmode() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.locks.IPCLockRequest.a_lockMode)
@@ -358,7 +326,7 @@ inline const std::string& IPCLockRequest::a_lockmode() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCLockRequest::set_a_lockmode(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_lockmode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.locks.IPCLockRequest.a_lockMode)
 }
@@ -371,32 +339,22 @@ inline const std::string& IPCLockRequest::_internal_a_lockmode() const {
   return _impl_.a_lockmode_.Get();
 }
 inline void IPCLockRequest::_internal_set_a_lockmode(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_lockmode_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCLockRequest::_internal_mutable_a_lockmode() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_lockmode_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCLockRequest::release_a_lockmode() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.locks.IPCLockRequest.a_lockMode)
-  if (!_internal_has_a_lockmode()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_lockmode_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_lockmode_.IsDefault()) {
-    _impl_.a_lockmode_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_lockmode_.Release();
 }
 inline void IPCLockRequest::set_allocated_a_lockmode(std::string* a_lockmode) {
   if (a_lockmode != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_lockmode_.SetAllocated(a_lockmode, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -407,17 +365,9 @@ inline void IPCLockRequest::set_allocated_a_lockmode(std::string* a_lockmode) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.locks.IPCLockRequest.a_lockMode)
 }
 
-// required bool a_ifAvailable = 3;
-inline bool IPCLockRequest::_internal_has_a_ifavailable() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool IPCLockRequest::has_a_ifavailable() const {
-  return _internal_has_a_ifavailable();
-}
+// bool a_ifAvailable = 3;
 inline void IPCLockRequest::clear_a_ifavailable() {
   _impl_.a_ifavailable_ = false;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline bool IPCLockRequest::_internal_a_ifavailable() const {
   return _impl_.a_ifavailable_;
@@ -427,7 +377,7 @@ inline bool IPCLockRequest::a_ifavailable() const {
   return _internal_a_ifavailable();
 }
 inline void IPCLockRequest::_internal_set_a_ifavailable(bool value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_ifavailable_ = value;
 }
 inline void IPCLockRequest::set_a_ifavailable(bool value) {
@@ -435,17 +385,9 @@ inline void IPCLockRequest::set_a_ifavailable(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.locks.IPCLockRequest.a_ifAvailable)
 }
 
-// required bool a_steal = 4;
-inline bool IPCLockRequest::_internal_has_a_steal() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool IPCLockRequest::has_a_steal() const {
-  return _internal_has_a_steal();
-}
+// bool a_steal = 4;
 inline void IPCLockRequest::clear_a_steal() {
   _impl_.a_steal_ = false;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline bool IPCLockRequest::_internal_a_steal() const {
   return _impl_.a_steal_;
@@ -455,7 +397,7 @@ inline bool IPCLockRequest::a_steal() const {
   return _internal_a_steal();
 }
 inline void IPCLockRequest::_internal_set_a_steal(bool value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_steal_ = value;
 }
 inline void IPCLockRequest::set_a_steal(bool value) {

@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "IPCQuotaObject.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -42,6 +44,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_RandomAccessStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_RandomAccessStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace ipc {
@@ -69,7 +72,7 @@ namespace ipc {
 // ===================================================================
 
 class FileRandomAccessStreamParams final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.FileRandomAccessStreamParams) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.FileRandomAccessStreamParams) */ {
  public:
   inline FileRandomAccessStreamParams() : FileRandomAccessStreamParams(nullptr) {}
   ~FileRandomAccessStreamParams() override;
@@ -99,13 +102,15 @@ class FileRandomAccessStreamParams final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const FileRandomAccessStreamParams& default_instance() {
     return *internal_default_instance();
   }
@@ -143,9 +148,15 @@ class FileRandomAccessStreamParams final :
   FileRandomAccessStreamParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<FileRandomAccessStreamParams>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const FileRandomAccessStreamParams& from);
-  void MergeFrom(const FileRandomAccessStreamParams& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const FileRandomAccessStreamParams& from) {
+    FileRandomAccessStreamParams::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -158,7 +169,7 @@ class FileRandomAccessStreamParams final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(FileRandomAccessStreamParams* other);
 
   private:
@@ -171,7 +182,10 @@ class FileRandomAccessStreamParams final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -181,11 +195,7 @@ class FileRandomAccessStreamParams final :
     kAFileDescriptorFieldNumber = 1,
     kABehaviorFlagsFieldNumber = 2,
   };
-  // required bytes a_fileDescriptor = 1;
-  bool has_a_filedescriptor() const;
-  private:
-  bool _internal_has_a_filedescriptor() const;
-  public:
+  // bytes a_fileDescriptor = 1;
   void clear_a_filedescriptor();
   const std::string& a_filedescriptor() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -199,11 +209,7 @@ class FileRandomAccessStreamParams final :
   std::string* _internal_mutable_a_filedescriptor();
   public:
 
-  // required sint32 a_behaviorFlags = 2;
-  bool has_a_behaviorflags() const;
-  private:
-  bool _internal_has_a_behaviorflags() const;
-  public:
+  // sint32 a_behaviorFlags = 2;
   void clear_a_behaviorflags();
   int32_t a_behaviorflags() const;
   void set_a_behaviorflags(int32_t value);
@@ -216,17 +222,13 @@ class FileRandomAccessStreamParams final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_filedescriptor_;
     int32_t a_behaviorflags_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_RandomAccessStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -234,7 +236,7 @@ class FileRandomAccessStreamParams final :
 // -------------------------------------------------------------------
 
 class LimitingFileRandomAccessStreamParams final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.LimitingFileRandomAccessStreamParams) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.LimitingFileRandomAccessStreamParams) */ {
  public:
   inline LimitingFileRandomAccessStreamParams() : LimitingFileRandomAccessStreamParams(nullptr) {}
   ~LimitingFileRandomAccessStreamParams() override;
@@ -264,13 +266,15 @@ class LimitingFileRandomAccessStreamParams final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const LimitingFileRandomAccessStreamParams& default_instance() {
     return *internal_default_instance();
   }
@@ -308,9 +312,15 @@ class LimitingFileRandomAccessStreamParams final :
   LimitingFileRandomAccessStreamParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<LimitingFileRandomAccessStreamParams>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const LimitingFileRandomAccessStreamParams& from);
-  void MergeFrom(const LimitingFileRandomAccessStreamParams& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const LimitingFileRandomAccessStreamParams& from) {
+    LimitingFileRandomAccessStreamParams::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -323,7 +333,7 @@ class LimitingFileRandomAccessStreamParams final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(LimitingFileRandomAccessStreamParams* other);
 
   private:
@@ -336,7 +346,10 @@ class LimitingFileRandomAccessStreamParams final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -346,7 +359,7 @@ class LimitingFileRandomAccessStreamParams final :
     kAFileRandomAccessStreamParamsFieldNumber = 1,
     kAQuotaObjectFieldNumber = 2,
   };
-  // required .protobuf.mozilla.ipc.FileRandomAccessStreamParams a_fileRandomAccessStreamParams = 1;
+  // .protobuf.mozilla.ipc.FileRandomAccessStreamParams a_fileRandomAccessStreamParams = 1;
   bool has_a_filerandomaccessstreamparams() const;
   private:
   bool _internal_has_a_filerandomaccessstreamparams() const;
@@ -364,7 +377,7 @@ class LimitingFileRandomAccessStreamParams final :
       ::protobuf::mozilla::ipc::FileRandomAccessStreamParams* a_filerandomaccessstreamparams);
   ::protobuf::mozilla::ipc::FileRandomAccessStreamParams* unsafe_arena_release_a_filerandomaccessstreamparams();
 
-  // required .protobuf.mozilla.dom.quota.IPCQuotaObject a_quotaObject = 2;
+  // .protobuf.mozilla.dom.quota.IPCQuotaObject a_quotaObject = 2;
   bool has_a_quotaobject() const;
   private:
   bool _internal_has_a_quotaobject() const;
@@ -386,17 +399,13 @@ class LimitingFileRandomAccessStreamParams final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::ipc::FileRandomAccessStreamParams* a_filerandomaccessstreamparams_;
     ::protobuf::mozilla::dom::quota::IPCQuotaObject* a_quotaobject_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_RandomAccessStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -404,7 +413,7 @@ class LimitingFileRandomAccessStreamParams final :
 // -------------------------------------------------------------------
 
 class RandomAccessStreamParams final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.RandomAccessStreamParams) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.RandomAccessStreamParams) */ {
  public:
   inline RandomAccessStreamParams() : RandomAccessStreamParams(nullptr) {}
   ~RandomAccessStreamParams() override;
@@ -434,13 +443,15 @@ class RandomAccessStreamParams final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const RandomAccessStreamParams& default_instance() {
     return *internal_default_instance();
   }
@@ -484,9 +495,15 @@ class RandomAccessStreamParams final :
   RandomAccessStreamParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<RandomAccessStreamParams>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const RandomAccessStreamParams& from);
-  void MergeFrom(const RandomAccessStreamParams& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const RandomAccessStreamParams& from) {
+    RandomAccessStreamParams::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -499,7 +516,7 @@ class RandomAccessStreamParams final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(RandomAccessStreamParams* other);
 
   private:
@@ -512,7 +529,10 @@ class RandomAccessStreamParams final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -597,17 +617,9 @@ class RandomAccessStreamParams final :
 #endif  // __GNUC__
 // FileRandomAccessStreamParams
 
-// required bytes a_fileDescriptor = 1;
-inline bool FileRandomAccessStreamParams::_internal_has_a_filedescriptor() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool FileRandomAccessStreamParams::has_a_filedescriptor() const {
-  return _internal_has_a_filedescriptor();
-}
+// bytes a_fileDescriptor = 1;
 inline void FileRandomAccessStreamParams::clear_a_filedescriptor() {
   _impl_.a_filedescriptor_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& FileRandomAccessStreamParams::a_filedescriptor() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.FileRandomAccessStreamParams.a_fileDescriptor)
@@ -616,7 +628,7 @@ inline const std::string& FileRandomAccessStreamParams::a_filedescriptor() const
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileRandomAccessStreamParams::set_a_filedescriptor(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_filedescriptor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.FileRandomAccessStreamParams.a_fileDescriptor)
 }
@@ -629,32 +641,22 @@ inline const std::string& FileRandomAccessStreamParams::_internal_a_filedescript
   return _impl_.a_filedescriptor_.Get();
 }
 inline void FileRandomAccessStreamParams::_internal_set_a_filedescriptor(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_filedescriptor_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileRandomAccessStreamParams::_internal_mutable_a_filedescriptor() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_filedescriptor_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileRandomAccessStreamParams::release_a_filedescriptor() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.FileRandomAccessStreamParams.a_fileDescriptor)
-  if (!_internal_has_a_filedescriptor()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_filedescriptor_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_filedescriptor_.IsDefault()) {
-    _impl_.a_filedescriptor_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_filedescriptor_.Release();
 }
 inline void FileRandomAccessStreamParams::set_allocated_a_filedescriptor(std::string* a_filedescriptor) {
   if (a_filedescriptor != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_filedescriptor_.SetAllocated(a_filedescriptor, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -665,17 +667,9 @@ inline void FileRandomAccessStreamParams::set_allocated_a_filedescriptor(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.FileRandomAccessStreamParams.a_fileDescriptor)
 }
 
-// required sint32 a_behaviorFlags = 2;
-inline bool FileRandomAccessStreamParams::_internal_has_a_behaviorflags() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool FileRandomAccessStreamParams::has_a_behaviorflags() const {
-  return _internal_has_a_behaviorflags();
-}
+// sint32 a_behaviorFlags = 2;
 inline void FileRandomAccessStreamParams::clear_a_behaviorflags() {
   _impl_.a_behaviorflags_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int32_t FileRandomAccessStreamParams::_internal_a_behaviorflags() const {
   return _impl_.a_behaviorflags_;
@@ -685,7 +679,7 @@ inline int32_t FileRandomAccessStreamParams::a_behaviorflags() const {
   return _internal_a_behaviorflags();
 }
 inline void FileRandomAccessStreamParams::_internal_set_a_behaviorflags(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_behaviorflags_ = value;
 }
 inline void FileRandomAccessStreamParams::set_a_behaviorflags(int32_t value) {
@@ -697,18 +691,18 @@ inline void FileRandomAccessStreamParams::set_a_behaviorflags(int32_t value) {
 
 // LimitingFileRandomAccessStreamParams
 
-// required .protobuf.mozilla.ipc.FileRandomAccessStreamParams a_fileRandomAccessStreamParams = 1;
+// .protobuf.mozilla.ipc.FileRandomAccessStreamParams a_fileRandomAccessStreamParams = 1;
 inline bool LimitingFileRandomAccessStreamParams::_internal_has_a_filerandomaccessstreamparams() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_filerandomaccessstreamparams_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_filerandomaccessstreamparams_ != nullptr;
 }
 inline bool LimitingFileRandomAccessStreamParams::has_a_filerandomaccessstreamparams() const {
   return _internal_has_a_filerandomaccessstreamparams();
 }
 inline void LimitingFileRandomAccessStreamParams::clear_a_filerandomaccessstreamparams() {
-  if (_impl_.a_filerandomaccessstreamparams_ != nullptr) _impl_.a_filerandomaccessstreamparams_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_filerandomaccessstreamparams_ != nullptr) {
+    delete _impl_.a_filerandomaccessstreamparams_;
+  }
+  _impl_.a_filerandomaccessstreamparams_ = nullptr;
 }
 inline const ::protobuf::mozilla::ipc::FileRandomAccessStreamParams& LimitingFileRandomAccessStreamParams::_internal_a_filerandomaccessstreamparams() const {
   const ::protobuf::mozilla::ipc::FileRandomAccessStreamParams* p = _impl_.a_filerandomaccessstreamparams_;
@@ -726,14 +720,14 @@ inline void LimitingFileRandomAccessStreamParams::unsafe_arena_set_allocated_a_f
   }
   _impl_.a_filerandomaccessstreamparams_ = a_filerandomaccessstreamparams;
   if (a_filerandomaccessstreamparams) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.LimitingFileRandomAccessStreamParams.a_fileRandomAccessStreamParams)
 }
 inline ::protobuf::mozilla::ipc::FileRandomAccessStreamParams* LimitingFileRandomAccessStreamParams::release_a_filerandomaccessstreamparams() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::ipc::FileRandomAccessStreamParams* temp = _impl_.a_filerandomaccessstreamparams_;
   _impl_.a_filerandomaccessstreamparams_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -749,13 +743,13 @@ inline ::protobuf::mozilla::ipc::FileRandomAccessStreamParams* LimitingFileRando
 }
 inline ::protobuf::mozilla::ipc::FileRandomAccessStreamParams* LimitingFileRandomAccessStreamParams::unsafe_arena_release_a_filerandomaccessstreamparams() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.LimitingFileRandomAccessStreamParams.a_fileRandomAccessStreamParams)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::ipc::FileRandomAccessStreamParams* temp = _impl_.a_filerandomaccessstreamparams_;
   _impl_.a_filerandomaccessstreamparams_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::ipc::FileRandomAccessStreamParams* LimitingFileRandomAccessStreamParams::_internal_mutable_a_filerandomaccessstreamparams() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_filerandomaccessstreamparams_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::FileRandomAccessStreamParams>(GetArenaForAllocation());
     _impl_.a_filerandomaccessstreamparams_ = p;
@@ -779,19 +773,17 @@ inline void LimitingFileRandomAccessStreamParams::set_allocated_a_filerandomacce
       a_filerandomaccessstreamparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_filerandomaccessstreamparams, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_filerandomaccessstreamparams_ = a_filerandomaccessstreamparams;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.LimitingFileRandomAccessStreamParams.a_fileRandomAccessStreamParams)
 }
 
-// required .protobuf.mozilla.dom.quota.IPCQuotaObject a_quotaObject = 2;
+// .protobuf.mozilla.dom.quota.IPCQuotaObject a_quotaObject = 2;
 inline bool LimitingFileRandomAccessStreamParams::_internal_has_a_quotaobject() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_quotaobject_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_quotaobject_ != nullptr;
 }
 inline bool LimitingFileRandomAccessStreamParams::has_a_quotaobject() const {
   return _internal_has_a_quotaobject();
@@ -812,14 +804,14 @@ inline void LimitingFileRandomAccessStreamParams::unsafe_arena_set_allocated_a_q
   }
   _impl_.a_quotaobject_ = a_quotaobject;
   if (a_quotaobject) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.LimitingFileRandomAccessStreamParams.a_quotaObject)
 }
 inline ::protobuf::mozilla::dom::quota::IPCQuotaObject* LimitingFileRandomAccessStreamParams::release_a_quotaobject() {
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::dom::quota::IPCQuotaObject* temp = _impl_.a_quotaobject_;
   _impl_.a_quotaobject_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -835,13 +827,13 @@ inline ::protobuf::mozilla::dom::quota::IPCQuotaObject* LimitingFileRandomAccess
 }
 inline ::protobuf::mozilla::dom::quota::IPCQuotaObject* LimitingFileRandomAccessStreamParams::unsafe_arena_release_a_quotaobject() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.LimitingFileRandomAccessStreamParams.a_quotaObject)
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::dom::quota::IPCQuotaObject* temp = _impl_.a_quotaobject_;
   _impl_.a_quotaobject_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::quota::IPCQuotaObject* LimitingFileRandomAccessStreamParams::_internal_mutable_a_quotaobject() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   if (_impl_.a_quotaobject_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::quota::IPCQuotaObject>(GetArenaForAllocation());
     _impl_.a_quotaobject_ = p;
@@ -866,9 +858,9 @@ inline void LimitingFileRandomAccessStreamParams::set_allocated_a_quotaobject(::
       a_quotaobject = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_quotaobject, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_quotaobject_ = a_quotaobject;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.LimitingFileRandomAccessStreamParams.a_quotaObject)

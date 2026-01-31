@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_GMPTypes_5fprotobuf_2emozilla_2egmp_2eh_2eproto
@@ -41,6 +43,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_GMPTypes_5fprotobuf_2emozilla_2egmp_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_GMPTypes_5fprotobuf_2emozilla_2egmp_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace gmp {
@@ -96,7 +99,7 @@ namespace gmp {
 // ===================================================================
 
 class NodeIdParts final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.NodeIdParts) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.NodeIdParts) */ {
  public:
   inline NodeIdParts() : NodeIdParts(nullptr) {}
   ~NodeIdParts() override;
@@ -126,13 +129,15 @@ class NodeIdParts final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const NodeIdParts& default_instance() {
     return *internal_default_instance();
   }
@@ -170,9 +175,15 @@ class NodeIdParts final :
   NodeIdParts* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<NodeIdParts>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const NodeIdParts& from);
-  void MergeFrom(const NodeIdParts& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const NodeIdParts& from) {
+    NodeIdParts::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -185,7 +196,7 @@ class NodeIdParts final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(NodeIdParts* other);
 
   private:
@@ -198,7 +209,10 @@ class NodeIdParts final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -209,11 +223,7 @@ class NodeIdParts final :
     kAMTopLevelOriginFieldNumber = 2,
     kAMGMPNameFieldNumber = 3,
   };
-  // required string a_mOrigin = 1;
-  bool has_a_morigin() const;
-  private:
-  bool _internal_has_a_morigin() const;
-  public:
+  // string a_mOrigin = 1;
   void clear_a_morigin();
   const std::string& a_morigin() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -227,11 +237,7 @@ class NodeIdParts final :
   std::string* _internal_mutable_a_morigin();
   public:
 
-  // required string a_mTopLevelOrigin = 2;
-  bool has_a_mtoplevelorigin() const;
-  private:
-  bool _internal_has_a_mtoplevelorigin() const;
-  public:
+  // string a_mTopLevelOrigin = 2;
   void clear_a_mtoplevelorigin();
   const std::string& a_mtoplevelorigin() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -245,11 +251,7 @@ class NodeIdParts final :
   std::string* _internal_mutable_a_mtoplevelorigin();
   public:
 
-  // required string a_mGMPName = 3;
-  bool has_a_mgmpname() const;
-  private:
-  bool _internal_has_a_mgmpname() const;
-  public:
+  // string a_mGMPName = 3;
   void clear_a_mgmpname();
   const std::string& a_mgmpname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -267,18 +269,14 @@ class NodeIdParts final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_morigin_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mtoplevelorigin_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mgmpname_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GMPTypes_5fprotobuf_2emozilla_2egmp_2eh_2eproto;
@@ -286,7 +284,7 @@ class NodeIdParts final :
 // -------------------------------------------------------------------
 
 class NodeIdVariant final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.NodeIdVariant) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.NodeIdVariant) */ {
  public:
   inline NodeIdVariant() : NodeIdVariant(nullptr) {}
   ~NodeIdVariant() override;
@@ -316,13 +314,15 @@ class NodeIdVariant final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const NodeIdVariant& default_instance() {
     return *internal_default_instance();
   }
@@ -366,9 +366,15 @@ class NodeIdVariant final :
   NodeIdVariant* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<NodeIdVariant>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const NodeIdVariant& from);
-  void MergeFrom(const NodeIdVariant& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const NodeIdVariant& from) {
+    NodeIdVariant::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -381,7 +387,7 @@ class NodeIdVariant final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(NodeIdVariant* other);
 
   private:
@@ -394,7 +400,10 @@ class NodeIdVariant final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -471,7 +480,7 @@ class NodeIdVariant final :
 // -------------------------------------------------------------------
 
 class GMPVideoEncodedFrameData final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.GMPVideoEncodedFrameData) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.GMPVideoEncodedFrameData) */ {
  public:
   inline GMPVideoEncodedFrameData() : GMPVideoEncodedFrameData(nullptr) {}
   ~GMPVideoEncodedFrameData() override;
@@ -501,13 +510,15 @@ class GMPVideoEncodedFrameData final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const GMPVideoEncodedFrameData& default_instance() {
     return *internal_default_instance();
   }
@@ -545,9 +556,15 @@ class GMPVideoEncodedFrameData final :
   GMPVideoEncodedFrameData* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<GMPVideoEncodedFrameData>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const GMPVideoEncodedFrameData& from);
-  void MergeFrom(const GMPVideoEncodedFrameData& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const GMPVideoEncodedFrameData& from) {
+    GMPVideoEncodedFrameData::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -560,7 +577,7 @@ class GMPVideoEncodedFrameData final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(GMPVideoEncodedFrameData* other);
 
   private:
@@ -573,7 +590,10 @@ class GMPVideoEncodedFrameData final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -590,11 +610,7 @@ class GMPVideoEncodedFrameData final :
     kAMTemporalLayerIdFieldNumber = 7,
     kAMCompleteFrameFieldNumber = 9,
   };
-  // required bytes a_mBufferType = 8;
-  bool has_a_mbuffertype() const;
-  private:
-  bool _internal_has_a_mbuffertype() const;
-  public:
+  // bytes a_mBufferType = 8;
   void clear_a_mbuffertype();
   const std::string& a_mbuffertype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -608,11 +624,7 @@ class GMPVideoEncodedFrameData final :
   std::string* _internal_mutable_a_mbuffertype();
   public:
 
-  // required uint32 a_mEncodedWidth = 1;
-  bool has_a_mencodedwidth() const;
-  private:
-  bool _internal_has_a_mencodedwidth() const;
-  public:
+  // uint32 a_mEncodedWidth = 1;
   void clear_a_mencodedwidth();
   uint32_t a_mencodedwidth() const;
   void set_a_mencodedwidth(uint32_t value);
@@ -621,11 +633,7 @@ class GMPVideoEncodedFrameData final :
   void _internal_set_a_mencodedwidth(uint32_t value);
   public:
 
-  // required uint32 a_mEncodedHeight = 2;
-  bool has_a_mencodedheight() const;
-  private:
-  bool _internal_has_a_mencodedheight() const;
-  public:
+  // uint32 a_mEncodedHeight = 2;
   void clear_a_mencodedheight();
   uint32_t a_mencodedheight() const;
   void set_a_mencodedheight(uint32_t value);
@@ -634,11 +642,7 @@ class GMPVideoEncodedFrameData final :
   void _internal_set_a_mencodedheight(uint32_t value);
   public:
 
-  // required uint64 a_mTimestamp = 3;
-  bool has_a_mtimestamp() const;
-  private:
-  bool _internal_has_a_mtimestamp() const;
-  public:
+  // uint64 a_mTimestamp = 3;
   void clear_a_mtimestamp();
   uint64_t a_mtimestamp() const;
   void set_a_mtimestamp(uint64_t value);
@@ -647,11 +651,7 @@ class GMPVideoEncodedFrameData final :
   void _internal_set_a_mtimestamp(uint64_t value);
   public:
 
-  // required uint64 a_mDuration = 4;
-  bool has_a_mduration() const;
-  private:
-  bool _internal_has_a_mduration() const;
-  public:
+  // uint64 a_mDuration = 4;
   void clear_a_mduration();
   uint64_t a_mduration() const;
   void set_a_mduration(uint64_t value);
@@ -660,11 +660,7 @@ class GMPVideoEncodedFrameData final :
   void _internal_set_a_mduration(uint64_t value);
   public:
 
-  // required uint32 a_mFrameType = 5;
-  bool has_a_mframetype() const;
-  private:
-  bool _internal_has_a_mframetype() const;
-  public:
+  // uint32 a_mFrameType = 5;
   void clear_a_mframetype();
   uint32_t a_mframetype() const;
   void set_a_mframetype(uint32_t value);
@@ -673,11 +669,7 @@ class GMPVideoEncodedFrameData final :
   void _internal_set_a_mframetype(uint32_t value);
   public:
 
-  // required uint32 a_mSize = 6;
-  bool has_a_msize() const;
-  private:
-  bool _internal_has_a_msize() const;
-  public:
+  // uint32 a_mSize = 6;
   void clear_a_msize();
   uint32_t a_msize() const;
   void set_a_msize(uint32_t value);
@@ -686,11 +678,7 @@ class GMPVideoEncodedFrameData final :
   void _internal_set_a_msize(uint32_t value);
   public:
 
-  // required sint32 a_mTemporalLayerId = 7;
-  bool has_a_mtemporallayerid() const;
-  private:
-  bool _internal_has_a_mtemporallayerid() const;
-  public:
+  // sint32 a_mTemporalLayerId = 7;
   void clear_a_mtemporallayerid();
   int32_t a_mtemporallayerid() const;
   void set_a_mtemporallayerid(int32_t value);
@@ -699,11 +687,7 @@ class GMPVideoEncodedFrameData final :
   void _internal_set_a_mtemporallayerid(int32_t value);
   public:
 
-  // required bool a_mCompleteFrame = 9;
-  bool has_a_mcompleteframe() const;
-  private:
-  bool _internal_has_a_mcompleteframe() const;
-  public:
+  // bool a_mCompleteFrame = 9;
   void clear_a_mcompleteframe();
   bool a_mcompleteframe() const;
   void set_a_mcompleteframe(bool value);
@@ -716,15 +700,10 @@ class GMPVideoEncodedFrameData final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mbuffertype_;
     uint32_t a_mencodedwidth_;
     uint32_t a_mencodedheight_;
@@ -734,6 +713,7 @@ class GMPVideoEncodedFrameData final :
     uint32_t a_msize_;
     int32_t a_mtemporallayerid_;
     bool a_mcompleteframe_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GMPTypes_5fprotobuf_2emozilla_2egmp_2eh_2eproto;
@@ -741,7 +721,7 @@ class GMPVideoEncodedFrameData final :
 // -------------------------------------------------------------------
 
 class GMPPlaneData final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.GMPPlaneData) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.GMPPlaneData) */ {
  public:
   inline GMPPlaneData() : GMPPlaneData(nullptr) {}
   ~GMPPlaneData() override;
@@ -771,13 +751,15 @@ class GMPPlaneData final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const GMPPlaneData& default_instance() {
     return *internal_default_instance();
   }
@@ -815,9 +797,15 @@ class GMPPlaneData final :
   GMPPlaneData* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<GMPPlaneData>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const GMPPlaneData& from);
-  void MergeFrom(const GMPPlaneData& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const GMPPlaneData& from) {
+    GMPPlaneData::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -830,7 +818,7 @@ class GMPPlaneData final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(GMPPlaneData* other);
 
   private:
@@ -843,7 +831,10 @@ class GMPPlaneData final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -854,11 +845,7 @@ class GMPPlaneData final :
     kAMSizeFieldNumber = 2,
     kAMStrideFieldNumber = 3,
   };
-  // required sint32 a_mOffset = 1;
-  bool has_a_moffset() const;
-  private:
-  bool _internal_has_a_moffset() const;
-  public:
+  // sint32 a_mOffset = 1;
   void clear_a_moffset();
   int32_t a_moffset() const;
   void set_a_moffset(int32_t value);
@@ -867,11 +854,7 @@ class GMPPlaneData final :
   void _internal_set_a_moffset(int32_t value);
   public:
 
-  // required sint32 a_mSize = 2;
-  bool has_a_msize() const;
-  private:
-  bool _internal_has_a_msize() const;
-  public:
+  // sint32 a_mSize = 2;
   void clear_a_msize();
   int32_t a_msize() const;
   void set_a_msize(int32_t value);
@@ -880,11 +863,7 @@ class GMPPlaneData final :
   void _internal_set_a_msize(int32_t value);
   public:
 
-  // required sint32 a_mStride = 3;
-  bool has_a_mstride() const;
-  private:
-  bool _internal_has_a_mstride() const;
-  public:
+  // sint32 a_mStride = 3;
   void clear_a_mstride();
   int32_t a_mstride() const;
   void set_a_mstride(int32_t value);
@@ -897,18 +876,14 @@ class GMPPlaneData final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     int32_t a_moffset_;
     int32_t a_msize_;
     int32_t a_mstride_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GMPTypes_5fprotobuf_2emozilla_2egmp_2eh_2eproto;
@@ -916,7 +891,7 @@ class GMPPlaneData final :
 // -------------------------------------------------------------------
 
 class GMPVideoi420FrameData final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.GMPVideoi420FrameData) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.GMPVideoi420FrameData) */ {
  public:
   inline GMPVideoi420FrameData() : GMPVideoi420FrameData(nullptr) {}
   ~GMPVideoi420FrameData() override;
@@ -946,13 +921,15 @@ class GMPVideoi420FrameData final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const GMPVideoi420FrameData& default_instance() {
     return *internal_default_instance();
   }
@@ -990,9 +967,15 @@ class GMPVideoi420FrameData final :
   GMPVideoi420FrameData* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<GMPVideoi420FrameData>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const GMPVideoi420FrameData& from);
-  void MergeFrom(const GMPVideoi420FrameData& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const GMPVideoi420FrameData& from) {
+    GMPVideoi420FrameData::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1005,7 +988,7 @@ class GMPVideoi420FrameData final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(GMPVideoi420FrameData* other);
 
   private:
@@ -1018,7 +1001,10 @@ class GMPVideoi420FrameData final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1034,7 +1020,7 @@ class GMPVideoi420FrameData final :
     kAMUpdatedTimestampFieldNumber = 7,
     kAMDurationFieldNumber = 8,
   };
-  // required .protobuf.mozilla.gmp.GMPPlaneData a_mYPlane = 1;
+  // .protobuf.mozilla.gmp.GMPPlaneData a_mYPlane = 1;
   bool has_a_myplane() const;
   private:
   bool _internal_has_a_myplane() const;
@@ -1052,7 +1038,7 @@ class GMPVideoi420FrameData final :
       ::protobuf::mozilla::gmp::GMPPlaneData* a_myplane);
   ::protobuf::mozilla::gmp::GMPPlaneData* unsafe_arena_release_a_myplane();
 
-  // required .protobuf.mozilla.gmp.GMPPlaneData a_mUPlane = 2;
+  // .protobuf.mozilla.gmp.GMPPlaneData a_mUPlane = 2;
   bool has_a_muplane() const;
   private:
   bool _internal_has_a_muplane() const;
@@ -1070,7 +1056,7 @@ class GMPVideoi420FrameData final :
       ::protobuf::mozilla::gmp::GMPPlaneData* a_muplane);
   ::protobuf::mozilla::gmp::GMPPlaneData* unsafe_arena_release_a_muplane();
 
-  // required .protobuf.mozilla.gmp.GMPPlaneData a_mVPlane = 3;
+  // .protobuf.mozilla.gmp.GMPPlaneData a_mVPlane = 3;
   bool has_a_mvplane() const;
   private:
   bool _internal_has_a_mvplane() const;
@@ -1088,11 +1074,7 @@ class GMPVideoi420FrameData final :
       ::protobuf::mozilla::gmp::GMPPlaneData* a_mvplane);
   ::protobuf::mozilla::gmp::GMPPlaneData* unsafe_arena_release_a_mvplane();
 
-  // required sint32 a_mWidth = 4;
-  bool has_a_mwidth() const;
-  private:
-  bool _internal_has_a_mwidth() const;
-  public:
+  // sint32 a_mWidth = 4;
   void clear_a_mwidth();
   int32_t a_mwidth() const;
   void set_a_mwidth(int32_t value);
@@ -1101,11 +1083,7 @@ class GMPVideoi420FrameData final :
   void _internal_set_a_mwidth(int32_t value);
   public:
 
-  // required sint32 a_mHeight = 5;
-  bool has_a_mheight() const;
-  private:
-  bool _internal_has_a_mheight() const;
-  public:
+  // sint32 a_mHeight = 5;
   void clear_a_mheight();
   int32_t a_mheight() const;
   void set_a_mheight(int32_t value);
@@ -1114,11 +1092,7 @@ class GMPVideoi420FrameData final :
   void _internal_set_a_mheight(int32_t value);
   public:
 
-  // required uint64 a_mTimestamp = 6;
-  bool has_a_mtimestamp() const;
-  private:
-  bool _internal_has_a_mtimestamp() const;
-  public:
+  // uint64 a_mTimestamp = 6;
   void clear_a_mtimestamp();
   uint64_t a_mtimestamp() const;
   void set_a_mtimestamp(uint64_t value);
@@ -1140,11 +1114,7 @@ class GMPVideoi420FrameData final :
   void _internal_set_a_mupdatedtimestamp(uint64_t value);
   public:
 
-  // required uint64 a_mDuration = 8;
-  bool has_a_mduration() const;
-  private:
-  bool _internal_has_a_mduration() const;
-  public:
+  // uint64 a_mDuration = 8;
   void clear_a_mduration();
   uint64_t a_mduration() const;
   void set_a_mduration(uint64_t value);
@@ -1156,9 +1126,6 @@ class GMPVideoi420FrameData final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.gmp.GMPVideoi420FrameData)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1181,7 +1148,7 @@ class GMPVideoi420FrameData final :
 // -------------------------------------------------------------------
 
 class CDMInputBuffer final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.CDMInputBuffer) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.CDMInputBuffer) */ {
  public:
   inline CDMInputBuffer() : CDMInputBuffer(nullptr) {}
   ~CDMInputBuffer() override;
@@ -1211,13 +1178,15 @@ class CDMInputBuffer final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const CDMInputBuffer& default_instance() {
     return *internal_default_instance();
   }
@@ -1255,9 +1224,15 @@ class CDMInputBuffer final :
   CDMInputBuffer* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<CDMInputBuffer>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const CDMInputBuffer& from);
-  void MergeFrom(const CDMInputBuffer& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const CDMInputBuffer& from) {
+    CDMInputBuffer::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1270,7 +1245,7 @@ class CDMInputBuffer final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(CDMInputBuffer* other);
 
   private:
@@ -1283,7 +1258,10 @@ class CDMInputBuffer final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1389,11 +1367,7 @@ class CDMInputBuffer final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_mcipherbytes();
 
-  // required bytes a_mData = 1;
-  bool has_a_mdata() const;
-  private:
-  bool _internal_has_a_mdata() const;
-  public:
+  // bytes a_mData = 1;
   void clear_a_mdata();
   const std::string& a_mdata() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1407,11 +1381,7 @@ class CDMInputBuffer final :
   std::string* _internal_mutable_a_mdata();
   public:
 
-  // required bytes a_mEncryptionScheme = 10;
-  bool has_a_mencryptionscheme() const;
-  private:
-  bool _internal_has_a_mencryptionscheme() const;
-  public:
+  // bytes a_mEncryptionScheme = 10;
   void clear_a_mencryptionscheme();
   const std::string& a_mencryptionscheme() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1425,11 +1395,7 @@ class CDMInputBuffer final :
   std::string* _internal_mutable_a_mencryptionscheme();
   public:
 
-  // required sint64 a_mTimestamp = 4;
-  bool has_a_mtimestamp() const;
-  private:
-  bool _internal_has_a_mtimestamp() const;
-  public:
+  // sint64 a_mTimestamp = 4;
   void clear_a_mtimestamp();
   int64_t a_mtimestamp() const;
   void set_a_mtimestamp(int64_t value);
@@ -1438,11 +1404,7 @@ class CDMInputBuffer final :
   void _internal_set_a_mtimestamp(int64_t value);
   public:
 
-  // required sint64 a_mDuration = 5;
-  bool has_a_mduration() const;
-  private:
-  bool _internal_has_a_mduration() const;
-  public:
+  // sint64 a_mDuration = 5;
   void clear_a_mduration();
   int64_t a_mduration() const;
   void set_a_mduration(int64_t value);
@@ -1451,11 +1413,7 @@ class CDMInputBuffer final :
   void _internal_set_a_mduration(int64_t value);
   public:
 
-  // required uint32 a_mCryptByteBlock = 8;
-  bool has_a_mcryptbyteblock() const;
-  private:
-  bool _internal_has_a_mcryptbyteblock() const;
-  public:
+  // uint32 a_mCryptByteBlock = 8;
   void clear_a_mcryptbyteblock();
   uint32_t a_mcryptbyteblock() const;
   void set_a_mcryptbyteblock(uint32_t value);
@@ -1464,11 +1422,7 @@ class CDMInputBuffer final :
   void _internal_set_a_mcryptbyteblock(uint32_t value);
   public:
 
-  // required uint32 a_mSkipByteBlock = 9;
-  bool has_a_mskipbyteblock() const;
-  private:
-  bool _internal_has_a_mskipbyteblock() const;
-  public:
+  // uint32 a_mSkipByteBlock = 9;
   void clear_a_mskipbyteblock();
   uint32_t a_mskipbyteblock() const;
   void set_a_mskipbyteblock(uint32_t value);
@@ -1481,25 +1435,25 @@ class CDMInputBuffer final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_mkeyid_;
+    mutable std::atomic<int> _a_mkeyid_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_miv_;
+    mutable std::atomic<int> _a_miv_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_mclearbytes_;
+    mutable std::atomic<int> _a_mclearbytes_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_mcipherbytes_;
+    mutable std::atomic<int> _a_mcipherbytes_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mdata_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mencryptionscheme_;
     int64_t a_mtimestamp_;
     int64_t a_mduration_;
     uint32_t a_mcryptbyteblock_;
     uint32_t a_mskipbyteblock_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GMPTypes_5fprotobuf_2emozilla_2egmp_2eh_2eproto;
@@ -1507,7 +1461,7 @@ class CDMInputBuffer final :
 // -------------------------------------------------------------------
 
 class CDMVideoDecoderConfig final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.CDMVideoDecoderConfig) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.CDMVideoDecoderConfig) */ {
  public:
   inline CDMVideoDecoderConfig() : CDMVideoDecoderConfig(nullptr) {}
   ~CDMVideoDecoderConfig() override;
@@ -1537,13 +1491,15 @@ class CDMVideoDecoderConfig final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const CDMVideoDecoderConfig& default_instance() {
     return *internal_default_instance();
   }
@@ -1581,9 +1537,15 @@ class CDMVideoDecoderConfig final :
   CDMVideoDecoderConfig* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<CDMVideoDecoderConfig>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const CDMVideoDecoderConfig& from);
-  void MergeFrom(const CDMVideoDecoderConfig& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const CDMVideoDecoderConfig& from) {
+    CDMVideoDecoderConfig::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1596,7 +1558,7 @@ class CDMVideoDecoderConfig final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(CDMVideoDecoderConfig* other);
 
   private:
@@ -1609,7 +1571,10 @@ class CDMVideoDecoderConfig final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1646,11 +1611,7 @@ class CDMVideoDecoderConfig final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_mextradata();
 
-  // required bytes a_mEncryptionScheme = 7;
-  bool has_a_mencryptionscheme() const;
-  private:
-  bool _internal_has_a_mencryptionscheme() const;
-  public:
+  // bytes a_mEncryptionScheme = 7;
   void clear_a_mencryptionscheme();
   const std::string& a_mencryptionscheme() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1664,11 +1625,7 @@ class CDMVideoDecoderConfig final :
   std::string* _internal_mutable_a_mencryptionscheme();
   public:
 
-  // required uint32 a_mCodec = 1;
-  bool has_a_mcodec() const;
-  private:
-  bool _internal_has_a_mcodec() const;
-  public:
+  // uint32 a_mCodec = 1;
   void clear_a_mcodec();
   uint32_t a_mcodec() const;
   void set_a_mcodec(uint32_t value);
@@ -1677,11 +1634,7 @@ class CDMVideoDecoderConfig final :
   void _internal_set_a_mcodec(uint32_t value);
   public:
 
-  // required uint32 a_mProfile = 2;
-  bool has_a_mprofile() const;
-  private:
-  bool _internal_has_a_mprofile() const;
-  public:
+  // uint32 a_mProfile = 2;
   void clear_a_mprofile();
   uint32_t a_mprofile() const;
   void set_a_mprofile(uint32_t value);
@@ -1690,11 +1643,7 @@ class CDMVideoDecoderConfig final :
   void _internal_set_a_mprofile(uint32_t value);
   public:
 
-  // required uint32 a_mFormat = 3;
-  bool has_a_mformat() const;
-  private:
-  bool _internal_has_a_mformat() const;
-  public:
+  // uint32 a_mFormat = 3;
   void clear_a_mformat();
   uint32_t a_mformat() const;
   void set_a_mformat(uint32_t value);
@@ -1703,11 +1652,7 @@ class CDMVideoDecoderConfig final :
   void _internal_set_a_mformat(uint32_t value);
   public:
 
-  // required sint32 a_mImageWidth = 4;
-  bool has_a_mimagewidth() const;
-  private:
-  bool _internal_has_a_mimagewidth() const;
-  public:
+  // sint32 a_mImageWidth = 4;
   void clear_a_mimagewidth();
   int32_t a_mimagewidth() const;
   void set_a_mimagewidth(int32_t value);
@@ -1716,11 +1661,7 @@ class CDMVideoDecoderConfig final :
   void _internal_set_a_mimagewidth(int32_t value);
   public:
 
-  // required sint32 a_mImageHeight = 5;
-  bool has_a_mimageheight() const;
-  private:
-  bool _internal_has_a_mimageheight() const;
-  public:
+  // sint32 a_mImageHeight = 5;
   void clear_a_mimageheight();
   int32_t a_mimageheight() const;
   void set_a_mimageheight(int32_t value);
@@ -1733,22 +1674,19 @@ class CDMVideoDecoderConfig final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_mextradata_;
+    mutable std::atomic<int> _a_mextradata_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mencryptionscheme_;
     uint32_t a_mcodec_;
     uint32_t a_mprofile_;
     uint32_t a_mformat_;
     int32_t a_mimagewidth_;
     int32_t a_mimageheight_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GMPTypes_5fprotobuf_2emozilla_2egmp_2eh_2eproto;
@@ -1756,7 +1694,7 @@ class CDMVideoDecoderConfig final :
 // -------------------------------------------------------------------
 
 class CDMKeyInformation final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.CDMKeyInformation) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.CDMKeyInformation) */ {
  public:
   inline CDMKeyInformation() : CDMKeyInformation(nullptr) {}
   ~CDMKeyInformation() override;
@@ -1786,13 +1724,15 @@ class CDMKeyInformation final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const CDMKeyInformation& default_instance() {
     return *internal_default_instance();
   }
@@ -1830,9 +1770,15 @@ class CDMKeyInformation final :
   CDMKeyInformation* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<CDMKeyInformation>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const CDMKeyInformation& from);
-  void MergeFrom(const CDMKeyInformation& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const CDMKeyInformation& from) {
+    CDMKeyInformation::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1845,7 +1791,7 @@ class CDMKeyInformation final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(CDMKeyInformation* other);
 
   private:
@@ -1858,7 +1804,10 @@ class CDMKeyInformation final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1891,11 +1840,7 @@ class CDMKeyInformation final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_mkeyid();
 
-  // required uint32 a_mStatus = 2;
-  bool has_a_mstatus() const;
-  private:
-  bool _internal_has_a_mstatus() const;
-  public:
+  // uint32 a_mStatus = 2;
   void clear_a_mstatus();
   uint32_t a_mstatus() const;
   void set_a_mstatus(uint32_t value);
@@ -1904,11 +1849,7 @@ class CDMKeyInformation final :
   void _internal_set_a_mstatus(uint32_t value);
   public:
 
-  // required uint32 a_mSystemCode = 3;
-  bool has_a_msystemcode() const;
-  private:
-  bool _internal_has_a_msystemcode() const;
-  public:
+  // uint32 a_mSystemCode = 3;
   void clear_a_msystemcode();
   uint32_t a_msystemcode() const;
   void set_a_msystemcode(uint32_t value);
@@ -1921,18 +1862,15 @@ class CDMKeyInformation final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_mkeyid_;
+    mutable std::atomic<int> _a_mkeyid_cached_byte_size_;
     uint32_t a_mstatus_;
     uint32_t a_msystemcode_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GMPTypes_5fprotobuf_2emozilla_2egmp_2eh_2eproto;
@@ -1940,7 +1878,7 @@ class CDMKeyInformation final :
 // -------------------------------------------------------------------
 
 class CDMVideoPlane final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.CDMVideoPlane) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.CDMVideoPlane) */ {
  public:
   inline CDMVideoPlane() : CDMVideoPlane(nullptr) {}
   ~CDMVideoPlane() override;
@@ -1970,13 +1908,15 @@ class CDMVideoPlane final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const CDMVideoPlane& default_instance() {
     return *internal_default_instance();
   }
@@ -2014,9 +1954,15 @@ class CDMVideoPlane final :
   CDMVideoPlane* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<CDMVideoPlane>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const CDMVideoPlane& from);
-  void MergeFrom(const CDMVideoPlane& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const CDMVideoPlane& from) {
+    CDMVideoPlane::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2029,7 +1975,7 @@ class CDMVideoPlane final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(CDMVideoPlane* other);
 
   private:
@@ -2042,7 +1988,10 @@ class CDMVideoPlane final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2052,11 +2001,7 @@ class CDMVideoPlane final :
     kAMPlaneOffsetFieldNumber = 1,
     kAMStrideFieldNumber = 2,
   };
-  // required uint32 a_mPlaneOffset = 1;
-  bool has_a_mplaneoffset() const;
-  private:
-  bool _internal_has_a_mplaneoffset() const;
-  public:
+  // uint32 a_mPlaneOffset = 1;
   void clear_a_mplaneoffset();
   uint32_t a_mplaneoffset() const;
   void set_a_mplaneoffset(uint32_t value);
@@ -2065,11 +2010,7 @@ class CDMVideoPlane final :
   void _internal_set_a_mplaneoffset(uint32_t value);
   public:
 
-  // required uint32 a_mStride = 2;
-  bool has_a_mstride() const;
-  private:
-  bool _internal_has_a_mstride() const;
-  public:
+  // uint32 a_mStride = 2;
   void clear_a_mstride();
   uint32_t a_mstride() const;
   void set_a_mstride(uint32_t value);
@@ -2082,17 +2023,13 @@ class CDMVideoPlane final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_mplaneoffset_;
     uint32_t a_mstride_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GMPTypes_5fprotobuf_2emozilla_2egmp_2eh_2eproto;
@@ -2100,7 +2037,7 @@ class CDMVideoPlane final :
 // -------------------------------------------------------------------
 
 class CDMVideoFrame final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.CDMVideoFrame) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.CDMVideoFrame) */ {
  public:
   inline CDMVideoFrame() : CDMVideoFrame(nullptr) {}
   ~CDMVideoFrame() override;
@@ -2130,13 +2067,15 @@ class CDMVideoFrame final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const CDMVideoFrame& default_instance() {
     return *internal_default_instance();
   }
@@ -2174,9 +2113,15 @@ class CDMVideoFrame final :
   CDMVideoFrame* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<CDMVideoFrame>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const CDMVideoFrame& from);
-  void MergeFrom(const CDMVideoFrame& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const CDMVideoFrame& from) {
+    CDMVideoFrame::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2189,7 +2134,7 @@ class CDMVideoFrame final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(CDMVideoFrame* other);
 
   private:
@@ -2202,7 +2147,10 @@ class CDMVideoFrame final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2218,7 +2166,7 @@ class CDMVideoFrame final :
     kAMDurationFieldNumber = 8,
     kAMImageHeightFieldNumber = 3,
   };
-  // required .protobuf.mozilla.gmp.CDMVideoPlane a_mYPlane = 4;
+  // .protobuf.mozilla.gmp.CDMVideoPlane a_mYPlane = 4;
   bool has_a_myplane() const;
   private:
   bool _internal_has_a_myplane() const;
@@ -2236,7 +2184,7 @@ class CDMVideoFrame final :
       ::protobuf::mozilla::gmp::CDMVideoPlane* a_myplane);
   ::protobuf::mozilla::gmp::CDMVideoPlane* unsafe_arena_release_a_myplane();
 
-  // required .protobuf.mozilla.gmp.CDMVideoPlane a_mUPlane = 5;
+  // .protobuf.mozilla.gmp.CDMVideoPlane a_mUPlane = 5;
   bool has_a_muplane() const;
   private:
   bool _internal_has_a_muplane() const;
@@ -2254,7 +2202,7 @@ class CDMVideoFrame final :
       ::protobuf::mozilla::gmp::CDMVideoPlane* a_muplane);
   ::protobuf::mozilla::gmp::CDMVideoPlane* unsafe_arena_release_a_muplane();
 
-  // required .protobuf.mozilla.gmp.CDMVideoPlane a_mVPlane = 6;
+  // .protobuf.mozilla.gmp.CDMVideoPlane a_mVPlane = 6;
   bool has_a_mvplane() const;
   private:
   bool _internal_has_a_mvplane() const;
@@ -2272,11 +2220,7 @@ class CDMVideoFrame final :
       ::protobuf::mozilla::gmp::CDMVideoPlane* a_mvplane);
   ::protobuf::mozilla::gmp::CDMVideoPlane* unsafe_arena_release_a_mvplane();
 
-  // required uint32 a_mFormat = 1;
-  bool has_a_mformat() const;
-  private:
-  bool _internal_has_a_mformat() const;
-  public:
+  // uint32 a_mFormat = 1;
   void clear_a_mformat();
   uint32_t a_mformat() const;
   void set_a_mformat(uint32_t value);
@@ -2285,11 +2229,7 @@ class CDMVideoFrame final :
   void _internal_set_a_mformat(uint32_t value);
   public:
 
-  // required sint32 a_mImageWidth = 2;
-  bool has_a_mimagewidth() const;
-  private:
-  bool _internal_has_a_mimagewidth() const;
-  public:
+  // sint32 a_mImageWidth = 2;
   void clear_a_mimagewidth();
   int32_t a_mimagewidth() const;
   void set_a_mimagewidth(int32_t value);
@@ -2298,11 +2238,7 @@ class CDMVideoFrame final :
   void _internal_set_a_mimagewidth(int32_t value);
   public:
 
-  // required sint64 a_mTimestamp = 7;
-  bool has_a_mtimestamp() const;
-  private:
-  bool _internal_has_a_mtimestamp() const;
-  public:
+  // sint64 a_mTimestamp = 7;
   void clear_a_mtimestamp();
   int64_t a_mtimestamp() const;
   void set_a_mtimestamp(int64_t value);
@@ -2311,11 +2247,7 @@ class CDMVideoFrame final :
   void _internal_set_a_mtimestamp(int64_t value);
   public:
 
-  // required sint64 a_mDuration = 8;
-  bool has_a_mduration() const;
-  private:
-  bool _internal_has_a_mduration() const;
-  public:
+  // sint64 a_mDuration = 8;
   void clear_a_mduration();
   int64_t a_mduration() const;
   void set_a_mduration(int64_t value);
@@ -2324,11 +2256,7 @@ class CDMVideoFrame final :
   void _internal_set_a_mduration(int64_t value);
   public:
 
-  // required sint32 a_mImageHeight = 3;
-  bool has_a_mimageheight() const;
-  private:
-  bool _internal_has_a_mimageheight() const;
-  public:
+  // sint32 a_mImageHeight = 3;
   void clear_a_mimageheight();
   int32_t a_mimageheight() const;
   void set_a_mimageheight(int32_t value);
@@ -2341,15 +2269,10 @@ class CDMVideoFrame final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::gmp::CDMVideoPlane* a_myplane_;
     ::protobuf::mozilla::gmp::CDMVideoPlane* a_muplane_;
     ::protobuf::mozilla::gmp::CDMVideoPlane* a_mvplane_;
@@ -2358,6 +2281,7 @@ class CDMVideoFrame final :
     int64_t a_mtimestamp_;
     int64_t a_mduration_;
     int32_t a_mimageheight_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_GMPTypes_5fprotobuf_2emozilla_2egmp_2eh_2eproto;
@@ -2373,17 +2297,9 @@ class CDMVideoFrame final :
 #endif  // __GNUC__
 // NodeIdParts
 
-// required string a_mOrigin = 1;
-inline bool NodeIdParts::_internal_has_a_morigin() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool NodeIdParts::has_a_morigin() const {
-  return _internal_has_a_morigin();
-}
+// string a_mOrigin = 1;
 inline void NodeIdParts::clear_a_morigin() {
   _impl_.a_morigin_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& NodeIdParts::a_morigin() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.NodeIdParts.a_mOrigin)
@@ -2392,7 +2308,7 @@ inline const std::string& NodeIdParts::a_morigin() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void NodeIdParts::set_a_morigin(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_morigin_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.NodeIdParts.a_mOrigin)
 }
@@ -2405,32 +2321,22 @@ inline const std::string& NodeIdParts::_internal_a_morigin() const {
   return _impl_.a_morigin_.Get();
 }
 inline void NodeIdParts::_internal_set_a_morigin(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_morigin_.Set(value, GetArenaForAllocation());
 }
 inline std::string* NodeIdParts::_internal_mutable_a_morigin() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_morigin_.Mutable(GetArenaForAllocation());
 }
 inline std::string* NodeIdParts::release_a_morigin() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.NodeIdParts.a_mOrigin)
-  if (!_internal_has_a_morigin()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_morigin_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_morigin_.IsDefault()) {
-    _impl_.a_morigin_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_morigin_.Release();
 }
 inline void NodeIdParts::set_allocated_a_morigin(std::string* a_morigin) {
   if (a_morigin != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_morigin_.SetAllocated(a_morigin, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2441,17 +2347,9 @@ inline void NodeIdParts::set_allocated_a_morigin(std::string* a_morigin) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.NodeIdParts.a_mOrigin)
 }
 
-// required string a_mTopLevelOrigin = 2;
-inline bool NodeIdParts::_internal_has_a_mtoplevelorigin() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool NodeIdParts::has_a_mtoplevelorigin() const {
-  return _internal_has_a_mtoplevelorigin();
-}
+// string a_mTopLevelOrigin = 2;
 inline void NodeIdParts::clear_a_mtoplevelorigin() {
   _impl_.a_mtoplevelorigin_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& NodeIdParts::a_mtoplevelorigin() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.NodeIdParts.a_mTopLevelOrigin)
@@ -2460,7 +2358,7 @@ inline const std::string& NodeIdParts::a_mtoplevelorigin() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void NodeIdParts::set_a_mtoplevelorigin(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_mtoplevelorigin_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.NodeIdParts.a_mTopLevelOrigin)
 }
@@ -2473,32 +2371,22 @@ inline const std::string& NodeIdParts::_internal_a_mtoplevelorigin() const {
   return _impl_.a_mtoplevelorigin_.Get();
 }
 inline void NodeIdParts::_internal_set_a_mtoplevelorigin(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_mtoplevelorigin_.Set(value, GetArenaForAllocation());
 }
 inline std::string* NodeIdParts::_internal_mutable_a_mtoplevelorigin() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_mtoplevelorigin_.Mutable(GetArenaForAllocation());
 }
 inline std::string* NodeIdParts::release_a_mtoplevelorigin() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.NodeIdParts.a_mTopLevelOrigin)
-  if (!_internal_has_a_mtoplevelorigin()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_mtoplevelorigin_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_mtoplevelorigin_.IsDefault()) {
-    _impl_.a_mtoplevelorigin_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_mtoplevelorigin_.Release();
 }
 inline void NodeIdParts::set_allocated_a_mtoplevelorigin(std::string* a_mtoplevelorigin) {
   if (a_mtoplevelorigin != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_mtoplevelorigin_.SetAllocated(a_mtoplevelorigin, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2509,17 +2397,9 @@ inline void NodeIdParts::set_allocated_a_mtoplevelorigin(std::string* a_mtopleve
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.NodeIdParts.a_mTopLevelOrigin)
 }
 
-// required string a_mGMPName = 3;
-inline bool NodeIdParts::_internal_has_a_mgmpname() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool NodeIdParts::has_a_mgmpname() const {
-  return _internal_has_a_mgmpname();
-}
+// string a_mGMPName = 3;
 inline void NodeIdParts::clear_a_mgmpname() {
   _impl_.a_mgmpname_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& NodeIdParts::a_mgmpname() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.NodeIdParts.a_mGMPName)
@@ -2528,7 +2408,7 @@ inline const std::string& NodeIdParts::a_mgmpname() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void NodeIdParts::set_a_mgmpname(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_mgmpname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.NodeIdParts.a_mGMPName)
 }
@@ -2541,32 +2421,22 @@ inline const std::string& NodeIdParts::_internal_a_mgmpname() const {
   return _impl_.a_mgmpname_.Get();
 }
 inline void NodeIdParts::_internal_set_a_mgmpname(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_mgmpname_.Set(value, GetArenaForAllocation());
 }
 inline std::string* NodeIdParts::_internal_mutable_a_mgmpname() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_mgmpname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* NodeIdParts::release_a_mgmpname() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.NodeIdParts.a_mGMPName)
-  if (!_internal_has_a_mgmpname()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_mgmpname_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_mgmpname_.IsDefault()) {
-    _impl_.a_mgmpname_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_mgmpname_.Release();
 }
 inline void NodeIdParts::set_allocated_a_mgmpname(std::string* a_mgmpname) {
   if (a_mgmpname != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_mgmpname_.SetAllocated(a_mgmpname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2745,17 +2615,9 @@ inline NodeIdVariant::ContentCase NodeIdVariant::content_case() const {
 
 // GMPVideoEncodedFrameData
 
-// required uint32 a_mEncodedWidth = 1;
-inline bool GMPVideoEncodedFrameData::_internal_has_a_mencodedwidth() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool GMPVideoEncodedFrameData::has_a_mencodedwidth() const {
-  return _internal_has_a_mencodedwidth();
-}
+// uint32 a_mEncodedWidth = 1;
 inline void GMPVideoEncodedFrameData::clear_a_mencodedwidth() {
   _impl_.a_mencodedwidth_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t GMPVideoEncodedFrameData::_internal_a_mencodedwidth() const {
   return _impl_.a_mencodedwidth_;
@@ -2765,7 +2627,7 @@ inline uint32_t GMPVideoEncodedFrameData::a_mencodedwidth() const {
   return _internal_a_mencodedwidth();
 }
 inline void GMPVideoEncodedFrameData::_internal_set_a_mencodedwidth(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_mencodedwidth_ = value;
 }
 inline void GMPVideoEncodedFrameData::set_a_mencodedwidth(uint32_t value) {
@@ -2773,17 +2635,9 @@ inline void GMPVideoEncodedFrameData::set_a_mencodedwidth(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPVideoEncodedFrameData.a_mEncodedWidth)
 }
 
-// required uint32 a_mEncodedHeight = 2;
-inline bool GMPVideoEncodedFrameData::_internal_has_a_mencodedheight() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool GMPVideoEncodedFrameData::has_a_mencodedheight() const {
-  return _internal_has_a_mencodedheight();
-}
+// uint32 a_mEncodedHeight = 2;
 inline void GMPVideoEncodedFrameData::clear_a_mencodedheight() {
   _impl_.a_mencodedheight_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t GMPVideoEncodedFrameData::_internal_a_mencodedheight() const {
   return _impl_.a_mencodedheight_;
@@ -2793,7 +2647,7 @@ inline uint32_t GMPVideoEncodedFrameData::a_mencodedheight() const {
   return _internal_a_mencodedheight();
 }
 inline void GMPVideoEncodedFrameData::_internal_set_a_mencodedheight(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_mencodedheight_ = value;
 }
 inline void GMPVideoEncodedFrameData::set_a_mencodedheight(uint32_t value) {
@@ -2801,17 +2655,9 @@ inline void GMPVideoEncodedFrameData::set_a_mencodedheight(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPVideoEncodedFrameData.a_mEncodedHeight)
 }
 
-// required uint64 a_mTimestamp = 3;
-inline bool GMPVideoEncodedFrameData::_internal_has_a_mtimestamp() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool GMPVideoEncodedFrameData::has_a_mtimestamp() const {
-  return _internal_has_a_mtimestamp();
-}
+// uint64 a_mTimestamp = 3;
 inline void GMPVideoEncodedFrameData::clear_a_mtimestamp() {
   _impl_.a_mtimestamp_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint64_t GMPVideoEncodedFrameData::_internal_a_mtimestamp() const {
   return _impl_.a_mtimestamp_;
@@ -2821,7 +2667,7 @@ inline uint64_t GMPVideoEncodedFrameData::a_mtimestamp() const {
   return _internal_a_mtimestamp();
 }
 inline void GMPVideoEncodedFrameData::_internal_set_a_mtimestamp(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_mtimestamp_ = value;
 }
 inline void GMPVideoEncodedFrameData::set_a_mtimestamp(uint64_t value) {
@@ -2829,17 +2675,9 @@ inline void GMPVideoEncodedFrameData::set_a_mtimestamp(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPVideoEncodedFrameData.a_mTimestamp)
 }
 
-// required uint64 a_mDuration = 4;
-inline bool GMPVideoEncodedFrameData::_internal_has_a_mduration() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool GMPVideoEncodedFrameData::has_a_mduration() const {
-  return _internal_has_a_mduration();
-}
+// uint64 a_mDuration = 4;
 inline void GMPVideoEncodedFrameData::clear_a_mduration() {
   _impl_.a_mduration_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline uint64_t GMPVideoEncodedFrameData::_internal_a_mduration() const {
   return _impl_.a_mduration_;
@@ -2849,7 +2687,7 @@ inline uint64_t GMPVideoEncodedFrameData::a_mduration() const {
   return _internal_a_mduration();
 }
 inline void GMPVideoEncodedFrameData::_internal_set_a_mduration(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_mduration_ = value;
 }
 inline void GMPVideoEncodedFrameData::set_a_mduration(uint64_t value) {
@@ -2857,17 +2695,9 @@ inline void GMPVideoEncodedFrameData::set_a_mduration(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPVideoEncodedFrameData.a_mDuration)
 }
 
-// required uint32 a_mFrameType = 5;
-inline bool GMPVideoEncodedFrameData::_internal_has_a_mframetype() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool GMPVideoEncodedFrameData::has_a_mframetype() const {
-  return _internal_has_a_mframetype();
-}
+// uint32 a_mFrameType = 5;
 inline void GMPVideoEncodedFrameData::clear_a_mframetype() {
   _impl_.a_mframetype_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline uint32_t GMPVideoEncodedFrameData::_internal_a_mframetype() const {
   return _impl_.a_mframetype_;
@@ -2877,7 +2707,7 @@ inline uint32_t GMPVideoEncodedFrameData::a_mframetype() const {
   return _internal_a_mframetype();
 }
 inline void GMPVideoEncodedFrameData::_internal_set_a_mframetype(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   _impl_.a_mframetype_ = value;
 }
 inline void GMPVideoEncodedFrameData::set_a_mframetype(uint32_t value) {
@@ -2885,17 +2715,9 @@ inline void GMPVideoEncodedFrameData::set_a_mframetype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPVideoEncodedFrameData.a_mFrameType)
 }
 
-// required uint32 a_mSize = 6;
-inline bool GMPVideoEncodedFrameData::_internal_has_a_msize() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool GMPVideoEncodedFrameData::has_a_msize() const {
-  return _internal_has_a_msize();
-}
+// uint32 a_mSize = 6;
 inline void GMPVideoEncodedFrameData::clear_a_msize() {
   _impl_.a_msize_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline uint32_t GMPVideoEncodedFrameData::_internal_a_msize() const {
   return _impl_.a_msize_;
@@ -2905,7 +2727,7 @@ inline uint32_t GMPVideoEncodedFrameData::a_msize() const {
   return _internal_a_msize();
 }
 inline void GMPVideoEncodedFrameData::_internal_set_a_msize(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000040u;
+  
   _impl_.a_msize_ = value;
 }
 inline void GMPVideoEncodedFrameData::set_a_msize(uint32_t value) {
@@ -2913,17 +2735,9 @@ inline void GMPVideoEncodedFrameData::set_a_msize(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPVideoEncodedFrameData.a_mSize)
 }
 
-// required sint32 a_mTemporalLayerId = 7;
-inline bool GMPVideoEncodedFrameData::_internal_has_a_mtemporallayerid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
-  return value;
-}
-inline bool GMPVideoEncodedFrameData::has_a_mtemporallayerid() const {
-  return _internal_has_a_mtemporallayerid();
-}
+// sint32 a_mTemporalLayerId = 7;
 inline void GMPVideoEncodedFrameData::clear_a_mtemporallayerid() {
   _impl_.a_mtemporallayerid_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000080u;
 }
 inline int32_t GMPVideoEncodedFrameData::_internal_a_mtemporallayerid() const {
   return _impl_.a_mtemporallayerid_;
@@ -2933,7 +2747,7 @@ inline int32_t GMPVideoEncodedFrameData::a_mtemporallayerid() const {
   return _internal_a_mtemporallayerid();
 }
 inline void GMPVideoEncodedFrameData::_internal_set_a_mtemporallayerid(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000080u;
+  
   _impl_.a_mtemporallayerid_ = value;
 }
 inline void GMPVideoEncodedFrameData::set_a_mtemporallayerid(int32_t value) {
@@ -2941,17 +2755,9 @@ inline void GMPVideoEncodedFrameData::set_a_mtemporallayerid(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPVideoEncodedFrameData.a_mTemporalLayerId)
 }
 
-// required bytes a_mBufferType = 8;
-inline bool GMPVideoEncodedFrameData::_internal_has_a_mbuffertype() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool GMPVideoEncodedFrameData::has_a_mbuffertype() const {
-  return _internal_has_a_mbuffertype();
-}
+// bytes a_mBufferType = 8;
 inline void GMPVideoEncodedFrameData::clear_a_mbuffertype() {
   _impl_.a_mbuffertype_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& GMPVideoEncodedFrameData::a_mbuffertype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.GMPVideoEncodedFrameData.a_mBufferType)
@@ -2960,7 +2766,7 @@ inline const std::string& GMPVideoEncodedFrameData::a_mbuffertype() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void GMPVideoEncodedFrameData::set_a_mbuffertype(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_mbuffertype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPVideoEncodedFrameData.a_mBufferType)
 }
@@ -2973,32 +2779,22 @@ inline const std::string& GMPVideoEncodedFrameData::_internal_a_mbuffertype() co
   return _impl_.a_mbuffertype_.Get();
 }
 inline void GMPVideoEncodedFrameData::_internal_set_a_mbuffertype(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_mbuffertype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* GMPVideoEncodedFrameData::_internal_mutable_a_mbuffertype() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_mbuffertype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* GMPVideoEncodedFrameData::release_a_mbuffertype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.GMPVideoEncodedFrameData.a_mBufferType)
-  if (!_internal_has_a_mbuffertype()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_mbuffertype_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_mbuffertype_.IsDefault()) {
-    _impl_.a_mbuffertype_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_mbuffertype_.Release();
 }
 inline void GMPVideoEncodedFrameData::set_allocated_a_mbuffertype(std::string* a_mbuffertype) {
   if (a_mbuffertype != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_mbuffertype_.SetAllocated(a_mbuffertype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3009,17 +2805,9 @@ inline void GMPVideoEncodedFrameData::set_allocated_a_mbuffertype(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.GMPVideoEncodedFrameData.a_mBufferType)
 }
 
-// required bool a_mCompleteFrame = 9;
-inline bool GMPVideoEncodedFrameData::_internal_has_a_mcompleteframe() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
-  return value;
-}
-inline bool GMPVideoEncodedFrameData::has_a_mcompleteframe() const {
-  return _internal_has_a_mcompleteframe();
-}
+// bool a_mCompleteFrame = 9;
 inline void GMPVideoEncodedFrameData::clear_a_mcompleteframe() {
   _impl_.a_mcompleteframe_ = false;
-  _impl_._has_bits_[0] &= ~0x00000100u;
 }
 inline bool GMPVideoEncodedFrameData::_internal_a_mcompleteframe() const {
   return _impl_.a_mcompleteframe_;
@@ -3029,7 +2817,7 @@ inline bool GMPVideoEncodedFrameData::a_mcompleteframe() const {
   return _internal_a_mcompleteframe();
 }
 inline void GMPVideoEncodedFrameData::_internal_set_a_mcompleteframe(bool value) {
-  _impl_._has_bits_[0] |= 0x00000100u;
+  
   _impl_.a_mcompleteframe_ = value;
 }
 inline void GMPVideoEncodedFrameData::set_a_mcompleteframe(bool value) {
@@ -3041,17 +2829,9 @@ inline void GMPVideoEncodedFrameData::set_a_mcompleteframe(bool value) {
 
 // GMPPlaneData
 
-// required sint32 a_mOffset = 1;
-inline bool GMPPlaneData::_internal_has_a_moffset() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool GMPPlaneData::has_a_moffset() const {
-  return _internal_has_a_moffset();
-}
+// sint32 a_mOffset = 1;
 inline void GMPPlaneData::clear_a_moffset() {
   _impl_.a_moffset_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline int32_t GMPPlaneData::_internal_a_moffset() const {
   return _impl_.a_moffset_;
@@ -3061,7 +2841,7 @@ inline int32_t GMPPlaneData::a_moffset() const {
   return _internal_a_moffset();
 }
 inline void GMPPlaneData::_internal_set_a_moffset(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_moffset_ = value;
 }
 inline void GMPPlaneData::set_a_moffset(int32_t value) {
@@ -3069,17 +2849,9 @@ inline void GMPPlaneData::set_a_moffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPPlaneData.a_mOffset)
 }
 
-// required sint32 a_mSize = 2;
-inline bool GMPPlaneData::_internal_has_a_msize() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool GMPPlaneData::has_a_msize() const {
-  return _internal_has_a_msize();
-}
+// sint32 a_mSize = 2;
 inline void GMPPlaneData::clear_a_msize() {
   _impl_.a_msize_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int32_t GMPPlaneData::_internal_a_msize() const {
   return _impl_.a_msize_;
@@ -3089,7 +2861,7 @@ inline int32_t GMPPlaneData::a_msize() const {
   return _internal_a_msize();
 }
 inline void GMPPlaneData::_internal_set_a_msize(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_msize_ = value;
 }
 inline void GMPPlaneData::set_a_msize(int32_t value) {
@@ -3097,17 +2869,9 @@ inline void GMPPlaneData::set_a_msize(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPPlaneData.a_mSize)
 }
 
-// required sint32 a_mStride = 3;
-inline bool GMPPlaneData::_internal_has_a_mstride() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool GMPPlaneData::has_a_mstride() const {
-  return _internal_has_a_mstride();
-}
+// sint32 a_mStride = 3;
 inline void GMPPlaneData::clear_a_mstride() {
   _impl_.a_mstride_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t GMPPlaneData::_internal_a_mstride() const {
   return _impl_.a_mstride_;
@@ -3117,7 +2881,7 @@ inline int32_t GMPPlaneData::a_mstride() const {
   return _internal_a_mstride();
 }
 inline void GMPPlaneData::_internal_set_a_mstride(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_mstride_ = value;
 }
 inline void GMPPlaneData::set_a_mstride(int32_t value) {
@@ -3129,18 +2893,18 @@ inline void GMPPlaneData::set_a_mstride(int32_t value) {
 
 // GMPVideoi420FrameData
 
-// required .protobuf.mozilla.gmp.GMPPlaneData a_mYPlane = 1;
+// .protobuf.mozilla.gmp.GMPPlaneData a_mYPlane = 1;
 inline bool GMPVideoi420FrameData::_internal_has_a_myplane() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_myplane_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_myplane_ != nullptr;
 }
 inline bool GMPVideoi420FrameData::has_a_myplane() const {
   return _internal_has_a_myplane();
 }
 inline void GMPVideoi420FrameData::clear_a_myplane() {
-  if (_impl_.a_myplane_ != nullptr) _impl_.a_myplane_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_myplane_ != nullptr) {
+    delete _impl_.a_myplane_;
+  }
+  _impl_.a_myplane_ = nullptr;
 }
 inline const ::protobuf::mozilla::gmp::GMPPlaneData& GMPVideoi420FrameData::_internal_a_myplane() const {
   const ::protobuf::mozilla::gmp::GMPPlaneData* p = _impl_.a_myplane_;
@@ -3158,14 +2922,14 @@ inline void GMPVideoi420FrameData::unsafe_arena_set_allocated_a_myplane(
   }
   _impl_.a_myplane_ = a_myplane;
   if (a_myplane) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.GMPVideoi420FrameData.a_mYPlane)
 }
 inline ::protobuf::mozilla::gmp::GMPPlaneData* GMPVideoi420FrameData::release_a_myplane() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::gmp::GMPPlaneData* temp = _impl_.a_myplane_;
   _impl_.a_myplane_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -3181,13 +2945,13 @@ inline ::protobuf::mozilla::gmp::GMPPlaneData* GMPVideoi420FrameData::release_a_
 }
 inline ::protobuf::mozilla::gmp::GMPPlaneData* GMPVideoi420FrameData::unsafe_arena_release_a_myplane() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.GMPVideoi420FrameData.a_mYPlane)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::gmp::GMPPlaneData* temp = _impl_.a_myplane_;
   _impl_.a_myplane_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::gmp::GMPPlaneData* GMPVideoi420FrameData::_internal_mutable_a_myplane() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_myplane_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gmp::GMPPlaneData>(GetArenaForAllocation());
     _impl_.a_myplane_ = p;
@@ -3211,26 +2975,26 @@ inline void GMPVideoi420FrameData::set_allocated_a_myplane(::protobuf::mozilla::
       a_myplane = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_myplane, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_myplane_ = a_myplane;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.GMPVideoi420FrameData.a_mYPlane)
 }
 
-// required .protobuf.mozilla.gmp.GMPPlaneData a_mUPlane = 2;
+// .protobuf.mozilla.gmp.GMPPlaneData a_mUPlane = 2;
 inline bool GMPVideoi420FrameData::_internal_has_a_muplane() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_muplane_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_muplane_ != nullptr;
 }
 inline bool GMPVideoi420FrameData::has_a_muplane() const {
   return _internal_has_a_muplane();
 }
 inline void GMPVideoi420FrameData::clear_a_muplane() {
-  if (_impl_.a_muplane_ != nullptr) _impl_.a_muplane_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_muplane_ != nullptr) {
+    delete _impl_.a_muplane_;
+  }
+  _impl_.a_muplane_ = nullptr;
 }
 inline const ::protobuf::mozilla::gmp::GMPPlaneData& GMPVideoi420FrameData::_internal_a_muplane() const {
   const ::protobuf::mozilla::gmp::GMPPlaneData* p = _impl_.a_muplane_;
@@ -3248,14 +3012,14 @@ inline void GMPVideoi420FrameData::unsafe_arena_set_allocated_a_muplane(
   }
   _impl_.a_muplane_ = a_muplane;
   if (a_muplane) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.GMPVideoi420FrameData.a_mUPlane)
 }
 inline ::protobuf::mozilla::gmp::GMPPlaneData* GMPVideoi420FrameData::release_a_muplane() {
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::gmp::GMPPlaneData* temp = _impl_.a_muplane_;
   _impl_.a_muplane_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -3271,13 +3035,13 @@ inline ::protobuf::mozilla::gmp::GMPPlaneData* GMPVideoi420FrameData::release_a_
 }
 inline ::protobuf::mozilla::gmp::GMPPlaneData* GMPVideoi420FrameData::unsafe_arena_release_a_muplane() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.GMPVideoi420FrameData.a_mUPlane)
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::gmp::GMPPlaneData* temp = _impl_.a_muplane_;
   _impl_.a_muplane_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::gmp::GMPPlaneData* GMPVideoi420FrameData::_internal_mutable_a_muplane() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   if (_impl_.a_muplane_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gmp::GMPPlaneData>(GetArenaForAllocation());
     _impl_.a_muplane_ = p;
@@ -3301,26 +3065,26 @@ inline void GMPVideoi420FrameData::set_allocated_a_muplane(::protobuf::mozilla::
       a_muplane = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_muplane, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_muplane_ = a_muplane;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.GMPVideoi420FrameData.a_mUPlane)
 }
 
-// required .protobuf.mozilla.gmp.GMPPlaneData a_mVPlane = 3;
+// .protobuf.mozilla.gmp.GMPPlaneData a_mVPlane = 3;
 inline bool GMPVideoi420FrameData::_internal_has_a_mvplane() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_mvplane_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_mvplane_ != nullptr;
 }
 inline bool GMPVideoi420FrameData::has_a_mvplane() const {
   return _internal_has_a_mvplane();
 }
 inline void GMPVideoi420FrameData::clear_a_mvplane() {
-  if (_impl_.a_mvplane_ != nullptr) _impl_.a_mvplane_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_mvplane_ != nullptr) {
+    delete _impl_.a_mvplane_;
+  }
+  _impl_.a_mvplane_ = nullptr;
 }
 inline const ::protobuf::mozilla::gmp::GMPPlaneData& GMPVideoi420FrameData::_internal_a_mvplane() const {
   const ::protobuf::mozilla::gmp::GMPPlaneData* p = _impl_.a_mvplane_;
@@ -3338,14 +3102,14 @@ inline void GMPVideoi420FrameData::unsafe_arena_set_allocated_a_mvplane(
   }
   _impl_.a_mvplane_ = a_mvplane;
   if (a_mvplane) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.GMPVideoi420FrameData.a_mVPlane)
 }
 inline ::protobuf::mozilla::gmp::GMPPlaneData* GMPVideoi420FrameData::release_a_mvplane() {
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  
   ::protobuf::mozilla::gmp::GMPPlaneData* temp = _impl_.a_mvplane_;
   _impl_.a_mvplane_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -3361,13 +3125,13 @@ inline ::protobuf::mozilla::gmp::GMPPlaneData* GMPVideoi420FrameData::release_a_
 }
 inline ::protobuf::mozilla::gmp::GMPPlaneData* GMPVideoi420FrameData::unsafe_arena_release_a_mvplane() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.GMPVideoi420FrameData.a_mVPlane)
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  
   ::protobuf::mozilla::gmp::GMPPlaneData* temp = _impl_.a_mvplane_;
   _impl_.a_mvplane_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::gmp::GMPPlaneData* GMPVideoi420FrameData::_internal_mutable_a_mvplane() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   if (_impl_.a_mvplane_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gmp::GMPPlaneData>(GetArenaForAllocation());
     _impl_.a_mvplane_ = p;
@@ -3391,25 +3155,17 @@ inline void GMPVideoi420FrameData::set_allocated_a_mvplane(::protobuf::mozilla::
       a_mvplane = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_mvplane, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_mvplane_ = a_mvplane;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.GMPVideoi420FrameData.a_mVPlane)
 }
 
-// required sint32 a_mWidth = 4;
-inline bool GMPVideoi420FrameData::_internal_has_a_mwidth() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool GMPVideoi420FrameData::has_a_mwidth() const {
-  return _internal_has_a_mwidth();
-}
+// sint32 a_mWidth = 4;
 inline void GMPVideoi420FrameData::clear_a_mwidth() {
   _impl_.a_mwidth_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline int32_t GMPVideoi420FrameData::_internal_a_mwidth() const {
   return _impl_.a_mwidth_;
@@ -3419,7 +3175,7 @@ inline int32_t GMPVideoi420FrameData::a_mwidth() const {
   return _internal_a_mwidth();
 }
 inline void GMPVideoi420FrameData::_internal_set_a_mwidth(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_mwidth_ = value;
 }
 inline void GMPVideoi420FrameData::set_a_mwidth(int32_t value) {
@@ -3427,17 +3183,9 @@ inline void GMPVideoi420FrameData::set_a_mwidth(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPVideoi420FrameData.a_mWidth)
 }
 
-// required sint32 a_mHeight = 5;
-inline bool GMPVideoi420FrameData::_internal_has_a_mheight() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool GMPVideoi420FrameData::has_a_mheight() const {
-  return _internal_has_a_mheight();
-}
+// sint32 a_mHeight = 5;
 inline void GMPVideoi420FrameData::clear_a_mheight() {
   _impl_.a_mheight_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline int32_t GMPVideoi420FrameData::_internal_a_mheight() const {
   return _impl_.a_mheight_;
@@ -3447,7 +3195,7 @@ inline int32_t GMPVideoi420FrameData::a_mheight() const {
   return _internal_a_mheight();
 }
 inline void GMPVideoi420FrameData::_internal_set_a_mheight(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_mheight_ = value;
 }
 inline void GMPVideoi420FrameData::set_a_mheight(int32_t value) {
@@ -3455,17 +3203,9 @@ inline void GMPVideoi420FrameData::set_a_mheight(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPVideoi420FrameData.a_mHeight)
 }
 
-// required uint64 a_mTimestamp = 6;
-inline bool GMPVideoi420FrameData::_internal_has_a_mtimestamp() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool GMPVideoi420FrameData::has_a_mtimestamp() const {
-  return _internal_has_a_mtimestamp();
-}
+// uint64 a_mTimestamp = 6;
 inline void GMPVideoi420FrameData::clear_a_mtimestamp() {
   _impl_.a_mtimestamp_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline uint64_t GMPVideoi420FrameData::_internal_a_mtimestamp() const {
   return _impl_.a_mtimestamp_;
@@ -3475,7 +3215,7 @@ inline uint64_t GMPVideoi420FrameData::a_mtimestamp() const {
   return _internal_a_mtimestamp();
 }
 inline void GMPVideoi420FrameData::_internal_set_a_mtimestamp(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   _impl_.a_mtimestamp_ = value;
 }
 inline void GMPVideoi420FrameData::set_a_mtimestamp(uint64_t value) {
@@ -3485,7 +3225,7 @@ inline void GMPVideoi420FrameData::set_a_mtimestamp(uint64_t value) {
 
 // optional uint64 a_mUpdatedTimestamp = 7;
 inline bool GMPVideoi420FrameData::_internal_has_a_mupdatedtimestamp() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
 inline bool GMPVideoi420FrameData::has_a_mupdatedtimestamp() const {
@@ -3493,7 +3233,7 @@ inline bool GMPVideoi420FrameData::has_a_mupdatedtimestamp() const {
 }
 inline void GMPVideoi420FrameData::clear_a_mupdatedtimestamp() {
   _impl_.a_mupdatedtimestamp_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000040u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t GMPVideoi420FrameData::_internal_a_mupdatedtimestamp() const {
   return _impl_.a_mupdatedtimestamp_;
@@ -3503,7 +3243,7 @@ inline uint64_t GMPVideoi420FrameData::a_mupdatedtimestamp() const {
   return _internal_a_mupdatedtimestamp();
 }
 inline void GMPVideoi420FrameData::_internal_set_a_mupdatedtimestamp(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000040u;
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_mupdatedtimestamp_ = value;
 }
 inline void GMPVideoi420FrameData::set_a_mupdatedtimestamp(uint64_t value) {
@@ -3511,17 +3251,9 @@ inline void GMPVideoi420FrameData::set_a_mupdatedtimestamp(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.GMPVideoi420FrameData.a_mUpdatedTimestamp)
 }
 
-// required uint64 a_mDuration = 8;
-inline bool GMPVideoi420FrameData::_internal_has_a_mduration() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
-  return value;
-}
-inline bool GMPVideoi420FrameData::has_a_mduration() const {
-  return _internal_has_a_mduration();
-}
+// uint64 a_mDuration = 8;
 inline void GMPVideoi420FrameData::clear_a_mduration() {
   _impl_.a_mduration_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000080u;
 }
 inline uint64_t GMPVideoi420FrameData::_internal_a_mduration() const {
   return _impl_.a_mduration_;
@@ -3531,7 +3263,7 @@ inline uint64_t GMPVideoi420FrameData::a_mduration() const {
   return _internal_a_mduration();
 }
 inline void GMPVideoi420FrameData::_internal_set_a_mduration(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000080u;
+  
   _impl_.a_mduration_ = value;
 }
 inline void GMPVideoi420FrameData::set_a_mduration(uint64_t value) {
@@ -3543,17 +3275,9 @@ inline void GMPVideoi420FrameData::set_a_mduration(uint64_t value) {
 
 // CDMInputBuffer
 
-// required bytes a_mData = 1;
-inline bool CDMInputBuffer::_internal_has_a_mdata() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool CDMInputBuffer::has_a_mdata() const {
-  return _internal_has_a_mdata();
-}
+// bytes a_mData = 1;
 inline void CDMInputBuffer::clear_a_mdata() {
   _impl_.a_mdata_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& CDMInputBuffer::a_mdata() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.CDMInputBuffer.a_mData)
@@ -3562,7 +3286,7 @@ inline const std::string& CDMInputBuffer::a_mdata() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CDMInputBuffer::set_a_mdata(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_mdata_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMInputBuffer.a_mData)
 }
@@ -3575,32 +3299,22 @@ inline const std::string& CDMInputBuffer::_internal_a_mdata() const {
   return _impl_.a_mdata_.Get();
 }
 inline void CDMInputBuffer::_internal_set_a_mdata(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_mdata_.Set(value, GetArenaForAllocation());
 }
 inline std::string* CDMInputBuffer::_internal_mutable_a_mdata() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_mdata_.Mutable(GetArenaForAllocation());
 }
 inline std::string* CDMInputBuffer::release_a_mdata() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.CDMInputBuffer.a_mData)
-  if (!_internal_has_a_mdata()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_mdata_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_mdata_.IsDefault()) {
-    _impl_.a_mdata_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_mdata_.Release();
 }
 inline void CDMInputBuffer::set_allocated_a_mdata(std::string* a_mdata) {
   if (a_mdata != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_mdata_.SetAllocated(a_mdata, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3705,17 +3419,9 @@ CDMInputBuffer::mutable_a_miv() {
   return _internal_mutable_a_miv();
 }
 
-// required sint64 a_mTimestamp = 4;
-inline bool CDMInputBuffer::_internal_has_a_mtimestamp() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool CDMInputBuffer::has_a_mtimestamp() const {
-  return _internal_has_a_mtimestamp();
-}
+// sint64 a_mTimestamp = 4;
 inline void CDMInputBuffer::clear_a_mtimestamp() {
   _impl_.a_mtimestamp_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int64_t CDMInputBuffer::_internal_a_mtimestamp() const {
   return _impl_.a_mtimestamp_;
@@ -3725,7 +3431,7 @@ inline int64_t CDMInputBuffer::a_mtimestamp() const {
   return _internal_a_mtimestamp();
 }
 inline void CDMInputBuffer::_internal_set_a_mtimestamp(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_mtimestamp_ = value;
 }
 inline void CDMInputBuffer::set_a_mtimestamp(int64_t value) {
@@ -3733,17 +3439,9 @@ inline void CDMInputBuffer::set_a_mtimestamp(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMInputBuffer.a_mTimestamp)
 }
 
-// required sint64 a_mDuration = 5;
-inline bool CDMInputBuffer::_internal_has_a_mduration() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool CDMInputBuffer::has_a_mduration() const {
-  return _internal_has_a_mduration();
-}
+// sint64 a_mDuration = 5;
 inline void CDMInputBuffer::clear_a_mduration() {
   _impl_.a_mduration_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline int64_t CDMInputBuffer::_internal_a_mduration() const {
   return _impl_.a_mduration_;
@@ -3753,7 +3451,7 @@ inline int64_t CDMInputBuffer::a_mduration() const {
   return _internal_a_mduration();
 }
 inline void CDMInputBuffer::_internal_set_a_mduration(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_mduration_ = value;
 }
 inline void CDMInputBuffer::set_a_mduration(int64_t value) {
@@ -3855,17 +3553,9 @@ CDMInputBuffer::mutable_a_mcipherbytes() {
   return _internal_mutable_a_mcipherbytes();
 }
 
-// required uint32 a_mCryptByteBlock = 8;
-inline bool CDMInputBuffer::_internal_has_a_mcryptbyteblock() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool CDMInputBuffer::has_a_mcryptbyteblock() const {
-  return _internal_has_a_mcryptbyteblock();
-}
+// uint32 a_mCryptByteBlock = 8;
 inline void CDMInputBuffer::clear_a_mcryptbyteblock() {
   _impl_.a_mcryptbyteblock_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline uint32_t CDMInputBuffer::_internal_a_mcryptbyteblock() const {
   return _impl_.a_mcryptbyteblock_;
@@ -3875,7 +3565,7 @@ inline uint32_t CDMInputBuffer::a_mcryptbyteblock() const {
   return _internal_a_mcryptbyteblock();
 }
 inline void CDMInputBuffer::_internal_set_a_mcryptbyteblock(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_mcryptbyteblock_ = value;
 }
 inline void CDMInputBuffer::set_a_mcryptbyteblock(uint32_t value) {
@@ -3883,17 +3573,9 @@ inline void CDMInputBuffer::set_a_mcryptbyteblock(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMInputBuffer.a_mCryptByteBlock)
 }
 
-// required uint32 a_mSkipByteBlock = 9;
-inline bool CDMInputBuffer::_internal_has_a_mskipbyteblock() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool CDMInputBuffer::has_a_mskipbyteblock() const {
-  return _internal_has_a_mskipbyteblock();
-}
+// uint32 a_mSkipByteBlock = 9;
 inline void CDMInputBuffer::clear_a_mskipbyteblock() {
   _impl_.a_mskipbyteblock_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline uint32_t CDMInputBuffer::_internal_a_mskipbyteblock() const {
   return _impl_.a_mskipbyteblock_;
@@ -3903,7 +3585,7 @@ inline uint32_t CDMInputBuffer::a_mskipbyteblock() const {
   return _internal_a_mskipbyteblock();
 }
 inline void CDMInputBuffer::_internal_set_a_mskipbyteblock(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   _impl_.a_mskipbyteblock_ = value;
 }
 inline void CDMInputBuffer::set_a_mskipbyteblock(uint32_t value) {
@@ -3911,17 +3593,9 @@ inline void CDMInputBuffer::set_a_mskipbyteblock(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMInputBuffer.a_mSkipByteBlock)
 }
 
-// required bytes a_mEncryptionScheme = 10;
-inline bool CDMInputBuffer::_internal_has_a_mencryptionscheme() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool CDMInputBuffer::has_a_mencryptionscheme() const {
-  return _internal_has_a_mencryptionscheme();
-}
+// bytes a_mEncryptionScheme = 10;
 inline void CDMInputBuffer::clear_a_mencryptionscheme() {
   _impl_.a_mencryptionscheme_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& CDMInputBuffer::a_mencryptionscheme() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.CDMInputBuffer.a_mEncryptionScheme)
@@ -3930,7 +3604,7 @@ inline const std::string& CDMInputBuffer::a_mencryptionscheme() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CDMInputBuffer::set_a_mencryptionscheme(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_mencryptionscheme_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMInputBuffer.a_mEncryptionScheme)
 }
@@ -3943,32 +3617,22 @@ inline const std::string& CDMInputBuffer::_internal_a_mencryptionscheme() const 
   return _impl_.a_mencryptionscheme_.Get();
 }
 inline void CDMInputBuffer::_internal_set_a_mencryptionscheme(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_mencryptionscheme_.Set(value, GetArenaForAllocation());
 }
 inline std::string* CDMInputBuffer::_internal_mutable_a_mencryptionscheme() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_mencryptionscheme_.Mutable(GetArenaForAllocation());
 }
 inline std::string* CDMInputBuffer::release_a_mencryptionscheme() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.CDMInputBuffer.a_mEncryptionScheme)
-  if (!_internal_has_a_mencryptionscheme()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_mencryptionscheme_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_mencryptionscheme_.IsDefault()) {
-    _impl_.a_mencryptionscheme_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_mencryptionscheme_.Release();
 }
 inline void CDMInputBuffer::set_allocated_a_mencryptionscheme(std::string* a_mencryptionscheme) {
   if (a_mencryptionscheme != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_mencryptionscheme_.SetAllocated(a_mencryptionscheme, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3983,17 +3647,9 @@ inline void CDMInputBuffer::set_allocated_a_mencryptionscheme(std::string* a_men
 
 // CDMVideoDecoderConfig
 
-// required uint32 a_mCodec = 1;
-inline bool CDMVideoDecoderConfig::_internal_has_a_mcodec() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool CDMVideoDecoderConfig::has_a_mcodec() const {
-  return _internal_has_a_mcodec();
-}
+// uint32 a_mCodec = 1;
 inline void CDMVideoDecoderConfig::clear_a_mcodec() {
   _impl_.a_mcodec_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t CDMVideoDecoderConfig::_internal_a_mcodec() const {
   return _impl_.a_mcodec_;
@@ -4003,7 +3659,7 @@ inline uint32_t CDMVideoDecoderConfig::a_mcodec() const {
   return _internal_a_mcodec();
 }
 inline void CDMVideoDecoderConfig::_internal_set_a_mcodec(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_mcodec_ = value;
 }
 inline void CDMVideoDecoderConfig::set_a_mcodec(uint32_t value) {
@@ -4011,17 +3667,9 @@ inline void CDMVideoDecoderConfig::set_a_mcodec(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMVideoDecoderConfig.a_mCodec)
 }
 
-// required uint32 a_mProfile = 2;
-inline bool CDMVideoDecoderConfig::_internal_has_a_mprofile() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool CDMVideoDecoderConfig::has_a_mprofile() const {
-  return _internal_has_a_mprofile();
-}
+// uint32 a_mProfile = 2;
 inline void CDMVideoDecoderConfig::clear_a_mprofile() {
   _impl_.a_mprofile_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t CDMVideoDecoderConfig::_internal_a_mprofile() const {
   return _impl_.a_mprofile_;
@@ -4031,7 +3679,7 @@ inline uint32_t CDMVideoDecoderConfig::a_mprofile() const {
   return _internal_a_mprofile();
 }
 inline void CDMVideoDecoderConfig::_internal_set_a_mprofile(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_mprofile_ = value;
 }
 inline void CDMVideoDecoderConfig::set_a_mprofile(uint32_t value) {
@@ -4039,17 +3687,9 @@ inline void CDMVideoDecoderConfig::set_a_mprofile(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMVideoDecoderConfig.a_mProfile)
 }
 
-// required uint32 a_mFormat = 3;
-inline bool CDMVideoDecoderConfig::_internal_has_a_mformat() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool CDMVideoDecoderConfig::has_a_mformat() const {
-  return _internal_has_a_mformat();
-}
+// uint32 a_mFormat = 3;
 inline void CDMVideoDecoderConfig::clear_a_mformat() {
   _impl_.a_mformat_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t CDMVideoDecoderConfig::_internal_a_mformat() const {
   return _impl_.a_mformat_;
@@ -4059,7 +3699,7 @@ inline uint32_t CDMVideoDecoderConfig::a_mformat() const {
   return _internal_a_mformat();
 }
 inline void CDMVideoDecoderConfig::_internal_set_a_mformat(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_mformat_ = value;
 }
 inline void CDMVideoDecoderConfig::set_a_mformat(uint32_t value) {
@@ -4067,17 +3707,9 @@ inline void CDMVideoDecoderConfig::set_a_mformat(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMVideoDecoderConfig.a_mFormat)
 }
 
-// required sint32 a_mImageWidth = 4;
-inline bool CDMVideoDecoderConfig::_internal_has_a_mimagewidth() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool CDMVideoDecoderConfig::has_a_mimagewidth() const {
-  return _internal_has_a_mimagewidth();
-}
+// sint32 a_mImageWidth = 4;
 inline void CDMVideoDecoderConfig::clear_a_mimagewidth() {
   _impl_.a_mimagewidth_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline int32_t CDMVideoDecoderConfig::_internal_a_mimagewidth() const {
   return _impl_.a_mimagewidth_;
@@ -4087,7 +3719,7 @@ inline int32_t CDMVideoDecoderConfig::a_mimagewidth() const {
   return _internal_a_mimagewidth();
 }
 inline void CDMVideoDecoderConfig::_internal_set_a_mimagewidth(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_mimagewidth_ = value;
 }
 inline void CDMVideoDecoderConfig::set_a_mimagewidth(int32_t value) {
@@ -4095,17 +3727,9 @@ inline void CDMVideoDecoderConfig::set_a_mimagewidth(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMVideoDecoderConfig.a_mImageWidth)
 }
 
-// required sint32 a_mImageHeight = 5;
-inline bool CDMVideoDecoderConfig::_internal_has_a_mimageheight() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool CDMVideoDecoderConfig::has_a_mimageheight() const {
-  return _internal_has_a_mimageheight();
-}
+// sint32 a_mImageHeight = 5;
 inline void CDMVideoDecoderConfig::clear_a_mimageheight() {
   _impl_.a_mimageheight_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline int32_t CDMVideoDecoderConfig::_internal_a_mimageheight() const {
   return _impl_.a_mimageheight_;
@@ -4115,7 +3739,7 @@ inline int32_t CDMVideoDecoderConfig::a_mimageheight() const {
   return _internal_a_mimageheight();
 }
 inline void CDMVideoDecoderConfig::_internal_set_a_mimageheight(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   _impl_.a_mimageheight_ = value;
 }
 inline void CDMVideoDecoderConfig::set_a_mimageheight(int32_t value) {
@@ -4170,17 +3794,9 @@ CDMVideoDecoderConfig::mutable_a_mextradata() {
   return _internal_mutable_a_mextradata();
 }
 
-// required bytes a_mEncryptionScheme = 7;
-inline bool CDMVideoDecoderConfig::_internal_has_a_mencryptionscheme() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool CDMVideoDecoderConfig::has_a_mencryptionscheme() const {
-  return _internal_has_a_mencryptionscheme();
-}
+// bytes a_mEncryptionScheme = 7;
 inline void CDMVideoDecoderConfig::clear_a_mencryptionscheme() {
   _impl_.a_mencryptionscheme_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& CDMVideoDecoderConfig::a_mencryptionscheme() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.CDMVideoDecoderConfig.a_mEncryptionScheme)
@@ -4189,7 +3805,7 @@ inline const std::string& CDMVideoDecoderConfig::a_mencryptionscheme() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CDMVideoDecoderConfig::set_a_mencryptionscheme(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_mencryptionscheme_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMVideoDecoderConfig.a_mEncryptionScheme)
 }
@@ -4202,32 +3818,22 @@ inline const std::string& CDMVideoDecoderConfig::_internal_a_mencryptionscheme()
   return _impl_.a_mencryptionscheme_.Get();
 }
 inline void CDMVideoDecoderConfig::_internal_set_a_mencryptionscheme(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_mencryptionscheme_.Set(value, GetArenaForAllocation());
 }
 inline std::string* CDMVideoDecoderConfig::_internal_mutable_a_mencryptionscheme() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_mencryptionscheme_.Mutable(GetArenaForAllocation());
 }
 inline std::string* CDMVideoDecoderConfig::release_a_mencryptionscheme() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.CDMVideoDecoderConfig.a_mEncryptionScheme)
-  if (!_internal_has_a_mencryptionscheme()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_mencryptionscheme_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_mencryptionscheme_.IsDefault()) {
-    _impl_.a_mencryptionscheme_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_mencryptionscheme_.Release();
 }
 inline void CDMVideoDecoderConfig::set_allocated_a_mencryptionscheme(std::string* a_mencryptionscheme) {
   if (a_mencryptionscheme != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_mencryptionscheme_.SetAllocated(a_mencryptionscheme, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4289,17 +3895,9 @@ CDMKeyInformation::mutable_a_mkeyid() {
   return _internal_mutable_a_mkeyid();
 }
 
-// required uint32 a_mStatus = 2;
-inline bool CDMKeyInformation::_internal_has_a_mstatus() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool CDMKeyInformation::has_a_mstatus() const {
-  return _internal_has_a_mstatus();
-}
+// uint32 a_mStatus = 2;
 inline void CDMKeyInformation::clear_a_mstatus() {
   _impl_.a_mstatus_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t CDMKeyInformation::_internal_a_mstatus() const {
   return _impl_.a_mstatus_;
@@ -4309,7 +3907,7 @@ inline uint32_t CDMKeyInformation::a_mstatus() const {
   return _internal_a_mstatus();
 }
 inline void CDMKeyInformation::_internal_set_a_mstatus(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_mstatus_ = value;
 }
 inline void CDMKeyInformation::set_a_mstatus(uint32_t value) {
@@ -4317,17 +3915,9 @@ inline void CDMKeyInformation::set_a_mstatus(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMKeyInformation.a_mStatus)
 }
 
-// required uint32 a_mSystemCode = 3;
-inline bool CDMKeyInformation::_internal_has_a_msystemcode() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool CDMKeyInformation::has_a_msystemcode() const {
-  return _internal_has_a_msystemcode();
-}
+// uint32 a_mSystemCode = 3;
 inline void CDMKeyInformation::clear_a_msystemcode() {
   _impl_.a_msystemcode_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t CDMKeyInformation::_internal_a_msystemcode() const {
   return _impl_.a_msystemcode_;
@@ -4337,7 +3927,7 @@ inline uint32_t CDMKeyInformation::a_msystemcode() const {
   return _internal_a_msystemcode();
 }
 inline void CDMKeyInformation::_internal_set_a_msystemcode(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_msystemcode_ = value;
 }
 inline void CDMKeyInformation::set_a_msystemcode(uint32_t value) {
@@ -4349,17 +3939,9 @@ inline void CDMKeyInformation::set_a_msystemcode(uint32_t value) {
 
 // CDMVideoPlane
 
-// required uint32 a_mPlaneOffset = 1;
-inline bool CDMVideoPlane::_internal_has_a_mplaneoffset() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool CDMVideoPlane::has_a_mplaneoffset() const {
-  return _internal_has_a_mplaneoffset();
-}
+// uint32 a_mPlaneOffset = 1;
 inline void CDMVideoPlane::clear_a_mplaneoffset() {
   _impl_.a_mplaneoffset_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t CDMVideoPlane::_internal_a_mplaneoffset() const {
   return _impl_.a_mplaneoffset_;
@@ -4369,7 +3951,7 @@ inline uint32_t CDMVideoPlane::a_mplaneoffset() const {
   return _internal_a_mplaneoffset();
 }
 inline void CDMVideoPlane::_internal_set_a_mplaneoffset(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_mplaneoffset_ = value;
 }
 inline void CDMVideoPlane::set_a_mplaneoffset(uint32_t value) {
@@ -4377,17 +3959,9 @@ inline void CDMVideoPlane::set_a_mplaneoffset(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMVideoPlane.a_mPlaneOffset)
 }
 
-// required uint32 a_mStride = 2;
-inline bool CDMVideoPlane::_internal_has_a_mstride() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool CDMVideoPlane::has_a_mstride() const {
-  return _internal_has_a_mstride();
-}
+// uint32 a_mStride = 2;
 inline void CDMVideoPlane::clear_a_mstride() {
   _impl_.a_mstride_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t CDMVideoPlane::_internal_a_mstride() const {
   return _impl_.a_mstride_;
@@ -4397,7 +3971,7 @@ inline uint32_t CDMVideoPlane::a_mstride() const {
   return _internal_a_mstride();
 }
 inline void CDMVideoPlane::_internal_set_a_mstride(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_mstride_ = value;
 }
 inline void CDMVideoPlane::set_a_mstride(uint32_t value) {
@@ -4409,17 +3983,9 @@ inline void CDMVideoPlane::set_a_mstride(uint32_t value) {
 
 // CDMVideoFrame
 
-// required uint32 a_mFormat = 1;
-inline bool CDMVideoFrame::_internal_has_a_mformat() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool CDMVideoFrame::has_a_mformat() const {
-  return _internal_has_a_mformat();
-}
+// uint32 a_mFormat = 1;
 inline void CDMVideoFrame::clear_a_mformat() {
   _impl_.a_mformat_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t CDMVideoFrame::_internal_a_mformat() const {
   return _impl_.a_mformat_;
@@ -4429,7 +3995,7 @@ inline uint32_t CDMVideoFrame::a_mformat() const {
   return _internal_a_mformat();
 }
 inline void CDMVideoFrame::_internal_set_a_mformat(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_mformat_ = value;
 }
 inline void CDMVideoFrame::set_a_mformat(uint32_t value) {
@@ -4437,17 +4003,9 @@ inline void CDMVideoFrame::set_a_mformat(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMVideoFrame.a_mFormat)
 }
 
-// required sint32 a_mImageWidth = 2;
-inline bool CDMVideoFrame::_internal_has_a_mimagewidth() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool CDMVideoFrame::has_a_mimagewidth() const {
-  return _internal_has_a_mimagewidth();
-}
+// sint32 a_mImageWidth = 2;
 inline void CDMVideoFrame::clear_a_mimagewidth() {
   _impl_.a_mimagewidth_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline int32_t CDMVideoFrame::_internal_a_mimagewidth() const {
   return _impl_.a_mimagewidth_;
@@ -4457,7 +4015,7 @@ inline int32_t CDMVideoFrame::a_mimagewidth() const {
   return _internal_a_mimagewidth();
 }
 inline void CDMVideoFrame::_internal_set_a_mimagewidth(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_mimagewidth_ = value;
 }
 inline void CDMVideoFrame::set_a_mimagewidth(int32_t value) {
@@ -4465,17 +4023,9 @@ inline void CDMVideoFrame::set_a_mimagewidth(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMVideoFrame.a_mImageWidth)
 }
 
-// required sint32 a_mImageHeight = 3;
-inline bool CDMVideoFrame::_internal_has_a_mimageheight() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
-  return value;
-}
-inline bool CDMVideoFrame::has_a_mimageheight() const {
-  return _internal_has_a_mimageheight();
-}
+// sint32 a_mImageHeight = 3;
 inline void CDMVideoFrame::clear_a_mimageheight() {
   _impl_.a_mimageheight_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000080u;
 }
 inline int32_t CDMVideoFrame::_internal_a_mimageheight() const {
   return _impl_.a_mimageheight_;
@@ -4485,7 +4035,7 @@ inline int32_t CDMVideoFrame::a_mimageheight() const {
   return _internal_a_mimageheight();
 }
 inline void CDMVideoFrame::_internal_set_a_mimageheight(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000080u;
+  
   _impl_.a_mimageheight_ = value;
 }
 inline void CDMVideoFrame::set_a_mimageheight(int32_t value) {
@@ -4493,18 +4043,18 @@ inline void CDMVideoFrame::set_a_mimageheight(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMVideoFrame.a_mImageHeight)
 }
 
-// required .protobuf.mozilla.gmp.CDMVideoPlane a_mYPlane = 4;
+// .protobuf.mozilla.gmp.CDMVideoPlane a_mYPlane = 4;
 inline bool CDMVideoFrame::_internal_has_a_myplane() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_myplane_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_myplane_ != nullptr;
 }
 inline bool CDMVideoFrame::has_a_myplane() const {
   return _internal_has_a_myplane();
 }
 inline void CDMVideoFrame::clear_a_myplane() {
-  if (_impl_.a_myplane_ != nullptr) _impl_.a_myplane_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_myplane_ != nullptr) {
+    delete _impl_.a_myplane_;
+  }
+  _impl_.a_myplane_ = nullptr;
 }
 inline const ::protobuf::mozilla::gmp::CDMVideoPlane& CDMVideoFrame::_internal_a_myplane() const {
   const ::protobuf::mozilla::gmp::CDMVideoPlane* p = _impl_.a_myplane_;
@@ -4522,14 +4072,14 @@ inline void CDMVideoFrame::unsafe_arena_set_allocated_a_myplane(
   }
   _impl_.a_myplane_ = a_myplane;
   if (a_myplane) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.CDMVideoFrame.a_mYPlane)
 }
 inline ::protobuf::mozilla::gmp::CDMVideoPlane* CDMVideoFrame::release_a_myplane() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::gmp::CDMVideoPlane* temp = _impl_.a_myplane_;
   _impl_.a_myplane_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -4545,13 +4095,13 @@ inline ::protobuf::mozilla::gmp::CDMVideoPlane* CDMVideoFrame::release_a_myplane
 }
 inline ::protobuf::mozilla::gmp::CDMVideoPlane* CDMVideoFrame::unsafe_arena_release_a_myplane() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.CDMVideoFrame.a_mYPlane)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::gmp::CDMVideoPlane* temp = _impl_.a_myplane_;
   _impl_.a_myplane_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::gmp::CDMVideoPlane* CDMVideoFrame::_internal_mutable_a_myplane() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_myplane_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gmp::CDMVideoPlane>(GetArenaForAllocation());
     _impl_.a_myplane_ = p;
@@ -4575,26 +4125,26 @@ inline void CDMVideoFrame::set_allocated_a_myplane(::protobuf::mozilla::gmp::CDM
       a_myplane = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_myplane, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_myplane_ = a_myplane;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.CDMVideoFrame.a_mYPlane)
 }
 
-// required .protobuf.mozilla.gmp.CDMVideoPlane a_mUPlane = 5;
+// .protobuf.mozilla.gmp.CDMVideoPlane a_mUPlane = 5;
 inline bool CDMVideoFrame::_internal_has_a_muplane() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_muplane_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_muplane_ != nullptr;
 }
 inline bool CDMVideoFrame::has_a_muplane() const {
   return _internal_has_a_muplane();
 }
 inline void CDMVideoFrame::clear_a_muplane() {
-  if (_impl_.a_muplane_ != nullptr) _impl_.a_muplane_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_muplane_ != nullptr) {
+    delete _impl_.a_muplane_;
+  }
+  _impl_.a_muplane_ = nullptr;
 }
 inline const ::protobuf::mozilla::gmp::CDMVideoPlane& CDMVideoFrame::_internal_a_muplane() const {
   const ::protobuf::mozilla::gmp::CDMVideoPlane* p = _impl_.a_muplane_;
@@ -4612,14 +4162,14 @@ inline void CDMVideoFrame::unsafe_arena_set_allocated_a_muplane(
   }
   _impl_.a_muplane_ = a_muplane;
   if (a_muplane) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.CDMVideoFrame.a_mUPlane)
 }
 inline ::protobuf::mozilla::gmp::CDMVideoPlane* CDMVideoFrame::release_a_muplane() {
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::gmp::CDMVideoPlane* temp = _impl_.a_muplane_;
   _impl_.a_muplane_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -4635,13 +4185,13 @@ inline ::protobuf::mozilla::gmp::CDMVideoPlane* CDMVideoFrame::release_a_muplane
 }
 inline ::protobuf::mozilla::gmp::CDMVideoPlane* CDMVideoFrame::unsafe_arena_release_a_muplane() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.CDMVideoFrame.a_mUPlane)
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::gmp::CDMVideoPlane* temp = _impl_.a_muplane_;
   _impl_.a_muplane_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::gmp::CDMVideoPlane* CDMVideoFrame::_internal_mutable_a_muplane() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   if (_impl_.a_muplane_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gmp::CDMVideoPlane>(GetArenaForAllocation());
     _impl_.a_muplane_ = p;
@@ -4665,26 +4215,26 @@ inline void CDMVideoFrame::set_allocated_a_muplane(::protobuf::mozilla::gmp::CDM
       a_muplane = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_muplane, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_muplane_ = a_muplane;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.CDMVideoFrame.a_mUPlane)
 }
 
-// required .protobuf.mozilla.gmp.CDMVideoPlane a_mVPlane = 6;
+// .protobuf.mozilla.gmp.CDMVideoPlane a_mVPlane = 6;
 inline bool CDMVideoFrame::_internal_has_a_mvplane() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_mvplane_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_mvplane_ != nullptr;
 }
 inline bool CDMVideoFrame::has_a_mvplane() const {
   return _internal_has_a_mvplane();
 }
 inline void CDMVideoFrame::clear_a_mvplane() {
-  if (_impl_.a_mvplane_ != nullptr) _impl_.a_mvplane_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_mvplane_ != nullptr) {
+    delete _impl_.a_mvplane_;
+  }
+  _impl_.a_mvplane_ = nullptr;
 }
 inline const ::protobuf::mozilla::gmp::CDMVideoPlane& CDMVideoFrame::_internal_a_mvplane() const {
   const ::protobuf::mozilla::gmp::CDMVideoPlane* p = _impl_.a_mvplane_;
@@ -4702,14 +4252,14 @@ inline void CDMVideoFrame::unsafe_arena_set_allocated_a_mvplane(
   }
   _impl_.a_mvplane_ = a_mvplane;
   if (a_mvplane) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.gmp.CDMVideoFrame.a_mVPlane)
 }
 inline ::protobuf::mozilla::gmp::CDMVideoPlane* CDMVideoFrame::release_a_mvplane() {
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  
   ::protobuf::mozilla::gmp::CDMVideoPlane* temp = _impl_.a_mvplane_;
   _impl_.a_mvplane_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -4725,13 +4275,13 @@ inline ::protobuf::mozilla::gmp::CDMVideoPlane* CDMVideoFrame::release_a_mvplane
 }
 inline ::protobuf::mozilla::gmp::CDMVideoPlane* CDMVideoFrame::unsafe_arena_release_a_mvplane() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.CDMVideoFrame.a_mVPlane)
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  
   ::protobuf::mozilla::gmp::CDMVideoPlane* temp = _impl_.a_mvplane_;
   _impl_.a_mvplane_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::gmp::CDMVideoPlane* CDMVideoFrame::_internal_mutable_a_mvplane() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   if (_impl_.a_mvplane_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::gmp::CDMVideoPlane>(GetArenaForAllocation());
     _impl_.a_mvplane_ = p;
@@ -4755,25 +4305,17 @@ inline void CDMVideoFrame::set_allocated_a_mvplane(::protobuf::mozilla::gmp::CDM
       a_mvplane = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_mvplane, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_mvplane_ = a_mvplane;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.gmp.CDMVideoFrame.a_mVPlane)
 }
 
-// required sint64 a_mTimestamp = 7;
-inline bool CDMVideoFrame::_internal_has_a_mtimestamp() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool CDMVideoFrame::has_a_mtimestamp() const {
-  return _internal_has_a_mtimestamp();
-}
+// sint64 a_mTimestamp = 7;
 inline void CDMVideoFrame::clear_a_mtimestamp() {
   _impl_.a_mtimestamp_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline int64_t CDMVideoFrame::_internal_a_mtimestamp() const {
   return _impl_.a_mtimestamp_;
@@ -4783,7 +4325,7 @@ inline int64_t CDMVideoFrame::a_mtimestamp() const {
   return _internal_a_mtimestamp();
 }
 inline void CDMVideoFrame::_internal_set_a_mtimestamp(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   _impl_.a_mtimestamp_ = value;
 }
 inline void CDMVideoFrame::set_a_mtimestamp(int64_t value) {
@@ -4791,17 +4333,9 @@ inline void CDMVideoFrame::set_a_mtimestamp(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.CDMVideoFrame.a_mTimestamp)
 }
 
-// required sint64 a_mDuration = 8;
-inline bool CDMVideoFrame::_internal_has_a_mduration() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool CDMVideoFrame::has_a_mduration() const {
-  return _internal_has_a_mduration();
-}
+// sint64 a_mDuration = 8;
 inline void CDMVideoFrame::clear_a_mduration() {
   _impl_.a_mduration_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline int64_t CDMVideoFrame::_internal_a_mduration() const {
   return _impl_.a_mduration_;
@@ -4811,7 +4345,7 @@ inline int64_t CDMVideoFrame::a_mduration() const {
   return _internal_a_mduration();
 }
 inline void CDMVideoFrame::_internal_set_a_mduration(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000040u;
+  
   _impl_.a_mduration_ = value;
 }
 inline void CDMVideoFrame::set_a_mduration(int64_t value) {

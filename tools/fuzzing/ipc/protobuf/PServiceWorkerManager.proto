@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/serviceworkers/PServiceWorkerManager.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PServiceWorkerManager;
 
@@ -18,17 +17,17 @@ import "ServiceWorkerRegistrarTypes.proto";
 
 // Message declarations
 message Msg_Register {
-  required protobuf.mozilla.dom.ServiceWorkerRegistrationData a_data = 1;
+  protobuf.mozilla.dom.ServiceWorkerRegistrationData a_data = 1;
 }
 
 message Msg_Unregister {
-  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
-  required string a_scope = 2;
+  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  string a_scope = 2;
 }
 
 message Msg_PropagateUnregister {
-  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
-  required string a_scope = 2;
+  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  string a_scope = 2;
 }
 
 message Msg___delete__ {

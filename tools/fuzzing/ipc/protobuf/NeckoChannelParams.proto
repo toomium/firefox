@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/netwerk/ipc/NeckoChannelParams.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 // Importing all namespaced protobuf children headers
 import public "NeckoChannelParams_protobuf.mozilla.net.h.proto";

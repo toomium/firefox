@@ -5,16 +5,15 @@
 
 // Generated from /home/tmittendorf/firefox/js/xpconnect/loader/PScriptCache.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.loader;
 
 
 // Structs and unions declarations
 message ScriptData {
-  required string a_url = 1;
-  required string a_cachePath = 2;
-  required bytes a_loadTime = 3;
+  string a_url = 1;
+  string a_cachePath = 2;
+  bytes a_loadTime = 3;
   repeated uint32 a_xdrData = 4;
 }

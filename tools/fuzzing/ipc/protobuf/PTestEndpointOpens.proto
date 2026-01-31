@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/ipc/ipdl/test/gtest/PTestEndpointOpens.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla._ipdltest.PTestEndpointOpens;
 
@@ -19,7 +18,7 @@ message Msg_Start {
 }
 
 message Msg_StartSubprotocol {
-  required bytes a_endpoint = 1;
+  bytes a_endpoint = 1;
 }
 
 message Msg___delete__ {

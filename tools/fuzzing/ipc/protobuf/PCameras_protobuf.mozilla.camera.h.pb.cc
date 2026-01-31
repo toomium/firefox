@@ -8,7 +8,10 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -22,13 +25,12 @@ namespace mozilla {
 namespace camera {
 PROTOBUF_CONSTEXPR VideoCaptureCapability::VideoCaptureCapability(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_width_)*/0
+    /*decltype(_impl_.a_width_)*/0
   , /*decltype(_impl_.a_height_)*/0
   , /*decltype(_impl_.a_maxfps_)*/0
   , /*decltype(_impl_.a_videotype_)*/0
-  , /*decltype(_impl_.a_interlaced_)*/false} {}
+  , /*decltype(_impl_.a_interlaced_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct VideoCaptureCapabilityDefaultTypeInternal {
   PROTOBUF_CONSTEXPR VideoCaptureCapabilityDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -40,9 +42,7 @@ struct VideoCaptureCapabilityDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 VideoCaptureCapabilityDefaultTypeInternal _VideoCaptureCapability_default_instance_;
 PROTOBUF_CONSTEXPR VideoFrameProperties::VideoFrameProperties(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_capturetime_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.a_capturetime_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_buffersize_)*/0u
   , /*decltype(_impl_.a_rtptimestamp_)*/0u
   , /*decltype(_impl_.a_ntptimems_)*/int64_t{0}
@@ -55,7 +55,8 @@ PROTOBUF_CONSTEXPR VideoFrameProperties::VideoFrameProperties(
   , /*decltype(_impl_.a_height_)*/0
   , /*decltype(_impl_.a_ystride_)*/0
   , /*decltype(_impl_.a_ustride_)*/0
-  , /*decltype(_impl_.a_vstride_)*/0} {}
+  , /*decltype(_impl_.a_vstride_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct VideoFramePropertiesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR VideoFramePropertiesDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -68,6 +69,87 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace camera
 }  // namespace mozilla
 }  // namespace protobuf
+static ::_pb::Metadata file_level_metadata_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto[2];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto = nullptr;
+
+const uint32_t TableStruct_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoCaptureCapability, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoCaptureCapability, _impl_.a_width_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoCaptureCapability, _impl_.a_height_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoCaptureCapability, _impl_.a_maxfps_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoCaptureCapability, _impl_.a_videotype_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoCaptureCapability, _impl_.a_interlaced_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_capturetime_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_buffersize_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_rtptimestamp_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_ntptimems_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_rendertimems_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_rotation_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_yallocatedsize_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_uallocatedsize_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_vallocatedsize_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_width_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_height_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_ystride_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_ustride_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_vstride_),
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::protobuf::mozilla::camera::VideoCaptureCapability)},
+  { 11, -1, -1, sizeof(::protobuf::mozilla::camera::VideoFrameProperties)},
+};
+
+static const ::_pb::Message* const file_default_instances[] = {
+  &::protobuf::mozilla::camera::_VideoCaptureCapability_default_instance_._instance,
+  &::protobuf::mozilla::camera::_VideoFrameProperties_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n(PCameras_protobuf.mozilla.camera.h.pro"
+  "to\022\027protobuf.mozilla.camera\032\034PBackground"
+  "SharedTypes.proto\"x\n\026VideoCaptureCapabil"
+  "ity\022\017\n\007a_width\030\001 \001(\021\022\020\n\010a_height\030\002 \001(\021\022\020"
+  "\n\010a_maxFPS\030\003 \001(\021\022\023\n\013a_videoType\030\004 \001(\021\022\024\n"
+  "\014a_interlaced\030\005 \001(\010\"\306\002\n\024VideoFrameProper"
+  "ties\022\025\n\ra_captureTime\030\001 \001(\014\022\024\n\014a_bufferS"
+  "ize\030\002 \001(\r\022\026\n\016a_rtpTimeStamp\030\003 \001(\r\022\023\n\013a_n"
+  "tpTimeMs\030\004 \001(\022\022\026\n\016a_renderTimeMs\030\005 \001(\022\022\022"
+  "\n\na_rotation\030\006 \001(\021\022\030\n\020a_yAllocatedSize\030\007"
+  " \001(\021\022\030\n\020a_uAllocatedSize\030\010 \001(\021\022\030\n\020a_vAll"
+  "ocatedSize\030\t \001(\021\022\017\n\007a_width\030\n \001(\021\022\020\n\010a_h"
+  "eight\030\013 \001(\021\022\021\n\ta_yStride\030\014 \001(\021\022\021\n\ta_uStr"
+  "ide\030\r \001(\021\022\021\n\ta_vStride\030\016 \001(\021b\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto_deps[1] = {
+  &::descriptor_table_PBackgroundSharedTypes_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto = {
+    false, false, 556, descriptor_table_protodef_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto,
+    "PCameras_protobuf.mozilla.camera.h.proto",
+    &descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto_once, descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto_deps, 1, 2,
+    schemas, file_default_instances, TableStruct_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto::offsets,
+    file_level_metadata_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto, file_level_enum_descriptors_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto,
+    file_level_service_descriptors_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto_getter() {
+  return &descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto;
+}
+
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto(&descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace camera {
@@ -76,46 +158,26 @@ namespace camera {
 
 class VideoCaptureCapability::_Internal {
  public:
-  using HasBits = decltype(std::declval<VideoCaptureCapability>()._impl_._has_bits_);
-  static void set_has_a_width(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_height(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_a_maxfps(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_a_videotype(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_a_interlaced(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000001f) ^ 0x0000001f) != 0;
-  }
 };
 
 VideoCaptureCapability::VideoCaptureCapability(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.camera.VideoCaptureCapability)
 }
 VideoCaptureCapability::VideoCaptureCapability(const VideoCaptureCapability& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   VideoCaptureCapability* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_width_){}
+      decltype(_impl_.a_width_){}
     , decltype(_impl_.a_height_){}
     , decltype(_impl_.a_maxfps_){}
     , decltype(_impl_.a_videotype_){}
-    , decltype(_impl_.a_interlaced_){}};
+    , decltype(_impl_.a_interlaced_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::memcpy(&_impl_.a_width_, &from._impl_.a_width_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_interlaced_) -
     reinterpret_cast<char*>(&_impl_.a_width_)) + sizeof(_impl_.a_interlaced_));
@@ -127,19 +189,18 @@ inline void VideoCaptureCapability::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_width_){0}
+      decltype(_impl_.a_width_){0}
     , decltype(_impl_.a_height_){0}
     , decltype(_impl_.a_maxfps_){0}
     , decltype(_impl_.a_videotype_){0}
     , decltype(_impl_.a_interlaced_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
 
 VideoCaptureCapability::~VideoCaptureCapability() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.camera.VideoCaptureCapability)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -160,63 +221,53 @@ void VideoCaptureCapability::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
-    ::memset(&_impl_.a_width_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.a_interlaced_) -
-        reinterpret_cast<char*>(&_impl_.a_width_)) + sizeof(_impl_.a_interlaced_));
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  ::memset(&_impl_.a_width_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.a_interlaced_) -
+      reinterpret_cast<char*>(&_impl_.a_width_)) + sizeof(_impl_.a_interlaced_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* VideoCaptureCapability::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint32 a_width = 1;
+      // sint32 a_width = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_a_width(&has_bits);
           _impl_.a_width_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_height = 2;
+      // sint32 a_height = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_a_height(&has_bits);
           _impl_.a_height_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_maxFPS = 3;
+      // sint32 a_maxFPS = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_a_maxfps(&has_bits);
           _impl_.a_maxfps_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_videoType = 4;
+      // sint32 a_videoType = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_a_videotype(&has_bits);
           _impl_.a_videotype_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool a_interlaced = 5;
+      // bool a_interlaced = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_a_interlaced(&has_bits);
           _impl_.a_interlaced_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -233,12 +284,11 @@ const char* VideoCaptureCapability::_InternalParse(const char* ptr, ::_pbi::Pars
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -252,144 +302,111 @@ uint8_t* VideoCaptureCapability::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required sint32 a_width = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // sint32 a_width = 1;
+  if (this->_internal_a_width() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_width(), target);
   }
 
-  // required sint32 a_height = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // sint32 a_height = 2;
+  if (this->_internal_a_height() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(2, this->_internal_a_height(), target);
   }
 
-  // required sint32 a_maxFPS = 3;
-  if (cached_has_bits & 0x00000004u) {
+  // sint32 a_maxFPS = 3;
+  if (this->_internal_a_maxfps() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_a_maxfps(), target);
   }
 
-  // required sint32 a_videoType = 4;
-  if (cached_has_bits & 0x00000008u) {
+  // sint32 a_videoType = 4;
+  if (this->_internal_a_videotype() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_a_videotype(), target);
   }
 
-  // required bool a_interlaced = 5;
-  if (cached_has_bits & 0x00000010u) {
+  // bool a_interlaced = 5;
+  if (this->_internal_a_interlaced() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_interlaced(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.camera.VideoCaptureCapability)
   return target;
 }
 
-size_t VideoCaptureCapability::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.camera.VideoCaptureCapability)
-  size_t total_size = 0;
-
-  if (_internal_has_a_width()) {
-    // required sint32 a_width = 1;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_width());
-  }
-
-  if (_internal_has_a_height()) {
-    // required sint32 a_height = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_height());
-  }
-
-  if (_internal_has_a_maxfps()) {
-    // required sint32 a_maxFPS = 3;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_maxfps());
-  }
-
-  if (_internal_has_a_videotype()) {
-    // required sint32 a_videoType = 4;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_videotype());
-  }
-
-  if (_internal_has_a_interlaced()) {
-    // required bool a_interlaced = 5;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t VideoCaptureCapability::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.camera.VideoCaptureCapability)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
-    // required sint32 a_width = 1;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_width());
-
-    // required sint32 a_height = 2;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_height());
-
-    // required sint32 a_maxFPS = 3;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_maxfps());
-
-    // required sint32 a_videoType = 4;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_videotype());
-
-    // required bool a_interlaced = 5;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // sint32 a_width = 1;
+  if (this->_internal_a_width() != 0) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_width());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // sint32 a_height = 2;
+  if (this->_internal_a_height() != 0) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_height());
+  }
+
+  // sint32 a_maxFPS = 3;
+  if (this->_internal_a_maxfps() != 0) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_maxfps());
+  }
+
+  // sint32 a_videoType = 4;
+  if (this->_internal_a_videotype() != 0) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_videotype());
+  }
+
+  // bool a_interlaced = 5;
+  if (this->_internal_a_interlaced() != 0) {
+    total_size += 1 + 1;
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void VideoCaptureCapability::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const VideoCaptureCapability*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData VideoCaptureCapability::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    VideoCaptureCapability::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*VideoCaptureCapability::GetClassData() const { return &_class_data_; }
 
-void VideoCaptureCapability::MergeFrom(const VideoCaptureCapability& from) {
-  VideoCaptureCapability* const _this = this;
+
+void VideoCaptureCapability::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<VideoCaptureCapability*>(&to_msg);
+  auto& from = static_cast<const VideoCaptureCapability&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.camera.VideoCaptureCapability)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_impl_.a_width_ = from._impl_.a_width_;
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.a_height_ = from._impl_.a_height_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.a_maxfps_ = from._impl_.a_maxfps_;
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.a_videotype_ = from._impl_.a_videotype_;
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.a_interlaced_ = from._impl_.a_interlaced_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (from._internal_a_width() != 0) {
+    _this->_internal_set_a_width(from._internal_a_width());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (from._internal_a_height() != 0) {
+    _this->_internal_set_a_height(from._internal_a_height());
+  }
+  if (from._internal_a_maxfps() != 0) {
+    _this->_internal_set_a_maxfps(from._internal_a_maxfps());
+  }
+  if (from._internal_a_videotype() != 0) {
+    _this->_internal_set_a_videotype(from._internal_a_videotype());
+  }
+  if (from._internal_a_interlaced() != 0) {
+    _this->_internal_set_a_interlaced(from._internal_a_interlaced());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void VideoCaptureCapability::CopyFrom(const VideoCaptureCapability& from) {
@@ -400,14 +417,12 @@ void VideoCaptureCapability::CopyFrom(const VideoCaptureCapability& from) {
 }
 
 bool VideoCaptureCapability::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void VideoCaptureCapability::InternalSwap(VideoCaptureCapability* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(VideoCaptureCapability, _impl_.a_interlaced_)
       + sizeof(VideoCaptureCapability::_impl_.a_interlaced_)
@@ -416,76 +431,29 @@ void VideoCaptureCapability::InternalSwap(VideoCaptureCapability* other) {
           reinterpret_cast<char*>(&other->_impl_.a_width_));
 }
 
-std::string VideoCaptureCapability::GetTypeName() const {
-  return "protobuf.mozilla.camera.VideoCaptureCapability";
+::PROTOBUF_NAMESPACE_ID::Metadata VideoCaptureCapability::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto_getter, &descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto_once,
+      file_level_metadata_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto[0]);
 }
-
 
 // ===================================================================
 
 class VideoFrameProperties::_Internal {
  public:
-  using HasBits = decltype(std::declval<VideoFrameProperties>()._impl_._has_bits_);
-  static void set_has_a_capturetime(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_buffersize(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_a_rtptimestamp(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_a_ntptimems(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_a_rendertimems(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static void set_has_a_rotation(HasBits* has_bits) {
-    (*has_bits)[0] |= 32u;
-  }
-  static void set_has_a_yallocatedsize(HasBits* has_bits) {
-    (*has_bits)[0] |= 64u;
-  }
-  static void set_has_a_uallocatedsize(HasBits* has_bits) {
-    (*has_bits)[0] |= 128u;
-  }
-  static void set_has_a_vallocatedsize(HasBits* has_bits) {
-    (*has_bits)[0] |= 256u;
-  }
-  static void set_has_a_width(HasBits* has_bits) {
-    (*has_bits)[0] |= 512u;
-  }
-  static void set_has_a_height(HasBits* has_bits) {
-    (*has_bits)[0] |= 1024u;
-  }
-  static void set_has_a_ystride(HasBits* has_bits) {
-    (*has_bits)[0] |= 2048u;
-  }
-  static void set_has_a_ustride(HasBits* has_bits) {
-    (*has_bits)[0] |= 4096u;
-  }
-  static void set_has_a_vstride(HasBits* has_bits) {
-    (*has_bits)[0] |= 8192u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00003fff) ^ 0x00003fff) != 0;
-  }
 };
 
 VideoFrameProperties::VideoFrameProperties(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.camera.VideoFrameProperties)
 }
 VideoFrameProperties::VideoFrameProperties(const VideoFrameProperties& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   VideoFrameProperties* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_capturetime_){}
+      decltype(_impl_.a_capturetime_){}
     , decltype(_impl_.a_buffersize_){}
     , decltype(_impl_.a_rtptimestamp_){}
     , decltype(_impl_.a_ntptimems_){}
@@ -498,14 +466,15 @@ VideoFrameProperties::VideoFrameProperties(const VideoFrameProperties& from)
     , decltype(_impl_.a_height_){}
     , decltype(_impl_.a_ystride_){}
     , decltype(_impl_.a_ustride_){}
-    , decltype(_impl_.a_vstride_){}};
+    , decltype(_impl_.a_vstride_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_capturetime_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_capturetime_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_capturetime()) {
+  if (!from._internal_a_capturetime().empty()) {
     _this->_impl_.a_capturetime_.Set(from._internal_a_capturetime(), 
       _this->GetArenaForAllocation());
   }
@@ -520,9 +489,7 @@ inline void VideoFrameProperties::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_capturetime_){}
+      decltype(_impl_.a_capturetime_){}
     , decltype(_impl_.a_buffersize_){0u}
     , decltype(_impl_.a_rtptimestamp_){0u}
     , decltype(_impl_.a_ntptimems_){int64_t{0}}
@@ -536,6 +503,7 @@ inline void VideoFrameProperties::SharedCtor(
     , decltype(_impl_.a_ystride_){0}
     , decltype(_impl_.a_ustride_){0}
     , decltype(_impl_.a_vstride_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_capturetime_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -545,7 +513,7 @@ inline void VideoFrameProperties::SharedCtor(
 
 VideoFrameProperties::~VideoFrameProperties() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.camera.VideoFrameProperties)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -567,32 +535,20 @@ void VideoFrameProperties::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_capturetime_.ClearNonDefaultToEmpty();
-  }
-  if (cached_has_bits & 0x000000feu) {
-    ::memset(&_impl_.a_buffersize_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.a_uallocatedsize_) -
-        reinterpret_cast<char*>(&_impl_.a_buffersize_)) + sizeof(_impl_.a_uallocatedsize_));
-  }
-  if (cached_has_bits & 0x00003f00u) {
-    ::memset(&_impl_.a_vallocatedsize_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.a_vstride_) -
-        reinterpret_cast<char*>(&_impl_.a_vallocatedsize_)) + sizeof(_impl_.a_vstride_));
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_capturetime_.ClearToEmpty();
+  ::memset(&_impl_.a_buffersize_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.a_vstride_) -
+      reinterpret_cast<char*>(&_impl_.a_buffersize_)) + sizeof(_impl_.a_vstride_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* VideoFrameProperties::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_captureTime = 1;
+      // bytes a_captureTime = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_capturetime();
@@ -601,118 +557,105 @@ const char* VideoFrameProperties::_InternalParse(const char* ptr, ::_pbi::ParseC
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_bufferSize = 2;
+      // uint32 a_bufferSize = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_a_buffersize(&has_bits);
           _impl_.a_buffersize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_rtpTimeStamp = 3;
+      // uint32 a_rtpTimeStamp = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_a_rtptimestamp(&has_bits);
           _impl_.a_rtptimestamp_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint64 a_ntpTimeMs = 4;
+      // sint64 a_ntpTimeMs = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_a_ntptimems(&has_bits);
           _impl_.a_ntptimems_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint64 a_renderTimeMs = 5;
+      // sint64 a_renderTimeMs = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_a_rendertimems(&has_bits);
           _impl_.a_rendertimems_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_rotation = 6;
+      // sint32 a_rotation = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
-          _Internal::set_has_a_rotation(&has_bits);
           _impl_.a_rotation_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_yAllocatedSize = 7;
+      // sint32 a_yAllocatedSize = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
-          _Internal::set_has_a_yallocatedsize(&has_bits);
           _impl_.a_yallocatedsize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_uAllocatedSize = 8;
+      // sint32 a_uAllocatedSize = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
-          _Internal::set_has_a_uallocatedsize(&has_bits);
           _impl_.a_uallocatedsize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_vAllocatedSize = 9;
+      // sint32 a_vAllocatedSize = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
-          _Internal::set_has_a_vallocatedsize(&has_bits);
           _impl_.a_vallocatedsize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_width = 10;
+      // sint32 a_width = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
-          _Internal::set_has_a_width(&has_bits);
           _impl_.a_width_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_height = 11;
+      // sint32 a_height = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 88)) {
-          _Internal::set_has_a_height(&has_bits);
           _impl_.a_height_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_yStride = 12;
+      // sint32 a_yStride = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
-          _Internal::set_has_a_ystride(&has_bits);
           _impl_.a_ystride_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_uStride = 13;
+      // sint32 a_uStride = 13;
       case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 104)) {
-          _Internal::set_has_a_ustride(&has_bits);
           _impl_.a_ustride_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_vStride = 14;
+      // sint32 a_vStride = 14;
       case 14:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 112)) {
-          _Internal::set_has_a_vstride(&has_bits);
           _impl_.a_vstride_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
@@ -729,12 +672,11 @@ const char* VideoFrameProperties::_InternalParse(const char* ptr, ::_pbi::ParseC
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -748,304 +690,239 @@ uint8_t* VideoFrameProperties::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_captureTime = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // bytes a_captureTime = 1;
+  if (!this->_internal_a_capturetime().empty()) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_capturetime(), target);
   }
 
-  // required uint32 a_bufferSize = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // uint32 a_bufferSize = 2;
+  if (this->_internal_a_buffersize() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_buffersize(), target);
   }
 
-  // required uint32 a_rtpTimeStamp = 3;
-  if (cached_has_bits & 0x00000004u) {
+  // uint32 a_rtpTimeStamp = 3;
+  if (this->_internal_a_rtptimestamp() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_a_rtptimestamp(), target);
   }
 
-  // required sint64 a_ntpTimeMs = 4;
-  if (cached_has_bits & 0x00000008u) {
+  // sint64 a_ntpTimeMs = 4;
+  if (this->_internal_a_ntptimems() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(4, this->_internal_a_ntptimems(), target);
   }
 
-  // required sint64 a_renderTimeMs = 5;
-  if (cached_has_bits & 0x00000010u) {
+  // sint64 a_renderTimeMs = 5;
+  if (this->_internal_a_rendertimems() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(5, this->_internal_a_rendertimems(), target);
   }
 
-  // required sint32 a_rotation = 6;
-  if (cached_has_bits & 0x00000020u) {
+  // sint32 a_rotation = 6;
+  if (this->_internal_a_rotation() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(6, this->_internal_a_rotation(), target);
   }
 
-  // required sint32 a_yAllocatedSize = 7;
-  if (cached_has_bits & 0x00000040u) {
+  // sint32 a_yAllocatedSize = 7;
+  if (this->_internal_a_yallocatedsize() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(7, this->_internal_a_yallocatedsize(), target);
   }
 
-  // required sint32 a_uAllocatedSize = 8;
-  if (cached_has_bits & 0x00000080u) {
+  // sint32 a_uAllocatedSize = 8;
+  if (this->_internal_a_uallocatedsize() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(8, this->_internal_a_uallocatedsize(), target);
   }
 
-  // required sint32 a_vAllocatedSize = 9;
-  if (cached_has_bits & 0x00000100u) {
+  // sint32 a_vAllocatedSize = 9;
+  if (this->_internal_a_vallocatedsize() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(9, this->_internal_a_vallocatedsize(), target);
   }
 
-  // required sint32 a_width = 10;
-  if (cached_has_bits & 0x00000200u) {
+  // sint32 a_width = 10;
+  if (this->_internal_a_width() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(10, this->_internal_a_width(), target);
   }
 
-  // required sint32 a_height = 11;
-  if (cached_has_bits & 0x00000400u) {
+  // sint32 a_height = 11;
+  if (this->_internal_a_height() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(11, this->_internal_a_height(), target);
   }
 
-  // required sint32 a_yStride = 12;
-  if (cached_has_bits & 0x00000800u) {
+  // sint32 a_yStride = 12;
+  if (this->_internal_a_ystride() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(12, this->_internal_a_ystride(), target);
   }
 
-  // required sint32 a_uStride = 13;
-  if (cached_has_bits & 0x00001000u) {
+  // sint32 a_uStride = 13;
+  if (this->_internal_a_ustride() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(13, this->_internal_a_ustride(), target);
   }
 
-  // required sint32 a_vStride = 14;
-  if (cached_has_bits & 0x00002000u) {
+  // sint32 a_vStride = 14;
+  if (this->_internal_a_vstride() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(14, this->_internal_a_vstride(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.camera.VideoFrameProperties)
   return target;
 }
 
-size_t VideoFrameProperties::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.camera.VideoFrameProperties)
-  size_t total_size = 0;
-
-  if (_internal_has_a_capturetime()) {
-    // required bytes a_captureTime = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_capturetime());
-  }
-
-  if (_internal_has_a_buffersize()) {
-    // required uint32 a_bufferSize = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_buffersize());
-  }
-
-  if (_internal_has_a_rtptimestamp()) {
-    // required uint32 a_rtpTimeStamp = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_rtptimestamp());
-  }
-
-  if (_internal_has_a_ntptimems()) {
-    // required sint64 a_ntpTimeMs = 4;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_ntptimems());
-  }
-
-  if (_internal_has_a_rendertimems()) {
-    // required sint64 a_renderTimeMs = 5;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_rendertimems());
-  }
-
-  if (_internal_has_a_rotation()) {
-    // required sint32 a_rotation = 6;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_rotation());
-  }
-
-  if (_internal_has_a_yallocatedsize()) {
-    // required sint32 a_yAllocatedSize = 7;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_yallocatedsize());
-  }
-
-  if (_internal_has_a_uallocatedsize()) {
-    // required sint32 a_uAllocatedSize = 8;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_uallocatedsize());
-  }
-
-  if (_internal_has_a_vallocatedsize()) {
-    // required sint32 a_vAllocatedSize = 9;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_vallocatedsize());
-  }
-
-  if (_internal_has_a_width()) {
-    // required sint32 a_width = 10;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_width());
-  }
-
-  if (_internal_has_a_height()) {
-    // required sint32 a_height = 11;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_height());
-  }
-
-  if (_internal_has_a_ystride()) {
-    // required sint32 a_yStride = 12;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_ystride());
-  }
-
-  if (_internal_has_a_ustride()) {
-    // required sint32 a_uStride = 13;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_ustride());
-  }
-
-  if (_internal_has_a_vstride()) {
-    // required sint32 a_vStride = 14;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_vstride());
-  }
-
-  return total_size;
-}
 size_t VideoFrameProperties::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.camera.VideoFrameProperties)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00003fff) ^ 0x00003fff) == 0) {  // All required fields are present.
-    // required bytes a_captureTime = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_capturetime());
-
-    // required uint32 a_bufferSize = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_buffersize());
-
-    // required uint32 a_rtpTimeStamp = 3;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_rtptimestamp());
-
-    // required sint64 a_ntpTimeMs = 4;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_ntptimems());
-
-    // required sint64 a_renderTimeMs = 5;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_rendertimems());
-
-    // required sint32 a_rotation = 6;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_rotation());
-
-    // required sint32 a_yAllocatedSize = 7;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_yallocatedsize());
-
-    // required sint32 a_uAllocatedSize = 8;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_uallocatedsize());
-
-    // required sint32 a_vAllocatedSize = 9;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_vallocatedsize());
-
-    // required sint32 a_width = 10;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_width());
-
-    // required sint32 a_height = 11;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_height());
-
-    // required sint32 a_yStride = 12;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_ystride());
-
-    // required sint32 a_uStride = 13;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_ustride());
-
-    // required sint32 a_vStride = 14;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_vstride());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // bytes a_captureTime = 1;
+  if (!this->_internal_a_capturetime().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_capturetime());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // uint32 a_bufferSize = 2;
+  if (this->_internal_a_buffersize() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_buffersize());
+  }
+
+  // uint32 a_rtpTimeStamp = 3;
+  if (this->_internal_a_rtptimestamp() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_rtptimestamp());
+  }
+
+  // sint64 a_ntpTimeMs = 4;
+  if (this->_internal_a_ntptimems() != 0) {
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_ntptimems());
+  }
+
+  // sint64 a_renderTimeMs = 5;
+  if (this->_internal_a_rendertimems() != 0) {
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_rendertimems());
+  }
+
+  // sint32 a_rotation = 6;
+  if (this->_internal_a_rotation() != 0) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_rotation());
+  }
+
+  // sint32 a_yAllocatedSize = 7;
+  if (this->_internal_a_yallocatedsize() != 0) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_yallocatedsize());
+  }
+
+  // sint32 a_uAllocatedSize = 8;
+  if (this->_internal_a_uallocatedsize() != 0) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_uallocatedsize());
+  }
+
+  // sint32 a_vAllocatedSize = 9;
+  if (this->_internal_a_vallocatedsize() != 0) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_vallocatedsize());
+  }
+
+  // sint32 a_width = 10;
+  if (this->_internal_a_width() != 0) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_width());
+  }
+
+  // sint32 a_height = 11;
+  if (this->_internal_a_height() != 0) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_height());
+  }
+
+  // sint32 a_yStride = 12;
+  if (this->_internal_a_ystride() != 0) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_ystride());
+  }
+
+  // sint32 a_uStride = 13;
+  if (this->_internal_a_ustride() != 0) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_ustride());
+  }
+
+  // sint32 a_vStride = 14;
+  if (this->_internal_a_vstride() != 0) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_vstride());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void VideoFrameProperties::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const VideoFrameProperties*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData VideoFrameProperties::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    VideoFrameProperties::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*VideoFrameProperties::GetClassData() const { return &_class_data_; }
 
-void VideoFrameProperties::MergeFrom(const VideoFrameProperties& from) {
-  VideoFrameProperties* const _this = this;
+
+void VideoFrameProperties::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<VideoFrameProperties*>(&to_msg);
+  auto& from = static_cast<const VideoFrameProperties&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.camera.VideoFrameProperties)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x000000ffu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_capturetime(from._internal_a_capturetime());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.a_buffersize_ = from._impl_.a_buffersize_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.a_rtptimestamp_ = from._impl_.a_rtptimestamp_;
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.a_ntptimems_ = from._impl_.a_ntptimems_;
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.a_rendertimems_ = from._impl_.a_rendertimems_;
-    }
-    if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.a_rotation_ = from._impl_.a_rotation_;
-    }
-    if (cached_has_bits & 0x00000040u) {
-      _this->_impl_.a_yallocatedsize_ = from._impl_.a_yallocatedsize_;
-    }
-    if (cached_has_bits & 0x00000080u) {
-      _this->_impl_.a_uallocatedsize_ = from._impl_.a_uallocatedsize_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_capturetime().empty()) {
+    _this->_internal_set_a_capturetime(from._internal_a_capturetime());
   }
-  if (cached_has_bits & 0x00003f00u) {
-    if (cached_has_bits & 0x00000100u) {
-      _this->_impl_.a_vallocatedsize_ = from._impl_.a_vallocatedsize_;
-    }
-    if (cached_has_bits & 0x00000200u) {
-      _this->_impl_.a_width_ = from._impl_.a_width_;
-    }
-    if (cached_has_bits & 0x00000400u) {
-      _this->_impl_.a_height_ = from._impl_.a_height_;
-    }
-    if (cached_has_bits & 0x00000800u) {
-      _this->_impl_.a_ystride_ = from._impl_.a_ystride_;
-    }
-    if (cached_has_bits & 0x00001000u) {
-      _this->_impl_.a_ustride_ = from._impl_.a_ustride_;
-    }
-    if (cached_has_bits & 0x00002000u) {
-      _this->_impl_.a_vstride_ = from._impl_.a_vstride_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (from._internal_a_buffersize() != 0) {
+    _this->_internal_set_a_buffersize(from._internal_a_buffersize());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (from._internal_a_rtptimestamp() != 0) {
+    _this->_internal_set_a_rtptimestamp(from._internal_a_rtptimestamp());
+  }
+  if (from._internal_a_ntptimems() != 0) {
+    _this->_internal_set_a_ntptimems(from._internal_a_ntptimems());
+  }
+  if (from._internal_a_rendertimems() != 0) {
+    _this->_internal_set_a_rendertimems(from._internal_a_rendertimems());
+  }
+  if (from._internal_a_rotation() != 0) {
+    _this->_internal_set_a_rotation(from._internal_a_rotation());
+  }
+  if (from._internal_a_yallocatedsize() != 0) {
+    _this->_internal_set_a_yallocatedsize(from._internal_a_yallocatedsize());
+  }
+  if (from._internal_a_uallocatedsize() != 0) {
+    _this->_internal_set_a_uallocatedsize(from._internal_a_uallocatedsize());
+  }
+  if (from._internal_a_vallocatedsize() != 0) {
+    _this->_internal_set_a_vallocatedsize(from._internal_a_vallocatedsize());
+  }
+  if (from._internal_a_width() != 0) {
+    _this->_internal_set_a_width(from._internal_a_width());
+  }
+  if (from._internal_a_height() != 0) {
+    _this->_internal_set_a_height(from._internal_a_height());
+  }
+  if (from._internal_a_ystride() != 0) {
+    _this->_internal_set_a_ystride(from._internal_a_ystride());
+  }
+  if (from._internal_a_ustride() != 0) {
+    _this->_internal_set_a_ustride(from._internal_a_ustride());
+  }
+  if (from._internal_a_vstride() != 0) {
+    _this->_internal_set_a_vstride(from._internal_a_vstride());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void VideoFrameProperties::CopyFrom(const VideoFrameProperties& from) {
@@ -1056,7 +933,6 @@ void VideoFrameProperties::CopyFrom(const VideoFrameProperties& from) {
 }
 
 bool VideoFrameProperties::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1065,7 +941,6 @@ void VideoFrameProperties::InternalSwap(VideoFrameProperties* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_capturetime_, lhs_arena,
       &other->_impl_.a_capturetime_, rhs_arena
@@ -1078,10 +953,11 @@ void VideoFrameProperties::InternalSwap(VideoFrameProperties* other) {
           reinterpret_cast<char*>(&other->_impl_.a_buffersize_));
 }
 
-std::string VideoFrameProperties::GetTypeName() const {
-  return "protobuf.mozilla.camera.VideoFrameProperties";
+::PROTOBUF_NAMESPACE_ID::Metadata VideoFrameProperties::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto_getter, &descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto_once,
+      file_level_metadata_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto[1]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace camera

@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "PBackgroundSharedTypes.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -42,6 +44,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -72,7 +75,7 @@ namespace indexedDB {
 // ===================================================================
 
 class OpenDatabaseRequestResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestResponse) */ {
  public:
   inline OpenDatabaseRequestResponse() : OpenDatabaseRequestResponse(nullptr) {}
   ~OpenDatabaseRequestResponse() override;
@@ -102,13 +105,15 @@ class OpenDatabaseRequestResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpenDatabaseRequestResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -146,9 +151,15 @@ class OpenDatabaseRequestResponse final :
   OpenDatabaseRequestResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpenDatabaseRequestResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpenDatabaseRequestResponse& from);
-  void MergeFrom(const OpenDatabaseRequestResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpenDatabaseRequestResponse& from) {
+    OpenDatabaseRequestResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -161,7 +172,7 @@ class OpenDatabaseRequestResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpenDatabaseRequestResponse* other);
 
   private:
@@ -174,7 +185,10 @@ class OpenDatabaseRequestResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -183,11 +197,7 @@ class OpenDatabaseRequestResponse final :
   enum : int {
     kADatabaseFieldNumber = 1,
   };
-  // required bytes a_database = 1;
-  bool has_a_database() const;
-  private:
-  bool _internal_has_a_database() const;
-  public:
+  // bytes a_database = 1;
   void clear_a_database();
   const std::string& a_database() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -209,9 +219,8 @@ class OpenDatabaseRequestResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_database_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -219,7 +228,7 @@ class OpenDatabaseRequestResponse final :
 // -------------------------------------------------------------------
 
 class DeleteDatabaseRequestResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestResponse) */ {
  public:
   inline DeleteDatabaseRequestResponse() : DeleteDatabaseRequestResponse(nullptr) {}
   ~DeleteDatabaseRequestResponse() override;
@@ -249,13 +258,15 @@ class DeleteDatabaseRequestResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const DeleteDatabaseRequestResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -293,9 +304,15 @@ class DeleteDatabaseRequestResponse final :
   DeleteDatabaseRequestResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<DeleteDatabaseRequestResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const DeleteDatabaseRequestResponse& from);
-  void MergeFrom(const DeleteDatabaseRequestResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const DeleteDatabaseRequestResponse& from) {
+    DeleteDatabaseRequestResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -308,7 +325,7 @@ class DeleteDatabaseRequestResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(DeleteDatabaseRequestResponse* other);
 
   private:
@@ -321,7 +338,10 @@ class DeleteDatabaseRequestResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -330,11 +350,7 @@ class DeleteDatabaseRequestResponse final :
   enum : int {
     kAPreviousVersionFieldNumber = 1,
   };
-  // required uint64 a_previousVersion = 1;
-  bool has_a_previousversion() const;
-  private:
-  bool _internal_has_a_previousversion() const;
-  public:
+  // uint64 a_previousVersion = 1;
   void clear_a_previousversion();
   uint64_t a_previousversion() const;
   void set_a_previousversion(uint64_t value);
@@ -351,9 +367,8 @@ class DeleteDatabaseRequestResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_previousversion_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -361,7 +376,7 @@ class DeleteDatabaseRequestResponse final :
 // -------------------------------------------------------------------
 
 class FactoryRequestResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.FactoryRequestResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.FactoryRequestResponse) */ {
  public:
   inline FactoryRequestResponse() : FactoryRequestResponse(nullptr) {}
   ~FactoryRequestResponse() override;
@@ -391,13 +406,15 @@ class FactoryRequestResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const FactoryRequestResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -442,9 +459,15 @@ class FactoryRequestResponse final :
   FactoryRequestResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<FactoryRequestResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const FactoryRequestResponse& from);
-  void MergeFrom(const FactoryRequestResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const FactoryRequestResponse& from) {
+    FactoryRequestResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -457,7 +480,7 @@ class FactoryRequestResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(FactoryRequestResponse* other);
 
   private:
@@ -470,7 +493,10 @@ class FactoryRequestResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -576,17 +602,9 @@ class FactoryRequestResponse final :
 #endif  // __GNUC__
 // OpenDatabaseRequestResponse
 
-// required bytes a_database = 1;
-inline bool OpenDatabaseRequestResponse::_internal_has_a_database() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpenDatabaseRequestResponse::has_a_database() const {
-  return _internal_has_a_database();
-}
+// bytes a_database = 1;
 inline void OpenDatabaseRequestResponse::clear_a_database() {
   _impl_.a_database_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpenDatabaseRequestResponse::a_database() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestResponse.a_database)
@@ -595,7 +613,7 @@ inline const std::string& OpenDatabaseRequestResponse::a_database() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpenDatabaseRequestResponse::set_a_database(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_database_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestResponse.a_database)
 }
@@ -608,32 +626,22 @@ inline const std::string& OpenDatabaseRequestResponse::_internal_a_database() co
   return _impl_.a_database_.Get();
 }
 inline void OpenDatabaseRequestResponse::_internal_set_a_database(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_database_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpenDatabaseRequestResponse::_internal_mutable_a_database() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_database_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpenDatabaseRequestResponse::release_a_database() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestResponse.a_database)
-  if (!_internal_has_a_database()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_database_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_database_.IsDefault()) {
-    _impl_.a_database_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_database_.Release();
 }
 inline void OpenDatabaseRequestResponse::set_allocated_a_database(std::string* a_database) {
   if (a_database != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_database_.SetAllocated(a_database, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -648,17 +656,9 @@ inline void OpenDatabaseRequestResponse::set_allocated_a_database(std::string* a
 
 // DeleteDatabaseRequestResponse
 
-// required uint64 a_previousVersion = 1;
-inline bool DeleteDatabaseRequestResponse::_internal_has_a_previousversion() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool DeleteDatabaseRequestResponse::has_a_previousversion() const {
-  return _internal_has_a_previousversion();
-}
+// uint64 a_previousVersion = 1;
 inline void DeleteDatabaseRequestResponse::clear_a_previousversion() {
   _impl_.a_previousversion_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t DeleteDatabaseRequestResponse::_internal_a_previousversion() const {
   return _impl_.a_previousversion_;
@@ -668,7 +668,7 @@ inline uint64_t DeleteDatabaseRequestResponse::a_previousversion() const {
   return _internal_a_previousversion();
 }
 inline void DeleteDatabaseRequestResponse::_internal_set_a_previousversion(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_previousversion_ = value;
 }
 inline void DeleteDatabaseRequestResponse::set_a_previousversion(uint64_t value) {

@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/fs/shared/PFileSystemWritableFileStream.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PFileSystemWritableFileStream;
 
@@ -16,11 +15,11 @@ package protobuf.mozilla.dom.PFileSystemWritableFileStream;
 
 // Message declarations
 message Msg_Close {
-  required bool a_aAbort = 1;
+  bool a_aAbort = 1;
 }
 
 message Reply_Close {
-  required bytes a_ok = 1;
+  bytes a_ok = 1;
 }
 
 message Msg___delete__ {

@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/gfx/layers/ipc/PVideoBridge.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.layers.PVideoBridge;
 
@@ -21,17 +20,17 @@ message Msg_Ping {
 }
 
 message Reply_Ping {
-  required bytes a_ok = 1;
+  bytes a_ok = 1;
 }
 
 message Msg_PTextureConstructor {
-  required sint64 a_actorid = 1;
-  required protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 2;
-  required protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 3;
-  required bytes a_aBackend = 4;
-  required bytes a_aTextureFlags = 5;
-  required bytes a_aContentId = 6;
-  required uint64 a_aSerial = 7;
+  sint64 a_actorid = 1;
+  protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 2;
+  protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 3;
+  bytes a_aBackend = 4;
+  bytes a_aTextureFlags = 5;
+  bytes a_aContentId = 6;
+  uint64 a_aSerial = 7;
 }
 
 message Reply_PTextureConstructor {

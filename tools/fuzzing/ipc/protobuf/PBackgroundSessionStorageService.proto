@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/storage/PBackgroundSessionStorageService.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PBackgroundSessionStorageService;
 
@@ -22,8 +21,8 @@ message Reply___delete__ {
 }
 
 message Msg_ClearStoragesForOrigin {
-  required string a_originAttrs = 1;
-  required string a_originKey = 2;
+  string a_originAttrs = 1;
+  string a_originKey = 2;
 }
 
 // Parameter mappings stats:

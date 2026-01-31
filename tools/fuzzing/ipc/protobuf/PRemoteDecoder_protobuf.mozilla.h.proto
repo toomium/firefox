@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/media/ipc/PRemoteDecoder.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla;
 
@@ -22,14 +21,14 @@ message DecodedOutputIPDL {
 }
 
 message InitCompletionIPDL {
-  required bytes a_type = 1;
-  required string a_decoderDescription = 2;
-  required string a_decoderProcessName = 3;
-  required string a_decoderCodecName = 4;
-  required bool a_hardware = 5;
-  required string a_hardwareReason = 6;
-  required bytes a_conversion = 7;
-  required bool a_shouldDecoderAlwaysBeRecycled = 8;
+  bytes a_type = 1;
+  string a_decoderDescription = 2;
+  string a_decoderProcessName = 3;
+  string a_decoderCodecName = 4;
+  bool a_hardware = 5;
+  string a_hardwareReason = 6;
+  bytes a_conversion = 7;
+  bool a_shouldDecoderAlwaysBeRecycled = 8;
 }
 
 message InitResultIPDL {

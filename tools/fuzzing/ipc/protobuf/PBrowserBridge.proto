@@ -5,8 +5,7 @@
 
 // Generated from PBrowserBridge.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PBrowserBridge;
 
@@ -18,25 +17,25 @@ import "PPrintingTypes.proto";
 
 // Message declarations
 message Msg_RequestFocus {
-  required bool a_canRaise = 1;
-  required bytes a_aCallerType = 2;
+  bool a_canRaise = 1;
+  bytes a_aCallerType = 2;
 }
 
 message Msg_MoveFocus {
-  required bool a_forward = 1;
-  required bool a_forDocumentNavigation = 2;
+  bool a_forward = 1;
+  bool a_forDocumentNavigation = 2;
 }
 
 message Msg_MaybeFireEmbedderLoadEvents {
-  required bytes a_aFireEventAtEmbeddingElement = 1;
+  bytes a_aFireEventAtEmbeddingElement = 1;
 }
 
 message Msg_ScrollRectIntoView {
-  required bytes a_aRect = 1;
-  required bytes a_aVertical = 2;
-  required bytes a_aHorizontal = 3;
-  required bytes a_aScrollFlags = 4;
-  required sint32 a_aAppUnitsPerDevPixel = 5;
+  bytes a_aRect = 1;
+  bytes a_aVertical = 2;
+  bytes a_aHorizontal = 3;
+  bytes a_aScrollFlags = 4;
+  sint32 a_aAppUnitsPerDevPixel = 5;
 }
 
 message Msg_SubFrameCrashed {
@@ -48,7 +47,7 @@ message Msg_IntrinsicSizeOrRatioChanged {
 }
 
 message Msg_ImageLoadComplete {
-  required bytes a_aResult = 1;
+  bytes a_aResult = 1;
 }
 
 message Msg___delete__ {
@@ -61,66 +60,66 @@ message Msg_BeginDestroy {
 }
 
 message Msg_LoadURL {
-  required bytes a_aLoadState = 1;
+  bytes a_aLoadState = 1;
 }
 
 message Msg_ResumeLoad {
-  required uint64 a_aPendingSwitchID = 1;
+  uint64 a_aPendingSwitchID = 1;
 }
 
 message Msg_Show {
-  required protobuf.mozilla.dom.OwnerShowInfo a_info = 1;
+  protobuf.mozilla.dom.OwnerShowInfo a_info = 1;
 }
 
 message Msg_ScrollbarPreferenceChanged {
-  required bytes a_pref = 1;
+  bytes a_pref = 1;
 }
 
 message Msg_UpdateDimensions {
-  required bytes a_rect = 1;
-  required bytes a_size = 2;
+  bytes a_rect = 1;
+  bytes a_size = 2;
 }
 
 message Msg_RenderLayers {
-  required bool a_aEnabled = 1;
+  bool a_aEnabled = 1;
 }
 
 message Msg_UpdateEffects {
-  required bytes a_aEffects = 1;
+  bytes a_aEffects = 1;
 }
 
 message Msg_UpdateRemotePrintSettings {
-  required protobuf.mozilla.embedding.PrintData a_aPrintData = 1;
+  protobuf.mozilla.embedding.PrintData a_aPrintData = 1;
 }
 
 message Msg_NavigateByKey {
-  required bool a_aForward = 1;
-  required bool a_aForDocumentNavigation = 2;
+  bool a_aForward = 1;
+  bool a_aForDocumentNavigation = 2;
 }
 
 message Msg_DispatchSynthesizedMouseEvent {
-  required bytes a_event = 1;
+  bytes a_event = 1;
 }
 
 message Msg_Activate {
-  required uint64 a_aActionId = 1;
+  uint64 a_aActionId = 1;
 }
 
 message Msg_Deactivate {
-  required bool a_aWindowLowering = 1;
-  required uint64 a_aActionId = 2;
+  bool a_aWindowLowering = 1;
+  uint64 a_aActionId = 2;
 }
 
 message Msg_UpdateRemoteStyle {
-  required bytes a_aImageRendering = 1;
+  bytes a_aImageRendering = 1;
 }
 
 message Msg_WillChangeProcess {
 }
 
 message Msg_SetEmbedderAccessible {
-  required bytes a_aDoc = 1;
-  required uint64 a_aID = 2;
+  bytes a_aDoc = 1;
+  uint64 a_aID = 2;
 }
 
 // Parameter mappings stats:

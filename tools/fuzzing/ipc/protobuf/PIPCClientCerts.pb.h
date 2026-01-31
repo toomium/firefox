@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "PSMIPCTypes.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -42,6 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PIPCClientCerts_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PIPCClientCerts_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace psm {
@@ -84,10 +88,9 @@ namespace PIPCClientCerts {
 // ===================================================================
 
 class Msg_FindObjects final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.PIPCClientCerts.Msg_FindObjects) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.PIPCClientCerts.Msg_FindObjects) */ {
  public:
   inline Msg_FindObjects() : Msg_FindObjects(nullptr) {}
-  ~Msg_FindObjects() override;
   explicit PROTOBUF_CONSTEXPR Msg_FindObjects(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_FindObjects(const Msg_FindObjects& from);
@@ -114,13 +117,15 @@ class Msg_FindObjects final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_FindObjects& default_instance() {
     return *internal_default_instance();
   }
@@ -158,23 +163,15 @@ class Msg_FindObjects final :
   Msg_FindObjects* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_FindObjects>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_FindObjects& from);
-  void MergeFrom(const Msg_FindObjects& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_FindObjects* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_FindObjects& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_FindObjects& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -186,7 +183,10 @@ class Msg_FindObjects final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -200,15 +200,13 @@ class Msg_FindObjects final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PIPCClientCerts_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply_FindObjects final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.PIPCClientCerts.Reply_FindObjects) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.PIPCClientCerts.Reply_FindObjects) */ {
  public:
   inline Reply_FindObjects() : Reply_FindObjects(nullptr) {}
   ~Reply_FindObjects() override;
@@ -238,13 +236,15 @@ class Reply_FindObjects final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_FindObjects& default_instance() {
     return *internal_default_instance();
   }
@@ -282,9 +282,15 @@ class Reply_FindObjects final :
   Reply_FindObjects* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_FindObjects>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_FindObjects& from);
-  void MergeFrom(const Reply_FindObjects& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_FindObjects& from) {
+    Reply_FindObjects::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -297,7 +303,7 @@ class Reply_FindObjects final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_FindObjects* other);
 
   private:
@@ -310,7 +316,10 @@ class Reply_FindObjects final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -354,7 +363,7 @@ class Reply_FindObjects final :
 // -------------------------------------------------------------------
 
 class Msg_Sign final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.PIPCClientCerts.Msg_Sign) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.PIPCClientCerts.Msg_Sign) */ {
  public:
   inline Msg_Sign() : Msg_Sign(nullptr) {}
   ~Msg_Sign() override;
@@ -384,13 +393,15 @@ class Msg_Sign final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_Sign& default_instance() {
     return *internal_default_instance();
   }
@@ -428,9 +439,15 @@ class Msg_Sign final :
   Msg_Sign* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_Sign>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_Sign& from);
-  void MergeFrom(const Msg_Sign& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_Sign& from) {
+    Msg_Sign::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -443,7 +460,7 @@ class Msg_Sign final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_Sign* other);
 
   private:
@@ -456,7 +473,10 @@ class Msg_Sign final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -467,7 +487,7 @@ class Msg_Sign final :
     kAADataFieldNumber = 2,
     kAAParamsFieldNumber = 3,
   };
-  // required .protobuf.mozilla.psm.ByteArray a_aCert = 1;
+  // .protobuf.mozilla.psm.ByteArray a_aCert = 1;
   bool has_a_acert() const;
   private:
   bool _internal_has_a_acert() const;
@@ -485,7 +505,7 @@ class Msg_Sign final :
       ::protobuf::mozilla::psm::ByteArray* a_acert);
   ::protobuf::mozilla::psm::ByteArray* unsafe_arena_release_a_acert();
 
-  // required .protobuf.mozilla.psm.ByteArray a_aData = 2;
+  // .protobuf.mozilla.psm.ByteArray a_aData = 2;
   bool has_a_adata() const;
   private:
   bool _internal_has_a_adata() const;
@@ -503,7 +523,7 @@ class Msg_Sign final :
       ::protobuf::mozilla::psm::ByteArray* a_adata);
   ::protobuf::mozilla::psm::ByteArray* unsafe_arena_release_a_adata();
 
-  // required .protobuf.mozilla.psm.ByteArray a_aParams = 3;
+  // .protobuf.mozilla.psm.ByteArray a_aParams = 3;
   bool has_a_aparams() const;
   private:
   bool _internal_has_a_aparams() const;
@@ -525,18 +545,14 @@ class Msg_Sign final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::psm::ByteArray* a_acert_;
     ::protobuf::mozilla::psm::ByteArray* a_adata_;
     ::protobuf::mozilla::psm::ByteArray* a_aparams_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PIPCClientCerts_2eproto;
@@ -544,7 +560,7 @@ class Msg_Sign final :
 // -------------------------------------------------------------------
 
 class Reply_Sign final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.PIPCClientCerts.Reply_Sign) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.PIPCClientCerts.Reply_Sign) */ {
  public:
   inline Reply_Sign() : Reply_Sign(nullptr) {}
   ~Reply_Sign() override;
@@ -574,13 +590,15 @@ class Reply_Sign final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_Sign& default_instance() {
     return *internal_default_instance();
   }
@@ -618,9 +636,15 @@ class Reply_Sign final :
   Reply_Sign* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_Sign>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_Sign& from);
-  void MergeFrom(const Reply_Sign& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_Sign& from) {
+    Reply_Sign::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -633,7 +657,7 @@ class Reply_Sign final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_Sign* other);
 
   private:
@@ -646,7 +670,10 @@ class Reply_Sign final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -655,7 +682,7 @@ class Reply_Sign final :
   enum : int {
     kAASignatureFieldNumber = 1,
   };
-  // required .protobuf.mozilla.psm.ByteArray a_aSignature = 1;
+  // .protobuf.mozilla.psm.ByteArray a_aSignature = 1;
   bool has_a_asignature() const;
   private:
   bool _internal_has_a_asignature() const;
@@ -681,9 +708,8 @@ class Reply_Sign final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::psm::ByteArray* a_asignature_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PIPCClientCerts_2eproto;
@@ -691,10 +717,9 @@ class Reply_Sign final :
 // -------------------------------------------------------------------
 
 class Msg___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.PIPCClientCerts.Msg___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.PIPCClientCerts.Msg___delete__) */ {
  public:
   inline Msg___delete__() : Msg___delete__(nullptr) {}
-  ~Msg___delete__() override;
   explicit PROTOBUF_CONSTEXPR Msg___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg___delete__(const Msg___delete__& from);
@@ -721,13 +746,15 @@ class Msg___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -765,23 +792,15 @@ class Msg___delete__ final :
   Msg___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg___delete__& from);
-  void MergeFrom(const Msg___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -793,7 +812,10 @@ class Msg___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -807,18 +829,15 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PIPCClientCerts_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.PIPCClientCerts.Reply___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.PIPCClientCerts.Reply___delete__) */ {
  public:
   inline Reply___delete__() : Reply___delete__(nullptr) {}
-  ~Reply___delete__() override;
   explicit PROTOBUF_CONSTEXPR Reply___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply___delete__(const Reply___delete__& from);
@@ -845,13 +864,15 @@ class Reply___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -889,23 +910,15 @@ class Reply___delete__ final :
   Reply___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply___delete__& from);
-  void MergeFrom(const Reply___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -917,7 +930,10 @@ class Reply___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -931,9 +947,7 @@ class Reply___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PIPCClientCerts_2eproto;
 };
 // ===================================================================
@@ -992,11 +1006,9 @@ Reply_FindObjects::a_aobjects() const {
 
 // Msg_Sign
 
-// required .protobuf.mozilla.psm.ByteArray a_aCert = 1;
+// .protobuf.mozilla.psm.ByteArray a_aCert = 1;
 inline bool Msg_Sign::_internal_has_a_acert() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_acert_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_acert_ != nullptr;
 }
 inline bool Msg_Sign::has_a_acert() const {
   return _internal_has_a_acert();
@@ -1017,14 +1029,14 @@ inline void Msg_Sign::unsafe_arena_set_allocated_a_acert(
   }
   _impl_.a_acert_ = a_acert;
   if (a_acert) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.psm.PIPCClientCerts.Msg_Sign.a_aCert)
 }
 inline ::protobuf::mozilla::psm::ByteArray* Msg_Sign::release_a_acert() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::psm::ByteArray* temp = _impl_.a_acert_;
   _impl_.a_acert_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1040,13 +1052,13 @@ inline ::protobuf::mozilla::psm::ByteArray* Msg_Sign::release_a_acert() {
 }
 inline ::protobuf::mozilla::psm::ByteArray* Msg_Sign::unsafe_arena_release_a_acert() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.psm.PIPCClientCerts.Msg_Sign.a_aCert)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::psm::ByteArray* temp = _impl_.a_acert_;
   _impl_.a_acert_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::psm::ByteArray* Msg_Sign::_internal_mutable_a_acert() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_acert_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::psm::ByteArray>(GetArenaForAllocation());
     _impl_.a_acert_ = p;
@@ -1071,19 +1083,17 @@ inline void Msg_Sign::set_allocated_a_acert(::protobuf::mozilla::psm::ByteArray*
       a_acert = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_acert, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_acert_ = a_acert;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.psm.PIPCClientCerts.Msg_Sign.a_aCert)
 }
 
-// required .protobuf.mozilla.psm.ByteArray a_aData = 2;
+// .protobuf.mozilla.psm.ByteArray a_aData = 2;
 inline bool Msg_Sign::_internal_has_a_adata() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_adata_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_adata_ != nullptr;
 }
 inline bool Msg_Sign::has_a_adata() const {
   return _internal_has_a_adata();
@@ -1104,14 +1114,14 @@ inline void Msg_Sign::unsafe_arena_set_allocated_a_adata(
   }
   _impl_.a_adata_ = a_adata;
   if (a_adata) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.psm.PIPCClientCerts.Msg_Sign.a_aData)
 }
 inline ::protobuf::mozilla::psm::ByteArray* Msg_Sign::release_a_adata() {
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::psm::ByteArray* temp = _impl_.a_adata_;
   _impl_.a_adata_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1127,13 +1137,13 @@ inline ::protobuf::mozilla::psm::ByteArray* Msg_Sign::release_a_adata() {
 }
 inline ::protobuf::mozilla::psm::ByteArray* Msg_Sign::unsafe_arena_release_a_adata() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.psm.PIPCClientCerts.Msg_Sign.a_aData)
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::psm::ByteArray* temp = _impl_.a_adata_;
   _impl_.a_adata_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::psm::ByteArray* Msg_Sign::_internal_mutable_a_adata() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   if (_impl_.a_adata_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::psm::ByteArray>(GetArenaForAllocation());
     _impl_.a_adata_ = p;
@@ -1158,19 +1168,17 @@ inline void Msg_Sign::set_allocated_a_adata(::protobuf::mozilla::psm::ByteArray*
       a_adata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_adata, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_adata_ = a_adata;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.psm.PIPCClientCerts.Msg_Sign.a_aData)
 }
 
-// required .protobuf.mozilla.psm.ByteArray a_aParams = 3;
+// .protobuf.mozilla.psm.ByteArray a_aParams = 3;
 inline bool Msg_Sign::_internal_has_a_aparams() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_aparams_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_aparams_ != nullptr;
 }
 inline bool Msg_Sign::has_a_aparams() const {
   return _internal_has_a_aparams();
@@ -1191,14 +1199,14 @@ inline void Msg_Sign::unsafe_arena_set_allocated_a_aparams(
   }
   _impl_.a_aparams_ = a_aparams;
   if (a_aparams) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.psm.PIPCClientCerts.Msg_Sign.a_aParams)
 }
 inline ::protobuf::mozilla::psm::ByteArray* Msg_Sign::release_a_aparams() {
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  
   ::protobuf::mozilla::psm::ByteArray* temp = _impl_.a_aparams_;
   _impl_.a_aparams_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1214,13 +1222,13 @@ inline ::protobuf::mozilla::psm::ByteArray* Msg_Sign::release_a_aparams() {
 }
 inline ::protobuf::mozilla::psm::ByteArray* Msg_Sign::unsafe_arena_release_a_aparams() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.psm.PIPCClientCerts.Msg_Sign.a_aParams)
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  
   ::protobuf::mozilla::psm::ByteArray* temp = _impl_.a_aparams_;
   _impl_.a_aparams_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::psm::ByteArray* Msg_Sign::_internal_mutable_a_aparams() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   if (_impl_.a_aparams_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::psm::ByteArray>(GetArenaForAllocation());
     _impl_.a_aparams_ = p;
@@ -1245,9 +1253,9 @@ inline void Msg_Sign::set_allocated_a_aparams(::protobuf::mozilla::psm::ByteArra
       a_aparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_aparams, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_aparams_ = a_aparams;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.psm.PIPCClientCerts.Msg_Sign.a_aParams)
@@ -1257,11 +1265,9 @@ inline void Msg_Sign::set_allocated_a_aparams(::protobuf::mozilla::psm::ByteArra
 
 // Reply_Sign
 
-// required .protobuf.mozilla.psm.ByteArray a_aSignature = 1;
+// .protobuf.mozilla.psm.ByteArray a_aSignature = 1;
 inline bool Reply_Sign::_internal_has_a_asignature() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_asignature_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_asignature_ != nullptr;
 }
 inline bool Reply_Sign::has_a_asignature() const {
   return _internal_has_a_asignature();
@@ -1282,14 +1288,14 @@ inline void Reply_Sign::unsafe_arena_set_allocated_a_asignature(
   }
   _impl_.a_asignature_ = a_asignature;
   if (a_asignature) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.psm.PIPCClientCerts.Reply_Sign.a_aSignature)
 }
 inline ::protobuf::mozilla::psm::ByteArray* Reply_Sign::release_a_asignature() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::psm::ByteArray* temp = _impl_.a_asignature_;
   _impl_.a_asignature_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1305,13 +1311,13 @@ inline ::protobuf::mozilla::psm::ByteArray* Reply_Sign::release_a_asignature() {
 }
 inline ::protobuf::mozilla::psm::ByteArray* Reply_Sign::unsafe_arena_release_a_asignature() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.psm.PIPCClientCerts.Reply_Sign.a_aSignature)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::psm::ByteArray* temp = _impl_.a_asignature_;
   _impl_.a_asignature_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::psm::ByteArray* Reply_Sign::_internal_mutable_a_asignature() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_asignature_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::psm::ByteArray>(GetArenaForAllocation());
     _impl_.a_asignature_ = p;
@@ -1336,9 +1342,9 @@ inline void Reply_Sign::set_allocated_a_asignature(::protobuf::mozilla::psm::Byt
       a_asignature = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_asignature, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_asignature_ = a_asignature;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.psm.PIPCClientCerts.Reply_Sign.a_aSignature)

@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "PBackgroundIDBSharedTypes.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -42,6 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PBackgroundIDBRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PBackgroundIDBRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -148,7 +152,7 @@ namespace indexedDB {
 // ===================================================================
 
 class ObjectStoreAddResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreAddResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreAddResponse) */ {
  public:
   inline ObjectStoreAddResponse() : ObjectStoreAddResponse(nullptr) {}
   ~ObjectStoreAddResponse() override;
@@ -178,13 +182,15 @@ class ObjectStoreAddResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const ObjectStoreAddResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -222,9 +228,15 @@ class ObjectStoreAddResponse final :
   ObjectStoreAddResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<ObjectStoreAddResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const ObjectStoreAddResponse& from);
-  void MergeFrom(const ObjectStoreAddResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const ObjectStoreAddResponse& from) {
+    ObjectStoreAddResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -237,7 +249,7 @@ class ObjectStoreAddResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(ObjectStoreAddResponse* other);
 
   private:
@@ -250,7 +262,10 @@ class ObjectStoreAddResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -259,11 +274,7 @@ class ObjectStoreAddResponse final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required bytes a_key = 1;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // bytes a_key = 1;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -285,9 +296,8 @@ class ObjectStoreAddResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -295,7 +305,7 @@ class ObjectStoreAddResponse final :
 // -------------------------------------------------------------------
 
 class ObjectStorePutResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStorePutResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStorePutResponse) */ {
  public:
   inline ObjectStorePutResponse() : ObjectStorePutResponse(nullptr) {}
   ~ObjectStorePutResponse() override;
@@ -325,13 +335,15 @@ class ObjectStorePutResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const ObjectStorePutResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -369,9 +381,15 @@ class ObjectStorePutResponse final :
   ObjectStorePutResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<ObjectStorePutResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const ObjectStorePutResponse& from);
-  void MergeFrom(const ObjectStorePutResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const ObjectStorePutResponse& from) {
+    ObjectStorePutResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -384,7 +402,7 @@ class ObjectStorePutResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(ObjectStorePutResponse* other);
 
   private:
@@ -397,7 +415,10 @@ class ObjectStorePutResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -406,11 +427,7 @@ class ObjectStorePutResponse final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required bytes a_key = 1;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // bytes a_key = 1;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -432,9 +449,8 @@ class ObjectStorePutResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -442,7 +458,7 @@ class ObjectStorePutResponse final :
 // -------------------------------------------------------------------
 
 class ObjectStoreGetResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreGetResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreGetResponse) */ {
  public:
   inline ObjectStoreGetResponse() : ObjectStoreGetResponse(nullptr) {}
   ~ObjectStoreGetResponse() override;
@@ -472,13 +488,15 @@ class ObjectStoreGetResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const ObjectStoreGetResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -516,9 +534,15 @@ class ObjectStoreGetResponse final :
   ObjectStoreGetResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<ObjectStoreGetResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const ObjectStoreGetResponse& from);
-  void MergeFrom(const ObjectStoreGetResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const ObjectStoreGetResponse& from) {
+    ObjectStoreGetResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -531,7 +555,7 @@ class ObjectStoreGetResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(ObjectStoreGetResponse* other);
 
   private:
@@ -544,7 +568,10 @@ class ObjectStoreGetResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -553,7 +580,7 @@ class ObjectStoreGetResponse final :
   enum : int {
     kACloneInfoFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 1;
+  // .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 1;
   bool has_a_cloneinfo() const;
   private:
   bool _internal_has_a_cloneinfo() const;
@@ -579,9 +606,8 @@ class ObjectStoreGetResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* a_cloneinfo_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -589,7 +615,7 @@ class ObjectStoreGetResponse final :
 // -------------------------------------------------------------------
 
 class ObjectStoreGetKeyResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreGetKeyResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreGetKeyResponse) */ {
  public:
   inline ObjectStoreGetKeyResponse() : ObjectStoreGetKeyResponse(nullptr) {}
   ~ObjectStoreGetKeyResponse() override;
@@ -619,13 +645,15 @@ class ObjectStoreGetKeyResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const ObjectStoreGetKeyResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -663,9 +691,15 @@ class ObjectStoreGetKeyResponse final :
   ObjectStoreGetKeyResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<ObjectStoreGetKeyResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const ObjectStoreGetKeyResponse& from);
-  void MergeFrom(const ObjectStoreGetKeyResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const ObjectStoreGetKeyResponse& from) {
+    ObjectStoreGetKeyResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -678,7 +712,7 @@ class ObjectStoreGetKeyResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(ObjectStoreGetKeyResponse* other);
 
   private:
@@ -691,7 +725,10 @@ class ObjectStoreGetKeyResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -700,11 +737,7 @@ class ObjectStoreGetKeyResponse final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required bytes a_key = 1;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // bytes a_key = 1;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -726,9 +759,8 @@ class ObjectStoreGetKeyResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -736,7 +768,7 @@ class ObjectStoreGetKeyResponse final :
 // -------------------------------------------------------------------
 
 class ObjectStoreGetAllResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreGetAllResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreGetAllResponse) */ {
  public:
   inline ObjectStoreGetAllResponse() : ObjectStoreGetAllResponse(nullptr) {}
   ~ObjectStoreGetAllResponse() override;
@@ -766,13 +798,15 @@ class ObjectStoreGetAllResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const ObjectStoreGetAllResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -810,9 +844,15 @@ class ObjectStoreGetAllResponse final :
   ObjectStoreGetAllResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<ObjectStoreGetAllResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const ObjectStoreGetAllResponse& from);
-  void MergeFrom(const ObjectStoreGetAllResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const ObjectStoreGetAllResponse& from) {
+    ObjectStoreGetAllResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -825,7 +865,7 @@ class ObjectStoreGetAllResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(ObjectStoreGetAllResponse* other);
 
   private:
@@ -838,7 +878,10 @@ class ObjectStoreGetAllResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -882,7 +925,7 @@ class ObjectStoreGetAllResponse final :
 // -------------------------------------------------------------------
 
 class ObjectStoreGetAllKeysResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreGetAllKeysResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreGetAllKeysResponse) */ {
  public:
   inline ObjectStoreGetAllKeysResponse() : ObjectStoreGetAllKeysResponse(nullptr) {}
   ~ObjectStoreGetAllKeysResponse() override;
@@ -912,13 +955,15 @@ class ObjectStoreGetAllKeysResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const ObjectStoreGetAllKeysResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -956,9 +1001,15 @@ class ObjectStoreGetAllKeysResponse final :
   ObjectStoreGetAllKeysResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<ObjectStoreGetAllKeysResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const ObjectStoreGetAllKeysResponse& from);
-  void MergeFrom(const ObjectStoreGetAllKeysResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const ObjectStoreGetAllKeysResponse& from) {
+    ObjectStoreGetAllKeysResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -971,7 +1022,7 @@ class ObjectStoreGetAllKeysResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(ObjectStoreGetAllKeysResponse* other);
 
   private:
@@ -984,7 +1035,10 @@ class ObjectStoreGetAllKeysResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1034,10 +1088,9 @@ class ObjectStoreGetAllKeysResponse final :
 // -------------------------------------------------------------------
 
 class ObjectStoreDeleteResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreDeleteResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreDeleteResponse) */ {
  public:
   inline ObjectStoreDeleteResponse() : ObjectStoreDeleteResponse(nullptr) {}
-  ~ObjectStoreDeleteResponse() override;
   explicit PROTOBUF_CONSTEXPR ObjectStoreDeleteResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   ObjectStoreDeleteResponse(const ObjectStoreDeleteResponse& from);
@@ -1064,13 +1117,15 @@ class ObjectStoreDeleteResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const ObjectStoreDeleteResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -1108,23 +1163,15 @@ class ObjectStoreDeleteResponse final :
   ObjectStoreDeleteResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<ObjectStoreDeleteResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const ObjectStoreDeleteResponse& from);
-  void MergeFrom(const ObjectStoreDeleteResponse& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(ObjectStoreDeleteResponse* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const ObjectStoreDeleteResponse& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const ObjectStoreDeleteResponse& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1136,7 +1183,10 @@ class ObjectStoreDeleteResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1150,18 +1200,15 @@ class ObjectStoreDeleteResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
 };
 // -------------------------------------------------------------------
 
 class ObjectStoreClearResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreClearResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreClearResponse) */ {
  public:
   inline ObjectStoreClearResponse() : ObjectStoreClearResponse(nullptr) {}
-  ~ObjectStoreClearResponse() override;
   explicit PROTOBUF_CONSTEXPR ObjectStoreClearResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   ObjectStoreClearResponse(const ObjectStoreClearResponse& from);
@@ -1188,13 +1235,15 @@ class ObjectStoreClearResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const ObjectStoreClearResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -1232,23 +1281,15 @@ class ObjectStoreClearResponse final :
   ObjectStoreClearResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<ObjectStoreClearResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const ObjectStoreClearResponse& from);
-  void MergeFrom(const ObjectStoreClearResponse& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(ObjectStoreClearResponse* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const ObjectStoreClearResponse& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const ObjectStoreClearResponse& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1260,7 +1301,10 @@ class ObjectStoreClearResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1274,15 +1318,13 @@ class ObjectStoreClearResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
 };
 // -------------------------------------------------------------------
 
 class ObjectStoreCountResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreCountResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreCountResponse) */ {
  public:
   inline ObjectStoreCountResponse() : ObjectStoreCountResponse(nullptr) {}
   ~ObjectStoreCountResponse() override;
@@ -1312,13 +1354,15 @@ class ObjectStoreCountResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const ObjectStoreCountResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -1356,9 +1400,15 @@ class ObjectStoreCountResponse final :
   ObjectStoreCountResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<ObjectStoreCountResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const ObjectStoreCountResponse& from);
-  void MergeFrom(const ObjectStoreCountResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const ObjectStoreCountResponse& from) {
+    ObjectStoreCountResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1371,7 +1421,7 @@ class ObjectStoreCountResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(ObjectStoreCountResponse* other);
 
   private:
@@ -1384,7 +1434,10 @@ class ObjectStoreCountResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1393,11 +1446,7 @@ class ObjectStoreCountResponse final :
   enum : int {
     kACountFieldNumber = 1,
   };
-  // required uint64 a_count = 1;
-  bool has_a_count() const;
-  private:
-  bool _internal_has_a_count() const;
-  public:
+  // uint64 a_count = 1;
   void clear_a_count();
   uint64_t a_count() const;
   void set_a_count(uint64_t value);
@@ -1414,9 +1463,8 @@ class ObjectStoreCountResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_count_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -1424,7 +1472,7 @@ class ObjectStoreCountResponse final :
 // -------------------------------------------------------------------
 
 class IndexGetResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.IndexGetResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.IndexGetResponse) */ {
  public:
   inline IndexGetResponse() : IndexGetResponse(nullptr) {}
   ~IndexGetResponse() override;
@@ -1454,13 +1502,15 @@ class IndexGetResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const IndexGetResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -1498,9 +1548,15 @@ class IndexGetResponse final :
   IndexGetResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<IndexGetResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const IndexGetResponse& from);
-  void MergeFrom(const IndexGetResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const IndexGetResponse& from) {
+    IndexGetResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1513,7 +1569,7 @@ class IndexGetResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(IndexGetResponse* other);
 
   private:
@@ -1526,7 +1582,10 @@ class IndexGetResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1535,7 +1594,7 @@ class IndexGetResponse final :
   enum : int {
     kACloneInfoFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 1;
+  // .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 1;
   bool has_a_cloneinfo() const;
   private:
   bool _internal_has_a_cloneinfo() const;
@@ -1561,9 +1620,8 @@ class IndexGetResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* a_cloneinfo_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -1571,7 +1629,7 @@ class IndexGetResponse final :
 // -------------------------------------------------------------------
 
 class IndexGetKeyResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.IndexGetKeyResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.IndexGetKeyResponse) */ {
  public:
   inline IndexGetKeyResponse() : IndexGetKeyResponse(nullptr) {}
   ~IndexGetKeyResponse() override;
@@ -1601,13 +1659,15 @@ class IndexGetKeyResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const IndexGetKeyResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -1645,9 +1705,15 @@ class IndexGetKeyResponse final :
   IndexGetKeyResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<IndexGetKeyResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const IndexGetKeyResponse& from);
-  void MergeFrom(const IndexGetKeyResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const IndexGetKeyResponse& from) {
+    IndexGetKeyResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1660,7 +1726,7 @@ class IndexGetKeyResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(IndexGetKeyResponse* other);
 
   private:
@@ -1673,7 +1739,10 @@ class IndexGetKeyResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1682,11 +1751,7 @@ class IndexGetKeyResponse final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required bytes a_key = 1;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // bytes a_key = 1;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1708,9 +1773,8 @@ class IndexGetKeyResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -1718,7 +1782,7 @@ class IndexGetKeyResponse final :
 // -------------------------------------------------------------------
 
 class IndexGetAllResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.IndexGetAllResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.IndexGetAllResponse) */ {
  public:
   inline IndexGetAllResponse() : IndexGetAllResponse(nullptr) {}
   ~IndexGetAllResponse() override;
@@ -1748,13 +1812,15 @@ class IndexGetAllResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const IndexGetAllResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -1792,9 +1858,15 @@ class IndexGetAllResponse final :
   IndexGetAllResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<IndexGetAllResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const IndexGetAllResponse& from);
-  void MergeFrom(const IndexGetAllResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const IndexGetAllResponse& from) {
+    IndexGetAllResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1807,7 +1879,7 @@ class IndexGetAllResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(IndexGetAllResponse* other);
 
   private:
@@ -1820,7 +1892,10 @@ class IndexGetAllResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1864,7 +1939,7 @@ class IndexGetAllResponse final :
 // -------------------------------------------------------------------
 
 class IndexGetAllKeysResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.IndexGetAllKeysResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.IndexGetAllKeysResponse) */ {
  public:
   inline IndexGetAllKeysResponse() : IndexGetAllKeysResponse(nullptr) {}
   ~IndexGetAllKeysResponse() override;
@@ -1894,13 +1969,15 @@ class IndexGetAllKeysResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const IndexGetAllKeysResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -1938,9 +2015,15 @@ class IndexGetAllKeysResponse final :
   IndexGetAllKeysResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<IndexGetAllKeysResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const IndexGetAllKeysResponse& from);
-  void MergeFrom(const IndexGetAllKeysResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const IndexGetAllKeysResponse& from) {
+    IndexGetAllKeysResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1953,7 +2036,7 @@ class IndexGetAllKeysResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(IndexGetAllKeysResponse* other);
 
   private:
@@ -1966,7 +2049,10 @@ class IndexGetAllKeysResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2016,7 +2102,7 @@ class IndexGetAllKeysResponse final :
 // -------------------------------------------------------------------
 
 class IndexCountResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.IndexCountResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.IndexCountResponse) */ {
  public:
   inline IndexCountResponse() : IndexCountResponse(nullptr) {}
   ~IndexCountResponse() override;
@@ -2046,13 +2132,15 @@ class IndexCountResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const IndexCountResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -2090,9 +2178,15 @@ class IndexCountResponse final :
   IndexCountResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<IndexCountResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const IndexCountResponse& from);
-  void MergeFrom(const IndexCountResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const IndexCountResponse& from) {
+    IndexCountResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2105,7 +2199,7 @@ class IndexCountResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(IndexCountResponse* other);
 
   private:
@@ -2118,7 +2212,10 @@ class IndexCountResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2127,11 +2224,7 @@ class IndexCountResponse final :
   enum : int {
     kACountFieldNumber = 1,
   };
-  // required uint64 a_count = 1;
-  bool has_a_count() const;
-  private:
-  bool _internal_has_a_count() const;
-  public:
+  // uint64 a_count = 1;
   void clear_a_count();
   uint64_t a_count() const;
   void set_a_count(uint64_t value);
@@ -2148,9 +2241,8 @@ class IndexCountResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_count_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -2158,7 +2250,7 @@ class IndexCountResponse final :
 // -------------------------------------------------------------------
 
 class RequestResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.RequestResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.RequestResponse) */ {
  public:
   inline RequestResponse() : RequestResponse(nullptr) {}
   ~RequestResponse() override;
@@ -2188,13 +2280,15 @@ class RequestResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const RequestResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -2251,9 +2345,15 @@ class RequestResponse final :
   RequestResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<RequestResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const RequestResponse& from);
-  void MergeFrom(const RequestResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const RequestResponse& from) {
+    RequestResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2266,7 +2366,7 @@ class RequestResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(RequestResponse* other);
 
   private:
@@ -2279,7 +2379,10 @@ class RequestResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2629,7 +2732,7 @@ class RequestResponse final :
 // -------------------------------------------------------------------
 
 class PreprocessInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.PreprocessInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.PreprocessInfo) */ {
  public:
   inline PreprocessInfo() : PreprocessInfo(nullptr) {}
   ~PreprocessInfo() override;
@@ -2659,13 +2762,15 @@ class PreprocessInfo final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const PreprocessInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -2703,9 +2808,15 @@ class PreprocessInfo final :
   PreprocessInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<PreprocessInfo>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const PreprocessInfo& from);
-  void MergeFrom(const PreprocessInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const PreprocessInfo& from) {
+    PreprocessInfo::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2718,7 +2829,7 @@ class PreprocessInfo final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(PreprocessInfo* other);
 
   private:
@@ -2731,7 +2842,10 @@ class PreprocessInfo final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2775,7 +2889,7 @@ class PreprocessInfo final :
 // -------------------------------------------------------------------
 
 class ObjectStoreGetPreprocessParams final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreGetPreprocessParams) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreGetPreprocessParams) */ {
  public:
   inline ObjectStoreGetPreprocessParams() : ObjectStoreGetPreprocessParams(nullptr) {}
   ~ObjectStoreGetPreprocessParams() override;
@@ -2805,13 +2919,15 @@ class ObjectStoreGetPreprocessParams final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const ObjectStoreGetPreprocessParams& default_instance() {
     return *internal_default_instance();
   }
@@ -2849,9 +2965,15 @@ class ObjectStoreGetPreprocessParams final :
   ObjectStoreGetPreprocessParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<ObjectStoreGetPreprocessParams>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const ObjectStoreGetPreprocessParams& from);
-  void MergeFrom(const ObjectStoreGetPreprocessParams& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const ObjectStoreGetPreprocessParams& from) {
+    ObjectStoreGetPreprocessParams::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2864,7 +2986,7 @@ class ObjectStoreGetPreprocessParams final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(ObjectStoreGetPreprocessParams* other);
 
   private:
@@ -2877,7 +2999,10 @@ class ObjectStoreGetPreprocessParams final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2886,7 +3011,7 @@ class ObjectStoreGetPreprocessParams final :
   enum : int {
     kAPreprocessInfoFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.indexedDB.PreprocessInfo a_preprocessInfo = 1;
+  // .protobuf.mozilla.dom.indexedDB.PreprocessInfo a_preprocessInfo = 1;
   bool has_a_preprocessinfo() const;
   private:
   bool _internal_has_a_preprocessinfo() const;
@@ -2912,9 +3037,8 @@ class ObjectStoreGetPreprocessParams final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::indexedDB::PreprocessInfo* a_preprocessinfo_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
@@ -2922,7 +3046,7 @@ class ObjectStoreGetPreprocessParams final :
 // -------------------------------------------------------------------
 
 class ObjectStoreGetAllPreprocessParams final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreGetAllPreprocessParams) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreGetAllPreprocessParams) */ {
  public:
   inline ObjectStoreGetAllPreprocessParams() : ObjectStoreGetAllPreprocessParams(nullptr) {}
   ~ObjectStoreGetAllPreprocessParams() override;
@@ -2952,13 +3076,15 @@ class ObjectStoreGetAllPreprocessParams final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const ObjectStoreGetAllPreprocessParams& default_instance() {
     return *internal_default_instance();
   }
@@ -2996,9 +3122,15 @@ class ObjectStoreGetAllPreprocessParams final :
   ObjectStoreGetAllPreprocessParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<ObjectStoreGetAllPreprocessParams>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const ObjectStoreGetAllPreprocessParams& from);
-  void MergeFrom(const ObjectStoreGetAllPreprocessParams& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const ObjectStoreGetAllPreprocessParams& from) {
+    ObjectStoreGetAllPreprocessParams::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3011,7 +3143,7 @@ class ObjectStoreGetAllPreprocessParams final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(ObjectStoreGetAllPreprocessParams* other);
 
   private:
@@ -3024,7 +3156,10 @@ class ObjectStoreGetAllPreprocessParams final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3068,7 +3203,7 @@ class ObjectStoreGetAllPreprocessParams final :
 // -------------------------------------------------------------------
 
 class PreprocessParams final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.PreprocessParams) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.PreprocessParams) */ {
  public:
   inline PreprocessParams() : PreprocessParams(nullptr) {}
   ~PreprocessParams() override;
@@ -3098,13 +3233,15 @@ class PreprocessParams final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const PreprocessParams& default_instance() {
     return *internal_default_instance();
   }
@@ -3148,9 +3285,15 @@ class PreprocessParams final :
   PreprocessParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<PreprocessParams>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const PreprocessParams& from);
-  void MergeFrom(const PreprocessParams& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const PreprocessParams& from) {
+    PreprocessParams::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3163,7 +3306,7 @@ class PreprocessParams final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(PreprocessParams* other);
 
   private:
@@ -3176,7 +3319,10 @@ class PreprocessParams final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3253,10 +3399,9 @@ class PreprocessParams final :
 // -------------------------------------------------------------------
 
 class ObjectStoreGetPreprocessResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreGetPreprocessResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreGetPreprocessResponse) */ {
  public:
   inline ObjectStoreGetPreprocessResponse() : ObjectStoreGetPreprocessResponse(nullptr) {}
-  ~ObjectStoreGetPreprocessResponse() override;
   explicit PROTOBUF_CONSTEXPR ObjectStoreGetPreprocessResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   ObjectStoreGetPreprocessResponse(const ObjectStoreGetPreprocessResponse& from);
@@ -3283,13 +3428,15 @@ class ObjectStoreGetPreprocessResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const ObjectStoreGetPreprocessResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -3327,23 +3474,15 @@ class ObjectStoreGetPreprocessResponse final :
   ObjectStoreGetPreprocessResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<ObjectStoreGetPreprocessResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const ObjectStoreGetPreprocessResponse& from);
-  void MergeFrom(const ObjectStoreGetPreprocessResponse& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(ObjectStoreGetPreprocessResponse* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const ObjectStoreGetPreprocessResponse& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const ObjectStoreGetPreprocessResponse& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -3355,7 +3494,10 @@ class ObjectStoreGetPreprocessResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3369,18 +3511,15 @@ class ObjectStoreGetPreprocessResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
 };
 // -------------------------------------------------------------------
 
 class ObjectStoreGetAllPreprocessResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreGetAllPreprocessResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreGetAllPreprocessResponse) */ {
  public:
   inline ObjectStoreGetAllPreprocessResponse() : ObjectStoreGetAllPreprocessResponse(nullptr) {}
-  ~ObjectStoreGetAllPreprocessResponse() override;
   explicit PROTOBUF_CONSTEXPR ObjectStoreGetAllPreprocessResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   ObjectStoreGetAllPreprocessResponse(const ObjectStoreGetAllPreprocessResponse& from);
@@ -3407,13 +3546,15 @@ class ObjectStoreGetAllPreprocessResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const ObjectStoreGetAllPreprocessResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -3451,23 +3592,15 @@ class ObjectStoreGetAllPreprocessResponse final :
   ObjectStoreGetAllPreprocessResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<ObjectStoreGetAllPreprocessResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const ObjectStoreGetAllPreprocessResponse& from);
-  void MergeFrom(const ObjectStoreGetAllPreprocessResponse& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(ObjectStoreGetAllPreprocessResponse* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const ObjectStoreGetAllPreprocessResponse& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const ObjectStoreGetAllPreprocessResponse& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -3479,7 +3612,10 @@ class ObjectStoreGetAllPreprocessResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3493,15 +3629,13 @@ class ObjectStoreGetAllPreprocessResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundIDBRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
 };
 // -------------------------------------------------------------------
 
 class PreprocessResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.PreprocessResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.PreprocessResponse) */ {
  public:
   inline PreprocessResponse() : PreprocessResponse(nullptr) {}
   ~PreprocessResponse() override;
@@ -3531,13 +3665,15 @@ class PreprocessResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const PreprocessResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -3582,9 +3718,15 @@ class PreprocessResponse final :
   PreprocessResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<PreprocessResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const PreprocessResponse& from);
-  void MergeFrom(const PreprocessResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const PreprocessResponse& from) {
+    PreprocessResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3597,7 +3739,7 @@ class PreprocessResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(PreprocessResponse* other);
 
   private:
@@ -3610,7 +3752,10 @@ class PreprocessResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3716,17 +3861,9 @@ class PreprocessResponse final :
 #endif  // __GNUC__
 // ObjectStoreAddResponse
 
-// required bytes a_key = 1;
-inline bool ObjectStoreAddResponse::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool ObjectStoreAddResponse::has_a_key() const {
-  return _internal_has_a_key();
-}
+// bytes a_key = 1;
 inline void ObjectStoreAddResponse::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& ObjectStoreAddResponse::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.ObjectStoreAddResponse.a_key)
@@ -3735,7 +3872,7 @@ inline const std::string& ObjectStoreAddResponse::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ObjectStoreAddResponse::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.ObjectStoreAddResponse.a_key)
 }
@@ -3748,32 +3885,22 @@ inline const std::string& ObjectStoreAddResponse::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void ObjectStoreAddResponse::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* ObjectStoreAddResponse::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ObjectStoreAddResponse::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ObjectStoreAddResponse.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void ObjectStoreAddResponse::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3788,17 +3915,9 @@ inline void ObjectStoreAddResponse::set_allocated_a_key(std::string* a_key) {
 
 // ObjectStorePutResponse
 
-// required bytes a_key = 1;
-inline bool ObjectStorePutResponse::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool ObjectStorePutResponse::has_a_key() const {
-  return _internal_has_a_key();
-}
+// bytes a_key = 1;
 inline void ObjectStorePutResponse::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& ObjectStorePutResponse::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.ObjectStorePutResponse.a_key)
@@ -3807,7 +3926,7 @@ inline const std::string& ObjectStorePutResponse::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ObjectStorePutResponse::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.ObjectStorePutResponse.a_key)
 }
@@ -3820,32 +3939,22 @@ inline const std::string& ObjectStorePutResponse::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void ObjectStorePutResponse::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* ObjectStorePutResponse::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ObjectStorePutResponse::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ObjectStorePutResponse.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void ObjectStorePutResponse::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3860,11 +3969,9 @@ inline void ObjectStorePutResponse::set_allocated_a_key(std::string* a_key) {
 
 // ObjectStoreGetResponse
 
-// required .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 1;
+// .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 1;
 inline bool ObjectStoreGetResponse::_internal_has_a_cloneinfo() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_cloneinfo_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_cloneinfo_ != nullptr;
 }
 inline bool ObjectStoreGetResponse::has_a_cloneinfo() const {
   return _internal_has_a_cloneinfo();
@@ -3885,14 +3992,14 @@ inline void ObjectStoreGetResponse::unsafe_arena_set_allocated_a_cloneinfo(
   }
   _impl_.a_cloneinfo_ = a_cloneinfo;
   if (a_cloneinfo) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.ObjectStoreGetResponse.a_cloneInfo)
 }
 inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* ObjectStoreGetResponse::release_a_cloneinfo() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* temp = _impl_.a_cloneinfo_;
   _impl_.a_cloneinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -3908,13 +4015,13 @@ inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* O
 }
 inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* ObjectStoreGetResponse::unsafe_arena_release_a_cloneinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ObjectStoreGetResponse.a_cloneInfo)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* temp = _impl_.a_cloneinfo_;
   _impl_.a_cloneinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* ObjectStoreGetResponse::_internal_mutable_a_cloneinfo() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_cloneinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo>(GetArenaForAllocation());
     _impl_.a_cloneinfo_ = p;
@@ -3939,9 +4046,9 @@ inline void ObjectStoreGetResponse::set_allocated_a_cloneinfo(::protobuf::mozill
       a_cloneinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_cloneinfo, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_cloneinfo_ = a_cloneinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.ObjectStoreGetResponse.a_cloneInfo)
@@ -3951,17 +4058,9 @@ inline void ObjectStoreGetResponse::set_allocated_a_cloneinfo(::protobuf::mozill
 
 // ObjectStoreGetKeyResponse
 
-// required bytes a_key = 1;
-inline bool ObjectStoreGetKeyResponse::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool ObjectStoreGetKeyResponse::has_a_key() const {
-  return _internal_has_a_key();
-}
+// bytes a_key = 1;
 inline void ObjectStoreGetKeyResponse::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& ObjectStoreGetKeyResponse::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.ObjectStoreGetKeyResponse.a_key)
@@ -3970,7 +4069,7 @@ inline const std::string& ObjectStoreGetKeyResponse::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ObjectStoreGetKeyResponse::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.ObjectStoreGetKeyResponse.a_key)
 }
@@ -3983,32 +4082,22 @@ inline const std::string& ObjectStoreGetKeyResponse::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void ObjectStoreGetKeyResponse::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* ObjectStoreGetKeyResponse::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ObjectStoreGetKeyResponse::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ObjectStoreGetKeyResponse.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void ObjectStoreGetKeyResponse::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4151,17 +4240,9 @@ ObjectStoreGetAllKeysResponse::mutable_a_keys() {
 
 // ObjectStoreCountResponse
 
-// required uint64 a_count = 1;
-inline bool ObjectStoreCountResponse::_internal_has_a_count() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool ObjectStoreCountResponse::has_a_count() const {
-  return _internal_has_a_count();
-}
+// uint64 a_count = 1;
 inline void ObjectStoreCountResponse::clear_a_count() {
   _impl_.a_count_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t ObjectStoreCountResponse::_internal_a_count() const {
   return _impl_.a_count_;
@@ -4171,7 +4252,7 @@ inline uint64_t ObjectStoreCountResponse::a_count() const {
   return _internal_a_count();
 }
 inline void ObjectStoreCountResponse::_internal_set_a_count(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_count_ = value;
 }
 inline void ObjectStoreCountResponse::set_a_count(uint64_t value) {
@@ -4183,11 +4264,9 @@ inline void ObjectStoreCountResponse::set_a_count(uint64_t value) {
 
 // IndexGetResponse
 
-// required .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 1;
+// .protobuf.mozilla.dom.indexedDB.SerializedStructuredCloneReadInfo a_cloneInfo = 1;
 inline bool IndexGetResponse::_internal_has_a_cloneinfo() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_cloneinfo_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_cloneinfo_ != nullptr;
 }
 inline bool IndexGetResponse::has_a_cloneinfo() const {
   return _internal_has_a_cloneinfo();
@@ -4208,14 +4287,14 @@ inline void IndexGetResponse::unsafe_arena_set_allocated_a_cloneinfo(
   }
   _impl_.a_cloneinfo_ = a_cloneinfo;
   if (a_cloneinfo) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.IndexGetResponse.a_cloneInfo)
 }
 inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* IndexGetResponse::release_a_cloneinfo() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* temp = _impl_.a_cloneinfo_;
   _impl_.a_cloneinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -4231,13 +4310,13 @@ inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* I
 }
 inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* IndexGetResponse::unsafe_arena_release_a_cloneinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexGetResponse.a_cloneInfo)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* temp = _impl_.a_cloneinfo_;
   _impl_.a_cloneinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo* IndexGetResponse::_internal_mutable_a_cloneinfo() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_cloneinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::SerializedStructuredCloneReadInfo>(GetArenaForAllocation());
     _impl_.a_cloneinfo_ = p;
@@ -4262,9 +4341,9 @@ inline void IndexGetResponse::set_allocated_a_cloneinfo(::protobuf::mozilla::dom
       a_cloneinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_cloneinfo, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_cloneinfo_ = a_cloneinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.IndexGetResponse.a_cloneInfo)
@@ -4274,17 +4353,9 @@ inline void IndexGetResponse::set_allocated_a_cloneinfo(::protobuf::mozilla::dom
 
 // IndexGetKeyResponse
 
-// required bytes a_key = 1;
-inline bool IndexGetKeyResponse::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool IndexGetKeyResponse::has_a_key() const {
-  return _internal_has_a_key();
-}
+// bytes a_key = 1;
 inline void IndexGetKeyResponse::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& IndexGetKeyResponse::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.indexedDB.IndexGetKeyResponse.a_key)
@@ -4293,7 +4364,7 @@ inline const std::string& IndexGetKeyResponse::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IndexGetKeyResponse::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.indexedDB.IndexGetKeyResponse.a_key)
 }
@@ -4306,32 +4377,22 @@ inline const std::string& IndexGetKeyResponse::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void IndexGetKeyResponse::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IndexGetKeyResponse::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IndexGetKeyResponse::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.IndexGetKeyResponse.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void IndexGetKeyResponse::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4466,17 +4527,9 @@ IndexGetAllKeysResponse::mutable_a_keys() {
 
 // IndexCountResponse
 
-// required uint64 a_count = 1;
-inline bool IndexCountResponse::_internal_has_a_count() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool IndexCountResponse::has_a_count() const {
-  return _internal_has_a_count();
-}
+// uint64 a_count = 1;
 inline void IndexCountResponse::clear_a_count() {
   _impl_.a_count_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t IndexCountResponse::_internal_a_count() const {
   return _impl_.a_count_;
@@ -4486,7 +4539,7 @@ inline uint64_t IndexCountResponse::a_count() const {
   return _internal_a_count();
 }
 inline void IndexCountResponse::_internal_set_a_count(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_count_ = value;
 }
 inline void IndexCountResponse::set_a_count(uint64_t value) {
@@ -5665,18 +5718,18 @@ PreprocessInfo::a_files() const {
 
 // ObjectStoreGetPreprocessParams
 
-// required .protobuf.mozilla.dom.indexedDB.PreprocessInfo a_preprocessInfo = 1;
+// .protobuf.mozilla.dom.indexedDB.PreprocessInfo a_preprocessInfo = 1;
 inline bool ObjectStoreGetPreprocessParams::_internal_has_a_preprocessinfo() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_preprocessinfo_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_preprocessinfo_ != nullptr;
 }
 inline bool ObjectStoreGetPreprocessParams::has_a_preprocessinfo() const {
   return _internal_has_a_preprocessinfo();
 }
 inline void ObjectStoreGetPreprocessParams::clear_a_preprocessinfo() {
-  if (_impl_.a_preprocessinfo_ != nullptr) _impl_.a_preprocessinfo_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_preprocessinfo_ != nullptr) {
+    delete _impl_.a_preprocessinfo_;
+  }
+  _impl_.a_preprocessinfo_ = nullptr;
 }
 inline const ::protobuf::mozilla::dom::indexedDB::PreprocessInfo& ObjectStoreGetPreprocessParams::_internal_a_preprocessinfo() const {
   const ::protobuf::mozilla::dom::indexedDB::PreprocessInfo* p = _impl_.a_preprocessinfo_;
@@ -5694,14 +5747,14 @@ inline void ObjectStoreGetPreprocessParams::unsafe_arena_set_allocated_a_preproc
   }
   _impl_.a_preprocessinfo_ = a_preprocessinfo;
   if (a_preprocessinfo) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.indexedDB.ObjectStoreGetPreprocessParams.a_preprocessInfo)
 }
 inline ::protobuf::mozilla::dom::indexedDB::PreprocessInfo* ObjectStoreGetPreprocessParams::release_a_preprocessinfo() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::dom::indexedDB::PreprocessInfo* temp = _impl_.a_preprocessinfo_;
   _impl_.a_preprocessinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -5717,13 +5770,13 @@ inline ::protobuf::mozilla::dom::indexedDB::PreprocessInfo* ObjectStoreGetPrepro
 }
 inline ::protobuf::mozilla::dom::indexedDB::PreprocessInfo* ObjectStoreGetPreprocessParams::unsafe_arena_release_a_preprocessinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.indexedDB.ObjectStoreGetPreprocessParams.a_preprocessInfo)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::dom::indexedDB::PreprocessInfo* temp = _impl_.a_preprocessinfo_;
   _impl_.a_preprocessinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::indexedDB::PreprocessInfo* ObjectStoreGetPreprocessParams::_internal_mutable_a_preprocessinfo() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_preprocessinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::indexedDB::PreprocessInfo>(GetArenaForAllocation());
     _impl_.a_preprocessinfo_ = p;
@@ -5747,9 +5800,9 @@ inline void ObjectStoreGetPreprocessParams::set_allocated_a_preprocessinfo(::pro
       a_preprocessinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_preprocessinfo, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_preprocessinfo_ = a_preprocessinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.indexedDB.ObjectStoreGetPreprocessParams.a_preprocessInfo)

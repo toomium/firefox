@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/ipc/glue/URIParams.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.ipc;
 
@@ -14,58 +13,58 @@ import "PBackgroundSharedTypes.proto";
 
 // Structs and unions declarations
 message SimpleURIParams {
-  required string a_spec = 1;
+  string a_spec = 1;
 }
 
 message DefaultURIParams {
-  required string a_spec = 1;
+  string a_spec = 1;
 }
 
 message StandardURLSegment {
-  required uint32 a_position = 1;
-  required sint32 a_length = 2;
+  uint32 a_position = 1;
+  sint32 a_length = 2;
 }
 
 message StandardURLParams {
-  required uint32 a_urlType = 1;
-  required sint32 a_port = 2;
-  required sint32 a_defaultPort = 3;
-  required string a_spec = 4;
-  required protobuf.mozilla.ipc.StandardURLSegment a_scheme = 5;
-  required protobuf.mozilla.ipc.StandardURLSegment a_authority = 6;
-  required protobuf.mozilla.ipc.StandardURLSegment a_username = 7;
-  required protobuf.mozilla.ipc.StandardURLSegment a_password = 8;
-  required protobuf.mozilla.ipc.StandardURLSegment a_host = 9;
-  required protobuf.mozilla.ipc.StandardURLSegment a_path = 10;
-  required protobuf.mozilla.ipc.StandardURLSegment a_filePath = 11;
-  required protobuf.mozilla.ipc.StandardURLSegment a_directory = 12;
-  required protobuf.mozilla.ipc.StandardURLSegment a_baseName = 13;
-  required protobuf.mozilla.ipc.StandardURLSegment a_extension = 14;
-  required protobuf.mozilla.ipc.StandardURLSegment a_query = 15;
-  required protobuf.mozilla.ipc.StandardURLSegment a_ref = 16;
-  required bool a_supportsFileURL = 17;
-  required bool a_isSubstituting = 18;
+  uint32 a_urlType = 1;
+  sint32 a_port = 2;
+  sint32 a_defaultPort = 3;
+  string a_spec = 4;
+  protobuf.mozilla.ipc.StandardURLSegment a_scheme = 5;
+  protobuf.mozilla.ipc.StandardURLSegment a_authority = 6;
+  protobuf.mozilla.ipc.StandardURLSegment a_username = 7;
+  protobuf.mozilla.ipc.StandardURLSegment a_password = 8;
+  protobuf.mozilla.ipc.StandardURLSegment a_host = 9;
+  protobuf.mozilla.ipc.StandardURLSegment a_path = 10;
+  protobuf.mozilla.ipc.StandardURLSegment a_filePath = 11;
+  protobuf.mozilla.ipc.StandardURLSegment a_directory = 12;
+  protobuf.mozilla.ipc.StandardURLSegment a_baseName = 13;
+  protobuf.mozilla.ipc.StandardURLSegment a_extension = 14;
+  protobuf.mozilla.ipc.StandardURLSegment a_query = 15;
+  protobuf.mozilla.ipc.StandardURLSegment a_ref = 16;
+  bool a_supportsFileURL = 17;
+  bool a_isSubstituting = 18;
 }
 
 message JARURIParams {
-  required protobuf.mozilla.ipc.URIParams a_jarFile = 1;
-  required protobuf.mozilla.ipc.URIParams a_jarEntry = 2;
-  required string a_charset = 3;
+  protobuf.mozilla.ipc.URIParams a_jarFile = 1;
+  protobuf.mozilla.ipc.URIParams a_jarEntry = 2;
+  string a_charset = 3;
 }
 
 message IconURIParams {
   optional protobuf.mozilla.ipc.URIParams a_uri = 1;
-  required uint32 a_size = 2;
-  required string a_contentType = 3;
-  required string a_fileName = 4;
-  required string a_stockIcon = 5;
-  required uint32 a_iconScale = 6;
+  uint32 a_size = 2;
+  string a_contentType = 3;
+  string a_fileName = 4;
+  string a_stockIcon = 5;
+  uint32 a_iconScale = 6;
   optional bool a_iconDark = 7;
 }
 
 message HostObjectURIParams {
-  required protobuf.mozilla.ipc.SimpleURIParams a_simpleParams = 1;
-  required bool a_revoked = 2;
+  protobuf.mozilla.ipc.SimpleURIParams a_simpleParams = 1;
+  bool a_revoked = 2;
 }
 
 message URIParams {
@@ -84,21 +83,21 @@ message URIParams {
 }
 
 message JSURIParams {
-  required protobuf.mozilla.ipc.SimpleURIParams a_simpleParams = 1;
+  protobuf.mozilla.ipc.SimpleURIParams a_simpleParams = 1;
   optional protobuf.mozilla.ipc.URIParams a_baseURI = 2;
 }
 
 message SimpleNestedURIParams {
-  required protobuf.mozilla.ipc.SimpleURIParams a_simpleParams = 1;
-  required protobuf.mozilla.ipc.URIParams a_innerURI = 2;
+  protobuf.mozilla.ipc.SimpleURIParams a_simpleParams = 1;
+  protobuf.mozilla.ipc.URIParams a_innerURI = 2;
 }
 
 message NestedAboutURIParams {
-  required protobuf.mozilla.ipc.SimpleNestedURIParams a_nestedParams = 1;
+  protobuf.mozilla.ipc.SimpleNestedURIParams a_nestedParams = 1;
   optional protobuf.mozilla.ipc.URIParams a_baseURI = 2;
 }
 
 message SubstitutingJARURIParams {
-  required protobuf.mozilla.ipc.URIParams a_source = 1;
-  required protobuf.mozilla.ipc.JARURIParams a_resolved = 2;
+  protobuf.mozilla.ipc.URIParams a_source = 1;
+  protobuf.mozilla.ipc.JARURIParams a_resolved = 2;
 }

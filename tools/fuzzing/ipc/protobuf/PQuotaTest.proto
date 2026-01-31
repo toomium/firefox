@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/quota/test/gtest/PQuotaTest.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.quota.PQuotaTest;
 
@@ -17,28 +16,28 @@ message Msg_Try_Success_CustomErr_QmIpcFail {
 }
 
 message Reply_Try_Success_CustomErr_QmIpcFail {
-  required bool a_tryDidNotReturn = 1;
+  bool a_tryDidNotReturn = 1;
 }
 
 message Msg_Try_Success_CustomErr_IpcFail {
 }
 
 message Reply_Try_Success_CustomErr_IpcFail {
-  required bool a_tryDidNotReturn = 1;
+  bool a_tryDidNotReturn = 1;
 }
 
 message Msg_TryInspect_Success_CustomErr_QmIpcFail {
 }
 
 message Reply_TryInspect_Success_CustomErr_QmIpcFail {
-  required bool a_tryDidNotReturn = 1;
+  bool a_tryDidNotReturn = 1;
 }
 
 message Msg_TryInspect_Success_CustomErr_IpcFail {
 }
 
 message Reply_TryInspect_Success_CustomErr_IpcFail {
-  required bool a_tryDidNotReturn = 1;
+  bool a_tryDidNotReturn = 1;
 }
 
 // Parameter mappings stats:

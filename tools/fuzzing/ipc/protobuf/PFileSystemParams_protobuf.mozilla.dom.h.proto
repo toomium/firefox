@@ -5,29 +5,28 @@
 
 // Generated from /home/tmittendorf/firefox/dom/filesystem/PFileSystemParams.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message FileSystemGetDirectoryListingParams {
-  required string a_filesystem = 1;
-  required string a_realPath = 2;
-  required string a_domPath = 3;
-  required string a_filters = 4;
+  string a_filesystem = 1;
+  string a_realPath = 2;
+  string a_domPath = 3;
+  string a_filters = 4;
 }
 
 message FileSystemGetFilesParams {
-  required string a_filesystem = 1;
-  required string a_realPath = 2;
-  required string a_domPath = 3;
-  required bool a_recursiveFlag = 4;
+  string a_filesystem = 1;
+  string a_realPath = 2;
+  string a_domPath = 3;
+  bool a_recursiveFlag = 4;
 }
 
 message FileSystemGetFileOrDirectoryParams {
-  required string a_filesystem = 1;
-  required string a_realPath = 2;
+  string a_filesystem = 1;
+  string a_realPath = 2;
 }
 
 message FileSystemParams {

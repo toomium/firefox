@@ -8,7 +8,10 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -22,10 +25,9 @@ namespace mozilla {
 namespace dom {
 PROTOBUF_CONSTEXPR IPCPaymentMethodData::IPCPaymentMethodData(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_supportedmethods_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_data_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_supportedmethods_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_data_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCPaymentMethodDataDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCPaymentMethodDataDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -37,10 +39,9 @@ struct IPCPaymentMethodDataDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCPaymentMethodDataDefaultTypeInternal _IPCPaymentMethodData_default_instance_;
 PROTOBUF_CONSTEXPR IPCPaymentCurrencyAmount::IPCPaymentCurrencyAmount(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_currency_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_value_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_currency_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_value_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCPaymentCurrencyAmountDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCPaymentCurrencyAmountDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -52,11 +53,10 @@ struct IPCPaymentCurrencyAmountDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCPaymentCurrencyAmountDefaultTypeInternal _IPCPaymentCurrencyAmount_default_instance_;
 PROTOBUF_CONSTEXPR IPCPaymentItem::IPCPaymentItem(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_label_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.a_label_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_amount_)*/nullptr
-  , /*decltype(_impl_.a_pending_)*/false} {}
+  , /*decltype(_impl_.a_pending_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCPaymentItemDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCPaymentItemDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -68,13 +68,12 @@ struct IPCPaymentItemDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCPaymentItemDefaultTypeInternal _IPCPaymentItem_default_instance_;
 PROTOBUF_CONSTEXPR IPCPaymentDetailsModifier::IPCPaymentDetailsModifier(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_additionaldisplayitems_)*/{}
+    /*decltype(_impl_.a_additionaldisplayitems_)*/{}
   , /*decltype(_impl_.a_supportedmethods_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_data_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_total_)*/nullptr
-  , /*decltype(_impl_.a_additionaldisplayitemspassed_)*/false} {}
+  , /*decltype(_impl_.a_additionaldisplayitemspassed_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCPaymentDetailsModifierDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCPaymentDetailsModifierDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -86,12 +85,11 @@ struct IPCPaymentDetailsModifierDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCPaymentDetailsModifierDefaultTypeInternal _IPCPaymentDetailsModifier_default_instance_;
 PROTOBUF_CONSTEXPR IPCPaymentShippingOption::IPCPaymentShippingOption(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.a_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_label_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_amount_)*/nullptr
-  , /*decltype(_impl_.a_selected_)*/false} {}
+  , /*decltype(_impl_.a_selected_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCPaymentShippingOptionDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCPaymentShippingOptionDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -103,9 +101,7 @@ struct IPCPaymentShippingOptionDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCPaymentShippingOptionDefaultTypeInternal _IPCPaymentShippingOption_default_instance_;
 PROTOBUF_CONSTEXPR IPCPaymentDetails::IPCPaymentDetails(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_displayitems_)*/{}
+    /*decltype(_impl_.a_displayitems_)*/{}
   , /*decltype(_impl_.a_shippingoptions_)*/{}
   , /*decltype(_impl_.a_modifiers_)*/{}
   , /*decltype(_impl_.a_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
@@ -113,7 +109,8 @@ PROTOBUF_CONSTEXPR IPCPaymentDetails::IPCPaymentDetails(
   , /*decltype(_impl_.a_shippingaddresserrors_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_payererrors_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_paymentmethoderrors_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_total_)*/nullptr} {}
+  , /*decltype(_impl_.a_total_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCPaymentDetailsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCPaymentDetailsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -125,14 +122,13 @@ struct IPCPaymentDetailsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCPaymentDetailsDefaultTypeInternal _IPCPaymentDetails_default_instance_;
 PROTOBUF_CONSTEXPR IPCPaymentOptions::IPCPaymentOptions(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_shippingtype_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.a_shippingtype_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_requestpayername_)*/false
   , /*decltype(_impl_.a_requestpayeremail_)*/false
   , /*decltype(_impl_.a_requestpayerphone_)*/false
   , /*decltype(_impl_.a_requestshipping_)*/false
-  , /*decltype(_impl_.a_requestbillingaddress_)*/false} {}
+  , /*decltype(_impl_.a_requestbillingaddress_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCPaymentOptionsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCPaymentOptionsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -164,9 +160,8 @@ struct IPCPaymentCreateActionRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCPaymentCreateActionRequestDefaultTypeInternal _IPCPaymentCreateActionRequest_default_instance_;
 PROTOBUF_CONSTEXPR IPCPaymentCanMakeActionRequest::IPCPaymentCanMakeActionRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCPaymentCanMakeActionRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCPaymentCanMakeActionRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -178,10 +173,9 @@ struct IPCPaymentCanMakeActionRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCPaymentCanMakeActionRequestDefaultTypeInternal _IPCPaymentCanMakeActionRequest_default_instance_;
 PROTOBUF_CONSTEXPR IPCPaymentShowActionRequest::IPCPaymentShowActionRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_isupdating_)*/false} {}
+    /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_isupdating_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCPaymentShowActionRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCPaymentShowActionRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -193,9 +187,8 @@ struct IPCPaymentShowActionRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCPaymentShowActionRequestDefaultTypeInternal _IPCPaymentShowActionRequest_default_instance_;
 PROTOBUF_CONSTEXPR IPCPaymentAbortActionRequest::IPCPaymentAbortActionRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCPaymentAbortActionRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCPaymentAbortActionRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -207,10 +200,9 @@ struct IPCPaymentAbortActionRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCPaymentAbortActionRequestDefaultTypeInternal _IPCPaymentAbortActionRequest_default_instance_;
 PROTOBUF_CONSTEXPR IPCPaymentCompleteActionRequest::IPCPaymentCompleteActionRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_completestatus_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_completestatus_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCPaymentCompleteActionRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCPaymentCompleteActionRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -222,11 +214,10 @@ struct IPCPaymentCompleteActionRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCPaymentCompleteActionRequestDefaultTypeInternal _IPCPaymentCompleteActionRequest_default_instance_;
 PROTOBUF_CONSTEXPR IPCPaymentUpdateActionRequest::IPCPaymentUpdateActionRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_shippingoption_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_details_)*/nullptr} {}
+  , /*decltype(_impl_.a_details_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCPaymentUpdateActionRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCPaymentUpdateActionRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -238,9 +229,8 @@ struct IPCPaymentUpdateActionRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCPaymentUpdateActionRequestDefaultTypeInternal _IPCPaymentUpdateActionRequest_default_instance_;
 PROTOBUF_CONSTEXPR IPCPaymentCloseActionRequest::IPCPaymentCloseActionRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCPaymentCloseActionRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCPaymentCloseActionRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -252,13 +242,12 @@ struct IPCPaymentCloseActionRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCPaymentCloseActionRequestDefaultTypeInternal _IPCPaymentCloseActionRequest_default_instance_;
 PROTOBUF_CONSTEXPR IPCPaymentRetryActionRequest::IPCPaymentRetryActionRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_error_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_payererrors_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_paymentmethoderrors_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_shippingaddresserrors_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_shippingaddresserrors_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCPaymentRetryActionRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCPaymentRetryActionRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -284,10 +273,9 @@ struct IPCPaymentActionRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCPaymentActionRequestDefaultTypeInternal _IPCPaymentActionRequest_default_instance_;
 PROTOBUF_CONSTEXPR IPCPaymentCanMakeActionResponse::IPCPaymentCanMakeActionResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_result_)*/false} {}
+    /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_result_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCPaymentCanMakeActionResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCPaymentCanMakeActionResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -299,9 +287,7 @@ struct IPCPaymentCanMakeActionResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCPaymentCanMakeActionResponseDefaultTypeInternal _IPCPaymentCanMakeActionResponse_default_instance_;
 PROTOBUF_CONSTEXPR IPCPaymentAddress::IPCPaymentAddress(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_addressline_)*/{}
+    /*decltype(_impl_.a_addressline_)*/{}
   , /*decltype(_impl_.a_country_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_region_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_regioncode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
@@ -311,7 +297,8 @@ PROTOBUF_CONSTEXPR IPCPaymentAddress::IPCPaymentAddress(
   , /*decltype(_impl_.a_sortingcode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_organization_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_recipient_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_phone_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_phone_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCPaymentAddressDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCPaymentAddressDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -323,9 +310,8 @@ struct IPCPaymentAddressDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCPaymentAddressDefaultTypeInternal _IPCPaymentAddress_default_instance_;
 PROTOBUF_CONSTEXPR IPCGeneralResponse::IPCGeneralResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_data_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_data_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCGeneralResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCGeneralResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -337,14 +323,13 @@ struct IPCGeneralResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCGeneralResponseDefaultTypeInternal _IPCGeneralResponse_default_instance_;
 PROTOBUF_CONSTEXPR IPCBasicCardResponse::IPCBasicCardResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_cardholdername_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.a_cardholdername_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_cardnumber_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_expirymonth_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_expiryyear_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_cardsecuritycode_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_billingaddress_)*/nullptr} {}
+  , /*decltype(_impl_.a_billingaddress_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCBasicCardResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCBasicCardResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -370,15 +355,14 @@ struct IPCPaymentResponseDataDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCPaymentResponseDataDefaultTypeInternal _IPCPaymentResponseData_default_instance_;
 PROTOBUF_CONSTEXPR IPCPaymentShowActionResponse::IPCPaymentShowActionResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_methodname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_payername_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_payeremail_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_payerphone_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_data_)*/nullptr
-  , /*decltype(_impl_.a_status_)*/0u} {}
+  , /*decltype(_impl_.a_status_)*/0u
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCPaymentShowActionResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCPaymentShowActionResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -390,10 +374,9 @@ struct IPCPaymentShowActionResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCPaymentShowActionResponseDefaultTypeInternal _IPCPaymentShowActionResponse_default_instance_;
 PROTOBUF_CONSTEXPR IPCPaymentAbortActionResponse::IPCPaymentAbortActionResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_issucceeded_)*/false} {}
+    /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_issucceeded_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCPaymentAbortActionResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCPaymentAbortActionResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -405,10 +388,9 @@ struct IPCPaymentAbortActionResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCPaymentAbortActionResponseDefaultTypeInternal _IPCPaymentAbortActionResponse_default_instance_;
 PROTOBUF_CONSTEXPR IPCPaymentCompleteActionResponse::IPCPaymentCompleteActionResponse(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_iscompleted_)*/false} {}
+    /*decltype(_impl_.a_requestid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_iscompleted_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCPaymentCompleteActionResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCPaymentCompleteActionResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -434,9 +416,8 @@ struct IPCPaymentActionResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCPaymentActionResponseDefaultTypeInternal _IPCPaymentActionResponse_default_instance_;
 PROTOBUF_CONSTEXPR IPCGeneralChangeDetails::IPCGeneralChangeDetails(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_details_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_details_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCGeneralChangeDetailsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCGeneralChangeDetailsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -448,9 +429,8 @@ struct IPCGeneralChangeDetailsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCGeneralChangeDetailsDefaultTypeInternal _IPCGeneralChangeDetails_default_instance_;
 PROTOBUF_CONSTEXPR IPCBasicCardChangeDetails::IPCBasicCardChangeDetails(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_billingaddress_)*/nullptr} {}
+    /*decltype(_impl_.a_billingaddress_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IPCBasicCardChangeDetailsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR IPCBasicCardChangeDetailsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -477,6 +457,499 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
+static ::_pb::Metadata file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[28];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
+
+const uint32_t TableStruct_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentMethodData, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentMethodData, _impl_.a_supportedmethods_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentMethodData, _impl_.a_data_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCurrencyAmount, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCurrencyAmount, _impl_.a_currency_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCurrencyAmount, _impl_.a_value_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentItem, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentItem, _impl_.a_label_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentItem, _impl_.a_amount_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentItem, _impl_.a_pending_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentDetailsModifier, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentDetailsModifier, _impl_.a_supportedmethods_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentDetailsModifier, _impl_.a_total_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentDetailsModifier, _impl_.a_additionaldisplayitems_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentDetailsModifier, _impl_.a_data_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentDetailsModifier, _impl_.a_additionaldisplayitemspassed_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentShippingOption, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentShippingOption, _impl_.a_id_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentShippingOption, _impl_.a_label_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentShippingOption, _impl_.a_amount_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentShippingOption, _impl_.a_selected_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentDetails, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentDetails, _impl_.a_id_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentDetails, _impl_.a_total_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentDetails, _impl_.a_displayitems_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentDetails, _impl_.a_shippingoptions_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentDetails, _impl_.a_modifiers_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentDetails, _impl_.a_error_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentDetails, _impl_.a_shippingaddresserrors_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentDetails, _impl_.a_payererrors_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentDetails, _impl_.a_paymentmethoderrors_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentOptions, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentOptions, _impl_.a_requestpayername_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentOptions, _impl_.a_requestpayeremail_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentOptions, _impl_.a_requestpayerphone_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentOptions, _impl_.a_requestshipping_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentOptions, _impl_.a_requestbillingaddress_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentOptions, _impl_.a_shippingtype_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCreateActionRequest, _impl_._has_bits_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCreateActionRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCreateActionRequest, _impl_.a_topouterwindowid_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCreateActionRequest, _impl_.a_requestid_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCreateActionRequest, _impl_.a_toplevelprincipal_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCreateActionRequest, _impl_.a_methoddata_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCreateActionRequest, _impl_.a_details_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCreateActionRequest, _impl_.a_options_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCreateActionRequest, _impl_.a_shippingoption_),
+  ~0u,
+  ~0u,
+  0,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCanMakeActionRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCanMakeActionRequest, _impl_.a_requestid_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentShowActionRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentShowActionRequest, _impl_.a_requestid_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentShowActionRequest, _impl_.a_isupdating_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentAbortActionRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentAbortActionRequest, _impl_.a_requestid_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCompleteActionRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCompleteActionRequest, _impl_.a_requestid_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCompleteActionRequest, _impl_.a_completestatus_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentUpdateActionRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentUpdateActionRequest, _impl_.a_requestid_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentUpdateActionRequest, _impl_.a_details_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentUpdateActionRequest, _impl_.a_shippingoption_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCloseActionRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCloseActionRequest, _impl_.a_requestid_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentRetryActionRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentRetryActionRequest, _impl_.a_requestid_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentRetryActionRequest, _impl_.a_error_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentRetryActionRequest, _impl_.a_payererrors_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentRetryActionRequest, _impl_.a_paymentmethoderrors_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentRetryActionRequest, _impl_.a_shippingaddresserrors_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentActionRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentActionRequest, _impl_._oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentActionRequest, _impl_.content_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCanMakeActionResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCanMakeActionResponse, _impl_.a_requestid_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCanMakeActionResponse, _impl_.a_result_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentAddress, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentAddress, _impl_.a_country_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentAddress, _impl_.a_addressline_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentAddress, _impl_.a_region_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentAddress, _impl_.a_regioncode_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentAddress, _impl_.a_city_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentAddress, _impl_.a_dependentlocality_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentAddress, _impl_.a_postalcode_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentAddress, _impl_.a_sortingcode_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentAddress, _impl_.a_organization_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentAddress, _impl_.a_recipient_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentAddress, _impl_.a_phone_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCGeneralResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCGeneralResponse, _impl_.a_data_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCBasicCardResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCBasicCardResponse, _impl_.a_cardholdername_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCBasicCardResponse, _impl_.a_cardnumber_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCBasicCardResponse, _impl_.a_expirymonth_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCBasicCardResponse, _impl_.a_expiryyear_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCBasicCardResponse, _impl_.a_cardsecuritycode_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCBasicCardResponse, _impl_.a_billingaddress_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentResponseData, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentResponseData, _impl_._oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentResponseData, _impl_.content_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentShowActionResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentShowActionResponse, _impl_.a_requestid_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentShowActionResponse, _impl_.a_status_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentShowActionResponse, _impl_.a_methodname_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentShowActionResponse, _impl_.a_data_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentShowActionResponse, _impl_.a_payername_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentShowActionResponse, _impl_.a_payeremail_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentShowActionResponse, _impl_.a_payerphone_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentAbortActionResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentAbortActionResponse, _impl_.a_requestid_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentAbortActionResponse, _impl_.a_issucceeded_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCompleteActionResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCompleteActionResponse, _impl_.a_requestid_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentCompleteActionResponse, _impl_.a_iscompleted_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentActionResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentActionResponse, _impl_._oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPaymentActionResponse, _impl_.content_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCGeneralChangeDetails, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCGeneralChangeDetails, _impl_.a_details_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCBasicCardChangeDetails, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCBasicCardChangeDetails, _impl_.a_billingaddress_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCMethodChangeDetails, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCMethodChangeDetails, _impl_._oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCMethodChangeDetails, _impl_.content_),
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentMethodData)},
+  { 8, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentCurrencyAmount)},
+  { 16, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentItem)},
+  { 25, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentDetailsModifier)},
+  { 36, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentShippingOption)},
+  { 46, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentDetails)},
+  { 61, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentOptions)},
+  { 73, 86, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentCreateActionRequest)},
+  { 93, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentCanMakeActionRequest)},
+  { 100, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentShowActionRequest)},
+  { 108, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentAbortActionRequest)},
+  { 115, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentCompleteActionRequest)},
+  { 123, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentUpdateActionRequest)},
+  { 132, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentCloseActionRequest)},
+  { 139, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentRetryActionRequest)},
+  { 150, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentActionRequest)},
+  { 165, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentCanMakeActionResponse)},
+  { 173, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentAddress)},
+  { 190, -1, -1, sizeof(::protobuf::mozilla::dom::IPCGeneralResponse)},
+  { 197, -1, -1, sizeof(::protobuf::mozilla::dom::IPCBasicCardResponse)},
+  { 209, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentResponseData)},
+  { 218, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentShowActionResponse)},
+  { 231, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentAbortActionResponse)},
+  { 239, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentCompleteActionResponse)},
+  { 247, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPaymentActionResponse)},
+  { 258, -1, -1, sizeof(::protobuf::mozilla::dom::IPCGeneralChangeDetails)},
+  { 265, -1, -1, sizeof(::protobuf::mozilla::dom::IPCBasicCardChangeDetails)},
+  { 272, -1, -1, sizeof(::protobuf::mozilla::dom::IPCMethodChangeDetails)},
+};
+
+static const ::_pb::Message* const file_default_instances[] = {
+  &::protobuf::mozilla::dom::_IPCPaymentMethodData_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentCurrencyAmount_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentItem_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentDetailsModifier_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentShippingOption_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentDetails_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentOptions_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentCreateActionRequest_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentCanMakeActionRequest_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentShowActionRequest_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentAbortActionRequest_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentCompleteActionRequest_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentUpdateActionRequest_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentCloseActionRequest_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentRetryActionRequest_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentActionRequest_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentCanMakeActionResponse_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentAddress_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCGeneralResponse_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCBasicCardResponse_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentResponseData_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentShowActionResponse_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentAbortActionResponse_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentCompleteActionResponse_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCPaymentActionResponse_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCGeneralChangeDetails_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCBasicCardChangeDetails_default_instance_._instance,
+  &::protobuf::mozilla::dom::_IPCMethodChangeDetails_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n,PPaymentRequest_protobuf.mozilla.dom.h"
+  ".proto\022\024protobuf.mozilla.dom\"B\n\024IPCPayme"
+  "ntMethodData\022\032\n\022a_supportedMethods\030\001 \001(\t"
+  "\022\016\n\006a_data\030\002 \001(\t\"\?\n\030IPCPaymentCurrencyAm"
+  "ount\022\022\n\na_currency\030\001 \001(\t\022\017\n\007a_value\030\002 \001("
+  "\t\"v\n\016IPCPaymentItem\022\017\n\007a_label\030\001 \001(\t\022@\n\010"
+  "a_amount\030\002 \001(\0132..protobuf.mozilla.dom.IP"
+  "CPaymentCurrencyAmount\022\021\n\ta_pending\030\003 \001("
+  "\010\"\356\001\n\031IPCPaymentDetailsModifier\022\032\n\022a_sup"
+  "portedMethods\030\001 \001(\t\0225\n\007a_total\030\002 \001(\0132$.p"
+  "rotobuf.mozilla.dom.IPCPaymentItem\022F\n\030a_"
+  "additionalDisplayItems\030\003 \003(\0132$.protobuf."
+  "mozilla.dom.IPCPaymentItem\022\016\n\006a_data\030\004 \001"
+  "(\t\022&\n\036a_additionalDisplayItemsPassed\030\005 \001"
+  "(\010\"\217\001\n\030IPCPaymentShippingOption\022\014\n\004a_id\030"
+  "\001 \001(\t\022\017\n\007a_label\030\002 \001(\t\022@\n\010a_amount\030\003 \001(\013"
+  "2..protobuf.mozilla.dom.IPCPaymentCurren"
+  "cyAmount\022\022\n\na_selected\030\004 \001(\010\"\217\003\n\021IPCPaym"
+  "entDetails\022\014\n\004a_id\030\001 \001(\t\0225\n\007a_total\030\002 \001("
+  "\0132$.protobuf.mozilla.dom.IPCPaymentItem\022"
+  "<\n\016a_displayItems\030\003 \003(\0132$.protobuf.mozil"
+  "la.dom.IPCPaymentItem\022I\n\021a_shippingOptio"
+  "ns\030\004 \003(\0132..protobuf.mozilla.dom.IPCPayme"
+  "ntShippingOption\022D\n\013a_modifiers\030\005 \003(\0132/."
+  "protobuf.mozilla.dom.IPCPaymentDetailsMo"
+  "difier\022\017\n\007a_error\030\006 \001(\t\022\037\n\027a_shippingAdd"
+  "ressErrors\030\007 \001(\t\022\025\n\ra_payerErrors\030\010 \001(\t\022"
+  "\035\n\025a_paymentMethodErrors\030\t \001(\t\"\275\001\n\021IPCPa"
+  "ymentOptions\022\032\n\022a_requestPayerName\030\001 \001(\010"
+  "\022\033\n\023a_requestPayerEmail\030\002 \001(\010\022\033\n\023a_reque"
+  "stPayerPhone\030\003 \001(\010\022\031\n\021a_requestShipping\030"
+  "\004 \001(\010\022\037\n\027a_requestBillingAddress\030\005 \001(\010\022\026"
+  "\n\016a_shippingType\030\006 \001(\t\"\336\002\n\035IPCPaymentCre"
+  "ateActionRequest\022\032\n\022a_topOuterWindowId\030\001"
+  " \001(\004\022\023\n\013a_requestId\030\002 \001(\t\022 \n\023a_topLevelP"
+  "rincipal\030\003 \001(\014H\000\210\001\001\022@\n\014a_methodData\030\004 \003("
+  "\0132*.protobuf.mozilla.dom.IPCPaymentMetho"
+  "dData\022:\n\ta_details\030\005 \001(\0132\'.protobuf.mozi"
+  "lla.dom.IPCPaymentDetails\022:\n\ta_options\030\006"
+  " \001(\0132\'.protobuf.mozilla.dom.IPCPaymentOp"
+  "tions\022\030\n\020a_shippingOption\030\007 \001(\tB\026\n\024_a_to"
+  "pLevelPrincipal\"5\n\036IPCPaymentCanMakeActi"
+  "onRequest\022\023\n\013a_requestId\030\001 \001(\t\"H\n\033IPCPay"
+  "mentShowActionRequest\022\023\n\013a_requestId\030\001 \001"
+  "(\t\022\024\n\014a_isUpdating\030\002 \001(\010\"3\n\034IPCPaymentAb"
+  "ortActionRequest\022\023\n\013a_requestId\030\001 \001(\t\"P\n"
+  "\037IPCPaymentCompleteActionRequest\022\023\n\013a_re"
+  "questId\030\001 \001(\t\022\030\n\020a_completeStatus\030\002 \001(\t\""
+  "\212\001\n\035IPCPaymentUpdateActionRequest\022\023\n\013a_r"
+  "equestId\030\001 \001(\t\022:\n\ta_details\030\002 \001(\0132\'.prot"
+  "obuf.mozilla.dom.IPCPaymentDetails\022\030\n\020a_"
+  "shippingOption\030\003 \001(\t\"3\n\034IPCPaymentCloseA"
+  "ctionRequest\022\023\n\013a_requestId\030\001 \001(\t\"\233\001\n\034IP"
+  "CPaymentRetryActionRequest\022\023\n\013a_requestI"
+  "d\030\001 \001(\t\022\017\n\007a_error\030\002 \001(\t\022\025\n\ra_payerError"
+  "s\030\003 \001(\t\022\035\n\025a_paymentMethodErrors\030\004 \001(\t\022\037"
+  "\n\027a_shippingAddressErrors\030\005 \001(\t\"\260\006\n\027IPCP"
+  "aymentActionRequest\022`\n!a_mVIPCPaymentCre"
+  "ateActionRequest\030\001 \001(\01323.protobuf.mozill"
+  "a.dom.IPCPaymentCreateActionRequestH\000\022b\n"
+  "\"a_mVIPCPaymentCanMakeActionRequest\030\002 \001("
+  "\01324.protobuf.mozilla.dom.IPCPaymentCanMa"
+  "keActionRequestH\000\022\\\n\037a_mVIPCPaymentShowA"
+  "ctionRequest\030\003 \001(\01321.protobuf.mozilla.do"
+  "m.IPCPaymentShowActionRequestH\000\022^\n a_mVI"
+  "PCPaymentAbortActionRequest\030\004 \001(\01322.prot"
+  "obuf.mozilla.dom.IPCPaymentAbortActionRe"
+  "questH\000\022d\n#a_mVIPCPaymentCompleteActionR"
+  "equest\030\005 \001(\01325.protobuf.mozilla.dom.IPCP"
+  "aymentCompleteActionRequestH\000\022`\n!a_mVIPC"
+  "PaymentUpdateActionRequest\030\006 \001(\01323.proto"
+  "buf.mozilla.dom.IPCPaymentUpdateActionRe"
+  "questH\000\022^\n a_mVIPCPaymentCloseActionRequ"
+  "est\030\007 \001(\01322.protobuf.mozilla.dom.IPCPaym"
+  "entCloseActionRequestH\000\022^\n a_mVIPCPaymen"
+  "tRetryActionRequest\030\010 \001(\01322.protobuf.moz"
+  "illa.dom.IPCPaymentRetryActionRequestH\000B"
+  "\t\n\007content\"H\n\037IPCPaymentCanMakeActionRes"
+  "ponse\022\023\n\013a_requestId\030\001 \001(\t\022\020\n\010a_result\030\002"
+  " \001(\010\"\375\001\n\021IPCPaymentAddress\022\021\n\ta_country\030"
+  "\001 \001(\t\022\025\n\ra_addressLine\030\002 \003(\t\022\020\n\010a_region"
+  "\030\003 \001(\t\022\024\n\014a_regionCode\030\004 \001(\t\022\016\n\006a_city\030\005"
+  " \001(\t\022\033\n\023a_dependentLocality\030\006 \001(\t\022\024\n\014a_p"
+  "ostalCode\030\007 \001(\t\022\025\n\ra_sortingCode\030\010 \001(\t\022\026"
+  "\n\016a_organization\030\t \001(\t\022\023\n\013a_recipient\030\n "
+  "\001(\t\022\017\n\007a_phone\030\013 \001(\t\"$\n\022IPCGeneralRespon"
+  "se\022\016\n\006a_data\030\001 \001(\t\"\322\001\n\024IPCBasicCardRespo"
+  "nse\022\030\n\020a_cardholderName\030\001 \001(\t\022\024\n\014a_cardN"
+  "umber\030\002 \001(\t\022\025\n\ra_expiryMonth\030\003 \001(\t\022\024\n\014a_"
+  "expiryYear\030\004 \001(\t\022\032\n\022a_cardSecurityCode\030\005"
+  " \001(\t\022A\n\020a_billingAddress\030\006 \001(\0132\'.protobu"
+  "f.mozilla.dom.IPCPaymentAddress\"\277\001\n\026IPCP"
+  "aymentResponseData\022J\n\026a_mVIPCGeneralResp"
+  "onse\030\001 \001(\0132(.protobuf.mozilla.dom.IPCGen"
+  "eralResponseH\000\022N\n\030a_mVIPCBasicCardRespon"
+  "se\030\002 \001(\0132*.protobuf.mozilla.dom.IPCBasic"
+  "CardResponseH\000B\t\n\007content\"\332\001\n\034IPCPayment"
+  "ShowActionResponse\022\023\n\013a_requestId\030\001 \001(\t\022"
+  "\020\n\010a_status\030\002 \001(\r\022\024\n\014a_methodName\030\003 \001(\t\022"
+  "<\n\006a_data\030\004 \001(\0132,.protobuf.mozilla.dom.I"
+  "PCPaymentResponseData\022\023\n\013a_payerName\030\005 \001"
+  "(\t\022\024\n\014a_payerEmail\030\006 \001(\t\022\024\n\014a_payerPhone"
+  "\030\007 \001(\t\"K\n\035IPCPaymentAbortActionResponse\022"
+  "\023\n\013a_requestId\030\001 \001(\t\022\025\n\ra_isSucceeded\030\002 "
+  "\001(\010\"N\n IPCPaymentCompleteActionResponse\022"
+  "\023\n\013a_requestId\030\001 \001(\t\022\025\n\ra_isCompleted\030\002 "
+  "\001(\010\"\265\003\n\030IPCPaymentActionResponse\022d\n#a_mV"
+  "IPCPaymentCanMakeActionResponse\030\001 \001(\01325."
+  "protobuf.mozilla.dom.IPCPaymentCanMakeAc"
+  "tionResponseH\000\022^\n a_mVIPCPaymentShowActi"
+  "onResponse\030\002 \001(\01322.protobuf.mozilla.dom."
+  "IPCPaymentShowActionResponseH\000\022`\n!a_mVIP"
+  "CPaymentAbortActionResponse\030\003 \001(\01323.prot"
+  "obuf.mozilla.dom.IPCPaymentAbortActionRe"
+  "sponseH\000\022f\n$a_mVIPCPaymentCompleteAction"
+  "Response\030\004 \001(\01326.protobuf.mozilla.dom.IP"
+  "CPaymentCompleteActionResponseH\000B\t\n\007cont"
+  "ent\",\n\027IPCGeneralChangeDetails\022\021\n\ta_deta"
+  "ils\030\001 \001(\t\"^\n\031IPCBasicCardChangeDetails\022A"
+  "\n\020a_billingAddress\030\001 \001(\0132\'.protobuf.mozi"
+  "lla.dom.IPCPaymentAddress\"\323\001\n\026IPCMethodC"
+  "hangeDetails\022T\n\033a_mVIPCGeneralChangeDeta"
+  "ils\030\001 \001(\0132-.protobuf.mozilla.dom.IPCGene"
+  "ralChangeDetailsH\000\022X\n\035a_mVIPCBasicCardCh"
+  "angeDetails\030\002 \001(\0132/.protobuf.mozilla.dom"
+  ".IPCBasicCardChangeDetailsH\000B\t\n\007contentb"
+  "\006proto3"
+  ;
+static ::_pbi::once_flag descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto = {
+    false, false, 5047, descriptor_table_protodef_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto,
+    "PPaymentRequest_protobuf.mozilla.dom.h.proto",
+    &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once, nullptr, 0, 28,
+    schemas, file_default_instances, TableStruct_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets,
+    file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto, file_level_enum_descriptors_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto,
+    file_level_service_descriptors_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter() {
+  return &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
+}
+
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto(&descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -485,39 +958,28 @@ namespace dom {
 
 class IPCPaymentMethodData::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCPaymentMethodData>()._impl_._has_bits_);
-  static void set_has_a_supportedmethods(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_data(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 IPCPaymentMethodData::IPCPaymentMethodData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentMethodData)
 }
 IPCPaymentMethodData::IPCPaymentMethodData(const IPCPaymentMethodData& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentMethodData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_supportedmethods_){}
-    , decltype(_impl_.a_data_){}};
+      decltype(_impl_.a_supportedmethods_){}
+    , decltype(_impl_.a_data_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_supportedmethods_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_supportedmethods_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_supportedmethods()) {
+  if (!from._internal_a_supportedmethods().empty()) {
     _this->_impl_.a_supportedmethods_.Set(from._internal_a_supportedmethods(), 
       _this->GetArenaForAllocation());
   }
@@ -525,7 +987,7 @@ IPCPaymentMethodData::IPCPaymentMethodData(const IPCPaymentMethodData& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_data_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_data()) {
+  if (!from._internal_a_data().empty()) {
     _this->_impl_.a_data_.Set(from._internal_a_data(), 
       _this->GetArenaForAllocation());
   }
@@ -537,10 +999,9 @@ inline void IPCPaymentMethodData::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_supportedmethods_){}
+      decltype(_impl_.a_supportedmethods_){}
     , decltype(_impl_.a_data_){}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_supportedmethods_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -554,7 +1015,7 @@ inline void IPCPaymentMethodData::SharedCtor(
 
 IPCPaymentMethodData::~IPCPaymentMethodData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentMethodData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -577,41 +1038,34 @@ void IPCPaymentMethodData::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_supportedmethods_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_data_.ClearNonDefaultToEmpty();
-    }
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_supportedmethods_.ClearToEmpty();
+  _impl_.a_data_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentMethodData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_supportedMethods = 1;
+      // string a_supportedMethods = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_supportedmethods();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentMethodData.a_supportedMethods"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_data = 2;
+      // string a_data = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_data();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentMethodData.a_data"));
         } else
           goto handle_unusual;
         continue;
@@ -626,12 +1080,11 @@ const char* IPCPaymentMethodData::_InternalParse(const char* ptr, ::_pbi::ParseC
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -645,100 +1098,81 @@ uint8_t* IPCPaymentMethodData::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_supportedMethods = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_supportedMethods = 1;
+  if (!this->_internal_a_supportedmethods().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_supportedmethods().data(), static_cast<int>(this->_internal_a_supportedmethods().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentMethodData.a_supportedMethods");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_supportedmethods(), target);
   }
 
-  // required string a_data = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // string a_data = 2;
+  if (!this->_internal_a_data().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_data().data(), static_cast<int>(this->_internal_a_data().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentMethodData.a_data");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_data(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentMethodData)
   return target;
 }
 
-size_t IPCPaymentMethodData::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCPaymentMethodData)
-  size_t total_size = 0;
-
-  if (_internal_has_a_supportedmethods()) {
-    // required string a_supportedMethods = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_supportedmethods());
-  }
-
-  if (_internal_has_a_data()) {
-    // required string a_data = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_data());
-  }
-
-  return total_size;
-}
 size_t IPCPaymentMethodData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPaymentMethodData)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_supportedMethods = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_supportedmethods());
-
-    // required string a_data = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_data());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_supportedMethods = 1;
+  if (!this->_internal_a_supportedmethods().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_supportedmethods());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // string a_data = 2;
+  if (!this->_internal_a_data().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_data());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentMethodData::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentMethodData*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentMethodData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentMethodData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentMethodData::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentMethodData::MergeFrom(const IPCPaymentMethodData& from) {
-  IPCPaymentMethodData* const _this = this;
+
+void IPCPaymentMethodData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentMethodData*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentMethodData&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentMethodData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_supportedmethods(from._internal_a_supportedmethods());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_data(from._internal_a_data());
-    }
+  if (!from._internal_a_supportedmethods().empty()) {
+    _this->_internal_set_a_supportedmethods(from._internal_a_supportedmethods());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_data().empty()) {
+    _this->_internal_set_a_data(from._internal_a_data());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentMethodData::CopyFrom(const IPCPaymentMethodData& from) {
@@ -749,7 +1183,6 @@ void IPCPaymentMethodData::CopyFrom(const IPCPaymentMethodData& from) {
 }
 
 bool IPCPaymentMethodData::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -758,7 +1191,6 @@ void IPCPaymentMethodData::InternalSwap(IPCPaymentMethodData* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_supportedmethods_, lhs_arena,
       &other->_impl_.a_supportedmethods_, rhs_arena
@@ -769,48 +1201,38 @@ void IPCPaymentMethodData::InternalSwap(IPCPaymentMethodData* other) {
   );
 }
 
-std::string IPCPaymentMethodData::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentMethodData";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentMethodData::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[0]);
 }
-
 
 // ===================================================================
 
 class IPCPaymentCurrencyAmount::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCPaymentCurrencyAmount>()._impl_._has_bits_);
-  static void set_has_a_currency(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_value(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 IPCPaymentCurrencyAmount::IPCPaymentCurrencyAmount(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentCurrencyAmount)
 }
 IPCPaymentCurrencyAmount::IPCPaymentCurrencyAmount(const IPCPaymentCurrencyAmount& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentCurrencyAmount* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_currency_){}
-    , decltype(_impl_.a_value_){}};
+      decltype(_impl_.a_currency_){}
+    , decltype(_impl_.a_value_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_currency_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_currency_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_currency()) {
+  if (!from._internal_a_currency().empty()) {
     _this->_impl_.a_currency_.Set(from._internal_a_currency(), 
       _this->GetArenaForAllocation());
   }
@@ -818,7 +1240,7 @@ IPCPaymentCurrencyAmount::IPCPaymentCurrencyAmount(const IPCPaymentCurrencyAmoun
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_value_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_value()) {
+  if (!from._internal_a_value().empty()) {
     _this->_impl_.a_value_.Set(from._internal_a_value(), 
       _this->GetArenaForAllocation());
   }
@@ -830,10 +1252,9 @@ inline void IPCPaymentCurrencyAmount::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_currency_){}
+      decltype(_impl_.a_currency_){}
     , decltype(_impl_.a_value_){}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_currency_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -847,7 +1268,7 @@ inline void IPCPaymentCurrencyAmount::SharedCtor(
 
 IPCPaymentCurrencyAmount::~IPCPaymentCurrencyAmount() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentCurrencyAmount)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -870,41 +1291,34 @@ void IPCPaymentCurrencyAmount::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_currency_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_value_.ClearNonDefaultToEmpty();
-    }
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_currency_.ClearToEmpty();
+  _impl_.a_value_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentCurrencyAmount::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_currency = 1;
+      // string a_currency = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_currency();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentCurrencyAmount.a_currency"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_value = 2;
+      // string a_value = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_value();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentCurrencyAmount.a_value"));
         } else
           goto handle_unusual;
         continue;
@@ -919,12 +1333,11 @@ const char* IPCPaymentCurrencyAmount::_InternalParse(const char* ptr, ::_pbi::Pa
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -938,100 +1351,81 @@ uint8_t* IPCPaymentCurrencyAmount::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_currency = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_currency = 1;
+  if (!this->_internal_a_currency().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_currency().data(), static_cast<int>(this->_internal_a_currency().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentCurrencyAmount.a_currency");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_currency(), target);
   }
 
-  // required string a_value = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // string a_value = 2;
+  if (!this->_internal_a_value().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_value().data(), static_cast<int>(this->_internal_a_value().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentCurrencyAmount.a_value");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_value(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentCurrencyAmount)
   return target;
 }
 
-size_t IPCPaymentCurrencyAmount::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCPaymentCurrencyAmount)
-  size_t total_size = 0;
-
-  if (_internal_has_a_currency()) {
-    // required string a_currency = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_currency());
-  }
-
-  if (_internal_has_a_value()) {
-    // required string a_value = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_value());
-  }
-
-  return total_size;
-}
 size_t IPCPaymentCurrencyAmount::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPaymentCurrencyAmount)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_currency = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_currency());
-
-    // required string a_value = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_value());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_currency = 1;
+  if (!this->_internal_a_currency().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_currency());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // string a_value = 2;
+  if (!this->_internal_a_value().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_value());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentCurrencyAmount::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentCurrencyAmount*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentCurrencyAmount::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentCurrencyAmount::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentCurrencyAmount::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentCurrencyAmount::MergeFrom(const IPCPaymentCurrencyAmount& from) {
-  IPCPaymentCurrencyAmount* const _this = this;
+
+void IPCPaymentCurrencyAmount::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentCurrencyAmount*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentCurrencyAmount&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentCurrencyAmount)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_currency(from._internal_a_currency());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_value(from._internal_a_value());
-    }
+  if (!from._internal_a_currency().empty()) {
+    _this->_internal_set_a_currency(from._internal_a_currency());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_value().empty()) {
+    _this->_internal_set_a_value(from._internal_a_value());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentCurrencyAmount::CopyFrom(const IPCPaymentCurrencyAmount& from) {
@@ -1042,7 +1436,6 @@ void IPCPaymentCurrencyAmount::CopyFrom(const IPCPaymentCurrencyAmount& from) {
 }
 
 bool IPCPaymentCurrencyAmount::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1051,7 +1444,6 @@ void IPCPaymentCurrencyAmount::InternalSwap(IPCPaymentCurrencyAmount* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_currency_, lhs_arena,
       &other->_impl_.a_currency_, rhs_arena
@@ -1062,29 +1454,17 @@ void IPCPaymentCurrencyAmount::InternalSwap(IPCPaymentCurrencyAmount* other) {
   );
 }
 
-std::string IPCPaymentCurrencyAmount::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentCurrencyAmount";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentCurrencyAmount::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[1]);
 }
-
 
 // ===================================================================
 
 class IPCPaymentItem::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCPaymentItem>()._impl_._has_bits_);
-  static void set_has_a_label(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
   static const ::protobuf::mozilla::dom::IPCPaymentCurrencyAmount& a_amount(const IPCPaymentItem* msg);
-  static void set_has_a_amount(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_a_pending(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
-  }
 };
 
 const ::protobuf::mozilla::dom::IPCPaymentCurrencyAmount&
@@ -1093,26 +1473,25 @@ IPCPaymentItem::_Internal::a_amount(const IPCPaymentItem* msg) {
 }
 IPCPaymentItem::IPCPaymentItem(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentItem)
 }
 IPCPaymentItem::IPCPaymentItem(const IPCPaymentItem& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentItem* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_label_){}
+      decltype(_impl_.a_label_){}
     , decltype(_impl_.a_amount_){nullptr}
-    , decltype(_impl_.a_pending_){}};
+    , decltype(_impl_.a_pending_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_label_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_label_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_label()) {
+  if (!from._internal_a_label().empty()) {
     _this->_impl_.a_label_.Set(from._internal_a_label(), 
       _this->GetArenaForAllocation());
   }
@@ -1128,11 +1507,10 @@ inline void IPCPaymentItem::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_label_){}
+      decltype(_impl_.a_label_){}
     , decltype(_impl_.a_amount_){nullptr}
     , decltype(_impl_.a_pending_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_label_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1142,7 +1520,7 @@ inline void IPCPaymentItem::SharedCtor(
 
 IPCPaymentItem::~IPCPaymentItem() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentItem)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -1165,38 +1543,32 @@ void IPCPaymentItem::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_label_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(_impl_.a_amount_ != nullptr);
-      _impl_.a_amount_->Clear();
-    }
+  _impl_.a_label_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_amount_ != nullptr) {
+    delete _impl_.a_amount_;
   }
+  _impl_.a_amount_ = nullptr;
   _impl_.a_pending_ = false;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentItem::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_label = 1;
+      // string a_label = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_label();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentItem.a_label"));
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.dom.IPCPaymentCurrencyAmount a_amount = 2;
+      // .protobuf.mozilla.dom.IPCPaymentCurrencyAmount a_amount = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_amount(), ptr);
@@ -1204,10 +1576,9 @@ const char* IPCPaymentItem::_InternalParse(const char* ptr, ::_pbi::ParseContext
         } else
           goto handle_unusual;
         continue;
-      // required bool a_pending = 3;
+      // bool a_pending = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_a_pending(&has_bits);
           _impl_.a_pending_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -1224,12 +1595,11 @@ const char* IPCPaymentItem::_InternalParse(const char* ptr, ::_pbi::ParseContext
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1243,120 +1613,93 @@ uint8_t* IPCPaymentItem::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_label = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_label = 1;
+  if (!this->_internal_a_label().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_label().data(), static_cast<int>(this->_internal_a_label().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentItem.a_label");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_label(), target);
   }
 
-  // required .protobuf.mozilla.dom.IPCPaymentCurrencyAmount a_amount = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // .protobuf.mozilla.dom.IPCPaymentCurrencyAmount a_amount = 2;
+  if (this->_internal_has_a_amount()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::a_amount(this),
         _Internal::a_amount(this).GetCachedSize(), target, stream);
   }
 
-  // required bool a_pending = 3;
-  if (cached_has_bits & 0x00000004u) {
+  // bool a_pending = 3;
+  if (this->_internal_a_pending() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_pending(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentItem)
   return target;
 }
 
-size_t IPCPaymentItem::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCPaymentItem)
-  size_t total_size = 0;
-
-  if (_internal_has_a_label()) {
-    // required string a_label = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_label());
-  }
-
-  if (_internal_has_a_amount()) {
-    // required .protobuf.mozilla.dom.IPCPaymentCurrencyAmount a_amount = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_amount_);
-  }
-
-  if (_internal_has_a_pending()) {
-    // required bool a_pending = 3;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t IPCPaymentItem::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPaymentItem)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string a_label = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_label());
-
-    // required .protobuf.mozilla.dom.IPCPaymentCurrencyAmount a_amount = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_amount_);
-
-    // required bool a_pending = 3;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_label = 1;
+  if (!this->_internal_a_label().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_label());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // .protobuf.mozilla.dom.IPCPaymentCurrencyAmount a_amount = 2;
+  if (this->_internal_has_a_amount()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_amount_);
+  }
+
+  // bool a_pending = 3;
+  if (this->_internal_a_pending() != 0) {
+    total_size += 1 + 1;
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentItem::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentItem*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentItem::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentItem::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentItem::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentItem::MergeFrom(const IPCPaymentItem& from) {
-  IPCPaymentItem* const _this = this;
+
+void IPCPaymentItem::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentItem*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentItem&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentItem)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_label(from._internal_a_label());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_mutable_a_amount()->::protobuf::mozilla::dom::IPCPaymentCurrencyAmount::MergeFrom(
-          from._internal_a_amount());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.a_pending_ = from._impl_.a_pending_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_label().empty()) {
+    _this->_internal_set_a_label(from._internal_a_label());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (from._internal_has_a_amount()) {
+    _this->_internal_mutable_a_amount()->::protobuf::mozilla::dom::IPCPaymentCurrencyAmount::MergeFrom(
+        from._internal_a_amount());
+  }
+  if (from._internal_a_pending() != 0) {
+    _this->_internal_set_a_pending(from._internal_a_pending());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentItem::CopyFrom(const IPCPaymentItem& from) {
@@ -1367,10 +1710,6 @@ void IPCPaymentItem::CopyFrom(const IPCPaymentItem& from) {
 }
 
 bool IPCPaymentItem::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_amount()) {
-    if (!_impl_.a_amount_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -1379,7 +1718,6 @@ void IPCPaymentItem::InternalSwap(IPCPaymentItem* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_label_, lhs_arena,
       &other->_impl_.a_label_, rhs_arena
@@ -1392,32 +1730,17 @@ void IPCPaymentItem::InternalSwap(IPCPaymentItem* other) {
           reinterpret_cast<char*>(&other->_impl_.a_amount_));
 }
 
-std::string IPCPaymentItem::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentItem";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentItem::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[2]);
 }
-
 
 // ===================================================================
 
 class IPCPaymentDetailsModifier::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCPaymentDetailsModifier>()._impl_._has_bits_);
-  static void set_has_a_supportedmethods(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
   static const ::protobuf::mozilla::dom::IPCPaymentItem& a_total(const IPCPaymentDetailsModifier* msg);
-  static void set_has_a_total(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_a_data(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_a_additionaldisplayitemspassed(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
-  }
 };
 
 const ::protobuf::mozilla::dom::IPCPaymentItem&
@@ -1426,28 +1749,27 @@ IPCPaymentDetailsModifier::_Internal::a_total(const IPCPaymentDetailsModifier* m
 }
 IPCPaymentDetailsModifier::IPCPaymentDetailsModifier(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentDetailsModifier)
 }
 IPCPaymentDetailsModifier::IPCPaymentDetailsModifier(const IPCPaymentDetailsModifier& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentDetailsModifier* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_additionaldisplayitems_){from._impl_.a_additionaldisplayitems_}
+      decltype(_impl_.a_additionaldisplayitems_){from._impl_.a_additionaldisplayitems_}
     , decltype(_impl_.a_supportedmethods_){}
     , decltype(_impl_.a_data_){}
     , decltype(_impl_.a_total_){nullptr}
-    , decltype(_impl_.a_additionaldisplayitemspassed_){}};
+    , decltype(_impl_.a_additionaldisplayitemspassed_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_supportedmethods_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_supportedmethods_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_supportedmethods()) {
+  if (!from._internal_a_supportedmethods().empty()) {
     _this->_impl_.a_supportedmethods_.Set(from._internal_a_supportedmethods(), 
       _this->GetArenaForAllocation());
   }
@@ -1455,7 +1777,7 @@ IPCPaymentDetailsModifier::IPCPaymentDetailsModifier(const IPCPaymentDetailsModi
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_data_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_data()) {
+  if (!from._internal_a_data().empty()) {
     _this->_impl_.a_data_.Set(from._internal_a_data(), 
       _this->GetArenaForAllocation());
   }
@@ -1471,13 +1793,12 @@ inline void IPCPaymentDetailsModifier::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_additionaldisplayitems_){arena}
+      decltype(_impl_.a_additionaldisplayitems_){arena}
     , decltype(_impl_.a_supportedmethods_){}
     , decltype(_impl_.a_data_){}
     , decltype(_impl_.a_total_){nullptr}
     , decltype(_impl_.a_additionaldisplayitemspassed_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_supportedmethods_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1491,7 +1812,7 @@ inline void IPCPaymentDetailsModifier::SharedCtor(
 
 IPCPaymentDetailsModifier::~IPCPaymentDetailsModifier() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentDetailsModifier)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -1517,41 +1838,33 @@ void IPCPaymentDetailsModifier::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_additionaldisplayitems_.Clear();
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_supportedmethods_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_data_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      GOOGLE_DCHECK(_impl_.a_total_ != nullptr);
-      _impl_.a_total_->Clear();
-    }
+  _impl_.a_supportedmethods_.ClearToEmpty();
+  _impl_.a_data_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_total_ != nullptr) {
+    delete _impl_.a_total_;
   }
+  _impl_.a_total_ = nullptr;
   _impl_.a_additionaldisplayitemspassed_ = false;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentDetailsModifier::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_supportedMethods = 1;
+      // string a_supportedMethods = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_supportedmethods();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentDetailsModifier.a_supportedMethods"));
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.dom.IPCPaymentItem a_total = 2;
+      // .protobuf.mozilla.dom.IPCPaymentItem a_total = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_total(), ptr);
@@ -1572,19 +1885,19 @@ const char* IPCPaymentDetailsModifier::_InternalParse(const char* ptr, ::_pbi::P
         } else
           goto handle_unusual;
         continue;
-      // required string a_data = 4;
+      // string a_data = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_data();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentDetailsModifier.a_data"));
         } else
           goto handle_unusual;
         continue;
-      // required bool a_additionalDisplayItemsPassed = 5;
+      // bool a_additionalDisplayItemsPassed = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_a_additionaldisplayitemspassed(&has_bits);
           _impl_.a_additionaldisplayitemspassed_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -1601,12 +1914,11 @@ const char* IPCPaymentDetailsModifier::_InternalParse(const char* ptr, ::_pbi::P
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1620,15 +1932,18 @@ uint8_t* IPCPaymentDetailsModifier::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_supportedMethods = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_supportedMethods = 1;
+  if (!this->_internal_a_supportedmethods().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_supportedmethods().data(), static_cast<int>(this->_internal_a_supportedmethods().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentDetailsModifier.a_supportedMethods");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_supportedmethods(), target);
   }
 
-  // required .protobuf.mozilla.dom.IPCPaymentItem a_total = 2;
-  if (cached_has_bits & 0x00000004u) {
+  // .protobuf.mozilla.dom.IPCPaymentItem a_total = 2;
+  if (this->_internal_has_a_total()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::a_total(this),
         _Internal::a_total(this).GetCachedSize(), target, stream);
@@ -1642,84 +1957,34 @@ uint8_t* IPCPaymentDetailsModifier::_InternalSerialize(
         InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // required string a_data = 4;
-  if (cached_has_bits & 0x00000002u) {
+  // string a_data = 4;
+  if (!this->_internal_a_data().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_data().data(), static_cast<int>(this->_internal_a_data().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentDetailsModifier.a_data");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_data(), target);
   }
 
-  // required bool a_additionalDisplayItemsPassed = 5;
-  if (cached_has_bits & 0x00000008u) {
+  // bool a_additionalDisplayItemsPassed = 5;
+  if (this->_internal_a_additionaldisplayitemspassed() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_additionaldisplayitemspassed(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentDetailsModifier)
   return target;
 }
 
-size_t IPCPaymentDetailsModifier::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCPaymentDetailsModifier)
-  size_t total_size = 0;
-
-  if (_internal_has_a_supportedmethods()) {
-    // required string a_supportedMethods = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_supportedmethods());
-  }
-
-  if (_internal_has_a_data()) {
-    // required string a_data = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_data());
-  }
-
-  if (_internal_has_a_total()) {
-    // required .protobuf.mozilla.dom.IPCPaymentItem a_total = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_total_);
-  }
-
-  if (_internal_has_a_additionaldisplayitemspassed()) {
-    // required bool a_additionalDisplayItemsPassed = 5;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t IPCPaymentDetailsModifier::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPaymentDetailsModifier)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required string a_supportedMethods = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_supportedmethods());
-
-    // required string a_data = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_data());
-
-    // required .protobuf.mozilla.dom.IPCPaymentItem a_total = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_total_);
-
-    // required bool a_additionalDisplayItemsPassed = 5;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1731,46 +1996,65 @@ size_t IPCPaymentDetailsModifier::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_supportedMethods = 1;
+  if (!this->_internal_a_supportedmethods().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_supportedmethods());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // string a_data = 4;
+  if (!this->_internal_a_data().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_data());
+  }
+
+  // .protobuf.mozilla.dom.IPCPaymentItem a_total = 2;
+  if (this->_internal_has_a_total()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_total_);
+  }
+
+  // bool a_additionalDisplayItemsPassed = 5;
+  if (this->_internal_a_additionaldisplayitemspassed() != 0) {
+    total_size += 1 + 1;
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentDetailsModifier::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentDetailsModifier*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentDetailsModifier::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentDetailsModifier::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentDetailsModifier::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentDetailsModifier::MergeFrom(const IPCPaymentDetailsModifier& from) {
-  IPCPaymentDetailsModifier* const _this = this;
+
+void IPCPaymentDetailsModifier::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentDetailsModifier*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentDetailsModifier&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentDetailsModifier)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_additionaldisplayitems_.MergeFrom(from._impl_.a_additionaldisplayitems_);
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_supportedmethods(from._internal_a_supportedmethods());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_data(from._internal_a_data());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_mutable_a_total()->::protobuf::mozilla::dom::IPCPaymentItem::MergeFrom(
-          from._internal_a_total());
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.a_additionaldisplayitemspassed_ = from._impl_.a_additionaldisplayitemspassed_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_supportedmethods().empty()) {
+    _this->_internal_set_a_supportedmethods(from._internal_a_supportedmethods());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_data().empty()) {
+    _this->_internal_set_a_data(from._internal_a_data());
+  }
+  if (from._internal_has_a_total()) {
+    _this->_internal_mutable_a_total()->::protobuf::mozilla::dom::IPCPaymentItem::MergeFrom(
+        from._internal_a_total());
+  }
+  if (from._internal_a_additionaldisplayitemspassed() != 0) {
+    _this->_internal_set_a_additionaldisplayitemspassed(from._internal_a_additionaldisplayitemspassed());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentDetailsModifier::CopyFrom(const IPCPaymentDetailsModifier& from) {
@@ -1781,12 +2065,6 @@ void IPCPaymentDetailsModifier::CopyFrom(const IPCPaymentDetailsModifier& from) 
 }
 
 bool IPCPaymentDetailsModifier::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_additionaldisplayitems_))
-    return false;
-  if (_internal_has_a_total()) {
-    if (!_impl_.a_total_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -1795,7 +2073,6 @@ void IPCPaymentDetailsModifier::InternalSwap(IPCPaymentDetailsModifier* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_additionaldisplayitems_.InternalSwap(&other->_impl_.a_additionaldisplayitems_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_supportedmethods_, lhs_arena,
@@ -1813,32 +2090,17 @@ void IPCPaymentDetailsModifier::InternalSwap(IPCPaymentDetailsModifier* other) {
           reinterpret_cast<char*>(&other->_impl_.a_total_));
 }
 
-std::string IPCPaymentDetailsModifier::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentDetailsModifier";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentDetailsModifier::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[3]);
 }
-
 
 // ===================================================================
 
 class IPCPaymentShippingOption::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCPaymentShippingOption>()._impl_._has_bits_);
-  static void set_has_a_id(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_label(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
   static const ::protobuf::mozilla::dom::IPCPaymentCurrencyAmount& a_amount(const IPCPaymentShippingOption* msg);
-  static void set_has_a_amount(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_a_selected(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000000f) ^ 0x0000000f) != 0;
-  }
 };
 
 const ::protobuf::mozilla::dom::IPCPaymentCurrencyAmount&
@@ -1847,27 +2109,26 @@ IPCPaymentShippingOption::_Internal::a_amount(const IPCPaymentShippingOption* ms
 }
 IPCPaymentShippingOption::IPCPaymentShippingOption(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentShippingOption)
 }
 IPCPaymentShippingOption::IPCPaymentShippingOption(const IPCPaymentShippingOption& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentShippingOption* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_id_){}
+      decltype(_impl_.a_id_){}
     , decltype(_impl_.a_label_){}
     , decltype(_impl_.a_amount_){nullptr}
-    , decltype(_impl_.a_selected_){}};
+    , decltype(_impl_.a_selected_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_id_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_id()) {
+  if (!from._internal_a_id().empty()) {
     _this->_impl_.a_id_.Set(from._internal_a_id(), 
       _this->GetArenaForAllocation());
   }
@@ -1875,7 +2136,7 @@ IPCPaymentShippingOption::IPCPaymentShippingOption(const IPCPaymentShippingOptio
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_label_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_label()) {
+  if (!from._internal_a_label().empty()) {
     _this->_impl_.a_label_.Set(from._internal_a_label(), 
       _this->GetArenaForAllocation());
   }
@@ -1891,12 +2152,11 @@ inline void IPCPaymentShippingOption::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_id_){}
+      decltype(_impl_.a_id_){}
     , decltype(_impl_.a_label_){}
     , decltype(_impl_.a_amount_){nullptr}
     , decltype(_impl_.a_selected_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1910,7 +2170,7 @@ inline void IPCPaymentShippingOption::SharedCtor(
 
 IPCPaymentShippingOption::~IPCPaymentShippingOption() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentShippingOption)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -1934,50 +2194,43 @@ void IPCPaymentShippingOption::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_id_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_label_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      GOOGLE_DCHECK(_impl_.a_amount_ != nullptr);
-      _impl_.a_amount_->Clear();
-    }
+  _impl_.a_id_.ClearToEmpty();
+  _impl_.a_label_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_amount_ != nullptr) {
+    delete _impl_.a_amount_;
   }
+  _impl_.a_amount_ = nullptr;
   _impl_.a_selected_ = false;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentShippingOption::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_id = 1;
+      // string a_id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_id();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentShippingOption.a_id"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_label = 2;
+      // string a_label = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_label();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentShippingOption.a_label"));
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.dom.IPCPaymentCurrencyAmount a_amount = 3;
+      // .protobuf.mozilla.dom.IPCPaymentCurrencyAmount a_amount = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_amount(), ptr);
@@ -1985,10 +2238,9 @@ const char* IPCPaymentShippingOption::_InternalParse(const char* ptr, ::_pbi::Pa
         } else
           goto handle_unusual;
         continue;
-      // required bool a_selected = 4;
+      // bool a_selected = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_a_selected(&has_bits);
           _impl_.a_selected_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -2005,12 +2257,11 @@ const char* IPCPaymentShippingOption::_InternalParse(const char* ptr, ::_pbi::Pa
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2024,141 +2275,113 @@ uint8_t* IPCPaymentShippingOption::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_id = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_id = 1;
+  if (!this->_internal_a_id().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_id().data(), static_cast<int>(this->_internal_a_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentShippingOption.a_id");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_id(), target);
   }
 
-  // required string a_label = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // string a_label = 2;
+  if (!this->_internal_a_label().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_label().data(), static_cast<int>(this->_internal_a_label().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentShippingOption.a_label");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_label(), target);
   }
 
-  // required .protobuf.mozilla.dom.IPCPaymentCurrencyAmount a_amount = 3;
-  if (cached_has_bits & 0x00000004u) {
+  // .protobuf.mozilla.dom.IPCPaymentCurrencyAmount a_amount = 3;
+  if (this->_internal_has_a_amount()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(3, _Internal::a_amount(this),
         _Internal::a_amount(this).GetCachedSize(), target, stream);
   }
 
-  // required bool a_selected = 4;
-  if (cached_has_bits & 0x00000008u) {
+  // bool a_selected = 4;
+  if (this->_internal_a_selected() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_selected(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentShippingOption)
   return target;
 }
 
-size_t IPCPaymentShippingOption::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCPaymentShippingOption)
-  size_t total_size = 0;
-
-  if (_internal_has_a_id()) {
-    // required string a_id = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_id());
-  }
-
-  if (_internal_has_a_label()) {
-    // required string a_label = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_label());
-  }
-
-  if (_internal_has_a_amount()) {
-    // required .protobuf.mozilla.dom.IPCPaymentCurrencyAmount a_amount = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_amount_);
-  }
-
-  if (_internal_has_a_selected()) {
-    // required bool a_selected = 4;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t IPCPaymentShippingOption::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPaymentShippingOption)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000000f) ^ 0x0000000f) == 0) {  // All required fields are present.
-    // required string a_id = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_id());
-
-    // required string a_label = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_label());
-
-    // required .protobuf.mozilla.dom.IPCPaymentCurrencyAmount a_amount = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_amount_);
-
-    // required bool a_selected = 4;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_id = 1;
+  if (!this->_internal_a_id().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_id());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // string a_label = 2;
+  if (!this->_internal_a_label().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_label());
+  }
+
+  // .protobuf.mozilla.dom.IPCPaymentCurrencyAmount a_amount = 3;
+  if (this->_internal_has_a_amount()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_amount_);
+  }
+
+  // bool a_selected = 4;
+  if (this->_internal_a_selected() != 0) {
+    total_size += 1 + 1;
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentShippingOption::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentShippingOption*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentShippingOption::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentShippingOption::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentShippingOption::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentShippingOption::MergeFrom(const IPCPaymentShippingOption& from) {
-  IPCPaymentShippingOption* const _this = this;
+
+void IPCPaymentShippingOption::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentShippingOption*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentShippingOption&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentShippingOption)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000000fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_id(from._internal_a_id());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_label(from._internal_a_label());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_mutable_a_amount()->::protobuf::mozilla::dom::IPCPaymentCurrencyAmount::MergeFrom(
-          from._internal_a_amount());
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.a_selected_ = from._impl_.a_selected_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_id().empty()) {
+    _this->_internal_set_a_id(from._internal_a_id());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_label().empty()) {
+    _this->_internal_set_a_label(from._internal_a_label());
+  }
+  if (from._internal_has_a_amount()) {
+    _this->_internal_mutable_a_amount()->::protobuf::mozilla::dom::IPCPaymentCurrencyAmount::MergeFrom(
+        from._internal_a_amount());
+  }
+  if (from._internal_a_selected() != 0) {
+    _this->_internal_set_a_selected(from._internal_a_selected());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentShippingOption::CopyFrom(const IPCPaymentShippingOption& from) {
@@ -2169,10 +2392,6 @@ void IPCPaymentShippingOption::CopyFrom(const IPCPaymentShippingOption& from) {
 }
 
 bool IPCPaymentShippingOption::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_amount()) {
-    if (!_impl_.a_amount_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -2181,7 +2400,6 @@ void IPCPaymentShippingOption::InternalSwap(IPCPaymentShippingOption* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_id_, lhs_arena,
       &other->_impl_.a_id_, rhs_arena
@@ -2198,38 +2416,17 @@ void IPCPaymentShippingOption::InternalSwap(IPCPaymentShippingOption* other) {
           reinterpret_cast<char*>(&other->_impl_.a_amount_));
 }
 
-std::string IPCPaymentShippingOption::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentShippingOption";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentShippingOption::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[4]);
 }
-
 
 // ===================================================================
 
 class IPCPaymentDetails::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCPaymentDetails>()._impl_._has_bits_);
-  static void set_has_a_id(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
   static const ::protobuf::mozilla::dom::IPCPaymentItem& a_total(const IPCPaymentDetails* msg);
-  static void set_has_a_total(HasBits* has_bits) {
-    (*has_bits)[0] |= 32u;
-  }
-  static void set_has_a_error(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_a_shippingaddresserrors(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_a_payererrors(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_a_paymentmethoderrors(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000003f) ^ 0x0000003f) != 0;
-  }
 };
 
 const ::protobuf::mozilla::dom::IPCPaymentItem&
@@ -2238,17 +2435,15 @@ IPCPaymentDetails::_Internal::a_total(const IPCPaymentDetails* msg) {
 }
 IPCPaymentDetails::IPCPaymentDetails(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentDetails)
 }
 IPCPaymentDetails::IPCPaymentDetails(const IPCPaymentDetails& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentDetails* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_displayitems_){from._impl_.a_displayitems_}
+      decltype(_impl_.a_displayitems_){from._impl_.a_displayitems_}
     , decltype(_impl_.a_shippingoptions_){from._impl_.a_shippingoptions_}
     , decltype(_impl_.a_modifiers_){from._impl_.a_modifiers_}
     , decltype(_impl_.a_id_){}
@@ -2256,14 +2451,15 @@ IPCPaymentDetails::IPCPaymentDetails(const IPCPaymentDetails& from)
     , decltype(_impl_.a_shippingaddresserrors_){}
     , decltype(_impl_.a_payererrors_){}
     , decltype(_impl_.a_paymentmethoderrors_){}
-    , decltype(_impl_.a_total_){nullptr}};
+    , decltype(_impl_.a_total_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_id_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_id()) {
+  if (!from._internal_a_id().empty()) {
     _this->_impl_.a_id_.Set(from._internal_a_id(), 
       _this->GetArenaForAllocation());
   }
@@ -2271,7 +2467,7 @@ IPCPaymentDetails::IPCPaymentDetails(const IPCPaymentDetails& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_error_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_error()) {
+  if (!from._internal_a_error().empty()) {
     _this->_impl_.a_error_.Set(from._internal_a_error(), 
       _this->GetArenaForAllocation());
   }
@@ -2279,7 +2475,7 @@ IPCPaymentDetails::IPCPaymentDetails(const IPCPaymentDetails& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_shippingaddresserrors_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_shippingaddresserrors()) {
+  if (!from._internal_a_shippingaddresserrors().empty()) {
     _this->_impl_.a_shippingaddresserrors_.Set(from._internal_a_shippingaddresserrors(), 
       _this->GetArenaForAllocation());
   }
@@ -2287,7 +2483,7 @@ IPCPaymentDetails::IPCPaymentDetails(const IPCPaymentDetails& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_payererrors_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_payererrors()) {
+  if (!from._internal_a_payererrors().empty()) {
     _this->_impl_.a_payererrors_.Set(from._internal_a_payererrors(), 
       _this->GetArenaForAllocation());
   }
@@ -2295,7 +2491,7 @@ IPCPaymentDetails::IPCPaymentDetails(const IPCPaymentDetails& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_paymentmethoderrors_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_paymentmethoderrors()) {
+  if (!from._internal_a_paymentmethoderrors().empty()) {
     _this->_impl_.a_paymentmethoderrors_.Set(from._internal_a_paymentmethoderrors(), 
       _this->GetArenaForAllocation());
   }
@@ -2310,9 +2506,7 @@ inline void IPCPaymentDetails::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_displayitems_){arena}
+      decltype(_impl_.a_displayitems_){arena}
     , decltype(_impl_.a_shippingoptions_){arena}
     , decltype(_impl_.a_modifiers_){arena}
     , decltype(_impl_.a_id_){}
@@ -2321,6 +2515,7 @@ inline void IPCPaymentDetails::SharedCtor(
     , decltype(_impl_.a_payererrors_){}
     , decltype(_impl_.a_paymentmethoderrors_){}
     , decltype(_impl_.a_total_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2346,7 +2541,7 @@ inline void IPCPaymentDetails::SharedCtor(
 
 IPCPaymentDetails::~IPCPaymentDetails() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentDetails)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -2379,49 +2574,35 @@ void IPCPaymentDetails::Clear() {
   _impl_.a_displayitems_.Clear();
   _impl_.a_shippingoptions_.Clear();
   _impl_.a_modifiers_.Clear();
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000003fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_id_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_error_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _impl_.a_shippingaddresserrors_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _impl_.a_payererrors_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _impl_.a_paymentmethoderrors_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000020u) {
-      GOOGLE_DCHECK(_impl_.a_total_ != nullptr);
-      _impl_.a_total_->Clear();
-    }
+  _impl_.a_id_.ClearToEmpty();
+  _impl_.a_error_.ClearToEmpty();
+  _impl_.a_shippingaddresserrors_.ClearToEmpty();
+  _impl_.a_payererrors_.ClearToEmpty();
+  _impl_.a_paymentmethoderrors_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_total_ != nullptr) {
+    delete _impl_.a_total_;
   }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_total_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentDetails::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_id = 1;
+      // string a_id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_id();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentDetails.a_id"));
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.dom.IPCPaymentItem a_total = 2;
+      // .protobuf.mozilla.dom.IPCPaymentItem a_total = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_total(), ptr);
@@ -2468,39 +2649,43 @@ const char* IPCPaymentDetails::_InternalParse(const char* ptr, ::_pbi::ParseCont
         } else
           goto handle_unusual;
         continue;
-      // required string a_error = 6;
+      // string a_error = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_a_error();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentDetails.a_error"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_shippingAddressErrors = 7;
+      // string a_shippingAddressErrors = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           auto str = _internal_mutable_a_shippingaddresserrors();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentDetails.a_shippingAddressErrors"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_payerErrors = 8;
+      // string a_payerErrors = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           auto str = _internal_mutable_a_payererrors();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentDetails.a_payerErrors"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_paymentMethodErrors = 9;
+      // string a_paymentMethodErrors = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           auto str = _internal_mutable_a_paymentmethoderrors();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentDetails.a_paymentMethodErrors"));
         } else
           goto handle_unusual;
         continue;
@@ -2515,12 +2700,11 @@ const char* IPCPaymentDetails::_InternalParse(const char* ptr, ::_pbi::ParseCont
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2534,15 +2718,18 @@ uint8_t* IPCPaymentDetails::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_id = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_id = 1;
+  if (!this->_internal_a_id().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_id().data(), static_cast<int>(this->_internal_a_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentDetails.a_id");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_id(), target);
   }
 
-  // required .protobuf.mozilla.dom.IPCPaymentItem a_total = 2;
-  if (cached_has_bits & 0x00000020u) {
+  // .protobuf.mozilla.dom.IPCPaymentItem a_total = 2;
+  if (this->_internal_has_a_total()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::a_total(this),
         _Internal::a_total(this).GetCachedSize(), target, stream);
@@ -2572,124 +2759,58 @@ uint8_t* IPCPaymentDetails::_InternalSerialize(
         InternalWriteMessage(5, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // required string a_error = 6;
-  if (cached_has_bits & 0x00000002u) {
+  // string a_error = 6;
+  if (!this->_internal_a_error().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_error().data(), static_cast<int>(this->_internal_a_error().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentDetails.a_error");
     target = stream->WriteStringMaybeAliased(
         6, this->_internal_a_error(), target);
   }
 
-  // required string a_shippingAddressErrors = 7;
-  if (cached_has_bits & 0x00000004u) {
+  // string a_shippingAddressErrors = 7;
+  if (!this->_internal_a_shippingaddresserrors().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_shippingaddresserrors().data(), static_cast<int>(this->_internal_a_shippingaddresserrors().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentDetails.a_shippingAddressErrors");
     target = stream->WriteStringMaybeAliased(
         7, this->_internal_a_shippingaddresserrors(), target);
   }
 
-  // required string a_payerErrors = 8;
-  if (cached_has_bits & 0x00000008u) {
+  // string a_payerErrors = 8;
+  if (!this->_internal_a_payererrors().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_payererrors().data(), static_cast<int>(this->_internal_a_payererrors().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentDetails.a_payerErrors");
     target = stream->WriteStringMaybeAliased(
         8, this->_internal_a_payererrors(), target);
   }
 
-  // required string a_paymentMethodErrors = 9;
-  if (cached_has_bits & 0x00000010u) {
+  // string a_paymentMethodErrors = 9;
+  if (!this->_internal_a_paymentmethoderrors().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_paymentmethoderrors().data(), static_cast<int>(this->_internal_a_paymentmethoderrors().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentDetails.a_paymentMethodErrors");
     target = stream->WriteStringMaybeAliased(
         9, this->_internal_a_paymentmethoderrors(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentDetails)
   return target;
 }
 
-size_t IPCPaymentDetails::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCPaymentDetails)
-  size_t total_size = 0;
-
-  if (_internal_has_a_id()) {
-    // required string a_id = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_id());
-  }
-
-  if (_internal_has_a_error()) {
-    // required string a_error = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_error());
-  }
-
-  if (_internal_has_a_shippingaddresserrors()) {
-    // required string a_shippingAddressErrors = 7;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_shippingaddresserrors());
-  }
-
-  if (_internal_has_a_payererrors()) {
-    // required string a_payerErrors = 8;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_payererrors());
-  }
-
-  if (_internal_has_a_paymentmethoderrors()) {
-    // required string a_paymentMethodErrors = 9;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_paymentmethoderrors());
-  }
-
-  if (_internal_has_a_total()) {
-    // required .protobuf.mozilla.dom.IPCPaymentItem a_total = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_total_);
-  }
-
-  return total_size;
-}
 size_t IPCPaymentDetails::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPaymentDetails)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
-    // required string a_id = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_id());
-
-    // required string a_error = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_error());
-
-    // required string a_shippingAddressErrors = 7;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_shippingaddresserrors());
-
-    // required string a_payerErrors = 8;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_payererrors());
-
-    // required string a_paymentMethodErrors = 9;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_paymentmethoderrors());
-
-    // required .protobuf.mozilla.dom.IPCPaymentItem a_total = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_total_);
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2715,22 +2836,61 @@ size_t IPCPaymentDetails::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_id = 1;
+  if (!this->_internal_a_id().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_id());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // string a_error = 6;
+  if (!this->_internal_a_error().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_error());
+  }
+
+  // string a_shippingAddressErrors = 7;
+  if (!this->_internal_a_shippingaddresserrors().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_shippingaddresserrors());
+  }
+
+  // string a_payerErrors = 8;
+  if (!this->_internal_a_payererrors().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_payererrors());
+  }
+
+  // string a_paymentMethodErrors = 9;
+  if (!this->_internal_a_paymentmethoderrors().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_paymentmethoderrors());
+  }
+
+  // .protobuf.mozilla.dom.IPCPaymentItem a_total = 2;
+  if (this->_internal_has_a_total()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_total_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentDetails::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentDetails*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentDetails::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentDetails::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentDetails::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentDetails::MergeFrom(const IPCPaymentDetails& from) {
-  IPCPaymentDetails* const _this = this;
+
+void IPCPaymentDetails::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentDetails*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentDetails&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentDetails)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2739,29 +2899,26 @@ void IPCPaymentDetails::MergeFrom(const IPCPaymentDetails& from) {
   _this->_impl_.a_displayitems_.MergeFrom(from._impl_.a_displayitems_);
   _this->_impl_.a_shippingoptions_.MergeFrom(from._impl_.a_shippingoptions_);
   _this->_impl_.a_modifiers_.MergeFrom(from._impl_.a_modifiers_);
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000003fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_id(from._internal_a_id());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_error(from._internal_a_error());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_a_shippingaddresserrors(from._internal_a_shippingaddresserrors());
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_internal_set_a_payererrors(from._internal_a_payererrors());
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_internal_set_a_paymentmethoderrors(from._internal_a_paymentmethoderrors());
-    }
-    if (cached_has_bits & 0x00000020u) {
-      _this->_internal_mutable_a_total()->::protobuf::mozilla::dom::IPCPaymentItem::MergeFrom(
-          from._internal_a_total());
-    }
+  if (!from._internal_a_id().empty()) {
+    _this->_internal_set_a_id(from._internal_a_id());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_error().empty()) {
+    _this->_internal_set_a_error(from._internal_a_error());
+  }
+  if (!from._internal_a_shippingaddresserrors().empty()) {
+    _this->_internal_set_a_shippingaddresserrors(from._internal_a_shippingaddresserrors());
+  }
+  if (!from._internal_a_payererrors().empty()) {
+    _this->_internal_set_a_payererrors(from._internal_a_payererrors());
+  }
+  if (!from._internal_a_paymentmethoderrors().empty()) {
+    _this->_internal_set_a_paymentmethoderrors(from._internal_a_paymentmethoderrors());
+  }
+  if (from._internal_has_a_total()) {
+    _this->_internal_mutable_a_total()->::protobuf::mozilla::dom::IPCPaymentItem::MergeFrom(
+        from._internal_a_total());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentDetails::CopyFrom(const IPCPaymentDetails& from) {
@@ -2772,16 +2929,6 @@ void IPCPaymentDetails::CopyFrom(const IPCPaymentDetails& from) {
 }
 
 bool IPCPaymentDetails::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_displayitems_))
-    return false;
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_shippingoptions_))
-    return false;
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_modifiers_))
-    return false;
-  if (_internal_has_a_total()) {
-    if (!_impl_.a_total_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -2790,7 +2937,6 @@ void IPCPaymentDetails::InternalSwap(IPCPaymentDetails* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_displayitems_.InternalSwap(&other->_impl_.a_displayitems_);
   _impl_.a_shippingoptions_.InternalSwap(&other->_impl_.a_shippingoptions_);
   _impl_.a_modifiers_.InternalSwap(&other->_impl_.a_modifiers_);
@@ -2817,64 +2963,42 @@ void IPCPaymentDetails::InternalSwap(IPCPaymentDetails* other) {
   swap(_impl_.a_total_, other->_impl_.a_total_);
 }
 
-std::string IPCPaymentDetails::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentDetails";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentDetails::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[5]);
 }
-
 
 // ===================================================================
 
 class IPCPaymentOptions::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCPaymentOptions>()._impl_._has_bits_);
-  static void set_has_a_requestpayername(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_a_requestpayeremail(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_a_requestpayerphone(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_a_requestshipping(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static void set_has_a_requestbillingaddress(HasBits* has_bits) {
-    (*has_bits)[0] |= 32u;
-  }
-  static void set_has_a_shippingtype(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000003f) ^ 0x0000003f) != 0;
-  }
 };
 
 IPCPaymentOptions::IPCPaymentOptions(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentOptions)
 }
 IPCPaymentOptions::IPCPaymentOptions(const IPCPaymentOptions& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentOptions* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_shippingtype_){}
+      decltype(_impl_.a_shippingtype_){}
     , decltype(_impl_.a_requestpayername_){}
     , decltype(_impl_.a_requestpayeremail_){}
     , decltype(_impl_.a_requestpayerphone_){}
     , decltype(_impl_.a_requestshipping_){}
-    , decltype(_impl_.a_requestbillingaddress_){}};
+    , decltype(_impl_.a_requestbillingaddress_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_shippingtype_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_shippingtype_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_shippingtype()) {
+  if (!from._internal_a_shippingtype().empty()) {
     _this->_impl_.a_shippingtype_.Set(from._internal_a_shippingtype(), 
       _this->GetArenaForAllocation());
   }
@@ -2889,14 +3013,13 @@ inline void IPCPaymentOptions::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_shippingtype_){}
+      decltype(_impl_.a_shippingtype_){}
     , decltype(_impl_.a_requestpayername_){false}
     , decltype(_impl_.a_requestpayeremail_){false}
     , decltype(_impl_.a_requestpayerphone_){false}
     , decltype(_impl_.a_requestshipping_){false}
     , decltype(_impl_.a_requestbillingaddress_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_shippingtype_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2906,7 +3029,7 @@ inline void IPCPaymentOptions::SharedCtor(
 
 IPCPaymentOptions::~IPCPaymentOptions() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentOptions)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -2928,77 +3051,66 @@ void IPCPaymentOptions::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_shippingtype_.ClearNonDefaultToEmpty();
-  }
-  if (cached_has_bits & 0x0000003eu) {
-    ::memset(&_impl_.a_requestpayername_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.a_requestbillingaddress_) -
-        reinterpret_cast<char*>(&_impl_.a_requestpayername_)) + sizeof(_impl_.a_requestbillingaddress_));
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_shippingtype_.ClearToEmpty();
+  ::memset(&_impl_.a_requestpayername_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.a_requestbillingaddress_) -
+      reinterpret_cast<char*>(&_impl_.a_requestpayername_)) + sizeof(_impl_.a_requestbillingaddress_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentOptions::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_requestPayerName = 1;
+      // bool a_requestPayerName = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_a_requestpayername(&has_bits);
           _impl_.a_requestpayername_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool a_requestPayerEmail = 2;
+      // bool a_requestPayerEmail = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_a_requestpayeremail(&has_bits);
           _impl_.a_requestpayeremail_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool a_requestPayerPhone = 3;
+      // bool a_requestPayerPhone = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_a_requestpayerphone(&has_bits);
           _impl_.a_requestpayerphone_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool a_requestShipping = 4;
+      // bool a_requestShipping = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_a_requestshipping(&has_bits);
           _impl_.a_requestshipping_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool a_requestBillingAddress = 5;
+      // bool a_requestBillingAddress = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_a_requestbillingaddress(&has_bits);
           _impl_.a_requestbillingaddress_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required string a_shippingType = 6;
+      // string a_shippingType = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_a_shippingtype();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentOptions.a_shippingType"));
         } else
           goto handle_unusual;
         continue;
@@ -3013,12 +3125,11 @@ const char* IPCPaymentOptions::_InternalParse(const char* ptr, ::_pbi::ParseCont
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -3032,165 +3143,131 @@ uint8_t* IPCPaymentOptions::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_requestPayerName = 1;
-  if (cached_has_bits & 0x00000002u) {
+  // bool a_requestPayerName = 1;
+  if (this->_internal_a_requestpayername() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_requestpayername(), target);
   }
 
-  // required bool a_requestPayerEmail = 2;
-  if (cached_has_bits & 0x00000004u) {
+  // bool a_requestPayerEmail = 2;
+  if (this->_internal_a_requestpayeremail() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_requestpayeremail(), target);
   }
 
-  // required bool a_requestPayerPhone = 3;
-  if (cached_has_bits & 0x00000008u) {
+  // bool a_requestPayerPhone = 3;
+  if (this->_internal_a_requestpayerphone() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_requestpayerphone(), target);
   }
 
-  // required bool a_requestShipping = 4;
-  if (cached_has_bits & 0x00000010u) {
+  // bool a_requestShipping = 4;
+  if (this->_internal_a_requestshipping() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_a_requestshipping(), target);
   }
 
-  // required bool a_requestBillingAddress = 5;
-  if (cached_has_bits & 0x00000020u) {
+  // bool a_requestBillingAddress = 5;
+  if (this->_internal_a_requestbillingaddress() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_requestbillingaddress(), target);
   }
 
-  // required string a_shippingType = 6;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_shippingType = 6;
+  if (!this->_internal_a_shippingtype().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_shippingtype().data(), static_cast<int>(this->_internal_a_shippingtype().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentOptions.a_shippingType");
     target = stream->WriteStringMaybeAliased(
         6, this->_internal_a_shippingtype(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentOptions)
   return target;
 }
 
-size_t IPCPaymentOptions::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCPaymentOptions)
-  size_t total_size = 0;
-
-  if (_internal_has_a_shippingtype()) {
-    // required string a_shippingType = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_shippingtype());
-  }
-
-  if (_internal_has_a_requestpayername()) {
-    // required bool a_requestPayerName = 1;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_requestpayeremail()) {
-    // required bool a_requestPayerEmail = 2;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_requestpayerphone()) {
-    // required bool a_requestPayerPhone = 3;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_requestshipping()) {
-    // required bool a_requestShipping = 4;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_requestbillingaddress()) {
-    // required bool a_requestBillingAddress = 5;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t IPCPaymentOptions::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPaymentOptions)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
-    // required string a_shippingType = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_shippingtype());
-
-    // required bool a_requestPayerName = 1;
-    total_size += 1 + 1;
-
-    // required bool a_requestPayerEmail = 2;
-    total_size += 1 + 1;
-
-    // required bool a_requestPayerPhone = 3;
-    total_size += 1 + 1;
-
-    // required bool a_requestShipping = 4;
-    total_size += 1 + 1;
-
-    // required bool a_requestBillingAddress = 5;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_shippingType = 6;
+  if (!this->_internal_a_shippingtype().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_shippingtype());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // bool a_requestPayerName = 1;
+  if (this->_internal_a_requestpayername() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool a_requestPayerEmail = 2;
+  if (this->_internal_a_requestpayeremail() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool a_requestPayerPhone = 3;
+  if (this->_internal_a_requestpayerphone() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool a_requestShipping = 4;
+  if (this->_internal_a_requestshipping() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool a_requestBillingAddress = 5;
+  if (this->_internal_a_requestbillingaddress() != 0) {
+    total_size += 1 + 1;
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentOptions::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentOptions*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentOptions::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentOptions::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentOptions::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentOptions::MergeFrom(const IPCPaymentOptions& from) {
-  IPCPaymentOptions* const _this = this;
+
+void IPCPaymentOptions::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentOptions*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentOptions&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentOptions)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000003fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_shippingtype(from._internal_a_shippingtype());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.a_requestpayername_ = from._impl_.a_requestpayername_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.a_requestpayeremail_ = from._impl_.a_requestpayeremail_;
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.a_requestpayerphone_ = from._impl_.a_requestpayerphone_;
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.a_requestshipping_ = from._impl_.a_requestshipping_;
-    }
-    if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.a_requestbillingaddress_ = from._impl_.a_requestbillingaddress_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_shippingtype().empty()) {
+    _this->_internal_set_a_shippingtype(from._internal_a_shippingtype());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (from._internal_a_requestpayername() != 0) {
+    _this->_internal_set_a_requestpayername(from._internal_a_requestpayername());
+  }
+  if (from._internal_a_requestpayeremail() != 0) {
+    _this->_internal_set_a_requestpayeremail(from._internal_a_requestpayeremail());
+  }
+  if (from._internal_a_requestpayerphone() != 0) {
+    _this->_internal_set_a_requestpayerphone(from._internal_a_requestpayerphone());
+  }
+  if (from._internal_a_requestshipping() != 0) {
+    _this->_internal_set_a_requestshipping(from._internal_a_requestshipping());
+  }
+  if (from._internal_a_requestbillingaddress() != 0) {
+    _this->_internal_set_a_requestbillingaddress(from._internal_a_requestbillingaddress());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentOptions::CopyFrom(const IPCPaymentOptions& from) {
@@ -3201,7 +3278,6 @@ void IPCPaymentOptions::CopyFrom(const IPCPaymentOptions& from) {
 }
 
 bool IPCPaymentOptions::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -3210,7 +3286,6 @@ void IPCPaymentOptions::InternalSwap(IPCPaymentOptions* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_shippingtype_, lhs_arena,
       &other->_impl_.a_shippingtype_, rhs_arena
@@ -3223,39 +3298,22 @@ void IPCPaymentOptions::InternalSwap(IPCPaymentOptions* other) {
           reinterpret_cast<char*>(&other->_impl_.a_requestpayername_));
 }
 
-std::string IPCPaymentOptions::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentOptions";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentOptions::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[6]);
 }
-
 
 // ===================================================================
 
 class IPCPaymentCreateActionRequest::_Internal {
  public:
   using HasBits = decltype(std::declval<IPCPaymentCreateActionRequest>()._impl_._has_bits_);
-  static void set_has_a_topouterwindowid(HasBits* has_bits) {
-    (*has_bits)[0] |= 32u;
-  }
-  static void set_has_a_requestid(HasBits* has_bits) {
+  static void set_has_a_toplevelprincipal(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_a_toplevelprincipal(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
   static const ::protobuf::mozilla::dom::IPCPaymentDetails& a_details(const IPCPaymentCreateActionRequest* msg);
-  static void set_has_a_details(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
   static const ::protobuf::mozilla::dom::IPCPaymentOptions& a_options(const IPCPaymentCreateActionRequest* msg);
-  static void set_has_a_options(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static void set_has_a_shippingoption(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000003d) ^ 0x0000003d) != 0;
-  }
 };
 
 const ::protobuf::mozilla::dom::IPCPaymentDetails&
@@ -3268,12 +3326,12 @@ IPCPaymentCreateActionRequest::_Internal::a_options(const IPCPaymentCreateAction
 }
 IPCPaymentCreateActionRequest::IPCPaymentCreateActionRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentCreateActionRequest)
 }
 IPCPaymentCreateActionRequest::IPCPaymentCreateActionRequest(const IPCPaymentCreateActionRequest& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentCreateActionRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -3286,12 +3344,12 @@ IPCPaymentCreateActionRequest::IPCPaymentCreateActionRequest(const IPCPaymentCre
     , decltype(_impl_.a_options_){nullptr}
     , decltype(_impl_.a_topouterwindowid_){}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_requestid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_requestid()) {
+  if (!from._internal_a_requestid().empty()) {
     _this->_impl_.a_requestid_.Set(from._internal_a_requestid(), 
       _this->GetArenaForAllocation());
   }
@@ -3307,7 +3365,7 @@ IPCPaymentCreateActionRequest::IPCPaymentCreateActionRequest(const IPCPaymentCre
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_shippingoption_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_shippingoption()) {
+  if (!from._internal_a_shippingoption().empty()) {
     _this->_impl_.a_shippingoption_.Set(from._internal_a_shippingoption(), 
       _this->GetArenaForAllocation());
   }
@@ -3352,7 +3410,7 @@ inline void IPCPaymentCreateActionRequest::SharedCtor(
 
 IPCPaymentCreateActionRequest::~IPCPaymentCreateActionRequest() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentCreateActionRequest)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -3380,29 +3438,23 @@ void IPCPaymentCreateActionRequest::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_methoddata_.Clear();
+  _impl_.a_requestid_.ClearToEmpty();
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_requestid_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_toplevelprincipal_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _impl_.a_shippingoption_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000008u) {
-      GOOGLE_DCHECK(_impl_.a_details_ != nullptr);
-      _impl_.a_details_->Clear();
-    }
-    if (cached_has_bits & 0x00000010u) {
-      GOOGLE_DCHECK(_impl_.a_options_ != nullptr);
-      _impl_.a_options_->Clear();
-    }
+  if (cached_has_bits & 0x00000001u) {
+    _impl_.a_toplevelprincipal_.ClearNonDefaultToEmpty();
   }
+  _impl_.a_shippingoption_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_details_ != nullptr) {
+    delete _impl_.a_details_;
+  }
+  _impl_.a_details_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_options_ != nullptr) {
+    delete _impl_.a_options_;
+  }
+  _impl_.a_options_ = nullptr;
   _impl_.a_topouterwindowid_ = uint64_t{0u};
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentCreateActionRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -3412,21 +3464,21 @@ const char* IPCPaymentCreateActionRequest::_InternalParse(const char* ptr, ::_pb
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 a_topOuterWindowId = 1;
+      // uint64 a_topOuterWindowId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_a_topouterwindowid(&has_bits);
           _impl_.a_topouterwindowid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required string a_requestId = 2;
+      // string a_requestId = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_requestid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentCreateActionRequest.a_requestId"));
         } else
           goto handle_unusual;
         continue;
@@ -3452,7 +3504,7 @@ const char* IPCPaymentCreateActionRequest::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.dom.IPCPaymentDetails a_details = 5;
+      // .protobuf.mozilla.dom.IPCPaymentDetails a_details = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_details(), ptr);
@@ -3460,7 +3512,7 @@ const char* IPCPaymentCreateActionRequest::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.dom.IPCPaymentOptions a_options = 6;
+      // .protobuf.mozilla.dom.IPCPaymentOptions a_options = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_options(), ptr);
@@ -3468,12 +3520,13 @@ const char* IPCPaymentCreateActionRequest::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // required string a_shippingOption = 7;
+      // string a_shippingOption = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           auto str = _internal_mutable_a_shippingoption();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentCreateActionRequest.a_shippingOption"));
         } else
           goto handle_unusual;
         continue;
@@ -3488,7 +3541,7 @@ const char* IPCPaymentCreateActionRequest::_InternalParse(const char* ptr, ::_pb
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -3507,21 +3560,24 @@ uint8_t* IPCPaymentCreateActionRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 a_topOuterWindowId = 1;
-  if (cached_has_bits & 0x00000020u) {
+  // uint64 a_topOuterWindowId = 1;
+  if (this->_internal_a_topouterwindowid() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_topouterwindowid(), target);
   }
 
-  // required string a_requestId = 2;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_requestId = 2;
+  if (!this->_internal_a_requestid().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_requestid().data(), static_cast<int>(this->_internal_a_requestid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentCreateActionRequest.a_requestId");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_requestid(), target);
   }
 
   // optional bytes a_topLevelPrincipal = 3;
-  if (cached_has_bits & 0x00000002u) {
+  if (_internal_has_a_toplevelprincipal()) {
     target = stream->WriteBytesMaybeAliased(
         3, this->_internal_a_toplevelprincipal(), target);
   }
@@ -3534,104 +3590,42 @@ uint8_t* IPCPaymentCreateActionRequest::_InternalSerialize(
         InternalWriteMessage(4, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  // required .protobuf.mozilla.dom.IPCPaymentDetails a_details = 5;
-  if (cached_has_bits & 0x00000008u) {
+  // .protobuf.mozilla.dom.IPCPaymentDetails a_details = 5;
+  if (this->_internal_has_a_details()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(5, _Internal::a_details(this),
         _Internal::a_details(this).GetCachedSize(), target, stream);
   }
 
-  // required .protobuf.mozilla.dom.IPCPaymentOptions a_options = 6;
-  if (cached_has_bits & 0x00000010u) {
+  // .protobuf.mozilla.dom.IPCPaymentOptions a_options = 6;
+  if (this->_internal_has_a_options()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(6, _Internal::a_options(this),
         _Internal::a_options(this).GetCachedSize(), target, stream);
   }
 
-  // required string a_shippingOption = 7;
-  if (cached_has_bits & 0x00000004u) {
+  // string a_shippingOption = 7;
+  if (!this->_internal_a_shippingoption().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_shippingoption().data(), static_cast<int>(this->_internal_a_shippingoption().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentCreateActionRequest.a_shippingOption");
     target = stream->WriteStringMaybeAliased(
         7, this->_internal_a_shippingoption(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentCreateActionRequest)
   return target;
 }
 
-size_t IPCPaymentCreateActionRequest::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCPaymentCreateActionRequest)
-  size_t total_size = 0;
-
-  if (_internal_has_a_requestid()) {
-    // required string a_requestId = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_requestid());
-  }
-
-  if (_internal_has_a_shippingoption()) {
-    // required string a_shippingOption = 7;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_shippingoption());
-  }
-
-  if (_internal_has_a_details()) {
-    // required .protobuf.mozilla.dom.IPCPaymentDetails a_details = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_details_);
-  }
-
-  if (_internal_has_a_options()) {
-    // required .protobuf.mozilla.dom.IPCPaymentOptions a_options = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_options_);
-  }
-
-  if (_internal_has_a_topouterwindowid()) {
-    // required uint64 a_topOuterWindowId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_topouterwindowid());
-  }
-
-  return total_size;
-}
 size_t IPCPaymentCreateActionRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPaymentCreateActionRequest)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000003d) ^ 0x0000003d) == 0) {  // All required fields are present.
-    // required string a_requestId = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_requestid());
-
-    // required string a_shippingOption = 7;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_shippingoption());
-
-    // required .protobuf.mozilla.dom.IPCPaymentDetails a_details = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_details_);
-
-    // required .protobuf.mozilla.dom.IPCPaymentOptions a_options = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_options_);
-
-    // required uint64 a_topOuterWindowId = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_topouterwindowid());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3643,61 +3637,87 @@ size_t IPCPaymentCreateActionRequest::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
+  // string a_requestId = 2;
+  if (!this->_internal_a_requestid().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_requestid());
+  }
+
   // optional bytes a_topLevelPrincipal = 3;
   cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000002u) {
+  if (cached_has_bits & 0x00000001u) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_a_toplevelprincipal());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_shippingOption = 7;
+  if (!this->_internal_a_shippingoption().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_shippingoption());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // .protobuf.mozilla.dom.IPCPaymentDetails a_details = 5;
+  if (this->_internal_has_a_details()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_details_);
+  }
+
+  // .protobuf.mozilla.dom.IPCPaymentOptions a_options = 6;
+  if (this->_internal_has_a_options()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_options_);
+  }
+
+  // uint64 a_topOuterWindowId = 1;
+  if (this->_internal_a_topouterwindowid() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_topouterwindowid());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentCreateActionRequest::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentCreateActionRequest*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentCreateActionRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentCreateActionRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentCreateActionRequest::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentCreateActionRequest::MergeFrom(const IPCPaymentCreateActionRequest& from) {
-  IPCPaymentCreateActionRequest* const _this = this;
+
+void IPCPaymentCreateActionRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentCreateActionRequest*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentCreateActionRequest&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentCreateActionRequest)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_methoddata_.MergeFrom(from._impl_.a_methoddata_);
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000003fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_requestid(from._internal_a_requestid());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_toplevelprincipal(from._internal_a_toplevelprincipal());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_a_shippingoption(from._internal_a_shippingoption());
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_internal_mutable_a_details()->::protobuf::mozilla::dom::IPCPaymentDetails::MergeFrom(
-          from._internal_a_details());
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_internal_mutable_a_options()->::protobuf::mozilla::dom::IPCPaymentOptions::MergeFrom(
-          from._internal_a_options());
-    }
-    if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.a_topouterwindowid_ = from._impl_.a_topouterwindowid_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_requestid().empty()) {
+    _this->_internal_set_a_requestid(from._internal_a_requestid());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (from._internal_has_a_toplevelprincipal()) {
+    _this->_internal_set_a_toplevelprincipal(from._internal_a_toplevelprincipal());
+  }
+  if (!from._internal_a_shippingoption().empty()) {
+    _this->_internal_set_a_shippingoption(from._internal_a_shippingoption());
+  }
+  if (from._internal_has_a_details()) {
+    _this->_internal_mutable_a_details()->::protobuf::mozilla::dom::IPCPaymentDetails::MergeFrom(
+        from._internal_a_details());
+  }
+  if (from._internal_has_a_options()) {
+    _this->_internal_mutable_a_options()->::protobuf::mozilla::dom::IPCPaymentOptions::MergeFrom(
+        from._internal_a_options());
+  }
+  if (from._internal_a_topouterwindowid() != 0) {
+    _this->_internal_set_a_topouterwindowid(from._internal_a_topouterwindowid());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentCreateActionRequest::CopyFrom(const IPCPaymentCreateActionRequest& from) {
@@ -3708,15 +3728,6 @@ void IPCPaymentCreateActionRequest::CopyFrom(const IPCPaymentCreateActionRequest
 }
 
 bool IPCPaymentCreateActionRequest::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_methoddata_))
-    return false;
-  if (_internal_has_a_details()) {
-    if (!_impl_.a_details_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_options()) {
-    if (!_impl_.a_options_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -3747,44 +3758,37 @@ void IPCPaymentCreateActionRequest::InternalSwap(IPCPaymentCreateActionRequest* 
           reinterpret_cast<char*>(&other->_impl_.a_details_));
 }
 
-std::string IPCPaymentCreateActionRequest::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentCreateActionRequest";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentCreateActionRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[7]);
 }
-
 
 // ===================================================================
 
 class IPCPaymentCanMakeActionRequest::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCPaymentCanMakeActionRequest>()._impl_._has_bits_);
-  static void set_has_a_requestid(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 IPCPaymentCanMakeActionRequest::IPCPaymentCanMakeActionRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentCanMakeActionRequest)
 }
 IPCPaymentCanMakeActionRequest::IPCPaymentCanMakeActionRequest(const IPCPaymentCanMakeActionRequest& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentCanMakeActionRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}};
+      decltype(_impl_.a_requestid_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_requestid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_requestid()) {
+  if (!from._internal_a_requestid().empty()) {
     _this->_impl_.a_requestid_.Set(from._internal_a_requestid(), 
       _this->GetArenaForAllocation());
   }
@@ -3796,9 +3800,8 @@ inline void IPCPaymentCanMakeActionRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_requestid_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}
   };
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3808,7 +3811,7 @@ inline void IPCPaymentCanMakeActionRequest::SharedCtor(
 
 IPCPaymentCanMakeActionRequest::~IPCPaymentCanMakeActionRequest() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentCanMakeActionRequest)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -3830,27 +3833,23 @@ void IPCPaymentCanMakeActionRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_requestid_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_requestid_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentCanMakeActionRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_requestId = 1;
+      // string a_requestId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_requestid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentCanMakeActionRequest.a_requestId"));
         } else
           goto handle_unusual;
         continue;
@@ -3865,12 +3864,11 @@ const char* IPCPaymentCanMakeActionRequest::_InternalParse(const char* ptr, ::_p
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -3884,16 +3882,19 @@ uint8_t* IPCPaymentCanMakeActionRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_requestId = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_requestid().data(), static_cast<int>(this->_internal_a_requestid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentCanMakeActionRequest.a_requestId");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_requestid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentCanMakeActionRequest)
   return target;
@@ -3903,41 +3904,39 @@ size_t IPCPaymentCanMakeActionRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPaymentCanMakeActionRequest)
   size_t total_size = 0;
 
-  // required string a_requestId = 1;
-  if (_internal_has_a_requestid()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_requestid());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_requestid());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentCanMakeActionRequest::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentCanMakeActionRequest*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentCanMakeActionRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentCanMakeActionRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentCanMakeActionRequest::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentCanMakeActionRequest::MergeFrom(const IPCPaymentCanMakeActionRequest& from) {
-  IPCPaymentCanMakeActionRequest* const _this = this;
+
+void IPCPaymentCanMakeActionRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentCanMakeActionRequest*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentCanMakeActionRequest&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentCanMakeActionRequest)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_requestid()) {
+  if (!from._internal_a_requestid().empty()) {
     _this->_internal_set_a_requestid(from._internal_a_requestid());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentCanMakeActionRequest::CopyFrom(const IPCPaymentCanMakeActionRequest& from) {
@@ -3948,7 +3947,6 @@ void IPCPaymentCanMakeActionRequest::CopyFrom(const IPCPaymentCanMakeActionReque
 }
 
 bool IPCPaymentCanMakeActionRequest::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -3957,55 +3955,44 @@ void IPCPaymentCanMakeActionRequest::InternalSwap(IPCPaymentCanMakeActionRequest
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_requestid_, lhs_arena,
       &other->_impl_.a_requestid_, rhs_arena
   );
 }
 
-std::string IPCPaymentCanMakeActionRequest::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentCanMakeActionRequest";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentCanMakeActionRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[8]);
 }
-
 
 // ===================================================================
 
 class IPCPaymentShowActionRequest::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCPaymentShowActionRequest>()._impl_._has_bits_);
-  static void set_has_a_requestid(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_isupdating(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 IPCPaymentShowActionRequest::IPCPaymentShowActionRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentShowActionRequest)
 }
 IPCPaymentShowActionRequest::IPCPaymentShowActionRequest(const IPCPaymentShowActionRequest& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentShowActionRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}
-    , decltype(_impl_.a_isupdating_){}};
+      decltype(_impl_.a_requestid_){}
+    , decltype(_impl_.a_isupdating_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_requestid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_requestid()) {
+  if (!from._internal_a_requestid().empty()) {
     _this->_impl_.a_requestid_.Set(from._internal_a_requestid(), 
       _this->GetArenaForAllocation());
   }
@@ -4018,10 +4005,9 @@ inline void IPCPaymentShowActionRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}
+      decltype(_impl_.a_requestid_){}
     , decltype(_impl_.a_isupdating_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4031,7 +4017,7 @@ inline void IPCPaymentShowActionRequest::SharedCtor(
 
 IPCPaymentShowActionRequest::~IPCPaymentShowActionRequest() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentShowActionRequest)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -4053,35 +4039,30 @@ void IPCPaymentShowActionRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_requestid_.ClearNonDefaultToEmpty();
-  }
+  _impl_.a_requestid_.ClearToEmpty();
   _impl_.a_isupdating_ = false;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentShowActionRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_requestId = 1;
+      // string a_requestId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_requestid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentShowActionRequest.a_requestId"));
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isUpdating = 2;
+      // bool a_isUpdating = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_a_isupdating(&has_bits);
           _impl_.a_isupdating_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -4098,12 +4079,11 @@ const char* IPCPaymentShowActionRequest::_InternalParse(const char* ptr, ::_pbi:
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -4117,97 +4097,75 @@ uint8_t* IPCPaymentShowActionRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_requestId = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_requestid().data(), static_cast<int>(this->_internal_a_requestid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentShowActionRequest.a_requestId");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_requestid(), target);
   }
 
-  // required bool a_isUpdating = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // bool a_isUpdating = 2;
+  if (this->_internal_a_isupdating() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_isupdating(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentShowActionRequest)
   return target;
 }
 
-size_t IPCPaymentShowActionRequest::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCPaymentShowActionRequest)
-  size_t total_size = 0;
-
-  if (_internal_has_a_requestid()) {
-    // required string a_requestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_requestid());
-  }
-
-  if (_internal_has_a_isupdating()) {
-    // required bool a_isUpdating = 2;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t IPCPaymentShowActionRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPaymentShowActionRequest)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_requestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_requestid());
-
-    // required bool a_isUpdating = 2;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_requestid());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // bool a_isUpdating = 2;
+  if (this->_internal_a_isupdating() != 0) {
+    total_size += 1 + 1;
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentShowActionRequest::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentShowActionRequest*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentShowActionRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentShowActionRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentShowActionRequest::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentShowActionRequest::MergeFrom(const IPCPaymentShowActionRequest& from) {
-  IPCPaymentShowActionRequest* const _this = this;
+
+void IPCPaymentShowActionRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentShowActionRequest*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentShowActionRequest&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentShowActionRequest)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_requestid(from._internal_a_requestid());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.a_isupdating_ = from._impl_.a_isupdating_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_requestid().empty()) {
+    _this->_internal_set_a_requestid(from._internal_a_requestid());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (from._internal_a_isupdating() != 0) {
+    _this->_internal_set_a_isupdating(from._internal_a_isupdating());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentShowActionRequest::CopyFrom(const IPCPaymentShowActionRequest& from) {
@@ -4218,7 +4176,6 @@ void IPCPaymentShowActionRequest::CopyFrom(const IPCPaymentShowActionRequest& fr
 }
 
 bool IPCPaymentShowActionRequest::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -4227,7 +4184,6 @@ void IPCPaymentShowActionRequest::InternalSwap(IPCPaymentShowActionRequest* othe
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_requestid_, lhs_arena,
       &other->_impl_.a_requestid_, rhs_arena
@@ -4235,44 +4191,37 @@ void IPCPaymentShowActionRequest::InternalSwap(IPCPaymentShowActionRequest* othe
   swap(_impl_.a_isupdating_, other->_impl_.a_isupdating_);
 }
 
-std::string IPCPaymentShowActionRequest::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentShowActionRequest";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentShowActionRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[9]);
 }
-
 
 // ===================================================================
 
 class IPCPaymentAbortActionRequest::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCPaymentAbortActionRequest>()._impl_._has_bits_);
-  static void set_has_a_requestid(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 IPCPaymentAbortActionRequest::IPCPaymentAbortActionRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentAbortActionRequest)
 }
 IPCPaymentAbortActionRequest::IPCPaymentAbortActionRequest(const IPCPaymentAbortActionRequest& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentAbortActionRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}};
+      decltype(_impl_.a_requestid_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_requestid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_requestid()) {
+  if (!from._internal_a_requestid().empty()) {
     _this->_impl_.a_requestid_.Set(from._internal_a_requestid(), 
       _this->GetArenaForAllocation());
   }
@@ -4284,9 +4233,8 @@ inline void IPCPaymentAbortActionRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_requestid_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}
   };
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4296,7 +4244,7 @@ inline void IPCPaymentAbortActionRequest::SharedCtor(
 
 IPCPaymentAbortActionRequest::~IPCPaymentAbortActionRequest() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentAbortActionRequest)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -4318,27 +4266,23 @@ void IPCPaymentAbortActionRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_requestid_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_requestid_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentAbortActionRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_requestId = 1;
+      // string a_requestId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_requestid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentAbortActionRequest.a_requestId"));
         } else
           goto handle_unusual;
         continue;
@@ -4353,12 +4297,11 @@ const char* IPCPaymentAbortActionRequest::_InternalParse(const char* ptr, ::_pbi
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -4372,16 +4315,19 @@ uint8_t* IPCPaymentAbortActionRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_requestId = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_requestid().data(), static_cast<int>(this->_internal_a_requestid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentAbortActionRequest.a_requestId");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_requestid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentAbortActionRequest)
   return target;
@@ -4391,41 +4337,39 @@ size_t IPCPaymentAbortActionRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPaymentAbortActionRequest)
   size_t total_size = 0;
 
-  // required string a_requestId = 1;
-  if (_internal_has_a_requestid()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_requestid());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_requestid());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentAbortActionRequest::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentAbortActionRequest*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentAbortActionRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentAbortActionRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentAbortActionRequest::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentAbortActionRequest::MergeFrom(const IPCPaymentAbortActionRequest& from) {
-  IPCPaymentAbortActionRequest* const _this = this;
+
+void IPCPaymentAbortActionRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentAbortActionRequest*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentAbortActionRequest&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentAbortActionRequest)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_requestid()) {
+  if (!from._internal_a_requestid().empty()) {
     _this->_internal_set_a_requestid(from._internal_a_requestid());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentAbortActionRequest::CopyFrom(const IPCPaymentAbortActionRequest& from) {
@@ -4436,7 +4380,6 @@ void IPCPaymentAbortActionRequest::CopyFrom(const IPCPaymentAbortActionRequest& 
 }
 
 bool IPCPaymentAbortActionRequest::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -4445,55 +4388,44 @@ void IPCPaymentAbortActionRequest::InternalSwap(IPCPaymentAbortActionRequest* ot
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_requestid_, lhs_arena,
       &other->_impl_.a_requestid_, rhs_arena
   );
 }
 
-std::string IPCPaymentAbortActionRequest::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentAbortActionRequest";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentAbortActionRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[10]);
 }
-
 
 // ===================================================================
 
 class IPCPaymentCompleteActionRequest::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCPaymentCompleteActionRequest>()._impl_._has_bits_);
-  static void set_has_a_requestid(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_completestatus(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 IPCPaymentCompleteActionRequest::IPCPaymentCompleteActionRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentCompleteActionRequest)
 }
 IPCPaymentCompleteActionRequest::IPCPaymentCompleteActionRequest(const IPCPaymentCompleteActionRequest& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentCompleteActionRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}
-    , decltype(_impl_.a_completestatus_){}};
+      decltype(_impl_.a_requestid_){}
+    , decltype(_impl_.a_completestatus_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_requestid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_requestid()) {
+  if (!from._internal_a_requestid().empty()) {
     _this->_impl_.a_requestid_.Set(from._internal_a_requestid(), 
       _this->GetArenaForAllocation());
   }
@@ -4501,7 +4433,7 @@ IPCPaymentCompleteActionRequest::IPCPaymentCompleteActionRequest(const IPCPaymen
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_completestatus_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_completestatus()) {
+  if (!from._internal_a_completestatus().empty()) {
     _this->_impl_.a_completestatus_.Set(from._internal_a_completestatus(), 
       _this->GetArenaForAllocation());
   }
@@ -4513,10 +4445,9 @@ inline void IPCPaymentCompleteActionRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}
+      decltype(_impl_.a_requestid_){}
     , decltype(_impl_.a_completestatus_){}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4530,7 +4461,7 @@ inline void IPCPaymentCompleteActionRequest::SharedCtor(
 
 IPCPaymentCompleteActionRequest::~IPCPaymentCompleteActionRequest() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentCompleteActionRequest)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -4553,41 +4484,34 @@ void IPCPaymentCompleteActionRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_requestid_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_completestatus_.ClearNonDefaultToEmpty();
-    }
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_requestid_.ClearToEmpty();
+  _impl_.a_completestatus_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentCompleteActionRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_requestId = 1;
+      // string a_requestId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_requestid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentCompleteActionRequest.a_requestId"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_completeStatus = 2;
+      // string a_completeStatus = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_completestatus();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentCompleteActionRequest.a_completeStatus"));
         } else
           goto handle_unusual;
         continue;
@@ -4602,12 +4526,11 @@ const char* IPCPaymentCompleteActionRequest::_InternalParse(const char* ptr, ::_
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -4621,100 +4544,81 @@ uint8_t* IPCPaymentCompleteActionRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_requestId = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_requestid().data(), static_cast<int>(this->_internal_a_requestid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentCompleteActionRequest.a_requestId");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_requestid(), target);
   }
 
-  // required string a_completeStatus = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // string a_completeStatus = 2;
+  if (!this->_internal_a_completestatus().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_completestatus().data(), static_cast<int>(this->_internal_a_completestatus().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentCompleteActionRequest.a_completeStatus");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_completestatus(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentCompleteActionRequest)
   return target;
 }
 
-size_t IPCPaymentCompleteActionRequest::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCPaymentCompleteActionRequest)
-  size_t total_size = 0;
-
-  if (_internal_has_a_requestid()) {
-    // required string a_requestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_requestid());
-  }
-
-  if (_internal_has_a_completestatus()) {
-    // required string a_completeStatus = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_completestatus());
-  }
-
-  return total_size;
-}
 size_t IPCPaymentCompleteActionRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPaymentCompleteActionRequest)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_requestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_requestid());
-
-    // required string a_completeStatus = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_completestatus());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_requestid());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // string a_completeStatus = 2;
+  if (!this->_internal_a_completestatus().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_completestatus());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentCompleteActionRequest::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentCompleteActionRequest*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentCompleteActionRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentCompleteActionRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentCompleteActionRequest::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentCompleteActionRequest::MergeFrom(const IPCPaymentCompleteActionRequest& from) {
-  IPCPaymentCompleteActionRequest* const _this = this;
+
+void IPCPaymentCompleteActionRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentCompleteActionRequest*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentCompleteActionRequest&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentCompleteActionRequest)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_requestid(from._internal_a_requestid());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_completestatus(from._internal_a_completestatus());
-    }
+  if (!from._internal_a_requestid().empty()) {
+    _this->_internal_set_a_requestid(from._internal_a_requestid());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_completestatus().empty()) {
+    _this->_internal_set_a_completestatus(from._internal_a_completestatus());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentCompleteActionRequest::CopyFrom(const IPCPaymentCompleteActionRequest& from) {
@@ -4725,7 +4629,6 @@ void IPCPaymentCompleteActionRequest::CopyFrom(const IPCPaymentCompleteActionReq
 }
 
 bool IPCPaymentCompleteActionRequest::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -4734,7 +4637,6 @@ void IPCPaymentCompleteActionRequest::InternalSwap(IPCPaymentCompleteActionReque
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_requestid_, lhs_arena,
       &other->_impl_.a_requestid_, rhs_arena
@@ -4745,29 +4647,17 @@ void IPCPaymentCompleteActionRequest::InternalSwap(IPCPaymentCompleteActionReque
   );
 }
 
-std::string IPCPaymentCompleteActionRequest::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentCompleteActionRequest";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentCompleteActionRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[11]);
 }
-
 
 // ===================================================================
 
 class IPCPaymentUpdateActionRequest::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCPaymentUpdateActionRequest>()._impl_._has_bits_);
-  static void set_has_a_requestid(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
   static const ::protobuf::mozilla::dom::IPCPaymentDetails& a_details(const IPCPaymentUpdateActionRequest* msg);
-  static void set_has_a_details(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_a_shippingoption(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
-  }
 };
 
 const ::protobuf::mozilla::dom::IPCPaymentDetails&
@@ -4776,26 +4666,25 @@ IPCPaymentUpdateActionRequest::_Internal::a_details(const IPCPaymentUpdateAction
 }
 IPCPaymentUpdateActionRequest::IPCPaymentUpdateActionRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentUpdateActionRequest)
 }
 IPCPaymentUpdateActionRequest::IPCPaymentUpdateActionRequest(const IPCPaymentUpdateActionRequest& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentUpdateActionRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}
+      decltype(_impl_.a_requestid_){}
     , decltype(_impl_.a_shippingoption_){}
-    , decltype(_impl_.a_details_){nullptr}};
+    , decltype(_impl_.a_details_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_requestid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_requestid()) {
+  if (!from._internal_a_requestid().empty()) {
     _this->_impl_.a_requestid_.Set(from._internal_a_requestid(), 
       _this->GetArenaForAllocation());
   }
@@ -4803,7 +4692,7 @@ IPCPaymentUpdateActionRequest::IPCPaymentUpdateActionRequest(const IPCPaymentUpd
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_shippingoption_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_shippingoption()) {
+  if (!from._internal_a_shippingoption().empty()) {
     _this->_impl_.a_shippingoption_.Set(from._internal_a_shippingoption(), 
       _this->GetArenaForAllocation());
   }
@@ -4818,11 +4707,10 @@ inline void IPCPaymentUpdateActionRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}
+      decltype(_impl_.a_requestid_){}
     , decltype(_impl_.a_shippingoption_){}
     , decltype(_impl_.a_details_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4836,7 +4724,7 @@ inline void IPCPaymentUpdateActionRequest::SharedCtor(
 
 IPCPaymentUpdateActionRequest::~IPCPaymentUpdateActionRequest() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentUpdateActionRequest)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -4860,40 +4748,32 @@ void IPCPaymentUpdateActionRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_requestid_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_shippingoption_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      GOOGLE_DCHECK(_impl_.a_details_ != nullptr);
-      _impl_.a_details_->Clear();
-    }
+  _impl_.a_requestid_.ClearToEmpty();
+  _impl_.a_shippingoption_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_details_ != nullptr) {
+    delete _impl_.a_details_;
   }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_details_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentUpdateActionRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_requestId = 1;
+      // string a_requestId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_requestid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentUpdateActionRequest.a_requestId"));
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.dom.IPCPaymentDetails a_details = 2;
+      // .protobuf.mozilla.dom.IPCPaymentDetails a_details = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_details(), ptr);
@@ -4901,12 +4781,13 @@ const char* IPCPaymentUpdateActionRequest::_InternalParse(const char* ptr, ::_pb
         } else
           goto handle_unusual;
         continue;
-      // required string a_shippingOption = 3;
+      // string a_shippingOption = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_shippingoption();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentUpdateActionRequest.a_shippingOption"));
         } else
           goto handle_unusual;
         continue;
@@ -4921,12 +4802,11 @@ const char* IPCPaymentUpdateActionRequest::_InternalParse(const char* ptr, ::_pb
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -4940,123 +4820,99 @@ uint8_t* IPCPaymentUpdateActionRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_requestId = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_requestid().data(), static_cast<int>(this->_internal_a_requestid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentUpdateActionRequest.a_requestId");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_requestid(), target);
   }
 
-  // required .protobuf.mozilla.dom.IPCPaymentDetails a_details = 2;
-  if (cached_has_bits & 0x00000004u) {
+  // .protobuf.mozilla.dom.IPCPaymentDetails a_details = 2;
+  if (this->_internal_has_a_details()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::a_details(this),
         _Internal::a_details(this).GetCachedSize(), target, stream);
   }
 
-  // required string a_shippingOption = 3;
-  if (cached_has_bits & 0x00000002u) {
+  // string a_shippingOption = 3;
+  if (!this->_internal_a_shippingoption().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_shippingoption().data(), static_cast<int>(this->_internal_a_shippingoption().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentUpdateActionRequest.a_shippingOption");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_shippingoption(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentUpdateActionRequest)
   return target;
 }
 
-size_t IPCPaymentUpdateActionRequest::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCPaymentUpdateActionRequest)
-  size_t total_size = 0;
-
-  if (_internal_has_a_requestid()) {
-    // required string a_requestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_requestid());
-  }
-
-  if (_internal_has_a_shippingoption()) {
-    // required string a_shippingOption = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_shippingoption());
-  }
-
-  if (_internal_has_a_details()) {
-    // required .protobuf.mozilla.dom.IPCPaymentDetails a_details = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_details_);
-  }
-
-  return total_size;
-}
 size_t IPCPaymentUpdateActionRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPaymentUpdateActionRequest)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string a_requestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_requestid());
-
-    // required string a_shippingOption = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_shippingoption());
-
-    // required .protobuf.mozilla.dom.IPCPaymentDetails a_details = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_details_);
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_requestid());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // string a_shippingOption = 3;
+  if (!this->_internal_a_shippingoption().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_shippingoption());
+  }
+
+  // .protobuf.mozilla.dom.IPCPaymentDetails a_details = 2;
+  if (this->_internal_has_a_details()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_details_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentUpdateActionRequest::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentUpdateActionRequest*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentUpdateActionRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentUpdateActionRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentUpdateActionRequest::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentUpdateActionRequest::MergeFrom(const IPCPaymentUpdateActionRequest& from) {
-  IPCPaymentUpdateActionRequest* const _this = this;
+
+void IPCPaymentUpdateActionRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentUpdateActionRequest*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentUpdateActionRequest&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentUpdateActionRequest)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_requestid(from._internal_a_requestid());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_shippingoption(from._internal_a_shippingoption());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_mutable_a_details()->::protobuf::mozilla::dom::IPCPaymentDetails::MergeFrom(
-          from._internal_a_details());
-    }
+  if (!from._internal_a_requestid().empty()) {
+    _this->_internal_set_a_requestid(from._internal_a_requestid());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_shippingoption().empty()) {
+    _this->_internal_set_a_shippingoption(from._internal_a_shippingoption());
+  }
+  if (from._internal_has_a_details()) {
+    _this->_internal_mutable_a_details()->::protobuf::mozilla::dom::IPCPaymentDetails::MergeFrom(
+        from._internal_a_details());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentUpdateActionRequest::CopyFrom(const IPCPaymentUpdateActionRequest& from) {
@@ -5067,10 +4923,6 @@ void IPCPaymentUpdateActionRequest::CopyFrom(const IPCPaymentUpdateActionRequest
 }
 
 bool IPCPaymentUpdateActionRequest::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_details()) {
-    if (!_impl_.a_details_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -5079,7 +4931,6 @@ void IPCPaymentUpdateActionRequest::InternalSwap(IPCPaymentUpdateActionRequest* 
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_requestid_, lhs_arena,
       &other->_impl_.a_requestid_, rhs_arena
@@ -5091,44 +4942,37 @@ void IPCPaymentUpdateActionRequest::InternalSwap(IPCPaymentUpdateActionRequest* 
   swap(_impl_.a_details_, other->_impl_.a_details_);
 }
 
-std::string IPCPaymentUpdateActionRequest::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentUpdateActionRequest";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentUpdateActionRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[12]);
 }
-
 
 // ===================================================================
 
 class IPCPaymentCloseActionRequest::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCPaymentCloseActionRequest>()._impl_._has_bits_);
-  static void set_has_a_requestid(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 IPCPaymentCloseActionRequest::IPCPaymentCloseActionRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentCloseActionRequest)
 }
 IPCPaymentCloseActionRequest::IPCPaymentCloseActionRequest(const IPCPaymentCloseActionRequest& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentCloseActionRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}};
+      decltype(_impl_.a_requestid_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_requestid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_requestid()) {
+  if (!from._internal_a_requestid().empty()) {
     _this->_impl_.a_requestid_.Set(from._internal_a_requestid(), 
       _this->GetArenaForAllocation());
   }
@@ -5140,9 +4984,8 @@ inline void IPCPaymentCloseActionRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_requestid_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}
   };
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5152,7 +4995,7 @@ inline void IPCPaymentCloseActionRequest::SharedCtor(
 
 IPCPaymentCloseActionRequest::~IPCPaymentCloseActionRequest() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentCloseActionRequest)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -5174,27 +5017,23 @@ void IPCPaymentCloseActionRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_requestid_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_requestid_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentCloseActionRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_requestId = 1;
+      // string a_requestId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_requestid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentCloseActionRequest.a_requestId"));
         } else
           goto handle_unusual;
         continue;
@@ -5209,12 +5048,11 @@ const char* IPCPaymentCloseActionRequest::_InternalParse(const char* ptr, ::_pbi
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -5228,16 +5066,19 @@ uint8_t* IPCPaymentCloseActionRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_requestId = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_requestid().data(), static_cast<int>(this->_internal_a_requestid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentCloseActionRequest.a_requestId");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_requestid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentCloseActionRequest)
   return target;
@@ -5247,41 +5088,39 @@ size_t IPCPaymentCloseActionRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPaymentCloseActionRequest)
   size_t total_size = 0;
 
-  // required string a_requestId = 1;
-  if (_internal_has_a_requestid()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_requestid());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_requestid());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentCloseActionRequest::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentCloseActionRequest*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentCloseActionRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentCloseActionRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentCloseActionRequest::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentCloseActionRequest::MergeFrom(const IPCPaymentCloseActionRequest& from) {
-  IPCPaymentCloseActionRequest* const _this = this;
+
+void IPCPaymentCloseActionRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentCloseActionRequest*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentCloseActionRequest&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentCloseActionRequest)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_requestid()) {
+  if (!from._internal_a_requestid().empty()) {
     _this->_internal_set_a_requestid(from._internal_a_requestid());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentCloseActionRequest::CopyFrom(const IPCPaymentCloseActionRequest& from) {
@@ -5292,7 +5131,6 @@ void IPCPaymentCloseActionRequest::CopyFrom(const IPCPaymentCloseActionRequest& 
 }
 
 bool IPCPaymentCloseActionRequest::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -5301,67 +5139,47 @@ void IPCPaymentCloseActionRequest::InternalSwap(IPCPaymentCloseActionRequest* ot
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_requestid_, lhs_arena,
       &other->_impl_.a_requestid_, rhs_arena
   );
 }
 
-std::string IPCPaymentCloseActionRequest::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentCloseActionRequest";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentCloseActionRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[13]);
 }
-
 
 // ===================================================================
 
 class IPCPaymentRetryActionRequest::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCPaymentRetryActionRequest>()._impl_._has_bits_);
-  static void set_has_a_requestid(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_error(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_a_payererrors(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_a_paymentmethoderrors(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_a_shippingaddresserrors(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000001f) ^ 0x0000001f) != 0;
-  }
 };
 
 IPCPaymentRetryActionRequest::IPCPaymentRetryActionRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentRetryActionRequest)
 }
 IPCPaymentRetryActionRequest::IPCPaymentRetryActionRequest(const IPCPaymentRetryActionRequest& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentRetryActionRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}
+      decltype(_impl_.a_requestid_){}
     , decltype(_impl_.a_error_){}
     , decltype(_impl_.a_payererrors_){}
     , decltype(_impl_.a_paymentmethoderrors_){}
-    , decltype(_impl_.a_shippingaddresserrors_){}};
+    , decltype(_impl_.a_shippingaddresserrors_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_requestid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_requestid()) {
+  if (!from._internal_a_requestid().empty()) {
     _this->_impl_.a_requestid_.Set(from._internal_a_requestid(), 
       _this->GetArenaForAllocation());
   }
@@ -5369,7 +5187,7 @@ IPCPaymentRetryActionRequest::IPCPaymentRetryActionRequest(const IPCPaymentRetry
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_error_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_error()) {
+  if (!from._internal_a_error().empty()) {
     _this->_impl_.a_error_.Set(from._internal_a_error(), 
       _this->GetArenaForAllocation());
   }
@@ -5377,7 +5195,7 @@ IPCPaymentRetryActionRequest::IPCPaymentRetryActionRequest(const IPCPaymentRetry
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_payererrors_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_payererrors()) {
+  if (!from._internal_a_payererrors().empty()) {
     _this->_impl_.a_payererrors_.Set(from._internal_a_payererrors(), 
       _this->GetArenaForAllocation());
   }
@@ -5385,7 +5203,7 @@ IPCPaymentRetryActionRequest::IPCPaymentRetryActionRequest(const IPCPaymentRetry
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_paymentmethoderrors_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_paymentmethoderrors()) {
+  if (!from._internal_a_paymentmethoderrors().empty()) {
     _this->_impl_.a_paymentmethoderrors_.Set(from._internal_a_paymentmethoderrors(), 
       _this->GetArenaForAllocation());
   }
@@ -5393,7 +5211,7 @@ IPCPaymentRetryActionRequest::IPCPaymentRetryActionRequest(const IPCPaymentRetry
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_shippingaddresserrors_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_shippingaddresserrors()) {
+  if (!from._internal_a_shippingaddresserrors().empty()) {
     _this->_impl_.a_shippingaddresserrors_.Set(from._internal_a_shippingaddresserrors(), 
       _this->GetArenaForAllocation());
   }
@@ -5405,13 +5223,12 @@ inline void IPCPaymentRetryActionRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}
+      decltype(_impl_.a_requestid_){}
     , decltype(_impl_.a_error_){}
     , decltype(_impl_.a_payererrors_){}
     , decltype(_impl_.a_paymentmethoderrors_){}
     , decltype(_impl_.a_shippingaddresserrors_){}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5437,7 +5254,7 @@ inline void IPCPaymentRetryActionRequest::SharedCtor(
 
 IPCPaymentRetryActionRequest::~IPCPaymentRetryActionRequest() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentRetryActionRequest)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -5463,77 +5280,67 @@ void IPCPaymentRetryActionRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_requestid_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_error_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _impl_.a_payererrors_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _impl_.a_paymentmethoderrors_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _impl_.a_shippingaddresserrors_.ClearNonDefaultToEmpty();
-    }
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_requestid_.ClearToEmpty();
+  _impl_.a_error_.ClearToEmpty();
+  _impl_.a_payererrors_.ClearToEmpty();
+  _impl_.a_paymentmethoderrors_.ClearToEmpty();
+  _impl_.a_shippingaddresserrors_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentRetryActionRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_requestId = 1;
+      // string a_requestId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_requestid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_requestId"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_error = 2;
+      // string a_error = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_error();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_error"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_payerErrors = 3;
+      // string a_payerErrors = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_payererrors();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_payerErrors"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_paymentMethodErrors = 4;
+      // string a_paymentMethodErrors = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_paymentmethoderrors();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_paymentMethodErrors"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_shippingAddressErrors = 5;
+      // string a_shippingAddressErrors = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_a_shippingaddresserrors();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_shippingAddressErrors"));
         } else
           goto handle_unusual;
         continue;
@@ -5548,12 +5355,11 @@ const char* IPCPaymentRetryActionRequest::_InternalParse(const char* ptr, ::_pbi
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -5567,163 +5373,141 @@ uint8_t* IPCPaymentRetryActionRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_requestId = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_requestid().data(), static_cast<int>(this->_internal_a_requestid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_requestId");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_requestid(), target);
   }
 
-  // required string a_error = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // string a_error = 2;
+  if (!this->_internal_a_error().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_error().data(), static_cast<int>(this->_internal_a_error().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_error");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_error(), target);
   }
 
-  // required string a_payerErrors = 3;
-  if (cached_has_bits & 0x00000004u) {
+  // string a_payerErrors = 3;
+  if (!this->_internal_a_payererrors().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_payererrors().data(), static_cast<int>(this->_internal_a_payererrors().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_payerErrors");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_payererrors(), target);
   }
 
-  // required string a_paymentMethodErrors = 4;
-  if (cached_has_bits & 0x00000008u) {
+  // string a_paymentMethodErrors = 4;
+  if (!this->_internal_a_paymentmethoderrors().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_paymentmethoderrors().data(), static_cast<int>(this->_internal_a_paymentmethoderrors().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_paymentMethodErrors");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_paymentmethoderrors(), target);
   }
 
-  // required string a_shippingAddressErrors = 5;
-  if (cached_has_bits & 0x00000010u) {
+  // string a_shippingAddressErrors = 5;
+  if (!this->_internal_a_shippingaddresserrors().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_shippingaddresserrors().data(), static_cast<int>(this->_internal_a_shippingaddresserrors().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentRetryActionRequest.a_shippingAddressErrors");
     target = stream->WriteStringMaybeAliased(
         5, this->_internal_a_shippingaddresserrors(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentRetryActionRequest)
   return target;
 }
 
-size_t IPCPaymentRetryActionRequest::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCPaymentRetryActionRequest)
-  size_t total_size = 0;
-
-  if (_internal_has_a_requestid()) {
-    // required string a_requestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_requestid());
-  }
-
-  if (_internal_has_a_error()) {
-    // required string a_error = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_error());
-  }
-
-  if (_internal_has_a_payererrors()) {
-    // required string a_payerErrors = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_payererrors());
-  }
-
-  if (_internal_has_a_paymentmethoderrors()) {
-    // required string a_paymentMethodErrors = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_paymentmethoderrors());
-  }
-
-  if (_internal_has_a_shippingaddresserrors()) {
-    // required string a_shippingAddressErrors = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_shippingaddresserrors());
-  }
-
-  return total_size;
-}
 size_t IPCPaymentRetryActionRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPaymentRetryActionRequest)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
-    // required string a_requestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_requestid());
-
-    // required string a_error = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_error());
-
-    // required string a_payerErrors = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_payererrors());
-
-    // required string a_paymentMethodErrors = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_paymentmethoderrors());
-
-    // required string a_shippingAddressErrors = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_shippingaddresserrors());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_requestid());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // string a_error = 2;
+  if (!this->_internal_a_error().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_error());
+  }
+
+  // string a_payerErrors = 3;
+  if (!this->_internal_a_payererrors().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_payererrors());
+  }
+
+  // string a_paymentMethodErrors = 4;
+  if (!this->_internal_a_paymentmethoderrors().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_paymentmethoderrors());
+  }
+
+  // string a_shippingAddressErrors = 5;
+  if (!this->_internal_a_shippingaddresserrors().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_shippingaddresserrors());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentRetryActionRequest::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentRetryActionRequest*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentRetryActionRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentRetryActionRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentRetryActionRequest::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentRetryActionRequest::MergeFrom(const IPCPaymentRetryActionRequest& from) {
-  IPCPaymentRetryActionRequest* const _this = this;
+
+void IPCPaymentRetryActionRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentRetryActionRequest*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentRetryActionRequest&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentRetryActionRequest)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_requestid(from._internal_a_requestid());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_error(from._internal_a_error());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_a_payererrors(from._internal_a_payererrors());
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_internal_set_a_paymentmethoderrors(from._internal_a_paymentmethoderrors());
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_internal_set_a_shippingaddresserrors(from._internal_a_shippingaddresserrors());
-    }
+  if (!from._internal_a_requestid().empty()) {
+    _this->_internal_set_a_requestid(from._internal_a_requestid());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_error().empty()) {
+    _this->_internal_set_a_error(from._internal_a_error());
+  }
+  if (!from._internal_a_payererrors().empty()) {
+    _this->_internal_set_a_payererrors(from._internal_a_payererrors());
+  }
+  if (!from._internal_a_paymentmethoderrors().empty()) {
+    _this->_internal_set_a_paymentmethoderrors(from._internal_a_paymentmethoderrors());
+  }
+  if (!from._internal_a_shippingaddresserrors().empty()) {
+    _this->_internal_set_a_shippingaddresserrors(from._internal_a_shippingaddresserrors());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentRetryActionRequest::CopyFrom(const IPCPaymentRetryActionRequest& from) {
@@ -5734,7 +5518,6 @@ void IPCPaymentRetryActionRequest::CopyFrom(const IPCPaymentRetryActionRequest& 
 }
 
 bool IPCPaymentRetryActionRequest::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -5743,7 +5526,6 @@ void IPCPaymentRetryActionRequest::InternalSwap(IPCPaymentRetryActionRequest* ot
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_requestid_, lhs_arena,
       &other->_impl_.a_requestid_, rhs_arena
@@ -5766,10 +5548,11 @@ void IPCPaymentRetryActionRequest::InternalSwap(IPCPaymentRetryActionRequest* ot
   );
 }
 
-std::string IPCPaymentRetryActionRequest::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentRetryActionRequest";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentRetryActionRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[14]);
 }
-
 
 // ===================================================================
 
@@ -5939,19 +5722,19 @@ void IPCPaymentActionRequest::set_allocated_a_mvipcpaymentretryactionrequest(::p
 }
 IPCPaymentActionRequest::IPCPaymentActionRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentActionRequest)
 }
 IPCPaymentActionRequest::IPCPaymentActionRequest(const IPCPaymentActionRequest& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentActionRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVIPCPaymentCreateActionRequest: {
@@ -6015,7 +5798,7 @@ inline void IPCPaymentActionRequest::SharedCtor(
 
 IPCPaymentActionRequest::~IPCPaymentActionRequest() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentActionRequest)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -6099,7 +5882,7 @@ void IPCPaymentActionRequest::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentActionRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -6183,7 +5966,7 @@ const char* IPCPaymentActionRequest::_InternalParse(const char* ptr, ::_pbi::Par
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -6201,60 +5984,65 @@ uint8_t* IPCPaymentActionRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  switch (content_case()) {
-    case kAMVIPCPaymentCreateActionRequest: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::a_mvipcpaymentcreateactionrequest(this),
-          _Internal::a_mvipcpaymentcreateactionrequest(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVIPCPaymentCanMakeActionRequest: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::a_mvipcpaymentcanmakeactionrequest(this),
-          _Internal::a_mvipcpaymentcanmakeactionrequest(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVIPCPaymentShowActionRequest: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(3, _Internal::a_mvipcpaymentshowactionrequest(this),
-          _Internal::a_mvipcpaymentshowactionrequest(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVIPCPaymentAbortActionRequest: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(4, _Internal::a_mvipcpaymentabortactionrequest(this),
-          _Internal::a_mvipcpaymentabortactionrequest(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVIPCPaymentCompleteActionRequest: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(5, _Internal::a_mvipcpaymentcompleteactionrequest(this),
-          _Internal::a_mvipcpaymentcompleteactionrequest(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVIPCPaymentUpdateActionRequest: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(6, _Internal::a_mvipcpaymentupdateactionrequest(this),
-          _Internal::a_mvipcpaymentupdateactionrequest(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVIPCPaymentCloseActionRequest: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(7, _Internal::a_mvipcpaymentcloseactionrequest(this),
-          _Internal::a_mvipcpaymentcloseactionrequest(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVIPCPaymentRetryActionRequest: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(8, _Internal::a_mvipcpaymentretryactionrequest(this),
-          _Internal::a_mvipcpaymentretryactionrequest(this).GetCachedSize(), target, stream);
-      break;
-    }
-    default: ;
+  // .protobuf.mozilla.dom.IPCPaymentCreateActionRequest a_mVIPCPaymentCreateActionRequest = 1;
+  if (_internal_has_a_mvipcpaymentcreateactionrequest()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::a_mvipcpaymentcreateactionrequest(this),
+        _Internal::a_mvipcpaymentcreateactionrequest(this).GetCachedSize(), target, stream);
   }
+
+  // .protobuf.mozilla.dom.IPCPaymentCanMakeActionRequest a_mVIPCPaymentCanMakeActionRequest = 2;
+  if (_internal_has_a_mvipcpaymentcanmakeactionrequest()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::a_mvipcpaymentcanmakeactionrequest(this),
+        _Internal::a_mvipcpaymentcanmakeactionrequest(this).GetCachedSize(), target, stream);
+  }
+
+  // .protobuf.mozilla.dom.IPCPaymentShowActionRequest a_mVIPCPaymentShowActionRequest = 3;
+  if (_internal_has_a_mvipcpaymentshowactionrequest()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::a_mvipcpaymentshowactionrequest(this),
+        _Internal::a_mvipcpaymentshowactionrequest(this).GetCachedSize(), target, stream);
+  }
+
+  // .protobuf.mozilla.dom.IPCPaymentAbortActionRequest a_mVIPCPaymentAbortActionRequest = 4;
+  if (_internal_has_a_mvipcpaymentabortactionrequest()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, _Internal::a_mvipcpaymentabortactionrequest(this),
+        _Internal::a_mvipcpaymentabortactionrequest(this).GetCachedSize(), target, stream);
+  }
+
+  // .protobuf.mozilla.dom.IPCPaymentCompleteActionRequest a_mVIPCPaymentCompleteActionRequest = 5;
+  if (_internal_has_a_mvipcpaymentcompleteactionrequest()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(5, _Internal::a_mvipcpaymentcompleteactionrequest(this),
+        _Internal::a_mvipcpaymentcompleteactionrequest(this).GetCachedSize(), target, stream);
+  }
+
+  // .protobuf.mozilla.dom.IPCPaymentUpdateActionRequest a_mVIPCPaymentUpdateActionRequest = 6;
+  if (_internal_has_a_mvipcpaymentupdateactionrequest()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(6, _Internal::a_mvipcpaymentupdateactionrequest(this),
+        _Internal::a_mvipcpaymentupdateactionrequest(this).GetCachedSize(), target, stream);
+  }
+
+  // .protobuf.mozilla.dom.IPCPaymentCloseActionRequest a_mVIPCPaymentCloseActionRequest = 7;
+  if (_internal_has_a_mvipcpaymentcloseactionrequest()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(7, _Internal::a_mvipcpaymentcloseactionrequest(this),
+        _Internal::a_mvipcpaymentcloseactionrequest(this).GetCachedSize(), target, stream);
+  }
+
+  // .protobuf.mozilla.dom.IPCPaymentRetryActionRequest a_mVIPCPaymentRetryActionRequest = 8;
+  if (_internal_has_a_mvipcpaymentretryactionrequest()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(8, _Internal::a_mvipcpaymentretryactionrequest(this),
+        _Internal::a_mvipcpaymentretryactionrequest(this).GetCachedSize(), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentActionRequest)
   return target;
@@ -6329,22 +6117,19 @@ size_t IPCPaymentActionRequest::ByteSizeLong() const {
       break;
     }
   }
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentActionRequest::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentActionRequest*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentActionRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentActionRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentActionRequest::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentActionRequest::MergeFrom(const IPCPaymentActionRequest& from) {
-  IPCPaymentActionRequest* const _this = this;
+
+void IPCPaymentActionRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentActionRequest*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentActionRequest&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentActionRequest)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -6395,7 +6180,7 @@ void IPCPaymentActionRequest::MergeFrom(const IPCPaymentActionRequest& from) {
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentActionRequest::CopyFrom(const IPCPaymentActionRequest& from) {
@@ -6406,59 +6191,6 @@ void IPCPaymentActionRequest::CopyFrom(const IPCPaymentActionRequest& from) {
 }
 
 bool IPCPaymentActionRequest::IsInitialized() const {
-  switch (content_case()) {
-    case kAMVIPCPaymentCreateActionRequest: {
-      if (_internal_has_a_mvipcpaymentcreateactionrequest()) {
-        if (!_impl_.content_.a_mvipcpaymentcreateactionrequest_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVIPCPaymentCanMakeActionRequest: {
-      if (_internal_has_a_mvipcpaymentcanmakeactionrequest()) {
-        if (!_impl_.content_.a_mvipcpaymentcanmakeactionrequest_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVIPCPaymentShowActionRequest: {
-      if (_internal_has_a_mvipcpaymentshowactionrequest()) {
-        if (!_impl_.content_.a_mvipcpaymentshowactionrequest_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVIPCPaymentAbortActionRequest: {
-      if (_internal_has_a_mvipcpaymentabortactionrequest()) {
-        if (!_impl_.content_.a_mvipcpaymentabortactionrequest_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVIPCPaymentCompleteActionRequest: {
-      if (_internal_has_a_mvipcpaymentcompleteactionrequest()) {
-        if (!_impl_.content_.a_mvipcpaymentcompleteactionrequest_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVIPCPaymentUpdateActionRequest: {
-      if (_internal_has_a_mvipcpaymentupdateactionrequest()) {
-        if (!_impl_.content_.a_mvipcpaymentupdateactionrequest_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVIPCPaymentCloseActionRequest: {
-      if (_internal_has_a_mvipcpaymentcloseactionrequest()) {
-        if (!_impl_.content_.a_mvipcpaymentcloseactionrequest_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVIPCPaymentRetryActionRequest: {
-      if (_internal_has_a_mvipcpaymentretryactionrequest()) {
-        if (!_impl_.content_.a_mvipcpaymentretryactionrequest_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case CONTENT_NOT_SET: {
-      break;
-    }
-  }
   return true;
 }
 
@@ -6469,48 +6201,38 @@ void IPCPaymentActionRequest::InternalSwap(IPCPaymentActionRequest* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-std::string IPCPaymentActionRequest::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentActionRequest";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentActionRequest::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[15]);
 }
-
 
 // ===================================================================
 
 class IPCPaymentCanMakeActionResponse::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCPaymentCanMakeActionResponse>()._impl_._has_bits_);
-  static void set_has_a_requestid(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_result(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 IPCPaymentCanMakeActionResponse::IPCPaymentCanMakeActionResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentCanMakeActionResponse)
 }
 IPCPaymentCanMakeActionResponse::IPCPaymentCanMakeActionResponse(const IPCPaymentCanMakeActionResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentCanMakeActionResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}
-    , decltype(_impl_.a_result_){}};
+      decltype(_impl_.a_requestid_){}
+    , decltype(_impl_.a_result_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_requestid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_requestid()) {
+  if (!from._internal_a_requestid().empty()) {
     _this->_impl_.a_requestid_.Set(from._internal_a_requestid(), 
       _this->GetArenaForAllocation());
   }
@@ -6523,10 +6245,9 @@ inline void IPCPaymentCanMakeActionResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}
+      decltype(_impl_.a_requestid_){}
     , decltype(_impl_.a_result_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6536,7 +6257,7 @@ inline void IPCPaymentCanMakeActionResponse::SharedCtor(
 
 IPCPaymentCanMakeActionResponse::~IPCPaymentCanMakeActionResponse() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentCanMakeActionResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -6558,35 +6279,30 @@ void IPCPaymentCanMakeActionResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_requestid_.ClearNonDefaultToEmpty();
-  }
+  _impl_.a_requestid_.ClearToEmpty();
   _impl_.a_result_ = false;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentCanMakeActionResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_requestId = 1;
+      // string a_requestId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_requestid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentCanMakeActionResponse.a_requestId"));
         } else
           goto handle_unusual;
         continue;
-      // required bool a_result = 2;
+      // bool a_result = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_a_result(&has_bits);
           _impl_.a_result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -6603,12 +6319,11 @@ const char* IPCPaymentCanMakeActionResponse::_InternalParse(const char* ptr, ::_
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -6622,97 +6337,75 @@ uint8_t* IPCPaymentCanMakeActionResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_requestId = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_requestid().data(), static_cast<int>(this->_internal_a_requestid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentCanMakeActionResponse.a_requestId");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_requestid(), target);
   }
 
-  // required bool a_result = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // bool a_result = 2;
+  if (this->_internal_a_result() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_result(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentCanMakeActionResponse)
   return target;
 }
 
-size_t IPCPaymentCanMakeActionResponse::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCPaymentCanMakeActionResponse)
-  size_t total_size = 0;
-
-  if (_internal_has_a_requestid()) {
-    // required string a_requestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_requestid());
-  }
-
-  if (_internal_has_a_result()) {
-    // required bool a_result = 2;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t IPCPaymentCanMakeActionResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPaymentCanMakeActionResponse)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_requestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_requestid());
-
-    // required bool a_result = 2;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_requestid());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // bool a_result = 2;
+  if (this->_internal_a_result() != 0) {
+    total_size += 1 + 1;
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentCanMakeActionResponse::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentCanMakeActionResponse*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentCanMakeActionResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentCanMakeActionResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentCanMakeActionResponse::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentCanMakeActionResponse::MergeFrom(const IPCPaymentCanMakeActionResponse& from) {
-  IPCPaymentCanMakeActionResponse* const _this = this;
+
+void IPCPaymentCanMakeActionResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentCanMakeActionResponse*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentCanMakeActionResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentCanMakeActionResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_requestid(from._internal_a_requestid());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.a_result_ = from._impl_.a_result_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_requestid().empty()) {
+    _this->_internal_set_a_requestid(from._internal_a_requestid());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (from._internal_a_result() != 0) {
+    _this->_internal_set_a_result(from._internal_a_result());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentCanMakeActionResponse::CopyFrom(const IPCPaymentCanMakeActionResponse& from) {
@@ -6723,7 +6416,6 @@ void IPCPaymentCanMakeActionResponse::CopyFrom(const IPCPaymentCanMakeActionResp
 }
 
 bool IPCPaymentCanMakeActionResponse::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -6732,7 +6424,6 @@ void IPCPaymentCanMakeActionResponse::InternalSwap(IPCPaymentCanMakeActionRespon
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_requestid_, lhs_arena,
       &other->_impl_.a_requestid_, rhs_arena
@@ -6740,64 +6431,29 @@ void IPCPaymentCanMakeActionResponse::InternalSwap(IPCPaymentCanMakeActionRespon
   swap(_impl_.a_result_, other->_impl_.a_result_);
 }
 
-std::string IPCPaymentCanMakeActionResponse::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentCanMakeActionResponse";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentCanMakeActionResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[16]);
 }
-
 
 // ===================================================================
 
 class IPCPaymentAddress::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCPaymentAddress>()._impl_._has_bits_);
-  static void set_has_a_country(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_region(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_a_regioncode(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_a_city(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_a_dependentlocality(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static void set_has_a_postalcode(HasBits* has_bits) {
-    (*has_bits)[0] |= 32u;
-  }
-  static void set_has_a_sortingcode(HasBits* has_bits) {
-    (*has_bits)[0] |= 64u;
-  }
-  static void set_has_a_organization(HasBits* has_bits) {
-    (*has_bits)[0] |= 128u;
-  }
-  static void set_has_a_recipient(HasBits* has_bits) {
-    (*has_bits)[0] |= 256u;
-  }
-  static void set_has_a_phone(HasBits* has_bits) {
-    (*has_bits)[0] |= 512u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x000003ff) ^ 0x000003ff) != 0;
-  }
 };
 
 IPCPaymentAddress::IPCPaymentAddress(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentAddress)
 }
 IPCPaymentAddress::IPCPaymentAddress(const IPCPaymentAddress& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentAddress* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_addressline_){from._impl_.a_addressline_}
+      decltype(_impl_.a_addressline_){from._impl_.a_addressline_}
     , decltype(_impl_.a_country_){}
     , decltype(_impl_.a_region_){}
     , decltype(_impl_.a_regioncode_){}
@@ -6807,14 +6463,15 @@ IPCPaymentAddress::IPCPaymentAddress(const IPCPaymentAddress& from)
     , decltype(_impl_.a_sortingcode_){}
     , decltype(_impl_.a_organization_){}
     , decltype(_impl_.a_recipient_){}
-    , decltype(_impl_.a_phone_){}};
+    , decltype(_impl_.a_phone_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_country_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_country_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_country()) {
+  if (!from._internal_a_country().empty()) {
     _this->_impl_.a_country_.Set(from._internal_a_country(), 
       _this->GetArenaForAllocation());
   }
@@ -6822,7 +6479,7 @@ IPCPaymentAddress::IPCPaymentAddress(const IPCPaymentAddress& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_region_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_region()) {
+  if (!from._internal_a_region().empty()) {
     _this->_impl_.a_region_.Set(from._internal_a_region(), 
       _this->GetArenaForAllocation());
   }
@@ -6830,7 +6487,7 @@ IPCPaymentAddress::IPCPaymentAddress(const IPCPaymentAddress& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_regioncode_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_regioncode()) {
+  if (!from._internal_a_regioncode().empty()) {
     _this->_impl_.a_regioncode_.Set(from._internal_a_regioncode(), 
       _this->GetArenaForAllocation());
   }
@@ -6838,7 +6495,7 @@ IPCPaymentAddress::IPCPaymentAddress(const IPCPaymentAddress& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_city_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_city()) {
+  if (!from._internal_a_city().empty()) {
     _this->_impl_.a_city_.Set(from._internal_a_city(), 
       _this->GetArenaForAllocation());
   }
@@ -6846,7 +6503,7 @@ IPCPaymentAddress::IPCPaymentAddress(const IPCPaymentAddress& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_dependentlocality_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_dependentlocality()) {
+  if (!from._internal_a_dependentlocality().empty()) {
     _this->_impl_.a_dependentlocality_.Set(from._internal_a_dependentlocality(), 
       _this->GetArenaForAllocation());
   }
@@ -6854,7 +6511,7 @@ IPCPaymentAddress::IPCPaymentAddress(const IPCPaymentAddress& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_postalcode_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_postalcode()) {
+  if (!from._internal_a_postalcode().empty()) {
     _this->_impl_.a_postalcode_.Set(from._internal_a_postalcode(), 
       _this->GetArenaForAllocation());
   }
@@ -6862,7 +6519,7 @@ IPCPaymentAddress::IPCPaymentAddress(const IPCPaymentAddress& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_sortingcode_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_sortingcode()) {
+  if (!from._internal_a_sortingcode().empty()) {
     _this->_impl_.a_sortingcode_.Set(from._internal_a_sortingcode(), 
       _this->GetArenaForAllocation());
   }
@@ -6870,7 +6527,7 @@ IPCPaymentAddress::IPCPaymentAddress(const IPCPaymentAddress& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_organization_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_organization()) {
+  if (!from._internal_a_organization().empty()) {
     _this->_impl_.a_organization_.Set(from._internal_a_organization(), 
       _this->GetArenaForAllocation());
   }
@@ -6878,7 +6535,7 @@ IPCPaymentAddress::IPCPaymentAddress(const IPCPaymentAddress& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_recipient_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_recipient()) {
+  if (!from._internal_a_recipient().empty()) {
     _this->_impl_.a_recipient_.Set(from._internal_a_recipient(), 
       _this->GetArenaForAllocation());
   }
@@ -6886,7 +6543,7 @@ IPCPaymentAddress::IPCPaymentAddress(const IPCPaymentAddress& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_phone_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_phone()) {
+  if (!from._internal_a_phone().empty()) {
     _this->_impl_.a_phone_.Set(from._internal_a_phone(), 
       _this->GetArenaForAllocation());
   }
@@ -6898,9 +6555,7 @@ inline void IPCPaymentAddress::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_addressline_){arena}
+      decltype(_impl_.a_addressline_){arena}
     , decltype(_impl_.a_country_){}
     , decltype(_impl_.a_region_){}
     , decltype(_impl_.a_regioncode_){}
@@ -6911,6 +6566,7 @@ inline void IPCPaymentAddress::SharedCtor(
     , decltype(_impl_.a_organization_){}
     , decltype(_impl_.a_recipient_){}
     , decltype(_impl_.a_phone_){}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_country_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6956,7 +6612,7 @@ inline void IPCPaymentAddress::SharedCtor(
 
 IPCPaymentAddress::~IPCPaymentAddress() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentAddress)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -6989,58 +6645,32 @@ void IPCPaymentAddress::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_addressline_.Clear();
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x000000ffu) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_country_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_region_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _impl_.a_regioncode_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _impl_.a_city_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _impl_.a_dependentlocality_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000020u) {
-      _impl_.a_postalcode_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000040u) {
-      _impl_.a_sortingcode_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000080u) {
-      _impl_.a_organization_.ClearNonDefaultToEmpty();
-    }
-  }
-  if (cached_has_bits & 0x00000300u) {
-    if (cached_has_bits & 0x00000100u) {
-      _impl_.a_recipient_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000200u) {
-      _impl_.a_phone_.ClearNonDefaultToEmpty();
-    }
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_country_.ClearToEmpty();
+  _impl_.a_region_.ClearToEmpty();
+  _impl_.a_regioncode_.ClearToEmpty();
+  _impl_.a_city_.ClearToEmpty();
+  _impl_.a_dependentlocality_.ClearToEmpty();
+  _impl_.a_postalcode_.ClearToEmpty();
+  _impl_.a_sortingcode_.ClearToEmpty();
+  _impl_.a_organization_.ClearToEmpty();
+  _impl_.a_recipient_.ClearToEmpty();
+  _impl_.a_phone_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentAddress::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_country = 1;
+      // string a_country = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_country();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentAddress.a_country"));
         } else
           goto handle_unusual;
         continue;
@@ -7053,89 +6683,99 @@ const char* IPCPaymentAddress::_InternalParse(const char* ptr, ::_pbi::ParseCont
             auto str = _internal_add_a_addressline();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
+            CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentAddress.a_addressLine"));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else
           goto handle_unusual;
         continue;
-      // required string a_region = 3;
+      // string a_region = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_region();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentAddress.a_region"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_regionCode = 4;
+      // string a_regionCode = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_regioncode();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentAddress.a_regionCode"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_city = 5;
+      // string a_city = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_a_city();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentAddress.a_city"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_dependentLocality = 6;
+      // string a_dependentLocality = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_a_dependentlocality();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentAddress.a_dependentLocality"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_postalCode = 7;
+      // string a_postalCode = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           auto str = _internal_mutable_a_postalcode();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentAddress.a_postalCode"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_sortingCode = 8;
+      // string a_sortingCode = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           auto str = _internal_mutable_a_sortingcode();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentAddress.a_sortingCode"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_organization = 9;
+      // string a_organization = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           auto str = _internal_mutable_a_organization();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentAddress.a_organization"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_recipient = 10;
+      // string a_recipient = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           auto str = _internal_mutable_a_recipient();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentAddress.a_recipient"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_phone = 11;
+      // string a_phone = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 90)) {
           auto str = _internal_mutable_a_phone();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentAddress.a_phone"));
         } else
           goto handle_unusual;
         continue;
@@ -7150,12 +6790,11 @@ const char* IPCPaymentAddress::_InternalParse(const char* ptr, ::_pbi::ParseCont
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -7169,9 +6808,12 @@ uint8_t* IPCPaymentAddress::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_country = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_country = 1;
+  if (!this->_internal_a_country().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_country().data(), static_cast<int>(this->_internal_a_country().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentAddress.a_country");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_country(), target);
   }
@@ -7179,205 +6821,115 @@ uint8_t* IPCPaymentAddress::_InternalSerialize(
   // repeated string a_addressLine = 2;
   for (int i = 0, n = this->_internal_a_addressline_size(); i < n; i++) {
     const auto& s = this->_internal_a_addressline(i);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      s.data(), static_cast<int>(s.length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentAddress.a_addressLine");
     target = stream->WriteString(2, s, target);
   }
 
-  // required string a_region = 3;
-  if (cached_has_bits & 0x00000002u) {
+  // string a_region = 3;
+  if (!this->_internal_a_region().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_region().data(), static_cast<int>(this->_internal_a_region().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentAddress.a_region");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_region(), target);
   }
 
-  // required string a_regionCode = 4;
-  if (cached_has_bits & 0x00000004u) {
+  // string a_regionCode = 4;
+  if (!this->_internal_a_regioncode().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_regioncode().data(), static_cast<int>(this->_internal_a_regioncode().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentAddress.a_regionCode");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_regioncode(), target);
   }
 
-  // required string a_city = 5;
-  if (cached_has_bits & 0x00000008u) {
+  // string a_city = 5;
+  if (!this->_internal_a_city().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_city().data(), static_cast<int>(this->_internal_a_city().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentAddress.a_city");
     target = stream->WriteStringMaybeAliased(
         5, this->_internal_a_city(), target);
   }
 
-  // required string a_dependentLocality = 6;
-  if (cached_has_bits & 0x00000010u) {
+  // string a_dependentLocality = 6;
+  if (!this->_internal_a_dependentlocality().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_dependentlocality().data(), static_cast<int>(this->_internal_a_dependentlocality().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentAddress.a_dependentLocality");
     target = stream->WriteStringMaybeAliased(
         6, this->_internal_a_dependentlocality(), target);
   }
 
-  // required string a_postalCode = 7;
-  if (cached_has_bits & 0x00000020u) {
+  // string a_postalCode = 7;
+  if (!this->_internal_a_postalcode().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_postalcode().data(), static_cast<int>(this->_internal_a_postalcode().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentAddress.a_postalCode");
     target = stream->WriteStringMaybeAliased(
         7, this->_internal_a_postalcode(), target);
   }
 
-  // required string a_sortingCode = 8;
-  if (cached_has_bits & 0x00000040u) {
+  // string a_sortingCode = 8;
+  if (!this->_internal_a_sortingcode().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_sortingcode().data(), static_cast<int>(this->_internal_a_sortingcode().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentAddress.a_sortingCode");
     target = stream->WriteStringMaybeAliased(
         8, this->_internal_a_sortingcode(), target);
   }
 
-  // required string a_organization = 9;
-  if (cached_has_bits & 0x00000080u) {
+  // string a_organization = 9;
+  if (!this->_internal_a_organization().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_organization().data(), static_cast<int>(this->_internal_a_organization().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentAddress.a_organization");
     target = stream->WriteStringMaybeAliased(
         9, this->_internal_a_organization(), target);
   }
 
-  // required string a_recipient = 10;
-  if (cached_has_bits & 0x00000100u) {
+  // string a_recipient = 10;
+  if (!this->_internal_a_recipient().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_recipient().data(), static_cast<int>(this->_internal_a_recipient().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentAddress.a_recipient");
     target = stream->WriteStringMaybeAliased(
         10, this->_internal_a_recipient(), target);
   }
 
-  // required string a_phone = 11;
-  if (cached_has_bits & 0x00000200u) {
+  // string a_phone = 11;
+  if (!this->_internal_a_phone().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_phone().data(), static_cast<int>(this->_internal_a_phone().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentAddress.a_phone");
     target = stream->WriteStringMaybeAliased(
         11, this->_internal_a_phone(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentAddress)
   return target;
 }
 
-size_t IPCPaymentAddress::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCPaymentAddress)
-  size_t total_size = 0;
-
-  if (_internal_has_a_country()) {
-    // required string a_country = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_country());
-  }
-
-  if (_internal_has_a_region()) {
-    // required string a_region = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_region());
-  }
-
-  if (_internal_has_a_regioncode()) {
-    // required string a_regionCode = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_regioncode());
-  }
-
-  if (_internal_has_a_city()) {
-    // required string a_city = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_city());
-  }
-
-  if (_internal_has_a_dependentlocality()) {
-    // required string a_dependentLocality = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_dependentlocality());
-  }
-
-  if (_internal_has_a_postalcode()) {
-    // required string a_postalCode = 7;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_postalcode());
-  }
-
-  if (_internal_has_a_sortingcode()) {
-    // required string a_sortingCode = 8;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_sortingcode());
-  }
-
-  if (_internal_has_a_organization()) {
-    // required string a_organization = 9;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_organization());
-  }
-
-  if (_internal_has_a_recipient()) {
-    // required string a_recipient = 10;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_recipient());
-  }
-
-  if (_internal_has_a_phone()) {
-    // required string a_phone = 11;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_phone());
-  }
-
-  return total_size;
-}
 size_t IPCPaymentAddress::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPaymentAddress)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x000003ff) ^ 0x000003ff) == 0) {  // All required fields are present.
-    // required string a_country = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_country());
-
-    // required string a_region = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_region());
-
-    // required string a_regionCode = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_regioncode());
-
-    // required string a_city = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_city());
-
-    // required string a_dependentLocality = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_dependentlocality());
-
-    // required string a_postalCode = 7;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_postalcode());
-
-    // required string a_sortingCode = 8;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_sortingcode());
-
-    // required string a_organization = 9;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_organization());
-
-    // required string a_recipient = 10;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_recipient());
-
-    // required string a_phone = 11;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_phone());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7390,64 +6942,126 @@ size_t IPCPaymentAddress::ByteSizeLong() const {
       _impl_.a_addressline_.Get(i));
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_country = 1;
+  if (!this->_internal_a_country().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_country());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // string a_region = 3;
+  if (!this->_internal_a_region().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_region());
+  }
+
+  // string a_regionCode = 4;
+  if (!this->_internal_a_regioncode().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_regioncode());
+  }
+
+  // string a_city = 5;
+  if (!this->_internal_a_city().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_city());
+  }
+
+  // string a_dependentLocality = 6;
+  if (!this->_internal_a_dependentlocality().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_dependentlocality());
+  }
+
+  // string a_postalCode = 7;
+  if (!this->_internal_a_postalcode().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_postalcode());
+  }
+
+  // string a_sortingCode = 8;
+  if (!this->_internal_a_sortingcode().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_sortingcode());
+  }
+
+  // string a_organization = 9;
+  if (!this->_internal_a_organization().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_organization());
+  }
+
+  // string a_recipient = 10;
+  if (!this->_internal_a_recipient().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_recipient());
+  }
+
+  // string a_phone = 11;
+  if (!this->_internal_a_phone().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_phone());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentAddress::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentAddress*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentAddress::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentAddress::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentAddress::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentAddress::MergeFrom(const IPCPaymentAddress& from) {
-  IPCPaymentAddress* const _this = this;
+
+void IPCPaymentAddress::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentAddress*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentAddress&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentAddress)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_addressline_.MergeFrom(from._impl_.a_addressline_);
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x000000ffu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_country(from._internal_a_country());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_region(from._internal_a_region());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_a_regioncode(from._internal_a_regioncode());
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_internal_set_a_city(from._internal_a_city());
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_internal_set_a_dependentlocality(from._internal_a_dependentlocality());
-    }
-    if (cached_has_bits & 0x00000020u) {
-      _this->_internal_set_a_postalcode(from._internal_a_postalcode());
-    }
-    if (cached_has_bits & 0x00000040u) {
-      _this->_internal_set_a_sortingcode(from._internal_a_sortingcode());
-    }
-    if (cached_has_bits & 0x00000080u) {
-      _this->_internal_set_a_organization(from._internal_a_organization());
-    }
+  if (!from._internal_a_country().empty()) {
+    _this->_internal_set_a_country(from._internal_a_country());
   }
-  if (cached_has_bits & 0x00000300u) {
-    if (cached_has_bits & 0x00000100u) {
-      _this->_internal_set_a_recipient(from._internal_a_recipient());
-    }
-    if (cached_has_bits & 0x00000200u) {
-      _this->_internal_set_a_phone(from._internal_a_phone());
-    }
+  if (!from._internal_a_region().empty()) {
+    _this->_internal_set_a_region(from._internal_a_region());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_regioncode().empty()) {
+    _this->_internal_set_a_regioncode(from._internal_a_regioncode());
+  }
+  if (!from._internal_a_city().empty()) {
+    _this->_internal_set_a_city(from._internal_a_city());
+  }
+  if (!from._internal_a_dependentlocality().empty()) {
+    _this->_internal_set_a_dependentlocality(from._internal_a_dependentlocality());
+  }
+  if (!from._internal_a_postalcode().empty()) {
+    _this->_internal_set_a_postalcode(from._internal_a_postalcode());
+  }
+  if (!from._internal_a_sortingcode().empty()) {
+    _this->_internal_set_a_sortingcode(from._internal_a_sortingcode());
+  }
+  if (!from._internal_a_organization().empty()) {
+    _this->_internal_set_a_organization(from._internal_a_organization());
+  }
+  if (!from._internal_a_recipient().empty()) {
+    _this->_internal_set_a_recipient(from._internal_a_recipient());
+  }
+  if (!from._internal_a_phone().empty()) {
+    _this->_internal_set_a_phone(from._internal_a_phone());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentAddress::CopyFrom(const IPCPaymentAddress& from) {
@@ -7458,7 +7072,6 @@ void IPCPaymentAddress::CopyFrom(const IPCPaymentAddress& from) {
 }
 
 bool IPCPaymentAddress::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -7467,7 +7080,6 @@ void IPCPaymentAddress::InternalSwap(IPCPaymentAddress* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_addressline_.InternalSwap(&other->_impl_.a_addressline_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_country_, lhs_arena,
@@ -7511,44 +7123,37 @@ void IPCPaymentAddress::InternalSwap(IPCPaymentAddress* other) {
   );
 }
 
-std::string IPCPaymentAddress::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentAddress";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentAddress::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[17]);
 }
-
 
 // ===================================================================
 
 class IPCGeneralResponse::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCGeneralResponse>()._impl_._has_bits_);
-  static void set_has_a_data(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 IPCGeneralResponse::IPCGeneralResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCGeneralResponse)
 }
 IPCGeneralResponse::IPCGeneralResponse(const IPCGeneralResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCGeneralResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_data_){}};
+      decltype(_impl_.a_data_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_data_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_data_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_data()) {
+  if (!from._internal_a_data().empty()) {
     _this->_impl_.a_data_.Set(from._internal_a_data(), 
       _this->GetArenaForAllocation());
   }
@@ -7560,9 +7165,8 @@ inline void IPCGeneralResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_data_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_data_){}
   };
   _impl_.a_data_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7572,7 +7176,7 @@ inline void IPCGeneralResponse::SharedCtor(
 
 IPCGeneralResponse::~IPCGeneralResponse() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCGeneralResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -7594,27 +7198,23 @@ void IPCGeneralResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_data_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_data_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCGeneralResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_data = 1;
+      // string a_data = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_data();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCGeneralResponse.a_data"));
         } else
           goto handle_unusual;
         continue;
@@ -7629,12 +7229,11 @@ const char* IPCGeneralResponse::_InternalParse(const char* ptr, ::_pbi::ParseCon
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -7648,16 +7247,19 @@ uint8_t* IPCGeneralResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_data = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_data = 1;
+  if (!this->_internal_a_data().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_data().data(), static_cast<int>(this->_internal_a_data().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCGeneralResponse.a_data");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_data(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCGeneralResponse)
   return target;
@@ -7667,41 +7269,39 @@ size_t IPCGeneralResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCGeneralResponse)
   size_t total_size = 0;
 
-  // required string a_data = 1;
-  if (_internal_has_a_data()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_data());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_data = 1;
+  if (!this->_internal_a_data().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_data());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCGeneralResponse::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCGeneralResponse*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCGeneralResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCGeneralResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCGeneralResponse::GetClassData() const { return &_class_data_; }
 
-void IPCGeneralResponse::MergeFrom(const IPCGeneralResponse& from) {
-  IPCGeneralResponse* const _this = this;
+
+void IPCGeneralResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCGeneralResponse*>(&to_msg);
+  auto& from = static_cast<const IPCGeneralResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCGeneralResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_data()) {
+  if (!from._internal_a_data().empty()) {
     _this->_internal_set_a_data(from._internal_a_data());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCGeneralResponse::CopyFrom(const IPCGeneralResponse& from) {
@@ -7712,7 +7312,6 @@ void IPCGeneralResponse::CopyFrom(const IPCGeneralResponse& from) {
 }
 
 bool IPCGeneralResponse::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -7721,45 +7320,23 @@ void IPCGeneralResponse::InternalSwap(IPCGeneralResponse* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_data_, lhs_arena,
       &other->_impl_.a_data_, rhs_arena
   );
 }
 
-std::string IPCGeneralResponse::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCGeneralResponse";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCGeneralResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[18]);
 }
-
 
 // ===================================================================
 
 class IPCBasicCardResponse::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCBasicCardResponse>()._impl_._has_bits_);
-  static void set_has_a_cardholdername(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_cardnumber(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_a_expirymonth(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_a_expiryyear(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_a_cardsecuritycode(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
   static const ::protobuf::mozilla::dom::IPCPaymentAddress& a_billingaddress(const IPCBasicCardResponse* msg);
-  static void set_has_a_billingaddress(HasBits* has_bits) {
-    (*has_bits)[0] |= 32u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000003f) ^ 0x0000003f) != 0;
-  }
 };
 
 const ::protobuf::mozilla::dom::IPCPaymentAddress&
@@ -7768,29 +7345,28 @@ IPCBasicCardResponse::_Internal::a_billingaddress(const IPCBasicCardResponse* ms
 }
 IPCBasicCardResponse::IPCBasicCardResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCBasicCardResponse)
 }
 IPCBasicCardResponse::IPCBasicCardResponse(const IPCBasicCardResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCBasicCardResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_cardholdername_){}
+      decltype(_impl_.a_cardholdername_){}
     , decltype(_impl_.a_cardnumber_){}
     , decltype(_impl_.a_expirymonth_){}
     , decltype(_impl_.a_expiryyear_){}
     , decltype(_impl_.a_cardsecuritycode_){}
-    , decltype(_impl_.a_billingaddress_){nullptr}};
+    , decltype(_impl_.a_billingaddress_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_cardholdername_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_cardholdername_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_cardholdername()) {
+  if (!from._internal_a_cardholdername().empty()) {
     _this->_impl_.a_cardholdername_.Set(from._internal_a_cardholdername(), 
       _this->GetArenaForAllocation());
   }
@@ -7798,7 +7374,7 @@ IPCBasicCardResponse::IPCBasicCardResponse(const IPCBasicCardResponse& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_cardnumber_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_cardnumber()) {
+  if (!from._internal_a_cardnumber().empty()) {
     _this->_impl_.a_cardnumber_.Set(from._internal_a_cardnumber(), 
       _this->GetArenaForAllocation());
   }
@@ -7806,7 +7382,7 @@ IPCBasicCardResponse::IPCBasicCardResponse(const IPCBasicCardResponse& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_expirymonth_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_expirymonth()) {
+  if (!from._internal_a_expirymonth().empty()) {
     _this->_impl_.a_expirymonth_.Set(from._internal_a_expirymonth(), 
       _this->GetArenaForAllocation());
   }
@@ -7814,7 +7390,7 @@ IPCBasicCardResponse::IPCBasicCardResponse(const IPCBasicCardResponse& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_expiryyear_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_expiryyear()) {
+  if (!from._internal_a_expiryyear().empty()) {
     _this->_impl_.a_expiryyear_.Set(from._internal_a_expiryyear(), 
       _this->GetArenaForAllocation());
   }
@@ -7822,7 +7398,7 @@ IPCBasicCardResponse::IPCBasicCardResponse(const IPCBasicCardResponse& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_cardsecuritycode_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_cardsecuritycode()) {
+  if (!from._internal_a_cardsecuritycode().empty()) {
     _this->_impl_.a_cardsecuritycode_.Set(from._internal_a_cardsecuritycode(), 
       _this->GetArenaForAllocation());
   }
@@ -7837,14 +7413,13 @@ inline void IPCBasicCardResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_cardholdername_){}
+      decltype(_impl_.a_cardholdername_){}
     , decltype(_impl_.a_cardnumber_){}
     , decltype(_impl_.a_expirymonth_){}
     , decltype(_impl_.a_expiryyear_){}
     , decltype(_impl_.a_cardsecuritycode_){}
     , decltype(_impl_.a_billingaddress_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_cardholdername_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7870,7 +7445,7 @@ inline void IPCBasicCardResponse::SharedCtor(
 
 IPCBasicCardResponse::~IPCBasicCardResponse() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCBasicCardResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -7897,85 +7472,75 @@ void IPCBasicCardResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000003fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_cardholdername_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_cardnumber_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _impl_.a_expirymonth_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _impl_.a_expiryyear_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _impl_.a_cardsecuritycode_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000020u) {
-      GOOGLE_DCHECK(_impl_.a_billingaddress_ != nullptr);
-      _impl_.a_billingaddress_->Clear();
-    }
+  _impl_.a_cardholdername_.ClearToEmpty();
+  _impl_.a_cardnumber_.ClearToEmpty();
+  _impl_.a_expirymonth_.ClearToEmpty();
+  _impl_.a_expiryyear_.ClearToEmpty();
+  _impl_.a_cardsecuritycode_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_billingaddress_ != nullptr) {
+    delete _impl_.a_billingaddress_;
   }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_billingaddress_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCBasicCardResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_cardholderName = 1;
+      // string a_cardholderName = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_cardholdername();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCBasicCardResponse.a_cardholderName"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_cardNumber = 2;
+      // string a_cardNumber = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_cardnumber();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCBasicCardResponse.a_cardNumber"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_expiryMonth = 3;
+      // string a_expiryMonth = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_expirymonth();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCBasicCardResponse.a_expiryMonth"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_expiryYear = 4;
+      // string a_expiryYear = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_expiryyear();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCBasicCardResponse.a_expiryYear"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_cardSecurityCode = 5;
+      // string a_cardSecurityCode = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_a_cardsecuritycode();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCBasicCardResponse.a_cardSecurityCode"));
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.dom.IPCPaymentAddress a_billingAddress = 6;
+      // .protobuf.mozilla.dom.IPCPaymentAddress a_billingAddress = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_billingaddress(), ptr);
@@ -7994,12 +7559,11 @@ const char* IPCBasicCardResponse::_InternalParse(const char* ptr, ::_pbi::ParseC
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -8013,186 +7577,159 @@ uint8_t* IPCBasicCardResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_cardholderName = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_cardholderName = 1;
+  if (!this->_internal_a_cardholdername().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_cardholdername().data(), static_cast<int>(this->_internal_a_cardholdername().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCBasicCardResponse.a_cardholderName");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_cardholdername(), target);
   }
 
-  // required string a_cardNumber = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // string a_cardNumber = 2;
+  if (!this->_internal_a_cardnumber().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_cardnumber().data(), static_cast<int>(this->_internal_a_cardnumber().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCBasicCardResponse.a_cardNumber");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_cardnumber(), target);
   }
 
-  // required string a_expiryMonth = 3;
-  if (cached_has_bits & 0x00000004u) {
+  // string a_expiryMonth = 3;
+  if (!this->_internal_a_expirymonth().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_expirymonth().data(), static_cast<int>(this->_internal_a_expirymonth().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCBasicCardResponse.a_expiryMonth");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_expirymonth(), target);
   }
 
-  // required string a_expiryYear = 4;
-  if (cached_has_bits & 0x00000008u) {
+  // string a_expiryYear = 4;
+  if (!this->_internal_a_expiryyear().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_expiryyear().data(), static_cast<int>(this->_internal_a_expiryyear().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCBasicCardResponse.a_expiryYear");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_a_expiryyear(), target);
   }
 
-  // required string a_cardSecurityCode = 5;
-  if (cached_has_bits & 0x00000010u) {
+  // string a_cardSecurityCode = 5;
+  if (!this->_internal_a_cardsecuritycode().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_cardsecuritycode().data(), static_cast<int>(this->_internal_a_cardsecuritycode().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCBasicCardResponse.a_cardSecurityCode");
     target = stream->WriteStringMaybeAliased(
         5, this->_internal_a_cardsecuritycode(), target);
   }
 
-  // required .protobuf.mozilla.dom.IPCPaymentAddress a_billingAddress = 6;
-  if (cached_has_bits & 0x00000020u) {
+  // .protobuf.mozilla.dom.IPCPaymentAddress a_billingAddress = 6;
+  if (this->_internal_has_a_billingaddress()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(6, _Internal::a_billingaddress(this),
         _Internal::a_billingaddress(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCBasicCardResponse)
   return target;
 }
 
-size_t IPCBasicCardResponse::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCBasicCardResponse)
-  size_t total_size = 0;
-
-  if (_internal_has_a_cardholdername()) {
-    // required string a_cardholderName = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_cardholdername());
-  }
-
-  if (_internal_has_a_cardnumber()) {
-    // required string a_cardNumber = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_cardnumber());
-  }
-
-  if (_internal_has_a_expirymonth()) {
-    // required string a_expiryMonth = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_expirymonth());
-  }
-
-  if (_internal_has_a_expiryyear()) {
-    // required string a_expiryYear = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_expiryyear());
-  }
-
-  if (_internal_has_a_cardsecuritycode()) {
-    // required string a_cardSecurityCode = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_cardsecuritycode());
-  }
-
-  if (_internal_has_a_billingaddress()) {
-    // required .protobuf.mozilla.dom.IPCPaymentAddress a_billingAddress = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_billingaddress_);
-  }
-
-  return total_size;
-}
 size_t IPCBasicCardResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCBasicCardResponse)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000003f) ^ 0x0000003f) == 0) {  // All required fields are present.
-    // required string a_cardholderName = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_cardholdername());
-
-    // required string a_cardNumber = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_cardnumber());
-
-    // required string a_expiryMonth = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_expirymonth());
-
-    // required string a_expiryYear = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_expiryyear());
-
-    // required string a_cardSecurityCode = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_cardsecuritycode());
-
-    // required .protobuf.mozilla.dom.IPCPaymentAddress a_billingAddress = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_billingaddress_);
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_cardholderName = 1;
+  if (!this->_internal_a_cardholdername().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_cardholdername());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // string a_cardNumber = 2;
+  if (!this->_internal_a_cardnumber().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_cardnumber());
+  }
+
+  // string a_expiryMonth = 3;
+  if (!this->_internal_a_expirymonth().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_expirymonth());
+  }
+
+  // string a_expiryYear = 4;
+  if (!this->_internal_a_expiryyear().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_expiryyear());
+  }
+
+  // string a_cardSecurityCode = 5;
+  if (!this->_internal_a_cardsecuritycode().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_cardsecuritycode());
+  }
+
+  // .protobuf.mozilla.dom.IPCPaymentAddress a_billingAddress = 6;
+  if (this->_internal_has_a_billingaddress()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_billingaddress_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCBasicCardResponse::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCBasicCardResponse*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCBasicCardResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCBasicCardResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCBasicCardResponse::GetClassData() const { return &_class_data_; }
 
-void IPCBasicCardResponse::MergeFrom(const IPCBasicCardResponse& from) {
-  IPCBasicCardResponse* const _this = this;
+
+void IPCBasicCardResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCBasicCardResponse*>(&to_msg);
+  auto& from = static_cast<const IPCBasicCardResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCBasicCardResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000003fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_cardholdername(from._internal_a_cardholdername());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_cardnumber(from._internal_a_cardnumber());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_a_expirymonth(from._internal_a_expirymonth());
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_internal_set_a_expiryyear(from._internal_a_expiryyear());
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_internal_set_a_cardsecuritycode(from._internal_a_cardsecuritycode());
-    }
-    if (cached_has_bits & 0x00000020u) {
-      _this->_internal_mutable_a_billingaddress()->::protobuf::mozilla::dom::IPCPaymentAddress::MergeFrom(
-          from._internal_a_billingaddress());
-    }
+  if (!from._internal_a_cardholdername().empty()) {
+    _this->_internal_set_a_cardholdername(from._internal_a_cardholdername());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_cardnumber().empty()) {
+    _this->_internal_set_a_cardnumber(from._internal_a_cardnumber());
+  }
+  if (!from._internal_a_expirymonth().empty()) {
+    _this->_internal_set_a_expirymonth(from._internal_a_expirymonth());
+  }
+  if (!from._internal_a_expiryyear().empty()) {
+    _this->_internal_set_a_expiryyear(from._internal_a_expiryyear());
+  }
+  if (!from._internal_a_cardsecuritycode().empty()) {
+    _this->_internal_set_a_cardsecuritycode(from._internal_a_cardsecuritycode());
+  }
+  if (from._internal_has_a_billingaddress()) {
+    _this->_internal_mutable_a_billingaddress()->::protobuf::mozilla::dom::IPCPaymentAddress::MergeFrom(
+        from._internal_a_billingaddress());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCBasicCardResponse::CopyFrom(const IPCBasicCardResponse& from) {
@@ -8203,10 +7740,6 @@ void IPCBasicCardResponse::CopyFrom(const IPCBasicCardResponse& from) {
 }
 
 bool IPCBasicCardResponse::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_billingaddress()) {
-    if (!_impl_.a_billingaddress_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -8215,7 +7748,6 @@ void IPCBasicCardResponse::InternalSwap(IPCBasicCardResponse* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_cardholdername_, lhs_arena,
       &other->_impl_.a_cardholdername_, rhs_arena
@@ -8239,10 +7771,11 @@ void IPCBasicCardResponse::InternalSwap(IPCBasicCardResponse* other) {
   swap(_impl_.a_billingaddress_, other->_impl_.a_billingaddress_);
 }
 
-std::string IPCBasicCardResponse::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCBasicCardResponse";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCBasicCardResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[19]);
 }
-
 
 // ===================================================================
 
@@ -8292,19 +7825,19 @@ void IPCPaymentResponseData::set_allocated_a_mvipcbasiccardresponse(::protobuf::
 }
 IPCPaymentResponseData::IPCPaymentResponseData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentResponseData)
 }
 IPCPaymentResponseData::IPCPaymentResponseData(const IPCPaymentResponseData& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentResponseData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVIPCGeneralResponse: {
@@ -8338,7 +7871,7 @@ inline void IPCPaymentResponseData::SharedCtor(
 
 IPCPaymentResponseData::~IPCPaymentResponseData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentResponseData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -8386,7 +7919,7 @@ void IPCPaymentResponseData::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentResponseData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -8422,7 +7955,7 @@ const char* IPCPaymentResponseData::_InternalParse(const char* ptr, ::_pbi::Pars
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -8440,24 +7973,23 @@ uint8_t* IPCPaymentResponseData::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  switch (content_case()) {
-    case kAMVIPCGeneralResponse: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::a_mvipcgeneralresponse(this),
-          _Internal::a_mvipcgeneralresponse(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVIPCBasicCardResponse: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::a_mvipcbasiccardresponse(this),
-          _Internal::a_mvipcbasiccardresponse(this).GetCachedSize(), target, stream);
-      break;
-    }
-    default: ;
+  // .protobuf.mozilla.dom.IPCGeneralResponse a_mVIPCGeneralResponse = 1;
+  if (_internal_has_a_mvipcgeneralresponse()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::a_mvipcgeneralresponse(this),
+        _Internal::a_mvipcgeneralresponse(this).GetCachedSize(), target, stream);
   }
+
+  // .protobuf.mozilla.dom.IPCBasicCardResponse a_mVIPCBasicCardResponse = 2;
+  if (_internal_has_a_mvipcbasiccardresponse()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::a_mvipcbasiccardresponse(this),
+        _Internal::a_mvipcbasiccardresponse(this).GetCachedSize(), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentResponseData)
   return target;
@@ -8490,22 +8022,19 @@ size_t IPCPaymentResponseData::ByteSizeLong() const {
       break;
     }
   }
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentResponseData::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentResponseData*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentResponseData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentResponseData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentResponseData::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentResponseData::MergeFrom(const IPCPaymentResponseData& from) {
-  IPCPaymentResponseData* const _this = this;
+
+void IPCPaymentResponseData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentResponseData*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentResponseData&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentResponseData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -8526,7 +8055,7 @@ void IPCPaymentResponseData::MergeFrom(const IPCPaymentResponseData& from) {
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentResponseData::CopyFrom(const IPCPaymentResponseData& from) {
@@ -8537,23 +8066,6 @@ void IPCPaymentResponseData::CopyFrom(const IPCPaymentResponseData& from) {
 }
 
 bool IPCPaymentResponseData::IsInitialized() const {
-  switch (content_case()) {
-    case kAMVIPCGeneralResponse: {
-      if (_internal_has_a_mvipcgeneralresponse()) {
-        if (!_impl_.content_.a_mvipcgeneralresponse_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVIPCBasicCardResponse: {
-      if (_internal_has_a_mvipcbasiccardresponse()) {
-        if (!_impl_.content_.a_mvipcbasiccardresponse_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case CONTENT_NOT_SET: {
-      break;
-    }
-  }
   return true;
 }
 
@@ -8564,41 +8076,17 @@ void IPCPaymentResponseData::InternalSwap(IPCPaymentResponseData* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-std::string IPCPaymentResponseData::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentResponseData";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentResponseData::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[20]);
 }
-
 
 // ===================================================================
 
 class IPCPaymentShowActionResponse::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCPaymentShowActionResponse>()._impl_._has_bits_);
-  static void set_has_a_requestid(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_status(HasBits* has_bits) {
-    (*has_bits)[0] |= 64u;
-  }
-  static void set_has_a_methodname(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
   static const ::protobuf::mozilla::dom::IPCPaymentResponseData& a_data(const IPCPaymentShowActionResponse* msg);
-  static void set_has_a_data(HasBits* has_bits) {
-    (*has_bits)[0] |= 32u;
-  }
-  static void set_has_a_payername(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_a_payeremail(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_a_payerphone(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000007f) ^ 0x0000007f) != 0;
-  }
 };
 
 const ::protobuf::mozilla::dom::IPCPaymentResponseData&
@@ -8607,30 +8095,29 @@ IPCPaymentShowActionResponse::_Internal::a_data(const IPCPaymentShowActionRespon
 }
 IPCPaymentShowActionResponse::IPCPaymentShowActionResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentShowActionResponse)
 }
 IPCPaymentShowActionResponse::IPCPaymentShowActionResponse(const IPCPaymentShowActionResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentShowActionResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}
+      decltype(_impl_.a_requestid_){}
     , decltype(_impl_.a_methodname_){}
     , decltype(_impl_.a_payername_){}
     , decltype(_impl_.a_payeremail_){}
     , decltype(_impl_.a_payerphone_){}
     , decltype(_impl_.a_data_){nullptr}
-    , decltype(_impl_.a_status_){}};
+    , decltype(_impl_.a_status_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_requestid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_requestid()) {
+  if (!from._internal_a_requestid().empty()) {
     _this->_impl_.a_requestid_.Set(from._internal_a_requestid(), 
       _this->GetArenaForAllocation());
   }
@@ -8638,7 +8125,7 @@ IPCPaymentShowActionResponse::IPCPaymentShowActionResponse(const IPCPaymentShowA
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_methodname_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_methodname()) {
+  if (!from._internal_a_methodname().empty()) {
     _this->_impl_.a_methodname_.Set(from._internal_a_methodname(), 
       _this->GetArenaForAllocation());
   }
@@ -8646,7 +8133,7 @@ IPCPaymentShowActionResponse::IPCPaymentShowActionResponse(const IPCPaymentShowA
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_payername_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_payername()) {
+  if (!from._internal_a_payername().empty()) {
     _this->_impl_.a_payername_.Set(from._internal_a_payername(), 
       _this->GetArenaForAllocation());
   }
@@ -8654,7 +8141,7 @@ IPCPaymentShowActionResponse::IPCPaymentShowActionResponse(const IPCPaymentShowA
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_payeremail_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_payeremail()) {
+  if (!from._internal_a_payeremail().empty()) {
     _this->_impl_.a_payeremail_.Set(from._internal_a_payeremail(), 
       _this->GetArenaForAllocation());
   }
@@ -8662,7 +8149,7 @@ IPCPaymentShowActionResponse::IPCPaymentShowActionResponse(const IPCPaymentShowA
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_payerphone_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_payerphone()) {
+  if (!from._internal_a_payerphone().empty()) {
     _this->_impl_.a_payerphone_.Set(from._internal_a_payerphone(), 
       _this->GetArenaForAllocation());
   }
@@ -8678,15 +8165,14 @@ inline void IPCPaymentShowActionResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}
+      decltype(_impl_.a_requestid_){}
     , decltype(_impl_.a_methodname_){}
     , decltype(_impl_.a_payername_){}
     , decltype(_impl_.a_payeremail_){}
     , decltype(_impl_.a_payerphone_){}
     , decltype(_impl_.a_data_){nullptr}
     , decltype(_impl_.a_status_){0u}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8712,7 +8198,7 @@ inline void IPCPaymentShowActionResponse::SharedCtor(
 
 IPCPaymentShowActionResponse::~IPCPaymentShowActionResponse() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentShowActionResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -8739,68 +8225,54 @@ void IPCPaymentShowActionResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000003fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_requestid_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_methodname_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _impl_.a_payername_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _impl_.a_payeremail_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _impl_.a_payerphone_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000020u) {
-      GOOGLE_DCHECK(_impl_.a_data_ != nullptr);
-      _impl_.a_data_->Clear();
-    }
+  _impl_.a_requestid_.ClearToEmpty();
+  _impl_.a_methodname_.ClearToEmpty();
+  _impl_.a_payername_.ClearToEmpty();
+  _impl_.a_payeremail_.ClearToEmpty();
+  _impl_.a_payerphone_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_data_ != nullptr) {
+    delete _impl_.a_data_;
   }
+  _impl_.a_data_ = nullptr;
   _impl_.a_status_ = 0u;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentShowActionResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_requestId = 1;
+      // string a_requestId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_requestid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_requestId"));
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_status = 2;
+      // uint32 a_status = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_a_status(&has_bits);
           _impl_.a_status_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required string a_methodName = 3;
+      // string a_methodName = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_methodname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_methodName"));
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.dom.IPCPaymentResponseData a_data = 4;
+      // .protobuf.mozilla.dom.IPCPaymentResponseData a_data = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_data(), ptr);
@@ -8808,30 +8280,33 @@ const char* IPCPaymentShowActionResponse::_InternalParse(const char* ptr, ::_pbi
         } else
           goto handle_unusual;
         continue;
-      // required string a_payerName = 5;
+      // string a_payerName = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_a_payername();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_payerName"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_payerEmail = 6;
+      // string a_payerEmail = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_a_payeremail();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_payerEmail"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_payerPhone = 7;
+      // string a_payerPhone = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           auto str = _internal_mutable_a_payerphone();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_payerPhone"));
         } else
           goto handle_unusual;
         continue;
@@ -8846,12 +8321,11 @@ const char* IPCPaymentShowActionResponse::_InternalParse(const char* ptr, ::_pbi
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -8865,204 +8339,173 @@ uint8_t* IPCPaymentShowActionResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_requestId = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_requestid().data(), static_cast<int>(this->_internal_a_requestid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_requestId");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_requestid(), target);
   }
 
-  // required uint32 a_status = 2;
-  if (cached_has_bits & 0x00000040u) {
+  // uint32 a_status = 2;
+  if (this->_internal_a_status() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_status(), target);
   }
 
-  // required string a_methodName = 3;
-  if (cached_has_bits & 0x00000002u) {
+  // string a_methodName = 3;
+  if (!this->_internal_a_methodname().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_methodname().data(), static_cast<int>(this->_internal_a_methodname().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_methodName");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_a_methodname(), target);
   }
 
-  // required .protobuf.mozilla.dom.IPCPaymentResponseData a_data = 4;
-  if (cached_has_bits & 0x00000020u) {
+  // .protobuf.mozilla.dom.IPCPaymentResponseData a_data = 4;
+  if (this->_internal_has_a_data()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(4, _Internal::a_data(this),
         _Internal::a_data(this).GetCachedSize(), target, stream);
   }
 
-  // required string a_payerName = 5;
-  if (cached_has_bits & 0x00000004u) {
+  // string a_payerName = 5;
+  if (!this->_internal_a_payername().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_payername().data(), static_cast<int>(this->_internal_a_payername().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_payerName");
     target = stream->WriteStringMaybeAliased(
         5, this->_internal_a_payername(), target);
   }
 
-  // required string a_payerEmail = 6;
-  if (cached_has_bits & 0x00000008u) {
+  // string a_payerEmail = 6;
+  if (!this->_internal_a_payeremail().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_payeremail().data(), static_cast<int>(this->_internal_a_payeremail().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_payerEmail");
     target = stream->WriteStringMaybeAliased(
         6, this->_internal_a_payeremail(), target);
   }
 
-  // required string a_payerPhone = 7;
-  if (cached_has_bits & 0x00000010u) {
+  // string a_payerPhone = 7;
+  if (!this->_internal_a_payerphone().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_payerphone().data(), static_cast<int>(this->_internal_a_payerphone().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentShowActionResponse.a_payerPhone");
     target = stream->WriteStringMaybeAliased(
         7, this->_internal_a_payerphone(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentShowActionResponse)
   return target;
 }
 
-size_t IPCPaymentShowActionResponse::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCPaymentShowActionResponse)
-  size_t total_size = 0;
-
-  if (_internal_has_a_requestid()) {
-    // required string a_requestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_requestid());
-  }
-
-  if (_internal_has_a_methodname()) {
-    // required string a_methodName = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_methodname());
-  }
-
-  if (_internal_has_a_payername()) {
-    // required string a_payerName = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_payername());
-  }
-
-  if (_internal_has_a_payeremail()) {
-    // required string a_payerEmail = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_payeremail());
-  }
-
-  if (_internal_has_a_payerphone()) {
-    // required string a_payerPhone = 7;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_payerphone());
-  }
-
-  if (_internal_has_a_data()) {
-    // required .protobuf.mozilla.dom.IPCPaymentResponseData a_data = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_data_);
-  }
-
-  if (_internal_has_a_status()) {
-    // required uint32 a_status = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_status());
-  }
-
-  return total_size;
-}
 size_t IPCPaymentShowActionResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPaymentShowActionResponse)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000007f) ^ 0x0000007f) == 0) {  // All required fields are present.
-    // required string a_requestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_requestid());
-
-    // required string a_methodName = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_methodname());
-
-    // required string a_payerName = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_payername());
-
-    // required string a_payerEmail = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_payeremail());
-
-    // required string a_payerPhone = 7;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_payerphone());
-
-    // required .protobuf.mozilla.dom.IPCPaymentResponseData a_data = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_data_);
-
-    // required uint32 a_status = 2;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_status());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_requestid());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // string a_methodName = 3;
+  if (!this->_internal_a_methodname().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_methodname());
+  }
+
+  // string a_payerName = 5;
+  if (!this->_internal_a_payername().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_payername());
+  }
+
+  // string a_payerEmail = 6;
+  if (!this->_internal_a_payeremail().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_payeremail());
+  }
+
+  // string a_payerPhone = 7;
+  if (!this->_internal_a_payerphone().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_payerphone());
+  }
+
+  // .protobuf.mozilla.dom.IPCPaymentResponseData a_data = 4;
+  if (this->_internal_has_a_data()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_data_);
+  }
+
+  // uint32 a_status = 2;
+  if (this->_internal_a_status() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_status());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentShowActionResponse::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentShowActionResponse*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentShowActionResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentShowActionResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentShowActionResponse::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentShowActionResponse::MergeFrom(const IPCPaymentShowActionResponse& from) {
-  IPCPaymentShowActionResponse* const _this = this;
+
+void IPCPaymentShowActionResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentShowActionResponse*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentShowActionResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentShowActionResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000007fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_requestid(from._internal_a_requestid());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_methodname(from._internal_a_methodname());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_a_payername(from._internal_a_payername());
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_internal_set_a_payeremail(from._internal_a_payeremail());
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_internal_set_a_payerphone(from._internal_a_payerphone());
-    }
-    if (cached_has_bits & 0x00000020u) {
-      _this->_internal_mutable_a_data()->::protobuf::mozilla::dom::IPCPaymentResponseData::MergeFrom(
-          from._internal_a_data());
-    }
-    if (cached_has_bits & 0x00000040u) {
-      _this->_impl_.a_status_ = from._impl_.a_status_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_requestid().empty()) {
+    _this->_internal_set_a_requestid(from._internal_a_requestid());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_methodname().empty()) {
+    _this->_internal_set_a_methodname(from._internal_a_methodname());
+  }
+  if (!from._internal_a_payername().empty()) {
+    _this->_internal_set_a_payername(from._internal_a_payername());
+  }
+  if (!from._internal_a_payeremail().empty()) {
+    _this->_internal_set_a_payeremail(from._internal_a_payeremail());
+  }
+  if (!from._internal_a_payerphone().empty()) {
+    _this->_internal_set_a_payerphone(from._internal_a_payerphone());
+  }
+  if (from._internal_has_a_data()) {
+    _this->_internal_mutable_a_data()->::protobuf::mozilla::dom::IPCPaymentResponseData::MergeFrom(
+        from._internal_a_data());
+  }
+  if (from._internal_a_status() != 0) {
+    _this->_internal_set_a_status(from._internal_a_status());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentShowActionResponse::CopyFrom(const IPCPaymentShowActionResponse& from) {
@@ -9073,10 +8516,6 @@ void IPCPaymentShowActionResponse::CopyFrom(const IPCPaymentShowActionResponse& 
 }
 
 bool IPCPaymentShowActionResponse::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_data()) {
-    if (!_impl_.a_data_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -9085,7 +8524,6 @@ void IPCPaymentShowActionResponse::InternalSwap(IPCPaymentShowActionResponse* ot
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_requestid_, lhs_arena,
       &other->_impl_.a_requestid_, rhs_arena
@@ -9114,48 +8552,38 @@ void IPCPaymentShowActionResponse::InternalSwap(IPCPaymentShowActionResponse* ot
           reinterpret_cast<char*>(&other->_impl_.a_data_));
 }
 
-std::string IPCPaymentShowActionResponse::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentShowActionResponse";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentShowActionResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[21]);
 }
-
 
 // ===================================================================
 
 class IPCPaymentAbortActionResponse::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCPaymentAbortActionResponse>()._impl_._has_bits_);
-  static void set_has_a_requestid(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_issucceeded(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 IPCPaymentAbortActionResponse::IPCPaymentAbortActionResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentAbortActionResponse)
 }
 IPCPaymentAbortActionResponse::IPCPaymentAbortActionResponse(const IPCPaymentAbortActionResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentAbortActionResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}
-    , decltype(_impl_.a_issucceeded_){}};
+      decltype(_impl_.a_requestid_){}
+    , decltype(_impl_.a_issucceeded_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_requestid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_requestid()) {
+  if (!from._internal_a_requestid().empty()) {
     _this->_impl_.a_requestid_.Set(from._internal_a_requestid(), 
       _this->GetArenaForAllocation());
   }
@@ -9168,10 +8596,9 @@ inline void IPCPaymentAbortActionResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}
+      decltype(_impl_.a_requestid_){}
     , decltype(_impl_.a_issucceeded_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9181,7 +8608,7 @@ inline void IPCPaymentAbortActionResponse::SharedCtor(
 
 IPCPaymentAbortActionResponse::~IPCPaymentAbortActionResponse() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentAbortActionResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -9203,35 +8630,30 @@ void IPCPaymentAbortActionResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_requestid_.ClearNonDefaultToEmpty();
-  }
+  _impl_.a_requestid_.ClearToEmpty();
   _impl_.a_issucceeded_ = false;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentAbortActionResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_requestId = 1;
+      // string a_requestId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_requestid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentAbortActionResponse.a_requestId"));
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isSucceeded = 2;
+      // bool a_isSucceeded = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_a_issucceeded(&has_bits);
           _impl_.a_issucceeded_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -9248,12 +8670,11 @@ const char* IPCPaymentAbortActionResponse::_InternalParse(const char* ptr, ::_pb
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -9267,97 +8688,75 @@ uint8_t* IPCPaymentAbortActionResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_requestId = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_requestid().data(), static_cast<int>(this->_internal_a_requestid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentAbortActionResponse.a_requestId");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_requestid(), target);
   }
 
-  // required bool a_isSucceeded = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // bool a_isSucceeded = 2;
+  if (this->_internal_a_issucceeded() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_issucceeded(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentAbortActionResponse)
   return target;
 }
 
-size_t IPCPaymentAbortActionResponse::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCPaymentAbortActionResponse)
-  size_t total_size = 0;
-
-  if (_internal_has_a_requestid()) {
-    // required string a_requestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_requestid());
-  }
-
-  if (_internal_has_a_issucceeded()) {
-    // required bool a_isSucceeded = 2;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t IPCPaymentAbortActionResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPaymentAbortActionResponse)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_requestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_requestid());
-
-    // required bool a_isSucceeded = 2;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_requestid());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // bool a_isSucceeded = 2;
+  if (this->_internal_a_issucceeded() != 0) {
+    total_size += 1 + 1;
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentAbortActionResponse::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentAbortActionResponse*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentAbortActionResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentAbortActionResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentAbortActionResponse::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentAbortActionResponse::MergeFrom(const IPCPaymentAbortActionResponse& from) {
-  IPCPaymentAbortActionResponse* const _this = this;
+
+void IPCPaymentAbortActionResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentAbortActionResponse*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentAbortActionResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentAbortActionResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_requestid(from._internal_a_requestid());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.a_issucceeded_ = from._impl_.a_issucceeded_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_requestid().empty()) {
+    _this->_internal_set_a_requestid(from._internal_a_requestid());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (from._internal_a_issucceeded() != 0) {
+    _this->_internal_set_a_issucceeded(from._internal_a_issucceeded());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentAbortActionResponse::CopyFrom(const IPCPaymentAbortActionResponse& from) {
@@ -9368,7 +8767,6 @@ void IPCPaymentAbortActionResponse::CopyFrom(const IPCPaymentAbortActionResponse
 }
 
 bool IPCPaymentAbortActionResponse::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -9377,7 +8775,6 @@ void IPCPaymentAbortActionResponse::InternalSwap(IPCPaymentAbortActionResponse* 
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_requestid_, lhs_arena,
       &other->_impl_.a_requestid_, rhs_arena
@@ -9385,48 +8782,38 @@ void IPCPaymentAbortActionResponse::InternalSwap(IPCPaymentAbortActionResponse* 
   swap(_impl_.a_issucceeded_, other->_impl_.a_issucceeded_);
 }
 
-std::string IPCPaymentAbortActionResponse::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentAbortActionResponse";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentAbortActionResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[22]);
 }
-
 
 // ===================================================================
 
 class IPCPaymentCompleteActionResponse::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCPaymentCompleteActionResponse>()._impl_._has_bits_);
-  static void set_has_a_requestid(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_iscompleted(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 IPCPaymentCompleteActionResponse::IPCPaymentCompleteActionResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentCompleteActionResponse)
 }
 IPCPaymentCompleteActionResponse::IPCPaymentCompleteActionResponse(const IPCPaymentCompleteActionResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentCompleteActionResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}
-    , decltype(_impl_.a_iscompleted_){}};
+      decltype(_impl_.a_requestid_){}
+    , decltype(_impl_.a_iscompleted_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_requestid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_requestid()) {
+  if (!from._internal_a_requestid().empty()) {
     _this->_impl_.a_requestid_.Set(from._internal_a_requestid(), 
       _this->GetArenaForAllocation());
   }
@@ -9439,10 +8826,9 @@ inline void IPCPaymentCompleteActionResponse::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_requestid_){}
+      decltype(_impl_.a_requestid_){}
     , decltype(_impl_.a_iscompleted_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_requestid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9452,7 +8838,7 @@ inline void IPCPaymentCompleteActionResponse::SharedCtor(
 
 IPCPaymentCompleteActionResponse::~IPCPaymentCompleteActionResponse() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentCompleteActionResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -9474,35 +8860,30 @@ void IPCPaymentCompleteActionResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_requestid_.ClearNonDefaultToEmpty();
-  }
+  _impl_.a_requestid_.ClearToEmpty();
   _impl_.a_iscompleted_ = false;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentCompleteActionResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_requestId = 1;
+      // string a_requestId = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_requestid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPaymentCompleteActionResponse.a_requestId"));
         } else
           goto handle_unusual;
         continue;
-      // required bool a_isCompleted = 2;
+      // bool a_isCompleted = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_a_iscompleted(&has_bits);
           _impl_.a_iscompleted_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -9519,12 +8900,11 @@ const char* IPCPaymentCompleteActionResponse::_InternalParse(const char* ptr, ::
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -9538,97 +8918,75 @@ uint8_t* IPCPaymentCompleteActionResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_requestId = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_requestid().data(), static_cast<int>(this->_internal_a_requestid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCPaymentCompleteActionResponse.a_requestId");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_requestid(), target);
   }
 
-  // required bool a_isCompleted = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // bool a_isCompleted = 2;
+  if (this->_internal_a_iscompleted() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_iscompleted(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentCompleteActionResponse)
   return target;
 }
 
-size_t IPCPaymentCompleteActionResponse::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.IPCPaymentCompleteActionResponse)
-  size_t total_size = 0;
-
-  if (_internal_has_a_requestid()) {
-    // required string a_requestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_requestid());
-  }
-
-  if (_internal_has_a_iscompleted()) {
-    // required bool a_isCompleted = 2;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t IPCPaymentCompleteActionResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCPaymentCompleteActionResponse)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_requestId = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_requestid());
-
-    // required bool a_isCompleted = 2;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_requestId = 1;
+  if (!this->_internal_a_requestid().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_requestid());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // bool a_isCompleted = 2;
+  if (this->_internal_a_iscompleted() != 0) {
+    total_size += 1 + 1;
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentCompleteActionResponse::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentCompleteActionResponse*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentCompleteActionResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentCompleteActionResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentCompleteActionResponse::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentCompleteActionResponse::MergeFrom(const IPCPaymentCompleteActionResponse& from) {
-  IPCPaymentCompleteActionResponse* const _this = this;
+
+void IPCPaymentCompleteActionResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentCompleteActionResponse*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentCompleteActionResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentCompleteActionResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_requestid(from._internal_a_requestid());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.a_iscompleted_ = from._impl_.a_iscompleted_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_requestid().empty()) {
+    _this->_internal_set_a_requestid(from._internal_a_requestid());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (from._internal_a_iscompleted() != 0) {
+    _this->_internal_set_a_iscompleted(from._internal_a_iscompleted());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentCompleteActionResponse::CopyFrom(const IPCPaymentCompleteActionResponse& from) {
@@ -9639,7 +8997,6 @@ void IPCPaymentCompleteActionResponse::CopyFrom(const IPCPaymentCompleteActionRe
 }
 
 bool IPCPaymentCompleteActionResponse::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -9648,7 +9005,6 @@ void IPCPaymentCompleteActionResponse::InternalSwap(IPCPaymentCompleteActionResp
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_requestid_, lhs_arena,
       &other->_impl_.a_requestid_, rhs_arena
@@ -9656,10 +9012,11 @@ void IPCPaymentCompleteActionResponse::InternalSwap(IPCPaymentCompleteActionResp
   swap(_impl_.a_iscompleted_, other->_impl_.a_iscompleted_);
 }
 
-std::string IPCPaymentCompleteActionResponse::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentCompleteActionResponse";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentCompleteActionResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[23]);
 }
-
 
 // ===================================================================
 
@@ -9749,19 +9106,19 @@ void IPCPaymentActionResponse::set_allocated_a_mvipcpaymentcompleteactionrespons
 }
 IPCPaymentActionResponse::IPCPaymentActionResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPaymentActionResponse)
 }
 IPCPaymentActionResponse::IPCPaymentActionResponse(const IPCPaymentActionResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCPaymentActionResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVIPCPaymentCanMakeActionResponse: {
@@ -9805,7 +9162,7 @@ inline void IPCPaymentActionResponse::SharedCtor(
 
 IPCPaymentActionResponse::~IPCPaymentActionResponse() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPaymentActionResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -9865,7 +9222,7 @@ void IPCPaymentActionResponse::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCPaymentActionResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -9917,7 +9274,7 @@ const char* IPCPaymentActionResponse::_InternalParse(const char* ptr, ::_pbi::Pa
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -9935,36 +9292,37 @@ uint8_t* IPCPaymentActionResponse::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  switch (content_case()) {
-    case kAMVIPCPaymentCanMakeActionResponse: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::a_mvipcpaymentcanmakeactionresponse(this),
-          _Internal::a_mvipcpaymentcanmakeactionresponse(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVIPCPaymentShowActionResponse: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::a_mvipcpaymentshowactionresponse(this),
-          _Internal::a_mvipcpaymentshowactionresponse(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVIPCPaymentAbortActionResponse: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(3, _Internal::a_mvipcpaymentabortactionresponse(this),
-          _Internal::a_mvipcpaymentabortactionresponse(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVIPCPaymentCompleteActionResponse: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(4, _Internal::a_mvipcpaymentcompleteactionresponse(this),
-          _Internal::a_mvipcpaymentcompleteactionresponse(this).GetCachedSize(), target, stream);
-      break;
-    }
-    default: ;
+  // .protobuf.mozilla.dom.IPCPaymentCanMakeActionResponse a_mVIPCPaymentCanMakeActionResponse = 1;
+  if (_internal_has_a_mvipcpaymentcanmakeactionresponse()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::a_mvipcpaymentcanmakeactionresponse(this),
+        _Internal::a_mvipcpaymentcanmakeactionresponse(this).GetCachedSize(), target, stream);
   }
+
+  // .protobuf.mozilla.dom.IPCPaymentShowActionResponse a_mVIPCPaymentShowActionResponse = 2;
+  if (_internal_has_a_mvipcpaymentshowactionresponse()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::a_mvipcpaymentshowactionresponse(this),
+        _Internal::a_mvipcpaymentshowactionresponse(this).GetCachedSize(), target, stream);
+  }
+
+  // .protobuf.mozilla.dom.IPCPaymentAbortActionResponse a_mVIPCPaymentAbortActionResponse = 3;
+  if (_internal_has_a_mvipcpaymentabortactionresponse()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::a_mvipcpaymentabortactionresponse(this),
+        _Internal::a_mvipcpaymentabortactionresponse(this).GetCachedSize(), target, stream);
+  }
+
+  // .protobuf.mozilla.dom.IPCPaymentCompleteActionResponse a_mVIPCPaymentCompleteActionResponse = 4;
+  if (_internal_has_a_mvipcpaymentcompleteactionresponse()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, _Internal::a_mvipcpaymentcompleteactionresponse(this),
+        _Internal::a_mvipcpaymentcompleteactionresponse(this).GetCachedSize(), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPaymentActionResponse)
   return target;
@@ -10011,22 +9369,19 @@ size_t IPCPaymentActionResponse::ByteSizeLong() const {
       break;
     }
   }
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCPaymentActionResponse::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCPaymentActionResponse*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPaymentActionResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCPaymentActionResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPaymentActionResponse::GetClassData() const { return &_class_data_; }
 
-void IPCPaymentActionResponse::MergeFrom(const IPCPaymentActionResponse& from) {
-  IPCPaymentActionResponse* const _this = this;
+
+void IPCPaymentActionResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCPaymentActionResponse*>(&to_msg);
+  auto& from = static_cast<const IPCPaymentActionResponse&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPaymentActionResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -10057,7 +9412,7 @@ void IPCPaymentActionResponse::MergeFrom(const IPCPaymentActionResponse& from) {
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCPaymentActionResponse::CopyFrom(const IPCPaymentActionResponse& from) {
@@ -10068,35 +9423,6 @@ void IPCPaymentActionResponse::CopyFrom(const IPCPaymentActionResponse& from) {
 }
 
 bool IPCPaymentActionResponse::IsInitialized() const {
-  switch (content_case()) {
-    case kAMVIPCPaymentCanMakeActionResponse: {
-      if (_internal_has_a_mvipcpaymentcanmakeactionresponse()) {
-        if (!_impl_.content_.a_mvipcpaymentcanmakeactionresponse_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVIPCPaymentShowActionResponse: {
-      if (_internal_has_a_mvipcpaymentshowactionresponse()) {
-        if (!_impl_.content_.a_mvipcpaymentshowactionresponse_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVIPCPaymentAbortActionResponse: {
-      if (_internal_has_a_mvipcpaymentabortactionresponse()) {
-        if (!_impl_.content_.a_mvipcpaymentabortactionresponse_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVIPCPaymentCompleteActionResponse: {
-      if (_internal_has_a_mvipcpaymentcompleteactionresponse()) {
-        if (!_impl_.content_.a_mvipcpaymentcompleteactionresponse_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case CONTENT_NOT_SET: {
-      break;
-    }
-  }
   return true;
 }
 
@@ -10107,44 +9433,37 @@ void IPCPaymentActionResponse::InternalSwap(IPCPaymentActionResponse* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-std::string IPCPaymentActionResponse::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCPaymentActionResponse";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCPaymentActionResponse::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[24]);
 }
-
 
 // ===================================================================
 
 class IPCGeneralChangeDetails::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCGeneralChangeDetails>()._impl_._has_bits_);
-  static void set_has_a_details(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 IPCGeneralChangeDetails::IPCGeneralChangeDetails(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCGeneralChangeDetails)
 }
 IPCGeneralChangeDetails::IPCGeneralChangeDetails(const IPCGeneralChangeDetails& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCGeneralChangeDetails* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_details_){}};
+      decltype(_impl_.a_details_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_details_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_details_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_details()) {
+  if (!from._internal_a_details().empty()) {
     _this->_impl_.a_details_.Set(from._internal_a_details(), 
       _this->GetArenaForAllocation());
   }
@@ -10156,9 +9475,8 @@ inline void IPCGeneralChangeDetails::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_details_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_details_){}
   };
   _impl_.a_details_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10168,7 +9486,7 @@ inline void IPCGeneralChangeDetails::SharedCtor(
 
 IPCGeneralChangeDetails::~IPCGeneralChangeDetails() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCGeneralChangeDetails)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -10190,27 +9508,23 @@ void IPCGeneralChangeDetails::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_details_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_details_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCGeneralChangeDetails::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_details = 1;
+      // string a_details = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_details();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCGeneralChangeDetails.a_details"));
         } else
           goto handle_unusual;
         continue;
@@ -10225,12 +9539,11 @@ const char* IPCGeneralChangeDetails::_InternalParse(const char* ptr, ::_pbi::Par
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -10244,16 +9557,19 @@ uint8_t* IPCGeneralChangeDetails::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_details = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_details = 1;
+  if (!this->_internal_a_details().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_details().data(), static_cast<int>(this->_internal_a_details().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.IPCGeneralChangeDetails.a_details");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_details(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCGeneralChangeDetails)
   return target;
@@ -10263,41 +9579,39 @@ size_t IPCGeneralChangeDetails::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCGeneralChangeDetails)
   size_t total_size = 0;
 
-  // required string a_details = 1;
-  if (_internal_has_a_details()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_details());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_details = 1;
+  if (!this->_internal_a_details().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_details());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCGeneralChangeDetails::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCGeneralChangeDetails*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCGeneralChangeDetails::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCGeneralChangeDetails::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCGeneralChangeDetails::GetClassData() const { return &_class_data_; }
 
-void IPCGeneralChangeDetails::MergeFrom(const IPCGeneralChangeDetails& from) {
-  IPCGeneralChangeDetails* const _this = this;
+
+void IPCGeneralChangeDetails::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCGeneralChangeDetails*>(&to_msg);
+  auto& from = static_cast<const IPCGeneralChangeDetails&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCGeneralChangeDetails)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_details()) {
+  if (!from._internal_a_details().empty()) {
     _this->_internal_set_a_details(from._internal_a_details());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCGeneralChangeDetails::CopyFrom(const IPCGeneralChangeDetails& from) {
@@ -10308,7 +9622,6 @@ void IPCGeneralChangeDetails::CopyFrom(const IPCGeneralChangeDetails& from) {
 }
 
 bool IPCGeneralChangeDetails::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -10317,30 +9630,23 @@ void IPCGeneralChangeDetails::InternalSwap(IPCGeneralChangeDetails* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_details_, lhs_arena,
       &other->_impl_.a_details_, rhs_arena
   );
 }
 
-std::string IPCGeneralChangeDetails::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCGeneralChangeDetails";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCGeneralChangeDetails::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[25]);
 }
-
 
 // ===================================================================
 
 class IPCBasicCardChangeDetails::_Internal {
  public:
-  using HasBits = decltype(std::declval<IPCBasicCardChangeDetails>()._impl_._has_bits_);
   static const ::protobuf::mozilla::dom::IPCPaymentAddress& a_billingaddress(const IPCBasicCardChangeDetails* msg);
-  static void set_has_a_billingaddress(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 const ::protobuf::mozilla::dom::IPCPaymentAddress&
@@ -10349,19 +9655,18 @@ IPCBasicCardChangeDetails::_Internal::a_billingaddress(const IPCBasicCardChangeD
 }
 IPCBasicCardChangeDetails::IPCBasicCardChangeDetails(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCBasicCardChangeDetails)
 }
 IPCBasicCardChangeDetails::IPCBasicCardChangeDetails(const IPCBasicCardChangeDetails& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCBasicCardChangeDetails* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_billingaddress_){nullptr}};
+      decltype(_impl_.a_billingaddress_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_a_billingaddress()) {
     _this->_impl_.a_billingaddress_ = new ::protobuf::mozilla::dom::IPCPaymentAddress(*from._impl_.a_billingaddress_);
   }
@@ -10373,15 +9678,14 @@ inline void IPCBasicCardChangeDetails::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_billingaddress_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_billingaddress_){nullptr}
   };
 }
 
 IPCBasicCardChangeDetails::~IPCBasicCardChangeDetails() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCBasicCardChangeDetails)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -10403,23 +9707,20 @@ void IPCBasicCardChangeDetails::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.a_billingaddress_ != nullptr);
-    _impl_.a_billingaddress_->Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_billingaddress_ != nullptr) {
+    delete _impl_.a_billingaddress_;
   }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_billingaddress_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCBasicCardChangeDetails::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.dom.IPCPaymentAddress a_billingAddress = 1;
+      // .protobuf.mozilla.dom.IPCPaymentAddress a_billingAddress = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_billingaddress(), ptr);
@@ -10438,12 +9739,11 @@ const char* IPCBasicCardChangeDetails::_InternalParse(const char* ptr, ::_pbi::P
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -10457,17 +9757,16 @@ uint8_t* IPCBasicCardChangeDetails::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.dom.IPCPaymentAddress a_billingAddress = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // .protobuf.mozilla.dom.IPCPaymentAddress a_billingAddress = 1;
+  if (this->_internal_has_a_billingaddress()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_billingaddress(this),
         _Internal::a_billingaddress(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCBasicCardChangeDetails)
   return target;
@@ -10477,32 +9776,30 @@ size_t IPCBasicCardChangeDetails::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.IPCBasicCardChangeDetails)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.dom.IPCPaymentAddress a_billingAddress = 1;
-  if (_internal_has_a_billingaddress()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_billingaddress_);
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // .protobuf.mozilla.dom.IPCPaymentAddress a_billingAddress = 1;
+  if (this->_internal_has_a_billingaddress()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_billingaddress_);
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCBasicCardChangeDetails::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCBasicCardChangeDetails*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCBasicCardChangeDetails::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCBasicCardChangeDetails::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCBasicCardChangeDetails::GetClassData() const { return &_class_data_; }
 
-void IPCBasicCardChangeDetails::MergeFrom(const IPCBasicCardChangeDetails& from) {
-  IPCBasicCardChangeDetails* const _this = this;
+
+void IPCBasicCardChangeDetails::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCBasicCardChangeDetails*>(&to_msg);
+  auto& from = static_cast<const IPCBasicCardChangeDetails&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCBasicCardChangeDetails)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -10512,7 +9809,7 @@ void IPCBasicCardChangeDetails::MergeFrom(const IPCBasicCardChangeDetails& from)
     _this->_internal_mutable_a_billingaddress()->::protobuf::mozilla::dom::IPCPaymentAddress::MergeFrom(
         from._internal_a_billingaddress());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCBasicCardChangeDetails::CopyFrom(const IPCBasicCardChangeDetails& from) {
@@ -10523,24 +9820,20 @@ void IPCBasicCardChangeDetails::CopyFrom(const IPCBasicCardChangeDetails& from) 
 }
 
 bool IPCBasicCardChangeDetails::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_billingaddress()) {
-    if (!_impl_.a_billingaddress_->IsInitialized()) return false;
-  }
   return true;
 }
 
 void IPCBasicCardChangeDetails::InternalSwap(IPCBasicCardChangeDetails* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_billingaddress_, other->_impl_.a_billingaddress_);
 }
 
-std::string IPCBasicCardChangeDetails::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCBasicCardChangeDetails";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCBasicCardChangeDetails::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[26]);
 }
-
 
 // ===================================================================
 
@@ -10590,19 +9883,19 @@ void IPCMethodChangeDetails::set_allocated_a_mvipcbasiccardchangedetails(::proto
 }
 IPCMethodChangeDetails::IPCMethodChangeDetails(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCMethodChangeDetails)
 }
 IPCMethodChangeDetails::IPCMethodChangeDetails(const IPCMethodChangeDetails& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   IPCMethodChangeDetails* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVIPCGeneralChangeDetails: {
@@ -10636,7 +9929,7 @@ inline void IPCMethodChangeDetails::SharedCtor(
 
 IPCMethodChangeDetails::~IPCMethodChangeDetails() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCMethodChangeDetails)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -10684,7 +9977,7 @@ void IPCMethodChangeDetails::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* IPCMethodChangeDetails::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -10720,7 +10013,7 @@ const char* IPCMethodChangeDetails::_InternalParse(const char* ptr, ::_pbi::Pars
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -10738,24 +10031,23 @@ uint8_t* IPCMethodChangeDetails::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  switch (content_case()) {
-    case kAMVIPCGeneralChangeDetails: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(1, _Internal::a_mvipcgeneralchangedetails(this),
-          _Internal::a_mvipcgeneralchangedetails(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVIPCBasicCardChangeDetails: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::a_mvipcbasiccardchangedetails(this),
-          _Internal::a_mvipcbasiccardchangedetails(this).GetCachedSize(), target, stream);
-      break;
-    }
-    default: ;
+  // .protobuf.mozilla.dom.IPCGeneralChangeDetails a_mVIPCGeneralChangeDetails = 1;
+  if (_internal_has_a_mvipcgeneralchangedetails()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::a_mvipcgeneralchangedetails(this),
+        _Internal::a_mvipcgeneralchangedetails(this).GetCachedSize(), target, stream);
   }
+
+  // .protobuf.mozilla.dom.IPCBasicCardChangeDetails a_mVIPCBasicCardChangeDetails = 2;
+  if (_internal_has_a_mvipcbasiccardchangedetails()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::a_mvipcbasiccardchangedetails(this),
+        _Internal::a_mvipcbasiccardchangedetails(this).GetCachedSize(), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCMethodChangeDetails)
   return target;
@@ -10788,22 +10080,19 @@ size_t IPCMethodChangeDetails::ByteSizeLong() const {
       break;
     }
   }
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IPCMethodChangeDetails::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const IPCMethodChangeDetails*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCMethodChangeDetails::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IPCMethodChangeDetails::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCMethodChangeDetails::GetClassData() const { return &_class_data_; }
 
-void IPCMethodChangeDetails::MergeFrom(const IPCMethodChangeDetails& from) {
-  IPCMethodChangeDetails* const _this = this;
+
+void IPCMethodChangeDetails::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IPCMethodChangeDetails*>(&to_msg);
+  auto& from = static_cast<const IPCMethodChangeDetails&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCMethodChangeDetails)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -10824,7 +10113,7 @@ void IPCMethodChangeDetails::MergeFrom(const IPCMethodChangeDetails& from) {
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IPCMethodChangeDetails::CopyFrom(const IPCMethodChangeDetails& from) {
@@ -10835,23 +10124,6 @@ void IPCMethodChangeDetails::CopyFrom(const IPCMethodChangeDetails& from) {
 }
 
 bool IPCMethodChangeDetails::IsInitialized() const {
-  switch (content_case()) {
-    case kAMVIPCGeneralChangeDetails: {
-      if (_internal_has_a_mvipcgeneralchangedetails()) {
-        if (!_impl_.content_.a_mvipcgeneralchangedetails_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVIPCBasicCardChangeDetails: {
-      if (_internal_has_a_mvipcbasiccardchangedetails()) {
-        if (!_impl_.content_.a_mvipcbasiccardchangedetails_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case CONTENT_NOT_SET: {
-      break;
-    }
-  }
   return true;
 }
 
@@ -10862,10 +10134,11 @@ void IPCMethodChangeDetails::InternalSwap(IPCMethodChangeDetails* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-std::string IPCMethodChangeDetails::GetTypeName() const {
-  return "protobuf.mozilla.dom.IPCMethodChangeDetails";
+::PROTOBUF_NAMESPACE_ID::Metadata IPCMethodChangeDetails::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_PPaymentRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto[27]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace dom

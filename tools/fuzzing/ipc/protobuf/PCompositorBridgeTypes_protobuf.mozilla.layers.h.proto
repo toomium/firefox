@@ -5,19 +5,18 @@
 
 // Generated from /home/tmittendorf/firefox/gfx/layers/ipc/PCompositorBridgeTypes.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.layers;
 
 // Structs and unions declarations
 message RecordedFrameData {
-  required bytes a_timeOffset = 1;
-  required uint32 a_length = 2;
+  bytes a_timeOffset = 1;
+  uint32 a_length = 2;
 }
 
 message FrameRecording {
-  required bytes a_startTime = 1;
+  bytes a_startTime = 1;
   repeated protobuf.mozilla.layers.RecordedFrameData a_frames = 2;
-  required bytes a_bytes = 3;
+  bytes a_bytes = 3;
 }

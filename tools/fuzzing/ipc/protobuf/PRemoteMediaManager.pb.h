@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "PRemoteMediaManager_protobuf.mozilla.h.pb.h"
 #include "LayersSurfaces.pb.h"
 #include "PMediaDecoderParams.pb.h"
@@ -44,6 +47,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PRemoteMediaManager_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PRemoteMediaManager_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace PRemoteMediaManager {
@@ -87,7 +91,7 @@ namespace PRemoteMediaManager {
 // ===================================================================
 
 class Msg_PRemoteDecoderConstructor final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor) */ {
  public:
   inline Msg_PRemoteDecoderConstructor() : Msg_PRemoteDecoderConstructor(nullptr) {}
   ~Msg_PRemoteDecoderConstructor() override;
@@ -117,13 +121,15 @@ class Msg_PRemoteDecoderConstructor final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_PRemoteDecoderConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -161,9 +167,15 @@ class Msg_PRemoteDecoderConstructor final :
   Msg_PRemoteDecoderConstructor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_PRemoteDecoderConstructor>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_PRemoteDecoderConstructor& from);
-  void MergeFrom(const Msg_PRemoteDecoderConstructor& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_PRemoteDecoderConstructor& from) {
+    Msg_PRemoteDecoderConstructor::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -176,7 +188,7 @@ class Msg_PRemoteDecoderConstructor final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_PRemoteDecoderConstructor* other);
 
   private:
@@ -189,7 +201,10 @@ class Msg_PRemoteDecoderConstructor final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -203,11 +218,7 @@ class Msg_PRemoteDecoderConstructor final :
     kAActoridFieldNumber = 1,
     kAMediaEngineIdFieldNumber = 5,
   };
-  // required bytes a_options = 3;
-  bool has_a_options() const;
-  private:
-  bool _internal_has_a_options() const;
-  public:
+  // bytes a_options = 3;
   void clear_a_options();
   const std::string& a_options() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -257,7 +268,7 @@ class Msg_PRemoteDecoderConstructor final :
   std::string* _internal_mutable_a_trackingid();
   public:
 
-  // required .protobuf.mozilla.RemoteDecoderInfoIPDL a_info = 2;
+  // .protobuf.mozilla.RemoteDecoderInfoIPDL a_info = 2;
   bool has_a_info() const;
   private:
   bool _internal_has_a_info() const;
@@ -275,11 +286,7 @@ class Msg_PRemoteDecoderConstructor final :
       ::protobuf::mozilla::RemoteDecoderInfoIPDL* a_info);
   ::protobuf::mozilla::RemoteDecoderInfoIPDL* unsafe_arena_release_a_info();
 
-  // required sint64 a_actorid = 1;
-  bool has_a_actorid() const;
-  private:
-  bool _internal_has_a_actorid() const;
-  public:
+  // sint64 a_actorid = 1;
   void clear_a_actorid();
   int64_t a_actorid() const;
   void set_a_actorid(int64_t value);
@@ -305,9 +312,6 @@ class Msg_PRemoteDecoderConstructor final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
@@ -327,10 +331,9 @@ class Msg_PRemoteDecoderConstructor final :
 // -------------------------------------------------------------------
 
 class Reply_PRemoteDecoderConstructor final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteMediaManager.Reply_PRemoteDecoderConstructor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteMediaManager.Reply_PRemoteDecoderConstructor) */ {
  public:
   inline Reply_PRemoteDecoderConstructor() : Reply_PRemoteDecoderConstructor(nullptr) {}
-  ~Reply_PRemoteDecoderConstructor() override;
   explicit PROTOBUF_CONSTEXPR Reply_PRemoteDecoderConstructor(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply_PRemoteDecoderConstructor(const Reply_PRemoteDecoderConstructor& from);
@@ -357,13 +360,15 @@ class Reply_PRemoteDecoderConstructor final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_PRemoteDecoderConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -401,23 +406,15 @@ class Reply_PRemoteDecoderConstructor final :
   Reply_PRemoteDecoderConstructor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_PRemoteDecoderConstructor>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply_PRemoteDecoderConstructor& from);
-  void MergeFrom(const Reply_PRemoteDecoderConstructor& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply_PRemoteDecoderConstructor* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply_PRemoteDecoderConstructor& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply_PRemoteDecoderConstructor& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -429,7 +426,10 @@ class Reply_PRemoteDecoderConstructor final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -443,15 +443,13 @@ class Reply_PRemoteDecoderConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteMediaManager_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_PRemoteEncoderConstructor final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteEncoderConstructor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteEncoderConstructor) */ {
  public:
   inline Msg_PRemoteEncoderConstructor() : Msg_PRemoteEncoderConstructor(nullptr) {}
   ~Msg_PRemoteEncoderConstructor() override;
@@ -481,13 +479,15 @@ class Msg_PRemoteEncoderConstructor final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_PRemoteEncoderConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -525,9 +525,15 @@ class Msg_PRemoteEncoderConstructor final :
   Msg_PRemoteEncoderConstructor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_PRemoteEncoderConstructor>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_PRemoteEncoderConstructor& from);
-  void MergeFrom(const Msg_PRemoteEncoderConstructor& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_PRemoteEncoderConstructor& from) {
+    Msg_PRemoteEncoderConstructor::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -540,7 +546,7 @@ class Msg_PRemoteEncoderConstructor final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_PRemoteEncoderConstructor* other);
 
   private:
@@ -553,7 +559,10 @@ class Msg_PRemoteEncoderConstructor final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -563,11 +572,7 @@ class Msg_PRemoteEncoderConstructor final :
     kAConfigFieldNumber = 2,
     kAActoridFieldNumber = 1,
   };
-  // required bytes a_config = 2;
-  bool has_a_config() const;
-  private:
-  bool _internal_has_a_config() const;
-  public:
+  // bytes a_config = 2;
   void clear_a_config();
   const std::string& a_config() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -581,11 +586,7 @@ class Msg_PRemoteEncoderConstructor final :
   std::string* _internal_mutable_a_config();
   public:
 
-  // required sint64 a_actorid = 1;
-  bool has_a_actorid() const;
-  private:
-  bool _internal_has_a_actorid() const;
-  public:
+  // sint64 a_actorid = 1;
   void clear_a_actorid();
   int64_t a_actorid() const;
   void set_a_actorid(int64_t value);
@@ -598,17 +599,13 @@ class Msg_PRemoteEncoderConstructor final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_config_;
     int64_t a_actorid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteMediaManager_2eproto;
@@ -616,10 +613,9 @@ class Msg_PRemoteEncoderConstructor final :
 // -------------------------------------------------------------------
 
 class Reply_PRemoteEncoderConstructor final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteMediaManager.Reply_PRemoteEncoderConstructor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteMediaManager.Reply_PRemoteEncoderConstructor) */ {
  public:
   inline Reply_PRemoteEncoderConstructor() : Reply_PRemoteEncoderConstructor(nullptr) {}
-  ~Reply_PRemoteEncoderConstructor() override;
   explicit PROTOBUF_CONSTEXPR Reply_PRemoteEncoderConstructor(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply_PRemoteEncoderConstructor(const Reply_PRemoteEncoderConstructor& from);
@@ -646,13 +642,15 @@ class Reply_PRemoteEncoderConstructor final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_PRemoteEncoderConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -690,23 +688,15 @@ class Reply_PRemoteEncoderConstructor final :
   Reply_PRemoteEncoderConstructor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_PRemoteEncoderConstructor>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply_PRemoteEncoderConstructor& from);
-  void MergeFrom(const Reply_PRemoteEncoderConstructor& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply_PRemoteEncoderConstructor* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply_PRemoteEncoderConstructor& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply_PRemoteEncoderConstructor& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -718,7 +708,10 @@ class Reply_PRemoteEncoderConstructor final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -732,15 +725,13 @@ class Reply_PRemoteEncoderConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteMediaManager_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_Readback final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteMediaManager.Msg_Readback) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteMediaManager.Msg_Readback) */ {
  public:
   inline Msg_Readback() : Msg_Readback(nullptr) {}
   ~Msg_Readback() override;
@@ -770,13 +761,15 @@ class Msg_Readback final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_Readback& default_instance() {
     return *internal_default_instance();
   }
@@ -814,9 +807,15 @@ class Msg_Readback final :
   Msg_Readback* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_Readback>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_Readback& from);
-  void MergeFrom(const Msg_Readback& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_Readback& from) {
+    Msg_Readback::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -829,7 +828,7 @@ class Msg_Readback final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_Readback* other);
 
   private:
@@ -842,7 +841,10 @@ class Msg_Readback final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -851,7 +853,7 @@ class Msg_Readback final :
   enum : int {
     kASdFieldNumber = 1,
   };
-  // required .protobuf.mozilla.layers.SurfaceDescriptorGPUVideo a_sd = 1;
+  // .protobuf.mozilla.layers.SurfaceDescriptorGPUVideo a_sd = 1;
   bool has_a_sd() const;
   private:
   bool _internal_has_a_sd() const;
@@ -877,9 +879,8 @@ class Msg_Readback final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo* a_sd_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteMediaManager_2eproto;
@@ -887,7 +888,7 @@ class Msg_Readback final :
 // -------------------------------------------------------------------
 
 class Reply_Readback final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteMediaManager.Reply_Readback) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteMediaManager.Reply_Readback) */ {
  public:
   inline Reply_Readback() : Reply_Readback(nullptr) {}
   ~Reply_Readback() override;
@@ -917,13 +918,15 @@ class Reply_Readback final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_Readback& default_instance() {
     return *internal_default_instance();
   }
@@ -961,9 +964,15 @@ class Reply_Readback final :
   Reply_Readback* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_Readback>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_Readback& from);
-  void MergeFrom(const Reply_Readback& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_Readback& from) {
+    Reply_Readback::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -976,7 +985,7 @@ class Reply_Readback final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_Readback* other);
 
   private:
@@ -989,7 +998,10 @@ class Reply_Readback final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -998,7 +1010,7 @@ class Reply_Readback final :
   enum : int {
     kAAResultFieldNumber = 1,
   };
-  // required .protobuf.mozilla.layers.SurfaceDescriptor a_aResult = 1;
+  // .protobuf.mozilla.layers.SurfaceDescriptor a_aResult = 1;
   bool has_a_aresult() const;
   private:
   bool _internal_has_a_aresult() const;
@@ -1024,9 +1036,8 @@ class Reply_Readback final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::layers::SurfaceDescriptor* a_aresult_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteMediaManager_2eproto;
@@ -1034,7 +1045,7 @@ class Reply_Readback final :
 // -------------------------------------------------------------------
 
 class Msg_DeallocateSurfaceDescriptorGPUVideo final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteMediaManager.Msg_DeallocateSurfaceDescriptorGPUVideo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteMediaManager.Msg_DeallocateSurfaceDescriptorGPUVideo) */ {
  public:
   inline Msg_DeallocateSurfaceDescriptorGPUVideo() : Msg_DeallocateSurfaceDescriptorGPUVideo(nullptr) {}
   ~Msg_DeallocateSurfaceDescriptorGPUVideo() override;
@@ -1064,13 +1075,15 @@ class Msg_DeallocateSurfaceDescriptorGPUVideo final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_DeallocateSurfaceDescriptorGPUVideo& default_instance() {
     return *internal_default_instance();
   }
@@ -1108,9 +1121,15 @@ class Msg_DeallocateSurfaceDescriptorGPUVideo final :
   Msg_DeallocateSurfaceDescriptorGPUVideo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_DeallocateSurfaceDescriptorGPUVideo>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_DeallocateSurfaceDescriptorGPUVideo& from);
-  void MergeFrom(const Msg_DeallocateSurfaceDescriptorGPUVideo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_DeallocateSurfaceDescriptorGPUVideo& from) {
+    Msg_DeallocateSurfaceDescriptorGPUVideo::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1123,7 +1142,7 @@ class Msg_DeallocateSurfaceDescriptorGPUVideo final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_DeallocateSurfaceDescriptorGPUVideo* other);
 
   private:
@@ -1136,7 +1155,10 @@ class Msg_DeallocateSurfaceDescriptorGPUVideo final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1145,7 +1167,7 @@ class Msg_DeallocateSurfaceDescriptorGPUVideo final :
   enum : int {
     kASdFieldNumber = 1,
   };
-  // required .protobuf.mozilla.layers.SurfaceDescriptorGPUVideo a_sd = 1;
+  // .protobuf.mozilla.layers.SurfaceDescriptorGPUVideo a_sd = 1;
   bool has_a_sd() const;
   private:
   bool _internal_has_a_sd() const;
@@ -1171,9 +1193,8 @@ class Msg_DeallocateSurfaceDescriptorGPUVideo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo* a_sd_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteMediaManager_2eproto;
@@ -1189,17 +1210,9 @@ class Msg_DeallocateSurfaceDescriptorGPUVideo final :
 #endif  // __GNUC__
 // Msg_PRemoteDecoderConstructor
 
-// required sint64 a_actorid = 1;
-inline bool Msg_PRemoteDecoderConstructor::_internal_has_a_actorid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool Msg_PRemoteDecoderConstructor::has_a_actorid() const {
-  return _internal_has_a_actorid();
-}
+// sint64 a_actorid = 1;
 inline void Msg_PRemoteDecoderConstructor::clear_a_actorid() {
   _impl_.a_actorid_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline int64_t Msg_PRemoteDecoderConstructor::_internal_a_actorid() const {
   return _impl_.a_actorid_;
@@ -1209,7 +1222,7 @@ inline int64_t Msg_PRemoteDecoderConstructor::a_actorid() const {
   return _internal_a_actorid();
 }
 inline void Msg_PRemoteDecoderConstructor::_internal_set_a_actorid(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_actorid_ = value;
 }
 inline void Msg_PRemoteDecoderConstructor::set_a_actorid(int64_t value) {
@@ -1217,11 +1230,9 @@ inline void Msg_PRemoteDecoderConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor.a_actorid)
 }
 
-// required .protobuf.mozilla.RemoteDecoderInfoIPDL a_info = 2;
+// .protobuf.mozilla.RemoteDecoderInfoIPDL a_info = 2;
 inline bool Msg_PRemoteDecoderConstructor::_internal_has_a_info() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_info_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_info_ != nullptr;
 }
 inline bool Msg_PRemoteDecoderConstructor::has_a_info() const {
   return _internal_has_a_info();
@@ -1242,14 +1253,14 @@ inline void Msg_PRemoteDecoderConstructor::unsafe_arena_set_allocated_a_info(
   }
   _impl_.a_info_ = a_info;
   if (a_info) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor.a_info)
 }
 inline ::protobuf::mozilla::RemoteDecoderInfoIPDL* Msg_PRemoteDecoderConstructor::release_a_info() {
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  
   ::protobuf::mozilla::RemoteDecoderInfoIPDL* temp = _impl_.a_info_;
   _impl_.a_info_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1265,13 +1276,13 @@ inline ::protobuf::mozilla::RemoteDecoderInfoIPDL* Msg_PRemoteDecoderConstructor
 }
 inline ::protobuf::mozilla::RemoteDecoderInfoIPDL* Msg_PRemoteDecoderConstructor::unsafe_arena_release_a_info() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor.a_info)
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  
   ::protobuf::mozilla::RemoteDecoderInfoIPDL* temp = _impl_.a_info_;
   _impl_.a_info_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::RemoteDecoderInfoIPDL* Msg_PRemoteDecoderConstructor::_internal_mutable_a_info() {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   if (_impl_.a_info_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::RemoteDecoderInfoIPDL>(GetArenaForAllocation());
     _impl_.a_info_ = p;
@@ -1296,25 +1307,17 @@ inline void Msg_PRemoteDecoderConstructor::set_allocated_a_info(::protobuf::mozi
       a_info = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_info, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    
   }
   _impl_.a_info_ = a_info;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor.a_info)
 }
 
-// required bytes a_options = 3;
-inline bool Msg_PRemoteDecoderConstructor::_internal_has_a_options() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_PRemoteDecoderConstructor::has_a_options() const {
-  return _internal_has_a_options();
-}
+// bytes a_options = 3;
 inline void Msg_PRemoteDecoderConstructor::clear_a_options() {
   _impl_.a_options_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_PRemoteDecoderConstructor::a_options() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor.a_options)
@@ -1323,7 +1326,7 @@ inline const std::string& Msg_PRemoteDecoderConstructor::a_options() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PRemoteDecoderConstructor::set_a_options(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_options_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor.a_options)
 }
@@ -1336,32 +1339,22 @@ inline const std::string& Msg_PRemoteDecoderConstructor::_internal_a_options() c
   return _impl_.a_options_.Get();
 }
 inline void Msg_PRemoteDecoderConstructor::_internal_set_a_options(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_options_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_PRemoteDecoderConstructor::_internal_mutable_a_options() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_options_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_PRemoteDecoderConstructor::release_a_options() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor.a_options)
-  if (!_internal_has_a_options()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_options_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_options_.IsDefault()) {
-    _impl_.a_options_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_options_.Release();
 }
 inline void Msg_PRemoteDecoderConstructor::set_allocated_a_options(std::string* a_options) {
   if (a_options != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_options_.SetAllocated(a_options, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1374,7 +1367,7 @@ inline void Msg_PRemoteDecoderConstructor::set_allocated_a_options(std::string* 
 
 // optional bytes a_identifier = 4;
 inline bool Msg_PRemoteDecoderConstructor::_internal_has_a_identifier() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
 inline bool Msg_PRemoteDecoderConstructor::has_a_identifier() const {
@@ -1382,7 +1375,7 @@ inline bool Msg_PRemoteDecoderConstructor::has_a_identifier() const {
 }
 inline void Msg_PRemoteDecoderConstructor::clear_a_identifier() {
   _impl_.a_identifier_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_PRemoteDecoderConstructor::a_identifier() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor.a_identifier)
@@ -1391,7 +1384,7 @@ inline const std::string& Msg_PRemoteDecoderConstructor::a_identifier() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PRemoteDecoderConstructor::set_a_identifier(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_identifier_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor.a_identifier)
 }
@@ -1404,11 +1397,11 @@ inline const std::string& Msg_PRemoteDecoderConstructor::_internal_a_identifier(
   return _impl_.a_identifier_.Get();
 }
 inline void Msg_PRemoteDecoderConstructor::_internal_set_a_identifier(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_identifier_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_PRemoteDecoderConstructor::_internal_mutable_a_identifier() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_identifier_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_PRemoteDecoderConstructor::release_a_identifier() {
@@ -1416,7 +1409,7 @@ inline std::string* Msg_PRemoteDecoderConstructor::release_a_identifier() {
   if (!_internal_has_a_identifier()) {
     return nullptr;
   }
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
   auto* p = _impl_.a_identifier_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (_impl_.a_identifier_.IsDefault()) {
@@ -1427,9 +1420,9 @@ inline std::string* Msg_PRemoteDecoderConstructor::release_a_identifier() {
 }
 inline void Msg_PRemoteDecoderConstructor::set_allocated_a_identifier(std::string* a_identifier) {
   if (a_identifier != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_identifier_.SetAllocated(a_identifier, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1442,7 +1435,7 @@ inline void Msg_PRemoteDecoderConstructor::set_allocated_a_identifier(std::strin
 
 // optional uint64 a_mediaEngineId = 5;
 inline bool Msg_PRemoteDecoderConstructor::_internal_has_a_mediaengineid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
 inline bool Msg_PRemoteDecoderConstructor::has_a_mediaengineid() const {
@@ -1450,7 +1443,7 @@ inline bool Msg_PRemoteDecoderConstructor::has_a_mediaengineid() const {
 }
 inline void Msg_PRemoteDecoderConstructor::clear_a_mediaengineid() {
   _impl_.a_mediaengineid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000020u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint64_t Msg_PRemoteDecoderConstructor::_internal_a_mediaengineid() const {
   return _impl_.a_mediaengineid_;
@@ -1460,7 +1453,7 @@ inline uint64_t Msg_PRemoteDecoderConstructor::a_mediaengineid() const {
   return _internal_a_mediaengineid();
 }
 inline void Msg_PRemoteDecoderConstructor::_internal_set_a_mediaengineid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.a_mediaengineid_ = value;
 }
 inline void Msg_PRemoteDecoderConstructor::set_a_mediaengineid(uint64_t value) {
@@ -1470,7 +1463,7 @@ inline void Msg_PRemoteDecoderConstructor::set_a_mediaengineid(uint64_t value) {
 
 // optional bytes a_trackingId = 6;
 inline bool Msg_PRemoteDecoderConstructor::_internal_has_a_trackingid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
 inline bool Msg_PRemoteDecoderConstructor::has_a_trackingid() const {
@@ -1478,7 +1471,7 @@ inline bool Msg_PRemoteDecoderConstructor::has_a_trackingid() const {
 }
 inline void Msg_PRemoteDecoderConstructor::clear_a_trackingid() {
   _impl_.a_trackingid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_PRemoteDecoderConstructor::a_trackingid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor.a_trackingId)
@@ -1487,7 +1480,7 @@ inline const std::string& Msg_PRemoteDecoderConstructor::a_trackingid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PRemoteDecoderConstructor::set_a_trackingid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.a_trackingid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteDecoderConstructor.a_trackingId)
 }
@@ -1500,11 +1493,11 @@ inline const std::string& Msg_PRemoteDecoderConstructor::_internal_a_trackingid(
   return _impl_.a_trackingid_.Get();
 }
 inline void Msg_PRemoteDecoderConstructor::_internal_set_a_trackingid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.a_trackingid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_PRemoteDecoderConstructor::_internal_mutable_a_trackingid() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.a_trackingid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_PRemoteDecoderConstructor::release_a_trackingid() {
@@ -1512,7 +1505,7 @@ inline std::string* Msg_PRemoteDecoderConstructor::release_a_trackingid() {
   if (!_internal_has_a_trackingid()) {
     return nullptr;
   }
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
   auto* p = _impl_.a_trackingid_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (_impl_.a_trackingid_.IsDefault()) {
@@ -1523,9 +1516,9 @@ inline std::string* Msg_PRemoteDecoderConstructor::release_a_trackingid() {
 }
 inline void Msg_PRemoteDecoderConstructor::set_allocated_a_trackingid(std::string* a_trackingid) {
   if (a_trackingid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_trackingid_.SetAllocated(a_trackingid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1544,17 +1537,9 @@ inline void Msg_PRemoteDecoderConstructor::set_allocated_a_trackingid(std::strin
 
 // Msg_PRemoteEncoderConstructor
 
-// required sint64 a_actorid = 1;
-inline bool Msg_PRemoteEncoderConstructor::_internal_has_a_actorid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_PRemoteEncoderConstructor::has_a_actorid() const {
-  return _internal_has_a_actorid();
-}
+// sint64 a_actorid = 1;
 inline void Msg_PRemoteEncoderConstructor::clear_a_actorid() {
   _impl_.a_actorid_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int64_t Msg_PRemoteEncoderConstructor::_internal_a_actorid() const {
   return _impl_.a_actorid_;
@@ -1564,7 +1549,7 @@ inline int64_t Msg_PRemoteEncoderConstructor::a_actorid() const {
   return _internal_a_actorid();
 }
 inline void Msg_PRemoteEncoderConstructor::_internal_set_a_actorid(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_actorid_ = value;
 }
 inline void Msg_PRemoteEncoderConstructor::set_a_actorid(int64_t value) {
@@ -1572,17 +1557,9 @@ inline void Msg_PRemoteEncoderConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteEncoderConstructor.a_actorid)
 }
 
-// required bytes a_config = 2;
-inline bool Msg_PRemoteEncoderConstructor::_internal_has_a_config() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_PRemoteEncoderConstructor::has_a_config() const {
-  return _internal_has_a_config();
-}
+// bytes a_config = 2;
 inline void Msg_PRemoteEncoderConstructor::clear_a_config() {
   _impl_.a_config_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_PRemoteEncoderConstructor::a_config() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteEncoderConstructor.a_config)
@@ -1591,7 +1568,7 @@ inline const std::string& Msg_PRemoteEncoderConstructor::a_config() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PRemoteEncoderConstructor::set_a_config(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_config_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteEncoderConstructor.a_config)
 }
@@ -1604,32 +1581,22 @@ inline const std::string& Msg_PRemoteEncoderConstructor::_internal_a_config() co
   return _impl_.a_config_.Get();
 }
 inline void Msg_PRemoteEncoderConstructor::_internal_set_a_config(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_config_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_PRemoteEncoderConstructor::_internal_mutable_a_config() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_config_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_PRemoteEncoderConstructor::release_a_config() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteMediaManager.Msg_PRemoteEncoderConstructor.a_config)
-  if (!_internal_has_a_config()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_config_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_config_.IsDefault()) {
-    _impl_.a_config_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_config_.Release();
 }
 inline void Msg_PRemoteEncoderConstructor::set_allocated_a_config(std::string* a_config) {
   if (a_config != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_config_.SetAllocated(a_config, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1648,11 +1615,9 @@ inline void Msg_PRemoteEncoderConstructor::set_allocated_a_config(std::string* a
 
 // Msg_Readback
 
-// required .protobuf.mozilla.layers.SurfaceDescriptorGPUVideo a_sd = 1;
+// .protobuf.mozilla.layers.SurfaceDescriptorGPUVideo a_sd = 1;
 inline bool Msg_Readback::_internal_has_a_sd() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_sd_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_sd_ != nullptr;
 }
 inline bool Msg_Readback::has_a_sd() const {
   return _internal_has_a_sd();
@@ -1673,14 +1638,14 @@ inline void Msg_Readback::unsafe_arena_set_allocated_a_sd(
   }
   _impl_.a_sd_ = a_sd;
   if (a_sd) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PRemoteMediaManager.Msg_Readback.a_sd)
 }
 inline ::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo* Msg_Readback::release_a_sd() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo* temp = _impl_.a_sd_;
   _impl_.a_sd_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1696,13 +1661,13 @@ inline ::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo* Msg_Readback::rel
 }
 inline ::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo* Msg_Readback::unsafe_arena_release_a_sd() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteMediaManager.Msg_Readback.a_sd)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo* temp = _impl_.a_sd_;
   _impl_.a_sd_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo* Msg_Readback::_internal_mutable_a_sd() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_sd_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo>(GetArenaForAllocation());
     _impl_.a_sd_ = p;
@@ -1727,9 +1692,9 @@ inline void Msg_Readback::set_allocated_a_sd(::protobuf::mozilla::layers::Surfac
       a_sd = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_sd, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_sd_ = a_sd;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteMediaManager.Msg_Readback.a_sd)
@@ -1739,11 +1704,9 @@ inline void Msg_Readback::set_allocated_a_sd(::protobuf::mozilla::layers::Surfac
 
 // Reply_Readback
 
-// required .protobuf.mozilla.layers.SurfaceDescriptor a_aResult = 1;
+// .protobuf.mozilla.layers.SurfaceDescriptor a_aResult = 1;
 inline bool Reply_Readback::_internal_has_a_aresult() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_aresult_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_aresult_ != nullptr;
 }
 inline bool Reply_Readback::has_a_aresult() const {
   return _internal_has_a_aresult();
@@ -1764,14 +1727,14 @@ inline void Reply_Readback::unsafe_arena_set_allocated_a_aresult(
   }
   _impl_.a_aresult_ = a_aresult;
   if (a_aresult) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PRemoteMediaManager.Reply_Readback.a_aResult)
 }
 inline ::protobuf::mozilla::layers::SurfaceDescriptor* Reply_Readback::release_a_aresult() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::layers::SurfaceDescriptor* temp = _impl_.a_aresult_;
   _impl_.a_aresult_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1787,13 +1750,13 @@ inline ::protobuf::mozilla::layers::SurfaceDescriptor* Reply_Readback::release_a
 }
 inline ::protobuf::mozilla::layers::SurfaceDescriptor* Reply_Readback::unsafe_arena_release_a_aresult() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteMediaManager.Reply_Readback.a_aResult)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::layers::SurfaceDescriptor* temp = _impl_.a_aresult_;
   _impl_.a_aresult_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::layers::SurfaceDescriptor* Reply_Readback::_internal_mutable_a_aresult() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_aresult_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::layers::SurfaceDescriptor>(GetArenaForAllocation());
     _impl_.a_aresult_ = p;
@@ -1818,9 +1781,9 @@ inline void Reply_Readback::set_allocated_a_aresult(::protobuf::mozilla::layers:
       a_aresult = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_aresult, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_aresult_ = a_aresult;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteMediaManager.Reply_Readback.a_aResult)
@@ -1830,11 +1793,9 @@ inline void Reply_Readback::set_allocated_a_aresult(::protobuf::mozilla::layers:
 
 // Msg_DeallocateSurfaceDescriptorGPUVideo
 
-// required .protobuf.mozilla.layers.SurfaceDescriptorGPUVideo a_sd = 1;
+// .protobuf.mozilla.layers.SurfaceDescriptorGPUVideo a_sd = 1;
 inline bool Msg_DeallocateSurfaceDescriptorGPUVideo::_internal_has_a_sd() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_sd_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_sd_ != nullptr;
 }
 inline bool Msg_DeallocateSurfaceDescriptorGPUVideo::has_a_sd() const {
   return _internal_has_a_sd();
@@ -1855,14 +1816,14 @@ inline void Msg_DeallocateSurfaceDescriptorGPUVideo::unsafe_arena_set_allocated_
   }
   _impl_.a_sd_ = a_sd;
   if (a_sd) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PRemoteMediaManager.Msg_DeallocateSurfaceDescriptorGPUVideo.a_sd)
 }
 inline ::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo* Msg_DeallocateSurfaceDescriptorGPUVideo::release_a_sd() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo* temp = _impl_.a_sd_;
   _impl_.a_sd_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1878,13 +1839,13 @@ inline ::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo* Msg_DeallocateSur
 }
 inline ::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo* Msg_DeallocateSurfaceDescriptorGPUVideo::unsafe_arena_release_a_sd() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteMediaManager.Msg_DeallocateSurfaceDescriptorGPUVideo.a_sd)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo* temp = _impl_.a_sd_;
   _impl_.a_sd_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo* Msg_DeallocateSurfaceDescriptorGPUVideo::_internal_mutable_a_sd() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_sd_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo>(GetArenaForAllocation());
     _impl_.a_sd_ = p;
@@ -1909,9 +1870,9 @@ inline void Msg_DeallocateSurfaceDescriptorGPUVideo::set_allocated_a_sd(::protob
       a_sd = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_sd, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_sd_ = a_sd;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteMediaManager.Msg_DeallocateSurfaceDescriptorGPUVideo.a_sd)

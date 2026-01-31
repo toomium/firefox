@@ -5,40 +5,39 @@
 
 // Generated from /home/tmittendorf/firefox/tools/profiler/gecko/ProfilerTypes.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla;
 
 // Structs and unions declarations
 message ProfilerInitParams {
-  required bool a_enabled = 1;
-  required uint32 a_entries = 2;
+  bool a_enabled = 1;
+  uint32 a_entries = 2;
   optional double a_duration = 3;
-  required double a_interval = 4;
-  required uint32 a_features = 5;
-  required uint64 a_activeTabID = 6;
+  double a_interval = 4;
+  uint32 a_features = 5;
+  uint64 a_activeTabID = 6;
   repeated string a_filters = 7;
 }
 
 message ProfileBufferChunkMetadata {
-  required bytes a_doneTimeStamp = 1;
-  required uint32 a_bufferBytes = 2;
+  bytes a_doneTimeStamp = 1;
+  uint32 a_bufferBytes = 2;
 }
 
 message ProfileBufferChunkManagerUpdate {
-  required uint64 a_unreleasedBytes = 1;
-  required uint64 a_releasedBytes = 2;
-  required bytes a_oldestDoneTimeStamp = 3;
+  uint64 a_unreleasedBytes = 1;
+  uint64 a_releasedBytes = 2;
+  bytes a_oldestDoneTimeStamp = 3;
   repeated protobuf.mozilla.ProfileBufferChunkMetadata a_newlyReleasedChunks = 4;
 }
 
 message GatherProfileProgress {
-  required uint32 a_progressProportionValueUnderlyingType = 1;
-  required string a_progressLocation = 2;
+  uint32 a_progressProportionValueUnderlyingType = 1;
+  string a_progressLocation = 2;
 }
 
 message IPCProfileAndAdditionalInformation {
-  required bytes a_profileShmem = 1;
+  bytes a_profileShmem = 1;
   optional bytes a_additionalInformation = 2;
 }

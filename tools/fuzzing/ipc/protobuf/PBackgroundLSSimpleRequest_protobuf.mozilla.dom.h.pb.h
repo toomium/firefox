@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "PBackgroundLSSharedTypes.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -42,6 +44,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PBackgroundLSSimpleRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PBackgroundLSSimpleRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -69,7 +72,7 @@ namespace dom {
 // ===================================================================
 
 class LSSimpleRequestPreloadedResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.LSSimpleRequestPreloadedResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.LSSimpleRequestPreloadedResponse) */ {
  public:
   inline LSSimpleRequestPreloadedResponse() : LSSimpleRequestPreloadedResponse(nullptr) {}
   ~LSSimpleRequestPreloadedResponse() override;
@@ -99,13 +102,15 @@ class LSSimpleRequestPreloadedResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const LSSimpleRequestPreloadedResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -143,9 +148,15 @@ class LSSimpleRequestPreloadedResponse final :
   LSSimpleRequestPreloadedResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<LSSimpleRequestPreloadedResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const LSSimpleRequestPreloadedResponse& from);
-  void MergeFrom(const LSSimpleRequestPreloadedResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const LSSimpleRequestPreloadedResponse& from) {
+    LSSimpleRequestPreloadedResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -158,7 +169,7 @@ class LSSimpleRequestPreloadedResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(LSSimpleRequestPreloadedResponse* other);
 
   private:
@@ -171,7 +182,10 @@ class LSSimpleRequestPreloadedResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -180,11 +194,7 @@ class LSSimpleRequestPreloadedResponse final :
   enum : int {
     kAPreloadedFieldNumber = 1,
   };
-  // required bool a_preloaded = 1;
-  bool has_a_preloaded() const;
-  private:
-  bool _internal_has_a_preloaded() const;
-  public:
+  // bool a_preloaded = 1;
   void clear_a_preloaded();
   bool a_preloaded() const;
   void set_a_preloaded(bool value);
@@ -201,9 +211,8 @@ class LSSimpleRequestPreloadedResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     bool a_preloaded_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSimpleRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -211,7 +220,7 @@ class LSSimpleRequestPreloadedResponse final :
 // -------------------------------------------------------------------
 
 class LSSimpleRequestGetStateResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.LSSimpleRequestGetStateResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.LSSimpleRequestGetStateResponse) */ {
  public:
   inline LSSimpleRequestGetStateResponse() : LSSimpleRequestGetStateResponse(nullptr) {}
   ~LSSimpleRequestGetStateResponse() override;
@@ -241,13 +250,15 @@ class LSSimpleRequestGetStateResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const LSSimpleRequestGetStateResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -285,9 +296,15 @@ class LSSimpleRequestGetStateResponse final :
   LSSimpleRequestGetStateResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<LSSimpleRequestGetStateResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const LSSimpleRequestGetStateResponse& from);
-  void MergeFrom(const LSSimpleRequestGetStateResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const LSSimpleRequestGetStateResponse& from) {
+    LSSimpleRequestGetStateResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -300,7 +317,7 @@ class LSSimpleRequestGetStateResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(LSSimpleRequestGetStateResponse* other);
 
   private:
@@ -313,7 +330,10 @@ class LSSimpleRequestGetStateResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -357,7 +377,7 @@ class LSSimpleRequestGetStateResponse final :
 // -------------------------------------------------------------------
 
 class LSSimpleRequestResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.LSSimpleRequestResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.LSSimpleRequestResponse) */ {
  public:
   inline LSSimpleRequestResponse() : LSSimpleRequestResponse(nullptr) {}
   ~LSSimpleRequestResponse() override;
@@ -387,13 +407,15 @@ class LSSimpleRequestResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const LSSimpleRequestResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -438,9 +460,15 @@ class LSSimpleRequestResponse final :
   LSSimpleRequestResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<LSSimpleRequestResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const LSSimpleRequestResponse& from);
-  void MergeFrom(const LSSimpleRequestResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const LSSimpleRequestResponse& from) {
+    LSSimpleRequestResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -453,7 +481,7 @@ class LSSimpleRequestResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(LSSimpleRequestResponse* other);
 
   private:
@@ -466,7 +494,10 @@ class LSSimpleRequestResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -572,17 +603,9 @@ class LSSimpleRequestResponse final :
 #endif  // __GNUC__
 // LSSimpleRequestPreloadedResponse
 
-// required bool a_preloaded = 1;
-inline bool LSSimpleRequestPreloadedResponse::_internal_has_a_preloaded() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool LSSimpleRequestPreloadedResponse::has_a_preloaded() const {
-  return _internal_has_a_preloaded();
-}
+// bool a_preloaded = 1;
 inline void LSSimpleRequestPreloadedResponse::clear_a_preloaded() {
   _impl_.a_preloaded_ = false;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool LSSimpleRequestPreloadedResponse::_internal_a_preloaded() const {
   return _impl_.a_preloaded_;
@@ -592,7 +615,7 @@ inline bool LSSimpleRequestPreloadedResponse::a_preloaded() const {
   return _internal_a_preloaded();
 }
 inline void LSSimpleRequestPreloadedResponse::_internal_set_a_preloaded(bool value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_preloaded_ = value;
 }
 inline void LSSimpleRequestPreloadedResponse::set_a_preloaded(bool value) {

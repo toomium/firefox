@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "PBackgroundSharedTypes.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -42,6 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PBackgroundSessionStorageCache_5fprotobuf_2emozilla_2edom_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PBackgroundSessionStorageCache_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -77,7 +81,7 @@ namespace dom {
 // ===================================================================
 
 class SSSetItemInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SSSetItemInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SSSetItemInfo) */ {
  public:
   inline SSSetItemInfo() : SSSetItemInfo(nullptr) {}
   ~SSSetItemInfo() override;
@@ -107,13 +111,15 @@ class SSSetItemInfo final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const SSSetItemInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -151,9 +157,15 @@ class SSSetItemInfo final :
   SSSetItemInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SSSetItemInfo>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const SSSetItemInfo& from);
-  void MergeFrom(const SSSetItemInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const SSSetItemInfo& from) {
+    SSSetItemInfo::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -166,7 +178,7 @@ class SSSetItemInfo final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(SSSetItemInfo* other);
 
   private:
@@ -179,7 +191,10 @@ class SSSetItemInfo final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -189,11 +204,7 @@ class SSSetItemInfo final :
     kAKeyFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required string a_key = 1;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // string a_key = 1;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -207,11 +218,7 @@ class SSSetItemInfo final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required string a_value = 2;
-  bool has_a_value() const;
-  private:
-  bool _internal_has_a_value() const;
-  public:
+  // string a_value = 2;
   void clear_a_value();
   const std::string& a_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -229,17 +236,13 @@ class SSSetItemInfo final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_value_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundSessionStorageCache_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -247,7 +250,7 @@ class SSSetItemInfo final :
 // -------------------------------------------------------------------
 
 class SSRemoveItemInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SSRemoveItemInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SSRemoveItemInfo) */ {
  public:
   inline SSRemoveItemInfo() : SSRemoveItemInfo(nullptr) {}
   ~SSRemoveItemInfo() override;
@@ -277,13 +280,15 @@ class SSRemoveItemInfo final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const SSRemoveItemInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -321,9 +326,15 @@ class SSRemoveItemInfo final :
   SSRemoveItemInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SSRemoveItemInfo>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const SSRemoveItemInfo& from);
-  void MergeFrom(const SSRemoveItemInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const SSRemoveItemInfo& from) {
+    SSRemoveItemInfo::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -336,7 +347,7 @@ class SSRemoveItemInfo final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(SSRemoveItemInfo* other);
 
   private:
@@ -349,7 +360,10 @@ class SSRemoveItemInfo final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -358,11 +372,7 @@ class SSRemoveItemInfo final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required string a_key = 1;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // string a_key = 1;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -384,9 +394,8 @@ class SSRemoveItemInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundSessionStorageCache_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -394,10 +403,9 @@ class SSRemoveItemInfo final :
 // -------------------------------------------------------------------
 
 class SSClearInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SSClearInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SSClearInfo) */ {
  public:
   inline SSClearInfo() : SSClearInfo(nullptr) {}
-  ~SSClearInfo() override;
   explicit PROTOBUF_CONSTEXPR SSClearInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   SSClearInfo(const SSClearInfo& from);
@@ -424,13 +432,15 @@ class SSClearInfo final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const SSClearInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -468,23 +478,15 @@ class SSClearInfo final :
   SSClearInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SSClearInfo>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const SSClearInfo& from);
-  void MergeFrom(const SSClearInfo& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(SSClearInfo* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const SSClearInfo& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const SSClearInfo& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -496,7 +498,10 @@ class SSClearInfo final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -510,15 +515,13 @@ class SSClearInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundSessionStorageCache_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 };
 // -------------------------------------------------------------------
 
 class SSWriteInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SSWriteInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SSWriteInfo) */ {
  public:
   inline SSWriteInfo() : SSWriteInfo(nullptr) {}
   ~SSWriteInfo() override;
@@ -548,13 +551,15 @@ class SSWriteInfo final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const SSWriteInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -599,9 +604,15 @@ class SSWriteInfo final :
   SSWriteInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SSWriteInfo>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const SSWriteInfo& from);
-  void MergeFrom(const SSWriteInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const SSWriteInfo& from) {
+    SSWriteInfo::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -614,7 +625,7 @@ class SSWriteInfo final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(SSWriteInfo* other);
 
   private:
@@ -627,7 +638,10 @@ class SSWriteInfo final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -725,7 +739,7 @@ class SSWriteInfo final :
 // -------------------------------------------------------------------
 
 class SSCacheCopy final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SSCacheCopy) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SSCacheCopy) */ {
  public:
   inline SSCacheCopy() : SSCacheCopy(nullptr) {}
   ~SSCacheCopy() override;
@@ -755,13 +769,15 @@ class SSCacheCopy final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const SSCacheCopy& default_instance() {
     return *internal_default_instance();
   }
@@ -799,9 +815,15 @@ class SSCacheCopy final :
   SSCacheCopy* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SSCacheCopy>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const SSCacheCopy& from);
-  void MergeFrom(const SSCacheCopy& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const SSCacheCopy& from) {
+    SSCacheCopy::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -814,7 +836,7 @@ class SSCacheCopy final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(SSCacheCopy* other);
 
   private:
@@ -827,7 +849,10 @@ class SSCacheCopy final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -856,11 +881,7 @@ class SSCacheCopy final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::SSSetItemInfo >&
       a_data() const;
 
-  // required string a_originKey = 1;
-  bool has_a_originkey() const;
-  private:
-  bool _internal_has_a_originkey() const;
-  public:
+  // string a_originKey = 1;
   void clear_a_originkey();
   const std::string& a_originkey() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -874,7 +895,7 @@ class SSCacheCopy final :
   std::string* _internal_mutable_a_originkey();
   public:
 
-  // required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+  // .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
   bool has_a_principalinfo() const;
   private:
   bool _internal_has_a_principalinfo() const;
@@ -896,18 +917,14 @@ class SSCacheCopy final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::SSSetItemInfo > a_data_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_originkey_;
     ::protobuf::mozilla::ipc::PrincipalInfo* a_principalinfo_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundSessionStorageCache_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -923,17 +940,9 @@ class SSCacheCopy final :
 #endif  // __GNUC__
 // SSSetItemInfo
 
-// required string a_key = 1;
-inline bool SSSetItemInfo::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool SSSetItemInfo::has_a_key() const {
-  return _internal_has_a_key();
-}
+// string a_key = 1;
 inline void SSSetItemInfo::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& SSSetItemInfo::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SSSetItemInfo.a_key)
@@ -942,7 +951,7 @@ inline const std::string& SSSetItemInfo::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SSSetItemInfo::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SSSetItemInfo.a_key)
 }
@@ -955,32 +964,22 @@ inline const std::string& SSSetItemInfo::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void SSSetItemInfo::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* SSSetItemInfo::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* SSSetItemInfo::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SSSetItemInfo.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void SSSetItemInfo::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -991,17 +990,9 @@ inline void SSSetItemInfo::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SSSetItemInfo.a_key)
 }
 
-// required string a_value = 2;
-inline bool SSSetItemInfo::_internal_has_a_value() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool SSSetItemInfo::has_a_value() const {
-  return _internal_has_a_value();
-}
+// string a_value = 2;
 inline void SSSetItemInfo::clear_a_value() {
   _impl_.a_value_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& SSSetItemInfo::a_value() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SSSetItemInfo.a_value)
@@ -1010,7 +1001,7 @@ inline const std::string& SSSetItemInfo::a_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SSSetItemInfo::set_a_value(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SSSetItemInfo.a_value)
 }
@@ -1023,32 +1014,22 @@ inline const std::string& SSSetItemInfo::_internal_a_value() const {
   return _impl_.a_value_.Get();
 }
 inline void SSSetItemInfo::_internal_set_a_value(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_value_.Set(value, GetArenaForAllocation());
 }
 inline std::string* SSSetItemInfo::_internal_mutable_a_value() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_value_.Mutable(GetArenaForAllocation());
 }
 inline std::string* SSSetItemInfo::release_a_value() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SSSetItemInfo.a_value)
-  if (!_internal_has_a_value()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_value_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_value_.IsDefault()) {
-    _impl_.a_value_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_value_.Release();
 }
 inline void SSSetItemInfo::set_allocated_a_value(std::string* a_value) {
   if (a_value != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_value_.SetAllocated(a_value, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1063,17 +1044,9 @@ inline void SSSetItemInfo::set_allocated_a_value(std::string* a_value) {
 
 // SSRemoveItemInfo
 
-// required string a_key = 1;
-inline bool SSRemoveItemInfo::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool SSRemoveItemInfo::has_a_key() const {
-  return _internal_has_a_key();
-}
+// string a_key = 1;
 inline void SSRemoveItemInfo::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& SSRemoveItemInfo::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SSRemoveItemInfo.a_key)
@@ -1082,7 +1055,7 @@ inline const std::string& SSRemoveItemInfo::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SSRemoveItemInfo::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SSRemoveItemInfo.a_key)
 }
@@ -1095,32 +1068,22 @@ inline const std::string& SSRemoveItemInfo::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void SSRemoveItemInfo::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* SSRemoveItemInfo::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* SSRemoveItemInfo::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SSRemoveItemInfo.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void SSRemoveItemInfo::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1374,17 +1337,9 @@ inline SSWriteInfo::ContentCase SSWriteInfo::content_case() const {
 
 // SSCacheCopy
 
-// required string a_originKey = 1;
-inline bool SSCacheCopy::_internal_has_a_originkey() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool SSCacheCopy::has_a_originkey() const {
-  return _internal_has_a_originkey();
-}
+// string a_originKey = 1;
 inline void SSCacheCopy::clear_a_originkey() {
   _impl_.a_originkey_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& SSCacheCopy::a_originkey() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.SSCacheCopy.a_originKey)
@@ -1393,7 +1348,7 @@ inline const std::string& SSCacheCopy::a_originkey() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SSCacheCopy::set_a_originkey(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_originkey_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.SSCacheCopy.a_originKey)
 }
@@ -1406,32 +1361,22 @@ inline const std::string& SSCacheCopy::_internal_a_originkey() const {
   return _impl_.a_originkey_.Get();
 }
 inline void SSCacheCopy::_internal_set_a_originkey(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_originkey_.Set(value, GetArenaForAllocation());
 }
 inline std::string* SSCacheCopy::_internal_mutable_a_originkey() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_originkey_.Mutable(GetArenaForAllocation());
 }
 inline std::string* SSCacheCopy::release_a_originkey() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SSCacheCopy.a_originKey)
-  if (!_internal_has_a_originkey()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_originkey_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_originkey_.IsDefault()) {
-    _impl_.a_originkey_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_originkey_.Release();
 }
 inline void SSCacheCopy::set_allocated_a_originkey(std::string* a_originkey) {
   if (a_originkey != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_originkey_.SetAllocated(a_originkey, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1442,11 +1387,9 @@ inline void SSCacheCopy::set_allocated_a_originkey(std::string* a_originkey) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SSCacheCopy.a_originKey)
 }
 
-// required .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+// .protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
 inline bool SSCacheCopy::_internal_has_a_principalinfo() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_principalinfo_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_principalinfo_ != nullptr;
 }
 inline bool SSCacheCopy::has_a_principalinfo() const {
   return _internal_has_a_principalinfo();
@@ -1467,14 +1410,14 @@ inline void SSCacheCopy::unsafe_arena_set_allocated_a_principalinfo(
   }
   _impl_.a_principalinfo_ = a_principalinfo;
   if (a_principalinfo) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.SSCacheCopy.a_principalInfo)
 }
 inline ::protobuf::mozilla::ipc::PrincipalInfo* SSCacheCopy::release_a_principalinfo() {
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.a_principalinfo_;
   _impl_.a_principalinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1490,13 +1433,13 @@ inline ::protobuf::mozilla::ipc::PrincipalInfo* SSCacheCopy::release_a_principal
 }
 inline ::protobuf::mozilla::ipc::PrincipalInfo* SSCacheCopy::unsafe_arena_release_a_principalinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SSCacheCopy.a_principalInfo)
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::ipc::PrincipalInfo* temp = _impl_.a_principalinfo_;
   _impl_.a_principalinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::ipc::PrincipalInfo* SSCacheCopy::_internal_mutable_a_principalinfo() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   if (_impl_.a_principalinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::PrincipalInfo>(GetArenaForAllocation());
     _impl_.a_principalinfo_ = p;
@@ -1521,9 +1464,9 @@ inline void SSCacheCopy::set_allocated_a_principalinfo(::protobuf::mozilla::ipc:
       a_principalinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_principalinfo, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_principalinfo_ = a_principalinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SSCacheCopy.a_principalInfo)

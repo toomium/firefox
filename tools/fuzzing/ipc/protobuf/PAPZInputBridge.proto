@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/gfx/layers/ipc/PAPZInputBridge.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.layers.PAPZInputBridge;
 
@@ -14,103 +13,103 @@ package protobuf.mozilla.layers.PAPZInputBridge;
 
 // Message declarations
 message Msg_ReceiveMultiTouchInputEvent {
-  required bytes a_aEvent = 1;
-  required bool a_aWantsCallback = 2;
+  bytes a_aEvent = 1;
+  bool a_aWantsCallback = 2;
 }
 
 message Reply_ReceiveMultiTouchInputEvent {
-  required bytes a_aOutResult = 1;
-  required bytes a_aOutEvent = 2;
+  bytes a_aOutResult = 1;
+  bytes a_aOutEvent = 2;
 }
 
 message Msg_ReceiveMouseInputEvent {
-  required bytes a_aEvent = 1;
-  required bool a_aWantsCallback = 2;
+  bytes a_aEvent = 1;
+  bool a_aWantsCallback = 2;
 }
 
 message Reply_ReceiveMouseInputEvent {
-  required bytes a_aOutResult = 1;
-  required bytes a_aOutEvent = 2;
+  bytes a_aOutResult = 1;
+  bytes a_aOutEvent = 2;
 }
 
 message Msg_ReceivePanGestureInputEvent {
-  required bytes a_aEvent = 1;
-  required bool a_aWantsCallback = 2;
+  bytes a_aEvent = 1;
+  bool a_aWantsCallback = 2;
 }
 
 message Reply_ReceivePanGestureInputEvent {
-  required bytes a_aOutResult = 1;
-  required bytes a_aOutEvent = 2;
+  bytes a_aOutResult = 1;
+  bytes a_aOutEvent = 2;
 }
 
 message Msg_ReceivePinchGestureInputEvent {
-  required bytes a_aEvent = 1;
-  required bool a_aWantsCallback = 2;
+  bytes a_aEvent = 1;
+  bool a_aWantsCallback = 2;
 }
 
 message Reply_ReceivePinchGestureInputEvent {
-  required bytes a_aOutResult = 1;
-  required bytes a_aOutEvent = 2;
+  bytes a_aOutResult = 1;
+  bytes a_aOutEvent = 2;
 }
 
 message Msg_ReceiveTapGestureInputEvent {
-  required bytes a_aEvent = 1;
-  required bool a_aWantsCallback = 2;
+  bytes a_aEvent = 1;
+  bool a_aWantsCallback = 2;
 }
 
 message Reply_ReceiveTapGestureInputEvent {
-  required bytes a_aOutResult = 1;
-  required bytes a_aOutEvent = 2;
+  bytes a_aOutResult = 1;
+  bytes a_aOutEvent = 2;
 }
 
 message Msg_ReceiveScrollWheelInputEvent {
-  required bytes a_aEvent = 1;
-  required bool a_aWantsCallback = 2;
+  bytes a_aEvent = 1;
+  bool a_aWantsCallback = 2;
 }
 
 message Reply_ReceiveScrollWheelInputEvent {
-  required bytes a_aOutResult = 1;
-  required bytes a_aOutEvent = 2;
+  bytes a_aOutResult = 1;
+  bytes a_aOutEvent = 2;
 }
 
 message Msg_ReceiveKeyboardInputEvent {
-  required bytes a_aEvent = 1;
-  required bool a_aWantsCallback = 2;
+  bytes a_aEvent = 1;
+  bool a_aWantsCallback = 2;
 }
 
 message Reply_ReceiveKeyboardInputEvent {
-  required bytes a_aOutResult = 1;
-  required bytes a_aOutEvent = 2;
+  bytes a_aOutResult = 1;
+  bytes a_aOutEvent = 2;
 }
 
 message Msg_UpdateWheelTransaction {
-  required bytes a_aRefPoint = 1;
-  required bytes a_aEventMessage = 2;
+  bytes a_aRefPoint = 1;
+  bytes a_aEventMessage = 2;
   optional bytes a_aTargetGuid = 3;
 }
 
 message Msg_ProcessUnhandledEvent {
-  required bytes a_aRefPoint = 1;
+  bytes a_aRefPoint = 1;
 }
 
 message Reply_ProcessUnhandledEvent {
-  required bytes a_aOutRefPoint = 1;
-  required bytes a_aOutTargetGuid = 2;
-  required uint64 a_aOutFocusSequenceNumber = 3;
-  required bytes a_aOutLayersId = 4;
+  bytes a_aOutRefPoint = 1;
+  bytes a_aOutTargetGuid = 2;
+  uint64 a_aOutFocusSequenceNumber = 3;
+  bytes a_aOutLayersId = 4;
 }
 
 message Msg_CallInputBlockCallback {
-  required uint64 a_aInputBlockId = 1;
-  required bytes a_aHandledResult = 2;
+  uint64 a_aInputBlockId = 1;
+  bytes a_aHandledResult = 2;
 }
 
 message Msg_HandleTap {
-  required bytes a_aType = 1;
-  required bytes a_point = 2;
-  required bytes a_aModifiers = 3;
-  required bytes a_aGuid = 4;
-  required uint64 a_aInputBlockId = 5;
+  bytes a_aType = 1;
+  bytes a_point = 2;
+  bytes a_aModifiers = 3;
+  bytes a_aGuid = 4;
+  uint64 a_aInputBlockId = 5;
   optional bytes a_aDoubleTapToZoomMetrics = 6;
 }
 

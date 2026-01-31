@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/cache/PCacheStreamControl.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.cache.PCacheStreamControl;
 
@@ -17,7 +16,7 @@ import "IPCStream.proto";
 
 // Message declarations
 message Msg_OpenStream {
-  required bytes a_aStreamId = 1;
+  bytes a_aStreamId = 1;
 }
 
 message Reply_OpenStream {
@@ -25,7 +24,7 @@ message Reply_OpenStream {
 }
 
 message Msg_NoteClosed {
-  required bytes a_aStreamId = 1;
+  bytes a_aStreamId = 1;
 }
 
 message Msg_CloseAll {

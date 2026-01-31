@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/fs/shared/PFileSystemManager.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PFileSystemManager;
 
@@ -22,91 +21,91 @@ message Msg_GetRootHandle {
 }
 
 message Reply_GetRootHandle {
-  required protobuf.mozilla.dom.fs.FileSystemGetHandleResponse a_response = 1;
+  protobuf.mozilla.dom.fs.FileSystemGetHandleResponse a_response = 1;
 }
 
 message Msg_GetDirectoryHandle {
-  required protobuf.mozilla.dom.fs.FileSystemGetHandleRequest a_request = 1;
+  protobuf.mozilla.dom.fs.FileSystemGetHandleRequest a_request = 1;
 }
 
 message Reply_GetDirectoryHandle {
-  required protobuf.mozilla.dom.fs.FileSystemGetHandleResponse a_handle = 1;
+  protobuf.mozilla.dom.fs.FileSystemGetHandleResponse a_handle = 1;
 }
 
 message Msg_GetFileHandle {
-  required protobuf.mozilla.dom.fs.FileSystemGetHandleRequest a_request = 1;
+  protobuf.mozilla.dom.fs.FileSystemGetHandleRequest a_request = 1;
 }
 
 message Reply_GetFileHandle {
-  required protobuf.mozilla.dom.fs.FileSystemGetHandleResponse a_handle = 1;
+  protobuf.mozilla.dom.fs.FileSystemGetHandleResponse a_handle = 1;
 }
 
 message Msg_GetFile {
-  required protobuf.mozilla.dom.fs.FileSystemGetFileRequest a_request = 1;
+  protobuf.mozilla.dom.fs.FileSystemGetFileRequest a_request = 1;
 }
 
 message Reply_GetFile {
-  required protobuf.mozilla.dom.fs.FileSystemGetFileResponse a_response = 1;
+  protobuf.mozilla.dom.fs.FileSystemGetFileResponse a_response = 1;
 }
 
 message Msg_GetAccessHandle {
-  required protobuf.mozilla.dom.fs.FileSystemGetAccessHandleRequest a_request = 1;
+  protobuf.mozilla.dom.fs.FileSystemGetAccessHandleRequest a_request = 1;
 }
 
 message Reply_GetAccessHandle {
-  required protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse a_response = 1;
+  protobuf.mozilla.dom.fs.FileSystemGetAccessHandleResponse a_response = 1;
 }
 
 message Msg_GetWritable {
-  required protobuf.mozilla.dom.fs.FileSystemGetWritableRequest a_request = 1;
+  protobuf.mozilla.dom.fs.FileSystemGetWritableRequest a_request = 1;
 }
 
 message Reply_GetWritable {
-  required protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse a_fileData = 1;
+  protobuf.mozilla.dom.fs.FileSystemGetWritableFileStreamResponse a_fileData = 1;
 }
 
 message Msg_Resolve {
-  required protobuf.mozilla.dom.fs.FileSystemResolveRequest a_request = 1;
+  protobuf.mozilla.dom.fs.FileSystemResolveRequest a_request = 1;
 }
 
 message Reply_Resolve {
-  required protobuf.mozilla.dom.fs.FileSystemResolveResponse a_response = 1;
+  protobuf.mozilla.dom.fs.FileSystemResolveResponse a_response = 1;
 }
 
 message Msg_GetEntries {
-  required protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest a_request = 1;
+  protobuf.mozilla.dom.fs.FileSystemGetEntriesRequest a_request = 1;
 }
 
 message Reply_GetEntries {
-  required protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse a_entries = 1;
+  protobuf.mozilla.dom.fs.FileSystemGetEntriesResponse a_entries = 1;
 }
 
 message Msg_RemoveEntry {
-  required protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest a_request = 1;
+  protobuf.mozilla.dom.fs.FileSystemRemoveEntryRequest a_request = 1;
 }
 
 message Reply_RemoveEntry {
-  required protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse a_response = 1;
+  protobuf.mozilla.dom.fs.FileSystemRemoveEntryResponse a_response = 1;
 }
 
 message Msg_MoveEntry {
-  required protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest a_request = 1;
+  protobuf.mozilla.dom.fs.FileSystemMoveEntryRequest a_request = 1;
 }
 
 message Reply_MoveEntry {
-  required protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse a_response = 1;
+  protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse a_response = 1;
 }
 
 message Msg_RenameEntry {
-  required protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest a_request = 1;
+  protobuf.mozilla.dom.fs.FileSystemRenameEntryRequest a_request = 1;
 }
 
 message Reply_RenameEntry {
-  required protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse a_response = 1;
+  protobuf.mozilla.dom.fs.FileSystemMoveEntryResponse a_response = 1;
 }
 
 message Msg_PFileSystemWritableFileStreamConstructor {
-  required sint64 a_actorid = 1;
+  sint64 a_actorid = 1;
 }
 
 message Reply_PFileSystemWritableFileStreamConstructor {
@@ -116,7 +115,7 @@ message Msg_CloseAll {
 }
 
 message Reply_CloseAll {
-  required bytes a_rv = 1;
+  bytes a_rv = 1;
 }
 
 // Parameter mappings stats:

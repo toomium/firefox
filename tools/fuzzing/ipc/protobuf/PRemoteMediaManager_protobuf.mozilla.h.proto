@@ -5,8 +5,7 @@
 
 // Generated from PRemoteMediaManager.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla;
 
@@ -15,8 +14,8 @@ import "PMediaDecoderParams.proto";
 
 // Structs and unions declarations
 message VideoDecoderInfoIPDL {
-  required bytes a_videoInfo = 1;
-  required float a_framerate = 2;
+  bytes a_videoInfo = 1;
+  float a_framerate = 2;
 }
 
 message RemoteDecoderInfoIPDL {

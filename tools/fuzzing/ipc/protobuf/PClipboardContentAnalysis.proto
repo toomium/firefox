@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/widget/PClipboardContentAnalysis.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.PClipboardContentAnalysis;
 
@@ -18,22 +17,22 @@ import "IPCTransferable.proto";
 // Message declarations
 message Msg_GetClipboard {
   repeated string a_aTypes = 1;
-  required bytes a_aWhichClipboard = 2;
-  required uint64 a_aRequestingWindowContextId = 3;
+  bytes a_aWhichClipboard = 2;
+  uint64 a_aRequestingWindowContextId = 3;
 }
 
 message Reply_GetClipboard {
-  required protobuf.mozilla.dom.IPCTransferableDataOrError a_transferableDataOrError = 1;
+  protobuf.mozilla.dom.IPCTransferableDataOrError a_transferableDataOrError = 1;
 }
 
 message Msg_GetAllClipboardDataSync {
   repeated string a_aTypes = 1;
-  required bytes a_aWhichClipboard = 2;
-  required uint64 a_aRequestingWindowContextId = 3;
+  bytes a_aWhichClipboard = 2;
+  uint64 a_aRequestingWindowContextId = 3;
 }
 
 message Reply_GetAllClipboardDataSync {
-  required protobuf.mozilla.dom.IPCTransferableDataOrError a_transferableDataOrError = 1;
+  protobuf.mozilla.dom.IPCTransferableDataOrError a_transferableDataOrError = 1;
 }
 
 // Parameter mappings stats:

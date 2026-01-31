@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "LayersSurfaces.pb.h"
 #include "LayersMessages.pb.h"
 // @@protoc_insertion_point(includes)
@@ -43,6 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace layers {
@@ -166,7 +169,7 @@ namespace layers {
 // ===================================================================
 
 class RefCountedShmem final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.RefCountedShmem) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.RefCountedShmem) */ {
  public:
   inline RefCountedShmem() : RefCountedShmem(nullptr) {}
   ~RefCountedShmem() override;
@@ -196,13 +199,15 @@ class RefCountedShmem final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const RefCountedShmem& default_instance() {
     return *internal_default_instance();
   }
@@ -240,9 +245,15 @@ class RefCountedShmem final :
   RefCountedShmem* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<RefCountedShmem>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const RefCountedShmem& from);
-  void MergeFrom(const RefCountedShmem& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const RefCountedShmem& from) {
+    RefCountedShmem::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -255,7 +266,7 @@ class RefCountedShmem final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(RefCountedShmem* other);
 
   private:
@@ -268,7 +279,10 @@ class RefCountedShmem final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -277,11 +291,7 @@ class RefCountedShmem final :
   enum : int {
     kABufferFieldNumber = 1,
   };
-  // required bytes a_buffer = 1;
-  bool has_a_buffer() const;
-  private:
-  bool _internal_has_a_buffer() const;
-  public:
+  // bytes a_buffer = 1;
   void clear_a_buffer();
   const std::string& a_buffer() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -303,9 +313,8 @@ class RefCountedShmem final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_buffer_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -313,7 +322,7 @@ class RefCountedShmem final :
 // -------------------------------------------------------------------
 
 class OpAddSharedExternalImage final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpAddSharedExternalImage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpAddSharedExternalImage) */ {
  public:
   inline OpAddSharedExternalImage() : OpAddSharedExternalImage(nullptr) {}
   ~OpAddSharedExternalImage() override;
@@ -343,13 +352,15 @@ class OpAddSharedExternalImage final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpAddSharedExternalImage& default_instance() {
     return *internal_default_instance();
   }
@@ -387,9 +398,15 @@ class OpAddSharedExternalImage final :
   OpAddSharedExternalImage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpAddSharedExternalImage>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpAddSharedExternalImage& from);
-  void MergeFrom(const OpAddSharedExternalImage& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpAddSharedExternalImage& from) {
+    OpAddSharedExternalImage::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -402,7 +419,7 @@ class OpAddSharedExternalImage final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpAddSharedExternalImage* other);
 
   private:
@@ -415,7 +432,10 @@ class OpAddSharedExternalImage final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -425,11 +445,7 @@ class OpAddSharedExternalImage final :
     kAExternalImageIdFieldNumber = 1,
     kAKeyFieldNumber = 2,
   };
-  // required bytes a_externalImageId = 1;
-  bool has_a_externalimageid() const;
-  private:
-  bool _internal_has_a_externalimageid() const;
-  public:
+  // bytes a_externalImageId = 1;
   void clear_a_externalimageid();
   const std::string& a_externalimageid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -443,11 +459,7 @@ class OpAddSharedExternalImage final :
   std::string* _internal_mutable_a_externalimageid();
   public:
 
-  // required bytes a_key = 2;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // bytes a_key = 2;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -465,17 +477,13 @@ class OpAddSharedExternalImage final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_externalimageid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -483,7 +491,7 @@ class OpAddSharedExternalImage final :
 // -------------------------------------------------------------------
 
 class OpPushExternalImageForTexture final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpPushExternalImageForTexture) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpPushExternalImageForTexture) */ {
  public:
   inline OpPushExternalImageForTexture() : OpPushExternalImageForTexture(nullptr) {}
   ~OpPushExternalImageForTexture() override;
@@ -513,13 +521,15 @@ class OpPushExternalImageForTexture final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpPushExternalImageForTexture& default_instance() {
     return *internal_default_instance();
   }
@@ -557,9 +567,15 @@ class OpPushExternalImageForTexture final :
   OpPushExternalImageForTexture* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpPushExternalImageForTexture>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpPushExternalImageForTexture& from);
-  void MergeFrom(const OpPushExternalImageForTexture& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpPushExternalImageForTexture& from) {
+    OpPushExternalImageForTexture::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -572,7 +588,7 @@ class OpPushExternalImageForTexture final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpPushExternalImageForTexture* other);
 
   private:
@@ -585,7 +601,10 @@ class OpPushExternalImageForTexture final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -597,11 +616,7 @@ class OpPushExternalImageForTexture final :
     kATextureFieldNumber = 3,
     kAIsUpdateFieldNumber = 4,
   };
-  // required bytes a_externalImageId = 1;
-  bool has_a_externalimageid() const;
-  private:
-  bool _internal_has_a_externalimageid() const;
-  public:
+  // bytes a_externalImageId = 1;
   void clear_a_externalimageid();
   const std::string& a_externalimageid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -615,11 +630,7 @@ class OpPushExternalImageForTexture final :
   std::string* _internal_mutable_a_externalimageid();
   public:
 
-  // required bytes a_key = 2;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // bytes a_key = 2;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -633,11 +644,7 @@ class OpPushExternalImageForTexture final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required bytes a_texture = 3;
-  bool has_a_texture() const;
-  private:
-  bool _internal_has_a_texture() const;
-  public:
+  // bytes a_texture = 3;
   void clear_a_texture();
   const std::string& a_texture() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -651,11 +658,7 @@ class OpPushExternalImageForTexture final :
   std::string* _internal_mutable_a_texture();
   public:
 
-  // required bool a_isUpdate = 4;
-  bool has_a_isupdate() const;
-  private:
-  bool _internal_has_a_isupdate() const;
-  public:
+  // bool a_isUpdate = 4;
   void clear_a_isupdate();
   bool a_isupdate() const;
   void set_a_isupdate(bool value);
@@ -668,19 +671,15 @@ class OpPushExternalImageForTexture final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_externalimageid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_texture_;
     bool a_isupdate_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -688,7 +687,7 @@ class OpPushExternalImageForTexture final :
 // -------------------------------------------------------------------
 
 class OpAddCompositorAnimations final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpAddCompositorAnimations) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpAddCompositorAnimations) */ {
  public:
   inline OpAddCompositorAnimations() : OpAddCompositorAnimations(nullptr) {}
   ~OpAddCompositorAnimations() override;
@@ -718,13 +717,15 @@ class OpAddCompositorAnimations final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpAddCompositorAnimations& default_instance() {
     return *internal_default_instance();
   }
@@ -762,9 +763,15 @@ class OpAddCompositorAnimations final :
   OpAddCompositorAnimations* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpAddCompositorAnimations>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpAddCompositorAnimations& from);
-  void MergeFrom(const OpAddCompositorAnimations& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpAddCompositorAnimations& from) {
+    OpAddCompositorAnimations::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -777,7 +784,7 @@ class OpAddCompositorAnimations final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpAddCompositorAnimations* other);
 
   private:
@@ -790,7 +797,10 @@ class OpAddCompositorAnimations final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -799,7 +809,7 @@ class OpAddCompositorAnimations final :
   enum : int {
     kADataFieldNumber = 1,
   };
-  // required .protobuf.mozilla.layers.CompositorAnimations a_data = 1;
+  // .protobuf.mozilla.layers.CompositorAnimations a_data = 1;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -825,9 +835,8 @@ class OpAddCompositorAnimations final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::layers::CompositorAnimations* a_data_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -835,7 +844,7 @@ class OpAddCompositorAnimations final :
 // -------------------------------------------------------------------
 
 class OpAddPipelineIdForCompositable final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpAddPipelineIdForCompositable) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpAddPipelineIdForCompositable) */ {
  public:
   inline OpAddPipelineIdForCompositable() : OpAddPipelineIdForCompositable(nullptr) {}
   ~OpAddPipelineIdForCompositable() override;
@@ -865,13 +874,15 @@ class OpAddPipelineIdForCompositable final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpAddPipelineIdForCompositable& default_instance() {
     return *internal_default_instance();
   }
@@ -909,9 +920,15 @@ class OpAddPipelineIdForCompositable final :
   OpAddPipelineIdForCompositable* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpAddPipelineIdForCompositable>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpAddPipelineIdForCompositable& from);
-  void MergeFrom(const OpAddPipelineIdForCompositable& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpAddPipelineIdForCompositable& from) {
+    OpAddPipelineIdForCompositable::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -924,7 +941,7 @@ class OpAddPipelineIdForCompositable final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpAddPipelineIdForCompositable* other);
 
   private:
@@ -937,7 +954,10 @@ class OpAddPipelineIdForCompositable final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -948,11 +968,7 @@ class OpAddPipelineIdForCompositable final :
     kAHandleFieldNumber = 2,
     kAOwnerFieldNumber = 3,
   };
-  // required bytes a_pipelineId = 1;
-  bool has_a_pipelineid() const;
-  private:
-  bool _internal_has_a_pipelineid() const;
-  public:
+  // bytes a_pipelineId = 1;
   void clear_a_pipelineid();
   const std::string& a_pipelineid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -966,11 +982,7 @@ class OpAddPipelineIdForCompositable final :
   std::string* _internal_mutable_a_pipelineid();
   public:
 
-  // required bytes a_handle = 2;
-  bool has_a_handle() const;
-  private:
-  bool _internal_has_a_handle() const;
-  public:
+  // bytes a_handle = 2;
   void clear_a_handle();
   const std::string& a_handle() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -984,11 +996,7 @@ class OpAddPipelineIdForCompositable final :
   std::string* _internal_mutable_a_handle();
   public:
 
-  // required bytes a_owner = 3;
-  bool has_a_owner() const;
-  private:
-  bool _internal_has_a_owner() const;
-  public:
+  // bytes a_owner = 3;
   void clear_a_owner();
   const std::string& a_owner() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1006,18 +1014,14 @@ class OpAddPipelineIdForCompositable final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_pipelineid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_handle_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_owner_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -1025,7 +1029,7 @@ class OpAddPipelineIdForCompositable final :
 // -------------------------------------------------------------------
 
 class OpRemovePipelineIdForCompositable final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpRemovePipelineIdForCompositable) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpRemovePipelineIdForCompositable) */ {
  public:
   inline OpRemovePipelineIdForCompositable() : OpRemovePipelineIdForCompositable(nullptr) {}
   ~OpRemovePipelineIdForCompositable() override;
@@ -1055,13 +1059,15 @@ class OpRemovePipelineIdForCompositable final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpRemovePipelineIdForCompositable& default_instance() {
     return *internal_default_instance();
   }
@@ -1099,9 +1105,15 @@ class OpRemovePipelineIdForCompositable final :
   OpRemovePipelineIdForCompositable* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpRemovePipelineIdForCompositable>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpRemovePipelineIdForCompositable& from);
-  void MergeFrom(const OpRemovePipelineIdForCompositable& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpRemovePipelineIdForCompositable& from) {
+    OpRemovePipelineIdForCompositable::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1114,7 +1126,7 @@ class OpRemovePipelineIdForCompositable final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpRemovePipelineIdForCompositable* other);
 
   private:
@@ -1127,7 +1139,10 @@ class OpRemovePipelineIdForCompositable final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1136,11 +1151,7 @@ class OpRemovePipelineIdForCompositable final :
   enum : int {
     kAPipelineIdFieldNumber = 1,
   };
-  // required bytes a_pipelineId = 1;
-  bool has_a_pipelineid() const;
-  private:
-  bool _internal_has_a_pipelineid() const;
-  public:
+  // bytes a_pipelineId = 1;
   void clear_a_pipelineid();
   const std::string& a_pipelineid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1162,9 +1173,8 @@ class OpRemovePipelineIdForCompositable final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_pipelineid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -1172,7 +1182,7 @@ class OpRemovePipelineIdForCompositable final :
 // -------------------------------------------------------------------
 
 class OpReleaseTextureOfImage final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpReleaseTextureOfImage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpReleaseTextureOfImage) */ {
  public:
   inline OpReleaseTextureOfImage() : OpReleaseTextureOfImage(nullptr) {}
   ~OpReleaseTextureOfImage() override;
@@ -1202,13 +1212,15 @@ class OpReleaseTextureOfImage final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpReleaseTextureOfImage& default_instance() {
     return *internal_default_instance();
   }
@@ -1246,9 +1258,15 @@ class OpReleaseTextureOfImage final :
   OpReleaseTextureOfImage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpReleaseTextureOfImage>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpReleaseTextureOfImage& from);
-  void MergeFrom(const OpReleaseTextureOfImage& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpReleaseTextureOfImage& from) {
+    OpReleaseTextureOfImage::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1261,7 +1279,7 @@ class OpReleaseTextureOfImage final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpReleaseTextureOfImage* other);
 
   private:
@@ -1274,7 +1292,10 @@ class OpReleaseTextureOfImage final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1283,11 +1304,7 @@ class OpReleaseTextureOfImage final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required bytes a_key = 1;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // bytes a_key = 1;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1309,9 +1326,8 @@ class OpReleaseTextureOfImage final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -1319,7 +1335,7 @@ class OpReleaseTextureOfImage final :
 // -------------------------------------------------------------------
 
 class OpUpdateAsyncImagePipeline final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpUpdateAsyncImagePipeline) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpUpdateAsyncImagePipeline) */ {
  public:
   inline OpUpdateAsyncImagePipeline() : OpUpdateAsyncImagePipeline(nullptr) {}
   ~OpUpdateAsyncImagePipeline() override;
@@ -1349,13 +1365,15 @@ class OpUpdateAsyncImagePipeline final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpUpdateAsyncImagePipeline& default_instance() {
     return *internal_default_instance();
   }
@@ -1393,9 +1411,15 @@ class OpUpdateAsyncImagePipeline final :
   OpUpdateAsyncImagePipeline* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpUpdateAsyncImagePipeline>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpUpdateAsyncImagePipeline& from);
-  void MergeFrom(const OpUpdateAsyncImagePipeline& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpUpdateAsyncImagePipeline& from) {
+    OpUpdateAsyncImagePipeline::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1408,7 +1432,7 @@ class OpUpdateAsyncImagePipeline final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpUpdateAsyncImagePipeline* other);
 
   private:
@@ -1421,7 +1445,10 @@ class OpUpdateAsyncImagePipeline final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1434,11 +1461,7 @@ class OpUpdateAsyncImagePipeline final :
     kAFilterFieldNumber = 4,
     kAMixBlendModeFieldNumber = 5,
   };
-  // required bytes a_pipelineId = 1;
-  bool has_a_pipelineid() const;
-  private:
-  bool _internal_has_a_pipelineid() const;
-  public:
+  // bytes a_pipelineId = 1;
   void clear_a_pipelineid();
   const std::string& a_pipelineid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1452,11 +1475,7 @@ class OpUpdateAsyncImagePipeline final :
   std::string* _internal_mutable_a_pipelineid();
   public:
 
-  // required bytes a_scBounds = 2;
-  bool has_a_scbounds() const;
-  private:
-  bool _internal_has_a_scbounds() const;
-  public:
+  // bytes a_scBounds = 2;
   void clear_a_scbounds();
   const std::string& a_scbounds() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1470,11 +1489,7 @@ class OpUpdateAsyncImagePipeline final :
   std::string* _internal_mutable_a_scbounds();
   public:
 
-  // required bytes a_rotation = 3;
-  bool has_a_rotation() const;
-  private:
-  bool _internal_has_a_rotation() const;
-  public:
+  // bytes a_rotation = 3;
   void clear_a_rotation();
   const std::string& a_rotation() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1488,11 +1503,7 @@ class OpUpdateAsyncImagePipeline final :
   std::string* _internal_mutable_a_rotation();
   public:
 
-  // required bytes a_filter = 4;
-  bool has_a_filter() const;
-  private:
-  bool _internal_has_a_filter() const;
-  public:
+  // bytes a_filter = 4;
   void clear_a_filter();
   const std::string& a_filter() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1506,11 +1517,7 @@ class OpUpdateAsyncImagePipeline final :
   std::string* _internal_mutable_a_filter();
   public:
 
-  // required bytes a_mixBlendMode = 5;
-  bool has_a_mixblendmode() const;
-  private:
-  bool _internal_has_a_mixblendmode() const;
-  public:
+  // bytes a_mixBlendMode = 5;
   void clear_a_mixblendmode();
   const std::string& a_mixblendmode() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1528,20 +1535,16 @@ class OpUpdateAsyncImagePipeline final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_pipelineid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_scbounds_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_rotation_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_filter_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mixblendmode_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -1549,7 +1552,7 @@ class OpUpdateAsyncImagePipeline final :
 // -------------------------------------------------------------------
 
 class OpUpdatedAsyncImagePipeline final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpUpdatedAsyncImagePipeline) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpUpdatedAsyncImagePipeline) */ {
  public:
   inline OpUpdatedAsyncImagePipeline() : OpUpdatedAsyncImagePipeline(nullptr) {}
   ~OpUpdatedAsyncImagePipeline() override;
@@ -1579,13 +1582,15 @@ class OpUpdatedAsyncImagePipeline final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpUpdatedAsyncImagePipeline& default_instance() {
     return *internal_default_instance();
   }
@@ -1623,9 +1628,15 @@ class OpUpdatedAsyncImagePipeline final :
   OpUpdatedAsyncImagePipeline* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpUpdatedAsyncImagePipeline>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpUpdatedAsyncImagePipeline& from);
-  void MergeFrom(const OpUpdatedAsyncImagePipeline& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpUpdatedAsyncImagePipeline& from) {
+    OpUpdatedAsyncImagePipeline::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1638,7 +1649,7 @@ class OpUpdatedAsyncImagePipeline final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpUpdatedAsyncImagePipeline* other);
 
   private:
@@ -1651,7 +1662,10 @@ class OpUpdatedAsyncImagePipeline final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1660,11 +1674,7 @@ class OpUpdatedAsyncImagePipeline final :
   enum : int {
     kAPipelineIdFieldNumber = 1,
   };
-  // required bytes a_pipelineId = 1;
-  bool has_a_pipelineid() const;
-  private:
-  bool _internal_has_a_pipelineid() const;
-  public:
+  // bytes a_pipelineId = 1;
   void clear_a_pipelineid();
   const std::string& a_pipelineid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1686,9 +1696,8 @@ class OpUpdatedAsyncImagePipeline final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_pipelineid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -1696,7 +1705,7 @@ class OpUpdatedAsyncImagePipeline final :
 // -------------------------------------------------------------------
 
 class WebRenderParentCommand final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.WebRenderParentCommand) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.WebRenderParentCommand) */ {
  public:
   inline WebRenderParentCommand() : WebRenderParentCommand(nullptr) {}
   ~WebRenderParentCommand() override;
@@ -1726,13 +1735,15 @@ class WebRenderParentCommand final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const WebRenderParentCommand& default_instance() {
     return *internal_default_instance();
   }
@@ -1781,9 +1792,15 @@ class WebRenderParentCommand final :
   WebRenderParentCommand* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebRenderParentCommand>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const WebRenderParentCommand& from);
-  void MergeFrom(const WebRenderParentCommand& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const WebRenderParentCommand& from) {
+    WebRenderParentCommand::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1796,7 +1813,7 @@ class WebRenderParentCommand final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(WebRenderParentCommand* other);
 
   private:
@@ -1809,7 +1826,10 @@ class WebRenderParentCommand final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1991,7 +2011,7 @@ class WebRenderParentCommand final :
 // -------------------------------------------------------------------
 
 class OffsetRange final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OffsetRange) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OffsetRange) */ {
  public:
   inline OffsetRange() : OffsetRange(nullptr) {}
   ~OffsetRange() override;
@@ -2021,13 +2041,15 @@ class OffsetRange final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OffsetRange& default_instance() {
     return *internal_default_instance();
   }
@@ -2065,9 +2087,15 @@ class OffsetRange final :
   OffsetRange* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OffsetRange>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OffsetRange& from);
-  void MergeFrom(const OffsetRange& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OffsetRange& from) {
+    OffsetRange::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2080,7 +2108,7 @@ class OffsetRange final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OffsetRange* other);
 
   private:
@@ -2093,7 +2121,10 @@ class OffsetRange final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2104,11 +2135,7 @@ class OffsetRange final :
     kAStartFieldNumber = 2,
     kALengthFieldNumber = 3,
   };
-  // required uint32 a_source = 1;
-  bool has_a_source() const;
-  private:
-  bool _internal_has_a_source() const;
-  public:
+  // uint32 a_source = 1;
   void clear_a_source();
   uint32_t a_source() const;
   void set_a_source(uint32_t value);
@@ -2117,11 +2144,7 @@ class OffsetRange final :
   void _internal_set_a_source(uint32_t value);
   public:
 
-  // required uint32 a_start = 2;
-  bool has_a_start() const;
-  private:
-  bool _internal_has_a_start() const;
-  public:
+  // uint32 a_start = 2;
   void clear_a_start();
   uint32_t a_start() const;
   void set_a_start(uint32_t value);
@@ -2130,11 +2153,7 @@ class OffsetRange final :
   void _internal_set_a_start(uint32_t value);
   public:
 
-  // required uint32 a_length = 3;
-  bool has_a_length() const;
-  private:
-  bool _internal_has_a_length() const;
-  public:
+  // uint32 a_length = 3;
   void clear_a_length();
   uint32_t a_length() const;
   void set_a_length(uint32_t value);
@@ -2147,18 +2166,14 @@ class OffsetRange final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_source_;
     uint32_t a_start_;
     uint32_t a_length_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -2166,7 +2181,7 @@ class OffsetRange final :
 // -------------------------------------------------------------------
 
 class OpAddImage final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpAddImage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpAddImage) */ {
  public:
   inline OpAddImage() : OpAddImage(nullptr) {}
   ~OpAddImage() override;
@@ -2196,13 +2211,15 @@ class OpAddImage final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpAddImage& default_instance() {
     return *internal_default_instance();
   }
@@ -2240,9 +2257,15 @@ class OpAddImage final :
   OpAddImage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpAddImage>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpAddImage& from);
-  void MergeFrom(const OpAddImage& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpAddImage& from) {
+    OpAddImage::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2255,7 +2278,7 @@ class OpAddImage final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpAddImage* other);
 
   private:
@@ -2268,7 +2291,10 @@ class OpAddImage final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2280,11 +2306,7 @@ class OpAddImage final :
     kABytesFieldNumber = 2,
     kATilingFieldNumber = 3,
   };
-  // required bytes a_descriptor = 1;
-  bool has_a_descriptor() const;
-  private:
-  bool _internal_has_a_descriptor() const;
-  public:
+  // bytes a_descriptor = 1;
   void clear_a_descriptor();
   const std::string& a_descriptor() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2298,11 +2320,7 @@ class OpAddImage final :
   std::string* _internal_mutable_a_descriptor();
   public:
 
-  // required bytes a_key = 4;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // bytes a_key = 4;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2316,7 +2334,7 @@ class OpAddImage final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required .protobuf.mozilla.layers.OffsetRange a_bytes = 2;
+  // .protobuf.mozilla.layers.OffsetRange a_bytes = 2;
   bool has_a_bytes() const;
   private:
   bool _internal_has_a_bytes() const;
@@ -2334,11 +2352,7 @@ class OpAddImage final :
       ::protobuf::mozilla::layers::OffsetRange* a_bytes);
   ::protobuf::mozilla::layers::OffsetRange* unsafe_arena_release_a_bytes();
 
-  // required uint32 a_tiling = 3;
-  bool has_a_tiling() const;
-  private:
-  bool _internal_has_a_tiling() const;
-  public:
+  // uint32 a_tiling = 3;
   void clear_a_tiling();
   uint32_t a_tiling() const;
   void set_a_tiling(uint32_t value);
@@ -2351,19 +2365,15 @@ class OpAddImage final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_descriptor_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::protobuf::mozilla::layers::OffsetRange* a_bytes_;
     uint32_t a_tiling_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -2371,7 +2381,7 @@ class OpAddImage final :
 // -------------------------------------------------------------------
 
 class OpAddBlobImage final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpAddBlobImage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpAddBlobImage) */ {
  public:
   inline OpAddBlobImage() : OpAddBlobImage(nullptr) {}
   ~OpAddBlobImage() override;
@@ -2401,13 +2411,15 @@ class OpAddBlobImage final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpAddBlobImage& default_instance() {
     return *internal_default_instance();
   }
@@ -2445,9 +2457,15 @@ class OpAddBlobImage final :
   OpAddBlobImage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpAddBlobImage>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpAddBlobImage& from);
-  void MergeFrom(const OpAddBlobImage& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpAddBlobImage& from) {
+    OpAddBlobImage::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2460,7 +2478,7 @@ class OpAddBlobImage final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpAddBlobImage* other);
 
   private:
@@ -2473,7 +2491,10 @@ class OpAddBlobImage final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2486,11 +2507,7 @@ class OpAddBlobImage final :
     kABytesFieldNumber = 2,
     kATilingFieldNumber = 4,
   };
-  // required bytes a_descriptor = 1;
-  bool has_a_descriptor() const;
-  private:
-  bool _internal_has_a_descriptor() const;
-  public:
+  // bytes a_descriptor = 1;
   void clear_a_descriptor();
   const std::string& a_descriptor() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2504,11 +2521,7 @@ class OpAddBlobImage final :
   std::string* _internal_mutable_a_descriptor();
   public:
 
-  // required bytes a_visibleRect = 3;
-  bool has_a_visiblerect() const;
-  private:
-  bool _internal_has_a_visiblerect() const;
-  public:
+  // bytes a_visibleRect = 3;
   void clear_a_visiblerect();
   const std::string& a_visiblerect() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2522,11 +2535,7 @@ class OpAddBlobImage final :
   std::string* _internal_mutable_a_visiblerect();
   public:
 
-  // required bytes a_key = 5;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // bytes a_key = 5;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2540,7 +2549,7 @@ class OpAddBlobImage final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required .protobuf.mozilla.layers.OffsetRange a_bytes = 2;
+  // .protobuf.mozilla.layers.OffsetRange a_bytes = 2;
   bool has_a_bytes() const;
   private:
   bool _internal_has_a_bytes() const;
@@ -2558,11 +2567,7 @@ class OpAddBlobImage final :
       ::protobuf::mozilla::layers::OffsetRange* a_bytes);
   ::protobuf::mozilla::layers::OffsetRange* unsafe_arena_release_a_bytes();
 
-  // required uint32 a_tiling = 4;
-  bool has_a_tiling() const;
-  private:
-  bool _internal_has_a_tiling() const;
-  public:
+  // uint32 a_tiling = 4;
   void clear_a_tiling();
   uint32_t a_tiling() const;
   void set_a_tiling(uint32_t value);
@@ -2575,20 +2580,16 @@ class OpAddBlobImage final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_descriptor_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_visiblerect_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::protobuf::mozilla::layers::OffsetRange* a_bytes_;
     uint32_t a_tiling_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -2596,7 +2597,7 @@ class OpAddBlobImage final :
 // -------------------------------------------------------------------
 
 class OpAddSnapshotImage final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpAddSnapshotImage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpAddSnapshotImage) */ {
  public:
   inline OpAddSnapshotImage() : OpAddSnapshotImage(nullptr) {}
   ~OpAddSnapshotImage() override;
@@ -2626,13 +2627,15 @@ class OpAddSnapshotImage final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpAddSnapshotImage& default_instance() {
     return *internal_default_instance();
   }
@@ -2670,9 +2673,15 @@ class OpAddSnapshotImage final :
   OpAddSnapshotImage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpAddSnapshotImage>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpAddSnapshotImage& from);
-  void MergeFrom(const OpAddSnapshotImage& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpAddSnapshotImage& from) {
+    OpAddSnapshotImage::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2685,7 +2694,7 @@ class OpAddSnapshotImage final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpAddSnapshotImage* other);
 
   private:
@@ -2698,7 +2707,10 @@ class OpAddSnapshotImage final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2707,11 +2719,7 @@ class OpAddSnapshotImage final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required bytes a_key = 1;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // bytes a_key = 1;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2733,9 +2741,8 @@ class OpAddSnapshotImage final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -2743,7 +2750,7 @@ class OpAddSnapshotImage final :
 // -------------------------------------------------------------------
 
 class OpUpdateImage final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpUpdateImage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpUpdateImage) */ {
  public:
   inline OpUpdateImage() : OpUpdateImage(nullptr) {}
   ~OpUpdateImage() override;
@@ -2773,13 +2780,15 @@ class OpUpdateImage final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpUpdateImage& default_instance() {
     return *internal_default_instance();
   }
@@ -2817,9 +2826,15 @@ class OpUpdateImage final :
   OpUpdateImage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpUpdateImage>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpUpdateImage& from);
-  void MergeFrom(const OpUpdateImage& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpUpdateImage& from) {
+    OpUpdateImage::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2832,7 +2847,7 @@ class OpUpdateImage final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpUpdateImage* other);
 
   private:
@@ -2845,7 +2860,10 @@ class OpUpdateImage final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2856,11 +2874,7 @@ class OpUpdateImage final :
     kAKeyFieldNumber = 3,
     kABytesFieldNumber = 2,
   };
-  // required bytes a_descriptor = 1;
-  bool has_a_descriptor() const;
-  private:
-  bool _internal_has_a_descriptor() const;
-  public:
+  // bytes a_descriptor = 1;
   void clear_a_descriptor();
   const std::string& a_descriptor() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2874,11 +2888,7 @@ class OpUpdateImage final :
   std::string* _internal_mutable_a_descriptor();
   public:
 
-  // required bytes a_key = 3;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // bytes a_key = 3;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2892,7 +2902,7 @@ class OpUpdateImage final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required .protobuf.mozilla.layers.OffsetRange a_bytes = 2;
+  // .protobuf.mozilla.layers.OffsetRange a_bytes = 2;
   bool has_a_bytes() const;
   private:
   bool _internal_has_a_bytes() const;
@@ -2914,18 +2924,14 @@ class OpUpdateImage final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_descriptor_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::protobuf::mozilla::layers::OffsetRange* a_bytes_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -2933,7 +2939,7 @@ class OpUpdateImage final :
 // -------------------------------------------------------------------
 
 class OpUpdateBlobImage final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpUpdateBlobImage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpUpdateBlobImage) */ {
  public:
   inline OpUpdateBlobImage() : OpUpdateBlobImage(nullptr) {}
   ~OpUpdateBlobImage() override;
@@ -2963,13 +2969,15 @@ class OpUpdateBlobImage final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpUpdateBlobImage& default_instance() {
     return *internal_default_instance();
   }
@@ -3007,9 +3015,15 @@ class OpUpdateBlobImage final :
   OpUpdateBlobImage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpUpdateBlobImage>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpUpdateBlobImage& from);
-  void MergeFrom(const OpUpdateBlobImage& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpUpdateBlobImage& from) {
+    OpUpdateBlobImage::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3022,7 +3036,7 @@ class OpUpdateBlobImage final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpUpdateBlobImage* other);
 
   private:
@@ -3035,7 +3049,10 @@ class OpUpdateBlobImage final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3048,11 +3065,7 @@ class OpUpdateBlobImage final :
     kADirtyRectFieldNumber = 5,
     kABytesFieldNumber = 2,
   };
-  // required bytes a_descriptor = 1;
-  bool has_a_descriptor() const;
-  private:
-  bool _internal_has_a_descriptor() const;
-  public:
+  // bytes a_descriptor = 1;
   void clear_a_descriptor();
   const std::string& a_descriptor() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3066,11 +3079,7 @@ class OpUpdateBlobImage final :
   std::string* _internal_mutable_a_descriptor();
   public:
 
-  // required bytes a_key = 3;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // bytes a_key = 3;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3084,11 +3093,7 @@ class OpUpdateBlobImage final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required bytes a_visibleRect = 4;
-  bool has_a_visiblerect() const;
-  private:
-  bool _internal_has_a_visiblerect() const;
-  public:
+  // bytes a_visibleRect = 4;
   void clear_a_visiblerect();
   const std::string& a_visiblerect() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3102,11 +3107,7 @@ class OpUpdateBlobImage final :
   std::string* _internal_mutable_a_visiblerect();
   public:
 
-  // required bytes a_dirtyRect = 5;
-  bool has_a_dirtyrect() const;
-  private:
-  bool _internal_has_a_dirtyrect() const;
-  public:
+  // bytes a_dirtyRect = 5;
   void clear_a_dirtyrect();
   const std::string& a_dirtyrect() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3120,7 +3121,7 @@ class OpUpdateBlobImage final :
   std::string* _internal_mutable_a_dirtyrect();
   public:
 
-  // required .protobuf.mozilla.layers.OffsetRange a_bytes = 2;
+  // .protobuf.mozilla.layers.OffsetRange a_bytes = 2;
   bool has_a_bytes() const;
   private:
   bool _internal_has_a_bytes() const;
@@ -3142,20 +3143,16 @@ class OpUpdateBlobImage final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_descriptor_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_visiblerect_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_dirtyrect_;
     ::protobuf::mozilla::layers::OffsetRange* a_bytes_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -3163,7 +3160,7 @@ class OpUpdateBlobImage final :
 // -------------------------------------------------------------------
 
 class OpSetBlobImageVisibleArea final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpSetBlobImageVisibleArea) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpSetBlobImageVisibleArea) */ {
  public:
   inline OpSetBlobImageVisibleArea() : OpSetBlobImageVisibleArea(nullptr) {}
   ~OpSetBlobImageVisibleArea() override;
@@ -3193,13 +3190,15 @@ class OpSetBlobImageVisibleArea final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpSetBlobImageVisibleArea& default_instance() {
     return *internal_default_instance();
   }
@@ -3237,9 +3236,15 @@ class OpSetBlobImageVisibleArea final :
   OpSetBlobImageVisibleArea* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpSetBlobImageVisibleArea>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpSetBlobImageVisibleArea& from);
-  void MergeFrom(const OpSetBlobImageVisibleArea& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpSetBlobImageVisibleArea& from) {
+    OpSetBlobImageVisibleArea::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3252,7 +3257,7 @@ class OpSetBlobImageVisibleArea final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpSetBlobImageVisibleArea* other);
 
   private:
@@ -3265,7 +3270,10 @@ class OpSetBlobImageVisibleArea final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3275,11 +3283,7 @@ class OpSetBlobImageVisibleArea final :
     kAAreaFieldNumber = 1,
     kAKeyFieldNumber = 2,
   };
-  // required bytes a_area = 1;
-  bool has_a_area() const;
-  private:
-  bool _internal_has_a_area() const;
-  public:
+  // bytes a_area = 1;
   void clear_a_area();
   const std::string& a_area() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3293,11 +3297,7 @@ class OpSetBlobImageVisibleArea final :
   std::string* _internal_mutable_a_area();
   public:
 
-  // required bytes a_key = 2;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // bytes a_key = 2;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3315,17 +3315,13 @@ class OpSetBlobImageVisibleArea final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_area_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -3333,7 +3329,7 @@ class OpSetBlobImageVisibleArea final :
 // -------------------------------------------------------------------
 
 class OpUpdateSharedExternalImage final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpUpdateSharedExternalImage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpUpdateSharedExternalImage) */ {
  public:
   inline OpUpdateSharedExternalImage() : OpUpdateSharedExternalImage(nullptr) {}
   ~OpUpdateSharedExternalImage() override;
@@ -3363,13 +3359,15 @@ class OpUpdateSharedExternalImage final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpUpdateSharedExternalImage& default_instance() {
     return *internal_default_instance();
   }
@@ -3407,9 +3405,15 @@ class OpUpdateSharedExternalImage final :
   OpUpdateSharedExternalImage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpUpdateSharedExternalImage>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpUpdateSharedExternalImage& from);
-  void MergeFrom(const OpUpdateSharedExternalImage& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpUpdateSharedExternalImage& from) {
+    OpUpdateSharedExternalImage::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3422,7 +3426,7 @@ class OpUpdateSharedExternalImage final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpUpdateSharedExternalImage* other);
 
   private:
@@ -3435,7 +3439,10 @@ class OpUpdateSharedExternalImage final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3446,11 +3453,7 @@ class OpUpdateSharedExternalImage final :
     kAKeyFieldNumber = 2,
     kADirtyRectFieldNumber = 3,
   };
-  // required bytes a_externalImageId = 1;
-  bool has_a_externalimageid() const;
-  private:
-  bool _internal_has_a_externalimageid() const;
-  public:
+  // bytes a_externalImageId = 1;
   void clear_a_externalimageid();
   const std::string& a_externalimageid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3464,11 +3467,7 @@ class OpUpdateSharedExternalImage final :
   std::string* _internal_mutable_a_externalimageid();
   public:
 
-  // required bytes a_key = 2;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // bytes a_key = 2;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3482,11 +3481,7 @@ class OpUpdateSharedExternalImage final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required bytes a_dirtyRect = 3;
-  bool has_a_dirtyrect() const;
-  private:
-  bool _internal_has_a_dirtyrect() const;
-  public:
+  // bytes a_dirtyRect = 3;
   void clear_a_dirtyrect();
   const std::string& a_dirtyrect() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3504,18 +3499,14 @@ class OpUpdateSharedExternalImage final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_externalimageid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_dirtyrect_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -3523,7 +3514,7 @@ class OpUpdateSharedExternalImage final :
 // -------------------------------------------------------------------
 
 class OpDeleteImage final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpDeleteImage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpDeleteImage) */ {
  public:
   inline OpDeleteImage() : OpDeleteImage(nullptr) {}
   ~OpDeleteImage() override;
@@ -3553,13 +3544,15 @@ class OpDeleteImage final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpDeleteImage& default_instance() {
     return *internal_default_instance();
   }
@@ -3597,9 +3590,15 @@ class OpDeleteImage final :
   OpDeleteImage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpDeleteImage>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpDeleteImage& from);
-  void MergeFrom(const OpDeleteImage& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpDeleteImage& from) {
+    OpDeleteImage::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3612,7 +3611,7 @@ class OpDeleteImage final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpDeleteImage* other);
 
   private:
@@ -3625,7 +3624,10 @@ class OpDeleteImage final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3634,11 +3636,7 @@ class OpDeleteImage final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required bytes a_key = 1;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // bytes a_key = 1;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3660,9 +3658,8 @@ class OpDeleteImage final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -3670,7 +3667,7 @@ class OpDeleteImage final :
 // -------------------------------------------------------------------
 
 class OpDeleteSnapshotImage final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpDeleteSnapshotImage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpDeleteSnapshotImage) */ {
  public:
   inline OpDeleteSnapshotImage() : OpDeleteSnapshotImage(nullptr) {}
   ~OpDeleteSnapshotImage() override;
@@ -3700,13 +3697,15 @@ class OpDeleteSnapshotImage final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpDeleteSnapshotImage& default_instance() {
     return *internal_default_instance();
   }
@@ -3744,9 +3743,15 @@ class OpDeleteSnapshotImage final :
   OpDeleteSnapshotImage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpDeleteSnapshotImage>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpDeleteSnapshotImage& from);
-  void MergeFrom(const OpDeleteSnapshotImage& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpDeleteSnapshotImage& from) {
+    OpDeleteSnapshotImage::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3759,7 +3764,7 @@ class OpDeleteSnapshotImage final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpDeleteSnapshotImage* other);
 
   private:
@@ -3772,7 +3777,10 @@ class OpDeleteSnapshotImage final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3781,11 +3789,7 @@ class OpDeleteSnapshotImage final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required bytes a_key = 1;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // bytes a_key = 1;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3807,9 +3811,8 @@ class OpDeleteSnapshotImage final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -3817,7 +3820,7 @@ class OpDeleteSnapshotImage final :
 // -------------------------------------------------------------------
 
 class OpDeleteBlobImage final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpDeleteBlobImage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpDeleteBlobImage) */ {
  public:
   inline OpDeleteBlobImage() : OpDeleteBlobImage(nullptr) {}
   ~OpDeleteBlobImage() override;
@@ -3847,13 +3850,15 @@ class OpDeleteBlobImage final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpDeleteBlobImage& default_instance() {
     return *internal_default_instance();
   }
@@ -3891,9 +3896,15 @@ class OpDeleteBlobImage final :
   OpDeleteBlobImage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpDeleteBlobImage>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpDeleteBlobImage& from);
-  void MergeFrom(const OpDeleteBlobImage& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpDeleteBlobImage& from) {
+    OpDeleteBlobImage::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3906,7 +3917,7 @@ class OpDeleteBlobImage final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpDeleteBlobImage* other);
 
   private:
@@ -3919,7 +3930,10 @@ class OpDeleteBlobImage final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3928,11 +3942,7 @@ class OpDeleteBlobImage final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required bytes a_key = 1;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // bytes a_key = 1;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3954,9 +3964,8 @@ class OpDeleteBlobImage final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -3964,7 +3973,7 @@ class OpDeleteBlobImage final :
 // -------------------------------------------------------------------
 
 class OpAddRawFont final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpAddRawFont) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpAddRawFont) */ {
  public:
   inline OpAddRawFont() : OpAddRawFont(nullptr) {}
   ~OpAddRawFont() override;
@@ -3994,13 +4003,15 @@ class OpAddRawFont final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpAddRawFont& default_instance() {
     return *internal_default_instance();
   }
@@ -4038,9 +4049,15 @@ class OpAddRawFont final :
   OpAddRawFont* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpAddRawFont>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpAddRawFont& from);
-  void MergeFrom(const OpAddRawFont& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpAddRawFont& from) {
+    OpAddRawFont::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4053,7 +4070,7 @@ class OpAddRawFont final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpAddRawFont* other);
 
   private:
@@ -4066,7 +4083,10 @@ class OpAddRawFont final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4077,11 +4097,7 @@ class OpAddRawFont final :
     kABytesFieldNumber = 1,
     kAFontIndexFieldNumber = 2,
   };
-  // required bytes a_key = 3;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // bytes a_key = 3;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4095,7 +4111,7 @@ class OpAddRawFont final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required .protobuf.mozilla.layers.OffsetRange a_bytes = 1;
+  // .protobuf.mozilla.layers.OffsetRange a_bytes = 1;
   bool has_a_bytes() const;
   private:
   bool _internal_has_a_bytes() const;
@@ -4113,11 +4129,7 @@ class OpAddRawFont final :
       ::protobuf::mozilla::layers::OffsetRange* a_bytes);
   ::protobuf::mozilla::layers::OffsetRange* unsafe_arena_release_a_bytes();
 
-  // required uint32 a_fontIndex = 2;
-  bool has_a_fontindex() const;
-  private:
-  bool _internal_has_a_fontindex() const;
-  public:
+  // uint32 a_fontIndex = 2;
   void clear_a_fontindex();
   uint32_t a_fontindex() const;
   void set_a_fontindex(uint32_t value);
@@ -4130,18 +4142,14 @@ class OpAddRawFont final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::protobuf::mozilla::layers::OffsetRange* a_bytes_;
     uint32_t a_fontindex_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -4149,7 +4157,7 @@ class OpAddRawFont final :
 // -------------------------------------------------------------------
 
 class OpAddFontDescriptor final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpAddFontDescriptor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpAddFontDescriptor) */ {
  public:
   inline OpAddFontDescriptor() : OpAddFontDescriptor(nullptr) {}
   ~OpAddFontDescriptor() override;
@@ -4179,13 +4187,15 @@ class OpAddFontDescriptor final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpAddFontDescriptor& default_instance() {
     return *internal_default_instance();
   }
@@ -4223,9 +4233,15 @@ class OpAddFontDescriptor final :
   OpAddFontDescriptor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpAddFontDescriptor>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpAddFontDescriptor& from);
-  void MergeFrom(const OpAddFontDescriptor& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpAddFontDescriptor& from) {
+    OpAddFontDescriptor::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4238,7 +4254,7 @@ class OpAddFontDescriptor final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpAddFontDescriptor* other);
 
   private:
@@ -4251,7 +4267,10 @@ class OpAddFontDescriptor final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4262,11 +4281,7 @@ class OpAddFontDescriptor final :
     kABytesFieldNumber = 1,
     kAFontIndexFieldNumber = 2,
   };
-  // required bytes a_key = 3;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // bytes a_key = 3;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4280,7 +4295,7 @@ class OpAddFontDescriptor final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required .protobuf.mozilla.layers.OffsetRange a_bytes = 1;
+  // .protobuf.mozilla.layers.OffsetRange a_bytes = 1;
   bool has_a_bytes() const;
   private:
   bool _internal_has_a_bytes() const;
@@ -4298,11 +4313,7 @@ class OpAddFontDescriptor final :
       ::protobuf::mozilla::layers::OffsetRange* a_bytes);
   ::protobuf::mozilla::layers::OffsetRange* unsafe_arena_release_a_bytes();
 
-  // required uint32 a_fontIndex = 2;
-  bool has_a_fontindex() const;
-  private:
-  bool _internal_has_a_fontindex() const;
-  public:
+  // uint32 a_fontIndex = 2;
   void clear_a_fontindex();
   uint32_t a_fontindex() const;
   void set_a_fontindex(uint32_t value);
@@ -4315,18 +4326,14 @@ class OpAddFontDescriptor final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::protobuf::mozilla::layers::OffsetRange* a_bytes_;
     uint32_t a_fontindex_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -4334,7 +4341,7 @@ class OpAddFontDescriptor final :
 // -------------------------------------------------------------------
 
 class OpDeleteFont final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpDeleteFont) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpDeleteFont) */ {
  public:
   inline OpDeleteFont() : OpDeleteFont(nullptr) {}
   ~OpDeleteFont() override;
@@ -4364,13 +4371,15 @@ class OpDeleteFont final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpDeleteFont& default_instance() {
     return *internal_default_instance();
   }
@@ -4408,9 +4417,15 @@ class OpDeleteFont final :
   OpDeleteFont* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpDeleteFont>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpDeleteFont& from);
-  void MergeFrom(const OpDeleteFont& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpDeleteFont& from) {
+    OpDeleteFont::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4423,7 +4438,7 @@ class OpDeleteFont final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpDeleteFont* other);
 
   private:
@@ -4436,7 +4451,10 @@ class OpDeleteFont final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4445,11 +4463,7 @@ class OpDeleteFont final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required bytes a_key = 1;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // bytes a_key = 1;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4471,9 +4485,8 @@ class OpDeleteFont final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -4481,7 +4494,7 @@ class OpDeleteFont final :
 // -------------------------------------------------------------------
 
 class OpAddFontInstance final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpAddFontInstance) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpAddFontInstance) */ {
  public:
   inline OpAddFontInstance() : OpAddFontInstance(nullptr) {}
   ~OpAddFontInstance() override;
@@ -4511,13 +4524,15 @@ class OpAddFontInstance final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpAddFontInstance& default_instance() {
     return *internal_default_instance();
   }
@@ -4555,9 +4570,15 @@ class OpAddFontInstance final :
   OpAddFontInstance* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpAddFontInstance>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpAddFontInstance& from);
-  void MergeFrom(const OpAddFontInstance& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpAddFontInstance& from) {
+    OpAddFontInstance::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4570,7 +4591,7 @@ class OpAddFontInstance final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpAddFontInstance* other);
 
   private:
@@ -4583,7 +4604,10 @@ class OpAddFontInstance final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4597,11 +4621,7 @@ class OpAddFontInstance final :
     kAVariationsFieldNumber = 3,
     kAGlyphSizeFieldNumber = 6,
   };
-  // required bytes a_options = 1;
-  bool has_a_options() const;
-  private:
-  bool _internal_has_a_options() const;
-  public:
+  // bytes a_options = 1;
   void clear_a_options();
   const std::string& a_options() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4615,11 +4635,7 @@ class OpAddFontInstance final :
   std::string* _internal_mutable_a_options();
   public:
 
-  // required bytes a_platformOptions = 2;
-  bool has_a_platformoptions() const;
-  private:
-  bool _internal_has_a_platformoptions() const;
-  public:
+  // bytes a_platformOptions = 2;
   void clear_a_platformoptions();
   const std::string& a_platformoptions() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4633,11 +4649,7 @@ class OpAddFontInstance final :
   std::string* _internal_mutable_a_platformoptions();
   public:
 
-  // required bytes a_instanceKey = 4;
-  bool has_a_instancekey() const;
-  private:
-  bool _internal_has_a_instancekey() const;
-  public:
+  // bytes a_instanceKey = 4;
   void clear_a_instancekey();
   const std::string& a_instancekey() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4651,11 +4663,7 @@ class OpAddFontInstance final :
   std::string* _internal_mutable_a_instancekey();
   public:
 
-  // required bytes a_fontKey = 5;
-  bool has_a_fontkey() const;
-  private:
-  bool _internal_has_a_fontkey() const;
-  public:
+  // bytes a_fontKey = 5;
   void clear_a_fontkey();
   const std::string& a_fontkey() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4669,7 +4677,7 @@ class OpAddFontInstance final :
   std::string* _internal_mutable_a_fontkey();
   public:
 
-  // required .protobuf.mozilla.layers.OffsetRange a_variations = 3;
+  // .protobuf.mozilla.layers.OffsetRange a_variations = 3;
   bool has_a_variations() const;
   private:
   bool _internal_has_a_variations() const;
@@ -4687,11 +4695,7 @@ class OpAddFontInstance final :
       ::protobuf::mozilla::layers::OffsetRange* a_variations);
   ::protobuf::mozilla::layers::OffsetRange* unsafe_arena_release_a_variations();
 
-  // required float a_glyphSize = 6;
-  bool has_a_glyphsize() const;
-  private:
-  bool _internal_has_a_glyphsize() const;
-  public:
+  // float a_glyphSize = 6;
   void clear_a_glyphsize();
   float a_glyphsize() const;
   void set_a_glyphsize(float value);
@@ -4704,21 +4708,17 @@ class OpAddFontInstance final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_options_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_platformoptions_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_instancekey_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_fontkey_;
     ::protobuf::mozilla::layers::OffsetRange* a_variations_;
     float a_glyphsize_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -4726,7 +4726,7 @@ class OpAddFontInstance final :
 // -------------------------------------------------------------------
 
 class OpDeleteFontInstance final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpDeleteFontInstance) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpDeleteFontInstance) */ {
  public:
   inline OpDeleteFontInstance() : OpDeleteFontInstance(nullptr) {}
   ~OpDeleteFontInstance() override;
@@ -4756,13 +4756,15 @@ class OpDeleteFontInstance final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpDeleteFontInstance& default_instance() {
     return *internal_default_instance();
   }
@@ -4800,9 +4802,15 @@ class OpDeleteFontInstance final :
   OpDeleteFontInstance* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpDeleteFontInstance>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpDeleteFontInstance& from);
-  void MergeFrom(const OpDeleteFontInstance& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpDeleteFontInstance& from) {
+    OpDeleteFontInstance::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4815,7 +4823,7 @@ class OpDeleteFontInstance final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpDeleteFontInstance* other);
 
   private:
@@ -4828,7 +4836,10 @@ class OpDeleteFontInstance final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4837,11 +4848,7 @@ class OpDeleteFontInstance final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required bytes a_key = 1;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // bytes a_key = 1;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4863,9 +4870,8 @@ class OpDeleteFontInstance final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_WebRenderMessages_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
@@ -4873,7 +4879,7 @@ class OpDeleteFontInstance final :
 // -------------------------------------------------------------------
 
 class OpUpdateResource final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpUpdateResource) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.OpUpdateResource) */ {
  public:
   inline OpUpdateResource() : OpUpdateResource(nullptr) {}
   ~OpUpdateResource() override;
@@ -4903,13 +4909,15 @@ class OpUpdateResource final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const OpUpdateResource& default_instance() {
     return *internal_default_instance();
   }
@@ -4968,9 +4976,15 @@ class OpUpdateResource final :
   OpUpdateResource* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<OpUpdateResource>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const OpUpdateResource& from);
-  void MergeFrom(const OpUpdateResource& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const OpUpdateResource& from) {
+    OpUpdateResource::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4983,7 +4997,7 @@ class OpUpdateResource final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(OpUpdateResource* other);
 
   private:
@@ -4996,7 +5010,10 @@ class OpUpdateResource final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -5396,17 +5413,9 @@ class OpUpdateResource final :
 #endif  // __GNUC__
 // RefCountedShmem
 
-// required bytes a_buffer = 1;
-inline bool RefCountedShmem::_internal_has_a_buffer() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool RefCountedShmem::has_a_buffer() const {
-  return _internal_has_a_buffer();
-}
+// bytes a_buffer = 1;
 inline void RefCountedShmem::clear_a_buffer() {
   _impl_.a_buffer_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& RefCountedShmem::a_buffer() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.RefCountedShmem.a_buffer)
@@ -5415,7 +5424,7 @@ inline const std::string& RefCountedShmem::a_buffer() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RefCountedShmem::set_a_buffer(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_buffer_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.RefCountedShmem.a_buffer)
 }
@@ -5428,32 +5437,22 @@ inline const std::string& RefCountedShmem::_internal_a_buffer() const {
   return _impl_.a_buffer_.Get();
 }
 inline void RefCountedShmem::_internal_set_a_buffer(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_buffer_.Set(value, GetArenaForAllocation());
 }
 inline std::string* RefCountedShmem::_internal_mutable_a_buffer() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_buffer_.Mutable(GetArenaForAllocation());
 }
 inline std::string* RefCountedShmem::release_a_buffer() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.RefCountedShmem.a_buffer)
-  if (!_internal_has_a_buffer()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_buffer_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_buffer_.IsDefault()) {
-    _impl_.a_buffer_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_buffer_.Release();
 }
 inline void RefCountedShmem::set_allocated_a_buffer(std::string* a_buffer) {
   if (a_buffer != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_buffer_.SetAllocated(a_buffer, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5468,17 +5467,9 @@ inline void RefCountedShmem::set_allocated_a_buffer(std::string* a_buffer) {
 
 // OpAddSharedExternalImage
 
-// required bytes a_externalImageId = 1;
-inline bool OpAddSharedExternalImage::_internal_has_a_externalimageid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpAddSharedExternalImage::has_a_externalimageid() const {
-  return _internal_has_a_externalimageid();
-}
+// bytes a_externalImageId = 1;
 inline void OpAddSharedExternalImage::clear_a_externalimageid() {
   _impl_.a_externalimageid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpAddSharedExternalImage::a_externalimageid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpAddSharedExternalImage.a_externalImageId)
@@ -5487,7 +5478,7 @@ inline const std::string& OpAddSharedExternalImage::a_externalimageid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpAddSharedExternalImage::set_a_externalimageid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_externalimageid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpAddSharedExternalImage.a_externalImageId)
 }
@@ -5500,32 +5491,22 @@ inline const std::string& OpAddSharedExternalImage::_internal_a_externalimageid(
   return _impl_.a_externalimageid_.Get();
 }
 inline void OpAddSharedExternalImage::_internal_set_a_externalimageid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_externalimageid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpAddSharedExternalImage::_internal_mutable_a_externalimageid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_externalimageid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpAddSharedExternalImage::release_a_externalimageid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddSharedExternalImage.a_externalImageId)
-  if (!_internal_has_a_externalimageid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_externalimageid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_externalimageid_.IsDefault()) {
-    _impl_.a_externalimageid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_externalimageid_.Release();
 }
 inline void OpAddSharedExternalImage::set_allocated_a_externalimageid(std::string* a_externalimageid) {
   if (a_externalimageid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_externalimageid_.SetAllocated(a_externalimageid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5536,17 +5517,9 @@ inline void OpAddSharedExternalImage::set_allocated_a_externalimageid(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpAddSharedExternalImage.a_externalImageId)
 }
 
-// required bytes a_key = 2;
-inline bool OpAddSharedExternalImage::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool OpAddSharedExternalImage::has_a_key() const {
-  return _internal_has_a_key();
-}
+// bytes a_key = 2;
 inline void OpAddSharedExternalImage::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& OpAddSharedExternalImage::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpAddSharedExternalImage.a_key)
@@ -5555,7 +5528,7 @@ inline const std::string& OpAddSharedExternalImage::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpAddSharedExternalImage::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpAddSharedExternalImage.a_key)
 }
@@ -5568,32 +5541,22 @@ inline const std::string& OpAddSharedExternalImage::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void OpAddSharedExternalImage::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpAddSharedExternalImage::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpAddSharedExternalImage::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddSharedExternalImage.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void OpAddSharedExternalImage::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5608,17 +5571,9 @@ inline void OpAddSharedExternalImage::set_allocated_a_key(std::string* a_key) {
 
 // OpPushExternalImageForTexture
 
-// required bytes a_externalImageId = 1;
-inline bool OpPushExternalImageForTexture::_internal_has_a_externalimageid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpPushExternalImageForTexture::has_a_externalimageid() const {
-  return _internal_has_a_externalimageid();
-}
+// bytes a_externalImageId = 1;
 inline void OpPushExternalImageForTexture::clear_a_externalimageid() {
   _impl_.a_externalimageid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpPushExternalImageForTexture::a_externalimageid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpPushExternalImageForTexture.a_externalImageId)
@@ -5627,7 +5582,7 @@ inline const std::string& OpPushExternalImageForTexture::a_externalimageid() con
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpPushExternalImageForTexture::set_a_externalimageid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_externalimageid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpPushExternalImageForTexture.a_externalImageId)
 }
@@ -5640,32 +5595,22 @@ inline const std::string& OpPushExternalImageForTexture::_internal_a_externalima
   return _impl_.a_externalimageid_.Get();
 }
 inline void OpPushExternalImageForTexture::_internal_set_a_externalimageid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_externalimageid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpPushExternalImageForTexture::_internal_mutable_a_externalimageid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_externalimageid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpPushExternalImageForTexture::release_a_externalimageid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpPushExternalImageForTexture.a_externalImageId)
-  if (!_internal_has_a_externalimageid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_externalimageid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_externalimageid_.IsDefault()) {
-    _impl_.a_externalimageid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_externalimageid_.Release();
 }
 inline void OpPushExternalImageForTexture::set_allocated_a_externalimageid(std::string* a_externalimageid) {
   if (a_externalimageid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_externalimageid_.SetAllocated(a_externalimageid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5676,17 +5621,9 @@ inline void OpPushExternalImageForTexture::set_allocated_a_externalimageid(std::
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpPushExternalImageForTexture.a_externalImageId)
 }
 
-// required bytes a_key = 2;
-inline bool OpPushExternalImageForTexture::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool OpPushExternalImageForTexture::has_a_key() const {
-  return _internal_has_a_key();
-}
+// bytes a_key = 2;
 inline void OpPushExternalImageForTexture::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& OpPushExternalImageForTexture::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpPushExternalImageForTexture.a_key)
@@ -5695,7 +5632,7 @@ inline const std::string& OpPushExternalImageForTexture::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpPushExternalImageForTexture::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpPushExternalImageForTexture.a_key)
 }
@@ -5708,32 +5645,22 @@ inline const std::string& OpPushExternalImageForTexture::_internal_a_key() const
   return _impl_.a_key_.Get();
 }
 inline void OpPushExternalImageForTexture::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpPushExternalImageForTexture::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpPushExternalImageForTexture::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpPushExternalImageForTexture.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void OpPushExternalImageForTexture::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5744,17 +5671,9 @@ inline void OpPushExternalImageForTexture::set_allocated_a_key(std::string* a_ke
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpPushExternalImageForTexture.a_key)
 }
 
-// required bytes a_texture = 3;
-inline bool OpPushExternalImageForTexture::_internal_has_a_texture() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool OpPushExternalImageForTexture::has_a_texture() const {
-  return _internal_has_a_texture();
-}
+// bytes a_texture = 3;
 inline void OpPushExternalImageForTexture::clear_a_texture() {
   _impl_.a_texture_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& OpPushExternalImageForTexture::a_texture() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpPushExternalImageForTexture.a_texture)
@@ -5763,7 +5682,7 @@ inline const std::string& OpPushExternalImageForTexture::a_texture() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpPushExternalImageForTexture::set_a_texture(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_texture_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpPushExternalImageForTexture.a_texture)
 }
@@ -5776,32 +5695,22 @@ inline const std::string& OpPushExternalImageForTexture::_internal_a_texture() c
   return _impl_.a_texture_.Get();
 }
 inline void OpPushExternalImageForTexture::_internal_set_a_texture(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_texture_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpPushExternalImageForTexture::_internal_mutable_a_texture() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_texture_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpPushExternalImageForTexture::release_a_texture() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpPushExternalImageForTexture.a_texture)
-  if (!_internal_has_a_texture()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_texture_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_texture_.IsDefault()) {
-    _impl_.a_texture_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_texture_.Release();
 }
 inline void OpPushExternalImageForTexture::set_allocated_a_texture(std::string* a_texture) {
   if (a_texture != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_texture_.SetAllocated(a_texture, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5812,17 +5721,9 @@ inline void OpPushExternalImageForTexture::set_allocated_a_texture(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpPushExternalImageForTexture.a_texture)
 }
 
-// required bool a_isUpdate = 4;
-inline bool OpPushExternalImageForTexture::_internal_has_a_isupdate() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool OpPushExternalImageForTexture::has_a_isupdate() const {
-  return _internal_has_a_isupdate();
-}
+// bool a_isUpdate = 4;
 inline void OpPushExternalImageForTexture::clear_a_isupdate() {
   _impl_.a_isupdate_ = false;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline bool OpPushExternalImageForTexture::_internal_a_isupdate() const {
   return _impl_.a_isupdate_;
@@ -5832,7 +5733,7 @@ inline bool OpPushExternalImageForTexture::a_isupdate() const {
   return _internal_a_isupdate();
 }
 inline void OpPushExternalImageForTexture::_internal_set_a_isupdate(bool value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_isupdate_ = value;
 }
 inline void OpPushExternalImageForTexture::set_a_isupdate(bool value) {
@@ -5844,11 +5745,9 @@ inline void OpPushExternalImageForTexture::set_a_isupdate(bool value) {
 
 // OpAddCompositorAnimations
 
-// required .protobuf.mozilla.layers.CompositorAnimations a_data = 1;
+// .protobuf.mozilla.layers.CompositorAnimations a_data = 1;
 inline bool OpAddCompositorAnimations::_internal_has_a_data() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_data_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_data_ != nullptr;
 }
 inline bool OpAddCompositorAnimations::has_a_data() const {
   return _internal_has_a_data();
@@ -5869,14 +5768,14 @@ inline void OpAddCompositorAnimations::unsafe_arena_set_allocated_a_data(
   }
   _impl_.a_data_ = a_data;
   if (a_data) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.layers.OpAddCompositorAnimations.a_data)
 }
 inline ::protobuf::mozilla::layers::CompositorAnimations* OpAddCompositorAnimations::release_a_data() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::layers::CompositorAnimations* temp = _impl_.a_data_;
   _impl_.a_data_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -5892,13 +5791,13 @@ inline ::protobuf::mozilla::layers::CompositorAnimations* OpAddCompositorAnimati
 }
 inline ::protobuf::mozilla::layers::CompositorAnimations* OpAddCompositorAnimations::unsafe_arena_release_a_data() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddCompositorAnimations.a_data)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::layers::CompositorAnimations* temp = _impl_.a_data_;
   _impl_.a_data_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::layers::CompositorAnimations* OpAddCompositorAnimations::_internal_mutable_a_data() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_data_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::layers::CompositorAnimations>(GetArenaForAllocation());
     _impl_.a_data_ = p;
@@ -5923,9 +5822,9 @@ inline void OpAddCompositorAnimations::set_allocated_a_data(::protobuf::mozilla:
       a_data = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_data, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_data_ = a_data;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpAddCompositorAnimations.a_data)
@@ -5935,17 +5834,9 @@ inline void OpAddCompositorAnimations::set_allocated_a_data(::protobuf::mozilla:
 
 // OpAddPipelineIdForCompositable
 
-// required bytes a_pipelineId = 1;
-inline bool OpAddPipelineIdForCompositable::_internal_has_a_pipelineid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpAddPipelineIdForCompositable::has_a_pipelineid() const {
-  return _internal_has_a_pipelineid();
-}
+// bytes a_pipelineId = 1;
 inline void OpAddPipelineIdForCompositable::clear_a_pipelineid() {
   _impl_.a_pipelineid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpAddPipelineIdForCompositable::a_pipelineid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpAddPipelineIdForCompositable.a_pipelineId)
@@ -5954,7 +5845,7 @@ inline const std::string& OpAddPipelineIdForCompositable::a_pipelineid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpAddPipelineIdForCompositable::set_a_pipelineid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_pipelineid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpAddPipelineIdForCompositable.a_pipelineId)
 }
@@ -5967,32 +5858,22 @@ inline const std::string& OpAddPipelineIdForCompositable::_internal_a_pipelineid
   return _impl_.a_pipelineid_.Get();
 }
 inline void OpAddPipelineIdForCompositable::_internal_set_a_pipelineid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_pipelineid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpAddPipelineIdForCompositable::_internal_mutable_a_pipelineid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_pipelineid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpAddPipelineIdForCompositable::release_a_pipelineid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddPipelineIdForCompositable.a_pipelineId)
-  if (!_internal_has_a_pipelineid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_pipelineid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_pipelineid_.IsDefault()) {
-    _impl_.a_pipelineid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_pipelineid_.Release();
 }
 inline void OpAddPipelineIdForCompositable::set_allocated_a_pipelineid(std::string* a_pipelineid) {
   if (a_pipelineid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_pipelineid_.SetAllocated(a_pipelineid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6003,17 +5884,9 @@ inline void OpAddPipelineIdForCompositable::set_allocated_a_pipelineid(std::stri
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpAddPipelineIdForCompositable.a_pipelineId)
 }
 
-// required bytes a_handle = 2;
-inline bool OpAddPipelineIdForCompositable::_internal_has_a_handle() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool OpAddPipelineIdForCompositable::has_a_handle() const {
-  return _internal_has_a_handle();
-}
+// bytes a_handle = 2;
 inline void OpAddPipelineIdForCompositable::clear_a_handle() {
   _impl_.a_handle_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& OpAddPipelineIdForCompositable::a_handle() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpAddPipelineIdForCompositable.a_handle)
@@ -6022,7 +5895,7 @@ inline const std::string& OpAddPipelineIdForCompositable::a_handle() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpAddPipelineIdForCompositable::set_a_handle(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_handle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpAddPipelineIdForCompositable.a_handle)
 }
@@ -6035,32 +5908,22 @@ inline const std::string& OpAddPipelineIdForCompositable::_internal_a_handle() c
   return _impl_.a_handle_.Get();
 }
 inline void OpAddPipelineIdForCompositable::_internal_set_a_handle(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_handle_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpAddPipelineIdForCompositable::_internal_mutable_a_handle() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_handle_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpAddPipelineIdForCompositable::release_a_handle() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddPipelineIdForCompositable.a_handle)
-  if (!_internal_has_a_handle()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_handle_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_handle_.IsDefault()) {
-    _impl_.a_handle_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_handle_.Release();
 }
 inline void OpAddPipelineIdForCompositable::set_allocated_a_handle(std::string* a_handle) {
   if (a_handle != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_handle_.SetAllocated(a_handle, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6071,17 +5934,9 @@ inline void OpAddPipelineIdForCompositable::set_allocated_a_handle(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpAddPipelineIdForCompositable.a_handle)
 }
 
-// required bytes a_owner = 3;
-inline bool OpAddPipelineIdForCompositable::_internal_has_a_owner() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool OpAddPipelineIdForCompositable::has_a_owner() const {
-  return _internal_has_a_owner();
-}
+// bytes a_owner = 3;
 inline void OpAddPipelineIdForCompositable::clear_a_owner() {
   _impl_.a_owner_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& OpAddPipelineIdForCompositable::a_owner() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpAddPipelineIdForCompositable.a_owner)
@@ -6090,7 +5945,7 @@ inline const std::string& OpAddPipelineIdForCompositable::a_owner() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpAddPipelineIdForCompositable::set_a_owner(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_owner_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpAddPipelineIdForCompositable.a_owner)
 }
@@ -6103,32 +5958,22 @@ inline const std::string& OpAddPipelineIdForCompositable::_internal_a_owner() co
   return _impl_.a_owner_.Get();
 }
 inline void OpAddPipelineIdForCompositable::_internal_set_a_owner(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_owner_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpAddPipelineIdForCompositable::_internal_mutable_a_owner() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_owner_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpAddPipelineIdForCompositable::release_a_owner() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddPipelineIdForCompositable.a_owner)
-  if (!_internal_has_a_owner()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_owner_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_owner_.IsDefault()) {
-    _impl_.a_owner_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_owner_.Release();
 }
 inline void OpAddPipelineIdForCompositable::set_allocated_a_owner(std::string* a_owner) {
   if (a_owner != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_owner_.SetAllocated(a_owner, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6143,17 +5988,9 @@ inline void OpAddPipelineIdForCompositable::set_allocated_a_owner(std::string* a
 
 // OpRemovePipelineIdForCompositable
 
-// required bytes a_pipelineId = 1;
-inline bool OpRemovePipelineIdForCompositable::_internal_has_a_pipelineid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpRemovePipelineIdForCompositable::has_a_pipelineid() const {
-  return _internal_has_a_pipelineid();
-}
+// bytes a_pipelineId = 1;
 inline void OpRemovePipelineIdForCompositable::clear_a_pipelineid() {
   _impl_.a_pipelineid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpRemovePipelineIdForCompositable::a_pipelineid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpRemovePipelineIdForCompositable.a_pipelineId)
@@ -6162,7 +5999,7 @@ inline const std::string& OpRemovePipelineIdForCompositable::a_pipelineid() cons
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpRemovePipelineIdForCompositable::set_a_pipelineid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_pipelineid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpRemovePipelineIdForCompositable.a_pipelineId)
 }
@@ -6175,32 +6012,22 @@ inline const std::string& OpRemovePipelineIdForCompositable::_internal_a_pipelin
   return _impl_.a_pipelineid_.Get();
 }
 inline void OpRemovePipelineIdForCompositable::_internal_set_a_pipelineid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_pipelineid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpRemovePipelineIdForCompositable::_internal_mutable_a_pipelineid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_pipelineid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpRemovePipelineIdForCompositable::release_a_pipelineid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpRemovePipelineIdForCompositable.a_pipelineId)
-  if (!_internal_has_a_pipelineid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_pipelineid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_pipelineid_.IsDefault()) {
-    _impl_.a_pipelineid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_pipelineid_.Release();
 }
 inline void OpRemovePipelineIdForCompositable::set_allocated_a_pipelineid(std::string* a_pipelineid) {
   if (a_pipelineid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_pipelineid_.SetAllocated(a_pipelineid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6215,17 +6042,9 @@ inline void OpRemovePipelineIdForCompositable::set_allocated_a_pipelineid(std::s
 
 // OpReleaseTextureOfImage
 
-// required bytes a_key = 1;
-inline bool OpReleaseTextureOfImage::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpReleaseTextureOfImage::has_a_key() const {
-  return _internal_has_a_key();
-}
+// bytes a_key = 1;
 inline void OpReleaseTextureOfImage::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpReleaseTextureOfImage::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpReleaseTextureOfImage.a_key)
@@ -6234,7 +6053,7 @@ inline const std::string& OpReleaseTextureOfImage::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpReleaseTextureOfImage::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpReleaseTextureOfImage.a_key)
 }
@@ -6247,32 +6066,22 @@ inline const std::string& OpReleaseTextureOfImage::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void OpReleaseTextureOfImage::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpReleaseTextureOfImage::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpReleaseTextureOfImage::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpReleaseTextureOfImage.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void OpReleaseTextureOfImage::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6287,17 +6096,9 @@ inline void OpReleaseTextureOfImage::set_allocated_a_key(std::string* a_key) {
 
 // OpUpdateAsyncImagePipeline
 
-// required bytes a_pipelineId = 1;
-inline bool OpUpdateAsyncImagePipeline::_internal_has_a_pipelineid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpUpdateAsyncImagePipeline::has_a_pipelineid() const {
-  return _internal_has_a_pipelineid();
-}
+// bytes a_pipelineId = 1;
 inline void OpUpdateAsyncImagePipeline::clear_a_pipelineid() {
   _impl_.a_pipelineid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpUpdateAsyncImagePipeline::a_pipelineid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpUpdateAsyncImagePipeline.a_pipelineId)
@@ -6306,7 +6107,7 @@ inline const std::string& OpUpdateAsyncImagePipeline::a_pipelineid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpUpdateAsyncImagePipeline::set_a_pipelineid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_pipelineid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpUpdateAsyncImagePipeline.a_pipelineId)
 }
@@ -6319,32 +6120,22 @@ inline const std::string& OpUpdateAsyncImagePipeline::_internal_a_pipelineid() c
   return _impl_.a_pipelineid_.Get();
 }
 inline void OpUpdateAsyncImagePipeline::_internal_set_a_pipelineid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_pipelineid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpUpdateAsyncImagePipeline::_internal_mutable_a_pipelineid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_pipelineid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpUpdateAsyncImagePipeline::release_a_pipelineid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpUpdateAsyncImagePipeline.a_pipelineId)
-  if (!_internal_has_a_pipelineid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_pipelineid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_pipelineid_.IsDefault()) {
-    _impl_.a_pipelineid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_pipelineid_.Release();
 }
 inline void OpUpdateAsyncImagePipeline::set_allocated_a_pipelineid(std::string* a_pipelineid) {
   if (a_pipelineid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_pipelineid_.SetAllocated(a_pipelineid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6355,17 +6146,9 @@ inline void OpUpdateAsyncImagePipeline::set_allocated_a_pipelineid(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpUpdateAsyncImagePipeline.a_pipelineId)
 }
 
-// required bytes a_scBounds = 2;
-inline bool OpUpdateAsyncImagePipeline::_internal_has_a_scbounds() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool OpUpdateAsyncImagePipeline::has_a_scbounds() const {
-  return _internal_has_a_scbounds();
-}
+// bytes a_scBounds = 2;
 inline void OpUpdateAsyncImagePipeline::clear_a_scbounds() {
   _impl_.a_scbounds_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& OpUpdateAsyncImagePipeline::a_scbounds() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpUpdateAsyncImagePipeline.a_scBounds)
@@ -6374,7 +6157,7 @@ inline const std::string& OpUpdateAsyncImagePipeline::a_scbounds() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpUpdateAsyncImagePipeline::set_a_scbounds(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_scbounds_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpUpdateAsyncImagePipeline.a_scBounds)
 }
@@ -6387,32 +6170,22 @@ inline const std::string& OpUpdateAsyncImagePipeline::_internal_a_scbounds() con
   return _impl_.a_scbounds_.Get();
 }
 inline void OpUpdateAsyncImagePipeline::_internal_set_a_scbounds(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_scbounds_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpUpdateAsyncImagePipeline::_internal_mutable_a_scbounds() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_scbounds_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpUpdateAsyncImagePipeline::release_a_scbounds() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpUpdateAsyncImagePipeline.a_scBounds)
-  if (!_internal_has_a_scbounds()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_scbounds_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_scbounds_.IsDefault()) {
-    _impl_.a_scbounds_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_scbounds_.Release();
 }
 inline void OpUpdateAsyncImagePipeline::set_allocated_a_scbounds(std::string* a_scbounds) {
   if (a_scbounds != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_scbounds_.SetAllocated(a_scbounds, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6423,17 +6196,9 @@ inline void OpUpdateAsyncImagePipeline::set_allocated_a_scbounds(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpUpdateAsyncImagePipeline.a_scBounds)
 }
 
-// required bytes a_rotation = 3;
-inline bool OpUpdateAsyncImagePipeline::_internal_has_a_rotation() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool OpUpdateAsyncImagePipeline::has_a_rotation() const {
-  return _internal_has_a_rotation();
-}
+// bytes a_rotation = 3;
 inline void OpUpdateAsyncImagePipeline::clear_a_rotation() {
   _impl_.a_rotation_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& OpUpdateAsyncImagePipeline::a_rotation() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpUpdateAsyncImagePipeline.a_rotation)
@@ -6442,7 +6207,7 @@ inline const std::string& OpUpdateAsyncImagePipeline::a_rotation() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpUpdateAsyncImagePipeline::set_a_rotation(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_rotation_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpUpdateAsyncImagePipeline.a_rotation)
 }
@@ -6455,32 +6220,22 @@ inline const std::string& OpUpdateAsyncImagePipeline::_internal_a_rotation() con
   return _impl_.a_rotation_.Get();
 }
 inline void OpUpdateAsyncImagePipeline::_internal_set_a_rotation(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_rotation_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpUpdateAsyncImagePipeline::_internal_mutable_a_rotation() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_rotation_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpUpdateAsyncImagePipeline::release_a_rotation() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpUpdateAsyncImagePipeline.a_rotation)
-  if (!_internal_has_a_rotation()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_rotation_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_rotation_.IsDefault()) {
-    _impl_.a_rotation_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_rotation_.Release();
 }
 inline void OpUpdateAsyncImagePipeline::set_allocated_a_rotation(std::string* a_rotation) {
   if (a_rotation != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_rotation_.SetAllocated(a_rotation, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6491,17 +6246,9 @@ inline void OpUpdateAsyncImagePipeline::set_allocated_a_rotation(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpUpdateAsyncImagePipeline.a_rotation)
 }
 
-// required bytes a_filter = 4;
-inline bool OpUpdateAsyncImagePipeline::_internal_has_a_filter() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool OpUpdateAsyncImagePipeline::has_a_filter() const {
-  return _internal_has_a_filter();
-}
+// bytes a_filter = 4;
 inline void OpUpdateAsyncImagePipeline::clear_a_filter() {
   _impl_.a_filter_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& OpUpdateAsyncImagePipeline::a_filter() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpUpdateAsyncImagePipeline.a_filter)
@@ -6510,7 +6257,7 @@ inline const std::string& OpUpdateAsyncImagePipeline::a_filter() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpUpdateAsyncImagePipeline::set_a_filter(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000008u;
+ 
  _impl_.a_filter_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpUpdateAsyncImagePipeline.a_filter)
 }
@@ -6523,32 +6270,22 @@ inline const std::string& OpUpdateAsyncImagePipeline::_internal_a_filter() const
   return _impl_.a_filter_.Get();
 }
 inline void OpUpdateAsyncImagePipeline::_internal_set_a_filter(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_filter_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpUpdateAsyncImagePipeline::_internal_mutable_a_filter() {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   return _impl_.a_filter_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpUpdateAsyncImagePipeline::release_a_filter() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpUpdateAsyncImagePipeline.a_filter)
-  if (!_internal_has_a_filter()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.a_filter_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_filter_.IsDefault()) {
-    _impl_.a_filter_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_filter_.Release();
 }
 inline void OpUpdateAsyncImagePipeline::set_allocated_a_filter(std::string* a_filter) {
   if (a_filter != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    
   }
   _impl_.a_filter_.SetAllocated(a_filter, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6559,17 +6296,9 @@ inline void OpUpdateAsyncImagePipeline::set_allocated_a_filter(std::string* a_fi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpUpdateAsyncImagePipeline.a_filter)
 }
 
-// required bytes a_mixBlendMode = 5;
-inline bool OpUpdateAsyncImagePipeline::_internal_has_a_mixblendmode() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool OpUpdateAsyncImagePipeline::has_a_mixblendmode() const {
-  return _internal_has_a_mixblendmode();
-}
+// bytes a_mixBlendMode = 5;
 inline void OpUpdateAsyncImagePipeline::clear_a_mixblendmode() {
   _impl_.a_mixblendmode_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline const std::string& OpUpdateAsyncImagePipeline::a_mixblendmode() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpUpdateAsyncImagePipeline.a_mixBlendMode)
@@ -6578,7 +6307,7 @@ inline const std::string& OpUpdateAsyncImagePipeline::a_mixblendmode() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpUpdateAsyncImagePipeline::set_a_mixblendmode(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000010u;
+ 
  _impl_.a_mixblendmode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpUpdateAsyncImagePipeline.a_mixBlendMode)
 }
@@ -6591,32 +6320,22 @@ inline const std::string& OpUpdateAsyncImagePipeline::_internal_a_mixblendmode()
   return _impl_.a_mixblendmode_.Get();
 }
 inline void OpUpdateAsyncImagePipeline::_internal_set_a_mixblendmode(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_mixblendmode_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpUpdateAsyncImagePipeline::_internal_mutable_a_mixblendmode() {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   return _impl_.a_mixblendmode_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpUpdateAsyncImagePipeline::release_a_mixblendmode() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpUpdateAsyncImagePipeline.a_mixBlendMode)
-  if (!_internal_has_a_mixblendmode()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000010u;
-  auto* p = _impl_.a_mixblendmode_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_mixblendmode_.IsDefault()) {
-    _impl_.a_mixblendmode_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_mixblendmode_.Release();
 }
 inline void OpUpdateAsyncImagePipeline::set_allocated_a_mixblendmode(std::string* a_mixblendmode) {
   if (a_mixblendmode != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000010u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000010u;
+    
   }
   _impl_.a_mixblendmode_.SetAllocated(a_mixblendmode, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6631,17 +6350,9 @@ inline void OpUpdateAsyncImagePipeline::set_allocated_a_mixblendmode(std::string
 
 // OpUpdatedAsyncImagePipeline
 
-// required bytes a_pipelineId = 1;
-inline bool OpUpdatedAsyncImagePipeline::_internal_has_a_pipelineid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpUpdatedAsyncImagePipeline::has_a_pipelineid() const {
-  return _internal_has_a_pipelineid();
-}
+// bytes a_pipelineId = 1;
 inline void OpUpdatedAsyncImagePipeline::clear_a_pipelineid() {
   _impl_.a_pipelineid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpUpdatedAsyncImagePipeline::a_pipelineid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpUpdatedAsyncImagePipeline.a_pipelineId)
@@ -6650,7 +6361,7 @@ inline const std::string& OpUpdatedAsyncImagePipeline::a_pipelineid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpUpdatedAsyncImagePipeline::set_a_pipelineid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_pipelineid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpUpdatedAsyncImagePipeline.a_pipelineId)
 }
@@ -6663,32 +6374,22 @@ inline const std::string& OpUpdatedAsyncImagePipeline::_internal_a_pipelineid() 
   return _impl_.a_pipelineid_.Get();
 }
 inline void OpUpdatedAsyncImagePipeline::_internal_set_a_pipelineid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_pipelineid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpUpdatedAsyncImagePipeline::_internal_mutable_a_pipelineid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_pipelineid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpUpdatedAsyncImagePipeline::release_a_pipelineid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpUpdatedAsyncImagePipeline.a_pipelineId)
-  if (!_internal_has_a_pipelineid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_pipelineid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_pipelineid_.IsDefault()) {
-    _impl_.a_pipelineid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_pipelineid_.Release();
 }
 inline void OpUpdatedAsyncImagePipeline::set_allocated_a_pipelineid(std::string* a_pipelineid) {
   if (a_pipelineid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_pipelineid_.SetAllocated(a_pipelineid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7226,17 +6927,9 @@ inline WebRenderParentCommand::ContentCase WebRenderParentCommand::content_case(
 
 // OffsetRange
 
-// required uint32 a_source = 1;
-inline bool OffsetRange::_internal_has_a_source() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OffsetRange::has_a_source() const {
-  return _internal_has_a_source();
-}
+// uint32 a_source = 1;
 inline void OffsetRange::clear_a_source() {
   _impl_.a_source_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t OffsetRange::_internal_a_source() const {
   return _impl_.a_source_;
@@ -7246,7 +6939,7 @@ inline uint32_t OffsetRange::a_source() const {
   return _internal_a_source();
 }
 inline void OffsetRange::_internal_set_a_source(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_source_ = value;
 }
 inline void OffsetRange::set_a_source(uint32_t value) {
@@ -7254,17 +6947,9 @@ inline void OffsetRange::set_a_source(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OffsetRange.a_source)
 }
 
-// required uint32 a_start = 2;
-inline bool OffsetRange::_internal_has_a_start() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool OffsetRange::has_a_start() const {
-  return _internal_has_a_start();
-}
+// uint32 a_start = 2;
 inline void OffsetRange::clear_a_start() {
   _impl_.a_start_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t OffsetRange::_internal_a_start() const {
   return _impl_.a_start_;
@@ -7274,7 +6959,7 @@ inline uint32_t OffsetRange::a_start() const {
   return _internal_a_start();
 }
 inline void OffsetRange::_internal_set_a_start(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_start_ = value;
 }
 inline void OffsetRange::set_a_start(uint32_t value) {
@@ -7282,17 +6967,9 @@ inline void OffsetRange::set_a_start(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OffsetRange.a_start)
 }
 
-// required uint32 a_length = 3;
-inline bool OffsetRange::_internal_has_a_length() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool OffsetRange::has_a_length() const {
-  return _internal_has_a_length();
-}
+// uint32 a_length = 3;
 inline void OffsetRange::clear_a_length() {
   _impl_.a_length_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t OffsetRange::_internal_a_length() const {
   return _impl_.a_length_;
@@ -7302,7 +6979,7 @@ inline uint32_t OffsetRange::a_length() const {
   return _internal_a_length();
 }
 inline void OffsetRange::_internal_set_a_length(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_length_ = value;
 }
 inline void OffsetRange::set_a_length(uint32_t value) {
@@ -7314,17 +6991,9 @@ inline void OffsetRange::set_a_length(uint32_t value) {
 
 // OpAddImage
 
-// required bytes a_descriptor = 1;
-inline bool OpAddImage::_internal_has_a_descriptor() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpAddImage::has_a_descriptor() const {
-  return _internal_has_a_descriptor();
-}
+// bytes a_descriptor = 1;
 inline void OpAddImage::clear_a_descriptor() {
   _impl_.a_descriptor_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpAddImage::a_descriptor() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpAddImage.a_descriptor)
@@ -7333,7 +7002,7 @@ inline const std::string& OpAddImage::a_descriptor() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpAddImage::set_a_descriptor(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_descriptor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpAddImage.a_descriptor)
 }
@@ -7346,32 +7015,22 @@ inline const std::string& OpAddImage::_internal_a_descriptor() const {
   return _impl_.a_descriptor_.Get();
 }
 inline void OpAddImage::_internal_set_a_descriptor(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_descriptor_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpAddImage::_internal_mutable_a_descriptor() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_descriptor_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpAddImage::release_a_descriptor() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddImage.a_descriptor)
-  if (!_internal_has_a_descriptor()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_descriptor_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_descriptor_.IsDefault()) {
-    _impl_.a_descriptor_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_descriptor_.Release();
 }
 inline void OpAddImage::set_allocated_a_descriptor(std::string* a_descriptor) {
   if (a_descriptor != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_descriptor_.SetAllocated(a_descriptor, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7382,18 +7041,18 @@ inline void OpAddImage::set_allocated_a_descriptor(std::string* a_descriptor) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpAddImage.a_descriptor)
 }
 
-// required .protobuf.mozilla.layers.OffsetRange a_bytes = 2;
+// .protobuf.mozilla.layers.OffsetRange a_bytes = 2;
 inline bool OpAddImage::_internal_has_a_bytes() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_bytes_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_bytes_ != nullptr;
 }
 inline bool OpAddImage::has_a_bytes() const {
   return _internal_has_a_bytes();
 }
 inline void OpAddImage::clear_a_bytes() {
-  if (_impl_.a_bytes_ != nullptr) _impl_.a_bytes_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_bytes_ != nullptr) {
+    delete _impl_.a_bytes_;
+  }
+  _impl_.a_bytes_ = nullptr;
 }
 inline const ::protobuf::mozilla::layers::OffsetRange& OpAddImage::_internal_a_bytes() const {
   const ::protobuf::mozilla::layers::OffsetRange* p = _impl_.a_bytes_;
@@ -7411,14 +7070,14 @@ inline void OpAddImage::unsafe_arena_set_allocated_a_bytes(
   }
   _impl_.a_bytes_ = a_bytes;
   if (a_bytes) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.layers.OpAddImage.a_bytes)
 }
 inline ::protobuf::mozilla::layers::OffsetRange* OpAddImage::release_a_bytes() {
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  
   ::protobuf::mozilla::layers::OffsetRange* temp = _impl_.a_bytes_;
   _impl_.a_bytes_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -7434,13 +7093,13 @@ inline ::protobuf::mozilla::layers::OffsetRange* OpAddImage::release_a_bytes() {
 }
 inline ::protobuf::mozilla::layers::OffsetRange* OpAddImage::unsafe_arena_release_a_bytes() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddImage.a_bytes)
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  
   ::protobuf::mozilla::layers::OffsetRange* temp = _impl_.a_bytes_;
   _impl_.a_bytes_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::layers::OffsetRange* OpAddImage::_internal_mutable_a_bytes() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   if (_impl_.a_bytes_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::layers::OffsetRange>(GetArenaForAllocation());
     _impl_.a_bytes_ = p;
@@ -7464,25 +7123,17 @@ inline void OpAddImage::set_allocated_a_bytes(::protobuf::mozilla::layers::Offse
       a_bytes = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_bytes, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_bytes_ = a_bytes;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpAddImage.a_bytes)
 }
 
-// required uint32 a_tiling = 3;
-inline bool OpAddImage::_internal_has_a_tiling() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool OpAddImage::has_a_tiling() const {
-  return _internal_has_a_tiling();
-}
+// uint32 a_tiling = 3;
 inline void OpAddImage::clear_a_tiling() {
   _impl_.a_tiling_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t OpAddImage::_internal_a_tiling() const {
   return _impl_.a_tiling_;
@@ -7492,7 +7143,7 @@ inline uint32_t OpAddImage::a_tiling() const {
   return _internal_a_tiling();
 }
 inline void OpAddImage::_internal_set_a_tiling(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_tiling_ = value;
 }
 inline void OpAddImage::set_a_tiling(uint32_t value) {
@@ -7500,17 +7151,9 @@ inline void OpAddImage::set_a_tiling(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpAddImage.a_tiling)
 }
 
-// required bytes a_key = 4;
-inline bool OpAddImage::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool OpAddImage::has_a_key() const {
-  return _internal_has_a_key();
-}
+// bytes a_key = 4;
 inline void OpAddImage::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& OpAddImage::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpAddImage.a_key)
@@ -7519,7 +7162,7 @@ inline const std::string& OpAddImage::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpAddImage::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpAddImage.a_key)
 }
@@ -7532,32 +7175,22 @@ inline const std::string& OpAddImage::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void OpAddImage::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpAddImage::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpAddImage::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddImage.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void OpAddImage::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7572,17 +7205,9 @@ inline void OpAddImage::set_allocated_a_key(std::string* a_key) {
 
 // OpAddBlobImage
 
-// required bytes a_descriptor = 1;
-inline bool OpAddBlobImage::_internal_has_a_descriptor() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpAddBlobImage::has_a_descriptor() const {
-  return _internal_has_a_descriptor();
-}
+// bytes a_descriptor = 1;
 inline void OpAddBlobImage::clear_a_descriptor() {
   _impl_.a_descriptor_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpAddBlobImage::a_descriptor() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpAddBlobImage.a_descriptor)
@@ -7591,7 +7216,7 @@ inline const std::string& OpAddBlobImage::a_descriptor() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpAddBlobImage::set_a_descriptor(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_descriptor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpAddBlobImage.a_descriptor)
 }
@@ -7604,32 +7229,22 @@ inline const std::string& OpAddBlobImage::_internal_a_descriptor() const {
   return _impl_.a_descriptor_.Get();
 }
 inline void OpAddBlobImage::_internal_set_a_descriptor(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_descriptor_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpAddBlobImage::_internal_mutable_a_descriptor() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_descriptor_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpAddBlobImage::release_a_descriptor() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddBlobImage.a_descriptor)
-  if (!_internal_has_a_descriptor()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_descriptor_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_descriptor_.IsDefault()) {
-    _impl_.a_descriptor_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_descriptor_.Release();
 }
 inline void OpAddBlobImage::set_allocated_a_descriptor(std::string* a_descriptor) {
   if (a_descriptor != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_descriptor_.SetAllocated(a_descriptor, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7640,18 +7255,18 @@ inline void OpAddBlobImage::set_allocated_a_descriptor(std::string* a_descriptor
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpAddBlobImage.a_descriptor)
 }
 
-// required .protobuf.mozilla.layers.OffsetRange a_bytes = 2;
+// .protobuf.mozilla.layers.OffsetRange a_bytes = 2;
 inline bool OpAddBlobImage::_internal_has_a_bytes() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_bytes_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_bytes_ != nullptr;
 }
 inline bool OpAddBlobImage::has_a_bytes() const {
   return _internal_has_a_bytes();
 }
 inline void OpAddBlobImage::clear_a_bytes() {
-  if (_impl_.a_bytes_ != nullptr) _impl_.a_bytes_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_bytes_ != nullptr) {
+    delete _impl_.a_bytes_;
+  }
+  _impl_.a_bytes_ = nullptr;
 }
 inline const ::protobuf::mozilla::layers::OffsetRange& OpAddBlobImage::_internal_a_bytes() const {
   const ::protobuf::mozilla::layers::OffsetRange* p = _impl_.a_bytes_;
@@ -7669,14 +7284,14 @@ inline void OpAddBlobImage::unsafe_arena_set_allocated_a_bytes(
   }
   _impl_.a_bytes_ = a_bytes;
   if (a_bytes) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.layers.OpAddBlobImage.a_bytes)
 }
 inline ::protobuf::mozilla::layers::OffsetRange* OpAddBlobImage::release_a_bytes() {
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  
   ::protobuf::mozilla::layers::OffsetRange* temp = _impl_.a_bytes_;
   _impl_.a_bytes_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -7692,13 +7307,13 @@ inline ::protobuf::mozilla::layers::OffsetRange* OpAddBlobImage::release_a_bytes
 }
 inline ::protobuf::mozilla::layers::OffsetRange* OpAddBlobImage::unsafe_arena_release_a_bytes() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddBlobImage.a_bytes)
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  
   ::protobuf::mozilla::layers::OffsetRange* temp = _impl_.a_bytes_;
   _impl_.a_bytes_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::layers::OffsetRange* OpAddBlobImage::_internal_mutable_a_bytes() {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   if (_impl_.a_bytes_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::layers::OffsetRange>(GetArenaForAllocation());
     _impl_.a_bytes_ = p;
@@ -7722,25 +7337,17 @@ inline void OpAddBlobImage::set_allocated_a_bytes(::protobuf::mozilla::layers::O
       a_bytes = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_bytes, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    
   }
   _impl_.a_bytes_ = a_bytes;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpAddBlobImage.a_bytes)
 }
 
-// required bytes a_visibleRect = 3;
-inline bool OpAddBlobImage::_internal_has_a_visiblerect() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool OpAddBlobImage::has_a_visiblerect() const {
-  return _internal_has_a_visiblerect();
-}
+// bytes a_visibleRect = 3;
 inline void OpAddBlobImage::clear_a_visiblerect() {
   _impl_.a_visiblerect_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& OpAddBlobImage::a_visiblerect() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpAddBlobImage.a_visibleRect)
@@ -7749,7 +7356,7 @@ inline const std::string& OpAddBlobImage::a_visiblerect() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpAddBlobImage::set_a_visiblerect(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_visiblerect_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpAddBlobImage.a_visibleRect)
 }
@@ -7762,32 +7369,22 @@ inline const std::string& OpAddBlobImage::_internal_a_visiblerect() const {
   return _impl_.a_visiblerect_.Get();
 }
 inline void OpAddBlobImage::_internal_set_a_visiblerect(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_visiblerect_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpAddBlobImage::_internal_mutable_a_visiblerect() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_visiblerect_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpAddBlobImage::release_a_visiblerect() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddBlobImage.a_visibleRect)
-  if (!_internal_has_a_visiblerect()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_visiblerect_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_visiblerect_.IsDefault()) {
-    _impl_.a_visiblerect_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_visiblerect_.Release();
 }
 inline void OpAddBlobImage::set_allocated_a_visiblerect(std::string* a_visiblerect) {
   if (a_visiblerect != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_visiblerect_.SetAllocated(a_visiblerect, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7798,17 +7395,9 @@ inline void OpAddBlobImage::set_allocated_a_visiblerect(std::string* a_visiblere
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpAddBlobImage.a_visibleRect)
 }
 
-// required uint32 a_tiling = 4;
-inline bool OpAddBlobImage::_internal_has_a_tiling() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool OpAddBlobImage::has_a_tiling() const {
-  return _internal_has_a_tiling();
-}
+// uint32 a_tiling = 4;
 inline void OpAddBlobImage::clear_a_tiling() {
   _impl_.a_tiling_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline uint32_t OpAddBlobImage::_internal_a_tiling() const {
   return _impl_.a_tiling_;
@@ -7818,7 +7407,7 @@ inline uint32_t OpAddBlobImage::a_tiling() const {
   return _internal_a_tiling();
 }
 inline void OpAddBlobImage::_internal_set_a_tiling(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_tiling_ = value;
 }
 inline void OpAddBlobImage::set_a_tiling(uint32_t value) {
@@ -7826,17 +7415,9 @@ inline void OpAddBlobImage::set_a_tiling(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpAddBlobImage.a_tiling)
 }
 
-// required bytes a_key = 5;
-inline bool OpAddBlobImage::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool OpAddBlobImage::has_a_key() const {
-  return _internal_has_a_key();
-}
+// bytes a_key = 5;
 inline void OpAddBlobImage::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& OpAddBlobImage::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpAddBlobImage.a_key)
@@ -7845,7 +7426,7 @@ inline const std::string& OpAddBlobImage::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpAddBlobImage::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpAddBlobImage.a_key)
 }
@@ -7858,32 +7439,22 @@ inline const std::string& OpAddBlobImage::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void OpAddBlobImage::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpAddBlobImage::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpAddBlobImage::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddBlobImage.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void OpAddBlobImage::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7898,17 +7469,9 @@ inline void OpAddBlobImage::set_allocated_a_key(std::string* a_key) {
 
 // OpAddSnapshotImage
 
-// required bytes a_key = 1;
-inline bool OpAddSnapshotImage::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpAddSnapshotImage::has_a_key() const {
-  return _internal_has_a_key();
-}
+// bytes a_key = 1;
 inline void OpAddSnapshotImage::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpAddSnapshotImage::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpAddSnapshotImage.a_key)
@@ -7917,7 +7480,7 @@ inline const std::string& OpAddSnapshotImage::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpAddSnapshotImage::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpAddSnapshotImage.a_key)
 }
@@ -7930,32 +7493,22 @@ inline const std::string& OpAddSnapshotImage::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void OpAddSnapshotImage::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpAddSnapshotImage::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpAddSnapshotImage::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddSnapshotImage.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void OpAddSnapshotImage::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7970,17 +7523,9 @@ inline void OpAddSnapshotImage::set_allocated_a_key(std::string* a_key) {
 
 // OpUpdateImage
 
-// required bytes a_descriptor = 1;
-inline bool OpUpdateImage::_internal_has_a_descriptor() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpUpdateImage::has_a_descriptor() const {
-  return _internal_has_a_descriptor();
-}
+// bytes a_descriptor = 1;
 inline void OpUpdateImage::clear_a_descriptor() {
   _impl_.a_descriptor_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpUpdateImage::a_descriptor() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpUpdateImage.a_descriptor)
@@ -7989,7 +7534,7 @@ inline const std::string& OpUpdateImage::a_descriptor() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpUpdateImage::set_a_descriptor(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_descriptor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpUpdateImage.a_descriptor)
 }
@@ -8002,32 +7547,22 @@ inline const std::string& OpUpdateImage::_internal_a_descriptor() const {
   return _impl_.a_descriptor_.Get();
 }
 inline void OpUpdateImage::_internal_set_a_descriptor(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_descriptor_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpUpdateImage::_internal_mutable_a_descriptor() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_descriptor_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpUpdateImage::release_a_descriptor() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpUpdateImage.a_descriptor)
-  if (!_internal_has_a_descriptor()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_descriptor_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_descriptor_.IsDefault()) {
-    _impl_.a_descriptor_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_descriptor_.Release();
 }
 inline void OpUpdateImage::set_allocated_a_descriptor(std::string* a_descriptor) {
   if (a_descriptor != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_descriptor_.SetAllocated(a_descriptor, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8038,18 +7573,18 @@ inline void OpUpdateImage::set_allocated_a_descriptor(std::string* a_descriptor)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpUpdateImage.a_descriptor)
 }
 
-// required .protobuf.mozilla.layers.OffsetRange a_bytes = 2;
+// .protobuf.mozilla.layers.OffsetRange a_bytes = 2;
 inline bool OpUpdateImage::_internal_has_a_bytes() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_bytes_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_bytes_ != nullptr;
 }
 inline bool OpUpdateImage::has_a_bytes() const {
   return _internal_has_a_bytes();
 }
 inline void OpUpdateImage::clear_a_bytes() {
-  if (_impl_.a_bytes_ != nullptr) _impl_.a_bytes_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_bytes_ != nullptr) {
+    delete _impl_.a_bytes_;
+  }
+  _impl_.a_bytes_ = nullptr;
 }
 inline const ::protobuf::mozilla::layers::OffsetRange& OpUpdateImage::_internal_a_bytes() const {
   const ::protobuf::mozilla::layers::OffsetRange* p = _impl_.a_bytes_;
@@ -8067,14 +7602,14 @@ inline void OpUpdateImage::unsafe_arena_set_allocated_a_bytes(
   }
   _impl_.a_bytes_ = a_bytes;
   if (a_bytes) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.layers.OpUpdateImage.a_bytes)
 }
 inline ::protobuf::mozilla::layers::OffsetRange* OpUpdateImage::release_a_bytes() {
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  
   ::protobuf::mozilla::layers::OffsetRange* temp = _impl_.a_bytes_;
   _impl_.a_bytes_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -8090,13 +7625,13 @@ inline ::protobuf::mozilla::layers::OffsetRange* OpUpdateImage::release_a_bytes(
 }
 inline ::protobuf::mozilla::layers::OffsetRange* OpUpdateImage::unsafe_arena_release_a_bytes() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpUpdateImage.a_bytes)
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  
   ::protobuf::mozilla::layers::OffsetRange* temp = _impl_.a_bytes_;
   _impl_.a_bytes_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::layers::OffsetRange* OpUpdateImage::_internal_mutable_a_bytes() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   if (_impl_.a_bytes_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::layers::OffsetRange>(GetArenaForAllocation());
     _impl_.a_bytes_ = p;
@@ -8120,25 +7655,17 @@ inline void OpUpdateImage::set_allocated_a_bytes(::protobuf::mozilla::layers::Of
       a_bytes = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_bytes, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_bytes_ = a_bytes;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpUpdateImage.a_bytes)
 }
 
-// required bytes a_key = 3;
-inline bool OpUpdateImage::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool OpUpdateImage::has_a_key() const {
-  return _internal_has_a_key();
-}
+// bytes a_key = 3;
 inline void OpUpdateImage::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& OpUpdateImage::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpUpdateImage.a_key)
@@ -8147,7 +7674,7 @@ inline const std::string& OpUpdateImage::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpUpdateImage::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpUpdateImage.a_key)
 }
@@ -8160,32 +7687,22 @@ inline const std::string& OpUpdateImage::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void OpUpdateImage::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpUpdateImage::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpUpdateImage::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpUpdateImage.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void OpUpdateImage::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8200,17 +7717,9 @@ inline void OpUpdateImage::set_allocated_a_key(std::string* a_key) {
 
 // OpUpdateBlobImage
 
-// required bytes a_descriptor = 1;
-inline bool OpUpdateBlobImage::_internal_has_a_descriptor() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpUpdateBlobImage::has_a_descriptor() const {
-  return _internal_has_a_descriptor();
-}
+// bytes a_descriptor = 1;
 inline void OpUpdateBlobImage::clear_a_descriptor() {
   _impl_.a_descriptor_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpUpdateBlobImage::a_descriptor() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpUpdateBlobImage.a_descriptor)
@@ -8219,7 +7728,7 @@ inline const std::string& OpUpdateBlobImage::a_descriptor() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpUpdateBlobImage::set_a_descriptor(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_descriptor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpUpdateBlobImage.a_descriptor)
 }
@@ -8232,32 +7741,22 @@ inline const std::string& OpUpdateBlobImage::_internal_a_descriptor() const {
   return _impl_.a_descriptor_.Get();
 }
 inline void OpUpdateBlobImage::_internal_set_a_descriptor(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_descriptor_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpUpdateBlobImage::_internal_mutable_a_descriptor() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_descriptor_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpUpdateBlobImage::release_a_descriptor() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpUpdateBlobImage.a_descriptor)
-  if (!_internal_has_a_descriptor()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_descriptor_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_descriptor_.IsDefault()) {
-    _impl_.a_descriptor_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_descriptor_.Release();
 }
 inline void OpUpdateBlobImage::set_allocated_a_descriptor(std::string* a_descriptor) {
   if (a_descriptor != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_descriptor_.SetAllocated(a_descriptor, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8268,18 +7767,18 @@ inline void OpUpdateBlobImage::set_allocated_a_descriptor(std::string* a_descrip
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpUpdateBlobImage.a_descriptor)
 }
 
-// required .protobuf.mozilla.layers.OffsetRange a_bytes = 2;
+// .protobuf.mozilla.layers.OffsetRange a_bytes = 2;
 inline bool OpUpdateBlobImage::_internal_has_a_bytes() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_bytes_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_bytes_ != nullptr;
 }
 inline bool OpUpdateBlobImage::has_a_bytes() const {
   return _internal_has_a_bytes();
 }
 inline void OpUpdateBlobImage::clear_a_bytes() {
-  if (_impl_.a_bytes_ != nullptr) _impl_.a_bytes_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_bytes_ != nullptr) {
+    delete _impl_.a_bytes_;
+  }
+  _impl_.a_bytes_ = nullptr;
 }
 inline const ::protobuf::mozilla::layers::OffsetRange& OpUpdateBlobImage::_internal_a_bytes() const {
   const ::protobuf::mozilla::layers::OffsetRange* p = _impl_.a_bytes_;
@@ -8297,14 +7796,14 @@ inline void OpUpdateBlobImage::unsafe_arena_set_allocated_a_bytes(
   }
   _impl_.a_bytes_ = a_bytes;
   if (a_bytes) {
-    _impl_._has_bits_[0] |= 0x00000010u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000010u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.layers.OpUpdateBlobImage.a_bytes)
 }
 inline ::protobuf::mozilla::layers::OffsetRange* OpUpdateBlobImage::release_a_bytes() {
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  
   ::protobuf::mozilla::layers::OffsetRange* temp = _impl_.a_bytes_;
   _impl_.a_bytes_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -8320,13 +7819,13 @@ inline ::protobuf::mozilla::layers::OffsetRange* OpUpdateBlobImage::release_a_by
 }
 inline ::protobuf::mozilla::layers::OffsetRange* OpUpdateBlobImage::unsafe_arena_release_a_bytes() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpUpdateBlobImage.a_bytes)
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  
   ::protobuf::mozilla::layers::OffsetRange* temp = _impl_.a_bytes_;
   _impl_.a_bytes_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::layers::OffsetRange* OpUpdateBlobImage::_internal_mutable_a_bytes() {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   if (_impl_.a_bytes_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::layers::OffsetRange>(GetArenaForAllocation());
     _impl_.a_bytes_ = p;
@@ -8350,25 +7849,17 @@ inline void OpUpdateBlobImage::set_allocated_a_bytes(::protobuf::mozilla::layers
       a_bytes = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_bytes, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000010u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000010u;
+    
   }
   _impl_.a_bytes_ = a_bytes;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpUpdateBlobImage.a_bytes)
 }
 
-// required bytes a_key = 3;
-inline bool OpUpdateBlobImage::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool OpUpdateBlobImage::has_a_key() const {
-  return _internal_has_a_key();
-}
+// bytes a_key = 3;
 inline void OpUpdateBlobImage::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& OpUpdateBlobImage::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpUpdateBlobImage.a_key)
@@ -8377,7 +7868,7 @@ inline const std::string& OpUpdateBlobImage::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpUpdateBlobImage::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpUpdateBlobImage.a_key)
 }
@@ -8390,32 +7881,22 @@ inline const std::string& OpUpdateBlobImage::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void OpUpdateBlobImage::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpUpdateBlobImage::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpUpdateBlobImage::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpUpdateBlobImage.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void OpUpdateBlobImage::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8426,17 +7907,9 @@ inline void OpUpdateBlobImage::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpUpdateBlobImage.a_key)
 }
 
-// required bytes a_visibleRect = 4;
-inline bool OpUpdateBlobImage::_internal_has_a_visiblerect() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool OpUpdateBlobImage::has_a_visiblerect() const {
-  return _internal_has_a_visiblerect();
-}
+// bytes a_visibleRect = 4;
 inline void OpUpdateBlobImage::clear_a_visiblerect() {
   _impl_.a_visiblerect_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& OpUpdateBlobImage::a_visiblerect() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpUpdateBlobImage.a_visibleRect)
@@ -8445,7 +7918,7 @@ inline const std::string& OpUpdateBlobImage::a_visiblerect() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpUpdateBlobImage::set_a_visiblerect(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_visiblerect_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpUpdateBlobImage.a_visibleRect)
 }
@@ -8458,32 +7931,22 @@ inline const std::string& OpUpdateBlobImage::_internal_a_visiblerect() const {
   return _impl_.a_visiblerect_.Get();
 }
 inline void OpUpdateBlobImage::_internal_set_a_visiblerect(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_visiblerect_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpUpdateBlobImage::_internal_mutable_a_visiblerect() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_visiblerect_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpUpdateBlobImage::release_a_visiblerect() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpUpdateBlobImage.a_visibleRect)
-  if (!_internal_has_a_visiblerect()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_visiblerect_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_visiblerect_.IsDefault()) {
-    _impl_.a_visiblerect_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_visiblerect_.Release();
 }
 inline void OpUpdateBlobImage::set_allocated_a_visiblerect(std::string* a_visiblerect) {
   if (a_visiblerect != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_visiblerect_.SetAllocated(a_visiblerect, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8494,17 +7957,9 @@ inline void OpUpdateBlobImage::set_allocated_a_visiblerect(std::string* a_visibl
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpUpdateBlobImage.a_visibleRect)
 }
 
-// required bytes a_dirtyRect = 5;
-inline bool OpUpdateBlobImage::_internal_has_a_dirtyrect() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool OpUpdateBlobImage::has_a_dirtyrect() const {
-  return _internal_has_a_dirtyrect();
-}
+// bytes a_dirtyRect = 5;
 inline void OpUpdateBlobImage::clear_a_dirtyrect() {
   _impl_.a_dirtyrect_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& OpUpdateBlobImage::a_dirtyrect() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpUpdateBlobImage.a_dirtyRect)
@@ -8513,7 +7968,7 @@ inline const std::string& OpUpdateBlobImage::a_dirtyrect() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpUpdateBlobImage::set_a_dirtyrect(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000008u;
+ 
  _impl_.a_dirtyrect_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpUpdateBlobImage.a_dirtyRect)
 }
@@ -8526,32 +7981,22 @@ inline const std::string& OpUpdateBlobImage::_internal_a_dirtyrect() const {
   return _impl_.a_dirtyrect_.Get();
 }
 inline void OpUpdateBlobImage::_internal_set_a_dirtyrect(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_dirtyrect_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpUpdateBlobImage::_internal_mutable_a_dirtyrect() {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   return _impl_.a_dirtyrect_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpUpdateBlobImage::release_a_dirtyrect() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpUpdateBlobImage.a_dirtyRect)
-  if (!_internal_has_a_dirtyrect()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.a_dirtyrect_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_dirtyrect_.IsDefault()) {
-    _impl_.a_dirtyrect_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_dirtyrect_.Release();
 }
 inline void OpUpdateBlobImage::set_allocated_a_dirtyrect(std::string* a_dirtyrect) {
   if (a_dirtyrect != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    
   }
   _impl_.a_dirtyrect_.SetAllocated(a_dirtyrect, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8566,17 +8011,9 @@ inline void OpUpdateBlobImage::set_allocated_a_dirtyrect(std::string* a_dirtyrec
 
 // OpSetBlobImageVisibleArea
 
-// required bytes a_area = 1;
-inline bool OpSetBlobImageVisibleArea::_internal_has_a_area() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpSetBlobImageVisibleArea::has_a_area() const {
-  return _internal_has_a_area();
-}
+// bytes a_area = 1;
 inline void OpSetBlobImageVisibleArea::clear_a_area() {
   _impl_.a_area_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpSetBlobImageVisibleArea::a_area() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpSetBlobImageVisibleArea.a_area)
@@ -8585,7 +8022,7 @@ inline const std::string& OpSetBlobImageVisibleArea::a_area() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpSetBlobImageVisibleArea::set_a_area(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_area_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpSetBlobImageVisibleArea.a_area)
 }
@@ -8598,32 +8035,22 @@ inline const std::string& OpSetBlobImageVisibleArea::_internal_a_area() const {
   return _impl_.a_area_.Get();
 }
 inline void OpSetBlobImageVisibleArea::_internal_set_a_area(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_area_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpSetBlobImageVisibleArea::_internal_mutable_a_area() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_area_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpSetBlobImageVisibleArea::release_a_area() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpSetBlobImageVisibleArea.a_area)
-  if (!_internal_has_a_area()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_area_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_area_.IsDefault()) {
-    _impl_.a_area_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_area_.Release();
 }
 inline void OpSetBlobImageVisibleArea::set_allocated_a_area(std::string* a_area) {
   if (a_area != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_area_.SetAllocated(a_area, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8634,17 +8061,9 @@ inline void OpSetBlobImageVisibleArea::set_allocated_a_area(std::string* a_area)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpSetBlobImageVisibleArea.a_area)
 }
 
-// required bytes a_key = 2;
-inline bool OpSetBlobImageVisibleArea::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool OpSetBlobImageVisibleArea::has_a_key() const {
-  return _internal_has_a_key();
-}
+// bytes a_key = 2;
 inline void OpSetBlobImageVisibleArea::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& OpSetBlobImageVisibleArea::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpSetBlobImageVisibleArea.a_key)
@@ -8653,7 +8072,7 @@ inline const std::string& OpSetBlobImageVisibleArea::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpSetBlobImageVisibleArea::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpSetBlobImageVisibleArea.a_key)
 }
@@ -8666,32 +8085,22 @@ inline const std::string& OpSetBlobImageVisibleArea::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void OpSetBlobImageVisibleArea::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpSetBlobImageVisibleArea::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpSetBlobImageVisibleArea::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpSetBlobImageVisibleArea.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void OpSetBlobImageVisibleArea::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8706,17 +8115,9 @@ inline void OpSetBlobImageVisibleArea::set_allocated_a_key(std::string* a_key) {
 
 // OpUpdateSharedExternalImage
 
-// required bytes a_externalImageId = 1;
-inline bool OpUpdateSharedExternalImage::_internal_has_a_externalimageid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpUpdateSharedExternalImage::has_a_externalimageid() const {
-  return _internal_has_a_externalimageid();
-}
+// bytes a_externalImageId = 1;
 inline void OpUpdateSharedExternalImage::clear_a_externalimageid() {
   _impl_.a_externalimageid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpUpdateSharedExternalImage::a_externalimageid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpUpdateSharedExternalImage.a_externalImageId)
@@ -8725,7 +8126,7 @@ inline const std::string& OpUpdateSharedExternalImage::a_externalimageid() const
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpUpdateSharedExternalImage::set_a_externalimageid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_externalimageid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpUpdateSharedExternalImage.a_externalImageId)
 }
@@ -8738,32 +8139,22 @@ inline const std::string& OpUpdateSharedExternalImage::_internal_a_externalimage
   return _impl_.a_externalimageid_.Get();
 }
 inline void OpUpdateSharedExternalImage::_internal_set_a_externalimageid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_externalimageid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpUpdateSharedExternalImage::_internal_mutable_a_externalimageid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_externalimageid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpUpdateSharedExternalImage::release_a_externalimageid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpUpdateSharedExternalImage.a_externalImageId)
-  if (!_internal_has_a_externalimageid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_externalimageid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_externalimageid_.IsDefault()) {
-    _impl_.a_externalimageid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_externalimageid_.Release();
 }
 inline void OpUpdateSharedExternalImage::set_allocated_a_externalimageid(std::string* a_externalimageid) {
   if (a_externalimageid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_externalimageid_.SetAllocated(a_externalimageid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8774,17 +8165,9 @@ inline void OpUpdateSharedExternalImage::set_allocated_a_externalimageid(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpUpdateSharedExternalImage.a_externalImageId)
 }
 
-// required bytes a_key = 2;
-inline bool OpUpdateSharedExternalImage::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool OpUpdateSharedExternalImage::has_a_key() const {
-  return _internal_has_a_key();
-}
+// bytes a_key = 2;
 inline void OpUpdateSharedExternalImage::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& OpUpdateSharedExternalImage::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpUpdateSharedExternalImage.a_key)
@@ -8793,7 +8176,7 @@ inline const std::string& OpUpdateSharedExternalImage::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpUpdateSharedExternalImage::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpUpdateSharedExternalImage.a_key)
 }
@@ -8806,32 +8189,22 @@ inline const std::string& OpUpdateSharedExternalImage::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void OpUpdateSharedExternalImage::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpUpdateSharedExternalImage::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpUpdateSharedExternalImage::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpUpdateSharedExternalImage.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void OpUpdateSharedExternalImage::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8842,17 +8215,9 @@ inline void OpUpdateSharedExternalImage::set_allocated_a_key(std::string* a_key)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpUpdateSharedExternalImage.a_key)
 }
 
-// required bytes a_dirtyRect = 3;
-inline bool OpUpdateSharedExternalImage::_internal_has_a_dirtyrect() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool OpUpdateSharedExternalImage::has_a_dirtyrect() const {
-  return _internal_has_a_dirtyrect();
-}
+// bytes a_dirtyRect = 3;
 inline void OpUpdateSharedExternalImage::clear_a_dirtyrect() {
   _impl_.a_dirtyrect_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& OpUpdateSharedExternalImage::a_dirtyrect() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpUpdateSharedExternalImage.a_dirtyRect)
@@ -8861,7 +8226,7 @@ inline const std::string& OpUpdateSharedExternalImage::a_dirtyrect() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpUpdateSharedExternalImage::set_a_dirtyrect(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_dirtyrect_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpUpdateSharedExternalImage.a_dirtyRect)
 }
@@ -8874,32 +8239,22 @@ inline const std::string& OpUpdateSharedExternalImage::_internal_a_dirtyrect() c
   return _impl_.a_dirtyrect_.Get();
 }
 inline void OpUpdateSharedExternalImage::_internal_set_a_dirtyrect(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_dirtyrect_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpUpdateSharedExternalImage::_internal_mutable_a_dirtyrect() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_dirtyrect_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpUpdateSharedExternalImage::release_a_dirtyrect() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpUpdateSharedExternalImage.a_dirtyRect)
-  if (!_internal_has_a_dirtyrect()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_dirtyrect_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_dirtyrect_.IsDefault()) {
-    _impl_.a_dirtyrect_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_dirtyrect_.Release();
 }
 inline void OpUpdateSharedExternalImage::set_allocated_a_dirtyrect(std::string* a_dirtyrect) {
   if (a_dirtyrect != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_dirtyrect_.SetAllocated(a_dirtyrect, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8914,17 +8269,9 @@ inline void OpUpdateSharedExternalImage::set_allocated_a_dirtyrect(std::string* 
 
 // OpDeleteImage
 
-// required bytes a_key = 1;
-inline bool OpDeleteImage::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpDeleteImage::has_a_key() const {
-  return _internal_has_a_key();
-}
+// bytes a_key = 1;
 inline void OpDeleteImage::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpDeleteImage::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpDeleteImage.a_key)
@@ -8933,7 +8280,7 @@ inline const std::string& OpDeleteImage::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpDeleteImage::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpDeleteImage.a_key)
 }
@@ -8946,32 +8293,22 @@ inline const std::string& OpDeleteImage::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void OpDeleteImage::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpDeleteImage::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpDeleteImage::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpDeleteImage.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void OpDeleteImage::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8986,17 +8323,9 @@ inline void OpDeleteImage::set_allocated_a_key(std::string* a_key) {
 
 // OpDeleteSnapshotImage
 
-// required bytes a_key = 1;
-inline bool OpDeleteSnapshotImage::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpDeleteSnapshotImage::has_a_key() const {
-  return _internal_has_a_key();
-}
+// bytes a_key = 1;
 inline void OpDeleteSnapshotImage::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpDeleteSnapshotImage::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpDeleteSnapshotImage.a_key)
@@ -9005,7 +8334,7 @@ inline const std::string& OpDeleteSnapshotImage::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpDeleteSnapshotImage::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpDeleteSnapshotImage.a_key)
 }
@@ -9018,32 +8347,22 @@ inline const std::string& OpDeleteSnapshotImage::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void OpDeleteSnapshotImage::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpDeleteSnapshotImage::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpDeleteSnapshotImage::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpDeleteSnapshotImage.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void OpDeleteSnapshotImage::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9058,17 +8377,9 @@ inline void OpDeleteSnapshotImage::set_allocated_a_key(std::string* a_key) {
 
 // OpDeleteBlobImage
 
-// required bytes a_key = 1;
-inline bool OpDeleteBlobImage::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpDeleteBlobImage::has_a_key() const {
-  return _internal_has_a_key();
-}
+// bytes a_key = 1;
 inline void OpDeleteBlobImage::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpDeleteBlobImage::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpDeleteBlobImage.a_key)
@@ -9077,7 +8388,7 @@ inline const std::string& OpDeleteBlobImage::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpDeleteBlobImage::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpDeleteBlobImage.a_key)
 }
@@ -9090,32 +8401,22 @@ inline const std::string& OpDeleteBlobImage::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void OpDeleteBlobImage::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpDeleteBlobImage::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpDeleteBlobImage::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpDeleteBlobImage.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void OpDeleteBlobImage::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9130,18 +8431,18 @@ inline void OpDeleteBlobImage::set_allocated_a_key(std::string* a_key) {
 
 // OpAddRawFont
 
-// required .protobuf.mozilla.layers.OffsetRange a_bytes = 1;
+// .protobuf.mozilla.layers.OffsetRange a_bytes = 1;
 inline bool OpAddRawFont::_internal_has_a_bytes() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_bytes_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_bytes_ != nullptr;
 }
 inline bool OpAddRawFont::has_a_bytes() const {
   return _internal_has_a_bytes();
 }
 inline void OpAddRawFont::clear_a_bytes() {
-  if (_impl_.a_bytes_ != nullptr) _impl_.a_bytes_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_bytes_ != nullptr) {
+    delete _impl_.a_bytes_;
+  }
+  _impl_.a_bytes_ = nullptr;
 }
 inline const ::protobuf::mozilla::layers::OffsetRange& OpAddRawFont::_internal_a_bytes() const {
   const ::protobuf::mozilla::layers::OffsetRange* p = _impl_.a_bytes_;
@@ -9159,14 +8460,14 @@ inline void OpAddRawFont::unsafe_arena_set_allocated_a_bytes(
   }
   _impl_.a_bytes_ = a_bytes;
   if (a_bytes) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.layers.OpAddRawFont.a_bytes)
 }
 inline ::protobuf::mozilla::layers::OffsetRange* OpAddRawFont::release_a_bytes() {
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::layers::OffsetRange* temp = _impl_.a_bytes_;
   _impl_.a_bytes_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -9182,13 +8483,13 @@ inline ::protobuf::mozilla::layers::OffsetRange* OpAddRawFont::release_a_bytes()
 }
 inline ::protobuf::mozilla::layers::OffsetRange* OpAddRawFont::unsafe_arena_release_a_bytes() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddRawFont.a_bytes)
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::layers::OffsetRange* temp = _impl_.a_bytes_;
   _impl_.a_bytes_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::layers::OffsetRange* OpAddRawFont::_internal_mutable_a_bytes() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   if (_impl_.a_bytes_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::layers::OffsetRange>(GetArenaForAllocation());
     _impl_.a_bytes_ = p;
@@ -9212,25 +8513,17 @@ inline void OpAddRawFont::set_allocated_a_bytes(::protobuf::mozilla::layers::Off
       a_bytes = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_bytes, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_bytes_ = a_bytes;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpAddRawFont.a_bytes)
 }
 
-// required uint32 a_fontIndex = 2;
-inline bool OpAddRawFont::_internal_has_a_fontindex() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool OpAddRawFont::has_a_fontindex() const {
-  return _internal_has_a_fontindex();
-}
+// uint32 a_fontIndex = 2;
 inline void OpAddRawFont::clear_a_fontindex() {
   _impl_.a_fontindex_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t OpAddRawFont::_internal_a_fontindex() const {
   return _impl_.a_fontindex_;
@@ -9240,7 +8533,7 @@ inline uint32_t OpAddRawFont::a_fontindex() const {
   return _internal_a_fontindex();
 }
 inline void OpAddRawFont::_internal_set_a_fontindex(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_fontindex_ = value;
 }
 inline void OpAddRawFont::set_a_fontindex(uint32_t value) {
@@ -9248,17 +8541,9 @@ inline void OpAddRawFont::set_a_fontindex(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpAddRawFont.a_fontIndex)
 }
 
-// required bytes a_key = 3;
-inline bool OpAddRawFont::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpAddRawFont::has_a_key() const {
-  return _internal_has_a_key();
-}
+// bytes a_key = 3;
 inline void OpAddRawFont::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpAddRawFont::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpAddRawFont.a_key)
@@ -9267,7 +8552,7 @@ inline const std::string& OpAddRawFont::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpAddRawFont::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpAddRawFont.a_key)
 }
@@ -9280,32 +8565,22 @@ inline const std::string& OpAddRawFont::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void OpAddRawFont::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpAddRawFont::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpAddRawFont::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddRawFont.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void OpAddRawFont::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9320,18 +8595,18 @@ inline void OpAddRawFont::set_allocated_a_key(std::string* a_key) {
 
 // OpAddFontDescriptor
 
-// required .protobuf.mozilla.layers.OffsetRange a_bytes = 1;
+// .protobuf.mozilla.layers.OffsetRange a_bytes = 1;
 inline bool OpAddFontDescriptor::_internal_has_a_bytes() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_bytes_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_bytes_ != nullptr;
 }
 inline bool OpAddFontDescriptor::has_a_bytes() const {
   return _internal_has_a_bytes();
 }
 inline void OpAddFontDescriptor::clear_a_bytes() {
-  if (_impl_.a_bytes_ != nullptr) _impl_.a_bytes_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_bytes_ != nullptr) {
+    delete _impl_.a_bytes_;
+  }
+  _impl_.a_bytes_ = nullptr;
 }
 inline const ::protobuf::mozilla::layers::OffsetRange& OpAddFontDescriptor::_internal_a_bytes() const {
   const ::protobuf::mozilla::layers::OffsetRange* p = _impl_.a_bytes_;
@@ -9349,14 +8624,14 @@ inline void OpAddFontDescriptor::unsafe_arena_set_allocated_a_bytes(
   }
   _impl_.a_bytes_ = a_bytes;
   if (a_bytes) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.layers.OpAddFontDescriptor.a_bytes)
 }
 inline ::protobuf::mozilla::layers::OffsetRange* OpAddFontDescriptor::release_a_bytes() {
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::layers::OffsetRange* temp = _impl_.a_bytes_;
   _impl_.a_bytes_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -9372,13 +8647,13 @@ inline ::protobuf::mozilla::layers::OffsetRange* OpAddFontDescriptor::release_a_
 }
 inline ::protobuf::mozilla::layers::OffsetRange* OpAddFontDescriptor::unsafe_arena_release_a_bytes() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddFontDescriptor.a_bytes)
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::layers::OffsetRange* temp = _impl_.a_bytes_;
   _impl_.a_bytes_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::layers::OffsetRange* OpAddFontDescriptor::_internal_mutable_a_bytes() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   if (_impl_.a_bytes_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::layers::OffsetRange>(GetArenaForAllocation());
     _impl_.a_bytes_ = p;
@@ -9402,25 +8677,17 @@ inline void OpAddFontDescriptor::set_allocated_a_bytes(::protobuf::mozilla::laye
       a_bytes = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_bytes, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_bytes_ = a_bytes;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpAddFontDescriptor.a_bytes)
 }
 
-// required uint32 a_fontIndex = 2;
-inline bool OpAddFontDescriptor::_internal_has_a_fontindex() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool OpAddFontDescriptor::has_a_fontindex() const {
-  return _internal_has_a_fontindex();
-}
+// uint32 a_fontIndex = 2;
 inline void OpAddFontDescriptor::clear_a_fontindex() {
   _impl_.a_fontindex_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t OpAddFontDescriptor::_internal_a_fontindex() const {
   return _impl_.a_fontindex_;
@@ -9430,7 +8697,7 @@ inline uint32_t OpAddFontDescriptor::a_fontindex() const {
   return _internal_a_fontindex();
 }
 inline void OpAddFontDescriptor::_internal_set_a_fontindex(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_fontindex_ = value;
 }
 inline void OpAddFontDescriptor::set_a_fontindex(uint32_t value) {
@@ -9438,17 +8705,9 @@ inline void OpAddFontDescriptor::set_a_fontindex(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpAddFontDescriptor.a_fontIndex)
 }
 
-// required bytes a_key = 3;
-inline bool OpAddFontDescriptor::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpAddFontDescriptor::has_a_key() const {
-  return _internal_has_a_key();
-}
+// bytes a_key = 3;
 inline void OpAddFontDescriptor::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpAddFontDescriptor::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpAddFontDescriptor.a_key)
@@ -9457,7 +8716,7 @@ inline const std::string& OpAddFontDescriptor::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpAddFontDescriptor::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpAddFontDescriptor.a_key)
 }
@@ -9470,32 +8729,22 @@ inline const std::string& OpAddFontDescriptor::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void OpAddFontDescriptor::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpAddFontDescriptor::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpAddFontDescriptor::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddFontDescriptor.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void OpAddFontDescriptor::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9510,17 +8759,9 @@ inline void OpAddFontDescriptor::set_allocated_a_key(std::string* a_key) {
 
 // OpDeleteFont
 
-// required bytes a_key = 1;
-inline bool OpDeleteFont::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpDeleteFont::has_a_key() const {
-  return _internal_has_a_key();
-}
+// bytes a_key = 1;
 inline void OpDeleteFont::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpDeleteFont::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpDeleteFont.a_key)
@@ -9529,7 +8770,7 @@ inline const std::string& OpDeleteFont::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpDeleteFont::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpDeleteFont.a_key)
 }
@@ -9542,32 +8783,22 @@ inline const std::string& OpDeleteFont::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void OpDeleteFont::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpDeleteFont::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpDeleteFont::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpDeleteFont.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void OpDeleteFont::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9582,17 +8813,9 @@ inline void OpDeleteFont::set_allocated_a_key(std::string* a_key) {
 
 // OpAddFontInstance
 
-// required bytes a_options = 1;
-inline bool OpAddFontInstance::_internal_has_a_options() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpAddFontInstance::has_a_options() const {
-  return _internal_has_a_options();
-}
+// bytes a_options = 1;
 inline void OpAddFontInstance::clear_a_options() {
   _impl_.a_options_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpAddFontInstance::a_options() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpAddFontInstance.a_options)
@@ -9601,7 +8824,7 @@ inline const std::string& OpAddFontInstance::a_options() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpAddFontInstance::set_a_options(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_options_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpAddFontInstance.a_options)
 }
@@ -9614,32 +8837,22 @@ inline const std::string& OpAddFontInstance::_internal_a_options() const {
   return _impl_.a_options_.Get();
 }
 inline void OpAddFontInstance::_internal_set_a_options(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_options_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpAddFontInstance::_internal_mutable_a_options() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_options_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpAddFontInstance::release_a_options() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddFontInstance.a_options)
-  if (!_internal_has_a_options()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_options_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_options_.IsDefault()) {
-    _impl_.a_options_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_options_.Release();
 }
 inline void OpAddFontInstance::set_allocated_a_options(std::string* a_options) {
   if (a_options != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_options_.SetAllocated(a_options, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9650,17 +8863,9 @@ inline void OpAddFontInstance::set_allocated_a_options(std::string* a_options) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpAddFontInstance.a_options)
 }
 
-// required bytes a_platformOptions = 2;
-inline bool OpAddFontInstance::_internal_has_a_platformoptions() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool OpAddFontInstance::has_a_platformoptions() const {
-  return _internal_has_a_platformoptions();
-}
+// bytes a_platformOptions = 2;
 inline void OpAddFontInstance::clear_a_platformoptions() {
   _impl_.a_platformoptions_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& OpAddFontInstance::a_platformoptions() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpAddFontInstance.a_platformOptions)
@@ -9669,7 +8874,7 @@ inline const std::string& OpAddFontInstance::a_platformoptions() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpAddFontInstance::set_a_platformoptions(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_platformoptions_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpAddFontInstance.a_platformOptions)
 }
@@ -9682,32 +8887,22 @@ inline const std::string& OpAddFontInstance::_internal_a_platformoptions() const
   return _impl_.a_platformoptions_.Get();
 }
 inline void OpAddFontInstance::_internal_set_a_platformoptions(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_platformoptions_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpAddFontInstance::_internal_mutable_a_platformoptions() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_platformoptions_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpAddFontInstance::release_a_platformoptions() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddFontInstance.a_platformOptions)
-  if (!_internal_has_a_platformoptions()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_platformoptions_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_platformoptions_.IsDefault()) {
-    _impl_.a_platformoptions_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_platformoptions_.Release();
 }
 inline void OpAddFontInstance::set_allocated_a_platformoptions(std::string* a_platformoptions) {
   if (a_platformoptions != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_platformoptions_.SetAllocated(a_platformoptions, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9718,18 +8913,18 @@ inline void OpAddFontInstance::set_allocated_a_platformoptions(std::string* a_pl
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpAddFontInstance.a_platformOptions)
 }
 
-// required .protobuf.mozilla.layers.OffsetRange a_variations = 3;
+// .protobuf.mozilla.layers.OffsetRange a_variations = 3;
 inline bool OpAddFontInstance::_internal_has_a_variations() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_variations_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_variations_ != nullptr;
 }
 inline bool OpAddFontInstance::has_a_variations() const {
   return _internal_has_a_variations();
 }
 inline void OpAddFontInstance::clear_a_variations() {
-  if (_impl_.a_variations_ != nullptr) _impl_.a_variations_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_variations_ != nullptr) {
+    delete _impl_.a_variations_;
+  }
+  _impl_.a_variations_ = nullptr;
 }
 inline const ::protobuf::mozilla::layers::OffsetRange& OpAddFontInstance::_internal_a_variations() const {
   const ::protobuf::mozilla::layers::OffsetRange* p = _impl_.a_variations_;
@@ -9747,14 +8942,14 @@ inline void OpAddFontInstance::unsafe_arena_set_allocated_a_variations(
   }
   _impl_.a_variations_ = a_variations;
   if (a_variations) {
-    _impl_._has_bits_[0] |= 0x00000010u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000010u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.layers.OpAddFontInstance.a_variations)
 }
 inline ::protobuf::mozilla::layers::OffsetRange* OpAddFontInstance::release_a_variations() {
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  
   ::protobuf::mozilla::layers::OffsetRange* temp = _impl_.a_variations_;
   _impl_.a_variations_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -9770,13 +8965,13 @@ inline ::protobuf::mozilla::layers::OffsetRange* OpAddFontInstance::release_a_va
 }
 inline ::protobuf::mozilla::layers::OffsetRange* OpAddFontInstance::unsafe_arena_release_a_variations() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddFontInstance.a_variations)
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  
   ::protobuf::mozilla::layers::OffsetRange* temp = _impl_.a_variations_;
   _impl_.a_variations_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::layers::OffsetRange* OpAddFontInstance::_internal_mutable_a_variations() {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   if (_impl_.a_variations_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::layers::OffsetRange>(GetArenaForAllocation());
     _impl_.a_variations_ = p;
@@ -9800,25 +8995,17 @@ inline void OpAddFontInstance::set_allocated_a_variations(::protobuf::mozilla::l
       a_variations = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_variations, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000010u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000010u;
+    
   }
   _impl_.a_variations_ = a_variations;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpAddFontInstance.a_variations)
 }
 
-// required bytes a_instanceKey = 4;
-inline bool OpAddFontInstance::_internal_has_a_instancekey() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool OpAddFontInstance::has_a_instancekey() const {
-  return _internal_has_a_instancekey();
-}
+// bytes a_instanceKey = 4;
 inline void OpAddFontInstance::clear_a_instancekey() {
   _impl_.a_instancekey_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& OpAddFontInstance::a_instancekey() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpAddFontInstance.a_instanceKey)
@@ -9827,7 +9014,7 @@ inline const std::string& OpAddFontInstance::a_instancekey() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpAddFontInstance::set_a_instancekey(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_instancekey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpAddFontInstance.a_instanceKey)
 }
@@ -9840,32 +9027,22 @@ inline const std::string& OpAddFontInstance::_internal_a_instancekey() const {
   return _impl_.a_instancekey_.Get();
 }
 inline void OpAddFontInstance::_internal_set_a_instancekey(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_instancekey_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpAddFontInstance::_internal_mutable_a_instancekey() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_instancekey_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpAddFontInstance::release_a_instancekey() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddFontInstance.a_instanceKey)
-  if (!_internal_has_a_instancekey()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_instancekey_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_instancekey_.IsDefault()) {
-    _impl_.a_instancekey_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_instancekey_.Release();
 }
 inline void OpAddFontInstance::set_allocated_a_instancekey(std::string* a_instancekey) {
   if (a_instancekey != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_instancekey_.SetAllocated(a_instancekey, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9876,17 +9053,9 @@ inline void OpAddFontInstance::set_allocated_a_instancekey(std::string* a_instan
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpAddFontInstance.a_instanceKey)
 }
 
-// required bytes a_fontKey = 5;
-inline bool OpAddFontInstance::_internal_has_a_fontkey() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool OpAddFontInstance::has_a_fontkey() const {
-  return _internal_has_a_fontkey();
-}
+// bytes a_fontKey = 5;
 inline void OpAddFontInstance::clear_a_fontkey() {
   _impl_.a_fontkey_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& OpAddFontInstance::a_fontkey() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpAddFontInstance.a_fontKey)
@@ -9895,7 +9064,7 @@ inline const std::string& OpAddFontInstance::a_fontkey() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpAddFontInstance::set_a_fontkey(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000008u;
+ 
  _impl_.a_fontkey_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpAddFontInstance.a_fontKey)
 }
@@ -9908,32 +9077,22 @@ inline const std::string& OpAddFontInstance::_internal_a_fontkey() const {
   return _impl_.a_fontkey_.Get();
 }
 inline void OpAddFontInstance::_internal_set_a_fontkey(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_fontkey_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpAddFontInstance::_internal_mutable_a_fontkey() {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   return _impl_.a_fontkey_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpAddFontInstance::release_a_fontkey() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpAddFontInstance.a_fontKey)
-  if (!_internal_has_a_fontkey()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.a_fontkey_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_fontkey_.IsDefault()) {
-    _impl_.a_fontkey_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_fontkey_.Release();
 }
 inline void OpAddFontInstance::set_allocated_a_fontkey(std::string* a_fontkey) {
   if (a_fontkey != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    
   }
   _impl_.a_fontkey_.SetAllocated(a_fontkey, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9944,17 +9103,9 @@ inline void OpAddFontInstance::set_allocated_a_fontkey(std::string* a_fontkey) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.OpAddFontInstance.a_fontKey)
 }
 
-// required float a_glyphSize = 6;
-inline bool OpAddFontInstance::_internal_has_a_glyphsize() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool OpAddFontInstance::has_a_glyphsize() const {
-  return _internal_has_a_glyphsize();
-}
+// float a_glyphSize = 6;
 inline void OpAddFontInstance::clear_a_glyphsize() {
   _impl_.a_glyphsize_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline float OpAddFontInstance::_internal_a_glyphsize() const {
   return _impl_.a_glyphsize_;
@@ -9964,7 +9115,7 @@ inline float OpAddFontInstance::a_glyphsize() const {
   return _internal_a_glyphsize();
 }
 inline void OpAddFontInstance::_internal_set_a_glyphsize(float value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   _impl_.a_glyphsize_ = value;
 }
 inline void OpAddFontInstance::set_a_glyphsize(float value) {
@@ -9976,17 +9127,9 @@ inline void OpAddFontInstance::set_a_glyphsize(float value) {
 
 // OpDeleteFontInstance
 
-// required bytes a_key = 1;
-inline bool OpDeleteFontInstance::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool OpDeleteFontInstance::has_a_key() const {
-  return _internal_has_a_key();
-}
+// bytes a_key = 1;
 inline void OpDeleteFontInstance::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& OpDeleteFontInstance::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.OpDeleteFontInstance.a_key)
@@ -9995,7 +9138,7 @@ inline const std::string& OpDeleteFontInstance::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void OpDeleteFontInstance::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_key_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.OpDeleteFontInstance.a_key)
 }
@@ -10008,32 +9151,22 @@ inline const std::string& OpDeleteFontInstance::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void OpDeleteFontInstance::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* OpDeleteFontInstance::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* OpDeleteFontInstance::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.OpDeleteFontInstance.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void OpDeleteFontInstance::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

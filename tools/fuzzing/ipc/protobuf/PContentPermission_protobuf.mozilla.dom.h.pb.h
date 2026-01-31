@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_PContentPermission_5fprotobuf_2emozilla_2edom_2eh_2eproto
@@ -41,6 +43,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PContentPermission_5fprotobuf_2emozilla_2edom_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PContentPermission_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -64,7 +67,7 @@ namespace dom {
 // ===================================================================
 
 class PermissionRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PermissionRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PermissionRequest) */ {
  public:
   inline PermissionRequest() : PermissionRequest(nullptr) {}
   ~PermissionRequest() override;
@@ -94,13 +97,15 @@ class PermissionRequest final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const PermissionRequest& default_instance() {
     return *internal_default_instance();
   }
@@ -138,9 +143,15 @@ class PermissionRequest final :
   PermissionRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<PermissionRequest>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const PermissionRequest& from);
-  void MergeFrom(const PermissionRequest& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const PermissionRequest& from) {
+    PermissionRequest::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -153,7 +164,7 @@ class PermissionRequest final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(PermissionRequest* other);
 
   private:
@@ -166,7 +177,10 @@ class PermissionRequest final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -200,11 +214,7 @@ class PermissionRequest final :
   std::string* _internal_add_a_options();
   public:
 
-  // required string a_type = 1;
-  bool has_a_type() const;
-  private:
-  bool _internal_has_a_type() const;
-  public:
+  // string a_type = 1;
   void clear_a_type();
   const std::string& a_type() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -226,10 +236,9 @@ class PermissionRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_options_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_type_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PContentPermission_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -237,7 +246,7 @@ class PermissionRequest final :
 // -------------------------------------------------------------------
 
 class PermissionChoice final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PermissionChoice) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PermissionChoice) */ {
  public:
   inline PermissionChoice() : PermissionChoice(nullptr) {}
   ~PermissionChoice() override;
@@ -267,13 +276,15 @@ class PermissionChoice final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const PermissionChoice& default_instance() {
     return *internal_default_instance();
   }
@@ -311,9 +322,15 @@ class PermissionChoice final :
   PermissionChoice* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<PermissionChoice>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const PermissionChoice& from);
-  void MergeFrom(const PermissionChoice& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const PermissionChoice& from) {
+    PermissionChoice::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -326,7 +343,7 @@ class PermissionChoice final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(PermissionChoice* other);
 
   private:
@@ -339,7 +356,10 @@ class PermissionChoice final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -349,11 +369,7 @@ class PermissionChoice final :
     kATypeFieldNumber = 1,
     kAChoiceFieldNumber = 2,
   };
-  // required string a_type = 1;
-  bool has_a_type() const;
-  private:
-  bool _internal_has_a_type() const;
-  public:
+  // string a_type = 1;
   void clear_a_type();
   const std::string& a_type() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -367,11 +383,7 @@ class PermissionChoice final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // required string a_choice = 2;
-  bool has_a_choice() const;
-  private:
-  bool _internal_has_a_choice() const;
-  public:
+  // string a_choice = 2;
   void clear_a_choice();
   const std::string& a_choice() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -389,17 +401,13 @@ class PermissionChoice final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_type_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_choice_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PContentPermission_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -415,17 +423,9 @@ class PermissionChoice final :
 #endif  // __GNUC__
 // PermissionRequest
 
-// required string a_type = 1;
-inline bool PermissionRequest::_internal_has_a_type() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool PermissionRequest::has_a_type() const {
-  return _internal_has_a_type();
-}
+// string a_type = 1;
 inline void PermissionRequest::clear_a_type() {
   _impl_.a_type_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& PermissionRequest::a_type() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PermissionRequest.a_type)
@@ -434,7 +434,7 @@ inline const std::string& PermissionRequest::a_type() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PermissionRequest::set_a_type(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_type_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PermissionRequest.a_type)
 }
@@ -447,32 +447,22 @@ inline const std::string& PermissionRequest::_internal_a_type() const {
   return _impl_.a_type_.Get();
 }
 inline void PermissionRequest::_internal_set_a_type(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_type_.Set(value, GetArenaForAllocation());
 }
 inline std::string* PermissionRequest::_internal_mutable_a_type() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_type_.Mutable(GetArenaForAllocation());
 }
 inline std::string* PermissionRequest::release_a_type() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PermissionRequest.a_type)
-  if (!_internal_has_a_type()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_type_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_type_.IsDefault()) {
-    _impl_.a_type_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_type_.Release();
 }
 inline void PermissionRequest::set_allocated_a_type(std::string* a_type) {
   if (a_type != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_type_.SetAllocated(a_type, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -562,17 +552,9 @@ PermissionRequest::mutable_a_options() {
 
 // PermissionChoice
 
-// required string a_type = 1;
-inline bool PermissionChoice::_internal_has_a_type() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool PermissionChoice::has_a_type() const {
-  return _internal_has_a_type();
-}
+// string a_type = 1;
 inline void PermissionChoice::clear_a_type() {
   _impl_.a_type_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& PermissionChoice::a_type() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PermissionChoice.a_type)
@@ -581,7 +563,7 @@ inline const std::string& PermissionChoice::a_type() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PermissionChoice::set_a_type(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_type_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PermissionChoice.a_type)
 }
@@ -594,32 +576,22 @@ inline const std::string& PermissionChoice::_internal_a_type() const {
   return _impl_.a_type_.Get();
 }
 inline void PermissionChoice::_internal_set_a_type(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_type_.Set(value, GetArenaForAllocation());
 }
 inline std::string* PermissionChoice::_internal_mutable_a_type() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_type_.Mutable(GetArenaForAllocation());
 }
 inline std::string* PermissionChoice::release_a_type() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PermissionChoice.a_type)
-  if (!_internal_has_a_type()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_type_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_type_.IsDefault()) {
-    _impl_.a_type_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_type_.Release();
 }
 inline void PermissionChoice::set_allocated_a_type(std::string* a_type) {
   if (a_type != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_type_.SetAllocated(a_type, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -630,17 +602,9 @@ inline void PermissionChoice::set_allocated_a_type(std::string* a_type) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PermissionChoice.a_type)
 }
 
-// required string a_choice = 2;
-inline bool PermissionChoice::_internal_has_a_choice() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool PermissionChoice::has_a_choice() const {
-  return _internal_has_a_choice();
-}
+// string a_choice = 2;
 inline void PermissionChoice::clear_a_choice() {
   _impl_.a_choice_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& PermissionChoice::a_choice() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PermissionChoice.a_choice)
@@ -649,7 +613,7 @@ inline const std::string& PermissionChoice::a_choice() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PermissionChoice::set_a_choice(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_choice_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PermissionChoice.a_choice)
 }
@@ -662,32 +626,22 @@ inline const std::string& PermissionChoice::_internal_a_choice() const {
   return _impl_.a_choice_.Get();
 }
 inline void PermissionChoice::_internal_set_a_choice(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_choice_.Set(value, GetArenaForAllocation());
 }
 inline std::string* PermissionChoice::_internal_mutable_a_choice() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_choice_.Mutable(GetArenaForAllocation());
 }
 inline std::string* PermissionChoice::release_a_choice() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PermissionChoice.a_choice)
-  if (!_internal_has_a_choice()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_choice_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_choice_.IsDefault()) {
-    _impl_.a_choice_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_choice_.Release();
 }
 inline void PermissionChoice::set_allocated_a_choice(std::string* a_choice) {
   if (a_choice != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_choice_.SetAllocated(a_choice, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

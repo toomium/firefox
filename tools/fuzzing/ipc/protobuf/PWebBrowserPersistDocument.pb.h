@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "PWebBrowserPersistDocument_protobuf.mozilla.h.pb.h"
 #include "PBackgroundSharedTypes.pb.h"
 #include "IPCStream.pb.h"
@@ -45,6 +48,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PWebBrowserPersistDocument_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PWebBrowserPersistDocument_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace PWebBrowserPersistDocument {
@@ -96,7 +100,7 @@ namespace PWebBrowserPersistDocument {
 // ===================================================================
 
 class Msg_Attributes final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes) */ {
  public:
   inline Msg_Attributes() : Msg_Attributes(nullptr) {}
   ~Msg_Attributes() override;
@@ -126,13 +130,15 @@ class Msg_Attributes final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_Attributes& default_instance() {
     return *internal_default_instance();
   }
@@ -170,9 +176,15 @@ class Msg_Attributes final :
   Msg_Attributes* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_Attributes>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_Attributes& from);
-  void MergeFrom(const Msg_Attributes& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_Attributes& from) {
+    Msg_Attributes::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -185,7 +197,7 @@ class Msg_Attributes final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_Attributes* other);
 
   private:
@@ -198,7 +210,10 @@ class Msg_Attributes final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -208,7 +223,7 @@ class Msg_Attributes final :
     kAAAttrsFieldNumber = 1,
     kAStreamFieldNumber = 2,
   };
-  // required .protobuf.mozilla.WebBrowserPersistDocumentAttrs a_aAttrs = 1;
+  // .protobuf.mozilla.WebBrowserPersistDocumentAttrs a_aAttrs = 1;
   bool has_a_aattrs() const;
   private:
   bool _internal_has_a_aattrs() const;
@@ -263,7 +278,7 @@ class Msg_Attributes final :
 // -------------------------------------------------------------------
 
 class Msg_InitFailure final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PWebBrowserPersistDocument.Msg_InitFailure) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PWebBrowserPersistDocument.Msg_InitFailure) */ {
  public:
   inline Msg_InitFailure() : Msg_InitFailure(nullptr) {}
   ~Msg_InitFailure() override;
@@ -293,13 +308,15 @@ class Msg_InitFailure final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_InitFailure& default_instance() {
     return *internal_default_instance();
   }
@@ -337,9 +354,15 @@ class Msg_InitFailure final :
   Msg_InitFailure* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_InitFailure>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_InitFailure& from);
-  void MergeFrom(const Msg_InitFailure& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_InitFailure& from) {
+    Msg_InitFailure::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -352,7 +375,7 @@ class Msg_InitFailure final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_InitFailure* other);
 
   private:
@@ -365,7 +388,10 @@ class Msg_InitFailure final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -374,11 +400,7 @@ class Msg_InitFailure final :
   enum : int {
     kAAStatusFieldNumber = 1,
   };
-  // required bytes a_aStatus = 1;
-  bool has_a_astatus() const;
-  private:
-  bool _internal_has_a_astatus() const;
-  public:
+  // bytes a_aStatus = 1;
   void clear_a_astatus();
   const std::string& a_astatus() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -400,9 +422,8 @@ class Msg_InitFailure final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_astatus_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebBrowserPersistDocument_2eproto;
@@ -410,7 +431,7 @@ class Msg_InitFailure final :
 // -------------------------------------------------------------------
 
 class Msg_SetPersistFlags final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PWebBrowserPersistDocument.Msg_SetPersistFlags) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PWebBrowserPersistDocument.Msg_SetPersistFlags) */ {
  public:
   inline Msg_SetPersistFlags() : Msg_SetPersistFlags(nullptr) {}
   ~Msg_SetPersistFlags() override;
@@ -440,13 +461,15 @@ class Msg_SetPersistFlags final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SetPersistFlags& default_instance() {
     return *internal_default_instance();
   }
@@ -484,9 +507,15 @@ class Msg_SetPersistFlags final :
   Msg_SetPersistFlags* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SetPersistFlags>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SetPersistFlags& from);
-  void MergeFrom(const Msg_SetPersistFlags& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SetPersistFlags& from) {
+    Msg_SetPersistFlags::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -499,7 +528,7 @@ class Msg_SetPersistFlags final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SetPersistFlags* other);
 
   private:
@@ -512,7 +541,10 @@ class Msg_SetPersistFlags final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -521,11 +553,7 @@ class Msg_SetPersistFlags final :
   enum : int {
     kAANewFlagsFieldNumber = 1,
   };
-  // required uint32 a_aNewFlags = 1;
-  bool has_a_anewflags() const;
-  private:
-  bool _internal_has_a_anewflags() const;
-  public:
+  // uint32 a_aNewFlags = 1;
   void clear_a_anewflags();
   uint32_t a_anewflags() const;
   void set_a_anewflags(uint32_t value);
@@ -542,9 +570,8 @@ class Msg_SetPersistFlags final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_anewflags_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebBrowserPersistDocument_2eproto;
@@ -552,7 +579,7 @@ class Msg_SetPersistFlags final :
 // -------------------------------------------------------------------
 
 class Msg_PWebBrowserPersistResourcesConstructor final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistResourcesConstructor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistResourcesConstructor) */ {
  public:
   inline Msg_PWebBrowserPersistResourcesConstructor() : Msg_PWebBrowserPersistResourcesConstructor(nullptr) {}
   ~Msg_PWebBrowserPersistResourcesConstructor() override;
@@ -582,13 +609,15 @@ class Msg_PWebBrowserPersistResourcesConstructor final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_PWebBrowserPersistResourcesConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -626,9 +655,15 @@ class Msg_PWebBrowserPersistResourcesConstructor final :
   Msg_PWebBrowserPersistResourcesConstructor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_PWebBrowserPersistResourcesConstructor>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_PWebBrowserPersistResourcesConstructor& from);
-  void MergeFrom(const Msg_PWebBrowserPersistResourcesConstructor& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_PWebBrowserPersistResourcesConstructor& from) {
+    Msg_PWebBrowserPersistResourcesConstructor::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -641,7 +676,7 @@ class Msg_PWebBrowserPersistResourcesConstructor final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_PWebBrowserPersistResourcesConstructor* other);
 
   private:
@@ -654,7 +689,10 @@ class Msg_PWebBrowserPersistResourcesConstructor final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -663,11 +701,7 @@ class Msg_PWebBrowserPersistResourcesConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
-  bool has_a_actorid() const;
-  private:
-  bool _internal_has_a_actorid() const;
-  public:
+  // sint64 a_actorid = 1;
   void clear_a_actorid();
   int64_t a_actorid() const;
   void set_a_actorid(int64_t value);
@@ -684,9 +718,8 @@ class Msg_PWebBrowserPersistResourcesConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     int64_t a_actorid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebBrowserPersistDocument_2eproto;
@@ -694,10 +727,9 @@ class Msg_PWebBrowserPersistResourcesConstructor final :
 // -------------------------------------------------------------------
 
 class Reply_PWebBrowserPersistResourcesConstructor final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PWebBrowserPersistDocument.Reply_PWebBrowserPersistResourcesConstructor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PWebBrowserPersistDocument.Reply_PWebBrowserPersistResourcesConstructor) */ {
  public:
   inline Reply_PWebBrowserPersistResourcesConstructor() : Reply_PWebBrowserPersistResourcesConstructor(nullptr) {}
-  ~Reply_PWebBrowserPersistResourcesConstructor() override;
   explicit PROTOBUF_CONSTEXPR Reply_PWebBrowserPersistResourcesConstructor(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply_PWebBrowserPersistResourcesConstructor(const Reply_PWebBrowserPersistResourcesConstructor& from);
@@ -724,13 +756,15 @@ class Reply_PWebBrowserPersistResourcesConstructor final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_PWebBrowserPersistResourcesConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -768,23 +802,15 @@ class Reply_PWebBrowserPersistResourcesConstructor final :
   Reply_PWebBrowserPersistResourcesConstructor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_PWebBrowserPersistResourcesConstructor>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply_PWebBrowserPersistResourcesConstructor& from);
-  void MergeFrom(const Reply_PWebBrowserPersistResourcesConstructor& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply_PWebBrowserPersistResourcesConstructor* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply_PWebBrowserPersistResourcesConstructor& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply_PWebBrowserPersistResourcesConstructor& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -796,7 +822,10 @@ class Reply_PWebBrowserPersistResourcesConstructor final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -810,15 +839,13 @@ class Reply_PWebBrowserPersistResourcesConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebBrowserPersistDocument_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_PWebBrowserPersistSerializeConstructor final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor) */ {
  public:
   inline Msg_PWebBrowserPersistSerializeConstructor() : Msg_PWebBrowserPersistSerializeConstructor(nullptr) {}
   ~Msg_PWebBrowserPersistSerializeConstructor() override;
@@ -848,13 +875,15 @@ class Msg_PWebBrowserPersistSerializeConstructor final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_PWebBrowserPersistSerializeConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -892,9 +921,15 @@ class Msg_PWebBrowserPersistSerializeConstructor final :
   Msg_PWebBrowserPersistSerializeConstructor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_PWebBrowserPersistSerializeConstructor>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_PWebBrowserPersistSerializeConstructor& from);
-  void MergeFrom(const Msg_PWebBrowserPersistSerializeConstructor& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_PWebBrowserPersistSerializeConstructor& from) {
+    Msg_PWebBrowserPersistSerializeConstructor::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -907,7 +942,7 @@ class Msg_PWebBrowserPersistSerializeConstructor final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_PWebBrowserPersistSerializeConstructor* other);
 
   private:
@@ -920,7 +955,10 @@ class Msg_PWebBrowserPersistSerializeConstructor final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -933,11 +971,7 @@ class Msg_PWebBrowserPersistSerializeConstructor final :
     kAAEncoderFlagsFieldNumber = 4,
     kAAWrapColumnFieldNumber = 5,
   };
-  // required string a_aRequestedContentType = 3;
-  bool has_a_arequestedcontenttype() const;
-  private:
-  bool _internal_has_a_arequestedcontenttype() const;
-  public:
+  // string a_aRequestedContentType = 3;
   void clear_a_arequestedcontenttype();
   const std::string& a_arequestedcontenttype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -951,7 +985,7 @@ class Msg_PWebBrowserPersistSerializeConstructor final :
   std::string* _internal_mutable_a_arequestedcontenttype();
   public:
 
-  // required .protobuf.mozilla.WebBrowserPersistURIMap a_aMap = 2;
+  // .protobuf.mozilla.WebBrowserPersistURIMap a_aMap = 2;
   bool has_a_amap() const;
   private:
   bool _internal_has_a_amap() const;
@@ -969,11 +1003,7 @@ class Msg_PWebBrowserPersistSerializeConstructor final :
       ::protobuf::mozilla::WebBrowserPersistURIMap* a_amap);
   ::protobuf::mozilla::WebBrowserPersistURIMap* unsafe_arena_release_a_amap();
 
-  // required sint64 a_actorid = 1;
-  bool has_a_actorid() const;
-  private:
-  bool _internal_has_a_actorid() const;
-  public:
+  // sint64 a_actorid = 1;
   void clear_a_actorid();
   int64_t a_actorid() const;
   void set_a_actorid(int64_t value);
@@ -982,11 +1012,7 @@ class Msg_PWebBrowserPersistSerializeConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required uint32 a_aEncoderFlags = 4;
-  bool has_a_aencoderflags() const;
-  private:
-  bool _internal_has_a_aencoderflags() const;
-  public:
+  // uint32 a_aEncoderFlags = 4;
   void clear_a_aencoderflags();
   uint32_t a_aencoderflags() const;
   void set_a_aencoderflags(uint32_t value);
@@ -995,11 +1021,7 @@ class Msg_PWebBrowserPersistSerializeConstructor final :
   void _internal_set_a_aencoderflags(uint32_t value);
   public:
 
-  // required uint32 a_aWrapColumn = 5;
-  bool has_a_awrapcolumn() const;
-  private:
-  bool _internal_has_a_awrapcolumn() const;
-  public:
+  // uint32 a_aWrapColumn = 5;
   void clear_a_awrapcolumn();
   uint32_t a_awrapcolumn() const;
   void set_a_awrapcolumn(uint32_t value);
@@ -1012,20 +1034,16 @@ class Msg_PWebBrowserPersistSerializeConstructor final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_arequestedcontenttype_;
     ::protobuf::mozilla::WebBrowserPersistURIMap* a_amap_;
     int64_t a_actorid_;
     uint32_t a_aencoderflags_;
     uint32_t a_awrapcolumn_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebBrowserPersistDocument_2eproto;
@@ -1033,10 +1051,9 @@ class Msg_PWebBrowserPersistSerializeConstructor final :
 // -------------------------------------------------------------------
 
 class Reply_PWebBrowserPersistSerializeConstructor final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PWebBrowserPersistDocument.Reply_PWebBrowserPersistSerializeConstructor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PWebBrowserPersistDocument.Reply_PWebBrowserPersistSerializeConstructor) */ {
  public:
   inline Reply_PWebBrowserPersistSerializeConstructor() : Reply_PWebBrowserPersistSerializeConstructor(nullptr) {}
-  ~Reply_PWebBrowserPersistSerializeConstructor() override;
   explicit PROTOBUF_CONSTEXPR Reply_PWebBrowserPersistSerializeConstructor(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply_PWebBrowserPersistSerializeConstructor(const Reply_PWebBrowserPersistSerializeConstructor& from);
@@ -1063,13 +1080,15 @@ class Reply_PWebBrowserPersistSerializeConstructor final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_PWebBrowserPersistSerializeConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -1107,23 +1126,15 @@ class Reply_PWebBrowserPersistSerializeConstructor final :
   Reply_PWebBrowserPersistSerializeConstructor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_PWebBrowserPersistSerializeConstructor>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply_PWebBrowserPersistSerializeConstructor& from);
-  void MergeFrom(const Reply_PWebBrowserPersistSerializeConstructor& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply_PWebBrowserPersistSerializeConstructor* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply_PWebBrowserPersistSerializeConstructor& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply_PWebBrowserPersistSerializeConstructor& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1135,7 +1146,10 @@ class Reply_PWebBrowserPersistSerializeConstructor final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1149,18 +1163,15 @@ class Reply_PWebBrowserPersistSerializeConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebBrowserPersistDocument_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PWebBrowserPersistDocument.Msg___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PWebBrowserPersistDocument.Msg___delete__) */ {
  public:
   inline Msg___delete__() : Msg___delete__(nullptr) {}
-  ~Msg___delete__() override;
   explicit PROTOBUF_CONSTEXPR Msg___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg___delete__(const Msg___delete__& from);
@@ -1187,13 +1198,15 @@ class Msg___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -1231,23 +1244,15 @@ class Msg___delete__ final :
   Msg___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg___delete__& from);
-  void MergeFrom(const Msg___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1259,7 +1264,10 @@ class Msg___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1273,18 +1281,15 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebBrowserPersistDocument_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PWebBrowserPersistDocument.Reply___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PWebBrowserPersistDocument.Reply___delete__) */ {
  public:
   inline Reply___delete__() : Reply___delete__(nullptr) {}
-  ~Reply___delete__() override;
   explicit PROTOBUF_CONSTEXPR Reply___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply___delete__(const Reply___delete__& from);
@@ -1311,13 +1316,15 @@ class Reply___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -1355,23 +1362,15 @@ class Reply___delete__ final :
   Reply___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply___delete__& from);
-  void MergeFrom(const Reply___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1383,7 +1382,10 @@ class Reply___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1397,9 +1399,7 @@ class Reply___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebBrowserPersistDocument_2eproto;
 };
 // ===================================================================
@@ -1413,11 +1413,9 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_Attributes
 
-// required .protobuf.mozilla.WebBrowserPersistDocumentAttrs a_aAttrs = 1;
+// .protobuf.mozilla.WebBrowserPersistDocumentAttrs a_aAttrs = 1;
 inline bool Msg_Attributes::_internal_has_a_aattrs() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_aattrs_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_aattrs_ != nullptr;
 }
 inline bool Msg_Attributes::has_a_aattrs() const {
   return _internal_has_a_aattrs();
@@ -1438,14 +1436,14 @@ inline void Msg_Attributes::unsafe_arena_set_allocated_a_aattrs(
   }
   _impl_.a_aattrs_ = a_aattrs;
   if (a_aattrs) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.a_aAttrs)
 }
 inline ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* Msg_Attributes::release_a_aattrs() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* temp = _impl_.a_aattrs_;
   _impl_.a_aattrs_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1461,13 +1459,13 @@ inline ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* Msg_Attributes::rele
 }
 inline ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* Msg_Attributes::unsafe_arena_release_a_aattrs() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.a_aAttrs)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* temp = _impl_.a_aattrs_;
   _impl_.a_aattrs_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::WebBrowserPersistDocumentAttrs* Msg_Attributes::_internal_mutable_a_aattrs() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_aattrs_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::WebBrowserPersistDocumentAttrs>(GetArenaForAllocation());
     _impl_.a_aattrs_ = p;
@@ -1492,9 +1490,9 @@ inline void Msg_Attributes::set_allocated_a_aattrs(::protobuf::mozilla::WebBrows
       a_aattrs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_aattrs, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_aattrs_ = a_aattrs;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.a_aAttrs)
@@ -1502,7 +1500,7 @@ inline void Msg_Attributes::set_allocated_a_aattrs(::protobuf::mozilla::WebBrows
 
 // optional .protobuf.mozilla.ipc.IPCStream a_stream = 2;
 inline bool Msg_Attributes::_internal_has_a_stream() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_stream_ != nullptr);
   return value;
 }
@@ -1525,14 +1523,14 @@ inline void Msg_Attributes::unsafe_arena_set_allocated_a_stream(
   }
   _impl_.a_stream_ = a_stream;
   if (a_stream) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.a_stream)
 }
 inline ::protobuf::mozilla::ipc::IPCStream* Msg_Attributes::release_a_stream() {
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.a_stream_;
   _impl_.a_stream_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1548,13 +1546,13 @@ inline ::protobuf::mozilla::ipc::IPCStream* Msg_Attributes::release_a_stream() {
 }
 inline ::protobuf::mozilla::ipc::IPCStream* Msg_Attributes::unsafe_arena_release_a_stream() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.a_stream)
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::ipc::IPCStream* temp = _impl_.a_stream_;
   _impl_.a_stream_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::ipc::IPCStream* Msg_Attributes::_internal_mutable_a_stream() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_stream_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::IPCStream>(GetArenaForAllocation());
     _impl_.a_stream_ = p;
@@ -1579,9 +1577,9 @@ inline void Msg_Attributes::set_allocated_a_stream(::protobuf::mozilla::ipc::IPC
       a_stream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_stream, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000002u;
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_stream_ = a_stream;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_Attributes.a_stream)
@@ -1591,17 +1589,9 @@ inline void Msg_Attributes::set_allocated_a_stream(::protobuf::mozilla::ipc::IPC
 
 // Msg_InitFailure
 
-// required bytes a_aStatus = 1;
-inline bool Msg_InitFailure::_internal_has_a_astatus() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_InitFailure::has_a_astatus() const {
-  return _internal_has_a_astatus();
-}
+// bytes a_aStatus = 1;
 inline void Msg_InitFailure::clear_a_astatus() {
   _impl_.a_astatus_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_InitFailure::a_astatus() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistDocument.Msg_InitFailure.a_aStatus)
@@ -1610,7 +1600,7 @@ inline const std::string& Msg_InitFailure::a_astatus() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_InitFailure::set_a_astatus(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistDocument.Msg_InitFailure.a_aStatus)
 }
@@ -1623,32 +1613,22 @@ inline const std::string& Msg_InitFailure::_internal_a_astatus() const {
   return _impl_.a_astatus_.Get();
 }
 inline void Msg_InitFailure::_internal_set_a_astatus(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_astatus_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_InitFailure::_internal_mutable_a_astatus() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_astatus_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_InitFailure::release_a_astatus() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PWebBrowserPersistDocument.Msg_InitFailure.a_aStatus)
-  if (!_internal_has_a_astatus()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_astatus_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_astatus_.IsDefault()) {
-    _impl_.a_astatus_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_astatus_.Release();
 }
 inline void Msg_InitFailure::set_allocated_a_astatus(std::string* a_astatus) {
   if (a_astatus != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_astatus_.SetAllocated(a_astatus, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1663,17 +1643,9 @@ inline void Msg_InitFailure::set_allocated_a_astatus(std::string* a_astatus) {
 
 // Msg_SetPersistFlags
 
-// required uint32 a_aNewFlags = 1;
-inline bool Msg_SetPersistFlags::_internal_has_a_anewflags() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_SetPersistFlags::has_a_anewflags() const {
-  return _internal_has_a_anewflags();
-}
+// uint32 a_aNewFlags = 1;
 inline void Msg_SetPersistFlags::clear_a_anewflags() {
   _impl_.a_anewflags_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_SetPersistFlags::_internal_a_anewflags() const {
   return _impl_.a_anewflags_;
@@ -1683,7 +1655,7 @@ inline uint32_t Msg_SetPersistFlags::a_anewflags() const {
   return _internal_a_anewflags();
 }
 inline void Msg_SetPersistFlags::_internal_set_a_anewflags(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_anewflags_ = value;
 }
 inline void Msg_SetPersistFlags::set_a_anewflags(uint32_t value) {
@@ -1695,17 +1667,9 @@ inline void Msg_SetPersistFlags::set_a_anewflags(uint32_t value) {
 
 // Msg_PWebBrowserPersistResourcesConstructor
 
-// required sint64 a_actorid = 1;
-inline bool Msg_PWebBrowserPersistResourcesConstructor::_internal_has_a_actorid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_PWebBrowserPersistResourcesConstructor::has_a_actorid() const {
-  return _internal_has_a_actorid();
-}
+// sint64 a_actorid = 1;
 inline void Msg_PWebBrowserPersistResourcesConstructor::clear_a_actorid() {
   _impl_.a_actorid_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline int64_t Msg_PWebBrowserPersistResourcesConstructor::_internal_a_actorid() const {
   return _impl_.a_actorid_;
@@ -1715,7 +1679,7 @@ inline int64_t Msg_PWebBrowserPersistResourcesConstructor::a_actorid() const {
   return _internal_a_actorid();
 }
 inline void Msg_PWebBrowserPersistResourcesConstructor::_internal_set_a_actorid(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_actorid_ = value;
 }
 inline void Msg_PWebBrowserPersistResourcesConstructor::set_a_actorid(int64_t value) {
@@ -1731,17 +1695,9 @@ inline void Msg_PWebBrowserPersistResourcesConstructor::set_a_actorid(int64_t va
 
 // Msg_PWebBrowserPersistSerializeConstructor
 
-// required sint64 a_actorid = 1;
-inline bool Msg_PWebBrowserPersistSerializeConstructor::_internal_has_a_actorid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_PWebBrowserPersistSerializeConstructor::has_a_actorid() const {
-  return _internal_has_a_actorid();
-}
+// sint64 a_actorid = 1;
 inline void Msg_PWebBrowserPersistSerializeConstructor::clear_a_actorid() {
   _impl_.a_actorid_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int64_t Msg_PWebBrowserPersistSerializeConstructor::_internal_a_actorid() const {
   return _impl_.a_actorid_;
@@ -1751,7 +1707,7 @@ inline int64_t Msg_PWebBrowserPersistSerializeConstructor::a_actorid() const {
   return _internal_a_actorid();
 }
 inline void Msg_PWebBrowserPersistSerializeConstructor::_internal_set_a_actorid(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_actorid_ = value;
 }
 inline void Msg_PWebBrowserPersistSerializeConstructor::set_a_actorid(int64_t value) {
@@ -1759,11 +1715,9 @@ inline void Msg_PWebBrowserPersistSerializeConstructor::set_a_actorid(int64_t va
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_actorid)
 }
 
-// required .protobuf.mozilla.WebBrowserPersistURIMap a_aMap = 2;
+// .protobuf.mozilla.WebBrowserPersistURIMap a_aMap = 2;
 inline bool Msg_PWebBrowserPersistSerializeConstructor::_internal_has_a_amap() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_amap_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_amap_ != nullptr;
 }
 inline bool Msg_PWebBrowserPersistSerializeConstructor::has_a_amap() const {
   return _internal_has_a_amap();
@@ -1784,14 +1738,14 @@ inline void Msg_PWebBrowserPersistSerializeConstructor::unsafe_arena_set_allocat
   }
   _impl_.a_amap_ = a_amap;
   if (a_amap) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aMap)
 }
 inline ::protobuf::mozilla::WebBrowserPersistURIMap* Msg_PWebBrowserPersistSerializeConstructor::release_a_amap() {
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::WebBrowserPersistURIMap* temp = _impl_.a_amap_;
   _impl_.a_amap_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1807,13 +1761,13 @@ inline ::protobuf::mozilla::WebBrowserPersistURIMap* Msg_PWebBrowserPersistSeria
 }
 inline ::protobuf::mozilla::WebBrowserPersistURIMap* Msg_PWebBrowserPersistSerializeConstructor::unsafe_arena_release_a_amap() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aMap)
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::WebBrowserPersistURIMap* temp = _impl_.a_amap_;
   _impl_.a_amap_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::WebBrowserPersistURIMap* Msg_PWebBrowserPersistSerializeConstructor::_internal_mutable_a_amap() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   if (_impl_.a_amap_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::WebBrowserPersistURIMap>(GetArenaForAllocation());
     _impl_.a_amap_ = p;
@@ -1838,25 +1792,17 @@ inline void Msg_PWebBrowserPersistSerializeConstructor::set_allocated_a_amap(::p
       a_amap = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_amap, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_amap_ = a_amap;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aMap)
 }
 
-// required string a_aRequestedContentType = 3;
-inline bool Msg_PWebBrowserPersistSerializeConstructor::_internal_has_a_arequestedcontenttype() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_PWebBrowserPersistSerializeConstructor::has_a_arequestedcontenttype() const {
-  return _internal_has_a_arequestedcontenttype();
-}
+// string a_aRequestedContentType = 3;
 inline void Msg_PWebBrowserPersistSerializeConstructor::clear_a_arequestedcontenttype() {
   _impl_.a_arequestedcontenttype_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_PWebBrowserPersistSerializeConstructor::a_arequestedcontenttype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aRequestedContentType)
@@ -1865,7 +1811,7 @@ inline const std::string& Msg_PWebBrowserPersistSerializeConstructor::a_arequest
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PWebBrowserPersistSerializeConstructor::set_a_arequestedcontenttype(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_arequestedcontenttype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aRequestedContentType)
 }
@@ -1878,32 +1824,22 @@ inline const std::string& Msg_PWebBrowserPersistSerializeConstructor::_internal_
   return _impl_.a_arequestedcontenttype_.Get();
 }
 inline void Msg_PWebBrowserPersistSerializeConstructor::_internal_set_a_arequestedcontenttype(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_arequestedcontenttype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_PWebBrowserPersistSerializeConstructor::_internal_mutable_a_arequestedcontenttype() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_arequestedcontenttype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_PWebBrowserPersistSerializeConstructor::release_a_arequestedcontenttype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aRequestedContentType)
-  if (!_internal_has_a_arequestedcontenttype()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_arequestedcontenttype_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_arequestedcontenttype_.IsDefault()) {
-    _impl_.a_arequestedcontenttype_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_arequestedcontenttype_.Release();
 }
 inline void Msg_PWebBrowserPersistSerializeConstructor::set_allocated_a_arequestedcontenttype(std::string* a_arequestedcontenttype) {
   if (a_arequestedcontenttype != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_arequestedcontenttype_.SetAllocated(a_arequestedcontenttype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1914,17 +1850,9 @@ inline void Msg_PWebBrowserPersistSerializeConstructor::set_allocated_a_arequest
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aRequestedContentType)
 }
 
-// required uint32 a_aEncoderFlags = 4;
-inline bool Msg_PWebBrowserPersistSerializeConstructor::_internal_has_a_aencoderflags() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_PWebBrowserPersistSerializeConstructor::has_a_aencoderflags() const {
-  return _internal_has_a_aencoderflags();
-}
+// uint32 a_aEncoderFlags = 4;
 inline void Msg_PWebBrowserPersistSerializeConstructor::clear_a_aencoderflags() {
   _impl_.a_aencoderflags_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t Msg_PWebBrowserPersistSerializeConstructor::_internal_a_aencoderflags() const {
   return _impl_.a_aencoderflags_;
@@ -1934,7 +1862,7 @@ inline uint32_t Msg_PWebBrowserPersistSerializeConstructor::a_aencoderflags() co
   return _internal_a_aencoderflags();
 }
 inline void Msg_PWebBrowserPersistSerializeConstructor::_internal_set_a_aencoderflags(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_aencoderflags_ = value;
 }
 inline void Msg_PWebBrowserPersistSerializeConstructor::set_a_aencoderflags(uint32_t value) {
@@ -1942,17 +1870,9 @@ inline void Msg_PWebBrowserPersistSerializeConstructor::set_a_aencoderflags(uint
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PWebBrowserPersistDocument.Msg_PWebBrowserPersistSerializeConstructor.a_aEncoderFlags)
 }
 
-// required uint32 a_aWrapColumn = 5;
-inline bool Msg_PWebBrowserPersistSerializeConstructor::_internal_has_a_awrapcolumn() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool Msg_PWebBrowserPersistSerializeConstructor::has_a_awrapcolumn() const {
-  return _internal_has_a_awrapcolumn();
-}
+// uint32 a_aWrapColumn = 5;
 inline void Msg_PWebBrowserPersistSerializeConstructor::clear_a_awrapcolumn() {
   _impl_.a_awrapcolumn_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline uint32_t Msg_PWebBrowserPersistSerializeConstructor::_internal_a_awrapcolumn() const {
   return _impl_.a_awrapcolumn_;
@@ -1962,7 +1882,7 @@ inline uint32_t Msg_PWebBrowserPersistSerializeConstructor::a_awrapcolumn() cons
   return _internal_a_awrapcolumn();
 }
 inline void Msg_PWebBrowserPersistSerializeConstructor::_internal_set_a_awrapcolumn(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_awrapcolumn_ = value;
 }
 inline void Msg_PWebBrowserPersistSerializeConstructor::set_a_awrapcolumn(uint32_t value) {

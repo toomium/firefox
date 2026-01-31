@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/ipc/glue/PBackgroundStarter.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.ipc.PBackgroundStarter;
 
@@ -16,7 +15,7 @@ package protobuf.mozilla.ipc.PBackgroundStarter;
 
 // Message declarations
 message Msg_InitBackground {
-  required bytes a_aEndpoint = 1;
+  bytes a_aEndpoint = 1;
 }
 
 // Parameter mappings stats:

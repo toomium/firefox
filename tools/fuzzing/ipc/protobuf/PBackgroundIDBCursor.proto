@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/indexedDB/PBackgroundIDBCursor.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.indexedDB.PBackgroundIDBCursor;
 
@@ -21,10 +20,10 @@ message Msg_DeleteMe {
 }
 
 message Msg_Continue {
-  required sint64 a_requestId = 1;
-  required protobuf.mozilla.dom.indexedDB.CursorRequestParams a_params = 2;
-  required bytes a_currentKey = 3;
-  required bytes a_currentObjectStoreKey = 4;
+  sint64 a_requestId = 1;
+  protobuf.mozilla.dom.indexedDB.CursorRequestParams a_params = 2;
+  bytes a_currentKey = 3;
+  bytes a_currentObjectStoreKey = 4;
 }
 
 message Msg___delete__ {
@@ -34,7 +33,7 @@ message Reply___delete__ {
 }
 
 message Msg_Response {
-  required protobuf.mozilla.dom.indexedDB.CursorResponse a_response = 1;
+  protobuf.mozilla.dom.indexedDB.CursorResponse a_response = 1;
 }
 
 // Parameter mappings stats:

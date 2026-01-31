@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "IPCBlob.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -42,6 +44,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -93,7 +96,7 @@ namespace dom {
 // ===================================================================
 
 class FileSystemFileResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.FileSystemFileResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.FileSystemFileResponse) */ {
  public:
   inline FileSystemFileResponse() : FileSystemFileResponse(nullptr) {}
   ~FileSystemFileResponse() override;
@@ -123,13 +126,15 @@ class FileSystemFileResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const FileSystemFileResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -167,9 +172,15 @@ class FileSystemFileResponse final :
   FileSystemFileResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<FileSystemFileResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const FileSystemFileResponse& from);
-  void MergeFrom(const FileSystemFileResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const FileSystemFileResponse& from) {
+    FileSystemFileResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -182,7 +193,7 @@ class FileSystemFileResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(FileSystemFileResponse* other);
 
   private:
@@ -195,7 +206,10 @@ class FileSystemFileResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -204,7 +218,7 @@ class FileSystemFileResponse final :
   enum : int {
     kABlobFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  // .protobuf.mozilla.dom.IPCBlob a_blob = 1;
   bool has_a_blob() const;
   private:
   bool _internal_has_a_blob() const;
@@ -230,9 +244,8 @@ class FileSystemFileResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::IPCBlob* a_blob_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -240,7 +253,7 @@ class FileSystemFileResponse final :
 // -------------------------------------------------------------------
 
 class FileSystemDirectoryResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.FileSystemDirectoryResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.FileSystemDirectoryResponse) */ {
  public:
   inline FileSystemDirectoryResponse() : FileSystemDirectoryResponse(nullptr) {}
   ~FileSystemDirectoryResponse() override;
@@ -270,13 +283,15 @@ class FileSystemDirectoryResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const FileSystemDirectoryResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -314,9 +329,15 @@ class FileSystemDirectoryResponse final :
   FileSystemDirectoryResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<FileSystemDirectoryResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const FileSystemDirectoryResponse& from);
-  void MergeFrom(const FileSystemDirectoryResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const FileSystemDirectoryResponse& from) {
+    FileSystemDirectoryResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -329,7 +350,7 @@ class FileSystemDirectoryResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(FileSystemDirectoryResponse* other);
 
   private:
@@ -342,7 +363,10 @@ class FileSystemDirectoryResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -351,11 +375,7 @@ class FileSystemDirectoryResponse final :
   enum : int {
     kARealPathFieldNumber = 1,
   };
-  // required string a_realPath = 1;
-  bool has_a_realpath() const;
-  private:
-  bool _internal_has_a_realpath() const;
-  public:
+  // string a_realPath = 1;
   void clear_a_realpath();
   const std::string& a_realpath() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -377,9 +397,8 @@ class FileSystemDirectoryResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_realpath_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -387,7 +406,7 @@ class FileSystemDirectoryResponse final :
 // -------------------------------------------------------------------
 
 class FileSystemDirectoryListingResponseFile final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile) */ {
  public:
   inline FileSystemDirectoryListingResponseFile() : FileSystemDirectoryListingResponseFile(nullptr) {}
   ~FileSystemDirectoryListingResponseFile() override;
@@ -417,13 +436,15 @@ class FileSystemDirectoryListingResponseFile final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const FileSystemDirectoryListingResponseFile& default_instance() {
     return *internal_default_instance();
   }
@@ -461,9 +482,15 @@ class FileSystemDirectoryListingResponseFile final :
   FileSystemDirectoryListingResponseFile* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<FileSystemDirectoryListingResponseFile>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const FileSystemDirectoryListingResponseFile& from);
-  void MergeFrom(const FileSystemDirectoryListingResponseFile& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const FileSystemDirectoryListingResponseFile& from) {
+    FileSystemDirectoryListingResponseFile::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -476,7 +503,7 @@ class FileSystemDirectoryListingResponseFile final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(FileSystemDirectoryListingResponseFile* other);
 
   private:
@@ -489,7 +516,10 @@ class FileSystemDirectoryListingResponseFile final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -498,7 +528,7 @@ class FileSystemDirectoryListingResponseFile final :
   enum : int {
     kABlobFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  // .protobuf.mozilla.dom.IPCBlob a_blob = 1;
   bool has_a_blob() const;
   private:
   bool _internal_has_a_blob() const;
@@ -524,9 +554,8 @@ class FileSystemDirectoryListingResponseFile final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::IPCBlob* a_blob_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -534,7 +563,7 @@ class FileSystemDirectoryListingResponseFile final :
 // -------------------------------------------------------------------
 
 class FileSystemDirectoryListingResponseDirectory final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory) */ {
  public:
   inline FileSystemDirectoryListingResponseDirectory() : FileSystemDirectoryListingResponseDirectory(nullptr) {}
   ~FileSystemDirectoryListingResponseDirectory() override;
@@ -564,13 +593,15 @@ class FileSystemDirectoryListingResponseDirectory final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const FileSystemDirectoryListingResponseDirectory& default_instance() {
     return *internal_default_instance();
   }
@@ -608,9 +639,15 @@ class FileSystemDirectoryListingResponseDirectory final :
   FileSystemDirectoryListingResponseDirectory* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<FileSystemDirectoryListingResponseDirectory>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const FileSystemDirectoryListingResponseDirectory& from);
-  void MergeFrom(const FileSystemDirectoryListingResponseDirectory& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const FileSystemDirectoryListingResponseDirectory& from) {
+    FileSystemDirectoryListingResponseDirectory::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -623,7 +660,7 @@ class FileSystemDirectoryListingResponseDirectory final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(FileSystemDirectoryListingResponseDirectory* other);
 
   private:
@@ -636,7 +673,10 @@ class FileSystemDirectoryListingResponseDirectory final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -645,11 +685,7 @@ class FileSystemDirectoryListingResponseDirectory final :
   enum : int {
     kADirectoryRealPathFieldNumber = 1,
   };
-  // required string a_directoryRealPath = 1;
-  bool has_a_directoryrealpath() const;
-  private:
-  bool _internal_has_a_directoryrealpath() const;
-  public:
+  // string a_directoryRealPath = 1;
   void clear_a_directoryrealpath();
   const std::string& a_directoryrealpath() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -671,9 +707,8 @@ class FileSystemDirectoryListingResponseDirectory final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_directoryrealpath_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -681,7 +716,7 @@ class FileSystemDirectoryListingResponseDirectory final :
 // -------------------------------------------------------------------
 
 class FileSystemDirectoryListingResponseData final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.FileSystemDirectoryListingResponseData) */ {
  public:
   inline FileSystemDirectoryListingResponseData() : FileSystemDirectoryListingResponseData(nullptr) {}
   ~FileSystemDirectoryListingResponseData() override;
@@ -711,13 +746,15 @@ class FileSystemDirectoryListingResponseData final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const FileSystemDirectoryListingResponseData& default_instance() {
     return *internal_default_instance();
   }
@@ -761,9 +798,15 @@ class FileSystemDirectoryListingResponseData final :
   FileSystemDirectoryListingResponseData* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<FileSystemDirectoryListingResponseData>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const FileSystemDirectoryListingResponseData& from);
-  void MergeFrom(const FileSystemDirectoryListingResponseData& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const FileSystemDirectoryListingResponseData& from) {
+    FileSystemDirectoryListingResponseData::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -776,7 +819,7 @@ class FileSystemDirectoryListingResponseData final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(FileSystemDirectoryListingResponseData* other);
 
   private:
@@ -789,7 +832,10 @@ class FileSystemDirectoryListingResponseData final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -866,7 +912,7 @@ class FileSystemDirectoryListingResponseData final :
 // -------------------------------------------------------------------
 
 class FileSystemDirectoryListingResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.FileSystemDirectoryListingResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.FileSystemDirectoryListingResponse) */ {
  public:
   inline FileSystemDirectoryListingResponse() : FileSystemDirectoryListingResponse(nullptr) {}
   ~FileSystemDirectoryListingResponse() override;
@@ -896,13 +942,15 @@ class FileSystemDirectoryListingResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const FileSystemDirectoryListingResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -940,9 +988,15 @@ class FileSystemDirectoryListingResponse final :
   FileSystemDirectoryListingResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<FileSystemDirectoryListingResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const FileSystemDirectoryListingResponse& from);
-  void MergeFrom(const FileSystemDirectoryListingResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const FileSystemDirectoryListingResponse& from) {
+    FileSystemDirectoryListingResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -955,7 +1009,7 @@ class FileSystemDirectoryListingResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(FileSystemDirectoryListingResponse* other);
 
   private:
@@ -968,7 +1022,10 @@ class FileSystemDirectoryListingResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1012,7 +1069,7 @@ class FileSystemDirectoryListingResponse final :
 // -------------------------------------------------------------------
 
 class FileSystemFilesResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.FileSystemFilesResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.FileSystemFilesResponse) */ {
  public:
   inline FileSystemFilesResponse() : FileSystemFilesResponse(nullptr) {}
   ~FileSystemFilesResponse() override;
@@ -1042,13 +1099,15 @@ class FileSystemFilesResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const FileSystemFilesResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -1086,9 +1145,15 @@ class FileSystemFilesResponse final :
   FileSystemFilesResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<FileSystemFilesResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const FileSystemFilesResponse& from);
-  void MergeFrom(const FileSystemFilesResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const FileSystemFilesResponse& from) {
+    FileSystemFilesResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1101,7 +1166,7 @@ class FileSystemFilesResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(FileSystemFilesResponse* other);
 
   private:
@@ -1114,7 +1179,10 @@ class FileSystemFilesResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1158,7 +1226,7 @@ class FileSystemFilesResponse final :
 // -------------------------------------------------------------------
 
 class FileSystemErrorResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.FileSystemErrorResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.FileSystemErrorResponse) */ {
  public:
   inline FileSystemErrorResponse() : FileSystemErrorResponse(nullptr) {}
   ~FileSystemErrorResponse() override;
@@ -1188,13 +1256,15 @@ class FileSystemErrorResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const FileSystemErrorResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -1232,9 +1302,15 @@ class FileSystemErrorResponse final :
   FileSystemErrorResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<FileSystemErrorResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const FileSystemErrorResponse& from);
-  void MergeFrom(const FileSystemErrorResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const FileSystemErrorResponse& from) {
+    FileSystemErrorResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1247,7 +1323,7 @@ class FileSystemErrorResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(FileSystemErrorResponse* other);
 
   private:
@@ -1260,7 +1336,10 @@ class FileSystemErrorResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1269,11 +1348,7 @@ class FileSystemErrorResponse final :
   enum : int {
     kAErrorFieldNumber = 1,
   };
-  // required bytes a_error = 1;
-  bool has_a_error() const;
-  private:
-  bool _internal_has_a_error() const;
-  public:
+  // bytes a_error = 1;
   void clear_a_error();
   const std::string& a_error() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1295,9 +1370,8 @@ class FileSystemErrorResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_error_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PFileSystemRequest_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1305,7 +1379,7 @@ class FileSystemErrorResponse final :
 // -------------------------------------------------------------------
 
 class FileSystemResponseValue final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.FileSystemResponseValue) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.FileSystemResponseValue) */ {
  public:
   inline FileSystemResponseValue() : FileSystemResponseValue(nullptr) {}
   ~FileSystemResponseValue() override;
@@ -1335,13 +1409,15 @@ class FileSystemResponseValue final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const FileSystemResponseValue& default_instance() {
     return *internal_default_instance();
   }
@@ -1388,9 +1464,15 @@ class FileSystemResponseValue final :
   FileSystemResponseValue* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<FileSystemResponseValue>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const FileSystemResponseValue& from);
-  void MergeFrom(const FileSystemResponseValue& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const FileSystemResponseValue& from) {
+    FileSystemResponseValue::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1403,7 +1485,7 @@ class FileSystemResponseValue final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(FileSystemResponseValue* other);
 
   private:
@@ -1416,7 +1498,10 @@ class FileSystemResponseValue final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1564,11 +1649,9 @@ class FileSystemResponseValue final :
 #endif  // __GNUC__
 // FileSystemFileResponse
 
-// required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+// .protobuf.mozilla.dom.IPCBlob a_blob = 1;
 inline bool FileSystemFileResponse::_internal_has_a_blob() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_blob_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_blob_ != nullptr;
 }
 inline bool FileSystemFileResponse::has_a_blob() const {
   return _internal_has_a_blob();
@@ -1589,14 +1672,14 @@ inline void FileSystemFileResponse::unsafe_arena_set_allocated_a_blob(
   }
   _impl_.a_blob_ = a_blob;
   if (a_blob) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemFileResponse.a_blob)
 }
 inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileResponse::release_a_blob() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.a_blob_;
   _impl_.a_blob_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1612,13 +1695,13 @@ inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileResponse::release_a_blob
 }
 inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileResponse::unsafe_arena_release_a_blob() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemFileResponse.a_blob)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.a_blob_;
   _impl_.a_blob_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::IPCBlob* FileSystemFileResponse::_internal_mutable_a_blob() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_blob_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCBlob>(GetArenaForAllocation());
     _impl_.a_blob_ = p;
@@ -1643,9 +1726,9 @@ inline void FileSystemFileResponse::set_allocated_a_blob(::protobuf::mozilla::do
       a_blob = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_blob, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_blob_ = a_blob;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemFileResponse.a_blob)
@@ -1655,17 +1738,9 @@ inline void FileSystemFileResponse::set_allocated_a_blob(::protobuf::mozilla::do
 
 // FileSystemDirectoryResponse
 
-// required string a_realPath = 1;
-inline bool FileSystemDirectoryResponse::_internal_has_a_realpath() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool FileSystemDirectoryResponse::has_a_realpath() const {
-  return _internal_has_a_realpath();
-}
+// string a_realPath = 1;
 inline void FileSystemDirectoryResponse::clear_a_realpath() {
   _impl_.a_realpath_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& FileSystemDirectoryResponse::a_realpath() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemDirectoryResponse.a_realPath)
@@ -1674,7 +1749,7 @@ inline const std::string& FileSystemDirectoryResponse::a_realpath() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemDirectoryResponse::set_a_realpath(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_realpath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemDirectoryResponse.a_realPath)
 }
@@ -1687,32 +1762,22 @@ inline const std::string& FileSystemDirectoryResponse::_internal_a_realpath() co
   return _impl_.a_realpath_.Get();
 }
 inline void FileSystemDirectoryResponse::_internal_set_a_realpath(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_realpath_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileSystemDirectoryResponse::_internal_mutable_a_realpath() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_realpath_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileSystemDirectoryResponse::release_a_realpath() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemDirectoryResponse.a_realPath)
-  if (!_internal_has_a_realpath()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_realpath_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_realpath_.IsDefault()) {
-    _impl_.a_realpath_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_realpath_.Release();
 }
 inline void FileSystemDirectoryResponse::set_allocated_a_realpath(std::string* a_realpath) {
   if (a_realpath != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_realpath_.SetAllocated(a_realpath, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1727,11 +1792,9 @@ inline void FileSystemDirectoryResponse::set_allocated_a_realpath(std::string* a
 
 // FileSystemDirectoryListingResponseFile
 
-// required .protobuf.mozilla.dom.IPCBlob a_blob = 1;
+// .protobuf.mozilla.dom.IPCBlob a_blob = 1;
 inline bool FileSystemDirectoryListingResponseFile::_internal_has_a_blob() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_blob_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_blob_ != nullptr;
 }
 inline bool FileSystemDirectoryListingResponseFile::has_a_blob() const {
   return _internal_has_a_blob();
@@ -1752,14 +1815,14 @@ inline void FileSystemDirectoryListingResponseFile::unsafe_arena_set_allocated_a
   }
   _impl_.a_blob_ = a_blob;
   if (a_blob) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile.a_blob)
 }
 inline ::protobuf::mozilla::dom::IPCBlob* FileSystemDirectoryListingResponseFile::release_a_blob() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.a_blob_;
   _impl_.a_blob_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1775,13 +1838,13 @@ inline ::protobuf::mozilla::dom::IPCBlob* FileSystemDirectoryListingResponseFile
 }
 inline ::protobuf::mozilla::dom::IPCBlob* FileSystemDirectoryListingResponseFile::unsafe_arena_release_a_blob() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile.a_blob)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::dom::IPCBlob* temp = _impl_.a_blob_;
   _impl_.a_blob_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::IPCBlob* FileSystemDirectoryListingResponseFile::_internal_mutable_a_blob() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_blob_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCBlob>(GetArenaForAllocation());
     _impl_.a_blob_ = p;
@@ -1806,9 +1869,9 @@ inline void FileSystemDirectoryListingResponseFile::set_allocated_a_blob(::proto
       a_blob = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_blob, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_blob_ = a_blob;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.FileSystemDirectoryListingResponseFile.a_blob)
@@ -1818,17 +1881,9 @@ inline void FileSystemDirectoryListingResponseFile::set_allocated_a_blob(::proto
 
 // FileSystemDirectoryListingResponseDirectory
 
-// required string a_directoryRealPath = 1;
-inline bool FileSystemDirectoryListingResponseDirectory::_internal_has_a_directoryrealpath() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool FileSystemDirectoryListingResponseDirectory::has_a_directoryrealpath() const {
-  return _internal_has_a_directoryrealpath();
-}
+// string a_directoryRealPath = 1;
 inline void FileSystemDirectoryListingResponseDirectory::clear_a_directoryrealpath() {
   _impl_.a_directoryrealpath_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& FileSystemDirectoryListingResponseDirectory::a_directoryrealpath() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory.a_directoryRealPath)
@@ -1837,7 +1892,7 @@ inline const std::string& FileSystemDirectoryListingResponseDirectory::a_directo
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemDirectoryListingResponseDirectory::set_a_directoryrealpath(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_directoryrealpath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory.a_directoryRealPath)
 }
@@ -1850,32 +1905,22 @@ inline const std::string& FileSystemDirectoryListingResponseDirectory::_internal
   return _impl_.a_directoryrealpath_.Get();
 }
 inline void FileSystemDirectoryListingResponseDirectory::_internal_set_a_directoryrealpath(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_directoryrealpath_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileSystemDirectoryListingResponseDirectory::_internal_mutable_a_directoryrealpath() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_directoryrealpath_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileSystemDirectoryListingResponseDirectory::release_a_directoryrealpath() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemDirectoryListingResponseDirectory.a_directoryRealPath)
-  if (!_internal_has_a_directoryrealpath()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_directoryrealpath_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_directoryrealpath_.IsDefault()) {
-    _impl_.a_directoryrealpath_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_directoryrealpath_.Release();
 }
 inline void FileSystemDirectoryListingResponseDirectory::set_allocated_a_directoryrealpath(std::string* a_directoryrealpath) {
   if (a_directoryrealpath != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_directoryrealpath_.SetAllocated(a_directoryrealpath, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2139,17 +2184,9 @@ FileSystemFilesResponse::a_data() const {
 
 // FileSystemErrorResponse
 
-// required bytes a_error = 1;
-inline bool FileSystemErrorResponse::_internal_has_a_error() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool FileSystemErrorResponse::has_a_error() const {
-  return _internal_has_a_error();
-}
+// bytes a_error = 1;
 inline void FileSystemErrorResponse::clear_a_error() {
   _impl_.a_error_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& FileSystemErrorResponse::a_error() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.FileSystemErrorResponse.a_error)
@@ -2158,7 +2195,7 @@ inline const std::string& FileSystemErrorResponse::a_error() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileSystemErrorResponse::set_a_error(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_error_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FileSystemErrorResponse.a_error)
 }
@@ -2171,32 +2208,22 @@ inline const std::string& FileSystemErrorResponse::_internal_a_error() const {
   return _impl_.a_error_.Get();
 }
 inline void FileSystemErrorResponse::_internal_set_a_error(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_error_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileSystemErrorResponse::_internal_mutable_a_error() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_error_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileSystemErrorResponse::release_a_error() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.FileSystemErrorResponse.a_error)
-  if (!_internal_has_a_error()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_error_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_error_.IsDefault()) {
-    _impl_.a_error_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_error_.Release();
 }
 inline void FileSystemErrorResponse::set_allocated_a_error(std::string* a_error) {
   if (a_error != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_error_.SetAllocated(a_error, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

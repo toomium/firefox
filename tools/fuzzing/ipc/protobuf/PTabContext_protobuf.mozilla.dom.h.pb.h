@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_PTabContext_5fprotobuf_2emozilla_2edom_2eh_2eproto
@@ -41,6 +43,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PTabContext_5fprotobuf_2emozilla_2edom_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PTabContext_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -68,7 +71,7 @@ namespace dom {
 // ===================================================================
 
 class PopupIPCTabContext final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PopupIPCTabContext) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PopupIPCTabContext) */ {
  public:
   inline PopupIPCTabContext() : PopupIPCTabContext(nullptr) {}
   ~PopupIPCTabContext() override;
@@ -98,13 +101,15 @@ class PopupIPCTabContext final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const PopupIPCTabContext& default_instance() {
     return *internal_default_instance();
   }
@@ -142,9 +147,15 @@ class PopupIPCTabContext final :
   PopupIPCTabContext* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<PopupIPCTabContext>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const PopupIPCTabContext& from);
-  void MergeFrom(const PopupIPCTabContext& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const PopupIPCTabContext& from) {
+    PopupIPCTabContext::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -157,7 +168,7 @@ class PopupIPCTabContext final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(PopupIPCTabContext* other);
 
   private:
@@ -170,7 +181,10 @@ class PopupIPCTabContext final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -180,11 +194,7 @@ class PopupIPCTabContext final :
     kAOpenerFieldNumber = 1,
     kAChromeOuterWindowIDFieldNumber = 2,
   };
-  // required bytes a_opener = 1;
-  bool has_a_opener() const;
-  private:
-  bool _internal_has_a_opener() const;
-  public:
+  // bytes a_opener = 1;
   void clear_a_opener();
   const std::string& a_opener() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -198,11 +208,7 @@ class PopupIPCTabContext final :
   std::string* _internal_mutable_a_opener();
   public:
 
-  // required uint64 a_chromeOuterWindowID = 2;
-  bool has_a_chromeouterwindowid() const;
-  private:
-  bool _internal_has_a_chromeouterwindowid() const;
-  public:
+  // uint64 a_chromeOuterWindowID = 2;
   void clear_a_chromeouterwindowid();
   uint64_t a_chromeouterwindowid() const;
   void set_a_chromeouterwindowid(uint64_t value);
@@ -215,17 +221,13 @@ class PopupIPCTabContext final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_opener_;
     uint64_t a_chromeouterwindowid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTabContext_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -233,7 +235,7 @@ class PopupIPCTabContext final :
 // -------------------------------------------------------------------
 
 class FrameIPCTabContext final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.FrameIPCTabContext) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.FrameIPCTabContext) */ {
  public:
   inline FrameIPCTabContext() : FrameIPCTabContext(nullptr) {}
   ~FrameIPCTabContext() override;
@@ -263,13 +265,15 @@ class FrameIPCTabContext final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const FrameIPCTabContext& default_instance() {
     return *internal_default_instance();
   }
@@ -307,9 +311,15 @@ class FrameIPCTabContext final :
   FrameIPCTabContext* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<FrameIPCTabContext>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const FrameIPCTabContext& from);
-  void MergeFrom(const FrameIPCTabContext& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const FrameIPCTabContext& from) {
+    FrameIPCTabContext::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -322,7 +332,7 @@ class FrameIPCTabContext final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(FrameIPCTabContext* other);
 
   private:
@@ -335,7 +345,10 @@ class FrameIPCTabContext final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -345,11 +358,7 @@ class FrameIPCTabContext final :
     kAChromeOuterWindowIDFieldNumber = 1,
     kAMaxTouchPointsFieldNumber = 2,
   };
-  // required uint64 a_chromeOuterWindowID = 1;
-  bool has_a_chromeouterwindowid() const;
-  private:
-  bool _internal_has_a_chromeouterwindowid() const;
-  public:
+  // uint64 a_chromeOuterWindowID = 1;
   void clear_a_chromeouterwindowid();
   uint64_t a_chromeouterwindowid() const;
   void set_a_chromeouterwindowid(uint64_t value);
@@ -358,11 +367,7 @@ class FrameIPCTabContext final :
   void _internal_set_a_chromeouterwindowid(uint64_t value);
   public:
 
-  // required uint32 a_maxTouchPoints = 2;
-  bool has_a_maxtouchpoints() const;
-  private:
-  bool _internal_has_a_maxtouchpoints() const;
-  public:
+  // uint32 a_maxTouchPoints = 2;
   void clear_a_maxtouchpoints();
   uint32_t a_maxtouchpoints() const;
   void set_a_maxtouchpoints(uint32_t value);
@@ -375,17 +380,13 @@ class FrameIPCTabContext final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_chromeouterwindowid_;
     uint32_t a_maxtouchpoints_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTabContext_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -393,7 +394,7 @@ class FrameIPCTabContext final :
 // -------------------------------------------------------------------
 
 class IPCTabContext final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.IPCTabContext) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.IPCTabContext) */ {
  public:
   inline IPCTabContext() : IPCTabContext(nullptr) {}
   ~IPCTabContext() override;
@@ -423,13 +424,15 @@ class IPCTabContext final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const IPCTabContext& default_instance() {
     return *internal_default_instance();
   }
@@ -473,9 +476,15 @@ class IPCTabContext final :
   IPCTabContext* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<IPCTabContext>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const IPCTabContext& from);
-  void MergeFrom(const IPCTabContext& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const IPCTabContext& from) {
+    IPCTabContext::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -488,7 +497,7 @@ class IPCTabContext final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(IPCTabContext* other);
 
   private:
@@ -501,7 +510,10 @@ class IPCTabContext final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -586,17 +598,9 @@ class IPCTabContext final :
 #endif  // __GNUC__
 // PopupIPCTabContext
 
-// required bytes a_opener = 1;
-inline bool PopupIPCTabContext::_internal_has_a_opener() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool PopupIPCTabContext::has_a_opener() const {
-  return _internal_has_a_opener();
-}
+// bytes a_opener = 1;
 inline void PopupIPCTabContext::clear_a_opener() {
   _impl_.a_opener_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& PopupIPCTabContext::a_opener() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PopupIPCTabContext.a_opener)
@@ -605,7 +609,7 @@ inline const std::string& PopupIPCTabContext::a_opener() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PopupIPCTabContext::set_a_opener(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_opener_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PopupIPCTabContext.a_opener)
 }
@@ -618,32 +622,22 @@ inline const std::string& PopupIPCTabContext::_internal_a_opener() const {
   return _impl_.a_opener_.Get();
 }
 inline void PopupIPCTabContext::_internal_set_a_opener(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_opener_.Set(value, GetArenaForAllocation());
 }
 inline std::string* PopupIPCTabContext::_internal_mutable_a_opener() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_opener_.Mutable(GetArenaForAllocation());
 }
 inline std::string* PopupIPCTabContext::release_a_opener() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PopupIPCTabContext.a_opener)
-  if (!_internal_has_a_opener()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_opener_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_opener_.IsDefault()) {
-    _impl_.a_opener_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_opener_.Release();
 }
 inline void PopupIPCTabContext::set_allocated_a_opener(std::string* a_opener) {
   if (a_opener != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_opener_.SetAllocated(a_opener, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -654,17 +648,9 @@ inline void PopupIPCTabContext::set_allocated_a_opener(std::string* a_opener) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PopupIPCTabContext.a_opener)
 }
 
-// required uint64 a_chromeOuterWindowID = 2;
-inline bool PopupIPCTabContext::_internal_has_a_chromeouterwindowid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool PopupIPCTabContext::has_a_chromeouterwindowid() const {
-  return _internal_has_a_chromeouterwindowid();
-}
+// uint64 a_chromeOuterWindowID = 2;
 inline void PopupIPCTabContext::clear_a_chromeouterwindowid() {
   _impl_.a_chromeouterwindowid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t PopupIPCTabContext::_internal_a_chromeouterwindowid() const {
   return _impl_.a_chromeouterwindowid_;
@@ -674,7 +660,7 @@ inline uint64_t PopupIPCTabContext::a_chromeouterwindowid() const {
   return _internal_a_chromeouterwindowid();
 }
 inline void PopupIPCTabContext::_internal_set_a_chromeouterwindowid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_chromeouterwindowid_ = value;
 }
 inline void PopupIPCTabContext::set_a_chromeouterwindowid(uint64_t value) {
@@ -686,17 +672,9 @@ inline void PopupIPCTabContext::set_a_chromeouterwindowid(uint64_t value) {
 
 // FrameIPCTabContext
 
-// required uint64 a_chromeOuterWindowID = 1;
-inline bool FrameIPCTabContext::_internal_has_a_chromeouterwindowid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool FrameIPCTabContext::has_a_chromeouterwindowid() const {
-  return _internal_has_a_chromeouterwindowid();
-}
+// uint64 a_chromeOuterWindowID = 1;
 inline void FrameIPCTabContext::clear_a_chromeouterwindowid() {
   _impl_.a_chromeouterwindowid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t FrameIPCTabContext::_internal_a_chromeouterwindowid() const {
   return _impl_.a_chromeouterwindowid_;
@@ -706,7 +684,7 @@ inline uint64_t FrameIPCTabContext::a_chromeouterwindowid() const {
   return _internal_a_chromeouterwindowid();
 }
 inline void FrameIPCTabContext::_internal_set_a_chromeouterwindowid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_chromeouterwindowid_ = value;
 }
 inline void FrameIPCTabContext::set_a_chromeouterwindowid(uint64_t value) {
@@ -714,17 +692,9 @@ inline void FrameIPCTabContext::set_a_chromeouterwindowid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.FrameIPCTabContext.a_chromeOuterWindowID)
 }
 
-// required uint32 a_maxTouchPoints = 2;
-inline bool FrameIPCTabContext::_internal_has_a_maxtouchpoints() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool FrameIPCTabContext::has_a_maxtouchpoints() const {
-  return _internal_has_a_maxtouchpoints();
-}
+// uint32 a_maxTouchPoints = 2;
 inline void FrameIPCTabContext::clear_a_maxtouchpoints() {
   _impl_.a_maxtouchpoints_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t FrameIPCTabContext::_internal_a_maxtouchpoints() const {
   return _impl_.a_maxtouchpoints_;
@@ -734,7 +704,7 @@ inline uint32_t FrameIPCTabContext::a_maxtouchpoints() const {
   return _internal_a_maxtouchpoints();
 }
 inline void FrameIPCTabContext::_internal_set_a_maxtouchpoints(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_maxtouchpoints_ = value;
 }
 inline void FrameIPCTabContext::set_a_maxtouchpoints(uint32_t value) {

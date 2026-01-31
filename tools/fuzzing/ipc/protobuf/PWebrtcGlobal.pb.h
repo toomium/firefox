@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_PWebrtcGlobal_2eproto
@@ -41,6 +44,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PWebrtcGlobal_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PWebrtcGlobal_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -107,10 +111,9 @@ namespace PWebrtcGlobal {
 // ===================================================================
 
 class Msg___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Msg___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Msg___delete__) */ {
  public:
   inline Msg___delete__() : Msg___delete__(nullptr) {}
-  ~Msg___delete__() override;
   explicit PROTOBUF_CONSTEXPR Msg___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg___delete__(const Msg___delete__& from);
@@ -137,13 +140,15 @@ class Msg___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -181,23 +186,15 @@ class Msg___delete__ final :
   Msg___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg___delete__& from);
-  void MergeFrom(const Msg___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -209,7 +206,10 @@ class Msg___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -223,18 +223,15 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Reply___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Reply___delete__) */ {
  public:
   inline Reply___delete__() : Reply___delete__(nullptr) {}
-  ~Reply___delete__() override;
   explicit PROTOBUF_CONSTEXPR Reply___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply___delete__(const Reply___delete__& from);
@@ -261,13 +258,15 @@ class Reply___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -305,23 +304,15 @@ class Reply___delete__ final :
   Reply___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply___delete__& from);
-  void MergeFrom(const Reply___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -333,7 +324,10 @@ class Reply___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -347,15 +341,13 @@ class Reply___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_PeerConnectionCreated final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated) */ {
  public:
   inline Msg_PeerConnectionCreated() : Msg_PeerConnectionCreated(nullptr) {}
   ~Msg_PeerConnectionCreated() override;
@@ -385,13 +377,15 @@ class Msg_PeerConnectionCreated final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_PeerConnectionCreated& default_instance() {
     return *internal_default_instance();
   }
@@ -429,9 +423,15 @@ class Msg_PeerConnectionCreated final :
   Msg_PeerConnectionCreated* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_PeerConnectionCreated>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_PeerConnectionCreated& from);
-  void MergeFrom(const Msg_PeerConnectionCreated& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_PeerConnectionCreated& from) {
+    Msg_PeerConnectionCreated::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -444,7 +444,7 @@ class Msg_PeerConnectionCreated final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_PeerConnectionCreated* other);
 
   private:
@@ -457,7 +457,10 @@ class Msg_PeerConnectionCreated final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -467,11 +470,7 @@ class Msg_PeerConnectionCreated final :
     kAAPcIdFieldNumber = 1,
     kAAIsLongTermStatsDisabledFieldNumber = 2,
   };
-  // required string a_aPcId = 1;
-  bool has_a_apcid() const;
-  private:
-  bool _internal_has_a_apcid() const;
-  public:
+  // string a_aPcId = 1;
   void clear_a_apcid();
   const std::string& a_apcid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -485,11 +484,7 @@ class Msg_PeerConnectionCreated final :
   std::string* _internal_mutable_a_apcid();
   public:
 
-  // required bool a_aIsLongTermStatsDisabled = 2;
-  bool has_a_aislongtermstatsdisabled() const;
-  private:
-  bool _internal_has_a_aislongtermstatsdisabled() const;
-  public:
+  // bool a_aIsLongTermStatsDisabled = 2;
   void clear_a_aislongtermstatsdisabled();
   bool a_aislongtermstatsdisabled() const;
   void set_a_aislongtermstatsdisabled(bool value);
@@ -502,17 +497,13 @@ class Msg_PeerConnectionCreated final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_apcid_;
     bool a_aislongtermstatsdisabled_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
@@ -520,7 +511,7 @@ class Msg_PeerConnectionCreated final :
 // -------------------------------------------------------------------
 
 class Msg_PeerConnectionDestroyed final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionDestroyed) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionDestroyed) */ {
  public:
   inline Msg_PeerConnectionDestroyed() : Msg_PeerConnectionDestroyed(nullptr) {}
   ~Msg_PeerConnectionDestroyed() override;
@@ -550,13 +541,15 @@ class Msg_PeerConnectionDestroyed final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_PeerConnectionDestroyed& default_instance() {
     return *internal_default_instance();
   }
@@ -594,9 +587,15 @@ class Msg_PeerConnectionDestroyed final :
   Msg_PeerConnectionDestroyed* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_PeerConnectionDestroyed>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_PeerConnectionDestroyed& from);
-  void MergeFrom(const Msg_PeerConnectionDestroyed& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_PeerConnectionDestroyed& from) {
+    Msg_PeerConnectionDestroyed::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -609,7 +608,7 @@ class Msg_PeerConnectionDestroyed final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_PeerConnectionDestroyed* other);
 
   private:
@@ -622,7 +621,10 @@ class Msg_PeerConnectionDestroyed final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -631,11 +633,7 @@ class Msg_PeerConnectionDestroyed final :
   enum : int {
     kAAPcIdFieldNumber = 1,
   };
-  // required string a_aPcId = 1;
-  bool has_a_apcid() const;
-  private:
-  bool _internal_has_a_apcid() const;
-  public:
+  // string a_aPcId = 1;
   void clear_a_apcid();
   const std::string& a_apcid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -657,9 +655,8 @@ class Msg_PeerConnectionDestroyed final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_apcid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
@@ -667,7 +664,7 @@ class Msg_PeerConnectionDestroyed final :
 // -------------------------------------------------------------------
 
 class Msg_PeerConnectionFinalStats final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionFinalStats) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionFinalStats) */ {
  public:
   inline Msg_PeerConnectionFinalStats() : Msg_PeerConnectionFinalStats(nullptr) {}
   ~Msg_PeerConnectionFinalStats() override;
@@ -697,13 +694,15 @@ class Msg_PeerConnectionFinalStats final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_PeerConnectionFinalStats& default_instance() {
     return *internal_default_instance();
   }
@@ -741,9 +740,15 @@ class Msg_PeerConnectionFinalStats final :
   Msg_PeerConnectionFinalStats* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_PeerConnectionFinalStats>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_PeerConnectionFinalStats& from);
-  void MergeFrom(const Msg_PeerConnectionFinalStats& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_PeerConnectionFinalStats& from) {
+    Msg_PeerConnectionFinalStats::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -756,7 +761,7 @@ class Msg_PeerConnectionFinalStats final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_PeerConnectionFinalStats* other);
 
   private:
@@ -769,7 +774,10 @@ class Msg_PeerConnectionFinalStats final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -778,11 +786,7 @@ class Msg_PeerConnectionFinalStats final :
   enum : int {
     kAAFinalStatsFieldNumber = 1,
   };
-  // required bytes a_aFinalStats = 1;
-  bool has_a_afinalstats() const;
-  private:
-  bool _internal_has_a_afinalstats() const;
-  public:
+  // bytes a_aFinalStats = 1;
   void clear_a_afinalstats();
   const std::string& a_afinalstats() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -804,9 +808,8 @@ class Msg_PeerConnectionFinalStats final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_afinalstats_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
@@ -814,7 +817,7 @@ class Msg_PeerConnectionFinalStats final :
 // -------------------------------------------------------------------
 
 class Msg_GetStats final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetStats) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetStats) */ {
  public:
   inline Msg_GetStats() : Msg_GetStats(nullptr) {}
   ~Msg_GetStats() override;
@@ -844,13 +847,15 @@ class Msg_GetStats final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_GetStats& default_instance() {
     return *internal_default_instance();
   }
@@ -888,9 +893,15 @@ class Msg_GetStats final :
   Msg_GetStats* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_GetStats>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_GetStats& from);
-  void MergeFrom(const Msg_GetStats& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_GetStats& from) {
+    Msg_GetStats::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -903,7 +914,7 @@ class Msg_GetStats final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_GetStats* other);
 
   private:
@@ -916,7 +927,10 @@ class Msg_GetStats final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -925,11 +939,7 @@ class Msg_GetStats final :
   enum : int {
     kAAPcIdFilterFieldNumber = 1,
   };
-  // required string a_aPcIdFilter = 1;
-  bool has_a_apcidfilter() const;
-  private:
-  bool _internal_has_a_apcidfilter() const;
-  public:
+  // string a_aPcIdFilter = 1;
   void clear_a_apcidfilter();
   const std::string& a_apcidfilter() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -951,9 +961,8 @@ class Msg_GetStats final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_apcidfilter_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
@@ -961,7 +970,7 @@ class Msg_GetStats final :
 // -------------------------------------------------------------------
 
 class Reply_GetStats final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetStats) */ {
  public:
   inline Reply_GetStats() : Reply_GetStats(nullptr) {}
   ~Reply_GetStats() override;
@@ -991,13 +1000,15 @@ class Reply_GetStats final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_GetStats& default_instance() {
     return *internal_default_instance();
   }
@@ -1035,9 +1046,15 @@ class Reply_GetStats final :
   Reply_GetStats* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_GetStats>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_GetStats& from);
-  void MergeFrom(const Reply_GetStats& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_GetStats& from) {
+    Reply_GetStats::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1050,7 +1067,7 @@ class Reply_GetStats final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_GetStats* other);
 
   private:
@@ -1063,7 +1080,10 @@ class Reply_GetStats final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1113,10 +1133,9 @@ class Reply_GetStats final :
 // -------------------------------------------------------------------
 
 class Msg_ClearStats final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Msg_ClearStats) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Msg_ClearStats) */ {
  public:
   inline Msg_ClearStats() : Msg_ClearStats(nullptr) {}
-  ~Msg_ClearStats() override;
   explicit PROTOBUF_CONSTEXPR Msg_ClearStats(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_ClearStats(const Msg_ClearStats& from);
@@ -1143,13 +1162,15 @@ class Msg_ClearStats final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_ClearStats& default_instance() {
     return *internal_default_instance();
   }
@@ -1187,23 +1208,15 @@ class Msg_ClearStats final :
   Msg_ClearStats* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ClearStats>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_ClearStats& from);
-  void MergeFrom(const Msg_ClearStats& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_ClearStats* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_ClearStats& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_ClearStats& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1215,7 +1228,10 @@ class Msg_ClearStats final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1229,18 +1245,15 @@ class Msg_ClearStats final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_GetLog final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetLog) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetLog) */ {
  public:
   inline Msg_GetLog() : Msg_GetLog(nullptr) {}
-  ~Msg_GetLog() override;
   explicit PROTOBUF_CONSTEXPR Msg_GetLog(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_GetLog(const Msg_GetLog& from);
@@ -1267,13 +1280,15 @@ class Msg_GetLog final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_GetLog& default_instance() {
     return *internal_default_instance();
   }
@@ -1311,23 +1326,15 @@ class Msg_GetLog final :
   Msg_GetLog* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_GetLog>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_GetLog& from);
-  void MergeFrom(const Msg_GetLog& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_GetLog* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_GetLog& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_GetLog& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1339,7 +1346,10 @@ class Msg_GetLog final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1353,15 +1363,13 @@ class Msg_GetLog final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply_GetLog final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetLog) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetLog) */ {
  public:
   inline Reply_GetLog() : Reply_GetLog(nullptr) {}
   ~Reply_GetLog() override;
@@ -1391,13 +1399,15 @@ class Reply_GetLog final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_GetLog& default_instance() {
     return *internal_default_instance();
   }
@@ -1435,9 +1445,15 @@ class Reply_GetLog final :
   Reply_GetLog* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_GetLog>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_GetLog& from);
-  void MergeFrom(const Reply_GetLog& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_GetLog& from) {
+    Reply_GetLog::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1450,7 +1466,7 @@ class Reply_GetLog final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_GetLog* other);
 
   private:
@@ -1463,7 +1479,10 @@ class Reply_GetLog final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1472,11 +1491,7 @@ class Reply_GetLog final :
   enum : int {
     kALogsFieldNumber = 1,
   };
-  // required bytes a_logs = 1;
-  bool has_a_logs() const;
-  private:
-  bool _internal_has_a_logs() const;
-  public:
+  // bytes a_logs = 1;
   void clear_a_logs();
   const std::string& a_logs() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1498,9 +1513,8 @@ class Reply_GetLog final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_logs_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
@@ -1508,10 +1522,9 @@ class Reply_GetLog final :
 // -------------------------------------------------------------------
 
 class Msg_ClearLog final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Msg_ClearLog) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Msg_ClearLog) */ {
  public:
   inline Msg_ClearLog() : Msg_ClearLog(nullptr) {}
-  ~Msg_ClearLog() override;
   explicit PROTOBUF_CONSTEXPR Msg_ClearLog(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_ClearLog(const Msg_ClearLog& from);
@@ -1538,13 +1551,15 @@ class Msg_ClearLog final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_ClearLog& default_instance() {
     return *internal_default_instance();
   }
@@ -1582,23 +1597,15 @@ class Msg_ClearLog final :
   Msg_ClearLog* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ClearLog>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_ClearLog& from);
-  void MergeFrom(const Msg_ClearLog& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_ClearLog* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_ClearLog& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_ClearLog& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1610,7 +1617,10 @@ class Msg_ClearLog final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1624,15 +1634,13 @@ class Msg_ClearLog final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_SetAecLogging final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Msg_SetAecLogging) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PWebrtcGlobal.Msg_SetAecLogging) */ {
  public:
   inline Msg_SetAecLogging() : Msg_SetAecLogging(nullptr) {}
   ~Msg_SetAecLogging() override;
@@ -1662,13 +1670,15 @@ class Msg_SetAecLogging final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SetAecLogging& default_instance() {
     return *internal_default_instance();
   }
@@ -1706,9 +1716,15 @@ class Msg_SetAecLogging final :
   Msg_SetAecLogging* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SetAecLogging>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SetAecLogging& from);
-  void MergeFrom(const Msg_SetAecLogging& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SetAecLogging& from) {
+    Msg_SetAecLogging::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1721,7 +1737,7 @@ class Msg_SetAecLogging final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SetAecLogging* other);
 
   private:
@@ -1734,7 +1750,10 @@ class Msg_SetAecLogging final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1743,11 +1762,7 @@ class Msg_SetAecLogging final :
   enum : int {
     kAAEnableFieldNumber = 1,
   };
-  // required bool a_aEnable = 1;
-  bool has_a_aenable() const;
-  private:
-  bool _internal_has_a_aenable() const;
-  public:
+  // bool a_aEnable = 1;
   void clear_a_aenable();
   bool a_aenable() const;
   void set_a_aenable(bool value);
@@ -1764,9 +1779,8 @@ class Msg_SetAecLogging final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     bool a_aenable_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebrtcGlobal_2eproto;
@@ -1790,17 +1804,9 @@ class Msg_SetAecLogging final :
 
 // Msg_PeerConnectionCreated
 
-// required string a_aPcId = 1;
-inline bool Msg_PeerConnectionCreated::_internal_has_a_apcid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_PeerConnectionCreated::has_a_apcid() const {
-  return _internal_has_a_apcid();
-}
+// string a_aPcId = 1;
 inline void Msg_PeerConnectionCreated::clear_a_apcid() {
   _impl_.a_apcid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_PeerConnectionCreated::a_apcid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.a_aPcId)
@@ -1809,7 +1815,7 @@ inline const std::string& Msg_PeerConnectionCreated::a_apcid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PeerConnectionCreated::set_a_apcid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_apcid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.a_aPcId)
 }
@@ -1822,32 +1828,22 @@ inline const std::string& Msg_PeerConnectionCreated::_internal_a_apcid() const {
   return _impl_.a_apcid_.Get();
 }
 inline void Msg_PeerConnectionCreated::_internal_set_a_apcid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_apcid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_PeerConnectionCreated::_internal_mutable_a_apcid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_apcid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_PeerConnectionCreated::release_a_apcid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.a_aPcId)
-  if (!_internal_has_a_apcid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_apcid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_apcid_.IsDefault()) {
-    _impl_.a_apcid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_apcid_.Release();
 }
 inline void Msg_PeerConnectionCreated::set_allocated_a_apcid(std::string* a_apcid) {
   if (a_apcid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_apcid_.SetAllocated(a_apcid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1858,17 +1854,9 @@ inline void Msg_PeerConnectionCreated::set_allocated_a_apcid(std::string* a_apci
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionCreated.a_aPcId)
 }
 
-// required bool a_aIsLongTermStatsDisabled = 2;
-inline bool Msg_PeerConnectionCreated::_internal_has_a_aislongtermstatsdisabled() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_PeerConnectionCreated::has_a_aislongtermstatsdisabled() const {
-  return _internal_has_a_aislongtermstatsdisabled();
-}
+// bool a_aIsLongTermStatsDisabled = 2;
 inline void Msg_PeerConnectionCreated::clear_a_aislongtermstatsdisabled() {
   _impl_.a_aislongtermstatsdisabled_ = false;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool Msg_PeerConnectionCreated::_internal_a_aislongtermstatsdisabled() const {
   return _impl_.a_aislongtermstatsdisabled_;
@@ -1878,7 +1866,7 @@ inline bool Msg_PeerConnectionCreated::a_aislongtermstatsdisabled() const {
   return _internal_a_aislongtermstatsdisabled();
 }
 inline void Msg_PeerConnectionCreated::_internal_set_a_aislongtermstatsdisabled(bool value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aislongtermstatsdisabled_ = value;
 }
 inline void Msg_PeerConnectionCreated::set_a_aislongtermstatsdisabled(bool value) {
@@ -1890,17 +1878,9 @@ inline void Msg_PeerConnectionCreated::set_a_aislongtermstatsdisabled(bool value
 
 // Msg_PeerConnectionDestroyed
 
-// required string a_aPcId = 1;
-inline bool Msg_PeerConnectionDestroyed::_internal_has_a_apcid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_PeerConnectionDestroyed::has_a_apcid() const {
-  return _internal_has_a_apcid();
-}
+// string a_aPcId = 1;
 inline void Msg_PeerConnectionDestroyed::clear_a_apcid() {
   _impl_.a_apcid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_PeerConnectionDestroyed::a_apcid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionDestroyed.a_aPcId)
@@ -1909,7 +1889,7 @@ inline const std::string& Msg_PeerConnectionDestroyed::a_apcid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PeerConnectionDestroyed::set_a_apcid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_apcid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionDestroyed.a_aPcId)
 }
@@ -1922,32 +1902,22 @@ inline const std::string& Msg_PeerConnectionDestroyed::_internal_a_apcid() const
   return _impl_.a_apcid_.Get();
 }
 inline void Msg_PeerConnectionDestroyed::_internal_set_a_apcid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_apcid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_PeerConnectionDestroyed::_internal_mutable_a_apcid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_apcid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_PeerConnectionDestroyed::release_a_apcid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionDestroyed.a_aPcId)
-  if (!_internal_has_a_apcid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_apcid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_apcid_.IsDefault()) {
-    _impl_.a_apcid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_apcid_.Release();
 }
 inline void Msg_PeerConnectionDestroyed::set_allocated_a_apcid(std::string* a_apcid) {
   if (a_apcid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_apcid_.SetAllocated(a_apcid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1962,17 +1932,9 @@ inline void Msg_PeerConnectionDestroyed::set_allocated_a_apcid(std::string* a_ap
 
 // Msg_PeerConnectionFinalStats
 
-// required bytes a_aFinalStats = 1;
-inline bool Msg_PeerConnectionFinalStats::_internal_has_a_afinalstats() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_PeerConnectionFinalStats::has_a_afinalstats() const {
-  return _internal_has_a_afinalstats();
-}
+// bytes a_aFinalStats = 1;
 inline void Msg_PeerConnectionFinalStats::clear_a_afinalstats() {
   _impl_.a_afinalstats_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_PeerConnectionFinalStats::a_afinalstats() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionFinalStats.a_aFinalStats)
@@ -1981,7 +1943,7 @@ inline const std::string& Msg_PeerConnectionFinalStats::a_afinalstats() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PeerConnectionFinalStats::set_a_afinalstats(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_afinalstats_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionFinalStats.a_aFinalStats)
 }
@@ -1994,32 +1956,22 @@ inline const std::string& Msg_PeerConnectionFinalStats::_internal_a_afinalstats(
   return _impl_.a_afinalstats_.Get();
 }
 inline void Msg_PeerConnectionFinalStats::_internal_set_a_afinalstats(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_afinalstats_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_PeerConnectionFinalStats::_internal_mutable_a_afinalstats() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_afinalstats_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_PeerConnectionFinalStats::release_a_afinalstats() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebrtcGlobal.Msg_PeerConnectionFinalStats.a_aFinalStats)
-  if (!_internal_has_a_afinalstats()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_afinalstats_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_afinalstats_.IsDefault()) {
-    _impl_.a_afinalstats_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_afinalstats_.Release();
 }
 inline void Msg_PeerConnectionFinalStats::set_allocated_a_afinalstats(std::string* a_afinalstats) {
   if (a_afinalstats != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_afinalstats_.SetAllocated(a_afinalstats, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2034,17 +1986,9 @@ inline void Msg_PeerConnectionFinalStats::set_allocated_a_afinalstats(std::strin
 
 // Msg_GetStats
 
-// required string a_aPcIdFilter = 1;
-inline bool Msg_GetStats::_internal_has_a_apcidfilter() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_GetStats::has_a_apcidfilter() const {
-  return _internal_has_a_apcidfilter();
-}
+// string a_aPcIdFilter = 1;
 inline void Msg_GetStats::clear_a_apcidfilter() {
   _impl_.a_apcidfilter_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_GetStats::a_apcidfilter() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetStats.a_aPcIdFilter)
@@ -2053,7 +1997,7 @@ inline const std::string& Msg_GetStats::a_apcidfilter() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetStats::set_a_apcidfilter(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_apcidfilter_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetStats.a_aPcIdFilter)
 }
@@ -2066,32 +2010,22 @@ inline const std::string& Msg_GetStats::_internal_a_apcidfilter() const {
   return _impl_.a_apcidfilter_.Get();
 }
 inline void Msg_GetStats::_internal_set_a_apcidfilter(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_apcidfilter_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_GetStats::_internal_mutable_a_apcidfilter() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_apcidfilter_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_GetStats::release_a_apcidfilter() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebrtcGlobal.Msg_GetStats.a_aPcIdFilter)
-  if (!_internal_has_a_apcidfilter()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_apcidfilter_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_apcidfilter_.IsDefault()) {
-    _impl_.a_apcidfilter_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_apcidfilter_.Release();
 }
 inline void Msg_GetStats::set_allocated_a_apcidfilter(std::string* a_apcidfilter) {
   if (a_apcidfilter != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_apcidfilter_.SetAllocated(a_apcidfilter, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2193,17 +2127,9 @@ Reply_GetStats::mutable_a_stats() {
 
 // Reply_GetLog
 
-// required bytes a_logs = 1;
-inline bool Reply_GetLog::_internal_has_a_logs() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Reply_GetLog::has_a_logs() const {
-  return _internal_has_a_logs();
-}
+// bytes a_logs = 1;
 inline void Reply_GetLog::clear_a_logs() {
   _impl_.a_logs_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_GetLog::a_logs() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetLog.a_logs)
@@ -2212,7 +2138,7 @@ inline const std::string& Reply_GetLog::a_logs() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_GetLog::set_a_logs(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_logs_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetLog.a_logs)
 }
@@ -2225,32 +2151,22 @@ inline const std::string& Reply_GetLog::_internal_a_logs() const {
   return _impl_.a_logs_.Get();
 }
 inline void Reply_GetLog::_internal_set_a_logs(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_logs_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_GetLog::_internal_mutable_a_logs() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_logs_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_GetLog::release_a_logs() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PWebrtcGlobal.Reply_GetLog.a_logs)
-  if (!_internal_has_a_logs()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_logs_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_logs_.IsDefault()) {
-    _impl_.a_logs_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_logs_.Release();
 }
 inline void Reply_GetLog::set_allocated_a_logs(std::string* a_logs) {
   if (a_logs != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_logs_.SetAllocated(a_logs, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2269,17 +2185,9 @@ inline void Reply_GetLog::set_allocated_a_logs(std::string* a_logs) {
 
 // Msg_SetAecLogging
 
-// required bool a_aEnable = 1;
-inline bool Msg_SetAecLogging::_internal_has_a_aenable() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_SetAecLogging::has_a_aenable() const {
-  return _internal_has_a_aenable();
-}
+// bool a_aEnable = 1;
 inline void Msg_SetAecLogging::clear_a_aenable() {
   _impl_.a_aenable_ = false;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Msg_SetAecLogging::_internal_a_aenable() const {
   return _impl_.a_aenable_;
@@ -2289,7 +2197,7 @@ inline bool Msg_SetAecLogging::a_aenable() const {
   return _internal_a_aenable();
 }
 inline void Msg_SetAecLogging::_internal_set_a_aenable(bool value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aenable_ = value;
 }
 inline void Msg_SetAecLogging::set_a_aenable(bool value) {

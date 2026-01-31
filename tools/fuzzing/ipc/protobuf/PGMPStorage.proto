@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/media/gmp/PGMPStorage.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.gmp.PGMPStorage;
 
@@ -17,39 +16,39 @@ import "GMPTypes.proto";
 
 // Message declarations
 message Msg_OpenComplete {
-  required string a_aRecordName = 1;
-  required bytes a_aStatus = 2;
+  string a_aRecordName = 1;
+  bytes a_aStatus = 2;
 }
 
 message Msg_ReadComplete {
-  required string a_aRecordName = 1;
-  required bytes a_aStatus = 2;
+  string a_aRecordName = 1;
+  bytes a_aStatus = 2;
   repeated uint32 a_aBytes = 3;
 }
 
 message Msg_WriteComplete {
-  required string a_aRecordName = 1;
-  required bytes a_aStatus = 2;
+  string a_aRecordName = 1;
+  bytes a_aStatus = 2;
 }
 
 message Msg_Shutdown {
 }
 
 message Msg_Open {
-  required string a_aRecordName = 1;
+  string a_aRecordName = 1;
 }
 
 message Msg_Read {
-  required string a_aRecordName = 1;
+  string a_aRecordName = 1;
 }
 
 message Msg_Write {
-  required string a_aRecordName = 1;
+  string a_aRecordName = 1;
   repeated uint32 a_aBytes = 2;
 }
 
 message Msg_Close {
-  required string a_aRecordName = 1;
+  string a_aRecordName = 1;
 }
 
 message Msg___delete__ {

@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_PMediaDecoderParams_5fprotobuf_2emozilla_2eh_2eproto
@@ -41,6 +43,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PMediaDecoderParams_5fprotobuf_2emozilla_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PMediaDecoderParams_5fprotobuf_2emozilla_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 class CryptoInfo;
@@ -61,7 +64,7 @@ namespace mozilla {
 // ===================================================================
 
 class MediaDataIPDL final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.MediaDataIPDL) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.MediaDataIPDL) */ {
  public:
   inline MediaDataIPDL() : MediaDataIPDL(nullptr) {}
   ~MediaDataIPDL() override;
@@ -91,13 +94,15 @@ class MediaDataIPDL final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const MediaDataIPDL& default_instance() {
     return *internal_default_instance();
   }
@@ -135,9 +140,15 @@ class MediaDataIPDL final :
   MediaDataIPDL* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<MediaDataIPDL>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const MediaDataIPDL& from);
-  void MergeFrom(const MediaDataIPDL& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const MediaDataIPDL& from) {
+    MediaDataIPDL::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -150,7 +161,7 @@ class MediaDataIPDL final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(MediaDataIPDL* other);
 
   private:
@@ -163,7 +174,10 @@ class MediaDataIPDL final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -176,11 +190,7 @@ class MediaDataIPDL final :
     kAOffsetFieldNumber = 1,
     kAKeyframeFieldNumber = 5,
   };
-  // required bytes a_time = 2;
-  bool has_a_time() const;
-  private:
-  bool _internal_has_a_time() const;
-  public:
+  // bytes a_time = 2;
   void clear_a_time();
   const std::string& a_time() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -194,11 +204,7 @@ class MediaDataIPDL final :
   std::string* _internal_mutable_a_time();
   public:
 
-  // required bytes a_timecode = 3;
-  bool has_a_timecode() const;
-  private:
-  bool _internal_has_a_timecode() const;
-  public:
+  // bytes a_timecode = 3;
   void clear_a_timecode();
   const std::string& a_timecode() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -212,11 +218,7 @@ class MediaDataIPDL final :
   std::string* _internal_mutable_a_timecode();
   public:
 
-  // required bytes a_duration = 4;
-  bool has_a_duration() const;
-  private:
-  bool _internal_has_a_duration() const;
-  public:
+  // bytes a_duration = 4;
   void clear_a_duration();
   const std::string& a_duration() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -230,11 +232,7 @@ class MediaDataIPDL final :
   std::string* _internal_mutable_a_duration();
   public:
 
-  // required sint64 a_offset = 1;
-  bool has_a_offset() const;
-  private:
-  bool _internal_has_a_offset() const;
-  public:
+  // sint64 a_offset = 1;
   void clear_a_offset();
   int64_t a_offset() const;
   void set_a_offset(int64_t value);
@@ -243,11 +241,7 @@ class MediaDataIPDL final :
   void _internal_set_a_offset(int64_t value);
   public:
 
-  // required bool a_keyframe = 5;
-  bool has_a_keyframe() const;
-  private:
-  bool _internal_has_a_keyframe() const;
-  public:
+  // bool a_keyframe = 5;
   void clear_a_keyframe();
   bool a_keyframe() const;
   void set_a_keyframe(bool value);
@@ -260,20 +254,16 @@ class MediaDataIPDL final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_time_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_timecode_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_duration_;
     int64_t a_offset_;
     bool a_keyframe_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMediaDecoderParams_5fprotobuf_2emozilla_2eh_2eproto;
@@ -281,7 +271,7 @@ class MediaDataIPDL final :
 // -------------------------------------------------------------------
 
 class CryptoInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.CryptoInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.CryptoInfo) */ {
  public:
   inline CryptoInfo() : CryptoInfo(nullptr) {}
   ~CryptoInfo() override;
@@ -311,13 +301,15 @@ class CryptoInfo final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const CryptoInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -355,9 +347,15 @@ class CryptoInfo final :
   CryptoInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<CryptoInfo>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const CryptoInfo& from);
-  void MergeFrom(const CryptoInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const CryptoInfo& from) {
+    CryptoInfo::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -370,7 +368,7 @@ class CryptoInfo final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(CryptoInfo* other);
 
   private:
@@ -383,7 +381,10 @@ class CryptoInfo final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -484,11 +485,7 @@ class CryptoInfo final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_mcipherbytes();
 
-  // required bytes a_mEncryptionScheme = 1;
-  bool has_a_mencryptionscheme() const;
-  private:
-  bool _internal_has_a_mencryptionscheme() const;
-  public:
+  // bytes a_mEncryptionScheme = 1;
   void clear_a_mencryptionscheme();
   const std::string& a_mencryptionscheme() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -510,13 +507,16 @@ class CryptoInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_miv_;
+    mutable std::atomic<int> _a_miv_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_mkeyid_;
+    mutable std::atomic<int> _a_mkeyid_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_mclearbytes_;
+    mutable std::atomic<int> _a_mclearbytes_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_mcipherbytes_;
+    mutable std::atomic<int> _a_mcipherbytes_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mencryptionscheme_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PMediaDecoderParams_5fprotobuf_2emozilla_2eh_2eproto;
@@ -532,17 +532,9 @@ class CryptoInfo final :
 #endif  // __GNUC__
 // MediaDataIPDL
 
-// required sint64 a_offset = 1;
-inline bool MediaDataIPDL::_internal_has_a_offset() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool MediaDataIPDL::has_a_offset() const {
-  return _internal_has_a_offset();
-}
+// sint64 a_offset = 1;
 inline void MediaDataIPDL::clear_a_offset() {
   _impl_.a_offset_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline int64_t MediaDataIPDL::_internal_a_offset() const {
   return _impl_.a_offset_;
@@ -552,7 +544,7 @@ inline int64_t MediaDataIPDL::a_offset() const {
   return _internal_a_offset();
 }
 inline void MediaDataIPDL::_internal_set_a_offset(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_offset_ = value;
 }
 inline void MediaDataIPDL::set_a_offset(int64_t value) {
@@ -560,17 +552,9 @@ inline void MediaDataIPDL::set_a_offset(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.MediaDataIPDL.a_offset)
 }
 
-// required bytes a_time = 2;
-inline bool MediaDataIPDL::_internal_has_a_time() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool MediaDataIPDL::has_a_time() const {
-  return _internal_has_a_time();
-}
+// bytes a_time = 2;
 inline void MediaDataIPDL::clear_a_time() {
   _impl_.a_time_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& MediaDataIPDL::a_time() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.MediaDataIPDL.a_time)
@@ -579,7 +563,7 @@ inline const std::string& MediaDataIPDL::a_time() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void MediaDataIPDL::set_a_time(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_time_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.MediaDataIPDL.a_time)
 }
@@ -592,32 +576,22 @@ inline const std::string& MediaDataIPDL::_internal_a_time() const {
   return _impl_.a_time_.Get();
 }
 inline void MediaDataIPDL::_internal_set_a_time(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_time_.Set(value, GetArenaForAllocation());
 }
 inline std::string* MediaDataIPDL::_internal_mutable_a_time() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_time_.Mutable(GetArenaForAllocation());
 }
 inline std::string* MediaDataIPDL::release_a_time() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.MediaDataIPDL.a_time)
-  if (!_internal_has_a_time()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_time_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_time_.IsDefault()) {
-    _impl_.a_time_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_time_.Release();
 }
 inline void MediaDataIPDL::set_allocated_a_time(std::string* a_time) {
   if (a_time != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_time_.SetAllocated(a_time, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -628,17 +602,9 @@ inline void MediaDataIPDL::set_allocated_a_time(std::string* a_time) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.MediaDataIPDL.a_time)
 }
 
-// required bytes a_timecode = 3;
-inline bool MediaDataIPDL::_internal_has_a_timecode() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool MediaDataIPDL::has_a_timecode() const {
-  return _internal_has_a_timecode();
-}
+// bytes a_timecode = 3;
 inline void MediaDataIPDL::clear_a_timecode() {
   _impl_.a_timecode_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& MediaDataIPDL::a_timecode() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.MediaDataIPDL.a_timecode)
@@ -647,7 +613,7 @@ inline const std::string& MediaDataIPDL::a_timecode() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void MediaDataIPDL::set_a_timecode(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_timecode_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.MediaDataIPDL.a_timecode)
 }
@@ -660,32 +626,22 @@ inline const std::string& MediaDataIPDL::_internal_a_timecode() const {
   return _impl_.a_timecode_.Get();
 }
 inline void MediaDataIPDL::_internal_set_a_timecode(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_timecode_.Set(value, GetArenaForAllocation());
 }
 inline std::string* MediaDataIPDL::_internal_mutable_a_timecode() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_timecode_.Mutable(GetArenaForAllocation());
 }
 inline std::string* MediaDataIPDL::release_a_timecode() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.MediaDataIPDL.a_timecode)
-  if (!_internal_has_a_timecode()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_timecode_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_timecode_.IsDefault()) {
-    _impl_.a_timecode_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_timecode_.Release();
 }
 inline void MediaDataIPDL::set_allocated_a_timecode(std::string* a_timecode) {
   if (a_timecode != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_timecode_.SetAllocated(a_timecode, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -696,17 +652,9 @@ inline void MediaDataIPDL::set_allocated_a_timecode(std::string* a_timecode) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.MediaDataIPDL.a_timecode)
 }
 
-// required bytes a_duration = 4;
-inline bool MediaDataIPDL::_internal_has_a_duration() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool MediaDataIPDL::has_a_duration() const {
-  return _internal_has_a_duration();
-}
+// bytes a_duration = 4;
 inline void MediaDataIPDL::clear_a_duration() {
   _impl_.a_duration_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& MediaDataIPDL::a_duration() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.MediaDataIPDL.a_duration)
@@ -715,7 +663,7 @@ inline const std::string& MediaDataIPDL::a_duration() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void MediaDataIPDL::set_a_duration(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_duration_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.MediaDataIPDL.a_duration)
 }
@@ -728,32 +676,22 @@ inline const std::string& MediaDataIPDL::_internal_a_duration() const {
   return _impl_.a_duration_.Get();
 }
 inline void MediaDataIPDL::_internal_set_a_duration(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_duration_.Set(value, GetArenaForAllocation());
 }
 inline std::string* MediaDataIPDL::_internal_mutable_a_duration() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_duration_.Mutable(GetArenaForAllocation());
 }
 inline std::string* MediaDataIPDL::release_a_duration() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.MediaDataIPDL.a_duration)
-  if (!_internal_has_a_duration()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_duration_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_duration_.IsDefault()) {
-    _impl_.a_duration_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_duration_.Release();
 }
 inline void MediaDataIPDL::set_allocated_a_duration(std::string* a_duration) {
   if (a_duration != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_duration_.SetAllocated(a_duration, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -764,17 +702,9 @@ inline void MediaDataIPDL::set_allocated_a_duration(std::string* a_duration) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.MediaDataIPDL.a_duration)
 }
 
-// required bool a_keyframe = 5;
-inline bool MediaDataIPDL::_internal_has_a_keyframe() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool MediaDataIPDL::has_a_keyframe() const {
-  return _internal_has_a_keyframe();
-}
+// bool a_keyframe = 5;
 inline void MediaDataIPDL::clear_a_keyframe() {
   _impl_.a_keyframe_ = false;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline bool MediaDataIPDL::_internal_a_keyframe() const {
   return _impl_.a_keyframe_;
@@ -784,7 +714,7 @@ inline bool MediaDataIPDL::a_keyframe() const {
   return _internal_a_keyframe();
 }
 inline void MediaDataIPDL::_internal_set_a_keyframe(bool value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_keyframe_ = value;
 }
 inline void MediaDataIPDL::set_a_keyframe(bool value) {
@@ -796,17 +726,9 @@ inline void MediaDataIPDL::set_a_keyframe(bool value) {
 
 // CryptoInfo
 
-// required bytes a_mEncryptionScheme = 1;
-inline bool CryptoInfo::_internal_has_a_mencryptionscheme() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool CryptoInfo::has_a_mencryptionscheme() const {
-  return _internal_has_a_mencryptionscheme();
-}
+// bytes a_mEncryptionScheme = 1;
 inline void CryptoInfo::clear_a_mencryptionscheme() {
   _impl_.a_mencryptionscheme_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& CryptoInfo::a_mencryptionscheme() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.CryptoInfo.a_mEncryptionScheme)
@@ -815,7 +737,7 @@ inline const std::string& CryptoInfo::a_mencryptionscheme() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CryptoInfo::set_a_mencryptionscheme(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_mencryptionscheme_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.CryptoInfo.a_mEncryptionScheme)
 }
@@ -828,32 +750,22 @@ inline const std::string& CryptoInfo::_internal_a_mencryptionscheme() const {
   return _impl_.a_mencryptionscheme_.Get();
 }
 inline void CryptoInfo::_internal_set_a_mencryptionscheme(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_mencryptionscheme_.Set(value, GetArenaForAllocation());
 }
 inline std::string* CryptoInfo::_internal_mutable_a_mencryptionscheme() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_mencryptionscheme_.Mutable(GetArenaForAllocation());
 }
 inline std::string* CryptoInfo::release_a_mencryptionscheme() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.CryptoInfo.a_mEncryptionScheme)
-  if (!_internal_has_a_mencryptionscheme()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_mencryptionscheme_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_mencryptionscheme_.IsDefault()) {
-    _impl_.a_mencryptionscheme_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_mencryptionscheme_.Release();
 }
 inline void CryptoInfo::set_allocated_a_mencryptionscheme(std::string* a_mencryptionscheme) {
   if (a_mencryptionscheme != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_mencryptionscheme_.SetAllocated(a_mencryptionscheme, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "PBackgroundLSDatabase_protobuf.mozilla.dom.h.pb.h"
 #include "PBackgroundLSSharedTypes.pb.h"
 // @@protoc_insertion_point(includes)
@@ -43,6 +46,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PBackgroundLSDatabase_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PBackgroundLSDatabase_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -77,10 +81,9 @@ namespace PBackgroundLSDatabase {
 // ===================================================================
 
 class Msg_AllowToClose final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_AllowToClose) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_AllowToClose) */ {
  public:
   inline Msg_AllowToClose() : Msg_AllowToClose(nullptr) {}
-  ~Msg_AllowToClose() override;
   explicit PROTOBUF_CONSTEXPR Msg_AllowToClose(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_AllowToClose(const Msg_AllowToClose& from);
@@ -107,13 +110,15 @@ class Msg_AllowToClose final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_AllowToClose& default_instance() {
     return *internal_default_instance();
   }
@@ -151,23 +156,15 @@ class Msg_AllowToClose final :
   Msg_AllowToClose* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_AllowToClose>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_AllowToClose& from);
-  void MergeFrom(const Msg_AllowToClose& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_AllowToClose* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_AllowToClose& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_AllowToClose& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -179,7 +176,10 @@ class Msg_AllowToClose final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -193,15 +193,13 @@ class Msg_AllowToClose final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSDatabase_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_PBackgroundLSSnapshotConstructor final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor) */ {
  public:
   inline Msg_PBackgroundLSSnapshotConstructor() : Msg_PBackgroundLSSnapshotConstructor(nullptr) {}
   ~Msg_PBackgroundLSSnapshotConstructor() override;
@@ -231,13 +229,15 @@ class Msg_PBackgroundLSSnapshotConstructor final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_PBackgroundLSSnapshotConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -275,9 +275,15 @@ class Msg_PBackgroundLSSnapshotConstructor final :
   Msg_PBackgroundLSSnapshotConstructor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_PBackgroundLSSnapshotConstructor>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_PBackgroundLSSnapshotConstructor& from);
-  void MergeFrom(const Msg_PBackgroundLSSnapshotConstructor& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_PBackgroundLSSnapshotConstructor& from) {
+    Msg_PBackgroundLSSnapshotConstructor::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -290,7 +296,7 @@ class Msg_PBackgroundLSSnapshotConstructor final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_PBackgroundLSSnapshotConstructor* other);
 
   private:
@@ -303,7 +309,10 @@ class Msg_PBackgroundLSSnapshotConstructor final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -316,11 +325,7 @@ class Msg_PBackgroundLSSnapshotConstructor final :
     kAMinSizeFieldNumber = 5,
     kAIncreasePeakUsageFieldNumber = 4,
   };
-  // required string a_documentURI = 2;
-  bool has_a_documenturi() const;
-  private:
-  bool _internal_has_a_documenturi() const;
-  public:
+  // string a_documentURI = 2;
   void clear_a_documenturi();
   const std::string& a_documenturi() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -334,11 +339,7 @@ class Msg_PBackgroundLSSnapshotConstructor final :
   std::string* _internal_mutable_a_documenturi();
   public:
 
-  // required string a_key = 3;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // string a_key = 3;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -352,11 +353,7 @@ class Msg_PBackgroundLSSnapshotConstructor final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required sint64 a_actorid = 1;
-  bool has_a_actorid() const;
-  private:
-  bool _internal_has_a_actorid() const;
-  public:
+  // sint64 a_actorid = 1;
   void clear_a_actorid();
   int64_t a_actorid() const;
   void set_a_actorid(int64_t value);
@@ -365,11 +362,7 @@ class Msg_PBackgroundLSSnapshotConstructor final :
   void _internal_set_a_actorid(int64_t value);
   public:
 
-  // required sint64 a_minSize = 5;
-  bool has_a_minsize() const;
-  private:
-  bool _internal_has_a_minsize() const;
-  public:
+  // sint64 a_minSize = 5;
   void clear_a_minsize();
   int64_t a_minsize() const;
   void set_a_minsize(int64_t value);
@@ -378,11 +371,7 @@ class Msg_PBackgroundLSSnapshotConstructor final :
   void _internal_set_a_minsize(int64_t value);
   public:
 
-  // required bool a_increasePeakUsage = 4;
-  bool has_a_increasepeakusage() const;
-  private:
-  bool _internal_has_a_increasepeakusage() const;
-  public:
+  // bool a_increasePeakUsage = 4;
   void clear_a_increasepeakusage();
   bool a_increasepeakusage() const;
   void set_a_increasepeakusage(bool value);
@@ -395,20 +384,16 @@ class Msg_PBackgroundLSSnapshotConstructor final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_documenturi_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     int64_t a_actorid_;
     int64_t a_minsize_;
     bool a_increasepeakusage_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSDatabase_2eproto;
@@ -416,7 +401,7 @@ class Msg_PBackgroundLSSnapshotConstructor final :
 // -------------------------------------------------------------------
 
 class Reply_PBackgroundLSSnapshotConstructor final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PBackgroundLSDatabase.Reply_PBackgroundLSSnapshotConstructor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PBackgroundLSDatabase.Reply_PBackgroundLSSnapshotConstructor) */ {
  public:
   inline Reply_PBackgroundLSSnapshotConstructor() : Reply_PBackgroundLSSnapshotConstructor(nullptr) {}
   ~Reply_PBackgroundLSSnapshotConstructor() override;
@@ -446,13 +431,15 @@ class Reply_PBackgroundLSSnapshotConstructor final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_PBackgroundLSSnapshotConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -490,9 +477,15 @@ class Reply_PBackgroundLSSnapshotConstructor final :
   Reply_PBackgroundLSSnapshotConstructor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_PBackgroundLSSnapshotConstructor>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_PBackgroundLSSnapshotConstructor& from);
-  void MergeFrom(const Reply_PBackgroundLSSnapshotConstructor& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_PBackgroundLSSnapshotConstructor& from) {
+    Reply_PBackgroundLSSnapshotConstructor::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -505,7 +498,7 @@ class Reply_PBackgroundLSSnapshotConstructor final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_PBackgroundLSSnapshotConstructor* other);
 
   private:
@@ -518,7 +511,10 @@ class Reply_PBackgroundLSSnapshotConstructor final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -527,7 +523,7 @@ class Reply_PBackgroundLSSnapshotConstructor final :
   enum : int {
     kAInitInfoFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.LSSnapshotInitInfo a_initInfo = 1;
+  // .protobuf.mozilla.dom.LSSnapshotInitInfo a_initInfo = 1;
   bool has_a_initinfo() const;
   private:
   bool _internal_has_a_initinfo() const;
@@ -553,9 +549,8 @@ class Reply_PBackgroundLSSnapshotConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::LSSnapshotInitInfo* a_initinfo_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSDatabase_2eproto;
@@ -563,10 +558,9 @@ class Reply_PBackgroundLSSnapshotConstructor final :
 // -------------------------------------------------------------------
 
 class Msg_RequestAllowToClose final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_RequestAllowToClose) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_RequestAllowToClose) */ {
  public:
   inline Msg_RequestAllowToClose() : Msg_RequestAllowToClose(nullptr) {}
-  ~Msg_RequestAllowToClose() override;
   explicit PROTOBUF_CONSTEXPR Msg_RequestAllowToClose(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_RequestAllowToClose(const Msg_RequestAllowToClose& from);
@@ -593,13 +587,15 @@ class Msg_RequestAllowToClose final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_RequestAllowToClose& default_instance() {
     return *internal_default_instance();
   }
@@ -637,23 +633,15 @@ class Msg_RequestAllowToClose final :
   Msg_RequestAllowToClose* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_RequestAllowToClose>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_RequestAllowToClose& from);
-  void MergeFrom(const Msg_RequestAllowToClose& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_RequestAllowToClose* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_RequestAllowToClose& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_RequestAllowToClose& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -665,7 +653,10 @@ class Msg_RequestAllowToClose final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -679,9 +670,7 @@ class Msg_RequestAllowToClose final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSDatabase_2eproto;
 };
 // ===================================================================
@@ -699,17 +688,9 @@ class Msg_RequestAllowToClose final :
 
 // Msg_PBackgroundLSSnapshotConstructor
 
-// required sint64 a_actorid = 1;
-inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_a_actorid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_PBackgroundLSSnapshotConstructor::has_a_actorid() const {
-  return _internal_has_a_actorid();
-}
+// sint64 a_actorid = 1;
 inline void Msg_PBackgroundLSSnapshotConstructor::clear_a_actorid() {
   _impl_.a_actorid_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int64_t Msg_PBackgroundLSSnapshotConstructor::_internal_a_actorid() const {
   return _impl_.a_actorid_;
@@ -719,7 +700,7 @@ inline int64_t Msg_PBackgroundLSSnapshotConstructor::a_actorid() const {
   return _internal_a_actorid();
 }
 inline void Msg_PBackgroundLSSnapshotConstructor::_internal_set_a_actorid(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_actorid_ = value;
 }
 inline void Msg_PBackgroundLSSnapshotConstructor::set_a_actorid(int64_t value) {
@@ -727,17 +708,9 @@ inline void Msg_PBackgroundLSSnapshotConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_actorid)
 }
 
-// required string a_documentURI = 2;
-inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_a_documenturi() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_PBackgroundLSSnapshotConstructor::has_a_documenturi() const {
-  return _internal_has_a_documenturi();
-}
+// string a_documentURI = 2;
 inline void Msg_PBackgroundLSSnapshotConstructor::clear_a_documenturi() {
   _impl_.a_documenturi_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_PBackgroundLSSnapshotConstructor::a_documenturi() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_documentURI)
@@ -746,7 +719,7 @@ inline const std::string& Msg_PBackgroundLSSnapshotConstructor::a_documenturi() 
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PBackgroundLSSnapshotConstructor::set_a_documenturi(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_documenturi_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_documentURI)
 }
@@ -759,32 +732,22 @@ inline const std::string& Msg_PBackgroundLSSnapshotConstructor::_internal_a_docu
   return _impl_.a_documenturi_.Get();
 }
 inline void Msg_PBackgroundLSSnapshotConstructor::_internal_set_a_documenturi(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_documenturi_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_PBackgroundLSSnapshotConstructor::_internal_mutable_a_documenturi() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_documenturi_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_PBackgroundLSSnapshotConstructor::release_a_documenturi() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_documentURI)
-  if (!_internal_has_a_documenturi()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_documenturi_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_documenturi_.IsDefault()) {
-    _impl_.a_documenturi_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_documenturi_.Release();
 }
 inline void Msg_PBackgroundLSSnapshotConstructor::set_allocated_a_documenturi(std::string* a_documenturi) {
   if (a_documenturi != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_documenturi_.SetAllocated(a_documenturi, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -795,17 +758,9 @@ inline void Msg_PBackgroundLSSnapshotConstructor::set_allocated_a_documenturi(st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_documentURI)
 }
 
-// required string a_key = 3;
-inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_PBackgroundLSSnapshotConstructor::has_a_key() const {
-  return _internal_has_a_key();
-}
+// string a_key = 3;
 inline void Msg_PBackgroundLSSnapshotConstructor::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_PBackgroundLSSnapshotConstructor::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_key)
@@ -814,7 +769,7 @@ inline const std::string& Msg_PBackgroundLSSnapshotConstructor::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PBackgroundLSSnapshotConstructor::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_key)
 }
@@ -827,32 +782,22 @@ inline const std::string& Msg_PBackgroundLSSnapshotConstructor::_internal_a_key(
   return _impl_.a_key_.Get();
 }
 inline void Msg_PBackgroundLSSnapshotConstructor::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_PBackgroundLSSnapshotConstructor::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_PBackgroundLSSnapshotConstructor::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void Msg_PBackgroundLSSnapshotConstructor::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -863,17 +808,9 @@ inline void Msg_PBackgroundLSSnapshotConstructor::set_allocated_a_key(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_key)
 }
 
-// required bool a_increasePeakUsage = 4;
-inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_a_increasepeakusage() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool Msg_PBackgroundLSSnapshotConstructor::has_a_increasepeakusage() const {
-  return _internal_has_a_increasepeakusage();
-}
+// bool a_increasePeakUsage = 4;
 inline void Msg_PBackgroundLSSnapshotConstructor::clear_a_increasepeakusage() {
   _impl_.a_increasepeakusage_ = false;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_a_increasepeakusage() const {
   return _impl_.a_increasepeakusage_;
@@ -883,7 +820,7 @@ inline bool Msg_PBackgroundLSSnapshotConstructor::a_increasepeakusage() const {
   return _internal_a_increasepeakusage();
 }
 inline void Msg_PBackgroundLSSnapshotConstructor::_internal_set_a_increasepeakusage(bool value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_increasepeakusage_ = value;
 }
 inline void Msg_PBackgroundLSSnapshotConstructor::set_a_increasepeakusage(bool value) {
@@ -891,17 +828,9 @@ inline void Msg_PBackgroundLSSnapshotConstructor::set_a_increasepeakusage(bool v
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PBackgroundLSDatabase.Msg_PBackgroundLSSnapshotConstructor.a_increasePeakUsage)
 }
 
-// required sint64 a_minSize = 5;
-inline bool Msg_PBackgroundLSSnapshotConstructor::_internal_has_a_minsize() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_PBackgroundLSSnapshotConstructor::has_a_minsize() const {
-  return _internal_has_a_minsize();
-}
+// sint64 a_minSize = 5;
 inline void Msg_PBackgroundLSSnapshotConstructor::clear_a_minsize() {
   _impl_.a_minsize_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline int64_t Msg_PBackgroundLSSnapshotConstructor::_internal_a_minsize() const {
   return _impl_.a_minsize_;
@@ -911,7 +840,7 @@ inline int64_t Msg_PBackgroundLSSnapshotConstructor::a_minsize() const {
   return _internal_a_minsize();
 }
 inline void Msg_PBackgroundLSSnapshotConstructor::_internal_set_a_minsize(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_minsize_ = value;
 }
 inline void Msg_PBackgroundLSSnapshotConstructor::set_a_minsize(int64_t value) {
@@ -923,11 +852,9 @@ inline void Msg_PBackgroundLSSnapshotConstructor::set_a_minsize(int64_t value) {
 
 // Reply_PBackgroundLSSnapshotConstructor
 
-// required .protobuf.mozilla.dom.LSSnapshotInitInfo a_initInfo = 1;
+// .protobuf.mozilla.dom.LSSnapshotInitInfo a_initInfo = 1;
 inline bool Reply_PBackgroundLSSnapshotConstructor::_internal_has_a_initinfo() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_initinfo_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_initinfo_ != nullptr;
 }
 inline bool Reply_PBackgroundLSSnapshotConstructor::has_a_initinfo() const {
   return _internal_has_a_initinfo();
@@ -948,14 +875,14 @@ inline void Reply_PBackgroundLSSnapshotConstructor::unsafe_arena_set_allocated_a
   }
   _impl_.a_initinfo_ = a_initinfo;
   if (a_initinfo) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PBackgroundLSDatabase.Reply_PBackgroundLSSnapshotConstructor.a_initInfo)
 }
 inline ::protobuf::mozilla::dom::LSSnapshotInitInfo* Reply_PBackgroundLSSnapshotConstructor::release_a_initinfo() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::dom::LSSnapshotInitInfo* temp = _impl_.a_initinfo_;
   _impl_.a_initinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -971,13 +898,13 @@ inline ::protobuf::mozilla::dom::LSSnapshotInitInfo* Reply_PBackgroundLSSnapshot
 }
 inline ::protobuf::mozilla::dom::LSSnapshotInitInfo* Reply_PBackgroundLSSnapshotConstructor::unsafe_arena_release_a_initinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PBackgroundLSDatabase.Reply_PBackgroundLSSnapshotConstructor.a_initInfo)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::dom::LSSnapshotInitInfo* temp = _impl_.a_initinfo_;
   _impl_.a_initinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::LSSnapshotInitInfo* Reply_PBackgroundLSSnapshotConstructor::_internal_mutable_a_initinfo() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_initinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::LSSnapshotInitInfo>(GetArenaForAllocation());
     _impl_.a_initinfo_ = p;
@@ -1002,9 +929,9 @@ inline void Reply_PBackgroundLSSnapshotConstructor::set_allocated_a_initinfo(::p
       a_initinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_initinfo, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_initinfo_ = a_initinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PBackgroundLSDatabase.Reply_PBackgroundLSSnapshotConstructor.a_initInfo)

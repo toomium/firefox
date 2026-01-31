@@ -8,7 +8,10 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -22,8 +25,7 @@ namespace mozilla {
 namespace _ipdltest {
 namespace PTestCancel {
 PROTOBUF_CONSTEXPR Msg_ImmediateCancel::Msg_ImmediateCancel(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg_ImmediateCancelDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ImmediateCancelDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -34,8 +36,7 @@ struct Msg_ImmediateCancelDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_ImmediateCancelDefaultTypeInternal _Msg_ImmediateCancel_default_instance_;
 PROTOBUF_CONSTEXPR Reply_ImmediateCancel::Reply_ImmediateCancel(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Reply_ImmediateCancelDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_ImmediateCancelDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -46,8 +47,7 @@ struct Reply_ImmediateCancelDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_ImmediateCancelDefaultTypeInternal _Reply_ImmediateCancel_default_instance_;
 PROTOBUF_CONSTEXPR Msg_StartNestedCancel::Msg_StartNestedCancel(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg_StartNestedCancelDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_StartNestedCancelDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -58,8 +58,7 @@ struct Msg_StartNestedCancelDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_StartNestedCancelDefaultTypeInternal _Msg_StartNestedCancel_default_instance_;
 PROTOBUF_CONSTEXPR Msg_NestedCancel::Msg_NestedCancel(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg_NestedCancelDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_NestedCancelDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -70,8 +69,7 @@ struct Msg_NestedCancelDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_NestedCancelDefaultTypeInternal _Msg_NestedCancel_default_instance_;
 PROTOBUF_CONSTEXPR Reply_NestedCancel::Reply_NestedCancel(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Reply_NestedCancelDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_NestedCancelDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -82,8 +80,7 @@ struct Reply_NestedCancelDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_NestedCancelDefaultTypeInternal _Reply_NestedCancel_default_instance_;
 PROTOBUF_CONSTEXPR Msg_CallNestedCancel::Msg_CallNestedCancel(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg_CallNestedCancelDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_CallNestedCancelDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -94,8 +91,7 @@ struct Msg_CallNestedCancelDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_CallNestedCancelDefaultTypeInternal _Msg_CallNestedCancel_default_instance_;
 PROTOBUF_CONSTEXPR Reply_CallNestedCancel::Reply_CallNestedCancel(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Reply_CallNestedCancelDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_CallNestedCancelDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -106,8 +102,7 @@ struct Reply_CallNestedCancelDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_CallNestedCancelDefaultTypeInternal _Reply_CallNestedCancel_default_instance_;
 PROTOBUF_CONSTEXPR Msg_StartNestedCancelParent::Msg_StartNestedCancelParent(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg_StartNestedCancelParentDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_StartNestedCancelParentDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -118,8 +113,7 @@ struct Msg_StartNestedCancelParentDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_StartNestedCancelParentDefaultTypeInternal _Msg_StartNestedCancelParent_default_instance_;
 PROTOBUF_CONSTEXPR Reply_StartNestedCancelParent::Reply_StartNestedCancelParent(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Reply_StartNestedCancelParentDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_StartNestedCancelParentDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -130,8 +124,7 @@ struct Reply_StartNestedCancelParentDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_StartNestedCancelParentDefaultTypeInternal _Reply_StartNestedCancelParent_default_instance_;
 PROTOBUF_CONSTEXPR Msg_NestedCancelParent::Msg_NestedCancelParent(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg_NestedCancelParentDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_NestedCancelParentDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -142,8 +135,7 @@ struct Msg_NestedCancelParentDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_NestedCancelParentDefaultTypeInternal _Msg_NestedCancelParent_default_instance_;
 PROTOBUF_CONSTEXPR Reply_NestedCancelParent::Reply_NestedCancelParent(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Reply_NestedCancelParentDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_NestedCancelParentDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -154,8 +146,7 @@ struct Reply_NestedCancelParentDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_NestedCancelParentDefaultTypeInternal _Reply_NestedCancelParent_default_instance_;
 PROTOBUF_CONSTEXPR Msg_CheckChild::Msg_CheckChild(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg_CheckChildDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_CheckChildDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -167,9 +158,8 @@ struct Msg_CheckChildDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_CheckChildDefaultTypeInternal _Msg_CheckChild_default_instance_;
 PROTOBUF_CONSTEXPR Reply_CheckChild::Reply_CheckChild(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_reply_)*/0u} {}
+    /*decltype(_impl_.a_reply_)*/0u
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Reply_CheckChildDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_CheckChildDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -180,8 +170,7 @@ struct Reply_CheckChildDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_CheckChildDefaultTypeInternal _Reply_CheckChild_default_instance_;
 PROTOBUF_CONSTEXPR Msg_CheckParent::Msg_CheckParent(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg_CheckParentDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_CheckParentDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -193,9 +182,8 @@ struct Msg_CheckParentDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_CheckParentDefaultTypeInternal _Msg_CheckParent_default_instance_;
 PROTOBUF_CONSTEXPR Reply_CheckParent::Reply_CheckParent(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_reply_)*/0u} {}
+    /*decltype(_impl_.a_reply_)*/0u
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Reply_CheckParentDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_CheckParentDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -209,6 +197,169 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace _ipdltest
 }  // namespace mozilla
 }  // namespace protobuf
+static ::_pb::Metadata file_level_metadata_PTestCancel_2eproto[15];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PTestCancel_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PTestCancel_2eproto = nullptr;
+
+const uint32_t TableStruct_PTestCancel_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestCancel::Msg_ImmediateCancel, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestCancel::Reply_ImmediateCancel, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestCancel::Msg_StartNestedCancel, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestCancel::Msg_NestedCancel, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestCancel::Reply_NestedCancel, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestCancel::Msg_CallNestedCancel, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestCancel::Reply_CallNestedCancel, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestCancel::Msg_StartNestedCancelParent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestCancel::Reply_StartNestedCancelParent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestCancel::Msg_NestedCancelParent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestCancel::Reply_NestedCancelParent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestCancel::Msg_CheckChild, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestCancel::Reply_CheckChild, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestCancel::Reply_CheckChild, _impl_.a_reply_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestCancel::Msg_CheckParent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestCancel::Reply_CheckParent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestCancel::Reply_CheckParent, _impl_.a_reply_),
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestCancel::Msg_ImmediateCancel)},
+  { 6, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestCancel::Reply_ImmediateCancel)},
+  { 12, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestCancel::Msg_StartNestedCancel)},
+  { 18, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestCancel::Msg_NestedCancel)},
+  { 24, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestCancel::Reply_NestedCancel)},
+  { 30, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestCancel::Msg_CallNestedCancel)},
+  { 36, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestCancel::Reply_CallNestedCancel)},
+  { 42, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestCancel::Msg_StartNestedCancelParent)},
+  { 48, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestCancel::Reply_StartNestedCancelParent)},
+  { 54, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestCancel::Msg_NestedCancelParent)},
+  { 60, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestCancel::Reply_NestedCancelParent)},
+  { 66, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestCancel::Msg_CheckChild)},
+  { 72, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestCancel::Reply_CheckChild)},
+  { 79, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestCancel::Msg_CheckParent)},
+  { 85, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestCancel::Reply_CheckParent)},
+};
+
+static const ::_pb::Message* const file_default_instances[] = {
+  &::protobuf::mozilla::_ipdltest::PTestCancel::_Msg_ImmediateCancel_default_instance_._instance,
+  &::protobuf::mozilla::_ipdltest::PTestCancel::_Reply_ImmediateCancel_default_instance_._instance,
+  &::protobuf::mozilla::_ipdltest::PTestCancel::_Msg_StartNestedCancel_default_instance_._instance,
+  &::protobuf::mozilla::_ipdltest::PTestCancel::_Msg_NestedCancel_default_instance_._instance,
+  &::protobuf::mozilla::_ipdltest::PTestCancel::_Reply_NestedCancel_default_instance_._instance,
+  &::protobuf::mozilla::_ipdltest::PTestCancel::_Msg_CallNestedCancel_default_instance_._instance,
+  &::protobuf::mozilla::_ipdltest::PTestCancel::_Reply_CallNestedCancel_default_instance_._instance,
+  &::protobuf::mozilla::_ipdltest::PTestCancel::_Msg_StartNestedCancelParent_default_instance_._instance,
+  &::protobuf::mozilla::_ipdltest::PTestCancel::_Reply_StartNestedCancelParent_default_instance_._instance,
+  &::protobuf::mozilla::_ipdltest::PTestCancel::_Msg_NestedCancelParent_default_instance_._instance,
+  &::protobuf::mozilla::_ipdltest::PTestCancel::_Reply_NestedCancelParent_default_instance_._instance,
+  &::protobuf::mozilla::_ipdltest::PTestCancel::_Msg_CheckChild_default_instance_._instance,
+  &::protobuf::mozilla::_ipdltest::PTestCancel::_Reply_CheckChild_default_instance_._instance,
+  &::protobuf::mozilla::_ipdltest::PTestCancel::_Msg_CheckParent_default_instance_._instance,
+  &::protobuf::mozilla::_ipdltest::PTestCancel::_Reply_CheckParent_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_PTestCancel_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\021PTestCancel.proto\022&protobuf.mozilla._i"
+  "pdltest.PTestCancel\"\025\n\023Msg_ImmediateCanc"
+  "el\"\027\n\025Reply_ImmediateCancel\"\027\n\025Msg_Start"
+  "NestedCancel\"\022\n\020Msg_NestedCancel\"\024\n\022Repl"
+  "y_NestedCancel\"\026\n\024Msg_CallNestedCancel\"\030"
+  "\n\026Reply_CallNestedCancel\"\035\n\033Msg_StartNes"
+  "tedCancelParent\"\037\n\035Reply_StartNestedCanc"
+  "elParent\"\030\n\026Msg_NestedCancelParent\"\032\n\030Re"
+  "ply_NestedCancelParent\"\020\n\016Msg_CheckChild"
+  "\"#\n\020Reply_CheckChild\022\017\n\007a_reply\030\001 \001(\r\"\021\n"
+  "\017Msg_CheckParent\"$\n\021Reply_CheckParent\022\017\n"
+  "\007a_reply\030\001 \001(\rb\006proto3"
+  ;
+static ::_pbi::once_flag descriptor_table_PTestCancel_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_PTestCancel_2eproto = {
+    false, false, 462, descriptor_table_protodef_PTestCancel_2eproto,
+    "PTestCancel.proto",
+    &descriptor_table_PTestCancel_2eproto_once, nullptr, 0, 15,
+    schemas, file_default_instances, TableStruct_PTestCancel_2eproto::offsets,
+    file_level_metadata_PTestCancel_2eproto, file_level_enum_descriptors_PTestCancel_2eproto,
+    file_level_service_descriptors_PTestCancel_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PTestCancel_2eproto_getter() {
+  return &descriptor_table_PTestCancel_2eproto;
+}
+
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PTestCancel_2eproto(&descriptor_table_PTestCancel_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace _ipdltest {
@@ -222,145 +373,37 @@ class Msg_ImmediateCancel::_Internal {
 
 Msg_ImmediateCancel::Msg_ImmediateCancel(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_ImmediateCancel)
 }
 Msg_ImmediateCancel::Msg_ImmediateCancel(const Msg_ImmediateCancel& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg_ImmediateCancel* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_ImmediateCancel)
 }
 
-inline void Msg_ImmediateCancel::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_ImmediateCancel::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_ImmediateCancel::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_ImmediateCancel::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestCancel_2eproto_getter, &descriptor_table_PTestCancel_2eproto_once,
+      file_level_metadata_PTestCancel_2eproto[0]);
 }
-
-Msg_ImmediateCancel::~Msg_ImmediateCancel() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_ImmediateCancel)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg_ImmediateCancel::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg_ImmediateCancel::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg_ImmediateCancel::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_ImmediateCancel)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg_ImmediateCancel::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg_ImmediateCancel::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_ImmediateCancel)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestCancel.Msg_ImmediateCancel)
-  return target;
-}
-
-size_t Msg_ImmediateCancel::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_ImmediateCancel)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg_ImmediateCancel::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_ImmediateCancel*>(
-      &from));
-}
-
-void Msg_ImmediateCancel::MergeFrom(const Msg_ImmediateCancel& from) {
-  Msg_ImmediateCancel* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_ImmediateCancel)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg_ImmediateCancel::CopyFrom(const Msg_ImmediateCancel& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_ImmediateCancel)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg_ImmediateCancel::IsInitialized() const {
-  return true;
-}
-
-void Msg_ImmediateCancel::InternalSwap(Msg_ImmediateCancel* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg_ImmediateCancel::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.PTestCancel.Msg_ImmediateCancel";
-}
-
 
 // ===================================================================
 
@@ -370,145 +413,37 @@ class Reply_ImmediateCancel::_Internal {
 
 Reply_ImmediateCancel::Reply_ImmediateCancel(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_ImmediateCancel)
 }
 Reply_ImmediateCancel::Reply_ImmediateCancel(const Reply_ImmediateCancel& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Reply_ImmediateCancel* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_ImmediateCancel)
 }
 
-inline void Reply_ImmediateCancel::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_ImmediateCancel::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_ImmediateCancel::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Reply_ImmediateCancel::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestCancel_2eproto_getter, &descriptor_table_PTestCancel_2eproto_once,
+      file_level_metadata_PTestCancel_2eproto[1]);
 }
-
-Reply_ImmediateCancel::~Reply_ImmediateCancel() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_ImmediateCancel)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Reply_ImmediateCancel::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Reply_ImmediateCancel::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Reply_ImmediateCancel::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_ImmediateCancel)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Reply_ImmediateCancel::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Reply_ImmediateCancel::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_ImmediateCancel)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestCancel.Reply_ImmediateCancel)
-  return target;
-}
-
-size_t Reply_ImmediateCancel::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_ImmediateCancel)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Reply_ImmediateCancel::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply_ImmediateCancel*>(
-      &from));
-}
-
-void Reply_ImmediateCancel::MergeFrom(const Reply_ImmediateCancel& from) {
-  Reply_ImmediateCancel* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_ImmediateCancel)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Reply_ImmediateCancel::CopyFrom(const Reply_ImmediateCancel& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_ImmediateCancel)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Reply_ImmediateCancel::IsInitialized() const {
-  return true;
-}
-
-void Reply_ImmediateCancel::InternalSwap(Reply_ImmediateCancel* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Reply_ImmediateCancel::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.PTestCancel.Reply_ImmediateCancel";
-}
-
 
 // ===================================================================
 
@@ -518,145 +453,37 @@ class Msg_StartNestedCancel::_Internal {
 
 Msg_StartNestedCancel::Msg_StartNestedCancel(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_StartNestedCancel)
 }
 Msg_StartNestedCancel::Msg_StartNestedCancel(const Msg_StartNestedCancel& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg_StartNestedCancel* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_StartNestedCancel)
 }
 
-inline void Msg_StartNestedCancel::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_StartNestedCancel::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_StartNestedCancel::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_StartNestedCancel::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestCancel_2eproto_getter, &descriptor_table_PTestCancel_2eproto_once,
+      file_level_metadata_PTestCancel_2eproto[2]);
 }
-
-Msg_StartNestedCancel::~Msg_StartNestedCancel() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_StartNestedCancel)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg_StartNestedCancel::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg_StartNestedCancel::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg_StartNestedCancel::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_StartNestedCancel)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg_StartNestedCancel::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg_StartNestedCancel::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_StartNestedCancel)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestCancel.Msg_StartNestedCancel)
-  return target;
-}
-
-size_t Msg_StartNestedCancel::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_StartNestedCancel)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg_StartNestedCancel::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_StartNestedCancel*>(
-      &from));
-}
-
-void Msg_StartNestedCancel::MergeFrom(const Msg_StartNestedCancel& from) {
-  Msg_StartNestedCancel* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_StartNestedCancel)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg_StartNestedCancel::CopyFrom(const Msg_StartNestedCancel& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_StartNestedCancel)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg_StartNestedCancel::IsInitialized() const {
-  return true;
-}
-
-void Msg_StartNestedCancel::InternalSwap(Msg_StartNestedCancel* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg_StartNestedCancel::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.PTestCancel.Msg_StartNestedCancel";
-}
-
 
 // ===================================================================
 
@@ -666,145 +493,37 @@ class Msg_NestedCancel::_Internal {
 
 Msg_NestedCancel::Msg_NestedCancel(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_NestedCancel)
 }
 Msg_NestedCancel::Msg_NestedCancel(const Msg_NestedCancel& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg_NestedCancel* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_NestedCancel)
 }
 
-inline void Msg_NestedCancel::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_NestedCancel::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_NestedCancel::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_NestedCancel::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestCancel_2eproto_getter, &descriptor_table_PTestCancel_2eproto_once,
+      file_level_metadata_PTestCancel_2eproto[3]);
 }
-
-Msg_NestedCancel::~Msg_NestedCancel() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_NestedCancel)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg_NestedCancel::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg_NestedCancel::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg_NestedCancel::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_NestedCancel)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg_NestedCancel::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg_NestedCancel::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_NestedCancel)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestCancel.Msg_NestedCancel)
-  return target;
-}
-
-size_t Msg_NestedCancel::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_NestedCancel)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg_NestedCancel::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_NestedCancel*>(
-      &from));
-}
-
-void Msg_NestedCancel::MergeFrom(const Msg_NestedCancel& from) {
-  Msg_NestedCancel* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_NestedCancel)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg_NestedCancel::CopyFrom(const Msg_NestedCancel& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_NestedCancel)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg_NestedCancel::IsInitialized() const {
-  return true;
-}
-
-void Msg_NestedCancel::InternalSwap(Msg_NestedCancel* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg_NestedCancel::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.PTestCancel.Msg_NestedCancel";
-}
-
 
 // ===================================================================
 
@@ -814,145 +533,37 @@ class Reply_NestedCancel::_Internal {
 
 Reply_NestedCancel::Reply_NestedCancel(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_NestedCancel)
 }
 Reply_NestedCancel::Reply_NestedCancel(const Reply_NestedCancel& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Reply_NestedCancel* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_NestedCancel)
 }
 
-inline void Reply_NestedCancel::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_NestedCancel::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_NestedCancel::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Reply_NestedCancel::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestCancel_2eproto_getter, &descriptor_table_PTestCancel_2eproto_once,
+      file_level_metadata_PTestCancel_2eproto[4]);
 }
-
-Reply_NestedCancel::~Reply_NestedCancel() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_NestedCancel)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Reply_NestedCancel::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Reply_NestedCancel::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Reply_NestedCancel::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_NestedCancel)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Reply_NestedCancel::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Reply_NestedCancel::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_NestedCancel)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestCancel.Reply_NestedCancel)
-  return target;
-}
-
-size_t Reply_NestedCancel::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_NestedCancel)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Reply_NestedCancel::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply_NestedCancel*>(
-      &from));
-}
-
-void Reply_NestedCancel::MergeFrom(const Reply_NestedCancel& from) {
-  Reply_NestedCancel* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_NestedCancel)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Reply_NestedCancel::CopyFrom(const Reply_NestedCancel& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_NestedCancel)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Reply_NestedCancel::IsInitialized() const {
-  return true;
-}
-
-void Reply_NestedCancel::InternalSwap(Reply_NestedCancel* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Reply_NestedCancel::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.PTestCancel.Reply_NestedCancel";
-}
-
 
 // ===================================================================
 
@@ -962,145 +573,37 @@ class Msg_CallNestedCancel::_Internal {
 
 Msg_CallNestedCancel::Msg_CallNestedCancel(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_CallNestedCancel)
 }
 Msg_CallNestedCancel::Msg_CallNestedCancel(const Msg_CallNestedCancel& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg_CallNestedCancel* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_CallNestedCancel)
 }
 
-inline void Msg_CallNestedCancel::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_CallNestedCancel::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_CallNestedCancel::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_CallNestedCancel::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestCancel_2eproto_getter, &descriptor_table_PTestCancel_2eproto_once,
+      file_level_metadata_PTestCancel_2eproto[5]);
 }
-
-Msg_CallNestedCancel::~Msg_CallNestedCancel() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_CallNestedCancel)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg_CallNestedCancel::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg_CallNestedCancel::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg_CallNestedCancel::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_CallNestedCancel)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg_CallNestedCancel::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg_CallNestedCancel::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_CallNestedCancel)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestCancel.Msg_CallNestedCancel)
-  return target;
-}
-
-size_t Msg_CallNestedCancel::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_CallNestedCancel)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg_CallNestedCancel::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_CallNestedCancel*>(
-      &from));
-}
-
-void Msg_CallNestedCancel::MergeFrom(const Msg_CallNestedCancel& from) {
-  Msg_CallNestedCancel* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_CallNestedCancel)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg_CallNestedCancel::CopyFrom(const Msg_CallNestedCancel& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_CallNestedCancel)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg_CallNestedCancel::IsInitialized() const {
-  return true;
-}
-
-void Msg_CallNestedCancel::InternalSwap(Msg_CallNestedCancel* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg_CallNestedCancel::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.PTestCancel.Msg_CallNestedCancel";
-}
-
 
 // ===================================================================
 
@@ -1110,145 +613,37 @@ class Reply_CallNestedCancel::_Internal {
 
 Reply_CallNestedCancel::Reply_CallNestedCancel(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_CallNestedCancel)
 }
 Reply_CallNestedCancel::Reply_CallNestedCancel(const Reply_CallNestedCancel& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Reply_CallNestedCancel* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_CallNestedCancel)
 }
 
-inline void Reply_CallNestedCancel::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_CallNestedCancel::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_CallNestedCancel::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Reply_CallNestedCancel::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestCancel_2eproto_getter, &descriptor_table_PTestCancel_2eproto_once,
+      file_level_metadata_PTestCancel_2eproto[6]);
 }
-
-Reply_CallNestedCancel::~Reply_CallNestedCancel() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_CallNestedCancel)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Reply_CallNestedCancel::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Reply_CallNestedCancel::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Reply_CallNestedCancel::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_CallNestedCancel)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Reply_CallNestedCancel::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Reply_CallNestedCancel::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_CallNestedCancel)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestCancel.Reply_CallNestedCancel)
-  return target;
-}
-
-size_t Reply_CallNestedCancel::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_CallNestedCancel)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Reply_CallNestedCancel::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply_CallNestedCancel*>(
-      &from));
-}
-
-void Reply_CallNestedCancel::MergeFrom(const Reply_CallNestedCancel& from) {
-  Reply_CallNestedCancel* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_CallNestedCancel)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Reply_CallNestedCancel::CopyFrom(const Reply_CallNestedCancel& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_CallNestedCancel)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Reply_CallNestedCancel::IsInitialized() const {
-  return true;
-}
-
-void Reply_CallNestedCancel::InternalSwap(Reply_CallNestedCancel* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Reply_CallNestedCancel::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.PTestCancel.Reply_CallNestedCancel";
-}
-
 
 // ===================================================================
 
@@ -1258,145 +653,37 @@ class Msg_StartNestedCancelParent::_Internal {
 
 Msg_StartNestedCancelParent::Msg_StartNestedCancelParent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_StartNestedCancelParent)
 }
 Msg_StartNestedCancelParent::Msg_StartNestedCancelParent(const Msg_StartNestedCancelParent& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg_StartNestedCancelParent* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_StartNestedCancelParent)
 }
 
-inline void Msg_StartNestedCancelParent::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_StartNestedCancelParent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_StartNestedCancelParent::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_StartNestedCancelParent::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestCancel_2eproto_getter, &descriptor_table_PTestCancel_2eproto_once,
+      file_level_metadata_PTestCancel_2eproto[7]);
 }
-
-Msg_StartNestedCancelParent::~Msg_StartNestedCancelParent() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_StartNestedCancelParent)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg_StartNestedCancelParent::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg_StartNestedCancelParent::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg_StartNestedCancelParent::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_StartNestedCancelParent)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg_StartNestedCancelParent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg_StartNestedCancelParent::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_StartNestedCancelParent)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestCancel.Msg_StartNestedCancelParent)
-  return target;
-}
-
-size_t Msg_StartNestedCancelParent::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_StartNestedCancelParent)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg_StartNestedCancelParent::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_StartNestedCancelParent*>(
-      &from));
-}
-
-void Msg_StartNestedCancelParent::MergeFrom(const Msg_StartNestedCancelParent& from) {
-  Msg_StartNestedCancelParent* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_StartNestedCancelParent)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg_StartNestedCancelParent::CopyFrom(const Msg_StartNestedCancelParent& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_StartNestedCancelParent)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg_StartNestedCancelParent::IsInitialized() const {
-  return true;
-}
-
-void Msg_StartNestedCancelParent::InternalSwap(Msg_StartNestedCancelParent* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg_StartNestedCancelParent::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.PTestCancel.Msg_StartNestedCancelParent";
-}
-
 
 // ===================================================================
 
@@ -1406,145 +693,37 @@ class Reply_StartNestedCancelParent::_Internal {
 
 Reply_StartNestedCancelParent::Reply_StartNestedCancelParent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_StartNestedCancelParent)
 }
 Reply_StartNestedCancelParent::Reply_StartNestedCancelParent(const Reply_StartNestedCancelParent& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Reply_StartNestedCancelParent* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_StartNestedCancelParent)
 }
 
-inline void Reply_StartNestedCancelParent::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_StartNestedCancelParent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_StartNestedCancelParent::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Reply_StartNestedCancelParent::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestCancel_2eproto_getter, &descriptor_table_PTestCancel_2eproto_once,
+      file_level_metadata_PTestCancel_2eproto[8]);
 }
-
-Reply_StartNestedCancelParent::~Reply_StartNestedCancelParent() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_StartNestedCancelParent)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Reply_StartNestedCancelParent::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Reply_StartNestedCancelParent::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Reply_StartNestedCancelParent::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_StartNestedCancelParent)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Reply_StartNestedCancelParent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Reply_StartNestedCancelParent::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_StartNestedCancelParent)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestCancel.Reply_StartNestedCancelParent)
-  return target;
-}
-
-size_t Reply_StartNestedCancelParent::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_StartNestedCancelParent)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Reply_StartNestedCancelParent::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply_StartNestedCancelParent*>(
-      &from));
-}
-
-void Reply_StartNestedCancelParent::MergeFrom(const Reply_StartNestedCancelParent& from) {
-  Reply_StartNestedCancelParent* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_StartNestedCancelParent)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Reply_StartNestedCancelParent::CopyFrom(const Reply_StartNestedCancelParent& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_StartNestedCancelParent)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Reply_StartNestedCancelParent::IsInitialized() const {
-  return true;
-}
-
-void Reply_StartNestedCancelParent::InternalSwap(Reply_StartNestedCancelParent* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Reply_StartNestedCancelParent::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.PTestCancel.Reply_StartNestedCancelParent";
-}
-
 
 // ===================================================================
 
@@ -1554,145 +733,37 @@ class Msg_NestedCancelParent::_Internal {
 
 Msg_NestedCancelParent::Msg_NestedCancelParent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_NestedCancelParent)
 }
 Msg_NestedCancelParent::Msg_NestedCancelParent(const Msg_NestedCancelParent& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg_NestedCancelParent* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_NestedCancelParent)
 }
 
-inline void Msg_NestedCancelParent::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_NestedCancelParent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_NestedCancelParent::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_NestedCancelParent::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestCancel_2eproto_getter, &descriptor_table_PTestCancel_2eproto_once,
+      file_level_metadata_PTestCancel_2eproto[9]);
 }
-
-Msg_NestedCancelParent::~Msg_NestedCancelParent() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_NestedCancelParent)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg_NestedCancelParent::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg_NestedCancelParent::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg_NestedCancelParent::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_NestedCancelParent)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg_NestedCancelParent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg_NestedCancelParent::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_NestedCancelParent)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestCancel.Msg_NestedCancelParent)
-  return target;
-}
-
-size_t Msg_NestedCancelParent::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_NestedCancelParent)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg_NestedCancelParent::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_NestedCancelParent*>(
-      &from));
-}
-
-void Msg_NestedCancelParent::MergeFrom(const Msg_NestedCancelParent& from) {
-  Msg_NestedCancelParent* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_NestedCancelParent)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg_NestedCancelParent::CopyFrom(const Msg_NestedCancelParent& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_NestedCancelParent)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg_NestedCancelParent::IsInitialized() const {
-  return true;
-}
-
-void Msg_NestedCancelParent::InternalSwap(Msg_NestedCancelParent* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg_NestedCancelParent::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.PTestCancel.Msg_NestedCancelParent";
-}
-
 
 // ===================================================================
 
@@ -1702,145 +773,37 @@ class Reply_NestedCancelParent::_Internal {
 
 Reply_NestedCancelParent::Reply_NestedCancelParent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_NestedCancelParent)
 }
 Reply_NestedCancelParent::Reply_NestedCancelParent(const Reply_NestedCancelParent& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Reply_NestedCancelParent* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_NestedCancelParent)
 }
 
-inline void Reply_NestedCancelParent::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_NestedCancelParent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_NestedCancelParent::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Reply_NestedCancelParent::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestCancel_2eproto_getter, &descriptor_table_PTestCancel_2eproto_once,
+      file_level_metadata_PTestCancel_2eproto[10]);
 }
-
-Reply_NestedCancelParent::~Reply_NestedCancelParent() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_NestedCancelParent)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Reply_NestedCancelParent::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Reply_NestedCancelParent::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Reply_NestedCancelParent::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_NestedCancelParent)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Reply_NestedCancelParent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Reply_NestedCancelParent::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_NestedCancelParent)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestCancel.Reply_NestedCancelParent)
-  return target;
-}
-
-size_t Reply_NestedCancelParent::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_NestedCancelParent)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Reply_NestedCancelParent::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply_NestedCancelParent*>(
-      &from));
-}
-
-void Reply_NestedCancelParent::MergeFrom(const Reply_NestedCancelParent& from) {
-  Reply_NestedCancelParent* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_NestedCancelParent)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Reply_NestedCancelParent::CopyFrom(const Reply_NestedCancelParent& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_NestedCancelParent)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Reply_NestedCancelParent::IsInitialized() const {
-  return true;
-}
-
-void Reply_NestedCancelParent::InternalSwap(Reply_NestedCancelParent* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Reply_NestedCancelParent::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.PTestCancel.Reply_NestedCancelParent";
-}
-
 
 // ===================================================================
 
@@ -1850,174 +813,58 @@ class Msg_CheckChild::_Internal {
 
 Msg_CheckChild::Msg_CheckChild(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_CheckChild)
 }
 Msg_CheckChild::Msg_CheckChild(const Msg_CheckChild& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg_CheckChild* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_CheckChild)
 }
 
-inline void Msg_CheckChild::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_CheckChild::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_CheckChild::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_CheckChild::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestCancel_2eproto_getter, &descriptor_table_PTestCancel_2eproto_once,
+      file_level_metadata_PTestCancel_2eproto[11]);
 }
-
-Msg_CheckChild::~Msg_CheckChild() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_CheckChild)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg_CheckChild::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg_CheckChild::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg_CheckChild::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_CheckChild)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg_CheckChild::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg_CheckChild::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_CheckChild)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestCancel.Msg_CheckChild)
-  return target;
-}
-
-size_t Msg_CheckChild::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_CheckChild)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg_CheckChild::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_CheckChild*>(
-      &from));
-}
-
-void Msg_CheckChild::MergeFrom(const Msg_CheckChild& from) {
-  Msg_CheckChild* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_CheckChild)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg_CheckChild::CopyFrom(const Msg_CheckChild& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_CheckChild)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg_CheckChild::IsInitialized() const {
-  return true;
-}
-
-void Msg_CheckChild::InternalSwap(Msg_CheckChild* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg_CheckChild::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.PTestCancel.Msg_CheckChild";
-}
-
 
 // ===================================================================
 
 class Reply_CheckChild::_Internal {
  public:
-  using HasBits = decltype(std::declval<Reply_CheckChild>()._impl_._has_bits_);
-  static void set_has_a_reply(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_CheckChild::Reply_CheckChild(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckChild)
 }
 Reply_CheckChild::Reply_CheckChild(const Reply_CheckChild& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Reply_CheckChild* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_reply_){}};
+      decltype(_impl_.a_reply_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _this->_impl_.a_reply_ = from._impl_.a_reply_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckChild)
 }
@@ -2027,15 +874,14 @@ inline void Reply_CheckChild::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_reply_){0u}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_reply_){0u}
   };
 }
 
 Reply_CheckChild::~Reply_CheckChild() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckChild)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -2057,21 +903,18 @@ void Reply_CheckChild::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_reply_ = 0u;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Reply_CheckChild::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_reply = 1;
+      // uint32 a_reply = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_a_reply(&has_bits);
           _impl_.a_reply_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -2088,12 +931,11 @@ const char* Reply_CheckChild::_InternalParse(const char* ptr, ::_pbi::ParseConte
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2107,16 +949,15 @@ uint8_t* Reply_CheckChild::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_reply = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // uint32 a_reply = 1;
+  if (this->_internal_a_reply() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_reply(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckChild)
   return target;
@@ -2126,39 +967,37 @@ size_t Reply_CheckChild::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckChild)
   size_t total_size = 0;
 
-  // required uint32 a_reply = 1;
-  if (_internal_has_a_reply()) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_reply());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // uint32 a_reply = 1;
+  if (this->_internal_a_reply() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_reply());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Reply_CheckChild::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply_CheckChild*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_CheckChild::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Reply_CheckChild::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_CheckChild::GetClassData() const { return &_class_data_; }
 
-void Reply_CheckChild::MergeFrom(const Reply_CheckChild& from) {
-  Reply_CheckChild* const _this = this;
+
+void Reply_CheckChild::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Reply_CheckChild*>(&to_msg);
+  auto& from = static_cast<const Reply_CheckChild&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckChild)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_reply()) {
+  if (from._internal_a_reply() != 0) {
     _this->_internal_set_a_reply(from._internal_a_reply());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Reply_CheckChild::CopyFrom(const Reply_CheckChild& from) {
@@ -2169,21 +1008,20 @@ void Reply_CheckChild::CopyFrom(const Reply_CheckChild& from) {
 }
 
 bool Reply_CheckChild::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Reply_CheckChild::InternalSwap(Reply_CheckChild* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_reply_, other->_impl_.a_reply_);
 }
 
-std::string Reply_CheckChild::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckChild";
+::PROTOBUF_NAMESPACE_ID::Metadata Reply_CheckChild::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestCancel_2eproto_getter, &descriptor_table_PTestCancel_2eproto_once,
+      file_level_metadata_PTestCancel_2eproto[12]);
 }
-
 
 // ===================================================================
 
@@ -2193,174 +1031,58 @@ class Msg_CheckParent::_Internal {
 
 Msg_CheckParent::Msg_CheckParent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_CheckParent)
 }
 Msg_CheckParent::Msg_CheckParent(const Msg_CheckParent& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg_CheckParent* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_CheckParent)
 }
 
-inline void Msg_CheckParent::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_CheckParent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_CheckParent::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_CheckParent::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestCancel_2eproto_getter, &descriptor_table_PTestCancel_2eproto_once,
+      file_level_metadata_PTestCancel_2eproto[13]);
 }
-
-Msg_CheckParent::~Msg_CheckParent() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestCancel.Msg_CheckParent)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg_CheckParent::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg_CheckParent::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg_CheckParent::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_CheckParent)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg_CheckParent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg_CheckParent::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_CheckParent)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestCancel.Msg_CheckParent)
-  return target;
-}
-
-size_t Msg_CheckParent::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_CheckParent)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg_CheckParent::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_CheckParent*>(
-      &from));
-}
-
-void Msg_CheckParent::MergeFrom(const Msg_CheckParent& from) {
-  Msg_CheckParent* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_CheckParent)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg_CheckParent::CopyFrom(const Msg_CheckParent& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestCancel.Msg_CheckParent)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg_CheckParent::IsInitialized() const {
-  return true;
-}
-
-void Msg_CheckParent::InternalSwap(Msg_CheckParent* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg_CheckParent::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.PTestCancel.Msg_CheckParent";
-}
-
 
 // ===================================================================
 
 class Reply_CheckParent::_Internal {
  public:
-  using HasBits = decltype(std::declval<Reply_CheckParent>()._impl_._has_bits_);
-  static void set_has_a_reply(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_CheckParent::Reply_CheckParent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckParent)
 }
 Reply_CheckParent::Reply_CheckParent(const Reply_CheckParent& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Reply_CheckParent* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_reply_){}};
+      decltype(_impl_.a_reply_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _this->_impl_.a_reply_ = from._impl_.a_reply_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckParent)
 }
@@ -2370,15 +1092,14 @@ inline void Reply_CheckParent::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_reply_){0u}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_reply_){0u}
   };
 }
 
 Reply_CheckParent::~Reply_CheckParent() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckParent)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -2400,21 +1121,18 @@ void Reply_CheckParent::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_reply_ = 0u;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Reply_CheckParent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint32 a_reply = 1;
+      // uint32 a_reply = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_a_reply(&has_bits);
           _impl_.a_reply_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
@@ -2431,12 +1149,11 @@ const char* Reply_CheckParent::_InternalParse(const char* ptr, ::_pbi::ParseCont
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2450,16 +1167,15 @@ uint8_t* Reply_CheckParent::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_reply = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // uint32 a_reply = 1;
+  if (this->_internal_a_reply() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_reply(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckParent)
   return target;
@@ -2469,39 +1185,37 @@ size_t Reply_CheckParent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckParent)
   size_t total_size = 0;
 
-  // required uint32 a_reply = 1;
-  if (_internal_has_a_reply()) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_reply());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // uint32 a_reply = 1;
+  if (this->_internal_a_reply() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_reply());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Reply_CheckParent::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply_CheckParent*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_CheckParent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Reply_CheckParent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_CheckParent::GetClassData() const { return &_class_data_; }
 
-void Reply_CheckParent::MergeFrom(const Reply_CheckParent& from) {
-  Reply_CheckParent* const _this = this;
+
+void Reply_CheckParent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Reply_CheckParent*>(&to_msg);
+  auto& from = static_cast<const Reply_CheckParent&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckParent)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_reply()) {
+  if (from._internal_a_reply() != 0) {
     _this->_internal_set_a_reply(from._internal_a_reply());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Reply_CheckParent::CopyFrom(const Reply_CheckParent& from) {
@@ -2512,21 +1226,20 @@ void Reply_CheckParent::CopyFrom(const Reply_CheckParent& from) {
 }
 
 bool Reply_CheckParent::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Reply_CheckParent::InternalSwap(Reply_CheckParent* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_reply_, other->_impl_.a_reply_);
 }
 
-std::string Reply_CheckParent::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.PTestCancel.Reply_CheckParent";
+::PROTOBUF_NAMESPACE_ID::Metadata Reply_CheckParent::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestCancel_2eproto_getter, &descriptor_table_PTestCancel_2eproto_once,
+      file_level_metadata_PTestCancel_2eproto[14]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace PTestCancel

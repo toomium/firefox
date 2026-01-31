@@ -8,7 +8,10 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -22,9 +25,7 @@ namespace mozilla {
 namespace layers {
 PROTOBUF_CONSTEXPR FrameStats::FrameStats(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.a_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_compositestart_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_renderstart_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_compositeend_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
@@ -36,7 +37,8 @@ PROTOBUF_CONSTEXPR FrameStats::FrameStats(
   , /*decltype(_impl_.a_resourceuploadtime_)*/0
   , /*decltype(_impl_.a_gpucacheuploadtime_)*/0
   , /*decltype(_impl_.a_contentframetime_)*/0
-  , /*decltype(_impl_.a_skippedcomposites_)*/0u} {}
+  , /*decltype(_impl_.a_skippedcomposites_)*/0u
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FrameStatsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FrameStatsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -49,6 +51,75 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace layers
 }  // namespace mozilla
 }  // namespace protobuf
+static ::_pb::Metadata file_level_metadata_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto[1];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto = nullptr;
+
+const uint32_t TableStruct_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_id_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_compositestart_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_renderstart_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_compositeend_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_contentframetime_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_resourceuploadtime_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_gpucacheuploadtime_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_transactionstart_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_refreshstart_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_fwdtime_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_scenebuilttime_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_skippedcomposites_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_url_),
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::protobuf::mozilla::layers::FrameStats)},
+};
+
+static const ::_pb::Message* const file_default_instances[] = {
+  &::protobuf::mozilla::layers::_FrameStats_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n1PCompositorBridge_protobuf.mozilla.lay"
+  "ers.h.proto\022\027protobuf.mozilla.layers\032\024La"
+  "yersSurfaces.proto\032\024LayersMessages.proto"
+  "\032\031PlatformWidgetTypes.proto\032\034PCompositor"
+  "BridgeTypes.proto\"\310\002\n\nFrameStats\022\014\n\004a_id"
+  "\030\001 \001(\014\022\030\n\020a_compositeStart\030\002 \001(\014\022\025\n\ra_re"
+  "nderStart\030\003 \001(\014\022\026\n\016a_compositeEnd\030\004 \001(\014\022"
+  "\032\n\022a_contentFrameTime\030\005 \001(\021\022\034\n\024a_resourc"
+  "eUploadTime\030\006 \001(\001\022\034\n\024a_gpuCacheUploadTim"
+  "e\030\007 \001(\001\022\032\n\022a_transactionStart\030\010 \001(\014\022\026\n\016a"
+  "_refreshStart\030\t \001(\014\022\021\n\ta_fwdTime\030\n \001(\014\022\030"
+  "\n\020a_sceneBuiltTime\030\013 \001(\014\022\033\n\023a_skippedCom"
+  "posites\030\014 \001(\r\022\r\n\005a_url\030\r \001(\tb\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto_deps[4] = {
+  &::descriptor_table_LayersMessages_2eproto,
+  &::descriptor_table_LayersSurfaces_2eproto,
+  &::descriptor_table_PCompositorBridgeTypes_2eproto,
+  &::descriptor_table_PlatformWidgetTypes_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto = {
+    false, false, 516, descriptor_table_protodef_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto,
+    "PCompositorBridge_protobuf.mozilla.layers.h.proto",
+    &descriptor_table_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once, descriptor_table_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto_deps, 4, 1,
+    schemas, file_default_instances, TableStruct_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto::offsets,
+    file_level_metadata_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto, file_level_enum_descriptors_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto,
+    file_level_service_descriptors_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter() {
+  return &descriptor_table_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
+}
+
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto(&descriptor_table_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace layers {
@@ -57,64 +128,19 @@ namespace layers {
 
 class FrameStats::_Internal {
  public:
-  using HasBits = decltype(std::declval<FrameStats>()._impl_._has_bits_);
-  static void set_has_a_id(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_compositestart(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_a_renderstart(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_a_compositeend(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_a_contentframetime(HasBits* has_bits) {
-    (*has_bits)[0] |= 2048u;
-  }
-  static void set_has_a_resourceuploadtime(HasBits* has_bits) {
-    (*has_bits)[0] |= 512u;
-  }
-  static void set_has_a_gpucacheuploadtime(HasBits* has_bits) {
-    (*has_bits)[0] |= 1024u;
-  }
-  static void set_has_a_transactionstart(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static void set_has_a_refreshstart(HasBits* has_bits) {
-    (*has_bits)[0] |= 32u;
-  }
-  static void set_has_a_fwdtime(HasBits* has_bits) {
-    (*has_bits)[0] |= 64u;
-  }
-  static void set_has_a_scenebuilttime(HasBits* has_bits) {
-    (*has_bits)[0] |= 128u;
-  }
-  static void set_has_a_skippedcomposites(HasBits* has_bits) {
-    (*has_bits)[0] |= 4096u;
-  }
-  static void set_has_a_url(HasBits* has_bits) {
-    (*has_bits)[0] |= 256u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00001fff) ^ 0x00001fff) != 0;
-  }
 };
 
 FrameStats::FrameStats(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.FrameStats)
 }
 FrameStats::FrameStats(const FrameStats& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   FrameStats* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_id_){}
+      decltype(_impl_.a_id_){}
     , decltype(_impl_.a_compositestart_){}
     , decltype(_impl_.a_renderstart_){}
     , decltype(_impl_.a_compositeend_){}
@@ -126,14 +152,15 @@ FrameStats::FrameStats(const FrameStats& from)
     , decltype(_impl_.a_resourceuploadtime_){}
     , decltype(_impl_.a_gpucacheuploadtime_){}
     , decltype(_impl_.a_contentframetime_){}
-    , decltype(_impl_.a_skippedcomposites_){}};
+    , decltype(_impl_.a_skippedcomposites_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_id_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_id()) {
+  if (!from._internal_a_id().empty()) {
     _this->_impl_.a_id_.Set(from._internal_a_id(), 
       _this->GetArenaForAllocation());
   }
@@ -141,7 +168,7 @@ FrameStats::FrameStats(const FrameStats& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_compositestart_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_compositestart()) {
+  if (!from._internal_a_compositestart().empty()) {
     _this->_impl_.a_compositestart_.Set(from._internal_a_compositestart(), 
       _this->GetArenaForAllocation());
   }
@@ -149,7 +176,7 @@ FrameStats::FrameStats(const FrameStats& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_renderstart_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_renderstart()) {
+  if (!from._internal_a_renderstart().empty()) {
     _this->_impl_.a_renderstart_.Set(from._internal_a_renderstart(), 
       _this->GetArenaForAllocation());
   }
@@ -157,7 +184,7 @@ FrameStats::FrameStats(const FrameStats& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_compositeend_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_compositeend()) {
+  if (!from._internal_a_compositeend().empty()) {
     _this->_impl_.a_compositeend_.Set(from._internal_a_compositeend(), 
       _this->GetArenaForAllocation());
   }
@@ -165,7 +192,7 @@ FrameStats::FrameStats(const FrameStats& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_transactionstart_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_transactionstart()) {
+  if (!from._internal_a_transactionstart().empty()) {
     _this->_impl_.a_transactionstart_.Set(from._internal_a_transactionstart(), 
       _this->GetArenaForAllocation());
   }
@@ -173,7 +200,7 @@ FrameStats::FrameStats(const FrameStats& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_refreshstart_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_refreshstart()) {
+  if (!from._internal_a_refreshstart().empty()) {
     _this->_impl_.a_refreshstart_.Set(from._internal_a_refreshstart(), 
       _this->GetArenaForAllocation());
   }
@@ -181,7 +208,7 @@ FrameStats::FrameStats(const FrameStats& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_fwdtime_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_fwdtime()) {
+  if (!from._internal_a_fwdtime().empty()) {
     _this->_impl_.a_fwdtime_.Set(from._internal_a_fwdtime(), 
       _this->GetArenaForAllocation());
   }
@@ -189,7 +216,7 @@ FrameStats::FrameStats(const FrameStats& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_scenebuilttime_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_scenebuilttime()) {
+  if (!from._internal_a_scenebuilttime().empty()) {
     _this->_impl_.a_scenebuilttime_.Set(from._internal_a_scenebuilttime(), 
       _this->GetArenaForAllocation());
   }
@@ -197,7 +224,7 @@ FrameStats::FrameStats(const FrameStats& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_url_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_url()) {
+  if (!from._internal_a_url().empty()) {
     _this->_impl_.a_url_.Set(from._internal_a_url(), 
       _this->GetArenaForAllocation());
   }
@@ -212,9 +239,7 @@ inline void FrameStats::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_id_){}
+      decltype(_impl_.a_id_){}
     , decltype(_impl_.a_compositestart_){}
     , decltype(_impl_.a_renderstart_){}
     , decltype(_impl_.a_compositeend_){}
@@ -227,6 +252,7 @@ inline void FrameStats::SharedCtor(
     , decltype(_impl_.a_gpucacheuploadtime_){0}
     , decltype(_impl_.a_contentframetime_){0}
     , decltype(_impl_.a_skippedcomposites_){0u}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -268,7 +294,7 @@ inline void FrameStats::SharedCtor(
 
 FrameStats::~FrameStats() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.FrameStats)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -298,53 +324,28 @@ void FrameStats::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x000000ffu) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_id_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_compositestart_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _impl_.a_renderstart_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _impl_.a_compositeend_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _impl_.a_transactionstart_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000020u) {
-      _impl_.a_refreshstart_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000040u) {
-      _impl_.a_fwdtime_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000080u) {
-      _impl_.a_scenebuilttime_.ClearNonDefaultToEmpty();
-    }
-  }
-  if (cached_has_bits & 0x00000100u) {
-    _impl_.a_url_.ClearNonDefaultToEmpty();
-  }
-  if (cached_has_bits & 0x00001e00u) {
-    ::memset(&_impl_.a_resourceuploadtime_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.a_skippedcomposites_) -
-        reinterpret_cast<char*>(&_impl_.a_resourceuploadtime_)) + sizeof(_impl_.a_skippedcomposites_));
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_id_.ClearToEmpty();
+  _impl_.a_compositestart_.ClearToEmpty();
+  _impl_.a_renderstart_.ClearToEmpty();
+  _impl_.a_compositeend_.ClearToEmpty();
+  _impl_.a_transactionstart_.ClearToEmpty();
+  _impl_.a_refreshstart_.ClearToEmpty();
+  _impl_.a_fwdtime_.ClearToEmpty();
+  _impl_.a_scenebuilttime_.ClearToEmpty();
+  _impl_.a_url_.ClearToEmpty();
+  ::memset(&_impl_.a_resourceuploadtime_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.a_skippedcomposites_) -
+      reinterpret_cast<char*>(&_impl_.a_resourceuploadtime_)) + sizeof(_impl_.a_skippedcomposites_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_id = 1;
+      // bytes a_id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_id();
@@ -353,7 +354,7 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_compositeStart = 2;
+      // bytes a_compositeStart = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_compositestart();
@@ -362,7 +363,7 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_renderStart = 3;
+      // bytes a_renderStart = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_renderstart();
@@ -371,7 +372,7 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_compositeEnd = 4;
+      // bytes a_compositeEnd = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_compositeend();
@@ -380,34 +381,31 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_contentFrameTime = 5;
+      // sint32 a_contentFrameTime = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_a_contentframetime(&has_bits);
           _impl_.a_contentframetime_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required double a_resourceUploadTime = 6;
+      // double a_resourceUploadTime = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 49)) {
-          _Internal::set_has_a_resourceuploadtime(&has_bits);
           _impl_.a_resourceuploadtime_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // required double a_gpuCacheUploadTime = 7;
+      // double a_gpuCacheUploadTime = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 57)) {
-          _Internal::set_has_a_gpucacheuploadtime(&has_bits);
           _impl_.a_gpucacheuploadtime_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_transactionStart = 8;
+      // bytes a_transactionStart = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           auto str = _internal_mutable_a_transactionstart();
@@ -416,7 +414,7 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_refreshStart = 9;
+      // bytes a_refreshStart = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           auto str = _internal_mutable_a_refreshstart();
@@ -425,7 +423,7 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_fwdTime = 10;
+      // bytes a_fwdTime = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           auto str = _internal_mutable_a_fwdtime();
@@ -434,7 +432,7 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_sceneBuiltTime = 11;
+      // bytes a_sceneBuiltTime = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 90)) {
           auto str = _internal_mutable_a_scenebuilttime();
@@ -443,21 +441,21 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_skippedComposites = 12;
+      // uint32 a_skippedComposites = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
-          _Internal::set_has_a_skippedcomposites(&has_bits);
           _impl_.a_skippedcomposites_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required string a_url = 13;
+      // string a_url = 13;
       case 13:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 106)) {
           auto str = _internal_mutable_a_url();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.layers.FrameStats.a_url"));
         } else
           goto handle_unusual;
         continue;
@@ -472,12 +470,11 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -491,318 +488,269 @@ uint8_t* FrameStats::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_id = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // bytes a_id = 1;
+  if (!this->_internal_a_id().empty()) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_id(), target);
   }
 
-  // required bytes a_compositeStart = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // bytes a_compositeStart = 2;
+  if (!this->_internal_a_compositestart().empty()) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_compositestart(), target);
   }
 
-  // required bytes a_renderStart = 3;
-  if (cached_has_bits & 0x00000004u) {
+  // bytes a_renderStart = 3;
+  if (!this->_internal_a_renderstart().empty()) {
     target = stream->WriteBytesMaybeAliased(
         3, this->_internal_a_renderstart(), target);
   }
 
-  // required bytes a_compositeEnd = 4;
-  if (cached_has_bits & 0x00000008u) {
+  // bytes a_compositeEnd = 4;
+  if (!this->_internal_a_compositeend().empty()) {
     target = stream->WriteBytesMaybeAliased(
         4, this->_internal_a_compositeend(), target);
   }
 
-  // required sint32 a_contentFrameTime = 5;
-  if (cached_has_bits & 0x00000800u) {
+  // sint32 a_contentFrameTime = 5;
+  if (this->_internal_a_contentframetime() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(5, this->_internal_a_contentframetime(), target);
   }
 
-  // required double a_resourceUploadTime = 6;
-  if (cached_has_bits & 0x00000200u) {
+  // double a_resourceUploadTime = 6;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_a_resourceuploadtime = this->_internal_a_resourceuploadtime();
+  uint64_t raw_a_resourceuploadtime;
+  memcpy(&raw_a_resourceuploadtime, &tmp_a_resourceuploadtime, sizeof(tmp_a_resourceuploadtime));
+  if (raw_a_resourceuploadtime != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(6, this->_internal_a_resourceuploadtime(), target);
   }
 
-  // required double a_gpuCacheUploadTime = 7;
-  if (cached_has_bits & 0x00000400u) {
+  // double a_gpuCacheUploadTime = 7;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_a_gpucacheuploadtime = this->_internal_a_gpucacheuploadtime();
+  uint64_t raw_a_gpucacheuploadtime;
+  memcpy(&raw_a_gpucacheuploadtime, &tmp_a_gpucacheuploadtime, sizeof(tmp_a_gpucacheuploadtime));
+  if (raw_a_gpucacheuploadtime != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteDoubleToArray(7, this->_internal_a_gpucacheuploadtime(), target);
   }
 
-  // required bytes a_transactionStart = 8;
-  if (cached_has_bits & 0x00000010u) {
+  // bytes a_transactionStart = 8;
+  if (!this->_internal_a_transactionstart().empty()) {
     target = stream->WriteBytesMaybeAliased(
         8, this->_internal_a_transactionstart(), target);
   }
 
-  // required bytes a_refreshStart = 9;
-  if (cached_has_bits & 0x00000020u) {
+  // bytes a_refreshStart = 9;
+  if (!this->_internal_a_refreshstart().empty()) {
     target = stream->WriteBytesMaybeAliased(
         9, this->_internal_a_refreshstart(), target);
   }
 
-  // required bytes a_fwdTime = 10;
-  if (cached_has_bits & 0x00000040u) {
+  // bytes a_fwdTime = 10;
+  if (!this->_internal_a_fwdtime().empty()) {
     target = stream->WriteBytesMaybeAliased(
         10, this->_internal_a_fwdtime(), target);
   }
 
-  // required bytes a_sceneBuiltTime = 11;
-  if (cached_has_bits & 0x00000080u) {
+  // bytes a_sceneBuiltTime = 11;
+  if (!this->_internal_a_scenebuilttime().empty()) {
     target = stream->WriteBytesMaybeAliased(
         11, this->_internal_a_scenebuilttime(), target);
   }
 
-  // required uint32 a_skippedComposites = 12;
-  if (cached_has_bits & 0x00001000u) {
+  // uint32 a_skippedComposites = 12;
+  if (this->_internal_a_skippedcomposites() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(12, this->_internal_a_skippedcomposites(), target);
   }
 
-  // required string a_url = 13;
-  if (cached_has_bits & 0x00000100u) {
+  // string a_url = 13;
+  if (!this->_internal_a_url().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_url().data(), static_cast<int>(this->_internal_a_url().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.layers.FrameStats.a_url");
     target = stream->WriteStringMaybeAliased(
         13, this->_internal_a_url(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.FrameStats)
   return target;
 }
 
-size_t FrameStats::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.FrameStats)
-  size_t total_size = 0;
-
-  if (_internal_has_a_id()) {
-    // required bytes a_id = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_id());
-  }
-
-  if (_internal_has_a_compositestart()) {
-    // required bytes a_compositeStart = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_compositestart());
-  }
-
-  if (_internal_has_a_renderstart()) {
-    // required bytes a_renderStart = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_renderstart());
-  }
-
-  if (_internal_has_a_compositeend()) {
-    // required bytes a_compositeEnd = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_compositeend());
-  }
-
-  if (_internal_has_a_transactionstart()) {
-    // required bytes a_transactionStart = 8;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_transactionstart());
-  }
-
-  if (_internal_has_a_refreshstart()) {
-    // required bytes a_refreshStart = 9;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_refreshstart());
-  }
-
-  if (_internal_has_a_fwdtime()) {
-    // required bytes a_fwdTime = 10;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_fwdtime());
-  }
-
-  if (_internal_has_a_scenebuilttime()) {
-    // required bytes a_sceneBuiltTime = 11;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_scenebuilttime());
-  }
-
-  if (_internal_has_a_url()) {
-    // required string a_url = 13;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_url());
-  }
-
-  if (_internal_has_a_resourceuploadtime()) {
-    // required double a_resourceUploadTime = 6;
-    total_size += 1 + 8;
-  }
-
-  if (_internal_has_a_gpucacheuploadtime()) {
-    // required double a_gpuCacheUploadTime = 7;
-    total_size += 1 + 8;
-  }
-
-  if (_internal_has_a_contentframetime()) {
-    // required sint32 a_contentFrameTime = 5;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_contentframetime());
-  }
-
-  if (_internal_has_a_skippedcomposites()) {
-    // required uint32 a_skippedComposites = 12;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_skippedcomposites());
-  }
-
-  return total_size;
-}
 size_t FrameStats::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.FrameStats)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00001fff) ^ 0x00001fff) == 0) {  // All required fields are present.
-    // required bytes a_id = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_id());
-
-    // required bytes a_compositeStart = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_compositestart());
-
-    // required bytes a_renderStart = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_renderstart());
-
-    // required bytes a_compositeEnd = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_compositeend());
-
-    // required bytes a_transactionStart = 8;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_transactionstart());
-
-    // required bytes a_refreshStart = 9;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_refreshstart());
-
-    // required bytes a_fwdTime = 10;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_fwdtime());
-
-    // required bytes a_sceneBuiltTime = 11;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_scenebuilttime());
-
-    // required string a_url = 13;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_url());
-
-    // required double a_resourceUploadTime = 6;
-    total_size += 1 + 8;
-
-    // required double a_gpuCacheUploadTime = 7;
-    total_size += 1 + 8;
-
-    // required sint32 a_contentFrameTime = 5;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_contentframetime());
-
-    // required uint32 a_skippedComposites = 12;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_skippedcomposites());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // bytes a_id = 1;
+  if (!this->_internal_a_id().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_id());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // bytes a_compositeStart = 2;
+  if (!this->_internal_a_compositestart().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_compositestart());
+  }
+
+  // bytes a_renderStart = 3;
+  if (!this->_internal_a_renderstart().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_renderstart());
+  }
+
+  // bytes a_compositeEnd = 4;
+  if (!this->_internal_a_compositeend().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_compositeend());
+  }
+
+  // bytes a_transactionStart = 8;
+  if (!this->_internal_a_transactionstart().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_transactionstart());
+  }
+
+  // bytes a_refreshStart = 9;
+  if (!this->_internal_a_refreshstart().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_refreshstart());
+  }
+
+  // bytes a_fwdTime = 10;
+  if (!this->_internal_a_fwdtime().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_fwdtime());
+  }
+
+  // bytes a_sceneBuiltTime = 11;
+  if (!this->_internal_a_scenebuilttime().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_scenebuilttime());
+  }
+
+  // string a_url = 13;
+  if (!this->_internal_a_url().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_url());
+  }
+
+  // double a_resourceUploadTime = 6;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_a_resourceuploadtime = this->_internal_a_resourceuploadtime();
+  uint64_t raw_a_resourceuploadtime;
+  memcpy(&raw_a_resourceuploadtime, &tmp_a_resourceuploadtime, sizeof(tmp_a_resourceuploadtime));
+  if (raw_a_resourceuploadtime != 0) {
+    total_size += 1 + 8;
+  }
+
+  // double a_gpuCacheUploadTime = 7;
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_a_gpucacheuploadtime = this->_internal_a_gpucacheuploadtime();
+  uint64_t raw_a_gpucacheuploadtime;
+  memcpy(&raw_a_gpucacheuploadtime, &tmp_a_gpucacheuploadtime, sizeof(tmp_a_gpucacheuploadtime));
+  if (raw_a_gpucacheuploadtime != 0) {
+    total_size += 1 + 8;
+  }
+
+  // sint32 a_contentFrameTime = 5;
+  if (this->_internal_a_contentframetime() != 0) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_contentframetime());
+  }
+
+  // uint32 a_skippedComposites = 12;
+  if (this->_internal_a_skippedcomposites() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_skippedcomposites());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void FrameStats::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const FrameStats*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FrameStats::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    FrameStats::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FrameStats::GetClassData() const { return &_class_data_; }
 
-void FrameStats::MergeFrom(const FrameStats& from) {
-  FrameStats* const _this = this;
+
+void FrameStats::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<FrameStats*>(&to_msg);
+  auto& from = static_cast<const FrameStats&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.FrameStats)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x000000ffu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_id(from._internal_a_id());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_compositestart(from._internal_a_compositestart());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_a_renderstart(from._internal_a_renderstart());
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_internal_set_a_compositeend(from._internal_a_compositeend());
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_internal_set_a_transactionstart(from._internal_a_transactionstart());
-    }
-    if (cached_has_bits & 0x00000020u) {
-      _this->_internal_set_a_refreshstart(from._internal_a_refreshstart());
-    }
-    if (cached_has_bits & 0x00000040u) {
-      _this->_internal_set_a_fwdtime(from._internal_a_fwdtime());
-    }
-    if (cached_has_bits & 0x00000080u) {
-      _this->_internal_set_a_scenebuilttime(from._internal_a_scenebuilttime());
-    }
+  if (!from._internal_a_id().empty()) {
+    _this->_internal_set_a_id(from._internal_a_id());
   }
-  if (cached_has_bits & 0x00001f00u) {
-    if (cached_has_bits & 0x00000100u) {
-      _this->_internal_set_a_url(from._internal_a_url());
-    }
-    if (cached_has_bits & 0x00000200u) {
-      _this->_impl_.a_resourceuploadtime_ = from._impl_.a_resourceuploadtime_;
-    }
-    if (cached_has_bits & 0x00000400u) {
-      _this->_impl_.a_gpucacheuploadtime_ = from._impl_.a_gpucacheuploadtime_;
-    }
-    if (cached_has_bits & 0x00000800u) {
-      _this->_impl_.a_contentframetime_ = from._impl_.a_contentframetime_;
-    }
-    if (cached_has_bits & 0x00001000u) {
-      _this->_impl_.a_skippedcomposites_ = from._impl_.a_skippedcomposites_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_compositestart().empty()) {
+    _this->_internal_set_a_compositestart(from._internal_a_compositestart());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_renderstart().empty()) {
+    _this->_internal_set_a_renderstart(from._internal_a_renderstart());
+  }
+  if (!from._internal_a_compositeend().empty()) {
+    _this->_internal_set_a_compositeend(from._internal_a_compositeend());
+  }
+  if (!from._internal_a_transactionstart().empty()) {
+    _this->_internal_set_a_transactionstart(from._internal_a_transactionstart());
+  }
+  if (!from._internal_a_refreshstart().empty()) {
+    _this->_internal_set_a_refreshstart(from._internal_a_refreshstart());
+  }
+  if (!from._internal_a_fwdtime().empty()) {
+    _this->_internal_set_a_fwdtime(from._internal_a_fwdtime());
+  }
+  if (!from._internal_a_scenebuilttime().empty()) {
+    _this->_internal_set_a_scenebuilttime(from._internal_a_scenebuilttime());
+  }
+  if (!from._internal_a_url().empty()) {
+    _this->_internal_set_a_url(from._internal_a_url());
+  }
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_a_resourceuploadtime = from._internal_a_resourceuploadtime();
+  uint64_t raw_a_resourceuploadtime;
+  memcpy(&raw_a_resourceuploadtime, &tmp_a_resourceuploadtime, sizeof(tmp_a_resourceuploadtime));
+  if (raw_a_resourceuploadtime != 0) {
+    _this->_internal_set_a_resourceuploadtime(from._internal_a_resourceuploadtime());
+  }
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_a_gpucacheuploadtime = from._internal_a_gpucacheuploadtime();
+  uint64_t raw_a_gpucacheuploadtime;
+  memcpy(&raw_a_gpucacheuploadtime, &tmp_a_gpucacheuploadtime, sizeof(tmp_a_gpucacheuploadtime));
+  if (raw_a_gpucacheuploadtime != 0) {
+    _this->_internal_set_a_gpucacheuploadtime(from._internal_a_gpucacheuploadtime());
+  }
+  if (from._internal_a_contentframetime() != 0) {
+    _this->_internal_set_a_contentframetime(from._internal_a_contentframetime());
+  }
+  if (from._internal_a_skippedcomposites() != 0) {
+    _this->_internal_set_a_skippedcomposites(from._internal_a_skippedcomposites());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void FrameStats::CopyFrom(const FrameStats& from) {
@@ -813,7 +761,6 @@ void FrameStats::CopyFrom(const FrameStats& from) {
 }
 
 bool FrameStats::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -822,7 +769,6 @@ void FrameStats::InternalSwap(FrameStats* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_id_, lhs_arena,
       &other->_impl_.a_id_, rhs_arena
@@ -867,10 +813,11 @@ void FrameStats::InternalSwap(FrameStats* other) {
           reinterpret_cast<char*>(&other->_impl_.a_resourceuploadtime_));
 }
 
-std::string FrameStats::GetTypeName() const {
-  return "protobuf.mozilla.layers.FrameStats";
+::PROTOBUF_NAMESPACE_ID::Metadata FrameStats::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
+      file_level_metadata_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace layers

@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/clients/manager/PClientHandleOp.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PClientHandleOp;
 
@@ -17,7 +16,7 @@ import "ClientIPCTypes.proto";
 
 // Message declarations
 message Msg___delete__ {
-  required protobuf.mozilla.dom.ClientOpResult a_aResult = 1;
+  protobuf.mozilla.dom.ClientOpResult a_aResult = 1;
 }
 
 message Reply___delete__ {

@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/ipc/PVsync.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PVsync;
 
@@ -16,8 +15,8 @@ package protobuf.mozilla.dom.PVsync;
 
 // Message declarations
 message Msg_Notify {
-  required bytes a_aVsync = 1;
-  required float a_aVsyncRate = 2;
+  bytes a_aVsync = 1;
+  float a_aVsyncRate = 2;
 }
 
 message Msg_Observe {

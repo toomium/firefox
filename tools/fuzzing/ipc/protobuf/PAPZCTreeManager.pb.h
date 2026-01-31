@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_PAPZCTreeManager_2eproto
@@ -41,6 +44,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PAPZCTreeManager_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PAPZCTreeManager_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace layers {
@@ -127,7 +131,7 @@ namespace PAPZCTreeManager {
 // ===================================================================
 
 class Msg_ZoomToRect final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_ZoomToRect) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_ZoomToRect) */ {
  public:
   inline Msg_ZoomToRect() : Msg_ZoomToRect(nullptr) {}
   ~Msg_ZoomToRect() override;
@@ -157,13 +161,15 @@ class Msg_ZoomToRect final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_ZoomToRect& default_instance() {
     return *internal_default_instance();
   }
@@ -201,9 +207,15 @@ class Msg_ZoomToRect final :
   Msg_ZoomToRect* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ZoomToRect>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_ZoomToRect& from);
-  void MergeFrom(const Msg_ZoomToRect& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_ZoomToRect& from) {
+    Msg_ZoomToRect::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -216,7 +228,7 @@ class Msg_ZoomToRect final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_ZoomToRect* other);
 
   private:
@@ -229,7 +241,10 @@ class Msg_ZoomToRect final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -240,11 +255,7 @@ class Msg_ZoomToRect final :
     kAAZoomTargetFieldNumber = 2,
     kAFlagsFieldNumber = 3,
   };
-  // required bytes a_aGuid = 1;
-  bool has_a_aguid() const;
-  private:
-  bool _internal_has_a_aguid() const;
-  public:
+  // bytes a_aGuid = 1;
   void clear_a_aguid();
   const std::string& a_aguid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -258,11 +269,7 @@ class Msg_ZoomToRect final :
   std::string* _internal_mutable_a_aguid();
   public:
 
-  // required bytes a_aZoomTarget = 2;
-  bool has_a_azoomtarget() const;
-  private:
-  bool _internal_has_a_azoomtarget() const;
-  public:
+  // bytes a_aZoomTarget = 2;
   void clear_a_azoomtarget();
   const std::string& a_azoomtarget() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -276,11 +283,7 @@ class Msg_ZoomToRect final :
   std::string* _internal_mutable_a_azoomtarget();
   public:
 
-  // required uint32 a_Flags = 3;
-  bool has_a_flags() const;
-  private:
-  bool _internal_has_a_flags() const;
-  public:
+  // uint32 a_Flags = 3;
   void clear_a_flags();
   uint32_t a_flags() const;
   void set_a_flags(uint32_t value);
@@ -293,18 +296,14 @@ class Msg_ZoomToRect final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aguid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_azoomtarget_;
     uint32_t a_flags_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZCTreeManager_2eproto;
@@ -312,7 +311,7 @@ class Msg_ZoomToRect final :
 // -------------------------------------------------------------------
 
 class Msg_ContentReceivedInputBlock final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_ContentReceivedInputBlock) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_ContentReceivedInputBlock) */ {
  public:
   inline Msg_ContentReceivedInputBlock() : Msg_ContentReceivedInputBlock(nullptr) {}
   ~Msg_ContentReceivedInputBlock() override;
@@ -342,13 +341,15 @@ class Msg_ContentReceivedInputBlock final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_ContentReceivedInputBlock& default_instance() {
     return *internal_default_instance();
   }
@@ -386,9 +387,15 @@ class Msg_ContentReceivedInputBlock final :
   Msg_ContentReceivedInputBlock* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ContentReceivedInputBlock>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_ContentReceivedInputBlock& from);
-  void MergeFrom(const Msg_ContentReceivedInputBlock& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_ContentReceivedInputBlock& from) {
+    Msg_ContentReceivedInputBlock::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -401,7 +408,7 @@ class Msg_ContentReceivedInputBlock final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_ContentReceivedInputBlock* other);
 
   private:
@@ -414,7 +421,10 @@ class Msg_ContentReceivedInputBlock final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -424,11 +434,7 @@ class Msg_ContentReceivedInputBlock final :
     kAAInputBlockIdFieldNumber = 1,
     kAPreventDefaultFieldNumber = 2,
   };
-  // required uint64 a_aInputBlockId = 1;
-  bool has_a_ainputblockid() const;
-  private:
-  bool _internal_has_a_ainputblockid() const;
-  public:
+  // uint64 a_aInputBlockId = 1;
   void clear_a_ainputblockid();
   uint64_t a_ainputblockid() const;
   void set_a_ainputblockid(uint64_t value);
@@ -437,11 +443,7 @@ class Msg_ContentReceivedInputBlock final :
   void _internal_set_a_ainputblockid(uint64_t value);
   public:
 
-  // required bool a_PreventDefault = 2;
-  bool has_a_preventdefault() const;
-  private:
-  bool _internal_has_a_preventdefault() const;
-  public:
+  // bool a_PreventDefault = 2;
   void clear_a_preventdefault();
   bool a_preventdefault() const;
   void set_a_preventdefault(bool value);
@@ -454,17 +456,13 @@ class Msg_ContentReceivedInputBlock final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_ainputblockid_;
     bool a_preventdefault_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZCTreeManager_2eproto;
@@ -472,7 +470,7 @@ class Msg_ContentReceivedInputBlock final :
 // -------------------------------------------------------------------
 
 class Msg_SetTargetAPZC final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_SetTargetAPZC) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_SetTargetAPZC) */ {
  public:
   inline Msg_SetTargetAPZC() : Msg_SetTargetAPZC(nullptr) {}
   ~Msg_SetTargetAPZC() override;
@@ -502,13 +500,15 @@ class Msg_SetTargetAPZC final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SetTargetAPZC& default_instance() {
     return *internal_default_instance();
   }
@@ -546,9 +546,15 @@ class Msg_SetTargetAPZC final :
   Msg_SetTargetAPZC* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SetTargetAPZC>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SetTargetAPZC& from);
-  void MergeFrom(const Msg_SetTargetAPZC& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SetTargetAPZC& from) {
+    Msg_SetTargetAPZC::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -561,7 +567,7 @@ class Msg_SetTargetAPZC final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SetTargetAPZC* other);
 
   private:
@@ -574,7 +580,10 @@ class Msg_SetTargetAPZC final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -608,11 +617,7 @@ class Msg_SetTargetAPZC final :
   std::string* _internal_add_a_targets();
   public:
 
-  // required uint64 a_aInputBlockId = 1;
-  bool has_a_ainputblockid() const;
-  private:
-  bool _internal_has_a_ainputblockid() const;
-  public:
+  // uint64 a_aInputBlockId = 1;
   void clear_a_ainputblockid();
   uint64_t a_ainputblockid() const;
   void set_a_ainputblockid(uint64_t value);
@@ -629,10 +634,9 @@ class Msg_SetTargetAPZC final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_targets_;
     uint64_t a_ainputblockid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZCTreeManager_2eproto;
@@ -640,7 +644,7 @@ class Msg_SetTargetAPZC final :
 // -------------------------------------------------------------------
 
 class Msg_UpdateZoomConstraints final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_UpdateZoomConstraints) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_UpdateZoomConstraints) */ {
  public:
   inline Msg_UpdateZoomConstraints() : Msg_UpdateZoomConstraints(nullptr) {}
   ~Msg_UpdateZoomConstraints() override;
@@ -670,13 +674,15 @@ class Msg_UpdateZoomConstraints final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_UpdateZoomConstraints& default_instance() {
     return *internal_default_instance();
   }
@@ -714,9 +720,15 @@ class Msg_UpdateZoomConstraints final :
   Msg_UpdateZoomConstraints* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_UpdateZoomConstraints>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_UpdateZoomConstraints& from);
-  void MergeFrom(const Msg_UpdateZoomConstraints& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_UpdateZoomConstraints& from) {
+    Msg_UpdateZoomConstraints::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -729,7 +741,7 @@ class Msg_UpdateZoomConstraints final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_UpdateZoomConstraints* other);
 
   private:
@@ -742,7 +754,10 @@ class Msg_UpdateZoomConstraints final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -752,11 +767,7 @@ class Msg_UpdateZoomConstraints final :
     kAAGuidFieldNumber = 1,
     kAAConstraintsFieldNumber = 2,
   };
-  // required bytes a_aGuid = 1;
-  bool has_a_aguid() const;
-  private:
-  bool _internal_has_a_aguid() const;
-  public:
+  // bytes a_aGuid = 1;
   void clear_a_aguid();
   const std::string& a_aguid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -807,7 +818,7 @@ class Msg_UpdateZoomConstraints final :
 // -------------------------------------------------------------------
 
 class Msg_SetKeyboardMap final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_SetKeyboardMap) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_SetKeyboardMap) */ {
  public:
   inline Msg_SetKeyboardMap() : Msg_SetKeyboardMap(nullptr) {}
   ~Msg_SetKeyboardMap() override;
@@ -837,13 +848,15 @@ class Msg_SetKeyboardMap final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SetKeyboardMap& default_instance() {
     return *internal_default_instance();
   }
@@ -881,9 +894,15 @@ class Msg_SetKeyboardMap final :
   Msg_SetKeyboardMap* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SetKeyboardMap>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SetKeyboardMap& from);
-  void MergeFrom(const Msg_SetKeyboardMap& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SetKeyboardMap& from) {
+    Msg_SetKeyboardMap::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -896,7 +915,7 @@ class Msg_SetKeyboardMap final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SetKeyboardMap* other);
 
   private:
@@ -909,7 +928,10 @@ class Msg_SetKeyboardMap final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -918,11 +940,7 @@ class Msg_SetKeyboardMap final :
   enum : int {
     kAAKeyboardMapFieldNumber = 1,
   };
-  // required bytes a_aKeyboardMap = 1;
-  bool has_a_akeyboardmap() const;
-  private:
-  bool _internal_has_a_akeyboardmap() const;
-  public:
+  // bytes a_aKeyboardMap = 1;
   void clear_a_akeyboardmap();
   const std::string& a_akeyboardmap() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -944,9 +962,8 @@ class Msg_SetKeyboardMap final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_akeyboardmap_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZCTreeManager_2eproto;
@@ -954,7 +971,7 @@ class Msg_SetKeyboardMap final :
 // -------------------------------------------------------------------
 
 class Msg_SetDPI final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_SetDPI) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_SetDPI) */ {
  public:
   inline Msg_SetDPI() : Msg_SetDPI(nullptr) {}
   ~Msg_SetDPI() override;
@@ -984,13 +1001,15 @@ class Msg_SetDPI final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SetDPI& default_instance() {
     return *internal_default_instance();
   }
@@ -1028,9 +1047,15 @@ class Msg_SetDPI final :
   Msg_SetDPI* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SetDPI>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SetDPI& from);
-  void MergeFrom(const Msg_SetDPI& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SetDPI& from) {
+    Msg_SetDPI::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1043,7 +1068,7 @@ class Msg_SetDPI final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SetDPI* other);
 
   private:
@@ -1056,7 +1081,10 @@ class Msg_SetDPI final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1065,11 +1093,7 @@ class Msg_SetDPI final :
   enum : int {
     kAADpiValueFieldNumber = 1,
   };
-  // required float a_aDpiValue = 1;
-  bool has_a_adpivalue() const;
-  private:
-  bool _internal_has_a_adpivalue() const;
-  public:
+  // float a_aDpiValue = 1;
   void clear_a_adpivalue();
   float a_adpivalue() const;
   void set_a_adpivalue(float value);
@@ -1086,9 +1110,8 @@ class Msg_SetDPI final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     float a_adpivalue_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZCTreeManager_2eproto;
@@ -1096,7 +1119,7 @@ class Msg_SetDPI final :
 // -------------------------------------------------------------------
 
 class Msg_SetAllowedTouchBehavior final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_SetAllowedTouchBehavior) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_SetAllowedTouchBehavior) */ {
  public:
   inline Msg_SetAllowedTouchBehavior() : Msg_SetAllowedTouchBehavior(nullptr) {}
   ~Msg_SetAllowedTouchBehavior() override;
@@ -1126,13 +1149,15 @@ class Msg_SetAllowedTouchBehavior final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SetAllowedTouchBehavior& default_instance() {
     return *internal_default_instance();
   }
@@ -1170,9 +1195,15 @@ class Msg_SetAllowedTouchBehavior final :
   Msg_SetAllowedTouchBehavior* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SetAllowedTouchBehavior>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SetAllowedTouchBehavior& from);
-  void MergeFrom(const Msg_SetAllowedTouchBehavior& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SetAllowedTouchBehavior& from) {
+    Msg_SetAllowedTouchBehavior::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1185,7 +1216,7 @@ class Msg_SetAllowedTouchBehavior final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SetAllowedTouchBehavior* other);
 
   private:
@@ -1198,7 +1229,10 @@ class Msg_SetAllowedTouchBehavior final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1232,11 +1266,7 @@ class Msg_SetAllowedTouchBehavior final :
   std::string* _internal_add_a_avalues();
   public:
 
-  // required uint64 a_aInputBlockId = 1;
-  bool has_a_ainputblockid() const;
-  private:
-  bool _internal_has_a_ainputblockid() const;
-  public:
+  // uint64 a_aInputBlockId = 1;
   void clear_a_ainputblockid();
   uint64_t a_ainputblockid() const;
   void set_a_ainputblockid(uint64_t value);
@@ -1253,10 +1283,9 @@ class Msg_SetAllowedTouchBehavior final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_avalues_;
     uint64_t a_ainputblockid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZCTreeManager_2eproto;
@@ -1264,7 +1293,7 @@ class Msg_SetAllowedTouchBehavior final :
 // -------------------------------------------------------------------
 
 class Msg_StartScrollbarDrag final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StartScrollbarDrag) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StartScrollbarDrag) */ {
  public:
   inline Msg_StartScrollbarDrag() : Msg_StartScrollbarDrag(nullptr) {}
   ~Msg_StartScrollbarDrag() override;
@@ -1294,13 +1323,15 @@ class Msg_StartScrollbarDrag final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_StartScrollbarDrag& default_instance() {
     return *internal_default_instance();
   }
@@ -1338,9 +1369,15 @@ class Msg_StartScrollbarDrag final :
   Msg_StartScrollbarDrag* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_StartScrollbarDrag>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_StartScrollbarDrag& from);
-  void MergeFrom(const Msg_StartScrollbarDrag& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_StartScrollbarDrag& from) {
+    Msg_StartScrollbarDrag::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1353,7 +1390,7 @@ class Msg_StartScrollbarDrag final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_StartScrollbarDrag* other);
 
   private:
@@ -1366,7 +1403,10 @@ class Msg_StartScrollbarDrag final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1376,11 +1416,7 @@ class Msg_StartScrollbarDrag final :
     kAAGuidFieldNumber = 1,
     kAADragMetricsFieldNumber = 2,
   };
-  // required bytes a_aGuid = 1;
-  bool has_a_aguid() const;
-  private:
-  bool _internal_has_a_aguid() const;
-  public:
+  // bytes a_aGuid = 1;
   void clear_a_aguid();
   const std::string& a_aguid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1394,11 +1430,7 @@ class Msg_StartScrollbarDrag final :
   std::string* _internal_mutable_a_aguid();
   public:
 
-  // required bytes a_aDragMetrics = 2;
-  bool has_a_adragmetrics() const;
-  private:
-  bool _internal_has_a_adragmetrics() const;
-  public:
+  // bytes a_aDragMetrics = 2;
   void clear_a_adragmetrics();
   const std::string& a_adragmetrics() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1416,17 +1448,13 @@ class Msg_StartScrollbarDrag final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aguid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adragmetrics_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZCTreeManager_2eproto;
@@ -1434,7 +1462,7 @@ class Msg_StartScrollbarDrag final :
 // -------------------------------------------------------------------
 
 class Msg_StartAutoscroll final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StartAutoscroll) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StartAutoscroll) */ {
  public:
   inline Msg_StartAutoscroll() : Msg_StartAutoscroll(nullptr) {}
   ~Msg_StartAutoscroll() override;
@@ -1464,13 +1492,15 @@ class Msg_StartAutoscroll final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_StartAutoscroll& default_instance() {
     return *internal_default_instance();
   }
@@ -1508,9 +1538,15 @@ class Msg_StartAutoscroll final :
   Msg_StartAutoscroll* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_StartAutoscroll>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_StartAutoscroll& from);
-  void MergeFrom(const Msg_StartAutoscroll& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_StartAutoscroll& from) {
+    Msg_StartAutoscroll::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1523,7 +1559,7 @@ class Msg_StartAutoscroll final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_StartAutoscroll* other);
 
   private:
@@ -1536,7 +1572,10 @@ class Msg_StartAutoscroll final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1546,11 +1585,7 @@ class Msg_StartAutoscroll final :
     kAAGuidFieldNumber = 1,
     kAAAnchorLocationFieldNumber = 2,
   };
-  // required bytes a_aGuid = 1;
-  bool has_a_aguid() const;
-  private:
-  bool _internal_has_a_aguid() const;
-  public:
+  // bytes a_aGuid = 1;
   void clear_a_aguid();
   const std::string& a_aguid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1564,11 +1599,7 @@ class Msg_StartAutoscroll final :
   std::string* _internal_mutable_a_aguid();
   public:
 
-  // required bytes a_aAnchorLocation = 2;
-  bool has_a_aanchorlocation() const;
-  private:
-  bool _internal_has_a_aanchorlocation() const;
-  public:
+  // bytes a_aAnchorLocation = 2;
   void clear_a_aanchorlocation();
   const std::string& a_aanchorlocation() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1586,17 +1617,13 @@ class Msg_StartAutoscroll final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aguid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aanchorlocation_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZCTreeManager_2eproto;
@@ -1604,7 +1631,7 @@ class Msg_StartAutoscroll final :
 // -------------------------------------------------------------------
 
 class Msg_StopAutoscroll final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StopAutoscroll) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StopAutoscroll) */ {
  public:
   inline Msg_StopAutoscroll() : Msg_StopAutoscroll(nullptr) {}
   ~Msg_StopAutoscroll() override;
@@ -1634,13 +1661,15 @@ class Msg_StopAutoscroll final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_StopAutoscroll& default_instance() {
     return *internal_default_instance();
   }
@@ -1678,9 +1707,15 @@ class Msg_StopAutoscroll final :
   Msg_StopAutoscroll* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_StopAutoscroll>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_StopAutoscroll& from);
-  void MergeFrom(const Msg_StopAutoscroll& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_StopAutoscroll& from) {
+    Msg_StopAutoscroll::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1693,7 +1728,7 @@ class Msg_StopAutoscroll final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_StopAutoscroll* other);
 
   private:
@@ -1706,7 +1741,10 @@ class Msg_StopAutoscroll final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1715,11 +1753,7 @@ class Msg_StopAutoscroll final :
   enum : int {
     kAAGuidFieldNumber = 1,
   };
-  // required bytes a_aGuid = 1;
-  bool has_a_aguid() const;
-  private:
-  bool _internal_has_a_aguid() const;
-  public:
+  // bytes a_aGuid = 1;
   void clear_a_aguid();
   const std::string& a_aguid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1741,9 +1775,8 @@ class Msg_StopAutoscroll final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aguid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZCTreeManager_2eproto;
@@ -1751,7 +1784,7 @@ class Msg_StopAutoscroll final :
 // -------------------------------------------------------------------
 
 class Msg_SetLongTapEnabled final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_SetLongTapEnabled) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_SetLongTapEnabled) */ {
  public:
   inline Msg_SetLongTapEnabled() : Msg_SetLongTapEnabled(nullptr) {}
   ~Msg_SetLongTapEnabled() override;
@@ -1781,13 +1814,15 @@ class Msg_SetLongTapEnabled final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SetLongTapEnabled& default_instance() {
     return *internal_default_instance();
   }
@@ -1825,9 +1860,15 @@ class Msg_SetLongTapEnabled final :
   Msg_SetLongTapEnabled* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SetLongTapEnabled>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SetLongTapEnabled& from);
-  void MergeFrom(const Msg_SetLongTapEnabled& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SetLongTapEnabled& from) {
+    Msg_SetLongTapEnabled::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1840,7 +1881,7 @@ class Msg_SetLongTapEnabled final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SetLongTapEnabled* other);
 
   private:
@@ -1853,7 +1894,10 @@ class Msg_SetLongTapEnabled final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1862,11 +1906,7 @@ class Msg_SetLongTapEnabled final :
   enum : int {
     kAATapGestureEnabledFieldNumber = 1,
   };
-  // required bool a_aTapGestureEnabled = 1;
-  bool has_a_atapgestureenabled() const;
-  private:
-  bool _internal_has_a_atapgestureenabled() const;
-  public:
+  // bool a_aTapGestureEnabled = 1;
   void clear_a_atapgestureenabled();
   bool a_atapgestureenabled() const;
   void set_a_atapgestureenabled(bool value);
@@ -1883,9 +1923,8 @@ class Msg_SetLongTapEnabled final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     bool a_atapgestureenabled_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZCTreeManager_2eproto;
@@ -1893,7 +1932,7 @@ class Msg_SetLongTapEnabled final :
 // -------------------------------------------------------------------
 
 class Msg_SetBrowserGestureResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_SetBrowserGestureResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_SetBrowserGestureResponse) */ {
  public:
   inline Msg_SetBrowserGestureResponse() : Msg_SetBrowserGestureResponse(nullptr) {}
   ~Msg_SetBrowserGestureResponse() override;
@@ -1923,13 +1962,15 @@ class Msg_SetBrowserGestureResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SetBrowserGestureResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -1967,9 +2008,15 @@ class Msg_SetBrowserGestureResponse final :
   Msg_SetBrowserGestureResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SetBrowserGestureResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SetBrowserGestureResponse& from);
-  void MergeFrom(const Msg_SetBrowserGestureResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SetBrowserGestureResponse& from) {
+    Msg_SetBrowserGestureResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1982,7 +2029,7 @@ class Msg_SetBrowserGestureResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SetBrowserGestureResponse* other);
 
   private:
@@ -1995,7 +2042,10 @@ class Msg_SetBrowserGestureResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2005,11 +2055,7 @@ class Msg_SetBrowserGestureResponse final :
     kAAResponseFieldNumber = 2,
     kAAInputBlockIdFieldNumber = 1,
   };
-  // required bytes a_aResponse = 2;
-  bool has_a_aresponse() const;
-  private:
-  bool _internal_has_a_aresponse() const;
-  public:
+  // bytes a_aResponse = 2;
   void clear_a_aresponse();
   const std::string& a_aresponse() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2023,11 +2069,7 @@ class Msg_SetBrowserGestureResponse final :
   std::string* _internal_mutable_a_aresponse();
   public:
 
-  // required uint64 a_aInputBlockId = 1;
-  bool has_a_ainputblockid() const;
-  private:
-  bool _internal_has_a_ainputblockid() const;
-  public:
+  // uint64 a_aInputBlockId = 1;
   void clear_a_ainputblockid();
   uint64_t a_ainputblockid() const;
   void set_a_ainputblockid(uint64_t value);
@@ -2040,17 +2082,13 @@ class Msg_SetBrowserGestureResponse final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aresponse_;
     uint64_t a_ainputblockid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZCTreeManager_2eproto;
@@ -2058,10 +2096,9 @@ class Msg_SetBrowserGestureResponse final :
 // -------------------------------------------------------------------
 
 class Msg___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg___delete__) */ {
  public:
   inline Msg___delete__() : Msg___delete__(nullptr) {}
-  ~Msg___delete__() override;
   explicit PROTOBUF_CONSTEXPR Msg___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg___delete__(const Msg___delete__& from);
@@ -2088,13 +2125,15 @@ class Msg___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -2132,23 +2171,15 @@ class Msg___delete__ final :
   Msg___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg___delete__& from);
-  void MergeFrom(const Msg___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -2160,7 +2191,10 @@ class Msg___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2174,18 +2208,15 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZCTreeManager_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Reply___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Reply___delete__) */ {
  public:
   inline Reply___delete__() : Reply___delete__(nullptr) {}
-  ~Reply___delete__() override;
   explicit PROTOBUF_CONSTEXPR Reply___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply___delete__(const Reply___delete__& from);
@@ -2212,13 +2243,15 @@ class Reply___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -2256,23 +2289,15 @@ class Reply___delete__ final :
   Reply___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply___delete__& from);
-  void MergeFrom(const Reply___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -2284,7 +2309,10 @@ class Reply___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2298,15 +2326,13 @@ class Reply___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZCTreeManager_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_NotifyPinchGesture final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyPinchGesture) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyPinchGesture) */ {
  public:
   inline Msg_NotifyPinchGesture() : Msg_NotifyPinchGesture(nullptr) {}
   ~Msg_NotifyPinchGesture() override;
@@ -2336,13 +2362,15 @@ class Msg_NotifyPinchGesture final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_NotifyPinchGesture& default_instance() {
     return *internal_default_instance();
   }
@@ -2380,9 +2408,15 @@ class Msg_NotifyPinchGesture final :
   Msg_NotifyPinchGesture* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_NotifyPinchGesture>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_NotifyPinchGesture& from);
-  void MergeFrom(const Msg_NotifyPinchGesture& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_NotifyPinchGesture& from) {
+    Msg_NotifyPinchGesture::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2395,7 +2429,7 @@ class Msg_NotifyPinchGesture final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_NotifyPinchGesture* other);
 
   private:
@@ -2408,7 +2442,10 @@ class Msg_NotifyPinchGesture final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2421,11 +2458,7 @@ class Msg_NotifyPinchGesture final :
     kAASpanChangeFieldNumber = 4,
     kAAModifiersFieldNumber = 5,
   };
-  // required bytes a_aType = 1;
-  bool has_a_atype() const;
-  private:
-  bool _internal_has_a_atype() const;
-  public:
+  // bytes a_aType = 1;
   void clear_a_atype();
   const std::string& a_atype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2439,11 +2472,7 @@ class Msg_NotifyPinchGesture final :
   std::string* _internal_mutable_a_atype();
   public:
 
-  // required bytes a_aGuid = 2;
-  bool has_a_aguid() const;
-  private:
-  bool _internal_has_a_aguid() const;
-  public:
+  // bytes a_aGuid = 2;
   void clear_a_aguid();
   const std::string& a_aguid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2457,11 +2486,7 @@ class Msg_NotifyPinchGesture final :
   std::string* _internal_mutable_a_aguid();
   public:
 
-  // required bytes a_aFocusPoint = 3;
-  bool has_a_afocuspoint() const;
-  private:
-  bool _internal_has_a_afocuspoint() const;
-  public:
+  // bytes a_aFocusPoint = 3;
   void clear_a_afocuspoint();
   const std::string& a_afocuspoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2475,11 +2500,7 @@ class Msg_NotifyPinchGesture final :
   std::string* _internal_mutable_a_afocuspoint();
   public:
 
-  // required bytes a_aSpanChange = 4;
-  bool has_a_aspanchange() const;
-  private:
-  bool _internal_has_a_aspanchange() const;
-  public:
+  // bytes a_aSpanChange = 4;
   void clear_a_aspanchange();
   const std::string& a_aspanchange() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2493,11 +2514,7 @@ class Msg_NotifyPinchGesture final :
   std::string* _internal_mutable_a_aspanchange();
   public:
 
-  // required bytes a_aModifiers = 5;
-  bool has_a_amodifiers() const;
-  private:
-  bool _internal_has_a_amodifiers() const;
-  public:
+  // bytes a_aModifiers = 5;
   void clear_a_amodifiers();
   const std::string& a_amodifiers() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2515,20 +2532,16 @@ class Msg_NotifyPinchGesture final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atype_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aguid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_afocuspoint_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aspanchange_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_amodifiers_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZCTreeManager_2eproto;
@@ -2536,7 +2549,7 @@ class Msg_NotifyPinchGesture final :
 // -------------------------------------------------------------------
 
 class Msg_CancelAutoscroll final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_CancelAutoscroll) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_CancelAutoscroll) */ {
  public:
   inline Msg_CancelAutoscroll() : Msg_CancelAutoscroll(nullptr) {}
   ~Msg_CancelAutoscroll() override;
@@ -2566,13 +2579,15 @@ class Msg_CancelAutoscroll final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_CancelAutoscroll& default_instance() {
     return *internal_default_instance();
   }
@@ -2610,9 +2625,15 @@ class Msg_CancelAutoscroll final :
   Msg_CancelAutoscroll* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_CancelAutoscroll>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_CancelAutoscroll& from);
-  void MergeFrom(const Msg_CancelAutoscroll& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_CancelAutoscroll& from) {
+    Msg_CancelAutoscroll::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2625,7 +2646,7 @@ class Msg_CancelAutoscroll final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_CancelAutoscroll* other);
 
   private:
@@ -2638,7 +2659,10 @@ class Msg_CancelAutoscroll final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2647,11 +2671,7 @@ class Msg_CancelAutoscroll final :
   enum : int {
     kAAScrollIdFieldNumber = 1,
   };
-  // required bytes a_aScrollId = 1;
-  bool has_a_ascrollid() const;
-  private:
-  bool _internal_has_a_ascrollid() const;
-  public:
+  // bytes a_aScrollId = 1;
   void clear_a_ascrollid();
   const std::string& a_ascrollid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2673,9 +2693,8 @@ class Msg_CancelAutoscroll final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ascrollid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZCTreeManager_2eproto;
@@ -2683,7 +2702,7 @@ class Msg_CancelAutoscroll final :
 // -------------------------------------------------------------------
 
 class Msg_NotifyScaleGestureComplete final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyScaleGestureComplete) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyScaleGestureComplete) */ {
  public:
   inline Msg_NotifyScaleGestureComplete() : Msg_NotifyScaleGestureComplete(nullptr) {}
   ~Msg_NotifyScaleGestureComplete() override;
@@ -2713,13 +2732,15 @@ class Msg_NotifyScaleGestureComplete final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_NotifyScaleGestureComplete& default_instance() {
     return *internal_default_instance();
   }
@@ -2757,9 +2778,15 @@ class Msg_NotifyScaleGestureComplete final :
   Msg_NotifyScaleGestureComplete* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_NotifyScaleGestureComplete>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_NotifyScaleGestureComplete& from);
-  void MergeFrom(const Msg_NotifyScaleGestureComplete& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_NotifyScaleGestureComplete& from) {
+    Msg_NotifyScaleGestureComplete::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2772,7 +2799,7 @@ class Msg_NotifyScaleGestureComplete final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_NotifyScaleGestureComplete* other);
 
   private:
@@ -2785,7 +2812,10 @@ class Msg_NotifyScaleGestureComplete final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2795,11 +2825,7 @@ class Msg_NotifyScaleGestureComplete final :
     kAAScrollIdFieldNumber = 1,
     kAAScaleFieldNumber = 2,
   };
-  // required bytes a_aScrollId = 1;
-  bool has_a_ascrollid() const;
-  private:
-  bool _internal_has_a_ascrollid() const;
-  public:
+  // bytes a_aScrollId = 1;
   void clear_a_ascrollid();
   const std::string& a_ascrollid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2813,11 +2839,7 @@ class Msg_NotifyScaleGestureComplete final :
   std::string* _internal_mutable_a_ascrollid();
   public:
 
-  // required float a_aScale = 2;
-  bool has_a_ascale() const;
-  private:
-  bool _internal_has_a_ascale() const;
-  public:
+  // float a_aScale = 2;
   void clear_a_ascale();
   float a_ascale() const;
   void set_a_ascale(float value);
@@ -2830,17 +2852,13 @@ class Msg_NotifyScaleGestureComplete final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ascrollid_;
     float a_ascale_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PAPZCTreeManager_2eproto;
@@ -2856,17 +2874,9 @@ class Msg_NotifyScaleGestureComplete final :
 #endif  // __GNUC__
 // Msg_ZoomToRect
 
-// required bytes a_aGuid = 1;
-inline bool Msg_ZoomToRect::_internal_has_a_aguid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_ZoomToRect::has_a_aguid() const {
-  return _internal_has_a_aguid();
-}
+// bytes a_aGuid = 1;
 inline void Msg_ZoomToRect::clear_a_aguid() {
   _impl_.a_aguid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_ZoomToRect::a_aguid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZCTreeManager.Msg_ZoomToRect.a_aGuid)
@@ -2875,7 +2885,7 @@ inline const std::string& Msg_ZoomToRect::a_aguid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ZoomToRect::set_a_aguid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_aguid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZCTreeManager.Msg_ZoomToRect.a_aGuid)
 }
@@ -2888,32 +2898,22 @@ inline const std::string& Msg_ZoomToRect::_internal_a_aguid() const {
   return _impl_.a_aguid_.Get();
 }
 inline void Msg_ZoomToRect::_internal_set_a_aguid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aguid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ZoomToRect::_internal_mutable_a_aguid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_aguid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ZoomToRect::release_a_aguid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZCTreeManager.Msg_ZoomToRect.a_aGuid)
-  if (!_internal_has_a_aguid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_aguid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_aguid_.IsDefault()) {
-    _impl_.a_aguid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_aguid_.Release();
 }
 inline void Msg_ZoomToRect::set_allocated_a_aguid(std::string* a_aguid) {
   if (a_aguid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_aguid_.SetAllocated(a_aguid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2924,17 +2924,9 @@ inline void Msg_ZoomToRect::set_allocated_a_aguid(std::string* a_aguid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZCTreeManager.Msg_ZoomToRect.a_aGuid)
 }
 
-// required bytes a_aZoomTarget = 2;
-inline bool Msg_ZoomToRect::_internal_has_a_azoomtarget() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_ZoomToRect::has_a_azoomtarget() const {
-  return _internal_has_a_azoomtarget();
-}
+// bytes a_aZoomTarget = 2;
 inline void Msg_ZoomToRect::clear_a_azoomtarget() {
   _impl_.a_azoomtarget_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_ZoomToRect::a_azoomtarget() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZCTreeManager.Msg_ZoomToRect.a_aZoomTarget)
@@ -2943,7 +2935,7 @@ inline const std::string& Msg_ZoomToRect::a_azoomtarget() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ZoomToRect::set_a_azoomtarget(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_azoomtarget_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZCTreeManager.Msg_ZoomToRect.a_aZoomTarget)
 }
@@ -2956,32 +2948,22 @@ inline const std::string& Msg_ZoomToRect::_internal_a_azoomtarget() const {
   return _impl_.a_azoomtarget_.Get();
 }
 inline void Msg_ZoomToRect::_internal_set_a_azoomtarget(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_azoomtarget_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ZoomToRect::_internal_mutable_a_azoomtarget() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_azoomtarget_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ZoomToRect::release_a_azoomtarget() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZCTreeManager.Msg_ZoomToRect.a_aZoomTarget)
-  if (!_internal_has_a_azoomtarget()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_azoomtarget_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_azoomtarget_.IsDefault()) {
-    _impl_.a_azoomtarget_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_azoomtarget_.Release();
 }
 inline void Msg_ZoomToRect::set_allocated_a_azoomtarget(std::string* a_azoomtarget) {
   if (a_azoomtarget != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_azoomtarget_.SetAllocated(a_azoomtarget, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2992,17 +2974,9 @@ inline void Msg_ZoomToRect::set_allocated_a_azoomtarget(std::string* a_azoomtarg
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZCTreeManager.Msg_ZoomToRect.a_aZoomTarget)
 }
 
-// required uint32 a_Flags = 3;
-inline bool Msg_ZoomToRect::_internal_has_a_flags() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_ZoomToRect::has_a_flags() const {
-  return _internal_has_a_flags();
-}
+// uint32 a_Flags = 3;
 inline void Msg_ZoomToRect::clear_a_flags() {
   _impl_.a_flags_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_ZoomToRect::_internal_a_flags() const {
   return _impl_.a_flags_;
@@ -3012,7 +2986,7 @@ inline uint32_t Msg_ZoomToRect::a_flags() const {
   return _internal_a_flags();
 }
 inline void Msg_ZoomToRect::_internal_set_a_flags(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_flags_ = value;
 }
 inline void Msg_ZoomToRect::set_a_flags(uint32_t value) {
@@ -3024,17 +2998,9 @@ inline void Msg_ZoomToRect::set_a_flags(uint32_t value) {
 
 // Msg_ContentReceivedInputBlock
 
-// required uint64 a_aInputBlockId = 1;
-inline bool Msg_ContentReceivedInputBlock::_internal_has_a_ainputblockid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_ContentReceivedInputBlock::has_a_ainputblockid() const {
-  return _internal_has_a_ainputblockid();
-}
+// uint64 a_aInputBlockId = 1;
 inline void Msg_ContentReceivedInputBlock::clear_a_ainputblockid() {
   _impl_.a_ainputblockid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_ContentReceivedInputBlock::_internal_a_ainputblockid() const {
   return _impl_.a_ainputblockid_;
@@ -3044,7 +3010,7 @@ inline uint64_t Msg_ContentReceivedInputBlock::a_ainputblockid() const {
   return _internal_a_ainputblockid();
 }
 inline void Msg_ContentReceivedInputBlock::_internal_set_a_ainputblockid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_ainputblockid_ = value;
 }
 inline void Msg_ContentReceivedInputBlock::set_a_ainputblockid(uint64_t value) {
@@ -3052,17 +3018,9 @@ inline void Msg_ContentReceivedInputBlock::set_a_ainputblockid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZCTreeManager.Msg_ContentReceivedInputBlock.a_aInputBlockId)
 }
 
-// required bool a_PreventDefault = 2;
-inline bool Msg_ContentReceivedInputBlock::_internal_has_a_preventdefault() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_ContentReceivedInputBlock::has_a_preventdefault() const {
-  return _internal_has_a_preventdefault();
-}
+// bool a_PreventDefault = 2;
 inline void Msg_ContentReceivedInputBlock::clear_a_preventdefault() {
   _impl_.a_preventdefault_ = false;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool Msg_ContentReceivedInputBlock::_internal_a_preventdefault() const {
   return _impl_.a_preventdefault_;
@@ -3072,7 +3030,7 @@ inline bool Msg_ContentReceivedInputBlock::a_preventdefault() const {
   return _internal_a_preventdefault();
 }
 inline void Msg_ContentReceivedInputBlock::_internal_set_a_preventdefault(bool value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_preventdefault_ = value;
 }
 inline void Msg_ContentReceivedInputBlock::set_a_preventdefault(bool value) {
@@ -3084,17 +3042,9 @@ inline void Msg_ContentReceivedInputBlock::set_a_preventdefault(bool value) {
 
 // Msg_SetTargetAPZC
 
-// required uint64 a_aInputBlockId = 1;
-inline bool Msg_SetTargetAPZC::_internal_has_a_ainputblockid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_SetTargetAPZC::has_a_ainputblockid() const {
-  return _internal_has_a_ainputblockid();
-}
+// uint64 a_aInputBlockId = 1;
 inline void Msg_SetTargetAPZC::clear_a_ainputblockid() {
   _impl_.a_ainputblockid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_SetTargetAPZC::_internal_a_ainputblockid() const {
   return _impl_.a_ainputblockid_;
@@ -3104,7 +3054,7 @@ inline uint64_t Msg_SetTargetAPZC::a_ainputblockid() const {
   return _internal_a_ainputblockid();
 }
 inline void Msg_SetTargetAPZC::_internal_set_a_ainputblockid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_ainputblockid_ = value;
 }
 inline void Msg_SetTargetAPZC::set_a_ainputblockid(uint64_t value) {
@@ -3191,17 +3141,9 @@ Msg_SetTargetAPZC::mutable_a_targets() {
 
 // Msg_UpdateZoomConstraints
 
-// required bytes a_aGuid = 1;
-inline bool Msg_UpdateZoomConstraints::_internal_has_a_aguid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_UpdateZoomConstraints::has_a_aguid() const {
-  return _internal_has_a_aguid();
-}
+// bytes a_aGuid = 1;
 inline void Msg_UpdateZoomConstraints::clear_a_aguid() {
   _impl_.a_aguid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_UpdateZoomConstraints::a_aguid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZCTreeManager.Msg_UpdateZoomConstraints.a_aGuid)
@@ -3210,7 +3152,7 @@ inline const std::string& Msg_UpdateZoomConstraints::a_aguid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UpdateZoomConstraints::set_a_aguid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_aguid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZCTreeManager.Msg_UpdateZoomConstraints.a_aGuid)
 }
@@ -3223,32 +3165,22 @@ inline const std::string& Msg_UpdateZoomConstraints::_internal_a_aguid() const {
   return _impl_.a_aguid_.Get();
 }
 inline void Msg_UpdateZoomConstraints::_internal_set_a_aguid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aguid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateZoomConstraints::_internal_mutable_a_aguid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_aguid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateZoomConstraints::release_a_aguid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZCTreeManager.Msg_UpdateZoomConstraints.a_aGuid)
-  if (!_internal_has_a_aguid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_aguid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_aguid_.IsDefault()) {
-    _impl_.a_aguid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_aguid_.Release();
 }
 inline void Msg_UpdateZoomConstraints::set_allocated_a_aguid(std::string* a_aguid) {
   if (a_aguid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_aguid_.SetAllocated(a_aguid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3261,7 +3193,7 @@ inline void Msg_UpdateZoomConstraints::set_allocated_a_aguid(std::string* a_agui
 
 // optional bytes a_aConstraints = 2;
 inline bool Msg_UpdateZoomConstraints::_internal_has_a_aconstraints() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
 inline bool Msg_UpdateZoomConstraints::has_a_aconstraints() const {
@@ -3269,7 +3201,7 @@ inline bool Msg_UpdateZoomConstraints::has_a_aconstraints() const {
 }
 inline void Msg_UpdateZoomConstraints::clear_a_aconstraints() {
   _impl_.a_aconstraints_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_UpdateZoomConstraints::a_aconstraints() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZCTreeManager.Msg_UpdateZoomConstraints.a_aConstraints)
@@ -3278,7 +3210,7 @@ inline const std::string& Msg_UpdateZoomConstraints::a_aconstraints() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UpdateZoomConstraints::set_a_aconstraints(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_aconstraints_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZCTreeManager.Msg_UpdateZoomConstraints.a_aConstraints)
 }
@@ -3291,11 +3223,11 @@ inline const std::string& Msg_UpdateZoomConstraints::_internal_a_aconstraints() 
   return _impl_.a_aconstraints_.Get();
 }
 inline void Msg_UpdateZoomConstraints::_internal_set_a_aconstraints(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_aconstraints_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateZoomConstraints::_internal_mutable_a_aconstraints() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_aconstraints_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateZoomConstraints::release_a_aconstraints() {
@@ -3303,7 +3235,7 @@ inline std::string* Msg_UpdateZoomConstraints::release_a_aconstraints() {
   if (!_internal_has_a_aconstraints()) {
     return nullptr;
   }
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
   auto* p = _impl_.a_aconstraints_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (_impl_.a_aconstraints_.IsDefault()) {
@@ -3314,9 +3246,9 @@ inline std::string* Msg_UpdateZoomConstraints::release_a_aconstraints() {
 }
 inline void Msg_UpdateZoomConstraints::set_allocated_a_aconstraints(std::string* a_aconstraints) {
   if (a_aconstraints != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_aconstraints_.SetAllocated(a_aconstraints, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3331,17 +3263,9 @@ inline void Msg_UpdateZoomConstraints::set_allocated_a_aconstraints(std::string*
 
 // Msg_SetKeyboardMap
 
-// required bytes a_aKeyboardMap = 1;
-inline bool Msg_SetKeyboardMap::_internal_has_a_akeyboardmap() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_SetKeyboardMap::has_a_akeyboardmap() const {
-  return _internal_has_a_akeyboardmap();
-}
+// bytes a_aKeyboardMap = 1;
 inline void Msg_SetKeyboardMap::clear_a_akeyboardmap() {
   _impl_.a_akeyboardmap_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_SetKeyboardMap::a_akeyboardmap() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZCTreeManager.Msg_SetKeyboardMap.a_aKeyboardMap)
@@ -3350,7 +3274,7 @@ inline const std::string& Msg_SetKeyboardMap::a_akeyboardmap() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetKeyboardMap::set_a_akeyboardmap(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_akeyboardmap_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZCTreeManager.Msg_SetKeyboardMap.a_aKeyboardMap)
 }
@@ -3363,32 +3287,22 @@ inline const std::string& Msg_SetKeyboardMap::_internal_a_akeyboardmap() const {
   return _impl_.a_akeyboardmap_.Get();
 }
 inline void Msg_SetKeyboardMap::_internal_set_a_akeyboardmap(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_akeyboardmap_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_SetKeyboardMap::_internal_mutable_a_akeyboardmap() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_akeyboardmap_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_SetKeyboardMap::release_a_akeyboardmap() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZCTreeManager.Msg_SetKeyboardMap.a_aKeyboardMap)
-  if (!_internal_has_a_akeyboardmap()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_akeyboardmap_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_akeyboardmap_.IsDefault()) {
-    _impl_.a_akeyboardmap_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_akeyboardmap_.Release();
 }
 inline void Msg_SetKeyboardMap::set_allocated_a_akeyboardmap(std::string* a_akeyboardmap) {
   if (a_akeyboardmap != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_akeyboardmap_.SetAllocated(a_akeyboardmap, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3403,17 +3317,9 @@ inline void Msg_SetKeyboardMap::set_allocated_a_akeyboardmap(std::string* a_akey
 
 // Msg_SetDPI
 
-// required float a_aDpiValue = 1;
-inline bool Msg_SetDPI::_internal_has_a_adpivalue() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_SetDPI::has_a_adpivalue() const {
-  return _internal_has_a_adpivalue();
-}
+// float a_aDpiValue = 1;
 inline void Msg_SetDPI::clear_a_adpivalue() {
   _impl_.a_adpivalue_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline float Msg_SetDPI::_internal_a_adpivalue() const {
   return _impl_.a_adpivalue_;
@@ -3423,7 +3329,7 @@ inline float Msg_SetDPI::a_adpivalue() const {
   return _internal_a_adpivalue();
 }
 inline void Msg_SetDPI::_internal_set_a_adpivalue(float value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_adpivalue_ = value;
 }
 inline void Msg_SetDPI::set_a_adpivalue(float value) {
@@ -3435,17 +3341,9 @@ inline void Msg_SetDPI::set_a_adpivalue(float value) {
 
 // Msg_SetAllowedTouchBehavior
 
-// required uint64 a_aInputBlockId = 1;
-inline bool Msg_SetAllowedTouchBehavior::_internal_has_a_ainputblockid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_SetAllowedTouchBehavior::has_a_ainputblockid() const {
-  return _internal_has_a_ainputblockid();
-}
+// uint64 a_aInputBlockId = 1;
 inline void Msg_SetAllowedTouchBehavior::clear_a_ainputblockid() {
   _impl_.a_ainputblockid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_SetAllowedTouchBehavior::_internal_a_ainputblockid() const {
   return _impl_.a_ainputblockid_;
@@ -3455,7 +3353,7 @@ inline uint64_t Msg_SetAllowedTouchBehavior::a_ainputblockid() const {
   return _internal_a_ainputblockid();
 }
 inline void Msg_SetAllowedTouchBehavior::_internal_set_a_ainputblockid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_ainputblockid_ = value;
 }
 inline void Msg_SetAllowedTouchBehavior::set_a_ainputblockid(uint64_t value) {
@@ -3542,17 +3440,9 @@ Msg_SetAllowedTouchBehavior::mutable_a_avalues() {
 
 // Msg_StartScrollbarDrag
 
-// required bytes a_aGuid = 1;
-inline bool Msg_StartScrollbarDrag::_internal_has_a_aguid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_StartScrollbarDrag::has_a_aguid() const {
-  return _internal_has_a_aguid();
-}
+// bytes a_aGuid = 1;
 inline void Msg_StartScrollbarDrag::clear_a_aguid() {
   _impl_.a_aguid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_StartScrollbarDrag::a_aguid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StartScrollbarDrag.a_aGuid)
@@ -3561,7 +3451,7 @@ inline const std::string& Msg_StartScrollbarDrag::a_aguid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_StartScrollbarDrag::set_a_aguid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_aguid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StartScrollbarDrag.a_aGuid)
 }
@@ -3574,32 +3464,22 @@ inline const std::string& Msg_StartScrollbarDrag::_internal_a_aguid() const {
   return _impl_.a_aguid_.Get();
 }
 inline void Msg_StartScrollbarDrag::_internal_set_a_aguid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aguid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_StartScrollbarDrag::_internal_mutable_a_aguid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_aguid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_StartScrollbarDrag::release_a_aguid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StartScrollbarDrag.a_aGuid)
-  if (!_internal_has_a_aguid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_aguid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_aguid_.IsDefault()) {
-    _impl_.a_aguid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_aguid_.Release();
 }
 inline void Msg_StartScrollbarDrag::set_allocated_a_aguid(std::string* a_aguid) {
   if (a_aguid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_aguid_.SetAllocated(a_aguid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3610,17 +3490,9 @@ inline void Msg_StartScrollbarDrag::set_allocated_a_aguid(std::string* a_aguid) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StartScrollbarDrag.a_aGuid)
 }
 
-// required bytes a_aDragMetrics = 2;
-inline bool Msg_StartScrollbarDrag::_internal_has_a_adragmetrics() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_StartScrollbarDrag::has_a_adragmetrics() const {
-  return _internal_has_a_adragmetrics();
-}
+// bytes a_aDragMetrics = 2;
 inline void Msg_StartScrollbarDrag::clear_a_adragmetrics() {
   _impl_.a_adragmetrics_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_StartScrollbarDrag::a_adragmetrics() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StartScrollbarDrag.a_aDragMetrics)
@@ -3629,7 +3501,7 @@ inline const std::string& Msg_StartScrollbarDrag::a_adragmetrics() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_StartScrollbarDrag::set_a_adragmetrics(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_adragmetrics_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StartScrollbarDrag.a_aDragMetrics)
 }
@@ -3642,32 +3514,22 @@ inline const std::string& Msg_StartScrollbarDrag::_internal_a_adragmetrics() con
   return _impl_.a_adragmetrics_.Get();
 }
 inline void Msg_StartScrollbarDrag::_internal_set_a_adragmetrics(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_adragmetrics_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_StartScrollbarDrag::_internal_mutable_a_adragmetrics() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_adragmetrics_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_StartScrollbarDrag::release_a_adragmetrics() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StartScrollbarDrag.a_aDragMetrics)
-  if (!_internal_has_a_adragmetrics()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_adragmetrics_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_adragmetrics_.IsDefault()) {
-    _impl_.a_adragmetrics_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_adragmetrics_.Release();
 }
 inline void Msg_StartScrollbarDrag::set_allocated_a_adragmetrics(std::string* a_adragmetrics) {
   if (a_adragmetrics != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_adragmetrics_.SetAllocated(a_adragmetrics, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3682,17 +3544,9 @@ inline void Msg_StartScrollbarDrag::set_allocated_a_adragmetrics(std::string* a_
 
 // Msg_StartAutoscroll
 
-// required bytes a_aGuid = 1;
-inline bool Msg_StartAutoscroll::_internal_has_a_aguid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_StartAutoscroll::has_a_aguid() const {
-  return _internal_has_a_aguid();
-}
+// bytes a_aGuid = 1;
 inline void Msg_StartAutoscroll::clear_a_aguid() {
   _impl_.a_aguid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_StartAutoscroll::a_aguid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StartAutoscroll.a_aGuid)
@@ -3701,7 +3555,7 @@ inline const std::string& Msg_StartAutoscroll::a_aguid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_StartAutoscroll::set_a_aguid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_aguid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StartAutoscroll.a_aGuid)
 }
@@ -3714,32 +3568,22 @@ inline const std::string& Msg_StartAutoscroll::_internal_a_aguid() const {
   return _impl_.a_aguid_.Get();
 }
 inline void Msg_StartAutoscroll::_internal_set_a_aguid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aguid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_StartAutoscroll::_internal_mutable_a_aguid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_aguid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_StartAutoscroll::release_a_aguid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StartAutoscroll.a_aGuid)
-  if (!_internal_has_a_aguid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_aguid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_aguid_.IsDefault()) {
-    _impl_.a_aguid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_aguid_.Release();
 }
 inline void Msg_StartAutoscroll::set_allocated_a_aguid(std::string* a_aguid) {
   if (a_aguid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_aguid_.SetAllocated(a_aguid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3750,17 +3594,9 @@ inline void Msg_StartAutoscroll::set_allocated_a_aguid(std::string* a_aguid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StartAutoscroll.a_aGuid)
 }
 
-// required bytes a_aAnchorLocation = 2;
-inline bool Msg_StartAutoscroll::_internal_has_a_aanchorlocation() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_StartAutoscroll::has_a_aanchorlocation() const {
-  return _internal_has_a_aanchorlocation();
-}
+// bytes a_aAnchorLocation = 2;
 inline void Msg_StartAutoscroll::clear_a_aanchorlocation() {
   _impl_.a_aanchorlocation_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_StartAutoscroll::a_aanchorlocation() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StartAutoscroll.a_aAnchorLocation)
@@ -3769,7 +3605,7 @@ inline const std::string& Msg_StartAutoscroll::a_aanchorlocation() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_StartAutoscroll::set_a_aanchorlocation(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_aanchorlocation_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StartAutoscroll.a_aAnchorLocation)
 }
@@ -3782,32 +3618,22 @@ inline const std::string& Msg_StartAutoscroll::_internal_a_aanchorlocation() con
   return _impl_.a_aanchorlocation_.Get();
 }
 inline void Msg_StartAutoscroll::_internal_set_a_aanchorlocation(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aanchorlocation_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_StartAutoscroll::_internal_mutable_a_aanchorlocation() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_aanchorlocation_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_StartAutoscroll::release_a_aanchorlocation() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StartAutoscroll.a_aAnchorLocation)
-  if (!_internal_has_a_aanchorlocation()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_aanchorlocation_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_aanchorlocation_.IsDefault()) {
-    _impl_.a_aanchorlocation_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_aanchorlocation_.Release();
 }
 inline void Msg_StartAutoscroll::set_allocated_a_aanchorlocation(std::string* a_aanchorlocation) {
   if (a_aanchorlocation != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_aanchorlocation_.SetAllocated(a_aanchorlocation, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3822,17 +3648,9 @@ inline void Msg_StartAutoscroll::set_allocated_a_aanchorlocation(std::string* a_
 
 // Msg_StopAutoscroll
 
-// required bytes a_aGuid = 1;
-inline bool Msg_StopAutoscroll::_internal_has_a_aguid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_StopAutoscroll::has_a_aguid() const {
-  return _internal_has_a_aguid();
-}
+// bytes a_aGuid = 1;
 inline void Msg_StopAutoscroll::clear_a_aguid() {
   _impl_.a_aguid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_StopAutoscroll::a_aguid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StopAutoscroll.a_aGuid)
@@ -3841,7 +3659,7 @@ inline const std::string& Msg_StopAutoscroll::a_aguid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_StopAutoscroll::set_a_aguid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_aguid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StopAutoscroll.a_aGuid)
 }
@@ -3854,32 +3672,22 @@ inline const std::string& Msg_StopAutoscroll::_internal_a_aguid() const {
   return _impl_.a_aguid_.Get();
 }
 inline void Msg_StopAutoscroll::_internal_set_a_aguid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aguid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_StopAutoscroll::_internal_mutable_a_aguid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_aguid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_StopAutoscroll::release_a_aguid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZCTreeManager.Msg_StopAutoscroll.a_aGuid)
-  if (!_internal_has_a_aguid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_aguid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_aguid_.IsDefault()) {
-    _impl_.a_aguid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_aguid_.Release();
 }
 inline void Msg_StopAutoscroll::set_allocated_a_aguid(std::string* a_aguid) {
   if (a_aguid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_aguid_.SetAllocated(a_aguid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3894,17 +3702,9 @@ inline void Msg_StopAutoscroll::set_allocated_a_aguid(std::string* a_aguid) {
 
 // Msg_SetLongTapEnabled
 
-// required bool a_aTapGestureEnabled = 1;
-inline bool Msg_SetLongTapEnabled::_internal_has_a_atapgestureenabled() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_SetLongTapEnabled::has_a_atapgestureenabled() const {
-  return _internal_has_a_atapgestureenabled();
-}
+// bool a_aTapGestureEnabled = 1;
 inline void Msg_SetLongTapEnabled::clear_a_atapgestureenabled() {
   _impl_.a_atapgestureenabled_ = false;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Msg_SetLongTapEnabled::_internal_a_atapgestureenabled() const {
   return _impl_.a_atapgestureenabled_;
@@ -3914,7 +3714,7 @@ inline bool Msg_SetLongTapEnabled::a_atapgestureenabled() const {
   return _internal_a_atapgestureenabled();
 }
 inline void Msg_SetLongTapEnabled::_internal_set_a_atapgestureenabled(bool value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_atapgestureenabled_ = value;
 }
 inline void Msg_SetLongTapEnabled::set_a_atapgestureenabled(bool value) {
@@ -3926,17 +3726,9 @@ inline void Msg_SetLongTapEnabled::set_a_atapgestureenabled(bool value) {
 
 // Msg_SetBrowserGestureResponse
 
-// required uint64 a_aInputBlockId = 1;
-inline bool Msg_SetBrowserGestureResponse::_internal_has_a_ainputblockid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_SetBrowserGestureResponse::has_a_ainputblockid() const {
-  return _internal_has_a_ainputblockid();
-}
+// uint64 a_aInputBlockId = 1;
 inline void Msg_SetBrowserGestureResponse::clear_a_ainputblockid() {
   _impl_.a_ainputblockid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_SetBrowserGestureResponse::_internal_a_ainputblockid() const {
   return _impl_.a_ainputblockid_;
@@ -3946,7 +3738,7 @@ inline uint64_t Msg_SetBrowserGestureResponse::a_ainputblockid() const {
   return _internal_a_ainputblockid();
 }
 inline void Msg_SetBrowserGestureResponse::_internal_set_a_ainputblockid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_ainputblockid_ = value;
 }
 inline void Msg_SetBrowserGestureResponse::set_a_ainputblockid(uint64_t value) {
@@ -3954,17 +3746,9 @@ inline void Msg_SetBrowserGestureResponse::set_a_ainputblockid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZCTreeManager.Msg_SetBrowserGestureResponse.a_aInputBlockId)
 }
 
-// required bytes a_aResponse = 2;
-inline bool Msg_SetBrowserGestureResponse::_internal_has_a_aresponse() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_SetBrowserGestureResponse::has_a_aresponse() const {
-  return _internal_has_a_aresponse();
-}
+// bytes a_aResponse = 2;
 inline void Msg_SetBrowserGestureResponse::clear_a_aresponse() {
   _impl_.a_aresponse_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_SetBrowserGestureResponse::a_aresponse() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZCTreeManager.Msg_SetBrowserGestureResponse.a_aResponse)
@@ -3973,7 +3757,7 @@ inline const std::string& Msg_SetBrowserGestureResponse::a_aresponse() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetBrowserGestureResponse::set_a_aresponse(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_aresponse_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZCTreeManager.Msg_SetBrowserGestureResponse.a_aResponse)
 }
@@ -3986,32 +3770,22 @@ inline const std::string& Msg_SetBrowserGestureResponse::_internal_a_aresponse()
   return _impl_.a_aresponse_.Get();
 }
 inline void Msg_SetBrowserGestureResponse::_internal_set_a_aresponse(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aresponse_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_SetBrowserGestureResponse::_internal_mutable_a_aresponse() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_aresponse_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_SetBrowserGestureResponse::release_a_aresponse() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZCTreeManager.Msg_SetBrowserGestureResponse.a_aResponse)
-  if (!_internal_has_a_aresponse()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_aresponse_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_aresponse_.IsDefault()) {
-    _impl_.a_aresponse_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_aresponse_.Release();
 }
 inline void Msg_SetBrowserGestureResponse::set_allocated_a_aresponse(std::string* a_aresponse) {
   if (a_aresponse != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_aresponse_.SetAllocated(a_aresponse, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4034,17 +3808,9 @@ inline void Msg_SetBrowserGestureResponse::set_allocated_a_aresponse(std::string
 
 // Msg_NotifyPinchGesture
 
-// required bytes a_aType = 1;
-inline bool Msg_NotifyPinchGesture::_internal_has_a_atype() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_NotifyPinchGesture::has_a_atype() const {
-  return _internal_has_a_atype();
-}
+// bytes a_aType = 1;
 inline void Msg_NotifyPinchGesture::clear_a_atype() {
   _impl_.a_atype_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_NotifyPinchGesture::a_atype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyPinchGesture.a_aType)
@@ -4053,7 +3819,7 @@ inline const std::string& Msg_NotifyPinchGesture::a_atype() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyPinchGesture::set_a_atype(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_atype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyPinchGesture.a_aType)
 }
@@ -4066,32 +3832,22 @@ inline const std::string& Msg_NotifyPinchGesture::_internal_a_atype() const {
   return _impl_.a_atype_.Get();
 }
 inline void Msg_NotifyPinchGesture::_internal_set_a_atype(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_atype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyPinchGesture::_internal_mutable_a_atype() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_atype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyPinchGesture::release_a_atype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyPinchGesture.a_aType)
-  if (!_internal_has_a_atype()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_atype_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_atype_.IsDefault()) {
-    _impl_.a_atype_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_atype_.Release();
 }
 inline void Msg_NotifyPinchGesture::set_allocated_a_atype(std::string* a_atype) {
   if (a_atype != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_atype_.SetAllocated(a_atype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4102,17 +3858,9 @@ inline void Msg_NotifyPinchGesture::set_allocated_a_atype(std::string* a_atype) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyPinchGesture.a_aType)
 }
 
-// required bytes a_aGuid = 2;
-inline bool Msg_NotifyPinchGesture::_internal_has_a_aguid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_NotifyPinchGesture::has_a_aguid() const {
-  return _internal_has_a_aguid();
-}
+// bytes a_aGuid = 2;
 inline void Msg_NotifyPinchGesture::clear_a_aguid() {
   _impl_.a_aguid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_NotifyPinchGesture::a_aguid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyPinchGesture.a_aGuid)
@@ -4121,7 +3869,7 @@ inline const std::string& Msg_NotifyPinchGesture::a_aguid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyPinchGesture::set_a_aguid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_aguid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyPinchGesture.a_aGuid)
 }
@@ -4134,32 +3882,22 @@ inline const std::string& Msg_NotifyPinchGesture::_internal_a_aguid() const {
   return _impl_.a_aguid_.Get();
 }
 inline void Msg_NotifyPinchGesture::_internal_set_a_aguid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aguid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyPinchGesture::_internal_mutable_a_aguid() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_aguid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyPinchGesture::release_a_aguid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyPinchGesture.a_aGuid)
-  if (!_internal_has_a_aguid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_aguid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_aguid_.IsDefault()) {
-    _impl_.a_aguid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_aguid_.Release();
 }
 inline void Msg_NotifyPinchGesture::set_allocated_a_aguid(std::string* a_aguid) {
   if (a_aguid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_aguid_.SetAllocated(a_aguid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4170,17 +3908,9 @@ inline void Msg_NotifyPinchGesture::set_allocated_a_aguid(std::string* a_aguid) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyPinchGesture.a_aGuid)
 }
 
-// required bytes a_aFocusPoint = 3;
-inline bool Msg_NotifyPinchGesture::_internal_has_a_afocuspoint() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_NotifyPinchGesture::has_a_afocuspoint() const {
-  return _internal_has_a_afocuspoint();
-}
+// bytes a_aFocusPoint = 3;
 inline void Msg_NotifyPinchGesture::clear_a_afocuspoint() {
   _impl_.a_afocuspoint_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_NotifyPinchGesture::a_afocuspoint() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyPinchGesture.a_aFocusPoint)
@@ -4189,7 +3919,7 @@ inline const std::string& Msg_NotifyPinchGesture::a_afocuspoint() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyPinchGesture::set_a_afocuspoint(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_afocuspoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyPinchGesture.a_aFocusPoint)
 }
@@ -4202,32 +3932,22 @@ inline const std::string& Msg_NotifyPinchGesture::_internal_a_afocuspoint() cons
   return _impl_.a_afocuspoint_.Get();
 }
 inline void Msg_NotifyPinchGesture::_internal_set_a_afocuspoint(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_afocuspoint_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyPinchGesture::_internal_mutable_a_afocuspoint() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_afocuspoint_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyPinchGesture::release_a_afocuspoint() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyPinchGesture.a_aFocusPoint)
-  if (!_internal_has_a_afocuspoint()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_afocuspoint_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_afocuspoint_.IsDefault()) {
-    _impl_.a_afocuspoint_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_afocuspoint_.Release();
 }
 inline void Msg_NotifyPinchGesture::set_allocated_a_afocuspoint(std::string* a_afocuspoint) {
   if (a_afocuspoint != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_afocuspoint_.SetAllocated(a_afocuspoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4238,17 +3958,9 @@ inline void Msg_NotifyPinchGesture::set_allocated_a_afocuspoint(std::string* a_a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyPinchGesture.a_aFocusPoint)
 }
 
-// required bytes a_aSpanChange = 4;
-inline bool Msg_NotifyPinchGesture::_internal_has_a_aspanchange() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_NotifyPinchGesture::has_a_aspanchange() const {
-  return _internal_has_a_aspanchange();
-}
+// bytes a_aSpanChange = 4;
 inline void Msg_NotifyPinchGesture::clear_a_aspanchange() {
   _impl_.a_aspanchange_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& Msg_NotifyPinchGesture::a_aspanchange() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyPinchGesture.a_aSpanChange)
@@ -4257,7 +3969,7 @@ inline const std::string& Msg_NotifyPinchGesture::a_aspanchange() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyPinchGesture::set_a_aspanchange(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000008u;
+ 
  _impl_.a_aspanchange_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyPinchGesture.a_aSpanChange)
 }
@@ -4270,32 +3982,22 @@ inline const std::string& Msg_NotifyPinchGesture::_internal_a_aspanchange() cons
   return _impl_.a_aspanchange_.Get();
 }
 inline void Msg_NotifyPinchGesture::_internal_set_a_aspanchange(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_aspanchange_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyPinchGesture::_internal_mutable_a_aspanchange() {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   return _impl_.a_aspanchange_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyPinchGesture::release_a_aspanchange() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyPinchGesture.a_aSpanChange)
-  if (!_internal_has_a_aspanchange()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.a_aspanchange_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_aspanchange_.IsDefault()) {
-    _impl_.a_aspanchange_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_aspanchange_.Release();
 }
 inline void Msg_NotifyPinchGesture::set_allocated_a_aspanchange(std::string* a_aspanchange) {
   if (a_aspanchange != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    
   }
   _impl_.a_aspanchange_.SetAllocated(a_aspanchange, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4306,17 +4008,9 @@ inline void Msg_NotifyPinchGesture::set_allocated_a_aspanchange(std::string* a_a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyPinchGesture.a_aSpanChange)
 }
 
-// required bytes a_aModifiers = 5;
-inline bool Msg_NotifyPinchGesture::_internal_has_a_amodifiers() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool Msg_NotifyPinchGesture::has_a_amodifiers() const {
-  return _internal_has_a_amodifiers();
-}
+// bytes a_aModifiers = 5;
 inline void Msg_NotifyPinchGesture::clear_a_amodifiers() {
   _impl_.a_amodifiers_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline const std::string& Msg_NotifyPinchGesture::a_amodifiers() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyPinchGesture.a_aModifiers)
@@ -4325,7 +4019,7 @@ inline const std::string& Msg_NotifyPinchGesture::a_amodifiers() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyPinchGesture::set_a_amodifiers(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000010u;
+ 
  _impl_.a_amodifiers_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyPinchGesture.a_aModifiers)
 }
@@ -4338,32 +4032,22 @@ inline const std::string& Msg_NotifyPinchGesture::_internal_a_amodifiers() const
   return _impl_.a_amodifiers_.Get();
 }
 inline void Msg_NotifyPinchGesture::_internal_set_a_amodifiers(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_amodifiers_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyPinchGesture::_internal_mutable_a_amodifiers() {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   return _impl_.a_amodifiers_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyPinchGesture::release_a_amodifiers() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyPinchGesture.a_aModifiers)
-  if (!_internal_has_a_amodifiers()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000010u;
-  auto* p = _impl_.a_amodifiers_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_amodifiers_.IsDefault()) {
-    _impl_.a_amodifiers_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_amodifiers_.Release();
 }
 inline void Msg_NotifyPinchGesture::set_allocated_a_amodifiers(std::string* a_amodifiers) {
   if (a_amodifiers != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000010u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000010u;
+    
   }
   _impl_.a_amodifiers_.SetAllocated(a_amodifiers, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4378,17 +4062,9 @@ inline void Msg_NotifyPinchGesture::set_allocated_a_amodifiers(std::string* a_am
 
 // Msg_CancelAutoscroll
 
-// required bytes a_aScrollId = 1;
-inline bool Msg_CancelAutoscroll::_internal_has_a_ascrollid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_CancelAutoscroll::has_a_ascrollid() const {
-  return _internal_has_a_ascrollid();
-}
+// bytes a_aScrollId = 1;
 inline void Msg_CancelAutoscroll::clear_a_ascrollid() {
   _impl_.a_ascrollid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_CancelAutoscroll::a_ascrollid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZCTreeManager.Msg_CancelAutoscroll.a_aScrollId)
@@ -4397,7 +4073,7 @@ inline const std::string& Msg_CancelAutoscroll::a_ascrollid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CancelAutoscroll::set_a_ascrollid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_ascrollid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZCTreeManager.Msg_CancelAutoscroll.a_aScrollId)
 }
@@ -4410,32 +4086,22 @@ inline const std::string& Msg_CancelAutoscroll::_internal_a_ascrollid() const {
   return _impl_.a_ascrollid_.Get();
 }
 inline void Msg_CancelAutoscroll::_internal_set_a_ascrollid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_ascrollid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CancelAutoscroll::_internal_mutable_a_ascrollid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_ascrollid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CancelAutoscroll::release_a_ascrollid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZCTreeManager.Msg_CancelAutoscroll.a_aScrollId)
-  if (!_internal_has_a_ascrollid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_ascrollid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_ascrollid_.IsDefault()) {
-    _impl_.a_ascrollid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_ascrollid_.Release();
 }
 inline void Msg_CancelAutoscroll::set_allocated_a_ascrollid(std::string* a_ascrollid) {
   if (a_ascrollid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_ascrollid_.SetAllocated(a_ascrollid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4450,17 +4116,9 @@ inline void Msg_CancelAutoscroll::set_allocated_a_ascrollid(std::string* a_ascro
 
 // Msg_NotifyScaleGestureComplete
 
-// required bytes a_aScrollId = 1;
-inline bool Msg_NotifyScaleGestureComplete::_internal_has_a_ascrollid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_NotifyScaleGestureComplete::has_a_ascrollid() const {
-  return _internal_has_a_ascrollid();
-}
+// bytes a_aScrollId = 1;
 inline void Msg_NotifyScaleGestureComplete::clear_a_ascrollid() {
   _impl_.a_ascrollid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_NotifyScaleGestureComplete::a_ascrollid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyScaleGestureComplete.a_aScrollId)
@@ -4469,7 +4127,7 @@ inline const std::string& Msg_NotifyScaleGestureComplete::a_ascrollid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_NotifyScaleGestureComplete::set_a_ascrollid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_ascrollid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyScaleGestureComplete.a_aScrollId)
 }
@@ -4482,32 +4140,22 @@ inline const std::string& Msg_NotifyScaleGestureComplete::_internal_a_ascrollid(
   return _impl_.a_ascrollid_.Get();
 }
 inline void Msg_NotifyScaleGestureComplete::_internal_set_a_ascrollid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_ascrollid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyScaleGestureComplete::_internal_mutable_a_ascrollid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_ascrollid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_NotifyScaleGestureComplete::release_a_ascrollid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyScaleGestureComplete.a_aScrollId)
-  if (!_internal_has_a_ascrollid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_ascrollid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_ascrollid_.IsDefault()) {
-    _impl_.a_ascrollid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_ascrollid_.Release();
 }
 inline void Msg_NotifyScaleGestureComplete::set_allocated_a_ascrollid(std::string* a_ascrollid) {
   if (a_ascrollid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_ascrollid_.SetAllocated(a_ascrollid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4518,17 +4166,9 @@ inline void Msg_NotifyScaleGestureComplete::set_allocated_a_ascrollid(std::strin
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.layers.PAPZCTreeManager.Msg_NotifyScaleGestureComplete.a_aScrollId)
 }
 
-// required float a_aScale = 2;
-inline bool Msg_NotifyScaleGestureComplete::_internal_has_a_ascale() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_NotifyScaleGestureComplete::has_a_ascale() const {
-  return _internal_has_a_ascale();
-}
+// float a_aScale = 2;
 inline void Msg_NotifyScaleGestureComplete::clear_a_ascale() {
   _impl_.a_ascale_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline float Msg_NotifyScaleGestureComplete::_internal_a_ascale() const {
   return _impl_.a_ascale_;
@@ -4538,7 +4178,7 @@ inline float Msg_NotifyScaleGestureComplete::a_ascale() const {
   return _internal_a_ascale();
 }
 inline void Msg_NotifyScaleGestureComplete::_internal_set_a_ascale(float value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_ascale_ = value;
 }
 inline void Msg_NotifyScaleGestureComplete::set_a_ascale(float value) {

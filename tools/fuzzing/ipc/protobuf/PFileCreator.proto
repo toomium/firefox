@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/file/ipc/PFileCreator.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PFileCreator;
 
@@ -18,7 +17,7 @@ import "IPCBlob.proto";
 
 // Message declarations
 message Msg___delete__ {
-  required protobuf.mozilla.dom.FileCreationResult a_aResult = 1;
+  protobuf.mozilla.dom.FileCreationResult a_aResult = 1;
 }
 
 message Reply___delete__ {

@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/media/webrtc/transport/ipc/WebrtcProxyConfig.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.net;
 
@@ -14,8 +13,8 @@ import "NeckoChannelParams.proto";
 
 // Structs and unions declarations
 message WebrtcProxyConfig {
-  required bytes a_tabId = 1;
-  required string a_alpn = 2;
-  required protobuf.mozilla.net.LoadInfoArgs a_loadInfoArgs = 3;
-  required bool a_forceProxy = 4;
+  bytes a_tabId = 1;
+  string a_alpn = 2;
+  protobuf.mozilla.net.LoadInfoArgs a_loadInfoArgs = 3;
+  bool a_forceProxy = 4;
 }

@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "PBackgroundLSSharedTypes.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -42,6 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -85,7 +89,7 @@ namespace dom {
 // ===================================================================
 
 class LSSetItemInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.LSSetItemInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.LSSetItemInfo) */ {
  public:
   inline LSSetItemInfo() : LSSetItemInfo(nullptr) {}
   ~LSSetItemInfo() override;
@@ -115,13 +119,15 @@ class LSSetItemInfo final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const LSSetItemInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -159,9 +165,15 @@ class LSSetItemInfo final :
   LSSetItemInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<LSSetItemInfo>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const LSSetItemInfo& from);
-  void MergeFrom(const LSSetItemInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const LSSetItemInfo& from) {
+    LSSetItemInfo::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -174,7 +186,7 @@ class LSSetItemInfo final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(LSSetItemInfo* other);
 
   private:
@@ -187,7 +199,10 @@ class LSSetItemInfo final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -197,11 +212,7 @@ class LSSetItemInfo final :
     kAKeyFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required string a_key = 1;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // string a_key = 1;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -215,11 +226,7 @@ class LSSetItemInfo final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required bytes a_value = 2;
-  bool has_a_value() const;
-  private:
-  bool _internal_has_a_value() const;
-  public:
+  // bytes a_value = 2;
   void clear_a_value();
   const std::string& a_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -237,17 +244,13 @@ class LSSetItemInfo final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_value_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -255,7 +258,7 @@ class LSSetItemInfo final :
 // -------------------------------------------------------------------
 
 class LSRemoveItemInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.LSRemoveItemInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.LSRemoveItemInfo) */ {
  public:
   inline LSRemoveItemInfo() : LSRemoveItemInfo(nullptr) {}
   ~LSRemoveItemInfo() override;
@@ -285,13 +288,15 @@ class LSRemoveItemInfo final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const LSRemoveItemInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -329,9 +334,15 @@ class LSRemoveItemInfo final :
   LSRemoveItemInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<LSRemoveItemInfo>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const LSRemoveItemInfo& from);
-  void MergeFrom(const LSRemoveItemInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const LSRemoveItemInfo& from) {
+    LSRemoveItemInfo::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -344,7 +355,7 @@ class LSRemoveItemInfo final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(LSRemoveItemInfo* other);
 
   private:
@@ -357,7 +368,10 @@ class LSRemoveItemInfo final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -366,11 +380,7 @@ class LSRemoveItemInfo final :
   enum : int {
     kAKeyFieldNumber = 1,
   };
-  // required string a_key = 1;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // string a_key = 1;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -392,9 +402,8 @@ class LSRemoveItemInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -402,10 +411,9 @@ class LSRemoveItemInfo final :
 // -------------------------------------------------------------------
 
 class LSClearInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.LSClearInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.LSClearInfo) */ {
  public:
   inline LSClearInfo() : LSClearInfo(nullptr) {}
-  ~LSClearInfo() override;
   explicit PROTOBUF_CONSTEXPR LSClearInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   LSClearInfo(const LSClearInfo& from);
@@ -432,13 +440,15 @@ class LSClearInfo final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const LSClearInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -476,23 +486,15 @@ class LSClearInfo final :
   LSClearInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<LSClearInfo>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const LSClearInfo& from);
-  void MergeFrom(const LSClearInfo& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(LSClearInfo* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const LSClearInfo& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const LSClearInfo& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -504,7 +506,10 @@ class LSClearInfo final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -518,15 +523,13 @@ class LSClearInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 };
 // -------------------------------------------------------------------
 
 class LSWriteInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.LSWriteInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.LSWriteInfo) */ {
  public:
   inline LSWriteInfo() : LSWriteInfo(nullptr) {}
   ~LSWriteInfo() override;
@@ -556,13 +559,15 @@ class LSWriteInfo final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const LSWriteInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -607,9 +612,15 @@ class LSWriteInfo final :
   LSWriteInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<LSWriteInfo>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const LSWriteInfo& from);
-  void MergeFrom(const LSWriteInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const LSWriteInfo& from) {
+    LSWriteInfo::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -622,7 +633,7 @@ class LSWriteInfo final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(LSWriteInfo* other);
 
   private:
@@ -635,7 +646,10 @@ class LSWriteInfo final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -733,7 +747,7 @@ class LSWriteInfo final :
 // -------------------------------------------------------------------
 
 class LSSetItemAndNotifyInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.LSSetItemAndNotifyInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.LSSetItemAndNotifyInfo) */ {
  public:
   inline LSSetItemAndNotifyInfo() : LSSetItemAndNotifyInfo(nullptr) {}
   ~LSSetItemAndNotifyInfo() override;
@@ -763,13 +777,15 @@ class LSSetItemAndNotifyInfo final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const LSSetItemAndNotifyInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -807,9 +823,15 @@ class LSSetItemAndNotifyInfo final :
   LSSetItemAndNotifyInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<LSSetItemAndNotifyInfo>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const LSSetItemAndNotifyInfo& from);
-  void MergeFrom(const LSSetItemAndNotifyInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const LSSetItemAndNotifyInfo& from) {
+    LSSetItemAndNotifyInfo::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -822,7 +844,7 @@ class LSSetItemAndNotifyInfo final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(LSSetItemAndNotifyInfo* other);
 
   private:
@@ -835,7 +857,10 @@ class LSSetItemAndNotifyInfo final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -846,11 +871,7 @@ class LSSetItemAndNotifyInfo final :
     kAOldValueFieldNumber = 2,
     kAValueFieldNumber = 3,
   };
-  // required string a_key = 1;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // string a_key = 1;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -864,11 +885,7 @@ class LSSetItemAndNotifyInfo final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required bytes a_oldValue = 2;
-  bool has_a_oldvalue() const;
-  private:
-  bool _internal_has_a_oldvalue() const;
-  public:
+  // bytes a_oldValue = 2;
   void clear_a_oldvalue();
   const std::string& a_oldvalue() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -882,11 +899,7 @@ class LSSetItemAndNotifyInfo final :
   std::string* _internal_mutable_a_oldvalue();
   public:
 
-  // required bytes a_value = 3;
-  bool has_a_value() const;
-  private:
-  bool _internal_has_a_value() const;
-  public:
+  // bytes a_value = 3;
   void clear_a_value();
   const std::string& a_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -904,18 +917,14 @@ class LSSetItemAndNotifyInfo final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_oldvalue_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_value_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -923,7 +932,7 @@ class LSSetItemAndNotifyInfo final :
 // -------------------------------------------------------------------
 
 class LSRemoveItemAndNotifyInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo) */ {
  public:
   inline LSRemoveItemAndNotifyInfo() : LSRemoveItemAndNotifyInfo(nullptr) {}
   ~LSRemoveItemAndNotifyInfo() override;
@@ -953,13 +962,15 @@ class LSRemoveItemAndNotifyInfo final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const LSRemoveItemAndNotifyInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -997,9 +1008,15 @@ class LSRemoveItemAndNotifyInfo final :
   LSRemoveItemAndNotifyInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<LSRemoveItemAndNotifyInfo>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const LSRemoveItemAndNotifyInfo& from);
-  void MergeFrom(const LSRemoveItemAndNotifyInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const LSRemoveItemAndNotifyInfo& from) {
+    LSRemoveItemAndNotifyInfo::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1012,7 +1029,7 @@ class LSRemoveItemAndNotifyInfo final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(LSRemoveItemAndNotifyInfo* other);
 
   private:
@@ -1025,7 +1042,10 @@ class LSRemoveItemAndNotifyInfo final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1035,11 +1055,7 @@ class LSRemoveItemAndNotifyInfo final :
     kAKeyFieldNumber = 1,
     kAOldValueFieldNumber = 2,
   };
-  // required string a_key = 1;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // string a_key = 1;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1053,11 +1069,7 @@ class LSRemoveItemAndNotifyInfo final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required bytes a_oldValue = 2;
-  bool has_a_oldvalue() const;
-  private:
-  bool _internal_has_a_oldvalue() const;
-  public:
+  // bytes a_oldValue = 2;
   void clear_a_oldvalue();
   const std::string& a_oldvalue() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1075,17 +1087,13 @@ class LSRemoveItemAndNotifyInfo final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_oldvalue_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1093,7 +1101,7 @@ class LSRemoveItemAndNotifyInfo final :
 // -------------------------------------------------------------------
 
 class LSWriteAndNotifyInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.LSWriteAndNotifyInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.LSWriteAndNotifyInfo) */ {
  public:
   inline LSWriteAndNotifyInfo() : LSWriteAndNotifyInfo(nullptr) {}
   ~LSWriteAndNotifyInfo() override;
@@ -1123,13 +1131,15 @@ class LSWriteAndNotifyInfo final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const LSWriteAndNotifyInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -1174,9 +1184,15 @@ class LSWriteAndNotifyInfo final :
   LSWriteAndNotifyInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<LSWriteAndNotifyInfo>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const LSWriteAndNotifyInfo& from);
-  void MergeFrom(const LSWriteAndNotifyInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const LSWriteAndNotifyInfo& from) {
+    LSWriteAndNotifyInfo::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1189,7 +1205,7 @@ class LSWriteAndNotifyInfo final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(LSWriteAndNotifyInfo* other);
 
   private:
@@ -1202,7 +1218,10 @@ class LSWriteAndNotifyInfo final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1308,17 +1327,9 @@ class LSWriteAndNotifyInfo final :
 #endif  // __GNUC__
 // LSSetItemInfo
 
-// required string a_key = 1;
-inline bool LSSetItemInfo::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool LSSetItemInfo::has_a_key() const {
-  return _internal_has_a_key();
-}
+// string a_key = 1;
 inline void LSSetItemInfo::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& LSSetItemInfo::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSetItemInfo.a_key)
@@ -1327,7 +1338,7 @@ inline const std::string& LSSetItemInfo::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSSetItemInfo::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemInfo.a_key)
 }
@@ -1340,32 +1351,22 @@ inline const std::string& LSSetItemInfo::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void LSSetItemInfo::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* LSSetItemInfo::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LSSetItemInfo::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSetItemInfo.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void LSSetItemInfo::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1376,17 +1377,9 @@ inline void LSSetItemInfo::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSetItemInfo.a_key)
 }
 
-// required bytes a_value = 2;
-inline bool LSSetItemInfo::_internal_has_a_value() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool LSSetItemInfo::has_a_value() const {
-  return _internal_has_a_value();
-}
+// bytes a_value = 2;
 inline void LSSetItemInfo::clear_a_value() {
   _impl_.a_value_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& LSSetItemInfo::a_value() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSetItemInfo.a_value)
@@ -1395,7 +1388,7 @@ inline const std::string& LSSetItemInfo::a_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSSetItemInfo::set_a_value(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemInfo.a_value)
 }
@@ -1408,32 +1401,22 @@ inline const std::string& LSSetItemInfo::_internal_a_value() const {
   return _impl_.a_value_.Get();
 }
 inline void LSSetItemInfo::_internal_set_a_value(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_value_.Set(value, GetArenaForAllocation());
 }
 inline std::string* LSSetItemInfo::_internal_mutable_a_value() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_value_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LSSetItemInfo::release_a_value() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSetItemInfo.a_value)
-  if (!_internal_has_a_value()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_value_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_value_.IsDefault()) {
-    _impl_.a_value_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_value_.Release();
 }
 inline void LSSetItemInfo::set_allocated_a_value(std::string* a_value) {
   if (a_value != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_value_.SetAllocated(a_value, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1448,17 +1431,9 @@ inline void LSSetItemInfo::set_allocated_a_value(std::string* a_value) {
 
 // LSRemoveItemInfo
 
-// required string a_key = 1;
-inline bool LSRemoveItemInfo::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool LSRemoveItemInfo::has_a_key() const {
-  return _internal_has_a_key();
-}
+// string a_key = 1;
 inline void LSRemoveItemInfo::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& LSRemoveItemInfo::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRemoveItemInfo.a_key)
@@ -1467,7 +1442,7 @@ inline const std::string& LSRemoveItemInfo::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSRemoveItemInfo::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRemoveItemInfo.a_key)
 }
@@ -1480,32 +1455,22 @@ inline const std::string& LSRemoveItemInfo::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void LSRemoveItemInfo::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* LSRemoveItemInfo::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LSRemoveItemInfo::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRemoveItemInfo.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void LSRemoveItemInfo::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1759,17 +1724,9 @@ inline LSWriteInfo::ContentCase LSWriteInfo::content_case() const {
 
 // LSSetItemAndNotifyInfo
 
-// required string a_key = 1;
-inline bool LSSetItemAndNotifyInfo::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool LSSetItemAndNotifyInfo::has_a_key() const {
-  return _internal_has_a_key();
-}
+// string a_key = 1;
 inline void LSSetItemAndNotifyInfo::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& LSSetItemAndNotifyInfo::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_key)
@@ -1778,7 +1735,7 @@ inline const std::string& LSSetItemAndNotifyInfo::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSSetItemAndNotifyInfo::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_key)
 }
@@ -1791,32 +1748,22 @@ inline const std::string& LSSetItemAndNotifyInfo::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void LSSetItemAndNotifyInfo::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* LSSetItemAndNotifyInfo::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LSSetItemAndNotifyInfo::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void LSSetItemAndNotifyInfo::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1827,17 +1774,9 @@ inline void LSSetItemAndNotifyInfo::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_key)
 }
 
-// required bytes a_oldValue = 2;
-inline bool LSSetItemAndNotifyInfo::_internal_has_a_oldvalue() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool LSSetItemAndNotifyInfo::has_a_oldvalue() const {
-  return _internal_has_a_oldvalue();
-}
+// bytes a_oldValue = 2;
 inline void LSSetItemAndNotifyInfo::clear_a_oldvalue() {
   _impl_.a_oldvalue_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& LSSetItemAndNotifyInfo::a_oldvalue() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_oldValue)
@@ -1846,7 +1785,7 @@ inline const std::string& LSSetItemAndNotifyInfo::a_oldvalue() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSSetItemAndNotifyInfo::set_a_oldvalue(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_oldvalue_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_oldValue)
 }
@@ -1859,32 +1798,22 @@ inline const std::string& LSSetItemAndNotifyInfo::_internal_a_oldvalue() const {
   return _impl_.a_oldvalue_.Get();
 }
 inline void LSSetItemAndNotifyInfo::_internal_set_a_oldvalue(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_oldvalue_.Set(value, GetArenaForAllocation());
 }
 inline std::string* LSSetItemAndNotifyInfo::_internal_mutable_a_oldvalue() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_oldvalue_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LSSetItemAndNotifyInfo::release_a_oldvalue() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_oldValue)
-  if (!_internal_has_a_oldvalue()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_oldvalue_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_oldvalue_.IsDefault()) {
-    _impl_.a_oldvalue_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_oldvalue_.Release();
 }
 inline void LSSetItemAndNotifyInfo::set_allocated_a_oldvalue(std::string* a_oldvalue) {
   if (a_oldvalue != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_oldvalue_.SetAllocated(a_oldvalue, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1895,17 +1824,9 @@ inline void LSSetItemAndNotifyInfo::set_allocated_a_oldvalue(std::string* a_oldv
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_oldValue)
 }
 
-// required bytes a_value = 3;
-inline bool LSSetItemAndNotifyInfo::_internal_has_a_value() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool LSSetItemAndNotifyInfo::has_a_value() const {
-  return _internal_has_a_value();
-}
+// bytes a_value = 3;
 inline void LSSetItemAndNotifyInfo::clear_a_value() {
   _impl_.a_value_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& LSSetItemAndNotifyInfo::a_value() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_value)
@@ -1914,7 +1835,7 @@ inline const std::string& LSSetItemAndNotifyInfo::a_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSSetItemAndNotifyInfo::set_a_value(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_value_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_value)
 }
@@ -1927,32 +1848,22 @@ inline const std::string& LSSetItemAndNotifyInfo::_internal_a_value() const {
   return _impl_.a_value_.Get();
 }
 inline void LSSetItemAndNotifyInfo::_internal_set_a_value(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_value_.Set(value, GetArenaForAllocation());
 }
 inline std::string* LSSetItemAndNotifyInfo::_internal_mutable_a_value() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_value_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LSSetItemAndNotifyInfo::release_a_value() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_value)
-  if (!_internal_has_a_value()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_value_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_value_.IsDefault()) {
-    _impl_.a_value_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_value_.Release();
 }
 inline void LSSetItemAndNotifyInfo::set_allocated_a_value(std::string* a_value) {
   if (a_value != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_value_.SetAllocated(a_value, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1967,17 +1878,9 @@ inline void LSSetItemAndNotifyInfo::set_allocated_a_value(std::string* a_value) 
 
 // LSRemoveItemAndNotifyInfo
 
-// required string a_key = 1;
-inline bool LSRemoveItemAndNotifyInfo::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool LSRemoveItemAndNotifyInfo::has_a_key() const {
-  return _internal_has_a_key();
-}
+// string a_key = 1;
 inline void LSRemoveItemAndNotifyInfo::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& LSRemoveItemAndNotifyInfo::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_key)
@@ -1986,7 +1889,7 @@ inline const std::string& LSRemoveItemAndNotifyInfo::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSRemoveItemAndNotifyInfo::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_key)
 }
@@ -1999,32 +1902,22 @@ inline const std::string& LSRemoveItemAndNotifyInfo::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void LSRemoveItemAndNotifyInfo::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* LSRemoveItemAndNotifyInfo::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LSRemoveItemAndNotifyInfo::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void LSRemoveItemAndNotifyInfo::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2035,17 +1928,9 @@ inline void LSRemoveItemAndNotifyInfo::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_key)
 }
 
-// required bytes a_oldValue = 2;
-inline bool LSRemoveItemAndNotifyInfo::_internal_has_a_oldvalue() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool LSRemoveItemAndNotifyInfo::has_a_oldvalue() const {
-  return _internal_has_a_oldvalue();
-}
+// bytes a_oldValue = 2;
 inline void LSRemoveItemAndNotifyInfo::clear_a_oldvalue() {
   _impl_.a_oldvalue_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& LSRemoveItemAndNotifyInfo::a_oldvalue() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_oldValue)
@@ -2054,7 +1939,7 @@ inline const std::string& LSRemoveItemAndNotifyInfo::a_oldvalue() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LSRemoveItemAndNotifyInfo::set_a_oldvalue(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_oldvalue_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_oldValue)
 }
@@ -2067,32 +1952,22 @@ inline const std::string& LSRemoveItemAndNotifyInfo::_internal_a_oldvalue() cons
   return _impl_.a_oldvalue_.Get();
 }
 inline void LSRemoveItemAndNotifyInfo::_internal_set_a_oldvalue(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_oldvalue_.Set(value, GetArenaForAllocation());
 }
 inline std::string* LSRemoveItemAndNotifyInfo::_internal_mutable_a_oldvalue() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_oldvalue_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LSRemoveItemAndNotifyInfo::release_a_oldvalue() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_oldValue)
-  if (!_internal_has_a_oldvalue()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_oldvalue_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_oldvalue_.IsDefault()) {
-    _impl_.a_oldvalue_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_oldvalue_.Release();
 }
 inline void LSRemoveItemAndNotifyInfo::set_allocated_a_oldvalue(std::string* a_oldvalue) {
   if (a_oldvalue != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_oldvalue_.SetAllocated(a_oldvalue, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

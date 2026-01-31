@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_PrefsTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto
@@ -41,6 +43,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PrefsTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PrefsTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -64,7 +67,7 @@ namespace dom {
 // ===================================================================
 
 class PrefValue final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PrefValue) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PrefValue) */ {
  public:
   inline PrefValue() : PrefValue(nullptr) {}
   ~PrefValue() override;
@@ -94,13 +97,15 @@ class PrefValue final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const PrefValue& default_instance() {
     return *internal_default_instance();
   }
@@ -145,9 +150,15 @@ class PrefValue final :
   PrefValue* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<PrefValue>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const PrefValue& from);
-  void MergeFrom(const PrefValue& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const PrefValue& from) {
+    PrefValue::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -160,7 +171,7 @@ class PrefValue final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(PrefValue* other);
 
   private:
@@ -173,7 +184,10 @@ class PrefValue final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -261,7 +275,7 @@ class PrefValue final :
 // -------------------------------------------------------------------
 
 class Pref final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.Pref) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.Pref) */ {
  public:
   inline Pref() : Pref(nullptr) {}
   ~Pref() override;
@@ -291,13 +305,15 @@ class Pref final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Pref& default_instance() {
     return *internal_default_instance();
   }
@@ -335,9 +351,15 @@ class Pref final :
   Pref* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Pref>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Pref& from);
-  void MergeFrom(const Pref& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Pref& from) {
+    Pref::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -350,7 +372,7 @@ class Pref final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Pref* other);
 
   private:
@@ -363,7 +385,10 @@ class Pref final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -376,11 +401,7 @@ class Pref final :
     kAIsLockedFieldNumber = 2,
     kAIsSanitizedFieldNumber = 3,
   };
-  // required string a_name = 1;
-  bool has_a_name() const;
-  private:
-  bool _internal_has_a_name() const;
-  public:
+  // string a_name = 1;
   void clear_a_name();
   const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -430,11 +451,7 @@ class Pref final :
       ::protobuf::mozilla::dom::PrefValue* a_uservalue);
   ::protobuf::mozilla::dom::PrefValue* unsafe_arena_release_a_uservalue();
 
-  // required bool a_isLocked = 2;
-  bool has_a_islocked() const;
-  private:
-  bool _internal_has_a_islocked() const;
-  public:
+  // bool a_isLocked = 2;
   void clear_a_islocked();
   bool a_islocked() const;
   void set_a_islocked(bool value);
@@ -443,11 +460,7 @@ class Pref final :
   void _internal_set_a_islocked(bool value);
   public:
 
-  // required bool a_isSanitized = 3;
-  bool has_a_issanitized() const;
-  private:
-  bool _internal_has_a_issanitized() const;
-  public:
+  // bool a_isSanitized = 3;
   void clear_a_issanitized();
   bool a_issanitized() const;
   void set_a_issanitized(bool value);
@@ -459,9 +472,6 @@ class Pref final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.Pref)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -655,17 +665,9 @@ inline PrefValue::ContentCase PrefValue::content_case() const {
 
 // Pref
 
-// required string a_name = 1;
-inline bool Pref::_internal_has_a_name() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Pref::has_a_name() const {
-  return _internal_has_a_name();
-}
+// string a_name = 1;
 inline void Pref::clear_a_name() {
   _impl_.a_name_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Pref::a_name() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.Pref.a_name)
@@ -674,7 +676,7 @@ inline const std::string& Pref::a_name() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Pref::set_a_name(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.Pref.a_name)
 }
@@ -687,32 +689,22 @@ inline const std::string& Pref::_internal_a_name() const {
   return _impl_.a_name_.Get();
 }
 inline void Pref::_internal_set_a_name(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Pref::_internal_mutable_a_name() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Pref::release_a_name() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.Pref.a_name)
-  if (!_internal_has_a_name()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_name_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_name_.IsDefault()) {
-    _impl_.a_name_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_name_.Release();
 }
 inline void Pref::set_allocated_a_name(std::string* a_name) {
   if (a_name != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -723,17 +715,9 @@ inline void Pref::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.Pref.a_name)
 }
 
-// required bool a_isLocked = 2;
-inline bool Pref::_internal_has_a_islocked() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Pref::has_a_islocked() const {
-  return _internal_has_a_islocked();
-}
+// bool a_isLocked = 2;
 inline void Pref::clear_a_islocked() {
   _impl_.a_islocked_ = false;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline bool Pref::_internal_a_islocked() const {
   return _impl_.a_islocked_;
@@ -743,7 +727,7 @@ inline bool Pref::a_islocked() const {
   return _internal_a_islocked();
 }
 inline void Pref::_internal_set_a_islocked(bool value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_islocked_ = value;
 }
 inline void Pref::set_a_islocked(bool value) {
@@ -751,17 +735,9 @@ inline void Pref::set_a_islocked(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.Pref.a_isLocked)
 }
 
-// required bool a_isSanitized = 3;
-inline bool Pref::_internal_has_a_issanitized() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool Pref::has_a_issanitized() const {
-  return _internal_has_a_issanitized();
-}
+// bool a_isSanitized = 3;
 inline void Pref::clear_a_issanitized() {
   _impl_.a_issanitized_ = false;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline bool Pref::_internal_a_issanitized() const {
   return _impl_.a_issanitized_;
@@ -771,7 +747,7 @@ inline bool Pref::a_issanitized() const {
   return _internal_a_issanitized();
 }
 inline void Pref::_internal_set_a_issanitized(bool value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_issanitized_ = value;
 }
 inline void Pref::set_a_issanitized(bool value) {
@@ -781,7 +757,7 @@ inline void Pref::set_a_issanitized(bool value) {
 
 // optional .protobuf.mozilla.dom.PrefValue a_defaultValue = 4;
 inline bool Pref::_internal_has_a_defaultvalue() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_defaultvalue_ != nullptr);
   return value;
 }
@@ -790,7 +766,7 @@ inline bool Pref::has_a_defaultvalue() const {
 }
 inline void Pref::clear_a_defaultvalue() {
   if (_impl_.a_defaultvalue_ != nullptr) _impl_.a_defaultvalue_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const ::protobuf::mozilla::dom::PrefValue& Pref::_internal_a_defaultvalue() const {
   const ::protobuf::mozilla::dom::PrefValue* p = _impl_.a_defaultvalue_;
@@ -808,14 +784,14 @@ inline void Pref::unsafe_arena_set_allocated_a_defaultvalue(
   }
   _impl_.a_defaultvalue_ = a_defaultvalue;
   if (a_defaultvalue) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.Pref.a_defaultValue)
 }
 inline ::protobuf::mozilla::dom::PrefValue* Pref::release_a_defaultvalue() {
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::PrefValue* temp = _impl_.a_defaultvalue_;
   _impl_.a_defaultvalue_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -831,13 +807,13 @@ inline ::protobuf::mozilla::dom::PrefValue* Pref::release_a_defaultvalue() {
 }
 inline ::protobuf::mozilla::dom::PrefValue* Pref::unsafe_arena_release_a_defaultvalue() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.Pref.a_defaultValue)
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::PrefValue* temp = _impl_.a_defaultvalue_;
   _impl_.a_defaultvalue_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::PrefValue* Pref::_internal_mutable_a_defaultvalue() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_defaultvalue_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::PrefValue>(GetArenaForAllocation());
     _impl_.a_defaultvalue_ = p;
@@ -861,9 +837,9 @@ inline void Pref::set_allocated_a_defaultvalue(::protobuf::mozilla::dom::PrefVal
       a_defaultvalue = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_defaultvalue, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000002u;
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_defaultvalue_ = a_defaultvalue;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.Pref.a_defaultValue)
@@ -871,7 +847,7 @@ inline void Pref::set_allocated_a_defaultvalue(::protobuf::mozilla::dom::PrefVal
 
 // optional .protobuf.mozilla.dom.PrefValue a_userValue = 5;
 inline bool Pref::_internal_has_a_uservalue() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_uservalue_ != nullptr);
   return value;
 }
@@ -880,7 +856,7 @@ inline bool Pref::has_a_uservalue() const {
 }
 inline void Pref::clear_a_uservalue() {
   if (_impl_.a_uservalue_ != nullptr) _impl_.a_uservalue_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const ::protobuf::mozilla::dom::PrefValue& Pref::_internal_a_uservalue() const {
   const ::protobuf::mozilla::dom::PrefValue* p = _impl_.a_uservalue_;
@@ -898,14 +874,14 @@ inline void Pref::unsafe_arena_set_allocated_a_uservalue(
   }
   _impl_.a_uservalue_ = a_uservalue;
   if (a_uservalue) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.Pref.a_userValue)
 }
 inline ::protobuf::mozilla::dom::PrefValue* Pref::release_a_uservalue() {
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::PrefValue* temp = _impl_.a_uservalue_;
   _impl_.a_uservalue_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -921,13 +897,13 @@ inline ::protobuf::mozilla::dom::PrefValue* Pref::release_a_uservalue() {
 }
 inline ::protobuf::mozilla::dom::PrefValue* Pref::unsafe_arena_release_a_uservalue() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.Pref.a_userValue)
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::dom::PrefValue* temp = _impl_.a_uservalue_;
   _impl_.a_uservalue_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::PrefValue* Pref::_internal_mutable_a_uservalue() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.a_uservalue_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::PrefValue>(GetArenaForAllocation());
     _impl_.a_uservalue_ = p;
@@ -951,9 +927,9 @@ inline void Pref::set_allocated_a_uservalue(::protobuf::mozilla::dom::PrefValue*
       a_uservalue = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_uservalue, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000004u;
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_uservalue_ = a_uservalue;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.Pref.a_userValue)

@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "PDNSRequestParams.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -42,6 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PDNSRequest_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PDNSRequest_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace net {
@@ -76,7 +80,7 @@ namespace PDNSRequest {
 // ===================================================================
 
 class Msg_CancelDNSRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest) */ {
  public:
   inline Msg_CancelDNSRequest() : Msg_CancelDNSRequest(nullptr) {}
   ~Msg_CancelDNSRequest() override;
@@ -106,13 +110,15 @@ class Msg_CancelDNSRequest final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_CancelDNSRequest& default_instance() {
     return *internal_default_instance();
   }
@@ -150,9 +156,15 @@ class Msg_CancelDNSRequest final :
   Msg_CancelDNSRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_CancelDNSRequest>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_CancelDNSRequest& from);
-  void MergeFrom(const Msg_CancelDNSRequest& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_CancelDNSRequest& from) {
+    Msg_CancelDNSRequest::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -165,7 +177,7 @@ class Msg_CancelDNSRequest final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_CancelDNSRequest* other);
 
   private:
@@ -178,7 +190,10 @@ class Msg_CancelDNSRequest final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -193,11 +208,7 @@ class Msg_CancelDNSRequest final :
     kAPortFieldNumber = 3,
     kATypeFieldNumber = 4,
   };
-  // required string a_hostName = 1;
-  bool has_a_hostname() const;
-  private:
-  bool _internal_has_a_hostname() const;
-  public:
+  // string a_hostName = 1;
   void clear_a_hostname();
   const std::string& a_hostname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -211,11 +222,7 @@ class Msg_CancelDNSRequest final :
   std::string* _internal_mutable_a_hostname();
   public:
 
-  // required string a_trrServer = 2;
-  bool has_a_trrserver() const;
-  private:
-  bool _internal_has_a_trrserver() const;
-  public:
+  // string a_trrServer = 2;
   void clear_a_trrserver();
   const std::string& a_trrserver() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -229,11 +236,7 @@ class Msg_CancelDNSRequest final :
   std::string* _internal_mutable_a_trrserver();
   public:
 
-  // required bytes a_originAttributes = 5;
-  bool has_a_originattributes() const;
-  private:
-  bool _internal_has_a_originattributes() const;
-  public:
+  // bytes a_originAttributes = 5;
   void clear_a_originattributes();
   const std::string& a_originattributes() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -247,11 +250,7 @@ class Msg_CancelDNSRequest final :
   std::string* _internal_mutable_a_originattributes();
   public:
 
-  // required bytes a_flags = 6;
-  bool has_a_flags() const;
-  private:
-  bool _internal_has_a_flags() const;
-  public:
+  // bytes a_flags = 6;
   void clear_a_flags();
   const std::string& a_flags() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -265,11 +264,7 @@ class Msg_CancelDNSRequest final :
   std::string* _internal_mutable_a_flags();
   public:
 
-  // required bytes a_reason = 7;
-  bool has_a_reason() const;
-  private:
-  bool _internal_has_a_reason() const;
-  public:
+  // bytes a_reason = 7;
   void clear_a_reason();
   const std::string& a_reason() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -283,11 +278,7 @@ class Msg_CancelDNSRequest final :
   std::string* _internal_mutable_a_reason();
   public:
 
-  // required sint32 a_port = 3;
-  bool has_a_port() const;
-  private:
-  bool _internal_has_a_port() const;
-  public:
+  // sint32 a_port = 3;
   void clear_a_port();
   int32_t a_port() const;
   void set_a_port(int32_t value);
@@ -296,11 +287,7 @@ class Msg_CancelDNSRequest final :
   void _internal_set_a_port(int32_t value);
   public:
 
-  // required uint32 a_type = 4;
-  bool has_a_type() const;
-  private:
-  bool _internal_has_a_type() const;
-  public:
+  // uint32 a_type = 4;
   void clear_a_type();
   uint32_t a_type() const;
   void set_a_type(uint32_t value);
@@ -313,15 +300,10 @@ class Msg_CancelDNSRequest final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_hostname_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_trrserver_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_originattributes_;
@@ -329,6 +311,7 @@ class Msg_CancelDNSRequest final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_reason_;
     int32_t a_port_;
     uint32_t a_type_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDNSRequest_2eproto;
@@ -336,10 +319,9 @@ class Msg_CancelDNSRequest final :
 // -------------------------------------------------------------------
 
 class Msg___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PDNSRequest.Msg___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PDNSRequest.Msg___delete__) */ {
  public:
   inline Msg___delete__() : Msg___delete__(nullptr) {}
-  ~Msg___delete__() override;
   explicit PROTOBUF_CONSTEXPR Msg___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg___delete__(const Msg___delete__& from);
@@ -366,13 +348,15 @@ class Msg___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -410,23 +394,15 @@ class Msg___delete__ final :
   Msg___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg___delete__& from);
-  void MergeFrom(const Msg___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -438,7 +414,10 @@ class Msg___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -452,18 +431,15 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PDNSRequest_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PDNSRequest.Reply___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PDNSRequest.Reply___delete__) */ {
  public:
   inline Reply___delete__() : Reply___delete__(nullptr) {}
-  ~Reply___delete__() override;
   explicit PROTOBUF_CONSTEXPR Reply___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply___delete__(const Reply___delete__& from);
@@ -490,13 +466,15 @@ class Reply___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -534,23 +512,15 @@ class Reply___delete__ final :
   Reply___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply___delete__& from);
-  void MergeFrom(const Reply___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -562,7 +532,10 @@ class Reply___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -576,15 +549,13 @@ class Reply___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PDNSRequest_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_LookupCompleted final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PDNSRequest.Msg_LookupCompleted) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PDNSRequest.Msg_LookupCompleted) */ {
  public:
   inline Msg_LookupCompleted() : Msg_LookupCompleted(nullptr) {}
   ~Msg_LookupCompleted() override;
@@ -614,13 +585,15 @@ class Msg_LookupCompleted final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_LookupCompleted& default_instance() {
     return *internal_default_instance();
   }
@@ -658,9 +631,15 @@ class Msg_LookupCompleted final :
   Msg_LookupCompleted* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_LookupCompleted>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_LookupCompleted& from);
-  void MergeFrom(const Msg_LookupCompleted& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_LookupCompleted& from) {
+    Msg_LookupCompleted::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -673,7 +652,7 @@ class Msg_LookupCompleted final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_LookupCompleted* other);
 
   private:
@@ -686,7 +665,10 @@ class Msg_LookupCompleted final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -695,7 +677,7 @@ class Msg_LookupCompleted final :
   enum : int {
     kAReplyFieldNumber = 1,
   };
-  // required .protobuf.mozilla.net.DNSRequestResponse a_reply = 1;
+  // .protobuf.mozilla.net.DNSRequestResponse a_reply = 1;
   bool has_a_reply() const;
   private:
   bool _internal_has_a_reply() const;
@@ -721,9 +703,8 @@ class Msg_LookupCompleted final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::net::DNSRequestResponse* a_reply_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDNSRequest_2eproto;
@@ -739,17 +720,9 @@ class Msg_LookupCompleted final :
 #endif  // __GNUC__
 // Msg_CancelDNSRequest
 
-// required string a_hostName = 1;
-inline bool Msg_CancelDNSRequest::_internal_has_a_hostname() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_CancelDNSRequest::has_a_hostname() const {
-  return _internal_has_a_hostname();
-}
+// string a_hostName = 1;
 inline void Msg_CancelDNSRequest::clear_a_hostname() {
   _impl_.a_hostname_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_CancelDNSRequest::a_hostname() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_hostName)
@@ -758,7 +731,7 @@ inline const std::string& Msg_CancelDNSRequest::a_hostname() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CancelDNSRequest::set_a_hostname(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_hostname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_hostName)
 }
@@ -771,32 +744,22 @@ inline const std::string& Msg_CancelDNSRequest::_internal_a_hostname() const {
   return _impl_.a_hostname_.Get();
 }
 inline void Msg_CancelDNSRequest::_internal_set_a_hostname(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_hostname_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CancelDNSRequest::_internal_mutable_a_hostname() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_hostname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CancelDNSRequest::release_a_hostname() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_hostName)
-  if (!_internal_has_a_hostname()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_hostname_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_hostname_.IsDefault()) {
-    _impl_.a_hostname_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_hostname_.Release();
 }
 inline void Msg_CancelDNSRequest::set_allocated_a_hostname(std::string* a_hostname) {
   if (a_hostname != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_hostname_.SetAllocated(a_hostname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -807,17 +770,9 @@ inline void Msg_CancelDNSRequest::set_allocated_a_hostname(std::string* a_hostna
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_hostName)
 }
 
-// required string a_trrServer = 2;
-inline bool Msg_CancelDNSRequest::_internal_has_a_trrserver() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_CancelDNSRequest::has_a_trrserver() const {
-  return _internal_has_a_trrserver();
-}
+// string a_trrServer = 2;
 inline void Msg_CancelDNSRequest::clear_a_trrserver() {
   _impl_.a_trrserver_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_CancelDNSRequest::a_trrserver() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_trrServer)
@@ -826,7 +781,7 @@ inline const std::string& Msg_CancelDNSRequest::a_trrserver() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CancelDNSRequest::set_a_trrserver(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_trrserver_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_trrServer)
 }
@@ -839,32 +794,22 @@ inline const std::string& Msg_CancelDNSRequest::_internal_a_trrserver() const {
   return _impl_.a_trrserver_.Get();
 }
 inline void Msg_CancelDNSRequest::_internal_set_a_trrserver(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_trrserver_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CancelDNSRequest::_internal_mutable_a_trrserver() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_trrserver_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CancelDNSRequest::release_a_trrserver() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_trrServer)
-  if (!_internal_has_a_trrserver()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_trrserver_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_trrserver_.IsDefault()) {
-    _impl_.a_trrserver_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_trrserver_.Release();
 }
 inline void Msg_CancelDNSRequest::set_allocated_a_trrserver(std::string* a_trrserver) {
   if (a_trrserver != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_trrserver_.SetAllocated(a_trrserver, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -875,17 +820,9 @@ inline void Msg_CancelDNSRequest::set_allocated_a_trrserver(std::string* a_trrse
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_trrServer)
 }
 
-// required sint32 a_port = 3;
-inline bool Msg_CancelDNSRequest::_internal_has_a_port() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool Msg_CancelDNSRequest::has_a_port() const {
-  return _internal_has_a_port();
-}
+// sint32 a_port = 3;
 inline void Msg_CancelDNSRequest::clear_a_port() {
   _impl_.a_port_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline int32_t Msg_CancelDNSRequest::_internal_a_port() const {
   return _impl_.a_port_;
@@ -895,7 +832,7 @@ inline int32_t Msg_CancelDNSRequest::a_port() const {
   return _internal_a_port();
 }
 inline void Msg_CancelDNSRequest::_internal_set_a_port(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   _impl_.a_port_ = value;
 }
 inline void Msg_CancelDNSRequest::set_a_port(int32_t value) {
@@ -903,17 +840,9 @@ inline void Msg_CancelDNSRequest::set_a_port(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_port)
 }
 
-// required uint32 a_type = 4;
-inline bool Msg_CancelDNSRequest::_internal_has_a_type() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool Msg_CancelDNSRequest::has_a_type() const {
-  return _internal_has_a_type();
-}
+// uint32 a_type = 4;
 inline void Msg_CancelDNSRequest::clear_a_type() {
   _impl_.a_type_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline uint32_t Msg_CancelDNSRequest::_internal_a_type() const {
   return _impl_.a_type_;
@@ -923,7 +852,7 @@ inline uint32_t Msg_CancelDNSRequest::a_type() const {
   return _internal_a_type();
 }
 inline void Msg_CancelDNSRequest::_internal_set_a_type(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000040u;
+  
   _impl_.a_type_ = value;
 }
 inline void Msg_CancelDNSRequest::set_a_type(uint32_t value) {
@@ -931,17 +860,9 @@ inline void Msg_CancelDNSRequest::set_a_type(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_type)
 }
 
-// required bytes a_originAttributes = 5;
-inline bool Msg_CancelDNSRequest::_internal_has_a_originattributes() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_CancelDNSRequest::has_a_originattributes() const {
-  return _internal_has_a_originattributes();
-}
+// bytes a_originAttributes = 5;
 inline void Msg_CancelDNSRequest::clear_a_originattributes() {
   _impl_.a_originattributes_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_CancelDNSRequest::a_originattributes() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_originAttributes)
@@ -950,7 +871,7 @@ inline const std::string& Msg_CancelDNSRequest::a_originattributes() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CancelDNSRequest::set_a_originattributes(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_originattributes_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_originAttributes)
 }
@@ -963,32 +884,22 @@ inline const std::string& Msg_CancelDNSRequest::_internal_a_originattributes() c
   return _impl_.a_originattributes_.Get();
 }
 inline void Msg_CancelDNSRequest::_internal_set_a_originattributes(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_originattributes_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CancelDNSRequest::_internal_mutable_a_originattributes() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_originattributes_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CancelDNSRequest::release_a_originattributes() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_originAttributes)
-  if (!_internal_has_a_originattributes()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_originattributes_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_originattributes_.IsDefault()) {
-    _impl_.a_originattributes_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_originattributes_.Release();
 }
 inline void Msg_CancelDNSRequest::set_allocated_a_originattributes(std::string* a_originattributes) {
   if (a_originattributes != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_originattributes_.SetAllocated(a_originattributes, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -999,17 +910,9 @@ inline void Msg_CancelDNSRequest::set_allocated_a_originattributes(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_originAttributes)
 }
 
-// required bytes a_flags = 6;
-inline bool Msg_CancelDNSRequest::_internal_has_a_flags() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_CancelDNSRequest::has_a_flags() const {
-  return _internal_has_a_flags();
-}
+// bytes a_flags = 6;
 inline void Msg_CancelDNSRequest::clear_a_flags() {
   _impl_.a_flags_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& Msg_CancelDNSRequest::a_flags() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_flags)
@@ -1018,7 +921,7 @@ inline const std::string& Msg_CancelDNSRequest::a_flags() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CancelDNSRequest::set_a_flags(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000008u;
+ 
  _impl_.a_flags_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_flags)
 }
@@ -1031,32 +934,22 @@ inline const std::string& Msg_CancelDNSRequest::_internal_a_flags() const {
   return _impl_.a_flags_.Get();
 }
 inline void Msg_CancelDNSRequest::_internal_set_a_flags(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_flags_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CancelDNSRequest::_internal_mutable_a_flags() {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   return _impl_.a_flags_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CancelDNSRequest::release_a_flags() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_flags)
-  if (!_internal_has_a_flags()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.a_flags_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_flags_.IsDefault()) {
-    _impl_.a_flags_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_flags_.Release();
 }
 inline void Msg_CancelDNSRequest::set_allocated_a_flags(std::string* a_flags) {
   if (a_flags != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    
   }
   _impl_.a_flags_.SetAllocated(a_flags, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1067,17 +960,9 @@ inline void Msg_CancelDNSRequest::set_allocated_a_flags(std::string* a_flags) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_flags)
 }
 
-// required bytes a_reason = 7;
-inline bool Msg_CancelDNSRequest::_internal_has_a_reason() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool Msg_CancelDNSRequest::has_a_reason() const {
-  return _internal_has_a_reason();
-}
+// bytes a_reason = 7;
 inline void Msg_CancelDNSRequest::clear_a_reason() {
   _impl_.a_reason_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline const std::string& Msg_CancelDNSRequest::a_reason() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_reason)
@@ -1086,7 +971,7 @@ inline const std::string& Msg_CancelDNSRequest::a_reason() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CancelDNSRequest::set_a_reason(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000010u;
+ 
  _impl_.a_reason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_reason)
 }
@@ -1099,32 +984,22 @@ inline const std::string& Msg_CancelDNSRequest::_internal_a_reason() const {
   return _impl_.a_reason_.Get();
 }
 inline void Msg_CancelDNSRequest::_internal_set_a_reason(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_reason_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CancelDNSRequest::_internal_mutable_a_reason() {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   return _impl_.a_reason_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CancelDNSRequest::release_a_reason() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDNSRequest.Msg_CancelDNSRequest.a_reason)
-  if (!_internal_has_a_reason()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000010u;
-  auto* p = _impl_.a_reason_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_reason_.IsDefault()) {
-    _impl_.a_reason_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_reason_.Release();
 }
 inline void Msg_CancelDNSRequest::set_allocated_a_reason(std::string* a_reason) {
   if (a_reason != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000010u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000010u;
+    
   }
   _impl_.a_reason_.SetAllocated(a_reason, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1147,11 +1022,9 @@ inline void Msg_CancelDNSRequest::set_allocated_a_reason(std::string* a_reason) 
 
 // Msg_LookupCompleted
 
-// required .protobuf.mozilla.net.DNSRequestResponse a_reply = 1;
+// .protobuf.mozilla.net.DNSRequestResponse a_reply = 1;
 inline bool Msg_LookupCompleted::_internal_has_a_reply() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_reply_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_reply_ != nullptr;
 }
 inline bool Msg_LookupCompleted::has_a_reply() const {
   return _internal_has_a_reply();
@@ -1172,14 +1045,14 @@ inline void Msg_LookupCompleted::unsafe_arena_set_allocated_a_reply(
   }
   _impl_.a_reply_ = a_reply;
   if (a_reply) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PDNSRequest.Msg_LookupCompleted.a_reply)
 }
 inline ::protobuf::mozilla::net::DNSRequestResponse* Msg_LookupCompleted::release_a_reply() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::net::DNSRequestResponse* temp = _impl_.a_reply_;
   _impl_.a_reply_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1195,13 +1068,13 @@ inline ::protobuf::mozilla::net::DNSRequestResponse* Msg_LookupCompleted::releas
 }
 inline ::protobuf::mozilla::net::DNSRequestResponse* Msg_LookupCompleted::unsafe_arena_release_a_reply() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PDNSRequest.Msg_LookupCompleted.a_reply)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::net::DNSRequestResponse* temp = _impl_.a_reply_;
   _impl_.a_reply_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::net::DNSRequestResponse* Msg_LookupCompleted::_internal_mutable_a_reply() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_reply_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::DNSRequestResponse>(GetArenaForAllocation());
     _impl_.a_reply_ = p;
@@ -1226,9 +1099,9 @@ inline void Msg_LookupCompleted::set_allocated_a_reply(::protobuf::mozilla::net:
       a_reply = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_reply, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_reply_ = a_reply;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PDNSRequest.Msg_LookupCompleted.a_reply)

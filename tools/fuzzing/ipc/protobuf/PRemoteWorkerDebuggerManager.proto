@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/workers/remoteworkers/PRemoteWorkerDebuggerManager.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PRemoteWorkerDebuggerManager;
 
@@ -17,8 +16,8 @@ import "RemoteWorkerTypes.proto";
 
 // Message declarations
 message Msg_Register {
-  required protobuf.mozilla.dom.RemoteWorkerDebuggerInfo a_aDebuggerInfo = 1;
-  required bytes a_aParentEp = 2;
+  protobuf.mozilla.dom.RemoteWorkerDebuggerInfo a_aDebuggerInfo = 1;
+  bytes a_aParentEp = 2;
 }
 
 // Parameter mappings stats:

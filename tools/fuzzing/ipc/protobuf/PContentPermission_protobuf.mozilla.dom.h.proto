@@ -5,18 +5,17 @@
 
 // Generated from /home/tmittendorf/firefox/dom/ipc/PContentPermission.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message PermissionRequest {
-  required string a_type = 1;
+  string a_type = 1;
   repeated string a_options = 2;
 }
 
 message PermissionChoice {
-  required string a_type = 1;
-  required string a_choice = 2;
+  string a_type = 1;
+  string a_choice = 2;
 }

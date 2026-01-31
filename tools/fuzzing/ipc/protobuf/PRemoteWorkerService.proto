@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/workers/remoteworkers/PRemoteWorkerService.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PRemoteWorkerService;
 
@@ -18,9 +17,9 @@ import "RemoteWorkerTypes.proto";
 
 // Message declarations
 message Msg_PRemoteWorkerConstructor {
-  required sint64 a_actorid = 1;
-  required protobuf.mozilla.dom.RemoteWorkerData a_data = 2;
-  required bytes a_childEp = 3;
+  sint64 a_actorid = 1;
+  protobuf.mozilla.dom.RemoteWorkerData a_data = 2;
+  bytes a_childEp = 3;
 }
 
 message Reply_PRemoteWorkerConstructor {

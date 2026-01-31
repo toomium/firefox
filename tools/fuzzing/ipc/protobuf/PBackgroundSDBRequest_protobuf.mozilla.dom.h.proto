@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/simpledb/PBackgroundSDBRequest.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom;
 
@@ -19,7 +18,7 @@ message SDBRequestSeekResponse {
 }
 
 message SDBRequestReadResponse {
-  required string a_data = 1;
+  string a_data = 1;
 }
 
 message SDBRequestWriteResponse {

@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "HttpChannelParams.pb.h"
 #include "NeckoChannelParams.pb.h"
 // @@protoc_insertion_point(includes)
@@ -43,6 +46,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PBackgroundDataBridge_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PBackgroundDataBridge_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace net {
@@ -77,7 +81,7 @@ namespace PBackgroundDataBridge {
 // ===================================================================
 
 class Msg_OnTransportAndData final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnTransportAndData) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnTransportAndData) */ {
  public:
   inline Msg_OnTransportAndData() : Msg_OnTransportAndData(nullptr) {}
   ~Msg_OnTransportAndData() override;
@@ -107,13 +111,15 @@ class Msg_OnTransportAndData final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_OnTransportAndData& default_instance() {
     return *internal_default_instance();
   }
@@ -151,9 +157,15 @@ class Msg_OnTransportAndData final :
   Msg_OnTransportAndData* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_OnTransportAndData>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_OnTransportAndData& from);
-  void MergeFrom(const Msg_OnTransportAndData& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_OnTransportAndData& from) {
+    Msg_OnTransportAndData::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -166,7 +178,7 @@ class Msg_OnTransportAndData final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_OnTransportAndData* other);
 
   private:
@@ -179,7 +191,10 @@ class Msg_OnTransportAndData final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -191,11 +206,7 @@ class Msg_OnTransportAndData final :
     kAOffsetFieldNumber = 1,
     kACountFieldNumber = 2,
   };
-  // required string a_data = 3;
-  bool has_a_data() const;
-  private:
-  bool _internal_has_a_data() const;
-  public:
+  // string a_data = 3;
   void clear_a_data();
   const std::string& a_data() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -209,11 +220,7 @@ class Msg_OnTransportAndData final :
   std::string* _internal_mutable_a_data();
   public:
 
-  // required bytes a_onDataAvailableStart = 4;
-  bool has_a_ondataavailablestart() const;
-  private:
-  bool _internal_has_a_ondataavailablestart() const;
-  public:
+  // bytes a_onDataAvailableStart = 4;
   void clear_a_ondataavailablestart();
   const std::string& a_ondataavailablestart() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -227,11 +234,7 @@ class Msg_OnTransportAndData final :
   std::string* _internal_mutable_a_ondataavailablestart();
   public:
 
-  // required uint64 a_offset = 1;
-  bool has_a_offset() const;
-  private:
-  bool _internal_has_a_offset() const;
-  public:
+  // uint64 a_offset = 1;
   void clear_a_offset();
   uint64_t a_offset() const;
   void set_a_offset(uint64_t value);
@@ -240,11 +243,7 @@ class Msg_OnTransportAndData final :
   void _internal_set_a_offset(uint64_t value);
   public:
 
-  // required uint32 a_count = 2;
-  bool has_a_count() const;
-  private:
-  bool _internal_has_a_count() const;
-  public:
+  // uint32 a_count = 2;
   void clear_a_count();
   uint32_t a_count() const;
   void set_a_count(uint32_t value);
@@ -257,19 +256,15 @@ class Msg_OnTransportAndData final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_data_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ondataavailablestart_;
     uint64_t a_offset_;
     uint32_t a_count_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundDataBridge_2eproto;
@@ -277,7 +272,7 @@ class Msg_OnTransportAndData final :
 // -------------------------------------------------------------------
 
 class Msg_OnStopRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnStopRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnStopRequest) */ {
  public:
   inline Msg_OnStopRequest() : Msg_OnStopRequest(nullptr) {}
   ~Msg_OnStopRequest() override;
@@ -307,13 +302,15 @@ class Msg_OnStopRequest final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_OnStopRequest& default_instance() {
     return *internal_default_instance();
   }
@@ -351,9 +348,15 @@ class Msg_OnStopRequest final :
   Msg_OnStopRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_OnStopRequest>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_OnStopRequest& from);
-  void MergeFrom(const Msg_OnStopRequest& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_OnStopRequest& from) {
+    Msg_OnStopRequest::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -366,7 +369,7 @@ class Msg_OnStopRequest final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_OnStopRequest* other);
 
   private:
@@ -379,7 +382,10 @@ class Msg_OnStopRequest final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -392,11 +398,7 @@ class Msg_OnStopRequest final :
     kAOnStopRequestStartFieldNumber = 5,
     kATimingFieldNumber = 2,
   };
-  // required bytes a_aStatus = 1;
-  bool has_a_astatus() const;
-  private:
-  bool _internal_has_a_astatus() const;
-  public:
+  // bytes a_aStatus = 1;
   void clear_a_astatus();
   const std::string& a_astatus() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -410,11 +412,7 @@ class Msg_OnStopRequest final :
   std::string* _internal_mutable_a_astatus();
   public:
 
-  // required bytes a_lastActiveTabOptimization = 3;
-  bool has_a_lastactivetaboptimization() const;
-  private:
-  bool _internal_has_a_lastactivetaboptimization() const;
-  public:
+  // bytes a_lastActiveTabOptimization = 3;
   void clear_a_lastactivetaboptimization();
   const std::string& a_lastactivetaboptimization() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -428,11 +426,7 @@ class Msg_OnStopRequest final :
   std::string* _internal_mutable_a_lastactivetaboptimization();
   public:
 
-  // required bytes a_responseTrailers = 4;
-  bool has_a_responsetrailers() const;
-  private:
-  bool _internal_has_a_responsetrailers() const;
-  public:
+  // bytes a_responseTrailers = 4;
   void clear_a_responsetrailers();
   const std::string& a_responsetrailers() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -446,11 +440,7 @@ class Msg_OnStopRequest final :
   std::string* _internal_mutable_a_responsetrailers();
   public:
 
-  // required bytes a_onStopRequestStart = 5;
-  bool has_a_onstoprequeststart() const;
-  private:
-  bool _internal_has_a_onstoprequeststart() const;
-  public:
+  // bytes a_onStopRequestStart = 5;
   void clear_a_onstoprequeststart();
   const std::string& a_onstoprequeststart() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -464,7 +454,7 @@ class Msg_OnStopRequest final :
   std::string* _internal_mutable_a_onstoprequeststart();
   public:
 
-  // required .protobuf.mozilla.net.ResourceTimingStructArgs a_timing = 2;
+  // .protobuf.mozilla.net.ResourceTimingStructArgs a_timing = 2;
   bool has_a_timing() const;
   private:
   bool _internal_has_a_timing() const;
@@ -486,20 +476,16 @@ class Msg_OnStopRequest final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_astatus_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_lastactivetaboptimization_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_responsetrailers_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_onstoprequeststart_;
     ::protobuf::mozilla::net::ResourceTimingStructArgs* a_timing_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundDataBridge_2eproto;
@@ -507,10 +493,9 @@ class Msg_OnStopRequest final :
 // -------------------------------------------------------------------
 
 class Msg___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PBackgroundDataBridge.Msg___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PBackgroundDataBridge.Msg___delete__) */ {
  public:
   inline Msg___delete__() : Msg___delete__(nullptr) {}
-  ~Msg___delete__() override;
   explicit PROTOBUF_CONSTEXPR Msg___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg___delete__(const Msg___delete__& from);
@@ -537,13 +522,15 @@ class Msg___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -581,23 +568,15 @@ class Msg___delete__ final :
   Msg___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg___delete__& from);
-  void MergeFrom(const Msg___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -609,7 +588,10 @@ class Msg___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -623,18 +605,15 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundDataBridge_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PBackgroundDataBridge.Reply___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PBackgroundDataBridge.Reply___delete__) */ {
  public:
   inline Reply___delete__() : Reply___delete__(nullptr) {}
-  ~Reply___delete__() override;
   explicit PROTOBUF_CONSTEXPR Reply___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply___delete__(const Reply___delete__& from);
@@ -661,13 +640,15 @@ class Reply___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -705,23 +686,15 @@ class Reply___delete__ final :
   Reply___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply___delete__& from);
-  void MergeFrom(const Reply___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -733,7 +706,10 @@ class Reply___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -747,9 +723,7 @@ class Reply___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PBackgroundDataBridge_2eproto;
 };
 // ===================================================================
@@ -763,17 +737,9 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_OnTransportAndData
 
-// required uint64 a_offset = 1;
-inline bool Msg_OnTransportAndData::_internal_has_a_offset() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_OnTransportAndData::has_a_offset() const {
-  return _internal_has_a_offset();
-}
+// uint64 a_offset = 1;
 inline void Msg_OnTransportAndData::clear_a_offset() {
   _impl_.a_offset_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint64_t Msg_OnTransportAndData::_internal_a_offset() const {
   return _impl_.a_offset_;
@@ -783,7 +749,7 @@ inline uint64_t Msg_OnTransportAndData::a_offset() const {
   return _internal_a_offset();
 }
 inline void Msg_OnTransportAndData::_internal_set_a_offset(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_offset_ = value;
 }
 inline void Msg_OnTransportAndData::set_a_offset(uint64_t value) {
@@ -791,17 +757,9 @@ inline void Msg_OnTransportAndData::set_a_offset(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnTransportAndData.a_offset)
 }
 
-// required uint32 a_count = 2;
-inline bool Msg_OnTransportAndData::_internal_has_a_count() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_OnTransportAndData::has_a_count() const {
-  return _internal_has_a_count();
-}
+// uint32 a_count = 2;
 inline void Msg_OnTransportAndData::clear_a_count() {
   _impl_.a_count_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t Msg_OnTransportAndData::_internal_a_count() const {
   return _impl_.a_count_;
@@ -811,7 +769,7 @@ inline uint32_t Msg_OnTransportAndData::a_count() const {
   return _internal_a_count();
 }
 inline void Msg_OnTransportAndData::_internal_set_a_count(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_count_ = value;
 }
 inline void Msg_OnTransportAndData::set_a_count(uint32_t value) {
@@ -819,17 +777,9 @@ inline void Msg_OnTransportAndData::set_a_count(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnTransportAndData.a_count)
 }
 
-// required string a_data = 3;
-inline bool Msg_OnTransportAndData::_internal_has_a_data() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_OnTransportAndData::has_a_data() const {
-  return _internal_has_a_data();
-}
+// string a_data = 3;
 inline void Msg_OnTransportAndData::clear_a_data() {
   _impl_.a_data_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OnTransportAndData::a_data() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnTransportAndData.a_data)
@@ -838,7 +788,7 @@ inline const std::string& Msg_OnTransportAndData::a_data() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnTransportAndData::set_a_data(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_data_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnTransportAndData.a_data)
 }
@@ -851,32 +801,22 @@ inline const std::string& Msg_OnTransportAndData::_internal_a_data() const {
   return _impl_.a_data_.Get();
 }
 inline void Msg_OnTransportAndData::_internal_set_a_data(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_data_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnTransportAndData::_internal_mutable_a_data() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_data_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnTransportAndData::release_a_data() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnTransportAndData.a_data)
-  if (!_internal_has_a_data()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_data_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_data_.IsDefault()) {
-    _impl_.a_data_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_data_.Release();
 }
 inline void Msg_OnTransportAndData::set_allocated_a_data(std::string* a_data) {
   if (a_data != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_data_.SetAllocated(a_data, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -887,17 +827,9 @@ inline void Msg_OnTransportAndData::set_allocated_a_data(std::string* a_data) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnTransportAndData.a_data)
 }
 
-// required bytes a_onDataAvailableStart = 4;
-inline bool Msg_OnTransportAndData::_internal_has_a_ondataavailablestart() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_OnTransportAndData::has_a_ondataavailablestart() const {
-  return _internal_has_a_ondataavailablestart();
-}
+// bytes a_onDataAvailableStart = 4;
 inline void Msg_OnTransportAndData::clear_a_ondataavailablestart() {
   _impl_.a_ondataavailablestart_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_OnTransportAndData::a_ondataavailablestart() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnTransportAndData.a_onDataAvailableStart)
@@ -906,7 +838,7 @@ inline const std::string& Msg_OnTransportAndData::a_ondataavailablestart() const
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnTransportAndData::set_a_ondataavailablestart(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_ondataavailablestart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnTransportAndData.a_onDataAvailableStart)
 }
@@ -919,32 +851,22 @@ inline const std::string& Msg_OnTransportAndData::_internal_a_ondataavailablesta
   return _impl_.a_ondataavailablestart_.Get();
 }
 inline void Msg_OnTransportAndData::_internal_set_a_ondataavailablestart(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_ondataavailablestart_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnTransportAndData::_internal_mutable_a_ondataavailablestart() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_ondataavailablestart_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnTransportAndData::release_a_ondataavailablestart() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnTransportAndData.a_onDataAvailableStart)
-  if (!_internal_has_a_ondataavailablestart()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_ondataavailablestart_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_ondataavailablestart_.IsDefault()) {
-    _impl_.a_ondataavailablestart_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_ondataavailablestart_.Release();
 }
 inline void Msg_OnTransportAndData::set_allocated_a_ondataavailablestart(std::string* a_ondataavailablestart) {
   if (a_ondataavailablestart != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_ondataavailablestart_.SetAllocated(a_ondataavailablestart, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -959,17 +881,9 @@ inline void Msg_OnTransportAndData::set_allocated_a_ondataavailablestart(std::st
 
 // Msg_OnStopRequest
 
-// required bytes a_aStatus = 1;
-inline bool Msg_OnStopRequest::_internal_has_a_astatus() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_OnStopRequest::has_a_astatus() const {
-  return _internal_has_a_astatus();
-}
+// bytes a_aStatus = 1;
 inline void Msg_OnStopRequest::clear_a_astatus() {
   _impl_.a_astatus_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OnStopRequest::a_astatus() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnStopRequest.a_aStatus)
@@ -978,7 +892,7 @@ inline const std::string& Msg_OnStopRequest::a_astatus() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnStopRequest::set_a_astatus(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_astatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnStopRequest.a_aStatus)
 }
@@ -991,32 +905,22 @@ inline const std::string& Msg_OnStopRequest::_internal_a_astatus() const {
   return _impl_.a_astatus_.Get();
 }
 inline void Msg_OnStopRequest::_internal_set_a_astatus(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_astatus_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnStopRequest::_internal_mutable_a_astatus() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_astatus_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnStopRequest::release_a_astatus() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnStopRequest.a_aStatus)
-  if (!_internal_has_a_astatus()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_astatus_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_astatus_.IsDefault()) {
-    _impl_.a_astatus_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_astatus_.Release();
 }
 inline void Msg_OnStopRequest::set_allocated_a_astatus(std::string* a_astatus) {
   if (a_astatus != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_astatus_.SetAllocated(a_astatus, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1027,11 +931,9 @@ inline void Msg_OnStopRequest::set_allocated_a_astatus(std::string* a_astatus) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnStopRequest.a_aStatus)
 }
 
-// required .protobuf.mozilla.net.ResourceTimingStructArgs a_timing = 2;
+// .protobuf.mozilla.net.ResourceTimingStructArgs a_timing = 2;
 inline bool Msg_OnStopRequest::_internal_has_a_timing() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_timing_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_timing_ != nullptr;
 }
 inline bool Msg_OnStopRequest::has_a_timing() const {
   return _internal_has_a_timing();
@@ -1052,14 +954,14 @@ inline void Msg_OnStopRequest::unsafe_arena_set_allocated_a_timing(
   }
   _impl_.a_timing_ = a_timing;
   if (a_timing) {
-    _impl_._has_bits_[0] |= 0x00000010u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000010u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnStopRequest.a_timing)
 }
 inline ::protobuf::mozilla::net::ResourceTimingStructArgs* Msg_OnStopRequest::release_a_timing() {
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  
   ::protobuf::mozilla::net::ResourceTimingStructArgs* temp = _impl_.a_timing_;
   _impl_.a_timing_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1075,13 +977,13 @@ inline ::protobuf::mozilla::net::ResourceTimingStructArgs* Msg_OnStopRequest::re
 }
 inline ::protobuf::mozilla::net::ResourceTimingStructArgs* Msg_OnStopRequest::unsafe_arena_release_a_timing() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnStopRequest.a_timing)
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  
   ::protobuf::mozilla::net::ResourceTimingStructArgs* temp = _impl_.a_timing_;
   _impl_.a_timing_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::net::ResourceTimingStructArgs* Msg_OnStopRequest::_internal_mutable_a_timing() {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   if (_impl_.a_timing_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::ResourceTimingStructArgs>(GetArenaForAllocation());
     _impl_.a_timing_ = p;
@@ -1106,25 +1008,17 @@ inline void Msg_OnStopRequest::set_allocated_a_timing(::protobuf::mozilla::net::
       a_timing = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_timing, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000010u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000010u;
+    
   }
   _impl_.a_timing_ = a_timing;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnStopRequest.a_timing)
 }
 
-// required bytes a_lastActiveTabOptimization = 3;
-inline bool Msg_OnStopRequest::_internal_has_a_lastactivetaboptimization() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_OnStopRequest::has_a_lastactivetaboptimization() const {
-  return _internal_has_a_lastactivetaboptimization();
-}
+// bytes a_lastActiveTabOptimization = 3;
 inline void Msg_OnStopRequest::clear_a_lastactivetaboptimization() {
   _impl_.a_lastactivetaboptimization_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_OnStopRequest::a_lastactivetaboptimization() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnStopRequest.a_lastActiveTabOptimization)
@@ -1133,7 +1027,7 @@ inline const std::string& Msg_OnStopRequest::a_lastactivetaboptimization() const
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnStopRequest::set_a_lastactivetaboptimization(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_lastactivetaboptimization_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnStopRequest.a_lastActiveTabOptimization)
 }
@@ -1146,32 +1040,22 @@ inline const std::string& Msg_OnStopRequest::_internal_a_lastactivetaboptimizati
   return _impl_.a_lastactivetaboptimization_.Get();
 }
 inline void Msg_OnStopRequest::_internal_set_a_lastactivetaboptimization(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_lastactivetaboptimization_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnStopRequest::_internal_mutable_a_lastactivetaboptimization() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_lastactivetaboptimization_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnStopRequest::release_a_lastactivetaboptimization() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnStopRequest.a_lastActiveTabOptimization)
-  if (!_internal_has_a_lastactivetaboptimization()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_lastactivetaboptimization_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_lastactivetaboptimization_.IsDefault()) {
-    _impl_.a_lastactivetaboptimization_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_lastactivetaboptimization_.Release();
 }
 inline void Msg_OnStopRequest::set_allocated_a_lastactivetaboptimization(std::string* a_lastactivetaboptimization) {
   if (a_lastactivetaboptimization != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_lastactivetaboptimization_.SetAllocated(a_lastactivetaboptimization, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1182,17 +1066,9 @@ inline void Msg_OnStopRequest::set_allocated_a_lastactivetaboptimization(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnStopRequest.a_lastActiveTabOptimization)
 }
 
-// required bytes a_responseTrailers = 4;
-inline bool Msg_OnStopRequest::_internal_has_a_responsetrailers() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_OnStopRequest::has_a_responsetrailers() const {
-  return _internal_has_a_responsetrailers();
-}
+// bytes a_responseTrailers = 4;
 inline void Msg_OnStopRequest::clear_a_responsetrailers() {
   _impl_.a_responsetrailers_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_OnStopRequest::a_responsetrailers() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnStopRequest.a_responseTrailers)
@@ -1201,7 +1077,7 @@ inline const std::string& Msg_OnStopRequest::a_responsetrailers() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnStopRequest::set_a_responsetrailers(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_responsetrailers_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnStopRequest.a_responseTrailers)
 }
@@ -1214,32 +1090,22 @@ inline const std::string& Msg_OnStopRequest::_internal_a_responsetrailers() cons
   return _impl_.a_responsetrailers_.Get();
 }
 inline void Msg_OnStopRequest::_internal_set_a_responsetrailers(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_responsetrailers_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnStopRequest::_internal_mutable_a_responsetrailers() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_responsetrailers_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnStopRequest::release_a_responsetrailers() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnStopRequest.a_responseTrailers)
-  if (!_internal_has_a_responsetrailers()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_responsetrailers_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_responsetrailers_.IsDefault()) {
-    _impl_.a_responsetrailers_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_responsetrailers_.Release();
 }
 inline void Msg_OnStopRequest::set_allocated_a_responsetrailers(std::string* a_responsetrailers) {
   if (a_responsetrailers != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_responsetrailers_.SetAllocated(a_responsetrailers, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1250,17 +1116,9 @@ inline void Msg_OnStopRequest::set_allocated_a_responsetrailers(std::string* a_r
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnStopRequest.a_responseTrailers)
 }
 
-// required bytes a_onStopRequestStart = 5;
-inline bool Msg_OnStopRequest::_internal_has_a_onstoprequeststart() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_OnStopRequest::has_a_onstoprequeststart() const {
-  return _internal_has_a_onstoprequeststart();
-}
+// bytes a_onStopRequestStart = 5;
 inline void Msg_OnStopRequest::clear_a_onstoprequeststart() {
   _impl_.a_onstoprequeststart_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& Msg_OnStopRequest::a_onstoprequeststart() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnStopRequest.a_onStopRequestStart)
@@ -1269,7 +1127,7 @@ inline const std::string& Msg_OnStopRequest::a_onstoprequeststart() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnStopRequest::set_a_onstoprequeststart(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000008u;
+ 
  _impl_.a_onstoprequeststart_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnStopRequest.a_onStopRequestStart)
 }
@@ -1282,32 +1140,22 @@ inline const std::string& Msg_OnStopRequest::_internal_a_onstoprequeststart() co
   return _impl_.a_onstoprequeststart_.Get();
 }
 inline void Msg_OnStopRequest::_internal_set_a_onstoprequeststart(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_onstoprequeststart_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnStopRequest::_internal_mutable_a_onstoprequeststart() {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   return _impl_.a_onstoprequeststart_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnStopRequest::release_a_onstoprequeststart() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PBackgroundDataBridge.Msg_OnStopRequest.a_onStopRequestStart)
-  if (!_internal_has_a_onstoprequeststart()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.a_onstoprequeststart_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_onstoprequeststart_.IsDefault()) {
-    _impl_.a_onstoprequeststart_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_onstoprequeststart_.Release();
 }
 inline void Msg_OnStopRequest::set_allocated_a_onstoprequeststart(std::string* a_onstoprequeststart) {
   if (a_onstoprequeststart != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    
   }
   _impl_.a_onstoprequeststart_.SetAllocated(a_onstoprequeststart, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "PBackgroundSharedTypes.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -42,6 +44,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -85,7 +88,7 @@ namespace dom {
 // ===================================================================
 
 class UnidirectionalStream final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.UnidirectionalStream) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.UnidirectionalStream) */ {
  public:
   inline UnidirectionalStream() : UnidirectionalStream(nullptr) {}
   ~UnidirectionalStream() override;
@@ -115,13 +118,15 @@ class UnidirectionalStream final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const UnidirectionalStream& default_instance() {
     return *internal_default_instance();
   }
@@ -159,9 +164,15 @@ class UnidirectionalStream final :
   UnidirectionalStream* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<UnidirectionalStream>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const UnidirectionalStream& from);
-  void MergeFrom(const UnidirectionalStream& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const UnidirectionalStream& from) {
+    UnidirectionalStream::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -174,7 +185,7 @@ class UnidirectionalStream final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(UnidirectionalStream* other);
 
   private:
@@ -187,7 +198,10 @@ class UnidirectionalStream final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -215,11 +229,7 @@ class UnidirectionalStream final :
   std::string* _internal_mutable_a_outstream();
   public:
 
-  // required uint64 a_streamId = 1;
-  bool has_a_streamid() const;
-  private:
-  bool _internal_has_a_streamid() const;
-  public:
+  // uint64 a_streamId = 1;
   void clear_a_streamid();
   uint64_t a_streamid() const;
   void set_a_streamid(uint64_t value);
@@ -247,7 +257,7 @@ class UnidirectionalStream final :
 // -------------------------------------------------------------------
 
 class UnidirectionalStreamResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.UnidirectionalStreamResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.UnidirectionalStreamResponse) */ {
  public:
   inline UnidirectionalStreamResponse() : UnidirectionalStreamResponse(nullptr) {}
   ~UnidirectionalStreamResponse() override;
@@ -277,13 +287,15 @@ class UnidirectionalStreamResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const UnidirectionalStreamResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -327,9 +339,15 @@ class UnidirectionalStreamResponse final :
   UnidirectionalStreamResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<UnidirectionalStreamResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const UnidirectionalStreamResponse& from);
-  void MergeFrom(const UnidirectionalStreamResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const UnidirectionalStreamResponse& from) {
+    UnidirectionalStreamResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -342,7 +360,7 @@ class UnidirectionalStreamResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(UnidirectionalStreamResponse* other);
 
   private:
@@ -355,7 +373,10 @@ class UnidirectionalStreamResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -432,7 +453,7 @@ class UnidirectionalStreamResponse final :
 // -------------------------------------------------------------------
 
 class BidirectionalStream final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.BidirectionalStream) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.BidirectionalStream) */ {
  public:
   inline BidirectionalStream() : BidirectionalStream(nullptr) {}
   ~BidirectionalStream() override;
@@ -462,13 +483,15 @@ class BidirectionalStream final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const BidirectionalStream& default_instance() {
     return *internal_default_instance();
   }
@@ -506,9 +529,15 @@ class BidirectionalStream final :
   BidirectionalStream* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<BidirectionalStream>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const BidirectionalStream& from);
-  void MergeFrom(const BidirectionalStream& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const BidirectionalStream& from) {
+    BidirectionalStream::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -521,7 +550,7 @@ class BidirectionalStream final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(BidirectionalStream* other);
 
   private:
@@ -534,7 +563,10 @@ class BidirectionalStream final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -581,11 +613,7 @@ class BidirectionalStream final :
   std::string* _internal_mutable_a_outstream();
   public:
 
-  // required uint64 a_streamId = 1;
-  bool has_a_streamid() const;
-  private:
-  bool _internal_has_a_streamid() const;
-  public:
+  // uint64 a_streamId = 1;
   void clear_a_streamid();
   uint64_t a_streamid() const;
   void set_a_streamid(uint64_t value);
@@ -614,7 +642,7 @@ class BidirectionalStream final :
 // -------------------------------------------------------------------
 
 class BidirectionalStreamResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.BidirectionalStreamResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.BidirectionalStreamResponse) */ {
  public:
   inline BidirectionalStreamResponse() : BidirectionalStreamResponse(nullptr) {}
   ~BidirectionalStreamResponse() override;
@@ -644,13 +672,15 @@ class BidirectionalStreamResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const BidirectionalStreamResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -694,9 +724,15 @@ class BidirectionalStreamResponse final :
   BidirectionalStreamResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<BidirectionalStreamResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const BidirectionalStreamResponse& from);
-  void MergeFrom(const BidirectionalStreamResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const BidirectionalStreamResponse& from) {
+    BidirectionalStreamResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -709,7 +745,7 @@ class BidirectionalStreamResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(BidirectionalStreamResponse* other);
 
   private:
@@ -722,7 +758,10 @@ class BidirectionalStreamResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -799,7 +838,7 @@ class BidirectionalStreamResponse final :
 // -------------------------------------------------------------------
 
 class ResetError final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.ResetError) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.ResetError) */ {
  public:
   inline ResetError() : ResetError(nullptr) {}
   ~ResetError() override;
@@ -829,13 +868,15 @@ class ResetError final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const ResetError& default_instance() {
     return *internal_default_instance();
   }
@@ -873,9 +914,15 @@ class ResetError final :
   ResetError* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<ResetError>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const ResetError& from);
-  void MergeFrom(const ResetError& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const ResetError& from) {
+    ResetError::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -888,7 +935,7 @@ class ResetError final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(ResetError* other);
 
   private:
@@ -901,7 +948,10 @@ class ResetError final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -910,11 +960,7 @@ class ResetError final :
   enum : int {
     kAErrorFieldNumber = 1,
   };
-  // required bytes a_error = 1;
-  bool has_a_error() const;
-  private:
-  bool _internal_has_a_error() const;
-  public:
+  // bytes a_error = 1;
   void clear_a_error();
   const std::string& a_error() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -936,9 +982,8 @@ class ResetError final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_error_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -946,7 +991,7 @@ class ResetError final :
 // -------------------------------------------------------------------
 
 class StopSendingError final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.StopSendingError) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.StopSendingError) */ {
  public:
   inline StopSendingError() : StopSendingError(nullptr) {}
   ~StopSendingError() override;
@@ -976,13 +1021,15 @@ class StopSendingError final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const StopSendingError& default_instance() {
     return *internal_default_instance();
   }
@@ -1020,9 +1067,15 @@ class StopSendingError final :
   StopSendingError* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<StopSendingError>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const StopSendingError& from);
-  void MergeFrom(const StopSendingError& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const StopSendingError& from) {
+    StopSendingError::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1035,7 +1088,7 @@ class StopSendingError final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(StopSendingError* other);
 
   private:
@@ -1048,7 +1101,10 @@ class StopSendingError final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1057,11 +1113,7 @@ class StopSendingError final :
   enum : int {
     kAErrorFieldNumber = 1,
   };
-  // required bytes a_error = 1;
-  bool has_a_error() const;
-  private:
-  bool _internal_has_a_error() const;
-  public:
+  // bytes a_error = 1;
   void clear_a_error();
   const std::string& a_error() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1083,9 +1135,8 @@ class StopSendingError final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_error_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1093,7 +1144,7 @@ class StopSendingError final :
 // -------------------------------------------------------------------
 
 class StreamResetOrStopSendingError final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.StreamResetOrStopSendingError) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.StreamResetOrStopSendingError) */ {
  public:
   inline StreamResetOrStopSendingError() : StreamResetOrStopSendingError(nullptr) {}
   ~StreamResetOrStopSendingError() override;
@@ -1123,13 +1174,15 @@ class StreamResetOrStopSendingError final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const StreamResetOrStopSendingError& default_instance() {
     return *internal_default_instance();
   }
@@ -1173,9 +1226,15 @@ class StreamResetOrStopSendingError final :
   StreamResetOrStopSendingError* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<StreamResetOrStopSendingError>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const StreamResetOrStopSendingError& from);
-  void MergeFrom(const StreamResetOrStopSendingError& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const StreamResetOrStopSendingError& from) {
+    StreamResetOrStopSendingError::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1188,7 +1247,7 @@ class StreamResetOrStopSendingError final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(StreamResetOrStopSendingError* other);
 
   private:
@@ -1201,7 +1260,10 @@ class StreamResetOrStopSendingError final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1286,17 +1348,9 @@ class StreamResetOrStopSendingError final :
 #endif  // __GNUC__
 // UnidirectionalStream
 
-// required uint64 a_streamId = 1;
-inline bool UnidirectionalStream::_internal_has_a_streamid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool UnidirectionalStream::has_a_streamid() const {
-  return _internal_has_a_streamid();
-}
+// uint64 a_streamId = 1;
 inline void UnidirectionalStream::clear_a_streamid() {
   _impl_.a_streamid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t UnidirectionalStream::_internal_a_streamid() const {
   return _impl_.a_streamid_;
@@ -1306,7 +1360,7 @@ inline uint64_t UnidirectionalStream::a_streamid() const {
   return _internal_a_streamid();
 }
 inline void UnidirectionalStream::_internal_set_a_streamid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_streamid_ = value;
 }
 inline void UnidirectionalStream::set_a_streamid(uint64_t value) {
@@ -1550,17 +1604,9 @@ inline UnidirectionalStreamResponse::ContentCase UnidirectionalStreamResponse::c
 
 // BidirectionalStream
 
-// required uint64 a_streamId = 1;
-inline bool BidirectionalStream::_internal_has_a_streamid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool BidirectionalStream::has_a_streamid() const {
-  return _internal_has_a_streamid();
-}
+// uint64 a_streamId = 1;
 inline void BidirectionalStream::clear_a_streamid() {
   _impl_.a_streamid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint64_t BidirectionalStream::_internal_a_streamid() const {
   return _impl_.a_streamid_;
@@ -1570,7 +1616,7 @@ inline uint64_t BidirectionalStream::a_streamid() const {
   return _internal_a_streamid();
 }
 inline void BidirectionalStream::_internal_set_a_streamid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_streamid_ = value;
 }
 inline void BidirectionalStream::set_a_streamid(uint64_t value) {
@@ -1882,17 +1928,9 @@ inline BidirectionalStreamResponse::ContentCase BidirectionalStreamResponse::con
 
 // ResetError
 
-// required bytes a_error = 1;
-inline bool ResetError::_internal_has_a_error() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool ResetError::has_a_error() const {
-  return _internal_has_a_error();
-}
+// bytes a_error = 1;
 inline void ResetError::clear_a_error() {
   _impl_.a_error_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& ResetError::a_error() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.ResetError.a_error)
@@ -1901,7 +1939,7 @@ inline const std::string& ResetError::a_error() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ResetError::set_a_error(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_error_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.ResetError.a_error)
 }
@@ -1914,32 +1952,22 @@ inline const std::string& ResetError::_internal_a_error() const {
   return _impl_.a_error_.Get();
 }
 inline void ResetError::_internal_set_a_error(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_error_.Set(value, GetArenaForAllocation());
 }
 inline std::string* ResetError::_internal_mutable_a_error() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_error_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ResetError::release_a_error() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.ResetError.a_error)
-  if (!_internal_has_a_error()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_error_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_error_.IsDefault()) {
-    _impl_.a_error_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_error_.Release();
 }
 inline void ResetError::set_allocated_a_error(std::string* a_error) {
   if (a_error != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_error_.SetAllocated(a_error, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1954,17 +1982,9 @@ inline void ResetError::set_allocated_a_error(std::string* a_error) {
 
 // StopSendingError
 
-// required bytes a_error = 1;
-inline bool StopSendingError::_internal_has_a_error() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool StopSendingError::has_a_error() const {
-  return _internal_has_a_error();
-}
+// bytes a_error = 1;
 inline void StopSendingError::clear_a_error() {
   _impl_.a_error_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& StopSendingError::a_error() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.StopSendingError.a_error)
@@ -1973,7 +1993,7 @@ inline const std::string& StopSendingError::a_error() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void StopSendingError::set_a_error(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_error_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.StopSendingError.a_error)
 }
@@ -1986,32 +2006,22 @@ inline const std::string& StopSendingError::_internal_a_error() const {
   return _impl_.a_error_.Get();
 }
 inline void StopSendingError::_internal_set_a_error(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_error_.Set(value, GetArenaForAllocation());
 }
 inline std::string* StopSendingError::_internal_mutable_a_error() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_error_.Mutable(GetArenaForAllocation());
 }
 inline std::string* StopSendingError::release_a_error() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.StopSendingError.a_error)
-  if (!_internal_has_a_error()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_error_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_error_.IsDefault()) {
-    _impl_.a_error_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_error_.Release();
 }
 inline void StopSendingError::set_allocated_a_error(std::string* a_error) {
   if (a_error != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_error_.SetAllocated(a_error, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

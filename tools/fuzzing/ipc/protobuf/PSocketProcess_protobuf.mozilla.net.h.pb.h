@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "CrashReporterInitArgs.pb.h"
 #include "MemoryReportTypes.pb.h"
 #include "NeckoChannelParams.pb.h"
@@ -45,6 +47,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace net {
@@ -72,7 +75,7 @@ namespace net {
 // ===================================================================
 
 class HttpHandlerInitArgs final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.HttpHandlerInitArgs) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.HttpHandlerInitArgs) */ {
  public:
   inline HttpHandlerInitArgs() : HttpHandlerInitArgs(nullptr) {}
   ~HttpHandlerInitArgs() override;
@@ -102,13 +105,15 @@ class HttpHandlerInitArgs final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const HttpHandlerInitArgs& default_instance() {
     return *internal_default_instance();
   }
@@ -146,9 +151,15 @@ class HttpHandlerInitArgs final :
   HttpHandlerInitArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<HttpHandlerInitArgs>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const HttpHandlerInitArgs& from);
-  void MergeFrom(const HttpHandlerInitArgs& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const HttpHandlerInitArgs& from) {
+    HttpHandlerInitArgs::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -161,7 +172,7 @@ class HttpHandlerInitArgs final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(HttpHandlerInitArgs* other);
 
   private:
@@ -174,7 +185,10 @@ class HttpHandlerInitArgs final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -194,11 +208,7 @@ class HttpHandlerInitArgs final :
     kAMCompatDeviceFieldNumber = 11,
     kAMDeviceModelIdFieldNumber = 12,
   };
-  // required string a_mLegacyAppName = 1;
-  bool has_a_mlegacyappname() const;
-  private:
-  bool _internal_has_a_mlegacyappname() const;
-  public:
+  // string a_mLegacyAppName = 1;
   void clear_a_mlegacyappname();
   const std::string& a_mlegacyappname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -212,11 +222,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_mlegacyappname();
   public:
 
-  // required string a_mLegacyAppVersion = 2;
-  bool has_a_mlegacyappversion() const;
-  private:
-  bool _internal_has_a_mlegacyappversion() const;
-  public:
+  // string a_mLegacyAppVersion = 2;
   void clear_a_mlegacyappversion();
   const std::string& a_mlegacyappversion() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -230,11 +236,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_mlegacyappversion();
   public:
 
-  // required string a_mPlatform = 3;
-  bool has_a_mplatform() const;
-  private:
-  bool _internal_has_a_mplatform() const;
-  public:
+  // string a_mPlatform = 3;
   void clear_a_mplatform();
   const std::string& a_mplatform() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -248,11 +250,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_mplatform();
   public:
 
-  // required string a_mOscpu = 4;
-  bool has_a_moscpu() const;
-  private:
-  bool _internal_has_a_moscpu() const;
-  public:
+  // string a_mOscpu = 4;
   void clear_a_moscpu();
   const std::string& a_moscpu() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -266,11 +264,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_moscpu();
   public:
 
-  // required string a_mMisc = 5;
-  bool has_a_mmisc() const;
-  private:
-  bool _internal_has_a_mmisc() const;
-  public:
+  // string a_mMisc = 5;
   void clear_a_mmisc();
   const std::string& a_mmisc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -284,11 +278,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_mmisc();
   public:
 
-  // required string a_mProduct = 6;
-  bool has_a_mproduct() const;
-  private:
-  bool _internal_has_a_mproduct() const;
-  public:
+  // string a_mProduct = 6;
   void clear_a_mproduct();
   const std::string& a_mproduct() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -302,11 +292,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_mproduct();
   public:
 
-  // required string a_mProductSub = 7;
-  bool has_a_mproductsub() const;
-  private:
-  bool _internal_has_a_mproductsub() const;
-  public:
+  // string a_mProductSub = 7;
   void clear_a_mproductsub();
   const std::string& a_mproductsub() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -320,11 +306,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_mproductsub();
   public:
 
-  // required string a_mAppName = 8;
-  bool has_a_mappname() const;
-  private:
-  bool _internal_has_a_mappname() const;
-  public:
+  // string a_mAppName = 8;
   void clear_a_mappname();
   const std::string& a_mappname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -338,11 +320,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_mappname();
   public:
 
-  // required string a_mAppVersion = 9;
-  bool has_a_mappversion() const;
-  private:
-  bool _internal_has_a_mappversion() const;
-  public:
+  // string a_mAppVersion = 9;
   void clear_a_mappversion();
   const std::string& a_mappversion() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -356,11 +334,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_mappversion();
   public:
 
-  // required string a_mCompatFirefox = 10;
-  bool has_a_mcompatfirefox() const;
-  private:
-  bool _internal_has_a_mcompatfirefox() const;
-  public:
+  // string a_mCompatFirefox = 10;
   void clear_a_mcompatfirefox();
   const std::string& a_mcompatfirefox() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -374,11 +348,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_mcompatfirefox();
   public:
 
-  // required string a_mCompatDevice = 11;
-  bool has_a_mcompatdevice() const;
-  private:
-  bool _internal_has_a_mcompatdevice() const;
-  public:
+  // string a_mCompatDevice = 11;
   void clear_a_mcompatdevice();
   const std::string& a_mcompatdevice() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -392,11 +362,7 @@ class HttpHandlerInitArgs final :
   std::string* _internal_mutable_a_mcompatdevice();
   public:
 
-  // required string a_mDeviceModelId = 12;
-  bool has_a_mdevicemodelid() const;
-  private:
-  bool _internal_has_a_mdevicemodelid() const;
-  public:
+  // string a_mDeviceModelId = 12;
   void clear_a_mdevicemodelid();
   const std::string& a_mdevicemodelid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -414,15 +380,10 @@ class HttpHandlerInitArgs final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mlegacyappname_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mlegacyappversion_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mplatform_;
@@ -435,6 +396,7 @@ class HttpHandlerInitArgs final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mcompatfirefox_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mcompatdevice_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_mdevicemodelid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto;
@@ -442,7 +404,7 @@ class HttpHandlerInitArgs final :
 // -------------------------------------------------------------------
 
 class SocketDataArgs final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.SocketDataArgs) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.SocketDataArgs) */ {
  public:
   inline SocketDataArgs() : SocketDataArgs(nullptr) {}
   ~SocketDataArgs() override;
@@ -472,13 +434,15 @@ class SocketDataArgs final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const SocketDataArgs& default_instance() {
     return *internal_default_instance();
   }
@@ -516,9 +480,15 @@ class SocketDataArgs final :
   SocketDataArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SocketDataArgs>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const SocketDataArgs& from);
-  void MergeFrom(const SocketDataArgs& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const SocketDataArgs& from) {
+    SocketDataArgs::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -531,7 +501,7 @@ class SocketDataArgs final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(SocketDataArgs* other);
 
   private:
@@ -544,7 +514,10 @@ class SocketDataArgs final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -579,11 +552,7 @@ class SocketDataArgs final :
   std::string* _internal_add_a_info();
   public:
 
-  // required uint64 a_totalSent = 1;
-  bool has_a_totalsent() const;
-  private:
-  bool _internal_has_a_totalsent() const;
-  public:
+  // uint64 a_totalSent = 1;
   void clear_a_totalsent();
   uint64_t a_totalsent() const;
   void set_a_totalsent(uint64_t value);
@@ -592,11 +561,7 @@ class SocketDataArgs final :
   void _internal_set_a_totalsent(uint64_t value);
   public:
 
-  // required uint64 a_totalRecv = 2;
-  bool has_a_totalrecv() const;
-  private:
-  bool _internal_has_a_totalrecv() const;
-  public:
+  // uint64 a_totalRecv = 2;
   void clear_a_totalrecv();
   uint64_t a_totalrecv() const;
   void set_a_totalrecv(uint64_t value);
@@ -609,18 +574,14 @@ class SocketDataArgs final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_info_;
     uint64_t a_totalsent_;
     uint64_t a_totalrecv_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto;
@@ -628,7 +589,7 @@ class SocketDataArgs final :
 // -------------------------------------------------------------------
 
 class SocketPorcessInitAttributes final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.SocketPorcessInitAttributes) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.SocketPorcessInitAttributes) */ {
  public:
   inline SocketPorcessInitAttributes() : SocketPorcessInitAttributes(nullptr) {}
   ~SocketPorcessInitAttributes() override;
@@ -658,13 +619,15 @@ class SocketPorcessInitAttributes final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const SocketPorcessInitAttributes& default_instance() {
     return *internal_default_instance();
   }
@@ -702,9 +665,15 @@ class SocketPorcessInitAttributes final :
   SocketPorcessInitAttributes* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SocketPorcessInitAttributes>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const SocketPorcessInitAttributes& from);
-  void MergeFrom(const SocketPorcessInitAttributes& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const SocketPorcessInitAttributes& from) {
+    SocketPorcessInitAttributes::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -717,7 +686,7 @@ class SocketPorcessInitAttributes final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(SocketPorcessInitAttributes* other);
 
   private:
@@ -730,7 +699,10 @@ class SocketPorcessInitAttributes final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -760,11 +732,7 @@ class SocketPorcessInitAttributes final :
   std::string* _internal_mutable_a_msandboxbroker();
   public:
 
-  // required bool a_mOffline = 1;
-  bool has_a_moffline() const;
-  private:
-  bool _internal_has_a_moffline() const;
-  public:
+  // bool a_mOffline = 1;
   void clear_a_moffline();
   bool a_moffline() const;
   void set_a_moffline(bool value);
@@ -773,11 +741,7 @@ class SocketPorcessInitAttributes final :
   void _internal_set_a_moffline(bool value);
   public:
 
-  // required bool a_mConnectivity = 2;
-  bool has_a_mconnectivity() const;
-  private:
-  bool _internal_has_a_mconnectivity() const;
-  public:
+  // bool a_mConnectivity = 2;
   void clear_a_mconnectivity();
   bool a_mconnectivity() const;
   void set_a_mconnectivity(bool value);
@@ -786,11 +750,7 @@ class SocketPorcessInitAttributes final :
   void _internal_set_a_mconnectivity(bool value);
   public:
 
-  // required bool a_mInitSandbox = 3;
-  bool has_a_minitsandbox() const;
-  private:
-  bool _internal_has_a_minitsandbox() const;
-  public:
+  // bool a_mInitSandbox = 3;
   void clear_a_minitsandbox();
   bool a_minitsandbox() const;
   void set_a_minitsandbox(bool value);
@@ -802,9 +762,6 @@ class SocketPorcessInitAttributes final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.SocketPorcessInitAttributes)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -831,17 +788,9 @@ class SocketPorcessInitAttributes final :
 #endif  // __GNUC__
 // HttpHandlerInitArgs
 
-// required string a_mLegacyAppName = 1;
-inline bool HttpHandlerInitArgs::_internal_has_a_mlegacyappname() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool HttpHandlerInitArgs::has_a_mlegacyappname() const {
-  return _internal_has_a_mlegacyappname();
-}
+// string a_mLegacyAppName = 1;
 inline void HttpHandlerInitArgs::clear_a_mlegacyappname() {
   _impl_.a_mlegacyappname_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& HttpHandlerInitArgs::a_mlegacyappname() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.HttpHandlerInitArgs.a_mLegacyAppName)
@@ -850,7 +799,7 @@ inline const std::string& HttpHandlerInitArgs::a_mlegacyappname() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpHandlerInitArgs::set_a_mlegacyappname(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_mlegacyappname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpHandlerInitArgs.a_mLegacyAppName)
 }
@@ -863,32 +812,22 @@ inline const std::string& HttpHandlerInitArgs::_internal_a_mlegacyappname() cons
   return _impl_.a_mlegacyappname_.Get();
 }
 inline void HttpHandlerInitArgs::_internal_set_a_mlegacyappname(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_mlegacyappname_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::_internal_mutable_a_mlegacyappname() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_mlegacyappname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::release_a_mlegacyappname() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpHandlerInitArgs.a_mLegacyAppName)
-  if (!_internal_has_a_mlegacyappname()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_mlegacyappname_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_mlegacyappname_.IsDefault()) {
-    _impl_.a_mlegacyappname_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_mlegacyappname_.Release();
 }
 inline void HttpHandlerInitArgs::set_allocated_a_mlegacyappname(std::string* a_mlegacyappname) {
   if (a_mlegacyappname != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_mlegacyappname_.SetAllocated(a_mlegacyappname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -899,17 +838,9 @@ inline void HttpHandlerInitArgs::set_allocated_a_mlegacyappname(std::string* a_m
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mLegacyAppName)
 }
 
-// required string a_mLegacyAppVersion = 2;
-inline bool HttpHandlerInitArgs::_internal_has_a_mlegacyappversion() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool HttpHandlerInitArgs::has_a_mlegacyappversion() const {
-  return _internal_has_a_mlegacyappversion();
-}
+// string a_mLegacyAppVersion = 2;
 inline void HttpHandlerInitArgs::clear_a_mlegacyappversion() {
   _impl_.a_mlegacyappversion_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& HttpHandlerInitArgs::a_mlegacyappversion() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.HttpHandlerInitArgs.a_mLegacyAppVersion)
@@ -918,7 +849,7 @@ inline const std::string& HttpHandlerInitArgs::a_mlegacyappversion() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpHandlerInitArgs::set_a_mlegacyappversion(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_mlegacyappversion_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpHandlerInitArgs.a_mLegacyAppVersion)
 }
@@ -931,32 +862,22 @@ inline const std::string& HttpHandlerInitArgs::_internal_a_mlegacyappversion() c
   return _impl_.a_mlegacyappversion_.Get();
 }
 inline void HttpHandlerInitArgs::_internal_set_a_mlegacyappversion(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_mlegacyappversion_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::_internal_mutable_a_mlegacyappversion() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_mlegacyappversion_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::release_a_mlegacyappversion() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpHandlerInitArgs.a_mLegacyAppVersion)
-  if (!_internal_has_a_mlegacyappversion()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_mlegacyappversion_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_mlegacyappversion_.IsDefault()) {
-    _impl_.a_mlegacyappversion_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_mlegacyappversion_.Release();
 }
 inline void HttpHandlerInitArgs::set_allocated_a_mlegacyappversion(std::string* a_mlegacyappversion) {
   if (a_mlegacyappversion != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_mlegacyappversion_.SetAllocated(a_mlegacyappversion, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -967,17 +888,9 @@ inline void HttpHandlerInitArgs::set_allocated_a_mlegacyappversion(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mLegacyAppVersion)
 }
 
-// required string a_mPlatform = 3;
-inline bool HttpHandlerInitArgs::_internal_has_a_mplatform() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool HttpHandlerInitArgs::has_a_mplatform() const {
-  return _internal_has_a_mplatform();
-}
+// string a_mPlatform = 3;
 inline void HttpHandlerInitArgs::clear_a_mplatform() {
   _impl_.a_mplatform_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& HttpHandlerInitArgs::a_mplatform() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.HttpHandlerInitArgs.a_mPlatform)
@@ -986,7 +899,7 @@ inline const std::string& HttpHandlerInitArgs::a_mplatform() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpHandlerInitArgs::set_a_mplatform(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_mplatform_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpHandlerInitArgs.a_mPlatform)
 }
@@ -999,32 +912,22 @@ inline const std::string& HttpHandlerInitArgs::_internal_a_mplatform() const {
   return _impl_.a_mplatform_.Get();
 }
 inline void HttpHandlerInitArgs::_internal_set_a_mplatform(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_mplatform_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::_internal_mutable_a_mplatform() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_mplatform_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::release_a_mplatform() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpHandlerInitArgs.a_mPlatform)
-  if (!_internal_has_a_mplatform()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_mplatform_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_mplatform_.IsDefault()) {
-    _impl_.a_mplatform_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_mplatform_.Release();
 }
 inline void HttpHandlerInitArgs::set_allocated_a_mplatform(std::string* a_mplatform) {
   if (a_mplatform != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_mplatform_.SetAllocated(a_mplatform, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1035,17 +938,9 @@ inline void HttpHandlerInitArgs::set_allocated_a_mplatform(std::string* a_mplatf
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mPlatform)
 }
 
-// required string a_mOscpu = 4;
-inline bool HttpHandlerInitArgs::_internal_has_a_moscpu() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool HttpHandlerInitArgs::has_a_moscpu() const {
-  return _internal_has_a_moscpu();
-}
+// string a_mOscpu = 4;
 inline void HttpHandlerInitArgs::clear_a_moscpu() {
   _impl_.a_moscpu_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& HttpHandlerInitArgs::a_moscpu() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.HttpHandlerInitArgs.a_mOscpu)
@@ -1054,7 +949,7 @@ inline const std::string& HttpHandlerInitArgs::a_moscpu() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpHandlerInitArgs::set_a_moscpu(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000008u;
+ 
  _impl_.a_moscpu_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpHandlerInitArgs.a_mOscpu)
 }
@@ -1067,32 +962,22 @@ inline const std::string& HttpHandlerInitArgs::_internal_a_moscpu() const {
   return _impl_.a_moscpu_.Get();
 }
 inline void HttpHandlerInitArgs::_internal_set_a_moscpu(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_moscpu_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::_internal_mutable_a_moscpu() {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   return _impl_.a_moscpu_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::release_a_moscpu() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpHandlerInitArgs.a_mOscpu)
-  if (!_internal_has_a_moscpu()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.a_moscpu_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_moscpu_.IsDefault()) {
-    _impl_.a_moscpu_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_moscpu_.Release();
 }
 inline void HttpHandlerInitArgs::set_allocated_a_moscpu(std::string* a_moscpu) {
   if (a_moscpu != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    
   }
   _impl_.a_moscpu_.SetAllocated(a_moscpu, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1103,17 +988,9 @@ inline void HttpHandlerInitArgs::set_allocated_a_moscpu(std::string* a_moscpu) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mOscpu)
 }
 
-// required string a_mMisc = 5;
-inline bool HttpHandlerInitArgs::_internal_has_a_mmisc() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool HttpHandlerInitArgs::has_a_mmisc() const {
-  return _internal_has_a_mmisc();
-}
+// string a_mMisc = 5;
 inline void HttpHandlerInitArgs::clear_a_mmisc() {
   _impl_.a_mmisc_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline const std::string& HttpHandlerInitArgs::a_mmisc() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.HttpHandlerInitArgs.a_mMisc)
@@ -1122,7 +999,7 @@ inline const std::string& HttpHandlerInitArgs::a_mmisc() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpHandlerInitArgs::set_a_mmisc(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000010u;
+ 
  _impl_.a_mmisc_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpHandlerInitArgs.a_mMisc)
 }
@@ -1135,32 +1012,22 @@ inline const std::string& HttpHandlerInitArgs::_internal_a_mmisc() const {
   return _impl_.a_mmisc_.Get();
 }
 inline void HttpHandlerInitArgs::_internal_set_a_mmisc(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_mmisc_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::_internal_mutable_a_mmisc() {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   return _impl_.a_mmisc_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::release_a_mmisc() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpHandlerInitArgs.a_mMisc)
-  if (!_internal_has_a_mmisc()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000010u;
-  auto* p = _impl_.a_mmisc_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_mmisc_.IsDefault()) {
-    _impl_.a_mmisc_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_mmisc_.Release();
 }
 inline void HttpHandlerInitArgs::set_allocated_a_mmisc(std::string* a_mmisc) {
   if (a_mmisc != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000010u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000010u;
+    
   }
   _impl_.a_mmisc_.SetAllocated(a_mmisc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1171,17 +1038,9 @@ inline void HttpHandlerInitArgs::set_allocated_a_mmisc(std::string* a_mmisc) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mMisc)
 }
 
-// required string a_mProduct = 6;
-inline bool HttpHandlerInitArgs::_internal_has_a_mproduct() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool HttpHandlerInitArgs::has_a_mproduct() const {
-  return _internal_has_a_mproduct();
-}
+// string a_mProduct = 6;
 inline void HttpHandlerInitArgs::clear_a_mproduct() {
   _impl_.a_mproduct_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline const std::string& HttpHandlerInitArgs::a_mproduct() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.HttpHandlerInitArgs.a_mProduct)
@@ -1190,7 +1049,7 @@ inline const std::string& HttpHandlerInitArgs::a_mproduct() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpHandlerInitArgs::set_a_mproduct(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000020u;
+ 
  _impl_.a_mproduct_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpHandlerInitArgs.a_mProduct)
 }
@@ -1203,32 +1062,22 @@ inline const std::string& HttpHandlerInitArgs::_internal_a_mproduct() const {
   return _impl_.a_mproduct_.Get();
 }
 inline void HttpHandlerInitArgs::_internal_set_a_mproduct(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   _impl_.a_mproduct_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::_internal_mutable_a_mproduct() {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   return _impl_.a_mproduct_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::release_a_mproduct() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpHandlerInitArgs.a_mProduct)
-  if (!_internal_has_a_mproduct()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000020u;
-  auto* p = _impl_.a_mproduct_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_mproduct_.IsDefault()) {
-    _impl_.a_mproduct_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_mproduct_.Release();
 }
 inline void HttpHandlerInitArgs::set_allocated_a_mproduct(std::string* a_mproduct) {
   if (a_mproduct != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000020u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000020u;
+    
   }
   _impl_.a_mproduct_.SetAllocated(a_mproduct, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1239,17 +1088,9 @@ inline void HttpHandlerInitArgs::set_allocated_a_mproduct(std::string* a_mproduc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mProduct)
 }
 
-// required string a_mProductSub = 7;
-inline bool HttpHandlerInitArgs::_internal_has_a_mproductsub() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool HttpHandlerInitArgs::has_a_mproductsub() const {
-  return _internal_has_a_mproductsub();
-}
+// string a_mProductSub = 7;
 inline void HttpHandlerInitArgs::clear_a_mproductsub() {
   _impl_.a_mproductsub_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline const std::string& HttpHandlerInitArgs::a_mproductsub() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.HttpHandlerInitArgs.a_mProductSub)
@@ -1258,7 +1099,7 @@ inline const std::string& HttpHandlerInitArgs::a_mproductsub() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpHandlerInitArgs::set_a_mproductsub(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000040u;
+ 
  _impl_.a_mproductsub_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpHandlerInitArgs.a_mProductSub)
 }
@@ -1271,32 +1112,22 @@ inline const std::string& HttpHandlerInitArgs::_internal_a_mproductsub() const {
   return _impl_.a_mproductsub_.Get();
 }
 inline void HttpHandlerInitArgs::_internal_set_a_mproductsub(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000040u;
+  
   _impl_.a_mproductsub_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::_internal_mutable_a_mproductsub() {
-  _impl_._has_bits_[0] |= 0x00000040u;
+  
   return _impl_.a_mproductsub_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::release_a_mproductsub() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpHandlerInitArgs.a_mProductSub)
-  if (!_internal_has_a_mproductsub()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000040u;
-  auto* p = _impl_.a_mproductsub_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_mproductsub_.IsDefault()) {
-    _impl_.a_mproductsub_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_mproductsub_.Release();
 }
 inline void HttpHandlerInitArgs::set_allocated_a_mproductsub(std::string* a_mproductsub) {
   if (a_mproductsub != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000040u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000040u;
+    
   }
   _impl_.a_mproductsub_.SetAllocated(a_mproductsub, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1307,17 +1138,9 @@ inline void HttpHandlerInitArgs::set_allocated_a_mproductsub(std::string* a_mpro
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mProductSub)
 }
 
-// required string a_mAppName = 8;
-inline bool HttpHandlerInitArgs::_internal_has_a_mappname() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
-  return value;
-}
-inline bool HttpHandlerInitArgs::has_a_mappname() const {
-  return _internal_has_a_mappname();
-}
+// string a_mAppName = 8;
 inline void HttpHandlerInitArgs::clear_a_mappname() {
   _impl_.a_mappname_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000080u;
 }
 inline const std::string& HttpHandlerInitArgs::a_mappname() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.HttpHandlerInitArgs.a_mAppName)
@@ -1326,7 +1149,7 @@ inline const std::string& HttpHandlerInitArgs::a_mappname() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpHandlerInitArgs::set_a_mappname(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000080u;
+ 
  _impl_.a_mappname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpHandlerInitArgs.a_mAppName)
 }
@@ -1339,32 +1162,22 @@ inline const std::string& HttpHandlerInitArgs::_internal_a_mappname() const {
   return _impl_.a_mappname_.Get();
 }
 inline void HttpHandlerInitArgs::_internal_set_a_mappname(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000080u;
+  
   _impl_.a_mappname_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::_internal_mutable_a_mappname() {
-  _impl_._has_bits_[0] |= 0x00000080u;
+  
   return _impl_.a_mappname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::release_a_mappname() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpHandlerInitArgs.a_mAppName)
-  if (!_internal_has_a_mappname()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000080u;
-  auto* p = _impl_.a_mappname_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_mappname_.IsDefault()) {
-    _impl_.a_mappname_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_mappname_.Release();
 }
 inline void HttpHandlerInitArgs::set_allocated_a_mappname(std::string* a_mappname) {
   if (a_mappname != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000080u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000080u;
+    
   }
   _impl_.a_mappname_.SetAllocated(a_mappname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1375,17 +1188,9 @@ inline void HttpHandlerInitArgs::set_allocated_a_mappname(std::string* a_mappnam
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mAppName)
 }
 
-// required string a_mAppVersion = 9;
-inline bool HttpHandlerInitArgs::_internal_has_a_mappversion() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
-  return value;
-}
-inline bool HttpHandlerInitArgs::has_a_mappversion() const {
-  return _internal_has_a_mappversion();
-}
+// string a_mAppVersion = 9;
 inline void HttpHandlerInitArgs::clear_a_mappversion() {
   _impl_.a_mappversion_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000100u;
 }
 inline const std::string& HttpHandlerInitArgs::a_mappversion() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.HttpHandlerInitArgs.a_mAppVersion)
@@ -1394,7 +1199,7 @@ inline const std::string& HttpHandlerInitArgs::a_mappversion() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpHandlerInitArgs::set_a_mappversion(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000100u;
+ 
  _impl_.a_mappversion_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpHandlerInitArgs.a_mAppVersion)
 }
@@ -1407,32 +1212,22 @@ inline const std::string& HttpHandlerInitArgs::_internal_a_mappversion() const {
   return _impl_.a_mappversion_.Get();
 }
 inline void HttpHandlerInitArgs::_internal_set_a_mappversion(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000100u;
+  
   _impl_.a_mappversion_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::_internal_mutable_a_mappversion() {
-  _impl_._has_bits_[0] |= 0x00000100u;
+  
   return _impl_.a_mappversion_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::release_a_mappversion() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpHandlerInitArgs.a_mAppVersion)
-  if (!_internal_has_a_mappversion()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000100u;
-  auto* p = _impl_.a_mappversion_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_mappversion_.IsDefault()) {
-    _impl_.a_mappversion_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_mappversion_.Release();
 }
 inline void HttpHandlerInitArgs::set_allocated_a_mappversion(std::string* a_mappversion) {
   if (a_mappversion != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000100u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000100u;
+    
   }
   _impl_.a_mappversion_.SetAllocated(a_mappversion, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1443,17 +1238,9 @@ inline void HttpHandlerInitArgs::set_allocated_a_mappversion(std::string* a_mapp
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mAppVersion)
 }
 
-// required string a_mCompatFirefox = 10;
-inline bool HttpHandlerInitArgs::_internal_has_a_mcompatfirefox() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
-  return value;
-}
-inline bool HttpHandlerInitArgs::has_a_mcompatfirefox() const {
-  return _internal_has_a_mcompatfirefox();
-}
+// string a_mCompatFirefox = 10;
 inline void HttpHandlerInitArgs::clear_a_mcompatfirefox() {
   _impl_.a_mcompatfirefox_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000200u;
 }
 inline const std::string& HttpHandlerInitArgs::a_mcompatfirefox() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.HttpHandlerInitArgs.a_mCompatFirefox)
@@ -1462,7 +1249,7 @@ inline const std::string& HttpHandlerInitArgs::a_mcompatfirefox() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpHandlerInitArgs::set_a_mcompatfirefox(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000200u;
+ 
  _impl_.a_mcompatfirefox_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpHandlerInitArgs.a_mCompatFirefox)
 }
@@ -1475,32 +1262,22 @@ inline const std::string& HttpHandlerInitArgs::_internal_a_mcompatfirefox() cons
   return _impl_.a_mcompatfirefox_.Get();
 }
 inline void HttpHandlerInitArgs::_internal_set_a_mcompatfirefox(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000200u;
+  
   _impl_.a_mcompatfirefox_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::_internal_mutable_a_mcompatfirefox() {
-  _impl_._has_bits_[0] |= 0x00000200u;
+  
   return _impl_.a_mcompatfirefox_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::release_a_mcompatfirefox() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpHandlerInitArgs.a_mCompatFirefox)
-  if (!_internal_has_a_mcompatfirefox()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000200u;
-  auto* p = _impl_.a_mcompatfirefox_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_mcompatfirefox_.IsDefault()) {
-    _impl_.a_mcompatfirefox_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_mcompatfirefox_.Release();
 }
 inline void HttpHandlerInitArgs::set_allocated_a_mcompatfirefox(std::string* a_mcompatfirefox) {
   if (a_mcompatfirefox != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000200u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000200u;
+    
   }
   _impl_.a_mcompatfirefox_.SetAllocated(a_mcompatfirefox, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1511,17 +1288,9 @@ inline void HttpHandlerInitArgs::set_allocated_a_mcompatfirefox(std::string* a_m
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mCompatFirefox)
 }
 
-// required string a_mCompatDevice = 11;
-inline bool HttpHandlerInitArgs::_internal_has_a_mcompatdevice() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
-  return value;
-}
-inline bool HttpHandlerInitArgs::has_a_mcompatdevice() const {
-  return _internal_has_a_mcompatdevice();
-}
+// string a_mCompatDevice = 11;
 inline void HttpHandlerInitArgs::clear_a_mcompatdevice() {
   _impl_.a_mcompatdevice_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000400u;
 }
 inline const std::string& HttpHandlerInitArgs::a_mcompatdevice() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.HttpHandlerInitArgs.a_mCompatDevice)
@@ -1530,7 +1299,7 @@ inline const std::string& HttpHandlerInitArgs::a_mcompatdevice() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpHandlerInitArgs::set_a_mcompatdevice(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000400u;
+ 
  _impl_.a_mcompatdevice_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpHandlerInitArgs.a_mCompatDevice)
 }
@@ -1543,32 +1312,22 @@ inline const std::string& HttpHandlerInitArgs::_internal_a_mcompatdevice() const
   return _impl_.a_mcompatdevice_.Get();
 }
 inline void HttpHandlerInitArgs::_internal_set_a_mcompatdevice(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000400u;
+  
   _impl_.a_mcompatdevice_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::_internal_mutable_a_mcompatdevice() {
-  _impl_._has_bits_[0] |= 0x00000400u;
+  
   return _impl_.a_mcompatdevice_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::release_a_mcompatdevice() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpHandlerInitArgs.a_mCompatDevice)
-  if (!_internal_has_a_mcompatdevice()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000400u;
-  auto* p = _impl_.a_mcompatdevice_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_mcompatdevice_.IsDefault()) {
-    _impl_.a_mcompatdevice_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_mcompatdevice_.Release();
 }
 inline void HttpHandlerInitArgs::set_allocated_a_mcompatdevice(std::string* a_mcompatdevice) {
   if (a_mcompatdevice != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000400u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000400u;
+    
   }
   _impl_.a_mcompatdevice_.SetAllocated(a_mcompatdevice, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1579,17 +1338,9 @@ inline void HttpHandlerInitArgs::set_allocated_a_mcompatdevice(std::string* a_mc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.HttpHandlerInitArgs.a_mCompatDevice)
 }
 
-// required string a_mDeviceModelId = 12;
-inline bool HttpHandlerInitArgs::_internal_has_a_mdevicemodelid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
-  return value;
-}
-inline bool HttpHandlerInitArgs::has_a_mdevicemodelid() const {
-  return _internal_has_a_mdevicemodelid();
-}
+// string a_mDeviceModelId = 12;
 inline void HttpHandlerInitArgs::clear_a_mdevicemodelid() {
   _impl_.a_mdevicemodelid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000800u;
 }
 inline const std::string& HttpHandlerInitArgs::a_mdevicemodelid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.HttpHandlerInitArgs.a_mDeviceModelId)
@@ -1598,7 +1349,7 @@ inline const std::string& HttpHandlerInitArgs::a_mdevicemodelid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HttpHandlerInitArgs::set_a_mdevicemodelid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000800u;
+ 
  _impl_.a_mdevicemodelid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.HttpHandlerInitArgs.a_mDeviceModelId)
 }
@@ -1611,32 +1362,22 @@ inline const std::string& HttpHandlerInitArgs::_internal_a_mdevicemodelid() cons
   return _impl_.a_mdevicemodelid_.Get();
 }
 inline void HttpHandlerInitArgs::_internal_set_a_mdevicemodelid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000800u;
+  
   _impl_.a_mdevicemodelid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::_internal_mutable_a_mdevicemodelid() {
-  _impl_._has_bits_[0] |= 0x00000800u;
+  
   return _impl_.a_mdevicemodelid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HttpHandlerInitArgs::release_a_mdevicemodelid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.HttpHandlerInitArgs.a_mDeviceModelId)
-  if (!_internal_has_a_mdevicemodelid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000800u;
-  auto* p = _impl_.a_mdevicemodelid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_mdevicemodelid_.IsDefault()) {
-    _impl_.a_mdevicemodelid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_mdevicemodelid_.Release();
 }
 inline void HttpHandlerInitArgs::set_allocated_a_mdevicemodelid(std::string* a_mdevicemodelid) {
   if (a_mdevicemodelid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000800u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000800u;
+    
   }
   _impl_.a_mdevicemodelid_.SetAllocated(a_mdevicemodelid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1651,17 +1392,9 @@ inline void HttpHandlerInitArgs::set_allocated_a_mdevicemodelid(std::string* a_m
 
 // SocketDataArgs
 
-// required uint64 a_totalSent = 1;
-inline bool SocketDataArgs::_internal_has_a_totalsent() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool SocketDataArgs::has_a_totalsent() const {
-  return _internal_has_a_totalsent();
-}
+// uint64 a_totalSent = 1;
 inline void SocketDataArgs::clear_a_totalsent() {
   _impl_.a_totalsent_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t SocketDataArgs::_internal_a_totalsent() const {
   return _impl_.a_totalsent_;
@@ -1671,7 +1404,7 @@ inline uint64_t SocketDataArgs::a_totalsent() const {
   return _internal_a_totalsent();
 }
 inline void SocketDataArgs::_internal_set_a_totalsent(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_totalsent_ = value;
 }
 inline void SocketDataArgs::set_a_totalsent(uint64_t value) {
@@ -1679,17 +1412,9 @@ inline void SocketDataArgs::set_a_totalsent(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.SocketDataArgs.a_totalSent)
 }
 
-// required uint64 a_totalRecv = 2;
-inline bool SocketDataArgs::_internal_has_a_totalrecv() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool SocketDataArgs::has_a_totalrecv() const {
-  return _internal_has_a_totalrecv();
-}
+// uint64 a_totalRecv = 2;
 inline void SocketDataArgs::clear_a_totalrecv() {
   _impl_.a_totalrecv_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t SocketDataArgs::_internal_a_totalrecv() const {
   return _impl_.a_totalrecv_;
@@ -1699,7 +1424,7 @@ inline uint64_t SocketDataArgs::a_totalrecv() const {
   return _internal_a_totalrecv();
 }
 inline void SocketDataArgs::_internal_set_a_totalrecv(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_totalrecv_ = value;
 }
 inline void SocketDataArgs::set_a_totalrecv(uint64_t value) {
@@ -1786,17 +1511,9 @@ SocketDataArgs::mutable_a_info() {
 
 // SocketPorcessInitAttributes
 
-// required bool a_mOffline = 1;
-inline bool SocketPorcessInitAttributes::_internal_has_a_moffline() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool SocketPorcessInitAttributes::has_a_moffline() const {
-  return _internal_has_a_moffline();
-}
+// bool a_mOffline = 1;
 inline void SocketPorcessInitAttributes::clear_a_moffline() {
   _impl_.a_moffline_ = false;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool SocketPorcessInitAttributes::_internal_a_moffline() const {
   return _impl_.a_moffline_;
@@ -1806,7 +1523,7 @@ inline bool SocketPorcessInitAttributes::a_moffline() const {
   return _internal_a_moffline();
 }
 inline void SocketPorcessInitAttributes::_internal_set_a_moffline(bool value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_moffline_ = value;
 }
 inline void SocketPorcessInitAttributes::set_a_moffline(bool value) {
@@ -1814,17 +1531,9 @@ inline void SocketPorcessInitAttributes::set_a_moffline(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.SocketPorcessInitAttributes.a_mOffline)
 }
 
-// required bool a_mConnectivity = 2;
-inline bool SocketPorcessInitAttributes::_internal_has_a_mconnectivity() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool SocketPorcessInitAttributes::has_a_mconnectivity() const {
-  return _internal_has_a_mconnectivity();
-}
+// bool a_mConnectivity = 2;
 inline void SocketPorcessInitAttributes::clear_a_mconnectivity() {
   _impl_.a_mconnectivity_ = false;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline bool SocketPorcessInitAttributes::_internal_a_mconnectivity() const {
   return _impl_.a_mconnectivity_;
@@ -1834,7 +1543,7 @@ inline bool SocketPorcessInitAttributes::a_mconnectivity() const {
   return _internal_a_mconnectivity();
 }
 inline void SocketPorcessInitAttributes::_internal_set_a_mconnectivity(bool value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_mconnectivity_ = value;
 }
 inline void SocketPorcessInitAttributes::set_a_mconnectivity(bool value) {
@@ -1842,17 +1551,9 @@ inline void SocketPorcessInitAttributes::set_a_mconnectivity(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.SocketPorcessInitAttributes.a_mConnectivity)
 }
 
-// required bool a_mInitSandbox = 3;
-inline bool SocketPorcessInitAttributes::_internal_has_a_minitsandbox() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool SocketPorcessInitAttributes::has_a_minitsandbox() const {
-  return _internal_has_a_minitsandbox();
-}
+// bool a_mInitSandbox = 3;
 inline void SocketPorcessInitAttributes::clear_a_minitsandbox() {
   _impl_.a_minitsandbox_ = false;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline bool SocketPorcessInitAttributes::_internal_a_minitsandbox() const {
   return _impl_.a_minitsandbox_;
@@ -1862,7 +1563,7 @@ inline bool SocketPorcessInitAttributes::a_minitsandbox() const {
   return _internal_a_minitsandbox();
 }
 inline void SocketPorcessInitAttributes::_internal_set_a_minitsandbox(bool value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_minitsandbox_ = value;
 }
 inline void SocketPorcessInitAttributes::set_a_minitsandbox(bool value) {

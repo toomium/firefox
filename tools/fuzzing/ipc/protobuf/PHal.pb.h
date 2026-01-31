@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "PHal_protobuf.mozilla.hal.h.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -42,6 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PHal_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PHal_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace hal_sandbox {
@@ -168,7 +172,7 @@ namespace PHal {
 // ===================================================================
 
 class Msg_NotifyBatteryChange final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyBatteryChange) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyBatteryChange) */ {
  public:
   inline Msg_NotifyBatteryChange() : Msg_NotifyBatteryChange(nullptr) {}
   ~Msg_NotifyBatteryChange() override;
@@ -198,13 +202,15 @@ class Msg_NotifyBatteryChange final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_NotifyBatteryChange& default_instance() {
     return *internal_default_instance();
   }
@@ -242,9 +248,15 @@ class Msg_NotifyBatteryChange final :
   Msg_NotifyBatteryChange* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_NotifyBatteryChange>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_NotifyBatteryChange& from);
-  void MergeFrom(const Msg_NotifyBatteryChange& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_NotifyBatteryChange& from) {
+    Msg_NotifyBatteryChange::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -257,7 +269,7 @@ class Msg_NotifyBatteryChange final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_NotifyBatteryChange* other);
 
   private:
@@ -270,7 +282,10 @@ class Msg_NotifyBatteryChange final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -279,7 +294,7 @@ class Msg_NotifyBatteryChange final :
   enum : int {
     kAABatteryInfoFieldNumber = 1,
   };
-  // required .protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
+  // .protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
   bool has_a_abatteryinfo() const;
   private:
   bool _internal_has_a_abatteryinfo() const;
@@ -305,9 +320,8 @@ class Msg_NotifyBatteryChange final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::hal::BatteryInformation* a_abatteryinfo_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
@@ -315,7 +329,7 @@ class Msg_NotifyBatteryChange final :
 // -------------------------------------------------------------------
 
 class Msg_NotifyNetworkChange final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyNetworkChange) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyNetworkChange) */ {
  public:
   inline Msg_NotifyNetworkChange() : Msg_NotifyNetworkChange(nullptr) {}
   ~Msg_NotifyNetworkChange() override;
@@ -345,13 +359,15 @@ class Msg_NotifyNetworkChange final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_NotifyNetworkChange& default_instance() {
     return *internal_default_instance();
   }
@@ -389,9 +405,15 @@ class Msg_NotifyNetworkChange final :
   Msg_NotifyNetworkChange* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_NotifyNetworkChange>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_NotifyNetworkChange& from);
-  void MergeFrom(const Msg_NotifyNetworkChange& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_NotifyNetworkChange& from) {
+    Msg_NotifyNetworkChange::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -404,7 +426,7 @@ class Msg_NotifyNetworkChange final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_NotifyNetworkChange* other);
 
   private:
@@ -417,7 +439,10 @@ class Msg_NotifyNetworkChange final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -426,7 +451,7 @@ class Msg_NotifyNetworkChange final :
   enum : int {
     kAANetworkInfoFieldNumber = 1,
   };
-  // required .protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
+  // .protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
   bool has_a_anetworkinfo() const;
   private:
   bool _internal_has_a_anetworkinfo() const;
@@ -452,9 +477,8 @@ class Msg_NotifyNetworkChange final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::hal::NetworkInformation* a_anetworkinfo_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
@@ -462,7 +486,7 @@ class Msg_NotifyNetworkChange final :
 // -------------------------------------------------------------------
 
 class Msg_NotifyWakeLockChange final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyWakeLockChange) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyWakeLockChange) */ {
  public:
   inline Msg_NotifyWakeLockChange() : Msg_NotifyWakeLockChange(nullptr) {}
   ~Msg_NotifyWakeLockChange() override;
@@ -492,13 +516,15 @@ class Msg_NotifyWakeLockChange final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_NotifyWakeLockChange& default_instance() {
     return *internal_default_instance();
   }
@@ -536,9 +562,15 @@ class Msg_NotifyWakeLockChange final :
   Msg_NotifyWakeLockChange* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_NotifyWakeLockChange>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_NotifyWakeLockChange& from);
-  void MergeFrom(const Msg_NotifyWakeLockChange& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_NotifyWakeLockChange& from) {
+    Msg_NotifyWakeLockChange::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -551,7 +583,7 @@ class Msg_NotifyWakeLockChange final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_NotifyWakeLockChange* other);
 
   private:
@@ -564,7 +596,10 @@ class Msg_NotifyWakeLockChange final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -573,7 +608,7 @@ class Msg_NotifyWakeLockChange final :
   enum : int {
     kAAWakeLockInfoFieldNumber = 1,
   };
-  // required .protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
+  // .protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
   bool has_a_awakelockinfo() const;
   private:
   bool _internal_has_a_awakelockinfo() const;
@@ -599,9 +634,8 @@ class Msg_NotifyWakeLockChange final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::hal::WakeLockInformation* a_awakelockinfo_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
@@ -609,7 +643,7 @@ class Msg_NotifyWakeLockChange final :
 // -------------------------------------------------------------------
 
 class Msg_Vibrate final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_Vibrate) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_Vibrate) */ {
  public:
   inline Msg_Vibrate() : Msg_Vibrate(nullptr) {}
   ~Msg_Vibrate() override;
@@ -639,13 +673,15 @@ class Msg_Vibrate final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_Vibrate& default_instance() {
     return *internal_default_instance();
   }
@@ -683,9 +719,15 @@ class Msg_Vibrate final :
   Msg_Vibrate* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_Vibrate>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_Vibrate& from);
-  void MergeFrom(const Msg_Vibrate& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_Vibrate& from) {
+    Msg_Vibrate::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -698,7 +740,7 @@ class Msg_Vibrate final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_Vibrate* other);
 
   private:
@@ -711,7 +753,10 @@ class Msg_Vibrate final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -766,11 +811,7 @@ class Msg_Vibrate final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
       mutable_a_id();
 
-  // required bytes a_browser = 3;
-  bool has_a_browser() const;
-  private:
-  bool _internal_has_a_browser() const;
-  public:
+  // bytes a_browser = 3;
   void clear_a_browser();
   const std::string& a_browser() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -792,11 +833,12 @@ class Msg_Vibrate final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_pattern_;
+    mutable std::atomic<int> _a_pattern_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > a_id_;
+    mutable std::atomic<int> _a_id_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_browser_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
@@ -804,7 +846,7 @@ class Msg_Vibrate final :
 // -------------------------------------------------------------------
 
 class Msg_CancelVibrate final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_CancelVibrate) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_CancelVibrate) */ {
  public:
   inline Msg_CancelVibrate() : Msg_CancelVibrate(nullptr) {}
   ~Msg_CancelVibrate() override;
@@ -834,13 +876,15 @@ class Msg_CancelVibrate final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_CancelVibrate& default_instance() {
     return *internal_default_instance();
   }
@@ -878,9 +922,15 @@ class Msg_CancelVibrate final :
   Msg_CancelVibrate* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_CancelVibrate>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_CancelVibrate& from);
-  void MergeFrom(const Msg_CancelVibrate& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_CancelVibrate& from) {
+    Msg_CancelVibrate::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -893,7 +943,7 @@ class Msg_CancelVibrate final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_CancelVibrate* other);
 
   private:
@@ -906,7 +956,10 @@ class Msg_CancelVibrate final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -938,11 +991,7 @@ class Msg_CancelVibrate final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t >*
       mutable_a_id();
 
-  // required bytes a_browser = 2;
-  bool has_a_browser() const;
-  private:
-  bool _internal_has_a_browser() const;
-  public:
+  // bytes a_browser = 2;
   void clear_a_browser();
   const std::string& a_browser() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -964,10 +1013,10 @@ class Msg_CancelVibrate final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > a_id_;
+    mutable std::atomic<int> _a_id_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_browser_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
@@ -975,10 +1024,9 @@ class Msg_CancelVibrate final :
 // -------------------------------------------------------------------
 
 class Msg_EnableBatteryNotifications final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableBatteryNotifications) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableBatteryNotifications) */ {
  public:
   inline Msg_EnableBatteryNotifications() : Msg_EnableBatteryNotifications(nullptr) {}
-  ~Msg_EnableBatteryNotifications() override;
   explicit PROTOBUF_CONSTEXPR Msg_EnableBatteryNotifications(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_EnableBatteryNotifications(const Msg_EnableBatteryNotifications& from);
@@ -1005,13 +1053,15 @@ class Msg_EnableBatteryNotifications final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_EnableBatteryNotifications& default_instance() {
     return *internal_default_instance();
   }
@@ -1049,23 +1099,15 @@ class Msg_EnableBatteryNotifications final :
   Msg_EnableBatteryNotifications* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_EnableBatteryNotifications>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_EnableBatteryNotifications& from);
-  void MergeFrom(const Msg_EnableBatteryNotifications& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_EnableBatteryNotifications* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_EnableBatteryNotifications& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_EnableBatteryNotifications& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1077,7 +1119,10 @@ class Msg_EnableBatteryNotifications final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1091,18 +1136,15 @@ class Msg_EnableBatteryNotifications final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_DisableBatteryNotifications final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableBatteryNotifications) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableBatteryNotifications) */ {
  public:
   inline Msg_DisableBatteryNotifications() : Msg_DisableBatteryNotifications(nullptr) {}
-  ~Msg_DisableBatteryNotifications() override;
   explicit PROTOBUF_CONSTEXPR Msg_DisableBatteryNotifications(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_DisableBatteryNotifications(const Msg_DisableBatteryNotifications& from);
@@ -1129,13 +1171,15 @@ class Msg_DisableBatteryNotifications final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_DisableBatteryNotifications& default_instance() {
     return *internal_default_instance();
   }
@@ -1173,23 +1217,15 @@ class Msg_DisableBatteryNotifications final :
   Msg_DisableBatteryNotifications* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_DisableBatteryNotifications>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_DisableBatteryNotifications& from);
-  void MergeFrom(const Msg_DisableBatteryNotifications& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_DisableBatteryNotifications* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_DisableBatteryNotifications& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_DisableBatteryNotifications& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1201,7 +1237,10 @@ class Msg_DisableBatteryNotifications final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1215,18 +1254,15 @@ class Msg_DisableBatteryNotifications final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_GetCurrentBatteryInformation final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentBatteryInformation) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentBatteryInformation) */ {
  public:
   inline Msg_GetCurrentBatteryInformation() : Msg_GetCurrentBatteryInformation(nullptr) {}
-  ~Msg_GetCurrentBatteryInformation() override;
   explicit PROTOBUF_CONSTEXPR Msg_GetCurrentBatteryInformation(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_GetCurrentBatteryInformation(const Msg_GetCurrentBatteryInformation& from);
@@ -1253,13 +1289,15 @@ class Msg_GetCurrentBatteryInformation final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_GetCurrentBatteryInformation& default_instance() {
     return *internal_default_instance();
   }
@@ -1297,23 +1335,15 @@ class Msg_GetCurrentBatteryInformation final :
   Msg_GetCurrentBatteryInformation* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_GetCurrentBatteryInformation>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_GetCurrentBatteryInformation& from);
-  void MergeFrom(const Msg_GetCurrentBatteryInformation& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_GetCurrentBatteryInformation* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_GetCurrentBatteryInformation& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_GetCurrentBatteryInformation& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1325,7 +1355,10 @@ class Msg_GetCurrentBatteryInformation final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1339,15 +1372,13 @@ class Msg_GetCurrentBatteryInformation final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply_GetCurrentBatteryInformation final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentBatteryInformation) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentBatteryInformation) */ {
  public:
   inline Reply_GetCurrentBatteryInformation() : Reply_GetCurrentBatteryInformation(nullptr) {}
   ~Reply_GetCurrentBatteryInformation() override;
@@ -1377,13 +1408,15 @@ class Reply_GetCurrentBatteryInformation final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_GetCurrentBatteryInformation& default_instance() {
     return *internal_default_instance();
   }
@@ -1421,9 +1454,15 @@ class Reply_GetCurrentBatteryInformation final :
   Reply_GetCurrentBatteryInformation* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_GetCurrentBatteryInformation>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_GetCurrentBatteryInformation& from);
-  void MergeFrom(const Reply_GetCurrentBatteryInformation& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_GetCurrentBatteryInformation& from) {
+    Reply_GetCurrentBatteryInformation::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1436,7 +1475,7 @@ class Reply_GetCurrentBatteryInformation final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_GetCurrentBatteryInformation* other);
 
   private:
@@ -1449,7 +1488,10 @@ class Reply_GetCurrentBatteryInformation final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1458,7 +1500,7 @@ class Reply_GetCurrentBatteryInformation final :
   enum : int {
     kAABatteryInfoFieldNumber = 1,
   };
-  // required .protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
+  // .protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
   bool has_a_abatteryinfo() const;
   private:
   bool _internal_has_a_abatteryinfo() const;
@@ -1484,9 +1526,8 @@ class Reply_GetCurrentBatteryInformation final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::hal::BatteryInformation* a_abatteryinfo_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
@@ -1494,10 +1535,9 @@ class Reply_GetCurrentBatteryInformation final :
 // -------------------------------------------------------------------
 
 class Msg_EnableNetworkNotifications final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableNetworkNotifications) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableNetworkNotifications) */ {
  public:
   inline Msg_EnableNetworkNotifications() : Msg_EnableNetworkNotifications(nullptr) {}
-  ~Msg_EnableNetworkNotifications() override;
   explicit PROTOBUF_CONSTEXPR Msg_EnableNetworkNotifications(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_EnableNetworkNotifications(const Msg_EnableNetworkNotifications& from);
@@ -1524,13 +1564,15 @@ class Msg_EnableNetworkNotifications final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_EnableNetworkNotifications& default_instance() {
     return *internal_default_instance();
   }
@@ -1568,23 +1610,15 @@ class Msg_EnableNetworkNotifications final :
   Msg_EnableNetworkNotifications* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_EnableNetworkNotifications>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_EnableNetworkNotifications& from);
-  void MergeFrom(const Msg_EnableNetworkNotifications& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_EnableNetworkNotifications* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_EnableNetworkNotifications& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_EnableNetworkNotifications& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1596,7 +1630,10 @@ class Msg_EnableNetworkNotifications final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1610,18 +1647,15 @@ class Msg_EnableNetworkNotifications final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_DisableNetworkNotifications final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableNetworkNotifications) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableNetworkNotifications) */ {
  public:
   inline Msg_DisableNetworkNotifications() : Msg_DisableNetworkNotifications(nullptr) {}
-  ~Msg_DisableNetworkNotifications() override;
   explicit PROTOBUF_CONSTEXPR Msg_DisableNetworkNotifications(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_DisableNetworkNotifications(const Msg_DisableNetworkNotifications& from);
@@ -1648,13 +1682,15 @@ class Msg_DisableNetworkNotifications final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_DisableNetworkNotifications& default_instance() {
     return *internal_default_instance();
   }
@@ -1692,23 +1728,15 @@ class Msg_DisableNetworkNotifications final :
   Msg_DisableNetworkNotifications* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_DisableNetworkNotifications>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_DisableNetworkNotifications& from);
-  void MergeFrom(const Msg_DisableNetworkNotifications& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_DisableNetworkNotifications* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_DisableNetworkNotifications& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_DisableNetworkNotifications& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1720,7 +1748,10 @@ class Msg_DisableNetworkNotifications final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1734,18 +1765,15 @@ class Msg_DisableNetworkNotifications final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_GetCurrentNetworkInformation final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentNetworkInformation) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentNetworkInformation) */ {
  public:
   inline Msg_GetCurrentNetworkInformation() : Msg_GetCurrentNetworkInformation(nullptr) {}
-  ~Msg_GetCurrentNetworkInformation() override;
   explicit PROTOBUF_CONSTEXPR Msg_GetCurrentNetworkInformation(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_GetCurrentNetworkInformation(const Msg_GetCurrentNetworkInformation& from);
@@ -1772,13 +1800,15 @@ class Msg_GetCurrentNetworkInformation final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_GetCurrentNetworkInformation& default_instance() {
     return *internal_default_instance();
   }
@@ -1816,23 +1846,15 @@ class Msg_GetCurrentNetworkInformation final :
   Msg_GetCurrentNetworkInformation* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_GetCurrentNetworkInformation>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_GetCurrentNetworkInformation& from);
-  void MergeFrom(const Msg_GetCurrentNetworkInformation& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_GetCurrentNetworkInformation* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_GetCurrentNetworkInformation& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_GetCurrentNetworkInformation& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1844,7 +1866,10 @@ class Msg_GetCurrentNetworkInformation final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1858,15 +1883,13 @@ class Msg_GetCurrentNetworkInformation final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply_GetCurrentNetworkInformation final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentNetworkInformation) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentNetworkInformation) */ {
  public:
   inline Reply_GetCurrentNetworkInformation() : Reply_GetCurrentNetworkInformation(nullptr) {}
   ~Reply_GetCurrentNetworkInformation() override;
@@ -1896,13 +1919,15 @@ class Reply_GetCurrentNetworkInformation final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_GetCurrentNetworkInformation& default_instance() {
     return *internal_default_instance();
   }
@@ -1940,9 +1965,15 @@ class Reply_GetCurrentNetworkInformation final :
   Reply_GetCurrentNetworkInformation* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_GetCurrentNetworkInformation>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_GetCurrentNetworkInformation& from);
-  void MergeFrom(const Reply_GetCurrentNetworkInformation& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_GetCurrentNetworkInformation& from) {
+    Reply_GetCurrentNetworkInformation::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1955,7 +1986,7 @@ class Reply_GetCurrentNetworkInformation final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_GetCurrentNetworkInformation* other);
 
   private:
@@ -1968,7 +1999,10 @@ class Reply_GetCurrentNetworkInformation final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1977,7 +2011,7 @@ class Reply_GetCurrentNetworkInformation final :
   enum : int {
     kAANetworkInfoFieldNumber = 1,
   };
-  // required .protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
+  // .protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
   bool has_a_anetworkinfo() const;
   private:
   bool _internal_has_a_anetworkinfo() const;
@@ -2003,9 +2037,8 @@ class Reply_GetCurrentNetworkInformation final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::hal::NetworkInformation* a_anetworkinfo_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
@@ -2013,7 +2046,7 @@ class Reply_GetCurrentNetworkInformation final :
 // -------------------------------------------------------------------
 
 class Msg_ModifyWakeLock final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock) */ {
  public:
   inline Msg_ModifyWakeLock() : Msg_ModifyWakeLock(nullptr) {}
   ~Msg_ModifyWakeLock() override;
@@ -2043,13 +2076,15 @@ class Msg_ModifyWakeLock final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_ModifyWakeLock& default_instance() {
     return *internal_default_instance();
   }
@@ -2087,9 +2122,15 @@ class Msg_ModifyWakeLock final :
   Msg_ModifyWakeLock* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ModifyWakeLock>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_ModifyWakeLock& from);
-  void MergeFrom(const Msg_ModifyWakeLock& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_ModifyWakeLock& from) {
+    Msg_ModifyWakeLock::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2102,7 +2143,7 @@ class Msg_ModifyWakeLock final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_ModifyWakeLock* other);
 
   private:
@@ -2115,7 +2156,10 @@ class Msg_ModifyWakeLock final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2126,11 +2170,7 @@ class Msg_ModifyWakeLock final :
     kAALockAdjustFieldNumber = 2,
     kAAHiddenAdjustFieldNumber = 3,
   };
-  // required string a_aTopic = 1;
-  bool has_a_atopic() const;
-  private:
-  bool _internal_has_a_atopic() const;
-  public:
+  // string a_aTopic = 1;
   void clear_a_atopic();
   const std::string& a_atopic() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2144,11 +2184,7 @@ class Msg_ModifyWakeLock final :
   std::string* _internal_mutable_a_atopic();
   public:
 
-  // required bytes a_aLockAdjust = 2;
-  bool has_a_alockadjust() const;
-  private:
-  bool _internal_has_a_alockadjust() const;
-  public:
+  // bytes a_aLockAdjust = 2;
   void clear_a_alockadjust();
   const std::string& a_alockadjust() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2162,11 +2198,7 @@ class Msg_ModifyWakeLock final :
   std::string* _internal_mutable_a_alockadjust();
   public:
 
-  // required bytes a_aHiddenAdjust = 3;
-  bool has_a_ahiddenadjust() const;
-  private:
-  bool _internal_has_a_ahiddenadjust() const;
-  public:
+  // bytes a_aHiddenAdjust = 3;
   void clear_a_ahiddenadjust();
   const std::string& a_ahiddenadjust() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2184,18 +2216,14 @@ class Msg_ModifyWakeLock final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atopic_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_alockadjust_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ahiddenadjust_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
@@ -2203,10 +2231,9 @@ class Msg_ModifyWakeLock final :
 // -------------------------------------------------------------------
 
 class Msg_EnableWakeLockNotifications final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableWakeLockNotifications) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableWakeLockNotifications) */ {
  public:
   inline Msg_EnableWakeLockNotifications() : Msg_EnableWakeLockNotifications(nullptr) {}
-  ~Msg_EnableWakeLockNotifications() override;
   explicit PROTOBUF_CONSTEXPR Msg_EnableWakeLockNotifications(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_EnableWakeLockNotifications(const Msg_EnableWakeLockNotifications& from);
@@ -2233,13 +2260,15 @@ class Msg_EnableWakeLockNotifications final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_EnableWakeLockNotifications& default_instance() {
     return *internal_default_instance();
   }
@@ -2277,23 +2306,15 @@ class Msg_EnableWakeLockNotifications final :
   Msg_EnableWakeLockNotifications* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_EnableWakeLockNotifications>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_EnableWakeLockNotifications& from);
-  void MergeFrom(const Msg_EnableWakeLockNotifications& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_EnableWakeLockNotifications* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_EnableWakeLockNotifications& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_EnableWakeLockNotifications& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -2305,7 +2326,10 @@ class Msg_EnableWakeLockNotifications final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2319,18 +2343,15 @@ class Msg_EnableWakeLockNotifications final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_DisableWakeLockNotifications final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableWakeLockNotifications) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableWakeLockNotifications) */ {
  public:
   inline Msg_DisableWakeLockNotifications() : Msg_DisableWakeLockNotifications(nullptr) {}
-  ~Msg_DisableWakeLockNotifications() override;
   explicit PROTOBUF_CONSTEXPR Msg_DisableWakeLockNotifications(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_DisableWakeLockNotifications(const Msg_DisableWakeLockNotifications& from);
@@ -2357,13 +2378,15 @@ class Msg_DisableWakeLockNotifications final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_DisableWakeLockNotifications& default_instance() {
     return *internal_default_instance();
   }
@@ -2401,23 +2424,15 @@ class Msg_DisableWakeLockNotifications final :
   Msg_DisableWakeLockNotifications* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_DisableWakeLockNotifications>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_DisableWakeLockNotifications& from);
-  void MergeFrom(const Msg_DisableWakeLockNotifications& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_DisableWakeLockNotifications* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_DisableWakeLockNotifications& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_DisableWakeLockNotifications& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -2429,7 +2444,10 @@ class Msg_DisableWakeLockNotifications final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2443,15 +2461,13 @@ class Msg_DisableWakeLockNotifications final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_GetWakeLockInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_GetWakeLockInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_GetWakeLockInfo) */ {
  public:
   inline Msg_GetWakeLockInfo() : Msg_GetWakeLockInfo(nullptr) {}
   ~Msg_GetWakeLockInfo() override;
@@ -2481,13 +2497,15 @@ class Msg_GetWakeLockInfo final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_GetWakeLockInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -2525,9 +2543,15 @@ class Msg_GetWakeLockInfo final :
   Msg_GetWakeLockInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_GetWakeLockInfo>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_GetWakeLockInfo& from);
-  void MergeFrom(const Msg_GetWakeLockInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_GetWakeLockInfo& from) {
+    Msg_GetWakeLockInfo::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2540,7 +2564,7 @@ class Msg_GetWakeLockInfo final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_GetWakeLockInfo* other);
 
   private:
@@ -2553,7 +2577,10 @@ class Msg_GetWakeLockInfo final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2562,11 +2589,7 @@ class Msg_GetWakeLockInfo final :
   enum : int {
     kAATopicFieldNumber = 1,
   };
-  // required string a_aTopic = 1;
-  bool has_a_atopic() const;
-  private:
-  bool _internal_has_a_atopic() const;
-  public:
+  // string a_aTopic = 1;
   void clear_a_atopic();
   const std::string& a_atopic() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2588,9 +2611,8 @@ class Msg_GetWakeLockInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atopic_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
@@ -2598,7 +2620,7 @@ class Msg_GetWakeLockInfo final :
 // -------------------------------------------------------------------
 
 class Reply_GetWakeLockInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Reply_GetWakeLockInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Reply_GetWakeLockInfo) */ {
  public:
   inline Reply_GetWakeLockInfo() : Reply_GetWakeLockInfo(nullptr) {}
   ~Reply_GetWakeLockInfo() override;
@@ -2628,13 +2650,15 @@ class Reply_GetWakeLockInfo final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_GetWakeLockInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -2672,9 +2696,15 @@ class Reply_GetWakeLockInfo final :
   Reply_GetWakeLockInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_GetWakeLockInfo>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_GetWakeLockInfo& from);
-  void MergeFrom(const Reply_GetWakeLockInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_GetWakeLockInfo& from) {
+    Reply_GetWakeLockInfo::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2687,7 +2717,7 @@ class Reply_GetWakeLockInfo final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_GetWakeLockInfo* other);
 
   private:
@@ -2700,7 +2730,10 @@ class Reply_GetWakeLockInfo final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2709,7 +2742,7 @@ class Reply_GetWakeLockInfo final :
   enum : int {
     kAAWakeLockInfoFieldNumber = 1,
   };
-  // required .protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
+  // .protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
   bool has_a_awakelockinfo() const;
   private:
   bool _internal_has_a_awakelockinfo() const;
@@ -2735,9 +2768,8 @@ class Reply_GetWakeLockInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::hal::WakeLockInformation* a_awakelockinfo_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
@@ -2745,7 +2777,7 @@ class Reply_GetWakeLockInfo final :
 // -------------------------------------------------------------------
 
 class Msg_LockScreenOrientation final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_LockScreenOrientation) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_LockScreenOrientation) */ {
  public:
   inline Msg_LockScreenOrientation() : Msg_LockScreenOrientation(nullptr) {}
   ~Msg_LockScreenOrientation() override;
@@ -2775,13 +2807,15 @@ class Msg_LockScreenOrientation final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_LockScreenOrientation& default_instance() {
     return *internal_default_instance();
   }
@@ -2819,9 +2853,15 @@ class Msg_LockScreenOrientation final :
   Msg_LockScreenOrientation* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_LockScreenOrientation>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_LockScreenOrientation& from);
-  void MergeFrom(const Msg_LockScreenOrientation& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_LockScreenOrientation& from) {
+    Msg_LockScreenOrientation::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2834,7 +2874,7 @@ class Msg_LockScreenOrientation final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_LockScreenOrientation* other);
 
   private:
@@ -2847,7 +2887,10 @@ class Msg_LockScreenOrientation final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2856,11 +2899,7 @@ class Msg_LockScreenOrientation final :
   enum : int {
     kAAOrientationFieldNumber = 1,
   };
-  // required bytes a_aOrientation = 1;
-  bool has_a_aorientation() const;
-  private:
-  bool _internal_has_a_aorientation() const;
-  public:
+  // bytes a_aOrientation = 1;
   void clear_a_aorientation();
   const std::string& a_aorientation() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2882,9 +2921,8 @@ class Msg_LockScreenOrientation final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aorientation_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
@@ -2892,7 +2930,7 @@ class Msg_LockScreenOrientation final :
 // -------------------------------------------------------------------
 
 class Reply_LockScreenOrientation final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Reply_LockScreenOrientation) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Reply_LockScreenOrientation) */ {
  public:
   inline Reply_LockScreenOrientation() : Reply_LockScreenOrientation(nullptr) {}
   ~Reply_LockScreenOrientation() override;
@@ -2922,13 +2960,15 @@ class Reply_LockScreenOrientation final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_LockScreenOrientation& default_instance() {
     return *internal_default_instance();
   }
@@ -2966,9 +3006,15 @@ class Reply_LockScreenOrientation final :
   Reply_LockScreenOrientation* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_LockScreenOrientation>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_LockScreenOrientation& from);
-  void MergeFrom(const Reply_LockScreenOrientation& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_LockScreenOrientation& from) {
+    Reply_LockScreenOrientation::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2981,7 +3027,7 @@ class Reply_LockScreenOrientation final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_LockScreenOrientation* other);
 
   private:
@@ -2994,7 +3040,10 @@ class Reply_LockScreenOrientation final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3003,11 +3052,7 @@ class Reply_LockScreenOrientation final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // required bytes a_result = 1;
-  bool has_a_result() const;
-  private:
-  bool _internal_has_a_result() const;
-  public:
+  // bytes a_result = 1;
   void clear_a_result();
   const std::string& a_result() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3029,9 +3074,8 @@ class Reply_LockScreenOrientation final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_result_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
@@ -3039,10 +3083,9 @@ class Reply_LockScreenOrientation final :
 // -------------------------------------------------------------------
 
 class Msg_UnlockScreenOrientation final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_UnlockScreenOrientation) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_UnlockScreenOrientation) */ {
  public:
   inline Msg_UnlockScreenOrientation() : Msg_UnlockScreenOrientation(nullptr) {}
-  ~Msg_UnlockScreenOrientation() override;
   explicit PROTOBUF_CONSTEXPR Msg_UnlockScreenOrientation(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_UnlockScreenOrientation(const Msg_UnlockScreenOrientation& from);
@@ -3069,13 +3112,15 @@ class Msg_UnlockScreenOrientation final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_UnlockScreenOrientation& default_instance() {
     return *internal_default_instance();
   }
@@ -3113,23 +3158,15 @@ class Msg_UnlockScreenOrientation final :
   Msg_UnlockScreenOrientation* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_UnlockScreenOrientation>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_UnlockScreenOrientation& from);
-  void MergeFrom(const Msg_UnlockScreenOrientation& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_UnlockScreenOrientation* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_UnlockScreenOrientation& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_UnlockScreenOrientation& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -3141,7 +3178,10 @@ class Msg_UnlockScreenOrientation final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3155,15 +3195,13 @@ class Msg_UnlockScreenOrientation final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_PerformHapticFeedback final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_PerformHapticFeedback) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_PerformHapticFeedback) */ {
  public:
   inline Msg_PerformHapticFeedback() : Msg_PerformHapticFeedback(nullptr) {}
   ~Msg_PerformHapticFeedback() override;
@@ -3193,13 +3231,15 @@ class Msg_PerformHapticFeedback final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_PerformHapticFeedback& default_instance() {
     return *internal_default_instance();
   }
@@ -3237,9 +3277,15 @@ class Msg_PerformHapticFeedback final :
   Msg_PerformHapticFeedback* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_PerformHapticFeedback>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_PerformHapticFeedback& from);
-  void MergeFrom(const Msg_PerformHapticFeedback& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_PerformHapticFeedback& from) {
+    Msg_PerformHapticFeedback::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3252,7 +3298,7 @@ class Msg_PerformHapticFeedback final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_PerformHapticFeedback* other);
 
   private:
@@ -3265,7 +3311,10 @@ class Msg_PerformHapticFeedback final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3274,11 +3323,7 @@ class Msg_PerformHapticFeedback final :
   enum : int {
     kAATypeFieldNumber = 1,
   };
-  // required sint32 a_aType = 1;
-  bool has_a_atype() const;
-  private:
-  bool _internal_has_a_atype() const;
-  public:
+  // sint32 a_aType = 1;
   void clear_a_atype();
   int32_t a_atype() const;
   void set_a_atype(int32_t value);
@@ -3295,9 +3340,8 @@ class Msg_PerformHapticFeedback final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     int32_t a_atype_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
@@ -3305,7 +3349,7 @@ class Msg_PerformHapticFeedback final :
 // -------------------------------------------------------------------
 
 class Msg_NotifySensorChange final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifySensorChange) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifySensorChange) */ {
  public:
   inline Msg_NotifySensorChange() : Msg_NotifySensorChange(nullptr) {}
   ~Msg_NotifySensorChange() override;
@@ -3335,13 +3379,15 @@ class Msg_NotifySensorChange final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_NotifySensorChange& default_instance() {
     return *internal_default_instance();
   }
@@ -3379,9 +3425,15 @@ class Msg_NotifySensorChange final :
   Msg_NotifySensorChange* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_NotifySensorChange>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_NotifySensorChange& from);
-  void MergeFrom(const Msg_NotifySensorChange& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_NotifySensorChange& from) {
+    Msg_NotifySensorChange::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3394,7 +3446,7 @@ class Msg_NotifySensorChange final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_NotifySensorChange* other);
 
   private:
@@ -3407,7 +3459,10 @@ class Msg_NotifySensorChange final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3416,7 +3471,7 @@ class Msg_NotifySensorChange final :
   enum : int {
     kAASensorDataFieldNumber = 1,
   };
-  // required .protobuf.mozilla.hal.SensorData a_aSensorData = 1;
+  // .protobuf.mozilla.hal.SensorData a_aSensorData = 1;
   bool has_a_asensordata() const;
   private:
   bool _internal_has_a_asensordata() const;
@@ -3442,9 +3497,8 @@ class Msg_NotifySensorChange final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::hal::SensorData* a_asensordata_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
@@ -3452,7 +3506,7 @@ class Msg_NotifySensorChange final :
 // -------------------------------------------------------------------
 
 class Msg_EnableSensorNotifications final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableSensorNotifications) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableSensorNotifications) */ {
  public:
   inline Msg_EnableSensorNotifications() : Msg_EnableSensorNotifications(nullptr) {}
   ~Msg_EnableSensorNotifications() override;
@@ -3482,13 +3536,15 @@ class Msg_EnableSensorNotifications final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_EnableSensorNotifications& default_instance() {
     return *internal_default_instance();
   }
@@ -3526,9 +3582,15 @@ class Msg_EnableSensorNotifications final :
   Msg_EnableSensorNotifications* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_EnableSensorNotifications>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_EnableSensorNotifications& from);
-  void MergeFrom(const Msg_EnableSensorNotifications& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_EnableSensorNotifications& from) {
+    Msg_EnableSensorNotifications::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3541,7 +3603,7 @@ class Msg_EnableSensorNotifications final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_EnableSensorNotifications* other);
 
   private:
@@ -3554,7 +3616,10 @@ class Msg_EnableSensorNotifications final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3563,11 +3628,7 @@ class Msg_EnableSensorNotifications final :
   enum : int {
     kAASensorFieldNumber = 1,
   };
-  // required bytes a_aSensor = 1;
-  bool has_a_asensor() const;
-  private:
-  bool _internal_has_a_asensor() const;
-  public:
+  // bytes a_aSensor = 1;
   void clear_a_asensor();
   const std::string& a_asensor() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3589,9 +3650,8 @@ class Msg_EnableSensorNotifications final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_asensor_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
@@ -3599,7 +3659,7 @@ class Msg_EnableSensorNotifications final :
 // -------------------------------------------------------------------
 
 class Msg_DisableSensorNotifications final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableSensorNotifications) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableSensorNotifications) */ {
  public:
   inline Msg_DisableSensorNotifications() : Msg_DisableSensorNotifications(nullptr) {}
   ~Msg_DisableSensorNotifications() override;
@@ -3629,13 +3689,15 @@ class Msg_DisableSensorNotifications final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_DisableSensorNotifications& default_instance() {
     return *internal_default_instance();
   }
@@ -3673,9 +3735,15 @@ class Msg_DisableSensorNotifications final :
   Msg_DisableSensorNotifications* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_DisableSensorNotifications>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_DisableSensorNotifications& from);
-  void MergeFrom(const Msg_DisableSensorNotifications& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_DisableSensorNotifications& from) {
+    Msg_DisableSensorNotifications::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3688,7 +3756,7 @@ class Msg_DisableSensorNotifications final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_DisableSensorNotifications* other);
 
   private:
@@ -3701,7 +3769,10 @@ class Msg_DisableSensorNotifications final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3710,11 +3781,7 @@ class Msg_DisableSensorNotifications final :
   enum : int {
     kAASensorFieldNumber = 1,
   };
-  // required bytes a_aSensor = 1;
-  bool has_a_asensor() const;
-  private:
-  bool _internal_has_a_asensor() const;
-  public:
+  // bytes a_aSensor = 1;
   void clear_a_asensor();
   const std::string& a_asensor() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3736,9 +3803,8 @@ class Msg_DisableSensorNotifications final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_asensor_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
@@ -3746,10 +3812,9 @@ class Msg_DisableSensorNotifications final :
 // -------------------------------------------------------------------
 
 class Msg___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Msg___delete__) */ {
  public:
   inline Msg___delete__() : Msg___delete__(nullptr) {}
-  ~Msg___delete__() override;
   explicit PROTOBUF_CONSTEXPR Msg___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg___delete__(const Msg___delete__& from);
@@ -3776,13 +3841,15 @@ class Msg___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -3820,23 +3887,15 @@ class Msg___delete__ final :
   Msg___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg___delete__& from);
-  void MergeFrom(const Msg___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -3848,7 +3907,10 @@ class Msg___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3862,18 +3924,15 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Reply___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.hal_sandbox.PHal.Reply___delete__) */ {
  public:
   inline Reply___delete__() : Reply___delete__(nullptr) {}
-  ~Reply___delete__() override;
   explicit PROTOBUF_CONSTEXPR Reply___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply___delete__(const Reply___delete__& from);
@@ -3900,13 +3959,15 @@ class Reply___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -3944,23 +4005,15 @@ class Reply___delete__ final :
   Reply___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply___delete__& from);
-  void MergeFrom(const Reply___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -3972,7 +4025,10 @@ class Reply___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3986,9 +4042,7 @@ class Reply___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PHal_2eproto;
 };
 // ===================================================================
@@ -4002,11 +4056,9 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_NotifyBatteryChange
 
-// required .protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
+// .protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
 inline bool Msg_NotifyBatteryChange::_internal_has_a_abatteryinfo() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_abatteryinfo_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_abatteryinfo_ != nullptr;
 }
 inline bool Msg_NotifyBatteryChange::has_a_abatteryinfo() const {
   return _internal_has_a_abatteryinfo();
@@ -4027,14 +4079,14 @@ inline void Msg_NotifyBatteryChange::unsafe_arena_set_allocated_a_abatteryinfo(
   }
   _impl_.a_abatteryinfo_ = a_abatteryinfo;
   if (a_abatteryinfo) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyBatteryChange.a_aBatteryInfo)
 }
 inline ::protobuf::mozilla::hal::BatteryInformation* Msg_NotifyBatteryChange::release_a_abatteryinfo() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::hal::BatteryInformation* temp = _impl_.a_abatteryinfo_;
   _impl_.a_abatteryinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -4050,13 +4102,13 @@ inline ::protobuf::mozilla::hal::BatteryInformation* Msg_NotifyBatteryChange::re
 }
 inline ::protobuf::mozilla::hal::BatteryInformation* Msg_NotifyBatteryChange::unsafe_arena_release_a_abatteryinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyBatteryChange.a_aBatteryInfo)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::hal::BatteryInformation* temp = _impl_.a_abatteryinfo_;
   _impl_.a_abatteryinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::hal::BatteryInformation* Msg_NotifyBatteryChange::_internal_mutable_a_abatteryinfo() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_abatteryinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::hal::BatteryInformation>(GetArenaForAllocation());
     _impl_.a_abatteryinfo_ = p;
@@ -4081,9 +4133,9 @@ inline void Msg_NotifyBatteryChange::set_allocated_a_abatteryinfo(::protobuf::mo
       a_abatteryinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_abatteryinfo, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_abatteryinfo_ = a_abatteryinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyBatteryChange.a_aBatteryInfo)
@@ -4093,11 +4145,9 @@ inline void Msg_NotifyBatteryChange::set_allocated_a_abatteryinfo(::protobuf::mo
 
 // Msg_NotifyNetworkChange
 
-// required .protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
+// .protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
 inline bool Msg_NotifyNetworkChange::_internal_has_a_anetworkinfo() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_anetworkinfo_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_anetworkinfo_ != nullptr;
 }
 inline bool Msg_NotifyNetworkChange::has_a_anetworkinfo() const {
   return _internal_has_a_anetworkinfo();
@@ -4118,14 +4168,14 @@ inline void Msg_NotifyNetworkChange::unsafe_arena_set_allocated_a_anetworkinfo(
   }
   _impl_.a_anetworkinfo_ = a_anetworkinfo;
   if (a_anetworkinfo) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyNetworkChange.a_aNetworkInfo)
 }
 inline ::protobuf::mozilla::hal::NetworkInformation* Msg_NotifyNetworkChange::release_a_anetworkinfo() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::hal::NetworkInformation* temp = _impl_.a_anetworkinfo_;
   _impl_.a_anetworkinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -4141,13 +4191,13 @@ inline ::protobuf::mozilla::hal::NetworkInformation* Msg_NotifyNetworkChange::re
 }
 inline ::protobuf::mozilla::hal::NetworkInformation* Msg_NotifyNetworkChange::unsafe_arena_release_a_anetworkinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyNetworkChange.a_aNetworkInfo)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::hal::NetworkInformation* temp = _impl_.a_anetworkinfo_;
   _impl_.a_anetworkinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::hal::NetworkInformation* Msg_NotifyNetworkChange::_internal_mutable_a_anetworkinfo() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_anetworkinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::hal::NetworkInformation>(GetArenaForAllocation());
     _impl_.a_anetworkinfo_ = p;
@@ -4172,9 +4222,9 @@ inline void Msg_NotifyNetworkChange::set_allocated_a_anetworkinfo(::protobuf::mo
       a_anetworkinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_anetworkinfo, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_anetworkinfo_ = a_anetworkinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyNetworkChange.a_aNetworkInfo)
@@ -4184,11 +4234,9 @@ inline void Msg_NotifyNetworkChange::set_allocated_a_anetworkinfo(::protobuf::mo
 
 // Msg_NotifyWakeLockChange
 
-// required .protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
+// .protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
 inline bool Msg_NotifyWakeLockChange::_internal_has_a_awakelockinfo() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_awakelockinfo_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_awakelockinfo_ != nullptr;
 }
 inline bool Msg_NotifyWakeLockChange::has_a_awakelockinfo() const {
   return _internal_has_a_awakelockinfo();
@@ -4209,14 +4257,14 @@ inline void Msg_NotifyWakeLockChange::unsafe_arena_set_allocated_a_awakelockinfo
   }
   _impl_.a_awakelockinfo_ = a_awakelockinfo;
   if (a_awakelockinfo) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyWakeLockChange.a_aWakeLockInfo)
 }
 inline ::protobuf::mozilla::hal::WakeLockInformation* Msg_NotifyWakeLockChange::release_a_awakelockinfo() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::hal::WakeLockInformation* temp = _impl_.a_awakelockinfo_;
   _impl_.a_awakelockinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -4232,13 +4280,13 @@ inline ::protobuf::mozilla::hal::WakeLockInformation* Msg_NotifyWakeLockChange::
 }
 inline ::protobuf::mozilla::hal::WakeLockInformation* Msg_NotifyWakeLockChange::unsafe_arena_release_a_awakelockinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyWakeLockChange.a_aWakeLockInfo)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::hal::WakeLockInformation* temp = _impl_.a_awakelockinfo_;
   _impl_.a_awakelockinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::hal::WakeLockInformation* Msg_NotifyWakeLockChange::_internal_mutable_a_awakelockinfo() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_awakelockinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::hal::WakeLockInformation>(GetArenaForAllocation());
     _impl_.a_awakelockinfo_ = p;
@@ -4263,9 +4311,9 @@ inline void Msg_NotifyWakeLockChange::set_allocated_a_awakelockinfo(::protobuf::
       a_awakelockinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_awakelockinfo, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_awakelockinfo_ = a_awakelockinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyWakeLockChange.a_aWakeLockInfo)
@@ -4369,17 +4417,9 @@ Msg_Vibrate::mutable_a_id() {
   return _internal_mutable_a_id();
 }
 
-// required bytes a_browser = 3;
-inline bool Msg_Vibrate::_internal_has_a_browser() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_Vibrate::has_a_browser() const {
-  return _internal_has_a_browser();
-}
+// bytes a_browser = 3;
 inline void Msg_Vibrate::clear_a_browser() {
   _impl_.a_browser_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_Vibrate::a_browser() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.hal_sandbox.PHal.Msg_Vibrate.a_browser)
@@ -4388,7 +4428,7 @@ inline const std::string& Msg_Vibrate::a_browser() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Vibrate::set_a_browser(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_browser_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.hal_sandbox.PHal.Msg_Vibrate.a_browser)
 }
@@ -4401,32 +4441,22 @@ inline const std::string& Msg_Vibrate::_internal_a_browser() const {
   return _impl_.a_browser_.Get();
 }
 inline void Msg_Vibrate::_internal_set_a_browser(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_browser_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_Vibrate::_internal_mutable_a_browser() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_browser_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_Vibrate::release_a_browser() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.hal_sandbox.PHal.Msg_Vibrate.a_browser)
-  if (!_internal_has_a_browser()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_browser_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_browser_.IsDefault()) {
-    _impl_.a_browser_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_browser_.Release();
 }
 inline void Msg_Vibrate::set_allocated_a_browser(std::string* a_browser) {
   if (a_browser != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_browser_.SetAllocated(a_browser, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4488,17 +4518,9 @@ Msg_CancelVibrate::mutable_a_id() {
   return _internal_mutable_a_id();
 }
 
-// required bytes a_browser = 2;
-inline bool Msg_CancelVibrate::_internal_has_a_browser() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_CancelVibrate::has_a_browser() const {
-  return _internal_has_a_browser();
-}
+// bytes a_browser = 2;
 inline void Msg_CancelVibrate::clear_a_browser() {
   _impl_.a_browser_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_CancelVibrate::a_browser() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.hal_sandbox.PHal.Msg_CancelVibrate.a_browser)
@@ -4507,7 +4529,7 @@ inline const std::string& Msg_CancelVibrate::a_browser() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CancelVibrate::set_a_browser(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_browser_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.hal_sandbox.PHal.Msg_CancelVibrate.a_browser)
 }
@@ -4520,32 +4542,22 @@ inline const std::string& Msg_CancelVibrate::_internal_a_browser() const {
   return _impl_.a_browser_.Get();
 }
 inline void Msg_CancelVibrate::_internal_set_a_browser(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_browser_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CancelVibrate::_internal_mutable_a_browser() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_browser_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CancelVibrate::release_a_browser() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.hal_sandbox.PHal.Msg_CancelVibrate.a_browser)
-  if (!_internal_has_a_browser()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_browser_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_browser_.IsDefault()) {
-    _impl_.a_browser_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_browser_.Release();
 }
 inline void Msg_CancelVibrate::set_allocated_a_browser(std::string* a_browser) {
   if (a_browser != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_browser_.SetAllocated(a_browser, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4572,11 +4584,9 @@ inline void Msg_CancelVibrate::set_allocated_a_browser(std::string* a_browser) {
 
 // Reply_GetCurrentBatteryInformation
 
-// required .protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
+// .protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
 inline bool Reply_GetCurrentBatteryInformation::_internal_has_a_abatteryinfo() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_abatteryinfo_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_abatteryinfo_ != nullptr;
 }
 inline bool Reply_GetCurrentBatteryInformation::has_a_abatteryinfo() const {
   return _internal_has_a_abatteryinfo();
@@ -4597,14 +4607,14 @@ inline void Reply_GetCurrentBatteryInformation::unsafe_arena_set_allocated_a_aba
   }
   _impl_.a_abatteryinfo_ = a_abatteryinfo;
   if (a_abatteryinfo) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentBatteryInformation.a_aBatteryInfo)
 }
 inline ::protobuf::mozilla::hal::BatteryInformation* Reply_GetCurrentBatteryInformation::release_a_abatteryinfo() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::hal::BatteryInformation* temp = _impl_.a_abatteryinfo_;
   _impl_.a_abatteryinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -4620,13 +4630,13 @@ inline ::protobuf::mozilla::hal::BatteryInformation* Reply_GetCurrentBatteryInfo
 }
 inline ::protobuf::mozilla::hal::BatteryInformation* Reply_GetCurrentBatteryInformation::unsafe_arena_release_a_abatteryinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentBatteryInformation.a_aBatteryInfo)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::hal::BatteryInformation* temp = _impl_.a_abatteryinfo_;
   _impl_.a_abatteryinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::hal::BatteryInformation* Reply_GetCurrentBatteryInformation::_internal_mutable_a_abatteryinfo() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_abatteryinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::hal::BatteryInformation>(GetArenaForAllocation());
     _impl_.a_abatteryinfo_ = p;
@@ -4651,9 +4661,9 @@ inline void Reply_GetCurrentBatteryInformation::set_allocated_a_abatteryinfo(::p
       a_abatteryinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_abatteryinfo, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_abatteryinfo_ = a_abatteryinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentBatteryInformation.a_aBatteryInfo)
@@ -4675,11 +4685,9 @@ inline void Reply_GetCurrentBatteryInformation::set_allocated_a_abatteryinfo(::p
 
 // Reply_GetCurrentNetworkInformation
 
-// required .protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
+// .protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
 inline bool Reply_GetCurrentNetworkInformation::_internal_has_a_anetworkinfo() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_anetworkinfo_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_anetworkinfo_ != nullptr;
 }
 inline bool Reply_GetCurrentNetworkInformation::has_a_anetworkinfo() const {
   return _internal_has_a_anetworkinfo();
@@ -4700,14 +4708,14 @@ inline void Reply_GetCurrentNetworkInformation::unsafe_arena_set_allocated_a_ane
   }
   _impl_.a_anetworkinfo_ = a_anetworkinfo;
   if (a_anetworkinfo) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentNetworkInformation.a_aNetworkInfo)
 }
 inline ::protobuf::mozilla::hal::NetworkInformation* Reply_GetCurrentNetworkInformation::release_a_anetworkinfo() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::hal::NetworkInformation* temp = _impl_.a_anetworkinfo_;
   _impl_.a_anetworkinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -4723,13 +4731,13 @@ inline ::protobuf::mozilla::hal::NetworkInformation* Reply_GetCurrentNetworkInfo
 }
 inline ::protobuf::mozilla::hal::NetworkInformation* Reply_GetCurrentNetworkInformation::unsafe_arena_release_a_anetworkinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentNetworkInformation.a_aNetworkInfo)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::hal::NetworkInformation* temp = _impl_.a_anetworkinfo_;
   _impl_.a_anetworkinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::hal::NetworkInformation* Reply_GetCurrentNetworkInformation::_internal_mutable_a_anetworkinfo() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_anetworkinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::hal::NetworkInformation>(GetArenaForAllocation());
     _impl_.a_anetworkinfo_ = p;
@@ -4754,9 +4762,9 @@ inline void Reply_GetCurrentNetworkInformation::set_allocated_a_anetworkinfo(::p
       a_anetworkinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_anetworkinfo, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_anetworkinfo_ = a_anetworkinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentNetworkInformation.a_aNetworkInfo)
@@ -4766,17 +4774,9 @@ inline void Reply_GetCurrentNetworkInformation::set_allocated_a_anetworkinfo(::p
 
 // Msg_ModifyWakeLock
 
-// required string a_aTopic = 1;
-inline bool Msg_ModifyWakeLock::_internal_has_a_atopic() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_ModifyWakeLock::has_a_atopic() const {
-  return _internal_has_a_atopic();
-}
+// string a_aTopic = 1;
 inline void Msg_ModifyWakeLock::clear_a_atopic() {
   _impl_.a_atopic_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_ModifyWakeLock::a_atopic() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock.a_aTopic)
@@ -4785,7 +4785,7 @@ inline const std::string& Msg_ModifyWakeLock::a_atopic() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ModifyWakeLock::set_a_atopic(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_atopic_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock.a_aTopic)
 }
@@ -4798,32 +4798,22 @@ inline const std::string& Msg_ModifyWakeLock::_internal_a_atopic() const {
   return _impl_.a_atopic_.Get();
 }
 inline void Msg_ModifyWakeLock::_internal_set_a_atopic(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_atopic_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ModifyWakeLock::_internal_mutable_a_atopic() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_atopic_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ModifyWakeLock::release_a_atopic() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock.a_aTopic)
-  if (!_internal_has_a_atopic()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_atopic_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_atopic_.IsDefault()) {
-    _impl_.a_atopic_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_atopic_.Release();
 }
 inline void Msg_ModifyWakeLock::set_allocated_a_atopic(std::string* a_atopic) {
   if (a_atopic != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_atopic_.SetAllocated(a_atopic, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4834,17 +4824,9 @@ inline void Msg_ModifyWakeLock::set_allocated_a_atopic(std::string* a_atopic) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock.a_aTopic)
 }
 
-// required bytes a_aLockAdjust = 2;
-inline bool Msg_ModifyWakeLock::_internal_has_a_alockadjust() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_ModifyWakeLock::has_a_alockadjust() const {
-  return _internal_has_a_alockadjust();
-}
+// bytes a_aLockAdjust = 2;
 inline void Msg_ModifyWakeLock::clear_a_alockadjust() {
   _impl_.a_alockadjust_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_ModifyWakeLock::a_alockadjust() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock.a_aLockAdjust)
@@ -4853,7 +4835,7 @@ inline const std::string& Msg_ModifyWakeLock::a_alockadjust() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ModifyWakeLock::set_a_alockadjust(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_alockadjust_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock.a_aLockAdjust)
 }
@@ -4866,32 +4848,22 @@ inline const std::string& Msg_ModifyWakeLock::_internal_a_alockadjust() const {
   return _impl_.a_alockadjust_.Get();
 }
 inline void Msg_ModifyWakeLock::_internal_set_a_alockadjust(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_alockadjust_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ModifyWakeLock::_internal_mutable_a_alockadjust() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_alockadjust_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ModifyWakeLock::release_a_alockadjust() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock.a_aLockAdjust)
-  if (!_internal_has_a_alockadjust()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_alockadjust_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_alockadjust_.IsDefault()) {
-    _impl_.a_alockadjust_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_alockadjust_.Release();
 }
 inline void Msg_ModifyWakeLock::set_allocated_a_alockadjust(std::string* a_alockadjust) {
   if (a_alockadjust != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_alockadjust_.SetAllocated(a_alockadjust, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4902,17 +4874,9 @@ inline void Msg_ModifyWakeLock::set_allocated_a_alockadjust(std::string* a_alock
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock.a_aLockAdjust)
 }
 
-// required bytes a_aHiddenAdjust = 3;
-inline bool Msg_ModifyWakeLock::_internal_has_a_ahiddenadjust() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_ModifyWakeLock::has_a_ahiddenadjust() const {
-  return _internal_has_a_ahiddenadjust();
-}
+// bytes a_aHiddenAdjust = 3;
 inline void Msg_ModifyWakeLock::clear_a_ahiddenadjust() {
   _impl_.a_ahiddenadjust_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_ModifyWakeLock::a_ahiddenadjust() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock.a_aHiddenAdjust)
@@ -4921,7 +4885,7 @@ inline const std::string& Msg_ModifyWakeLock::a_ahiddenadjust() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ModifyWakeLock::set_a_ahiddenadjust(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_ahiddenadjust_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock.a_aHiddenAdjust)
 }
@@ -4934,32 +4898,22 @@ inline const std::string& Msg_ModifyWakeLock::_internal_a_ahiddenadjust() const 
   return _impl_.a_ahiddenadjust_.Get();
 }
 inline void Msg_ModifyWakeLock::_internal_set_a_ahiddenadjust(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_ahiddenadjust_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ModifyWakeLock::_internal_mutable_a_ahiddenadjust() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_ahiddenadjust_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ModifyWakeLock::release_a_ahiddenadjust() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock.a_aHiddenAdjust)
-  if (!_internal_has_a_ahiddenadjust()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_ahiddenadjust_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_ahiddenadjust_.IsDefault()) {
-    _impl_.a_ahiddenadjust_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_ahiddenadjust_.Release();
 }
 inline void Msg_ModifyWakeLock::set_allocated_a_ahiddenadjust(std::string* a_ahiddenadjust) {
   if (a_ahiddenadjust != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_ahiddenadjust_.SetAllocated(a_ahiddenadjust, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4982,17 +4936,9 @@ inline void Msg_ModifyWakeLock::set_allocated_a_ahiddenadjust(std::string* a_ahi
 
 // Msg_GetWakeLockInfo
 
-// required string a_aTopic = 1;
-inline bool Msg_GetWakeLockInfo::_internal_has_a_atopic() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_GetWakeLockInfo::has_a_atopic() const {
-  return _internal_has_a_atopic();
-}
+// string a_aTopic = 1;
 inline void Msg_GetWakeLockInfo::clear_a_atopic() {
   _impl_.a_atopic_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_GetWakeLockInfo::a_atopic() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.hal_sandbox.PHal.Msg_GetWakeLockInfo.a_aTopic)
@@ -5001,7 +4947,7 @@ inline const std::string& Msg_GetWakeLockInfo::a_atopic() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_GetWakeLockInfo::set_a_atopic(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_atopic_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.hal_sandbox.PHal.Msg_GetWakeLockInfo.a_aTopic)
 }
@@ -5014,32 +4960,22 @@ inline const std::string& Msg_GetWakeLockInfo::_internal_a_atopic() const {
   return _impl_.a_atopic_.Get();
 }
 inline void Msg_GetWakeLockInfo::_internal_set_a_atopic(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_atopic_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_GetWakeLockInfo::_internal_mutable_a_atopic() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_atopic_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_GetWakeLockInfo::release_a_atopic() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.hal_sandbox.PHal.Msg_GetWakeLockInfo.a_aTopic)
-  if (!_internal_has_a_atopic()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_atopic_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_atopic_.IsDefault()) {
-    _impl_.a_atopic_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_atopic_.Release();
 }
 inline void Msg_GetWakeLockInfo::set_allocated_a_atopic(std::string* a_atopic) {
   if (a_atopic != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_atopic_.SetAllocated(a_atopic, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5054,11 +4990,9 @@ inline void Msg_GetWakeLockInfo::set_allocated_a_atopic(std::string* a_atopic) {
 
 // Reply_GetWakeLockInfo
 
-// required .protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
+// .protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
 inline bool Reply_GetWakeLockInfo::_internal_has_a_awakelockinfo() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_awakelockinfo_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_awakelockinfo_ != nullptr;
 }
 inline bool Reply_GetWakeLockInfo::has_a_awakelockinfo() const {
   return _internal_has_a_awakelockinfo();
@@ -5079,14 +5013,14 @@ inline void Reply_GetWakeLockInfo::unsafe_arena_set_allocated_a_awakelockinfo(
   }
   _impl_.a_awakelockinfo_ = a_awakelockinfo;
   if (a_awakelockinfo) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.hal_sandbox.PHal.Reply_GetWakeLockInfo.a_aWakeLockInfo)
 }
 inline ::protobuf::mozilla::hal::WakeLockInformation* Reply_GetWakeLockInfo::release_a_awakelockinfo() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::hal::WakeLockInformation* temp = _impl_.a_awakelockinfo_;
   _impl_.a_awakelockinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -5102,13 +5036,13 @@ inline ::protobuf::mozilla::hal::WakeLockInformation* Reply_GetWakeLockInfo::rel
 }
 inline ::protobuf::mozilla::hal::WakeLockInformation* Reply_GetWakeLockInfo::unsafe_arena_release_a_awakelockinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.hal_sandbox.PHal.Reply_GetWakeLockInfo.a_aWakeLockInfo)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::hal::WakeLockInformation* temp = _impl_.a_awakelockinfo_;
   _impl_.a_awakelockinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::hal::WakeLockInformation* Reply_GetWakeLockInfo::_internal_mutable_a_awakelockinfo() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_awakelockinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::hal::WakeLockInformation>(GetArenaForAllocation());
     _impl_.a_awakelockinfo_ = p;
@@ -5133,9 +5067,9 @@ inline void Reply_GetWakeLockInfo::set_allocated_a_awakelockinfo(::protobuf::moz
       a_awakelockinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_awakelockinfo, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_awakelockinfo_ = a_awakelockinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.hal_sandbox.PHal.Reply_GetWakeLockInfo.a_aWakeLockInfo)
@@ -5145,17 +5079,9 @@ inline void Reply_GetWakeLockInfo::set_allocated_a_awakelockinfo(::protobuf::moz
 
 // Msg_LockScreenOrientation
 
-// required bytes a_aOrientation = 1;
-inline bool Msg_LockScreenOrientation::_internal_has_a_aorientation() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_LockScreenOrientation::has_a_aorientation() const {
-  return _internal_has_a_aorientation();
-}
+// bytes a_aOrientation = 1;
 inline void Msg_LockScreenOrientation::clear_a_aorientation() {
   _impl_.a_aorientation_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_LockScreenOrientation::a_aorientation() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.hal_sandbox.PHal.Msg_LockScreenOrientation.a_aOrientation)
@@ -5164,7 +5090,7 @@ inline const std::string& Msg_LockScreenOrientation::a_aorientation() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LockScreenOrientation::set_a_aorientation(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_aorientation_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.hal_sandbox.PHal.Msg_LockScreenOrientation.a_aOrientation)
 }
@@ -5177,32 +5103,22 @@ inline const std::string& Msg_LockScreenOrientation::_internal_a_aorientation() 
   return _impl_.a_aorientation_.Get();
 }
 inline void Msg_LockScreenOrientation::_internal_set_a_aorientation(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aorientation_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_LockScreenOrientation::_internal_mutable_a_aorientation() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_aorientation_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_LockScreenOrientation::release_a_aorientation() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.hal_sandbox.PHal.Msg_LockScreenOrientation.a_aOrientation)
-  if (!_internal_has_a_aorientation()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_aorientation_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_aorientation_.IsDefault()) {
-    _impl_.a_aorientation_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_aorientation_.Release();
 }
 inline void Msg_LockScreenOrientation::set_allocated_a_aorientation(std::string* a_aorientation) {
   if (a_aorientation != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_aorientation_.SetAllocated(a_aorientation, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5217,17 +5133,9 @@ inline void Msg_LockScreenOrientation::set_allocated_a_aorientation(std::string*
 
 // Reply_LockScreenOrientation
 
-// required bytes a_result = 1;
-inline bool Reply_LockScreenOrientation::_internal_has_a_result() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Reply_LockScreenOrientation::has_a_result() const {
-  return _internal_has_a_result();
-}
+// bytes a_result = 1;
 inline void Reply_LockScreenOrientation::clear_a_result() {
   _impl_.a_result_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_LockScreenOrientation::a_result() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.hal_sandbox.PHal.Reply_LockScreenOrientation.a_result)
@@ -5236,7 +5144,7 @@ inline const std::string& Reply_LockScreenOrientation::a_result() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_LockScreenOrientation::set_a_result(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.hal_sandbox.PHal.Reply_LockScreenOrientation.a_result)
 }
@@ -5249,32 +5157,22 @@ inline const std::string& Reply_LockScreenOrientation::_internal_a_result() cons
   return _impl_.a_result_.Get();
 }
 inline void Reply_LockScreenOrientation::_internal_set_a_result(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_result_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_LockScreenOrientation::_internal_mutable_a_result() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_result_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_LockScreenOrientation::release_a_result() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.hal_sandbox.PHal.Reply_LockScreenOrientation.a_result)
-  if (!_internal_has_a_result()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_result_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_result_.IsDefault()) {
-    _impl_.a_result_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_result_.Release();
 }
 inline void Reply_LockScreenOrientation::set_allocated_a_result(std::string* a_result) {
   if (a_result != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_result_.SetAllocated(a_result, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5293,17 +5191,9 @@ inline void Reply_LockScreenOrientation::set_allocated_a_result(std::string* a_r
 
 // Msg_PerformHapticFeedback
 
-// required sint32 a_aType = 1;
-inline bool Msg_PerformHapticFeedback::_internal_has_a_atype() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_PerformHapticFeedback::has_a_atype() const {
-  return _internal_has_a_atype();
-}
+// sint32 a_aType = 1;
 inline void Msg_PerformHapticFeedback::clear_a_atype() {
   _impl_.a_atype_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline int32_t Msg_PerformHapticFeedback::_internal_a_atype() const {
   return _impl_.a_atype_;
@@ -5313,7 +5203,7 @@ inline int32_t Msg_PerformHapticFeedback::a_atype() const {
   return _internal_a_atype();
 }
 inline void Msg_PerformHapticFeedback::_internal_set_a_atype(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_atype_ = value;
 }
 inline void Msg_PerformHapticFeedback::set_a_atype(int32_t value) {
@@ -5325,11 +5215,9 @@ inline void Msg_PerformHapticFeedback::set_a_atype(int32_t value) {
 
 // Msg_NotifySensorChange
 
-// required .protobuf.mozilla.hal.SensorData a_aSensorData = 1;
+// .protobuf.mozilla.hal.SensorData a_aSensorData = 1;
 inline bool Msg_NotifySensorChange::_internal_has_a_asensordata() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_asensordata_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_asensordata_ != nullptr;
 }
 inline bool Msg_NotifySensorChange::has_a_asensordata() const {
   return _internal_has_a_asensordata();
@@ -5350,14 +5238,14 @@ inline void Msg_NotifySensorChange::unsafe_arena_set_allocated_a_asensordata(
   }
   _impl_.a_asensordata_ = a_asensordata;
   if (a_asensordata) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifySensorChange.a_aSensorData)
 }
 inline ::protobuf::mozilla::hal::SensorData* Msg_NotifySensorChange::release_a_asensordata() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::hal::SensorData* temp = _impl_.a_asensordata_;
   _impl_.a_asensordata_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -5373,13 +5261,13 @@ inline ::protobuf::mozilla::hal::SensorData* Msg_NotifySensorChange::release_a_a
 }
 inline ::protobuf::mozilla::hal::SensorData* Msg_NotifySensorChange::unsafe_arena_release_a_asensordata() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifySensorChange.a_aSensorData)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::hal::SensorData* temp = _impl_.a_asensordata_;
   _impl_.a_asensordata_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::hal::SensorData* Msg_NotifySensorChange::_internal_mutable_a_asensordata() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_asensordata_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::hal::SensorData>(GetArenaForAllocation());
     _impl_.a_asensordata_ = p;
@@ -5404,9 +5292,9 @@ inline void Msg_NotifySensorChange::set_allocated_a_asensordata(::protobuf::mozi
       a_asensordata = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_asensordata, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_asensordata_ = a_asensordata;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifySensorChange.a_aSensorData)
@@ -5416,17 +5304,9 @@ inline void Msg_NotifySensorChange::set_allocated_a_asensordata(::protobuf::mozi
 
 // Msg_EnableSensorNotifications
 
-// required bytes a_aSensor = 1;
-inline bool Msg_EnableSensorNotifications::_internal_has_a_asensor() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_EnableSensorNotifications::has_a_asensor() const {
-  return _internal_has_a_asensor();
-}
+// bytes a_aSensor = 1;
 inline void Msg_EnableSensorNotifications::clear_a_asensor() {
   _impl_.a_asensor_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_EnableSensorNotifications::a_asensor() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableSensorNotifications.a_aSensor)
@@ -5435,7 +5315,7 @@ inline const std::string& Msg_EnableSensorNotifications::a_asensor() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_EnableSensorNotifications::set_a_asensor(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_asensor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableSensorNotifications.a_aSensor)
 }
@@ -5448,32 +5328,22 @@ inline const std::string& Msg_EnableSensorNotifications::_internal_a_asensor() c
   return _impl_.a_asensor_.Get();
 }
 inline void Msg_EnableSensorNotifications::_internal_set_a_asensor(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_asensor_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_EnableSensorNotifications::_internal_mutable_a_asensor() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_asensor_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_EnableSensorNotifications::release_a_asensor() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableSensorNotifications.a_aSensor)
-  if (!_internal_has_a_asensor()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_asensor_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_asensor_.IsDefault()) {
-    _impl_.a_asensor_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_asensor_.Release();
 }
 inline void Msg_EnableSensorNotifications::set_allocated_a_asensor(std::string* a_asensor) {
   if (a_asensor != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_asensor_.SetAllocated(a_asensor, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5488,17 +5358,9 @@ inline void Msg_EnableSensorNotifications::set_allocated_a_asensor(std::string* 
 
 // Msg_DisableSensorNotifications
 
-// required bytes a_aSensor = 1;
-inline bool Msg_DisableSensorNotifications::_internal_has_a_asensor() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_DisableSensorNotifications::has_a_asensor() const {
-  return _internal_has_a_asensor();
-}
+// bytes a_aSensor = 1;
 inline void Msg_DisableSensorNotifications::clear_a_asensor() {
   _impl_.a_asensor_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_DisableSensorNotifications::a_asensor() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableSensorNotifications.a_aSensor)
@@ -5507,7 +5369,7 @@ inline const std::string& Msg_DisableSensorNotifications::a_asensor() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DisableSensorNotifications::set_a_asensor(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_asensor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableSensorNotifications.a_aSensor)
 }
@@ -5520,32 +5382,22 @@ inline const std::string& Msg_DisableSensorNotifications::_internal_a_asensor() 
   return _impl_.a_asensor_.Get();
 }
 inline void Msg_DisableSensorNotifications::_internal_set_a_asensor(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_asensor_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DisableSensorNotifications::_internal_mutable_a_asensor() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_asensor_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DisableSensorNotifications::release_a_asensor() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableSensorNotifications.a_aSensor)
-  if (!_internal_has_a_asensor()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_asensor_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_asensor_.IsDefault()) {
-    _impl_.a_asensor_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_asensor_.Release();
 }
 inline void Msg_DisableSensorNotifications::set_allocated_a_asensor(std::string* a_asensor) {
   if (a_asensor != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_asensor_.SetAllocated(a_asensor, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

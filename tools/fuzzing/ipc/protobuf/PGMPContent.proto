@@ -5,8 +5,7 @@
 
 // Generated from PGMPContent.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.gmp.PGMPContent;
 
@@ -16,22 +15,22 @@ package protobuf.mozilla.gmp.PGMPContent;
 
 // Message declarations
 message Msg_PGMPVideoDecoderConstructor {
-  required sint64 a_actorid = 1;
+  sint64 a_actorid = 1;
 }
 
 message Reply_PGMPVideoDecoderConstructor {
 }
 
 message Msg_PGMPVideoEncoderConstructor {
-  required sint64 a_actorid = 1;
+  sint64 a_actorid = 1;
 }
 
 message Reply_PGMPVideoEncoderConstructor {
 }
 
 message Msg_PChromiumCDMConstructor {
-  required sint64 a_actorid = 1;
-  required string a_aKeySystem = 2;
+  sint64 a_actorid = 1;
+  string a_aKeySystem = 2;
 }
 
 message Reply_PChromiumCDMConstructor {

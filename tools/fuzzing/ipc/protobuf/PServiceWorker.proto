@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/serviceworkers/PServiceWorker.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PServiceWorker;
 
@@ -21,8 +20,8 @@ message Msg_Teardown {
 }
 
 message Msg_PostMessage {
-  required protobuf.mozilla.dom.ClonedOrErrorMessageData a_aClonedData = 1;
-  required protobuf.mozilla.dom.PostMessageSource a_aSource = 2;
+  protobuf.mozilla.dom.ClonedOrErrorMessageData a_aClonedData = 1;
+  protobuf.mozilla.dom.PostMessageSource a_aSource = 2;
 }
 
 message Msg___delete__ {

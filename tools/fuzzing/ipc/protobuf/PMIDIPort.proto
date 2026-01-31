@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/midi/PMIDIPort.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PMIDIPort;
 
@@ -37,8 +36,8 @@ message Msg_Receive {
 }
 
 message Msg_UpdateStatus {
-  required uint32 a_deviceState = 1;
-  required uint32 a_connectionState = 2;
+  uint32 a_deviceState = 1;
+  uint32 a_connectionState = 2;
 }
 
 // Parameter mappings stats:

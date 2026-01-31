@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/cache/PCacheOp.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.cache.PCacheOp;
 
@@ -17,8 +16,8 @@ import "CacheTypes.proto";
 
 // Message declarations
 message Msg___delete__ {
-  required bytes a_aRv = 1;
-  required protobuf.mozilla.dom.cache.CacheOpResult a_aResult = 2;
+  bytes a_aRv = 1;
+  protobuf.mozilla.dom.cache.CacheOpResult a_aResult = 2;
 }
 
 message Reply___delete__ {

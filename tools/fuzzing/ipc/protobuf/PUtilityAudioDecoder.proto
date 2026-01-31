@@ -5,8 +5,7 @@
 
 // Generated from PUtilityAudioDecoder.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.ipc.PUtilityAudioDecoder;
 
@@ -17,13 +16,13 @@ import "GraphicsMessages.proto";
 
 // Message declarations
 message Msg_NewContentRemoteMediaManager {
-  required bytes a_endpoint = 1;
-  required bytes a_parentId = 2;
+  bytes a_endpoint = 1;
+  bytes a_parentId = 2;
 }
 
 message Msg_UpdateMediaCodecsSupported {
-  required bytes a_aLocation = 1;
-  required bytes a_aSupported = 2;
+  bytes a_aLocation = 1;
+  bytes a_aSupported = 2;
 }
 
 // Parameter mappings stats:

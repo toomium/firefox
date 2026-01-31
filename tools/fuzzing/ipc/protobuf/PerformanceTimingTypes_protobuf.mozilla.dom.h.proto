@@ -5,50 +5,49 @@
 
 // Generated from /home/tmittendorf/firefox/dom/performance/PerformanceTimingTypes.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message IPCServerTiming {
-  required string a_name = 1;
-  required double a_duration = 2;
-  required string a_description = 3;
+  string a_name = 1;
+  double a_duration = 2;
+  string a_description = 3;
 }
 
 message IPCPerformanceTimingData {
   repeated protobuf.mozilla.dom.IPCServerTiming a_serverTiming = 1;
-  required string a_nextHopProtocol = 2;
-  required bytes a_asyncOpen = 3;
-  required bytes a_redirectStart = 4;
-  required bytes a_redirectEnd = 5;
-  required bytes a_domainLookupStart = 6;
-  required bytes a_domainLookupEnd = 7;
-  required bytes a_connectStart = 8;
-  required bytes a_secureConnectionStart = 9;
-  required bytes a_connectEnd = 10;
-  required bytes a_requestStart = 11;
-  required bytes a_responseStart = 12;
-  required bytes a_cacheReadStart = 13;
-  required bytes a_responseEnd = 14;
-  required bytes a_cacheReadEnd = 15;
-  required bytes a_workerStart = 16;
-  required bytes a_workerRequestStart = 17;
-  required bytes a_workerResponseEnd = 18;
-  required bytes a_zeroTime = 19;
-  required bytes a_fetchStart = 20;
-  required uint64 a_encodedBodySize = 21;
-  required uint64 a_transferSize = 22;
-  required uint64 a_decodedBodySize = 23;
-  required uint32 a_responseStatus = 24;
-  required uint32 a_redirectCount = 25;
-  required bool a_renderBlocking = 26;
-  required string a_contentType = 27;
-  required bool a_allRedirectsSameOrigin = 28;
-  required bool a_allRedirectsPassTAO = 29;
-  required bool a_secureConnection = 30;
-  required bytes a_bodyInfoAccessAllowed = 31;
-  required bool a_timingAllowed = 32;
-  required bool a_initialized = 33;
+  string a_nextHopProtocol = 2;
+  bytes a_asyncOpen = 3;
+  bytes a_redirectStart = 4;
+  bytes a_redirectEnd = 5;
+  bytes a_domainLookupStart = 6;
+  bytes a_domainLookupEnd = 7;
+  bytes a_connectStart = 8;
+  bytes a_secureConnectionStart = 9;
+  bytes a_connectEnd = 10;
+  bytes a_requestStart = 11;
+  bytes a_responseStart = 12;
+  bytes a_cacheReadStart = 13;
+  bytes a_responseEnd = 14;
+  bytes a_cacheReadEnd = 15;
+  bytes a_workerStart = 16;
+  bytes a_workerRequestStart = 17;
+  bytes a_workerResponseEnd = 18;
+  bytes a_zeroTime = 19;
+  bytes a_fetchStart = 20;
+  uint64 a_encodedBodySize = 21;
+  uint64 a_transferSize = 22;
+  uint64 a_decodedBodySize = 23;
+  uint32 a_responseStatus = 24;
+  uint32 a_redirectCount = 25;
+  bool a_renderBlocking = 26;
+  string a_contentType = 27;
+  bool a_allRedirectsSameOrigin = 28;
+  bool a_allRedirectsPassTAO = 29;
+  bool a_secureConnection = 30;
+  bytes a_bodyInfoAccessAllowed = 31;
+  bool a_timingAllowed = 32;
+  bool a_initialized = 33;
 }

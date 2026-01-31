@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto
@@ -41,6 +43,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace widget {
@@ -68,7 +71,7 @@ namespace widget {
 // ===================================================================
 
 class LookAndFeelFont final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.widget.LookAndFeelFont) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.widget.LookAndFeelFont) */ {
  public:
   inline LookAndFeelFont() : LookAndFeelFont(nullptr) {}
   ~LookAndFeelFont() override;
@@ -98,13 +101,15 @@ class LookAndFeelFont final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const LookAndFeelFont& default_instance() {
     return *internal_default_instance();
   }
@@ -142,9 +147,15 @@ class LookAndFeelFont final :
   LookAndFeelFont* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<LookAndFeelFont>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const LookAndFeelFont& from);
-  void MergeFrom(const LookAndFeelFont& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const LookAndFeelFont& from) {
+    LookAndFeelFont::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -157,7 +168,7 @@ class LookAndFeelFont final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(LookAndFeelFont* other);
 
   private:
@@ -170,7 +181,10 @@ class LookAndFeelFont final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -183,11 +197,7 @@ class LookAndFeelFont final :
     kAItalicFieldNumber = 5,
     kAWeightFieldNumber = 4,
   };
-  // required string a_name = 2;
-  bool has_a_name() const;
-  private:
-  bool _internal_has_a_name() const;
-  public:
+  // string a_name = 2;
   void clear_a_name();
   const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -201,11 +211,7 @@ class LookAndFeelFont final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required float a_size = 3;
-  bool has_a_size() const;
-  private:
-  bool _internal_has_a_size() const;
-  public:
+  // float a_size = 3;
   void clear_a_size();
   float a_size() const;
   void set_a_size(float value);
@@ -214,11 +220,7 @@ class LookAndFeelFont final :
   void _internal_set_a_size(float value);
   public:
 
-  // required bool a_haveFont = 1;
-  bool has_a_havefont() const;
-  private:
-  bool _internal_has_a_havefont() const;
-  public:
+  // bool a_haveFont = 1;
   void clear_a_havefont();
   bool a_havefont() const;
   void set_a_havefont(bool value);
@@ -227,11 +229,7 @@ class LookAndFeelFont final :
   void _internal_set_a_havefont(bool value);
   public:
 
-  // required bool a_italic = 5;
-  bool has_a_italic() const;
-  private:
-  bool _internal_has_a_italic() const;
-  public:
+  // bool a_italic = 5;
   void clear_a_italic();
   bool a_italic() const;
   void set_a_italic(bool value);
@@ -240,11 +238,7 @@ class LookAndFeelFont final :
   void _internal_set_a_italic(bool value);
   public:
 
-  // required float a_weight = 4;
-  bool has_a_weight() const;
-  private:
-  bool _internal_has_a_weight() const;
-  public:
+  // float a_weight = 4;
   void clear_a_weight();
   float a_weight() const;
   void set_a_weight(float value);
@@ -257,20 +251,16 @@ class LookAndFeelFont final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
     float a_size_;
     bool a_havefont_;
     bool a_italic_;
     float a_weight_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto;
@@ -278,7 +268,7 @@ class LookAndFeelFont final :
 // -------------------------------------------------------------------
 
 class LookAndFeelTables final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.widget.LookAndFeelTables) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.widget.LookAndFeelTables) */ {
  public:
   inline LookAndFeelTables() : LookAndFeelTables(nullptr) {}
   ~LookAndFeelTables() override;
@@ -308,13 +298,15 @@ class LookAndFeelTables final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const LookAndFeelTables& default_instance() {
     return *internal_default_instance();
   }
@@ -352,9 +344,15 @@ class LookAndFeelTables final :
   LookAndFeelTables* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<LookAndFeelTables>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const LookAndFeelTables& from);
-  void MergeFrom(const LookAndFeelTables& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const LookAndFeelTables& from) {
+    LookAndFeelTables::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -367,7 +365,7 @@ class LookAndFeelTables final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(LookAndFeelTables* other);
 
   private:
@@ -380,7 +378,10 @@ class LookAndFeelTables final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -620,11 +621,7 @@ class LookAndFeelTables final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_darkcolormap();
 
-  // required uint32 a_passwordChar = 11;
-  bool has_a_passwordchar() const;
-  private:
-  bool _internal_has_a_passwordchar() const;
-  public:
+  // uint32 a_passwordChar = 11;
   void clear_a_passwordchar();
   uint32_t a_passwordchar() const;
   void set_a_passwordchar(uint32_t value);
@@ -633,11 +630,7 @@ class LookAndFeelTables final :
   void _internal_set_a_passwordchar(uint32_t value);
   public:
 
-  // required bool a_passwordEcho = 12;
-  bool has_a_passwordecho() const;
-  private:
-  bool _internal_has_a_passwordecho() const;
-  public:
+  // bool a_passwordEcho = 12;
   void clear_a_passwordecho();
   bool a_passwordecho() const;
   void set_a_passwordecho(bool value);
@@ -650,27 +643,29 @@ class LookAndFeelTables final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > a_ints_;
+    mutable std::atomic<int> _a_ints_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< float > a_floats_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::widget::LookAndFeelFont > a_fonts_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_lightcolors_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_darkcolors_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_intmap_;
+    mutable std::atomic<int> _a_intmap_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_floatmap_;
+    mutable std::atomic<int> _a_floatmap_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_fontmap_;
+    mutable std::atomic<int> _a_fontmap_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_lightcolormap_;
+    mutable std::atomic<int> _a_lightcolormap_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_darkcolormap_;
+    mutable std::atomic<int> _a_darkcolormap_cached_byte_size_;
     uint32_t a_passwordchar_;
     bool a_passwordecho_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto;
@@ -678,7 +673,7 @@ class LookAndFeelTables final :
 // -------------------------------------------------------------------
 
 class FullLookAndFeel final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.widget.FullLookAndFeel) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.widget.FullLookAndFeel) */ {
  public:
   inline FullLookAndFeel() : FullLookAndFeel(nullptr) {}
   ~FullLookAndFeel() override;
@@ -708,13 +703,15 @@ class FullLookAndFeel final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const FullLookAndFeel& default_instance() {
     return *internal_default_instance();
   }
@@ -752,9 +749,15 @@ class FullLookAndFeel final :
   FullLookAndFeel* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<FullLookAndFeel>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const FullLookAndFeel& from);
-  void MergeFrom(const FullLookAndFeel& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const FullLookAndFeel& from) {
+    FullLookAndFeel::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -767,7 +770,7 @@ class FullLookAndFeel final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(FullLookAndFeel* other);
 
   private:
@@ -780,7 +783,10 @@ class FullLookAndFeel final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -789,7 +795,7 @@ class FullLookAndFeel final :
   enum : int {
     kATablesFieldNumber = 1,
   };
-  // required .protobuf.mozilla.widget.LookAndFeelTables a_tables = 1;
+  // .protobuf.mozilla.widget.LookAndFeelTables a_tables = 1;
   bool has_a_tables() const;
   private:
   bool _internal_has_a_tables() const;
@@ -815,9 +821,8 @@ class FullLookAndFeel final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::widget::LookAndFeelTables* a_tables_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto;
@@ -833,17 +838,9 @@ class FullLookAndFeel final :
 #endif  // __GNUC__
 // LookAndFeelFont
 
-// required bool a_haveFont = 1;
-inline bool LookAndFeelFont::_internal_has_a_havefont() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool LookAndFeelFont::has_a_havefont() const {
-  return _internal_has_a_havefont();
-}
+// bool a_haveFont = 1;
 inline void LookAndFeelFont::clear_a_havefont() {
   _impl_.a_havefont_ = false;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline bool LookAndFeelFont::_internal_a_havefont() const {
   return _impl_.a_havefont_;
@@ -853,7 +850,7 @@ inline bool LookAndFeelFont::a_havefont() const {
   return _internal_a_havefont();
 }
 inline void LookAndFeelFont::_internal_set_a_havefont(bool value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_havefont_ = value;
 }
 inline void LookAndFeelFont::set_a_havefont(bool value) {
@@ -861,17 +858,9 @@ inline void LookAndFeelFont::set_a_havefont(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.widget.LookAndFeelFont.a_haveFont)
 }
 
-// required string a_name = 2;
-inline bool LookAndFeelFont::_internal_has_a_name() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool LookAndFeelFont::has_a_name() const {
-  return _internal_has_a_name();
-}
+// string a_name = 2;
 inline void LookAndFeelFont::clear_a_name() {
   _impl_.a_name_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& LookAndFeelFont::a_name() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.widget.LookAndFeelFont.a_name)
@@ -880,7 +869,7 @@ inline const std::string& LookAndFeelFont::a_name() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void LookAndFeelFont::set_a_name(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.widget.LookAndFeelFont.a_name)
 }
@@ -893,32 +882,22 @@ inline const std::string& LookAndFeelFont::_internal_a_name() const {
   return _impl_.a_name_.Get();
 }
 inline void LookAndFeelFont::_internal_set_a_name(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
 inline std::string* LookAndFeelFont::_internal_mutable_a_name() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* LookAndFeelFont::release_a_name() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.widget.LookAndFeelFont.a_name)
-  if (!_internal_has_a_name()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_name_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_name_.IsDefault()) {
-    _impl_.a_name_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_name_.Release();
 }
 inline void LookAndFeelFont::set_allocated_a_name(std::string* a_name) {
   if (a_name != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -929,17 +908,9 @@ inline void LookAndFeelFont::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.widget.LookAndFeelFont.a_name)
 }
 
-// required float a_size = 3;
-inline bool LookAndFeelFont::_internal_has_a_size() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool LookAndFeelFont::has_a_size() const {
-  return _internal_has_a_size();
-}
+// float a_size = 3;
 inline void LookAndFeelFont::clear_a_size() {
   _impl_.a_size_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline float LookAndFeelFont::_internal_a_size() const {
   return _impl_.a_size_;
@@ -949,7 +920,7 @@ inline float LookAndFeelFont::a_size() const {
   return _internal_a_size();
 }
 inline void LookAndFeelFont::_internal_set_a_size(float value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_size_ = value;
 }
 inline void LookAndFeelFont::set_a_size(float value) {
@@ -957,17 +928,9 @@ inline void LookAndFeelFont::set_a_size(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.widget.LookAndFeelFont.a_size)
 }
 
-// required float a_weight = 4;
-inline bool LookAndFeelFont::_internal_has_a_weight() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool LookAndFeelFont::has_a_weight() const {
-  return _internal_has_a_weight();
-}
+// float a_weight = 4;
 inline void LookAndFeelFont::clear_a_weight() {
   _impl_.a_weight_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline float LookAndFeelFont::_internal_a_weight() const {
   return _impl_.a_weight_;
@@ -977,7 +940,7 @@ inline float LookAndFeelFont::a_weight() const {
   return _internal_a_weight();
 }
 inline void LookAndFeelFont::_internal_set_a_weight(float value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_weight_ = value;
 }
 inline void LookAndFeelFont::set_a_weight(float value) {
@@ -985,17 +948,9 @@ inline void LookAndFeelFont::set_a_weight(float value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.widget.LookAndFeelFont.a_weight)
 }
 
-// required bool a_italic = 5;
-inline bool LookAndFeelFont::_internal_has_a_italic() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool LookAndFeelFont::has_a_italic() const {
-  return _internal_has_a_italic();
-}
+// bool a_italic = 5;
 inline void LookAndFeelFont::clear_a_italic() {
   _impl_.a_italic_ = false;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline bool LookAndFeelFont::_internal_a_italic() const {
   return _impl_.a_italic_;
@@ -1005,7 +960,7 @@ inline bool LookAndFeelFont::a_italic() const {
   return _internal_a_italic();
 }
 inline void LookAndFeelFont::_internal_set_a_italic(bool value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_italic_ = value;
 }
 inline void LookAndFeelFont::set_a_italic(bool value) {
@@ -1536,17 +1491,9 @@ LookAndFeelTables::mutable_a_darkcolormap() {
   return _internal_mutable_a_darkcolormap();
 }
 
-// required uint32 a_passwordChar = 11;
-inline bool LookAndFeelTables::_internal_has_a_passwordchar() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool LookAndFeelTables::has_a_passwordchar() const {
-  return _internal_has_a_passwordchar();
-}
+// uint32 a_passwordChar = 11;
 inline void LookAndFeelTables::clear_a_passwordchar() {
   _impl_.a_passwordchar_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t LookAndFeelTables::_internal_a_passwordchar() const {
   return _impl_.a_passwordchar_;
@@ -1556,7 +1503,7 @@ inline uint32_t LookAndFeelTables::a_passwordchar() const {
   return _internal_a_passwordchar();
 }
 inline void LookAndFeelTables::_internal_set_a_passwordchar(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_passwordchar_ = value;
 }
 inline void LookAndFeelTables::set_a_passwordchar(uint32_t value) {
@@ -1564,17 +1511,9 @@ inline void LookAndFeelTables::set_a_passwordchar(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.widget.LookAndFeelTables.a_passwordChar)
 }
 
-// required bool a_passwordEcho = 12;
-inline bool LookAndFeelTables::_internal_has_a_passwordecho() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool LookAndFeelTables::has_a_passwordecho() const {
-  return _internal_has_a_passwordecho();
-}
+// bool a_passwordEcho = 12;
 inline void LookAndFeelTables::clear_a_passwordecho() {
   _impl_.a_passwordecho_ = false;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool LookAndFeelTables::_internal_a_passwordecho() const {
   return _impl_.a_passwordecho_;
@@ -1584,7 +1523,7 @@ inline bool LookAndFeelTables::a_passwordecho() const {
   return _internal_a_passwordecho();
 }
 inline void LookAndFeelTables::_internal_set_a_passwordecho(bool value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_passwordecho_ = value;
 }
 inline void LookAndFeelTables::set_a_passwordecho(bool value) {
@@ -1596,18 +1535,18 @@ inline void LookAndFeelTables::set_a_passwordecho(bool value) {
 
 // FullLookAndFeel
 
-// required .protobuf.mozilla.widget.LookAndFeelTables a_tables = 1;
+// .protobuf.mozilla.widget.LookAndFeelTables a_tables = 1;
 inline bool FullLookAndFeel::_internal_has_a_tables() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_tables_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_tables_ != nullptr;
 }
 inline bool FullLookAndFeel::has_a_tables() const {
   return _internal_has_a_tables();
 }
 inline void FullLookAndFeel::clear_a_tables() {
-  if (_impl_.a_tables_ != nullptr) _impl_.a_tables_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_tables_ != nullptr) {
+    delete _impl_.a_tables_;
+  }
+  _impl_.a_tables_ = nullptr;
 }
 inline const ::protobuf::mozilla::widget::LookAndFeelTables& FullLookAndFeel::_internal_a_tables() const {
   const ::protobuf::mozilla::widget::LookAndFeelTables* p = _impl_.a_tables_;
@@ -1625,14 +1564,14 @@ inline void FullLookAndFeel::unsafe_arena_set_allocated_a_tables(
   }
   _impl_.a_tables_ = a_tables;
   if (a_tables) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.widget.FullLookAndFeel.a_tables)
 }
 inline ::protobuf::mozilla::widget::LookAndFeelTables* FullLookAndFeel::release_a_tables() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::widget::LookAndFeelTables* temp = _impl_.a_tables_;
   _impl_.a_tables_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1648,13 +1587,13 @@ inline ::protobuf::mozilla::widget::LookAndFeelTables* FullLookAndFeel::release_
 }
 inline ::protobuf::mozilla::widget::LookAndFeelTables* FullLookAndFeel::unsafe_arena_release_a_tables() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.widget.FullLookAndFeel.a_tables)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::widget::LookAndFeelTables* temp = _impl_.a_tables_;
   _impl_.a_tables_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::widget::LookAndFeelTables* FullLookAndFeel::_internal_mutable_a_tables() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_tables_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::widget::LookAndFeelTables>(GetArenaForAllocation());
     _impl_.a_tables_ = p;
@@ -1678,9 +1617,9 @@ inline void FullLookAndFeel::set_allocated_a_tables(::protobuf::mozilla::widget:
       a_tables = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_tables, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_tables_ = a_tables;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.widget.FullLookAndFeel.a_tables)

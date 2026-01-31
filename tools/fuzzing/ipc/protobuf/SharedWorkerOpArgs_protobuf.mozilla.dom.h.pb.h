@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "DOMTypes.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -42,6 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_SharedWorkerOpArgs_5fprotobuf_2emozilla_2edom_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_SharedWorkerOpArgs_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -93,10 +97,9 @@ namespace dom {
 // ===================================================================
 
 class SharedWorkerSuspendOpArgs final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SharedWorkerSuspendOpArgs) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SharedWorkerSuspendOpArgs) */ {
  public:
   inline SharedWorkerSuspendOpArgs() : SharedWorkerSuspendOpArgs(nullptr) {}
-  ~SharedWorkerSuspendOpArgs() override;
   explicit PROTOBUF_CONSTEXPR SharedWorkerSuspendOpArgs(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   SharedWorkerSuspendOpArgs(const SharedWorkerSuspendOpArgs& from);
@@ -123,13 +126,15 @@ class SharedWorkerSuspendOpArgs final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const SharedWorkerSuspendOpArgs& default_instance() {
     return *internal_default_instance();
   }
@@ -167,23 +172,15 @@ class SharedWorkerSuspendOpArgs final :
   SharedWorkerSuspendOpArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SharedWorkerSuspendOpArgs>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const SharedWorkerSuspendOpArgs& from);
-  void MergeFrom(const SharedWorkerSuspendOpArgs& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(SharedWorkerSuspendOpArgs* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const SharedWorkerSuspendOpArgs& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const SharedWorkerSuspendOpArgs& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -195,7 +192,10 @@ class SharedWorkerSuspendOpArgs final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -209,18 +209,15 @@ class SharedWorkerSuspendOpArgs final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_SharedWorkerOpArgs_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 };
 // -------------------------------------------------------------------
 
 class SharedWorkerResumeOpArgs final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SharedWorkerResumeOpArgs) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SharedWorkerResumeOpArgs) */ {
  public:
   inline SharedWorkerResumeOpArgs() : SharedWorkerResumeOpArgs(nullptr) {}
-  ~SharedWorkerResumeOpArgs() override;
   explicit PROTOBUF_CONSTEXPR SharedWorkerResumeOpArgs(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   SharedWorkerResumeOpArgs(const SharedWorkerResumeOpArgs& from);
@@ -247,13 +244,15 @@ class SharedWorkerResumeOpArgs final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const SharedWorkerResumeOpArgs& default_instance() {
     return *internal_default_instance();
   }
@@ -291,23 +290,15 @@ class SharedWorkerResumeOpArgs final :
   SharedWorkerResumeOpArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SharedWorkerResumeOpArgs>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const SharedWorkerResumeOpArgs& from);
-  void MergeFrom(const SharedWorkerResumeOpArgs& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(SharedWorkerResumeOpArgs* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const SharedWorkerResumeOpArgs& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const SharedWorkerResumeOpArgs& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -319,7 +310,10 @@ class SharedWorkerResumeOpArgs final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -333,18 +327,15 @@ class SharedWorkerResumeOpArgs final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_SharedWorkerOpArgs_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 };
 // -------------------------------------------------------------------
 
 class SharedWorkerFreezeOpArgs final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SharedWorkerFreezeOpArgs) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SharedWorkerFreezeOpArgs) */ {
  public:
   inline SharedWorkerFreezeOpArgs() : SharedWorkerFreezeOpArgs(nullptr) {}
-  ~SharedWorkerFreezeOpArgs() override;
   explicit PROTOBUF_CONSTEXPR SharedWorkerFreezeOpArgs(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   SharedWorkerFreezeOpArgs(const SharedWorkerFreezeOpArgs& from);
@@ -371,13 +362,15 @@ class SharedWorkerFreezeOpArgs final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const SharedWorkerFreezeOpArgs& default_instance() {
     return *internal_default_instance();
   }
@@ -415,23 +408,15 @@ class SharedWorkerFreezeOpArgs final :
   SharedWorkerFreezeOpArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SharedWorkerFreezeOpArgs>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const SharedWorkerFreezeOpArgs& from);
-  void MergeFrom(const SharedWorkerFreezeOpArgs& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(SharedWorkerFreezeOpArgs* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const SharedWorkerFreezeOpArgs& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const SharedWorkerFreezeOpArgs& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -443,7 +428,10 @@ class SharedWorkerFreezeOpArgs final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -457,18 +445,15 @@ class SharedWorkerFreezeOpArgs final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_SharedWorkerOpArgs_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 };
 // -------------------------------------------------------------------
 
 class SharedWorkerThawOpArgs final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SharedWorkerThawOpArgs) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SharedWorkerThawOpArgs) */ {
  public:
   inline SharedWorkerThawOpArgs() : SharedWorkerThawOpArgs(nullptr) {}
-  ~SharedWorkerThawOpArgs() override;
   explicit PROTOBUF_CONSTEXPR SharedWorkerThawOpArgs(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   SharedWorkerThawOpArgs(const SharedWorkerThawOpArgs& from);
@@ -495,13 +480,15 @@ class SharedWorkerThawOpArgs final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const SharedWorkerThawOpArgs& default_instance() {
     return *internal_default_instance();
   }
@@ -539,23 +526,15 @@ class SharedWorkerThawOpArgs final :
   SharedWorkerThawOpArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SharedWorkerThawOpArgs>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const SharedWorkerThawOpArgs& from);
-  void MergeFrom(const SharedWorkerThawOpArgs& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(SharedWorkerThawOpArgs* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const SharedWorkerThawOpArgs& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const SharedWorkerThawOpArgs& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -567,7 +546,10 @@ class SharedWorkerThawOpArgs final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -581,18 +563,15 @@ class SharedWorkerThawOpArgs final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_SharedWorkerOpArgs_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 };
 // -------------------------------------------------------------------
 
 class SharedWorkerTerminateOpArgs final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SharedWorkerTerminateOpArgs) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SharedWorkerTerminateOpArgs) */ {
  public:
   inline SharedWorkerTerminateOpArgs() : SharedWorkerTerminateOpArgs(nullptr) {}
-  ~SharedWorkerTerminateOpArgs() override;
   explicit PROTOBUF_CONSTEXPR SharedWorkerTerminateOpArgs(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   SharedWorkerTerminateOpArgs(const SharedWorkerTerminateOpArgs& from);
@@ -619,13 +598,15 @@ class SharedWorkerTerminateOpArgs final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const SharedWorkerTerminateOpArgs& default_instance() {
     return *internal_default_instance();
   }
@@ -663,23 +644,15 @@ class SharedWorkerTerminateOpArgs final :
   SharedWorkerTerminateOpArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SharedWorkerTerminateOpArgs>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const SharedWorkerTerminateOpArgs& from);
-  void MergeFrom(const SharedWorkerTerminateOpArgs& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(SharedWorkerTerminateOpArgs* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const SharedWorkerTerminateOpArgs& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const SharedWorkerTerminateOpArgs& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -691,7 +664,10 @@ class SharedWorkerTerminateOpArgs final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -705,15 +681,13 @@ class SharedWorkerTerminateOpArgs final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_SharedWorkerOpArgs_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 };
 // -------------------------------------------------------------------
 
 class SharedWorkerPortIdentifierOpArgs final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs) */ {
  public:
   inline SharedWorkerPortIdentifierOpArgs() : SharedWorkerPortIdentifierOpArgs(nullptr) {}
   ~SharedWorkerPortIdentifierOpArgs() override;
@@ -743,13 +717,15 @@ class SharedWorkerPortIdentifierOpArgs final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const SharedWorkerPortIdentifierOpArgs& default_instance() {
     return *internal_default_instance();
   }
@@ -787,9 +763,15 @@ class SharedWorkerPortIdentifierOpArgs final :
   SharedWorkerPortIdentifierOpArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SharedWorkerPortIdentifierOpArgs>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const SharedWorkerPortIdentifierOpArgs& from);
-  void MergeFrom(const SharedWorkerPortIdentifierOpArgs& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const SharedWorkerPortIdentifierOpArgs& from) {
+    SharedWorkerPortIdentifierOpArgs::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -802,7 +784,7 @@ class SharedWorkerPortIdentifierOpArgs final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(SharedWorkerPortIdentifierOpArgs* other);
 
   private:
@@ -815,7 +797,10 @@ class SharedWorkerPortIdentifierOpArgs final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -824,7 +809,7 @@ class SharedWorkerPortIdentifierOpArgs final :
   enum : int {
     kAPortIdentifierFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 1;
+  // .protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 1;
   bool has_a_portidentifier() const;
   private:
   bool _internal_has_a_portidentifier() const;
@@ -850,9 +835,8 @@ class SharedWorkerPortIdentifierOpArgs final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::MessagePortIdentifier* a_portidentifier_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_SharedWorkerOpArgs_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -860,7 +844,7 @@ class SharedWorkerPortIdentifierOpArgs final :
 // -------------------------------------------------------------------
 
 class SharedWorkerAddWindowIDOpArgs final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SharedWorkerAddWindowIDOpArgs) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SharedWorkerAddWindowIDOpArgs) */ {
  public:
   inline SharedWorkerAddWindowIDOpArgs() : SharedWorkerAddWindowIDOpArgs(nullptr) {}
   ~SharedWorkerAddWindowIDOpArgs() override;
@@ -890,13 +874,15 @@ class SharedWorkerAddWindowIDOpArgs final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const SharedWorkerAddWindowIDOpArgs& default_instance() {
     return *internal_default_instance();
   }
@@ -934,9 +920,15 @@ class SharedWorkerAddWindowIDOpArgs final :
   SharedWorkerAddWindowIDOpArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SharedWorkerAddWindowIDOpArgs>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const SharedWorkerAddWindowIDOpArgs& from);
-  void MergeFrom(const SharedWorkerAddWindowIDOpArgs& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const SharedWorkerAddWindowIDOpArgs& from) {
+    SharedWorkerAddWindowIDOpArgs::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -949,7 +941,7 @@ class SharedWorkerAddWindowIDOpArgs final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(SharedWorkerAddWindowIDOpArgs* other);
 
   private:
@@ -962,7 +954,10 @@ class SharedWorkerAddWindowIDOpArgs final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -971,11 +966,7 @@ class SharedWorkerAddWindowIDOpArgs final :
   enum : int {
     kAWindowIDFieldNumber = 1,
   };
-  // required uint64 a_windowID = 1;
-  bool has_a_windowid() const;
-  private:
-  bool _internal_has_a_windowid() const;
-  public:
+  // uint64 a_windowID = 1;
   void clear_a_windowid();
   uint64_t a_windowid() const;
   void set_a_windowid(uint64_t value);
@@ -992,9 +983,8 @@ class SharedWorkerAddWindowIDOpArgs final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_windowid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_SharedWorkerOpArgs_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1002,7 +992,7 @@ class SharedWorkerAddWindowIDOpArgs final :
 // -------------------------------------------------------------------
 
 class SharedWorkerRemoveWindowIDOpArgs final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SharedWorkerRemoveWindowIDOpArgs) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SharedWorkerRemoveWindowIDOpArgs) */ {
  public:
   inline SharedWorkerRemoveWindowIDOpArgs() : SharedWorkerRemoveWindowIDOpArgs(nullptr) {}
   ~SharedWorkerRemoveWindowIDOpArgs() override;
@@ -1032,13 +1022,15 @@ class SharedWorkerRemoveWindowIDOpArgs final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const SharedWorkerRemoveWindowIDOpArgs& default_instance() {
     return *internal_default_instance();
   }
@@ -1076,9 +1068,15 @@ class SharedWorkerRemoveWindowIDOpArgs final :
   SharedWorkerRemoveWindowIDOpArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SharedWorkerRemoveWindowIDOpArgs>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const SharedWorkerRemoveWindowIDOpArgs& from);
-  void MergeFrom(const SharedWorkerRemoveWindowIDOpArgs& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const SharedWorkerRemoveWindowIDOpArgs& from) {
+    SharedWorkerRemoveWindowIDOpArgs::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1091,7 +1089,7 @@ class SharedWorkerRemoveWindowIDOpArgs final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(SharedWorkerRemoveWindowIDOpArgs* other);
 
   private:
@@ -1104,7 +1102,10 @@ class SharedWorkerRemoveWindowIDOpArgs final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1113,11 +1114,7 @@ class SharedWorkerRemoveWindowIDOpArgs final :
   enum : int {
     kAWindowIDFieldNumber = 1,
   };
-  // required uint64 a_windowID = 1;
-  bool has_a_windowid() const;
-  private:
-  bool _internal_has_a_windowid() const;
-  public:
+  // uint64 a_windowID = 1;
   void clear_a_windowid();
   uint64_t a_windowid() const;
   void set_a_windowid(uint64_t value);
@@ -1134,9 +1131,8 @@ class SharedWorkerRemoveWindowIDOpArgs final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_windowid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_SharedWorkerOpArgs_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -1144,7 +1140,7 @@ class SharedWorkerRemoveWindowIDOpArgs final :
 // -------------------------------------------------------------------
 
 class SharedWorkerOpArgs final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SharedWorkerOpArgs) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.SharedWorkerOpArgs) */ {
  public:
   inline SharedWorkerOpArgs() : SharedWorkerOpArgs(nullptr) {}
   ~SharedWorkerOpArgs() override;
@@ -1174,13 +1170,15 @@ class SharedWorkerOpArgs final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const SharedWorkerOpArgs& default_instance() {
     return *internal_default_instance();
   }
@@ -1230,9 +1228,15 @@ class SharedWorkerOpArgs final :
   SharedWorkerOpArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SharedWorkerOpArgs>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const SharedWorkerOpArgs& from);
-  void MergeFrom(const SharedWorkerOpArgs& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const SharedWorkerOpArgs& from) {
+    SharedWorkerOpArgs::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1245,7 +1249,7 @@ class SharedWorkerOpArgs final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(SharedWorkerOpArgs* other);
 
   private:
@@ -1258,7 +1262,10 @@ class SharedWorkerOpArgs final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1489,11 +1496,9 @@ class SharedWorkerOpArgs final :
 
 // SharedWorkerPortIdentifierOpArgs
 
-// required .protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 1;
+// .protobuf.mozilla.dom.MessagePortIdentifier a_portIdentifier = 1;
 inline bool SharedWorkerPortIdentifierOpArgs::_internal_has_a_portidentifier() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_portidentifier_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_portidentifier_ != nullptr;
 }
 inline bool SharedWorkerPortIdentifierOpArgs::has_a_portidentifier() const {
   return _internal_has_a_portidentifier();
@@ -1514,14 +1519,14 @@ inline void SharedWorkerPortIdentifierOpArgs::unsafe_arena_set_allocated_a_porti
   }
   _impl_.a_portidentifier_ = a_portidentifier;
   if (a_portidentifier) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs.a_portIdentifier)
 }
 inline ::protobuf::mozilla::dom::MessagePortIdentifier* SharedWorkerPortIdentifierOpArgs::release_a_portidentifier() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::dom::MessagePortIdentifier* temp = _impl_.a_portidentifier_;
   _impl_.a_portidentifier_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1537,13 +1542,13 @@ inline ::protobuf::mozilla::dom::MessagePortIdentifier* SharedWorkerPortIdentifi
 }
 inline ::protobuf::mozilla::dom::MessagePortIdentifier* SharedWorkerPortIdentifierOpArgs::unsafe_arena_release_a_portidentifier() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs.a_portIdentifier)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::dom::MessagePortIdentifier* temp = _impl_.a_portidentifier_;
   _impl_.a_portidentifier_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::MessagePortIdentifier* SharedWorkerPortIdentifierOpArgs::_internal_mutable_a_portidentifier() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_portidentifier_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::MessagePortIdentifier>(GetArenaForAllocation());
     _impl_.a_portidentifier_ = p;
@@ -1568,9 +1573,9 @@ inline void SharedWorkerPortIdentifierOpArgs::set_allocated_a_portidentifier(::p
       a_portidentifier = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_portidentifier, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_portidentifier_ = a_portidentifier;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.SharedWorkerPortIdentifierOpArgs.a_portIdentifier)
@@ -1580,17 +1585,9 @@ inline void SharedWorkerPortIdentifierOpArgs::set_allocated_a_portidentifier(::p
 
 // SharedWorkerAddWindowIDOpArgs
 
-// required uint64 a_windowID = 1;
-inline bool SharedWorkerAddWindowIDOpArgs::_internal_has_a_windowid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool SharedWorkerAddWindowIDOpArgs::has_a_windowid() const {
-  return _internal_has_a_windowid();
-}
+// uint64 a_windowID = 1;
 inline void SharedWorkerAddWindowIDOpArgs::clear_a_windowid() {
   _impl_.a_windowid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t SharedWorkerAddWindowIDOpArgs::_internal_a_windowid() const {
   return _impl_.a_windowid_;
@@ -1600,7 +1597,7 @@ inline uint64_t SharedWorkerAddWindowIDOpArgs::a_windowid() const {
   return _internal_a_windowid();
 }
 inline void SharedWorkerAddWindowIDOpArgs::_internal_set_a_windowid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_windowid_ = value;
 }
 inline void SharedWorkerAddWindowIDOpArgs::set_a_windowid(uint64_t value) {
@@ -1612,17 +1609,9 @@ inline void SharedWorkerAddWindowIDOpArgs::set_a_windowid(uint64_t value) {
 
 // SharedWorkerRemoveWindowIDOpArgs
 
-// required uint64 a_windowID = 1;
-inline bool SharedWorkerRemoveWindowIDOpArgs::_internal_has_a_windowid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool SharedWorkerRemoveWindowIDOpArgs::has_a_windowid() const {
-  return _internal_has_a_windowid();
-}
+// uint64 a_windowID = 1;
 inline void SharedWorkerRemoveWindowIDOpArgs::clear_a_windowid() {
   _impl_.a_windowid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t SharedWorkerRemoveWindowIDOpArgs::_internal_a_windowid() const {
   return _impl_.a_windowid_;
@@ -1632,7 +1621,7 @@ inline uint64_t SharedWorkerRemoveWindowIDOpArgs::a_windowid() const {
   return _internal_a_windowid();
 }
 inline void SharedWorkerRemoveWindowIDOpArgs::_internal_set_a_windowid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_windowid_ = value;
 }
 inline void SharedWorkerRemoveWindowIDOpArgs::set_a_windowid(uint64_t value) {

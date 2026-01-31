@@ -8,7 +8,10 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -22,8 +25,7 @@ namespace mozilla {
 namespace net {
 namespace PNativeDNSResolverOverride {
 PROTOBUF_CONSTEXPR Msg___delete__::Msg___delete__(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg___delete__DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg___delete__DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -34,8 +36,7 @@ struct Msg___delete__DefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg___delete__DefaultTypeInternal _Msg___delete___default_instance_;
 PROTOBUF_CONSTEXPR Reply___delete__::Reply___delete__(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Reply___delete__DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply___delete__DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -47,10 +48,9 @@ struct Reply___delete__DefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply___delete__DefaultTypeInternal _Reply___delete___default_instance_;
 PROTOBUF_CONSTEXPR Msg_AddIPOverride::Msg_AddIPOverride(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_ahost_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_aipliteral_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_ahost_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_aipliteral_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_AddIPOverrideDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_AddIPOverrideDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -62,10 +62,10 @@ struct Msg_AddIPOverrideDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_AddIPOverrideDefaultTypeInternal _Msg_AddIPOverride_default_instance_;
 PROTOBUF_CONSTEXPR Msg_AddHTTPSRecordOverride::Msg_AddHTTPSRecordOverride(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_adata_)*/{}
-  , /*decltype(_impl_.a_ahost_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_adata_)*/{}
+  , /*decltype(_impl_._a_adata_cached_byte_size_)*/{0}
+  , /*decltype(_impl_.a_ahost_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_AddHTTPSRecordOverrideDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_AddHTTPSRecordOverrideDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -77,10 +77,9 @@ struct Msg_AddHTTPSRecordOverrideDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_AddHTTPSRecordOverrideDefaultTypeInternal _Msg_AddHTTPSRecordOverride_default_instance_;
 PROTOBUF_CONSTEXPR Msg_SetCnameOverride::Msg_SetCnameOverride(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_ahost_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_acname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_ahost_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_acname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_SetCnameOverrideDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SetCnameOverrideDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -92,9 +91,8 @@ struct Msg_SetCnameOverrideDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_SetCnameOverrideDefaultTypeInternal _Msg_SetCnameOverride_default_instance_;
 PROTOBUF_CONSTEXPR Msg_ClearHostOverride::Msg_ClearHostOverride(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_ahost_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_ahost_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_ClearHostOverrideDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ClearHostOverrideDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -105,8 +103,7 @@ struct Msg_ClearHostOverrideDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_ClearHostOverrideDefaultTypeInternal _Msg_ClearHostOverride_default_instance_;
 PROTOBUF_CONSTEXPR Msg_ClearOverrides::Msg_ClearOverrides(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg_ClearOverridesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ClearOverridesDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -120,6 +117,108 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace net
 }  // namespace mozilla
 }  // namespace protobuf
+static ::_pb::Metadata file_level_metadata_PNativeDNSResolverOverride_2eproto[7];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PNativeDNSResolverOverride_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PNativeDNSResolverOverride_2eproto = nullptr;
+
+const uint32_t TableStruct_PNativeDNSResolverOverride_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PNativeDNSResolverOverride::Msg___delete__, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PNativeDNSResolverOverride::Reply___delete__, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PNativeDNSResolverOverride::Msg_AddIPOverride, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PNativeDNSResolverOverride::Msg_AddIPOverride, _impl_.a_ahost_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PNativeDNSResolverOverride::Msg_AddIPOverride, _impl_.a_aipliteral_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PNativeDNSResolverOverride::Msg_AddHTTPSRecordOverride, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PNativeDNSResolverOverride::Msg_AddHTTPSRecordOverride, _impl_.a_ahost_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PNativeDNSResolverOverride::Msg_AddHTTPSRecordOverride, _impl_.a_adata_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PNativeDNSResolverOverride::Msg_SetCnameOverride, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PNativeDNSResolverOverride::Msg_SetCnameOverride, _impl_.a_ahost_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PNativeDNSResolverOverride::Msg_SetCnameOverride, _impl_.a_acname_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PNativeDNSResolverOverride::Msg_ClearHostOverride, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PNativeDNSResolverOverride::Msg_ClearHostOverride, _impl_.a_ahost_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PNativeDNSResolverOverride::Msg_ClearOverrides, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::protobuf::mozilla::net::PNativeDNSResolverOverride::Msg___delete__)},
+  { 6, -1, -1, sizeof(::protobuf::mozilla::net::PNativeDNSResolverOverride::Reply___delete__)},
+  { 12, -1, -1, sizeof(::protobuf::mozilla::net::PNativeDNSResolverOverride::Msg_AddIPOverride)},
+  { 20, -1, -1, sizeof(::protobuf::mozilla::net::PNativeDNSResolverOverride::Msg_AddHTTPSRecordOverride)},
+  { 28, -1, -1, sizeof(::protobuf::mozilla::net::PNativeDNSResolverOverride::Msg_SetCnameOverride)},
+  { 36, -1, -1, sizeof(::protobuf::mozilla::net::PNativeDNSResolverOverride::Msg_ClearHostOverride)},
+  { 43, -1, -1, sizeof(::protobuf::mozilla::net::PNativeDNSResolverOverride::Msg_ClearOverrides)},
+};
+
+static const ::_pb::Message* const file_default_instances[] = {
+  &::protobuf::mozilla::net::PNativeDNSResolverOverride::_Msg___delete___default_instance_._instance,
+  &::protobuf::mozilla::net::PNativeDNSResolverOverride::_Reply___delete___default_instance_._instance,
+  &::protobuf::mozilla::net::PNativeDNSResolverOverride::_Msg_AddIPOverride_default_instance_._instance,
+  &::protobuf::mozilla::net::PNativeDNSResolverOverride::_Msg_AddHTTPSRecordOverride_default_instance_._instance,
+  &::protobuf::mozilla::net::PNativeDNSResolverOverride::_Msg_SetCnameOverride_default_instance_._instance,
+  &::protobuf::mozilla::net::PNativeDNSResolverOverride::_Msg_ClearHostOverride_default_instance_._instance,
+  &::protobuf::mozilla::net::PNativeDNSResolverOverride::_Msg_ClearOverrides_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_PNativeDNSResolverOverride_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n PNativeDNSResolverOverride.proto\022/prot"
+  "obuf.mozilla.net.PNativeDNSResolverOverr"
+  "ide\"\020\n\016Msg___delete__\"\022\n\020Reply___delete_"
+  "_\":\n\021Msg_AddIPOverride\022\017\n\007a_aHost\030\001 \001(\t\022"
+  "\024\n\014a_aIPLiteral\030\002 \001(\t\">\n\032Msg_AddHTTPSRec"
+  "ordOverride\022\017\n\007a_aHost\030\001 \001(\t\022\017\n\007a_aData\030"
+  "\002 \003(\r\"9\n\024Msg_SetCnameOverride\022\017\n\007a_aHost"
+  "\030\001 \001(\t\022\020\n\010a_aCNAME\030\002 \001(\t\"(\n\025Msg_ClearHos"
+  "tOverride\022\017\n\007a_aHost\030\001 \001(\t\"\024\n\022Msg_ClearO"
+  "verridesb\006proto3"
+  ;
+static ::_pbi::once_flag descriptor_table_PNativeDNSResolverOverride_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_PNativeDNSResolverOverride_2eproto = {
+    false, false, 376, descriptor_table_protodef_PNativeDNSResolverOverride_2eproto,
+    "PNativeDNSResolverOverride.proto",
+    &descriptor_table_PNativeDNSResolverOverride_2eproto_once, nullptr, 0, 7,
+    schemas, file_default_instances, TableStruct_PNativeDNSResolverOverride_2eproto::offsets,
+    file_level_metadata_PNativeDNSResolverOverride_2eproto, file_level_enum_descriptors_PNativeDNSResolverOverride_2eproto,
+    file_level_service_descriptors_PNativeDNSResolverOverride_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PNativeDNSResolverOverride_2eproto_getter() {
+  return &descriptor_table_PNativeDNSResolverOverride_2eproto;
+}
+
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PNativeDNSResolverOverride_2eproto(&descriptor_table_PNativeDNSResolverOverride_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace net {
@@ -133,145 +232,37 @@ class Msg___delete__::_Internal {
 
 Msg___delete__::Msg___delete__(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg___delete__)
 }
 Msg___delete__::Msg___delete__(const Msg___delete__& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg___delete__* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg___delete__)
 }
 
-inline void Msg___delete__::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg___delete__::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg___delete__::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg___delete__::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PNativeDNSResolverOverride_2eproto_getter, &descriptor_table_PNativeDNSResolverOverride_2eproto_once,
+      file_level_metadata_PNativeDNSResolverOverride_2eproto[0]);
 }
-
-Msg___delete__::~Msg___delete__() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg___delete__)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg___delete__::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg___delete__::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg___delete__::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg___delete__)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg___delete__::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg___delete__)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg___delete__)
-  return target;
-}
-
-size_t Msg___delete__::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg___delete__)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg___delete__::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg___delete__*>(
-      &from));
-}
-
-void Msg___delete__::MergeFrom(const Msg___delete__& from) {
-  Msg___delete__* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg___delete__)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg___delete__::CopyFrom(const Msg___delete__& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg___delete__)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg___delete__::IsInitialized() const {
-  return true;
-}
-
-void Msg___delete__::InternalSwap(Msg___delete__* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg___delete__::GetTypeName() const {
-  return "protobuf.mozilla.net.PNativeDNSResolverOverride.Msg___delete__";
-}
-
 
 // ===================================================================
 
@@ -281,183 +272,64 @@ class Reply___delete__::_Internal {
 
 Reply___delete__::Reply___delete__(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.net.PNativeDNSResolverOverride.Reply___delete__)
 }
 Reply___delete__::Reply___delete__(const Reply___delete__& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Reply___delete__* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.net.PNativeDNSResolverOverride.Reply___delete__)
 }
 
-inline void Reply___delete__::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply___delete__::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply___delete__::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Reply___delete__::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PNativeDNSResolverOverride_2eproto_getter, &descriptor_table_PNativeDNSResolverOverride_2eproto_once,
+      file_level_metadata_PNativeDNSResolverOverride_2eproto[1]);
 }
-
-Reply___delete__::~Reply___delete__() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.net.PNativeDNSResolverOverride.Reply___delete__)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Reply___delete__::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Reply___delete__::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Reply___delete__::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Reply___delete__)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Reply___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Reply___delete__::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Reply___delete__)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.net.PNativeDNSResolverOverride.Reply___delete__)
-  return target;
-}
-
-size_t Reply___delete__::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Reply___delete__)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Reply___delete__::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply___delete__*>(
-      &from));
-}
-
-void Reply___delete__::MergeFrom(const Reply___delete__& from) {
-  Reply___delete__* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Reply___delete__)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Reply___delete__::CopyFrom(const Reply___delete__& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Reply___delete__)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Reply___delete__::IsInitialized() const {
-  return true;
-}
-
-void Reply___delete__::InternalSwap(Reply___delete__* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Reply___delete__::GetTypeName() const {
-  return "protobuf.mozilla.net.PNativeDNSResolverOverride.Reply___delete__";
-}
-
 
 // ===================================================================
 
 class Msg_AddIPOverride::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_AddIPOverride>()._impl_._has_bits_);
-  static void set_has_a_ahost(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_aipliteral(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 Msg_AddIPOverride::Msg_AddIPOverride(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride)
 }
 Msg_AddIPOverride::Msg_AddIPOverride(const Msg_AddIPOverride& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_AddIPOverride* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_ahost_){}
-    , decltype(_impl_.a_aipliteral_){}};
+      decltype(_impl_.a_ahost_){}
+    , decltype(_impl_.a_aipliteral_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_ahost_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_ahost_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_ahost()) {
+  if (!from._internal_a_ahost().empty()) {
     _this->_impl_.a_ahost_.Set(from._internal_a_ahost(), 
       _this->GetArenaForAllocation());
   }
@@ -465,7 +337,7 @@ Msg_AddIPOverride::Msg_AddIPOverride(const Msg_AddIPOverride& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_aipliteral_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_aipliteral()) {
+  if (!from._internal_a_aipliteral().empty()) {
     _this->_impl_.a_aipliteral_.Set(from._internal_a_aipliteral(), 
       _this->GetArenaForAllocation());
   }
@@ -477,10 +349,9 @@ inline void Msg_AddIPOverride::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_ahost_){}
+      decltype(_impl_.a_ahost_){}
     , decltype(_impl_.a_aipliteral_){}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_ahost_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -494,7 +365,7 @@ inline void Msg_AddIPOverride::SharedCtor(
 
 Msg_AddIPOverride::~Msg_AddIPOverride() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -517,41 +388,34 @@ void Msg_AddIPOverride::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_ahost_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_aipliteral_.ClearNonDefaultToEmpty();
-    }
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_ahost_.ClearToEmpty();
+  _impl_.a_aipliteral_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_AddIPOverride::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aHost = 1;
+      // string a_aHost = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_ahost();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.a_aHost"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_aIPLiteral = 2;
+      // string a_aIPLiteral = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_aipliteral();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.a_aIPLiteral"));
         } else
           goto handle_unusual;
         continue;
@@ -566,12 +430,11 @@ const char* Msg_AddIPOverride::_InternalParse(const char* ptr, ::_pbi::ParseCont
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -585,100 +448,81 @@ uint8_t* Msg_AddIPOverride::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aHost = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_aHost = 1;
+  if (!this->_internal_a_ahost().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_ahost().data(), static_cast<int>(this->_internal_a_ahost().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.a_aHost");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_ahost(), target);
   }
 
-  // required string a_aIPLiteral = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // string a_aIPLiteral = 2;
+  if (!this->_internal_a_aipliteral().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_aipliteral().data(), static_cast<int>(this->_internal_a_aipliteral().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride.a_aIPLiteral");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_aipliteral(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride)
   return target;
 }
 
-size_t Msg_AddIPOverride::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride)
-  size_t total_size = 0;
-
-  if (_internal_has_a_ahost()) {
-    // required string a_aHost = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_ahost());
-  }
-
-  if (_internal_has_a_aipliteral()) {
-    // required string a_aIPLiteral = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_aipliteral());
-  }
-
-  return total_size;
-}
 size_t Msg_AddIPOverride::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_aHost = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_ahost());
-
-    // required string a_aIPLiteral = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_aipliteral());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_aHost = 1;
+  if (!this->_internal_a_ahost().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_ahost());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // string a_aIPLiteral = 2;
+  if (!this->_internal_a_aipliteral().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_aipliteral());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_AddIPOverride::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_AddIPOverride*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_AddIPOverride::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_AddIPOverride::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_AddIPOverride::GetClassData() const { return &_class_data_; }
 
-void Msg_AddIPOverride::MergeFrom(const Msg_AddIPOverride& from) {
-  Msg_AddIPOverride* const _this = this;
+
+void Msg_AddIPOverride::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_AddIPOverride*>(&to_msg);
+  auto& from = static_cast<const Msg_AddIPOverride&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_ahost(from._internal_a_ahost());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_aipliteral(from._internal_a_aipliteral());
-    }
+  if (!from._internal_a_ahost().empty()) {
+    _this->_internal_set_a_ahost(from._internal_a_ahost());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_aipliteral().empty()) {
+    _this->_internal_set_a_aipliteral(from._internal_a_aipliteral());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_AddIPOverride::CopyFrom(const Msg_AddIPOverride& from) {
@@ -689,7 +533,6 @@ void Msg_AddIPOverride::CopyFrom(const Msg_AddIPOverride& from) {
 }
 
 bool Msg_AddIPOverride::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -698,7 +541,6 @@ void Msg_AddIPOverride::InternalSwap(Msg_AddIPOverride* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_ahost_, lhs_arena,
       &other->_impl_.a_ahost_, rhs_arena
@@ -709,45 +551,39 @@ void Msg_AddIPOverride::InternalSwap(Msg_AddIPOverride* other) {
   );
 }
 
-std::string Msg_AddIPOverride::GetTypeName() const {
-  return "protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddIPOverride";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_AddIPOverride::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PNativeDNSResolverOverride_2eproto_getter, &descriptor_table_PNativeDNSResolverOverride_2eproto_once,
+      file_level_metadata_PNativeDNSResolverOverride_2eproto[2]);
 }
-
 
 // ===================================================================
 
 class Msg_AddHTTPSRecordOverride::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_AddHTTPSRecordOverride>()._impl_._has_bits_);
-  static void set_has_a_ahost(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_AddHTTPSRecordOverride::Msg_AddHTTPSRecordOverride(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride)
 }
 Msg_AddHTTPSRecordOverride::Msg_AddHTTPSRecordOverride(const Msg_AddHTTPSRecordOverride& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_AddHTTPSRecordOverride* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_adata_){from._impl_.a_adata_}
-    , decltype(_impl_.a_ahost_){}};
+      decltype(_impl_.a_adata_){from._impl_.a_adata_}
+    , /*decltype(_impl_._a_adata_cached_byte_size_)*/{0}
+    , decltype(_impl_.a_ahost_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_ahost_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_ahost_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_ahost()) {
+  if (!from._internal_a_ahost().empty()) {
     _this->_impl_.a_ahost_.Set(from._internal_a_ahost(), 
       _this->GetArenaForAllocation());
   }
@@ -759,10 +595,10 @@ inline void Msg_AddHTTPSRecordOverride::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_adata_){arena}
+      decltype(_impl_.a_adata_){arena}
+    , /*decltype(_impl_._a_adata_cached_byte_size_)*/{0}
     , decltype(_impl_.a_ahost_){}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_ahost_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -772,7 +608,7 @@ inline void Msg_AddHTTPSRecordOverride::SharedCtor(
 
 Msg_AddHTTPSRecordOverride::~Msg_AddHTTPSRecordOverride() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -796,42 +632,33 @@ void Msg_AddHTTPSRecordOverride::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_adata_.Clear();
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_ahost_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_ahost_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_AddHTTPSRecordOverride::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aHost = 1;
+      // string a_aHost = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_ahost();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.a_aHost"));
         } else
           goto handle_unusual;
         continue;
       // repeated uint32 a_aData = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            _internal_add_a_adata(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
-        } else if (static_cast<uint8_t>(tag) == 18) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_adata(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 16) {
+          _internal_add_a_adata(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -847,12 +674,11 @@ const char* Msg_AddHTTPSRecordOverride::_InternalParse(const char* ptr, ::_pbi::
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -866,22 +692,28 @@ uint8_t* Msg_AddHTTPSRecordOverride::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aHost = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_aHost = 1;
+  if (!this->_internal_a_ahost().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_ahost().data(), static_cast<int>(this->_internal_a_ahost().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride.a_aHost");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_ahost(), target);
   }
 
   // repeated uint32 a_aData = 2;
-  for (int i = 0, n = this->_internal_a_adata_size(); i < n; i++) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(2, this->_internal_a_adata(i), target);
+  {
+    int byte_size = _impl_._a_adata_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteUInt32Packed(
+          2, _internal_a_adata(), byte_size, target);
+    }
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride)
   return target;
@@ -891,12 +723,6 @@ size_t Msg_AddHTTPSRecordOverride::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride)
   size_t total_size = 0;
 
-  // required string a_aHost = 1;
-  if (_internal_has_a_ahost()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_ahost());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -905,37 +731,46 @@ size_t Msg_AddHTTPSRecordOverride::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_adata_);
-    total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_a_adata_size());
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    int cached_size = ::_pbi::ToCachedSize(data_size);
+    _impl_._a_adata_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
     total_size += data_size;
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_aHost = 1;
+  if (!this->_internal_a_ahost().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_ahost());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_AddHTTPSRecordOverride::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_AddHTTPSRecordOverride*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_AddHTTPSRecordOverride::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_AddHTTPSRecordOverride::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_AddHTTPSRecordOverride::GetClassData() const { return &_class_data_; }
 
-void Msg_AddHTTPSRecordOverride::MergeFrom(const Msg_AddHTTPSRecordOverride& from) {
-  Msg_AddHTTPSRecordOverride* const _this = this;
+
+void Msg_AddHTTPSRecordOverride::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_AddHTTPSRecordOverride*>(&to_msg);
+  auto& from = static_cast<const Msg_AddHTTPSRecordOverride&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_adata_.MergeFrom(from._impl_.a_adata_);
-  if (from._internal_has_a_ahost()) {
+  if (!from._internal_a_ahost().empty()) {
     _this->_internal_set_a_ahost(from._internal_a_ahost());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_AddHTTPSRecordOverride::CopyFrom(const Msg_AddHTTPSRecordOverride& from) {
@@ -946,7 +781,6 @@ void Msg_AddHTTPSRecordOverride::CopyFrom(const Msg_AddHTTPSRecordOverride& from
 }
 
 bool Msg_AddHTTPSRecordOverride::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -955,7 +789,6 @@ void Msg_AddHTTPSRecordOverride::InternalSwap(Msg_AddHTTPSRecordOverride* other)
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_adata_.InternalSwap(&other->_impl_.a_adata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_ahost_, lhs_arena,
@@ -963,48 +796,38 @@ void Msg_AddHTTPSRecordOverride::InternalSwap(Msg_AddHTTPSRecordOverride* other)
   );
 }
 
-std::string Msg_AddHTTPSRecordOverride::GetTypeName() const {
-  return "protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_AddHTTPSRecordOverride";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_AddHTTPSRecordOverride::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PNativeDNSResolverOverride_2eproto_getter, &descriptor_table_PNativeDNSResolverOverride_2eproto_once,
+      file_level_metadata_PNativeDNSResolverOverride_2eproto[3]);
 }
-
 
 // ===================================================================
 
 class Msg_SetCnameOverride::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_SetCnameOverride>()._impl_._has_bits_);
-  static void set_has_a_ahost(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_acname(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 Msg_SetCnameOverride::Msg_SetCnameOverride(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride)
 }
 Msg_SetCnameOverride::Msg_SetCnameOverride(const Msg_SetCnameOverride& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_SetCnameOverride* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_ahost_){}
-    , decltype(_impl_.a_acname_){}};
+      decltype(_impl_.a_ahost_){}
+    , decltype(_impl_.a_acname_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_ahost_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_ahost_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_ahost()) {
+  if (!from._internal_a_ahost().empty()) {
     _this->_impl_.a_ahost_.Set(from._internal_a_ahost(), 
       _this->GetArenaForAllocation());
   }
@@ -1012,7 +835,7 @@ Msg_SetCnameOverride::Msg_SetCnameOverride(const Msg_SetCnameOverride& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_acname_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_acname()) {
+  if (!from._internal_a_acname().empty()) {
     _this->_impl_.a_acname_.Set(from._internal_a_acname(), 
       _this->GetArenaForAllocation());
   }
@@ -1024,10 +847,9 @@ inline void Msg_SetCnameOverride::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_ahost_){}
+      decltype(_impl_.a_ahost_){}
     , decltype(_impl_.a_acname_){}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_ahost_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1041,7 +863,7 @@ inline void Msg_SetCnameOverride::SharedCtor(
 
 Msg_SetCnameOverride::~Msg_SetCnameOverride() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -1064,41 +886,34 @@ void Msg_SetCnameOverride::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_ahost_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_acname_.ClearNonDefaultToEmpty();
-    }
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_ahost_.ClearToEmpty();
+  _impl_.a_acname_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_SetCnameOverride::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aHost = 1;
+      // string a_aHost = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_ahost();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.a_aHost"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_aCNAME = 2;
+      // string a_aCNAME = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_acname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.a_aCNAME"));
         } else
           goto handle_unusual;
         continue;
@@ -1113,12 +928,11 @@ const char* Msg_SetCnameOverride::_InternalParse(const char* ptr, ::_pbi::ParseC
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1132,100 +946,81 @@ uint8_t* Msg_SetCnameOverride::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aHost = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_aHost = 1;
+  if (!this->_internal_a_ahost().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_ahost().data(), static_cast<int>(this->_internal_a_ahost().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.a_aHost");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_ahost(), target);
   }
 
-  // required string a_aCNAME = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // string a_aCNAME = 2;
+  if (!this->_internal_a_acname().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_acname().data(), static_cast<int>(this->_internal_a_acname().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride.a_aCNAME");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_acname(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride)
   return target;
 }
 
-size_t Msg_SetCnameOverride::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride)
-  size_t total_size = 0;
-
-  if (_internal_has_a_ahost()) {
-    // required string a_aHost = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_ahost());
-  }
-
-  if (_internal_has_a_acname()) {
-    // required string a_aCNAME = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_acname());
-  }
-
-  return total_size;
-}
 size_t Msg_SetCnameOverride::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_aHost = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_ahost());
-
-    // required string a_aCNAME = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_acname());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_aHost = 1;
+  if (!this->_internal_a_ahost().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_ahost());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // string a_aCNAME = 2;
+  if (!this->_internal_a_acname().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_acname());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_SetCnameOverride::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_SetCnameOverride*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_SetCnameOverride::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_SetCnameOverride::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_SetCnameOverride::GetClassData() const { return &_class_data_; }
 
-void Msg_SetCnameOverride::MergeFrom(const Msg_SetCnameOverride& from) {
-  Msg_SetCnameOverride* const _this = this;
+
+void Msg_SetCnameOverride::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_SetCnameOverride*>(&to_msg);
+  auto& from = static_cast<const Msg_SetCnameOverride&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_ahost(from._internal_a_ahost());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_acname(from._internal_a_acname());
-    }
+  if (!from._internal_a_ahost().empty()) {
+    _this->_internal_set_a_ahost(from._internal_a_ahost());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_acname().empty()) {
+    _this->_internal_set_a_acname(from._internal_a_acname());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_SetCnameOverride::CopyFrom(const Msg_SetCnameOverride& from) {
@@ -1236,7 +1031,6 @@ void Msg_SetCnameOverride::CopyFrom(const Msg_SetCnameOverride& from) {
 }
 
 bool Msg_SetCnameOverride::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1245,7 +1039,6 @@ void Msg_SetCnameOverride::InternalSwap(Msg_SetCnameOverride* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_ahost_, lhs_arena,
       &other->_impl_.a_ahost_, rhs_arena
@@ -1256,44 +1049,37 @@ void Msg_SetCnameOverride::InternalSwap(Msg_SetCnameOverride* other) {
   );
 }
 
-std::string Msg_SetCnameOverride::GetTypeName() const {
-  return "protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_SetCnameOverride";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_SetCnameOverride::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PNativeDNSResolverOverride_2eproto_getter, &descriptor_table_PNativeDNSResolverOverride_2eproto_once,
+      file_level_metadata_PNativeDNSResolverOverride_2eproto[4]);
 }
-
 
 // ===================================================================
 
 class Msg_ClearHostOverride::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_ClearHostOverride>()._impl_._has_bits_);
-  static void set_has_a_ahost(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_ClearHostOverride::Msg_ClearHostOverride(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride)
 }
 Msg_ClearHostOverride::Msg_ClearHostOverride(const Msg_ClearHostOverride& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_ClearHostOverride* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_ahost_){}};
+      decltype(_impl_.a_ahost_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_ahost_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_ahost_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_ahost()) {
+  if (!from._internal_a_ahost().empty()) {
     _this->_impl_.a_ahost_.Set(from._internal_a_ahost(), 
       _this->GetArenaForAllocation());
   }
@@ -1305,9 +1091,8 @@ inline void Msg_ClearHostOverride::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_ahost_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_ahost_){}
   };
   _impl_.a_ahost_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1317,7 +1102,7 @@ inline void Msg_ClearHostOverride::SharedCtor(
 
 Msg_ClearHostOverride::~Msg_ClearHostOverride() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -1339,27 +1124,23 @@ void Msg_ClearHostOverride::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_ahost_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_ahost_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_ClearHostOverride::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aHost = 1;
+      // string a_aHost = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_ahost();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride.a_aHost"));
         } else
           goto handle_unusual;
         continue;
@@ -1374,12 +1155,11 @@ const char* Msg_ClearHostOverride::_InternalParse(const char* ptr, ::_pbi::Parse
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1393,16 +1173,19 @@ uint8_t* Msg_ClearHostOverride::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aHost = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_aHost = 1;
+  if (!this->_internal_a_ahost().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_ahost().data(), static_cast<int>(this->_internal_a_ahost().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride.a_aHost");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_ahost(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride)
   return target;
@@ -1412,41 +1195,39 @@ size_t Msg_ClearHostOverride::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride)
   size_t total_size = 0;
 
-  // required string a_aHost = 1;
-  if (_internal_has_a_ahost()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_ahost());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_aHost = 1;
+  if (!this->_internal_a_ahost().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_ahost());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_ClearHostOverride::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_ClearHostOverride*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_ClearHostOverride::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_ClearHostOverride::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_ClearHostOverride::GetClassData() const { return &_class_data_; }
 
-void Msg_ClearHostOverride::MergeFrom(const Msg_ClearHostOverride& from) {
-  Msg_ClearHostOverride* const _this = this;
+
+void Msg_ClearHostOverride::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_ClearHostOverride*>(&to_msg);
+  auto& from = static_cast<const Msg_ClearHostOverride&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_ahost()) {
+  if (!from._internal_a_ahost().empty()) {
     _this->_internal_set_a_ahost(from._internal_a_ahost());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_ClearHostOverride::CopyFrom(const Msg_ClearHostOverride& from) {
@@ -1457,7 +1238,6 @@ void Msg_ClearHostOverride::CopyFrom(const Msg_ClearHostOverride& from) {
 }
 
 bool Msg_ClearHostOverride::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1466,17 +1246,17 @@ void Msg_ClearHostOverride::InternalSwap(Msg_ClearHostOverride* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_ahost_, lhs_arena,
       &other->_impl_.a_ahost_, rhs_arena
   );
 }
 
-std::string Msg_ClearHostOverride::GetTypeName() const {
-  return "protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearHostOverride";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_ClearHostOverride::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PNativeDNSResolverOverride_2eproto_getter, &descriptor_table_PNativeDNSResolverOverride_2eproto_once,
+      file_level_metadata_PNativeDNSResolverOverride_2eproto[5]);
 }
-
 
 // ===================================================================
 
@@ -1486,145 +1266,37 @@ class Msg_ClearOverrides::_Internal {
 
 Msg_ClearOverrides::Msg_ClearOverrides(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearOverrides)
 }
 Msg_ClearOverrides::Msg_ClearOverrides(const Msg_ClearOverrides& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg_ClearOverrides* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearOverrides)
 }
 
-inline void Msg_ClearOverrides::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_ClearOverrides::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_ClearOverrides::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_ClearOverrides::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PNativeDNSResolverOverride_2eproto_getter, &descriptor_table_PNativeDNSResolverOverride_2eproto_once,
+      file_level_metadata_PNativeDNSResolverOverride_2eproto[6]);
 }
-
-Msg_ClearOverrides::~Msg_ClearOverrides() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearOverrides)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg_ClearOverrides::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg_ClearOverrides::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg_ClearOverrides::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearOverrides)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg_ClearOverrides::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg_ClearOverrides::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearOverrides)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearOverrides)
-  return target;
-}
-
-size_t Msg_ClearOverrides::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearOverrides)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg_ClearOverrides::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_ClearOverrides*>(
-      &from));
-}
-
-void Msg_ClearOverrides::MergeFrom(const Msg_ClearOverrides& from) {
-  Msg_ClearOverrides* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearOverrides)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg_ClearOverrides::CopyFrom(const Msg_ClearOverrides& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearOverrides)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg_ClearOverrides::IsInitialized() const {
-  return true;
-}
-
-void Msg_ClearOverrides::InternalSwap(Msg_ClearOverrides* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg_ClearOverrides::GetTypeName() const {
-  return "protobuf.mozilla.net.PNativeDNSResolverOverride.Msg_ClearOverrides";
-}
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace PNativeDNSResolverOverride

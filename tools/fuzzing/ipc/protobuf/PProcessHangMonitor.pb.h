@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "PProcessHangMonitor_protobuf.mozilla.h.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -42,6 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PProcessHangMonitor_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PProcessHangMonitor_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace PProcessHangMonitor {
@@ -97,7 +101,7 @@ namespace PProcessHangMonitor {
 // ===================================================================
 
 class Msg_HangEvidence final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PProcessHangMonitor.Msg_HangEvidence) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PProcessHangMonitor.Msg_HangEvidence) */ {
  public:
   inline Msg_HangEvidence() : Msg_HangEvidence(nullptr) {}
   ~Msg_HangEvidence() override;
@@ -127,13 +131,15 @@ class Msg_HangEvidence final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_HangEvidence& default_instance() {
     return *internal_default_instance();
   }
@@ -171,9 +177,15 @@ class Msg_HangEvidence final :
   Msg_HangEvidence* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_HangEvidence>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_HangEvidence& from);
-  void MergeFrom(const Msg_HangEvidence& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_HangEvidence& from) {
+    Msg_HangEvidence::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -186,7 +198,7 @@ class Msg_HangEvidence final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_HangEvidence* other);
 
   private:
@@ -199,7 +211,10 @@ class Msg_HangEvidence final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -208,7 +223,7 @@ class Msg_HangEvidence final :
   enum : int {
     kADataFieldNumber = 1,
   };
-  // required .protobuf.mozilla.SlowScriptData a_data = 1;
+  // .protobuf.mozilla.SlowScriptData a_data = 1;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -234,9 +249,8 @@ class Msg_HangEvidence final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::SlowScriptData* a_data_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProcessHangMonitor_2eproto;
@@ -244,10 +258,9 @@ class Msg_HangEvidence final :
 // -------------------------------------------------------------------
 
 class Msg_ClearHang final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PProcessHangMonitor.Msg_ClearHang) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PProcessHangMonitor.Msg_ClearHang) */ {
  public:
   inline Msg_ClearHang() : Msg_ClearHang(nullptr) {}
-  ~Msg_ClearHang() override;
   explicit PROTOBUF_CONSTEXPR Msg_ClearHang(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_ClearHang(const Msg_ClearHang& from);
@@ -274,13 +287,15 @@ class Msg_ClearHang final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_ClearHang& default_instance() {
     return *internal_default_instance();
   }
@@ -318,23 +333,15 @@ class Msg_ClearHang final :
   Msg_ClearHang* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ClearHang>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_ClearHang& from);
-  void MergeFrom(const Msg_ClearHang& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_ClearHang* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_ClearHang& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_ClearHang& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -346,7 +353,10 @@ class Msg_ClearHang final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -360,18 +370,15 @@ class Msg_ClearHang final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PProcessHangMonitor_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_TerminateScript final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PProcessHangMonitor.Msg_TerminateScript) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PProcessHangMonitor.Msg_TerminateScript) */ {
  public:
   inline Msg_TerminateScript() : Msg_TerminateScript(nullptr) {}
-  ~Msg_TerminateScript() override;
   explicit PROTOBUF_CONSTEXPR Msg_TerminateScript(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_TerminateScript(const Msg_TerminateScript& from);
@@ -398,13 +405,15 @@ class Msg_TerminateScript final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_TerminateScript& default_instance() {
     return *internal_default_instance();
   }
@@ -442,23 +451,15 @@ class Msg_TerminateScript final :
   Msg_TerminateScript* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_TerminateScript>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_TerminateScript& from);
-  void MergeFrom(const Msg_TerminateScript& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_TerminateScript* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_TerminateScript& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_TerminateScript& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -470,7 +471,10 @@ class Msg_TerminateScript final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -484,18 +488,15 @@ class Msg_TerminateScript final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PProcessHangMonitor_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_RequestContentJSInterrupt final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PProcessHangMonitor.Msg_RequestContentJSInterrupt) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PProcessHangMonitor.Msg_RequestContentJSInterrupt) */ {
  public:
   inline Msg_RequestContentJSInterrupt() : Msg_RequestContentJSInterrupt(nullptr) {}
-  ~Msg_RequestContentJSInterrupt() override;
   explicit PROTOBUF_CONSTEXPR Msg_RequestContentJSInterrupt(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_RequestContentJSInterrupt(const Msg_RequestContentJSInterrupt& from);
@@ -522,13 +523,15 @@ class Msg_RequestContentJSInterrupt final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_RequestContentJSInterrupt& default_instance() {
     return *internal_default_instance();
   }
@@ -566,23 +569,15 @@ class Msg_RequestContentJSInterrupt final :
   Msg_RequestContentJSInterrupt* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_RequestContentJSInterrupt>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_RequestContentJSInterrupt& from);
-  void MergeFrom(const Msg_RequestContentJSInterrupt& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_RequestContentJSInterrupt* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_RequestContentJSInterrupt& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_RequestContentJSInterrupt& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -594,7 +589,10 @@ class Msg_RequestContentJSInterrupt final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -608,18 +606,15 @@ class Msg_RequestContentJSInterrupt final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PProcessHangMonitor_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_BeginStartingDebugger final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PProcessHangMonitor.Msg_BeginStartingDebugger) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PProcessHangMonitor.Msg_BeginStartingDebugger) */ {
  public:
   inline Msg_BeginStartingDebugger() : Msg_BeginStartingDebugger(nullptr) {}
-  ~Msg_BeginStartingDebugger() override;
   explicit PROTOBUF_CONSTEXPR Msg_BeginStartingDebugger(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_BeginStartingDebugger(const Msg_BeginStartingDebugger& from);
@@ -646,13 +641,15 @@ class Msg_BeginStartingDebugger final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_BeginStartingDebugger& default_instance() {
     return *internal_default_instance();
   }
@@ -690,23 +687,15 @@ class Msg_BeginStartingDebugger final :
   Msg_BeginStartingDebugger* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_BeginStartingDebugger>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_BeginStartingDebugger& from);
-  void MergeFrom(const Msg_BeginStartingDebugger& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_BeginStartingDebugger* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_BeginStartingDebugger& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_BeginStartingDebugger& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -718,7 +707,10 @@ class Msg_BeginStartingDebugger final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -732,18 +724,15 @@ class Msg_BeginStartingDebugger final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PProcessHangMonitor_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_EndStartingDebugger final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PProcessHangMonitor.Msg_EndStartingDebugger) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PProcessHangMonitor.Msg_EndStartingDebugger) */ {
  public:
   inline Msg_EndStartingDebugger() : Msg_EndStartingDebugger(nullptr) {}
-  ~Msg_EndStartingDebugger() override;
   explicit PROTOBUF_CONSTEXPR Msg_EndStartingDebugger(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_EndStartingDebugger(const Msg_EndStartingDebugger& from);
@@ -770,13 +759,15 @@ class Msg_EndStartingDebugger final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_EndStartingDebugger& default_instance() {
     return *internal_default_instance();
   }
@@ -814,23 +805,15 @@ class Msg_EndStartingDebugger final :
   Msg_EndStartingDebugger* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_EndStartingDebugger>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_EndStartingDebugger& from);
-  void MergeFrom(const Msg_EndStartingDebugger& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_EndStartingDebugger* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_EndStartingDebugger& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_EndStartingDebugger& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -842,7 +825,10 @@ class Msg_EndStartingDebugger final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -856,15 +842,13 @@ class Msg_EndStartingDebugger final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PProcessHangMonitor_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_PaintWhileInterruptingJS final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PProcessHangMonitor.Msg_PaintWhileInterruptingJS) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PProcessHangMonitor.Msg_PaintWhileInterruptingJS) */ {
  public:
   inline Msg_PaintWhileInterruptingJS() : Msg_PaintWhileInterruptingJS(nullptr) {}
   ~Msg_PaintWhileInterruptingJS() override;
@@ -894,13 +878,15 @@ class Msg_PaintWhileInterruptingJS final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_PaintWhileInterruptingJS& default_instance() {
     return *internal_default_instance();
   }
@@ -938,9 +924,15 @@ class Msg_PaintWhileInterruptingJS final :
   Msg_PaintWhileInterruptingJS* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_PaintWhileInterruptingJS>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_PaintWhileInterruptingJS& from);
-  void MergeFrom(const Msg_PaintWhileInterruptingJS& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_PaintWhileInterruptingJS& from) {
+    Msg_PaintWhileInterruptingJS::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -953,7 +945,7 @@ class Msg_PaintWhileInterruptingJS final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_PaintWhileInterruptingJS* other);
 
   private:
@@ -966,7 +958,10 @@ class Msg_PaintWhileInterruptingJS final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -975,11 +970,7 @@ class Msg_PaintWhileInterruptingJS final :
   enum : int {
     kATabIdFieldNumber = 1,
   };
-  // required bytes a_tabId = 1;
-  bool has_a_tabid() const;
-  private:
-  bool _internal_has_a_tabid() const;
-  public:
+  // bytes a_tabId = 1;
   void clear_a_tabid();
   const std::string& a_tabid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1001,9 +992,8 @@ class Msg_PaintWhileInterruptingJS final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_tabid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProcessHangMonitor_2eproto;
@@ -1011,7 +1001,7 @@ class Msg_PaintWhileInterruptingJS final :
 // -------------------------------------------------------------------
 
 class Msg_UnloadLayersWhileInterruptingJS final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PProcessHangMonitor.Msg_UnloadLayersWhileInterruptingJS) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PProcessHangMonitor.Msg_UnloadLayersWhileInterruptingJS) */ {
  public:
   inline Msg_UnloadLayersWhileInterruptingJS() : Msg_UnloadLayersWhileInterruptingJS(nullptr) {}
   ~Msg_UnloadLayersWhileInterruptingJS() override;
@@ -1041,13 +1031,15 @@ class Msg_UnloadLayersWhileInterruptingJS final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_UnloadLayersWhileInterruptingJS& default_instance() {
     return *internal_default_instance();
   }
@@ -1085,9 +1077,15 @@ class Msg_UnloadLayersWhileInterruptingJS final :
   Msg_UnloadLayersWhileInterruptingJS* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_UnloadLayersWhileInterruptingJS>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_UnloadLayersWhileInterruptingJS& from);
-  void MergeFrom(const Msg_UnloadLayersWhileInterruptingJS& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_UnloadLayersWhileInterruptingJS& from) {
+    Msg_UnloadLayersWhileInterruptingJS::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1100,7 +1098,7 @@ class Msg_UnloadLayersWhileInterruptingJS final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_UnloadLayersWhileInterruptingJS* other);
 
   private:
@@ -1113,7 +1111,10 @@ class Msg_UnloadLayersWhileInterruptingJS final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1122,11 +1123,7 @@ class Msg_UnloadLayersWhileInterruptingJS final :
   enum : int {
     kATabIdFieldNumber = 1,
   };
-  // required bytes a_tabId = 1;
-  bool has_a_tabid() const;
-  private:
-  bool _internal_has_a_tabid() const;
-  public:
+  // bytes a_tabId = 1;
   void clear_a_tabid();
   const std::string& a_tabid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1148,9 +1145,8 @@ class Msg_UnloadLayersWhileInterruptingJS final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_tabid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProcessHangMonitor_2eproto;
@@ -1158,7 +1154,7 @@ class Msg_UnloadLayersWhileInterruptingJS final :
 // -------------------------------------------------------------------
 
 class Msg_CancelContentJSExecutionIfRunning final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PProcessHangMonitor.Msg_CancelContentJSExecutionIfRunning) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PProcessHangMonitor.Msg_CancelContentJSExecutionIfRunning) */ {
  public:
   inline Msg_CancelContentJSExecutionIfRunning() : Msg_CancelContentJSExecutionIfRunning(nullptr) {}
   ~Msg_CancelContentJSExecutionIfRunning() override;
@@ -1188,13 +1184,15 @@ class Msg_CancelContentJSExecutionIfRunning final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_CancelContentJSExecutionIfRunning& default_instance() {
     return *internal_default_instance();
   }
@@ -1232,9 +1230,15 @@ class Msg_CancelContentJSExecutionIfRunning final :
   Msg_CancelContentJSExecutionIfRunning* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_CancelContentJSExecutionIfRunning>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_CancelContentJSExecutionIfRunning& from);
-  void MergeFrom(const Msg_CancelContentJSExecutionIfRunning& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_CancelContentJSExecutionIfRunning& from) {
+    Msg_CancelContentJSExecutionIfRunning::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1247,7 +1251,7 @@ class Msg_CancelContentJSExecutionIfRunning final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_CancelContentJSExecutionIfRunning* other);
 
   private:
@@ -1260,7 +1264,10 @@ class Msg_CancelContentJSExecutionIfRunning final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1273,11 +1280,7 @@ class Msg_CancelContentJSExecutionIfRunning final :
     kAANavigationIndexFieldNumber = 3,
     kAAEpochFieldNumber = 5,
   };
-  // required bytes a_tabId = 1;
-  bool has_a_tabid() const;
-  private:
-  bool _internal_has_a_tabid() const;
-  public:
+  // bytes a_tabId = 1;
   void clear_a_tabid();
   const std::string& a_tabid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1291,11 +1294,7 @@ class Msg_CancelContentJSExecutionIfRunning final :
   std::string* _internal_mutable_a_tabid();
   public:
 
-  // required bytes a_aNavigationType = 2;
-  bool has_a_anavigationtype() const;
-  private:
-  bool _internal_has_a_anavigationtype() const;
-  public:
+  // bytes a_aNavigationType = 2;
   void clear_a_anavigationtype();
   const std::string& a_anavigationtype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1327,11 +1326,7 @@ class Msg_CancelContentJSExecutionIfRunning final :
   std::string* _internal_mutable_a_anavigationuri();
   public:
 
-  // required sint32 a_aNavigationIndex = 3;
-  bool has_a_anavigationindex() const;
-  private:
-  bool _internal_has_a_anavigationindex() const;
-  public:
+  // sint32 a_aNavigationIndex = 3;
   void clear_a_anavigationindex();
   int32_t a_anavigationindex() const;
   void set_a_anavigationindex(int32_t value);
@@ -1340,11 +1335,7 @@ class Msg_CancelContentJSExecutionIfRunning final :
   void _internal_set_a_anavigationindex(int32_t value);
   public:
 
-  // required sint32 a_aEpoch = 5;
-  bool has_a_aepoch() const;
-  private:
-  bool _internal_has_a_aepoch() const;
-  public:
+  // sint32 a_aEpoch = 5;
   void clear_a_aepoch();
   int32_t a_aepoch() const;
   void set_a_aepoch(int32_t value);
@@ -1356,9 +1347,6 @@ class Msg_CancelContentJSExecutionIfRunning final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.PProcessHangMonitor.Msg_CancelContentJSExecutionIfRunning)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1378,7 +1366,7 @@ class Msg_CancelContentJSExecutionIfRunning final :
 // -------------------------------------------------------------------
 
 class Msg_SetMainThreadQoSPriority final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PProcessHangMonitor.Msg_SetMainThreadQoSPriority) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PProcessHangMonitor.Msg_SetMainThreadQoSPriority) */ {
  public:
   inline Msg_SetMainThreadQoSPriority() : Msg_SetMainThreadQoSPriority(nullptr) {}
   ~Msg_SetMainThreadQoSPriority() override;
@@ -1408,13 +1396,15 @@ class Msg_SetMainThreadQoSPriority final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SetMainThreadQoSPriority& default_instance() {
     return *internal_default_instance();
   }
@@ -1452,9 +1442,15 @@ class Msg_SetMainThreadQoSPriority final :
   Msg_SetMainThreadQoSPriority* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SetMainThreadQoSPriority>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SetMainThreadQoSPriority& from);
-  void MergeFrom(const Msg_SetMainThreadQoSPriority& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SetMainThreadQoSPriority& from) {
+    Msg_SetMainThreadQoSPriority::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1467,7 +1463,7 @@ class Msg_SetMainThreadQoSPriority final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SetMainThreadQoSPriority* other);
 
   private:
@@ -1480,7 +1476,10 @@ class Msg_SetMainThreadQoSPriority final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1489,11 +1488,7 @@ class Msg_SetMainThreadQoSPriority final :
   enum : int {
     kAQosPriorityFieldNumber = 1,
   };
-  // required bytes a_qosPriority = 1;
-  bool has_a_qospriority() const;
-  private:
-  bool _internal_has_a_qospriority() const;
-  public:
+  // bytes a_qosPriority = 1;
   void clear_a_qospriority();
   const std::string& a_qospriority() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1515,9 +1510,8 @@ class Msg_SetMainThreadQoSPriority final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_qospriority_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PProcessHangMonitor_2eproto;
@@ -1533,11 +1527,9 @@ class Msg_SetMainThreadQoSPriority final :
 #endif  // __GNUC__
 // Msg_HangEvidence
 
-// required .protobuf.mozilla.SlowScriptData a_data = 1;
+// .protobuf.mozilla.SlowScriptData a_data = 1;
 inline bool Msg_HangEvidence::_internal_has_a_data() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_data_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_data_ != nullptr;
 }
 inline bool Msg_HangEvidence::has_a_data() const {
   return _internal_has_a_data();
@@ -1558,14 +1550,14 @@ inline void Msg_HangEvidence::unsafe_arena_set_allocated_a_data(
   }
   _impl_.a_data_ = a_data;
   if (a_data) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.PProcessHangMonitor.Msg_HangEvidence.a_data)
 }
 inline ::protobuf::mozilla::SlowScriptData* Msg_HangEvidence::release_a_data() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::SlowScriptData* temp = _impl_.a_data_;
   _impl_.a_data_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1581,13 +1573,13 @@ inline ::protobuf::mozilla::SlowScriptData* Msg_HangEvidence::release_a_data() {
 }
 inline ::protobuf::mozilla::SlowScriptData* Msg_HangEvidence::unsafe_arena_release_a_data() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PProcessHangMonitor.Msg_HangEvidence.a_data)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::SlowScriptData* temp = _impl_.a_data_;
   _impl_.a_data_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::SlowScriptData* Msg_HangEvidence::_internal_mutable_a_data() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_data_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::SlowScriptData>(GetArenaForAllocation());
     _impl_.a_data_ = p;
@@ -1612,9 +1604,9 @@ inline void Msg_HangEvidence::set_allocated_a_data(::protobuf::mozilla::SlowScri
       a_data = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_data, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_data_ = a_data;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PProcessHangMonitor.Msg_HangEvidence.a_data)
@@ -1644,17 +1636,9 @@ inline void Msg_HangEvidence::set_allocated_a_data(::protobuf::mozilla::SlowScri
 
 // Msg_PaintWhileInterruptingJS
 
-// required bytes a_tabId = 1;
-inline bool Msg_PaintWhileInterruptingJS::_internal_has_a_tabid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_PaintWhileInterruptingJS::has_a_tabid() const {
-  return _internal_has_a_tabid();
-}
+// bytes a_tabId = 1;
 inline void Msg_PaintWhileInterruptingJS::clear_a_tabid() {
   _impl_.a_tabid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_PaintWhileInterruptingJS::a_tabid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PProcessHangMonitor.Msg_PaintWhileInterruptingJS.a_tabId)
@@ -1663,7 +1647,7 @@ inline const std::string& Msg_PaintWhileInterruptingJS::a_tabid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PaintWhileInterruptingJS::set_a_tabid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_tabid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PProcessHangMonitor.Msg_PaintWhileInterruptingJS.a_tabId)
 }
@@ -1676,32 +1660,22 @@ inline const std::string& Msg_PaintWhileInterruptingJS::_internal_a_tabid() cons
   return _impl_.a_tabid_.Get();
 }
 inline void Msg_PaintWhileInterruptingJS::_internal_set_a_tabid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_tabid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_PaintWhileInterruptingJS::_internal_mutable_a_tabid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_tabid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_PaintWhileInterruptingJS::release_a_tabid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PProcessHangMonitor.Msg_PaintWhileInterruptingJS.a_tabId)
-  if (!_internal_has_a_tabid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_tabid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_tabid_.IsDefault()) {
-    _impl_.a_tabid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_tabid_.Release();
 }
 inline void Msg_PaintWhileInterruptingJS::set_allocated_a_tabid(std::string* a_tabid) {
   if (a_tabid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_tabid_.SetAllocated(a_tabid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1716,17 +1690,9 @@ inline void Msg_PaintWhileInterruptingJS::set_allocated_a_tabid(std::string* a_t
 
 // Msg_UnloadLayersWhileInterruptingJS
 
-// required bytes a_tabId = 1;
-inline bool Msg_UnloadLayersWhileInterruptingJS::_internal_has_a_tabid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_UnloadLayersWhileInterruptingJS::has_a_tabid() const {
-  return _internal_has_a_tabid();
-}
+// bytes a_tabId = 1;
 inline void Msg_UnloadLayersWhileInterruptingJS::clear_a_tabid() {
   _impl_.a_tabid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_UnloadLayersWhileInterruptingJS::a_tabid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PProcessHangMonitor.Msg_UnloadLayersWhileInterruptingJS.a_tabId)
@@ -1735,7 +1701,7 @@ inline const std::string& Msg_UnloadLayersWhileInterruptingJS::a_tabid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UnloadLayersWhileInterruptingJS::set_a_tabid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_tabid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PProcessHangMonitor.Msg_UnloadLayersWhileInterruptingJS.a_tabId)
 }
@@ -1748,32 +1714,22 @@ inline const std::string& Msg_UnloadLayersWhileInterruptingJS::_internal_a_tabid
   return _impl_.a_tabid_.Get();
 }
 inline void Msg_UnloadLayersWhileInterruptingJS::_internal_set_a_tabid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_tabid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_UnloadLayersWhileInterruptingJS::_internal_mutable_a_tabid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_tabid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_UnloadLayersWhileInterruptingJS::release_a_tabid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PProcessHangMonitor.Msg_UnloadLayersWhileInterruptingJS.a_tabId)
-  if (!_internal_has_a_tabid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_tabid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_tabid_.IsDefault()) {
-    _impl_.a_tabid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_tabid_.Release();
 }
 inline void Msg_UnloadLayersWhileInterruptingJS::set_allocated_a_tabid(std::string* a_tabid) {
   if (a_tabid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_tabid_.SetAllocated(a_tabid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1788,17 +1744,9 @@ inline void Msg_UnloadLayersWhileInterruptingJS::set_allocated_a_tabid(std::stri
 
 // Msg_CancelContentJSExecutionIfRunning
 
-// required bytes a_tabId = 1;
-inline bool Msg_CancelContentJSExecutionIfRunning::_internal_has_a_tabid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_CancelContentJSExecutionIfRunning::has_a_tabid() const {
-  return _internal_has_a_tabid();
-}
+// bytes a_tabId = 1;
 inline void Msg_CancelContentJSExecutionIfRunning::clear_a_tabid() {
   _impl_.a_tabid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_CancelContentJSExecutionIfRunning::a_tabid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PProcessHangMonitor.Msg_CancelContentJSExecutionIfRunning.a_tabId)
@@ -1807,7 +1755,7 @@ inline const std::string& Msg_CancelContentJSExecutionIfRunning::a_tabid() const
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CancelContentJSExecutionIfRunning::set_a_tabid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_tabid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PProcessHangMonitor.Msg_CancelContentJSExecutionIfRunning.a_tabId)
 }
@@ -1820,32 +1768,22 @@ inline const std::string& Msg_CancelContentJSExecutionIfRunning::_internal_a_tab
   return _impl_.a_tabid_.Get();
 }
 inline void Msg_CancelContentJSExecutionIfRunning::_internal_set_a_tabid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_tabid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CancelContentJSExecutionIfRunning::_internal_mutable_a_tabid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_tabid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CancelContentJSExecutionIfRunning::release_a_tabid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PProcessHangMonitor.Msg_CancelContentJSExecutionIfRunning.a_tabId)
-  if (!_internal_has_a_tabid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_tabid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_tabid_.IsDefault()) {
-    _impl_.a_tabid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_tabid_.Release();
 }
 inline void Msg_CancelContentJSExecutionIfRunning::set_allocated_a_tabid(std::string* a_tabid) {
   if (a_tabid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_tabid_.SetAllocated(a_tabid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1856,17 +1794,9 @@ inline void Msg_CancelContentJSExecutionIfRunning::set_allocated_a_tabid(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PProcessHangMonitor.Msg_CancelContentJSExecutionIfRunning.a_tabId)
 }
 
-// required bytes a_aNavigationType = 2;
-inline bool Msg_CancelContentJSExecutionIfRunning::_internal_has_a_anavigationtype() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_CancelContentJSExecutionIfRunning::has_a_anavigationtype() const {
-  return _internal_has_a_anavigationtype();
-}
+// bytes a_aNavigationType = 2;
 inline void Msg_CancelContentJSExecutionIfRunning::clear_a_anavigationtype() {
   _impl_.a_anavigationtype_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_CancelContentJSExecutionIfRunning::a_anavigationtype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PProcessHangMonitor.Msg_CancelContentJSExecutionIfRunning.a_aNavigationType)
@@ -1875,7 +1805,7 @@ inline const std::string& Msg_CancelContentJSExecutionIfRunning::a_anavigationty
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CancelContentJSExecutionIfRunning::set_a_anavigationtype(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_anavigationtype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PProcessHangMonitor.Msg_CancelContentJSExecutionIfRunning.a_aNavigationType)
 }
@@ -1888,32 +1818,22 @@ inline const std::string& Msg_CancelContentJSExecutionIfRunning::_internal_a_ana
   return _impl_.a_anavigationtype_.Get();
 }
 inline void Msg_CancelContentJSExecutionIfRunning::_internal_set_a_anavigationtype(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_anavigationtype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CancelContentJSExecutionIfRunning::_internal_mutable_a_anavigationtype() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_anavigationtype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CancelContentJSExecutionIfRunning::release_a_anavigationtype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PProcessHangMonitor.Msg_CancelContentJSExecutionIfRunning.a_aNavigationType)
-  if (!_internal_has_a_anavigationtype()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_anavigationtype_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_anavigationtype_.IsDefault()) {
-    _impl_.a_anavigationtype_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_anavigationtype_.Release();
 }
 inline void Msg_CancelContentJSExecutionIfRunning::set_allocated_a_anavigationtype(std::string* a_anavigationtype) {
   if (a_anavigationtype != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_anavigationtype_.SetAllocated(a_anavigationtype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1924,17 +1844,9 @@ inline void Msg_CancelContentJSExecutionIfRunning::set_allocated_a_anavigationty
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PProcessHangMonitor.Msg_CancelContentJSExecutionIfRunning.a_aNavigationType)
 }
 
-// required sint32 a_aNavigationIndex = 3;
-inline bool Msg_CancelContentJSExecutionIfRunning::_internal_has_a_anavigationindex() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_CancelContentJSExecutionIfRunning::has_a_anavigationindex() const {
-  return _internal_has_a_anavigationindex();
-}
+// sint32 a_aNavigationIndex = 3;
 inline void Msg_CancelContentJSExecutionIfRunning::clear_a_anavigationindex() {
   _impl_.a_anavigationindex_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline int32_t Msg_CancelContentJSExecutionIfRunning::_internal_a_anavigationindex() const {
   return _impl_.a_anavigationindex_;
@@ -1944,7 +1856,7 @@ inline int32_t Msg_CancelContentJSExecutionIfRunning::a_anavigationindex() const
   return _internal_a_anavigationindex();
 }
 inline void Msg_CancelContentJSExecutionIfRunning::_internal_set_a_anavigationindex(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_anavigationindex_ = value;
 }
 inline void Msg_CancelContentJSExecutionIfRunning::set_a_anavigationindex(int32_t value) {
@@ -1954,7 +1866,7 @@ inline void Msg_CancelContentJSExecutionIfRunning::set_a_anavigationindex(int32_
 
 // optional string a_aNavigationURI = 4;
 inline bool Msg_CancelContentJSExecutionIfRunning::_internal_has_a_anavigationuri() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
 inline bool Msg_CancelContentJSExecutionIfRunning::has_a_anavigationuri() const {
@@ -1962,7 +1874,7 @@ inline bool Msg_CancelContentJSExecutionIfRunning::has_a_anavigationuri() const 
 }
 inline void Msg_CancelContentJSExecutionIfRunning::clear_a_anavigationuri() {
   _impl_.a_anavigationuri_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_CancelContentJSExecutionIfRunning::a_anavigationuri() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PProcessHangMonitor.Msg_CancelContentJSExecutionIfRunning.a_aNavigationURI)
@@ -1971,7 +1883,7 @@ inline const std::string& Msg_CancelContentJSExecutionIfRunning::a_anavigationur
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CancelContentJSExecutionIfRunning::set_a_anavigationuri(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_anavigationuri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PProcessHangMonitor.Msg_CancelContentJSExecutionIfRunning.a_aNavigationURI)
 }
@@ -1984,11 +1896,11 @@ inline const std::string& Msg_CancelContentJSExecutionIfRunning::_internal_a_ana
   return _impl_.a_anavigationuri_.Get();
 }
 inline void Msg_CancelContentJSExecutionIfRunning::_internal_set_a_anavigationuri(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_anavigationuri_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CancelContentJSExecutionIfRunning::_internal_mutable_a_anavigationuri() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_anavigationuri_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CancelContentJSExecutionIfRunning::release_a_anavigationuri() {
@@ -1996,7 +1908,7 @@ inline std::string* Msg_CancelContentJSExecutionIfRunning::release_a_anavigation
   if (!_internal_has_a_anavigationuri()) {
     return nullptr;
   }
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
   auto* p = _impl_.a_anavigationuri_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (_impl_.a_anavigationuri_.IsDefault()) {
@@ -2007,9 +1919,9 @@ inline std::string* Msg_CancelContentJSExecutionIfRunning::release_a_anavigation
 }
 inline void Msg_CancelContentJSExecutionIfRunning::set_allocated_a_anavigationuri(std::string* a_anavigationuri) {
   if (a_anavigationuri != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_anavigationuri_.SetAllocated(a_anavigationuri, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2020,17 +1932,9 @@ inline void Msg_CancelContentJSExecutionIfRunning::set_allocated_a_anavigationur
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PProcessHangMonitor.Msg_CancelContentJSExecutionIfRunning.a_aNavigationURI)
 }
 
-// required sint32 a_aEpoch = 5;
-inline bool Msg_CancelContentJSExecutionIfRunning::_internal_has_a_aepoch() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool Msg_CancelContentJSExecutionIfRunning::has_a_aepoch() const {
-  return _internal_has_a_aepoch();
-}
+// sint32 a_aEpoch = 5;
 inline void Msg_CancelContentJSExecutionIfRunning::clear_a_aepoch() {
   _impl_.a_aepoch_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline int32_t Msg_CancelContentJSExecutionIfRunning::_internal_a_aepoch() const {
   return _impl_.a_aepoch_;
@@ -2040,7 +1944,7 @@ inline int32_t Msg_CancelContentJSExecutionIfRunning::a_aepoch() const {
   return _internal_a_aepoch();
 }
 inline void Msg_CancelContentJSExecutionIfRunning::_internal_set_a_aepoch(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_aepoch_ = value;
 }
 inline void Msg_CancelContentJSExecutionIfRunning::set_a_aepoch(int32_t value) {
@@ -2052,17 +1956,9 @@ inline void Msg_CancelContentJSExecutionIfRunning::set_a_aepoch(int32_t value) {
 
 // Msg_SetMainThreadQoSPriority
 
-// required bytes a_qosPriority = 1;
-inline bool Msg_SetMainThreadQoSPriority::_internal_has_a_qospriority() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_SetMainThreadQoSPriority::has_a_qospriority() const {
-  return _internal_has_a_qospriority();
-}
+// bytes a_qosPriority = 1;
 inline void Msg_SetMainThreadQoSPriority::clear_a_qospriority() {
   _impl_.a_qospriority_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_SetMainThreadQoSPriority::a_qospriority() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PProcessHangMonitor.Msg_SetMainThreadQoSPriority.a_qosPriority)
@@ -2071,7 +1967,7 @@ inline const std::string& Msg_SetMainThreadQoSPriority::a_qospriority() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetMainThreadQoSPriority::set_a_qospriority(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_qospriority_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PProcessHangMonitor.Msg_SetMainThreadQoSPriority.a_qosPriority)
 }
@@ -2084,32 +1980,22 @@ inline const std::string& Msg_SetMainThreadQoSPriority::_internal_a_qospriority(
   return _impl_.a_qospriority_.Get();
 }
 inline void Msg_SetMainThreadQoSPriority::_internal_set_a_qospriority(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_qospriority_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_SetMainThreadQoSPriority::_internal_mutable_a_qospriority() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_qospriority_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_SetMainThreadQoSPriority::release_a_qospriority() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PProcessHangMonitor.Msg_SetMainThreadQoSPriority.a_qosPriority)
-  if (!_internal_has_a_qospriority()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_qospriority_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_qospriority_.IsDefault()) {
-    _impl_.a_qospriority_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_qospriority_.Release();
 }
 inline void Msg_SetMainThreadQoSPriority::set_allocated_a_qospriority(std::string* a_qospriority) {
   if (a_qospriority != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_qospriority_.SetAllocated(a_qospriority, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

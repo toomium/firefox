@@ -5,23 +5,22 @@
 
 // Generated from /home/tmittendorf/firefox/toolkit/components/backgroundhangmonitor/HangTypes.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla;
 
 // Structs and unions declarations
 message HangEntryBufOffset {
-  required uint32 a_index = 1;
+  uint32 a_index = 1;
 }
 
 message HangEntryModOffset {
-  required uint32 a_module = 1;
-  required uint32 a_offset = 2;
+  uint32 a_module = 1;
+  uint32 a_offset = 2;
 }
 
 message HangEntryProgCounter {
-  required bytes a_pc = 1;
+  bytes a_pc = 1;
 }
 
 message HangEntryContent {
@@ -54,8 +53,8 @@ message HangEntry {
 }
 
 message HangModule {
-  required string a_name = 1;
-  required string a_breakpadId = 2;
+  string a_name = 1;
+  string a_breakpadId = 2;
 }
 
 message HangStack {
@@ -65,16 +64,16 @@ message HangStack {
 }
 
 message HangAnnotation {
-  required string a_name = 1;
-  required string a_value = 2;
+  string a_name = 1;
+  string a_value = 2;
 }
 
 message HangDetails {
-  required bytes a_duration = 1;
-  required string a_process = 2;
-  required string a_remoteType = 3;
-  required string a_threadName = 4;
-  required string a_runnableName = 5;
-  required protobuf.mozilla.HangStack a_stack = 6;
+  bytes a_duration = 1;
+  string a_process = 2;
+  string a_remoteType = 3;
+  string a_threadName = 4;
+  string a_runnableName = 5;
+  protobuf.mozilla.HangStack a_stack = 6;
   repeated protobuf.mozilla.HangAnnotation a_annotations = 7;
 }

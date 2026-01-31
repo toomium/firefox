@@ -5,8 +5,7 @@
 
 // Generated from PDocAccessible.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.a11y;
 
@@ -14,45 +13,45 @@ import "DocAccessibleTypes.proto";
 
 // Structs and unions declarations
 message AccessibleData {
-  required uint64 a_ID = 1;
-  required bytes a_Role = 2;
-  required uint64 a_ParentID = 3;
-  required uint32 a_IndexInParent = 4;
-  required bytes a_Type = 5;
-  required bytes a_GenericTypes = 6;
-  required uint32 a_RoleMapEntryIndex = 7;
+  uint64 a_ID = 1;
+  bytes a_Role = 2;
+  uint64 a_ParentID = 3;
+  uint32 a_IndexInParent = 4;
+  bytes a_Type = 5;
+  bytes a_GenericTypes = 6;
+  uint32 a_RoleMapEntryIndex = 7;
   optional bytes a_CacheFields = 8;
 }
 
 message CacheEventData {
-  required bytes a_UpdateType = 1;
+  bytes a_UpdateType = 1;
   repeated protobuf.mozilla.a11y.CacheData a_aData = 2;
 }
 
 message ShowEventData {
   repeated protobuf.mozilla.a11y.AccessibleData a_NewTree = 1;
-  required bool a_EventSuppressed = 2;
-  required bool a_Complete = 3;
-  required bool a_FromUser = 4;
+  bool a_EventSuppressed = 2;
+  bool a_Complete = 3;
+  bool a_FromUser = 4;
 }
 
 message HideEventData {
-  required uint64 a_ID = 1;
-  required bool a_IsFromUserInput = 2;
+  uint64 a_ID = 1;
+  bool a_IsFromUserInput = 2;
 }
 
 message ReorderEventData {
-  required uint64 a_ID = 1;
-  required uint32 a_Type = 2;
+  uint64 a_ID = 1;
+  uint32 a_Type = 2;
 }
 
 message TextChangeEventData {
-  required uint64 a_ID = 1;
-  required string a_Str = 2;
-  required sint32 a_Start = 3;
-  required uint32 a_Len = 4;
-  required bool a_IsInsert = 5;
-  required bool a_FromUser = 6;
+  uint64 a_ID = 1;
+  string a_Str = 2;
+  sint32 a_Start = 3;
+  uint32 a_Len = 4;
+  bool a_IsInsert = 5;
+  bool a_FromUser = 6;
 }
 
 message MutationEventData {
@@ -66,8 +65,8 @@ message MutationEventData {
 }
 
 message TextRangeData {
-  required uint64 a_StartID = 1;
-  required uint64 a_EndID = 2;
-  required sint32 a_StartOffset = 3;
-  required sint32 a_EndOffset = 4;
+  uint64 a_StartID = 1;
+  uint64 a_EndID = 2;
+  sint32 a_StartOffset = 3;
+  sint32 a_EndOffset = 4;
 }

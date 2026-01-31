@@ -5,13 +5,12 @@
 
 // Generated from /home/tmittendorf/firefox/dom/quota/IPCQuotaObject.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.quota;
 
 
 // Structs and unions declarations
 message IPCQuotaObject {
-  required bytes a_childEndpoint = 1;
+  bytes a_childEndpoint = 1;
 }

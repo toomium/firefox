@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/network/PTCPSocket.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.net.PTCPSocket;
 
@@ -17,14 +16,14 @@ import public "PTCPSocket_protobuf.h.proto";
 
 // Message declarations
 message Msg_Open {
-  required string a_host = 1;
-  required uint32 a_port = 2;
-  required bool a_useSSL = 3;
-  required bool a_useArrayBuffers = 4;
+  string a_host = 1;
+  uint32 a_port = 2;
+  bool a_useSSL = 3;
+  bool a_useArrayBuffers = 4;
 }
 
 message Msg_Data {
-  required protobuf.SendableData a_data = 1;
+  protobuf.SendableData a_data = 1;
 }
 
 message Msg_StartTLS {
@@ -40,14 +39,14 @@ message Msg_Close {
 }
 
 message Msg_Callback {
-  required string a_type = 1;
-  required protobuf.CallbackData a_data = 2;
-  required uint32 a_readyState = 3;
+  string a_type = 1;
+  protobuf.CallbackData a_data = 2;
+  uint32 a_readyState = 3;
 }
 
 message Msg_UpdateBufferedAmount {
-  required uint32 a_bufferedAmount = 1;
-  required uint32 a_trackingNumber = 2;
+  uint32 a_bufferedAmount = 1;
+  uint32 a_trackingNumber = 2;
 }
 
 message Msg_RequestDelete {

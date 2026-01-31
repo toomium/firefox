@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/workers/remoteworkers/PRemoteWorkerController.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PRemoteWorkerController;
 
@@ -24,7 +23,7 @@ message Msg_CreationSucceeded {
 }
 
 message Msg_ErrorReceived {
-  required protobuf.mozilla.dom.ErrorValue a_aError = 1;
+  protobuf.mozilla.dom.ErrorValue a_aError = 1;
 }
 
 message Msg_Terminated {
@@ -34,12 +33,12 @@ message Msg_SetServiceWorkerSkipWaitingFlag {
 }
 
 message Reply_SetServiceWorkerSkipWaitingFlag {
-  required bool a_aOk = 1;
+  bool a_aOk = 1;
 }
 
 message Msg_PFetchEventOpConstructor {
-  required sint64 a_actorid = 1;
-  required protobuf.mozilla.dom.ParentToParentServiceWorkerFetchEventOpArgs a_aArgs = 2;
+  sint64 a_actorid = 1;
+  protobuf.mozilla.dom.ParentToParentServiceWorkerFetchEventOpArgs a_aArgs = 2;
 }
 
 message Reply_PFetchEventOpConstructor {
@@ -55,15 +54,15 @@ message Msg_Shutdown {
 }
 
 message Reply_Shutdown {
-  required bool a_aOk = 1;
+  bool a_aOk = 1;
 }
 
 message Msg_ExecServiceWorkerOp {
-  required protobuf.mozilla.dom.ServiceWorkerOpArgs a_aArgs = 1;
+  protobuf.mozilla.dom.ServiceWorkerOpArgs a_aArgs = 1;
 }
 
 message Reply_ExecServiceWorkerOp {
-  required protobuf.mozilla.dom.ServiceWorkerOpResult a_aResult = 1;
+  protobuf.mozilla.dom.ServiceWorkerOpResult a_aResult = 1;
 }
 
 // Parameter mappings stats:

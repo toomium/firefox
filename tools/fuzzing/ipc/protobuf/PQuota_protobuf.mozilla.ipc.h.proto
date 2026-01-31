@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/quota/PQuota.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.ipc;
 

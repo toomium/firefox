@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/gfx/vr/ipc/PVR.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.gfx.PVR;
 
@@ -20,60 +19,60 @@ import "PrefsTypes.proto";
 
 // Message declarations
 message Msg_NewGPUVRManager {
-  required bytes a_endpoint = 1;
+  bytes a_endpoint = 1;
 }
 
 message Msg_Init {
   repeated protobuf.mozilla.gfx.GfxVarUpdate a_vars = 1;
-  required protobuf.mozilla.gfx.DevicePrefs a_devicePrefs = 2;
+  protobuf.mozilla.gfx.DevicePrefs a_devicePrefs = 2;
 }
 
 message Msg_UpdateVar {
-  required protobuf.mozilla.gfx.GfxVarUpdate a_var = 1;
+  protobuf.mozilla.gfx.GfxVarUpdate a_var = 1;
 }
 
 message Msg_PreferenceUpdate {
-  required protobuf.mozilla.dom.Pref a_pref = 1;
+  protobuf.mozilla.dom.Pref a_pref = 1;
 }
 
 message Msg_OpenVRControllerActionPathToVR {
-  required string a_aPath = 1;
+  string a_aPath = 1;
 }
 
 message Msg_OpenVRControllerManifestPathToVR {
-  required bytes a_aType = 1;
-  required string a_aPath = 2;
+  bytes a_aType = 1;
+  string a_aPath = 2;
 }
 
 message Msg_RequestMemoryReport {
-  required uint32 a_generation = 1;
-  required bool a_anonymize = 2;
-  required bool a_minimizeMemoryUsage = 3;
+  uint32 a_generation = 1;
+  bool a_anonymize = 2;
+  bool a_minimizeMemoryUsage = 3;
   optional bytes a_DMDFile = 4;
 }
 
 message Reply_RequestMemoryReport {
-  required uint32 a_aGeneration = 1;
+  uint32 a_aGeneration = 1;
 }
 
 message Msg_InitComplete {
 }
 
 message Msg_OpenVRControllerActionPathToParent {
-  required string a_aPath = 1;
+  string a_aPath = 1;
 }
 
 message Msg_OpenVRControllerManifestPathToParent {
-  required bytes a_aType = 1;
-  required string a_aPath = 2;
+  bytes a_aType = 1;
+  string a_aPath = 2;
 }
 
 message Msg_InitCrashReporter {
-  required protobuf.CrashReporter.CrashReporterInitArgs a_aInitArgs = 1;
+  protobuf.CrashReporter.CrashReporterInitArgs a_aInitArgs = 1;
 }
 
 message Msg_AddMemoryReport {
-  required protobuf.mozilla.dom.MemoryReport a_aReport = 1;
+  protobuf.mozilla.dom.MemoryReport a_aReport = 1;
 }
 
 // Parameter mappings stats:

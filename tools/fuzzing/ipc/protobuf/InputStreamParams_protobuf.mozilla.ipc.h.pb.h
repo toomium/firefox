@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "ProtocolTypes.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -42,6 +44,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace ipc {
@@ -105,7 +108,7 @@ namespace ipc {
 // ===================================================================
 
 class HeaderEntry final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.HeaderEntry) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.HeaderEntry) */ {
  public:
   inline HeaderEntry() : HeaderEntry(nullptr) {}
   ~HeaderEntry() override;
@@ -135,13 +138,15 @@ class HeaderEntry final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const HeaderEntry& default_instance() {
     return *internal_default_instance();
   }
@@ -179,9 +184,15 @@ class HeaderEntry final :
   HeaderEntry* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<HeaderEntry>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const HeaderEntry& from);
-  void MergeFrom(const HeaderEntry& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const HeaderEntry& from) {
+    HeaderEntry::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -194,7 +205,7 @@ class HeaderEntry final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(HeaderEntry* other);
 
   private:
@@ -207,7 +218,10 @@ class HeaderEntry final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -217,11 +231,7 @@ class HeaderEntry final :
     kANameFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required string a_name = 1;
-  bool has_a_name() const;
-  private:
-  bool _internal_has_a_name() const;
-  public:
+  // string a_name = 1;
   void clear_a_name();
   const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -235,11 +245,7 @@ class HeaderEntry final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_value = 2;
-  bool has_a_value() const;
-  private:
-  bool _internal_has_a_value() const;
-  public:
+  // string a_value = 2;
   void clear_a_value();
   const std::string& a_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -257,17 +263,13 @@ class HeaderEntry final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_value_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -275,7 +277,7 @@ class HeaderEntry final :
 // -------------------------------------------------------------------
 
 class StringInputStreamParams final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.StringInputStreamParams) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.StringInputStreamParams) */ {
  public:
   inline StringInputStreamParams() : StringInputStreamParams(nullptr) {}
   ~StringInputStreamParams() override;
@@ -305,13 +307,15 @@ class StringInputStreamParams final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const StringInputStreamParams& default_instance() {
     return *internal_default_instance();
   }
@@ -349,9 +353,15 @@ class StringInputStreamParams final :
   StringInputStreamParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<StringInputStreamParams>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const StringInputStreamParams& from);
-  void MergeFrom(const StringInputStreamParams& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const StringInputStreamParams& from) {
+    StringInputStreamParams::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -364,7 +374,7 @@ class StringInputStreamParams final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(StringInputStreamParams* other);
 
   private:
@@ -377,7 +387,10 @@ class StringInputStreamParams final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -386,11 +399,7 @@ class StringInputStreamParams final :
   enum : int {
     kADataFieldNumber = 1,
   };
-  // required string a_data = 1;
-  bool has_a_data() const;
-  private:
-  bool _internal_has_a_data() const;
-  public:
+  // string a_data = 1;
   void clear_a_data();
   const std::string& a_data() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -412,9 +421,8 @@ class StringInputStreamParams final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_data_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -422,7 +430,7 @@ class StringInputStreamParams final :
 // -------------------------------------------------------------------
 
 class FileInputStreamParams final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.FileInputStreamParams) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.FileInputStreamParams) */ {
  public:
   inline FileInputStreamParams() : FileInputStreamParams(nullptr) {}
   ~FileInputStreamParams() override;
@@ -452,13 +460,15 @@ class FileInputStreamParams final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const FileInputStreamParams& default_instance() {
     return *internal_default_instance();
   }
@@ -496,9 +506,15 @@ class FileInputStreamParams final :
   FileInputStreamParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<FileInputStreamParams>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const FileInputStreamParams& from);
-  void MergeFrom(const FileInputStreamParams& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const FileInputStreamParams& from) {
+    FileInputStreamParams::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -511,7 +527,7 @@ class FileInputStreamParams final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(FileInputStreamParams* other);
 
   private:
@@ -524,7 +540,10 @@ class FileInputStreamParams final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -535,11 +554,7 @@ class FileInputStreamParams final :
     kABehaviorFlagsFieldNumber = 2,
     kAIoFlagsFieldNumber = 3,
   };
-  // required bytes a_fileDescriptor = 1;
-  bool has_a_filedescriptor() const;
-  private:
-  bool _internal_has_a_filedescriptor() const;
-  public:
+  // bytes a_fileDescriptor = 1;
   void clear_a_filedescriptor();
   const std::string& a_filedescriptor() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -553,11 +568,7 @@ class FileInputStreamParams final :
   std::string* _internal_mutable_a_filedescriptor();
   public:
 
-  // required sint32 a_behaviorFlags = 2;
-  bool has_a_behaviorflags() const;
-  private:
-  bool _internal_has_a_behaviorflags() const;
-  public:
+  // sint32 a_behaviorFlags = 2;
   void clear_a_behaviorflags();
   int32_t a_behaviorflags() const;
   void set_a_behaviorflags(int32_t value);
@@ -566,11 +577,7 @@ class FileInputStreamParams final :
   void _internal_set_a_behaviorflags(int32_t value);
   public:
 
-  // required sint32 a_ioFlags = 3;
-  bool has_a_ioflags() const;
-  private:
-  bool _internal_has_a_ioflags() const;
-  public:
+  // sint32 a_ioFlags = 3;
   void clear_a_ioflags();
   int32_t a_ioflags() const;
   void set_a_ioflags(int32_t value);
@@ -583,18 +590,14 @@ class FileInputStreamParams final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_filedescriptor_;
     int32_t a_behaviorflags_;
     int32_t a_ioflags_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -602,7 +605,7 @@ class FileInputStreamParams final :
 // -------------------------------------------------------------------
 
 class MultiplexInputStreamParams final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.MultiplexInputStreamParams) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.MultiplexInputStreamParams) */ {
  public:
   inline MultiplexInputStreamParams() : MultiplexInputStreamParams(nullptr) {}
   ~MultiplexInputStreamParams() override;
@@ -632,13 +635,15 @@ class MultiplexInputStreamParams final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const MultiplexInputStreamParams& default_instance() {
     return *internal_default_instance();
   }
@@ -676,9 +681,15 @@ class MultiplexInputStreamParams final :
   MultiplexInputStreamParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<MultiplexInputStreamParams>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const MultiplexInputStreamParams& from);
-  void MergeFrom(const MultiplexInputStreamParams& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const MultiplexInputStreamParams& from) {
+    MultiplexInputStreamParams::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -691,7 +702,7 @@ class MultiplexInputStreamParams final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(MultiplexInputStreamParams* other);
 
   private:
@@ -704,7 +715,10 @@ class MultiplexInputStreamParams final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -734,11 +748,7 @@ class MultiplexInputStreamParams final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ipc::InputStreamParams >&
       a_streams() const;
 
-  // required bytes a_status = 3;
-  bool has_a_status() const;
-  private:
-  bool _internal_has_a_status() const;
-  public:
+  // bytes a_status = 3;
   void clear_a_status();
   const std::string& a_status() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -752,11 +762,7 @@ class MultiplexInputStreamParams final :
   std::string* _internal_mutable_a_status();
   public:
 
-  // required uint32 a_currentStream = 2;
-  bool has_a_currentstream() const;
-  private:
-  bool _internal_has_a_currentstream() const;
-  public:
+  // uint32 a_currentStream = 2;
   void clear_a_currentstream();
   uint32_t a_currentstream() const;
   void set_a_currentstream(uint32_t value);
@@ -765,11 +771,7 @@ class MultiplexInputStreamParams final :
   void _internal_set_a_currentstream(uint32_t value);
   public:
 
-  // required bool a_startedReadingCurrent = 4;
-  bool has_a_startedreadingcurrent() const;
-  private:
-  bool _internal_has_a_startedreadingcurrent() const;
-  public:
+  // bool a_startedReadingCurrent = 4;
   void clear_a_startedreadingcurrent();
   bool a_startedreadingcurrent() const;
   void set_a_startedreadingcurrent(bool value);
@@ -782,19 +784,15 @@ class MultiplexInputStreamParams final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::ipc::InputStreamParams > a_streams_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_status_;
     uint32_t a_currentstream_;
     bool a_startedreadingcurrent_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -802,7 +800,7 @@ class MultiplexInputStreamParams final :
 // -------------------------------------------------------------------
 
 class SlicedInputStreamParams final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.SlicedInputStreamParams) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.SlicedInputStreamParams) */ {
  public:
   inline SlicedInputStreamParams() : SlicedInputStreamParams(nullptr) {}
   ~SlicedInputStreamParams() override;
@@ -832,13 +830,15 @@ class SlicedInputStreamParams final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const SlicedInputStreamParams& default_instance() {
     return *internal_default_instance();
   }
@@ -876,9 +876,15 @@ class SlicedInputStreamParams final :
   SlicedInputStreamParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SlicedInputStreamParams>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const SlicedInputStreamParams& from);
-  void MergeFrom(const SlicedInputStreamParams& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const SlicedInputStreamParams& from) {
+    SlicedInputStreamParams::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -891,7 +897,7 @@ class SlicedInputStreamParams final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(SlicedInputStreamParams* other);
 
   private:
@@ -904,7 +910,10 @@ class SlicedInputStreamParams final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -917,7 +926,7 @@ class SlicedInputStreamParams final :
     kACurPosFieldNumber = 4,
     kAClosedFieldNumber = 5,
   };
-  // required .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
+  // .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
   bool has_a_stream() const;
   private:
   bool _internal_has_a_stream() const;
@@ -935,11 +944,7 @@ class SlicedInputStreamParams final :
       ::protobuf::mozilla::ipc::InputStreamParams* a_stream);
   ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_a_stream();
 
-  // required uint64 a_start = 2;
-  bool has_a_start() const;
-  private:
-  bool _internal_has_a_start() const;
-  public:
+  // uint64 a_start = 2;
   void clear_a_start();
   uint64_t a_start() const;
   void set_a_start(uint64_t value);
@@ -948,11 +953,7 @@ class SlicedInputStreamParams final :
   void _internal_set_a_start(uint64_t value);
   public:
 
-  // required uint64 a_length = 3;
-  bool has_a_length() const;
-  private:
-  bool _internal_has_a_length() const;
-  public:
+  // uint64 a_length = 3;
   void clear_a_length();
   uint64_t a_length() const;
   void set_a_length(uint64_t value);
@@ -961,11 +962,7 @@ class SlicedInputStreamParams final :
   void _internal_set_a_length(uint64_t value);
   public:
 
-  // required uint64 a_curPos = 4;
-  bool has_a_curpos() const;
-  private:
-  bool _internal_has_a_curpos() const;
-  public:
+  // uint64 a_curPos = 4;
   void clear_a_curpos();
   uint64_t a_curpos() const;
   void set_a_curpos(uint64_t value);
@@ -974,11 +971,7 @@ class SlicedInputStreamParams final :
   void _internal_set_a_curpos(uint64_t value);
   public:
 
-  // required bool a_closed = 5;
-  bool has_a_closed() const;
-  private:
-  bool _internal_has_a_closed() const;
-  public:
+  // bool a_closed = 5;
   void clear_a_closed();
   bool a_closed() const;
   void set_a_closed(bool value);
@@ -991,20 +984,16 @@ class SlicedInputStreamParams final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::ipc::InputStreamParams* a_stream_;
     uint64_t a_start_;
     uint64_t a_length_;
     uint64_t a_curpos_;
     bool a_closed_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -1012,7 +1001,7 @@ class SlicedInputStreamParams final :
 // -------------------------------------------------------------------
 
 class RemoteLazyInputStreamParams final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.RemoteLazyInputStreamParams) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.RemoteLazyInputStreamParams) */ {
  public:
   inline RemoteLazyInputStreamParams() : RemoteLazyInputStreamParams(nullptr) {}
   ~RemoteLazyInputStreamParams() override;
@@ -1042,13 +1031,15 @@ class RemoteLazyInputStreamParams final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const RemoteLazyInputStreamParams& default_instance() {
     return *internal_default_instance();
   }
@@ -1086,9 +1077,15 @@ class RemoteLazyInputStreamParams final :
   RemoteLazyInputStreamParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<RemoteLazyInputStreamParams>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const RemoteLazyInputStreamParams& from);
-  void MergeFrom(const RemoteLazyInputStreamParams& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const RemoteLazyInputStreamParams& from) {
+    RemoteLazyInputStreamParams::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1101,7 +1098,7 @@ class RemoteLazyInputStreamParams final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(RemoteLazyInputStreamParams* other);
 
   private:
@@ -1114,7 +1111,10 @@ class RemoteLazyInputStreamParams final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1123,11 +1123,7 @@ class RemoteLazyInputStreamParams final :
   enum : int {
     kAStreamFieldNumber = 1,
   };
-  // required bytes a_stream = 1;
-  bool has_a_stream() const;
-  private:
-  bool _internal_has_a_stream() const;
-  public:
+  // bytes a_stream = 1;
   void clear_a_stream();
   const std::string& a_stream() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1149,9 +1145,8 @@ class RemoteLazyInputStreamParams final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_stream_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -1159,7 +1154,7 @@ class RemoteLazyInputStreamParams final :
 // -------------------------------------------------------------------
 
 class DataPipeReceiverStreamParams final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.DataPipeReceiverStreamParams) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.DataPipeReceiverStreamParams) */ {
  public:
   inline DataPipeReceiverStreamParams() : DataPipeReceiverStreamParams(nullptr) {}
   ~DataPipeReceiverStreamParams() override;
@@ -1189,13 +1184,15 @@ class DataPipeReceiverStreamParams final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const DataPipeReceiverStreamParams& default_instance() {
     return *internal_default_instance();
   }
@@ -1233,9 +1230,15 @@ class DataPipeReceiverStreamParams final :
   DataPipeReceiverStreamParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<DataPipeReceiverStreamParams>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const DataPipeReceiverStreamParams& from);
-  void MergeFrom(const DataPipeReceiverStreamParams& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const DataPipeReceiverStreamParams& from) {
+    DataPipeReceiverStreamParams::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1248,7 +1251,7 @@ class DataPipeReceiverStreamParams final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(DataPipeReceiverStreamParams* other);
 
   private:
@@ -1261,7 +1264,10 @@ class DataPipeReceiverStreamParams final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1270,11 +1276,7 @@ class DataPipeReceiverStreamParams final :
   enum : int {
     kAPipeFieldNumber = 1,
   };
-  // required bytes a_pipe = 1;
-  bool has_a_pipe() const;
-  private:
-  bool _internal_has_a_pipe() const;
-  public:
+  // bytes a_pipe = 1;
   void clear_a_pipe();
   const std::string& a_pipe() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1296,9 +1298,8 @@ class DataPipeReceiverStreamParams final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_pipe_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -1306,7 +1307,7 @@ class DataPipeReceiverStreamParams final :
 // -------------------------------------------------------------------
 
 class InputStreamParams final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.InputStreamParams) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.InputStreamParams) */ {
  public:
   inline InputStreamParams() : InputStreamParams(nullptr) {}
   ~InputStreamParams() override;
@@ -1336,13 +1337,15 @@ class InputStreamParams final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const InputStreamParams& default_instance() {
     return *internal_default_instance();
   }
@@ -1394,9 +1397,15 @@ class InputStreamParams final :
   InputStreamParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<InputStreamParams>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const InputStreamParams& from);
-  void MergeFrom(const InputStreamParams& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const InputStreamParams& from) {
+    InputStreamParams::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1409,7 +1418,7 @@ class InputStreamParams final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(InputStreamParams* other);
 
   private:
@@ -1422,7 +1431,10 @@ class InputStreamParams final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1667,7 +1679,7 @@ class InputStreamParams final :
 // -------------------------------------------------------------------
 
 class EncryptedFileInputStreamParams final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.EncryptedFileInputStreamParams) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.EncryptedFileInputStreamParams) */ {
  public:
   inline EncryptedFileInputStreamParams() : EncryptedFileInputStreamParams(nullptr) {}
   ~EncryptedFileInputStreamParams() override;
@@ -1697,13 +1709,15 @@ class EncryptedFileInputStreamParams final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const EncryptedFileInputStreamParams& default_instance() {
     return *internal_default_instance();
   }
@@ -1741,9 +1755,15 @@ class EncryptedFileInputStreamParams final :
   EncryptedFileInputStreamParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<EncryptedFileInputStreamParams>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const EncryptedFileInputStreamParams& from);
-  void MergeFrom(const EncryptedFileInputStreamParams& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const EncryptedFileInputStreamParams& from) {
+    EncryptedFileInputStreamParams::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1756,7 +1776,7 @@ class EncryptedFileInputStreamParams final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(EncryptedFileInputStreamParams* other);
 
   private:
@@ -1769,7 +1789,10 @@ class EncryptedFileInputStreamParams final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1802,7 +1825,7 @@ class EncryptedFileInputStreamParams final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_key();
 
-  // required .protobuf.mozilla.ipc.InputStreamParams a_inputStreamParams = 1;
+  // .protobuf.mozilla.ipc.InputStreamParams a_inputStreamParams = 1;
   bool has_a_inputstreamparams() const;
   private:
   bool _internal_has_a_inputstreamparams() const;
@@ -1820,11 +1843,7 @@ class EncryptedFileInputStreamParams final :
       ::protobuf::mozilla::ipc::InputStreamParams* a_inputstreamparams);
   ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_a_inputstreamparams();
 
-  // required uint32 a_blockSize = 3;
-  bool has_a_blocksize() const;
-  private:
-  bool _internal_has_a_blocksize() const;
-  public:
+  // uint32 a_blockSize = 3;
   void clear_a_blocksize();
   uint32_t a_blocksize() const;
   void set_a_blocksize(uint32_t value);
@@ -1837,18 +1856,15 @@ class EncryptedFileInputStreamParams final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_key_;
+    mutable std::atomic<int> _a_key_cached_byte_size_;
     ::protobuf::mozilla::ipc::InputStreamParams* a_inputstreamparams_;
     uint32_t a_blocksize_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -1856,7 +1872,7 @@ class EncryptedFileInputStreamParams final :
 // -------------------------------------------------------------------
 
 class BufferedInputStreamParams final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.BufferedInputStreamParams) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.BufferedInputStreamParams) */ {
  public:
   inline BufferedInputStreamParams() : BufferedInputStreamParams(nullptr) {}
   ~BufferedInputStreamParams() override;
@@ -1886,13 +1902,15 @@ class BufferedInputStreamParams final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const BufferedInputStreamParams& default_instance() {
     return *internal_default_instance();
   }
@@ -1930,9 +1948,15 @@ class BufferedInputStreamParams final :
   BufferedInputStreamParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<BufferedInputStreamParams>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const BufferedInputStreamParams& from);
-  void MergeFrom(const BufferedInputStreamParams& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const BufferedInputStreamParams& from) {
+    BufferedInputStreamParams::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1945,7 +1969,7 @@ class BufferedInputStreamParams final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(BufferedInputStreamParams* other);
 
   private:
@@ -1958,7 +1982,10 @@ class BufferedInputStreamParams final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1986,11 +2013,7 @@ class BufferedInputStreamParams final :
       ::protobuf::mozilla::ipc::InputStreamParams* a_optionalstream);
   ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_a_optionalstream();
 
-  // required uint32 a_bufferSize = 2;
-  bool has_a_buffersize() const;
-  private:
-  bool _internal_has_a_buffersize() const;
-  public:
+  // uint32 a_bufferSize = 2;
   void clear_a_buffersize();
   uint32_t a_buffersize() const;
   void set_a_buffersize(uint32_t value);
@@ -2018,7 +2041,7 @@ class BufferedInputStreamParams final :
 // -------------------------------------------------------------------
 
 class MIMEInputStreamParams final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.MIMEInputStreamParams) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.MIMEInputStreamParams) */ {
  public:
   inline MIMEInputStreamParams() : MIMEInputStreamParams(nullptr) {}
   ~MIMEInputStreamParams() override;
@@ -2048,13 +2071,15 @@ class MIMEInputStreamParams final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const MIMEInputStreamParams& default_instance() {
     return *internal_default_instance();
   }
@@ -2092,9 +2117,15 @@ class MIMEInputStreamParams final :
   MIMEInputStreamParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<MIMEInputStreamParams>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const MIMEInputStreamParams& from);
-  void MergeFrom(const MIMEInputStreamParams& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const MIMEInputStreamParams& from) {
+    MIMEInputStreamParams::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2107,7 +2138,7 @@ class MIMEInputStreamParams final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(MIMEInputStreamParams* other);
 
   private:
@@ -2120,7 +2151,10 @@ class MIMEInputStreamParams final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2167,11 +2201,7 @@ class MIMEInputStreamParams final :
       ::protobuf::mozilla::ipc::InputStreamParams* a_optionalstream);
   ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_a_optionalstream();
 
-  // required bool a_startedReading = 3;
-  bool has_a_startedreading() const;
-  private:
-  bool _internal_has_a_startedreading() const;
-  public:
+  // bool a_startedReading = 3;
   void clear_a_startedreading();
   bool a_startedreading() const;
   void set_a_startedreading(bool value);
@@ -2200,7 +2230,7 @@ class MIMEInputStreamParams final :
 // -------------------------------------------------------------------
 
 class InputStreamLengthWrapperParams final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.InputStreamLengthWrapperParams) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.ipc.InputStreamLengthWrapperParams) */ {
  public:
   inline InputStreamLengthWrapperParams() : InputStreamLengthWrapperParams(nullptr) {}
   ~InputStreamLengthWrapperParams() override;
@@ -2230,13 +2260,15 @@ class InputStreamLengthWrapperParams final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const InputStreamLengthWrapperParams& default_instance() {
     return *internal_default_instance();
   }
@@ -2274,9 +2306,15 @@ class InputStreamLengthWrapperParams final :
   InputStreamLengthWrapperParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<InputStreamLengthWrapperParams>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const InputStreamLengthWrapperParams& from);
-  void MergeFrom(const InputStreamLengthWrapperParams& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const InputStreamLengthWrapperParams& from) {
+    InputStreamLengthWrapperParams::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2289,7 +2327,7 @@ class InputStreamLengthWrapperParams final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(InputStreamLengthWrapperParams* other);
 
   private:
@@ -2302,7 +2340,10 @@ class InputStreamLengthWrapperParams final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2313,7 +2354,7 @@ class InputStreamLengthWrapperParams final :
     kALengthFieldNumber = 2,
     kAConsumedFieldNumber = 3,
   };
-  // required .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
+  // .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
   bool has_a_stream() const;
   private:
   bool _internal_has_a_stream() const;
@@ -2331,11 +2372,7 @@ class InputStreamLengthWrapperParams final :
       ::protobuf::mozilla::ipc::InputStreamParams* a_stream);
   ::protobuf::mozilla::ipc::InputStreamParams* unsafe_arena_release_a_stream();
 
-  // required sint64 a_length = 2;
-  bool has_a_length() const;
-  private:
-  bool _internal_has_a_length() const;
-  public:
+  // sint64 a_length = 2;
   void clear_a_length();
   int64_t a_length() const;
   void set_a_length(int64_t value);
@@ -2344,11 +2381,7 @@ class InputStreamLengthWrapperParams final :
   void _internal_set_a_length(int64_t value);
   public:
 
-  // required bool a_consumed = 3;
-  bool has_a_consumed() const;
-  private:
-  bool _internal_has_a_consumed() const;
-  public:
+  // bool a_consumed = 3;
   void clear_a_consumed();
   bool a_consumed() const;
   void set_a_consumed(bool value);
@@ -2361,18 +2394,14 @@ class InputStreamLengthWrapperParams final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::ipc::InputStreamParams* a_stream_;
     int64_t a_length_;
     bool a_consumed_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_InputStreamParams_5fprotobuf_2emozilla_2eipc_2eh_2eproto;
@@ -2388,17 +2417,9 @@ class InputStreamLengthWrapperParams final :
 #endif  // __GNUC__
 // HeaderEntry
 
-// required string a_name = 1;
-inline bool HeaderEntry::_internal_has_a_name() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool HeaderEntry::has_a_name() const {
-  return _internal_has_a_name();
-}
+// string a_name = 1;
 inline void HeaderEntry::clear_a_name() {
   _impl_.a_name_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& HeaderEntry::a_name() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.HeaderEntry.a_name)
@@ -2407,7 +2428,7 @@ inline const std::string& HeaderEntry::a_name() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HeaderEntry::set_a_name(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.HeaderEntry.a_name)
 }
@@ -2420,32 +2441,22 @@ inline const std::string& HeaderEntry::_internal_a_name() const {
   return _impl_.a_name_.Get();
 }
 inline void HeaderEntry::_internal_set_a_name(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HeaderEntry::_internal_mutable_a_name() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HeaderEntry::release_a_name() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.HeaderEntry.a_name)
-  if (!_internal_has_a_name()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_name_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_name_.IsDefault()) {
-    _impl_.a_name_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_name_.Release();
 }
 inline void HeaderEntry::set_allocated_a_name(std::string* a_name) {
   if (a_name != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2456,17 +2467,9 @@ inline void HeaderEntry::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.HeaderEntry.a_name)
 }
 
-// required string a_value = 2;
-inline bool HeaderEntry::_internal_has_a_value() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool HeaderEntry::has_a_value() const {
-  return _internal_has_a_value();
-}
+// string a_value = 2;
 inline void HeaderEntry::clear_a_value() {
   _impl_.a_value_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& HeaderEntry::a_value() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.HeaderEntry.a_value)
@@ -2475,7 +2478,7 @@ inline const std::string& HeaderEntry::a_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HeaderEntry::set_a_value(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.HeaderEntry.a_value)
 }
@@ -2488,32 +2491,22 @@ inline const std::string& HeaderEntry::_internal_a_value() const {
   return _impl_.a_value_.Get();
 }
 inline void HeaderEntry::_internal_set_a_value(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_value_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HeaderEntry::_internal_mutable_a_value() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_value_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HeaderEntry::release_a_value() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.HeaderEntry.a_value)
-  if (!_internal_has_a_value()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_value_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_value_.IsDefault()) {
-    _impl_.a_value_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_value_.Release();
 }
 inline void HeaderEntry::set_allocated_a_value(std::string* a_value) {
   if (a_value != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_value_.SetAllocated(a_value, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2528,17 +2521,9 @@ inline void HeaderEntry::set_allocated_a_value(std::string* a_value) {
 
 // StringInputStreamParams
 
-// required string a_data = 1;
-inline bool StringInputStreamParams::_internal_has_a_data() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool StringInputStreamParams::has_a_data() const {
-  return _internal_has_a_data();
-}
+// string a_data = 1;
 inline void StringInputStreamParams::clear_a_data() {
   _impl_.a_data_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& StringInputStreamParams::a_data() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.StringInputStreamParams.a_data)
@@ -2547,7 +2532,7 @@ inline const std::string& StringInputStreamParams::a_data() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void StringInputStreamParams::set_a_data(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_data_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.StringInputStreamParams.a_data)
 }
@@ -2560,32 +2545,22 @@ inline const std::string& StringInputStreamParams::_internal_a_data() const {
   return _impl_.a_data_.Get();
 }
 inline void StringInputStreamParams::_internal_set_a_data(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_data_.Set(value, GetArenaForAllocation());
 }
 inline std::string* StringInputStreamParams::_internal_mutable_a_data() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_data_.Mutable(GetArenaForAllocation());
 }
 inline std::string* StringInputStreamParams::release_a_data() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.StringInputStreamParams.a_data)
-  if (!_internal_has_a_data()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_data_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_data_.IsDefault()) {
-    _impl_.a_data_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_data_.Release();
 }
 inline void StringInputStreamParams::set_allocated_a_data(std::string* a_data) {
   if (a_data != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_data_.SetAllocated(a_data, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2600,17 +2575,9 @@ inline void StringInputStreamParams::set_allocated_a_data(std::string* a_data) {
 
 // FileInputStreamParams
 
-// required bytes a_fileDescriptor = 1;
-inline bool FileInputStreamParams::_internal_has_a_filedescriptor() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool FileInputStreamParams::has_a_filedescriptor() const {
-  return _internal_has_a_filedescriptor();
-}
+// bytes a_fileDescriptor = 1;
 inline void FileInputStreamParams::clear_a_filedescriptor() {
   _impl_.a_filedescriptor_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& FileInputStreamParams::a_filedescriptor() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.FileInputStreamParams.a_fileDescriptor)
@@ -2619,7 +2586,7 @@ inline const std::string& FileInputStreamParams::a_filedescriptor() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FileInputStreamParams::set_a_filedescriptor(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_filedescriptor_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.FileInputStreamParams.a_fileDescriptor)
 }
@@ -2632,32 +2599,22 @@ inline const std::string& FileInputStreamParams::_internal_a_filedescriptor() co
   return _impl_.a_filedescriptor_.Get();
 }
 inline void FileInputStreamParams::_internal_set_a_filedescriptor(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_filedescriptor_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FileInputStreamParams::_internal_mutable_a_filedescriptor() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_filedescriptor_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FileInputStreamParams::release_a_filedescriptor() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.FileInputStreamParams.a_fileDescriptor)
-  if (!_internal_has_a_filedescriptor()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_filedescriptor_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_filedescriptor_.IsDefault()) {
-    _impl_.a_filedescriptor_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_filedescriptor_.Release();
 }
 inline void FileInputStreamParams::set_allocated_a_filedescriptor(std::string* a_filedescriptor) {
   if (a_filedescriptor != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_filedescriptor_.SetAllocated(a_filedescriptor, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2668,17 +2625,9 @@ inline void FileInputStreamParams::set_allocated_a_filedescriptor(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.FileInputStreamParams.a_fileDescriptor)
 }
 
-// required sint32 a_behaviorFlags = 2;
-inline bool FileInputStreamParams::_internal_has_a_behaviorflags() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool FileInputStreamParams::has_a_behaviorflags() const {
-  return _internal_has_a_behaviorflags();
-}
+// sint32 a_behaviorFlags = 2;
 inline void FileInputStreamParams::clear_a_behaviorflags() {
   _impl_.a_behaviorflags_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int32_t FileInputStreamParams::_internal_a_behaviorflags() const {
   return _impl_.a_behaviorflags_;
@@ -2688,7 +2637,7 @@ inline int32_t FileInputStreamParams::a_behaviorflags() const {
   return _internal_a_behaviorflags();
 }
 inline void FileInputStreamParams::_internal_set_a_behaviorflags(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_behaviorflags_ = value;
 }
 inline void FileInputStreamParams::set_a_behaviorflags(int32_t value) {
@@ -2696,17 +2645,9 @@ inline void FileInputStreamParams::set_a_behaviorflags(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.FileInputStreamParams.a_behaviorFlags)
 }
 
-// required sint32 a_ioFlags = 3;
-inline bool FileInputStreamParams::_internal_has_a_ioflags() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool FileInputStreamParams::has_a_ioflags() const {
-  return _internal_has_a_ioflags();
-}
+// sint32 a_ioFlags = 3;
 inline void FileInputStreamParams::clear_a_ioflags() {
   _impl_.a_ioflags_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t FileInputStreamParams::_internal_a_ioflags() const {
   return _impl_.a_ioflags_;
@@ -2716,7 +2657,7 @@ inline int32_t FileInputStreamParams::a_ioflags() const {
   return _internal_a_ioflags();
 }
 inline void FileInputStreamParams::_internal_set_a_ioflags(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_ioflags_ = value;
 }
 inline void FileInputStreamParams::set_a_ioflags(int32_t value) {
@@ -2768,17 +2709,9 @@ MultiplexInputStreamParams::a_streams() const {
   return _impl_.a_streams_;
 }
 
-// required uint32 a_currentStream = 2;
-inline bool MultiplexInputStreamParams::_internal_has_a_currentstream() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool MultiplexInputStreamParams::has_a_currentstream() const {
-  return _internal_has_a_currentstream();
-}
+// uint32 a_currentStream = 2;
 inline void MultiplexInputStreamParams::clear_a_currentstream() {
   _impl_.a_currentstream_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t MultiplexInputStreamParams::_internal_a_currentstream() const {
   return _impl_.a_currentstream_;
@@ -2788,7 +2721,7 @@ inline uint32_t MultiplexInputStreamParams::a_currentstream() const {
   return _internal_a_currentstream();
 }
 inline void MultiplexInputStreamParams::_internal_set_a_currentstream(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_currentstream_ = value;
 }
 inline void MultiplexInputStreamParams::set_a_currentstream(uint32_t value) {
@@ -2796,17 +2729,9 @@ inline void MultiplexInputStreamParams::set_a_currentstream(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.MultiplexInputStreamParams.a_currentStream)
 }
 
-// required bytes a_status = 3;
-inline bool MultiplexInputStreamParams::_internal_has_a_status() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool MultiplexInputStreamParams::has_a_status() const {
-  return _internal_has_a_status();
-}
+// bytes a_status = 3;
 inline void MultiplexInputStreamParams::clear_a_status() {
   _impl_.a_status_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& MultiplexInputStreamParams::a_status() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.MultiplexInputStreamParams.a_status)
@@ -2815,7 +2740,7 @@ inline const std::string& MultiplexInputStreamParams::a_status() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void MultiplexInputStreamParams::set_a_status(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_status_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.MultiplexInputStreamParams.a_status)
 }
@@ -2828,32 +2753,22 @@ inline const std::string& MultiplexInputStreamParams::_internal_a_status() const
   return _impl_.a_status_.Get();
 }
 inline void MultiplexInputStreamParams::_internal_set_a_status(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_status_.Set(value, GetArenaForAllocation());
 }
 inline std::string* MultiplexInputStreamParams::_internal_mutable_a_status() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_status_.Mutable(GetArenaForAllocation());
 }
 inline std::string* MultiplexInputStreamParams::release_a_status() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.MultiplexInputStreamParams.a_status)
-  if (!_internal_has_a_status()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_status_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_status_.IsDefault()) {
-    _impl_.a_status_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_status_.Release();
 }
 inline void MultiplexInputStreamParams::set_allocated_a_status(std::string* a_status) {
   if (a_status != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_status_.SetAllocated(a_status, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2864,17 +2779,9 @@ inline void MultiplexInputStreamParams::set_allocated_a_status(std::string* a_st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.MultiplexInputStreamParams.a_status)
 }
 
-// required bool a_startedReadingCurrent = 4;
-inline bool MultiplexInputStreamParams::_internal_has_a_startedreadingcurrent() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool MultiplexInputStreamParams::has_a_startedreadingcurrent() const {
-  return _internal_has_a_startedreadingcurrent();
-}
+// bool a_startedReadingCurrent = 4;
 inline void MultiplexInputStreamParams::clear_a_startedreadingcurrent() {
   _impl_.a_startedreadingcurrent_ = false;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline bool MultiplexInputStreamParams::_internal_a_startedreadingcurrent() const {
   return _impl_.a_startedreadingcurrent_;
@@ -2884,7 +2791,7 @@ inline bool MultiplexInputStreamParams::a_startedreadingcurrent() const {
   return _internal_a_startedreadingcurrent();
 }
 inline void MultiplexInputStreamParams::_internal_set_a_startedreadingcurrent(bool value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_startedreadingcurrent_ = value;
 }
 inline void MultiplexInputStreamParams::set_a_startedreadingcurrent(bool value) {
@@ -2896,18 +2803,18 @@ inline void MultiplexInputStreamParams::set_a_startedreadingcurrent(bool value) 
 
 // SlicedInputStreamParams
 
-// required .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
+// .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
 inline bool SlicedInputStreamParams::_internal_has_a_stream() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_stream_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_stream_ != nullptr;
 }
 inline bool SlicedInputStreamParams::has_a_stream() const {
   return _internal_has_a_stream();
 }
 inline void SlicedInputStreamParams::clear_a_stream() {
-  if (_impl_.a_stream_ != nullptr) _impl_.a_stream_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_stream_ != nullptr) {
+    delete _impl_.a_stream_;
+  }
+  _impl_.a_stream_ = nullptr;
 }
 inline const ::protobuf::mozilla::ipc::InputStreamParams& SlicedInputStreamParams::_internal_a_stream() const {
   const ::protobuf::mozilla::ipc::InputStreamParams* p = _impl_.a_stream_;
@@ -2925,14 +2832,14 @@ inline void SlicedInputStreamParams::unsafe_arena_set_allocated_a_stream(
   }
   _impl_.a_stream_ = a_stream;
   if (a_stream) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.SlicedInputStreamParams.a_stream)
 }
 inline ::protobuf::mozilla::ipc::InputStreamParams* SlicedInputStreamParams::release_a_stream() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.a_stream_;
   _impl_.a_stream_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -2948,13 +2855,13 @@ inline ::protobuf::mozilla::ipc::InputStreamParams* SlicedInputStreamParams::rel
 }
 inline ::protobuf::mozilla::ipc::InputStreamParams* SlicedInputStreamParams::unsafe_arena_release_a_stream() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.SlicedInputStreamParams.a_stream)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.a_stream_;
   _impl_.a_stream_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::ipc::InputStreamParams* SlicedInputStreamParams::_internal_mutable_a_stream() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_stream_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::InputStreamParams>(GetArenaForAllocation());
     _impl_.a_stream_ = p;
@@ -2978,25 +2885,17 @@ inline void SlicedInputStreamParams::set_allocated_a_stream(::protobuf::mozilla:
       a_stream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_stream, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_stream_ = a_stream;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.SlicedInputStreamParams.a_stream)
 }
 
-// required uint64 a_start = 2;
-inline bool SlicedInputStreamParams::_internal_has_a_start() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool SlicedInputStreamParams::has_a_start() const {
-  return _internal_has_a_start();
-}
+// uint64 a_start = 2;
 inline void SlicedInputStreamParams::clear_a_start() {
   _impl_.a_start_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t SlicedInputStreamParams::_internal_a_start() const {
   return _impl_.a_start_;
@@ -3006,7 +2905,7 @@ inline uint64_t SlicedInputStreamParams::a_start() const {
   return _internal_a_start();
 }
 inline void SlicedInputStreamParams::_internal_set_a_start(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_start_ = value;
 }
 inline void SlicedInputStreamParams::set_a_start(uint64_t value) {
@@ -3014,17 +2913,9 @@ inline void SlicedInputStreamParams::set_a_start(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.SlicedInputStreamParams.a_start)
 }
 
-// required uint64 a_length = 3;
-inline bool SlicedInputStreamParams::_internal_has_a_length() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool SlicedInputStreamParams::has_a_length() const {
-  return _internal_has_a_length();
-}
+// uint64 a_length = 3;
 inline void SlicedInputStreamParams::clear_a_length() {
   _impl_.a_length_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint64_t SlicedInputStreamParams::_internal_a_length() const {
   return _impl_.a_length_;
@@ -3034,7 +2925,7 @@ inline uint64_t SlicedInputStreamParams::a_length() const {
   return _internal_a_length();
 }
 inline void SlicedInputStreamParams::_internal_set_a_length(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_length_ = value;
 }
 inline void SlicedInputStreamParams::set_a_length(uint64_t value) {
@@ -3042,17 +2933,9 @@ inline void SlicedInputStreamParams::set_a_length(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.SlicedInputStreamParams.a_length)
 }
 
-// required uint64 a_curPos = 4;
-inline bool SlicedInputStreamParams::_internal_has_a_curpos() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool SlicedInputStreamParams::has_a_curpos() const {
-  return _internal_has_a_curpos();
-}
+// uint64 a_curPos = 4;
 inline void SlicedInputStreamParams::clear_a_curpos() {
   _impl_.a_curpos_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint64_t SlicedInputStreamParams::_internal_a_curpos() const {
   return _impl_.a_curpos_;
@@ -3062,7 +2945,7 @@ inline uint64_t SlicedInputStreamParams::a_curpos() const {
   return _internal_a_curpos();
 }
 inline void SlicedInputStreamParams::_internal_set_a_curpos(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_curpos_ = value;
 }
 inline void SlicedInputStreamParams::set_a_curpos(uint64_t value) {
@@ -3070,17 +2953,9 @@ inline void SlicedInputStreamParams::set_a_curpos(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.SlicedInputStreamParams.a_curPos)
 }
 
-// required bool a_closed = 5;
-inline bool SlicedInputStreamParams::_internal_has_a_closed() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool SlicedInputStreamParams::has_a_closed() const {
-  return _internal_has_a_closed();
-}
+// bool a_closed = 5;
 inline void SlicedInputStreamParams::clear_a_closed() {
   _impl_.a_closed_ = false;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline bool SlicedInputStreamParams::_internal_a_closed() const {
   return _impl_.a_closed_;
@@ -3090,7 +2965,7 @@ inline bool SlicedInputStreamParams::a_closed() const {
   return _internal_a_closed();
 }
 inline void SlicedInputStreamParams::_internal_set_a_closed(bool value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_closed_ = value;
 }
 inline void SlicedInputStreamParams::set_a_closed(bool value) {
@@ -3102,17 +2977,9 @@ inline void SlicedInputStreamParams::set_a_closed(bool value) {
 
 // RemoteLazyInputStreamParams
 
-// required bytes a_stream = 1;
-inline bool RemoteLazyInputStreamParams::_internal_has_a_stream() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool RemoteLazyInputStreamParams::has_a_stream() const {
-  return _internal_has_a_stream();
-}
+// bytes a_stream = 1;
 inline void RemoteLazyInputStreamParams::clear_a_stream() {
   _impl_.a_stream_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& RemoteLazyInputStreamParams::a_stream() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.RemoteLazyInputStreamParams.a_stream)
@@ -3121,7 +2988,7 @@ inline const std::string& RemoteLazyInputStreamParams::a_stream() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RemoteLazyInputStreamParams::set_a_stream(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_stream_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.RemoteLazyInputStreamParams.a_stream)
 }
@@ -3134,32 +3001,22 @@ inline const std::string& RemoteLazyInputStreamParams::_internal_a_stream() cons
   return _impl_.a_stream_.Get();
 }
 inline void RemoteLazyInputStreamParams::_internal_set_a_stream(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_stream_.Set(value, GetArenaForAllocation());
 }
 inline std::string* RemoteLazyInputStreamParams::_internal_mutable_a_stream() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_stream_.Mutable(GetArenaForAllocation());
 }
 inline std::string* RemoteLazyInputStreamParams::release_a_stream() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.RemoteLazyInputStreamParams.a_stream)
-  if (!_internal_has_a_stream()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_stream_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_stream_.IsDefault()) {
-    _impl_.a_stream_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_stream_.Release();
 }
 inline void RemoteLazyInputStreamParams::set_allocated_a_stream(std::string* a_stream) {
   if (a_stream != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_stream_.SetAllocated(a_stream, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3174,17 +3031,9 @@ inline void RemoteLazyInputStreamParams::set_allocated_a_stream(std::string* a_s
 
 // DataPipeReceiverStreamParams
 
-// required bytes a_pipe = 1;
-inline bool DataPipeReceiverStreamParams::_internal_has_a_pipe() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool DataPipeReceiverStreamParams::has_a_pipe() const {
-  return _internal_has_a_pipe();
-}
+// bytes a_pipe = 1;
 inline void DataPipeReceiverStreamParams::clear_a_pipe() {
   _impl_.a_pipe_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& DataPipeReceiverStreamParams::a_pipe() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.ipc.DataPipeReceiverStreamParams.a_pipe)
@@ -3193,7 +3042,7 @@ inline const std::string& DataPipeReceiverStreamParams::a_pipe() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DataPipeReceiverStreamParams::set_a_pipe(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_pipe_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.DataPipeReceiverStreamParams.a_pipe)
 }
@@ -3206,32 +3055,22 @@ inline const std::string& DataPipeReceiverStreamParams::_internal_a_pipe() const
   return _impl_.a_pipe_.Get();
 }
 inline void DataPipeReceiverStreamParams::_internal_set_a_pipe(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_pipe_.Set(value, GetArenaForAllocation());
 }
 inline std::string* DataPipeReceiverStreamParams::_internal_mutable_a_pipe() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_pipe_.Mutable(GetArenaForAllocation());
 }
 inline std::string* DataPipeReceiverStreamParams::release_a_pipe() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.DataPipeReceiverStreamParams.a_pipe)
-  if (!_internal_has_a_pipe()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_pipe_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_pipe_.IsDefault()) {
-    _impl_.a_pipe_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_pipe_.Release();
 }
 inline void DataPipeReceiverStreamParams::set_allocated_a_pipe(std::string* a_pipe) {
   if (a_pipe != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_pipe_.SetAllocated(a_pipe, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3999,18 +3838,18 @@ inline InputStreamParams::ContentCase InputStreamParams::content_case() const {
 
 // EncryptedFileInputStreamParams
 
-// required .protobuf.mozilla.ipc.InputStreamParams a_inputStreamParams = 1;
+// .protobuf.mozilla.ipc.InputStreamParams a_inputStreamParams = 1;
 inline bool EncryptedFileInputStreamParams::_internal_has_a_inputstreamparams() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_inputstreamparams_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_inputstreamparams_ != nullptr;
 }
 inline bool EncryptedFileInputStreamParams::has_a_inputstreamparams() const {
   return _internal_has_a_inputstreamparams();
 }
 inline void EncryptedFileInputStreamParams::clear_a_inputstreamparams() {
-  if (_impl_.a_inputstreamparams_ != nullptr) _impl_.a_inputstreamparams_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_inputstreamparams_ != nullptr) {
+    delete _impl_.a_inputstreamparams_;
+  }
+  _impl_.a_inputstreamparams_ = nullptr;
 }
 inline const ::protobuf::mozilla::ipc::InputStreamParams& EncryptedFileInputStreamParams::_internal_a_inputstreamparams() const {
   const ::protobuf::mozilla::ipc::InputStreamParams* p = _impl_.a_inputstreamparams_;
@@ -4028,14 +3867,14 @@ inline void EncryptedFileInputStreamParams::unsafe_arena_set_allocated_a_inputst
   }
   _impl_.a_inputstreamparams_ = a_inputstreamparams;
   if (a_inputstreamparams) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.a_inputStreamParams)
 }
 inline ::protobuf::mozilla::ipc::InputStreamParams* EncryptedFileInputStreamParams::release_a_inputstreamparams() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.a_inputstreamparams_;
   _impl_.a_inputstreamparams_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -4051,13 +3890,13 @@ inline ::protobuf::mozilla::ipc::InputStreamParams* EncryptedFileInputStreamPara
 }
 inline ::protobuf::mozilla::ipc::InputStreamParams* EncryptedFileInputStreamParams::unsafe_arena_release_a_inputstreamparams() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.a_inputStreamParams)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.a_inputstreamparams_;
   _impl_.a_inputstreamparams_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::ipc::InputStreamParams* EncryptedFileInputStreamParams::_internal_mutable_a_inputstreamparams() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_inputstreamparams_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::InputStreamParams>(GetArenaForAllocation());
     _impl_.a_inputstreamparams_ = p;
@@ -4081,9 +3920,9 @@ inline void EncryptedFileInputStreamParams::set_allocated_a_inputstreamparams(::
       a_inputstreamparams = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_inputstreamparams, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_inputstreamparams_ = a_inputstreamparams;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.EncryptedFileInputStreamParams.a_inputStreamParams)
@@ -4136,17 +3975,9 @@ EncryptedFileInputStreamParams::mutable_a_key() {
   return _internal_mutable_a_key();
 }
 
-// required uint32 a_blockSize = 3;
-inline bool EncryptedFileInputStreamParams::_internal_has_a_blocksize() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool EncryptedFileInputStreamParams::has_a_blocksize() const {
-  return _internal_has_a_blocksize();
-}
+// uint32 a_blockSize = 3;
 inline void EncryptedFileInputStreamParams::clear_a_blocksize() {
   _impl_.a_blocksize_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t EncryptedFileInputStreamParams::_internal_a_blocksize() const {
   return _impl_.a_blocksize_;
@@ -4156,7 +3987,7 @@ inline uint32_t EncryptedFileInputStreamParams::a_blocksize() const {
   return _internal_a_blocksize();
 }
 inline void EncryptedFileInputStreamParams::_internal_set_a_blocksize(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_blocksize_ = value;
 }
 inline void EncryptedFileInputStreamParams::set_a_blocksize(uint32_t value) {
@@ -4258,17 +4089,9 @@ inline void BufferedInputStreamParams::set_allocated_a_optionalstream(::protobuf
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.BufferedInputStreamParams.a_optionalStream)
 }
 
-// required uint32 a_bufferSize = 2;
-inline bool BufferedInputStreamParams::_internal_has_a_buffersize() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool BufferedInputStreamParams::has_a_buffersize() const {
-  return _internal_has_a_buffersize();
-}
+// uint32 a_bufferSize = 2;
 inline void BufferedInputStreamParams::clear_a_buffersize() {
   _impl_.a_buffersize_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t BufferedInputStreamParams::_internal_a_buffersize() const {
   return _impl_.a_buffersize_;
@@ -4278,7 +4101,7 @@ inline uint32_t BufferedInputStreamParams::a_buffersize() const {
   return _internal_a_buffersize();
 }
 inline void BufferedInputStreamParams::_internal_set_a_buffersize(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_buffersize_ = value;
 }
 inline void BufferedInputStreamParams::set_a_buffersize(uint32_t value) {
@@ -4420,17 +4243,9 @@ MIMEInputStreamParams::a_headers() const {
   return _impl_.a_headers_;
 }
 
-// required bool a_startedReading = 3;
-inline bool MIMEInputStreamParams::_internal_has_a_startedreading() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool MIMEInputStreamParams::has_a_startedreading() const {
-  return _internal_has_a_startedreading();
-}
+// bool a_startedReading = 3;
 inline void MIMEInputStreamParams::clear_a_startedreading() {
   _impl_.a_startedreading_ = false;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool MIMEInputStreamParams::_internal_a_startedreading() const {
   return _impl_.a_startedreading_;
@@ -4440,7 +4255,7 @@ inline bool MIMEInputStreamParams::a_startedreading() const {
   return _internal_a_startedreading();
 }
 inline void MIMEInputStreamParams::_internal_set_a_startedreading(bool value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_startedreading_ = value;
 }
 inline void MIMEInputStreamParams::set_a_startedreading(bool value) {
@@ -4452,18 +4267,18 @@ inline void MIMEInputStreamParams::set_a_startedreading(bool value) {
 
 // InputStreamLengthWrapperParams
 
-// required .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
+// .protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
 inline bool InputStreamLengthWrapperParams::_internal_has_a_stream() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_stream_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_stream_ != nullptr;
 }
 inline bool InputStreamLengthWrapperParams::has_a_stream() const {
   return _internal_has_a_stream();
 }
 inline void InputStreamLengthWrapperParams::clear_a_stream() {
-  if (_impl_.a_stream_ != nullptr) _impl_.a_stream_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_stream_ != nullptr) {
+    delete _impl_.a_stream_;
+  }
+  _impl_.a_stream_ = nullptr;
 }
 inline const ::protobuf::mozilla::ipc::InputStreamParams& InputStreamLengthWrapperParams::_internal_a_stream() const {
   const ::protobuf::mozilla::ipc::InputStreamParams* p = _impl_.a_stream_;
@@ -4481,14 +4296,14 @@ inline void InputStreamLengthWrapperParams::unsafe_arena_set_allocated_a_stream(
   }
   _impl_.a_stream_ = a_stream;
   if (a_stream) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.a_stream)
 }
 inline ::protobuf::mozilla::ipc::InputStreamParams* InputStreamLengthWrapperParams::release_a_stream() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.a_stream_;
   _impl_.a_stream_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -4504,13 +4319,13 @@ inline ::protobuf::mozilla::ipc::InputStreamParams* InputStreamLengthWrapperPara
 }
 inline ::protobuf::mozilla::ipc::InputStreamParams* InputStreamLengthWrapperParams::unsafe_arena_release_a_stream() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.a_stream)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::ipc::InputStreamParams* temp = _impl_.a_stream_;
   _impl_.a_stream_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::ipc::InputStreamParams* InputStreamLengthWrapperParams::_internal_mutable_a_stream() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_stream_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::ipc::InputStreamParams>(GetArenaForAllocation());
     _impl_.a_stream_ = p;
@@ -4534,25 +4349,17 @@ inline void InputStreamLengthWrapperParams::set_allocated_a_stream(::protobuf::m
       a_stream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_stream, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_stream_ = a_stream;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.a_stream)
 }
 
-// required sint64 a_length = 2;
-inline bool InputStreamLengthWrapperParams::_internal_has_a_length() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool InputStreamLengthWrapperParams::has_a_length() const {
-  return _internal_has_a_length();
-}
+// sint64 a_length = 2;
 inline void InputStreamLengthWrapperParams::clear_a_length() {
   _impl_.a_length_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int64_t InputStreamLengthWrapperParams::_internal_a_length() const {
   return _impl_.a_length_;
@@ -4562,7 +4369,7 @@ inline int64_t InputStreamLengthWrapperParams::a_length() const {
   return _internal_a_length();
 }
 inline void InputStreamLengthWrapperParams::_internal_set_a_length(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_length_ = value;
 }
 inline void InputStreamLengthWrapperParams::set_a_length(int64_t value) {
@@ -4570,17 +4377,9 @@ inline void InputStreamLengthWrapperParams::set_a_length(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.ipc.InputStreamLengthWrapperParams.a_length)
 }
 
-// required bool a_consumed = 3;
-inline bool InputStreamLengthWrapperParams::_internal_has_a_consumed() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool InputStreamLengthWrapperParams::has_a_consumed() const {
-  return _internal_has_a_consumed();
-}
+// bool a_consumed = 3;
 inline void InputStreamLengthWrapperParams::clear_a_consumed() {
   _impl_.a_consumed_ = false;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline bool InputStreamLengthWrapperParams::_internal_a_consumed() const {
   return _impl_.a_consumed_;
@@ -4590,7 +4389,7 @@ inline bool InputStreamLengthWrapperParams::a_consumed() const {
   return _internal_a_consumed();
 }
 inline void InputStreamLengthWrapperParams::_internal_set_a_consumed(bool value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_consumed_ = value;
 }
 inline void InputStreamLengthWrapperParams::set_a_consumed(bool value) {

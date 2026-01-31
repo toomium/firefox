@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/webbrowserpersist/PWebBrowserPersistDocument.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.PWebBrowserPersistDocument;
 
@@ -20,31 +19,31 @@ import "NeckoChannelParams.proto";
 
 // Message declarations
 message Msg_Attributes {
-  required protobuf.mozilla.WebBrowserPersistDocumentAttrs a_aAttrs = 1;
+  protobuf.mozilla.WebBrowserPersistDocumentAttrs a_aAttrs = 1;
   optional protobuf.mozilla.ipc.IPCStream a_stream = 2;
 }
 
 message Msg_InitFailure {
-  required bytes a_aStatus = 1;
+  bytes a_aStatus = 1;
 }
 
 message Msg_SetPersistFlags {
-  required uint32 a_aNewFlags = 1;
+  uint32 a_aNewFlags = 1;
 }
 
 message Msg_PWebBrowserPersistResourcesConstructor {
-  required sint64 a_actorid = 1;
+  sint64 a_actorid = 1;
 }
 
 message Reply_PWebBrowserPersistResourcesConstructor {
 }
 
 message Msg_PWebBrowserPersistSerializeConstructor {
-  required sint64 a_actorid = 1;
-  required protobuf.mozilla.WebBrowserPersistURIMap a_aMap = 2;
-  required string a_aRequestedContentType = 3;
-  required uint32 a_aEncoderFlags = 4;
-  required uint32 a_aWrapColumn = 5;
+  sint64 a_actorid = 1;
+  protobuf.mozilla.WebBrowserPersistURIMap a_aMap = 2;
+  string a_aRequestedContentType = 3;
+  uint32 a_aEncoderFlags = 4;
+  uint32 a_aWrapColumn = 5;
 }
 
 message Reply_PWebBrowserPersistSerializeConstructor {

@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/localstorage/PBackgroundLSSharedTypes.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom;
 
@@ -15,24 +14,24 @@ import "ProtocolTypes.proto";
 
 // Structs and unions declarations
 message LSRequestCommonParams {
-  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
-  required protobuf.mozilla.ipc.PrincipalInfo a_storagePrincipalInfo = 2;
-  required string a_originKey = 3;
+  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  protobuf.mozilla.ipc.PrincipalInfo a_storagePrincipalInfo = 2;
+  string a_originKey = 3;
 }
 
 message LSRequestPreloadDatastoreParams {
-  required protobuf.mozilla.dom.LSRequestCommonParams a_commonParams = 1;
+  protobuf.mozilla.dom.LSRequestCommonParams a_commonParams = 1;
 }
 
 message LSRequestPrepareDatastoreParams {
-  required protobuf.mozilla.dom.LSRequestCommonParams a_commonParams = 1;
+  protobuf.mozilla.dom.LSRequestCommonParams a_commonParams = 1;
   optional bytes a_clientId = 2;
   optional protobuf.mozilla.ipc.PrincipalInfo a_clientPrincipalInfo = 3;
 }
 
 message LSRequestPrepareObserverParams {
-  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
-  required protobuf.mozilla.ipc.PrincipalInfo a_storagePrincipalInfo = 2;
+  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  protobuf.mozilla.ipc.PrincipalInfo a_storagePrincipalInfo = 2;
   optional bytes a_clientId = 3;
   optional protobuf.mozilla.ipc.PrincipalInfo a_clientPrincipalInfo = 4;
 }
@@ -46,13 +45,13 @@ message LSRequestParams {
 }
 
 message LSSimpleRequestPreloadedParams {
-  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
-  required protobuf.mozilla.ipc.PrincipalInfo a_storagePrincipalInfo = 2;
+  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  protobuf.mozilla.ipc.PrincipalInfo a_storagePrincipalInfo = 2;
 }
 
 message LSSimpleRequestGetStateParams {
-  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
-  required protobuf.mozilla.ipc.PrincipalInfo a_storagePrincipalInfo = 2;
+  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  protobuf.mozilla.ipc.PrincipalInfo a_storagePrincipalInfo = 2;
 }
 
 message LSSimpleRequestParams {
@@ -63,6 +62,6 @@ message LSSimpleRequestParams {
 }
 
 message LSItemInfo {
-  required string a_key = 1;
-  required bytes a_value = 2;
+  string a_key = 1;
+  bytes a_value = 2;
 }

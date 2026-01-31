@@ -8,7 +8,10 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -22,15 +25,14 @@ namespace mozilla {
 namespace dom {
 PROTOBUF_CONSTEXPR MemoryReport::MemoryReport(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_process_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.a_process_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_path_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_desc_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_kind_)*/0
   , /*decltype(_impl_.a_units_)*/0
   , /*decltype(_impl_.a_amount_)*/int64_t{0}
-  , /*decltype(_impl_.a_generation_)*/0u} {}
+  , /*decltype(_impl_.a_generation_)*/0u
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct MemoryReportDefaultTypeInternal {
   PROTOBUF_CONSTEXPR MemoryReportDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -43,6 +45,56 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
+static ::_pb::Metadata file_level_metadata_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[1];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
+
+const uint32_t TableStruct_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::MemoryReport, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::MemoryReport, _impl_.a_process_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::MemoryReport, _impl_.a_path_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::MemoryReport, _impl_.a_kind_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::MemoryReport, _impl_.a_units_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::MemoryReport, _impl_.a_amount_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::MemoryReport, _impl_.a_generation_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::MemoryReport, _impl_.a_desc_),
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::protobuf::mozilla::dom::MemoryReport)},
+};
+
+static const ::_pb::Message* const file_default_instances[] = {
+  &::protobuf::mozilla::dom::_MemoryReport_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n.MemoryReportTypes_protobuf.mozilla.dom"
+  ".h.proto\022\024protobuf.mozilla.dom\"\212\001\n\014Memor"
+  "yReport\022\021\n\ta_process\030\001 \001(\t\022\016\n\006a_path\030\002 \001"
+  "(\t\022\016\n\006a_kind\030\003 \001(\021\022\017\n\007a_units\030\004 \001(\021\022\020\n\010a"
+  "_amount\030\005 \001(\022\022\024\n\014a_generation\030\006 \001(\r\022\016\n\006a"
+  "_desc\030\007 \001(\tb\006proto3"
+  ;
+static ::_pbi::once_flag descriptor_table_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto = {
+    false, false, 219, descriptor_table_protodef_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto,
+    "MemoryReportTypes_protobuf.mozilla.dom.h.proto",
+    &descriptor_table_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once, nullptr, 0, 1,
+    schemas, file_default_instances, TableStruct_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets,
+    file_level_metadata_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto, file_level_enum_descriptors_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto,
+    file_level_service_descriptors_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter() {
+  return &descriptor_table_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
+}
+
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto(&descriptor_table_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -51,59 +103,33 @@ namespace dom {
 
 class MemoryReport::_Internal {
  public:
-  using HasBits = decltype(std::declval<MemoryReport>()._impl_._has_bits_);
-  static void set_has_a_process(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_path(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_a_kind(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_a_units(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static void set_has_a_amount(HasBits* has_bits) {
-    (*has_bits)[0] |= 32u;
-  }
-  static void set_has_a_generation(HasBits* has_bits) {
-    (*has_bits)[0] |= 64u;
-  }
-  static void set_has_a_desc(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000007f) ^ 0x0000007f) != 0;
-  }
 };
 
 MemoryReport::MemoryReport(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.MemoryReport)
 }
 MemoryReport::MemoryReport(const MemoryReport& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   MemoryReport* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_process_){}
+      decltype(_impl_.a_process_){}
     , decltype(_impl_.a_path_){}
     , decltype(_impl_.a_desc_){}
     , decltype(_impl_.a_kind_){}
     , decltype(_impl_.a_units_){}
     , decltype(_impl_.a_amount_){}
-    , decltype(_impl_.a_generation_){}};
+    , decltype(_impl_.a_generation_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_process_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_process_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_process()) {
+  if (!from._internal_a_process().empty()) {
     _this->_impl_.a_process_.Set(from._internal_a_process(), 
       _this->GetArenaForAllocation());
   }
@@ -111,7 +137,7 @@ MemoryReport::MemoryReport(const MemoryReport& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_path_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_path()) {
+  if (!from._internal_a_path().empty()) {
     _this->_impl_.a_path_.Set(from._internal_a_path(), 
       _this->GetArenaForAllocation());
   }
@@ -119,7 +145,7 @@ MemoryReport::MemoryReport(const MemoryReport& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_desc_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_desc()) {
+  if (!from._internal_a_desc().empty()) {
     _this->_impl_.a_desc_.Set(from._internal_a_desc(), 
       _this->GetArenaForAllocation());
   }
@@ -134,15 +160,14 @@ inline void MemoryReport::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_process_){}
+      decltype(_impl_.a_process_){}
     , decltype(_impl_.a_path_){}
     , decltype(_impl_.a_desc_){}
     , decltype(_impl_.a_kind_){0}
     , decltype(_impl_.a_units_){0}
     , decltype(_impl_.a_amount_){int64_t{0}}
     , decltype(_impl_.a_generation_){0u}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_process_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -160,7 +185,7 @@ inline void MemoryReport::SharedCtor(
 
 MemoryReport::~MemoryReport() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.MemoryReport)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -184,94 +209,80 @@ void MemoryReport::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_process_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_path_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _impl_.a_desc_.ClearNonDefaultToEmpty();
-    }
-  }
-  if (cached_has_bits & 0x00000078u) {
-    ::memset(&_impl_.a_kind_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.a_generation_) -
-        reinterpret_cast<char*>(&_impl_.a_kind_)) + sizeof(_impl_.a_generation_));
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_process_.ClearToEmpty();
+  _impl_.a_path_.ClearToEmpty();
+  _impl_.a_desc_.ClearToEmpty();
+  ::memset(&_impl_.a_kind_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.a_generation_) -
+      reinterpret_cast<char*>(&_impl_.a_kind_)) + sizeof(_impl_.a_generation_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* MemoryReport::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_process = 1;
+      // string a_process = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_process();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.MemoryReport.a_process"));
         } else
           goto handle_unusual;
         continue;
-      // required string a_path = 2;
+      // string a_path = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_path();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.MemoryReport.a_path"));
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_kind = 3;
+      // sint32 a_kind = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _Internal::set_has_a_kind(&has_bits);
           _impl_.a_kind_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint32 a_units = 4;
+      // sint32 a_units = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _Internal::set_has_a_units(&has_bits);
           _impl_.a_units_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required sint64 a_amount = 5;
+      // sint64 a_amount = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_a_amount(&has_bits);
           _impl_.a_amount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_generation = 6;
+      // uint32 a_generation = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
-          _Internal::set_has_a_generation(&has_bits);
           _impl_.a_generation_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required string a_desc = 7;
+      // string a_desc = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           auto str = _internal_mutable_a_desc();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.MemoryReport.a_desc"));
         } else
           goto handle_unusual;
         continue;
@@ -286,12 +297,11 @@ const char* MemoryReport::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -305,190 +315,157 @@ uint8_t* MemoryReport::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_process = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_process = 1;
+  if (!this->_internal_a_process().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_process().data(), static_cast<int>(this->_internal_a_process().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.MemoryReport.a_process");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_process(), target);
   }
 
-  // required string a_path = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // string a_path = 2;
+  if (!this->_internal_a_path().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_path().data(), static_cast<int>(this->_internal_a_path().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.MemoryReport.a_path");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_path(), target);
   }
 
-  // required sint32 a_kind = 3;
-  if (cached_has_bits & 0x00000008u) {
+  // sint32 a_kind = 3;
+  if (this->_internal_a_kind() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(3, this->_internal_a_kind(), target);
   }
 
-  // required sint32 a_units = 4;
-  if (cached_has_bits & 0x00000010u) {
+  // sint32 a_units = 4;
+  if (this->_internal_a_units() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_a_units(), target);
   }
 
-  // required sint64 a_amount = 5;
-  if (cached_has_bits & 0x00000020u) {
+  // sint64 a_amount = 5;
+  if (this->_internal_a_amount() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(5, this->_internal_a_amount(), target);
   }
 
-  // required uint32 a_generation = 6;
-  if (cached_has_bits & 0x00000040u) {
+  // uint32 a_generation = 6;
+  if (this->_internal_a_generation() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(6, this->_internal_a_generation(), target);
   }
 
-  // required string a_desc = 7;
-  if (cached_has_bits & 0x00000004u) {
+  // string a_desc = 7;
+  if (!this->_internal_a_desc().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_desc().data(), static_cast<int>(this->_internal_a_desc().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.dom.MemoryReport.a_desc");
     target = stream->WriteStringMaybeAliased(
         7, this->_internal_a_desc(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.MemoryReport)
   return target;
 }
 
-size_t MemoryReport::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.dom.MemoryReport)
-  size_t total_size = 0;
-
-  if (_internal_has_a_process()) {
-    // required string a_process = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_process());
-  }
-
-  if (_internal_has_a_path()) {
-    // required string a_path = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_path());
-  }
-
-  if (_internal_has_a_desc()) {
-    // required string a_desc = 7;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_desc());
-  }
-
-  if (_internal_has_a_kind()) {
-    // required sint32 a_kind = 3;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_kind());
-  }
-
-  if (_internal_has_a_units()) {
-    // required sint32 a_units = 4;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_units());
-  }
-
-  if (_internal_has_a_amount()) {
-    // required sint64 a_amount = 5;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_amount());
-  }
-
-  if (_internal_has_a_generation()) {
-    // required uint32 a_generation = 6;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_generation());
-  }
-
-  return total_size;
-}
 size_t MemoryReport::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.MemoryReport)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000007f) ^ 0x0000007f) == 0) {  // All required fields are present.
-    // required string a_process = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_process());
-
-    // required string a_path = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_path());
-
-    // required string a_desc = 7;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_desc());
-
-    // required sint32 a_kind = 3;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_kind());
-
-    // required sint32 a_units = 4;
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_units());
-
-    // required sint64 a_amount = 5;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_amount());
-
-    // required uint32 a_generation = 6;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_generation());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_process = 1;
+  if (!this->_internal_a_process().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_process());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // string a_path = 2;
+  if (!this->_internal_a_path().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_path());
+  }
+
+  // string a_desc = 7;
+  if (!this->_internal_a_desc().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_desc());
+  }
+
+  // sint32 a_kind = 3;
+  if (this->_internal_a_kind() != 0) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_kind());
+  }
+
+  // sint32 a_units = 4;
+  if (this->_internal_a_units() != 0) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_units());
+  }
+
+  // sint64 a_amount = 5;
+  if (this->_internal_a_amount() != 0) {
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_amount());
+  }
+
+  // uint32 a_generation = 6;
+  if (this->_internal_a_generation() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_generation());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void MemoryReport::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const MemoryReport*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MemoryReport::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    MemoryReport::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MemoryReport::GetClassData() const { return &_class_data_; }
 
-void MemoryReport::MergeFrom(const MemoryReport& from) {
-  MemoryReport* const _this = this;
+
+void MemoryReport::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<MemoryReport*>(&to_msg);
+  auto& from = static_cast<const MemoryReport&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.MemoryReport)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000007fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_process(from._internal_a_process());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_path(from._internal_a_path());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_a_desc(from._internal_a_desc());
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.a_kind_ = from._impl_.a_kind_;
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.a_units_ = from._impl_.a_units_;
-    }
-    if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.a_amount_ = from._impl_.a_amount_;
-    }
-    if (cached_has_bits & 0x00000040u) {
-      _this->_impl_.a_generation_ = from._impl_.a_generation_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_process().empty()) {
+    _this->_internal_set_a_process(from._internal_a_process());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_path().empty()) {
+    _this->_internal_set_a_path(from._internal_a_path());
+  }
+  if (!from._internal_a_desc().empty()) {
+    _this->_internal_set_a_desc(from._internal_a_desc());
+  }
+  if (from._internal_a_kind() != 0) {
+    _this->_internal_set_a_kind(from._internal_a_kind());
+  }
+  if (from._internal_a_units() != 0) {
+    _this->_internal_set_a_units(from._internal_a_units());
+  }
+  if (from._internal_a_amount() != 0) {
+    _this->_internal_set_a_amount(from._internal_a_amount());
+  }
+  if (from._internal_a_generation() != 0) {
+    _this->_internal_set_a_generation(from._internal_a_generation());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void MemoryReport::CopyFrom(const MemoryReport& from) {
@@ -499,7 +476,6 @@ void MemoryReport::CopyFrom(const MemoryReport& from) {
 }
 
 bool MemoryReport::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -508,7 +484,6 @@ void MemoryReport::InternalSwap(MemoryReport* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_process_, lhs_arena,
       &other->_impl_.a_process_, rhs_arena
@@ -529,10 +504,11 @@ void MemoryReport::InternalSwap(MemoryReport* other) {
           reinterpret_cast<char*>(&other->_impl_.a_kind_));
 }
 
-std::string MemoryReport::GetTypeName() const {
-  return "protobuf.mozilla.dom.MemoryReport";
+::PROTOBUF_NAMESPACE_ID::Metadata MemoryReport::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
+      file_level_metadata_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace dom

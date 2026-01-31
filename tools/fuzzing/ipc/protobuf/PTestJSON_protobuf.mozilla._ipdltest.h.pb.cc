@@ -8,7 +8,10 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -22,10 +25,9 @@ namespace mozilla {
 namespace _ipdltest {
 PROTOBUF_CONSTEXPR KeyValue::KeyValue(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_key_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_value_)*/nullptr} {}
+    /*decltype(_impl_.a_key_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.a_value_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct KeyValueDefaultTypeInternal {
   PROTOBUF_CONSTEXPR KeyValueDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -78,6 +80,100 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace _ipdltest
 }  // namespace mozilla
 }  // namespace protobuf
+static ::_pb::Metadata file_level_metadata_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto[4];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto = nullptr;
+
+const uint32_t TableStruct_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::KeyValue, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::KeyValue, _impl_.a_key_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::KeyValue, _impl_.a_value_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue, _impl_.a_mvarrayofkeyvalue_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant, _impl_.a_mvarrayofjsonvariant_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::JSONVariant, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::JSONVariant, _impl_._oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::JSONVariant, _impl_.content_),
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::KeyValue)},
+  { 8, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfKeyValue)},
+  { 15, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::JSONVariant_a_type_mVArrayOfJSONVariant)},
+  { 22, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::JSONVariant)},
+};
+
+static const ::_pb::Message* const file_default_instances[] = {
+  &::protobuf::mozilla::_ipdltest::_KeyValue_default_instance_._instance,
+  &::protobuf::mozilla::_ipdltest::_JSONVariant_a_type_mVArrayOfKeyValue_default_instance_._instance,
+  &::protobuf::mozilla::_ipdltest::_JSONVariant_a_type_mVArrayOfJSONVariant_default_instance_._instance,
+  &::protobuf::mozilla::_ipdltest::_JSONVariant_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n,PTestJSON_protobuf.mozilla._ipdltest.h"
+  ".proto\022\032protobuf.mozilla._ipdltest\"S\n\010Ke"
+  "yValue\022\r\n\005a_key\030\001 \001(\t\0228\n\007a_value\030\002 \001(\0132\'"
+  ".protobuf.mozilla._ipdltest.JSONVariant\""
+  "\307\004\n\013JSONVariant\022\024\n\na_mVvoid_t\030\001 \001(\014H\000\022\024\n"
+  "\na_mVnull_t\030\002 \001(\014H\000\022\022\n\010a_mVbool\030\003 \001(\010H\000\022"
+  "\021\n\007a_mVint\030\004 \001(\021H\000\022\024\n\na_mVdouble\030\005 \001(\001H\000"
+  "\022\026\n\014a_mVnsString\030\006 \001(\tH\000\022\035\n\023a_mVPTestJSO"
+  "NHandle\030\007 \001(\014H\000\022_\n\023a_mVArrayOfKeyValue\030\010"
+  " \001(\0132@.protobuf.mozilla._ipdltest.JSONVa"
+  "riant.a_type_mVArrayOfKeyValueH\000\022e\n\026a_mV"
+  "ArrayOfJSONVariant\030\t \001(\0132C.protobuf.mozi"
+  "lla._ipdltest.JSONVariant.a_type_mVArray"
+  "OfJSONVariantH\000\032]\n\030a_type_mVArrayOfKeyVa"
+  "lue\022A\n\023a_mVArrayOfKeyValue\030\001 \003(\0132$.proto"
+  "buf.mozilla._ipdltest.KeyValue\032f\n\033a_type"
+  "_mVArrayOfJSONVariant\022G\n\026a_mVArrayOfJSON"
+  "Variant\030\001 \003(\0132\'.protobuf.mozilla._ipdlte"
+  "st.JSONVariantB\t\n\007contentb\006proto3"
+  ;
+static ::_pbi::once_flag descriptor_table_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto = {
+    false, false, 753, descriptor_table_protodef_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto,
+    "PTestJSON_protobuf.mozilla._ipdltest.h.proto",
+    &descriptor_table_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto_once, nullptr, 0, 4,
+    schemas, file_default_instances, TableStruct_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto::offsets,
+    file_level_metadata_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto, file_level_enum_descriptors_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto,
+    file_level_service_descriptors_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto_getter() {
+  return &descriptor_table_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto;
+}
+
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto(&descriptor_table_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace _ipdltest {
@@ -86,17 +182,7 @@ namespace _ipdltest {
 
 class KeyValue::_Internal {
  public:
-  using HasBits = decltype(std::declval<KeyValue>()._impl_._has_bits_);
-  static void set_has_a_key(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
   static const ::protobuf::mozilla::_ipdltest::JSONVariant& a_value(const KeyValue* msg);
-  static void set_has_a_value(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 const ::protobuf::mozilla::_ipdltest::JSONVariant&
@@ -105,25 +191,24 @@ KeyValue::_Internal::a_value(const KeyValue* msg) {
 }
 KeyValue::KeyValue(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.KeyValue)
 }
 KeyValue::KeyValue(const KeyValue& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   KeyValue* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_key_){}
-    , decltype(_impl_.a_value_){nullptr}};
+      decltype(_impl_.a_key_){}
+    , decltype(_impl_.a_value_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_key_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_key_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_key()) {
+  if (!from._internal_a_key().empty()) {
     _this->_impl_.a_key_.Set(from._internal_a_key(), 
       _this->GetArenaForAllocation());
   }
@@ -138,10 +223,9 @@ inline void KeyValue::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_key_){}
+      decltype(_impl_.a_key_){}
     , decltype(_impl_.a_value_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_key_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -151,7 +235,7 @@ inline void KeyValue::SharedCtor(
 
 KeyValue::~KeyValue() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.KeyValue)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -174,37 +258,31 @@ void KeyValue::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_key_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(_impl_.a_value_ != nullptr);
-      _impl_.a_value_->Clear();
-    }
+  _impl_.a_key_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_value_ != nullptr) {
+    delete _impl_.a_value_;
   }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_value_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* KeyValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_key = 1;
+      // string a_key = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_key();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla._ipdltest.KeyValue.a_key"));
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
+      // .protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_value(), ptr);
@@ -223,12 +301,11 @@ const char* KeyValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -242,102 +319,79 @@ uint8_t* KeyValue::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_key = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_key = 1;
+  if (!this->_internal_a_key().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_key().data(), static_cast<int>(this->_internal_a_key().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla._ipdltest.KeyValue.a_key");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_key(), target);
   }
 
-  // required .protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // .protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
+  if (this->_internal_has_a_value()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::a_value(this),
         _Internal::a_value(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.KeyValue)
   return target;
 }
 
-size_t KeyValue::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla._ipdltest.KeyValue)
-  size_t total_size = 0;
-
-  if (_internal_has_a_key()) {
-    // required string a_key = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_key());
-  }
-
-  if (_internal_has_a_value()) {
-    // required .protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_value_);
-  }
-
-  return total_size;
-}
 size_t KeyValue::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.KeyValue)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required string a_key = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_key());
-
-    // required .protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_value_);
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_key = 1;
+  if (!this->_internal_a_key().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_key());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // .protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
+  if (this->_internal_has_a_value()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_value_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void KeyValue::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const KeyValue*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData KeyValue::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    KeyValue::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*KeyValue::GetClassData() const { return &_class_data_; }
 
-void KeyValue::MergeFrom(const KeyValue& from) {
-  KeyValue* const _this = this;
+
+void KeyValue::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<KeyValue*>(&to_msg);
+  auto& from = static_cast<const KeyValue&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.KeyValue)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_key(from._internal_a_key());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_mutable_a_value()->::protobuf::mozilla::_ipdltest::JSONVariant::MergeFrom(
-          from._internal_a_value());
-    }
+  if (!from._internal_a_key().empty()) {
+    _this->_internal_set_a_key(from._internal_a_key());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (from._internal_has_a_value()) {
+    _this->_internal_mutable_a_value()->::protobuf::mozilla::_ipdltest::JSONVariant::MergeFrom(
+        from._internal_a_value());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void KeyValue::CopyFrom(const KeyValue& from) {
@@ -348,10 +402,6 @@ void KeyValue::CopyFrom(const KeyValue& from) {
 }
 
 bool KeyValue::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_value()) {
-    if (!_impl_.a_value_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -360,7 +410,6 @@ void KeyValue::InternalSwap(KeyValue* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_key_, lhs_arena,
       &other->_impl_.a_key_, rhs_arena
@@ -368,10 +417,11 @@ void KeyValue::InternalSwap(KeyValue* other) {
   swap(_impl_.a_value_, other->_impl_.a_value_);
 }
 
-std::string KeyValue::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.KeyValue";
+::PROTOBUF_NAMESPACE_ID::Metadata KeyValue::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto_getter, &descriptor_table_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto_once,
+      file_level_metadata_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto[0]);
 }
-
 
 // ===================================================================
 
@@ -381,18 +431,18 @@ class JSONVariant_a_type_mVArrayOfKeyValue::_Internal {
 
 JSONVariant_a_type_mVArrayOfKeyValue::JSONVariant_a_type_mVArrayOfKeyValue(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfKeyValue)
 }
 JSONVariant_a_type_mVArrayOfKeyValue::JSONVariant_a_type_mVArrayOfKeyValue(const JSONVariant_a_type_mVArrayOfKeyValue& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   JSONVariant_a_type_mVArrayOfKeyValue* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_mvarrayofkeyvalue_){from._impl_.a_mvarrayofkeyvalue_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfKeyValue)
 }
 
@@ -408,7 +458,7 @@ inline void JSONVariant_a_type_mVArrayOfKeyValue::SharedCtor(
 
 JSONVariant_a_type_mVArrayOfKeyValue::~JSONVariant_a_type_mVArrayOfKeyValue() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfKeyValue)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -431,7 +481,7 @@ void JSONVariant_a_type_mVArrayOfKeyValue::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_mvarrayofkeyvalue_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* JSONVariant_a_type_mVArrayOfKeyValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -464,7 +514,7 @@ const char* JSONVariant_a_type_mVArrayOfKeyValue::_InternalParse(const char* ptr
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -491,8 +541,8 @@ uint8_t* JSONVariant_a_type_mVArrayOfKeyValue::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfKeyValue)
   return target;
@@ -513,29 +563,26 @@ size_t JSONVariant_a_type_mVArrayOfKeyValue::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void JSONVariant_a_type_mVArrayOfKeyValue::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const JSONVariant_a_type_mVArrayOfKeyValue*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData JSONVariant_a_type_mVArrayOfKeyValue::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    JSONVariant_a_type_mVArrayOfKeyValue::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*JSONVariant_a_type_mVArrayOfKeyValue::GetClassData() const { return &_class_data_; }
 
-void JSONVariant_a_type_mVArrayOfKeyValue::MergeFrom(const JSONVariant_a_type_mVArrayOfKeyValue& from) {
-  JSONVariant_a_type_mVArrayOfKeyValue* const _this = this;
+
+void JSONVariant_a_type_mVArrayOfKeyValue::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<JSONVariant_a_type_mVArrayOfKeyValue*>(&to_msg);
+  auto& from = static_cast<const JSONVariant_a_type_mVArrayOfKeyValue&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfKeyValue)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_mvarrayofkeyvalue_.MergeFrom(from._impl_.a_mvarrayofkeyvalue_);
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void JSONVariant_a_type_mVArrayOfKeyValue::CopyFrom(const JSONVariant_a_type_mVArrayOfKeyValue& from) {
@@ -546,8 +593,6 @@ void JSONVariant_a_type_mVArrayOfKeyValue::CopyFrom(const JSONVariant_a_type_mVA
 }
 
 bool JSONVariant_a_type_mVArrayOfKeyValue::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_mvarrayofkeyvalue_))
-    return false;
   return true;
 }
 
@@ -557,10 +602,11 @@ void JSONVariant_a_type_mVArrayOfKeyValue::InternalSwap(JSONVariant_a_type_mVArr
   _impl_.a_mvarrayofkeyvalue_.InternalSwap(&other->_impl_.a_mvarrayofkeyvalue_);
 }
 
-std::string JSONVariant_a_type_mVArrayOfKeyValue::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfKeyValue";
+::PROTOBUF_NAMESPACE_ID::Metadata JSONVariant_a_type_mVArrayOfKeyValue::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto_getter, &descriptor_table_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto_once,
+      file_level_metadata_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto[1]);
 }
-
 
 // ===================================================================
 
@@ -570,18 +616,18 @@ class JSONVariant_a_type_mVArrayOfJSONVariant::_Internal {
 
 JSONVariant_a_type_mVArrayOfJSONVariant::JSONVariant_a_type_mVArrayOfJSONVariant(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfJSONVariant)
 }
 JSONVariant_a_type_mVArrayOfJSONVariant::JSONVariant_a_type_mVArrayOfJSONVariant(const JSONVariant_a_type_mVArrayOfJSONVariant& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   JSONVariant_a_type_mVArrayOfJSONVariant* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_mvarrayofjsonvariant_){from._impl_.a_mvarrayofjsonvariant_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfJSONVariant)
 }
 
@@ -597,7 +643,7 @@ inline void JSONVariant_a_type_mVArrayOfJSONVariant::SharedCtor(
 
 JSONVariant_a_type_mVArrayOfJSONVariant::~JSONVariant_a_type_mVArrayOfJSONVariant() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfJSONVariant)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -620,7 +666,7 @@ void JSONVariant_a_type_mVArrayOfJSONVariant::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_mvarrayofjsonvariant_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* JSONVariant_a_type_mVArrayOfJSONVariant::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -653,7 +699,7 @@ const char* JSONVariant_a_type_mVArrayOfJSONVariant::_InternalParse(const char* 
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -680,8 +726,8 @@ uint8_t* JSONVariant_a_type_mVArrayOfJSONVariant::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfJSONVariant)
   return target;
@@ -702,29 +748,26 @@ size_t JSONVariant_a_type_mVArrayOfJSONVariant::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void JSONVariant_a_type_mVArrayOfJSONVariant::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const JSONVariant_a_type_mVArrayOfJSONVariant*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData JSONVariant_a_type_mVArrayOfJSONVariant::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    JSONVariant_a_type_mVArrayOfJSONVariant::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*JSONVariant_a_type_mVArrayOfJSONVariant::GetClassData() const { return &_class_data_; }
 
-void JSONVariant_a_type_mVArrayOfJSONVariant::MergeFrom(const JSONVariant_a_type_mVArrayOfJSONVariant& from) {
-  JSONVariant_a_type_mVArrayOfJSONVariant* const _this = this;
+
+void JSONVariant_a_type_mVArrayOfJSONVariant::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<JSONVariant_a_type_mVArrayOfJSONVariant*>(&to_msg);
+  auto& from = static_cast<const JSONVariant_a_type_mVArrayOfJSONVariant&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfJSONVariant)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_mvarrayofjsonvariant_.MergeFrom(from._impl_.a_mvarrayofjsonvariant_);
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void JSONVariant_a_type_mVArrayOfJSONVariant::CopyFrom(const JSONVariant_a_type_mVArrayOfJSONVariant& from) {
@@ -735,8 +778,6 @@ void JSONVariant_a_type_mVArrayOfJSONVariant::CopyFrom(const JSONVariant_a_type_
 }
 
 bool JSONVariant_a_type_mVArrayOfJSONVariant::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_mvarrayofjsonvariant_))
-    return false;
   return true;
 }
 
@@ -746,10 +787,11 @@ void JSONVariant_a_type_mVArrayOfJSONVariant::InternalSwap(JSONVariant_a_type_mV
   _impl_.a_mvarrayofjsonvariant_.InternalSwap(&other->_impl_.a_mvarrayofjsonvariant_);
 }
 
-std::string JSONVariant_a_type_mVArrayOfJSONVariant::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfJSONVariant";
+::PROTOBUF_NAMESPACE_ID::Metadata JSONVariant_a_type_mVArrayOfJSONVariant::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto_getter, &descriptor_table_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto_once,
+      file_level_metadata_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto[2]);
 }
-
 
 // ===================================================================
 
@@ -799,19 +841,19 @@ void JSONVariant::set_allocated_a_mvarrayofjsonvariant(::protobuf::mozilla::_ipd
 }
 JSONVariant::JSONVariant(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.JSONVariant)
 }
 JSONVariant::JSONVariant(const JSONVariant& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   JSONVariant* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVvoidT: {
@@ -873,7 +915,7 @@ inline void JSONVariant::SharedCtor(
 
 JSONVariant::~JSONVariant() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.JSONVariant)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -949,7 +991,7 @@ void JSONVariant::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* JSONVariant::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1006,6 +1048,7 @@ const char* JSONVariant::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
           auto str = _internal_mutable_a_mvnsstring();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla._ipdltest.JSONVariant.a_mVnsString"));
         } else
           goto handle_unusual;
         continue;
@@ -1045,7 +1088,7 @@ const char* JSONVariant::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1063,59 +1106,69 @@ uint8_t* JSONVariant::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  switch (content_case()) {
-    case kAMVvoidT: {
-      target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_a_mvvoid_t(), target);
-      break;
-    }
-    case kAMVnullT: {
-      target = stream->WriteBytesMaybeAliased(
-          2, this->_internal_a_mvnull_t(), target);
-      break;
-    }
-    case kAMVbool: {
-      target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_mvbool(), target);
-      break;
-    }
-    case kAMVint: {
-      target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_a_mvint(), target);
-      break;
-    }
-    case kAMVdouble: {
-      target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteDoubleToArray(5, this->_internal_a_mvdouble(), target);
-      break;
-    }
-    case kAMVnsString: {
-      target = stream->WriteStringMaybeAliased(
-          6, this->_internal_a_mvnsstring(), target);
-      break;
-    }
-    case kAMVPTestJSONHandle: {
-      target = stream->WriteBytesMaybeAliased(
-          7, this->_internal_a_mvptestjsonhandle(), target);
-      break;
-    }
-    case kAMVArrayOfKeyValue: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(8, _Internal::a_mvarrayofkeyvalue(this),
-          _Internal::a_mvarrayofkeyvalue(this).GetCachedSize(), target, stream);
-      break;
-    }
-    case kAMVArrayOfJSONVariant: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(9, _Internal::a_mvarrayofjsonvariant(this),
-          _Internal::a_mvarrayofjsonvariant(this).GetCachedSize(), target, stream);
-      break;
-    }
-    default: ;
+  // bytes a_mVvoid_t = 1;
+  if (_internal_has_a_mvvoid_t()) {
+    target = stream->WriteBytesMaybeAliased(
+        1, this->_internal_a_mvvoid_t(), target);
   }
+
+  // bytes a_mVnull_t = 2;
+  if (_internal_has_a_mvnull_t()) {
+    target = stream->WriteBytesMaybeAliased(
+        2, this->_internal_a_mvnull_t(), target);
+  }
+
+  // bool a_mVbool = 3;
+  if (_internal_has_a_mvbool()) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(3, this->_internal_a_mvbool(), target);
+  }
+
+  // sint32 a_mVint = 4;
+  if (_internal_has_a_mvint()) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(4, this->_internal_a_mvint(), target);
+  }
+
+  // double a_mVdouble = 5;
+  if (_internal_has_a_mvdouble()) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(5, this->_internal_a_mvdouble(), target);
+  }
+
+  // string a_mVnsString = 6;
+  if (_internal_has_a_mvnsstring()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_mvnsstring().data(), static_cast<int>(this->_internal_a_mvnsstring().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla._ipdltest.JSONVariant.a_mVnsString");
+    target = stream->WriteStringMaybeAliased(
+        6, this->_internal_a_mvnsstring(), target);
+  }
+
+  // bytes a_mVPTestJSONHandle = 7;
+  if (_internal_has_a_mvptestjsonhandle()) {
+    target = stream->WriteBytesMaybeAliased(
+        7, this->_internal_a_mvptestjsonhandle(), target);
+  }
+
+  // .protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfKeyValue a_mVArrayOfKeyValue = 8;
+  if (_internal_has_a_mvarrayofkeyvalue()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(8, _Internal::a_mvarrayofkeyvalue(this),
+        _Internal::a_mvarrayofkeyvalue(this).GetCachedSize(), target, stream);
+  }
+
+  // .protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfJSONVariant a_mVArrayOfJSONVariant = 9;
+  if (_internal_has_a_mvarrayofjsonvariant()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(9, _Internal::a_mvarrayofjsonvariant(this),
+        _Internal::a_mvarrayofjsonvariant(this).GetCachedSize(), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.JSONVariant)
   return target;
@@ -1191,22 +1244,19 @@ size_t JSONVariant::ByteSizeLong() const {
       break;
     }
   }
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void JSONVariant::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const JSONVariant*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData JSONVariant::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    JSONVariant::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*JSONVariant::GetClassData() const { return &_class_data_; }
 
-void JSONVariant::MergeFrom(const JSONVariant& from) {
-  JSONVariant* const _this = this;
+
+void JSONVariant::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<JSONVariant*>(&to_msg);
+  auto& from = static_cast<const JSONVariant&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.JSONVariant)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1255,7 +1305,7 @@ void JSONVariant::MergeFrom(const JSONVariant& from) {
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void JSONVariant::CopyFrom(const JSONVariant& from) {
@@ -1266,44 +1316,6 @@ void JSONVariant::CopyFrom(const JSONVariant& from) {
 }
 
 bool JSONVariant::IsInitialized() const {
-  switch (content_case()) {
-    case kAMVvoidT: {
-      break;
-    }
-    case kAMVnullT: {
-      break;
-    }
-    case kAMVbool: {
-      break;
-    }
-    case kAMVint: {
-      break;
-    }
-    case kAMVdouble: {
-      break;
-    }
-    case kAMVnsString: {
-      break;
-    }
-    case kAMVPTestJSONHandle: {
-      break;
-    }
-    case kAMVArrayOfKeyValue: {
-      if (_internal_has_a_mvarrayofkeyvalue()) {
-        if (!_impl_.content_.a_mvarrayofkeyvalue_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case kAMVArrayOfJSONVariant: {
-      if (_internal_has_a_mvarrayofjsonvariant()) {
-        if (!_impl_.content_.a_mvarrayofjsonvariant_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case CONTENT_NOT_SET: {
-      break;
-    }
-  }
   return true;
 }
 
@@ -1314,10 +1326,11 @@ void JSONVariant::InternalSwap(JSONVariant* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-std::string JSONVariant::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.JSONVariant";
+::PROTOBUF_NAMESPACE_ID::Metadata JSONVariant::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto_getter, &descriptor_table_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto_once,
+      file_level_metadata_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto[3]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace _ipdltest

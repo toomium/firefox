@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/netwerk/ipc/PInputChannelThrottleQueue.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.net.PInputChannelThrottleQueue;
 
@@ -16,7 +15,7 @@ package protobuf.mozilla.net.PInputChannelThrottleQueue;
 
 // Message declarations
 message Msg_RecordRead {
-  required uint32 a_aBytesRead = 1;
+  uint32 a_aBytesRead = 1;
 }
 
 message Msg___delete__ {

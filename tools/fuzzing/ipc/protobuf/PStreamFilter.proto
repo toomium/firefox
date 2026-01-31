@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/toolkit/components/extensions/webrequest/PStreamFilter.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.extensions.PStreamFilter;
 
@@ -47,7 +46,7 @@ message Msg_Closed {
 }
 
 message Msg_Error {
-  required string a_error = 1;
+  string a_error = 1;
 }
 
 message Msg_FlushData {
@@ -61,7 +60,7 @@ message Msg_Data {
 }
 
 message Msg_StopRequest {
-  required bytes a_aStatus = 1;
+  bytes a_aStatus = 1;
 }
 
 // Parameter mappings stats:

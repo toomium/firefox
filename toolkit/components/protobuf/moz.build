@@ -15,11 +15,18 @@ EXPORTS.google.protobuf += [
     'src/google/protobuf/arena_impl.h',
     'src/google/protobuf/arenastring.h',
     'src/google/protobuf/arenaz_sampler.h',
+    'src/google/protobuf/descriptor.h',                         # added for message compatibility
+    'src/google/protobuf/descriptor.pb.h',                      # added for message compatibility
+    'src/google/protobuf/descriptor_database.h',                # added for message compatibility
+    'src/google/protobuf/dynamic_message.h',                    # added for message compatibility
     'src/google/protobuf/endian.h',
     'src/google/protobuf/explicitly_constructed.h',
     'src/google/protobuf/extension_set.h',
     'src/google/protobuf/extension_set_inl.h',
+    'src/google/protobuf/generated_enum_reflection.h',          # added for message compatibility
     'src/google/protobuf/generated_enum_util.h',
+    'src/google/protobuf/generated_message_bases.h',            # added for message compatibility
+    'src/google/protobuf/generated_message_reflection.h',       # added for message compatibility
     'src/google/protobuf/generated_message_tctable_decl.h',
     'src/google/protobuf/generated_message_tctable_impl.h',
     'src/google/protobuf/generated_message_util.h',
@@ -27,17 +34,27 @@ EXPORTS.google.protobuf += [
     'src/google/protobuf/implicit_weak_message.h',
     'src/google/protobuf/inlined_string_field.h',
     'src/google/protobuf/map.h',
+    'src/google/protobuf/map_entry.h',                          # added for message compatibility
     'src/google/protobuf/map_entry_lite.h',
+    'src/google/protobuf/map_field.h',                          # added for message compatibility
+    'src/google/protobuf/map_field_inl.h',                      # added for message compatibility
     'src/google/protobuf/map_field_lite.h',
     'src/google/protobuf/map_type_handler.h',
+    'src/google/protobuf/message.h',                            # added for message compatibility
     'src/google/protobuf/message_lite.h',
     'src/google/protobuf/metadata_lite.h',
     'src/google/protobuf/parse_context.h',
     'src/google/protobuf/port.h',
     'src/google/protobuf/port_def.inc',
     'src/google/protobuf/port_undef.inc',
+    'src/google/protobuf/reflection.h',                         # added for message compatibility
+    'src/google/protobuf/reflection_internal.h',                # added for message compatibility
+    'src/google/protobuf/reflection_ops.h',                     # added for message compatibility
     'src/google/protobuf/repeated_field.h',
     'src/google/protobuf/repeated_ptr_field.h',
+    'src/google/protobuf/text_format.h',                        # added for message compatibility
+    'src/google/protobuf/unknown_field_set.h',                  # added for message compatibility
+    'src/google/protobuf/wire_format.h',                        # added for message compatibility
     'src/google/protobuf/wire_format_lite.h',
 ]
 
@@ -46,6 +63,7 @@ EXPORTS.google.protobuf.io += [
     'src/google/protobuf/io/gzip_stream.h',
     'src/google/protobuf/io/io_win32.h',
     'src/google/protobuf/io/strtod.h',
+    'src/google/protobuf/io/tokenizer.h',                       # added for message compatibility
     'src/google/protobuf/io/zero_copy_stream.h',
     'src/google/protobuf/io/zero_copy_stream_impl.h',
     'src/google/protobuf/io/zero_copy_stream_impl_lite.h',
@@ -71,6 +89,7 @@ EXPORTS.google.protobuf.stubs += [
     'src/google/protobuf/stubs/stringpiece.h',
     'src/google/protobuf/stubs/stringprintf.h',
     'src/google/protobuf/stubs/strutil.h',
+    'src/google/protobuf/stubs/substitute.h',                   # added for message compatibility
     'src/google/protobuf/stubs/time.h',
 ]
 
@@ -79,7 +98,7 @@ UNIFIED_SOURCES += [
     'src/google/protobuf/arena.cc',
     'src/google/protobuf/arenastring.cc',
     # 'src/google/protobuf/arenaz_sampler.cc', # Unused file
-    # 'src/google/protobuf/io/strtod.cc', # Unused file
+    'src/google/protobuf/io/strtod.cc', # Unused file           # reactivated for message compatibility
     'src/google/protobuf/io/zero_copy_stream.cc',
     'src/google/protobuf/stubs/stringpiece.cc',
     'src/google/protobuf/stubs/structurally_valid.cc',
@@ -87,8 +106,17 @@ UNIFIED_SOURCES += [
 ]
 
 SOURCES += [
+    'src/google/protobuf/any.cc',                                # added for message compatibility
+    'src/google/protobuf/any_lite.cc',                           # added for message compatibility
+    'src/google/protobuf/descriptor.cc',                         # added for message compatibility
+    'src/google/protobuf/descriptor.pb.cc',                      # added for message compatibility
+    'src/google/protobuf/descriptor_database.cc',                # added for message compatibility
+    'src/google/protobuf/dynamic_message.cc',                    # added for message compatibility
     'src/google/protobuf/extension_set.cc', # port_def conflicts
+    'src/google/protobuf/extension_set_heavy.cc', # port_def conflicts  # added for message compatibility
     'src/google/protobuf/generated_enum_util.cc', # port_def conflicts
+    'src/google/protobuf/generated_message_bases.cc',            # added for message compatibility
+    'src/google/protobuf/generated_message_reflection.cc',       # added for message compatibility
     'src/google/protobuf/generated_message_tctable_lite.cc',
     'src/google/protobuf/generated_message_util.cc', # port_def conflicts
     'src/google/protobuf/implicit_weak_message.cc', # port_def conflicts
@@ -96,20 +124,28 @@ SOURCES += [
     'src/google/protobuf/io/coded_stream.cc', # port_def conflicts
     'src/google/protobuf/io/gzip_stream.cc', # technically not in libprotobuf-lite.cmake but devtools/shared/heapsnapshot/HeapSnapshot.cpp uses it.
     'src/google/protobuf/io/io_win32.cc', # port_def conflicts
+    'src/google/protobuf/io/tokenizer.cc',                       # added for message compatibility
     'src/google/protobuf/io/zero_copy_stream_impl.cc', # port_def conflicts
     'src/google/protobuf/io/zero_copy_stream_impl_lite.cc', # port_def conflicts
     'src/google/protobuf/map.cc', # port_def conflicts
+    'src/google/protobuf/map_field.cc',                          # added for message compatibility
+    'src/google/protobuf/message.cc',                            # added for message compatibility
     'src/google/protobuf/message_lite.cc', # port_def conflicts
     'src/google/protobuf/parse_context.cc', # port_def conflicts
+    'src/google/protobuf/reflection_ops.cc',                     # added for message compatibility
     'src/google/protobuf/repeated_field.cc', # port_def conflicts
     'src/google/protobuf/repeated_ptr_field.cc', # port_def conflicts
     # 'src/google/protobuf/stubs/bytestream.cc', # Unused file # port_def conflicts
     'src/google/protobuf/stubs/common.cc', # port_def conflicts
     'src/google/protobuf/stubs/int128.cc', # port_def conflicts
     'src/google/protobuf/stubs/status.cc', # port_def conflicts
+    'src/google/protobuf/stubs/stringprintf.cc', # Unused file # port_def conflicts # added for message compatibility
+    'src/google/protobuf/stubs/substitute.cc',                   # added for message compatibility
     # 'src/google/protobuf/stubs/statusor.cc', # Unused file. # port_def conflicts
-    # 'src/google/protobuf/stubs/stringprintf.cc', # Unused file # port_def conflicts
     # 'src/google/protobuf/stubs/time.cc', # Unused file # GetCurrentTime conflict in winbase.h
+    'src/google/protobuf/text_format.cc',                        # added for message compatibility
+    'src/google/protobuf/unknown_field_set.cc',                  # added for message compatibility
+    'src/google/protobuf/wire_format.cc',                        # added for message compatibility
     'src/google/protobuf/wire_format_lite.cc', # port_def conflicts
 ]
 

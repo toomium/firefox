@@ -8,7 +8,10 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -23,9 +26,8 @@ namespace hal_sandbox {
 namespace PHal {
 PROTOBUF_CONSTEXPR Msg_NotifyBatteryChange::Msg_NotifyBatteryChange(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_abatteryinfo_)*/nullptr} {}
+    /*decltype(_impl_.a_abatteryinfo_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_NotifyBatteryChangeDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_NotifyBatteryChangeDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -37,9 +39,8 @@ struct Msg_NotifyBatteryChangeDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_NotifyBatteryChangeDefaultTypeInternal _Msg_NotifyBatteryChange_default_instance_;
 PROTOBUF_CONSTEXPR Msg_NotifyNetworkChange::Msg_NotifyNetworkChange(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_anetworkinfo_)*/nullptr} {}
+    /*decltype(_impl_.a_anetworkinfo_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_NotifyNetworkChangeDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_NotifyNetworkChangeDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -51,9 +52,8 @@ struct Msg_NotifyNetworkChangeDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_NotifyNetworkChangeDefaultTypeInternal _Msg_NotifyNetworkChange_default_instance_;
 PROTOBUF_CONSTEXPR Msg_NotifyWakeLockChange::Msg_NotifyWakeLockChange(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_awakelockinfo_)*/nullptr} {}
+    /*decltype(_impl_.a_awakelockinfo_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_NotifyWakeLockChangeDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_NotifyWakeLockChangeDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -65,11 +65,12 @@ struct Msg_NotifyWakeLockChangeDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_NotifyWakeLockChangeDefaultTypeInternal _Msg_NotifyWakeLockChange_default_instance_;
 PROTOBUF_CONSTEXPR Msg_Vibrate::Msg_Vibrate(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_pattern_)*/{}
+    /*decltype(_impl_.a_pattern_)*/{}
+  , /*decltype(_impl_._a_pattern_cached_byte_size_)*/{0}
   , /*decltype(_impl_.a_id_)*/{}
-  , /*decltype(_impl_.a_browser_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_._a_id_cached_byte_size_)*/{0}
+  , /*decltype(_impl_.a_browser_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_VibrateDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_VibrateDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -81,10 +82,10 @@ struct Msg_VibrateDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_VibrateDefaultTypeInternal _Msg_Vibrate_default_instance_;
 PROTOBUF_CONSTEXPR Msg_CancelVibrate::Msg_CancelVibrate(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_id_)*/{}
-  , /*decltype(_impl_.a_browser_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_id_)*/{}
+  , /*decltype(_impl_._a_id_cached_byte_size_)*/{0}
+  , /*decltype(_impl_.a_browser_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_CancelVibrateDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_CancelVibrateDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -95,8 +96,7 @@ struct Msg_CancelVibrateDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_CancelVibrateDefaultTypeInternal _Msg_CancelVibrate_default_instance_;
 PROTOBUF_CONSTEXPR Msg_EnableBatteryNotifications::Msg_EnableBatteryNotifications(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg_EnableBatteryNotificationsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_EnableBatteryNotificationsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -107,8 +107,7 @@ struct Msg_EnableBatteryNotificationsDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_EnableBatteryNotificationsDefaultTypeInternal _Msg_EnableBatteryNotifications_default_instance_;
 PROTOBUF_CONSTEXPR Msg_DisableBatteryNotifications::Msg_DisableBatteryNotifications(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg_DisableBatteryNotificationsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_DisableBatteryNotificationsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -119,8 +118,7 @@ struct Msg_DisableBatteryNotificationsDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_DisableBatteryNotificationsDefaultTypeInternal _Msg_DisableBatteryNotifications_default_instance_;
 PROTOBUF_CONSTEXPR Msg_GetCurrentBatteryInformation::Msg_GetCurrentBatteryInformation(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg_GetCurrentBatteryInformationDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_GetCurrentBatteryInformationDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -132,9 +130,8 @@ struct Msg_GetCurrentBatteryInformationDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_GetCurrentBatteryInformationDefaultTypeInternal _Msg_GetCurrentBatteryInformation_default_instance_;
 PROTOBUF_CONSTEXPR Reply_GetCurrentBatteryInformation::Reply_GetCurrentBatteryInformation(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_abatteryinfo_)*/nullptr} {}
+    /*decltype(_impl_.a_abatteryinfo_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Reply_GetCurrentBatteryInformationDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_GetCurrentBatteryInformationDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -145,8 +142,7 @@ struct Reply_GetCurrentBatteryInformationDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_GetCurrentBatteryInformationDefaultTypeInternal _Reply_GetCurrentBatteryInformation_default_instance_;
 PROTOBUF_CONSTEXPR Msg_EnableNetworkNotifications::Msg_EnableNetworkNotifications(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg_EnableNetworkNotificationsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_EnableNetworkNotificationsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -157,8 +153,7 @@ struct Msg_EnableNetworkNotificationsDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_EnableNetworkNotificationsDefaultTypeInternal _Msg_EnableNetworkNotifications_default_instance_;
 PROTOBUF_CONSTEXPR Msg_DisableNetworkNotifications::Msg_DisableNetworkNotifications(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg_DisableNetworkNotificationsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_DisableNetworkNotificationsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -169,8 +164,7 @@ struct Msg_DisableNetworkNotificationsDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_DisableNetworkNotificationsDefaultTypeInternal _Msg_DisableNetworkNotifications_default_instance_;
 PROTOBUF_CONSTEXPR Msg_GetCurrentNetworkInformation::Msg_GetCurrentNetworkInformation(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg_GetCurrentNetworkInformationDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_GetCurrentNetworkInformationDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -182,9 +176,8 @@ struct Msg_GetCurrentNetworkInformationDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_GetCurrentNetworkInformationDefaultTypeInternal _Msg_GetCurrentNetworkInformation_default_instance_;
 PROTOBUF_CONSTEXPR Reply_GetCurrentNetworkInformation::Reply_GetCurrentNetworkInformation(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_anetworkinfo_)*/nullptr} {}
+    /*decltype(_impl_.a_anetworkinfo_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Reply_GetCurrentNetworkInformationDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_GetCurrentNetworkInformationDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -196,11 +189,10 @@ struct Reply_GetCurrentNetworkInformationDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_GetCurrentNetworkInformationDefaultTypeInternal _Reply_GetCurrentNetworkInformation_default_instance_;
 PROTOBUF_CONSTEXPR Msg_ModifyWakeLock::Msg_ModifyWakeLock(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_atopic_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.a_atopic_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_alockadjust_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.a_ahiddenadjust_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+  , /*decltype(_impl_.a_ahiddenadjust_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_ModifyWakeLockDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_ModifyWakeLockDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -211,8 +203,7 @@ struct Msg_ModifyWakeLockDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_ModifyWakeLockDefaultTypeInternal _Msg_ModifyWakeLock_default_instance_;
 PROTOBUF_CONSTEXPR Msg_EnableWakeLockNotifications::Msg_EnableWakeLockNotifications(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg_EnableWakeLockNotificationsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_EnableWakeLockNotificationsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -223,8 +214,7 @@ struct Msg_EnableWakeLockNotificationsDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_EnableWakeLockNotificationsDefaultTypeInternal _Msg_EnableWakeLockNotifications_default_instance_;
 PROTOBUF_CONSTEXPR Msg_DisableWakeLockNotifications::Msg_DisableWakeLockNotifications(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg_DisableWakeLockNotificationsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_DisableWakeLockNotificationsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -236,9 +226,8 @@ struct Msg_DisableWakeLockNotificationsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_DisableWakeLockNotificationsDefaultTypeInternal _Msg_DisableWakeLockNotifications_default_instance_;
 PROTOBUF_CONSTEXPR Msg_GetWakeLockInfo::Msg_GetWakeLockInfo(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_atopic_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_atopic_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_GetWakeLockInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_GetWakeLockInfoDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -250,9 +239,8 @@ struct Msg_GetWakeLockInfoDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_GetWakeLockInfoDefaultTypeInternal _Msg_GetWakeLockInfo_default_instance_;
 PROTOBUF_CONSTEXPR Reply_GetWakeLockInfo::Reply_GetWakeLockInfo(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_awakelockinfo_)*/nullptr} {}
+    /*decltype(_impl_.a_awakelockinfo_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Reply_GetWakeLockInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_GetWakeLockInfoDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -264,9 +252,8 @@ struct Reply_GetWakeLockInfoDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_GetWakeLockInfoDefaultTypeInternal _Reply_GetWakeLockInfo_default_instance_;
 PROTOBUF_CONSTEXPR Msg_LockScreenOrientation::Msg_LockScreenOrientation(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_aorientation_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_aorientation_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_LockScreenOrientationDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_LockScreenOrientationDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -278,9 +265,8 @@ struct Msg_LockScreenOrientationDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_LockScreenOrientationDefaultTypeInternal _Msg_LockScreenOrientation_default_instance_;
 PROTOBUF_CONSTEXPR Reply_LockScreenOrientation::Reply_LockScreenOrientation(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_result_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Reply_LockScreenOrientationDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_LockScreenOrientationDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -291,8 +277,7 @@ struct Reply_LockScreenOrientationDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_LockScreenOrientationDefaultTypeInternal _Reply_LockScreenOrientation_default_instance_;
 PROTOBUF_CONSTEXPR Msg_UnlockScreenOrientation::Msg_UnlockScreenOrientation(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg_UnlockScreenOrientationDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_UnlockScreenOrientationDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -304,9 +289,8 @@ struct Msg_UnlockScreenOrientationDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_UnlockScreenOrientationDefaultTypeInternal _Msg_UnlockScreenOrientation_default_instance_;
 PROTOBUF_CONSTEXPR Msg_PerformHapticFeedback::Msg_PerformHapticFeedback(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_atype_)*/0} {}
+    /*decltype(_impl_.a_atype_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_PerformHapticFeedbackDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PerformHapticFeedbackDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -318,9 +302,8 @@ struct Msg_PerformHapticFeedbackDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_PerformHapticFeedbackDefaultTypeInternal _Msg_PerformHapticFeedback_default_instance_;
 PROTOBUF_CONSTEXPR Msg_NotifySensorChange::Msg_NotifySensorChange(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_asensordata_)*/nullptr} {}
+    /*decltype(_impl_.a_asensordata_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_NotifySensorChangeDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_NotifySensorChangeDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -332,9 +315,8 @@ struct Msg_NotifySensorChangeDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_NotifySensorChangeDefaultTypeInternal _Msg_NotifySensorChange_default_instance_;
 PROTOBUF_CONSTEXPR Msg_EnableSensorNotifications::Msg_EnableSensorNotifications(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_asensor_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_asensor_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_EnableSensorNotificationsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_EnableSensorNotificationsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -346,9 +328,8 @@ struct Msg_EnableSensorNotificationsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_EnableSensorNotificationsDefaultTypeInternal _Msg_EnableSensorNotifications_default_instance_;
 PROTOBUF_CONSTEXPR Msg_DisableSensorNotifications::Msg_DisableSensorNotifications(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_asensor_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_asensor_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_DisableSensorNotificationsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_DisableSensorNotificationsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -359,8 +340,7 @@ struct Msg_DisableSensorNotificationsDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_DisableSensorNotificationsDefaultTypeInternal _Msg_DisableSensorNotifications_default_instance_;
 PROTOBUF_CONSTEXPR Msg___delete__::Msg___delete__(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg___delete__DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg___delete__DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -371,8 +351,7 @@ struct Msg___delete__DefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg___delete__DefaultTypeInternal _Msg___delete___default_instance_;
 PROTOBUF_CONSTEXPR Reply___delete__::Reply___delete__(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Reply___delete__DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply___delete__DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -386,6 +365,316 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace hal_sandbox
 }  // namespace mozilla
 }  // namespace protobuf
+static ::_pb::Metadata file_level_metadata_PHal_2eproto[27];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PHal_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PHal_2eproto = nullptr;
+
+const uint32_t TableStruct_PHal_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_NotifyBatteryChange, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_NotifyBatteryChange, _impl_.a_abatteryinfo_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_NotifyNetworkChange, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_NotifyNetworkChange, _impl_.a_anetworkinfo_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_NotifyWakeLockChange, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_NotifyWakeLockChange, _impl_.a_awakelockinfo_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_Vibrate, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_Vibrate, _impl_.a_pattern_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_Vibrate, _impl_.a_id_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_Vibrate, _impl_.a_browser_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_CancelVibrate, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_CancelVibrate, _impl_.a_id_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_CancelVibrate, _impl_.a_browser_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_EnableBatteryNotifications, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_DisableBatteryNotifications, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_GetCurrentBatteryInformation, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Reply_GetCurrentBatteryInformation, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Reply_GetCurrentBatteryInformation, _impl_.a_abatteryinfo_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_EnableNetworkNotifications, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_DisableNetworkNotifications, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_GetCurrentNetworkInformation, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Reply_GetCurrentNetworkInformation, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Reply_GetCurrentNetworkInformation, _impl_.a_anetworkinfo_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_ModifyWakeLock, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_ModifyWakeLock, _impl_.a_atopic_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_ModifyWakeLock, _impl_.a_alockadjust_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_ModifyWakeLock, _impl_.a_ahiddenadjust_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_EnableWakeLockNotifications, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_DisableWakeLockNotifications, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_GetWakeLockInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_GetWakeLockInfo, _impl_.a_atopic_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Reply_GetWakeLockInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Reply_GetWakeLockInfo, _impl_.a_awakelockinfo_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_LockScreenOrientation, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_LockScreenOrientation, _impl_.a_aorientation_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Reply_LockScreenOrientation, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Reply_LockScreenOrientation, _impl_.a_result_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_UnlockScreenOrientation, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_PerformHapticFeedback, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_PerformHapticFeedback, _impl_.a_atype_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_NotifySensorChange, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_NotifySensorChange, _impl_.a_asensordata_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_EnableSensorNotifications, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_EnableSensorNotifications, _impl_.a_asensor_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_DisableSensorNotifications, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg_DisableSensorNotifications, _impl_.a_asensor_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Msg___delete__, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal_sandbox::PHal::Reply___delete__, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg_NotifyBatteryChange)},
+  { 7, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg_NotifyNetworkChange)},
+  { 14, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg_NotifyWakeLockChange)},
+  { 21, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg_Vibrate)},
+  { 30, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg_CancelVibrate)},
+  { 38, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg_EnableBatteryNotifications)},
+  { 44, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg_DisableBatteryNotifications)},
+  { 50, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg_GetCurrentBatteryInformation)},
+  { 56, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Reply_GetCurrentBatteryInformation)},
+  { 63, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg_EnableNetworkNotifications)},
+  { 69, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg_DisableNetworkNotifications)},
+  { 75, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg_GetCurrentNetworkInformation)},
+  { 81, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Reply_GetCurrentNetworkInformation)},
+  { 88, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg_ModifyWakeLock)},
+  { 97, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg_EnableWakeLockNotifications)},
+  { 103, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg_DisableWakeLockNotifications)},
+  { 109, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg_GetWakeLockInfo)},
+  { 116, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Reply_GetWakeLockInfo)},
+  { 123, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg_LockScreenOrientation)},
+  { 130, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Reply_LockScreenOrientation)},
+  { 137, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg_UnlockScreenOrientation)},
+  { 143, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg_PerformHapticFeedback)},
+  { 150, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg_NotifySensorChange)},
+  { 157, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg_EnableSensorNotifications)},
+  { 164, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg_DisableSensorNotifications)},
+  { 171, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Msg___delete__)},
+  { 177, -1, -1, sizeof(::protobuf::mozilla::hal_sandbox::PHal::Reply___delete__)},
+};
+
+static const ::_pb::Message* const file_default_instances[] = {
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg_NotifyBatteryChange_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg_NotifyNetworkChange_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg_NotifyWakeLockChange_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg_Vibrate_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg_CancelVibrate_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg_EnableBatteryNotifications_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg_DisableBatteryNotifications_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg_GetCurrentBatteryInformation_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Reply_GetCurrentBatteryInformation_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg_EnableNetworkNotifications_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg_DisableNetworkNotifications_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg_GetCurrentNetworkInformation_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Reply_GetCurrentNetworkInformation_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg_ModifyWakeLock_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg_EnableWakeLockNotifications_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg_DisableWakeLockNotifications_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg_GetWakeLockInfo_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Reply_GetWakeLockInfo_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg_LockScreenOrientation_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Reply_LockScreenOrientation_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg_UnlockScreenOrientation_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg_PerformHapticFeedback_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg_NotifySensorChange_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg_EnableSensorNotifications_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg_DisableSensorNotifications_default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Msg___delete___default_instance_._instance,
+  &::protobuf::mozilla::hal_sandbox::PHal::_Reply___delete___default_instance_._instance,
+};
+
+const char descriptor_table_protodef_PHal_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\nPHal.proto\022!protobuf.mozilla.hal_sandb"
+  "ox.PHal\032!PHal_protobuf.mozilla.hal.h.pro"
+  "to\"[\n\027Msg_NotifyBatteryChange\022@\n\016a_aBatt"
+  "eryInfo\030\001 \001(\0132(.protobuf.mozilla.hal.Bat"
+  "teryInformation\"[\n\027Msg_NotifyNetworkChan"
+  "ge\022@\n\016a_aNetworkInfo\030\001 \001(\0132(.protobuf.mo"
+  "zilla.hal.NetworkInformation\"^\n\030Msg_Noti"
+  "fyWakeLockChange\022B\n\017a_aWakeLockInfo\030\001 \001("
+  "\0132).protobuf.mozilla.hal.WakeLockInforma"
+  "tion\"A\n\013Msg_Vibrate\022\021\n\ta_pattern\030\001 \003(\r\022\014"
+  "\n\004a_id\030\002 \003(\004\022\021\n\ta_browser\030\003 \001(\014\"4\n\021Msg_C"
+  "ancelVibrate\022\014\n\004a_id\030\001 \003(\004\022\021\n\ta_browser\030"
+  "\002 \001(\014\" \n\036Msg_EnableBatteryNotifications\""
+  "!\n\037Msg_DisableBatteryNotifications\"\"\n Ms"
+  "g_GetCurrentBatteryInformation\"f\n\"Reply_"
+  "GetCurrentBatteryInformation\022@\n\016a_aBatte"
+  "ryInfo\030\001 \001(\0132(.protobuf.mozilla.hal.Batt"
+  "eryInformation\" \n\036Msg_EnableNetworkNotif"
+  "ications\"!\n\037Msg_DisableNetworkNotificati"
+  "ons\"\"\n Msg_GetCurrentNetworkInformation\""
+  "f\n\"Reply_GetCurrentNetworkInformation\022@\n"
+  "\016a_aNetworkInfo\030\001 \001(\0132(.protobuf.mozilla"
+  ".hal.NetworkInformation\"V\n\022Msg_ModifyWak"
+  "eLock\022\020\n\010a_aTopic\030\001 \001(\t\022\025\n\ra_aLockAdjust"
+  "\030\002 \001(\014\022\027\n\017a_aHiddenAdjust\030\003 \001(\014\"!\n\037Msg_E"
+  "nableWakeLockNotifications\"\"\n Msg_Disabl"
+  "eWakeLockNotifications\"\'\n\023Msg_GetWakeLoc"
+  "kInfo\022\020\n\010a_aTopic\030\001 \001(\t\"[\n\025Reply_GetWake"
+  "LockInfo\022B\n\017a_aWakeLockInfo\030\001 \001(\0132).prot"
+  "obuf.mozilla.hal.WakeLockInformation\"3\n\031"
+  "Msg_LockScreenOrientation\022\026\n\016a_aOrientat"
+  "ion\030\001 \001(\014\"/\n\033Reply_LockScreenOrientation"
+  "\022\020\n\010a_result\030\001 \001(\014\"\035\n\033Msg_UnlockScreenOr"
+  "ientation\",\n\031Msg_PerformHapticFeedback\022\017"
+  "\n\007a_aType\030\001 \001(\021\"Q\n\026Msg_NotifySensorChang"
+  "e\0227\n\ra_aSensorData\030\001 \001(\0132 .protobuf.mozi"
+  "lla.hal.SensorData\"2\n\035Msg_EnableSensorNo"
+  "tifications\022\021\n\ta_aSensor\030\001 \001(\014\"3\n\036Msg_Di"
+  "sableSensorNotifications\022\021\n\ta_aSensor\030\001 "
+  "\001(\014\"\020\n\016Msg___delete__\"\022\n\020Reply___delete_"
+  "_P\000b\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_PHal_2eproto_deps[1] = {
+  &::descriptor_table_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_PHal_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_PHal_2eproto = {
+    false, false, 1611, descriptor_table_protodef_PHal_2eproto,
+    "PHal.proto",
+    &descriptor_table_PHal_2eproto_once, descriptor_table_PHal_2eproto_deps, 1, 27,
+    schemas, file_default_instances, TableStruct_PHal_2eproto::offsets,
+    file_level_metadata_PHal_2eproto, file_level_enum_descriptors_PHal_2eproto,
+    file_level_service_descriptors_PHal_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PHal_2eproto_getter() {
+  return &descriptor_table_PHal_2eproto;
+}
+
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PHal_2eproto(&descriptor_table_PHal_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace hal_sandbox {
@@ -395,14 +684,7 @@ namespace PHal {
 
 class Msg_NotifyBatteryChange::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_NotifyBatteryChange>()._impl_._has_bits_);
   static const ::protobuf::mozilla::hal::BatteryInformation& a_abatteryinfo(const Msg_NotifyBatteryChange* msg);
-  static void set_has_a_abatteryinfo(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 const ::protobuf::mozilla::hal::BatteryInformation&
@@ -410,24 +692,25 @@ Msg_NotifyBatteryChange::_Internal::a_abatteryinfo(const Msg_NotifyBatteryChange
   return *msg->_impl_.a_abatteryinfo_;
 }
 void Msg_NotifyBatteryChange::clear_a_abatteryinfo() {
-  if (_impl_.a_abatteryinfo_ != nullptr) _impl_.a_abatteryinfo_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_abatteryinfo_ != nullptr) {
+    delete _impl_.a_abatteryinfo_;
+  }
+  _impl_.a_abatteryinfo_ = nullptr;
 }
 Msg_NotifyBatteryChange::Msg_NotifyBatteryChange(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyBatteryChange)
 }
 Msg_NotifyBatteryChange::Msg_NotifyBatteryChange(const Msg_NotifyBatteryChange& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_NotifyBatteryChange* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_abatteryinfo_){nullptr}};
+      decltype(_impl_.a_abatteryinfo_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_a_abatteryinfo()) {
     _this->_impl_.a_abatteryinfo_ = new ::protobuf::mozilla::hal::BatteryInformation(*from._impl_.a_abatteryinfo_);
   }
@@ -439,15 +722,14 @@ inline void Msg_NotifyBatteryChange::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_abatteryinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_abatteryinfo_){nullptr}
   };
 }
 
 Msg_NotifyBatteryChange::~Msg_NotifyBatteryChange() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyBatteryChange)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -469,23 +751,20 @@ void Msg_NotifyBatteryChange::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.a_abatteryinfo_ != nullptr);
-    _impl_.a_abatteryinfo_->Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_abatteryinfo_ != nullptr) {
+    delete _impl_.a_abatteryinfo_;
   }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_abatteryinfo_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_NotifyBatteryChange::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
+      // .protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_abatteryinfo(), ptr);
@@ -504,12 +783,11 @@ const char* Msg_NotifyBatteryChange::_InternalParse(const char* ptr, ::_pbi::Par
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -523,17 +801,16 @@ uint8_t* Msg_NotifyBatteryChange::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // .protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
+  if (this->_internal_has_a_abatteryinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_abatteryinfo(this),
         _Internal::a_abatteryinfo(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyBatteryChange)
   return target;
@@ -543,32 +820,30 @@ size_t Msg_NotifyBatteryChange::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyBatteryChange)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
-  if (_internal_has_a_abatteryinfo()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_abatteryinfo_);
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // .protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
+  if (this->_internal_has_a_abatteryinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_abatteryinfo_);
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_NotifyBatteryChange::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_NotifyBatteryChange*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_NotifyBatteryChange::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_NotifyBatteryChange::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_NotifyBatteryChange::GetClassData() const { return &_class_data_; }
 
-void Msg_NotifyBatteryChange::MergeFrom(const Msg_NotifyBatteryChange& from) {
-  Msg_NotifyBatteryChange* const _this = this;
+
+void Msg_NotifyBatteryChange::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_NotifyBatteryChange*>(&to_msg);
+  auto& from = static_cast<const Msg_NotifyBatteryChange&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyBatteryChange)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -578,7 +853,7 @@ void Msg_NotifyBatteryChange::MergeFrom(const Msg_NotifyBatteryChange& from) {
     _this->_internal_mutable_a_abatteryinfo()->::protobuf::mozilla::hal::BatteryInformation::MergeFrom(
         from._internal_a_abatteryinfo());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_NotifyBatteryChange::CopyFrom(const Msg_NotifyBatteryChange& from) {
@@ -589,37 +864,26 @@ void Msg_NotifyBatteryChange::CopyFrom(const Msg_NotifyBatteryChange& from) {
 }
 
 bool Msg_NotifyBatteryChange::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_abatteryinfo()) {
-    if (!_impl_.a_abatteryinfo_->IsInitialized()) return false;
-  }
   return true;
 }
 
 void Msg_NotifyBatteryChange::InternalSwap(Msg_NotifyBatteryChange* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_abatteryinfo_, other->_impl_.a_abatteryinfo_);
 }
 
-std::string Msg_NotifyBatteryChange::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyBatteryChange";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_NotifyBatteryChange::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[0]);
 }
-
 
 // ===================================================================
 
 class Msg_NotifyNetworkChange::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_NotifyNetworkChange>()._impl_._has_bits_);
   static const ::protobuf::mozilla::hal::NetworkInformation& a_anetworkinfo(const Msg_NotifyNetworkChange* msg);
-  static void set_has_a_anetworkinfo(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 const ::protobuf::mozilla::hal::NetworkInformation&
@@ -627,24 +891,25 @@ Msg_NotifyNetworkChange::_Internal::a_anetworkinfo(const Msg_NotifyNetworkChange
   return *msg->_impl_.a_anetworkinfo_;
 }
 void Msg_NotifyNetworkChange::clear_a_anetworkinfo() {
-  if (_impl_.a_anetworkinfo_ != nullptr) _impl_.a_anetworkinfo_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_anetworkinfo_ != nullptr) {
+    delete _impl_.a_anetworkinfo_;
+  }
+  _impl_.a_anetworkinfo_ = nullptr;
 }
 Msg_NotifyNetworkChange::Msg_NotifyNetworkChange(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyNetworkChange)
 }
 Msg_NotifyNetworkChange::Msg_NotifyNetworkChange(const Msg_NotifyNetworkChange& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_NotifyNetworkChange* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_anetworkinfo_){nullptr}};
+      decltype(_impl_.a_anetworkinfo_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_a_anetworkinfo()) {
     _this->_impl_.a_anetworkinfo_ = new ::protobuf::mozilla::hal::NetworkInformation(*from._impl_.a_anetworkinfo_);
   }
@@ -656,15 +921,14 @@ inline void Msg_NotifyNetworkChange::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_anetworkinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_anetworkinfo_){nullptr}
   };
 }
 
 Msg_NotifyNetworkChange::~Msg_NotifyNetworkChange() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyNetworkChange)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -686,23 +950,20 @@ void Msg_NotifyNetworkChange::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.a_anetworkinfo_ != nullptr);
-    _impl_.a_anetworkinfo_->Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_anetworkinfo_ != nullptr) {
+    delete _impl_.a_anetworkinfo_;
   }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_anetworkinfo_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_NotifyNetworkChange::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
+      // .protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_anetworkinfo(), ptr);
@@ -721,12 +982,11 @@ const char* Msg_NotifyNetworkChange::_InternalParse(const char* ptr, ::_pbi::Par
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -740,17 +1000,16 @@ uint8_t* Msg_NotifyNetworkChange::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // .protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
+  if (this->_internal_has_a_anetworkinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_anetworkinfo(this),
         _Internal::a_anetworkinfo(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyNetworkChange)
   return target;
@@ -760,32 +1019,30 @@ size_t Msg_NotifyNetworkChange::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyNetworkChange)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
-  if (_internal_has_a_anetworkinfo()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_anetworkinfo_);
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // .protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
+  if (this->_internal_has_a_anetworkinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_anetworkinfo_);
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_NotifyNetworkChange::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_NotifyNetworkChange*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_NotifyNetworkChange::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_NotifyNetworkChange::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_NotifyNetworkChange::GetClassData() const { return &_class_data_; }
 
-void Msg_NotifyNetworkChange::MergeFrom(const Msg_NotifyNetworkChange& from) {
-  Msg_NotifyNetworkChange* const _this = this;
+
+void Msg_NotifyNetworkChange::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_NotifyNetworkChange*>(&to_msg);
+  auto& from = static_cast<const Msg_NotifyNetworkChange&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyNetworkChange)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -795,7 +1052,7 @@ void Msg_NotifyNetworkChange::MergeFrom(const Msg_NotifyNetworkChange& from) {
     _this->_internal_mutable_a_anetworkinfo()->::protobuf::mozilla::hal::NetworkInformation::MergeFrom(
         from._internal_a_anetworkinfo());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_NotifyNetworkChange::CopyFrom(const Msg_NotifyNetworkChange& from) {
@@ -806,37 +1063,26 @@ void Msg_NotifyNetworkChange::CopyFrom(const Msg_NotifyNetworkChange& from) {
 }
 
 bool Msg_NotifyNetworkChange::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_anetworkinfo()) {
-    if (!_impl_.a_anetworkinfo_->IsInitialized()) return false;
-  }
   return true;
 }
 
 void Msg_NotifyNetworkChange::InternalSwap(Msg_NotifyNetworkChange* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_anetworkinfo_, other->_impl_.a_anetworkinfo_);
 }
 
-std::string Msg_NotifyNetworkChange::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyNetworkChange";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_NotifyNetworkChange::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[1]);
 }
-
 
 // ===================================================================
 
 class Msg_NotifyWakeLockChange::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_NotifyWakeLockChange>()._impl_._has_bits_);
   static const ::protobuf::mozilla::hal::WakeLockInformation& a_awakelockinfo(const Msg_NotifyWakeLockChange* msg);
-  static void set_has_a_awakelockinfo(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 const ::protobuf::mozilla::hal::WakeLockInformation&
@@ -844,24 +1090,25 @@ Msg_NotifyWakeLockChange::_Internal::a_awakelockinfo(const Msg_NotifyWakeLockCha
   return *msg->_impl_.a_awakelockinfo_;
 }
 void Msg_NotifyWakeLockChange::clear_a_awakelockinfo() {
-  if (_impl_.a_awakelockinfo_ != nullptr) _impl_.a_awakelockinfo_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_awakelockinfo_ != nullptr) {
+    delete _impl_.a_awakelockinfo_;
+  }
+  _impl_.a_awakelockinfo_ = nullptr;
 }
 Msg_NotifyWakeLockChange::Msg_NotifyWakeLockChange(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyWakeLockChange)
 }
 Msg_NotifyWakeLockChange::Msg_NotifyWakeLockChange(const Msg_NotifyWakeLockChange& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_NotifyWakeLockChange* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_awakelockinfo_){nullptr}};
+      decltype(_impl_.a_awakelockinfo_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_a_awakelockinfo()) {
     _this->_impl_.a_awakelockinfo_ = new ::protobuf::mozilla::hal::WakeLockInformation(*from._impl_.a_awakelockinfo_);
   }
@@ -873,15 +1120,14 @@ inline void Msg_NotifyWakeLockChange::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_awakelockinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_awakelockinfo_){nullptr}
   };
 }
 
 Msg_NotifyWakeLockChange::~Msg_NotifyWakeLockChange() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyWakeLockChange)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -903,23 +1149,20 @@ void Msg_NotifyWakeLockChange::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.a_awakelockinfo_ != nullptr);
-    _impl_.a_awakelockinfo_->Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_awakelockinfo_ != nullptr) {
+    delete _impl_.a_awakelockinfo_;
   }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_awakelockinfo_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_NotifyWakeLockChange::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
+      // .protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_awakelockinfo(), ptr);
@@ -938,12 +1181,11 @@ const char* Msg_NotifyWakeLockChange::_InternalParse(const char* ptr, ::_pbi::Pa
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -957,17 +1199,16 @@ uint8_t* Msg_NotifyWakeLockChange::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // .protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
+  if (this->_internal_has_a_awakelockinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_awakelockinfo(this),
         _Internal::a_awakelockinfo(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyWakeLockChange)
   return target;
@@ -977,32 +1218,30 @@ size_t Msg_NotifyWakeLockChange::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyWakeLockChange)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
-  if (_internal_has_a_awakelockinfo()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_awakelockinfo_);
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // .protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
+  if (this->_internal_has_a_awakelockinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_awakelockinfo_);
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_NotifyWakeLockChange::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_NotifyWakeLockChange*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_NotifyWakeLockChange::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_NotifyWakeLockChange::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_NotifyWakeLockChange::GetClassData() const { return &_class_data_; }
 
-void Msg_NotifyWakeLockChange::MergeFrom(const Msg_NotifyWakeLockChange& from) {
-  Msg_NotifyWakeLockChange* const _this = this;
+
+void Msg_NotifyWakeLockChange::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_NotifyWakeLockChange*>(&to_msg);
+  auto& from = static_cast<const Msg_NotifyWakeLockChange&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyWakeLockChange)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1012,7 +1251,7 @@ void Msg_NotifyWakeLockChange::MergeFrom(const Msg_NotifyWakeLockChange& from) {
     _this->_internal_mutable_a_awakelockinfo()->::protobuf::mozilla::hal::WakeLockInformation::MergeFrom(
         from._internal_a_awakelockinfo());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_NotifyWakeLockChange::CopyFrom(const Msg_NotifyWakeLockChange& from) {
@@ -1023,60 +1262,50 @@ void Msg_NotifyWakeLockChange::CopyFrom(const Msg_NotifyWakeLockChange& from) {
 }
 
 bool Msg_NotifyWakeLockChange::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_awakelockinfo()) {
-    if (!_impl_.a_awakelockinfo_->IsInitialized()) return false;
-  }
   return true;
 }
 
 void Msg_NotifyWakeLockChange::InternalSwap(Msg_NotifyWakeLockChange* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_awakelockinfo_, other->_impl_.a_awakelockinfo_);
 }
 
-std::string Msg_NotifyWakeLockChange::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg_NotifyWakeLockChange";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_NotifyWakeLockChange::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[2]);
 }
-
 
 // ===================================================================
 
 class Msg_Vibrate::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_Vibrate>()._impl_._has_bits_);
-  static void set_has_a_browser(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_Vibrate::Msg_Vibrate(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_Vibrate)
 }
 Msg_Vibrate::Msg_Vibrate(const Msg_Vibrate& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_Vibrate* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_pattern_){from._impl_.a_pattern_}
+      decltype(_impl_.a_pattern_){from._impl_.a_pattern_}
+    , /*decltype(_impl_._a_pattern_cached_byte_size_)*/{0}
     , decltype(_impl_.a_id_){from._impl_.a_id_}
-    , decltype(_impl_.a_browser_){}};
+    , /*decltype(_impl_._a_id_cached_byte_size_)*/{0}
+    , decltype(_impl_.a_browser_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_browser_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_browser_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_browser()) {
+  if (!from._internal_a_browser().empty()) {
     _this->_impl_.a_browser_.Set(from._internal_a_browser(), 
       _this->GetArenaForAllocation());
   }
@@ -1088,11 +1317,12 @@ inline void Msg_Vibrate::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_pattern_){arena}
+      decltype(_impl_.a_pattern_){arena}
+    , /*decltype(_impl_._a_pattern_cached_byte_size_)*/{0}
     , decltype(_impl_.a_id_){arena}
+    , /*decltype(_impl_._a_id_cached_byte_size_)*/{0}
     , decltype(_impl_.a_browser_){}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_browser_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1102,7 +1332,7 @@ inline void Msg_Vibrate::SharedCtor(
 
 Msg_Vibrate::~Msg_Vibrate() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg_Vibrate)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -1128,54 +1358,39 @@ void Msg_Vibrate::Clear() {
 
   _impl_.a_pattern_.Clear();
   _impl_.a_id_.Clear();
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_browser_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_browser_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_Vibrate::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // repeated uint32 a_pattern = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            _internal_add_a_pattern(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
-        } else if (static_cast<uint8_t>(tag) == 10) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_pattern(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 8) {
+          _internal_add_a_pattern(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
       // repeated uint64 a_id = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            _internal_add_a_id(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<16>(ptr));
-        } else if (static_cast<uint8_t>(tag) == 18) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt64Parser(_internal_mutable_a_id(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 16) {
+          _internal_add_a_id(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_browser = 3;
+      // bytes a_browser = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_browser();
@@ -1195,12 +1410,11 @@ const char* Msg_Vibrate::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1215,27 +1429,32 @@ uint8_t* Msg_Vibrate::_InternalSerialize(
   (void) cached_has_bits;
 
   // repeated uint32 a_pattern = 1;
-  for (int i = 0, n = this->_internal_a_pattern_size(); i < n; i++) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_a_pattern(i), target);
+  {
+    int byte_size = _impl_._a_pattern_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteUInt32Packed(
+          1, _internal_a_pattern(), byte_size, target);
+    }
   }
 
   // repeated uint64 a_id = 2;
-  for (int i = 0, n = this->_internal_a_id_size(); i < n; i++) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_a_id(i), target);
+  {
+    int byte_size = _impl_._a_id_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteUInt64Packed(
+          2, _internal_a_id(), byte_size, target);
+    }
   }
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_browser = 3;
-  if (cached_has_bits & 0x00000001u) {
+  // bytes a_browser = 3;
+  if (!this->_internal_a_browser().empty()) {
     target = stream->WriteBytesMaybeAliased(
         3, this->_internal_a_browser(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg_Vibrate)
   return target;
@@ -1245,12 +1464,6 @@ size_t Msg_Vibrate::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_Vibrate)
   size_t total_size = 0;
 
-  // required bytes a_browser = 3;
-  if (_internal_has_a_browser()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_browser());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1259,8 +1472,13 @@ size_t Msg_Vibrate::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_pattern_);
-    total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_a_pattern_size());
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    int cached_size = ::_pbi::ToCachedSize(data_size);
+    _impl_._a_pattern_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
     total_size += data_size;
   }
 
@@ -1268,27 +1486,36 @@ size_t Msg_Vibrate::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt64Size(this->_impl_.a_id_);
-    total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_a_id_size());
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    int cached_size = ::_pbi::ToCachedSize(data_size);
+    _impl_._a_id_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
     total_size += data_size;
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // bytes a_browser = 3;
+  if (!this->_internal_a_browser().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_browser());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_Vibrate::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_Vibrate*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_Vibrate::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_Vibrate::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_Vibrate::GetClassData() const { return &_class_data_; }
 
-void Msg_Vibrate::MergeFrom(const Msg_Vibrate& from) {
-  Msg_Vibrate* const _this = this;
+
+void Msg_Vibrate::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_Vibrate*>(&to_msg);
+  auto& from = static_cast<const Msg_Vibrate&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_Vibrate)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1296,10 +1523,10 @@ void Msg_Vibrate::MergeFrom(const Msg_Vibrate& from) {
 
   _this->_impl_.a_pattern_.MergeFrom(from._impl_.a_pattern_);
   _this->_impl_.a_id_.MergeFrom(from._impl_.a_id_);
-  if (from._internal_has_a_browser()) {
+  if (!from._internal_a_browser().empty()) {
     _this->_internal_set_a_browser(from._internal_a_browser());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_Vibrate::CopyFrom(const Msg_Vibrate& from) {
@@ -1310,7 +1537,6 @@ void Msg_Vibrate::CopyFrom(const Msg_Vibrate& from) {
 }
 
 bool Msg_Vibrate::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1319,7 +1545,6 @@ void Msg_Vibrate::InternalSwap(Msg_Vibrate* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_pattern_.InternalSwap(&other->_impl_.a_pattern_);
   _impl_.a_id_.InternalSwap(&other->_impl_.a_id_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
@@ -1328,45 +1553,39 @@ void Msg_Vibrate::InternalSwap(Msg_Vibrate* other) {
   );
 }
 
-std::string Msg_Vibrate::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg_Vibrate";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_Vibrate::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[3]);
 }
-
 
 // ===================================================================
 
 class Msg_CancelVibrate::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_CancelVibrate>()._impl_._has_bits_);
-  static void set_has_a_browser(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_CancelVibrate::Msg_CancelVibrate(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_CancelVibrate)
 }
 Msg_CancelVibrate::Msg_CancelVibrate(const Msg_CancelVibrate& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_CancelVibrate* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_id_){from._impl_.a_id_}
-    , decltype(_impl_.a_browser_){}};
+      decltype(_impl_.a_id_){from._impl_.a_id_}
+    , /*decltype(_impl_._a_id_cached_byte_size_)*/{0}
+    , decltype(_impl_.a_browser_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_browser_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_browser_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_browser()) {
+  if (!from._internal_a_browser().empty()) {
     _this->_impl_.a_browser_.Set(from._internal_a_browser(), 
       _this->GetArenaForAllocation());
   }
@@ -1378,10 +1597,10 @@ inline void Msg_CancelVibrate::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_id_){arena}
+      decltype(_impl_.a_id_){arena}
+    , /*decltype(_impl_._a_id_cached_byte_size_)*/{0}
     , decltype(_impl_.a_browser_){}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_browser_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1391,7 +1610,7 @@ inline void Msg_CancelVibrate::SharedCtor(
 
 Msg_CancelVibrate::~Msg_CancelVibrate() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg_CancelVibrate)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -1415,38 +1634,28 @@ void Msg_CancelVibrate::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_id_.Clear();
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_browser_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_browser_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_CancelVibrate::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // repeated uint64 a_id = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            _internal_add_a_id(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
-        } else if (static_cast<uint8_t>(tag) == 10) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt64Parser(_internal_mutable_a_id(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 8) {
+          _internal_add_a_id(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_browser = 2;
+      // bytes a_browser = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_browser();
@@ -1466,12 +1675,11 @@ const char* Msg_CancelVibrate::_InternalParse(const char* ptr, ::_pbi::ParseCont
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1486,21 +1694,23 @@ uint8_t* Msg_CancelVibrate::_InternalSerialize(
   (void) cached_has_bits;
 
   // repeated uint64 a_id = 1;
-  for (int i = 0, n = this->_internal_a_id_size(); i < n; i++) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_id(i), target);
+  {
+    int byte_size = _impl_._a_id_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteUInt64Packed(
+          1, _internal_a_id(), byte_size, target);
+    }
   }
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_browser = 2;
-  if (cached_has_bits & 0x00000001u) {
+  // bytes a_browser = 2;
+  if (!this->_internal_a_browser().empty()) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_browser(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg_CancelVibrate)
   return target;
@@ -1510,12 +1720,6 @@ size_t Msg_CancelVibrate::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_CancelVibrate)
   size_t total_size = 0;
 
-  // required bytes a_browser = 2;
-  if (_internal_has_a_browser()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_browser());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1524,37 +1728,46 @@ size_t Msg_CancelVibrate::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt64Size(this->_impl_.a_id_);
-    total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_a_id_size());
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    int cached_size = ::_pbi::ToCachedSize(data_size);
+    _impl_._a_id_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
     total_size += data_size;
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // bytes a_browser = 2;
+  if (!this->_internal_a_browser().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_browser());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_CancelVibrate::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_CancelVibrate*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_CancelVibrate::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_CancelVibrate::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_CancelVibrate::GetClassData() const { return &_class_data_; }
 
-void Msg_CancelVibrate::MergeFrom(const Msg_CancelVibrate& from) {
-  Msg_CancelVibrate* const _this = this;
+
+void Msg_CancelVibrate::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_CancelVibrate*>(&to_msg);
+  auto& from = static_cast<const Msg_CancelVibrate&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_CancelVibrate)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_id_.MergeFrom(from._impl_.a_id_);
-  if (from._internal_has_a_browser()) {
+  if (!from._internal_a_browser().empty()) {
     _this->_internal_set_a_browser(from._internal_a_browser());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_CancelVibrate::CopyFrom(const Msg_CancelVibrate& from) {
@@ -1565,7 +1778,6 @@ void Msg_CancelVibrate::CopyFrom(const Msg_CancelVibrate& from) {
 }
 
 bool Msg_CancelVibrate::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -1574,7 +1786,6 @@ void Msg_CancelVibrate::InternalSwap(Msg_CancelVibrate* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_id_.InternalSwap(&other->_impl_.a_id_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_browser_, lhs_arena,
@@ -1582,10 +1793,11 @@ void Msg_CancelVibrate::InternalSwap(Msg_CancelVibrate* other) {
   );
 }
 
-std::string Msg_CancelVibrate::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg_CancelVibrate";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_CancelVibrate::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[4]);
 }
-
 
 // ===================================================================
 
@@ -1595,145 +1807,37 @@ class Msg_EnableBatteryNotifications::_Internal {
 
 Msg_EnableBatteryNotifications::Msg_EnableBatteryNotifications(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableBatteryNotifications)
 }
 Msg_EnableBatteryNotifications::Msg_EnableBatteryNotifications(const Msg_EnableBatteryNotifications& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg_EnableBatteryNotifications* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableBatteryNotifications)
 }
 
-inline void Msg_EnableBatteryNotifications::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_EnableBatteryNotifications::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_EnableBatteryNotifications::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_EnableBatteryNotifications::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[5]);
 }
-
-Msg_EnableBatteryNotifications::~Msg_EnableBatteryNotifications() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableBatteryNotifications)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg_EnableBatteryNotifications::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg_EnableBatteryNotifications::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg_EnableBatteryNotifications::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableBatteryNotifications)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg_EnableBatteryNotifications::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg_EnableBatteryNotifications::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableBatteryNotifications)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableBatteryNotifications)
-  return target;
-}
-
-size_t Msg_EnableBatteryNotifications::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableBatteryNotifications)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg_EnableBatteryNotifications::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_EnableBatteryNotifications*>(
-      &from));
-}
-
-void Msg_EnableBatteryNotifications::MergeFrom(const Msg_EnableBatteryNotifications& from) {
-  Msg_EnableBatteryNotifications* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableBatteryNotifications)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg_EnableBatteryNotifications::CopyFrom(const Msg_EnableBatteryNotifications& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableBatteryNotifications)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg_EnableBatteryNotifications::IsInitialized() const {
-  return true;
-}
-
-void Msg_EnableBatteryNotifications::InternalSwap(Msg_EnableBatteryNotifications* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg_EnableBatteryNotifications::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg_EnableBatteryNotifications";
-}
-
 
 // ===================================================================
 
@@ -1743,145 +1847,37 @@ class Msg_DisableBatteryNotifications::_Internal {
 
 Msg_DisableBatteryNotifications::Msg_DisableBatteryNotifications(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableBatteryNotifications)
 }
 Msg_DisableBatteryNotifications::Msg_DisableBatteryNotifications(const Msg_DisableBatteryNotifications& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg_DisableBatteryNotifications* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableBatteryNotifications)
 }
 
-inline void Msg_DisableBatteryNotifications::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_DisableBatteryNotifications::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_DisableBatteryNotifications::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_DisableBatteryNotifications::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[6]);
 }
-
-Msg_DisableBatteryNotifications::~Msg_DisableBatteryNotifications() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableBatteryNotifications)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg_DisableBatteryNotifications::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg_DisableBatteryNotifications::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg_DisableBatteryNotifications::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableBatteryNotifications)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg_DisableBatteryNotifications::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg_DisableBatteryNotifications::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableBatteryNotifications)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableBatteryNotifications)
-  return target;
-}
-
-size_t Msg_DisableBatteryNotifications::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableBatteryNotifications)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg_DisableBatteryNotifications::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_DisableBatteryNotifications*>(
-      &from));
-}
-
-void Msg_DisableBatteryNotifications::MergeFrom(const Msg_DisableBatteryNotifications& from) {
-  Msg_DisableBatteryNotifications* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableBatteryNotifications)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg_DisableBatteryNotifications::CopyFrom(const Msg_DisableBatteryNotifications& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableBatteryNotifications)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg_DisableBatteryNotifications::IsInitialized() const {
-  return true;
-}
-
-void Msg_DisableBatteryNotifications::InternalSwap(Msg_DisableBatteryNotifications* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg_DisableBatteryNotifications::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg_DisableBatteryNotifications";
-}
-
 
 // ===================================================================
 
@@ -1891,158 +1887,43 @@ class Msg_GetCurrentBatteryInformation::_Internal {
 
 Msg_GetCurrentBatteryInformation::Msg_GetCurrentBatteryInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentBatteryInformation)
 }
 Msg_GetCurrentBatteryInformation::Msg_GetCurrentBatteryInformation(const Msg_GetCurrentBatteryInformation& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg_GetCurrentBatteryInformation* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentBatteryInformation)
 }
 
-inline void Msg_GetCurrentBatteryInformation::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_GetCurrentBatteryInformation::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_GetCurrentBatteryInformation::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_GetCurrentBatteryInformation::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[7]);
 }
-
-Msg_GetCurrentBatteryInformation::~Msg_GetCurrentBatteryInformation() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentBatteryInformation)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg_GetCurrentBatteryInformation::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg_GetCurrentBatteryInformation::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg_GetCurrentBatteryInformation::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentBatteryInformation)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg_GetCurrentBatteryInformation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg_GetCurrentBatteryInformation::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentBatteryInformation)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentBatteryInformation)
-  return target;
-}
-
-size_t Msg_GetCurrentBatteryInformation::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentBatteryInformation)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg_GetCurrentBatteryInformation::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_GetCurrentBatteryInformation*>(
-      &from));
-}
-
-void Msg_GetCurrentBatteryInformation::MergeFrom(const Msg_GetCurrentBatteryInformation& from) {
-  Msg_GetCurrentBatteryInformation* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentBatteryInformation)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg_GetCurrentBatteryInformation::CopyFrom(const Msg_GetCurrentBatteryInformation& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentBatteryInformation)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg_GetCurrentBatteryInformation::IsInitialized() const {
-  return true;
-}
-
-void Msg_GetCurrentBatteryInformation::InternalSwap(Msg_GetCurrentBatteryInformation* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg_GetCurrentBatteryInformation::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentBatteryInformation";
-}
-
 
 // ===================================================================
 
 class Reply_GetCurrentBatteryInformation::_Internal {
  public:
-  using HasBits = decltype(std::declval<Reply_GetCurrentBatteryInformation>()._impl_._has_bits_);
   static const ::protobuf::mozilla::hal::BatteryInformation& a_abatteryinfo(const Reply_GetCurrentBatteryInformation* msg);
-  static void set_has_a_abatteryinfo(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 const ::protobuf::mozilla::hal::BatteryInformation&
@@ -2050,24 +1931,25 @@ Reply_GetCurrentBatteryInformation::_Internal::a_abatteryinfo(const Reply_GetCur
   return *msg->_impl_.a_abatteryinfo_;
 }
 void Reply_GetCurrentBatteryInformation::clear_a_abatteryinfo() {
-  if (_impl_.a_abatteryinfo_ != nullptr) _impl_.a_abatteryinfo_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_abatteryinfo_ != nullptr) {
+    delete _impl_.a_abatteryinfo_;
+  }
+  _impl_.a_abatteryinfo_ = nullptr;
 }
 Reply_GetCurrentBatteryInformation::Reply_GetCurrentBatteryInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentBatteryInformation)
 }
 Reply_GetCurrentBatteryInformation::Reply_GetCurrentBatteryInformation(const Reply_GetCurrentBatteryInformation& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Reply_GetCurrentBatteryInformation* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_abatteryinfo_){nullptr}};
+      decltype(_impl_.a_abatteryinfo_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_a_abatteryinfo()) {
     _this->_impl_.a_abatteryinfo_ = new ::protobuf::mozilla::hal::BatteryInformation(*from._impl_.a_abatteryinfo_);
   }
@@ -2079,15 +1961,14 @@ inline void Reply_GetCurrentBatteryInformation::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_abatteryinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_abatteryinfo_){nullptr}
   };
 }
 
 Reply_GetCurrentBatteryInformation::~Reply_GetCurrentBatteryInformation() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentBatteryInformation)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -2109,23 +1990,20 @@ void Reply_GetCurrentBatteryInformation::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.a_abatteryinfo_ != nullptr);
-    _impl_.a_abatteryinfo_->Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_abatteryinfo_ != nullptr) {
+    delete _impl_.a_abatteryinfo_;
   }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_abatteryinfo_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Reply_GetCurrentBatteryInformation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
+      // .protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_abatteryinfo(), ptr);
@@ -2144,12 +2022,11 @@ const char* Reply_GetCurrentBatteryInformation::_InternalParse(const char* ptr, 
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2163,17 +2040,16 @@ uint8_t* Reply_GetCurrentBatteryInformation::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // .protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
+  if (this->_internal_has_a_abatteryinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_abatteryinfo(this),
         _Internal::a_abatteryinfo(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentBatteryInformation)
   return target;
@@ -2183,32 +2059,30 @@ size_t Reply_GetCurrentBatteryInformation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentBatteryInformation)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
-  if (_internal_has_a_abatteryinfo()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_abatteryinfo_);
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // .protobuf.mozilla.hal.BatteryInformation a_aBatteryInfo = 1;
+  if (this->_internal_has_a_abatteryinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_abatteryinfo_);
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Reply_GetCurrentBatteryInformation::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply_GetCurrentBatteryInformation*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_GetCurrentBatteryInformation::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Reply_GetCurrentBatteryInformation::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_GetCurrentBatteryInformation::GetClassData() const { return &_class_data_; }
 
-void Reply_GetCurrentBatteryInformation::MergeFrom(const Reply_GetCurrentBatteryInformation& from) {
-  Reply_GetCurrentBatteryInformation* const _this = this;
+
+void Reply_GetCurrentBatteryInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Reply_GetCurrentBatteryInformation*>(&to_msg);
+  auto& from = static_cast<const Reply_GetCurrentBatteryInformation&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentBatteryInformation)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2218,7 +2092,7 @@ void Reply_GetCurrentBatteryInformation::MergeFrom(const Reply_GetCurrentBattery
     _this->_internal_mutable_a_abatteryinfo()->::protobuf::mozilla::hal::BatteryInformation::MergeFrom(
         from._internal_a_abatteryinfo());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Reply_GetCurrentBatteryInformation::CopyFrom(const Reply_GetCurrentBatteryInformation& from) {
@@ -2229,24 +2103,20 @@ void Reply_GetCurrentBatteryInformation::CopyFrom(const Reply_GetCurrentBatteryI
 }
 
 bool Reply_GetCurrentBatteryInformation::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_abatteryinfo()) {
-    if (!_impl_.a_abatteryinfo_->IsInitialized()) return false;
-  }
   return true;
 }
 
 void Reply_GetCurrentBatteryInformation::InternalSwap(Reply_GetCurrentBatteryInformation* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_abatteryinfo_, other->_impl_.a_abatteryinfo_);
 }
 
-std::string Reply_GetCurrentBatteryInformation::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentBatteryInformation";
+::PROTOBUF_NAMESPACE_ID::Metadata Reply_GetCurrentBatteryInformation::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[8]);
 }
-
 
 // ===================================================================
 
@@ -2256,145 +2126,37 @@ class Msg_EnableNetworkNotifications::_Internal {
 
 Msg_EnableNetworkNotifications::Msg_EnableNetworkNotifications(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableNetworkNotifications)
 }
 Msg_EnableNetworkNotifications::Msg_EnableNetworkNotifications(const Msg_EnableNetworkNotifications& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg_EnableNetworkNotifications* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableNetworkNotifications)
 }
 
-inline void Msg_EnableNetworkNotifications::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_EnableNetworkNotifications::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_EnableNetworkNotifications::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_EnableNetworkNotifications::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[9]);
 }
-
-Msg_EnableNetworkNotifications::~Msg_EnableNetworkNotifications() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableNetworkNotifications)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg_EnableNetworkNotifications::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg_EnableNetworkNotifications::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg_EnableNetworkNotifications::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableNetworkNotifications)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg_EnableNetworkNotifications::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg_EnableNetworkNotifications::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableNetworkNotifications)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableNetworkNotifications)
-  return target;
-}
-
-size_t Msg_EnableNetworkNotifications::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableNetworkNotifications)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg_EnableNetworkNotifications::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_EnableNetworkNotifications*>(
-      &from));
-}
-
-void Msg_EnableNetworkNotifications::MergeFrom(const Msg_EnableNetworkNotifications& from) {
-  Msg_EnableNetworkNotifications* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableNetworkNotifications)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg_EnableNetworkNotifications::CopyFrom(const Msg_EnableNetworkNotifications& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableNetworkNotifications)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg_EnableNetworkNotifications::IsInitialized() const {
-  return true;
-}
-
-void Msg_EnableNetworkNotifications::InternalSwap(Msg_EnableNetworkNotifications* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg_EnableNetworkNotifications::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg_EnableNetworkNotifications";
-}
-
 
 // ===================================================================
 
@@ -2404,145 +2166,37 @@ class Msg_DisableNetworkNotifications::_Internal {
 
 Msg_DisableNetworkNotifications::Msg_DisableNetworkNotifications(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableNetworkNotifications)
 }
 Msg_DisableNetworkNotifications::Msg_DisableNetworkNotifications(const Msg_DisableNetworkNotifications& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg_DisableNetworkNotifications* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableNetworkNotifications)
 }
 
-inline void Msg_DisableNetworkNotifications::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_DisableNetworkNotifications::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_DisableNetworkNotifications::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_DisableNetworkNotifications::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[10]);
 }
-
-Msg_DisableNetworkNotifications::~Msg_DisableNetworkNotifications() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableNetworkNotifications)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg_DisableNetworkNotifications::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg_DisableNetworkNotifications::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg_DisableNetworkNotifications::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableNetworkNotifications)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg_DisableNetworkNotifications::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg_DisableNetworkNotifications::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableNetworkNotifications)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableNetworkNotifications)
-  return target;
-}
-
-size_t Msg_DisableNetworkNotifications::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableNetworkNotifications)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg_DisableNetworkNotifications::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_DisableNetworkNotifications*>(
-      &from));
-}
-
-void Msg_DisableNetworkNotifications::MergeFrom(const Msg_DisableNetworkNotifications& from) {
-  Msg_DisableNetworkNotifications* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableNetworkNotifications)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg_DisableNetworkNotifications::CopyFrom(const Msg_DisableNetworkNotifications& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableNetworkNotifications)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg_DisableNetworkNotifications::IsInitialized() const {
-  return true;
-}
-
-void Msg_DisableNetworkNotifications::InternalSwap(Msg_DisableNetworkNotifications* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg_DisableNetworkNotifications::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg_DisableNetworkNotifications";
-}
-
 
 // ===================================================================
 
@@ -2552,158 +2206,43 @@ class Msg_GetCurrentNetworkInformation::_Internal {
 
 Msg_GetCurrentNetworkInformation::Msg_GetCurrentNetworkInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentNetworkInformation)
 }
 Msg_GetCurrentNetworkInformation::Msg_GetCurrentNetworkInformation(const Msg_GetCurrentNetworkInformation& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg_GetCurrentNetworkInformation* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentNetworkInformation)
 }
 
-inline void Msg_GetCurrentNetworkInformation::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_GetCurrentNetworkInformation::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_GetCurrentNetworkInformation::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_GetCurrentNetworkInformation::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[11]);
 }
-
-Msg_GetCurrentNetworkInformation::~Msg_GetCurrentNetworkInformation() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentNetworkInformation)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg_GetCurrentNetworkInformation::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg_GetCurrentNetworkInformation::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg_GetCurrentNetworkInformation::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentNetworkInformation)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg_GetCurrentNetworkInformation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg_GetCurrentNetworkInformation::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentNetworkInformation)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentNetworkInformation)
-  return target;
-}
-
-size_t Msg_GetCurrentNetworkInformation::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentNetworkInformation)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg_GetCurrentNetworkInformation::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_GetCurrentNetworkInformation*>(
-      &from));
-}
-
-void Msg_GetCurrentNetworkInformation::MergeFrom(const Msg_GetCurrentNetworkInformation& from) {
-  Msg_GetCurrentNetworkInformation* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentNetworkInformation)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg_GetCurrentNetworkInformation::CopyFrom(const Msg_GetCurrentNetworkInformation& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentNetworkInformation)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg_GetCurrentNetworkInformation::IsInitialized() const {
-  return true;
-}
-
-void Msg_GetCurrentNetworkInformation::InternalSwap(Msg_GetCurrentNetworkInformation* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg_GetCurrentNetworkInformation::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg_GetCurrentNetworkInformation";
-}
-
 
 // ===================================================================
 
 class Reply_GetCurrentNetworkInformation::_Internal {
  public:
-  using HasBits = decltype(std::declval<Reply_GetCurrentNetworkInformation>()._impl_._has_bits_);
   static const ::protobuf::mozilla::hal::NetworkInformation& a_anetworkinfo(const Reply_GetCurrentNetworkInformation* msg);
-  static void set_has_a_anetworkinfo(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 const ::protobuf::mozilla::hal::NetworkInformation&
@@ -2711,24 +2250,25 @@ Reply_GetCurrentNetworkInformation::_Internal::a_anetworkinfo(const Reply_GetCur
   return *msg->_impl_.a_anetworkinfo_;
 }
 void Reply_GetCurrentNetworkInformation::clear_a_anetworkinfo() {
-  if (_impl_.a_anetworkinfo_ != nullptr) _impl_.a_anetworkinfo_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_anetworkinfo_ != nullptr) {
+    delete _impl_.a_anetworkinfo_;
+  }
+  _impl_.a_anetworkinfo_ = nullptr;
 }
 Reply_GetCurrentNetworkInformation::Reply_GetCurrentNetworkInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentNetworkInformation)
 }
 Reply_GetCurrentNetworkInformation::Reply_GetCurrentNetworkInformation(const Reply_GetCurrentNetworkInformation& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Reply_GetCurrentNetworkInformation* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_anetworkinfo_){nullptr}};
+      decltype(_impl_.a_anetworkinfo_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_a_anetworkinfo()) {
     _this->_impl_.a_anetworkinfo_ = new ::protobuf::mozilla::hal::NetworkInformation(*from._impl_.a_anetworkinfo_);
   }
@@ -2740,15 +2280,14 @@ inline void Reply_GetCurrentNetworkInformation::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_anetworkinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_anetworkinfo_){nullptr}
   };
 }
 
 Reply_GetCurrentNetworkInformation::~Reply_GetCurrentNetworkInformation() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentNetworkInformation)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -2770,23 +2309,20 @@ void Reply_GetCurrentNetworkInformation::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.a_anetworkinfo_ != nullptr);
-    _impl_.a_anetworkinfo_->Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_anetworkinfo_ != nullptr) {
+    delete _impl_.a_anetworkinfo_;
   }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_anetworkinfo_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Reply_GetCurrentNetworkInformation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
+      // .protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_anetworkinfo(), ptr);
@@ -2805,12 +2341,11 @@ const char* Reply_GetCurrentNetworkInformation::_InternalParse(const char* ptr, 
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2824,17 +2359,16 @@ uint8_t* Reply_GetCurrentNetworkInformation::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // .protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
+  if (this->_internal_has_a_anetworkinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_anetworkinfo(this),
         _Internal::a_anetworkinfo(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentNetworkInformation)
   return target;
@@ -2844,32 +2378,30 @@ size_t Reply_GetCurrentNetworkInformation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentNetworkInformation)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
-  if (_internal_has_a_anetworkinfo()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_anetworkinfo_);
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // .protobuf.mozilla.hal.NetworkInformation a_aNetworkInfo = 1;
+  if (this->_internal_has_a_anetworkinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_anetworkinfo_);
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Reply_GetCurrentNetworkInformation::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply_GetCurrentNetworkInformation*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_GetCurrentNetworkInformation::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Reply_GetCurrentNetworkInformation::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_GetCurrentNetworkInformation::GetClassData() const { return &_class_data_; }
 
-void Reply_GetCurrentNetworkInformation::MergeFrom(const Reply_GetCurrentNetworkInformation& from) {
-  Reply_GetCurrentNetworkInformation* const _this = this;
+
+void Reply_GetCurrentNetworkInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Reply_GetCurrentNetworkInformation*>(&to_msg);
+  auto& from = static_cast<const Reply_GetCurrentNetworkInformation&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentNetworkInformation)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2879,7 +2411,7 @@ void Reply_GetCurrentNetworkInformation::MergeFrom(const Reply_GetCurrentNetwork
     _this->_internal_mutable_a_anetworkinfo()->::protobuf::mozilla::hal::NetworkInformation::MergeFrom(
         from._internal_a_anetworkinfo());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Reply_GetCurrentNetworkInformation::CopyFrom(const Reply_GetCurrentNetworkInformation& from) {
@@ -2890,66 +2422,48 @@ void Reply_GetCurrentNetworkInformation::CopyFrom(const Reply_GetCurrentNetworkI
 }
 
 bool Reply_GetCurrentNetworkInformation::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_anetworkinfo()) {
-    if (!_impl_.a_anetworkinfo_->IsInitialized()) return false;
-  }
   return true;
 }
 
 void Reply_GetCurrentNetworkInformation::InternalSwap(Reply_GetCurrentNetworkInformation* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_anetworkinfo_, other->_impl_.a_anetworkinfo_);
 }
 
-std::string Reply_GetCurrentNetworkInformation::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Reply_GetCurrentNetworkInformation";
+::PROTOBUF_NAMESPACE_ID::Metadata Reply_GetCurrentNetworkInformation::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[12]);
 }
-
 
 // ===================================================================
 
 class Msg_ModifyWakeLock::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_ModifyWakeLock>()._impl_._has_bits_);
-  static void set_has_a_atopic(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_alockadjust(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_a_ahiddenadjust(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000007) ^ 0x00000007) != 0;
-  }
 };
 
 Msg_ModifyWakeLock::Msg_ModifyWakeLock(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock)
 }
 Msg_ModifyWakeLock::Msg_ModifyWakeLock(const Msg_ModifyWakeLock& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_ModifyWakeLock* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_atopic_){}
+      decltype(_impl_.a_atopic_){}
     , decltype(_impl_.a_alockadjust_){}
-    , decltype(_impl_.a_ahiddenadjust_){}};
+    , decltype(_impl_.a_ahiddenadjust_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_atopic_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_atopic_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_atopic()) {
+  if (!from._internal_a_atopic().empty()) {
     _this->_impl_.a_atopic_.Set(from._internal_a_atopic(), 
       _this->GetArenaForAllocation());
   }
@@ -2957,7 +2471,7 @@ Msg_ModifyWakeLock::Msg_ModifyWakeLock(const Msg_ModifyWakeLock& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_alockadjust_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_alockadjust()) {
+  if (!from._internal_a_alockadjust().empty()) {
     _this->_impl_.a_alockadjust_.Set(from._internal_a_alockadjust(), 
       _this->GetArenaForAllocation());
   }
@@ -2965,7 +2479,7 @@ Msg_ModifyWakeLock::Msg_ModifyWakeLock(const Msg_ModifyWakeLock& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_ahiddenadjust_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_ahiddenadjust()) {
+  if (!from._internal_a_ahiddenadjust().empty()) {
     _this->_impl_.a_ahiddenadjust_.Set(from._internal_a_ahiddenadjust(), 
       _this->GetArenaForAllocation());
   }
@@ -2977,11 +2491,10 @@ inline void Msg_ModifyWakeLock::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_atopic_){}
+      decltype(_impl_.a_atopic_){}
     , decltype(_impl_.a_alockadjust_){}
     , decltype(_impl_.a_ahiddenadjust_){}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_atopic_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2999,7 +2512,7 @@ inline void Msg_ModifyWakeLock::SharedCtor(
 
 Msg_ModifyWakeLock::~Msg_ModifyWakeLock() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -3023,39 +2536,29 @@ void Msg_ModifyWakeLock::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_atopic_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_alockadjust_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _impl_.a_ahiddenadjust_.ClearNonDefaultToEmpty();
-    }
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_atopic_.ClearToEmpty();
+  _impl_.a_alockadjust_.ClearToEmpty();
+  _impl_.a_ahiddenadjust_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_ModifyWakeLock::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aTopic = 1;
+      // string a_aTopic = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_atopic();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock.a_aTopic"));
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aLockAdjust = 2;
+      // bytes a_aLockAdjust = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_alockadjust();
@@ -3064,7 +2567,7 @@ const char* Msg_ModifyWakeLock::_InternalParse(const char* ptr, ::_pbi::ParseCon
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aHiddenAdjust = 3;
+      // bytes a_aHiddenAdjust = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           auto str = _internal_mutable_a_ahiddenadjust();
@@ -3084,12 +2587,11 @@ const char* Msg_ModifyWakeLock::_InternalParse(const char* ptr, ::_pbi::ParseCon
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -3103,121 +2605,93 @@ uint8_t* Msg_ModifyWakeLock::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aTopic = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_aTopic = 1;
+  if (!this->_internal_a_atopic().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_atopic().data(), static_cast<int>(this->_internal_a_atopic().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock.a_aTopic");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_atopic(), target);
   }
 
-  // required bytes a_aLockAdjust = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // bytes a_aLockAdjust = 2;
+  if (!this->_internal_a_alockadjust().empty()) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_alockadjust(), target);
   }
 
-  // required bytes a_aHiddenAdjust = 3;
-  if (cached_has_bits & 0x00000004u) {
+  // bytes a_aHiddenAdjust = 3;
+  if (!this->_internal_a_ahiddenadjust().empty()) {
     target = stream->WriteBytesMaybeAliased(
         3, this->_internal_a_ahiddenadjust(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock)
   return target;
 }
 
-size_t Msg_ModifyWakeLock::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock)
-  size_t total_size = 0;
-
-  if (_internal_has_a_atopic()) {
-    // required string a_aTopic = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_atopic());
-  }
-
-  if (_internal_has_a_alockadjust()) {
-    // required bytes a_aLockAdjust = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_alockadjust());
-  }
-
-  if (_internal_has_a_ahiddenadjust()) {
-    // required bytes a_aHiddenAdjust = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_ahiddenadjust());
-  }
-
-  return total_size;
-}
 size_t Msg_ModifyWakeLock::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string a_aTopic = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_atopic());
-
-    // required bytes a_aLockAdjust = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_alockadjust());
-
-    // required bytes a_aHiddenAdjust = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_ahiddenadjust());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_aTopic = 1;
+  if (!this->_internal_a_atopic().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_atopic());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // bytes a_aLockAdjust = 2;
+  if (!this->_internal_a_alockadjust().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_alockadjust());
+  }
+
+  // bytes a_aHiddenAdjust = 3;
+  if (!this->_internal_a_ahiddenadjust().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_ahiddenadjust());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_ModifyWakeLock::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_ModifyWakeLock*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_ModifyWakeLock::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_ModifyWakeLock::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_ModifyWakeLock::GetClassData() const { return &_class_data_; }
 
-void Msg_ModifyWakeLock::MergeFrom(const Msg_ModifyWakeLock& from) {
-  Msg_ModifyWakeLock* const _this = this;
+
+void Msg_ModifyWakeLock::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_ModifyWakeLock*>(&to_msg);
+  auto& from = static_cast<const Msg_ModifyWakeLock&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_atopic(from._internal_a_atopic());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_alockadjust(from._internal_a_alockadjust());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_a_ahiddenadjust(from._internal_a_ahiddenadjust());
-    }
+  if (!from._internal_a_atopic().empty()) {
+    _this->_internal_set_a_atopic(from._internal_a_atopic());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_alockadjust().empty()) {
+    _this->_internal_set_a_alockadjust(from._internal_a_alockadjust());
+  }
+  if (!from._internal_a_ahiddenadjust().empty()) {
+    _this->_internal_set_a_ahiddenadjust(from._internal_a_ahiddenadjust());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_ModifyWakeLock::CopyFrom(const Msg_ModifyWakeLock& from) {
@@ -3228,7 +2702,6 @@ void Msg_ModifyWakeLock::CopyFrom(const Msg_ModifyWakeLock& from) {
 }
 
 bool Msg_ModifyWakeLock::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -3237,7 +2710,6 @@ void Msg_ModifyWakeLock::InternalSwap(Msg_ModifyWakeLock* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_atopic_, lhs_arena,
       &other->_impl_.a_atopic_, rhs_arena
@@ -3252,10 +2724,11 @@ void Msg_ModifyWakeLock::InternalSwap(Msg_ModifyWakeLock* other) {
   );
 }
 
-std::string Msg_ModifyWakeLock::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg_ModifyWakeLock";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_ModifyWakeLock::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[13]);
 }
-
 
 // ===================================================================
 
@@ -3265,145 +2738,37 @@ class Msg_EnableWakeLockNotifications::_Internal {
 
 Msg_EnableWakeLockNotifications::Msg_EnableWakeLockNotifications(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableWakeLockNotifications)
 }
 Msg_EnableWakeLockNotifications::Msg_EnableWakeLockNotifications(const Msg_EnableWakeLockNotifications& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg_EnableWakeLockNotifications* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableWakeLockNotifications)
 }
 
-inline void Msg_EnableWakeLockNotifications::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_EnableWakeLockNotifications::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_EnableWakeLockNotifications::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_EnableWakeLockNotifications::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[14]);
 }
-
-Msg_EnableWakeLockNotifications::~Msg_EnableWakeLockNotifications() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableWakeLockNotifications)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg_EnableWakeLockNotifications::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg_EnableWakeLockNotifications::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg_EnableWakeLockNotifications::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableWakeLockNotifications)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg_EnableWakeLockNotifications::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg_EnableWakeLockNotifications::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableWakeLockNotifications)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableWakeLockNotifications)
-  return target;
-}
-
-size_t Msg_EnableWakeLockNotifications::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableWakeLockNotifications)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg_EnableWakeLockNotifications::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_EnableWakeLockNotifications*>(
-      &from));
-}
-
-void Msg_EnableWakeLockNotifications::MergeFrom(const Msg_EnableWakeLockNotifications& from) {
-  Msg_EnableWakeLockNotifications* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableWakeLockNotifications)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg_EnableWakeLockNotifications::CopyFrom(const Msg_EnableWakeLockNotifications& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableWakeLockNotifications)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg_EnableWakeLockNotifications::IsInitialized() const {
-  return true;
-}
-
-void Msg_EnableWakeLockNotifications::InternalSwap(Msg_EnableWakeLockNotifications* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg_EnableWakeLockNotifications::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg_EnableWakeLockNotifications";
-}
-
 
 // ===================================================================
 
@@ -3413,179 +2778,63 @@ class Msg_DisableWakeLockNotifications::_Internal {
 
 Msg_DisableWakeLockNotifications::Msg_DisableWakeLockNotifications(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableWakeLockNotifications)
 }
 Msg_DisableWakeLockNotifications::Msg_DisableWakeLockNotifications(const Msg_DisableWakeLockNotifications& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg_DisableWakeLockNotifications* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableWakeLockNotifications)
 }
 
-inline void Msg_DisableWakeLockNotifications::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_DisableWakeLockNotifications::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_DisableWakeLockNotifications::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_DisableWakeLockNotifications::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[15]);
 }
-
-Msg_DisableWakeLockNotifications::~Msg_DisableWakeLockNotifications() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableWakeLockNotifications)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg_DisableWakeLockNotifications::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg_DisableWakeLockNotifications::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg_DisableWakeLockNotifications::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableWakeLockNotifications)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg_DisableWakeLockNotifications::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg_DisableWakeLockNotifications::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableWakeLockNotifications)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableWakeLockNotifications)
-  return target;
-}
-
-size_t Msg_DisableWakeLockNotifications::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableWakeLockNotifications)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg_DisableWakeLockNotifications::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_DisableWakeLockNotifications*>(
-      &from));
-}
-
-void Msg_DisableWakeLockNotifications::MergeFrom(const Msg_DisableWakeLockNotifications& from) {
-  Msg_DisableWakeLockNotifications* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableWakeLockNotifications)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg_DisableWakeLockNotifications::CopyFrom(const Msg_DisableWakeLockNotifications& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableWakeLockNotifications)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg_DisableWakeLockNotifications::IsInitialized() const {
-  return true;
-}
-
-void Msg_DisableWakeLockNotifications::InternalSwap(Msg_DisableWakeLockNotifications* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg_DisableWakeLockNotifications::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg_DisableWakeLockNotifications";
-}
-
 
 // ===================================================================
 
 class Msg_GetWakeLockInfo::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_GetWakeLockInfo>()._impl_._has_bits_);
-  static void set_has_a_atopic(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_GetWakeLockInfo::Msg_GetWakeLockInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_GetWakeLockInfo)
 }
 Msg_GetWakeLockInfo::Msg_GetWakeLockInfo(const Msg_GetWakeLockInfo& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_GetWakeLockInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_atopic_){}};
+      decltype(_impl_.a_atopic_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_atopic_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_atopic_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_atopic()) {
+  if (!from._internal_a_atopic().empty()) {
     _this->_impl_.a_atopic_.Set(from._internal_a_atopic(), 
       _this->GetArenaForAllocation());
   }
@@ -3597,9 +2846,8 @@ inline void Msg_GetWakeLockInfo::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_atopic_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_atopic_){}
   };
   _impl_.a_atopic_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3609,7 +2857,7 @@ inline void Msg_GetWakeLockInfo::SharedCtor(
 
 Msg_GetWakeLockInfo::~Msg_GetWakeLockInfo() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg_GetWakeLockInfo)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -3631,27 +2879,23 @@ void Msg_GetWakeLockInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_atopic_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_atopic_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_GetWakeLockInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aTopic = 1;
+      // string a_aTopic = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_atopic();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.hal_sandbox.PHal.Msg_GetWakeLockInfo.a_aTopic"));
         } else
           goto handle_unusual;
         continue;
@@ -3666,12 +2910,11 @@ const char* Msg_GetWakeLockInfo::_InternalParse(const char* ptr, ::_pbi::ParseCo
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -3685,16 +2928,19 @@ uint8_t* Msg_GetWakeLockInfo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aTopic = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_aTopic = 1;
+  if (!this->_internal_a_atopic().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_atopic().data(), static_cast<int>(this->_internal_a_atopic().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.hal_sandbox.PHal.Msg_GetWakeLockInfo.a_aTopic");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_atopic(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg_GetWakeLockInfo)
   return target;
@@ -3704,41 +2950,39 @@ size_t Msg_GetWakeLockInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_GetWakeLockInfo)
   size_t total_size = 0;
 
-  // required string a_aTopic = 1;
-  if (_internal_has_a_atopic()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_atopic());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_aTopic = 1;
+  if (!this->_internal_a_atopic().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_atopic());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_GetWakeLockInfo::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_GetWakeLockInfo*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_GetWakeLockInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_GetWakeLockInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_GetWakeLockInfo::GetClassData() const { return &_class_data_; }
 
-void Msg_GetWakeLockInfo::MergeFrom(const Msg_GetWakeLockInfo& from) {
-  Msg_GetWakeLockInfo* const _this = this;
+
+void Msg_GetWakeLockInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_GetWakeLockInfo*>(&to_msg);
+  auto& from = static_cast<const Msg_GetWakeLockInfo&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_GetWakeLockInfo)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_atopic()) {
+  if (!from._internal_a_atopic().empty()) {
     _this->_internal_set_a_atopic(from._internal_a_atopic());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_GetWakeLockInfo::CopyFrom(const Msg_GetWakeLockInfo& from) {
@@ -3749,7 +2993,6 @@ void Msg_GetWakeLockInfo::CopyFrom(const Msg_GetWakeLockInfo& from) {
 }
 
 bool Msg_GetWakeLockInfo::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -3758,30 +3001,23 @@ void Msg_GetWakeLockInfo::InternalSwap(Msg_GetWakeLockInfo* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_atopic_, lhs_arena,
       &other->_impl_.a_atopic_, rhs_arena
   );
 }
 
-std::string Msg_GetWakeLockInfo::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg_GetWakeLockInfo";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_GetWakeLockInfo::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[16]);
 }
-
 
 // ===================================================================
 
 class Reply_GetWakeLockInfo::_Internal {
  public:
-  using HasBits = decltype(std::declval<Reply_GetWakeLockInfo>()._impl_._has_bits_);
   static const ::protobuf::mozilla::hal::WakeLockInformation& a_awakelockinfo(const Reply_GetWakeLockInfo* msg);
-  static void set_has_a_awakelockinfo(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 const ::protobuf::mozilla::hal::WakeLockInformation&
@@ -3789,24 +3025,25 @@ Reply_GetWakeLockInfo::_Internal::a_awakelockinfo(const Reply_GetWakeLockInfo* m
   return *msg->_impl_.a_awakelockinfo_;
 }
 void Reply_GetWakeLockInfo::clear_a_awakelockinfo() {
-  if (_impl_.a_awakelockinfo_ != nullptr) _impl_.a_awakelockinfo_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_awakelockinfo_ != nullptr) {
+    delete _impl_.a_awakelockinfo_;
+  }
+  _impl_.a_awakelockinfo_ = nullptr;
 }
 Reply_GetWakeLockInfo::Reply_GetWakeLockInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Reply_GetWakeLockInfo)
 }
 Reply_GetWakeLockInfo::Reply_GetWakeLockInfo(const Reply_GetWakeLockInfo& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Reply_GetWakeLockInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_awakelockinfo_){nullptr}};
+      decltype(_impl_.a_awakelockinfo_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_a_awakelockinfo()) {
     _this->_impl_.a_awakelockinfo_ = new ::protobuf::mozilla::hal::WakeLockInformation(*from._impl_.a_awakelockinfo_);
   }
@@ -3818,15 +3055,14 @@ inline void Reply_GetWakeLockInfo::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_awakelockinfo_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_awakelockinfo_){nullptr}
   };
 }
 
 Reply_GetWakeLockInfo::~Reply_GetWakeLockInfo() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Reply_GetWakeLockInfo)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -3848,23 +3084,20 @@ void Reply_GetWakeLockInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.a_awakelockinfo_ != nullptr);
-    _impl_.a_awakelockinfo_->Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_awakelockinfo_ != nullptr) {
+    delete _impl_.a_awakelockinfo_;
   }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_awakelockinfo_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Reply_GetWakeLockInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
+      // .protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_awakelockinfo(), ptr);
@@ -3883,12 +3116,11 @@ const char* Reply_GetWakeLockInfo::_InternalParse(const char* ptr, ::_pbi::Parse
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -3902,17 +3134,16 @@ uint8_t* Reply_GetWakeLockInfo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // .protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
+  if (this->_internal_has_a_awakelockinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_awakelockinfo(this),
         _Internal::a_awakelockinfo(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Reply_GetWakeLockInfo)
   return target;
@@ -3922,32 +3153,30 @@ size_t Reply_GetWakeLockInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Reply_GetWakeLockInfo)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
-  if (_internal_has_a_awakelockinfo()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_awakelockinfo_);
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // .protobuf.mozilla.hal.WakeLockInformation a_aWakeLockInfo = 1;
+  if (this->_internal_has_a_awakelockinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_awakelockinfo_);
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Reply_GetWakeLockInfo::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply_GetWakeLockInfo*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_GetWakeLockInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Reply_GetWakeLockInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_GetWakeLockInfo::GetClassData() const { return &_class_data_; }
 
-void Reply_GetWakeLockInfo::MergeFrom(const Reply_GetWakeLockInfo& from) {
-  Reply_GetWakeLockInfo* const _this = this;
+
+void Reply_GetWakeLockInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Reply_GetWakeLockInfo*>(&to_msg);
+  auto& from = static_cast<const Reply_GetWakeLockInfo&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Reply_GetWakeLockInfo)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -3957,7 +3186,7 @@ void Reply_GetWakeLockInfo::MergeFrom(const Reply_GetWakeLockInfo& from) {
     _this->_internal_mutable_a_awakelockinfo()->::protobuf::mozilla::hal::WakeLockInformation::MergeFrom(
         from._internal_a_awakelockinfo());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Reply_GetWakeLockInfo::CopyFrom(const Reply_GetWakeLockInfo& from) {
@@ -3968,58 +3197,46 @@ void Reply_GetWakeLockInfo::CopyFrom(const Reply_GetWakeLockInfo& from) {
 }
 
 bool Reply_GetWakeLockInfo::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_awakelockinfo()) {
-    if (!_impl_.a_awakelockinfo_->IsInitialized()) return false;
-  }
   return true;
 }
 
 void Reply_GetWakeLockInfo::InternalSwap(Reply_GetWakeLockInfo* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_awakelockinfo_, other->_impl_.a_awakelockinfo_);
 }
 
-std::string Reply_GetWakeLockInfo::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Reply_GetWakeLockInfo";
+::PROTOBUF_NAMESPACE_ID::Metadata Reply_GetWakeLockInfo::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[17]);
 }
-
 
 // ===================================================================
 
 class Msg_LockScreenOrientation::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_LockScreenOrientation>()._impl_._has_bits_);
-  static void set_has_a_aorientation(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_LockScreenOrientation::Msg_LockScreenOrientation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_LockScreenOrientation)
 }
 Msg_LockScreenOrientation::Msg_LockScreenOrientation(const Msg_LockScreenOrientation& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_LockScreenOrientation* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_aorientation_){}};
+      decltype(_impl_.a_aorientation_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_aorientation_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_aorientation_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_aorientation()) {
+  if (!from._internal_a_aorientation().empty()) {
     _this->_impl_.a_aorientation_.Set(from._internal_a_aorientation(), 
       _this->GetArenaForAllocation());
   }
@@ -4031,9 +3248,8 @@ inline void Msg_LockScreenOrientation::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_aorientation_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_aorientation_){}
   };
   _impl_.a_aorientation_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4043,7 +3259,7 @@ inline void Msg_LockScreenOrientation::SharedCtor(
 
 Msg_LockScreenOrientation::~Msg_LockScreenOrientation() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg_LockScreenOrientation)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -4065,22 +3281,17 @@ void Msg_LockScreenOrientation::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_aorientation_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_aorientation_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_LockScreenOrientation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aOrientation = 1;
+      // bytes a_aOrientation = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_aorientation();
@@ -4100,12 +3311,11 @@ const char* Msg_LockScreenOrientation::_InternalParse(const char* ptr, ::_pbi::P
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -4119,16 +3329,15 @@ uint8_t* Msg_LockScreenOrientation::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aOrientation = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // bytes a_aOrientation = 1;
+  if (!this->_internal_a_aorientation().empty()) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_aorientation(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg_LockScreenOrientation)
   return target;
@@ -4138,41 +3347,39 @@ size_t Msg_LockScreenOrientation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_LockScreenOrientation)
   size_t total_size = 0;
 
-  // required bytes a_aOrientation = 1;
-  if (_internal_has_a_aorientation()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_aorientation());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // bytes a_aOrientation = 1;
+  if (!this->_internal_a_aorientation().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_aorientation());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_LockScreenOrientation::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_LockScreenOrientation*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_LockScreenOrientation::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_LockScreenOrientation::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_LockScreenOrientation::GetClassData() const { return &_class_data_; }
 
-void Msg_LockScreenOrientation::MergeFrom(const Msg_LockScreenOrientation& from) {
-  Msg_LockScreenOrientation* const _this = this;
+
+void Msg_LockScreenOrientation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_LockScreenOrientation*>(&to_msg);
+  auto& from = static_cast<const Msg_LockScreenOrientation&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_LockScreenOrientation)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_aorientation()) {
+  if (!from._internal_a_aorientation().empty()) {
     _this->_internal_set_a_aorientation(from._internal_a_aorientation());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_LockScreenOrientation::CopyFrom(const Msg_LockScreenOrientation& from) {
@@ -4183,7 +3390,6 @@ void Msg_LockScreenOrientation::CopyFrom(const Msg_LockScreenOrientation& from) 
 }
 
 bool Msg_LockScreenOrientation::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -4192,51 +3398,43 @@ void Msg_LockScreenOrientation::InternalSwap(Msg_LockScreenOrientation* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_aorientation_, lhs_arena,
       &other->_impl_.a_aorientation_, rhs_arena
   );
 }
 
-std::string Msg_LockScreenOrientation::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg_LockScreenOrientation";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_LockScreenOrientation::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[18]);
 }
-
 
 // ===================================================================
 
 class Reply_LockScreenOrientation::_Internal {
  public:
-  using HasBits = decltype(std::declval<Reply_LockScreenOrientation>()._impl_._has_bits_);
-  static void set_has_a_result(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_LockScreenOrientation::Reply_LockScreenOrientation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Reply_LockScreenOrientation)
 }
 Reply_LockScreenOrientation::Reply_LockScreenOrientation(const Reply_LockScreenOrientation& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Reply_LockScreenOrientation* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_result_){}};
+      decltype(_impl_.a_result_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_result_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_result()) {
+  if (!from._internal_a_result().empty()) {
     _this->_impl_.a_result_.Set(from._internal_a_result(), 
       _this->GetArenaForAllocation());
   }
@@ -4248,9 +3446,8 @@ inline void Reply_LockScreenOrientation::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_result_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_result_){}
   };
   _impl_.a_result_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -4260,7 +3457,7 @@ inline void Reply_LockScreenOrientation::SharedCtor(
 
 Reply_LockScreenOrientation::~Reply_LockScreenOrientation() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Reply_LockScreenOrientation)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -4282,22 +3479,17 @@ void Reply_LockScreenOrientation::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_result_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_result_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Reply_LockScreenOrientation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_result = 1;
+      // bytes a_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_result();
@@ -4317,12 +3509,11 @@ const char* Reply_LockScreenOrientation::_InternalParse(const char* ptr, ::_pbi:
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -4336,16 +3527,15 @@ uint8_t* Reply_LockScreenOrientation::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_result = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // bytes a_result = 1;
+  if (!this->_internal_a_result().empty()) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_result(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Reply_LockScreenOrientation)
   return target;
@@ -4355,41 +3545,39 @@ size_t Reply_LockScreenOrientation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Reply_LockScreenOrientation)
   size_t total_size = 0;
 
-  // required bytes a_result = 1;
-  if (_internal_has_a_result()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_result());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // bytes a_result = 1;
+  if (!this->_internal_a_result().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_result());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Reply_LockScreenOrientation::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply_LockScreenOrientation*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_LockScreenOrientation::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Reply_LockScreenOrientation::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_LockScreenOrientation::GetClassData() const { return &_class_data_; }
 
-void Reply_LockScreenOrientation::MergeFrom(const Reply_LockScreenOrientation& from) {
-  Reply_LockScreenOrientation* const _this = this;
+
+void Reply_LockScreenOrientation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Reply_LockScreenOrientation*>(&to_msg);
+  auto& from = static_cast<const Reply_LockScreenOrientation&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Reply_LockScreenOrientation)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_result()) {
+  if (!from._internal_a_result().empty()) {
     _this->_internal_set_a_result(from._internal_a_result());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Reply_LockScreenOrientation::CopyFrom(const Reply_LockScreenOrientation& from) {
@@ -4400,7 +3588,6 @@ void Reply_LockScreenOrientation::CopyFrom(const Reply_LockScreenOrientation& fr
 }
 
 bool Reply_LockScreenOrientation::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -4409,17 +3596,17 @@ void Reply_LockScreenOrientation::InternalSwap(Reply_LockScreenOrientation* othe
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_result_, lhs_arena,
       &other->_impl_.a_result_, rhs_arena
   );
 }
 
-std::string Reply_LockScreenOrientation::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Reply_LockScreenOrientation";
+::PROTOBUF_NAMESPACE_ID::Metadata Reply_LockScreenOrientation::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[19]);
 }
-
 
 // ===================================================================
 
@@ -4429,174 +3616,58 @@ class Msg_UnlockScreenOrientation::_Internal {
 
 Msg_UnlockScreenOrientation::Msg_UnlockScreenOrientation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_UnlockScreenOrientation)
 }
 Msg_UnlockScreenOrientation::Msg_UnlockScreenOrientation(const Msg_UnlockScreenOrientation& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg_UnlockScreenOrientation* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_UnlockScreenOrientation)
 }
 
-inline void Msg_UnlockScreenOrientation::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_UnlockScreenOrientation::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_UnlockScreenOrientation::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_UnlockScreenOrientation::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[20]);
 }
-
-Msg_UnlockScreenOrientation::~Msg_UnlockScreenOrientation() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg_UnlockScreenOrientation)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg_UnlockScreenOrientation::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg_UnlockScreenOrientation::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg_UnlockScreenOrientation::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.hal_sandbox.PHal.Msg_UnlockScreenOrientation)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg_UnlockScreenOrientation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg_UnlockScreenOrientation::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.hal_sandbox.PHal.Msg_UnlockScreenOrientation)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg_UnlockScreenOrientation)
-  return target;
-}
-
-size_t Msg_UnlockScreenOrientation::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_UnlockScreenOrientation)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg_UnlockScreenOrientation::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_UnlockScreenOrientation*>(
-      &from));
-}
-
-void Msg_UnlockScreenOrientation::MergeFrom(const Msg_UnlockScreenOrientation& from) {
-  Msg_UnlockScreenOrientation* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_UnlockScreenOrientation)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg_UnlockScreenOrientation::CopyFrom(const Msg_UnlockScreenOrientation& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_UnlockScreenOrientation)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg_UnlockScreenOrientation::IsInitialized() const {
-  return true;
-}
-
-void Msg_UnlockScreenOrientation::InternalSwap(Msg_UnlockScreenOrientation* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg_UnlockScreenOrientation::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg_UnlockScreenOrientation";
-}
-
 
 // ===================================================================
 
 class Msg_PerformHapticFeedback::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_PerformHapticFeedback>()._impl_._has_bits_);
-  static void set_has_a_atype(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_PerformHapticFeedback::Msg_PerformHapticFeedback(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_PerformHapticFeedback)
 }
 Msg_PerformHapticFeedback::Msg_PerformHapticFeedback(const Msg_PerformHapticFeedback& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_PerformHapticFeedback* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_atype_){}};
+      decltype(_impl_.a_atype_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _this->_impl_.a_atype_ = from._impl_.a_atype_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_PerformHapticFeedback)
 }
@@ -4606,15 +3677,14 @@ inline void Msg_PerformHapticFeedback::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_atype_){0}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_atype_){0}
   };
 }
 
 Msg_PerformHapticFeedback::~Msg_PerformHapticFeedback() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg_PerformHapticFeedback)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -4636,21 +3706,18 @@ void Msg_PerformHapticFeedback::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_atype_ = 0;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_PerformHapticFeedback::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint32 a_aType = 1;
+      // sint32 a_aType = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_a_atype(&has_bits);
           _impl_.a_atype_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr);
           CHK_(ptr);
         } else
@@ -4667,12 +3734,11 @@ const char* Msg_PerformHapticFeedback::_InternalParse(const char* ptr, ::_pbi::P
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -4686,16 +3752,15 @@ uint8_t* Msg_PerformHapticFeedback::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required sint32 a_aType = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // sint32 a_aType = 1;
+  if (this->_internal_a_atype() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_atype(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg_PerformHapticFeedback)
   return target;
@@ -4705,39 +3770,37 @@ size_t Msg_PerformHapticFeedback::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_PerformHapticFeedback)
   size_t total_size = 0;
 
-  // required sint32 a_aType = 1;
-  if (_internal_has_a_atype()) {
-    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_atype());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // sint32 a_aType = 1;
+  if (this->_internal_a_atype() != 0) {
+    total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_atype());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_PerformHapticFeedback::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_PerformHapticFeedback*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_PerformHapticFeedback::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_PerformHapticFeedback::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_PerformHapticFeedback::GetClassData() const { return &_class_data_; }
 
-void Msg_PerformHapticFeedback::MergeFrom(const Msg_PerformHapticFeedback& from) {
-  Msg_PerformHapticFeedback* const _this = this;
+
+void Msg_PerformHapticFeedback::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_PerformHapticFeedback*>(&to_msg);
+  auto& from = static_cast<const Msg_PerformHapticFeedback&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_PerformHapticFeedback)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_atype()) {
+  if (from._internal_a_atype() != 0) {
     _this->_internal_set_a_atype(from._internal_a_atype());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_PerformHapticFeedback::CopyFrom(const Msg_PerformHapticFeedback& from) {
@@ -4748,34 +3811,26 @@ void Msg_PerformHapticFeedback::CopyFrom(const Msg_PerformHapticFeedback& from) 
 }
 
 bool Msg_PerformHapticFeedback::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Msg_PerformHapticFeedback::InternalSwap(Msg_PerformHapticFeedback* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_atype_, other->_impl_.a_atype_);
 }
 
-std::string Msg_PerformHapticFeedback::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg_PerformHapticFeedback";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_PerformHapticFeedback::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[21]);
 }
-
 
 // ===================================================================
 
 class Msg_NotifySensorChange::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_NotifySensorChange>()._impl_._has_bits_);
   static const ::protobuf::mozilla::hal::SensorData& a_asensordata(const Msg_NotifySensorChange* msg);
-  static void set_has_a_asensordata(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 const ::protobuf::mozilla::hal::SensorData&
@@ -4783,24 +3838,25 @@ Msg_NotifySensorChange::_Internal::a_asensordata(const Msg_NotifySensorChange* m
   return *msg->_impl_.a_asensordata_;
 }
 void Msg_NotifySensorChange::clear_a_asensordata() {
-  if (_impl_.a_asensordata_ != nullptr) _impl_.a_asensordata_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_asensordata_ != nullptr) {
+    delete _impl_.a_asensordata_;
+  }
+  _impl_.a_asensordata_ = nullptr;
 }
 Msg_NotifySensorChange::Msg_NotifySensorChange(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifySensorChange)
 }
 Msg_NotifySensorChange::Msg_NotifySensorChange(const Msg_NotifySensorChange& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_NotifySensorChange* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_asensordata_){nullptr}};
+      decltype(_impl_.a_asensordata_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_a_asensordata()) {
     _this->_impl_.a_asensordata_ = new ::protobuf::mozilla::hal::SensorData(*from._impl_.a_asensordata_);
   }
@@ -4812,15 +3868,14 @@ inline void Msg_NotifySensorChange::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_asensordata_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_asensordata_){nullptr}
   };
 }
 
 Msg_NotifySensorChange::~Msg_NotifySensorChange() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifySensorChange)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -4842,23 +3897,20 @@ void Msg_NotifySensorChange::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.a_asensordata_ != nullptr);
-    _impl_.a_asensordata_->Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_asensordata_ != nullptr) {
+    delete _impl_.a_asensordata_;
   }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_asensordata_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_NotifySensorChange::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.hal.SensorData a_aSensorData = 1;
+      // .protobuf.mozilla.hal.SensorData a_aSensorData = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_asensordata(), ptr);
@@ -4877,12 +3929,11 @@ const char* Msg_NotifySensorChange::_InternalParse(const char* ptr, ::_pbi::Pars
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -4896,17 +3947,16 @@ uint8_t* Msg_NotifySensorChange::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.hal.SensorData a_aSensorData = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // .protobuf.mozilla.hal.SensorData a_aSensorData = 1;
+  if (this->_internal_has_a_asensordata()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_asensordata(this),
         _Internal::a_asensordata(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifySensorChange)
   return target;
@@ -4916,32 +3966,30 @@ size_t Msg_NotifySensorChange::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifySensorChange)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.hal.SensorData a_aSensorData = 1;
-  if (_internal_has_a_asensordata()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_asensordata_);
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // .protobuf.mozilla.hal.SensorData a_aSensorData = 1;
+  if (this->_internal_has_a_asensordata()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_asensordata_);
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_NotifySensorChange::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_NotifySensorChange*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_NotifySensorChange::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_NotifySensorChange::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_NotifySensorChange::GetClassData() const { return &_class_data_; }
 
-void Msg_NotifySensorChange::MergeFrom(const Msg_NotifySensorChange& from) {
-  Msg_NotifySensorChange* const _this = this;
+
+void Msg_NotifySensorChange::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_NotifySensorChange*>(&to_msg);
+  auto& from = static_cast<const Msg_NotifySensorChange&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_NotifySensorChange)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -4951,7 +3999,7 @@ void Msg_NotifySensorChange::MergeFrom(const Msg_NotifySensorChange& from) {
     _this->_internal_mutable_a_asensordata()->::protobuf::mozilla::hal::SensorData::MergeFrom(
         from._internal_a_asensordata());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_NotifySensorChange::CopyFrom(const Msg_NotifySensorChange& from) {
@@ -4962,58 +4010,46 @@ void Msg_NotifySensorChange::CopyFrom(const Msg_NotifySensorChange& from) {
 }
 
 bool Msg_NotifySensorChange::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_asensordata()) {
-    if (!_impl_.a_asensordata_->IsInitialized()) return false;
-  }
   return true;
 }
 
 void Msg_NotifySensorChange::InternalSwap(Msg_NotifySensorChange* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_asensordata_, other->_impl_.a_asensordata_);
 }
 
-std::string Msg_NotifySensorChange::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg_NotifySensorChange";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_NotifySensorChange::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[22]);
 }
-
 
 // ===================================================================
 
 class Msg_EnableSensorNotifications::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_EnableSensorNotifications>()._impl_._has_bits_);
-  static void set_has_a_asensor(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_EnableSensorNotifications::Msg_EnableSensorNotifications(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableSensorNotifications)
 }
 Msg_EnableSensorNotifications::Msg_EnableSensorNotifications(const Msg_EnableSensorNotifications& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_EnableSensorNotifications* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_asensor_){}};
+      decltype(_impl_.a_asensor_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_asensor_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_asensor_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_asensor()) {
+  if (!from._internal_a_asensor().empty()) {
     _this->_impl_.a_asensor_.Set(from._internal_a_asensor(), 
       _this->GetArenaForAllocation());
   }
@@ -5025,9 +4061,8 @@ inline void Msg_EnableSensorNotifications::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_asensor_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_asensor_){}
   };
   _impl_.a_asensor_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5037,7 +4072,7 @@ inline void Msg_EnableSensorNotifications::SharedCtor(
 
 Msg_EnableSensorNotifications::~Msg_EnableSensorNotifications() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableSensorNotifications)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -5059,22 +4094,17 @@ void Msg_EnableSensorNotifications::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_asensor_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_asensor_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_EnableSensorNotifications::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aSensor = 1;
+      // bytes a_aSensor = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_asensor();
@@ -5094,12 +4124,11 @@ const char* Msg_EnableSensorNotifications::_InternalParse(const char* ptr, ::_pb
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -5113,16 +4142,15 @@ uint8_t* Msg_EnableSensorNotifications::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aSensor = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // bytes a_aSensor = 1;
+  if (!this->_internal_a_asensor().empty()) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_asensor(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableSensorNotifications)
   return target;
@@ -5132,41 +4160,39 @@ size_t Msg_EnableSensorNotifications::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableSensorNotifications)
   size_t total_size = 0;
 
-  // required bytes a_aSensor = 1;
-  if (_internal_has_a_asensor()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_asensor());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // bytes a_aSensor = 1;
+  if (!this->_internal_a_asensor().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_asensor());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_EnableSensorNotifications::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_EnableSensorNotifications*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_EnableSensorNotifications::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_EnableSensorNotifications::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_EnableSensorNotifications::GetClassData() const { return &_class_data_; }
 
-void Msg_EnableSensorNotifications::MergeFrom(const Msg_EnableSensorNotifications& from) {
-  Msg_EnableSensorNotifications* const _this = this;
+
+void Msg_EnableSensorNotifications::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_EnableSensorNotifications*>(&to_msg);
+  auto& from = static_cast<const Msg_EnableSensorNotifications&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_EnableSensorNotifications)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_asensor()) {
+  if (!from._internal_a_asensor().empty()) {
     _this->_internal_set_a_asensor(from._internal_a_asensor());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_EnableSensorNotifications::CopyFrom(const Msg_EnableSensorNotifications& from) {
@@ -5177,7 +4203,6 @@ void Msg_EnableSensorNotifications::CopyFrom(const Msg_EnableSensorNotifications
 }
 
 bool Msg_EnableSensorNotifications::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -5186,51 +4211,43 @@ void Msg_EnableSensorNotifications::InternalSwap(Msg_EnableSensorNotifications* 
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_asensor_, lhs_arena,
       &other->_impl_.a_asensor_, rhs_arena
   );
 }
 
-std::string Msg_EnableSensorNotifications::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg_EnableSensorNotifications";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_EnableSensorNotifications::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[23]);
 }
-
 
 // ===================================================================
 
 class Msg_DisableSensorNotifications::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_DisableSensorNotifications>()._impl_._has_bits_);
-  static void set_has_a_asensor(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_DisableSensorNotifications::Msg_DisableSensorNotifications(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableSensorNotifications)
 }
 Msg_DisableSensorNotifications::Msg_DisableSensorNotifications(const Msg_DisableSensorNotifications& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_DisableSensorNotifications* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_asensor_){}};
+      decltype(_impl_.a_asensor_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_asensor_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_asensor_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_asensor()) {
+  if (!from._internal_a_asensor().empty()) {
     _this->_impl_.a_asensor_.Set(from._internal_a_asensor(), 
       _this->GetArenaForAllocation());
   }
@@ -5242,9 +4259,8 @@ inline void Msg_DisableSensorNotifications::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_asensor_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_asensor_){}
   };
   _impl_.a_asensor_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5254,7 +4270,7 @@ inline void Msg_DisableSensorNotifications::SharedCtor(
 
 Msg_DisableSensorNotifications::~Msg_DisableSensorNotifications() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableSensorNotifications)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -5276,22 +4292,17 @@ void Msg_DisableSensorNotifications::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_asensor_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_asensor_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_DisableSensorNotifications::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aSensor = 1;
+      // bytes a_aSensor = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_asensor();
@@ -5311,12 +4322,11 @@ const char* Msg_DisableSensorNotifications::_InternalParse(const char* ptr, ::_p
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -5330,16 +4340,15 @@ uint8_t* Msg_DisableSensorNotifications::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aSensor = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // bytes a_aSensor = 1;
+  if (!this->_internal_a_asensor().empty()) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_asensor(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableSensorNotifications)
   return target;
@@ -5349,41 +4358,39 @@ size_t Msg_DisableSensorNotifications::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableSensorNotifications)
   size_t total_size = 0;
 
-  // required bytes a_aSensor = 1;
-  if (_internal_has_a_asensor()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_asensor());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // bytes a_aSensor = 1;
+  if (!this->_internal_a_asensor().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_asensor());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_DisableSensorNotifications::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_DisableSensorNotifications*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_DisableSensorNotifications::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_DisableSensorNotifications::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_DisableSensorNotifications::GetClassData() const { return &_class_data_; }
 
-void Msg_DisableSensorNotifications::MergeFrom(const Msg_DisableSensorNotifications& from) {
-  Msg_DisableSensorNotifications* const _this = this;
+
+void Msg_DisableSensorNotifications::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_DisableSensorNotifications*>(&to_msg);
+  auto& from = static_cast<const Msg_DisableSensorNotifications&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg_DisableSensorNotifications)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_asensor()) {
+  if (!from._internal_a_asensor().empty()) {
     _this->_internal_set_a_asensor(from._internal_a_asensor());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_DisableSensorNotifications::CopyFrom(const Msg_DisableSensorNotifications& from) {
@@ -5394,7 +4401,6 @@ void Msg_DisableSensorNotifications::CopyFrom(const Msg_DisableSensorNotificatio
 }
 
 bool Msg_DisableSensorNotifications::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -5403,17 +4409,17 @@ void Msg_DisableSensorNotifications::InternalSwap(Msg_DisableSensorNotifications
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_asensor_, lhs_arena,
       &other->_impl_.a_asensor_, rhs_arena
   );
 }
 
-std::string Msg_DisableSensorNotifications::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg_DisableSensorNotifications";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_DisableSensorNotifications::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[24]);
 }
-
 
 // ===================================================================
 
@@ -5423,145 +4429,37 @@ class Msg___delete__::_Internal {
 
 Msg___delete__::Msg___delete__(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg___delete__)
 }
 Msg___delete__::Msg___delete__(const Msg___delete__& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg___delete__* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.hal_sandbox.PHal.Msg___delete__)
 }
 
-inline void Msg___delete__::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg___delete__::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg___delete__::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg___delete__::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[25]);
 }
-
-Msg___delete__::~Msg___delete__() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Msg___delete__)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg___delete__::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg___delete__::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg___delete__::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.hal_sandbox.PHal.Msg___delete__)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg___delete__::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.hal_sandbox.PHal.Msg___delete__)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Msg___delete__)
-  return target;
-}
-
-size_t Msg___delete__::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Msg___delete__)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg___delete__::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg___delete__*>(
-      &from));
-}
-
-void Msg___delete__::MergeFrom(const Msg___delete__& from) {
-  Msg___delete__* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg___delete__)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg___delete__::CopyFrom(const Msg___delete__& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.hal_sandbox.PHal.Msg___delete__)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg___delete__::IsInitialized() const {
-  return true;
-}
-
-void Msg___delete__::InternalSwap(Msg___delete__* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg___delete__::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Msg___delete__";
-}
-
 
 // ===================================================================
 
@@ -5571,145 +4469,37 @@ class Reply___delete__::_Internal {
 
 Reply___delete__::Reply___delete__(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal_sandbox.PHal.Reply___delete__)
 }
 Reply___delete__::Reply___delete__(const Reply___delete__& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Reply___delete__* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.hal_sandbox.PHal.Reply___delete__)
 }
 
-inline void Reply___delete__::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply___delete__::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply___delete__::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Reply___delete__::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PHal_2eproto_getter, &descriptor_table_PHal_2eproto_once,
+      file_level_metadata_PHal_2eproto[26]);
 }
-
-Reply___delete__::~Reply___delete__() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.hal_sandbox.PHal.Reply___delete__)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Reply___delete__::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Reply___delete__::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Reply___delete__::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.hal_sandbox.PHal.Reply___delete__)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Reply___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Reply___delete__::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.hal_sandbox.PHal.Reply___delete__)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal_sandbox.PHal.Reply___delete__)
-  return target;
-}
-
-size_t Reply___delete__::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.hal_sandbox.PHal.Reply___delete__)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Reply___delete__::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply___delete__*>(
-      &from));
-}
-
-void Reply___delete__::MergeFrom(const Reply___delete__& from) {
-  Reply___delete__* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal_sandbox.PHal.Reply___delete__)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Reply___delete__::CopyFrom(const Reply___delete__& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.hal_sandbox.PHal.Reply___delete__)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Reply___delete__::IsInitialized() const {
-  return true;
-}
-
-void Reply___delete__::InternalSwap(Reply___delete__* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Reply___delete__::GetTypeName() const {
-  return "protobuf.mozilla.hal_sandbox.PHal.Reply___delete__";
-}
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace PHal

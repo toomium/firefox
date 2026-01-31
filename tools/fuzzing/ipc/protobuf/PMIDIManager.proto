@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/midi/PMIDIManager.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PMIDIManager;
 
@@ -23,7 +22,7 @@ message Msg_Shutdown {
 }
 
 message Msg_MIDIPortListUpdate {
-  required protobuf.mozilla.dom.MIDIPortList a_aPortList = 1;
+  protobuf.mozilla.dom.MIDIPortList a_aPortList = 1;
 }
 
 // Parameter mappings stats:

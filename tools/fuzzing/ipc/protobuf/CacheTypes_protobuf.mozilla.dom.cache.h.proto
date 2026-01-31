@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/cache/CacheTypes.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.cache;
 
@@ -15,76 +14,76 @@ import "PBackgroundSharedTypes.proto";
 
 // Structs and unions declarations
 message CacheQueryParams {
-  required bool a_ignoreSearch = 1;
-  required bool a_ignoreMethod = 2;
-  required bool a_ignoreVary = 3;
-  required bool a_cacheNameSet = 4;
-  required string a_cacheName = 5;
+  bool a_ignoreSearch = 1;
+  bool a_ignoreMethod = 2;
+  bool a_ignoreVary = 3;
+  bool a_cacheNameSet = 4;
+  string a_cacheName = 5;
 }
 
 message CacheReadStream {
-  required bytes a_id = 1;
+  bytes a_id = 1;
   optional bytes a_control = 2;
   optional protobuf.mozilla.ipc.IPCStream a_stream = 3;
 }
 
 message HeadersEntry {
-  required string a_name = 1;
-  required string a_value = 2;
+  string a_name = 1;
+  string a_value = 2;
 }
 
 message CacheRequest {
-  required string a_method = 1;
-  required string a_urlWithoutQuery = 2;
-  required string a_urlQuery = 3;
-  required string a_urlFragment = 4;
+  string a_method = 1;
+  string a_urlWithoutQuery = 2;
+  string a_urlQuery = 3;
+  string a_urlFragment = 4;
   repeated protobuf.mozilla.dom.cache.HeadersEntry a_headers = 5;
-  required bytes a_headersGuard = 6;
-  required string a_referrer = 7;
-  required bytes a_referrerPolicy = 8;
-  required bytes a_mode = 9;
-  required bytes a_credentials = 10;
+  bytes a_headersGuard = 6;
+  string a_referrer = 7;
+  bytes a_referrerPolicy = 8;
+  bytes a_mode = 9;
+  bytes a_credentials = 10;
   optional protobuf.mozilla.dom.cache.CacheReadStream a_body = 11;
-  required sint64 a_bodyDiskSize = 12;
-  required bytes a_contentPolicyType = 13;
-  required bytes a_requestCache = 14;
-  required bytes a_requestRedirect = 15;
-  required string a_integrity = 16;
-  required bytes a_loadingEmbedderPolicy = 17;
+  sint64 a_bodyDiskSize = 12;
+  bytes a_contentPolicyType = 13;
+  bytes a_requestCache = 14;
+  bytes a_requestRedirect = 15;
+  string a_integrity = 16;
+  bytes a_loadingEmbedderPolicy = 17;
   optional protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 18;
 }
 
 message CacheResponse {
-  required bytes a_type = 1;
+  bytes a_type = 1;
   repeated string a_urlList = 2;
-  required uint32 a_status = 3;
-  required string a_statusText = 4;
+  uint32 a_status = 3;
+  string a_statusText = 4;
   repeated protobuf.mozilla.dom.cache.HeadersEntry a_headers = 5;
-  required bytes a_headersGuard = 6;
+  bytes a_headersGuard = 6;
   optional protobuf.mozilla.dom.cache.CacheReadStream a_body = 7;
-  required sint64 a_bodyDiskSize = 8;
+  sint64 a_bodyDiskSize = 8;
   optional bytes a_securityInfo = 9;
   optional protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 10;
-  required uint32 a_paddingInfo = 11;
-  required sint64 a_paddingSize = 12;
-  required bytes a_credentials = 13;
+  uint32 a_paddingInfo = 11;
+  sint64 a_paddingSize = 12;
+  bytes a_credentials = 13;
 }
 
 message CacheRequestResponse {
-  required protobuf.mozilla.dom.cache.CacheRequest a_request = 1;
-  required protobuf.mozilla.dom.cache.CacheResponse a_response = 2;
+  protobuf.mozilla.dom.cache.CacheRequest a_request = 1;
+  protobuf.mozilla.dom.cache.CacheResponse a_response = 2;
 }
 
 message CacheMatchArgs {
-  required protobuf.mozilla.dom.cache.CacheRequest a_request = 1;
-  required protobuf.mozilla.dom.cache.CacheQueryParams a_params = 2;
-  required bytes a_openMode = 3;
+  protobuf.mozilla.dom.cache.CacheRequest a_request = 1;
+  protobuf.mozilla.dom.cache.CacheQueryParams a_params = 2;
+  bytes a_openMode = 3;
 }
 
 message CacheMatchAllArgs {
   optional protobuf.mozilla.dom.cache.CacheRequest a_maybeRequest = 1;
-  required protobuf.mozilla.dom.cache.CacheQueryParams a_params = 2;
-  required bytes a_openMode = 3;
+  protobuf.mozilla.dom.cache.CacheQueryParams a_params = 2;
+  bytes a_openMode = 3;
 }
 
 message CachePutAllArgs {
@@ -92,32 +91,32 @@ message CachePutAllArgs {
 }
 
 message CacheDeleteArgs {
-  required protobuf.mozilla.dom.cache.CacheRequest a_request = 1;
-  required protobuf.mozilla.dom.cache.CacheQueryParams a_params = 2;
+  protobuf.mozilla.dom.cache.CacheRequest a_request = 1;
+  protobuf.mozilla.dom.cache.CacheQueryParams a_params = 2;
 }
 
 message CacheKeysArgs {
   optional protobuf.mozilla.dom.cache.CacheRequest a_maybeRequest = 1;
-  required protobuf.mozilla.dom.cache.CacheQueryParams a_params = 2;
-  required bytes a_openMode = 3;
+  protobuf.mozilla.dom.cache.CacheQueryParams a_params = 2;
+  bytes a_openMode = 3;
 }
 
 message StorageMatchArgs {
-  required protobuf.mozilla.dom.cache.CacheRequest a_request = 1;
-  required protobuf.mozilla.dom.cache.CacheQueryParams a_params = 2;
-  required bytes a_openMode = 3;
+  protobuf.mozilla.dom.cache.CacheRequest a_request = 1;
+  protobuf.mozilla.dom.cache.CacheQueryParams a_params = 2;
+  bytes a_openMode = 3;
 }
 
 message StorageHasArgs {
-  required string a_key = 1;
+  string a_key = 1;
 }
 
 message StorageOpenArgs {
-  required string a_key = 1;
+  string a_key = 1;
 }
 
 message StorageDeleteArgs {
-  required string a_key = 1;
+  string a_key = 1;
 }
 
 message StorageKeysArgs {
@@ -150,7 +149,7 @@ message CachePutAllResult {
 }
 
 message CacheDeleteResult {
-  required bool a_success = 1;
+  bool a_success = 1;
 }
 
 message CacheKeysResult {
@@ -162,16 +161,16 @@ message StorageMatchResult {
 }
 
 message StorageHasResult {
-  required bool a_success = 1;
+  bool a_success = 1;
 }
 
 message StorageOpenResult {
   optional bytes a_actor = 1;
-  required bytes a_ns = 2;
+  bytes a_ns = 2;
 }
 
 message StorageDeleteResult {
-  required bool a_success = 1;
+  bool a_success = 1;
 }
 
 message StorageKeysResult {

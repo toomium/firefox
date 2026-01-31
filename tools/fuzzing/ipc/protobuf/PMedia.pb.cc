@@ -8,7 +8,10 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -23,10 +26,9 @@ namespace media {
 namespace PMedia {
 PROTOBUF_CONSTEXPR Msg_GetPrincipalKey::Msg_GetPrincipalKey(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_aprincipal_)*/nullptr
-  , /*decltype(_impl_.a_apersist_)*/false} {}
+    /*decltype(_impl_.a_aprincipal_)*/nullptr
+  , /*decltype(_impl_.a_apersist_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_GetPrincipalKeyDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_GetPrincipalKeyDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -38,9 +40,8 @@ struct Msg_GetPrincipalKeyDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_GetPrincipalKeyDefaultTypeInternal _Msg_GetPrincipalKey_default_instance_;
 PROTOBUF_CONSTEXPR Reply_GetPrincipalKey::Reply_GetPrincipalKey(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_akey_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_akey_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Reply_GetPrincipalKeyDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_GetPrincipalKeyDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -52,10 +53,9 @@ struct Reply_GetPrincipalKeyDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_GetPrincipalKeyDefaultTypeInternal _Reply_GetPrincipalKey_default_instance_;
 PROTOBUF_CONSTEXPR Msg_SanitizeOriginKeys::Msg_SanitizeOriginKeys(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_asincewhen_)*/uint64_t{0u}
-  , /*decltype(_impl_.a_aonlyprivatebrowsing_)*/false} {}
+    /*decltype(_impl_.a_asincewhen_)*/uint64_t{0u}
+  , /*decltype(_impl_.a_aonlyprivatebrowsing_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_SanitizeOriginKeysDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_SanitizeOriginKeysDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -66,8 +66,7 @@ struct Msg_SanitizeOriginKeysDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_SanitizeOriginKeysDefaultTypeInternal _Msg_SanitizeOriginKeys_default_instance_;
 PROTOBUF_CONSTEXPR Msg___delete__::Msg___delete__(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg___delete__DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg___delete__DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -78,8 +77,7 @@ struct Msg___delete__DefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg___delete__DefaultTypeInternal _Msg___delete___default_instance_;
 PROTOBUF_CONSTEXPR Reply___delete__::Reply___delete__(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Reply___delete__DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply___delete__DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -93,6 +91,92 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace media
 }  // namespace mozilla
 }  // namespace protobuf
+static ::_pb::Metadata file_level_metadata_PMedia_2eproto[5];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PMedia_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PMedia_2eproto = nullptr;
+
+const uint32_t TableStruct_PMedia_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::media::PMedia::Msg_GetPrincipalKey, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::media::PMedia::Msg_GetPrincipalKey, _impl_.a_aprincipal_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::media::PMedia::Msg_GetPrincipalKey, _impl_.a_apersist_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::media::PMedia::Reply_GetPrincipalKey, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::media::PMedia::Reply_GetPrincipalKey, _impl_.a_akey_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::media::PMedia::Msg_SanitizeOriginKeys, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::media::PMedia::Msg_SanitizeOriginKeys, _impl_.a_asincewhen_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::media::PMedia::Msg_SanitizeOriginKeys, _impl_.a_aonlyprivatebrowsing_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::media::PMedia::Msg___delete__, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::media::PMedia::Reply___delete__, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::protobuf::mozilla::media::PMedia::Msg_GetPrincipalKey)},
+  { 8, -1, -1, sizeof(::protobuf::mozilla::media::PMedia::Reply_GetPrincipalKey)},
+  { 15, -1, -1, sizeof(::protobuf::mozilla::media::PMedia::Msg_SanitizeOriginKeys)},
+  { 23, -1, -1, sizeof(::protobuf::mozilla::media::PMedia::Msg___delete__)},
+  { 29, -1, -1, sizeof(::protobuf::mozilla::media::PMedia::Reply___delete__)},
+};
+
+static const ::_pb::Message* const file_default_instances[] = {
+  &::protobuf::mozilla::media::PMedia::_Msg_GetPrincipalKey_default_instance_._instance,
+  &::protobuf::mozilla::media::PMedia::_Reply_GetPrincipalKey_default_instance_._instance,
+  &::protobuf::mozilla::media::PMedia::_Msg_SanitizeOriginKeys_default_instance_._instance,
+  &::protobuf::mozilla::media::PMedia::_Msg___delete___default_instance_._instance,
+  &::protobuf::mozilla::media::PMedia::_Reply___delete___default_instance_._instance,
+};
+
+const char descriptor_table_protodef_PMedia_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\014PMedia.proto\022\035protobuf.mozilla.media.P"
+  "Media\032\034PBackgroundSharedTypes.proto\"d\n\023M"
+  "sg_GetPrincipalKey\0229\n\014a_aPrincipal\030\001 \001(\013"
+  "2#.protobuf.mozilla.ipc.PrincipalInfo\022\022\n"
+  "\na_aPersist\030\002 \001(\010\"\'\n\025Reply_GetPrincipalK"
+  "ey\022\016\n\006a_aKey\030\001 \001(\t\"N\n\026Msg_SanitizeOrigin"
+  "Keys\022\024\n\014a_aSinceWhen\030\001 \001(\004\022\036\n\026a_aOnlyPri"
+  "vateBrowsing\030\002 \001(\010\"\020\n\016Msg___delete__\"\022\n\020"
+  "Reply___delete__b\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_PMedia_2eproto_deps[1] = {
+  &::descriptor_table_PBackgroundSharedTypes_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_PMedia_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_PMedia_2eproto = {
+    false, false, 344, descriptor_table_protodef_PMedia_2eproto,
+    "PMedia.proto",
+    &descriptor_table_PMedia_2eproto_once, descriptor_table_PMedia_2eproto_deps, 1, 5,
+    schemas, file_default_instances, TableStruct_PMedia_2eproto::offsets,
+    file_level_metadata_PMedia_2eproto, file_level_enum_descriptors_PMedia_2eproto,
+    file_level_service_descriptors_PMedia_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PMedia_2eproto_getter() {
+  return &descriptor_table_PMedia_2eproto;
+}
+
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PMedia_2eproto(&descriptor_table_PMedia_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace media {
@@ -102,17 +186,7 @@ namespace PMedia {
 
 class Msg_GetPrincipalKey::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_GetPrincipalKey>()._impl_._has_bits_);
   static const ::protobuf::mozilla::ipc::PrincipalInfo& a_aprincipal(const Msg_GetPrincipalKey* msg);
-  static void set_has_a_aprincipal(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_apersist(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 const ::protobuf::mozilla::ipc::PrincipalInfo&
@@ -120,25 +194,26 @@ Msg_GetPrincipalKey::_Internal::a_aprincipal(const Msg_GetPrincipalKey* msg) {
   return *msg->_impl_.a_aprincipal_;
 }
 void Msg_GetPrincipalKey::clear_a_aprincipal() {
-  if (_impl_.a_aprincipal_ != nullptr) _impl_.a_aprincipal_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_aprincipal_ != nullptr) {
+    delete _impl_.a_aprincipal_;
+  }
+  _impl_.a_aprincipal_ = nullptr;
 }
 Msg_GetPrincipalKey::Msg_GetPrincipalKey(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey)
 }
 Msg_GetPrincipalKey::Msg_GetPrincipalKey(const Msg_GetPrincipalKey& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_GetPrincipalKey* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_aprincipal_){nullptr}
-    , decltype(_impl_.a_apersist_){}};
+      decltype(_impl_.a_aprincipal_){nullptr}
+    , decltype(_impl_.a_apersist_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_a_aprincipal()) {
     _this->_impl_.a_aprincipal_ = new ::protobuf::mozilla::ipc::PrincipalInfo(*from._impl_.a_aprincipal_);
   }
@@ -151,16 +226,15 @@ inline void Msg_GetPrincipalKey::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_aprincipal_){nullptr}
+      decltype(_impl_.a_aprincipal_){nullptr}
     , decltype(_impl_.a_apersist_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
 
 Msg_GetPrincipalKey::~Msg_GetPrincipalKey() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -182,24 +256,21 @@ void Msg_GetPrincipalKey::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.a_aprincipal_ != nullptr);
-    _impl_.a_aprincipal_->Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_aprincipal_ != nullptr) {
+    delete _impl_.a_aprincipal_;
   }
+  _impl_.a_aprincipal_ = nullptr;
   _impl_.a_apersist_ = false;
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_GetPrincipalKey::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipal = 1;
+      // .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipal = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_aprincipal(), ptr);
@@ -207,10 +278,9 @@ const char* Msg_GetPrincipalKey::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // required bool a_aPersist = 2;
+      // bool a_aPersist = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_a_apersist(&has_bits);
           _impl_.a_apersist_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -227,12 +297,11 @@ const char* Msg_GetPrincipalKey::_InternalParse(const char* ptr, ::_pbi::ParseCo
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -246,99 +315,73 @@ uint8_t* Msg_GetPrincipalKey::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipal = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipal = 1;
+  if (this->_internal_has_a_aprincipal()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_aprincipal(this),
         _Internal::a_aprincipal(this).GetCachedSize(), target, stream);
   }
 
-  // required bool a_aPersist = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // bool a_aPersist = 2;
+  if (this->_internal_a_apersist() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_apersist(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey)
   return target;
 }
 
-size_t Msg_GetPrincipalKey::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey)
-  size_t total_size = 0;
-
-  if (_internal_has_a_aprincipal()) {
-    // required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipal = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_aprincipal_);
-  }
-
-  if (_internal_has_a_apersist()) {
-    // required bool a_aPersist = 2;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t Msg_GetPrincipalKey::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipal = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_aprincipal_);
-
-    // required bool a_aPersist = 2;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // .protobuf.mozilla.ipc.PrincipalInfo a_aPrincipal = 1;
+  if (this->_internal_has_a_aprincipal()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_aprincipal_);
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // bool a_aPersist = 2;
+  if (this->_internal_a_apersist() != 0) {
+    total_size += 1 + 1;
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_GetPrincipalKey::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_GetPrincipalKey*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_GetPrincipalKey::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_GetPrincipalKey::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_GetPrincipalKey::GetClassData() const { return &_class_data_; }
 
-void Msg_GetPrincipalKey::MergeFrom(const Msg_GetPrincipalKey& from) {
-  Msg_GetPrincipalKey* const _this = this;
+
+void Msg_GetPrincipalKey::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_GetPrincipalKey*>(&to_msg);
+  auto& from = static_cast<const Msg_GetPrincipalKey&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_mutable_a_aprincipal()->::protobuf::mozilla::ipc::PrincipalInfo::MergeFrom(
-          from._internal_a_aprincipal());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.a_apersist_ = from._impl_.a_apersist_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (from._internal_has_a_aprincipal()) {
+    _this->_internal_mutable_a_aprincipal()->::protobuf::mozilla::ipc::PrincipalInfo::MergeFrom(
+        from._internal_a_aprincipal());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (from._internal_a_apersist() != 0) {
+    _this->_internal_set_a_apersist(from._internal_a_apersist());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_GetPrincipalKey::CopyFrom(const Msg_GetPrincipalKey& from) {
@@ -349,17 +392,12 @@ void Msg_GetPrincipalKey::CopyFrom(const Msg_GetPrincipalKey& from) {
 }
 
 bool Msg_GetPrincipalKey::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_aprincipal()) {
-    if (!_impl_.a_aprincipal_->IsInitialized()) return false;
-  }
   return true;
 }
 
 void Msg_GetPrincipalKey::InternalSwap(Msg_GetPrincipalKey* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(Msg_GetPrincipalKey, _impl_.a_apersist_)
       + sizeof(Msg_GetPrincipalKey::_impl_.a_apersist_)
@@ -368,44 +406,37 @@ void Msg_GetPrincipalKey::InternalSwap(Msg_GetPrincipalKey* other) {
           reinterpret_cast<char*>(&other->_impl_.a_aprincipal_));
 }
 
-std::string Msg_GetPrincipalKey::GetTypeName() const {
-  return "protobuf.mozilla.media.PMedia.Msg_GetPrincipalKey";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_GetPrincipalKey::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PMedia_2eproto_getter, &descriptor_table_PMedia_2eproto_once,
+      file_level_metadata_PMedia_2eproto[0]);
 }
-
 
 // ===================================================================
 
 class Reply_GetPrincipalKey::_Internal {
  public:
-  using HasBits = decltype(std::declval<Reply_GetPrincipalKey>()._impl_._has_bits_);
-  static void set_has_a_akey(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_GetPrincipalKey::Reply_GetPrincipalKey(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.media.PMedia.Reply_GetPrincipalKey)
 }
 Reply_GetPrincipalKey::Reply_GetPrincipalKey(const Reply_GetPrincipalKey& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Reply_GetPrincipalKey* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_akey_){}};
+      decltype(_impl_.a_akey_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_akey_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_akey_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_akey()) {
+  if (!from._internal_a_akey().empty()) {
     _this->_impl_.a_akey_.Set(from._internal_a_akey(), 
       _this->GetArenaForAllocation());
   }
@@ -417,9 +448,8 @@ inline void Reply_GetPrincipalKey::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_akey_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_akey_){}
   };
   _impl_.a_akey_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -429,7 +459,7 @@ inline void Reply_GetPrincipalKey::SharedCtor(
 
 Reply_GetPrincipalKey::~Reply_GetPrincipalKey() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.media.PMedia.Reply_GetPrincipalKey)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -451,27 +481,23 @@ void Reply_GetPrincipalKey::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_akey_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_akey_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Reply_GetPrincipalKey::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required string a_aKey = 1;
+      // string a_aKey = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_akey();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.media.PMedia.Reply_GetPrincipalKey.a_aKey"));
         } else
           goto handle_unusual;
         continue;
@@ -486,12 +512,11 @@ const char* Reply_GetPrincipalKey::_InternalParse(const char* ptr, ::_pbi::Parse
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -505,16 +530,19 @@ uint8_t* Reply_GetPrincipalKey::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required string a_aKey = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_aKey = 1;
+  if (!this->_internal_a_akey().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_akey().data(), static_cast<int>(this->_internal_a_akey().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.media.PMedia.Reply_GetPrincipalKey.a_aKey");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_a_akey(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.media.PMedia.Reply_GetPrincipalKey)
   return target;
@@ -524,41 +552,39 @@ size_t Reply_GetPrincipalKey::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.media.PMedia.Reply_GetPrincipalKey)
   size_t total_size = 0;
 
-  // required string a_aKey = 1;
-  if (_internal_has_a_akey()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_akey());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_aKey = 1;
+  if (!this->_internal_a_akey().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_akey());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Reply_GetPrincipalKey::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply_GetPrincipalKey*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_GetPrincipalKey::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Reply_GetPrincipalKey::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_GetPrincipalKey::GetClassData() const { return &_class_data_; }
 
-void Reply_GetPrincipalKey::MergeFrom(const Reply_GetPrincipalKey& from) {
-  Reply_GetPrincipalKey* const _this = this;
+
+void Reply_GetPrincipalKey::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Reply_GetPrincipalKey*>(&to_msg);
+  auto& from = static_cast<const Reply_GetPrincipalKey&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.media.PMedia.Reply_GetPrincipalKey)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_akey()) {
+  if (!from._internal_a_akey().empty()) {
     _this->_internal_set_a_akey(from._internal_a_akey());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Reply_GetPrincipalKey::CopyFrom(const Reply_GetPrincipalKey& from) {
@@ -569,7 +595,6 @@ void Reply_GetPrincipalKey::CopyFrom(const Reply_GetPrincipalKey& from) {
 }
 
 bool Reply_GetPrincipalKey::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -578,50 +603,39 @@ void Reply_GetPrincipalKey::InternalSwap(Reply_GetPrincipalKey* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_akey_, lhs_arena,
       &other->_impl_.a_akey_, rhs_arena
   );
 }
 
-std::string Reply_GetPrincipalKey::GetTypeName() const {
-  return "protobuf.mozilla.media.PMedia.Reply_GetPrincipalKey";
+::PROTOBUF_NAMESPACE_ID::Metadata Reply_GetPrincipalKey::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PMedia_2eproto_getter, &descriptor_table_PMedia_2eproto_once,
+      file_level_metadata_PMedia_2eproto[1]);
 }
-
 
 // ===================================================================
 
 class Msg_SanitizeOriginKeys::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_SanitizeOriginKeys>()._impl_._has_bits_);
-  static void set_has_a_asincewhen(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_aonlyprivatebrowsing(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 Msg_SanitizeOriginKeys::Msg_SanitizeOriginKeys(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.media.PMedia.Msg_SanitizeOriginKeys)
 }
 Msg_SanitizeOriginKeys::Msg_SanitizeOriginKeys(const Msg_SanitizeOriginKeys& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_SanitizeOriginKeys* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_asincewhen_){}
-    , decltype(_impl_.a_aonlyprivatebrowsing_){}};
+      decltype(_impl_.a_asincewhen_){}
+    , decltype(_impl_.a_aonlyprivatebrowsing_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::memcpy(&_impl_.a_asincewhen_, &from._impl_.a_asincewhen_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_aonlyprivatebrowsing_) -
     reinterpret_cast<char*>(&_impl_.a_asincewhen_)) + sizeof(_impl_.a_aonlyprivatebrowsing_));
@@ -633,16 +647,15 @@ inline void Msg_SanitizeOriginKeys::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_asincewhen_){uint64_t{0u}}
+      decltype(_impl_.a_asincewhen_){uint64_t{0u}}
     , decltype(_impl_.a_aonlyprivatebrowsing_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
 
 Msg_SanitizeOriginKeys::~Msg_SanitizeOriginKeys() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.media.PMedia.Msg_SanitizeOriginKeys)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -663,36 +676,29 @@ void Msg_SanitizeOriginKeys::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    ::memset(&_impl_.a_asincewhen_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.a_aonlyprivatebrowsing_) -
-        reinterpret_cast<char*>(&_impl_.a_asincewhen_)) + sizeof(_impl_.a_aonlyprivatebrowsing_));
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  ::memset(&_impl_.a_asincewhen_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.a_aonlyprivatebrowsing_) -
+      reinterpret_cast<char*>(&_impl_.a_asincewhen_)) + sizeof(_impl_.a_aonlyprivatebrowsing_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_SanitizeOriginKeys::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required uint64 a_aSinceWhen = 1;
+      // uint64 a_aSinceWhen = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_a_asincewhen(&has_bits);
           _impl_.a_asincewhen_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool a_aOnlyPrivateBrowsing = 2;
+      // bool a_aOnlyPrivateBrowsing = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _Internal::set_has_a_aonlyprivatebrowsing(&has_bits);
           _impl_.a_aonlyprivatebrowsing_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -709,12 +715,11 @@ const char* Msg_SanitizeOriginKeys::_InternalParse(const char* ptr, ::_pbi::Pars
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -728,93 +733,69 @@ uint8_t* Msg_SanitizeOriginKeys::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required uint64 a_aSinceWhen = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // uint64 a_aSinceWhen = 1;
+  if (this->_internal_a_asincewhen() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_a_asincewhen(), target);
   }
 
-  // required bool a_aOnlyPrivateBrowsing = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // bool a_aOnlyPrivateBrowsing = 2;
+  if (this->_internal_a_aonlyprivatebrowsing() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_a_aonlyprivatebrowsing(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.media.PMedia.Msg_SanitizeOriginKeys)
   return target;
 }
 
-size_t Msg_SanitizeOriginKeys::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.media.PMedia.Msg_SanitizeOriginKeys)
-  size_t total_size = 0;
-
-  if (_internal_has_a_asincewhen()) {
-    // required uint64 a_aSinceWhen = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_asincewhen());
-  }
-
-  if (_internal_has_a_aonlyprivatebrowsing()) {
-    // required bool a_aOnlyPrivateBrowsing = 2;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t Msg_SanitizeOriginKeys::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.media.PMedia.Msg_SanitizeOriginKeys)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required uint64 a_aSinceWhen = 1;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_asincewhen());
-
-    // required bool a_aOnlyPrivateBrowsing = 2;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // uint64 a_aSinceWhen = 1;
+  if (this->_internal_a_asincewhen() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_asincewhen());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // bool a_aOnlyPrivateBrowsing = 2;
+  if (this->_internal_a_aonlyprivatebrowsing() != 0) {
+    total_size += 1 + 1;
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_SanitizeOriginKeys::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_SanitizeOriginKeys*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_SanitizeOriginKeys::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_SanitizeOriginKeys::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_SanitizeOriginKeys::GetClassData() const { return &_class_data_; }
 
-void Msg_SanitizeOriginKeys::MergeFrom(const Msg_SanitizeOriginKeys& from) {
-  Msg_SanitizeOriginKeys* const _this = this;
+
+void Msg_SanitizeOriginKeys::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_SanitizeOriginKeys*>(&to_msg);
+  auto& from = static_cast<const Msg_SanitizeOriginKeys&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.media.PMedia.Msg_SanitizeOriginKeys)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_impl_.a_asincewhen_ = from._impl_.a_asincewhen_;
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.a_aonlyprivatebrowsing_ = from._impl_.a_aonlyprivatebrowsing_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (from._internal_a_asincewhen() != 0) {
+    _this->_internal_set_a_asincewhen(from._internal_a_asincewhen());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (from._internal_a_aonlyprivatebrowsing() != 0) {
+    _this->_internal_set_a_aonlyprivatebrowsing(from._internal_a_aonlyprivatebrowsing());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_SanitizeOriginKeys::CopyFrom(const Msg_SanitizeOriginKeys& from) {
@@ -825,14 +806,12 @@ void Msg_SanitizeOriginKeys::CopyFrom(const Msg_SanitizeOriginKeys& from) {
 }
 
 bool Msg_SanitizeOriginKeys::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
 void Msg_SanitizeOriginKeys::InternalSwap(Msg_SanitizeOriginKeys* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(Msg_SanitizeOriginKeys, _impl_.a_aonlyprivatebrowsing_)
       + sizeof(Msg_SanitizeOriginKeys::_impl_.a_aonlyprivatebrowsing_)
@@ -841,10 +820,11 @@ void Msg_SanitizeOriginKeys::InternalSwap(Msg_SanitizeOriginKeys* other) {
           reinterpret_cast<char*>(&other->_impl_.a_asincewhen_));
 }
 
-std::string Msg_SanitizeOriginKeys::GetTypeName() const {
-  return "protobuf.mozilla.media.PMedia.Msg_SanitizeOriginKeys";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_SanitizeOriginKeys::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PMedia_2eproto_getter, &descriptor_table_PMedia_2eproto_once,
+      file_level_metadata_PMedia_2eproto[2]);
 }
-
 
 // ===================================================================
 
@@ -854,145 +834,37 @@ class Msg___delete__::_Internal {
 
 Msg___delete__::Msg___delete__(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.media.PMedia.Msg___delete__)
 }
 Msg___delete__::Msg___delete__(const Msg___delete__& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg___delete__* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.media.PMedia.Msg___delete__)
 }
 
-inline void Msg___delete__::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg___delete__::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg___delete__::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg___delete__::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PMedia_2eproto_getter, &descriptor_table_PMedia_2eproto_once,
+      file_level_metadata_PMedia_2eproto[3]);
 }
-
-Msg___delete__::~Msg___delete__() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.media.PMedia.Msg___delete__)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg___delete__::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg___delete__::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg___delete__::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.media.PMedia.Msg___delete__)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg___delete__::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.media.PMedia.Msg___delete__)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.media.PMedia.Msg___delete__)
-  return target;
-}
-
-size_t Msg___delete__::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.media.PMedia.Msg___delete__)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg___delete__::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg___delete__*>(
-      &from));
-}
-
-void Msg___delete__::MergeFrom(const Msg___delete__& from) {
-  Msg___delete__* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.media.PMedia.Msg___delete__)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg___delete__::CopyFrom(const Msg___delete__& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.media.PMedia.Msg___delete__)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg___delete__::IsInitialized() const {
-  return true;
-}
-
-void Msg___delete__::InternalSwap(Msg___delete__* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg___delete__::GetTypeName() const {
-  return "protobuf.mozilla.media.PMedia.Msg___delete__";
-}
-
 
 // ===================================================================
 
@@ -1002,145 +874,37 @@ class Reply___delete__::_Internal {
 
 Reply___delete__::Reply___delete__(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.media.PMedia.Reply___delete__)
 }
 Reply___delete__::Reply___delete__(const Reply___delete__& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Reply___delete__* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.media.PMedia.Reply___delete__)
 }
 
-inline void Reply___delete__::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply___delete__::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply___delete__::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Reply___delete__::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PMedia_2eproto_getter, &descriptor_table_PMedia_2eproto_once,
+      file_level_metadata_PMedia_2eproto[4]);
 }
-
-Reply___delete__::~Reply___delete__() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.media.PMedia.Reply___delete__)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Reply___delete__::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Reply___delete__::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Reply___delete__::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.media.PMedia.Reply___delete__)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Reply___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Reply___delete__::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.media.PMedia.Reply___delete__)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.media.PMedia.Reply___delete__)
-  return target;
-}
-
-size_t Reply___delete__::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.media.PMedia.Reply___delete__)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Reply___delete__::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply___delete__*>(
-      &from));
-}
-
-void Reply___delete__::MergeFrom(const Reply___delete__& from) {
-  Reply___delete__* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.media.PMedia.Reply___delete__)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Reply___delete__::CopyFrom(const Reply___delete__& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.media.PMedia.Reply___delete__)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Reply___delete__::IsInitialized() const {
-  return true;
-}
-
-void Reply___delete__::InternalSwap(Reply___delete__* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Reply___delete__::GetTypeName() const {
-  return "protobuf.mozilla.media.PMedia.Reply___delete__";
-}
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace PMedia

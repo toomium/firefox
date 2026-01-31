@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/ipc/ipdl/test/gtest/PTestManyChildAllocs.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla._ipdltest.PTestManyChildAllocs;
 
@@ -22,7 +21,7 @@ message Msg_Done {
 }
 
 message Msg_PTestManyChildAllocsSubConstructor {
-  required sint64 a_actorid = 1;
+  sint64 a_actorid = 1;
 }
 
 message Reply_PTestManyChildAllocsSubConstructor {

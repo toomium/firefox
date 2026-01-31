@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto
@@ -41,6 +43,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -60,7 +63,7 @@ namespace dom {
 // ===================================================================
 
 class MemoryReport final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.MemoryReport) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.MemoryReport) */ {
  public:
   inline MemoryReport() : MemoryReport(nullptr) {}
   ~MemoryReport() override;
@@ -90,13 +93,15 @@ class MemoryReport final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const MemoryReport& default_instance() {
     return *internal_default_instance();
   }
@@ -134,9 +139,15 @@ class MemoryReport final :
   MemoryReport* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<MemoryReport>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const MemoryReport& from);
-  void MergeFrom(const MemoryReport& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const MemoryReport& from) {
+    MemoryReport::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -149,7 +160,7 @@ class MemoryReport final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(MemoryReport* other);
 
   private:
@@ -162,7 +173,10 @@ class MemoryReport final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -177,11 +191,7 @@ class MemoryReport final :
     kAAmountFieldNumber = 5,
     kAGenerationFieldNumber = 6,
   };
-  // required string a_process = 1;
-  bool has_a_process() const;
-  private:
-  bool _internal_has_a_process() const;
-  public:
+  // string a_process = 1;
   void clear_a_process();
   const std::string& a_process() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -195,11 +205,7 @@ class MemoryReport final :
   std::string* _internal_mutable_a_process();
   public:
 
-  // required string a_path = 2;
-  bool has_a_path() const;
-  private:
-  bool _internal_has_a_path() const;
-  public:
+  // string a_path = 2;
   void clear_a_path();
   const std::string& a_path() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -213,11 +219,7 @@ class MemoryReport final :
   std::string* _internal_mutable_a_path();
   public:
 
-  // required string a_desc = 7;
-  bool has_a_desc() const;
-  private:
-  bool _internal_has_a_desc() const;
-  public:
+  // string a_desc = 7;
   void clear_a_desc();
   const std::string& a_desc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -231,11 +233,7 @@ class MemoryReport final :
   std::string* _internal_mutable_a_desc();
   public:
 
-  // required sint32 a_kind = 3;
-  bool has_a_kind() const;
-  private:
-  bool _internal_has_a_kind() const;
-  public:
+  // sint32 a_kind = 3;
   void clear_a_kind();
   int32_t a_kind() const;
   void set_a_kind(int32_t value);
@@ -244,11 +242,7 @@ class MemoryReport final :
   void _internal_set_a_kind(int32_t value);
   public:
 
-  // required sint32 a_units = 4;
-  bool has_a_units() const;
-  private:
-  bool _internal_has_a_units() const;
-  public:
+  // sint32 a_units = 4;
   void clear_a_units();
   int32_t a_units() const;
   void set_a_units(int32_t value);
@@ -257,11 +251,7 @@ class MemoryReport final :
   void _internal_set_a_units(int32_t value);
   public:
 
-  // required sint64 a_amount = 5;
-  bool has_a_amount() const;
-  private:
-  bool _internal_has_a_amount() const;
-  public:
+  // sint64 a_amount = 5;
   void clear_a_amount();
   int64_t a_amount() const;
   void set_a_amount(int64_t value);
@@ -270,11 +260,7 @@ class MemoryReport final :
   void _internal_set_a_amount(int64_t value);
   public:
 
-  // required uint32 a_generation = 6;
-  bool has_a_generation() const;
-  private:
-  bool _internal_has_a_generation() const;
-  public:
+  // uint32 a_generation = 6;
   void clear_a_generation();
   uint32_t a_generation() const;
   void set_a_generation(uint32_t value);
@@ -287,15 +273,10 @@ class MemoryReport final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_process_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_path_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_desc_;
@@ -303,6 +284,7 @@ class MemoryReport final :
     int32_t a_units_;
     int64_t a_amount_;
     uint32_t a_generation_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_MemoryReportTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -318,17 +300,9 @@ class MemoryReport final :
 #endif  // __GNUC__
 // MemoryReport
 
-// required string a_process = 1;
-inline bool MemoryReport::_internal_has_a_process() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool MemoryReport::has_a_process() const {
-  return _internal_has_a_process();
-}
+// string a_process = 1;
 inline void MemoryReport::clear_a_process() {
   _impl_.a_process_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& MemoryReport::a_process() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MemoryReport.a_process)
@@ -337,7 +311,7 @@ inline const std::string& MemoryReport::a_process() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void MemoryReport::set_a_process(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_process_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MemoryReport.a_process)
 }
@@ -350,32 +324,22 @@ inline const std::string& MemoryReport::_internal_a_process() const {
   return _impl_.a_process_.Get();
 }
 inline void MemoryReport::_internal_set_a_process(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_process_.Set(value, GetArenaForAllocation());
 }
 inline std::string* MemoryReport::_internal_mutable_a_process() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_process_.Mutable(GetArenaForAllocation());
 }
 inline std::string* MemoryReport::release_a_process() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.MemoryReport.a_process)
-  if (!_internal_has_a_process()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_process_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_process_.IsDefault()) {
-    _impl_.a_process_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_process_.Release();
 }
 inline void MemoryReport::set_allocated_a_process(std::string* a_process) {
   if (a_process != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_process_.SetAllocated(a_process, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -386,17 +350,9 @@ inline void MemoryReport::set_allocated_a_process(std::string* a_process) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MemoryReport.a_process)
 }
 
-// required string a_path = 2;
-inline bool MemoryReport::_internal_has_a_path() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool MemoryReport::has_a_path() const {
-  return _internal_has_a_path();
-}
+// string a_path = 2;
 inline void MemoryReport::clear_a_path() {
   _impl_.a_path_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& MemoryReport::a_path() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MemoryReport.a_path)
@@ -405,7 +361,7 @@ inline const std::string& MemoryReport::a_path() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void MemoryReport::set_a_path(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_path_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MemoryReport.a_path)
 }
@@ -418,32 +374,22 @@ inline const std::string& MemoryReport::_internal_a_path() const {
   return _impl_.a_path_.Get();
 }
 inline void MemoryReport::_internal_set_a_path(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_path_.Set(value, GetArenaForAllocation());
 }
 inline std::string* MemoryReport::_internal_mutable_a_path() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_path_.Mutable(GetArenaForAllocation());
 }
 inline std::string* MemoryReport::release_a_path() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.MemoryReport.a_path)
-  if (!_internal_has_a_path()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_path_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_path_.IsDefault()) {
-    _impl_.a_path_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_path_.Release();
 }
 inline void MemoryReport::set_allocated_a_path(std::string* a_path) {
   if (a_path != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_path_.SetAllocated(a_path, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -454,17 +400,9 @@ inline void MemoryReport::set_allocated_a_path(std::string* a_path) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.MemoryReport.a_path)
 }
 
-// required sint32 a_kind = 3;
-inline bool MemoryReport::_internal_has_a_kind() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool MemoryReport::has_a_kind() const {
-  return _internal_has_a_kind();
-}
+// sint32 a_kind = 3;
 inline void MemoryReport::clear_a_kind() {
   _impl_.a_kind_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline int32_t MemoryReport::_internal_a_kind() const {
   return _impl_.a_kind_;
@@ -474,7 +412,7 @@ inline int32_t MemoryReport::a_kind() const {
   return _internal_a_kind();
 }
 inline void MemoryReport::_internal_set_a_kind(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_kind_ = value;
 }
 inline void MemoryReport::set_a_kind(int32_t value) {
@@ -482,17 +420,9 @@ inline void MemoryReport::set_a_kind(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MemoryReport.a_kind)
 }
 
-// required sint32 a_units = 4;
-inline bool MemoryReport::_internal_has_a_units() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool MemoryReport::has_a_units() const {
-  return _internal_has_a_units();
-}
+// sint32 a_units = 4;
 inline void MemoryReport::clear_a_units() {
   _impl_.a_units_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline int32_t MemoryReport::_internal_a_units() const {
   return _impl_.a_units_;
@@ -502,7 +432,7 @@ inline int32_t MemoryReport::a_units() const {
   return _internal_a_units();
 }
 inline void MemoryReport::_internal_set_a_units(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_units_ = value;
 }
 inline void MemoryReport::set_a_units(int32_t value) {
@@ -510,17 +440,9 @@ inline void MemoryReport::set_a_units(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MemoryReport.a_units)
 }
 
-// required sint64 a_amount = 5;
-inline bool MemoryReport::_internal_has_a_amount() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool MemoryReport::has_a_amount() const {
-  return _internal_has_a_amount();
-}
+// sint64 a_amount = 5;
 inline void MemoryReport::clear_a_amount() {
   _impl_.a_amount_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline int64_t MemoryReport::_internal_a_amount() const {
   return _impl_.a_amount_;
@@ -530,7 +452,7 @@ inline int64_t MemoryReport::a_amount() const {
   return _internal_a_amount();
 }
 inline void MemoryReport::_internal_set_a_amount(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   _impl_.a_amount_ = value;
 }
 inline void MemoryReport::set_a_amount(int64_t value) {
@@ -538,17 +460,9 @@ inline void MemoryReport::set_a_amount(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MemoryReport.a_amount)
 }
 
-// required uint32 a_generation = 6;
-inline bool MemoryReport::_internal_has_a_generation() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool MemoryReport::has_a_generation() const {
-  return _internal_has_a_generation();
-}
+// uint32 a_generation = 6;
 inline void MemoryReport::clear_a_generation() {
   _impl_.a_generation_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline uint32_t MemoryReport::_internal_a_generation() const {
   return _impl_.a_generation_;
@@ -558,7 +472,7 @@ inline uint32_t MemoryReport::a_generation() const {
   return _internal_a_generation();
 }
 inline void MemoryReport::_internal_set_a_generation(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000040u;
+  
   _impl_.a_generation_ = value;
 }
 inline void MemoryReport::set_a_generation(uint32_t value) {
@@ -566,17 +480,9 @@ inline void MemoryReport::set_a_generation(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MemoryReport.a_generation)
 }
 
-// required string a_desc = 7;
-inline bool MemoryReport::_internal_has_a_desc() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool MemoryReport::has_a_desc() const {
-  return _internal_has_a_desc();
-}
+// string a_desc = 7;
 inline void MemoryReport::clear_a_desc() {
   _impl_.a_desc_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& MemoryReport::a_desc() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.MemoryReport.a_desc)
@@ -585,7 +491,7 @@ inline const std::string& MemoryReport::a_desc() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void MemoryReport::set_a_desc(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_desc_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.MemoryReport.a_desc)
 }
@@ -598,32 +504,22 @@ inline const std::string& MemoryReport::_internal_a_desc() const {
   return _impl_.a_desc_.Get();
 }
 inline void MemoryReport::_internal_set_a_desc(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_desc_.Set(value, GetArenaForAllocation());
 }
 inline std::string* MemoryReport::_internal_mutable_a_desc() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_desc_.Mutable(GetArenaForAllocation());
 }
 inline std::string* MemoryReport::release_a_desc() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.MemoryReport.a_desc)
-  if (!_internal_has_a_desc()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_desc_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_desc_.IsDefault()) {
-    _impl_.a_desc_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_desc_.Release();
 }
 inline void MemoryReport::set_allocated_a_desc(std::string* a_desc) {
   if (a_desc != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_desc_.SetAllocated(a_desc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

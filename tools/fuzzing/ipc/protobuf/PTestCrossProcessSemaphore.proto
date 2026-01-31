@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/ipc/ipdl/test/gtest/PTestCrossProcessSemaphore.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla._ipdltest.PTestCrossProcessSemaphore;
 
@@ -14,7 +13,7 @@ package protobuf.mozilla._ipdltest.PTestCrossProcessSemaphore;
 
 // Message declarations
 message Msg_CrossProcessSemaphore {
-  required bytes a_aSem = 1;
+  bytes a_aSem = 1;
 }
 
 // Parameter mappings stats:

@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/network/PTCPServerSocket.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.net.PTCPServerSocket;
 
@@ -22,7 +21,7 @@ message Msg_RequestDelete {
 }
 
 message Msg_CallbackAccept {
-  required bytes a_socket = 1;
+  bytes a_socket = 1;
 }
 
 message Msg___delete__ {

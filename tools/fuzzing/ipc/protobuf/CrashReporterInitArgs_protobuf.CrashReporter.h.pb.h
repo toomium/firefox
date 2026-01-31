@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_CrashReporterInitArgs_5fprotobuf_2eCrashReporter_2eh_2eproto
@@ -41,6 +43,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_CrashReporterInitArgs_5fprotobuf_2eCrashReporter_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_CrashReporterInitArgs_5fprotobuf_2eCrashReporter_2eh_2eproto;
 namespace protobuf {
 namespace CrashReporter {
 class CrashReporterInitArgs;
@@ -57,7 +60,7 @@ namespace CrashReporter {
 // ===================================================================
 
 class CrashReporterInitArgs final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.CrashReporter.CrashReporterInitArgs) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.CrashReporter.CrashReporterInitArgs) */ {
  public:
   inline CrashReporterInitArgs() : CrashReporterInitArgs(nullptr) {}
   ~CrashReporterInitArgs() override;
@@ -87,13 +90,15 @@ class CrashReporterInitArgs final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const CrashReporterInitArgs& default_instance() {
     return *internal_default_instance();
   }
@@ -131,9 +136,15 @@ class CrashReporterInitArgs final :
   CrashReporterInitArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<CrashReporterInitArgs>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const CrashReporterInitArgs& from);
-  void MergeFrom(const CrashReporterInitArgs& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const CrashReporterInitArgs& from) {
+    CrashReporterInitArgs::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -146,7 +157,7 @@ class CrashReporterInitArgs final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(CrashReporterInitArgs* other);
 
   private:
@@ -159,7 +170,10 @@ class CrashReporterInitArgs final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -168,11 +182,7 @@ class CrashReporterInitArgs final :
   enum : int {
     kAThreadIdFieldNumber = 1,
   };
-  // required bytes a_threadId = 1;
-  bool has_a_threadid() const;
-  private:
-  bool _internal_has_a_threadid() const;
-  public:
+  // bytes a_threadId = 1;
   void clear_a_threadid();
   const std::string& a_threadid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -194,9 +204,8 @@ class CrashReporterInitArgs final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_threadid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_CrashReporterInitArgs_5fprotobuf_2eCrashReporter_2eh_2eproto;
@@ -212,17 +221,9 @@ class CrashReporterInitArgs final :
 #endif  // __GNUC__
 // CrashReporterInitArgs
 
-// required bytes a_threadId = 1;
-inline bool CrashReporterInitArgs::_internal_has_a_threadid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool CrashReporterInitArgs::has_a_threadid() const {
-  return _internal_has_a_threadid();
-}
+// bytes a_threadId = 1;
 inline void CrashReporterInitArgs::clear_a_threadid() {
   _impl_.a_threadid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& CrashReporterInitArgs::a_threadid() const {
   // @@protoc_insertion_point(field_get:protobuf.CrashReporter.CrashReporterInitArgs.a_threadId)
@@ -231,7 +232,7 @@ inline const std::string& CrashReporterInitArgs::a_threadid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void CrashReporterInitArgs::set_a_threadid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_threadid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.CrashReporter.CrashReporterInitArgs.a_threadId)
 }
@@ -244,32 +245,22 @@ inline const std::string& CrashReporterInitArgs::_internal_a_threadid() const {
   return _impl_.a_threadid_.Get();
 }
 inline void CrashReporterInitArgs::_internal_set_a_threadid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_threadid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* CrashReporterInitArgs::_internal_mutable_a_threadid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_threadid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* CrashReporterInitArgs::release_a_threadid() {
   // @@protoc_insertion_point(field_release:protobuf.CrashReporter.CrashReporterInitArgs.a_threadId)
-  if (!_internal_has_a_threadid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_threadid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_threadid_.IsDefault()) {
-    _impl_.a_threadid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_threadid_.Release();
 }
 inline void CrashReporterInitArgs::set_allocated_a_threadid(std::string* a_threadid) {
   if (a_threadid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_threadid_.SetAllocated(a_threadid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

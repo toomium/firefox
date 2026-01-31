@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "NeckoChannelParams.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -42,6 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PHttpConnectionMgr_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PHttpConnectionMgr_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace net {
@@ -104,10 +108,9 @@ namespace PHttpConnectionMgr {
 // ===================================================================
 
 class Msg___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Msg___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Msg___delete__) */ {
  public:
   inline Msg___delete__() : Msg___delete__(nullptr) {}
-  ~Msg___delete__() override;
   explicit PROTOBUF_CONSTEXPR Msg___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg___delete__(const Msg___delete__& from);
@@ -134,13 +137,15 @@ class Msg___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -178,23 +183,15 @@ class Msg___delete__ final :
   Msg___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg___delete__& from);
-  void MergeFrom(const Msg___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -206,7 +203,10 @@ class Msg___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -220,18 +220,15 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PHttpConnectionMgr_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Reply___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Reply___delete__) */ {
  public:
   inline Reply___delete__() : Reply___delete__(nullptr) {}
-  ~Reply___delete__() override;
   explicit PROTOBUF_CONSTEXPR Reply___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply___delete__(const Reply___delete__& from);
@@ -258,13 +255,15 @@ class Reply___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -302,23 +301,15 @@ class Reply___delete__ final :
   Reply___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply___delete__& from);
-  void MergeFrom(const Reply___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -330,7 +321,10 @@ class Reply___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -344,15 +338,13 @@ class Reply___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PHttpConnectionMgr_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_DoShiftReloadConnectionCleanupWithConnInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Msg_DoShiftReloadConnectionCleanupWithConnInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Msg_DoShiftReloadConnectionCleanupWithConnInfo) */ {
  public:
   inline Msg_DoShiftReloadConnectionCleanupWithConnInfo() : Msg_DoShiftReloadConnectionCleanupWithConnInfo(nullptr) {}
   ~Msg_DoShiftReloadConnectionCleanupWithConnInfo() override;
@@ -382,13 +374,15 @@ class Msg_DoShiftReloadConnectionCleanupWithConnInfo final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_DoShiftReloadConnectionCleanupWithConnInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -426,9 +420,15 @@ class Msg_DoShiftReloadConnectionCleanupWithConnInfo final :
   Msg_DoShiftReloadConnectionCleanupWithConnInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_DoShiftReloadConnectionCleanupWithConnInfo>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_DoShiftReloadConnectionCleanupWithConnInfo& from);
-  void MergeFrom(const Msg_DoShiftReloadConnectionCleanupWithConnInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_DoShiftReloadConnectionCleanupWithConnInfo& from) {
+    Msg_DoShiftReloadConnectionCleanupWithConnInfo::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -441,7 +441,7 @@ class Msg_DoShiftReloadConnectionCleanupWithConnInfo final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_DoShiftReloadConnectionCleanupWithConnInfo* other);
 
   private:
@@ -454,7 +454,10 @@ class Msg_DoShiftReloadConnectionCleanupWithConnInfo final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -463,7 +466,7 @@ class Msg_DoShiftReloadConnectionCleanupWithConnInfo final :
   enum : int {
     kAAArgsFieldNumber = 1,
   };
-  // required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aArgs = 1;
+  // .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aArgs = 1;
   bool has_a_aargs() const;
   private:
   bool _internal_has_a_aargs() const;
@@ -489,9 +492,8 @@ class Msg_DoShiftReloadConnectionCleanupWithConnInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* a_aargs_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHttpConnectionMgr_2eproto;
@@ -499,7 +501,7 @@ class Msg_DoShiftReloadConnectionCleanupWithConnInfo final :
 // -------------------------------------------------------------------
 
 class Msg_UpdateCurrentBrowserId final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Msg_UpdateCurrentBrowserId) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Msg_UpdateCurrentBrowserId) */ {
  public:
   inline Msg_UpdateCurrentBrowserId() : Msg_UpdateCurrentBrowserId(nullptr) {}
   ~Msg_UpdateCurrentBrowserId() override;
@@ -529,13 +531,15 @@ class Msg_UpdateCurrentBrowserId final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_UpdateCurrentBrowserId& default_instance() {
     return *internal_default_instance();
   }
@@ -573,9 +577,15 @@ class Msg_UpdateCurrentBrowserId final :
   Msg_UpdateCurrentBrowserId* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_UpdateCurrentBrowserId>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_UpdateCurrentBrowserId& from);
-  void MergeFrom(const Msg_UpdateCurrentBrowserId& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_UpdateCurrentBrowserId& from) {
+    Msg_UpdateCurrentBrowserId::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -588,7 +598,7 @@ class Msg_UpdateCurrentBrowserId final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_UpdateCurrentBrowserId* other);
 
   private:
@@ -601,7 +611,10 @@ class Msg_UpdateCurrentBrowserId final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -610,11 +623,7 @@ class Msg_UpdateCurrentBrowserId final :
   enum : int {
     kAAIdFieldNumber = 1,
   };
-  // required uint64 a_aId = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aId = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -631,9 +640,8 @@ class Msg_UpdateCurrentBrowserId final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHttpConnectionMgr_2eproto;
@@ -641,7 +649,7 @@ class Msg_UpdateCurrentBrowserId final :
 // -------------------------------------------------------------------
 
 class Msg_AddTransaction final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransaction) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransaction) */ {
  public:
   inline Msg_AddTransaction() : Msg_AddTransaction(nullptr) {}
   ~Msg_AddTransaction() override;
@@ -671,13 +679,15 @@ class Msg_AddTransaction final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_AddTransaction& default_instance() {
     return *internal_default_instance();
   }
@@ -715,9 +725,15 @@ class Msg_AddTransaction final :
   Msg_AddTransaction* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_AddTransaction>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_AddTransaction& from);
-  void MergeFrom(const Msg_AddTransaction& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_AddTransaction& from) {
+    Msg_AddTransaction::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -730,7 +746,7 @@ class Msg_AddTransaction final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_AddTransaction* other);
 
   private:
@@ -743,7 +759,10 @@ class Msg_AddTransaction final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -753,11 +772,7 @@ class Msg_AddTransaction final :
     kAATransFieldNumber = 1,
     kAAPriorityFieldNumber = 2,
   };
-  // required bytes a_aTrans = 1;
-  bool has_a_atrans() const;
-  private:
-  bool _internal_has_a_atrans() const;
-  public:
+  // bytes a_aTrans = 1;
   void clear_a_atrans();
   const std::string& a_atrans() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -771,11 +786,7 @@ class Msg_AddTransaction final :
   std::string* _internal_mutable_a_atrans();
   public:
 
-  // required sint32 a_aPriority = 2;
-  bool has_a_apriority() const;
-  private:
-  bool _internal_has_a_apriority() const;
-  public:
+  // sint32 a_aPriority = 2;
   void clear_a_apriority();
   int32_t a_apriority() const;
   void set_a_apriority(int32_t value);
@@ -788,17 +799,13 @@ class Msg_AddTransaction final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atrans_;
     int32_t a_apriority_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHttpConnectionMgr_2eproto;
@@ -806,7 +813,7 @@ class Msg_AddTransaction final :
 // -------------------------------------------------------------------
 
 class Msg_AddTransactionWithStickyConn final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransactionWithStickyConn) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransactionWithStickyConn) */ {
  public:
   inline Msg_AddTransactionWithStickyConn() : Msg_AddTransactionWithStickyConn(nullptr) {}
   ~Msg_AddTransactionWithStickyConn() override;
@@ -836,13 +843,15 @@ class Msg_AddTransactionWithStickyConn final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_AddTransactionWithStickyConn& default_instance() {
     return *internal_default_instance();
   }
@@ -880,9 +889,15 @@ class Msg_AddTransactionWithStickyConn final :
   Msg_AddTransactionWithStickyConn* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_AddTransactionWithStickyConn>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_AddTransactionWithStickyConn& from);
-  void MergeFrom(const Msg_AddTransactionWithStickyConn& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_AddTransactionWithStickyConn& from) {
+    Msg_AddTransactionWithStickyConn::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -895,7 +910,7 @@ class Msg_AddTransactionWithStickyConn final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_AddTransactionWithStickyConn* other);
 
   private:
@@ -908,7 +923,10 @@ class Msg_AddTransactionWithStickyConn final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -919,11 +937,7 @@ class Msg_AddTransactionWithStickyConn final :
     kAATransWithStickyConnFieldNumber = 3,
     kAAPriorityFieldNumber = 2,
   };
-  // required bytes a_aTrans = 1;
-  bool has_a_atrans() const;
-  private:
-  bool _internal_has_a_atrans() const;
-  public:
+  // bytes a_aTrans = 1;
   void clear_a_atrans();
   const std::string& a_atrans() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -937,11 +951,7 @@ class Msg_AddTransactionWithStickyConn final :
   std::string* _internal_mutable_a_atrans();
   public:
 
-  // required bytes a_aTransWithStickyConn = 3;
-  bool has_a_atranswithstickyconn() const;
-  private:
-  bool _internal_has_a_atranswithstickyconn() const;
-  public:
+  // bytes a_aTransWithStickyConn = 3;
   void clear_a_atranswithstickyconn();
   const std::string& a_atranswithstickyconn() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -955,11 +965,7 @@ class Msg_AddTransactionWithStickyConn final :
   std::string* _internal_mutable_a_atranswithstickyconn();
   public:
 
-  // required sint32 a_aPriority = 2;
-  bool has_a_apriority() const;
-  private:
-  bool _internal_has_a_apriority() const;
-  public:
+  // sint32 a_aPriority = 2;
   void clear_a_apriority();
   int32_t a_apriority() const;
   void set_a_apriority(int32_t value);
@@ -972,18 +978,14 @@ class Msg_AddTransactionWithStickyConn final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atrans_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atranswithstickyconn_;
     int32_t a_apriority_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHttpConnectionMgr_2eproto;
@@ -991,7 +993,7 @@ class Msg_AddTransactionWithStickyConn final :
 // -------------------------------------------------------------------
 
 class Msg_RescheduleTransaction final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Msg_RescheduleTransaction) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Msg_RescheduleTransaction) */ {
  public:
   inline Msg_RescheduleTransaction() : Msg_RescheduleTransaction(nullptr) {}
   ~Msg_RescheduleTransaction() override;
@@ -1021,13 +1023,15 @@ class Msg_RescheduleTransaction final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_RescheduleTransaction& default_instance() {
     return *internal_default_instance();
   }
@@ -1065,9 +1069,15 @@ class Msg_RescheduleTransaction final :
   Msg_RescheduleTransaction* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_RescheduleTransaction>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_RescheduleTransaction& from);
-  void MergeFrom(const Msg_RescheduleTransaction& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_RescheduleTransaction& from) {
+    Msg_RescheduleTransaction::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1080,7 +1090,7 @@ class Msg_RescheduleTransaction final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_RescheduleTransaction* other);
 
   private:
@@ -1093,7 +1103,10 @@ class Msg_RescheduleTransaction final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1103,11 +1116,7 @@ class Msg_RescheduleTransaction final :
     kAATransFieldNumber = 1,
     kAAPriorityFieldNumber = 2,
   };
-  // required bytes a_aTrans = 1;
-  bool has_a_atrans() const;
-  private:
-  bool _internal_has_a_atrans() const;
-  public:
+  // bytes a_aTrans = 1;
   void clear_a_atrans();
   const std::string& a_atrans() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1121,11 +1130,7 @@ class Msg_RescheduleTransaction final :
   std::string* _internal_mutable_a_atrans();
   public:
 
-  // required sint32 a_aPriority = 2;
-  bool has_a_apriority() const;
-  private:
-  bool _internal_has_a_apriority() const;
-  public:
+  // sint32 a_aPriority = 2;
   void clear_a_apriority();
   int32_t a_apriority() const;
   void set_a_apriority(int32_t value);
@@ -1138,17 +1143,13 @@ class Msg_RescheduleTransaction final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atrans_;
     int32_t a_apriority_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHttpConnectionMgr_2eproto;
@@ -1156,7 +1157,7 @@ class Msg_RescheduleTransaction final :
 // -------------------------------------------------------------------
 
 class Msg_UpdateClassOfServiceOnTransaction final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Msg_UpdateClassOfServiceOnTransaction) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Msg_UpdateClassOfServiceOnTransaction) */ {
  public:
   inline Msg_UpdateClassOfServiceOnTransaction() : Msg_UpdateClassOfServiceOnTransaction(nullptr) {}
   ~Msg_UpdateClassOfServiceOnTransaction() override;
@@ -1186,13 +1187,15 @@ class Msg_UpdateClassOfServiceOnTransaction final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_UpdateClassOfServiceOnTransaction& default_instance() {
     return *internal_default_instance();
   }
@@ -1230,9 +1233,15 @@ class Msg_UpdateClassOfServiceOnTransaction final :
   Msg_UpdateClassOfServiceOnTransaction* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_UpdateClassOfServiceOnTransaction>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_UpdateClassOfServiceOnTransaction& from);
-  void MergeFrom(const Msg_UpdateClassOfServiceOnTransaction& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_UpdateClassOfServiceOnTransaction& from) {
+    Msg_UpdateClassOfServiceOnTransaction::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1245,7 +1254,7 @@ class Msg_UpdateClassOfServiceOnTransaction final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_UpdateClassOfServiceOnTransaction* other);
 
   private:
@@ -1258,7 +1267,10 @@ class Msg_UpdateClassOfServiceOnTransaction final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1268,11 +1280,7 @@ class Msg_UpdateClassOfServiceOnTransaction final :
     kAATransFieldNumber = 1,
     kAAClassOfServiceFieldNumber = 2,
   };
-  // required bytes a_aTrans = 1;
-  bool has_a_atrans() const;
-  private:
-  bool _internal_has_a_atrans() const;
-  public:
+  // bytes a_aTrans = 1;
   void clear_a_atrans();
   const std::string& a_atrans() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1286,11 +1294,7 @@ class Msg_UpdateClassOfServiceOnTransaction final :
   std::string* _internal_mutable_a_atrans();
   public:
 
-  // required bytes a_aClassOfService = 2;
-  bool has_a_aclassofservice() const;
-  private:
-  bool _internal_has_a_aclassofservice() const;
-  public:
+  // bytes a_aClassOfService = 2;
   void clear_a_aclassofservice();
   const std::string& a_aclassofservice() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1308,17 +1312,13 @@ class Msg_UpdateClassOfServiceOnTransaction final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atrans_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aclassofservice_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHttpConnectionMgr_2eproto;
@@ -1326,7 +1326,7 @@ class Msg_UpdateClassOfServiceOnTransaction final :
 // -------------------------------------------------------------------
 
 class Msg_CancelTransaction final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Msg_CancelTransaction) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Msg_CancelTransaction) */ {
  public:
   inline Msg_CancelTransaction() : Msg_CancelTransaction(nullptr) {}
   ~Msg_CancelTransaction() override;
@@ -1356,13 +1356,15 @@ class Msg_CancelTransaction final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_CancelTransaction& default_instance() {
     return *internal_default_instance();
   }
@@ -1400,9 +1402,15 @@ class Msg_CancelTransaction final :
   Msg_CancelTransaction* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_CancelTransaction>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_CancelTransaction& from);
-  void MergeFrom(const Msg_CancelTransaction& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_CancelTransaction& from) {
+    Msg_CancelTransaction::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1415,7 +1423,7 @@ class Msg_CancelTransaction final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_CancelTransaction* other);
 
   private:
@@ -1428,7 +1436,10 @@ class Msg_CancelTransaction final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1438,11 +1449,7 @@ class Msg_CancelTransaction final :
     kAATransFieldNumber = 1,
     kAAReasonFieldNumber = 2,
   };
-  // required bytes a_aTrans = 1;
-  bool has_a_atrans() const;
-  private:
-  bool _internal_has_a_atrans() const;
-  public:
+  // bytes a_aTrans = 1;
   void clear_a_atrans();
   const std::string& a_atrans() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1456,11 +1463,7 @@ class Msg_CancelTransaction final :
   std::string* _internal_mutable_a_atrans();
   public:
 
-  // required bytes a_aReason = 2;
-  bool has_a_areason() const;
-  private:
-  bool _internal_has_a_areason() const;
-  public:
+  // bytes a_aReason = 2;
   void clear_a_areason();
   const std::string& a_areason() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1478,17 +1481,13 @@ class Msg_CancelTransaction final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atrans_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_areason_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHttpConnectionMgr_2eproto;
@@ -1496,7 +1495,7 @@ class Msg_CancelTransaction final :
 // -------------------------------------------------------------------
 
 class Msg_SpeculativeConnect final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Msg_SpeculativeConnect) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Msg_SpeculativeConnect) */ {
  public:
   inline Msg_SpeculativeConnect() : Msg_SpeculativeConnect(nullptr) {}
   ~Msg_SpeculativeConnect() override;
@@ -1526,13 +1525,15 @@ class Msg_SpeculativeConnect final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SpeculativeConnect& default_instance() {
     return *internal_default_instance();
   }
@@ -1570,9 +1571,15 @@ class Msg_SpeculativeConnect final :
   Msg_SpeculativeConnect* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SpeculativeConnect>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SpeculativeConnect& from);
-  void MergeFrom(const Msg_SpeculativeConnect& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SpeculativeConnect& from) {
+    Msg_SpeculativeConnect::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1585,7 +1592,7 @@ class Msg_SpeculativeConnect final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SpeculativeConnect* other);
 
   private:
@@ -1598,7 +1605,10 @@ class Msg_SpeculativeConnect final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1629,7 +1639,7 @@ class Msg_SpeculativeConnect final :
   std::string* _internal_mutable_a_atrans();
   public:
 
-  // required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aConnInfo = 1;
+  // .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aConnInfo = 1;
   bool has_a_aconninfo() const;
   private:
   bool _internal_has_a_aconninfo() const;
@@ -1665,11 +1675,7 @@ class Msg_SpeculativeConnect final :
       ::protobuf::mozilla::net::SpeculativeConnectionOverriderArgs* a_aoverriderargs);
   ::protobuf::mozilla::net::SpeculativeConnectionOverriderArgs* unsafe_arena_release_a_aoverriderargs();
 
-  // required uint32 a_aCaps = 3;
-  bool has_a_acaps() const;
-  private:
-  bool _internal_has_a_acaps() const;
-  public:
+  // uint32 a_aCaps = 3;
   void clear_a_acaps();
   uint32_t a_acaps() const;
   void set_a_acaps(uint32_t value);
@@ -1678,11 +1684,7 @@ class Msg_SpeculativeConnect final :
   void _internal_set_a_acaps(uint32_t value);
   public:
 
-  // required bool a_aFetchHTTPSRR = 5;
-  bool has_a_afetchhttpsrr() const;
-  private:
-  bool _internal_has_a_afetchhttpsrr() const;
-  public:
+  // bool a_aFetchHTTPSRR = 5;
   void clear_a_afetchhttpsrr();
   bool a_afetchhttpsrr() const;
   void set_a_afetchhttpsrr(bool value);
@@ -1694,9 +1696,6 @@ class Msg_SpeculativeConnect final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.net.PHttpConnectionMgr.Msg_SpeculativeConnect)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -1716,7 +1715,7 @@ class Msg_SpeculativeConnect final :
 // -------------------------------------------------------------------
 
 class Msg_StartWebSocketConnection final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Msg_StartWebSocketConnection) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PHttpConnectionMgr.Msg_StartWebSocketConnection) */ {
  public:
   inline Msg_StartWebSocketConnection() : Msg_StartWebSocketConnection(nullptr) {}
   ~Msg_StartWebSocketConnection() override;
@@ -1746,13 +1745,15 @@ class Msg_StartWebSocketConnection final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_StartWebSocketConnection& default_instance() {
     return *internal_default_instance();
   }
@@ -1790,9 +1791,15 @@ class Msg_StartWebSocketConnection final :
   Msg_StartWebSocketConnection* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_StartWebSocketConnection>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_StartWebSocketConnection& from);
-  void MergeFrom(const Msg_StartWebSocketConnection& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_StartWebSocketConnection& from) {
+    Msg_StartWebSocketConnection::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1805,7 +1812,7 @@ class Msg_StartWebSocketConnection final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_StartWebSocketConnection* other);
 
   private:
@@ -1818,7 +1825,10 @@ class Msg_StartWebSocketConnection final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1828,11 +1838,7 @@ class Msg_StartWebSocketConnection final :
     kAATransWithStickyConnFieldNumber = 1,
     kAAListenerIdFieldNumber = 2,
   };
-  // required bytes a_aTransWithStickyConn = 1;
-  bool has_a_atranswithstickyconn() const;
-  private:
-  bool _internal_has_a_atranswithstickyconn() const;
-  public:
+  // bytes a_aTransWithStickyConn = 1;
   void clear_a_atranswithstickyconn();
   const std::string& a_atranswithstickyconn() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1846,11 +1852,7 @@ class Msg_StartWebSocketConnection final :
   std::string* _internal_mutable_a_atranswithstickyconn();
   public:
 
-  // required uint32 a_aListenerId = 2;
-  bool has_a_alistenerid() const;
-  private:
-  bool _internal_has_a_alistenerid() const;
-  public:
+  // uint32 a_aListenerId = 2;
   void clear_a_alistenerid();
   uint32_t a_alistenerid() const;
   void set_a_alistenerid(uint32_t value);
@@ -1863,17 +1865,13 @@ class Msg_StartWebSocketConnection final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atranswithstickyconn_;
     uint32_t a_alistenerid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PHttpConnectionMgr_2eproto;
@@ -1897,11 +1895,9 @@ class Msg_StartWebSocketConnection final :
 
 // Msg_DoShiftReloadConnectionCleanupWithConnInfo
 
-// required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aArgs = 1;
+// .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aArgs = 1;
 inline bool Msg_DoShiftReloadConnectionCleanupWithConnInfo::_internal_has_a_aargs() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_aargs_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_aargs_ != nullptr;
 }
 inline bool Msg_DoShiftReloadConnectionCleanupWithConnInfo::has_a_aargs() const {
   return _internal_has_a_aargs();
@@ -1922,14 +1918,14 @@ inline void Msg_DoShiftReloadConnectionCleanupWithConnInfo::unsafe_arena_set_all
   }
   _impl_.a_aargs_ = a_aargs;
   if (a_aargs) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_DoShiftReloadConnectionCleanupWithConnInfo.a_aArgs)
 }
 inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_DoShiftReloadConnectionCleanupWithConnInfo::release_a_aargs() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* temp = _impl_.a_aargs_;
   _impl_.a_aargs_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1945,13 +1941,13 @@ inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_DoShiftReloadC
 }
 inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_DoShiftReloadConnectionCleanupWithConnInfo::unsafe_arena_release_a_aargs() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PHttpConnectionMgr.Msg_DoShiftReloadConnectionCleanupWithConnInfo.a_aArgs)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* temp = _impl_.a_aargs_;
   _impl_.a_aargs_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_DoShiftReloadConnectionCleanupWithConnInfo::_internal_mutable_a_aargs() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_aargs_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::HttpConnectionInfoCloneArgs>(GetArenaForAllocation());
     _impl_.a_aargs_ = p;
@@ -1976,9 +1972,9 @@ inline void Msg_DoShiftReloadConnectionCleanupWithConnInfo::set_allocated_a_aarg
       a_aargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_aargs, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_aargs_ = a_aargs;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_DoShiftReloadConnectionCleanupWithConnInfo.a_aArgs)
@@ -1988,17 +1984,9 @@ inline void Msg_DoShiftReloadConnectionCleanupWithConnInfo::set_allocated_a_aarg
 
 // Msg_UpdateCurrentBrowserId
 
-// required uint64 a_aId = 1;
-inline bool Msg_UpdateCurrentBrowserId::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_UpdateCurrentBrowserId::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aId = 1;
 inline void Msg_UpdateCurrentBrowserId::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_UpdateCurrentBrowserId::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -2008,7 +1996,7 @@ inline uint64_t Msg_UpdateCurrentBrowserId::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_UpdateCurrentBrowserId::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_UpdateCurrentBrowserId::set_a_aid(uint64_t value) {
@@ -2020,17 +2008,9 @@ inline void Msg_UpdateCurrentBrowserId::set_a_aid(uint64_t value) {
 
 // Msg_AddTransaction
 
-// required bytes a_aTrans = 1;
-inline bool Msg_AddTransaction::_internal_has_a_atrans() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_AddTransaction::has_a_atrans() const {
-  return _internal_has_a_atrans();
-}
+// bytes a_aTrans = 1;
 inline void Msg_AddTransaction::clear_a_atrans() {
   _impl_.a_atrans_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_AddTransaction::a_atrans() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransaction.a_aTrans)
@@ -2039,7 +2019,7 @@ inline const std::string& Msg_AddTransaction::a_atrans() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AddTransaction::set_a_atrans(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_atrans_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransaction.a_aTrans)
 }
@@ -2052,32 +2032,22 @@ inline const std::string& Msg_AddTransaction::_internal_a_atrans() const {
   return _impl_.a_atrans_.Get();
 }
 inline void Msg_AddTransaction::_internal_set_a_atrans(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_atrans_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_AddTransaction::_internal_mutable_a_atrans() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_atrans_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_AddTransaction::release_a_atrans() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransaction.a_aTrans)
-  if (!_internal_has_a_atrans()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_atrans_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_atrans_.IsDefault()) {
-    _impl_.a_atrans_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_atrans_.Release();
 }
 inline void Msg_AddTransaction::set_allocated_a_atrans(std::string* a_atrans) {
   if (a_atrans != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_atrans_.SetAllocated(a_atrans, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2088,17 +2058,9 @@ inline void Msg_AddTransaction::set_allocated_a_atrans(std::string* a_atrans) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransaction.a_aTrans)
 }
 
-// required sint32 a_aPriority = 2;
-inline bool Msg_AddTransaction::_internal_has_a_apriority() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_AddTransaction::has_a_apriority() const {
-  return _internal_has_a_apriority();
-}
+// sint32 a_aPriority = 2;
 inline void Msg_AddTransaction::clear_a_apriority() {
   _impl_.a_apriority_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int32_t Msg_AddTransaction::_internal_a_apriority() const {
   return _impl_.a_apriority_;
@@ -2108,7 +2070,7 @@ inline int32_t Msg_AddTransaction::a_apriority() const {
   return _internal_a_apriority();
 }
 inline void Msg_AddTransaction::_internal_set_a_apriority(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_apriority_ = value;
 }
 inline void Msg_AddTransaction::set_a_apriority(int32_t value) {
@@ -2120,17 +2082,9 @@ inline void Msg_AddTransaction::set_a_apriority(int32_t value) {
 
 // Msg_AddTransactionWithStickyConn
 
-// required bytes a_aTrans = 1;
-inline bool Msg_AddTransactionWithStickyConn::_internal_has_a_atrans() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_AddTransactionWithStickyConn::has_a_atrans() const {
-  return _internal_has_a_atrans();
-}
+// bytes a_aTrans = 1;
 inline void Msg_AddTransactionWithStickyConn::clear_a_atrans() {
   _impl_.a_atrans_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_AddTransactionWithStickyConn::a_atrans() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransactionWithStickyConn.a_aTrans)
@@ -2139,7 +2093,7 @@ inline const std::string& Msg_AddTransactionWithStickyConn::a_atrans() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AddTransactionWithStickyConn::set_a_atrans(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_atrans_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransactionWithStickyConn.a_aTrans)
 }
@@ -2152,32 +2106,22 @@ inline const std::string& Msg_AddTransactionWithStickyConn::_internal_a_atrans()
   return _impl_.a_atrans_.Get();
 }
 inline void Msg_AddTransactionWithStickyConn::_internal_set_a_atrans(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_atrans_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_AddTransactionWithStickyConn::_internal_mutable_a_atrans() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_atrans_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_AddTransactionWithStickyConn::release_a_atrans() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransactionWithStickyConn.a_aTrans)
-  if (!_internal_has_a_atrans()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_atrans_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_atrans_.IsDefault()) {
-    _impl_.a_atrans_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_atrans_.Release();
 }
 inline void Msg_AddTransactionWithStickyConn::set_allocated_a_atrans(std::string* a_atrans) {
   if (a_atrans != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_atrans_.SetAllocated(a_atrans, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2188,17 +2132,9 @@ inline void Msg_AddTransactionWithStickyConn::set_allocated_a_atrans(std::string
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransactionWithStickyConn.a_aTrans)
 }
 
-// required sint32 a_aPriority = 2;
-inline bool Msg_AddTransactionWithStickyConn::_internal_has_a_apriority() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_AddTransactionWithStickyConn::has_a_apriority() const {
-  return _internal_has_a_apriority();
-}
+// sint32 a_aPriority = 2;
 inline void Msg_AddTransactionWithStickyConn::clear_a_apriority() {
   _impl_.a_apriority_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t Msg_AddTransactionWithStickyConn::_internal_a_apriority() const {
   return _impl_.a_apriority_;
@@ -2208,7 +2144,7 @@ inline int32_t Msg_AddTransactionWithStickyConn::a_apriority() const {
   return _internal_a_apriority();
 }
 inline void Msg_AddTransactionWithStickyConn::_internal_set_a_apriority(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_apriority_ = value;
 }
 inline void Msg_AddTransactionWithStickyConn::set_a_apriority(int32_t value) {
@@ -2216,17 +2152,9 @@ inline void Msg_AddTransactionWithStickyConn::set_a_apriority(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransactionWithStickyConn.a_aPriority)
 }
 
-// required bytes a_aTransWithStickyConn = 3;
-inline bool Msg_AddTransactionWithStickyConn::_internal_has_a_atranswithstickyconn() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_AddTransactionWithStickyConn::has_a_atranswithstickyconn() const {
-  return _internal_has_a_atranswithstickyconn();
-}
+// bytes a_aTransWithStickyConn = 3;
 inline void Msg_AddTransactionWithStickyConn::clear_a_atranswithstickyconn() {
   _impl_.a_atranswithstickyconn_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_AddTransactionWithStickyConn::a_atranswithstickyconn() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransactionWithStickyConn.a_aTransWithStickyConn)
@@ -2235,7 +2163,7 @@ inline const std::string& Msg_AddTransactionWithStickyConn::a_atranswithstickyco
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AddTransactionWithStickyConn::set_a_atranswithstickyconn(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_atranswithstickyconn_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransactionWithStickyConn.a_aTransWithStickyConn)
 }
@@ -2248,32 +2176,22 @@ inline const std::string& Msg_AddTransactionWithStickyConn::_internal_a_atranswi
   return _impl_.a_atranswithstickyconn_.Get();
 }
 inline void Msg_AddTransactionWithStickyConn::_internal_set_a_atranswithstickyconn(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_atranswithstickyconn_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_AddTransactionWithStickyConn::_internal_mutable_a_atranswithstickyconn() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_atranswithstickyconn_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_AddTransactionWithStickyConn::release_a_atranswithstickyconn() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PHttpConnectionMgr.Msg_AddTransactionWithStickyConn.a_aTransWithStickyConn)
-  if (!_internal_has_a_atranswithstickyconn()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_atranswithstickyconn_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_atranswithstickyconn_.IsDefault()) {
-    _impl_.a_atranswithstickyconn_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_atranswithstickyconn_.Release();
 }
 inline void Msg_AddTransactionWithStickyConn::set_allocated_a_atranswithstickyconn(std::string* a_atranswithstickyconn) {
   if (a_atranswithstickyconn != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_atranswithstickyconn_.SetAllocated(a_atranswithstickyconn, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2288,17 +2206,9 @@ inline void Msg_AddTransactionWithStickyConn::set_allocated_a_atranswithstickyco
 
 // Msg_RescheduleTransaction
 
-// required bytes a_aTrans = 1;
-inline bool Msg_RescheduleTransaction::_internal_has_a_atrans() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_RescheduleTransaction::has_a_atrans() const {
-  return _internal_has_a_atrans();
-}
+// bytes a_aTrans = 1;
 inline void Msg_RescheduleTransaction::clear_a_atrans() {
   _impl_.a_atrans_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_RescheduleTransaction::a_atrans() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PHttpConnectionMgr.Msg_RescheduleTransaction.a_aTrans)
@@ -2307,7 +2217,7 @@ inline const std::string& Msg_RescheduleTransaction::a_atrans() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RescheduleTransaction::set_a_atrans(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_atrans_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpConnectionMgr.Msg_RescheduleTransaction.a_aTrans)
 }
@@ -2320,32 +2230,22 @@ inline const std::string& Msg_RescheduleTransaction::_internal_a_atrans() const 
   return _impl_.a_atrans_.Get();
 }
 inline void Msg_RescheduleTransaction::_internal_set_a_atrans(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_atrans_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_RescheduleTransaction::_internal_mutable_a_atrans() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_atrans_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_RescheduleTransaction::release_a_atrans() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PHttpConnectionMgr.Msg_RescheduleTransaction.a_aTrans)
-  if (!_internal_has_a_atrans()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_atrans_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_atrans_.IsDefault()) {
-    _impl_.a_atrans_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_atrans_.Release();
 }
 inline void Msg_RescheduleTransaction::set_allocated_a_atrans(std::string* a_atrans) {
   if (a_atrans != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_atrans_.SetAllocated(a_atrans, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2356,17 +2256,9 @@ inline void Msg_RescheduleTransaction::set_allocated_a_atrans(std::string* a_atr
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_RescheduleTransaction.a_aTrans)
 }
 
-// required sint32 a_aPriority = 2;
-inline bool Msg_RescheduleTransaction::_internal_has_a_apriority() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_RescheduleTransaction::has_a_apriority() const {
-  return _internal_has_a_apriority();
-}
+// sint32 a_aPriority = 2;
 inline void Msg_RescheduleTransaction::clear_a_apriority() {
   _impl_.a_apriority_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int32_t Msg_RescheduleTransaction::_internal_a_apriority() const {
   return _impl_.a_apriority_;
@@ -2376,7 +2268,7 @@ inline int32_t Msg_RescheduleTransaction::a_apriority() const {
   return _internal_a_apriority();
 }
 inline void Msg_RescheduleTransaction::_internal_set_a_apriority(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_apriority_ = value;
 }
 inline void Msg_RescheduleTransaction::set_a_apriority(int32_t value) {
@@ -2388,17 +2280,9 @@ inline void Msg_RescheduleTransaction::set_a_apriority(int32_t value) {
 
 // Msg_UpdateClassOfServiceOnTransaction
 
-// required bytes a_aTrans = 1;
-inline bool Msg_UpdateClassOfServiceOnTransaction::_internal_has_a_atrans() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_UpdateClassOfServiceOnTransaction::has_a_atrans() const {
-  return _internal_has_a_atrans();
-}
+// bytes a_aTrans = 1;
 inline void Msg_UpdateClassOfServiceOnTransaction::clear_a_atrans() {
   _impl_.a_atrans_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_UpdateClassOfServiceOnTransaction::a_atrans() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PHttpConnectionMgr.Msg_UpdateClassOfServiceOnTransaction.a_aTrans)
@@ -2407,7 +2291,7 @@ inline const std::string& Msg_UpdateClassOfServiceOnTransaction::a_atrans() cons
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UpdateClassOfServiceOnTransaction::set_a_atrans(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_atrans_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpConnectionMgr.Msg_UpdateClassOfServiceOnTransaction.a_aTrans)
 }
@@ -2420,32 +2304,22 @@ inline const std::string& Msg_UpdateClassOfServiceOnTransaction::_internal_a_atr
   return _impl_.a_atrans_.Get();
 }
 inline void Msg_UpdateClassOfServiceOnTransaction::_internal_set_a_atrans(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_atrans_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateClassOfServiceOnTransaction::_internal_mutable_a_atrans() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_atrans_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateClassOfServiceOnTransaction::release_a_atrans() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PHttpConnectionMgr.Msg_UpdateClassOfServiceOnTransaction.a_aTrans)
-  if (!_internal_has_a_atrans()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_atrans_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_atrans_.IsDefault()) {
-    _impl_.a_atrans_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_atrans_.Release();
 }
 inline void Msg_UpdateClassOfServiceOnTransaction::set_allocated_a_atrans(std::string* a_atrans) {
   if (a_atrans != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_atrans_.SetAllocated(a_atrans, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2456,17 +2330,9 @@ inline void Msg_UpdateClassOfServiceOnTransaction::set_allocated_a_atrans(std::s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_UpdateClassOfServiceOnTransaction.a_aTrans)
 }
 
-// required bytes a_aClassOfService = 2;
-inline bool Msg_UpdateClassOfServiceOnTransaction::_internal_has_a_aclassofservice() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_UpdateClassOfServiceOnTransaction::has_a_aclassofservice() const {
-  return _internal_has_a_aclassofservice();
-}
+// bytes a_aClassOfService = 2;
 inline void Msg_UpdateClassOfServiceOnTransaction::clear_a_aclassofservice() {
   _impl_.a_aclassofservice_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_UpdateClassOfServiceOnTransaction::a_aclassofservice() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PHttpConnectionMgr.Msg_UpdateClassOfServiceOnTransaction.a_aClassOfService)
@@ -2475,7 +2341,7 @@ inline const std::string& Msg_UpdateClassOfServiceOnTransaction::a_aclassofservi
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UpdateClassOfServiceOnTransaction::set_a_aclassofservice(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_aclassofservice_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpConnectionMgr.Msg_UpdateClassOfServiceOnTransaction.a_aClassOfService)
 }
@@ -2488,32 +2354,22 @@ inline const std::string& Msg_UpdateClassOfServiceOnTransaction::_internal_a_acl
   return _impl_.a_aclassofservice_.Get();
 }
 inline void Msg_UpdateClassOfServiceOnTransaction::_internal_set_a_aclassofservice(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aclassofservice_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateClassOfServiceOnTransaction::_internal_mutable_a_aclassofservice() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_aclassofservice_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_UpdateClassOfServiceOnTransaction::release_a_aclassofservice() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PHttpConnectionMgr.Msg_UpdateClassOfServiceOnTransaction.a_aClassOfService)
-  if (!_internal_has_a_aclassofservice()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_aclassofservice_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_aclassofservice_.IsDefault()) {
-    _impl_.a_aclassofservice_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_aclassofservice_.Release();
 }
 inline void Msg_UpdateClassOfServiceOnTransaction::set_allocated_a_aclassofservice(std::string* a_aclassofservice) {
   if (a_aclassofservice != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_aclassofservice_.SetAllocated(a_aclassofservice, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2528,17 +2384,9 @@ inline void Msg_UpdateClassOfServiceOnTransaction::set_allocated_a_aclassofservi
 
 // Msg_CancelTransaction
 
-// required bytes a_aTrans = 1;
-inline bool Msg_CancelTransaction::_internal_has_a_atrans() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_CancelTransaction::has_a_atrans() const {
-  return _internal_has_a_atrans();
-}
+// bytes a_aTrans = 1;
 inline void Msg_CancelTransaction::clear_a_atrans() {
   _impl_.a_atrans_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_CancelTransaction::a_atrans() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PHttpConnectionMgr.Msg_CancelTransaction.a_aTrans)
@@ -2547,7 +2395,7 @@ inline const std::string& Msg_CancelTransaction::a_atrans() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CancelTransaction::set_a_atrans(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_atrans_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpConnectionMgr.Msg_CancelTransaction.a_aTrans)
 }
@@ -2560,32 +2408,22 @@ inline const std::string& Msg_CancelTransaction::_internal_a_atrans() const {
   return _impl_.a_atrans_.Get();
 }
 inline void Msg_CancelTransaction::_internal_set_a_atrans(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_atrans_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CancelTransaction::_internal_mutable_a_atrans() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_atrans_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CancelTransaction::release_a_atrans() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PHttpConnectionMgr.Msg_CancelTransaction.a_aTrans)
-  if (!_internal_has_a_atrans()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_atrans_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_atrans_.IsDefault()) {
-    _impl_.a_atrans_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_atrans_.Release();
 }
 inline void Msg_CancelTransaction::set_allocated_a_atrans(std::string* a_atrans) {
   if (a_atrans != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_atrans_.SetAllocated(a_atrans, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2596,17 +2434,9 @@ inline void Msg_CancelTransaction::set_allocated_a_atrans(std::string* a_atrans)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_CancelTransaction.a_aTrans)
 }
 
-// required bytes a_aReason = 2;
-inline bool Msg_CancelTransaction::_internal_has_a_areason() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_CancelTransaction::has_a_areason() const {
-  return _internal_has_a_areason();
-}
+// bytes a_aReason = 2;
 inline void Msg_CancelTransaction::clear_a_areason() {
   _impl_.a_areason_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_CancelTransaction::a_areason() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PHttpConnectionMgr.Msg_CancelTransaction.a_aReason)
@@ -2615,7 +2445,7 @@ inline const std::string& Msg_CancelTransaction::a_areason() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CancelTransaction::set_a_areason(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_areason_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpConnectionMgr.Msg_CancelTransaction.a_aReason)
 }
@@ -2628,32 +2458,22 @@ inline const std::string& Msg_CancelTransaction::_internal_a_areason() const {
   return _impl_.a_areason_.Get();
 }
 inline void Msg_CancelTransaction::_internal_set_a_areason(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_areason_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CancelTransaction::_internal_mutable_a_areason() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_areason_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CancelTransaction::release_a_areason() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PHttpConnectionMgr.Msg_CancelTransaction.a_aReason)
-  if (!_internal_has_a_areason()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_areason_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_areason_.IsDefault()) {
-    _impl_.a_areason_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_areason_.Release();
 }
 inline void Msg_CancelTransaction::set_allocated_a_areason(std::string* a_areason) {
   if (a_areason != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_areason_.SetAllocated(a_areason, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2668,11 +2488,9 @@ inline void Msg_CancelTransaction::set_allocated_a_areason(std::string* a_areaso
 
 // Msg_SpeculativeConnect
 
-// required .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aConnInfo = 1;
+// .protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aConnInfo = 1;
 inline bool Msg_SpeculativeConnect::_internal_has_a_aconninfo() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_aconninfo_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_aconninfo_ != nullptr;
 }
 inline bool Msg_SpeculativeConnect::has_a_aconninfo() const {
   return _internal_has_a_aconninfo();
@@ -2693,14 +2511,14 @@ inline void Msg_SpeculativeConnect::unsafe_arena_set_allocated_a_aconninfo(
   }
   _impl_.a_aconninfo_ = a_aconninfo;
   if (a_aconninfo) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_SpeculativeConnect.a_aConnInfo)
 }
 inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_SpeculativeConnect::release_a_aconninfo() {
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* temp = _impl_.a_aconninfo_;
   _impl_.a_aconninfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -2716,13 +2534,13 @@ inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_SpeculativeCon
 }
 inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_SpeculativeConnect::unsafe_arena_release_a_aconninfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PHttpConnectionMgr.Msg_SpeculativeConnect.a_aConnInfo)
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* temp = _impl_.a_aconninfo_;
   _impl_.a_aconninfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::net::HttpConnectionInfoCloneArgs* Msg_SpeculativeConnect::_internal_mutable_a_aconninfo() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   if (_impl_.a_aconninfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::HttpConnectionInfoCloneArgs>(GetArenaForAllocation());
     _impl_.a_aconninfo_ = p;
@@ -2747,9 +2565,9 @@ inline void Msg_SpeculativeConnect::set_allocated_a_aconninfo(::protobuf::mozill
       a_aconninfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_aconninfo, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_aconninfo_ = a_aconninfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_SpeculativeConnect.a_aConnInfo)
@@ -2757,7 +2575,7 @@ inline void Msg_SpeculativeConnect::set_allocated_a_aconninfo(::protobuf::mozill
 
 // optional .protobuf.mozilla.net.SpeculativeConnectionOverriderArgs a_aOverriderArgs = 2;
 inline bool Msg_SpeculativeConnect::_internal_has_a_aoverriderargs() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_aoverriderargs_ != nullptr);
   return value;
 }
@@ -2780,14 +2598,14 @@ inline void Msg_SpeculativeConnect::unsafe_arena_set_allocated_a_aoverriderargs(
   }
   _impl_.a_aoverriderargs_ = a_aoverriderargs;
   if (a_aoverriderargs) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_SpeculativeConnect.a_aOverriderArgs)
 }
 inline ::protobuf::mozilla::net::SpeculativeConnectionOverriderArgs* Msg_SpeculativeConnect::release_a_aoverriderargs() {
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::net::SpeculativeConnectionOverriderArgs* temp = _impl_.a_aoverriderargs_;
   _impl_.a_aoverriderargs_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -2803,13 +2621,13 @@ inline ::protobuf::mozilla::net::SpeculativeConnectionOverriderArgs* Msg_Specula
 }
 inline ::protobuf::mozilla::net::SpeculativeConnectionOverriderArgs* Msg_SpeculativeConnect::unsafe_arena_release_a_aoverriderargs() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PHttpConnectionMgr.Msg_SpeculativeConnect.a_aOverriderArgs)
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
   ::protobuf::mozilla::net::SpeculativeConnectionOverriderArgs* temp = _impl_.a_aoverriderargs_;
   _impl_.a_aoverriderargs_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::net::SpeculativeConnectionOverriderArgs* Msg_SpeculativeConnect::_internal_mutable_a_aoverriderargs() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.a_aoverriderargs_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::net::SpeculativeConnectionOverriderArgs>(GetArenaForAllocation());
     _impl_.a_aoverriderargs_ = p;
@@ -2834,25 +2652,17 @@ inline void Msg_SpeculativeConnect::set_allocated_a_aoverriderargs(::protobuf::m
       a_aoverriderargs = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_aoverriderargs, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000004u;
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.a_aoverriderargs_ = a_aoverriderargs;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_SpeculativeConnect.a_aOverriderArgs)
 }
 
-// required uint32 a_aCaps = 3;
-inline bool Msg_SpeculativeConnect::_internal_has_a_acaps() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_SpeculativeConnect::has_a_acaps() const {
-  return _internal_has_a_acaps();
-}
+// uint32 a_aCaps = 3;
 inline void Msg_SpeculativeConnect::clear_a_acaps() {
   _impl_.a_acaps_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t Msg_SpeculativeConnect::_internal_a_acaps() const {
   return _impl_.a_acaps_;
@@ -2862,7 +2672,7 @@ inline uint32_t Msg_SpeculativeConnect::a_acaps() const {
   return _internal_a_acaps();
 }
 inline void Msg_SpeculativeConnect::_internal_set_a_acaps(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_acaps_ = value;
 }
 inline void Msg_SpeculativeConnect::set_a_acaps(uint32_t value) {
@@ -2938,17 +2748,9 @@ inline void Msg_SpeculativeConnect::set_allocated_a_atrans(std::string* a_atrans
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_SpeculativeConnect.a_aTrans)
 }
 
-// required bool a_aFetchHTTPSRR = 5;
-inline bool Msg_SpeculativeConnect::_internal_has_a_afetchhttpsrr() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool Msg_SpeculativeConnect::has_a_afetchhttpsrr() const {
-  return _internal_has_a_afetchhttpsrr();
-}
+// bool a_aFetchHTTPSRR = 5;
 inline void Msg_SpeculativeConnect::clear_a_afetchhttpsrr() {
   _impl_.a_afetchhttpsrr_ = false;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline bool Msg_SpeculativeConnect::_internal_a_afetchhttpsrr() const {
   return _impl_.a_afetchhttpsrr_;
@@ -2958,7 +2760,7 @@ inline bool Msg_SpeculativeConnect::a_afetchhttpsrr() const {
   return _internal_a_afetchhttpsrr();
 }
 inline void Msg_SpeculativeConnect::_internal_set_a_afetchhttpsrr(bool value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_afetchhttpsrr_ = value;
 }
 inline void Msg_SpeculativeConnect::set_a_afetchhttpsrr(bool value) {
@@ -2970,17 +2772,9 @@ inline void Msg_SpeculativeConnect::set_a_afetchhttpsrr(bool value) {
 
 // Msg_StartWebSocketConnection
 
-// required bytes a_aTransWithStickyConn = 1;
-inline bool Msg_StartWebSocketConnection::_internal_has_a_atranswithstickyconn() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_StartWebSocketConnection::has_a_atranswithstickyconn() const {
-  return _internal_has_a_atranswithstickyconn();
-}
+// bytes a_aTransWithStickyConn = 1;
 inline void Msg_StartWebSocketConnection::clear_a_atranswithstickyconn() {
   _impl_.a_atranswithstickyconn_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_StartWebSocketConnection::a_atranswithstickyconn() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PHttpConnectionMgr.Msg_StartWebSocketConnection.a_aTransWithStickyConn)
@@ -2989,7 +2783,7 @@ inline const std::string& Msg_StartWebSocketConnection::a_atranswithstickyconn()
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_StartWebSocketConnection::set_a_atranswithstickyconn(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_atranswithstickyconn_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PHttpConnectionMgr.Msg_StartWebSocketConnection.a_aTransWithStickyConn)
 }
@@ -3002,32 +2796,22 @@ inline const std::string& Msg_StartWebSocketConnection::_internal_a_atranswithst
   return _impl_.a_atranswithstickyconn_.Get();
 }
 inline void Msg_StartWebSocketConnection::_internal_set_a_atranswithstickyconn(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_atranswithstickyconn_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_StartWebSocketConnection::_internal_mutable_a_atranswithstickyconn() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_atranswithstickyconn_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_StartWebSocketConnection::release_a_atranswithstickyconn() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PHttpConnectionMgr.Msg_StartWebSocketConnection.a_aTransWithStickyConn)
-  if (!_internal_has_a_atranswithstickyconn()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_atranswithstickyconn_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_atranswithstickyconn_.IsDefault()) {
-    _impl_.a_atranswithstickyconn_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_atranswithstickyconn_.Release();
 }
 inline void Msg_StartWebSocketConnection::set_allocated_a_atranswithstickyconn(std::string* a_atranswithstickyconn) {
   if (a_atranswithstickyconn != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_atranswithstickyconn_.SetAllocated(a_atranswithstickyconn, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3038,17 +2822,9 @@ inline void Msg_StartWebSocketConnection::set_allocated_a_atranswithstickyconn(s
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PHttpConnectionMgr.Msg_StartWebSocketConnection.a_aTransWithStickyConn)
 }
 
-// required uint32 a_aListenerId = 2;
-inline bool Msg_StartWebSocketConnection::_internal_has_a_alistenerid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_StartWebSocketConnection::has_a_alistenerid() const {
-  return _internal_has_a_alistenerid();
-}
+// uint32 a_aListenerId = 2;
 inline void Msg_StartWebSocketConnection::clear_a_alistenerid() {
   _impl_.a_alistenerid_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_StartWebSocketConnection::_internal_a_alistenerid() const {
   return _impl_.a_alistenerid_;
@@ -3058,7 +2834,7 @@ inline uint32_t Msg_StartWebSocketConnection::a_alistenerid() const {
   return _internal_a_alistenerid();
 }
 inline void Msg_StartWebSocketConnection::_internal_set_a_alistenerid(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_alistenerid_ = value;
 }
 inline void Msg_StartWebSocketConnection::set_a_alistenerid(uint32_t value) {

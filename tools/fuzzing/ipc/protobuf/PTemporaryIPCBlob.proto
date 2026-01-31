@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/file/ipc/PTemporaryIPCBlob.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PTemporaryIPCBlob;
 
@@ -18,11 +17,11 @@ import "IPCBlob.proto";
 
 // Message declarations
 message Msg_FileDesc {
-  required bytes a_aFD = 1;
+  bytes a_aFD = 1;
 }
 
 message Msg___delete__ {
-  required protobuf.mozilla.dom.IPCBlobOrError a_aBlobOrError = 1;
+  protobuf.mozilla.dom.IPCBlobOrError a_aBlobOrError = 1;
 }
 
 message Reply___delete__ {
@@ -32,8 +31,8 @@ message Msg_OperationFailed {
 }
 
 message Msg_OperationDone {
-  required string a_aContentType = 1;
-  required bytes a_aFD = 2;
+  string a_aContentType = 1;
+  bytes a_aFD = 2;
 }
 
 // Parameter mappings stats:

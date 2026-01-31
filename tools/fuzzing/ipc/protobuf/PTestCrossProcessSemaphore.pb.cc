@@ -8,7 +8,10 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -23,9 +26,8 @@ namespace _ipdltest {
 namespace PTestCrossProcessSemaphore {
 PROTOBUF_CONSTEXPR Msg_CrossProcessSemaphore::Msg_CrossProcessSemaphore(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_asem_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_asem_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_CrossProcessSemaphoreDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_CrossProcessSemaphoreDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -39,6 +41,48 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace _ipdltest
 }  // namespace mozilla
 }  // namespace protobuf
+static ::_pb::Metadata file_level_metadata_PTestCrossProcessSemaphore_2eproto[1];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PTestCrossProcessSemaphore_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PTestCrossProcessSemaphore_2eproto = nullptr;
+
+const uint32_t TableStruct_PTestCrossProcessSemaphore_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestCrossProcessSemaphore::Msg_CrossProcessSemaphore, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestCrossProcessSemaphore::Msg_CrossProcessSemaphore, _impl_.a_asem_),
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestCrossProcessSemaphore::Msg_CrossProcessSemaphore)},
+};
+
+static const ::_pb::Message* const file_default_instances[] = {
+  &::protobuf::mozilla::_ipdltest::PTestCrossProcessSemaphore::_Msg_CrossProcessSemaphore_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_PTestCrossProcessSemaphore_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n PTestCrossProcessSemaphore.proto\0225prot"
+  "obuf.mozilla._ipdltest.PTestCrossProcess"
+  "Semaphore\"+\n\031Msg_CrossProcessSemaphore\022\016"
+  "\n\006a_aSem\030\001 \001(\014b\006proto3"
+  ;
+static ::_pbi::once_flag descriptor_table_PTestCrossProcessSemaphore_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_PTestCrossProcessSemaphore_2eproto = {
+    false, false, 142, descriptor_table_protodef_PTestCrossProcessSemaphore_2eproto,
+    "PTestCrossProcessSemaphore.proto",
+    &descriptor_table_PTestCrossProcessSemaphore_2eproto_once, nullptr, 0, 1,
+    schemas, file_default_instances, TableStruct_PTestCrossProcessSemaphore_2eproto::offsets,
+    file_level_metadata_PTestCrossProcessSemaphore_2eproto, file_level_enum_descriptors_PTestCrossProcessSemaphore_2eproto,
+    file_level_service_descriptors_PTestCrossProcessSemaphore_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PTestCrossProcessSemaphore_2eproto_getter() {
+  return &descriptor_table_PTestCrossProcessSemaphore_2eproto;
+}
+
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PTestCrossProcessSemaphore_2eproto(&descriptor_table_PTestCrossProcessSemaphore_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace _ipdltest {
@@ -48,35 +92,27 @@ namespace PTestCrossProcessSemaphore {
 
 class Msg_CrossProcessSemaphore::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_CrossProcessSemaphore>()._impl_._has_bits_);
-  static void set_has_a_asem(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_CrossProcessSemaphore::Msg_CrossProcessSemaphore(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestCrossProcessSemaphore.Msg_CrossProcessSemaphore)
 }
 Msg_CrossProcessSemaphore::Msg_CrossProcessSemaphore(const Msg_CrossProcessSemaphore& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_CrossProcessSemaphore* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_asem_){}};
+      decltype(_impl_.a_asem_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_asem_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_asem_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_asem()) {
+  if (!from._internal_a_asem().empty()) {
     _this->_impl_.a_asem_.Set(from._internal_a_asem(), 
       _this->GetArenaForAllocation());
   }
@@ -88,9 +124,8 @@ inline void Msg_CrossProcessSemaphore::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_asem_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_asem_){}
   };
   _impl_.a_asem_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -100,7 +135,7 @@ inline void Msg_CrossProcessSemaphore::SharedCtor(
 
 Msg_CrossProcessSemaphore::~Msg_CrossProcessSemaphore() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestCrossProcessSemaphore.Msg_CrossProcessSemaphore)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -122,22 +157,17 @@ void Msg_CrossProcessSemaphore::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_asem_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_asem_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_CrossProcessSemaphore::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_aSem = 1;
+      // bytes a_aSem = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_asem();
@@ -157,12 +187,11 @@ const char* Msg_CrossProcessSemaphore::_InternalParse(const char* ptr, ::_pbi::P
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -176,16 +205,15 @@ uint8_t* Msg_CrossProcessSemaphore::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_aSem = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // bytes a_aSem = 1;
+  if (!this->_internal_a_asem().empty()) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_asem(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestCrossProcessSemaphore.Msg_CrossProcessSemaphore)
   return target;
@@ -195,41 +223,39 @@ size_t Msg_CrossProcessSemaphore::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestCrossProcessSemaphore.Msg_CrossProcessSemaphore)
   size_t total_size = 0;
 
-  // required bytes a_aSem = 1;
-  if (_internal_has_a_asem()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_asem());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // bytes a_aSem = 1;
+  if (!this->_internal_a_asem().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_asem());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_CrossProcessSemaphore::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_CrossProcessSemaphore*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_CrossProcessSemaphore::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_CrossProcessSemaphore::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_CrossProcessSemaphore::GetClassData() const { return &_class_data_; }
 
-void Msg_CrossProcessSemaphore::MergeFrom(const Msg_CrossProcessSemaphore& from) {
-  Msg_CrossProcessSemaphore* const _this = this;
+
+void Msg_CrossProcessSemaphore::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_CrossProcessSemaphore*>(&to_msg);
+  auto& from = static_cast<const Msg_CrossProcessSemaphore&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestCrossProcessSemaphore.Msg_CrossProcessSemaphore)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_asem()) {
+  if (!from._internal_a_asem().empty()) {
     _this->_internal_set_a_asem(from._internal_a_asem());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_CrossProcessSemaphore::CopyFrom(const Msg_CrossProcessSemaphore& from) {
@@ -240,7 +266,6 @@ void Msg_CrossProcessSemaphore::CopyFrom(const Msg_CrossProcessSemaphore& from) 
 }
 
 bool Msg_CrossProcessSemaphore::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -249,17 +274,17 @@ void Msg_CrossProcessSemaphore::InternalSwap(Msg_CrossProcessSemaphore* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_asem_, lhs_arena,
       &other->_impl_.a_asem_, rhs_arena
   );
 }
 
-std::string Msg_CrossProcessSemaphore::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.PTestCrossProcessSemaphore.Msg_CrossProcessSemaphore";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_CrossProcessSemaphore::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestCrossProcessSemaphore_2eproto_getter, &descriptor_table_PTestCrossProcessSemaphore_2eproto_once,
+      file_level_metadata_PTestCrossProcessSemaphore_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace PTestCrossProcessSemaphore

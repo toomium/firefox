@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/ipc/PJSOracle.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PJSOracle;
 
@@ -16,7 +15,7 @@ package protobuf.mozilla.dom.PJSOracle;
 
 // Message declarations
 message Msg_PJSValidatorConstructor {
-  required sint64 a_actorid = 1;
+  sint64 a_actorid = 1;
 }
 
 message Reply_PJSValidatorConstructor {

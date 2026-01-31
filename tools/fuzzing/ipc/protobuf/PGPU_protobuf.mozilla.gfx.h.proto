@@ -5,8 +5,7 @@
 
 // Generated from PGPU.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.gfx;
 
@@ -18,6 +17,6 @@ import "PrefsTypes.proto";
 
 // Structs and unions declarations
 message LayerTreeIdMapping {
-  required bytes a_layersId = 1;
-  required bytes a_ownerId = 2;
+  bytes a_layersId = 1;
+  bytes a_ownerId = 2;
 }

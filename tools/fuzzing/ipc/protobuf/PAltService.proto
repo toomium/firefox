@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/netwerk/protocol/http/PAltService.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.net.PAltService;
 
@@ -17,22 +16,22 @@ import "NeckoChannelParams.proto";
 
 // Message declarations
 message Msg_ClearHostMapping {
-  required string a_host = 1;
-  required sint32 a_port = 2;
-  required bytes a_originAttributes = 3;
+  string a_host = 1;
+  sint32 a_port = 2;
+  bytes a_originAttributes = 3;
 }
 
 message Msg_ProcessHeader {
-  required string a_buf = 1;
-  required string a_originScheme = 2;
-  required string a_originHost = 3;
-  required sint32 a_originPort = 4;
-  required string a_username = 5;
-  required bool a_privateBrowsing = 6;
+  string a_buf = 1;
+  string a_originScheme = 2;
+  string a_originHost = 3;
+  sint32 a_originPort = 4;
+  string a_username = 5;
+  bool a_privateBrowsing = 6;
   repeated protobuf.mozilla.net.ProxyInfoCloneArgs a_proxyInfo = 7;
-  required uint32 a_caps = 8;
-  required bytes a_originAttributes = 9;
-  required protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_connInfoArgs = 10;
+  uint32 a_caps = 8;
+  bytes a_originAttributes = 9;
+  protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_connInfoArgs = 10;
 }
 
 message Msg___delete__ {

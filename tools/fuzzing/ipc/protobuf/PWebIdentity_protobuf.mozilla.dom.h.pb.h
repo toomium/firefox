@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto
@@ -41,6 +43,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -64,7 +67,7 @@ namespace dom {
 // ===================================================================
 
 class IPCIdentityCredential final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.IPCIdentityCredential) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.IPCIdentityCredential) */ {
  public:
   inline IPCIdentityCredential() : IPCIdentityCredential(nullptr) {}
   ~IPCIdentityCredential() override;
@@ -94,13 +97,15 @@ class IPCIdentityCredential final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const IPCIdentityCredential& default_instance() {
     return *internal_default_instance();
   }
@@ -138,9 +143,15 @@ class IPCIdentityCredential final :
   IPCIdentityCredential* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<IPCIdentityCredential>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const IPCIdentityCredential& from);
-  void MergeFrom(const IPCIdentityCredential& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const IPCIdentityCredential& from) {
+    IPCIdentityCredential::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -153,7 +164,7 @@ class IPCIdentityCredential final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(IPCIdentityCredential* other);
 
   private:
@@ -166,7 +177,10 @@ class IPCIdentityCredential final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -176,11 +190,7 @@ class IPCIdentityCredential final :
     kAIdFieldNumber = 1,
     kATokenFieldNumber = 2,
   };
-  // required string a_id = 1;
-  bool has_a_id() const;
-  private:
-  bool _internal_has_a_id() const;
-  public:
+  // string a_id = 1;
   void clear_a_id();
   const std::string& a_id() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -231,7 +241,7 @@ class IPCIdentityCredential final :
 // -------------------------------------------------------------------
 
 class WebIdentityGetCredentialResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebIdentityGetCredentialResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebIdentityGetCredentialResponse) */ {
  public:
   inline WebIdentityGetCredentialResponse() : WebIdentityGetCredentialResponse(nullptr) {}
   ~WebIdentityGetCredentialResponse() override;
@@ -261,13 +271,15 @@ class WebIdentityGetCredentialResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const WebIdentityGetCredentialResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -311,9 +323,15 @@ class WebIdentityGetCredentialResponse final :
   WebIdentityGetCredentialResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebIdentityGetCredentialResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const WebIdentityGetCredentialResponse& from);
-  void MergeFrom(const WebIdentityGetCredentialResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const WebIdentityGetCredentialResponse& from) {
+    WebIdentityGetCredentialResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -326,7 +344,7 @@ class WebIdentityGetCredentialResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(WebIdentityGetCredentialResponse* other);
 
   private:
@@ -339,7 +357,10 @@ class WebIdentityGetCredentialResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -424,17 +445,9 @@ class WebIdentityGetCredentialResponse final :
 #endif  // __GNUC__
 // IPCIdentityCredential
 
-// required string a_id = 1;
-inline bool IPCIdentityCredential::_internal_has_a_id() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool IPCIdentityCredential::has_a_id() const {
-  return _internal_has_a_id();
-}
+// string a_id = 1;
 inline void IPCIdentityCredential::clear_a_id() {
   _impl_.a_id_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& IPCIdentityCredential::a_id() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCIdentityCredential.a_id)
@@ -443,7 +456,7 @@ inline const std::string& IPCIdentityCredential::a_id() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCIdentityCredential::set_a_id(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCIdentityCredential.a_id)
 }
@@ -456,32 +469,22 @@ inline const std::string& IPCIdentityCredential::_internal_a_id() const {
   return _impl_.a_id_.Get();
 }
 inline void IPCIdentityCredential::_internal_set_a_id(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_id_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCIdentityCredential::_internal_mutable_a_id() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_id_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCIdentityCredential::release_a_id() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCIdentityCredential.a_id)
-  if (!_internal_has_a_id()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_id_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_id_.IsDefault()) {
-    _impl_.a_id_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_id_.Release();
 }
 inline void IPCIdentityCredential::set_allocated_a_id(std::string* a_id) {
   if (a_id != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_id_.SetAllocated(a_id, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -494,7 +497,7 @@ inline void IPCIdentityCredential::set_allocated_a_id(std::string* a_id) {
 
 // optional string a_token = 2;
 inline bool IPCIdentityCredential::_internal_has_a_token() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
 inline bool IPCIdentityCredential::has_a_token() const {
@@ -502,7 +505,7 @@ inline bool IPCIdentityCredential::has_a_token() const {
 }
 inline void IPCIdentityCredential::clear_a_token() {
   _impl_.a_token_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& IPCIdentityCredential::a_token() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCIdentityCredential.a_token)
@@ -511,7 +514,7 @@ inline const std::string& IPCIdentityCredential::a_token() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCIdentityCredential::set_a_token(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.a_token_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCIdentityCredential.a_token)
 }
@@ -524,11 +527,11 @@ inline const std::string& IPCIdentityCredential::_internal_a_token() const {
   return _impl_.a_token_.Get();
 }
 inline void IPCIdentityCredential::_internal_set_a_token(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_token_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCIdentityCredential::_internal_mutable_a_token() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.a_token_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCIdentityCredential::release_a_token() {
@@ -536,7 +539,7 @@ inline std::string* IPCIdentityCredential::release_a_token() {
   if (!_internal_has_a_token()) {
     return nullptr;
   }
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
   auto* p = _impl_.a_token_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (_impl_.a_token_.IsDefault()) {
@@ -547,9 +550,9 @@ inline std::string* IPCIdentityCredential::release_a_token() {
 }
 inline void IPCIdentityCredential::set_allocated_a_token(std::string* a_token) {
   if (a_token != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_token_.SetAllocated(a_token, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

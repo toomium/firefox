@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "GamepadEventTypes.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -42,6 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PGamepadTestChannel_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PGamepadTestChannel_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -76,7 +80,7 @@ namespace PGamepadTestChannel {
 // ===================================================================
 
 class Msg_GamepadTestEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent) */ {
  public:
   inline Msg_GamepadTestEvent() : Msg_GamepadTestEvent(nullptr) {}
   ~Msg_GamepadTestEvent() override;
@@ -106,13 +110,15 @@ class Msg_GamepadTestEvent final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_GamepadTestEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -150,9 +156,15 @@ class Msg_GamepadTestEvent final :
   Msg_GamepadTestEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_GamepadTestEvent>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_GamepadTestEvent& from);
-  void MergeFrom(const Msg_GamepadTestEvent& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_GamepadTestEvent& from) {
+    Msg_GamepadTestEvent::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -165,7 +177,7 @@ class Msg_GamepadTestEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_GamepadTestEvent* other);
 
   private:
@@ -178,7 +190,10 @@ class Msg_GamepadTestEvent final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -188,7 +203,7 @@ class Msg_GamepadTestEvent final :
     kAAGamepadEventFieldNumber = 2,
     kAAIDFieldNumber = 1,
   };
-  // required .protobuf.mozilla.dom.GamepadChangeEvent a_aGamepadEvent = 2;
+  // .protobuf.mozilla.dom.GamepadChangeEvent a_aGamepadEvent = 2;
   bool has_a_agamepadevent() const;
   private:
   bool _internal_has_a_agamepadevent() const;
@@ -206,11 +221,7 @@ class Msg_GamepadTestEvent final :
       ::protobuf::mozilla::dom::GamepadChangeEvent* a_agamepadevent);
   ::protobuf::mozilla::dom::GamepadChangeEvent* unsafe_arena_release_a_agamepadevent();
 
-  // required uint32 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint32 a_aID = 1;
   void clear_a_aid();
   uint32_t a_aid() const;
   void set_a_aid(uint32_t value);
@@ -223,17 +234,13 @@ class Msg_GamepadTestEvent final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::dom::GamepadChangeEvent* a_agamepadevent_;
     uint32_t a_aid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGamepadTestChannel_2eproto;
@@ -241,10 +248,9 @@ class Msg_GamepadTestEvent final :
 // -------------------------------------------------------------------
 
 class Msg___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PGamepadTestChannel.Msg___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PGamepadTestChannel.Msg___delete__) */ {
  public:
   inline Msg___delete__() : Msg___delete__(nullptr) {}
-  ~Msg___delete__() override;
   explicit PROTOBUF_CONSTEXPR Msg___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg___delete__(const Msg___delete__& from);
@@ -271,13 +277,15 @@ class Msg___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -315,23 +323,15 @@ class Msg___delete__ final :
   Msg___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg___delete__& from);
-  void MergeFrom(const Msg___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -343,7 +343,10 @@ class Msg___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -357,18 +360,15 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PGamepadTestChannel_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PGamepadTestChannel.Reply___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PGamepadTestChannel.Reply___delete__) */ {
  public:
   inline Reply___delete__() : Reply___delete__(nullptr) {}
-  ~Reply___delete__() override;
   explicit PROTOBUF_CONSTEXPR Reply___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply___delete__(const Reply___delete__& from);
@@ -395,13 +395,15 @@ class Reply___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -439,23 +441,15 @@ class Reply___delete__ final :
   Reply___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply___delete__& from);
-  void MergeFrom(const Reply___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -467,7 +461,10 @@ class Reply___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -481,15 +478,13 @@ class Reply___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PGamepadTestChannel_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_ReplyGamepadHandle final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle) */ {
  public:
   inline Msg_ReplyGamepadHandle() : Msg_ReplyGamepadHandle(nullptr) {}
   ~Msg_ReplyGamepadHandle() override;
@@ -519,13 +514,15 @@ class Msg_ReplyGamepadHandle final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_ReplyGamepadHandle& default_instance() {
     return *internal_default_instance();
   }
@@ -563,9 +560,15 @@ class Msg_ReplyGamepadHandle final :
   Msg_ReplyGamepadHandle* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ReplyGamepadHandle>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_ReplyGamepadHandle& from);
-  void MergeFrom(const Msg_ReplyGamepadHandle& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_ReplyGamepadHandle& from) {
+    Msg_ReplyGamepadHandle::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -578,7 +581,7 @@ class Msg_ReplyGamepadHandle final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_ReplyGamepadHandle* other);
 
   private:
@@ -591,7 +594,10 @@ class Msg_ReplyGamepadHandle final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -601,11 +607,7 @@ class Msg_ReplyGamepadHandle final :
     kAAHandleFieldNumber = 2,
     kAAIDFieldNumber = 1,
   };
-  // required bytes a_aHandle = 2;
-  bool has_a_ahandle() const;
-  private:
-  bool _internal_has_a_ahandle() const;
-  public:
+  // bytes a_aHandle = 2;
   void clear_a_ahandle();
   const std::string& a_ahandle() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -619,11 +621,7 @@ class Msg_ReplyGamepadHandle final :
   std::string* _internal_mutable_a_ahandle();
   public:
 
-  // required uint32 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint32 a_aID = 1;
   void clear_a_aid();
   uint32_t a_aid() const;
   void set_a_aid(uint32_t value);
@@ -636,17 +634,13 @@ class Msg_ReplyGamepadHandle final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ahandle_;
     uint32_t a_aid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGamepadTestChannel_2eproto;
@@ -662,17 +656,9 @@ class Msg_ReplyGamepadHandle final :
 #endif  // __GNUC__
 // Msg_GamepadTestEvent
 
-// required uint32 a_aID = 1;
-inline bool Msg_GamepadTestEvent::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_GamepadTestEvent::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint32 a_aID = 1;
 inline void Msg_GamepadTestEvent::clear_a_aid() {
   _impl_.a_aid_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_GamepadTestEvent::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -682,7 +668,7 @@ inline uint32_t Msg_GamepadTestEvent::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_GamepadTestEvent::_internal_set_a_aid(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_GamepadTestEvent::set_a_aid(uint32_t value) {
@@ -690,11 +676,9 @@ inline void Msg_GamepadTestEvent::set_a_aid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent.a_aID)
 }
 
-// required .protobuf.mozilla.dom.GamepadChangeEvent a_aGamepadEvent = 2;
+// .protobuf.mozilla.dom.GamepadChangeEvent a_aGamepadEvent = 2;
 inline bool Msg_GamepadTestEvent::_internal_has_a_agamepadevent() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_agamepadevent_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_agamepadevent_ != nullptr;
 }
 inline bool Msg_GamepadTestEvent::has_a_agamepadevent() const {
   return _internal_has_a_agamepadevent();
@@ -715,14 +699,14 @@ inline void Msg_GamepadTestEvent::unsafe_arena_set_allocated_a_agamepadevent(
   }
   _impl_.a_agamepadevent_ = a_agamepadevent;
   if (a_agamepadevent) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent.a_aGamepadEvent)
 }
 inline ::protobuf::mozilla::dom::GamepadChangeEvent* Msg_GamepadTestEvent::release_a_agamepadevent() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::dom::GamepadChangeEvent* temp = _impl_.a_agamepadevent_;
   _impl_.a_agamepadevent_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -738,13 +722,13 @@ inline ::protobuf::mozilla::dom::GamepadChangeEvent* Msg_GamepadTestEvent::relea
 }
 inline ::protobuf::mozilla::dom::GamepadChangeEvent* Msg_GamepadTestEvent::unsafe_arena_release_a_agamepadevent() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent.a_aGamepadEvent)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::dom::GamepadChangeEvent* temp = _impl_.a_agamepadevent_;
   _impl_.a_agamepadevent_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::GamepadChangeEvent* Msg_GamepadTestEvent::_internal_mutable_a_agamepadevent() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_agamepadevent_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::GamepadChangeEvent>(GetArenaForAllocation());
     _impl_.a_agamepadevent_ = p;
@@ -769,9 +753,9 @@ inline void Msg_GamepadTestEvent::set_allocated_a_agamepadevent(::protobuf::mozi
       a_agamepadevent = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_agamepadevent, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_agamepadevent_ = a_agamepadevent;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.PGamepadTestChannel.Msg_GamepadTestEvent.a_aGamepadEvent)
@@ -789,17 +773,9 @@ inline void Msg_GamepadTestEvent::set_allocated_a_agamepadevent(::protobuf::mozi
 
 // Msg_ReplyGamepadHandle
 
-// required uint32 a_aID = 1;
-inline bool Msg_ReplyGamepadHandle::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_ReplyGamepadHandle::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint32 a_aID = 1;
 inline void Msg_ReplyGamepadHandle::clear_a_aid() {
   _impl_.a_aid_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_ReplyGamepadHandle::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -809,7 +785,7 @@ inline uint32_t Msg_ReplyGamepadHandle::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_ReplyGamepadHandle::_internal_set_a_aid(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_ReplyGamepadHandle::set_a_aid(uint32_t value) {
@@ -817,17 +793,9 @@ inline void Msg_ReplyGamepadHandle::set_a_aid(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle.a_aID)
 }
 
-// required bytes a_aHandle = 2;
-inline bool Msg_ReplyGamepadHandle::_internal_has_a_ahandle() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_ReplyGamepadHandle::has_a_ahandle() const {
-  return _internal_has_a_ahandle();
-}
+// bytes a_aHandle = 2;
 inline void Msg_ReplyGamepadHandle::clear_a_ahandle() {
   _impl_.a_ahandle_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_ReplyGamepadHandle::a_ahandle() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle.a_aHandle)
@@ -836,7 +804,7 @@ inline const std::string& Msg_ReplyGamepadHandle::a_ahandle() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReplyGamepadHandle::set_a_ahandle(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_ahandle_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle.a_aHandle)
 }
@@ -849,32 +817,22 @@ inline const std::string& Msg_ReplyGamepadHandle::_internal_a_ahandle() const {
   return _impl_.a_ahandle_.Get();
 }
 inline void Msg_ReplyGamepadHandle::_internal_set_a_ahandle(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_ahandle_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ReplyGamepadHandle::_internal_mutable_a_ahandle() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_ahandle_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ReplyGamepadHandle::release_a_ahandle() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.PGamepadTestChannel.Msg_ReplyGamepadHandle.a_aHandle)
-  if (!_internal_has_a_ahandle()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_ahandle_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_ahandle_.IsDefault()) {
-    _impl_.a_ahandle_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_ahandle_.Release();
 }
 inline void Msg_ReplyGamepadHandle::set_allocated_a_ahandle(std::string* a_ahandle) {
   if (a_ahandle != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_ahandle_.SetAllocated(a_ahandle, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

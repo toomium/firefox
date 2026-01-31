@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/media/ipc/PRemoteDecoder.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.PRemoteDecoder;
 
@@ -22,14 +21,14 @@ message Msg_Construct {
 }
 
 message Reply_Construct {
-  required bytes a_result = 1;
+  bytes a_result = 1;
 }
 
 message Msg_Init {
 }
 
 message Reply_Init {
-  required protobuf.mozilla.InitResultIPDL a_result = 1;
+  protobuf.mozilla.InitResultIPDL a_result = 1;
 }
 
 message Msg_Decode {
@@ -37,32 +36,32 @@ message Msg_Decode {
 }
 
 message Reply_Decode {
-  required protobuf.mozilla.DecodeResultIPDL a_result = 1;
+  protobuf.mozilla.DecodeResultIPDL a_result = 1;
 }
 
 message Msg_Flush {
 }
 
 message Reply_Flush {
-  required bytes a_error = 1;
+  bytes a_error = 1;
 }
 
 message Msg_Drain {
 }
 
 message Reply_Drain {
-  required protobuf.mozilla.DecodeResultIPDL a_result = 1;
+  protobuf.mozilla.DecodeResultIPDL a_result = 1;
 }
 
 message Msg_Shutdown {
 }
 
 message Reply_Shutdown {
-  required bool a_unused = 1;
+  bool a_unused = 1;
 }
 
 message Msg_SetSeekThreshold {
-  required bytes a_time = 1;
+  bytes a_time = 1;
 }
 
 message Msg___delete__ {

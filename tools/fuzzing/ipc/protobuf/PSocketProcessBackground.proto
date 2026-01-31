@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/netwerk/ipc/PSocketProcessBackground.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.net.PSocketProcessBackground;
 
@@ -17,37 +16,37 @@ import "PSMIPCTypes.proto";
 
 // Message declarations
 message Msg_InitVerifySSLServerCert {
-  required bytes a_aEndpoint = 1;
+  bytes a_aEndpoint = 1;
   repeated protobuf.mozilla.psm.ByteArray a_aPeerCertChain = 2;
-  required string a_aHostName = 3;
-  required sint32 a_aPort = 4;
-  required bytes a_aOriginAttributes = 5;
+  string a_aHostName = 3;
+  sint32 a_aPort = 4;
+  bytes a_aOriginAttributes = 5;
   optional protobuf.mozilla.psm.ByteArray a_aStapledOCSPResponse = 6;
   optional protobuf.mozilla.psm.ByteArray a_aSctsFromTLSExtension = 7;
   optional protobuf.mozilla.psm.DelegatedCredentialInfoArg a_aDcInfo = 8;
-  required uint32 a_aProviderFlags = 9;
-  required uint32 a_aCertVerifierFlags = 10;
+  uint32 a_aProviderFlags = 9;
+  uint32 a_aCertVerifierFlags = 10;
 }
 
 message Msg_InitSelectTLSClientAuthCert {
-  required bytes a_aEndpoint = 1;
-  required string a_aHostName = 2;
-  required bytes a_aOriginAttributes = 3;
-  required sint32 a_aPort = 4;
-  required uint32 a_aProviderFlags = 5;
-  required uint32 a_aProviderTlsFlags = 6;
-  required protobuf.mozilla.psm.ByteArray a_aServerCertBytes = 7;
+  bytes a_aEndpoint = 1;
+  string a_aHostName = 2;
+  bytes a_aOriginAttributes = 3;
+  sint32 a_aPort = 4;
+  uint32 a_aProviderFlags = 5;
+  uint32 a_aProviderTlsFlags = 6;
+  protobuf.mozilla.psm.ByteArray a_aServerCertBytes = 7;
   repeated protobuf.mozilla.psm.ByteArray a_aCANames = 8;
-  required uint64 a_aBrowserId = 9;
+  uint64 a_aBrowserId = 9;
 }
 
 message Msg_InitIPCClientCerts {
-  required bytes a_aEndpoint = 1;
+  bytes a_aEndpoint = 1;
 }
 
 message Msg_InitWebSocketConnection {
-  required bytes a_aEndpoint = 1;
-  required uint32 a_aListenerId = 2;
+  bytes a_aEndpoint = 1;
+  uint32 a_aListenerId = 2;
 }
 
 // Parameter mappings stats:

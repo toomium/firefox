@@ -5,15 +5,14 @@
 
 // Generated from /home/tmittendorf/firefox/dom/quota/PQuotaRequest.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.quota;
 
 
 // Structs and unions declarations
 message StorageNameResponse {
-  required string a_name = 1;
+  string a_name = 1;
 }
 
 message GetFullOriginMetadataResponse {
@@ -21,15 +20,15 @@ message GetFullOriginMetadataResponse {
 }
 
 message PersistedResponse {
-  required bool a_persisted = 1;
+  bool a_persisted = 1;
 }
 
 message PersistResponse {
 }
 
 message EstimateResponse {
-  required uint64 a_usage = 1;
-  required uint64 a_limit = 2;
+  uint64 a_usage = 1;
+  uint64 a_limit = 2;
 }
 
 message RequestResponse {

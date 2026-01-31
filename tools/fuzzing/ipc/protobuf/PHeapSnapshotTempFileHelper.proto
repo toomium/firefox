@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/devtools/shared/heapsnapshot/PHeapSnapshotTempFileHelper.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.devtools.PHeapSnapshotTempFileHelper;
 
@@ -20,7 +19,7 @@ message Msg_OpenHeapSnapshotTempFile {
 }
 
 message Reply_OpenHeapSnapshotTempFile {
-  required protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse a_response = 1;
+  protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse a_response = 1;
 }
 
 message Msg___delete__ {

@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/media/systemservices/PMediaSystemResourceManager.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.media.PMediaSystemResourceManager;
 
@@ -16,8 +15,8 @@ package protobuf.mozilla.media.PMediaSystemResourceManager;
 
 // Message declarations
 message Msg_Response {
-  required uint32 a_aId = 1;
-  required bool a_aSuccess = 2;
+  uint32 a_aId = 1;
+  bool a_aSuccess = 2;
 }
 
 message Msg___delete__ {
@@ -27,13 +26,13 @@ message Reply___delete__ {
 }
 
 message Msg_Acquire {
-  required uint32 a_aId = 1;
-  required bytes a_aResourceType = 2;
-  required bool a_aWillWait = 3;
+  uint32 a_aId = 1;
+  bytes a_aResourceType = 2;
+  bool a_aWillWait = 3;
 }
 
 message Msg_Release {
-  required uint32 a_aId = 1;
+  uint32 a_aId = 1;
 }
 
 message Msg_RemoveResourceManager {

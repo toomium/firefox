@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "IPCStream.pb.h"
 #include "ProtocolTypes.pb.h"
 #include "IPCBlob_protobuf.mozilla.h.pb.h"
@@ -44,6 +46,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_IPCBlob_5fprotobuf_2emozilla_2edom_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_IPCBlob_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -67,7 +70,7 @@ namespace dom {
 // ===================================================================
 
 class IPCFile final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.IPCFile) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.IPCFile) */ {
  public:
   inline IPCFile() : IPCFile(nullptr) {}
   ~IPCFile() override;
@@ -97,13 +100,15 @@ class IPCFile final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const IPCFile& default_instance() {
     return *internal_default_instance();
   }
@@ -141,9 +146,15 @@ class IPCFile final :
   IPCFile* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<IPCFile>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const IPCFile& from);
-  void MergeFrom(const IPCFile& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const IPCFile& from) {
+    IPCFile::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -156,7 +167,7 @@ class IPCFile final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(IPCFile* other);
 
   private:
@@ -169,7 +180,10 @@ class IPCFile final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -182,11 +196,7 @@ class IPCFile final :
     kALastModifiedFieldNumber = 2,
     kAIsDirectoryFieldNumber = 5,
   };
-  // required string a_name = 1;
-  bool has_a_name() const;
-  private:
-  bool _internal_has_a_name() const;
-  public:
+  // string a_name = 1;
   void clear_a_name();
   const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -200,11 +210,7 @@ class IPCFile final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_DOMPath = 3;
-  bool has_a_dompath() const;
-  private:
-  bool _internal_has_a_dompath() const;
-  public:
+  // string a_DOMPath = 3;
   void clear_a_dompath();
   const std::string& a_dompath() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -218,11 +224,7 @@ class IPCFile final :
   std::string* _internal_mutable_a_dompath();
   public:
 
-  // required string a_fullPath = 4;
-  bool has_a_fullpath() const;
-  private:
-  bool _internal_has_a_fullpath() const;
-  public:
+  // string a_fullPath = 4;
   void clear_a_fullpath();
   const std::string& a_fullpath() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -236,11 +238,7 @@ class IPCFile final :
   std::string* _internal_mutable_a_fullpath();
   public:
 
-  // required sint64 a_lastModified = 2;
-  bool has_a_lastmodified() const;
-  private:
-  bool _internal_has_a_lastmodified() const;
-  public:
+  // sint64 a_lastModified = 2;
   void clear_a_lastmodified();
   int64_t a_lastmodified() const;
   void set_a_lastmodified(int64_t value);
@@ -249,11 +247,7 @@ class IPCFile final :
   void _internal_set_a_lastmodified(int64_t value);
   public:
 
-  // required bool a_isDirectory = 5;
-  bool has_a_isdirectory() const;
-  private:
-  bool _internal_has_a_isdirectory() const;
-  public:
+  // bool a_isDirectory = 5;
   void clear_a_isdirectory();
   bool a_isdirectory() const;
   void set_a_isdirectory(bool value);
@@ -266,20 +260,16 @@ class IPCFile final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_dompath_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_fullpath_;
     int64_t a_lastmodified_;
     bool a_isdirectory_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_IPCBlob_5fprotobuf_2emozilla_2edom_2eh_2eproto;
@@ -287,7 +277,7 @@ class IPCFile final :
 // -------------------------------------------------------------------
 
 class IPCBlob final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.IPCBlob) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.IPCBlob) */ {
  public:
   inline IPCBlob() : IPCBlob(nullptr) {}
   ~IPCBlob() override;
@@ -317,13 +307,15 @@ class IPCBlob final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const IPCBlob& default_instance() {
     return *internal_default_instance();
   }
@@ -361,9 +353,15 @@ class IPCBlob final :
   IPCBlob* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<IPCBlob>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const IPCBlob& from);
-  void MergeFrom(const IPCBlob& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const IPCBlob& from) {
+    IPCBlob::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -376,7 +374,7 @@ class IPCBlob final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(IPCBlob* other);
 
   private:
@@ -389,7 +387,10 @@ class IPCBlob final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -403,11 +404,7 @@ class IPCBlob final :
     kASizeFieldNumber = 2,
     kAFileIdFieldNumber = 6,
   };
-  // required string a_type = 1;
-  bool has_a_type() const;
-  private:
-  bool _internal_has_a_type() const;
-  public:
+  // string a_type = 1;
   void clear_a_type();
   const std::string& a_type() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -421,11 +418,7 @@ class IPCBlob final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // required string a_blobImplType = 3;
-  bool has_a_blobimpltype() const;
-  private:
-  bool _internal_has_a_blobimpltype() const;
-  public:
+  // string a_blobImplType = 3;
   void clear_a_blobimpltype();
   const std::string& a_blobimpltype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -439,7 +432,7 @@ class IPCBlob final :
   std::string* _internal_mutable_a_blobimpltype();
   public:
 
-  // required .protobuf.mozilla.RemoteLazyStream a_inputStream = 4;
+  // .protobuf.mozilla.RemoteLazyStream a_inputStream = 4;
   bool has_a_inputstream() const;
   private:
   bool _internal_has_a_inputstream() const;
@@ -475,11 +468,7 @@ class IPCBlob final :
       ::protobuf::mozilla::dom::IPCFile* a_file);
   ::protobuf::mozilla::dom::IPCFile* unsafe_arena_release_a_file();
 
-  // required uint64 a_size = 2;
-  bool has_a_size() const;
-  private:
-  bool _internal_has_a_size() const;
-  public:
+  // uint64 a_size = 2;
   void clear_a_size();
   uint64_t a_size() const;
   void set_a_size(uint64_t value);
@@ -488,11 +477,7 @@ class IPCBlob final :
   void _internal_set_a_size(uint64_t value);
   public:
 
-  // required sint64 a_fileId = 6;
-  bool has_a_fileid() const;
-  private:
-  bool _internal_has_a_fileid() const;
-  public:
+  // sint64 a_fileId = 6;
   void clear_a_fileid();
   int64_t a_fileid() const;
   void set_a_fileid(int64_t value);
@@ -504,9 +489,6 @@ class IPCBlob final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.dom.IPCBlob)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -535,17 +517,9 @@ class IPCBlob final :
 #endif  // __GNUC__
 // IPCFile
 
-// required string a_name = 1;
-inline bool IPCFile::_internal_has_a_name() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool IPCFile::has_a_name() const {
-  return _internal_has_a_name();
-}
+// string a_name = 1;
 inline void IPCFile::clear_a_name() {
   _impl_.a_name_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& IPCFile::a_name() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCFile.a_name)
@@ -554,7 +528,7 @@ inline const std::string& IPCFile::a_name() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCFile::set_a_name(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCFile.a_name)
 }
@@ -567,32 +541,22 @@ inline const std::string& IPCFile::_internal_a_name() const {
   return _impl_.a_name_.Get();
 }
 inline void IPCFile::_internal_set_a_name(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCFile::_internal_mutable_a_name() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCFile::release_a_name() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCFile.a_name)
-  if (!_internal_has_a_name()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_name_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_name_.IsDefault()) {
-    _impl_.a_name_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_name_.Release();
 }
 inline void IPCFile::set_allocated_a_name(std::string* a_name) {
   if (a_name != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -603,17 +567,9 @@ inline void IPCFile::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCFile.a_name)
 }
 
-// required sint64 a_lastModified = 2;
-inline bool IPCFile::_internal_has_a_lastmodified() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool IPCFile::has_a_lastmodified() const {
-  return _internal_has_a_lastmodified();
-}
+// sint64 a_lastModified = 2;
 inline void IPCFile::clear_a_lastmodified() {
   _impl_.a_lastmodified_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline int64_t IPCFile::_internal_a_lastmodified() const {
   return _impl_.a_lastmodified_;
@@ -623,7 +579,7 @@ inline int64_t IPCFile::a_lastmodified() const {
   return _internal_a_lastmodified();
 }
 inline void IPCFile::_internal_set_a_lastmodified(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_lastmodified_ = value;
 }
 inline void IPCFile::set_a_lastmodified(int64_t value) {
@@ -631,17 +587,9 @@ inline void IPCFile::set_a_lastmodified(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCFile.a_lastModified)
 }
 
-// required string a_DOMPath = 3;
-inline bool IPCFile::_internal_has_a_dompath() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool IPCFile::has_a_dompath() const {
-  return _internal_has_a_dompath();
-}
+// string a_DOMPath = 3;
 inline void IPCFile::clear_a_dompath() {
   _impl_.a_dompath_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& IPCFile::a_dompath() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCFile.a_DOMPath)
@@ -650,7 +598,7 @@ inline const std::string& IPCFile::a_dompath() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCFile::set_a_dompath(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_dompath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCFile.a_DOMPath)
 }
@@ -663,32 +611,22 @@ inline const std::string& IPCFile::_internal_a_dompath() const {
   return _impl_.a_dompath_.Get();
 }
 inline void IPCFile::_internal_set_a_dompath(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_dompath_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCFile::_internal_mutable_a_dompath() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_dompath_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCFile::release_a_dompath() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCFile.a_DOMPath)
-  if (!_internal_has_a_dompath()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_dompath_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_dompath_.IsDefault()) {
-    _impl_.a_dompath_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_dompath_.Release();
 }
 inline void IPCFile::set_allocated_a_dompath(std::string* a_dompath) {
   if (a_dompath != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_dompath_.SetAllocated(a_dompath, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -699,17 +637,9 @@ inline void IPCFile::set_allocated_a_dompath(std::string* a_dompath) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCFile.a_DOMPath)
 }
 
-// required string a_fullPath = 4;
-inline bool IPCFile::_internal_has_a_fullpath() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool IPCFile::has_a_fullpath() const {
-  return _internal_has_a_fullpath();
-}
+// string a_fullPath = 4;
 inline void IPCFile::clear_a_fullpath() {
   _impl_.a_fullpath_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& IPCFile::a_fullpath() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCFile.a_fullPath)
@@ -718,7 +648,7 @@ inline const std::string& IPCFile::a_fullpath() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCFile::set_a_fullpath(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_fullpath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCFile.a_fullPath)
 }
@@ -731,32 +661,22 @@ inline const std::string& IPCFile::_internal_a_fullpath() const {
   return _impl_.a_fullpath_.Get();
 }
 inline void IPCFile::_internal_set_a_fullpath(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_fullpath_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCFile::_internal_mutable_a_fullpath() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_fullpath_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCFile::release_a_fullpath() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCFile.a_fullPath)
-  if (!_internal_has_a_fullpath()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_fullpath_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_fullpath_.IsDefault()) {
-    _impl_.a_fullpath_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_fullpath_.Release();
 }
 inline void IPCFile::set_allocated_a_fullpath(std::string* a_fullpath) {
   if (a_fullpath != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_fullpath_.SetAllocated(a_fullpath, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -767,17 +687,9 @@ inline void IPCFile::set_allocated_a_fullpath(std::string* a_fullpath) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCFile.a_fullPath)
 }
 
-// required bool a_isDirectory = 5;
-inline bool IPCFile::_internal_has_a_isdirectory() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool IPCFile::has_a_isdirectory() const {
-  return _internal_has_a_isdirectory();
-}
+// bool a_isDirectory = 5;
 inline void IPCFile::clear_a_isdirectory() {
   _impl_.a_isdirectory_ = false;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline bool IPCFile::_internal_a_isdirectory() const {
   return _impl_.a_isdirectory_;
@@ -787,7 +699,7 @@ inline bool IPCFile::a_isdirectory() const {
   return _internal_a_isdirectory();
 }
 inline void IPCFile::_internal_set_a_isdirectory(bool value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_isdirectory_ = value;
 }
 inline void IPCFile::set_a_isdirectory(bool value) {
@@ -799,17 +711,9 @@ inline void IPCFile::set_a_isdirectory(bool value) {
 
 // IPCBlob
 
-// required string a_type = 1;
-inline bool IPCBlob::_internal_has_a_type() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool IPCBlob::has_a_type() const {
-  return _internal_has_a_type();
-}
+// string a_type = 1;
 inline void IPCBlob::clear_a_type() {
   _impl_.a_type_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& IPCBlob::a_type() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCBlob.a_type)
@@ -818,7 +722,7 @@ inline const std::string& IPCBlob::a_type() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCBlob::set_a_type(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_type_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCBlob.a_type)
 }
@@ -831,32 +735,22 @@ inline const std::string& IPCBlob::_internal_a_type() const {
   return _impl_.a_type_.Get();
 }
 inline void IPCBlob::_internal_set_a_type(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_type_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCBlob::_internal_mutable_a_type() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_type_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCBlob::release_a_type() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCBlob.a_type)
-  if (!_internal_has_a_type()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_type_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_type_.IsDefault()) {
-    _impl_.a_type_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_type_.Release();
 }
 inline void IPCBlob::set_allocated_a_type(std::string* a_type) {
   if (a_type != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_type_.SetAllocated(a_type, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -867,17 +761,9 @@ inline void IPCBlob::set_allocated_a_type(std::string* a_type) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCBlob.a_type)
 }
 
-// required uint64 a_size = 2;
-inline bool IPCBlob::_internal_has_a_size() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool IPCBlob::has_a_size() const {
-  return _internal_has_a_size();
-}
+// uint64 a_size = 2;
 inline void IPCBlob::clear_a_size() {
   _impl_.a_size_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline uint64_t IPCBlob::_internal_a_size() const {
   return _impl_.a_size_;
@@ -887,7 +773,7 @@ inline uint64_t IPCBlob::a_size() const {
   return _internal_a_size();
 }
 inline void IPCBlob::_internal_set_a_size(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_size_ = value;
 }
 inline void IPCBlob::set_a_size(uint64_t value) {
@@ -895,17 +781,9 @@ inline void IPCBlob::set_a_size(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCBlob.a_size)
 }
 
-// required string a_blobImplType = 3;
-inline bool IPCBlob::_internal_has_a_blobimpltype() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool IPCBlob::has_a_blobimpltype() const {
-  return _internal_has_a_blobimpltype();
-}
+// string a_blobImplType = 3;
 inline void IPCBlob::clear_a_blobimpltype() {
   _impl_.a_blobimpltype_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& IPCBlob::a_blobimpltype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.IPCBlob.a_blobImplType)
@@ -914,7 +792,7 @@ inline const std::string& IPCBlob::a_blobimpltype() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCBlob::set_a_blobimpltype(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_blobimpltype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.IPCBlob.a_blobImplType)
 }
@@ -927,32 +805,22 @@ inline const std::string& IPCBlob::_internal_a_blobimpltype() const {
   return _impl_.a_blobimpltype_.Get();
 }
 inline void IPCBlob::_internal_set_a_blobimpltype(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_blobimpltype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCBlob::_internal_mutable_a_blobimpltype() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_blobimpltype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCBlob::release_a_blobimpltype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCBlob.a_blobImplType)
-  if (!_internal_has_a_blobimpltype()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_blobimpltype_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_blobimpltype_.IsDefault()) {
-    _impl_.a_blobimpltype_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_blobimpltype_.Release();
 }
 inline void IPCBlob::set_allocated_a_blobimpltype(std::string* a_blobimpltype) {
   if (a_blobimpltype != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_blobimpltype_.SetAllocated(a_blobimpltype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -963,11 +831,9 @@ inline void IPCBlob::set_allocated_a_blobimpltype(std::string* a_blobimpltype) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCBlob.a_blobImplType)
 }
 
-// required .protobuf.mozilla.RemoteLazyStream a_inputStream = 4;
+// .protobuf.mozilla.RemoteLazyStream a_inputStream = 4;
 inline bool IPCBlob::_internal_has_a_inputstream() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_inputstream_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_inputstream_ != nullptr;
 }
 inline bool IPCBlob::has_a_inputstream() const {
   return _internal_has_a_inputstream();
@@ -988,14 +854,14 @@ inline void IPCBlob::unsafe_arena_set_allocated_a_inputstream(
   }
   _impl_.a_inputstream_ = a_inputstream;
   if (a_inputstream) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCBlob.a_inputStream)
 }
 inline ::protobuf::mozilla::RemoteLazyStream* IPCBlob::release_a_inputstream() {
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  
   ::protobuf::mozilla::RemoteLazyStream* temp = _impl_.a_inputstream_;
   _impl_.a_inputstream_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1011,13 +877,13 @@ inline ::protobuf::mozilla::RemoteLazyStream* IPCBlob::release_a_inputstream() {
 }
 inline ::protobuf::mozilla::RemoteLazyStream* IPCBlob::unsafe_arena_release_a_inputstream() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCBlob.a_inputStream)
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  
   ::protobuf::mozilla::RemoteLazyStream* temp = _impl_.a_inputstream_;
   _impl_.a_inputstream_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::RemoteLazyStream* IPCBlob::_internal_mutable_a_inputstream() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   if (_impl_.a_inputstream_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::RemoteLazyStream>(GetArenaForAllocation());
     _impl_.a_inputstream_ = p;
@@ -1042,9 +908,9 @@ inline void IPCBlob::set_allocated_a_inputstream(::protobuf::mozilla::RemoteLazy
       a_inputstream = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_inputstream, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_inputstream_ = a_inputstream;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCBlob.a_inputStream)
@@ -1052,7 +918,7 @@ inline void IPCBlob::set_allocated_a_inputstream(::protobuf::mozilla::RemoteLazy
 
 // optional .protobuf.mozilla.dom.IPCFile a_file = 5;
 inline bool IPCBlob::_internal_has_a_file() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.a_file_ != nullptr);
   return value;
 }
@@ -1061,7 +927,7 @@ inline bool IPCBlob::has_a_file() const {
 }
 inline void IPCBlob::clear_a_file() {
   if (_impl_.a_file_ != nullptr) _impl_.a_file_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const ::protobuf::mozilla::dom::IPCFile& IPCBlob::_internal_a_file() const {
   const ::protobuf::mozilla::dom::IPCFile* p = _impl_.a_file_;
@@ -1079,14 +945,14 @@ inline void IPCBlob::unsafe_arena_set_allocated_a_file(
   }
   _impl_.a_file_ = a_file;
   if (a_file) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.IPCBlob.a_file)
 }
 inline ::protobuf::mozilla::dom::IPCFile* IPCBlob::release_a_file() {
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::IPCFile* temp = _impl_.a_file_;
   _impl_.a_file_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -1102,13 +968,13 @@ inline ::protobuf::mozilla::dom::IPCFile* IPCBlob::release_a_file() {
 }
 inline ::protobuf::mozilla::dom::IPCFile* IPCBlob::unsafe_arena_release_a_file() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.IPCBlob.a_file)
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
   ::protobuf::mozilla::dom::IPCFile* temp = _impl_.a_file_;
   _impl_.a_file_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::IPCFile* IPCBlob::_internal_mutable_a_file() {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_._has_bits_[0] |= 0x00000001u;
   if (_impl_.a_file_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::IPCFile>(GetArenaForAllocation());
     _impl_.a_file_ = p;
@@ -1132,25 +998,17 @@ inline void IPCBlob::set_allocated_a_file(::protobuf::mozilla::dom::IPCFile* a_f
       a_file = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_file, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000008u;
+    _impl_._has_bits_[0] |= 0x00000001u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.a_file_ = a_file;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.IPCBlob.a_file)
 }
 
-// required sint64 a_fileId = 6;
-inline bool IPCBlob::_internal_has_a_fileid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool IPCBlob::has_a_fileid() const {
-  return _internal_has_a_fileid();
-}
+// sint64 a_fileId = 6;
 inline void IPCBlob::clear_a_fileid() {
   _impl_.a_fileid_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline int64_t IPCBlob::_internal_a_fileid() const {
   return _impl_.a_fileid_;
@@ -1160,7 +1018,7 @@ inline int64_t IPCBlob::a_fileid() const {
   return _internal_a_fileid();
 }
 inline void IPCBlob::_internal_set_a_fileid(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   _impl_.a_fileid_ = value;
 }
 inline void IPCBlob::set_a_fileid(int64_t value) {

@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "PDocAccessible_protobuf.mozilla.a11y.h.pb.h"
 #include "DocAccessibleTypes.pb.h"
 // @@protoc_insertion_point(includes)
@@ -43,6 +46,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PDocAccessible_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PDocAccessible_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace a11y {
@@ -217,10 +221,9 @@ namespace PDocAccessible {
 // ===================================================================
 
 class Msg_Shutdown final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_Shutdown) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_Shutdown) */ {
  public:
   inline Msg_Shutdown() : Msg_Shutdown(nullptr) {}
-  ~Msg_Shutdown() override;
   explicit PROTOBUF_CONSTEXPR Msg_Shutdown(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_Shutdown(const Msg_Shutdown& from);
@@ -247,13 +250,15 @@ class Msg_Shutdown final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_Shutdown& default_instance() {
     return *internal_default_instance();
   }
@@ -291,23 +296,15 @@ class Msg_Shutdown final :
   Msg_Shutdown* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_Shutdown>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_Shutdown& from);
-  void MergeFrom(const Msg_Shutdown& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_Shutdown* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_Shutdown& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_Shutdown& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -319,7 +316,10 @@ class Msg_Shutdown final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -333,15 +333,13 @@ class Msg_Shutdown final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_Event final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_Event) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_Event) */ {
  public:
   inline Msg_Event() : Msg_Event(nullptr) {}
   ~Msg_Event() override;
@@ -371,13 +369,15 @@ class Msg_Event final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_Event& default_instance() {
     return *internal_default_instance();
   }
@@ -415,9 +415,15 @@ class Msg_Event final :
   Msg_Event* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_Event>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_Event& from);
-  void MergeFrom(const Msg_Event& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_Event& from) {
+    Msg_Event::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -430,7 +436,7 @@ class Msg_Event final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_Event* other);
 
   private:
@@ -443,7 +449,10 @@ class Msg_Event final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -453,11 +462,7 @@ class Msg_Event final :
     kAAIDFieldNumber = 1,
     kATypeFieldNumber = 2,
   };
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -466,11 +471,7 @@ class Msg_Event final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint32 a_type = 2;
-  bool has_a_type() const;
-  private:
-  bool _internal_has_a_type() const;
-  public:
+  // uint32 a_type = 2;
   void clear_a_type();
   uint32_t a_type() const;
   void set_a_type(uint32_t value);
@@ -483,17 +484,13 @@ class Msg_Event final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     uint32_t a_type_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -501,7 +498,7 @@ class Msg_Event final :
 // -------------------------------------------------------------------
 
 class Msg_StateChangeEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent) */ {
  public:
   inline Msg_StateChangeEvent() : Msg_StateChangeEvent(nullptr) {}
   ~Msg_StateChangeEvent() override;
@@ -531,13 +528,15 @@ class Msg_StateChangeEvent final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_StateChangeEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -575,9 +574,15 @@ class Msg_StateChangeEvent final :
   Msg_StateChangeEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_StateChangeEvent>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_StateChangeEvent& from);
-  void MergeFrom(const Msg_StateChangeEvent& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_StateChangeEvent& from) {
+    Msg_StateChangeEvent::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -590,7 +595,7 @@ class Msg_StateChangeEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_StateChangeEvent* other);
 
   private:
@@ -603,7 +608,10 @@ class Msg_StateChangeEvent final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -614,11 +622,7 @@ class Msg_StateChangeEvent final :
     kAAStateFieldNumber = 2,
     kAAEnabledFieldNumber = 3,
   };
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -627,11 +631,7 @@ class Msg_StateChangeEvent final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint64 a_aState = 2;
-  bool has_a_astate() const;
-  private:
-  bool _internal_has_a_astate() const;
-  public:
+  // uint64 a_aState = 2;
   void clear_a_astate();
   uint64_t a_astate() const;
   void set_a_astate(uint64_t value);
@@ -640,11 +640,7 @@ class Msg_StateChangeEvent final :
   void _internal_set_a_astate(uint64_t value);
   public:
 
-  // required bool a_aEnabled = 3;
-  bool has_a_aenabled() const;
-  private:
-  bool _internal_has_a_aenabled() const;
-  public:
+  // bool a_aEnabled = 3;
   void clear_a_aenabled();
   bool a_aenabled() const;
   void set_a_aenabled(bool value);
@@ -657,18 +653,14 @@ class Msg_StateChangeEvent final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     uint64_t a_astate_;
     bool a_aenabled_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -676,7 +668,7 @@ class Msg_StateChangeEvent final :
 // -------------------------------------------------------------------
 
 class Msg_CaretMoveEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent) */ {
  public:
   inline Msg_CaretMoveEvent() : Msg_CaretMoveEvent(nullptr) {}
   ~Msg_CaretMoveEvent() override;
@@ -706,13 +698,15 @@ class Msg_CaretMoveEvent final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_CaretMoveEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -750,9 +744,15 @@ class Msg_CaretMoveEvent final :
   Msg_CaretMoveEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_CaretMoveEvent>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_CaretMoveEvent& from);
-  void MergeFrom(const Msg_CaretMoveEvent& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_CaretMoveEvent& from) {
+    Msg_CaretMoveEvent::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -765,7 +765,7 @@ class Msg_CaretMoveEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_CaretMoveEvent* other);
 
   private:
@@ -778,7 +778,10 @@ class Msg_CaretMoveEvent final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -793,11 +796,7 @@ class Msg_CaretMoveEvent final :
     kAAFromUserFieldNumber = 7,
     kAAGranularityFieldNumber = 6,
   };
-  // required bytes a_aCaretRect = 2;
-  bool has_a_acaretrect() const;
-  private:
-  bool _internal_has_a_acaretrect() const;
-  public:
+  // bytes a_aCaretRect = 2;
   void clear_a_acaretrect();
   const std::string& a_acaretrect() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -811,11 +810,7 @@ class Msg_CaretMoveEvent final :
   std::string* _internal_mutable_a_acaretrect();
   public:
 
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -824,11 +819,7 @@ class Msg_CaretMoveEvent final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 a_aOffset = 3;
-  bool has_a_aoffset() const;
-  private:
-  bool _internal_has_a_aoffset() const;
-  public:
+  // sint32 a_aOffset = 3;
   void clear_a_aoffset();
   int32_t a_aoffset() const;
   void set_a_aoffset(int32_t value);
@@ -837,11 +828,7 @@ class Msg_CaretMoveEvent final :
   void _internal_set_a_aoffset(int32_t value);
   public:
 
-  // required bool a_aIsSelectionCollapsed = 4;
-  bool has_a_aisselectioncollapsed() const;
-  private:
-  bool _internal_has_a_aisselectioncollapsed() const;
-  public:
+  // bool a_aIsSelectionCollapsed = 4;
   void clear_a_aisselectioncollapsed();
   bool a_aisselectioncollapsed() const;
   void set_a_aisselectioncollapsed(bool value);
@@ -850,11 +837,7 @@ class Msg_CaretMoveEvent final :
   void _internal_set_a_aisselectioncollapsed(bool value);
   public:
 
-  // required bool a_aIsAtEndOfLine = 5;
-  bool has_a_aisatendofline() const;
-  private:
-  bool _internal_has_a_aisatendofline() const;
-  public:
+  // bool a_aIsAtEndOfLine = 5;
   void clear_a_aisatendofline();
   bool a_aisatendofline() const;
   void set_a_aisatendofline(bool value);
@@ -863,11 +846,7 @@ class Msg_CaretMoveEvent final :
   void _internal_set_a_aisatendofline(bool value);
   public:
 
-  // required bool a_aFromUser = 7;
-  bool has_a_afromuser() const;
-  private:
-  bool _internal_has_a_afromuser() const;
-  public:
+  // bool a_aFromUser = 7;
   void clear_a_afromuser();
   bool a_afromuser() const;
   void set_a_afromuser(bool value);
@@ -876,11 +855,7 @@ class Msg_CaretMoveEvent final :
   void _internal_set_a_afromuser(bool value);
   public:
 
-  // required sint32 a_aGranularity = 6;
-  bool has_a_agranularity() const;
-  private:
-  bool _internal_has_a_agranularity() const;
-  public:
+  // sint32 a_aGranularity = 6;
   void clear_a_agranularity();
   int32_t a_agranularity() const;
   void set_a_agranularity(int32_t value);
@@ -893,15 +868,10 @@ class Msg_CaretMoveEvent final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acaretrect_;
     uint64_t a_aid_;
     int32_t a_aoffset_;
@@ -909,6 +879,7 @@ class Msg_CaretMoveEvent final :
     bool a_aisatendofline_;
     bool a_afromuser_;
     int32_t a_agranularity_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -916,7 +887,7 @@ class Msg_CaretMoveEvent final :
 // -------------------------------------------------------------------
 
 class Msg_MutationEvents final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_MutationEvents) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_MutationEvents) */ {
  public:
   inline Msg_MutationEvents() : Msg_MutationEvents(nullptr) {}
   ~Msg_MutationEvents() override;
@@ -946,13 +917,15 @@ class Msg_MutationEvents final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_MutationEvents& default_instance() {
     return *internal_default_instance();
   }
@@ -990,9 +963,15 @@ class Msg_MutationEvents final :
   Msg_MutationEvents* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_MutationEvents>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_MutationEvents& from);
-  void MergeFrom(const Msg_MutationEvents& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_MutationEvents& from) {
+    Msg_MutationEvents::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1005,7 +984,7 @@ class Msg_MutationEvents final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_MutationEvents* other);
 
   private:
@@ -1018,7 +997,10 @@ class Msg_MutationEvents final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1062,10 +1044,9 @@ class Msg_MutationEvents final :
 // -------------------------------------------------------------------
 
 class Msg_RequestAckMutationEvents final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_RequestAckMutationEvents) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_RequestAckMutationEvents) */ {
  public:
   inline Msg_RequestAckMutationEvents() : Msg_RequestAckMutationEvents(nullptr) {}
-  ~Msg_RequestAckMutationEvents() override;
   explicit PROTOBUF_CONSTEXPR Msg_RequestAckMutationEvents(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_RequestAckMutationEvents(const Msg_RequestAckMutationEvents& from);
@@ -1092,13 +1073,15 @@ class Msg_RequestAckMutationEvents final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_RequestAckMutationEvents& default_instance() {
     return *internal_default_instance();
   }
@@ -1136,23 +1119,15 @@ class Msg_RequestAckMutationEvents final :
   Msg_RequestAckMutationEvents* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_RequestAckMutationEvents>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_RequestAckMutationEvents& from);
-  void MergeFrom(const Msg_RequestAckMutationEvents& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_RequestAckMutationEvents* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_RequestAckMutationEvents& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_RequestAckMutationEvents& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1164,7 +1139,10 @@ class Msg_RequestAckMutationEvents final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1178,15 +1156,13 @@ class Msg_RequestAckMutationEvents final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_SelectionEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent) */ {
  public:
   inline Msg_SelectionEvent() : Msg_SelectionEvent(nullptr) {}
   ~Msg_SelectionEvent() override;
@@ -1216,13 +1192,15 @@ class Msg_SelectionEvent final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SelectionEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -1260,9 +1238,15 @@ class Msg_SelectionEvent final :
   Msg_SelectionEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SelectionEvent>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SelectionEvent& from);
-  void MergeFrom(const Msg_SelectionEvent& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SelectionEvent& from) {
+    Msg_SelectionEvent::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1275,7 +1259,7 @@ class Msg_SelectionEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SelectionEvent* other);
 
   private:
@@ -1288,7 +1272,10 @@ class Msg_SelectionEvent final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1299,11 +1286,7 @@ class Msg_SelectionEvent final :
     kAAWidgetIDFieldNumber = 2,
     kAATypeFieldNumber = 3,
   };
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -1312,11 +1295,7 @@ class Msg_SelectionEvent final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint64 a_aWidgetID = 2;
-  bool has_a_awidgetid() const;
-  private:
-  bool _internal_has_a_awidgetid() const;
-  public:
+  // uint64 a_aWidgetID = 2;
   void clear_a_awidgetid();
   uint64_t a_awidgetid() const;
   void set_a_awidgetid(uint64_t value);
@@ -1325,11 +1304,7 @@ class Msg_SelectionEvent final :
   void _internal_set_a_awidgetid(uint64_t value);
   public:
 
-  // required uint32 a_aType = 3;
-  bool has_a_atype() const;
-  private:
-  bool _internal_has_a_atype() const;
-  public:
+  // uint32 a_aType = 3;
   void clear_a_atype();
   uint32_t a_atype() const;
   void set_a_atype(uint32_t value);
@@ -1342,18 +1317,14 @@ class Msg_SelectionEvent final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     uint64_t a_awidgetid_;
     uint32_t a_atype_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -1361,7 +1332,7 @@ class Msg_SelectionEvent final :
 // -------------------------------------------------------------------
 
 class Msg_RoleChangedEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent) */ {
  public:
   inline Msg_RoleChangedEvent() : Msg_RoleChangedEvent(nullptr) {}
   ~Msg_RoleChangedEvent() override;
@@ -1391,13 +1362,15 @@ class Msg_RoleChangedEvent final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_RoleChangedEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -1435,9 +1408,15 @@ class Msg_RoleChangedEvent final :
   Msg_RoleChangedEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_RoleChangedEvent>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_RoleChangedEvent& from);
-  void MergeFrom(const Msg_RoleChangedEvent& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_RoleChangedEvent& from) {
+    Msg_RoleChangedEvent::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1450,7 +1429,7 @@ class Msg_RoleChangedEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_RoleChangedEvent* other);
 
   private:
@@ -1463,7 +1442,10 @@ class Msg_RoleChangedEvent final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1473,11 +1455,7 @@ class Msg_RoleChangedEvent final :
     kAARoleFieldNumber = 1,
     kAARoleMapEntryIndexFieldNumber = 2,
   };
-  // required bytes a_aRole = 1;
-  bool has_a_arole() const;
-  private:
-  bool _internal_has_a_arole() const;
-  public:
+  // bytes a_aRole = 1;
   void clear_a_arole();
   const std::string& a_arole() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1491,11 +1469,7 @@ class Msg_RoleChangedEvent final :
   std::string* _internal_mutable_a_arole();
   public:
 
-  // required uint32 a_aRoleMapEntryIndex = 2;
-  bool has_a_arolemapentryindex() const;
-  private:
-  bool _internal_has_a_arolemapentryindex() const;
-  public:
+  // uint32 a_aRoleMapEntryIndex = 2;
   void clear_a_arolemapentryindex();
   uint32_t a_arolemapentryindex() const;
   void set_a_arolemapentryindex(uint32_t value);
@@ -1508,17 +1482,13 @@ class Msg_RoleChangedEvent final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_arole_;
     uint32_t a_arolemapentryindex_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -1526,7 +1496,7 @@ class Msg_RoleChangedEvent final :
 // -------------------------------------------------------------------
 
 class Msg_FocusEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent) */ {
  public:
   inline Msg_FocusEvent() : Msg_FocusEvent(nullptr) {}
   ~Msg_FocusEvent() override;
@@ -1556,13 +1526,15 @@ class Msg_FocusEvent final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_FocusEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -1600,9 +1572,15 @@ class Msg_FocusEvent final :
   Msg_FocusEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_FocusEvent>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_FocusEvent& from);
-  void MergeFrom(const Msg_FocusEvent& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_FocusEvent& from) {
+    Msg_FocusEvent::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1615,7 +1593,7 @@ class Msg_FocusEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_FocusEvent* other);
 
   private:
@@ -1628,7 +1606,10 @@ class Msg_FocusEvent final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1638,11 +1619,7 @@ class Msg_FocusEvent final :
     kAACaretRectFieldNumber = 2,
     kAAIDFieldNumber = 1,
   };
-  // required bytes a_aCaretRect = 2;
-  bool has_a_acaretrect() const;
-  private:
-  bool _internal_has_a_acaretrect() const;
-  public:
+  // bytes a_aCaretRect = 2;
   void clear_a_acaretrect();
   const std::string& a_acaretrect() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1656,11 +1633,7 @@ class Msg_FocusEvent final :
   std::string* _internal_mutable_a_acaretrect();
   public:
 
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -1673,17 +1646,13 @@ class Msg_FocusEvent final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_acaretrect_;
     uint64_t a_aid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -1691,7 +1660,7 @@ class Msg_FocusEvent final :
 // -------------------------------------------------------------------
 
 class Msg_ScrollingEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent) */ {
  public:
   inline Msg_ScrollingEvent() : Msg_ScrollingEvent(nullptr) {}
   ~Msg_ScrollingEvent() override;
@@ -1721,13 +1690,15 @@ class Msg_ScrollingEvent final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_ScrollingEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -1765,9 +1736,15 @@ class Msg_ScrollingEvent final :
   Msg_ScrollingEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ScrollingEvent>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_ScrollingEvent& from);
-  void MergeFrom(const Msg_ScrollingEvent& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_ScrollingEvent& from) {
+    Msg_ScrollingEvent::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1780,7 +1757,7 @@ class Msg_ScrollingEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_ScrollingEvent* other);
 
   private:
@@ -1793,7 +1770,10 @@ class Msg_ScrollingEvent final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1807,11 +1787,7 @@ class Msg_ScrollingEvent final :
     kAAMaxScrollXFieldNumber = 5,
     kAAMaxScrollYFieldNumber = 6,
   };
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -1820,11 +1796,7 @@ class Msg_ScrollingEvent final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint64 a_aType = 2;
-  bool has_a_atype() const;
-  private:
-  bool _internal_has_a_atype() const;
-  public:
+  // uint64 a_aType = 2;
   void clear_a_atype();
   uint64_t a_atype() const;
   void set_a_atype(uint64_t value);
@@ -1833,11 +1805,7 @@ class Msg_ScrollingEvent final :
   void _internal_set_a_atype(uint64_t value);
   public:
 
-  // required uint32 a_aScrollX = 3;
-  bool has_a_ascrollx() const;
-  private:
-  bool _internal_has_a_ascrollx() const;
-  public:
+  // uint32 a_aScrollX = 3;
   void clear_a_ascrollx();
   uint32_t a_ascrollx() const;
   void set_a_ascrollx(uint32_t value);
@@ -1846,11 +1814,7 @@ class Msg_ScrollingEvent final :
   void _internal_set_a_ascrollx(uint32_t value);
   public:
 
-  // required uint32 a_aScrollY = 4;
-  bool has_a_ascrolly() const;
-  private:
-  bool _internal_has_a_ascrolly() const;
-  public:
+  // uint32 a_aScrollY = 4;
   void clear_a_ascrolly();
   uint32_t a_ascrolly() const;
   void set_a_ascrolly(uint32_t value);
@@ -1859,11 +1823,7 @@ class Msg_ScrollingEvent final :
   void _internal_set_a_ascrolly(uint32_t value);
   public:
 
-  // required uint32 a_aMaxScrollX = 5;
-  bool has_a_amaxscrollx() const;
-  private:
-  bool _internal_has_a_amaxscrollx() const;
-  public:
+  // uint32 a_aMaxScrollX = 5;
   void clear_a_amaxscrollx();
   uint32_t a_amaxscrollx() const;
   void set_a_amaxscrollx(uint32_t value);
@@ -1872,11 +1832,7 @@ class Msg_ScrollingEvent final :
   void _internal_set_a_amaxscrollx(uint32_t value);
   public:
 
-  // required uint32 a_aMaxScrollY = 6;
-  bool has_a_amaxscrolly() const;
-  private:
-  bool _internal_has_a_amaxscrolly() const;
-  public:
+  // uint32 a_aMaxScrollY = 6;
   void clear_a_amaxscrolly();
   uint32_t a_amaxscrolly() const;
   void set_a_amaxscrolly(uint32_t value);
@@ -1889,21 +1845,17 @@ class Msg_ScrollingEvent final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     uint64_t a_atype_;
     uint32_t a_ascrollx_;
     uint32_t a_ascrolly_;
     uint32_t a_amaxscrollx_;
     uint32_t a_amaxscrolly_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -1911,7 +1863,7 @@ class Msg_ScrollingEvent final :
 // -------------------------------------------------------------------
 
 class Msg_AnnouncementEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent) */ {
  public:
   inline Msg_AnnouncementEvent() : Msg_AnnouncementEvent(nullptr) {}
   ~Msg_AnnouncementEvent() override;
@@ -1941,13 +1893,15 @@ class Msg_AnnouncementEvent final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_AnnouncementEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -1985,9 +1939,15 @@ class Msg_AnnouncementEvent final :
   Msg_AnnouncementEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_AnnouncementEvent>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_AnnouncementEvent& from);
-  void MergeFrom(const Msg_AnnouncementEvent& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_AnnouncementEvent& from) {
+    Msg_AnnouncementEvent::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2000,7 +1960,7 @@ class Msg_AnnouncementEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_AnnouncementEvent* other);
 
   private:
@@ -2013,7 +1973,10 @@ class Msg_AnnouncementEvent final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2024,11 +1987,7 @@ class Msg_AnnouncementEvent final :
     kAAIDFieldNumber = 1,
     kAAPriorityFieldNumber = 3,
   };
-  // required string a_aAnnouncement = 2;
-  bool has_a_aannouncement() const;
-  private:
-  bool _internal_has_a_aannouncement() const;
-  public:
+  // string a_aAnnouncement = 2;
   void clear_a_aannouncement();
   const std::string& a_aannouncement() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2042,11 +2001,7 @@ class Msg_AnnouncementEvent final :
   std::string* _internal_mutable_a_aannouncement();
   public:
 
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -2055,11 +2010,7 @@ class Msg_AnnouncementEvent final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint32 a_aPriority = 3;
-  bool has_a_apriority() const;
-  private:
-  bool _internal_has_a_apriority() const;
-  public:
+  // uint32 a_aPriority = 3;
   void clear_a_apriority();
   uint32_t a_apriority() const;
   void set_a_apriority(uint32_t value);
@@ -2072,18 +2023,14 @@ class Msg_AnnouncementEvent final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aannouncement_;
     uint64_t a_aid_;
     uint32_t a_apriority_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -2091,7 +2038,7 @@ class Msg_AnnouncementEvent final :
 // -------------------------------------------------------------------
 
 class Msg_TextSelectionChangeEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_TextSelectionChangeEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_TextSelectionChangeEvent) */ {
  public:
   inline Msg_TextSelectionChangeEvent() : Msg_TextSelectionChangeEvent(nullptr) {}
   ~Msg_TextSelectionChangeEvent() override;
@@ -2121,13 +2068,15 @@ class Msg_TextSelectionChangeEvent final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_TextSelectionChangeEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -2165,9 +2114,15 @@ class Msg_TextSelectionChangeEvent final :
   Msg_TextSelectionChangeEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_TextSelectionChangeEvent>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_TextSelectionChangeEvent& from);
-  void MergeFrom(const Msg_TextSelectionChangeEvent& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_TextSelectionChangeEvent& from) {
+    Msg_TextSelectionChangeEvent::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2180,7 +2135,7 @@ class Msg_TextSelectionChangeEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_TextSelectionChangeEvent* other);
 
   private:
@@ -2193,7 +2148,10 @@ class Msg_TextSelectionChangeEvent final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2221,11 +2179,7 @@ class Msg_TextSelectionChangeEvent final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::TextRangeData >&
       a_aselection() const;
 
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -2242,10 +2196,9 @@ class Msg_TextSelectionChangeEvent final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::TextRangeData > a_aselection_;
     uint64_t a_aid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -2253,7 +2206,7 @@ class Msg_TextSelectionChangeEvent final :
 // -------------------------------------------------------------------
 
 class Msg_BindChildDoc final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc) */ {
  public:
   inline Msg_BindChildDoc() : Msg_BindChildDoc(nullptr) {}
   ~Msg_BindChildDoc() override;
@@ -2283,13 +2236,15 @@ class Msg_BindChildDoc final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_BindChildDoc& default_instance() {
     return *internal_default_instance();
   }
@@ -2327,9 +2282,15 @@ class Msg_BindChildDoc final :
   Msg_BindChildDoc* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_BindChildDoc>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_BindChildDoc& from);
-  void MergeFrom(const Msg_BindChildDoc& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_BindChildDoc& from) {
+    Msg_BindChildDoc::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2342,7 +2303,7 @@ class Msg_BindChildDoc final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_BindChildDoc* other);
 
   private:
@@ -2355,7 +2316,10 @@ class Msg_BindChildDoc final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2365,11 +2329,7 @@ class Msg_BindChildDoc final :
     kAAChildDocFieldNumber = 1,
     kAAIDFieldNumber = 2,
   };
-  // required bytes a_aChildDoc = 1;
-  bool has_a_achilddoc() const;
-  private:
-  bool _internal_has_a_achilddoc() const;
-  public:
+  // bytes a_aChildDoc = 1;
   void clear_a_achilddoc();
   const std::string& a_achilddoc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2383,11 +2343,7 @@ class Msg_BindChildDoc final :
   std::string* _internal_mutable_a_achilddoc();
   public:
 
-  // required uint64 a_aID = 2;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 2;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -2400,17 +2356,13 @@ class Msg_BindChildDoc final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_achilddoc_;
     uint64_t a_aid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -2418,7 +2370,7 @@ class Msg_BindChildDoc final :
 // -------------------------------------------------------------------
 
 class Msg_Cache final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache) */ {
  public:
   inline Msg_Cache() : Msg_Cache(nullptr) {}
   ~Msg_Cache() override;
@@ -2448,13 +2400,15 @@ class Msg_Cache final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_Cache& default_instance() {
     return *internal_default_instance();
   }
@@ -2492,9 +2446,15 @@ class Msg_Cache final :
   Msg_Cache* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_Cache>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_Cache& from);
-  void MergeFrom(const Msg_Cache& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_Cache& from) {
+    Msg_Cache::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2507,7 +2467,7 @@ class Msg_Cache final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_Cache* other);
 
   private:
@@ -2520,7 +2480,10 @@ class Msg_Cache final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2548,11 +2511,7 @@ class Msg_Cache final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::CacheData >&
       a_adata() const;
 
-  // required bytes a_aUpdateType = 1;
-  bool has_a_aupdatetype() const;
-  private:
-  bool _internal_has_a_aupdatetype() const;
-  public:
+  // bytes a_aUpdateType = 1;
   void clear_a_aupdatetype();
   const std::string& a_aupdatetype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2574,10 +2533,9 @@ class Msg_Cache final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::a11y::CacheData > a_adata_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aupdatetype_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -2585,7 +2543,7 @@ class Msg_Cache final :
 // -------------------------------------------------------------------
 
 class Msg_SelectedAccessiblesChanged final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectedAccessiblesChanged) */ {
  public:
   inline Msg_SelectedAccessiblesChanged() : Msg_SelectedAccessiblesChanged(nullptr) {}
   ~Msg_SelectedAccessiblesChanged() override;
@@ -2615,13 +2573,15 @@ class Msg_SelectedAccessiblesChanged final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SelectedAccessiblesChanged& default_instance() {
     return *internal_default_instance();
   }
@@ -2659,9 +2619,15 @@ class Msg_SelectedAccessiblesChanged final :
   Msg_SelectedAccessiblesChanged* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SelectedAccessiblesChanged>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SelectedAccessiblesChanged& from);
-  void MergeFrom(const Msg_SelectedAccessiblesChanged& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SelectedAccessiblesChanged& from) {
+    Msg_SelectedAccessiblesChanged::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2674,7 +2640,7 @@ class Msg_SelectedAccessiblesChanged final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SelectedAccessiblesChanged* other);
 
   private:
@@ -2687,7 +2653,10 @@ class Msg_SelectedAccessiblesChanged final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2750,7 +2719,9 @@ class Msg_SelectedAccessiblesChanged final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > a_aselectedids_;
+    mutable std::atomic<int> _a_aselectedids_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > a_aunselectedids_;
+    mutable std::atomic<int> _a_aunselectedids_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2759,7 +2730,7 @@ class Msg_SelectedAccessiblesChanged final :
 // -------------------------------------------------------------------
 
 class Msg_AccessiblesWillMove final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_AccessiblesWillMove) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_AccessiblesWillMove) */ {
  public:
   inline Msg_AccessiblesWillMove() : Msg_AccessiblesWillMove(nullptr) {}
   ~Msg_AccessiblesWillMove() override;
@@ -2789,13 +2760,15 @@ class Msg_AccessiblesWillMove final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_AccessiblesWillMove& default_instance() {
     return *internal_default_instance();
   }
@@ -2833,9 +2806,15 @@ class Msg_AccessiblesWillMove final :
   Msg_AccessiblesWillMove* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_AccessiblesWillMove>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_AccessiblesWillMove& from);
-  void MergeFrom(const Msg_AccessiblesWillMove& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_AccessiblesWillMove& from) {
+    Msg_AccessiblesWillMove::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2848,7 +2827,7 @@ class Msg_AccessiblesWillMove final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_AccessiblesWillMove* other);
 
   private:
@@ -2861,7 +2840,10 @@ class Msg_AccessiblesWillMove final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2901,6 +2883,7 @@ class Msg_AccessiblesWillMove final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint64_t > a_aids_;
+    mutable std::atomic<int> _a_aids_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2909,10 +2892,9 @@ class Msg_AccessiblesWillMove final :
 // -------------------------------------------------------------------
 
 class Msg___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg___delete__) */ {
  public:
   inline Msg___delete__() : Msg___delete__(nullptr) {}
-  ~Msg___delete__() override;
   explicit PROTOBUF_CONSTEXPR Msg___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg___delete__(const Msg___delete__& from);
@@ -2939,13 +2921,15 @@ class Msg___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -2983,23 +2967,15 @@ class Msg___delete__ final :
   Msg___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg___delete__& from);
-  void MergeFrom(const Msg___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -3011,7 +2987,10 @@ class Msg___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3025,18 +3004,15 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Reply___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Reply___delete__) */ {
  public:
   inline Reply___delete__() : Reply___delete__(nullptr) {}
-  ~Reply___delete__() override;
   explicit PROTOBUF_CONSTEXPR Reply___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply___delete__(const Reply___delete__& from);
@@ -3063,13 +3039,15 @@ class Reply___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -3107,23 +3085,15 @@ class Reply___delete__ final :
   Reply___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply___delete__& from);
-  void MergeFrom(const Reply___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -3135,7 +3105,10 @@ class Reply___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3149,18 +3122,15 @@ class Reply___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_RestoreFocus final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_RestoreFocus) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_RestoreFocus) */ {
  public:
   inline Msg_RestoreFocus() : Msg_RestoreFocus(nullptr) {}
-  ~Msg_RestoreFocus() override;
   explicit PROTOBUF_CONSTEXPR Msg_RestoreFocus(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_RestoreFocus(const Msg_RestoreFocus& from);
@@ -3187,13 +3157,15 @@ class Msg_RestoreFocus final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_RestoreFocus& default_instance() {
     return *internal_default_instance();
   }
@@ -3231,23 +3203,15 @@ class Msg_RestoreFocus final :
   Msg_RestoreFocus* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_RestoreFocus>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_RestoreFocus& from);
-  void MergeFrom(const Msg_RestoreFocus& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_RestoreFocus* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_RestoreFocus& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_RestoreFocus& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -3259,7 +3223,10 @@ class Msg_RestoreFocus final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3273,15 +3240,13 @@ class Msg_RestoreFocus final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_ScrollTo final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTo) */ {
  public:
   inline Msg_ScrollTo() : Msg_ScrollTo(nullptr) {}
   ~Msg_ScrollTo() override;
@@ -3311,13 +3276,15 @@ class Msg_ScrollTo final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_ScrollTo& default_instance() {
     return *internal_default_instance();
   }
@@ -3355,9 +3322,15 @@ class Msg_ScrollTo final :
   Msg_ScrollTo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ScrollTo>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_ScrollTo& from);
-  void MergeFrom(const Msg_ScrollTo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_ScrollTo& from) {
+    Msg_ScrollTo::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3370,7 +3343,7 @@ class Msg_ScrollTo final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_ScrollTo* other);
 
   private:
@@ -3383,7 +3356,10 @@ class Msg_ScrollTo final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3393,11 +3369,7 @@ class Msg_ScrollTo final :
     kAAIDFieldNumber = 1,
     kAAScrollTypeFieldNumber = 2,
   };
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -3406,11 +3378,7 @@ class Msg_ScrollTo final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint32 a_aScrollType = 2;
-  bool has_a_ascrolltype() const;
-  private:
-  bool _internal_has_a_ascrolltype() const;
-  public:
+  // uint32 a_aScrollType = 2;
   void clear_a_ascrolltype();
   uint32_t a_ascrolltype() const;
   void set_a_ascrolltype(uint32_t value);
@@ -3423,17 +3391,13 @@ class Msg_ScrollTo final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     uint32_t a_ascrolltype_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -3441,7 +3405,7 @@ class Msg_ScrollTo final :
 // -------------------------------------------------------------------
 
 class Msg_ScrollToPoint final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint) */ {
  public:
   inline Msg_ScrollToPoint() : Msg_ScrollToPoint(nullptr) {}
   ~Msg_ScrollToPoint() override;
@@ -3471,13 +3435,15 @@ class Msg_ScrollToPoint final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_ScrollToPoint& default_instance() {
     return *internal_default_instance();
   }
@@ -3515,9 +3481,15 @@ class Msg_ScrollToPoint final :
   Msg_ScrollToPoint* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ScrollToPoint>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_ScrollToPoint& from);
-  void MergeFrom(const Msg_ScrollToPoint& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_ScrollToPoint& from) {
+    Msg_ScrollToPoint::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3530,7 +3502,7 @@ class Msg_ScrollToPoint final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_ScrollToPoint* other);
 
   private:
@@ -3543,7 +3515,10 @@ class Msg_ScrollToPoint final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3555,11 +3530,7 @@ class Msg_ScrollToPoint final :
     kAAXFieldNumber = 3,
     kAAYFieldNumber = 4,
   };
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -3568,11 +3539,7 @@ class Msg_ScrollToPoint final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint32 a_aScrollType = 2;
-  bool has_a_ascrolltype() const;
-  private:
-  bool _internal_has_a_ascrolltype() const;
-  public:
+  // uint32 a_aScrollType = 2;
   void clear_a_ascrolltype();
   uint32_t a_ascrolltype() const;
   void set_a_ascrolltype(uint32_t value);
@@ -3581,11 +3548,7 @@ class Msg_ScrollToPoint final :
   void _internal_set_a_ascrolltype(uint32_t value);
   public:
 
-  // required sint32 a_aX = 3;
-  bool has_a_ax() const;
-  private:
-  bool _internal_has_a_ax() const;
-  public:
+  // sint32 a_aX = 3;
   void clear_a_ax();
   int32_t a_ax() const;
   void set_a_ax(int32_t value);
@@ -3594,11 +3557,7 @@ class Msg_ScrollToPoint final :
   void _internal_set_a_ax(int32_t value);
   public:
 
-  // required sint32 a_aY = 4;
-  bool has_a_ay() const;
-  private:
-  bool _internal_has_a_ay() const;
-  public:
+  // sint32 a_aY = 4;
   void clear_a_ay();
   int32_t a_ay() const;
   void set_a_ay(int32_t value);
@@ -3611,19 +3570,15 @@ class Msg_ScrollToPoint final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     uint32_t a_ascrolltype_;
     int32_t a_ax_;
     int32_t a_ay_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -3631,7 +3586,7 @@ class Msg_ScrollToPoint final :
 // -------------------------------------------------------------------
 
 class Msg_Announce final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce) */ {
  public:
   inline Msg_Announce() : Msg_Announce(nullptr) {}
   ~Msg_Announce() override;
@@ -3661,13 +3616,15 @@ class Msg_Announce final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_Announce& default_instance() {
     return *internal_default_instance();
   }
@@ -3705,9 +3662,15 @@ class Msg_Announce final :
   Msg_Announce* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_Announce>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_Announce& from);
-  void MergeFrom(const Msg_Announce& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_Announce& from) {
+    Msg_Announce::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3720,7 +3683,7 @@ class Msg_Announce final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_Announce* other);
 
   private:
@@ -3733,7 +3696,10 @@ class Msg_Announce final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3744,11 +3710,7 @@ class Msg_Announce final :
     kAAIDFieldNumber = 1,
     kAAPriorityFieldNumber = 3,
   };
-  // required string a_aAnnouncement = 2;
-  bool has_a_aannouncement() const;
-  private:
-  bool _internal_has_a_aannouncement() const;
-  public:
+  // string a_aAnnouncement = 2;
   void clear_a_aannouncement();
   const std::string& a_aannouncement() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3762,11 +3724,7 @@ class Msg_Announce final :
   std::string* _internal_mutable_a_aannouncement();
   public:
 
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -3775,11 +3733,7 @@ class Msg_Announce final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint32 a_aPriority = 3;
-  bool has_a_apriority() const;
-  private:
-  bool _internal_has_a_apriority() const;
-  public:
+  // uint32 a_aPriority = 3;
   void clear_a_apriority();
   uint32_t a_apriority() const;
   void set_a_apriority(uint32_t value);
@@ -3792,18 +3746,14 @@ class Msg_Announce final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aannouncement_;
     uint64_t a_aid_;
     uint32_t a_apriority_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -3811,7 +3761,7 @@ class Msg_Announce final :
 // -------------------------------------------------------------------
 
 class Msg_SetTextSelection final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection) */ {
  public:
   inline Msg_SetTextSelection() : Msg_SetTextSelection(nullptr) {}
   ~Msg_SetTextSelection() override;
@@ -3841,13 +3791,15 @@ class Msg_SetTextSelection final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SetTextSelection& default_instance() {
     return *internal_default_instance();
   }
@@ -3885,9 +3837,15 @@ class Msg_SetTextSelection final :
   Msg_SetTextSelection* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SetTextSelection>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SetTextSelection& from);
-  void MergeFrom(const Msg_SetTextSelection& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SetTextSelection& from) {
+    Msg_SetTextSelection::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3900,7 +3858,7 @@ class Msg_SetTextSelection final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SetTextSelection* other);
 
   private:
@@ -3913,7 +3871,10 @@ class Msg_SetTextSelection final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3927,11 +3888,7 @@ class Msg_SetTextSelection final :
     kAASelectionNumFieldNumber = 5,
     kAASetFocusFieldNumber = 6,
   };
-  // required uint64 a_aStartID = 1;
-  bool has_a_astartid() const;
-  private:
-  bool _internal_has_a_astartid() const;
-  public:
+  // uint64 a_aStartID = 1;
   void clear_a_astartid();
   uint64_t a_astartid() const;
   void set_a_astartid(uint64_t value);
@@ -3940,11 +3897,7 @@ class Msg_SetTextSelection final :
   void _internal_set_a_astartid(uint64_t value);
   public:
 
-  // required uint64 a_aEndID = 3;
-  bool has_a_aendid() const;
-  private:
-  bool _internal_has_a_aendid() const;
-  public:
+  // uint64 a_aEndID = 3;
   void clear_a_aendid();
   uint64_t a_aendid() const;
   void set_a_aendid(uint64_t value);
@@ -3953,11 +3906,7 @@ class Msg_SetTextSelection final :
   void _internal_set_a_aendid(uint64_t value);
   public:
 
-  // required sint32 a_aStartOffset = 2;
-  bool has_a_astartoffset() const;
-  private:
-  bool _internal_has_a_astartoffset() const;
-  public:
+  // sint32 a_aStartOffset = 2;
   void clear_a_astartoffset();
   int32_t a_astartoffset() const;
   void set_a_astartoffset(int32_t value);
@@ -3966,11 +3915,7 @@ class Msg_SetTextSelection final :
   void _internal_set_a_astartoffset(int32_t value);
   public:
 
-  // required sint32 a_aEndOffset = 4;
-  bool has_a_aendoffset() const;
-  private:
-  bool _internal_has_a_aendoffset() const;
-  public:
+  // sint32 a_aEndOffset = 4;
   void clear_a_aendoffset();
   int32_t a_aendoffset() const;
   void set_a_aendoffset(int32_t value);
@@ -3979,11 +3924,7 @@ class Msg_SetTextSelection final :
   void _internal_set_a_aendoffset(int32_t value);
   public:
 
-  // required sint32 a_aSelectionNum = 5;
-  bool has_a_aselectionnum() const;
-  private:
-  bool _internal_has_a_aselectionnum() const;
-  public:
+  // sint32 a_aSelectionNum = 5;
   void clear_a_aselectionnum();
   int32_t a_aselectionnum() const;
   void set_a_aselectionnum(int32_t value);
@@ -3992,11 +3933,7 @@ class Msg_SetTextSelection final :
   void _internal_set_a_aselectionnum(int32_t value);
   public:
 
-  // required bool a_aSetFocus = 6;
-  bool has_a_asetfocus() const;
-  private:
-  bool _internal_has_a_asetfocus() const;
-  public:
+  // bool a_aSetFocus = 6;
   void clear_a_asetfocus();
   bool a_asetfocus() const;
   void set_a_asetfocus(bool value);
@@ -4009,21 +3946,17 @@ class Msg_SetTextSelection final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_astartid_;
     uint64_t a_aendid_;
     int32_t a_astartoffset_;
     int32_t a_aendoffset_;
     int32_t a_aselectionnum_;
     bool a_asetfocus_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -4031,7 +3964,7 @@ class Msg_SetTextSelection final :
 // -------------------------------------------------------------------
 
 class Msg_RemoveTextSelection final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_RemoveTextSelection) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_RemoveTextSelection) */ {
  public:
   inline Msg_RemoveTextSelection() : Msg_RemoveTextSelection(nullptr) {}
   ~Msg_RemoveTextSelection() override;
@@ -4061,13 +3994,15 @@ class Msg_RemoveTextSelection final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_RemoveTextSelection& default_instance() {
     return *internal_default_instance();
   }
@@ -4105,9 +4040,15 @@ class Msg_RemoveTextSelection final :
   Msg_RemoveTextSelection* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_RemoveTextSelection>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_RemoveTextSelection& from);
-  void MergeFrom(const Msg_RemoveTextSelection& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_RemoveTextSelection& from) {
+    Msg_RemoveTextSelection::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4120,7 +4061,7 @@ class Msg_RemoveTextSelection final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_RemoveTextSelection* other);
 
   private:
@@ -4133,7 +4074,10 @@ class Msg_RemoveTextSelection final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4143,11 +4087,7 @@ class Msg_RemoveTextSelection final :
     kAAIDFieldNumber = 1,
     kAASelectionNumFieldNumber = 2,
   };
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -4156,11 +4096,7 @@ class Msg_RemoveTextSelection final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 a_aSelectionNum = 2;
-  bool has_a_aselectionnum() const;
-  private:
-  bool _internal_has_a_aselectionnum() const;
-  public:
+  // sint32 a_aSelectionNum = 2;
   void clear_a_aselectionnum();
   int32_t a_aselectionnum() const;
   void set_a_aselectionnum(int32_t value);
@@ -4173,17 +4109,13 @@ class Msg_RemoveTextSelection final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     int32_t a_aselectionnum_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -4191,7 +4123,7 @@ class Msg_RemoveTextSelection final :
 // -------------------------------------------------------------------
 
 class Msg_ScrollTextLeafRangeIntoView final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView) */ {
  public:
   inline Msg_ScrollTextLeafRangeIntoView() : Msg_ScrollTextLeafRangeIntoView(nullptr) {}
   ~Msg_ScrollTextLeafRangeIntoView() override;
@@ -4221,13 +4153,15 @@ class Msg_ScrollTextLeafRangeIntoView final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_ScrollTextLeafRangeIntoView& default_instance() {
     return *internal_default_instance();
   }
@@ -4265,9 +4199,15 @@ class Msg_ScrollTextLeafRangeIntoView final :
   Msg_ScrollTextLeafRangeIntoView* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ScrollTextLeafRangeIntoView>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_ScrollTextLeafRangeIntoView& from);
-  void MergeFrom(const Msg_ScrollTextLeafRangeIntoView& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_ScrollTextLeafRangeIntoView& from) {
+    Msg_ScrollTextLeafRangeIntoView::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4280,7 +4220,7 @@ class Msg_ScrollTextLeafRangeIntoView final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_ScrollTextLeafRangeIntoView* other);
 
   private:
@@ -4293,7 +4233,10 @@ class Msg_ScrollTextLeafRangeIntoView final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4306,11 +4249,7 @@ class Msg_ScrollTextLeafRangeIntoView final :
     kAAEndOffsetFieldNumber = 4,
     kAAScrollTypeFieldNumber = 5,
   };
-  // required uint64 a_aStartID = 1;
-  bool has_a_astartid() const;
-  private:
-  bool _internal_has_a_astartid() const;
-  public:
+  // uint64 a_aStartID = 1;
   void clear_a_astartid();
   uint64_t a_astartid() const;
   void set_a_astartid(uint64_t value);
@@ -4319,11 +4258,7 @@ class Msg_ScrollTextLeafRangeIntoView final :
   void _internal_set_a_astartid(uint64_t value);
   public:
 
-  // required uint64 a_aEndID = 3;
-  bool has_a_aendid() const;
-  private:
-  bool _internal_has_a_aendid() const;
-  public:
+  // uint64 a_aEndID = 3;
   void clear_a_aendid();
   uint64_t a_aendid() const;
   void set_a_aendid(uint64_t value);
@@ -4332,11 +4267,7 @@ class Msg_ScrollTextLeafRangeIntoView final :
   void _internal_set_a_aendid(uint64_t value);
   public:
 
-  // required sint32 a_aStartOffset = 2;
-  bool has_a_astartoffset() const;
-  private:
-  bool _internal_has_a_astartoffset() const;
-  public:
+  // sint32 a_aStartOffset = 2;
   void clear_a_astartoffset();
   int32_t a_astartoffset() const;
   void set_a_astartoffset(int32_t value);
@@ -4345,11 +4276,7 @@ class Msg_ScrollTextLeafRangeIntoView final :
   void _internal_set_a_astartoffset(int32_t value);
   public:
 
-  // required sint32 a_aEndOffset = 4;
-  bool has_a_aendoffset() const;
-  private:
-  bool _internal_has_a_aendoffset() const;
-  public:
+  // sint32 a_aEndOffset = 4;
   void clear_a_aendoffset();
   int32_t a_aendoffset() const;
   void set_a_aendoffset(int32_t value);
@@ -4358,11 +4285,7 @@ class Msg_ScrollTextLeafRangeIntoView final :
   void _internal_set_a_aendoffset(int32_t value);
   public:
 
-  // required uint32 a_aScrollType = 5;
-  bool has_a_ascrolltype() const;
-  private:
-  bool _internal_has_a_ascrolltype() const;
-  public:
+  // uint32 a_aScrollType = 5;
   void clear_a_ascrolltype();
   uint32_t a_ascrolltype() const;
   void set_a_ascrolltype(uint32_t value);
@@ -4375,20 +4298,16 @@ class Msg_ScrollTextLeafRangeIntoView final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_astartid_;
     uint64_t a_aendid_;
     int32_t a_astartoffset_;
     int32_t a_aendoffset_;
     uint32_t a_ascrolltype_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -4396,7 +4315,7 @@ class Msg_ScrollTextLeafRangeIntoView final :
 // -------------------------------------------------------------------
 
 class Msg_ScrollSubstringToPoint final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint) */ {
  public:
   inline Msg_ScrollSubstringToPoint() : Msg_ScrollSubstringToPoint(nullptr) {}
   ~Msg_ScrollSubstringToPoint() override;
@@ -4426,13 +4345,15 @@ class Msg_ScrollSubstringToPoint final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_ScrollSubstringToPoint& default_instance() {
     return *internal_default_instance();
   }
@@ -4470,9 +4391,15 @@ class Msg_ScrollSubstringToPoint final :
   Msg_ScrollSubstringToPoint* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ScrollSubstringToPoint>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_ScrollSubstringToPoint& from);
-  void MergeFrom(const Msg_ScrollSubstringToPoint& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_ScrollSubstringToPoint& from) {
+    Msg_ScrollSubstringToPoint::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4485,7 +4412,7 @@ class Msg_ScrollSubstringToPoint final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_ScrollSubstringToPoint* other);
 
   private:
@@ -4498,7 +4425,10 @@ class Msg_ScrollSubstringToPoint final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4512,11 +4442,7 @@ class Msg_ScrollSubstringToPoint final :
     kAAXFieldNumber = 5,
     kAAYFieldNumber = 6,
   };
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -4525,11 +4451,7 @@ class Msg_ScrollSubstringToPoint final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 a_aStartOffset = 2;
-  bool has_a_astartoffset() const;
-  private:
-  bool _internal_has_a_astartoffset() const;
-  public:
+  // sint32 a_aStartOffset = 2;
   void clear_a_astartoffset();
   int32_t a_astartoffset() const;
   void set_a_astartoffset(int32_t value);
@@ -4538,11 +4460,7 @@ class Msg_ScrollSubstringToPoint final :
   void _internal_set_a_astartoffset(int32_t value);
   public:
 
-  // required sint32 a_aEndOffset = 3;
-  bool has_a_aendoffset() const;
-  private:
-  bool _internal_has_a_aendoffset() const;
-  public:
+  // sint32 a_aEndOffset = 3;
   void clear_a_aendoffset();
   int32_t a_aendoffset() const;
   void set_a_aendoffset(int32_t value);
@@ -4551,11 +4469,7 @@ class Msg_ScrollSubstringToPoint final :
   void _internal_set_a_aendoffset(int32_t value);
   public:
 
-  // required uint32 a_aCoordinateType = 4;
-  bool has_a_acoordinatetype() const;
-  private:
-  bool _internal_has_a_acoordinatetype() const;
-  public:
+  // uint32 a_aCoordinateType = 4;
   void clear_a_acoordinatetype();
   uint32_t a_acoordinatetype() const;
   void set_a_acoordinatetype(uint32_t value);
@@ -4564,11 +4478,7 @@ class Msg_ScrollSubstringToPoint final :
   void _internal_set_a_acoordinatetype(uint32_t value);
   public:
 
-  // required sint32 a_aX = 5;
-  bool has_a_ax() const;
-  private:
-  bool _internal_has_a_ax() const;
-  public:
+  // sint32 a_aX = 5;
   void clear_a_ax();
   int32_t a_ax() const;
   void set_a_ax(int32_t value);
@@ -4577,11 +4487,7 @@ class Msg_ScrollSubstringToPoint final :
   void _internal_set_a_ax(int32_t value);
   public:
 
-  // required sint32 a_aY = 6;
-  bool has_a_ay() const;
-  private:
-  bool _internal_has_a_ay() const;
-  public:
+  // sint32 a_aY = 6;
   void clear_a_ay();
   int32_t a_ay() const;
   void set_a_ay(int32_t value);
@@ -4594,21 +4500,17 @@ class Msg_ScrollSubstringToPoint final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     int32_t a_astartoffset_;
     int32_t a_aendoffset_;
     uint32_t a_acoordinatetype_;
     int32_t a_ax_;
     int32_t a_ay_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -4616,7 +4518,7 @@ class Msg_ScrollSubstringToPoint final :
 // -------------------------------------------------------------------
 
 class Msg_ReplaceText final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText) */ {
  public:
   inline Msg_ReplaceText() : Msg_ReplaceText(nullptr) {}
   ~Msg_ReplaceText() override;
@@ -4646,13 +4548,15 @@ class Msg_ReplaceText final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_ReplaceText& default_instance() {
     return *internal_default_instance();
   }
@@ -4690,9 +4594,15 @@ class Msg_ReplaceText final :
   Msg_ReplaceText* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ReplaceText>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_ReplaceText& from);
-  void MergeFrom(const Msg_ReplaceText& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_ReplaceText& from) {
+    Msg_ReplaceText::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4705,7 +4615,7 @@ class Msg_ReplaceText final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_ReplaceText* other);
 
   private:
@@ -4718,7 +4628,10 @@ class Msg_ReplaceText final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4728,11 +4641,7 @@ class Msg_ReplaceText final :
     kAATextFieldNumber = 2,
     kAAIDFieldNumber = 1,
   };
-  // required string a_aText = 2;
-  bool has_a_atext() const;
-  private:
-  bool _internal_has_a_atext() const;
-  public:
+  // string a_aText = 2;
   void clear_a_atext();
   const std::string& a_atext() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4746,11 +4655,7 @@ class Msg_ReplaceText final :
   std::string* _internal_mutable_a_atext();
   public:
 
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -4763,17 +4668,13 @@ class Msg_ReplaceText final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atext_;
     uint64_t a_aid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -4781,7 +4682,7 @@ class Msg_ReplaceText final :
 // -------------------------------------------------------------------
 
 class Msg_InsertText final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText) */ {
  public:
   inline Msg_InsertText() : Msg_InsertText(nullptr) {}
   ~Msg_InsertText() override;
@@ -4811,13 +4712,15 @@ class Msg_InsertText final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_InsertText& default_instance() {
     return *internal_default_instance();
   }
@@ -4855,9 +4758,15 @@ class Msg_InsertText final :
   Msg_InsertText* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_InsertText>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_InsertText& from);
-  void MergeFrom(const Msg_InsertText& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_InsertText& from) {
+    Msg_InsertText::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4870,7 +4779,7 @@ class Msg_InsertText final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_InsertText* other);
 
   private:
@@ -4883,7 +4792,10 @@ class Msg_InsertText final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4894,11 +4806,7 @@ class Msg_InsertText final :
     kAAIDFieldNumber = 1,
     kAAPositionFieldNumber = 3,
   };
-  // required string a_aText = 2;
-  bool has_a_atext() const;
-  private:
-  bool _internal_has_a_atext() const;
-  public:
+  // string a_aText = 2;
   void clear_a_atext();
   const std::string& a_atext() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4912,11 +4820,7 @@ class Msg_InsertText final :
   std::string* _internal_mutable_a_atext();
   public:
 
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -4925,11 +4829,7 @@ class Msg_InsertText final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 a_aPosition = 3;
-  bool has_a_aposition() const;
-  private:
-  bool _internal_has_a_aposition() const;
-  public:
+  // sint32 a_aPosition = 3;
   void clear_a_aposition();
   int32_t a_aposition() const;
   void set_a_aposition(int32_t value);
@@ -4942,18 +4842,14 @@ class Msg_InsertText final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atext_;
     uint64_t a_aid_;
     int32_t a_aposition_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -4961,7 +4857,7 @@ class Msg_InsertText final :
 // -------------------------------------------------------------------
 
 class Msg_CopyText final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText) */ {
  public:
   inline Msg_CopyText() : Msg_CopyText(nullptr) {}
   ~Msg_CopyText() override;
@@ -4991,13 +4887,15 @@ class Msg_CopyText final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_CopyText& default_instance() {
     return *internal_default_instance();
   }
@@ -5035,9 +4933,15 @@ class Msg_CopyText final :
   Msg_CopyText* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_CopyText>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_CopyText& from);
-  void MergeFrom(const Msg_CopyText& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_CopyText& from) {
+    Msg_CopyText::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -5050,7 +4954,7 @@ class Msg_CopyText final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_CopyText* other);
 
   private:
@@ -5063,7 +4967,10 @@ class Msg_CopyText final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -5074,11 +4981,7 @@ class Msg_CopyText final :
     kAAStartPosFieldNumber = 2,
     kAAEndPosFieldNumber = 3,
   };
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -5087,11 +4990,7 @@ class Msg_CopyText final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 a_aStartPos = 2;
-  bool has_a_astartpos() const;
-  private:
-  bool _internal_has_a_astartpos() const;
-  public:
+  // sint32 a_aStartPos = 2;
   void clear_a_astartpos();
   int32_t a_astartpos() const;
   void set_a_astartpos(int32_t value);
@@ -5100,11 +4999,7 @@ class Msg_CopyText final :
   void _internal_set_a_astartpos(int32_t value);
   public:
 
-  // required sint32 a_aEndPos = 3;
-  bool has_a_aendpos() const;
-  private:
-  bool _internal_has_a_aendpos() const;
-  public:
+  // sint32 a_aEndPos = 3;
   void clear_a_aendpos();
   int32_t a_aendpos() const;
   void set_a_aendpos(int32_t value);
@@ -5117,18 +5012,14 @@ class Msg_CopyText final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     int32_t a_astartpos_;
     int32_t a_aendpos_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -5136,7 +5027,7 @@ class Msg_CopyText final :
 // -------------------------------------------------------------------
 
 class Msg_CutText final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText) */ {
  public:
   inline Msg_CutText() : Msg_CutText(nullptr) {}
   ~Msg_CutText() override;
@@ -5166,13 +5057,15 @@ class Msg_CutText final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_CutText& default_instance() {
     return *internal_default_instance();
   }
@@ -5210,9 +5103,15 @@ class Msg_CutText final :
   Msg_CutText* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_CutText>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_CutText& from);
-  void MergeFrom(const Msg_CutText& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_CutText& from) {
+    Msg_CutText::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -5225,7 +5124,7 @@ class Msg_CutText final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_CutText* other);
 
   private:
@@ -5238,7 +5137,10 @@ class Msg_CutText final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -5249,11 +5151,7 @@ class Msg_CutText final :
     kAAStartPosFieldNumber = 2,
     kAAEndPosFieldNumber = 3,
   };
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -5262,11 +5160,7 @@ class Msg_CutText final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 a_aStartPos = 2;
-  bool has_a_astartpos() const;
-  private:
-  bool _internal_has_a_astartpos() const;
-  public:
+  // sint32 a_aStartPos = 2;
   void clear_a_astartpos();
   int32_t a_astartpos() const;
   void set_a_astartpos(int32_t value);
@@ -5275,11 +5169,7 @@ class Msg_CutText final :
   void _internal_set_a_astartpos(int32_t value);
   public:
 
-  // required sint32 a_aEndPos = 3;
-  bool has_a_aendpos() const;
-  private:
-  bool _internal_has_a_aendpos() const;
-  public:
+  // sint32 a_aEndPos = 3;
   void clear_a_aendpos();
   int32_t a_aendpos() const;
   void set_a_aendpos(int32_t value);
@@ -5292,18 +5182,14 @@ class Msg_CutText final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     int32_t a_astartpos_;
     int32_t a_aendpos_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -5311,7 +5197,7 @@ class Msg_CutText final :
 // -------------------------------------------------------------------
 
 class Msg_DeleteText final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText) */ {
  public:
   inline Msg_DeleteText() : Msg_DeleteText(nullptr) {}
   ~Msg_DeleteText() override;
@@ -5341,13 +5227,15 @@ class Msg_DeleteText final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_DeleteText& default_instance() {
     return *internal_default_instance();
   }
@@ -5385,9 +5273,15 @@ class Msg_DeleteText final :
   Msg_DeleteText* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_DeleteText>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_DeleteText& from);
-  void MergeFrom(const Msg_DeleteText& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_DeleteText& from) {
+    Msg_DeleteText::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -5400,7 +5294,7 @@ class Msg_DeleteText final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_DeleteText* other);
 
   private:
@@ -5413,7 +5307,10 @@ class Msg_DeleteText final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -5424,11 +5321,7 @@ class Msg_DeleteText final :
     kAAStartPosFieldNumber = 2,
     kAAEndPosFieldNumber = 3,
   };
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -5437,11 +5330,7 @@ class Msg_DeleteText final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 a_aStartPos = 2;
-  bool has_a_astartpos() const;
-  private:
-  bool _internal_has_a_astartpos() const;
-  public:
+  // sint32 a_aStartPos = 2;
   void clear_a_astartpos();
   int32_t a_astartpos() const;
   void set_a_astartpos(int32_t value);
@@ -5450,11 +5339,7 @@ class Msg_DeleteText final :
   void _internal_set_a_astartpos(int32_t value);
   public:
 
-  // required sint32 a_aEndPos = 3;
-  bool has_a_aendpos() const;
-  private:
-  bool _internal_has_a_aendpos() const;
-  public:
+  // sint32 a_aEndPos = 3;
   void clear_a_aendpos();
   int32_t a_aendpos() const;
   void set_a_aendpos(int32_t value);
@@ -5467,18 +5352,14 @@ class Msg_DeleteText final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     int32_t a_astartpos_;
     int32_t a_aendpos_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -5486,7 +5367,7 @@ class Msg_DeleteText final :
 // -------------------------------------------------------------------
 
 class Msg_PasteText final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_PasteText) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_PasteText) */ {
  public:
   inline Msg_PasteText() : Msg_PasteText(nullptr) {}
   ~Msg_PasteText() override;
@@ -5516,13 +5397,15 @@ class Msg_PasteText final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_PasteText& default_instance() {
     return *internal_default_instance();
   }
@@ -5560,9 +5443,15 @@ class Msg_PasteText final :
   Msg_PasteText* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_PasteText>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_PasteText& from);
-  void MergeFrom(const Msg_PasteText& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_PasteText& from) {
+    Msg_PasteText::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -5575,7 +5464,7 @@ class Msg_PasteText final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_PasteText* other);
 
   private:
@@ -5588,7 +5477,10 @@ class Msg_PasteText final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -5598,11 +5490,7 @@ class Msg_PasteText final :
     kAAIDFieldNumber = 1,
     kAAPositionFieldNumber = 2,
   };
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -5611,11 +5499,7 @@ class Msg_PasteText final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required sint32 a_aPosition = 2;
-  bool has_a_aposition() const;
-  private:
-  bool _internal_has_a_aposition() const;
-  public:
+  // sint32 a_aPosition = 2;
   void clear_a_aposition();
   int32_t a_aposition() const;
   void set_a_aposition(int32_t value);
@@ -5628,17 +5512,13 @@ class Msg_PasteText final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     int32_t a_aposition_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -5646,7 +5526,7 @@ class Msg_PasteText final :
 // -------------------------------------------------------------------
 
 class Msg_TakeSelection final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_TakeSelection) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_TakeSelection) */ {
  public:
   inline Msg_TakeSelection() : Msg_TakeSelection(nullptr) {}
   ~Msg_TakeSelection() override;
@@ -5676,13 +5556,15 @@ class Msg_TakeSelection final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_TakeSelection& default_instance() {
     return *internal_default_instance();
   }
@@ -5720,9 +5602,15 @@ class Msg_TakeSelection final :
   Msg_TakeSelection* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_TakeSelection>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_TakeSelection& from);
-  void MergeFrom(const Msg_TakeSelection& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_TakeSelection& from) {
+    Msg_TakeSelection::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -5735,7 +5623,7 @@ class Msg_TakeSelection final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_TakeSelection* other);
 
   private:
@@ -5748,7 +5636,10 @@ class Msg_TakeSelection final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -5757,11 +5648,7 @@ class Msg_TakeSelection final :
   enum : int {
     kAAIDFieldNumber = 1,
   };
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -5778,9 +5665,8 @@ class Msg_TakeSelection final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -5788,7 +5674,7 @@ class Msg_TakeSelection final :
 // -------------------------------------------------------------------
 
 class Msg_SetSelected final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_SetSelected) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_SetSelected) */ {
  public:
   inline Msg_SetSelected() : Msg_SetSelected(nullptr) {}
   ~Msg_SetSelected() override;
@@ -5818,13 +5704,15 @@ class Msg_SetSelected final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SetSelected& default_instance() {
     return *internal_default_instance();
   }
@@ -5862,9 +5750,15 @@ class Msg_SetSelected final :
   Msg_SetSelected* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SetSelected>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SetSelected& from);
-  void MergeFrom(const Msg_SetSelected& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SetSelected& from) {
+    Msg_SetSelected::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -5877,7 +5771,7 @@ class Msg_SetSelected final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SetSelected* other);
 
   private:
@@ -5890,7 +5784,10 @@ class Msg_SetSelected final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -5900,11 +5797,7 @@ class Msg_SetSelected final :
     kAAIDFieldNumber = 1,
     kAASelectedFieldNumber = 2,
   };
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -5913,11 +5806,7 @@ class Msg_SetSelected final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required bool a_aSelected = 2;
-  bool has_a_aselected() const;
-  private:
-  bool _internal_has_a_aselected() const;
-  public:
+  // bool a_aSelected = 2;
   void clear_a_aselected();
   bool a_aselected() const;
   void set_a_aselected(bool value);
@@ -5930,17 +5819,13 @@ class Msg_SetSelected final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     bool a_aselected_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -5948,7 +5833,7 @@ class Msg_SetSelected final :
 // -------------------------------------------------------------------
 
 class Msg_DoActionAsync final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_DoActionAsync) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_DoActionAsync) */ {
  public:
   inline Msg_DoActionAsync() : Msg_DoActionAsync(nullptr) {}
   ~Msg_DoActionAsync() override;
@@ -5978,13 +5863,15 @@ class Msg_DoActionAsync final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_DoActionAsync& default_instance() {
     return *internal_default_instance();
   }
@@ -6022,9 +5909,15 @@ class Msg_DoActionAsync final :
   Msg_DoActionAsync* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_DoActionAsync>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_DoActionAsync& from);
-  void MergeFrom(const Msg_DoActionAsync& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_DoActionAsync& from) {
+    Msg_DoActionAsync::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -6037,7 +5930,7 @@ class Msg_DoActionAsync final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_DoActionAsync* other);
 
   private:
@@ -6050,7 +5943,10 @@ class Msg_DoActionAsync final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -6060,11 +5956,7 @@ class Msg_DoActionAsync final :
     kAAIDFieldNumber = 1,
     kAAIndexFieldNumber = 2,
   };
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -6073,11 +5965,7 @@ class Msg_DoActionAsync final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint32 a_aIndex = 2;
-  bool has_a_aindex() const;
-  private:
-  bool _internal_has_a_aindex() const;
-  public:
+  // uint32 a_aIndex = 2;
   void clear_a_aindex();
   uint32_t a_aindex() const;
   void set_a_aindex(uint32_t value);
@@ -6090,17 +5978,13 @@ class Msg_DoActionAsync final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     uint32_t a_aindex_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -6108,7 +5992,7 @@ class Msg_DoActionAsync final :
 // -------------------------------------------------------------------
 
 class Msg_SetCurValue final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_SetCurValue) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_SetCurValue) */ {
  public:
   inline Msg_SetCurValue() : Msg_SetCurValue(nullptr) {}
   ~Msg_SetCurValue() override;
@@ -6138,13 +6022,15 @@ class Msg_SetCurValue final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SetCurValue& default_instance() {
     return *internal_default_instance();
   }
@@ -6182,9 +6068,15 @@ class Msg_SetCurValue final :
   Msg_SetCurValue* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SetCurValue>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SetCurValue& from);
-  void MergeFrom(const Msg_SetCurValue& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SetCurValue& from) {
+    Msg_SetCurValue::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -6197,7 +6089,7 @@ class Msg_SetCurValue final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SetCurValue* other);
 
   private:
@@ -6210,7 +6102,10 @@ class Msg_SetCurValue final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -6220,11 +6115,7 @@ class Msg_SetCurValue final :
     kAAIDFieldNumber = 1,
     kAAValueFieldNumber = 2,
   };
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -6233,11 +6124,7 @@ class Msg_SetCurValue final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required double a_aValue = 2;
-  bool has_a_avalue() const;
-  private:
-  bool _internal_has_a_avalue() const;
-  public:
+  // double a_aValue = 2;
   void clear_a_avalue();
   double a_avalue() const;
   void set_a_avalue(double value);
@@ -6250,17 +6137,13 @@ class Msg_SetCurValue final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
     double a_avalue_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -6268,7 +6151,7 @@ class Msg_SetCurValue final :
 // -------------------------------------------------------------------
 
 class Msg_TakeFocus final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_TakeFocus) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_TakeFocus) */ {
  public:
   inline Msg_TakeFocus() : Msg_TakeFocus(nullptr) {}
   ~Msg_TakeFocus() override;
@@ -6298,13 +6181,15 @@ class Msg_TakeFocus final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_TakeFocus& default_instance() {
     return *internal_default_instance();
   }
@@ -6342,9 +6227,15 @@ class Msg_TakeFocus final :
   Msg_TakeFocus* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_TakeFocus>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_TakeFocus& from);
-  void MergeFrom(const Msg_TakeFocus& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_TakeFocus& from) {
+    Msg_TakeFocus::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -6357,7 +6248,7 @@ class Msg_TakeFocus final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_TakeFocus* other);
 
   private:
@@ -6370,7 +6261,10 @@ class Msg_TakeFocus final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -6379,11 +6273,7 @@ class Msg_TakeFocus final :
   enum : int {
     kAAIDFieldNumber = 1,
   };
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -6400,9 +6290,8 @@ class Msg_TakeFocus final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_aid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
@@ -6410,7 +6299,7 @@ class Msg_TakeFocus final :
 // -------------------------------------------------------------------
 
 class Msg_VerifyCache final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache) */ {
  public:
   inline Msg_VerifyCache() : Msg_VerifyCache(nullptr) {}
   ~Msg_VerifyCache() override;
@@ -6440,13 +6329,15 @@ class Msg_VerifyCache final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_VerifyCache& default_instance() {
     return *internal_default_instance();
   }
@@ -6484,9 +6375,15 @@ class Msg_VerifyCache final :
   Msg_VerifyCache* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_VerifyCache>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_VerifyCache& from);
-  void MergeFrom(const Msg_VerifyCache& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_VerifyCache& from) {
+    Msg_VerifyCache::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -6499,7 +6396,7 @@ class Msg_VerifyCache final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_VerifyCache* other);
 
   private:
@@ -6512,7 +6409,10 @@ class Msg_VerifyCache final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -6541,11 +6441,7 @@ class Msg_VerifyCache final :
   std::string* _internal_mutable_a_afields();
   public:
 
-  // required uint64 a_aID = 1;
-  bool has_a_aid() const;
-  private:
-  bool _internal_has_a_aid() const;
-  public:
+  // uint64 a_aID = 1;
   void clear_a_aid();
   uint64_t a_aid() const;
   void set_a_aid(uint64_t value);
@@ -6554,11 +6450,7 @@ class Msg_VerifyCache final :
   void _internal_set_a_aid(uint64_t value);
   public:
 
-  // required uint64 a_aCacheDomain = 2;
-  bool has_a_acachedomain() const;
-  private:
-  bool _internal_has_a_acachedomain() const;
-  public:
+  // uint64 a_aCacheDomain = 2;
   void clear_a_acachedomain();
   uint64_t a_acachedomain() const;
   void set_a_acachedomain(uint64_t value);
@@ -6570,9 +6462,6 @@ class Msg_VerifyCache final :
   // @@protoc_insertion_point(class_scope:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache)
  private:
   class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -6590,10 +6479,9 @@ class Msg_VerifyCache final :
 // -------------------------------------------------------------------
 
 class Msg_AckMutationEvents final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_AckMutationEvents) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.a11y.PDocAccessible.Msg_AckMutationEvents) */ {
  public:
   inline Msg_AckMutationEvents() : Msg_AckMutationEvents(nullptr) {}
-  ~Msg_AckMutationEvents() override;
   explicit PROTOBUF_CONSTEXPR Msg_AckMutationEvents(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_AckMutationEvents(const Msg_AckMutationEvents& from);
@@ -6620,13 +6508,15 @@ class Msg_AckMutationEvents final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_AckMutationEvents& default_instance() {
     return *internal_default_instance();
   }
@@ -6664,23 +6554,15 @@ class Msg_AckMutationEvents final :
   Msg_AckMutationEvents* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_AckMutationEvents>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_AckMutationEvents& from);
-  void MergeFrom(const Msg_AckMutationEvents& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_AckMutationEvents* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_AckMutationEvents& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_AckMutationEvents& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -6692,7 +6574,10 @@ class Msg_AckMutationEvents final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -6706,9 +6591,7 @@ class Msg_AckMutationEvents final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PDocAccessible_2eproto;
 };
 // ===================================================================
@@ -6726,17 +6609,9 @@ class Msg_AckMutationEvents final :
 
 // Msg_Event
 
-// required uint64 a_aID = 1;
-inline bool Msg_Event::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_Event::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_Event::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_Event::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -6746,7 +6621,7 @@ inline uint64_t Msg_Event::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_Event::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_Event::set_a_aid(uint64_t value) {
@@ -6754,17 +6629,9 @@ inline void Msg_Event::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Event.a_aID)
 }
 
-// required uint32 a_type = 2;
-inline bool Msg_Event::_internal_has_a_type() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_Event::has_a_type() const {
-  return _internal_has_a_type();
-}
+// uint32 a_type = 2;
 inline void Msg_Event::clear_a_type() {
   _impl_.a_type_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_Event::_internal_a_type() const {
   return _impl_.a_type_;
@@ -6774,7 +6641,7 @@ inline uint32_t Msg_Event::a_type() const {
   return _internal_a_type();
 }
 inline void Msg_Event::_internal_set_a_type(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_type_ = value;
 }
 inline void Msg_Event::set_a_type(uint32_t value) {
@@ -6786,17 +6653,9 @@ inline void Msg_Event::set_a_type(uint32_t value) {
 
 // Msg_StateChangeEvent
 
-// required uint64 a_aID = 1;
-inline bool Msg_StateChangeEvent::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_StateChangeEvent::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_StateChangeEvent::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_StateChangeEvent::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -6806,7 +6665,7 @@ inline uint64_t Msg_StateChangeEvent::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_StateChangeEvent::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_StateChangeEvent::set_a_aid(uint64_t value) {
@@ -6814,17 +6673,9 @@ inline void Msg_StateChangeEvent::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent.a_aID)
 }
 
-// required uint64 a_aState = 2;
-inline bool Msg_StateChangeEvent::_internal_has_a_astate() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_StateChangeEvent::has_a_astate() const {
-  return _internal_has_a_astate();
-}
+// uint64 a_aState = 2;
 inline void Msg_StateChangeEvent::clear_a_astate() {
   _impl_.a_astate_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_StateChangeEvent::_internal_a_astate() const {
   return _impl_.a_astate_;
@@ -6834,7 +6685,7 @@ inline uint64_t Msg_StateChangeEvent::a_astate() const {
   return _internal_a_astate();
 }
 inline void Msg_StateChangeEvent::_internal_set_a_astate(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_astate_ = value;
 }
 inline void Msg_StateChangeEvent::set_a_astate(uint64_t value) {
@@ -6842,17 +6693,9 @@ inline void Msg_StateChangeEvent::set_a_astate(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_StateChangeEvent.a_aState)
 }
 
-// required bool a_aEnabled = 3;
-inline bool Msg_StateChangeEvent::_internal_has_a_aenabled() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_StateChangeEvent::has_a_aenabled() const {
-  return _internal_has_a_aenabled();
-}
+// bool a_aEnabled = 3;
 inline void Msg_StateChangeEvent::clear_a_aenabled() {
   _impl_.a_aenabled_ = false;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline bool Msg_StateChangeEvent::_internal_a_aenabled() const {
   return _impl_.a_aenabled_;
@@ -6862,7 +6705,7 @@ inline bool Msg_StateChangeEvent::a_aenabled() const {
   return _internal_a_aenabled();
 }
 inline void Msg_StateChangeEvent::_internal_set_a_aenabled(bool value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_aenabled_ = value;
 }
 inline void Msg_StateChangeEvent::set_a_aenabled(bool value) {
@@ -6874,17 +6717,9 @@ inline void Msg_StateChangeEvent::set_a_aenabled(bool value) {
 
 // Msg_CaretMoveEvent
 
-// required uint64 a_aID = 1;
-inline bool Msg_CaretMoveEvent::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_CaretMoveEvent::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_CaretMoveEvent::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_CaretMoveEvent::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -6894,7 +6729,7 @@ inline uint64_t Msg_CaretMoveEvent::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_CaretMoveEvent::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_CaretMoveEvent::set_a_aid(uint64_t value) {
@@ -6902,17 +6737,9 @@ inline void Msg_CaretMoveEvent::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aID)
 }
 
-// required bytes a_aCaretRect = 2;
-inline bool Msg_CaretMoveEvent::_internal_has_a_acaretrect() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_CaretMoveEvent::has_a_acaretrect() const {
-  return _internal_has_a_acaretrect();
-}
+// bytes a_aCaretRect = 2;
 inline void Msg_CaretMoveEvent::clear_a_acaretrect() {
   _impl_.a_acaretrect_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_CaretMoveEvent::a_acaretrect() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aCaretRect)
@@ -6921,7 +6748,7 @@ inline const std::string& Msg_CaretMoveEvent::a_acaretrect() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CaretMoveEvent::set_a_acaretrect(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_acaretrect_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aCaretRect)
 }
@@ -6934,32 +6761,22 @@ inline const std::string& Msg_CaretMoveEvent::_internal_a_acaretrect() const {
   return _impl_.a_acaretrect_.Get();
 }
 inline void Msg_CaretMoveEvent::_internal_set_a_acaretrect(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_acaretrect_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CaretMoveEvent::_internal_mutable_a_acaretrect() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_acaretrect_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CaretMoveEvent::release_a_acaretrect() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aCaretRect)
-  if (!_internal_has_a_acaretrect()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_acaretrect_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_acaretrect_.IsDefault()) {
-    _impl_.a_acaretrect_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_acaretrect_.Release();
 }
 inline void Msg_CaretMoveEvent::set_allocated_a_acaretrect(std::string* a_acaretrect) {
   if (a_acaretrect != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_acaretrect_.SetAllocated(a_acaretrect, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -6970,17 +6787,9 @@ inline void Msg_CaretMoveEvent::set_allocated_a_acaretrect(std::string* a_acaret
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aCaretRect)
 }
 
-// required sint32 a_aOffset = 3;
-inline bool Msg_CaretMoveEvent::_internal_has_a_aoffset() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_CaretMoveEvent::has_a_aoffset() const {
-  return _internal_has_a_aoffset();
-}
+// sint32 a_aOffset = 3;
 inline void Msg_CaretMoveEvent::clear_a_aoffset() {
   _impl_.a_aoffset_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t Msg_CaretMoveEvent::_internal_a_aoffset() const {
   return _impl_.a_aoffset_;
@@ -6990,7 +6799,7 @@ inline int32_t Msg_CaretMoveEvent::a_aoffset() const {
   return _internal_a_aoffset();
 }
 inline void Msg_CaretMoveEvent::_internal_set_a_aoffset(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_aoffset_ = value;
 }
 inline void Msg_CaretMoveEvent::set_a_aoffset(int32_t value) {
@@ -6998,17 +6807,9 @@ inline void Msg_CaretMoveEvent::set_a_aoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aOffset)
 }
 
-// required bool a_aIsSelectionCollapsed = 4;
-inline bool Msg_CaretMoveEvent::_internal_has_a_aisselectioncollapsed() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_CaretMoveEvent::has_a_aisselectioncollapsed() const {
-  return _internal_has_a_aisselectioncollapsed();
-}
+// bool a_aIsSelectionCollapsed = 4;
 inline void Msg_CaretMoveEvent::clear_a_aisselectioncollapsed() {
   _impl_.a_aisselectioncollapsed_ = false;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline bool Msg_CaretMoveEvent::_internal_a_aisselectioncollapsed() const {
   return _impl_.a_aisselectioncollapsed_;
@@ -7018,7 +6819,7 @@ inline bool Msg_CaretMoveEvent::a_aisselectioncollapsed() const {
   return _internal_a_aisselectioncollapsed();
 }
 inline void Msg_CaretMoveEvent::_internal_set_a_aisselectioncollapsed(bool value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_aisselectioncollapsed_ = value;
 }
 inline void Msg_CaretMoveEvent::set_a_aisselectioncollapsed(bool value) {
@@ -7026,17 +6827,9 @@ inline void Msg_CaretMoveEvent::set_a_aisselectioncollapsed(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aIsSelectionCollapsed)
 }
 
-// required bool a_aIsAtEndOfLine = 5;
-inline bool Msg_CaretMoveEvent::_internal_has_a_aisatendofline() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool Msg_CaretMoveEvent::has_a_aisatendofline() const {
-  return _internal_has_a_aisatendofline();
-}
+// bool a_aIsAtEndOfLine = 5;
 inline void Msg_CaretMoveEvent::clear_a_aisatendofline() {
   _impl_.a_aisatendofline_ = false;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline bool Msg_CaretMoveEvent::_internal_a_aisatendofline() const {
   return _impl_.a_aisatendofline_;
@@ -7046,7 +6839,7 @@ inline bool Msg_CaretMoveEvent::a_aisatendofline() const {
   return _internal_a_aisatendofline();
 }
 inline void Msg_CaretMoveEvent::_internal_set_a_aisatendofline(bool value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_aisatendofline_ = value;
 }
 inline void Msg_CaretMoveEvent::set_a_aisatendofline(bool value) {
@@ -7054,17 +6847,9 @@ inline void Msg_CaretMoveEvent::set_a_aisatendofline(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aIsAtEndOfLine)
 }
 
-// required sint32 a_aGranularity = 6;
-inline bool Msg_CaretMoveEvent::_internal_has_a_agranularity() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool Msg_CaretMoveEvent::has_a_agranularity() const {
-  return _internal_has_a_agranularity();
-}
+// sint32 a_aGranularity = 6;
 inline void Msg_CaretMoveEvent::clear_a_agranularity() {
   _impl_.a_agranularity_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline int32_t Msg_CaretMoveEvent::_internal_a_agranularity() const {
   return _impl_.a_agranularity_;
@@ -7074,7 +6859,7 @@ inline int32_t Msg_CaretMoveEvent::a_agranularity() const {
   return _internal_a_agranularity();
 }
 inline void Msg_CaretMoveEvent::_internal_set_a_agranularity(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000040u;
+  
   _impl_.a_agranularity_ = value;
 }
 inline void Msg_CaretMoveEvent::set_a_agranularity(int32_t value) {
@@ -7082,17 +6867,9 @@ inline void Msg_CaretMoveEvent::set_a_agranularity(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CaretMoveEvent.a_aGranularity)
 }
 
-// required bool a_aFromUser = 7;
-inline bool Msg_CaretMoveEvent::_internal_has_a_afromuser() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool Msg_CaretMoveEvent::has_a_afromuser() const {
-  return _internal_has_a_afromuser();
-}
+// bool a_aFromUser = 7;
 inline void Msg_CaretMoveEvent::clear_a_afromuser() {
   _impl_.a_afromuser_ = false;
-  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline bool Msg_CaretMoveEvent::_internal_a_afromuser() const {
   return _impl_.a_afromuser_;
@@ -7102,7 +6879,7 @@ inline bool Msg_CaretMoveEvent::a_afromuser() const {
   return _internal_a_afromuser();
 }
 inline void Msg_CaretMoveEvent::_internal_set_a_afromuser(bool value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   _impl_.a_afromuser_ = value;
 }
 inline void Msg_CaretMoveEvent::set_a_afromuser(bool value) {
@@ -7159,17 +6936,9 @@ Msg_MutationEvents::a_adata() const {
 
 // Msg_SelectionEvent
 
-// required uint64 a_aID = 1;
-inline bool Msg_SelectionEvent::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_SelectionEvent::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_SelectionEvent::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_SelectionEvent::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -7179,7 +6948,7 @@ inline uint64_t Msg_SelectionEvent::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_SelectionEvent::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_SelectionEvent::set_a_aid(uint64_t value) {
@@ -7187,17 +6956,9 @@ inline void Msg_SelectionEvent::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent.a_aID)
 }
 
-// required uint64 a_aWidgetID = 2;
-inline bool Msg_SelectionEvent::_internal_has_a_awidgetid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_SelectionEvent::has_a_awidgetid() const {
-  return _internal_has_a_awidgetid();
-}
+// uint64 a_aWidgetID = 2;
 inline void Msg_SelectionEvent::clear_a_awidgetid() {
   _impl_.a_awidgetid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_SelectionEvent::_internal_a_awidgetid() const {
   return _impl_.a_awidgetid_;
@@ -7207,7 +6968,7 @@ inline uint64_t Msg_SelectionEvent::a_awidgetid() const {
   return _internal_a_awidgetid();
 }
 inline void Msg_SelectionEvent::_internal_set_a_awidgetid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_awidgetid_ = value;
 }
 inline void Msg_SelectionEvent::set_a_awidgetid(uint64_t value) {
@@ -7215,17 +6976,9 @@ inline void Msg_SelectionEvent::set_a_awidgetid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SelectionEvent.a_aWidgetID)
 }
 
-// required uint32 a_aType = 3;
-inline bool Msg_SelectionEvent::_internal_has_a_atype() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_SelectionEvent::has_a_atype() const {
-  return _internal_has_a_atype();
-}
+// uint32 a_aType = 3;
 inline void Msg_SelectionEvent::clear_a_atype() {
   _impl_.a_atype_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_SelectionEvent::_internal_a_atype() const {
   return _impl_.a_atype_;
@@ -7235,7 +6988,7 @@ inline uint32_t Msg_SelectionEvent::a_atype() const {
   return _internal_a_atype();
 }
 inline void Msg_SelectionEvent::_internal_set_a_atype(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_atype_ = value;
 }
 inline void Msg_SelectionEvent::set_a_atype(uint32_t value) {
@@ -7247,17 +7000,9 @@ inline void Msg_SelectionEvent::set_a_atype(uint32_t value) {
 
 // Msg_RoleChangedEvent
 
-// required bytes a_aRole = 1;
-inline bool Msg_RoleChangedEvent::_internal_has_a_arole() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_RoleChangedEvent::has_a_arole() const {
-  return _internal_has_a_arole();
-}
+// bytes a_aRole = 1;
 inline void Msg_RoleChangedEvent::clear_a_arole() {
   _impl_.a_arole_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_RoleChangedEvent::a_arole() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.a_aRole)
@@ -7266,7 +7011,7 @@ inline const std::string& Msg_RoleChangedEvent::a_arole() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RoleChangedEvent::set_a_arole(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_arole_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.a_aRole)
 }
@@ -7279,32 +7024,22 @@ inline const std::string& Msg_RoleChangedEvent::_internal_a_arole() const {
   return _impl_.a_arole_.Get();
 }
 inline void Msg_RoleChangedEvent::_internal_set_a_arole(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_arole_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_RoleChangedEvent::_internal_mutable_a_arole() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_arole_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_RoleChangedEvent::release_a_arole() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.a_aRole)
-  if (!_internal_has_a_arole()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_arole_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_arole_.IsDefault()) {
-    _impl_.a_arole_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_arole_.Release();
 }
 inline void Msg_RoleChangedEvent::set_allocated_a_arole(std::string* a_arole) {
   if (a_arole != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_arole_.SetAllocated(a_arole, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7315,17 +7050,9 @@ inline void Msg_RoleChangedEvent::set_allocated_a_arole(std::string* a_arole) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_RoleChangedEvent.a_aRole)
 }
 
-// required uint32 a_aRoleMapEntryIndex = 2;
-inline bool Msg_RoleChangedEvent::_internal_has_a_arolemapentryindex() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_RoleChangedEvent::has_a_arolemapentryindex() const {
-  return _internal_has_a_arolemapentryindex();
-}
+// uint32 a_aRoleMapEntryIndex = 2;
 inline void Msg_RoleChangedEvent::clear_a_arolemapentryindex() {
   _impl_.a_arolemapentryindex_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_RoleChangedEvent::_internal_a_arolemapentryindex() const {
   return _impl_.a_arolemapentryindex_;
@@ -7335,7 +7062,7 @@ inline uint32_t Msg_RoleChangedEvent::a_arolemapentryindex() const {
   return _internal_a_arolemapentryindex();
 }
 inline void Msg_RoleChangedEvent::_internal_set_a_arolemapentryindex(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_arolemapentryindex_ = value;
 }
 inline void Msg_RoleChangedEvent::set_a_arolemapentryindex(uint32_t value) {
@@ -7347,17 +7074,9 @@ inline void Msg_RoleChangedEvent::set_a_arolemapentryindex(uint32_t value) {
 
 // Msg_FocusEvent
 
-// required uint64 a_aID = 1;
-inline bool Msg_FocusEvent::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_FocusEvent::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_FocusEvent::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_FocusEvent::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -7367,7 +7086,7 @@ inline uint64_t Msg_FocusEvent::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_FocusEvent::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_FocusEvent::set_a_aid(uint64_t value) {
@@ -7375,17 +7094,9 @@ inline void Msg_FocusEvent::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.a_aID)
 }
 
-// required bytes a_aCaretRect = 2;
-inline bool Msg_FocusEvent::_internal_has_a_acaretrect() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_FocusEvent::has_a_acaretrect() const {
-  return _internal_has_a_acaretrect();
-}
+// bytes a_aCaretRect = 2;
 inline void Msg_FocusEvent::clear_a_acaretrect() {
   _impl_.a_acaretrect_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_FocusEvent::a_acaretrect() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.a_aCaretRect)
@@ -7394,7 +7105,7 @@ inline const std::string& Msg_FocusEvent::a_acaretrect() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_FocusEvent::set_a_acaretrect(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_acaretrect_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.a_aCaretRect)
 }
@@ -7407,32 +7118,22 @@ inline const std::string& Msg_FocusEvent::_internal_a_acaretrect() const {
   return _impl_.a_acaretrect_.Get();
 }
 inline void Msg_FocusEvent::_internal_set_a_acaretrect(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_acaretrect_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_FocusEvent::_internal_mutable_a_acaretrect() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_acaretrect_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_FocusEvent::release_a_acaretrect() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_FocusEvent.a_aCaretRect)
-  if (!_internal_has_a_acaretrect()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_acaretrect_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_acaretrect_.IsDefault()) {
-    _impl_.a_acaretrect_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_acaretrect_.Release();
 }
 inline void Msg_FocusEvent::set_allocated_a_acaretrect(std::string* a_acaretrect) {
   if (a_acaretrect != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_acaretrect_.SetAllocated(a_acaretrect, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7447,17 +7148,9 @@ inline void Msg_FocusEvent::set_allocated_a_acaretrect(std::string* a_acaretrect
 
 // Msg_ScrollingEvent
 
-// required uint64 a_aID = 1;
-inline bool Msg_ScrollingEvent::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_ScrollingEvent::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_ScrollingEvent::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_ScrollingEvent::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -7467,7 +7160,7 @@ inline uint64_t Msg_ScrollingEvent::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_ScrollingEvent::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_ScrollingEvent::set_a_aid(uint64_t value) {
@@ -7475,17 +7168,9 @@ inline void Msg_ScrollingEvent::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aID)
 }
 
-// required uint64 a_aType = 2;
-inline bool Msg_ScrollingEvent::_internal_has_a_atype() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_ScrollingEvent::has_a_atype() const {
-  return _internal_has_a_atype();
-}
+// uint64 a_aType = 2;
 inline void Msg_ScrollingEvent::clear_a_atype() {
   _impl_.a_atype_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_ScrollingEvent::_internal_a_atype() const {
   return _impl_.a_atype_;
@@ -7495,7 +7180,7 @@ inline uint64_t Msg_ScrollingEvent::a_atype() const {
   return _internal_a_atype();
 }
 inline void Msg_ScrollingEvent::_internal_set_a_atype(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_atype_ = value;
 }
 inline void Msg_ScrollingEvent::set_a_atype(uint64_t value) {
@@ -7503,17 +7188,9 @@ inline void Msg_ScrollingEvent::set_a_atype(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aType)
 }
 
-// required uint32 a_aScrollX = 3;
-inline bool Msg_ScrollingEvent::_internal_has_a_ascrollx() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_ScrollingEvent::has_a_ascrollx() const {
-  return _internal_has_a_ascrollx();
-}
+// uint32 a_aScrollX = 3;
 inline void Msg_ScrollingEvent::clear_a_ascrollx() {
   _impl_.a_ascrollx_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_ScrollingEvent::_internal_a_ascrollx() const {
   return _impl_.a_ascrollx_;
@@ -7523,7 +7200,7 @@ inline uint32_t Msg_ScrollingEvent::a_ascrollx() const {
   return _internal_a_ascrollx();
 }
 inline void Msg_ScrollingEvent::_internal_set_a_ascrollx(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_ascrollx_ = value;
 }
 inline void Msg_ScrollingEvent::set_a_ascrollx(uint32_t value) {
@@ -7531,17 +7208,9 @@ inline void Msg_ScrollingEvent::set_a_ascrollx(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aScrollX)
 }
 
-// required uint32 a_aScrollY = 4;
-inline bool Msg_ScrollingEvent::_internal_has_a_ascrolly() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_ScrollingEvent::has_a_ascrolly() const {
-  return _internal_has_a_ascrolly();
-}
+// uint32 a_aScrollY = 4;
 inline void Msg_ScrollingEvent::clear_a_ascrolly() {
   _impl_.a_ascrolly_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t Msg_ScrollingEvent::_internal_a_ascrolly() const {
   return _impl_.a_ascrolly_;
@@ -7551,7 +7220,7 @@ inline uint32_t Msg_ScrollingEvent::a_ascrolly() const {
   return _internal_a_ascrolly();
 }
 inline void Msg_ScrollingEvent::_internal_set_a_ascrolly(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_ascrolly_ = value;
 }
 inline void Msg_ScrollingEvent::set_a_ascrolly(uint32_t value) {
@@ -7559,17 +7228,9 @@ inline void Msg_ScrollingEvent::set_a_ascrolly(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aScrollY)
 }
 
-// required uint32 a_aMaxScrollX = 5;
-inline bool Msg_ScrollingEvent::_internal_has_a_amaxscrollx() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool Msg_ScrollingEvent::has_a_amaxscrollx() const {
-  return _internal_has_a_amaxscrollx();
-}
+// uint32 a_aMaxScrollX = 5;
 inline void Msg_ScrollingEvent::clear_a_amaxscrollx() {
   _impl_.a_amaxscrollx_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline uint32_t Msg_ScrollingEvent::_internal_a_amaxscrollx() const {
   return _impl_.a_amaxscrollx_;
@@ -7579,7 +7240,7 @@ inline uint32_t Msg_ScrollingEvent::a_amaxscrollx() const {
   return _internal_a_amaxscrollx();
 }
 inline void Msg_ScrollingEvent::_internal_set_a_amaxscrollx(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_amaxscrollx_ = value;
 }
 inline void Msg_ScrollingEvent::set_a_amaxscrollx(uint32_t value) {
@@ -7587,17 +7248,9 @@ inline void Msg_ScrollingEvent::set_a_amaxscrollx(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollingEvent.a_aMaxScrollX)
 }
 
-// required uint32 a_aMaxScrollY = 6;
-inline bool Msg_ScrollingEvent::_internal_has_a_amaxscrolly() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool Msg_ScrollingEvent::has_a_amaxscrolly() const {
-  return _internal_has_a_amaxscrolly();
-}
+// uint32 a_aMaxScrollY = 6;
 inline void Msg_ScrollingEvent::clear_a_amaxscrolly() {
   _impl_.a_amaxscrolly_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline uint32_t Msg_ScrollingEvent::_internal_a_amaxscrolly() const {
   return _impl_.a_amaxscrolly_;
@@ -7607,7 +7260,7 @@ inline uint32_t Msg_ScrollingEvent::a_amaxscrolly() const {
   return _internal_a_amaxscrolly();
 }
 inline void Msg_ScrollingEvent::_internal_set_a_amaxscrolly(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   _impl_.a_amaxscrolly_ = value;
 }
 inline void Msg_ScrollingEvent::set_a_amaxscrolly(uint32_t value) {
@@ -7619,17 +7272,9 @@ inline void Msg_ScrollingEvent::set_a_amaxscrolly(uint32_t value) {
 
 // Msg_AnnouncementEvent
 
-// required uint64 a_aID = 1;
-inline bool Msg_AnnouncementEvent::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_AnnouncementEvent::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_AnnouncementEvent::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_AnnouncementEvent::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -7639,7 +7284,7 @@ inline uint64_t Msg_AnnouncementEvent::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_AnnouncementEvent::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_AnnouncementEvent::set_a_aid(uint64_t value) {
@@ -7647,17 +7292,9 @@ inline void Msg_AnnouncementEvent::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.a_aID)
 }
 
-// required string a_aAnnouncement = 2;
-inline bool Msg_AnnouncementEvent::_internal_has_a_aannouncement() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_AnnouncementEvent::has_a_aannouncement() const {
-  return _internal_has_a_aannouncement();
-}
+// string a_aAnnouncement = 2;
 inline void Msg_AnnouncementEvent::clear_a_aannouncement() {
   _impl_.a_aannouncement_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_AnnouncementEvent::a_aannouncement() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.a_aAnnouncement)
@@ -7666,7 +7303,7 @@ inline const std::string& Msg_AnnouncementEvent::a_aannouncement() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AnnouncementEvent::set_a_aannouncement(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_aannouncement_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.a_aAnnouncement)
 }
@@ -7679,32 +7316,22 @@ inline const std::string& Msg_AnnouncementEvent::_internal_a_aannouncement() con
   return _impl_.a_aannouncement_.Get();
 }
 inline void Msg_AnnouncementEvent::_internal_set_a_aannouncement(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aannouncement_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_AnnouncementEvent::_internal_mutable_a_aannouncement() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_aannouncement_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_AnnouncementEvent::release_a_aannouncement() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.a_aAnnouncement)
-  if (!_internal_has_a_aannouncement()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_aannouncement_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_aannouncement_.IsDefault()) {
-    _impl_.a_aannouncement_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_aannouncement_.Release();
 }
 inline void Msg_AnnouncementEvent::set_allocated_a_aannouncement(std::string* a_aannouncement) {
   if (a_aannouncement != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_aannouncement_.SetAllocated(a_aannouncement, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7715,17 +7342,9 @@ inline void Msg_AnnouncementEvent::set_allocated_a_aannouncement(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_AnnouncementEvent.a_aAnnouncement)
 }
 
-// required uint32 a_aPriority = 3;
-inline bool Msg_AnnouncementEvent::_internal_has_a_apriority() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_AnnouncementEvent::has_a_apriority() const {
-  return _internal_has_a_apriority();
-}
+// uint32 a_aPriority = 3;
 inline void Msg_AnnouncementEvent::clear_a_apriority() {
   _impl_.a_apriority_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_AnnouncementEvent::_internal_a_apriority() const {
   return _impl_.a_apriority_;
@@ -7735,7 +7354,7 @@ inline uint32_t Msg_AnnouncementEvent::a_apriority() const {
   return _internal_a_apriority();
 }
 inline void Msg_AnnouncementEvent::_internal_set_a_apriority(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_apriority_ = value;
 }
 inline void Msg_AnnouncementEvent::set_a_apriority(uint32_t value) {
@@ -7747,17 +7366,9 @@ inline void Msg_AnnouncementEvent::set_a_apriority(uint32_t value) {
 
 // Msg_TextSelectionChangeEvent
 
-// required uint64 a_aID = 1;
-inline bool Msg_TextSelectionChangeEvent::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_TextSelectionChangeEvent::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_TextSelectionChangeEvent::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_TextSelectionChangeEvent::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -7767,7 +7378,7 @@ inline uint64_t Msg_TextSelectionChangeEvent::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_TextSelectionChangeEvent::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_TextSelectionChangeEvent::set_a_aid(uint64_t value) {
@@ -7816,17 +7427,9 @@ Msg_TextSelectionChangeEvent::a_aselection() const {
 
 // Msg_BindChildDoc
 
-// required bytes a_aChildDoc = 1;
-inline bool Msg_BindChildDoc::_internal_has_a_achilddoc() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_BindChildDoc::has_a_achilddoc() const {
-  return _internal_has_a_achilddoc();
-}
+// bytes a_aChildDoc = 1;
 inline void Msg_BindChildDoc::clear_a_achilddoc() {
   _impl_.a_achilddoc_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_BindChildDoc::a_achilddoc() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.a_aChildDoc)
@@ -7835,7 +7438,7 @@ inline const std::string& Msg_BindChildDoc::a_achilddoc() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_BindChildDoc::set_a_achilddoc(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_achilddoc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.a_aChildDoc)
 }
@@ -7848,32 +7451,22 @@ inline const std::string& Msg_BindChildDoc::_internal_a_achilddoc() const {
   return _impl_.a_achilddoc_.Get();
 }
 inline void Msg_BindChildDoc::_internal_set_a_achilddoc(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_achilddoc_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_BindChildDoc::_internal_mutable_a_achilddoc() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_achilddoc_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_BindChildDoc::release_a_achilddoc() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.a_aChildDoc)
-  if (!_internal_has_a_achilddoc()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_achilddoc_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_achilddoc_.IsDefault()) {
-    _impl_.a_achilddoc_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_achilddoc_.Release();
 }
 inline void Msg_BindChildDoc::set_allocated_a_achilddoc(std::string* a_achilddoc) {
   if (a_achilddoc != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_achilddoc_.SetAllocated(a_achilddoc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -7884,17 +7477,9 @@ inline void Msg_BindChildDoc::set_allocated_a_achilddoc(std::string* a_achilddoc
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_BindChildDoc.a_aChildDoc)
 }
 
-// required uint64 a_aID = 2;
-inline bool Msg_BindChildDoc::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_BindChildDoc::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 2;
 inline void Msg_BindChildDoc::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_BindChildDoc::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -7904,7 +7489,7 @@ inline uint64_t Msg_BindChildDoc::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_BindChildDoc::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_BindChildDoc::set_a_aid(uint64_t value) {
@@ -7916,17 +7501,9 @@ inline void Msg_BindChildDoc::set_a_aid(uint64_t value) {
 
 // Msg_Cache
 
-// required bytes a_aUpdateType = 1;
-inline bool Msg_Cache::_internal_has_a_aupdatetype() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_Cache::has_a_aupdatetype() const {
-  return _internal_has_a_aupdatetype();
-}
+// bytes a_aUpdateType = 1;
 inline void Msg_Cache::clear_a_aupdatetype() {
   _impl_.a_aupdatetype_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_Cache::a_aupdatetype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.a_aUpdateType)
@@ -7935,7 +7512,7 @@ inline const std::string& Msg_Cache::a_aupdatetype() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Cache::set_a_aupdatetype(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_aupdatetype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.a_aUpdateType)
 }
@@ -7948,32 +7525,22 @@ inline const std::string& Msg_Cache::_internal_a_aupdatetype() const {
   return _impl_.a_aupdatetype_.Get();
 }
 inline void Msg_Cache::_internal_set_a_aupdatetype(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aupdatetype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_Cache::_internal_mutable_a_aupdatetype() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_aupdatetype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_Cache::release_a_aupdatetype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_Cache.a_aUpdateType)
-  if (!_internal_has_a_aupdatetype()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_aupdatetype_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_aupdatetype_.IsDefault()) {
-    _impl_.a_aupdatetype_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_aupdatetype_.Release();
 }
 inline void Msg_Cache::set_allocated_a_aupdatetype(std::string* a_aupdatetype) {
   if (a_aupdatetype != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_aupdatetype_.SetAllocated(a_aupdatetype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8186,17 +7753,9 @@ Msg_AccessiblesWillMove::mutable_a_aids() {
 
 // Msg_ScrollTo
 
-// required uint64 a_aID = 1;
-inline bool Msg_ScrollTo::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_ScrollTo::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_ScrollTo::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_ScrollTo::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -8206,7 +7765,7 @@ inline uint64_t Msg_ScrollTo::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_ScrollTo::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_ScrollTo::set_a_aid(uint64_t value) {
@@ -8214,17 +7773,9 @@ inline void Msg_ScrollTo::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTo.a_aID)
 }
 
-// required uint32 a_aScrollType = 2;
-inline bool Msg_ScrollTo::_internal_has_a_ascrolltype() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_ScrollTo::has_a_ascrolltype() const {
-  return _internal_has_a_ascrolltype();
-}
+// uint32 a_aScrollType = 2;
 inline void Msg_ScrollTo::clear_a_ascrolltype() {
   _impl_.a_ascrolltype_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_ScrollTo::_internal_a_ascrolltype() const {
   return _impl_.a_ascrolltype_;
@@ -8234,7 +7785,7 @@ inline uint32_t Msg_ScrollTo::a_ascrolltype() const {
   return _internal_a_ascrolltype();
 }
 inline void Msg_ScrollTo::_internal_set_a_ascrolltype(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_ascrolltype_ = value;
 }
 inline void Msg_ScrollTo::set_a_ascrolltype(uint32_t value) {
@@ -8246,17 +7797,9 @@ inline void Msg_ScrollTo::set_a_ascrolltype(uint32_t value) {
 
 // Msg_ScrollToPoint
 
-// required uint64 a_aID = 1;
-inline bool Msg_ScrollToPoint::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_ScrollToPoint::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_ScrollToPoint::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_ScrollToPoint::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -8266,7 +7809,7 @@ inline uint64_t Msg_ScrollToPoint::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_ScrollToPoint::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_ScrollToPoint::set_a_aid(uint64_t value) {
@@ -8274,17 +7817,9 @@ inline void Msg_ScrollToPoint::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.a_aID)
 }
 
-// required uint32 a_aScrollType = 2;
-inline bool Msg_ScrollToPoint::_internal_has_a_ascrolltype() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_ScrollToPoint::has_a_ascrolltype() const {
-  return _internal_has_a_ascrolltype();
-}
+// uint32 a_aScrollType = 2;
 inline void Msg_ScrollToPoint::clear_a_ascrolltype() {
   _impl_.a_ascrolltype_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_ScrollToPoint::_internal_a_ascrolltype() const {
   return _impl_.a_ascrolltype_;
@@ -8294,7 +7829,7 @@ inline uint32_t Msg_ScrollToPoint::a_ascrolltype() const {
   return _internal_a_ascrolltype();
 }
 inline void Msg_ScrollToPoint::_internal_set_a_ascrolltype(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_ascrolltype_ = value;
 }
 inline void Msg_ScrollToPoint::set_a_ascrolltype(uint32_t value) {
@@ -8302,17 +7837,9 @@ inline void Msg_ScrollToPoint::set_a_ascrolltype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.a_aScrollType)
 }
 
-// required sint32 a_aX = 3;
-inline bool Msg_ScrollToPoint::_internal_has_a_ax() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_ScrollToPoint::has_a_ax() const {
-  return _internal_has_a_ax();
-}
+// sint32 a_aX = 3;
 inline void Msg_ScrollToPoint::clear_a_ax() {
   _impl_.a_ax_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t Msg_ScrollToPoint::_internal_a_ax() const {
   return _impl_.a_ax_;
@@ -8322,7 +7849,7 @@ inline int32_t Msg_ScrollToPoint::a_ax() const {
   return _internal_a_ax();
 }
 inline void Msg_ScrollToPoint::_internal_set_a_ax(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_ax_ = value;
 }
 inline void Msg_ScrollToPoint::set_a_ax(int32_t value) {
@@ -8330,17 +7857,9 @@ inline void Msg_ScrollToPoint::set_a_ax(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollToPoint.a_aX)
 }
 
-// required sint32 a_aY = 4;
-inline bool Msg_ScrollToPoint::_internal_has_a_ay() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_ScrollToPoint::has_a_ay() const {
-  return _internal_has_a_ay();
-}
+// sint32 a_aY = 4;
 inline void Msg_ScrollToPoint::clear_a_ay() {
   _impl_.a_ay_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline int32_t Msg_ScrollToPoint::_internal_a_ay() const {
   return _impl_.a_ay_;
@@ -8350,7 +7869,7 @@ inline int32_t Msg_ScrollToPoint::a_ay() const {
   return _internal_a_ay();
 }
 inline void Msg_ScrollToPoint::_internal_set_a_ay(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_ay_ = value;
 }
 inline void Msg_ScrollToPoint::set_a_ay(int32_t value) {
@@ -8362,17 +7881,9 @@ inline void Msg_ScrollToPoint::set_a_ay(int32_t value) {
 
 // Msg_Announce
 
-// required uint64 a_aID = 1;
-inline bool Msg_Announce::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_Announce::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_Announce::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_Announce::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -8382,7 +7893,7 @@ inline uint64_t Msg_Announce::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_Announce::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_Announce::set_a_aid(uint64_t value) {
@@ -8390,17 +7901,9 @@ inline void Msg_Announce::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.a_aID)
 }
 
-// required string a_aAnnouncement = 2;
-inline bool Msg_Announce::_internal_has_a_aannouncement() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_Announce::has_a_aannouncement() const {
-  return _internal_has_a_aannouncement();
-}
+// string a_aAnnouncement = 2;
 inline void Msg_Announce::clear_a_aannouncement() {
   _impl_.a_aannouncement_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_Announce::a_aannouncement() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.a_aAnnouncement)
@@ -8409,7 +7912,7 @@ inline const std::string& Msg_Announce::a_aannouncement() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Announce::set_a_aannouncement(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_aannouncement_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.a_aAnnouncement)
 }
@@ -8422,32 +7925,22 @@ inline const std::string& Msg_Announce::_internal_a_aannouncement() const {
   return _impl_.a_aannouncement_.Get();
 }
 inline void Msg_Announce::_internal_set_a_aannouncement(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aannouncement_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_Announce::_internal_mutable_a_aannouncement() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_aannouncement_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_Announce::release_a_aannouncement() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.a_aAnnouncement)
-  if (!_internal_has_a_aannouncement()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_aannouncement_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_aannouncement_.IsDefault()) {
-    _impl_.a_aannouncement_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_aannouncement_.Release();
 }
 inline void Msg_Announce::set_allocated_a_aannouncement(std::string* a_aannouncement) {
   if (a_aannouncement != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_aannouncement_.SetAllocated(a_aannouncement, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -8458,17 +7951,9 @@ inline void Msg_Announce::set_allocated_a_aannouncement(std::string* a_aannounce
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_Announce.a_aAnnouncement)
 }
 
-// required uint32 a_aPriority = 3;
-inline bool Msg_Announce::_internal_has_a_apriority() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_Announce::has_a_apriority() const {
-  return _internal_has_a_apriority();
-}
+// uint32 a_aPriority = 3;
 inline void Msg_Announce::clear_a_apriority() {
   _impl_.a_apriority_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_Announce::_internal_a_apriority() const {
   return _impl_.a_apriority_;
@@ -8478,7 +7963,7 @@ inline uint32_t Msg_Announce::a_apriority() const {
   return _internal_a_apriority();
 }
 inline void Msg_Announce::_internal_set_a_apriority(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_apriority_ = value;
 }
 inline void Msg_Announce::set_a_apriority(uint32_t value) {
@@ -8490,17 +7975,9 @@ inline void Msg_Announce::set_a_apriority(uint32_t value) {
 
 // Msg_SetTextSelection
 
-// required uint64 a_aStartID = 1;
-inline bool Msg_SetTextSelection::_internal_has_a_astartid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_SetTextSelection::has_a_astartid() const {
-  return _internal_has_a_astartid();
-}
+// uint64 a_aStartID = 1;
 inline void Msg_SetTextSelection::clear_a_astartid() {
   _impl_.a_astartid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_SetTextSelection::_internal_a_astartid() const {
   return _impl_.a_astartid_;
@@ -8510,7 +7987,7 @@ inline uint64_t Msg_SetTextSelection::a_astartid() const {
   return _internal_a_astartid();
 }
 inline void Msg_SetTextSelection::_internal_set_a_astartid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_astartid_ = value;
 }
 inline void Msg_SetTextSelection::set_a_astartid(uint64_t value) {
@@ -8518,17 +7995,9 @@ inline void Msg_SetTextSelection::set_a_astartid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aStartID)
 }
 
-// required sint32 a_aStartOffset = 2;
-inline bool Msg_SetTextSelection::_internal_has_a_astartoffset() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_SetTextSelection::has_a_astartoffset() const {
-  return _internal_has_a_astartoffset();
-}
+// sint32 a_aStartOffset = 2;
 inline void Msg_SetTextSelection::clear_a_astartoffset() {
   _impl_.a_astartoffset_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t Msg_SetTextSelection::_internal_a_astartoffset() const {
   return _impl_.a_astartoffset_;
@@ -8538,7 +8007,7 @@ inline int32_t Msg_SetTextSelection::a_astartoffset() const {
   return _internal_a_astartoffset();
 }
 inline void Msg_SetTextSelection::_internal_set_a_astartoffset(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_astartoffset_ = value;
 }
 inline void Msg_SetTextSelection::set_a_astartoffset(int32_t value) {
@@ -8546,17 +8015,9 @@ inline void Msg_SetTextSelection::set_a_astartoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aStartOffset)
 }
 
-// required uint64 a_aEndID = 3;
-inline bool Msg_SetTextSelection::_internal_has_a_aendid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_SetTextSelection::has_a_aendid() const {
-  return _internal_has_a_aendid();
-}
+// uint64 a_aEndID = 3;
 inline void Msg_SetTextSelection::clear_a_aendid() {
   _impl_.a_aendid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_SetTextSelection::_internal_a_aendid() const {
   return _impl_.a_aendid_;
@@ -8566,7 +8027,7 @@ inline uint64_t Msg_SetTextSelection::a_aendid() const {
   return _internal_a_aendid();
 }
 inline void Msg_SetTextSelection::_internal_set_a_aendid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aendid_ = value;
 }
 inline void Msg_SetTextSelection::set_a_aendid(uint64_t value) {
@@ -8574,17 +8035,9 @@ inline void Msg_SetTextSelection::set_a_aendid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aEndID)
 }
 
-// required sint32 a_aEndOffset = 4;
-inline bool Msg_SetTextSelection::_internal_has_a_aendoffset() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_SetTextSelection::has_a_aendoffset() const {
-  return _internal_has_a_aendoffset();
-}
+// sint32 a_aEndOffset = 4;
 inline void Msg_SetTextSelection::clear_a_aendoffset() {
   _impl_.a_aendoffset_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline int32_t Msg_SetTextSelection::_internal_a_aendoffset() const {
   return _impl_.a_aendoffset_;
@@ -8594,7 +8047,7 @@ inline int32_t Msg_SetTextSelection::a_aendoffset() const {
   return _internal_a_aendoffset();
 }
 inline void Msg_SetTextSelection::_internal_set_a_aendoffset(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_aendoffset_ = value;
 }
 inline void Msg_SetTextSelection::set_a_aendoffset(int32_t value) {
@@ -8602,17 +8055,9 @@ inline void Msg_SetTextSelection::set_a_aendoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aEndOffset)
 }
 
-// required sint32 a_aSelectionNum = 5;
-inline bool Msg_SetTextSelection::_internal_has_a_aselectionnum() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool Msg_SetTextSelection::has_a_aselectionnum() const {
-  return _internal_has_a_aselectionnum();
-}
+// sint32 a_aSelectionNum = 5;
 inline void Msg_SetTextSelection::clear_a_aselectionnum() {
   _impl_.a_aselectionnum_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline int32_t Msg_SetTextSelection::_internal_a_aselectionnum() const {
   return _impl_.a_aselectionnum_;
@@ -8622,7 +8067,7 @@ inline int32_t Msg_SetTextSelection::a_aselectionnum() const {
   return _internal_a_aselectionnum();
 }
 inline void Msg_SetTextSelection::_internal_set_a_aselectionnum(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_aselectionnum_ = value;
 }
 inline void Msg_SetTextSelection::set_a_aselectionnum(int32_t value) {
@@ -8630,17 +8075,9 @@ inline void Msg_SetTextSelection::set_a_aselectionnum(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetTextSelection.a_aSelectionNum)
 }
 
-// required bool a_aSetFocus = 6;
-inline bool Msg_SetTextSelection::_internal_has_a_asetfocus() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool Msg_SetTextSelection::has_a_asetfocus() const {
-  return _internal_has_a_asetfocus();
-}
+// bool a_aSetFocus = 6;
 inline void Msg_SetTextSelection::clear_a_asetfocus() {
   _impl_.a_asetfocus_ = false;
-  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline bool Msg_SetTextSelection::_internal_a_asetfocus() const {
   return _impl_.a_asetfocus_;
@@ -8650,7 +8087,7 @@ inline bool Msg_SetTextSelection::a_asetfocus() const {
   return _internal_a_asetfocus();
 }
 inline void Msg_SetTextSelection::_internal_set_a_asetfocus(bool value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   _impl_.a_asetfocus_ = value;
 }
 inline void Msg_SetTextSelection::set_a_asetfocus(bool value) {
@@ -8662,17 +8099,9 @@ inline void Msg_SetTextSelection::set_a_asetfocus(bool value) {
 
 // Msg_RemoveTextSelection
 
-// required uint64 a_aID = 1;
-inline bool Msg_RemoveTextSelection::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_RemoveTextSelection::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_RemoveTextSelection::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_RemoveTextSelection::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -8682,7 +8111,7 @@ inline uint64_t Msg_RemoveTextSelection::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_RemoveTextSelection::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_RemoveTextSelection::set_a_aid(uint64_t value) {
@@ -8690,17 +8119,9 @@ inline void Msg_RemoveTextSelection::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_RemoveTextSelection.a_aID)
 }
 
-// required sint32 a_aSelectionNum = 2;
-inline bool Msg_RemoveTextSelection::_internal_has_a_aselectionnum() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_RemoveTextSelection::has_a_aselectionnum() const {
-  return _internal_has_a_aselectionnum();
-}
+// sint32 a_aSelectionNum = 2;
 inline void Msg_RemoveTextSelection::clear_a_aselectionnum() {
   _impl_.a_aselectionnum_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int32_t Msg_RemoveTextSelection::_internal_a_aselectionnum() const {
   return _impl_.a_aselectionnum_;
@@ -8710,7 +8131,7 @@ inline int32_t Msg_RemoveTextSelection::a_aselectionnum() const {
   return _internal_a_aselectionnum();
 }
 inline void Msg_RemoveTextSelection::_internal_set_a_aselectionnum(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aselectionnum_ = value;
 }
 inline void Msg_RemoveTextSelection::set_a_aselectionnum(int32_t value) {
@@ -8722,17 +8143,9 @@ inline void Msg_RemoveTextSelection::set_a_aselectionnum(int32_t value) {
 
 // Msg_ScrollTextLeafRangeIntoView
 
-// required uint64 a_aStartID = 1;
-inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_a_astartid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_ScrollTextLeafRangeIntoView::has_a_astartid() const {
-  return _internal_has_a_astartid();
-}
+// uint64 a_aStartID = 1;
 inline void Msg_ScrollTextLeafRangeIntoView::clear_a_astartid() {
   _impl_.a_astartid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_ScrollTextLeafRangeIntoView::_internal_a_astartid() const {
   return _impl_.a_astartid_;
@@ -8742,7 +8155,7 @@ inline uint64_t Msg_ScrollTextLeafRangeIntoView::a_astartid() const {
   return _internal_a_astartid();
 }
 inline void Msg_ScrollTextLeafRangeIntoView::_internal_set_a_astartid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_astartid_ = value;
 }
 inline void Msg_ScrollTextLeafRangeIntoView::set_a_astartid(uint64_t value) {
@@ -8750,17 +8163,9 @@ inline void Msg_ScrollTextLeafRangeIntoView::set_a_astartid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aStartID)
 }
 
-// required sint32 a_aStartOffset = 2;
-inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_a_astartoffset() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_ScrollTextLeafRangeIntoView::has_a_astartoffset() const {
-  return _internal_has_a_astartoffset();
-}
+// sint32 a_aStartOffset = 2;
 inline void Msg_ScrollTextLeafRangeIntoView::clear_a_astartoffset() {
   _impl_.a_astartoffset_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t Msg_ScrollTextLeafRangeIntoView::_internal_a_astartoffset() const {
   return _impl_.a_astartoffset_;
@@ -8770,7 +8175,7 @@ inline int32_t Msg_ScrollTextLeafRangeIntoView::a_astartoffset() const {
   return _internal_a_astartoffset();
 }
 inline void Msg_ScrollTextLeafRangeIntoView::_internal_set_a_astartoffset(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_astartoffset_ = value;
 }
 inline void Msg_ScrollTextLeafRangeIntoView::set_a_astartoffset(int32_t value) {
@@ -8778,17 +8183,9 @@ inline void Msg_ScrollTextLeafRangeIntoView::set_a_astartoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aStartOffset)
 }
 
-// required uint64 a_aEndID = 3;
-inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_a_aendid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_ScrollTextLeafRangeIntoView::has_a_aendid() const {
-  return _internal_has_a_aendid();
-}
+// uint64 a_aEndID = 3;
 inline void Msg_ScrollTextLeafRangeIntoView::clear_a_aendid() {
   _impl_.a_aendid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_ScrollTextLeafRangeIntoView::_internal_a_aendid() const {
   return _impl_.a_aendid_;
@@ -8798,7 +8195,7 @@ inline uint64_t Msg_ScrollTextLeafRangeIntoView::a_aendid() const {
   return _internal_a_aendid();
 }
 inline void Msg_ScrollTextLeafRangeIntoView::_internal_set_a_aendid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aendid_ = value;
 }
 inline void Msg_ScrollTextLeafRangeIntoView::set_a_aendid(uint64_t value) {
@@ -8806,17 +8203,9 @@ inline void Msg_ScrollTextLeafRangeIntoView::set_a_aendid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aEndID)
 }
 
-// required sint32 a_aEndOffset = 4;
-inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_a_aendoffset() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_ScrollTextLeafRangeIntoView::has_a_aendoffset() const {
-  return _internal_has_a_aendoffset();
-}
+// sint32 a_aEndOffset = 4;
 inline void Msg_ScrollTextLeafRangeIntoView::clear_a_aendoffset() {
   _impl_.a_aendoffset_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline int32_t Msg_ScrollTextLeafRangeIntoView::_internal_a_aendoffset() const {
   return _impl_.a_aendoffset_;
@@ -8826,7 +8215,7 @@ inline int32_t Msg_ScrollTextLeafRangeIntoView::a_aendoffset() const {
   return _internal_a_aendoffset();
 }
 inline void Msg_ScrollTextLeafRangeIntoView::_internal_set_a_aendoffset(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_aendoffset_ = value;
 }
 inline void Msg_ScrollTextLeafRangeIntoView::set_a_aendoffset(int32_t value) {
@@ -8834,17 +8223,9 @@ inline void Msg_ScrollTextLeafRangeIntoView::set_a_aendoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollTextLeafRangeIntoView.a_aEndOffset)
 }
 
-// required uint32 a_aScrollType = 5;
-inline bool Msg_ScrollTextLeafRangeIntoView::_internal_has_a_ascrolltype() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool Msg_ScrollTextLeafRangeIntoView::has_a_ascrolltype() const {
-  return _internal_has_a_ascrolltype();
-}
+// uint32 a_aScrollType = 5;
 inline void Msg_ScrollTextLeafRangeIntoView::clear_a_ascrolltype() {
   _impl_.a_ascrolltype_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline uint32_t Msg_ScrollTextLeafRangeIntoView::_internal_a_ascrolltype() const {
   return _impl_.a_ascrolltype_;
@@ -8854,7 +8235,7 @@ inline uint32_t Msg_ScrollTextLeafRangeIntoView::a_ascrolltype() const {
   return _internal_a_ascrolltype();
 }
 inline void Msg_ScrollTextLeafRangeIntoView::_internal_set_a_ascrolltype(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_ascrolltype_ = value;
 }
 inline void Msg_ScrollTextLeafRangeIntoView::set_a_ascrolltype(uint32_t value) {
@@ -8866,17 +8247,9 @@ inline void Msg_ScrollTextLeafRangeIntoView::set_a_ascrolltype(uint32_t value) {
 
 // Msg_ScrollSubstringToPoint
 
-// required uint64 a_aID = 1;
-inline bool Msg_ScrollSubstringToPoint::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_ScrollSubstringToPoint::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_ScrollSubstringToPoint::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_ScrollSubstringToPoint::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -8886,7 +8259,7 @@ inline uint64_t Msg_ScrollSubstringToPoint::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_ScrollSubstringToPoint::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_ScrollSubstringToPoint::set_a_aid(uint64_t value) {
@@ -8894,17 +8267,9 @@ inline void Msg_ScrollSubstringToPoint::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aID)
 }
 
-// required sint32 a_aStartOffset = 2;
-inline bool Msg_ScrollSubstringToPoint::_internal_has_a_astartoffset() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_ScrollSubstringToPoint::has_a_astartoffset() const {
-  return _internal_has_a_astartoffset();
-}
+// sint32 a_aStartOffset = 2;
 inline void Msg_ScrollSubstringToPoint::clear_a_astartoffset() {
   _impl_.a_astartoffset_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int32_t Msg_ScrollSubstringToPoint::_internal_a_astartoffset() const {
   return _impl_.a_astartoffset_;
@@ -8914,7 +8279,7 @@ inline int32_t Msg_ScrollSubstringToPoint::a_astartoffset() const {
   return _internal_a_astartoffset();
 }
 inline void Msg_ScrollSubstringToPoint::_internal_set_a_astartoffset(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_astartoffset_ = value;
 }
 inline void Msg_ScrollSubstringToPoint::set_a_astartoffset(int32_t value) {
@@ -8922,17 +8287,9 @@ inline void Msg_ScrollSubstringToPoint::set_a_astartoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aStartOffset)
 }
 
-// required sint32 a_aEndOffset = 3;
-inline bool Msg_ScrollSubstringToPoint::_internal_has_a_aendoffset() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_ScrollSubstringToPoint::has_a_aendoffset() const {
-  return _internal_has_a_aendoffset();
-}
+// sint32 a_aEndOffset = 3;
 inline void Msg_ScrollSubstringToPoint::clear_a_aendoffset() {
   _impl_.a_aendoffset_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t Msg_ScrollSubstringToPoint::_internal_a_aendoffset() const {
   return _impl_.a_aendoffset_;
@@ -8942,7 +8299,7 @@ inline int32_t Msg_ScrollSubstringToPoint::a_aendoffset() const {
   return _internal_a_aendoffset();
 }
 inline void Msg_ScrollSubstringToPoint::_internal_set_a_aendoffset(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_aendoffset_ = value;
 }
 inline void Msg_ScrollSubstringToPoint::set_a_aendoffset(int32_t value) {
@@ -8950,17 +8307,9 @@ inline void Msg_ScrollSubstringToPoint::set_a_aendoffset(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aEndOffset)
 }
 
-// required uint32 a_aCoordinateType = 4;
-inline bool Msg_ScrollSubstringToPoint::_internal_has_a_acoordinatetype() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_ScrollSubstringToPoint::has_a_acoordinatetype() const {
-  return _internal_has_a_acoordinatetype();
-}
+// uint32 a_aCoordinateType = 4;
 inline void Msg_ScrollSubstringToPoint::clear_a_acoordinatetype() {
   _impl_.a_acoordinatetype_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t Msg_ScrollSubstringToPoint::_internal_a_acoordinatetype() const {
   return _impl_.a_acoordinatetype_;
@@ -8970,7 +8319,7 @@ inline uint32_t Msg_ScrollSubstringToPoint::a_acoordinatetype() const {
   return _internal_a_acoordinatetype();
 }
 inline void Msg_ScrollSubstringToPoint::_internal_set_a_acoordinatetype(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_acoordinatetype_ = value;
 }
 inline void Msg_ScrollSubstringToPoint::set_a_acoordinatetype(uint32_t value) {
@@ -8978,17 +8327,9 @@ inline void Msg_ScrollSubstringToPoint::set_a_acoordinatetype(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aCoordinateType)
 }
 
-// required sint32 a_aX = 5;
-inline bool Msg_ScrollSubstringToPoint::_internal_has_a_ax() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool Msg_ScrollSubstringToPoint::has_a_ax() const {
-  return _internal_has_a_ax();
-}
+// sint32 a_aX = 5;
 inline void Msg_ScrollSubstringToPoint::clear_a_ax() {
   _impl_.a_ax_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline int32_t Msg_ScrollSubstringToPoint::_internal_a_ax() const {
   return _impl_.a_ax_;
@@ -8998,7 +8339,7 @@ inline int32_t Msg_ScrollSubstringToPoint::a_ax() const {
   return _internal_a_ax();
 }
 inline void Msg_ScrollSubstringToPoint::_internal_set_a_ax(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_ax_ = value;
 }
 inline void Msg_ScrollSubstringToPoint::set_a_ax(int32_t value) {
@@ -9006,17 +8347,9 @@ inline void Msg_ScrollSubstringToPoint::set_a_ax(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ScrollSubstringToPoint.a_aX)
 }
 
-// required sint32 a_aY = 6;
-inline bool Msg_ScrollSubstringToPoint::_internal_has_a_ay() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool Msg_ScrollSubstringToPoint::has_a_ay() const {
-  return _internal_has_a_ay();
-}
+// sint32 a_aY = 6;
 inline void Msg_ScrollSubstringToPoint::clear_a_ay() {
   _impl_.a_ay_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline int32_t Msg_ScrollSubstringToPoint::_internal_a_ay() const {
   return _impl_.a_ay_;
@@ -9026,7 +8359,7 @@ inline int32_t Msg_ScrollSubstringToPoint::a_ay() const {
   return _internal_a_ay();
 }
 inline void Msg_ScrollSubstringToPoint::_internal_set_a_ay(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   _impl_.a_ay_ = value;
 }
 inline void Msg_ScrollSubstringToPoint::set_a_ay(int32_t value) {
@@ -9038,17 +8371,9 @@ inline void Msg_ScrollSubstringToPoint::set_a_ay(int32_t value) {
 
 // Msg_ReplaceText
 
-// required uint64 a_aID = 1;
-inline bool Msg_ReplaceText::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_ReplaceText::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_ReplaceText::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_ReplaceText::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -9058,7 +8383,7 @@ inline uint64_t Msg_ReplaceText::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_ReplaceText::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_ReplaceText::set_a_aid(uint64_t value) {
@@ -9066,17 +8391,9 @@ inline void Msg_ReplaceText::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.a_aID)
 }
 
-// required string a_aText = 2;
-inline bool Msg_ReplaceText::_internal_has_a_atext() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_ReplaceText::has_a_atext() const {
-  return _internal_has_a_atext();
-}
+// string a_aText = 2;
 inline void Msg_ReplaceText::clear_a_atext() {
   _impl_.a_atext_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_ReplaceText::a_atext() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.a_aText)
@@ -9085,7 +8402,7 @@ inline const std::string& Msg_ReplaceText::a_atext() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReplaceText::set_a_atext(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_atext_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.a_aText)
 }
@@ -9098,32 +8415,22 @@ inline const std::string& Msg_ReplaceText::_internal_a_atext() const {
   return _impl_.a_atext_.Get();
 }
 inline void Msg_ReplaceText::_internal_set_a_atext(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_atext_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ReplaceText::_internal_mutable_a_atext() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_atext_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ReplaceText::release_a_atext() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_ReplaceText.a_aText)
-  if (!_internal_has_a_atext()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_atext_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_atext_.IsDefault()) {
-    _impl_.a_atext_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_atext_.Release();
 }
 inline void Msg_ReplaceText::set_allocated_a_atext(std::string* a_atext) {
   if (a_atext != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_atext_.SetAllocated(a_atext, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9138,17 +8445,9 @@ inline void Msg_ReplaceText::set_allocated_a_atext(std::string* a_atext) {
 
 // Msg_InsertText
 
-// required uint64 a_aID = 1;
-inline bool Msg_InsertText::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_InsertText::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_InsertText::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_InsertText::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -9158,7 +8457,7 @@ inline uint64_t Msg_InsertText::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_InsertText::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_InsertText::set_a_aid(uint64_t value) {
@@ -9166,17 +8465,9 @@ inline void Msg_InsertText::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.a_aID)
 }
 
-// required string a_aText = 2;
-inline bool Msg_InsertText::_internal_has_a_atext() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_InsertText::has_a_atext() const {
-  return _internal_has_a_atext();
-}
+// string a_aText = 2;
 inline void Msg_InsertText::clear_a_atext() {
   _impl_.a_atext_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_InsertText::a_atext() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.a_aText)
@@ -9185,7 +8476,7 @@ inline const std::string& Msg_InsertText::a_atext() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_InsertText::set_a_atext(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_atext_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.a_aText)
 }
@@ -9198,32 +8489,22 @@ inline const std::string& Msg_InsertText::_internal_a_atext() const {
   return _impl_.a_atext_.Get();
 }
 inline void Msg_InsertText::_internal_set_a_atext(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_atext_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_InsertText::_internal_mutable_a_atext() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_atext_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_InsertText::release_a_atext() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.a_aText)
-  if (!_internal_has_a_atext()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_atext_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_atext_.IsDefault()) {
-    _impl_.a_atext_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_atext_.Release();
 }
 inline void Msg_InsertText::set_allocated_a_atext(std::string* a_atext) {
   if (a_atext != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_atext_.SetAllocated(a_atext, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9234,17 +8515,9 @@ inline void Msg_InsertText::set_allocated_a_atext(std::string* a_atext) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.a11y.PDocAccessible.Msg_InsertText.a_aText)
 }
 
-// required sint32 a_aPosition = 3;
-inline bool Msg_InsertText::_internal_has_a_aposition() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_InsertText::has_a_aposition() const {
-  return _internal_has_a_aposition();
-}
+// sint32 a_aPosition = 3;
 inline void Msg_InsertText::clear_a_aposition() {
   _impl_.a_aposition_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t Msg_InsertText::_internal_a_aposition() const {
   return _impl_.a_aposition_;
@@ -9254,7 +8527,7 @@ inline int32_t Msg_InsertText::a_aposition() const {
   return _internal_a_aposition();
 }
 inline void Msg_InsertText::_internal_set_a_aposition(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_aposition_ = value;
 }
 inline void Msg_InsertText::set_a_aposition(int32_t value) {
@@ -9266,17 +8539,9 @@ inline void Msg_InsertText::set_a_aposition(int32_t value) {
 
 // Msg_CopyText
 
-// required uint64 a_aID = 1;
-inline bool Msg_CopyText::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_CopyText::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_CopyText::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_CopyText::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -9286,7 +8551,7 @@ inline uint64_t Msg_CopyText::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_CopyText::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_CopyText::set_a_aid(uint64_t value) {
@@ -9294,17 +8559,9 @@ inline void Msg_CopyText::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText.a_aID)
 }
 
-// required sint32 a_aStartPos = 2;
-inline bool Msg_CopyText::_internal_has_a_astartpos() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_CopyText::has_a_astartpos() const {
-  return _internal_has_a_astartpos();
-}
+// sint32 a_aStartPos = 2;
 inline void Msg_CopyText::clear_a_astartpos() {
   _impl_.a_astartpos_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int32_t Msg_CopyText::_internal_a_astartpos() const {
   return _impl_.a_astartpos_;
@@ -9314,7 +8571,7 @@ inline int32_t Msg_CopyText::a_astartpos() const {
   return _internal_a_astartpos();
 }
 inline void Msg_CopyText::_internal_set_a_astartpos(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_astartpos_ = value;
 }
 inline void Msg_CopyText::set_a_astartpos(int32_t value) {
@@ -9322,17 +8579,9 @@ inline void Msg_CopyText::set_a_astartpos(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CopyText.a_aStartPos)
 }
 
-// required sint32 a_aEndPos = 3;
-inline bool Msg_CopyText::_internal_has_a_aendpos() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_CopyText::has_a_aendpos() const {
-  return _internal_has_a_aendpos();
-}
+// sint32 a_aEndPos = 3;
 inline void Msg_CopyText::clear_a_aendpos() {
   _impl_.a_aendpos_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t Msg_CopyText::_internal_a_aendpos() const {
   return _impl_.a_aendpos_;
@@ -9342,7 +8591,7 @@ inline int32_t Msg_CopyText::a_aendpos() const {
   return _internal_a_aendpos();
 }
 inline void Msg_CopyText::_internal_set_a_aendpos(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_aendpos_ = value;
 }
 inline void Msg_CopyText::set_a_aendpos(int32_t value) {
@@ -9354,17 +8603,9 @@ inline void Msg_CopyText::set_a_aendpos(int32_t value) {
 
 // Msg_CutText
 
-// required uint64 a_aID = 1;
-inline bool Msg_CutText::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_CutText::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_CutText::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_CutText::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -9374,7 +8615,7 @@ inline uint64_t Msg_CutText::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_CutText::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_CutText::set_a_aid(uint64_t value) {
@@ -9382,17 +8623,9 @@ inline void Msg_CutText::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText.a_aID)
 }
 
-// required sint32 a_aStartPos = 2;
-inline bool Msg_CutText::_internal_has_a_astartpos() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_CutText::has_a_astartpos() const {
-  return _internal_has_a_astartpos();
-}
+// sint32 a_aStartPos = 2;
 inline void Msg_CutText::clear_a_astartpos() {
   _impl_.a_astartpos_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int32_t Msg_CutText::_internal_a_astartpos() const {
   return _impl_.a_astartpos_;
@@ -9402,7 +8635,7 @@ inline int32_t Msg_CutText::a_astartpos() const {
   return _internal_a_astartpos();
 }
 inline void Msg_CutText::_internal_set_a_astartpos(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_astartpos_ = value;
 }
 inline void Msg_CutText::set_a_astartpos(int32_t value) {
@@ -9410,17 +8643,9 @@ inline void Msg_CutText::set_a_astartpos(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_CutText.a_aStartPos)
 }
 
-// required sint32 a_aEndPos = 3;
-inline bool Msg_CutText::_internal_has_a_aendpos() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_CutText::has_a_aendpos() const {
-  return _internal_has_a_aendpos();
-}
+// sint32 a_aEndPos = 3;
 inline void Msg_CutText::clear_a_aendpos() {
   _impl_.a_aendpos_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t Msg_CutText::_internal_a_aendpos() const {
   return _impl_.a_aendpos_;
@@ -9430,7 +8655,7 @@ inline int32_t Msg_CutText::a_aendpos() const {
   return _internal_a_aendpos();
 }
 inline void Msg_CutText::_internal_set_a_aendpos(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_aendpos_ = value;
 }
 inline void Msg_CutText::set_a_aendpos(int32_t value) {
@@ -9442,17 +8667,9 @@ inline void Msg_CutText::set_a_aendpos(int32_t value) {
 
 // Msg_DeleteText
 
-// required uint64 a_aID = 1;
-inline bool Msg_DeleteText::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_DeleteText::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_DeleteText::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_DeleteText::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -9462,7 +8679,7 @@ inline uint64_t Msg_DeleteText::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_DeleteText::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_DeleteText::set_a_aid(uint64_t value) {
@@ -9470,17 +8687,9 @@ inline void Msg_DeleteText::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText.a_aID)
 }
 
-// required sint32 a_aStartPos = 2;
-inline bool Msg_DeleteText::_internal_has_a_astartpos() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_DeleteText::has_a_astartpos() const {
-  return _internal_has_a_astartpos();
-}
+// sint32 a_aStartPos = 2;
 inline void Msg_DeleteText::clear_a_astartpos() {
   _impl_.a_astartpos_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int32_t Msg_DeleteText::_internal_a_astartpos() const {
   return _impl_.a_astartpos_;
@@ -9490,7 +8699,7 @@ inline int32_t Msg_DeleteText::a_astartpos() const {
   return _internal_a_astartpos();
 }
 inline void Msg_DeleteText::_internal_set_a_astartpos(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_astartpos_ = value;
 }
 inline void Msg_DeleteText::set_a_astartpos(int32_t value) {
@@ -9498,17 +8707,9 @@ inline void Msg_DeleteText::set_a_astartpos(int32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_DeleteText.a_aStartPos)
 }
 
-// required sint32 a_aEndPos = 3;
-inline bool Msg_DeleteText::_internal_has_a_aendpos() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_DeleteText::has_a_aendpos() const {
-  return _internal_has_a_aendpos();
-}
+// sint32 a_aEndPos = 3;
 inline void Msg_DeleteText::clear_a_aendpos() {
   _impl_.a_aendpos_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline int32_t Msg_DeleteText::_internal_a_aendpos() const {
   return _impl_.a_aendpos_;
@@ -9518,7 +8719,7 @@ inline int32_t Msg_DeleteText::a_aendpos() const {
   return _internal_a_aendpos();
 }
 inline void Msg_DeleteText::_internal_set_a_aendpos(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_aendpos_ = value;
 }
 inline void Msg_DeleteText::set_a_aendpos(int32_t value) {
@@ -9530,17 +8731,9 @@ inline void Msg_DeleteText::set_a_aendpos(int32_t value) {
 
 // Msg_PasteText
 
-// required uint64 a_aID = 1;
-inline bool Msg_PasteText::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_PasteText::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_PasteText::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_PasteText::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -9550,7 +8743,7 @@ inline uint64_t Msg_PasteText::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_PasteText::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_PasteText::set_a_aid(uint64_t value) {
@@ -9558,17 +8751,9 @@ inline void Msg_PasteText::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_PasteText.a_aID)
 }
 
-// required sint32 a_aPosition = 2;
-inline bool Msg_PasteText::_internal_has_a_aposition() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_PasteText::has_a_aposition() const {
-  return _internal_has_a_aposition();
-}
+// sint32 a_aPosition = 2;
 inline void Msg_PasteText::clear_a_aposition() {
   _impl_.a_aposition_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int32_t Msg_PasteText::_internal_a_aposition() const {
   return _impl_.a_aposition_;
@@ -9578,7 +8763,7 @@ inline int32_t Msg_PasteText::a_aposition() const {
   return _internal_a_aposition();
 }
 inline void Msg_PasteText::_internal_set_a_aposition(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aposition_ = value;
 }
 inline void Msg_PasteText::set_a_aposition(int32_t value) {
@@ -9590,17 +8775,9 @@ inline void Msg_PasteText::set_a_aposition(int32_t value) {
 
 // Msg_TakeSelection
 
-// required uint64 a_aID = 1;
-inline bool Msg_TakeSelection::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_TakeSelection::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_TakeSelection::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_TakeSelection::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -9610,7 +8787,7 @@ inline uint64_t Msg_TakeSelection::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_TakeSelection::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_TakeSelection::set_a_aid(uint64_t value) {
@@ -9622,17 +8799,9 @@ inline void Msg_TakeSelection::set_a_aid(uint64_t value) {
 
 // Msg_SetSelected
 
-// required uint64 a_aID = 1;
-inline bool Msg_SetSelected::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_SetSelected::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_SetSelected::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_SetSelected::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -9642,7 +8811,7 @@ inline uint64_t Msg_SetSelected::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_SetSelected::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_SetSelected::set_a_aid(uint64_t value) {
@@ -9650,17 +8819,9 @@ inline void Msg_SetSelected::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetSelected.a_aID)
 }
 
-// required bool a_aSelected = 2;
-inline bool Msg_SetSelected::_internal_has_a_aselected() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_SetSelected::has_a_aselected() const {
-  return _internal_has_a_aselected();
-}
+// bool a_aSelected = 2;
 inline void Msg_SetSelected::clear_a_aselected() {
   _impl_.a_aselected_ = false;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool Msg_SetSelected::_internal_a_aselected() const {
   return _impl_.a_aselected_;
@@ -9670,7 +8831,7 @@ inline bool Msg_SetSelected::a_aselected() const {
   return _internal_a_aselected();
 }
 inline void Msg_SetSelected::_internal_set_a_aselected(bool value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aselected_ = value;
 }
 inline void Msg_SetSelected::set_a_aselected(bool value) {
@@ -9682,17 +8843,9 @@ inline void Msg_SetSelected::set_a_aselected(bool value) {
 
 // Msg_DoActionAsync
 
-// required uint64 a_aID = 1;
-inline bool Msg_DoActionAsync::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_DoActionAsync::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_DoActionAsync::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_DoActionAsync::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -9702,7 +8855,7 @@ inline uint64_t Msg_DoActionAsync::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_DoActionAsync::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_DoActionAsync::set_a_aid(uint64_t value) {
@@ -9710,17 +8863,9 @@ inline void Msg_DoActionAsync::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_DoActionAsync.a_aID)
 }
 
-// required uint32 a_aIndex = 2;
-inline bool Msg_DoActionAsync::_internal_has_a_aindex() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_DoActionAsync::has_a_aindex() const {
-  return _internal_has_a_aindex();
-}
+// uint32 a_aIndex = 2;
 inline void Msg_DoActionAsync::clear_a_aindex() {
   _impl_.a_aindex_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_DoActionAsync::_internal_a_aindex() const {
   return _impl_.a_aindex_;
@@ -9730,7 +8875,7 @@ inline uint32_t Msg_DoActionAsync::a_aindex() const {
   return _internal_a_aindex();
 }
 inline void Msg_DoActionAsync::_internal_set_a_aindex(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aindex_ = value;
 }
 inline void Msg_DoActionAsync::set_a_aindex(uint32_t value) {
@@ -9742,17 +8887,9 @@ inline void Msg_DoActionAsync::set_a_aindex(uint32_t value) {
 
 // Msg_SetCurValue
 
-// required uint64 a_aID = 1;
-inline bool Msg_SetCurValue::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_SetCurValue::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_SetCurValue::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_SetCurValue::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -9762,7 +8899,7 @@ inline uint64_t Msg_SetCurValue::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_SetCurValue::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_SetCurValue::set_a_aid(uint64_t value) {
@@ -9770,17 +8907,9 @@ inline void Msg_SetCurValue::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_SetCurValue.a_aID)
 }
 
-// required double a_aValue = 2;
-inline bool Msg_SetCurValue::_internal_has_a_avalue() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_SetCurValue::has_a_avalue() const {
-  return _internal_has_a_avalue();
-}
+// double a_aValue = 2;
 inline void Msg_SetCurValue::clear_a_avalue() {
   _impl_.a_avalue_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline double Msg_SetCurValue::_internal_a_avalue() const {
   return _impl_.a_avalue_;
@@ -9790,7 +8919,7 @@ inline double Msg_SetCurValue::a_avalue() const {
   return _internal_a_avalue();
 }
 inline void Msg_SetCurValue::_internal_set_a_avalue(double value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_avalue_ = value;
 }
 inline void Msg_SetCurValue::set_a_avalue(double value) {
@@ -9802,17 +8931,9 @@ inline void Msg_SetCurValue::set_a_avalue(double value) {
 
 // Msg_TakeFocus
 
-// required uint64 a_aID = 1;
-inline bool Msg_TakeFocus::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_TakeFocus::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_TakeFocus::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t Msg_TakeFocus::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -9822,7 +8943,7 @@ inline uint64_t Msg_TakeFocus::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_TakeFocus::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_TakeFocus::set_a_aid(uint64_t value) {
@@ -9834,17 +8955,9 @@ inline void Msg_TakeFocus::set_a_aid(uint64_t value) {
 
 // Msg_VerifyCache
 
-// required uint64 a_aID = 1;
-inline bool Msg_VerifyCache::_internal_has_a_aid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_VerifyCache::has_a_aid() const {
-  return _internal_has_a_aid();
-}
+// uint64 a_aID = 1;
 inline void Msg_VerifyCache::clear_a_aid() {
   _impl_.a_aid_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t Msg_VerifyCache::_internal_a_aid() const {
   return _impl_.a_aid_;
@@ -9854,7 +8967,7 @@ inline uint64_t Msg_VerifyCache::a_aid() const {
   return _internal_a_aid();
 }
 inline void Msg_VerifyCache::_internal_set_a_aid(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aid_ = value;
 }
 inline void Msg_VerifyCache::set_a_aid(uint64_t value) {
@@ -9862,17 +8975,9 @@ inline void Msg_VerifyCache::set_a_aid(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.a11y.PDocAccessible.Msg_VerifyCache.a_aID)
 }
 
-// required uint64 a_aCacheDomain = 2;
-inline bool Msg_VerifyCache::_internal_has_a_acachedomain() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_VerifyCache::has_a_acachedomain() const {
-  return _internal_has_a_acachedomain();
-}
+// uint64 a_aCacheDomain = 2;
 inline void Msg_VerifyCache::clear_a_acachedomain() {
   _impl_.a_acachedomain_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint64_t Msg_VerifyCache::_internal_a_acachedomain() const {
   return _impl_.a_acachedomain_;
@@ -9882,7 +8987,7 @@ inline uint64_t Msg_VerifyCache::a_acachedomain() const {
   return _internal_a_acachedomain();
 }
 inline void Msg_VerifyCache::_internal_set_a_acachedomain(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_acachedomain_ = value;
 }
 inline void Msg_VerifyCache::set_a_acachedomain(uint64_t value) {

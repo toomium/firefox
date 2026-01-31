@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_PSMIPCTypes_5fprotobuf_2emozilla_2epsm_2eh_2eproto
@@ -41,6 +43,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PSMIPCTypes_5fprotobuf_2emozilla_2epsm_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PSMIPCTypes_5fprotobuf_2emozilla_2epsm_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace psm {
@@ -80,7 +83,7 @@ namespace psm {
 // ===================================================================
 
 class ByteArray final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.ByteArray) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.ByteArray) */ {
  public:
   inline ByteArray() : ByteArray(nullptr) {}
   ~ByteArray() override;
@@ -110,13 +113,15 @@ class ByteArray final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const ByteArray& default_instance() {
     return *internal_default_instance();
   }
@@ -154,9 +159,15 @@ class ByteArray final :
   ByteArray* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<ByteArray>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const ByteArray& from);
-  void MergeFrom(const ByteArray& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const ByteArray& from) {
+    ByteArray::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -169,7 +180,7 @@ class ByteArray final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(ByteArray* other);
 
   private:
@@ -182,7 +193,10 @@ class ByteArray final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -222,6 +236,7 @@ class ByteArray final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_data_;
+    mutable std::atomic<int> _a_data_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -230,7 +245,7 @@ class ByteArray final :
 // -------------------------------------------------------------------
 
 class ECKey final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.ECKey) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.ECKey) */ {
  public:
   inline ECKey() : ECKey(nullptr) {}
   ~ECKey() override;
@@ -260,13 +275,15 @@ class ECKey final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const ECKey& default_instance() {
     return *internal_default_instance();
   }
@@ -304,9 +321,15 @@ class ECKey final :
   ECKey* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<ECKey>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const ECKey& from);
-  void MergeFrom(const ECKey& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const ECKey& from) {
+    ECKey::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -319,7 +342,7 @@ class ECKey final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(ECKey* other);
 
   private:
@@ -332,7 +355,10 @@ class ECKey final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -395,7 +421,9 @@ class ECKey final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_params_;
+    mutable std::atomic<int> _a_params_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_cert_;
+    mutable std::atomic<int> _a_cert_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -404,7 +432,7 @@ class ECKey final :
 // -------------------------------------------------------------------
 
 class RSAKey final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.RSAKey) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.RSAKey) */ {
  public:
   inline RSAKey() : RSAKey(nullptr) {}
   ~RSAKey() override;
@@ -434,13 +462,15 @@ class RSAKey final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const RSAKey& default_instance() {
     return *internal_default_instance();
   }
@@ -478,9 +508,15 @@ class RSAKey final :
   RSAKey* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<RSAKey>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const RSAKey& from);
-  void MergeFrom(const RSAKey& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const RSAKey& from) {
+    RSAKey::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -493,7 +529,7 @@ class RSAKey final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(RSAKey* other);
 
   private:
@@ -506,7 +542,10 @@ class RSAKey final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -569,7 +608,9 @@ class RSAKey final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_modulus_;
+    mutable std::atomic<int> _a_modulus_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_cert_;
+    mutable std::atomic<int> _a_cert_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -578,7 +619,7 @@ class RSAKey final :
 // -------------------------------------------------------------------
 
 class Certificate final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.Certificate) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.Certificate) */ {
  public:
   inline Certificate() : Certificate(nullptr) {}
   ~Certificate() override;
@@ -608,13 +649,15 @@ class Certificate final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Certificate& default_instance() {
     return *internal_default_instance();
   }
@@ -652,9 +695,15 @@ class Certificate final :
   Certificate* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Certificate>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Certificate& from);
-  void MergeFrom(const Certificate& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Certificate& from) {
+    Certificate::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -667,7 +716,7 @@ class Certificate final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Certificate* other);
 
   private:
@@ -680,7 +729,10 @@ class Certificate final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -720,6 +772,7 @@ class Certificate final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_der_;
+    mutable std::atomic<int> _a_der_cached_byte_size_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -728,7 +781,7 @@ class Certificate final :
 // -------------------------------------------------------------------
 
 class IPCClientCertObject final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.IPCClientCertObject) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.IPCClientCertObject) */ {
  public:
   inline IPCClientCertObject() : IPCClientCertObject(nullptr) {}
   ~IPCClientCertObject() override;
@@ -758,13 +811,15 @@ class IPCClientCertObject final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const IPCClientCertObject& default_instance() {
     return *internal_default_instance();
   }
@@ -809,9 +864,15 @@ class IPCClientCertObject final :
   IPCClientCertObject* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<IPCClientCertObject>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const IPCClientCertObject& from);
-  void MergeFrom(const IPCClientCertObject& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const IPCClientCertObject& from) {
+    IPCClientCertObject::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -824,7 +885,7 @@ class IPCClientCertObject final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(IPCClientCertObject* other);
 
   private:
@@ -837,7 +898,10 @@ class IPCClientCertObject final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -935,7 +999,7 @@ class IPCClientCertObject final :
 // -------------------------------------------------------------------
 
 class DelegatedCredentialInfoArg final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.DelegatedCredentialInfoArg) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.DelegatedCredentialInfoArg) */ {
  public:
   inline DelegatedCredentialInfoArg() : DelegatedCredentialInfoArg(nullptr) {}
   ~DelegatedCredentialInfoArg() override;
@@ -965,13 +1029,15 @@ class DelegatedCredentialInfoArg final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const DelegatedCredentialInfoArg& default_instance() {
     return *internal_default_instance();
   }
@@ -1009,9 +1075,15 @@ class DelegatedCredentialInfoArg final :
   DelegatedCredentialInfoArg* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<DelegatedCredentialInfoArg>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const DelegatedCredentialInfoArg& from);
-  void MergeFrom(const DelegatedCredentialInfoArg& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const DelegatedCredentialInfoArg& from) {
+    DelegatedCredentialInfoArg::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1024,7 +1096,7 @@ class DelegatedCredentialInfoArg final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(DelegatedCredentialInfoArg* other);
 
   private:
@@ -1037,7 +1109,10 @@ class DelegatedCredentialInfoArg final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1047,11 +1122,7 @@ class DelegatedCredentialInfoArg final :
     kASchemeFieldNumber = 1,
     kAAuthKeyBitsFieldNumber = 2,
   };
-  // required uint32 a_scheme = 1;
-  bool has_a_scheme() const;
-  private:
-  bool _internal_has_a_scheme() const;
-  public:
+  // uint32 a_scheme = 1;
   void clear_a_scheme();
   uint32_t a_scheme() const;
   void set_a_scheme(uint32_t value);
@@ -1060,11 +1131,7 @@ class DelegatedCredentialInfoArg final :
   void _internal_set_a_scheme(uint32_t value);
   public:
 
-  // required uint32 a_authKeyBits = 2;
-  bool has_a_authkeybits() const;
-  private:
-  bool _internal_has_a_authkeybits() const;
-  public:
+  // uint32 a_authKeyBits = 2;
   void clear_a_authkeybits();
   uint32_t a_authkeybits() const;
   void set_a_authkeybits(uint32_t value);
@@ -1077,17 +1144,13 @@ class DelegatedCredentialInfoArg final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_scheme_;
     uint32_t a_authkeybits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PSMIPCTypes_5fprotobuf_2emozilla_2epsm_2eh_2eproto;
@@ -1636,17 +1699,9 @@ inline IPCClientCertObject::ContentCase IPCClientCertObject::content_case() cons
 
 // DelegatedCredentialInfoArg
 
-// required uint32 a_scheme = 1;
-inline bool DelegatedCredentialInfoArg::_internal_has_a_scheme() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool DelegatedCredentialInfoArg::has_a_scheme() const {
-  return _internal_has_a_scheme();
-}
+// uint32 a_scheme = 1;
 inline void DelegatedCredentialInfoArg::clear_a_scheme() {
   _impl_.a_scheme_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t DelegatedCredentialInfoArg::_internal_a_scheme() const {
   return _impl_.a_scheme_;
@@ -1656,7 +1711,7 @@ inline uint32_t DelegatedCredentialInfoArg::a_scheme() const {
   return _internal_a_scheme();
 }
 inline void DelegatedCredentialInfoArg::_internal_set_a_scheme(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_scheme_ = value;
 }
 inline void DelegatedCredentialInfoArg::set_a_scheme(uint32_t value) {
@@ -1664,17 +1719,9 @@ inline void DelegatedCredentialInfoArg::set_a_scheme(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.DelegatedCredentialInfoArg.a_scheme)
 }
 
-// required uint32 a_authKeyBits = 2;
-inline bool DelegatedCredentialInfoArg::_internal_has_a_authkeybits() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool DelegatedCredentialInfoArg::has_a_authkeybits() const {
-  return _internal_has_a_authkeybits();
-}
+// uint32 a_authKeyBits = 2;
 inline void DelegatedCredentialInfoArg::clear_a_authkeybits() {
   _impl_.a_authkeybits_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t DelegatedCredentialInfoArg::_internal_a_authkeybits() const {
   return _impl_.a_authkeybits_;
@@ -1684,7 +1731,7 @@ inline uint32_t DelegatedCredentialInfoArg::a_authkeybits() const {
   return _internal_a_authkeybits();
 }
 inline void DelegatedCredentialInfoArg::_internal_set_a_authkeybits(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_authkeybits_ = value;
 }
 inline void DelegatedCredentialInfoArg::set_a_authkeybits(uint32_t value) {

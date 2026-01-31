@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/workers/sharedworkers/PSharedWorker.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PSharedWorker;
 
@@ -32,15 +31,15 @@ message Msg_Thaw {
 }
 
 message Msg_Error {
-  required protobuf.mozilla.dom.ErrorValue a_value = 1;
+  protobuf.mozilla.dom.ErrorValue a_value = 1;
 }
 
 message Msg_NotifyLock {
-  required bool a_aCreated = 1;
+  bool a_aCreated = 1;
 }
 
 message Msg_NotifyWebTransport {
-  required bool a_aCreated = 1;
+  bool a_aCreated = 1;
 }
 
 message Msg_Terminate {

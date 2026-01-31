@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/netwerk/dns/PDNSRequest.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.net.PDNSRequest;
 
@@ -17,13 +16,13 @@ import "PDNSRequestParams.proto";
 
 // Message declarations
 message Msg_CancelDNSRequest {
-  required string a_hostName = 1;
-  required string a_trrServer = 2;
-  required sint32 a_port = 3;
-  required uint32 a_type = 4;
-  required bytes a_originAttributes = 5;
-  required bytes a_flags = 6;
-  required bytes a_reason = 7;
+  string a_hostName = 1;
+  string a_trrServer = 2;
+  sint32 a_port = 3;
+  uint32 a_type = 4;
+  bytes a_originAttributes = 5;
+  bytes a_flags = 6;
+  bytes a_reason = 7;
 }
 
 message Msg___delete__ {
@@ -33,7 +32,7 @@ message Reply___delete__ {
 }
 
 message Msg_LookupCompleted {
-  required protobuf.mozilla.net.DNSRequestResponse a_reply = 1;
+  protobuf.mozilla.net.DNSRequestResponse a_reply = 1;
 }
 
 // Parameter mappings stats:

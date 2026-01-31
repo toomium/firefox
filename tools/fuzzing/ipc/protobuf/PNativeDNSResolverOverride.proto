@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/netwerk/dns/PNativeDNSResolverOverride.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.net.PNativeDNSResolverOverride;
 
@@ -22,22 +21,22 @@ message Reply___delete__ {
 }
 
 message Msg_AddIPOverride {
-  required string a_aHost = 1;
-  required string a_aIPLiteral = 2;
+  string a_aHost = 1;
+  string a_aIPLiteral = 2;
 }
 
 message Msg_AddHTTPSRecordOverride {
-  required string a_aHost = 1;
+  string a_aHost = 1;
   repeated uint32 a_aData = 2;
 }
 
 message Msg_SetCnameOverride {
-  required string a_aHost = 1;
-  required string a_aCNAME = 2;
+  string a_aHost = 1;
+  string a_aCNAME = 2;
 }
 
 message Msg_ClearHostOverride {
-  required string a_aHost = 1;
+  string a_aHost = 1;
 }
 
 message Msg_ClearOverrides {

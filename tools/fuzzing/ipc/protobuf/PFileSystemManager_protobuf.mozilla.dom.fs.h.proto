@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/fs/shared/PFileSystemManager.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.fs;
 
@@ -15,19 +14,19 @@ import "RandomAccessStreamParams.proto";
 
 // Structs and unions declarations
 message FileSystemEntryMetadata {
-  required bytes a_entryId = 1;
-  required bytes a_entryName = 2;
-  required bool a_directory = 3;
+  bytes a_entryId = 1;
+  bytes a_entryName = 2;
+  bool a_directory = 3;
 }
 
 message FileSystemChildMetadata {
-  required bytes a_parentId = 1;
-  required bytes a_childName = 2;
+  bytes a_parentId = 1;
+  bytes a_childName = 2;
 }
 
 message FileSystemGetHandleRequest {
-  required protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
-  required bool a_create = 2;
+  protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
+  bool a_create = 2;
 }
 
 message FileSystemGetHandleResponse {
@@ -38,8 +37,8 @@ message FileSystemGetHandleResponse {
 }
 
 message FileSystemGetEntriesRequest {
-  required bytes a_parentId = 1;
-  required bytes a_page = 2;
+  bytes a_parentId = 1;
+  bytes a_page = 2;
 }
 
 message FileSystemDirectoryListing {
@@ -55,13 +54,13 @@ message FileSystemGetEntriesResponse {
 }
 
 message FileSystemGetFileRequest {
-  required bytes a_entryId = 1;
+  bytes a_entryId = 1;
 }
 
 message FileSystemFileProperties {
-  required bytes a_last_modified_ms = 1;
-  required protobuf.mozilla.dom.IPCBlob a_file = 2;
-  required bytes a_type = 3;
+  bytes a_last_modified_ms = 1;
+  protobuf.mozilla.dom.IPCBlob a_file = 2;
+  bytes a_type = 3;
   repeated bytes a_path = 4;
 }
 
@@ -73,13 +72,13 @@ message FileSystemGetFileResponse {
 }
 
 message FileSystemGetAccessHandleRequest {
-  required bytes a_entryId = 1;
+  bytes a_entryId = 1;
 }
 
 message FileSystemAccessHandleProperties {
-  required protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
-  required bytes a_accessHandleChildEndpoint = 2;
-  required bytes a_accessHandleControlChildEndpoint = 3;
+  protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
+  bytes a_accessHandleChildEndpoint = 2;
+  bytes a_accessHandleControlChildEndpoint = 3;
 }
 
 message FileSystemGetAccessHandleResponse {
@@ -90,13 +89,13 @@ message FileSystemGetAccessHandleResponse {
 }
 
 message FileSystemGetWritableRequest {
-  required bytes a_entryId = 1;
-  required bool a_keepData = 2;
+  bytes a_entryId = 1;
+  bool a_keepData = 2;
 }
 
 message FileSystemWritableFileStreamProperties {
-  required protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
-  required bytes a_writableFileStream = 2;
+  protobuf.mozilla.ipc.RandomAccessStreamParams a_streamParams = 1;
+  bytes a_writableFileStream = 2;
 }
 
 message FileSystemGetWritableFileStreamResponse {
@@ -107,12 +106,12 @@ message FileSystemGetWritableFileStreamResponse {
 }
 
 message FileSystemEntryPair {
-  required bytes a_parentId = 1;
-  required bytes a_childId = 2;
+  bytes a_parentId = 1;
+  bytes a_childId = 2;
 }
 
 message FileSystemResolveRequest {
-  required protobuf.mozilla.dom.fs.FileSystemEntryPair a_endpoints = 1;
+  protobuf.mozilla.dom.fs.FileSystemEntryPair a_endpoints = 1;
 }
 
 message FileSystemPath {
@@ -127,8 +126,8 @@ message FileSystemResolveResponse {
 }
 
 message FileSystemRemoveEntryRequest {
-  required protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
-  required bool a_recursive = 2;
+  protobuf.mozilla.dom.fs.FileSystemChildMetadata a_handle = 1;
+  bool a_recursive = 2;
 }
 
 message FileSystemRemoveEntryResponse {
@@ -139,13 +138,13 @@ message FileSystemRemoveEntryResponse {
 }
 
 message FileSystemMoveEntryRequest {
-  required protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
-  required protobuf.mozilla.dom.fs.FileSystemChildMetadata a_destHandle = 2;
+  protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
+  protobuf.mozilla.dom.fs.FileSystemChildMetadata a_destHandle = 2;
 }
 
 message FileSystemRenameEntryRequest {
-  required protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
-  required bytes a_name = 2;
+  protobuf.mozilla.dom.fs.FileSystemEntryMetadata a_handle = 1;
+  bytes a_name = 2;
 }
 
 message FileSystemMoveEntryResponse {

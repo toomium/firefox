@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/indexedDB/PBackgroundIDBTransaction.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.indexedDB.PBackgroundIDBTransaction;
 
@@ -24,22 +23,22 @@ message Msg_Commit {
 }
 
 message Msg_Abort {
-  required bytes a_resultCode = 1;
+  bytes a_resultCode = 1;
 }
 
 message Msg_PBackgroundIDBCursorConstructor {
-  required sint64 a_actorid = 1;
-  required sint64 a_requestId = 2;
-  required protobuf.mozilla.dom.indexedDB.OpenCursorParams a_params = 3;
+  sint64 a_actorid = 1;
+  sint64 a_requestId = 2;
+  protobuf.mozilla.dom.indexedDB.OpenCursorParams a_params = 3;
 }
 
 message Reply_PBackgroundIDBCursorConstructor {
 }
 
 message Msg_PBackgroundIDBRequestConstructor {
-  required sint64 a_actorid = 1;
-  required sint64 a_requestId = 2;
-  required protobuf.mozilla.dom.indexedDB.RequestParams a_params = 3;
+  sint64 a_actorid = 1;
+  sint64 a_requestId = 2;
+  protobuf.mozilla.dom.indexedDB.RequestParams a_params = 3;
 }
 
 message Reply_PBackgroundIDBRequestConstructor {
@@ -52,7 +51,7 @@ message Reply___delete__ {
 }
 
 message Msg_Complete {
-  required bytes a_result = 1;
+  bytes a_result = 1;
 }
 
 // Parameter mappings stats:

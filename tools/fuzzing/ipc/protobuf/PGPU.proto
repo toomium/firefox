@@ -5,8 +5,7 @@
 
 // Generated from PGPU.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.gfx.PGPU;
 
@@ -23,170 +22,170 @@ import "PrefsTypes.proto";
 // Message declarations
 message Msg_Init {
   repeated protobuf.mozilla.gfx.GfxVarUpdate a_vars = 1;
-  required protobuf.mozilla.gfx.DevicePrefs a_devicePrefs = 2;
+  protobuf.mozilla.gfx.DevicePrefs a_devicePrefs = 2;
   repeated protobuf.mozilla.gfx.LayerTreeIdMapping a_mapping = 3;
   repeated protobuf.mozilla.gfx.GfxInfoFeatureStatus a_features = 4;
-  required uint32 a_wrNamespace = 5;
+  uint32 a_wrNamespace = 5;
 }
 
 message Msg_InitCompositorManager {
-  required bytes a_endpoint = 1;
-  required uint32 a_aNamespace = 2;
+  bytes a_endpoint = 1;
+  uint32 a_aNamespace = 2;
 }
 
 message Msg_InitVsyncBridge {
-  required bytes a_endpoint = 1;
+  bytes a_endpoint = 1;
 }
 
 message Msg_InitImageBridge {
-  required bytes a_endpoint = 1;
+  bytes a_endpoint = 1;
 }
 
 message Msg_InitVideoBridge {
-  required bytes a_endpoint = 1;
-  required bytes a_aSource = 2;
+  bytes a_endpoint = 1;
+  bytes a_aSource = 2;
 }
 
 message Msg_InitVRManager {
-  required bytes a_endpoint = 1;
+  bytes a_endpoint = 1;
 }
 
 message Msg_InitUiCompositorController {
-  required bytes a_rootLayerTreeId = 1;
-  required bytes a_endpoint = 2;
+  bytes a_rootLayerTreeId = 1;
+  bytes a_endpoint = 2;
 }
 
 message Msg_InitAPZInputBridge {
-  required bytes a_layersId = 1;
-  required bytes a_endpoint = 2;
+  bytes a_layersId = 1;
+  bytes a_endpoint = 2;
 }
 
 message Msg_InitProfiler {
-  required bytes a_endpoint = 1;
+  bytes a_endpoint = 1;
 }
 
 message Msg_InitVR {
-  required bytes a_endpoint = 1;
+  bytes a_endpoint = 1;
 }
 
 message Msg_UpdateVar {
-  required protobuf.mozilla.gfx.GfxVarUpdate a_var = 1;
+  protobuf.mozilla.gfx.GfxVarUpdate a_var = 1;
 }
 
 message Msg_PreferenceUpdate {
-  required protobuf.mozilla.dom.Pref a_pref = 1;
+  protobuf.mozilla.dom.Pref a_pref = 1;
 }
 
 message Msg_ScreenInformationChanged {
 }
 
 message Msg_NotifyBatteryInfo {
-  required bytes a_aBatteryInfo = 1;
+  bytes a_aBatteryInfo = 1;
 }
 
 message Msg_NewContentCompositorManager {
-  required bytes a_endpoint = 1;
-  required bytes a_childId = 2;
-  required uint32 a_aNamespace = 3;
+  bytes a_endpoint = 1;
+  bytes a_childId = 2;
+  uint32 a_aNamespace = 3;
 }
 
 message Msg_NewContentImageBridge {
-  required bytes a_endpoint = 1;
-  required bytes a_childId = 2;
+  bytes a_endpoint = 1;
+  bytes a_childId = 2;
 }
 
 message Msg_NewContentVRManager {
-  required bytes a_endpoint = 1;
-  required bytes a_childId = 2;
+  bytes a_endpoint = 1;
+  bytes a_childId = 2;
 }
 
 message Msg_NewContentRemoteMediaManager {
-  required bytes a_endpoint = 1;
-  required bytes a_childId = 2;
+  bytes a_endpoint = 1;
+  bytes a_childId = 2;
 }
 
 message Msg_AddLayerTreeIdMapping {
-  required protobuf.mozilla.gfx.LayerTreeIdMapping a_mapping = 1;
+  protobuf.mozilla.gfx.LayerTreeIdMapping a_mapping = 1;
 }
 
 message Reply_AddLayerTreeIdMapping {
 }
 
 message Msg_RemoveLayerTreeIdMapping {
-  required protobuf.mozilla.gfx.LayerTreeIdMapping a_mapping = 1;
+  protobuf.mozilla.gfx.LayerTreeIdMapping a_mapping = 1;
 }
 
 message Msg_GetDeviceStatus {
 }
 
 message Reply_GetDeviceStatus {
-  required protobuf.mozilla.gfx.GPUDeviceData a_status = 1;
+  protobuf.mozilla.gfx.GPUDeviceData a_status = 1;
 }
 
 message Msg_SimulateDeviceReset {
 }
 
 message Msg_NotifyGpuObservers {
-  required string a_aTopic = 1;
+  string a_aTopic = 1;
 }
 
 message Msg_RequestMemoryReport {
-  required uint32 a_generation = 1;
-  required bool a_anonymize = 2;
-  required bool a_minimizeMemoryUsage = 3;
+  uint32 a_generation = 1;
+  bool a_anonymize = 2;
+  bool a_minimizeMemoryUsage = 3;
   optional bytes a_DMDFile = 4;
 }
 
 message Reply_RequestMemoryReport {
-  required uint32 a_aGeneration = 1;
+  uint32 a_aGeneration = 1;
 }
 
 message Msg_ShutdownVR {
 }
 
 message Msg_UpdatePerfStatsCollectionMask {
-  required uint64 a_aMask = 1;
+  uint64 a_aMask = 1;
 }
 
 message Msg_CollectPerfStatsJSON {
 }
 
 message Reply_CollectPerfStatsJSON {
-  required string a_aStats = 1;
+  string a_aStats = 1;
 }
 
 message Msg_FlushFOGData {
 }
 
 message Reply_FlushFOGData {
-  required bytes a_buf = 1;
+  bytes a_buf = 1;
 }
 
 message Msg_TestTriggerMetrics {
 }
 
 message Reply_TestTriggerMetrics {
-  required bool a_unused = 1;
+  bool a_unused = 1;
 }
 
 message Msg_CrashProcess {
 }
 
 message Msg_InitComplete {
-  required protobuf.mozilla.gfx.GPUDeviceData a_data = 1;
+  protobuf.mozilla.gfx.GPUDeviceData a_data = 1;
 }
 
 message Msg_ReportCheckerboard {
-  required uint32 a_severity = 1;
-  required string a_log = 2;
+  uint32 a_severity = 1;
+  string a_log = 2;
 }
 
 message Msg_GraphicsError {
-  required string a_aError = 1;
+  string a_aError = 1;
 }
 
 message Msg_InitCrashReporter {
-  required protobuf.CrashReporter.CrashReporterInitArgs a_aInitArgs = 1;
+  protobuf.CrashReporter.CrashReporterInitArgs a_aInitArgs = 1;
 }
 
 message Msg_CreateVRProcess {
@@ -196,7 +195,7 @@ message Msg_ShutdownVRProcess {
 }
 
 message Msg_NotifyUiObservers {
-  required string a_aTopic = 1;
+  string a_aTopic = 1;
 }
 
 message Msg_AccumulateChildHistograms {
@@ -220,57 +219,57 @@ message Msg_RecordChildEvents {
 }
 
 message Msg_RecordDiscardedData {
-  required bytes a_data = 1;
+  bytes a_data = 1;
 }
 
 message Msg_DeclareStable {
 }
 
 message Msg_NotifyDeviceReset {
-  required protobuf.mozilla.gfx.GPUDeviceData a_status = 1;
-  required bytes a_reason = 2;
-  required bytes a_place = 3;
+  protobuf.mozilla.gfx.GPUDeviceData a_status = 1;
+  bytes a_reason = 2;
+  bytes a_place = 3;
 }
 
 message Msg_NotifyOverlayInfo {
-  required bytes a_info = 1;
+  bytes a_info = 1;
 }
 
 message Msg_NotifySwapChainInfo {
-  required bytes a_info = 1;
+  bytes a_info = 1;
 }
 
 message Msg_NotifyDisableRemoteCanvas {
 }
 
 message Msg_FlushMemory {
-  required string a_reason = 1;
+  string a_reason = 1;
 }
 
 message Msg_AddMemoryReport {
-  required protobuf.mozilla.dom.MemoryReport a_aReport = 1;
+  protobuf.mozilla.dom.MemoryReport a_aReport = 1;
 }
 
 message Msg_UpdateFeature {
-  required bytes a_aFeature = 1;
-  required protobuf.mozilla.gfx.FeatureFailure a_aChange = 2;
+  bytes a_aFeature = 1;
+  protobuf.mozilla.gfx.FeatureFailure a_aChange = 2;
 }
 
 message Msg_UsedFallback {
-  required bytes a_aFallback = 1;
-  required string a_message = 2;
+  bytes a_aFallback = 1;
+  string a_message = 2;
 }
 
 message Msg_BHRThreadHang {
-  required protobuf.mozilla.HangDetails a_aDetails = 1;
+  protobuf.mozilla.HangDetails a_aDetails = 1;
 }
 
 message Msg_UpdateMediaCodecsSupported {
-  required bytes a_aSupported = 1;
+  bytes a_aSupported = 1;
 }
 
 message Msg_FOGData {
-  required bytes a_buf = 1;
+  bytes a_buf = 1;
 }
 
 // Parameter mappings stats:

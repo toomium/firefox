@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/indexedDB/PBackgroundIndexedDBUtils.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.indexedDB.PBackgroundIndexedDBUtils;
 
@@ -19,23 +18,23 @@ message Msg_DeleteMe {
 }
 
 message Msg_GetFileReferences {
-  required bytes a_persistenceType = 1;
-  required string a_origin = 2;
-  required string a_databaseName = 3;
-  required sint64 a_fileId = 4;
+  bytes a_persistenceType = 1;
+  string a_origin = 2;
+  string a_databaseName = 3;
+  sint64 a_fileId = 4;
 }
 
 message Reply_GetFileReferences {
-  required sint32 a_refCnt = 1;
-  required sint32 a_dBRefCnt = 2;
-  required bool a_result = 3;
+  sint32 a_refCnt = 1;
+  sint32 a_dBRefCnt = 2;
+  bool a_result = 3;
 }
 
 message Msg_DoMaintenance {
 }
 
 message Reply_DoMaintenance {
-  required bytes a_rv = 1;
+  bytes a_rv = 1;
 }
 
 message Msg___delete__ {

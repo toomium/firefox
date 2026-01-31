@@ -5,8 +5,7 @@
 
 // Generated from PDocAccessible.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.a11y.PDocAccessible;
 
@@ -21,24 +20,24 @@ message Msg_Shutdown {
 }
 
 message Msg_Event {
-  required uint64 a_aID = 1;
-  required uint32 a_type = 2;
+  uint64 a_aID = 1;
+  uint32 a_type = 2;
 }
 
 message Msg_StateChangeEvent {
-  required uint64 a_aID = 1;
-  required uint64 a_aState = 2;
-  required bool a_aEnabled = 3;
+  uint64 a_aID = 1;
+  uint64 a_aState = 2;
+  bool a_aEnabled = 3;
 }
 
 message Msg_CaretMoveEvent {
-  required uint64 a_aID = 1;
-  required bytes a_aCaretRect = 2;
-  required sint32 a_aOffset = 3;
-  required bool a_aIsSelectionCollapsed = 4;
-  required bool a_aIsAtEndOfLine = 5;
-  required sint32 a_aGranularity = 6;
-  required bool a_aFromUser = 7;
+  uint64 a_aID = 1;
+  bytes a_aCaretRect = 2;
+  sint32 a_aOffset = 3;
+  bool a_aIsSelectionCollapsed = 4;
+  bool a_aIsAtEndOfLine = 5;
+  sint32 a_aGranularity = 6;
+  bool a_aFromUser = 7;
 }
 
 message Msg_MutationEvents {
@@ -49,48 +48,48 @@ message Msg_RequestAckMutationEvents {
 }
 
 message Msg_SelectionEvent {
-  required uint64 a_aID = 1;
-  required uint64 a_aWidgetID = 2;
-  required uint32 a_aType = 3;
+  uint64 a_aID = 1;
+  uint64 a_aWidgetID = 2;
+  uint32 a_aType = 3;
 }
 
 message Msg_RoleChangedEvent {
-  required bytes a_aRole = 1;
-  required uint32 a_aRoleMapEntryIndex = 2;
+  bytes a_aRole = 1;
+  uint32 a_aRoleMapEntryIndex = 2;
 }
 
 message Msg_FocusEvent {
-  required uint64 a_aID = 1;
-  required bytes a_aCaretRect = 2;
+  uint64 a_aID = 1;
+  bytes a_aCaretRect = 2;
 }
 
 message Msg_ScrollingEvent {
-  required uint64 a_aID = 1;
-  required uint64 a_aType = 2;
-  required uint32 a_aScrollX = 3;
-  required uint32 a_aScrollY = 4;
-  required uint32 a_aMaxScrollX = 5;
-  required uint32 a_aMaxScrollY = 6;
+  uint64 a_aID = 1;
+  uint64 a_aType = 2;
+  uint32 a_aScrollX = 3;
+  uint32 a_aScrollY = 4;
+  uint32 a_aMaxScrollX = 5;
+  uint32 a_aMaxScrollY = 6;
 }
 
 message Msg_AnnouncementEvent {
-  required uint64 a_aID = 1;
-  required string a_aAnnouncement = 2;
-  required uint32 a_aPriority = 3;
+  uint64 a_aID = 1;
+  string a_aAnnouncement = 2;
+  uint32 a_aPriority = 3;
 }
 
 message Msg_TextSelectionChangeEvent {
-  required uint64 a_aID = 1;
+  uint64 a_aID = 1;
   repeated protobuf.mozilla.a11y.TextRangeData a_aSelection = 2;
 }
 
 message Msg_BindChildDoc {
-  required bytes a_aChildDoc = 1;
-  required uint64 a_aID = 2;
+  bytes a_aChildDoc = 1;
+  uint64 a_aID = 2;
 }
 
 message Msg_Cache {
-  required bytes a_aUpdateType = 1;
+  bytes a_aUpdateType = 1;
   repeated protobuf.mozilla.a11y.CacheData a_aData = 2;
 }
 
@@ -113,114 +112,114 @@ message Msg_RestoreFocus {
 }
 
 message Msg_ScrollTo {
-  required uint64 a_aID = 1;
-  required uint32 a_aScrollType = 2;
+  uint64 a_aID = 1;
+  uint32 a_aScrollType = 2;
 }
 
 message Msg_ScrollToPoint {
-  required uint64 a_aID = 1;
-  required uint32 a_aScrollType = 2;
-  required sint32 a_aX = 3;
-  required sint32 a_aY = 4;
+  uint64 a_aID = 1;
+  uint32 a_aScrollType = 2;
+  sint32 a_aX = 3;
+  sint32 a_aY = 4;
 }
 
 message Msg_Announce {
-  required uint64 a_aID = 1;
-  required string a_aAnnouncement = 2;
-  required uint32 a_aPriority = 3;
+  uint64 a_aID = 1;
+  string a_aAnnouncement = 2;
+  uint32 a_aPriority = 3;
 }
 
 message Msg_SetTextSelection {
-  required uint64 a_aStartID = 1;
-  required sint32 a_aStartOffset = 2;
-  required uint64 a_aEndID = 3;
-  required sint32 a_aEndOffset = 4;
-  required sint32 a_aSelectionNum = 5;
-  required bool a_aSetFocus = 6;
+  uint64 a_aStartID = 1;
+  sint32 a_aStartOffset = 2;
+  uint64 a_aEndID = 3;
+  sint32 a_aEndOffset = 4;
+  sint32 a_aSelectionNum = 5;
+  bool a_aSetFocus = 6;
 }
 
 message Msg_RemoveTextSelection {
-  required uint64 a_aID = 1;
-  required sint32 a_aSelectionNum = 2;
+  uint64 a_aID = 1;
+  sint32 a_aSelectionNum = 2;
 }
 
 message Msg_ScrollTextLeafRangeIntoView {
-  required uint64 a_aStartID = 1;
-  required sint32 a_aStartOffset = 2;
-  required uint64 a_aEndID = 3;
-  required sint32 a_aEndOffset = 4;
-  required uint32 a_aScrollType = 5;
+  uint64 a_aStartID = 1;
+  sint32 a_aStartOffset = 2;
+  uint64 a_aEndID = 3;
+  sint32 a_aEndOffset = 4;
+  uint32 a_aScrollType = 5;
 }
 
 message Msg_ScrollSubstringToPoint {
-  required uint64 a_aID = 1;
-  required sint32 a_aStartOffset = 2;
-  required sint32 a_aEndOffset = 3;
-  required uint32 a_aCoordinateType = 4;
-  required sint32 a_aX = 5;
-  required sint32 a_aY = 6;
+  uint64 a_aID = 1;
+  sint32 a_aStartOffset = 2;
+  sint32 a_aEndOffset = 3;
+  uint32 a_aCoordinateType = 4;
+  sint32 a_aX = 5;
+  sint32 a_aY = 6;
 }
 
 message Msg_ReplaceText {
-  required uint64 a_aID = 1;
-  required string a_aText = 2;
+  uint64 a_aID = 1;
+  string a_aText = 2;
 }
 
 message Msg_InsertText {
-  required uint64 a_aID = 1;
-  required string a_aText = 2;
-  required sint32 a_aPosition = 3;
+  uint64 a_aID = 1;
+  string a_aText = 2;
+  sint32 a_aPosition = 3;
 }
 
 message Msg_CopyText {
-  required uint64 a_aID = 1;
-  required sint32 a_aStartPos = 2;
-  required sint32 a_aEndPos = 3;
+  uint64 a_aID = 1;
+  sint32 a_aStartPos = 2;
+  sint32 a_aEndPos = 3;
 }
 
 message Msg_CutText {
-  required uint64 a_aID = 1;
-  required sint32 a_aStartPos = 2;
-  required sint32 a_aEndPos = 3;
+  uint64 a_aID = 1;
+  sint32 a_aStartPos = 2;
+  sint32 a_aEndPos = 3;
 }
 
 message Msg_DeleteText {
-  required uint64 a_aID = 1;
-  required sint32 a_aStartPos = 2;
-  required sint32 a_aEndPos = 3;
+  uint64 a_aID = 1;
+  sint32 a_aStartPos = 2;
+  sint32 a_aEndPos = 3;
 }
 
 message Msg_PasteText {
-  required uint64 a_aID = 1;
-  required sint32 a_aPosition = 2;
+  uint64 a_aID = 1;
+  sint32 a_aPosition = 2;
 }
 
 message Msg_TakeSelection {
-  required uint64 a_aID = 1;
+  uint64 a_aID = 1;
 }
 
 message Msg_SetSelected {
-  required uint64 a_aID = 1;
-  required bool a_aSelected = 2;
+  uint64 a_aID = 1;
+  bool a_aSelected = 2;
 }
 
 message Msg_DoActionAsync {
-  required uint64 a_aID = 1;
-  required uint32 a_aIndex = 2;
+  uint64 a_aID = 1;
+  uint32 a_aIndex = 2;
 }
 
 message Msg_SetCurValue {
-  required uint64 a_aID = 1;
-  required double a_aValue = 2;
+  uint64 a_aID = 1;
+  double a_aValue = 2;
 }
 
 message Msg_TakeFocus {
-  required uint64 a_aID = 1;
+  uint64 a_aID = 1;
 }
 
 message Msg_VerifyCache {
-  required uint64 a_aID = 1;
-  required uint64 a_aCacheDomain = 2;
+  uint64 a_aID = 1;
+  uint64 a_aCacheDomain = 2;
   optional bytes a_aFields = 3;
 }
 

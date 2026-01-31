@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/ipc/PFilePicker.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PFilePicker;
 
@@ -18,22 +17,22 @@ import "IPCBlob.proto";
 
 // Message declarations
 message Msg_Open {
-  required sint32 a_selectedType = 1;
-  required bool a_addToRecentDocs = 2;
-  required string a_defaultFile = 3;
-  required string a_defaultExtension = 4;
+  sint32 a_selectedType = 1;
+  bool a_addToRecentDocs = 2;
+  string a_defaultFile = 3;
+  string a_defaultExtension = 4;
   repeated string a_filters = 5;
   repeated string a_filterNames = 6;
   repeated string a_rawFilters = 7;
-  required string a_displayDirectory = 8;
-  required string a_displaySpecialDirectory = 9;
-  required string a_okButtonLabel = 10;
-  required bytes a_capture = 11;
+  string a_displayDirectory = 8;
+  string a_displaySpecialDirectory = 9;
+  string a_okButtonLabel = 10;
+  bytes a_capture = 11;
 }
 
 message Msg___delete__ {
-  required protobuf.mozilla.dom.MaybeInputData a_data = 1;
-  required bytes a_result = 2;
+  protobuf.mozilla.dom.MaybeInputData a_data = 1;
+  bytes a_result = 2;
 }
 
 message Reply___delete__ {

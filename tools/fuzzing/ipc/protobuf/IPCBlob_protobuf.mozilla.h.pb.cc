@@ -8,7 +8,10 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -35,6 +38,56 @@ struct RemoteLazyStreamDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RemoteLazyStreamDefaultTypeInternal _RemoteLazyStream_default_instance_;
 }  // namespace mozilla
 }  // namespace protobuf
+static ::_pb::Metadata file_level_metadata_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto[1];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto = nullptr;
+
+const uint32_t TableStruct_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::RemoteLazyStream, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::RemoteLazyStream, _impl_._oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::RemoteLazyStream, _impl_.content_),
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::protobuf::mozilla::RemoteLazyStream)},
+};
+
+static const ::_pb::Message* const file_default_instances[] = {
+  &::protobuf::mozilla::_RemoteLazyStream_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n IPCBlob_protobuf.mozilla.h.proto\022\020prot"
+  "obuf.mozilla\032\017IPCStream.proto\032\023ProtocolT"
+  "ypes.proto\"|\n\020RemoteLazyStream\022#\n\031a_mVRe"
+  "moteLazyInputStream\030\001 \001(\014H\000\0228\n\ra_mVIPCSt"
+  "ream\030\002 \001(\0132\037.protobuf.mozilla.ipc.IPCStr"
+  "eamH\000B\t\n\007contentb\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto_deps[2] = {
+  &::descriptor_table_IPCStream_2eproto,
+  &::descriptor_table_ProtocolTypes_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto = {
+    false, false, 224, descriptor_table_protodef_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto,
+    "IPCBlob_protobuf.mozilla.h.proto",
+    &descriptor_table_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto_once, descriptor_table_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto_deps, 2, 1,
+    schemas, file_default_instances, TableStruct_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto::offsets,
+    file_level_metadata_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto, file_level_enum_descriptors_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto,
+    file_level_service_descriptors_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto_getter() {
+  return &descriptor_table_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto;
+}
+
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto(&descriptor_table_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 
@@ -75,19 +128,19 @@ void RemoteLazyStream::clear_a_mvipcstream() {
 }
 RemoteLazyStream::RemoteLazyStream(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.RemoteLazyStream)
 }
 RemoteLazyStream::RemoteLazyStream(const RemoteLazyStream& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   RemoteLazyStream* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVRemoteLazyInputStream: {
@@ -120,7 +173,7 @@ inline void RemoteLazyStream::SharedCtor(
 
 RemoteLazyStream::~RemoteLazyStream() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.RemoteLazyStream)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -166,7 +219,7 @@ void RemoteLazyStream::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<std::string>();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* RemoteLazyStream::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -203,7 +256,7 @@ const char* RemoteLazyStream::_InternalParse(const char* ptr, ::_pbi::ParseConte
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -221,23 +274,22 @@ uint8_t* RemoteLazyStream::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  switch (content_case()) {
-    case kAMVRemoteLazyInputStream: {
-      target = stream->WriteBytesMaybeAliased(
-          1, this->_internal_a_mvremotelazyinputstream(), target);
-      break;
-    }
-    case kAMVIPCStream: {
-      target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::a_mvipcstream(this),
-          _Internal::a_mvipcstream(this).GetCachedSize(), target, stream);
-      break;
-    }
-    default: ;
+  // bytes a_mVRemoteLazyInputStream = 1;
+  if (_internal_has_a_mvremotelazyinputstream()) {
+    target = stream->WriteBytesMaybeAliased(
+        1, this->_internal_a_mvremotelazyinputstream(), target);
   }
+
+  // .protobuf.mozilla.ipc.IPCStream a_mVIPCStream = 2;
+  if (_internal_has_a_mvipcstream()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::a_mvipcstream(this),
+        _Internal::a_mvipcstream(this).GetCachedSize(), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.RemoteLazyStream)
   return target;
@@ -270,22 +322,19 @@ size_t RemoteLazyStream::ByteSizeLong() const {
       break;
     }
   }
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RemoteLazyStream::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const RemoteLazyStream*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RemoteLazyStream::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RemoteLazyStream::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RemoteLazyStream::GetClassData() const { return &_class_data_; }
 
-void RemoteLazyStream::MergeFrom(const RemoteLazyStream& from) {
-  RemoteLazyStream* const _this = this;
+
+void RemoteLazyStream::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RemoteLazyStream*>(&to_msg);
+  auto& from = static_cast<const RemoteLazyStream&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.RemoteLazyStream)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -305,7 +354,7 @@ void RemoteLazyStream::MergeFrom(const RemoteLazyStream& from) {
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RemoteLazyStream::CopyFrom(const RemoteLazyStream& from) {
@@ -316,20 +365,6 @@ void RemoteLazyStream::CopyFrom(const RemoteLazyStream& from) {
 }
 
 bool RemoteLazyStream::IsInitialized() const {
-  switch (content_case()) {
-    case kAMVRemoteLazyInputStream: {
-      break;
-    }
-    case kAMVIPCStream: {
-      if (_internal_has_a_mvipcstream()) {
-        if (!_impl_.content_.a_mvipcstream_->IsInitialized()) return false;
-      }
-      break;
-    }
-    case CONTENT_NOT_SET: {
-      break;
-    }
-  }
   return true;
 }
 
@@ -340,10 +375,11 @@ void RemoteLazyStream::InternalSwap(RemoteLazyStream* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-std::string RemoteLazyStream::GetTypeName() const {
-  return "protobuf.mozilla.RemoteLazyStream";
+::PROTOBUF_NAMESPACE_ID::Metadata RemoteLazyStream::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto_getter, &descriptor_table_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto_once,
+      file_level_metadata_IPCBlob_5fprotobuf_2emozilla_2eh_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace mozilla

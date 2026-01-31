@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "LayersSurfaces.pb.h"
 #include "PMediaDecoderParams.pb.h"
 // @@protoc_insertion_point(includes)
@@ -43,6 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 class RemoteDecoderInfoIPDL;
@@ -63,7 +66,7 @@ namespace mozilla {
 // ===================================================================
 
 class VideoDecoderInfoIPDL final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.VideoDecoderInfoIPDL) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.VideoDecoderInfoIPDL) */ {
  public:
   inline VideoDecoderInfoIPDL() : VideoDecoderInfoIPDL(nullptr) {}
   ~VideoDecoderInfoIPDL() override;
@@ -93,13 +96,15 @@ class VideoDecoderInfoIPDL final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const VideoDecoderInfoIPDL& default_instance() {
     return *internal_default_instance();
   }
@@ -137,9 +142,15 @@ class VideoDecoderInfoIPDL final :
   VideoDecoderInfoIPDL* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<VideoDecoderInfoIPDL>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const VideoDecoderInfoIPDL& from);
-  void MergeFrom(const VideoDecoderInfoIPDL& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const VideoDecoderInfoIPDL& from) {
+    VideoDecoderInfoIPDL::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -152,7 +163,7 @@ class VideoDecoderInfoIPDL final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(VideoDecoderInfoIPDL* other);
 
   private:
@@ -165,7 +176,10 @@ class VideoDecoderInfoIPDL final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -175,11 +189,7 @@ class VideoDecoderInfoIPDL final :
     kAVideoInfoFieldNumber = 1,
     kAFramerateFieldNumber = 2,
   };
-  // required bytes a_videoInfo = 1;
-  bool has_a_videoinfo() const;
-  private:
-  bool _internal_has_a_videoinfo() const;
-  public:
+  // bytes a_videoInfo = 1;
   void clear_a_videoinfo();
   const std::string& a_videoinfo() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -193,11 +203,7 @@ class VideoDecoderInfoIPDL final :
   std::string* _internal_mutable_a_videoinfo();
   public:
 
-  // required float a_framerate = 2;
-  bool has_a_framerate() const;
-  private:
-  bool _internal_has_a_framerate() const;
-  public:
+  // float a_framerate = 2;
   void clear_a_framerate();
   float a_framerate() const;
   void set_a_framerate(float value);
@@ -210,17 +216,13 @@ class VideoDecoderInfoIPDL final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_videoinfo_;
     float a_framerate_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto;
@@ -228,7 +230,7 @@ class VideoDecoderInfoIPDL final :
 // -------------------------------------------------------------------
 
 class RemoteDecoderInfoIPDL final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.RemoteDecoderInfoIPDL) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.RemoteDecoderInfoIPDL) */ {
  public:
   inline RemoteDecoderInfoIPDL() : RemoteDecoderInfoIPDL(nullptr) {}
   ~RemoteDecoderInfoIPDL() override;
@@ -258,13 +260,15 @@ class RemoteDecoderInfoIPDL final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const RemoteDecoderInfoIPDL& default_instance() {
     return *internal_default_instance();
   }
@@ -308,9 +312,15 @@ class RemoteDecoderInfoIPDL final :
   RemoteDecoderInfoIPDL* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<RemoteDecoderInfoIPDL>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const RemoteDecoderInfoIPDL& from);
-  void MergeFrom(const RemoteDecoderInfoIPDL& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const RemoteDecoderInfoIPDL& from) {
+    RemoteDecoderInfoIPDL::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -323,7 +333,7 @@ class RemoteDecoderInfoIPDL final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(RemoteDecoderInfoIPDL* other);
 
   private:
@@ -336,7 +346,10 @@ class RemoteDecoderInfoIPDL final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -421,17 +434,9 @@ class RemoteDecoderInfoIPDL final :
 #endif  // __GNUC__
 // VideoDecoderInfoIPDL
 
-// required bytes a_videoInfo = 1;
-inline bool VideoDecoderInfoIPDL::_internal_has_a_videoinfo() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool VideoDecoderInfoIPDL::has_a_videoinfo() const {
-  return _internal_has_a_videoinfo();
-}
+// bytes a_videoInfo = 1;
 inline void VideoDecoderInfoIPDL::clear_a_videoinfo() {
   _impl_.a_videoinfo_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& VideoDecoderInfoIPDL::a_videoinfo() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.VideoDecoderInfoIPDL.a_videoInfo)
@@ -440,7 +445,7 @@ inline const std::string& VideoDecoderInfoIPDL::a_videoinfo() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void VideoDecoderInfoIPDL::set_a_videoinfo(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_videoinfo_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.VideoDecoderInfoIPDL.a_videoInfo)
 }
@@ -453,32 +458,22 @@ inline const std::string& VideoDecoderInfoIPDL::_internal_a_videoinfo() const {
   return _impl_.a_videoinfo_.Get();
 }
 inline void VideoDecoderInfoIPDL::_internal_set_a_videoinfo(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_videoinfo_.Set(value, GetArenaForAllocation());
 }
 inline std::string* VideoDecoderInfoIPDL::_internal_mutable_a_videoinfo() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_videoinfo_.Mutable(GetArenaForAllocation());
 }
 inline std::string* VideoDecoderInfoIPDL::release_a_videoinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.VideoDecoderInfoIPDL.a_videoInfo)
-  if (!_internal_has_a_videoinfo()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_videoinfo_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_videoinfo_.IsDefault()) {
-    _impl_.a_videoinfo_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_videoinfo_.Release();
 }
 inline void VideoDecoderInfoIPDL::set_allocated_a_videoinfo(std::string* a_videoinfo) {
   if (a_videoinfo != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_videoinfo_.SetAllocated(a_videoinfo, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -489,17 +484,9 @@ inline void VideoDecoderInfoIPDL::set_allocated_a_videoinfo(std::string* a_video
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.VideoDecoderInfoIPDL.a_videoInfo)
 }
 
-// required float a_framerate = 2;
-inline bool VideoDecoderInfoIPDL::_internal_has_a_framerate() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool VideoDecoderInfoIPDL::has_a_framerate() const {
-  return _internal_has_a_framerate();
-}
+// float a_framerate = 2;
 inline void VideoDecoderInfoIPDL::clear_a_framerate() {
   _impl_.a_framerate_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline float VideoDecoderInfoIPDL::_internal_a_framerate() const {
   return _impl_.a_framerate_;
@@ -509,7 +496,7 @@ inline float VideoDecoderInfoIPDL::a_framerate() const {
   return _internal_a_framerate();
 }
 inline void VideoDecoderInfoIPDL::_internal_set_a_framerate(float value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_framerate_ = value;
 }
 inline void VideoDecoderInfoIPDL::set_a_framerate(float value) {

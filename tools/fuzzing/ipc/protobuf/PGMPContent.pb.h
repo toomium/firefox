@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_PGMPContent_2eproto
@@ -41,6 +44,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PGMPContent_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PGMPContent_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace gmp {
@@ -83,7 +87,7 @@ namespace PGMPContent {
 // ===================================================================
 
 class Msg_PGMPVideoDecoderConstructor final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPContent.Msg_PGMPVideoDecoderConstructor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPContent.Msg_PGMPVideoDecoderConstructor) */ {
  public:
   inline Msg_PGMPVideoDecoderConstructor() : Msg_PGMPVideoDecoderConstructor(nullptr) {}
   ~Msg_PGMPVideoDecoderConstructor() override;
@@ -113,13 +117,15 @@ class Msg_PGMPVideoDecoderConstructor final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_PGMPVideoDecoderConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -157,9 +163,15 @@ class Msg_PGMPVideoDecoderConstructor final :
   Msg_PGMPVideoDecoderConstructor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_PGMPVideoDecoderConstructor>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_PGMPVideoDecoderConstructor& from);
-  void MergeFrom(const Msg_PGMPVideoDecoderConstructor& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_PGMPVideoDecoderConstructor& from) {
+    Msg_PGMPVideoDecoderConstructor::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -172,7 +184,7 @@ class Msg_PGMPVideoDecoderConstructor final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_PGMPVideoDecoderConstructor* other);
 
   private:
@@ -185,7 +197,10 @@ class Msg_PGMPVideoDecoderConstructor final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -194,11 +209,7 @@ class Msg_PGMPVideoDecoderConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
-  bool has_a_actorid() const;
-  private:
-  bool _internal_has_a_actorid() const;
-  public:
+  // sint64 a_actorid = 1;
   void clear_a_actorid();
   int64_t a_actorid() const;
   void set_a_actorid(int64_t value);
@@ -215,9 +226,8 @@ class Msg_PGMPVideoDecoderConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     int64_t a_actorid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPContent_2eproto;
@@ -225,10 +235,9 @@ class Msg_PGMPVideoDecoderConstructor final :
 // -------------------------------------------------------------------
 
 class Reply_PGMPVideoDecoderConstructor final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPContent.Reply_PGMPVideoDecoderConstructor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPContent.Reply_PGMPVideoDecoderConstructor) */ {
  public:
   inline Reply_PGMPVideoDecoderConstructor() : Reply_PGMPVideoDecoderConstructor(nullptr) {}
-  ~Reply_PGMPVideoDecoderConstructor() override;
   explicit PROTOBUF_CONSTEXPR Reply_PGMPVideoDecoderConstructor(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply_PGMPVideoDecoderConstructor(const Reply_PGMPVideoDecoderConstructor& from);
@@ -255,13 +264,15 @@ class Reply_PGMPVideoDecoderConstructor final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_PGMPVideoDecoderConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -299,23 +310,15 @@ class Reply_PGMPVideoDecoderConstructor final :
   Reply_PGMPVideoDecoderConstructor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_PGMPVideoDecoderConstructor>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply_PGMPVideoDecoderConstructor& from);
-  void MergeFrom(const Reply_PGMPVideoDecoderConstructor& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply_PGMPVideoDecoderConstructor* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply_PGMPVideoDecoderConstructor& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply_PGMPVideoDecoderConstructor& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -327,7 +330,10 @@ class Reply_PGMPVideoDecoderConstructor final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -341,15 +347,13 @@ class Reply_PGMPVideoDecoderConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPContent_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_PGMPVideoEncoderConstructor final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPContent.Msg_PGMPVideoEncoderConstructor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPContent.Msg_PGMPVideoEncoderConstructor) */ {
  public:
   inline Msg_PGMPVideoEncoderConstructor() : Msg_PGMPVideoEncoderConstructor(nullptr) {}
   ~Msg_PGMPVideoEncoderConstructor() override;
@@ -379,13 +383,15 @@ class Msg_PGMPVideoEncoderConstructor final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_PGMPVideoEncoderConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -423,9 +429,15 @@ class Msg_PGMPVideoEncoderConstructor final :
   Msg_PGMPVideoEncoderConstructor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_PGMPVideoEncoderConstructor>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_PGMPVideoEncoderConstructor& from);
-  void MergeFrom(const Msg_PGMPVideoEncoderConstructor& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_PGMPVideoEncoderConstructor& from) {
+    Msg_PGMPVideoEncoderConstructor::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -438,7 +450,7 @@ class Msg_PGMPVideoEncoderConstructor final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_PGMPVideoEncoderConstructor* other);
 
   private:
@@ -451,7 +463,10 @@ class Msg_PGMPVideoEncoderConstructor final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -460,11 +475,7 @@ class Msg_PGMPVideoEncoderConstructor final :
   enum : int {
     kAActoridFieldNumber = 1,
   };
-  // required sint64 a_actorid = 1;
-  bool has_a_actorid() const;
-  private:
-  bool _internal_has_a_actorid() const;
-  public:
+  // sint64 a_actorid = 1;
   void clear_a_actorid();
   int64_t a_actorid() const;
   void set_a_actorid(int64_t value);
@@ -481,9 +492,8 @@ class Msg_PGMPVideoEncoderConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     int64_t a_actorid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPContent_2eproto;
@@ -491,10 +501,9 @@ class Msg_PGMPVideoEncoderConstructor final :
 // -------------------------------------------------------------------
 
 class Reply_PGMPVideoEncoderConstructor final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPContent.Reply_PGMPVideoEncoderConstructor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPContent.Reply_PGMPVideoEncoderConstructor) */ {
  public:
   inline Reply_PGMPVideoEncoderConstructor() : Reply_PGMPVideoEncoderConstructor(nullptr) {}
-  ~Reply_PGMPVideoEncoderConstructor() override;
   explicit PROTOBUF_CONSTEXPR Reply_PGMPVideoEncoderConstructor(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply_PGMPVideoEncoderConstructor(const Reply_PGMPVideoEncoderConstructor& from);
@@ -521,13 +530,15 @@ class Reply_PGMPVideoEncoderConstructor final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_PGMPVideoEncoderConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -565,23 +576,15 @@ class Reply_PGMPVideoEncoderConstructor final :
   Reply_PGMPVideoEncoderConstructor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_PGMPVideoEncoderConstructor>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply_PGMPVideoEncoderConstructor& from);
-  void MergeFrom(const Reply_PGMPVideoEncoderConstructor& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply_PGMPVideoEncoderConstructor* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply_PGMPVideoEncoderConstructor& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply_PGMPVideoEncoderConstructor& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -593,7 +596,10 @@ class Reply_PGMPVideoEncoderConstructor final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -607,15 +613,13 @@ class Reply_PGMPVideoEncoderConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPContent_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_PChromiumCDMConstructor final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor) */ {
  public:
   inline Msg_PChromiumCDMConstructor() : Msg_PChromiumCDMConstructor(nullptr) {}
   ~Msg_PChromiumCDMConstructor() override;
@@ -645,13 +649,15 @@ class Msg_PChromiumCDMConstructor final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_PChromiumCDMConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -689,9 +695,15 @@ class Msg_PChromiumCDMConstructor final :
   Msg_PChromiumCDMConstructor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_PChromiumCDMConstructor>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_PChromiumCDMConstructor& from);
-  void MergeFrom(const Msg_PChromiumCDMConstructor& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_PChromiumCDMConstructor& from) {
+    Msg_PChromiumCDMConstructor::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -704,7 +716,7 @@ class Msg_PChromiumCDMConstructor final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_PChromiumCDMConstructor* other);
 
   private:
@@ -717,7 +729,10 @@ class Msg_PChromiumCDMConstructor final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -727,11 +742,7 @@ class Msg_PChromiumCDMConstructor final :
     kAAKeySystemFieldNumber = 2,
     kAActoridFieldNumber = 1,
   };
-  // required string a_aKeySystem = 2;
-  bool has_a_akeysystem() const;
-  private:
-  bool _internal_has_a_akeysystem() const;
-  public:
+  // string a_aKeySystem = 2;
   void clear_a_akeysystem();
   const std::string& a_akeysystem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -745,11 +756,7 @@ class Msg_PChromiumCDMConstructor final :
   std::string* _internal_mutable_a_akeysystem();
   public:
 
-  // required sint64 a_actorid = 1;
-  bool has_a_actorid() const;
-  private:
-  bool _internal_has_a_actorid() const;
-  public:
+  // sint64 a_actorid = 1;
   void clear_a_actorid();
   int64_t a_actorid() const;
   void set_a_actorid(int64_t value);
@@ -762,17 +769,13 @@ class Msg_PChromiumCDMConstructor final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_akeysystem_;
     int64_t a_actorid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPContent_2eproto;
@@ -780,10 +783,9 @@ class Msg_PChromiumCDMConstructor final :
 // -------------------------------------------------------------------
 
 class Reply_PChromiumCDMConstructor final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPContent.Reply_PChromiumCDMConstructor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gmp.PGMPContent.Reply_PChromiumCDMConstructor) */ {
  public:
   inline Reply_PChromiumCDMConstructor() : Reply_PChromiumCDMConstructor(nullptr) {}
-  ~Reply_PChromiumCDMConstructor() override;
   explicit PROTOBUF_CONSTEXPR Reply_PChromiumCDMConstructor(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply_PChromiumCDMConstructor(const Reply_PChromiumCDMConstructor& from);
@@ -810,13 +812,15 @@ class Reply_PChromiumCDMConstructor final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_PChromiumCDMConstructor& default_instance() {
     return *internal_default_instance();
   }
@@ -854,23 +858,15 @@ class Reply_PChromiumCDMConstructor final :
   Reply_PChromiumCDMConstructor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_PChromiumCDMConstructor>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply_PChromiumCDMConstructor& from);
-  void MergeFrom(const Reply_PChromiumCDMConstructor& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply_PChromiumCDMConstructor* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply_PChromiumCDMConstructor& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply_PChromiumCDMConstructor& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -882,7 +878,10 @@ class Reply_PChromiumCDMConstructor final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -896,9 +895,7 @@ class Reply_PChromiumCDMConstructor final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PGMPContent_2eproto;
 };
 // ===================================================================
@@ -912,17 +909,9 @@ class Reply_PChromiumCDMConstructor final :
 #endif  // __GNUC__
 // Msg_PGMPVideoDecoderConstructor
 
-// required sint64 a_actorid = 1;
-inline bool Msg_PGMPVideoDecoderConstructor::_internal_has_a_actorid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_PGMPVideoDecoderConstructor::has_a_actorid() const {
-  return _internal_has_a_actorid();
-}
+// sint64 a_actorid = 1;
 inline void Msg_PGMPVideoDecoderConstructor::clear_a_actorid() {
   _impl_.a_actorid_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline int64_t Msg_PGMPVideoDecoderConstructor::_internal_a_actorid() const {
   return _impl_.a_actorid_;
@@ -932,7 +921,7 @@ inline int64_t Msg_PGMPVideoDecoderConstructor::a_actorid() const {
   return _internal_a_actorid();
 }
 inline void Msg_PGMPVideoDecoderConstructor::_internal_set_a_actorid(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_actorid_ = value;
 }
 inline void Msg_PGMPVideoDecoderConstructor::set_a_actorid(int64_t value) {
@@ -948,17 +937,9 @@ inline void Msg_PGMPVideoDecoderConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PGMPVideoEncoderConstructor
 
-// required sint64 a_actorid = 1;
-inline bool Msg_PGMPVideoEncoderConstructor::_internal_has_a_actorid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_PGMPVideoEncoderConstructor::has_a_actorid() const {
-  return _internal_has_a_actorid();
-}
+// sint64 a_actorid = 1;
 inline void Msg_PGMPVideoEncoderConstructor::clear_a_actorid() {
   _impl_.a_actorid_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline int64_t Msg_PGMPVideoEncoderConstructor::_internal_a_actorid() const {
   return _impl_.a_actorid_;
@@ -968,7 +949,7 @@ inline int64_t Msg_PGMPVideoEncoderConstructor::a_actorid() const {
   return _internal_a_actorid();
 }
 inline void Msg_PGMPVideoEncoderConstructor::_internal_set_a_actorid(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_actorid_ = value;
 }
 inline void Msg_PGMPVideoEncoderConstructor::set_a_actorid(int64_t value) {
@@ -984,17 +965,9 @@ inline void Msg_PGMPVideoEncoderConstructor::set_a_actorid(int64_t value) {
 
 // Msg_PChromiumCDMConstructor
 
-// required sint64 a_actorid = 1;
-inline bool Msg_PChromiumCDMConstructor::_internal_has_a_actorid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_PChromiumCDMConstructor::has_a_actorid() const {
-  return _internal_has_a_actorid();
-}
+// sint64 a_actorid = 1;
 inline void Msg_PChromiumCDMConstructor::clear_a_actorid() {
   _impl_.a_actorid_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline int64_t Msg_PChromiumCDMConstructor::_internal_a_actorid() const {
   return _impl_.a_actorid_;
@@ -1004,7 +977,7 @@ inline int64_t Msg_PChromiumCDMConstructor::a_actorid() const {
   return _internal_a_actorid();
 }
 inline void Msg_PChromiumCDMConstructor::_internal_set_a_actorid(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_actorid_ = value;
 }
 inline void Msg_PChromiumCDMConstructor::set_a_actorid(int64_t value) {
@@ -1012,17 +985,9 @@ inline void Msg_PChromiumCDMConstructor::set_a_actorid(int64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor.a_actorid)
 }
 
-// required string a_aKeySystem = 2;
-inline bool Msg_PChromiumCDMConstructor::_internal_has_a_akeysystem() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_PChromiumCDMConstructor::has_a_akeysystem() const {
-  return _internal_has_a_akeysystem();
-}
+// string a_aKeySystem = 2;
 inline void Msg_PChromiumCDMConstructor::clear_a_akeysystem() {
   _impl_.a_akeysystem_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_PChromiumCDMConstructor::a_akeysystem() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor.a_aKeySystem)
@@ -1031,7 +996,7 @@ inline const std::string& Msg_PChromiumCDMConstructor::a_akeysystem() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PChromiumCDMConstructor::set_a_akeysystem(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_akeysystem_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor.a_aKeySystem)
 }
@@ -1044,32 +1009,22 @@ inline const std::string& Msg_PChromiumCDMConstructor::_internal_a_akeysystem() 
   return _impl_.a_akeysystem_.Get();
 }
 inline void Msg_PChromiumCDMConstructor::_internal_set_a_akeysystem(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_akeysystem_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_PChromiumCDMConstructor::_internal_mutable_a_akeysystem() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_akeysystem_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_PChromiumCDMConstructor::release_a_akeysystem() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.gmp.PGMPContent.Msg_PChromiumCDMConstructor.a_aKeySystem)
-  if (!_internal_has_a_akeysystem()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_akeysystem_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_akeysystem_.IsDefault()) {
-    _impl_.a_akeysystem_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_akeysystem_.Release();
 }
 inline void Msg_PChromiumCDMConstructor::set_allocated_a_akeysystem(std::string* a_akeysystem) {
   if (a_akeysystem != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_akeysystem_.SetAllocated(a_akeysystem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

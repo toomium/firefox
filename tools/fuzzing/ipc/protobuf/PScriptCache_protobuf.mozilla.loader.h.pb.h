@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto
@@ -41,6 +43,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace loader {
@@ -60,7 +63,7 @@ namespace loader {
 // ===================================================================
 
 class ScriptData final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.loader.ScriptData) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.loader.ScriptData) */ {
  public:
   inline ScriptData() : ScriptData(nullptr) {}
   ~ScriptData() override;
@@ -90,13 +93,15 @@ class ScriptData final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const ScriptData& default_instance() {
     return *internal_default_instance();
   }
@@ -134,9 +139,15 @@ class ScriptData final :
   ScriptData* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<ScriptData>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const ScriptData& from);
-  void MergeFrom(const ScriptData& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const ScriptData& from) {
+    ScriptData::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -149,7 +160,7 @@ class ScriptData final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(ScriptData* other);
 
   private:
@@ -162,7 +173,10 @@ class ScriptData final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -196,11 +210,7 @@ class ScriptData final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_xdrdata();
 
-  // required string a_url = 1;
-  bool has_a_url() const;
-  private:
-  bool _internal_has_a_url() const;
-  public:
+  // string a_url = 1;
   void clear_a_url();
   const std::string& a_url() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -214,11 +224,7 @@ class ScriptData final :
   std::string* _internal_mutable_a_url();
   public:
 
-  // required string a_cachePath = 2;
-  bool has_a_cachepath() const;
-  private:
-  bool _internal_has_a_cachepath() const;
-  public:
+  // string a_cachePath = 2;
   void clear_a_cachepath();
   const std::string& a_cachepath() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -232,11 +238,7 @@ class ScriptData final :
   std::string* _internal_mutable_a_cachepath();
   public:
 
-  // required bytes a_loadTime = 3;
-  bool has_a_loadtime() const;
-  private:
-  bool _internal_has_a_loadtime() const;
-  public:
+  // bytes a_loadTime = 3;
   void clear_a_loadtime();
   const std::string& a_loadtime() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -254,19 +256,16 @@ class ScriptData final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_xdrdata_;
+    mutable std::atomic<int> _a_xdrdata_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_url_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_cachepath_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_loadtime_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto;
@@ -282,17 +281,9 @@ class ScriptData final :
 #endif  // __GNUC__
 // ScriptData
 
-// required string a_url = 1;
-inline bool ScriptData::_internal_has_a_url() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool ScriptData::has_a_url() const {
-  return _internal_has_a_url();
-}
+// string a_url = 1;
 inline void ScriptData::clear_a_url() {
   _impl_.a_url_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& ScriptData::a_url() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.loader.ScriptData.a_url)
@@ -301,7 +292,7 @@ inline const std::string& ScriptData::a_url() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ScriptData::set_a_url(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_url_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.loader.ScriptData.a_url)
 }
@@ -314,32 +305,22 @@ inline const std::string& ScriptData::_internal_a_url() const {
   return _impl_.a_url_.Get();
 }
 inline void ScriptData::_internal_set_a_url(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_url_.Set(value, GetArenaForAllocation());
 }
 inline std::string* ScriptData::_internal_mutable_a_url() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_url_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ScriptData::release_a_url() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.loader.ScriptData.a_url)
-  if (!_internal_has_a_url()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_url_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_url_.IsDefault()) {
-    _impl_.a_url_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_url_.Release();
 }
 inline void ScriptData::set_allocated_a_url(std::string* a_url) {
   if (a_url != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_url_.SetAllocated(a_url, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -350,17 +331,9 @@ inline void ScriptData::set_allocated_a_url(std::string* a_url) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.loader.ScriptData.a_url)
 }
 
-// required string a_cachePath = 2;
-inline bool ScriptData::_internal_has_a_cachepath() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool ScriptData::has_a_cachepath() const {
-  return _internal_has_a_cachepath();
-}
+// string a_cachePath = 2;
 inline void ScriptData::clear_a_cachepath() {
   _impl_.a_cachepath_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& ScriptData::a_cachepath() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.loader.ScriptData.a_cachePath)
@@ -369,7 +342,7 @@ inline const std::string& ScriptData::a_cachepath() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ScriptData::set_a_cachepath(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_cachepath_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.loader.ScriptData.a_cachePath)
 }
@@ -382,32 +355,22 @@ inline const std::string& ScriptData::_internal_a_cachepath() const {
   return _impl_.a_cachepath_.Get();
 }
 inline void ScriptData::_internal_set_a_cachepath(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_cachepath_.Set(value, GetArenaForAllocation());
 }
 inline std::string* ScriptData::_internal_mutable_a_cachepath() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_cachepath_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ScriptData::release_a_cachepath() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.loader.ScriptData.a_cachePath)
-  if (!_internal_has_a_cachepath()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_cachepath_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_cachepath_.IsDefault()) {
-    _impl_.a_cachepath_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_cachepath_.Release();
 }
 inline void ScriptData::set_allocated_a_cachepath(std::string* a_cachepath) {
   if (a_cachepath != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_cachepath_.SetAllocated(a_cachepath, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -418,17 +381,9 @@ inline void ScriptData::set_allocated_a_cachepath(std::string* a_cachepath) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.loader.ScriptData.a_cachePath)
 }
 
-// required bytes a_loadTime = 3;
-inline bool ScriptData::_internal_has_a_loadtime() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool ScriptData::has_a_loadtime() const {
-  return _internal_has_a_loadtime();
-}
+// bytes a_loadTime = 3;
 inline void ScriptData::clear_a_loadtime() {
   _impl_.a_loadtime_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& ScriptData::a_loadtime() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.loader.ScriptData.a_loadTime)
@@ -437,7 +392,7 @@ inline const std::string& ScriptData::a_loadtime() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ScriptData::set_a_loadtime(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_loadtime_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.loader.ScriptData.a_loadTime)
 }
@@ -450,32 +405,22 @@ inline const std::string& ScriptData::_internal_a_loadtime() const {
   return _impl_.a_loadtime_.Get();
 }
 inline void ScriptData::_internal_set_a_loadtime(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_loadtime_.Set(value, GetArenaForAllocation());
 }
 inline std::string* ScriptData::_internal_mutable_a_loadtime() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_loadtime_.Mutable(GetArenaForAllocation());
 }
 inline std::string* ScriptData::release_a_loadtime() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.loader.ScriptData.a_loadTime)
-  if (!_internal_has_a_loadtime()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_loadtime_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_loadtime_.IsDefault()) {
-    _impl_.a_loadtime_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_loadtime_.Release();
 }
 inline void ScriptData::set_allocated_a_loadtime(std::string* a_loadtime) {
   if (a_loadtime != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_loadtime_.SetAllocated(a_loadtime, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

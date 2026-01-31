@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/toolkit/components/printingui/ipc/PPrintingTypes.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 // Importing all namespaced protobuf children headers
 import public "PPrintingTypes_protobuf.mozilla.embedding.h.proto";

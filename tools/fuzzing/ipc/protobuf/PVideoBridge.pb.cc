@@ -8,7 +8,10 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -22,8 +25,7 @@ namespace mozilla {
 namespace layers {
 namespace PVideoBridge {
 PROTOBUF_CONSTEXPR Msg_Ping::Msg_Ping(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Msg_PingDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PingDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -35,9 +37,8 @@ struct Msg_PingDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_PingDefaultTypeInternal _Msg_Ping_default_instance_;
 PROTOBUF_CONSTEXPR Reply_Ping::Reply_Ping(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_ok_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_ok_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Reply_PingDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_PingDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -49,15 +50,14 @@ struct Reply_PingDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_PingDefaultTypeInternal _Reply_Ping_default_instance_;
 PROTOBUF_CONSTEXPR Msg_PTextureConstructor::Msg_PTextureConstructor(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_abackend_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.a_abackend_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_atextureflags_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_acontentid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_ashareddata_)*/nullptr
   , /*decltype(_impl_.a_areadlock_)*/nullptr
   , /*decltype(_impl_.a_actorid_)*/int64_t{0}
-  , /*decltype(_impl_.a_aserial_)*/uint64_t{0u}} {}
+  , /*decltype(_impl_.a_aserial_)*/uint64_t{0u}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_PTextureConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PTextureConstructorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -68,8 +68,7 @@ struct Msg_PTextureConstructorDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_PTextureConstructorDefaultTypeInternal _Msg_PTextureConstructor_default_instance_;
 PROTOBUF_CONSTEXPR Reply_PTextureConstructor::Reply_PTextureConstructor(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._cached_size_)*/{}} {}
+    ::_pbi::ConstantInitialized) {}
 struct Reply_PTextureConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_PTextureConstructorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -83,6 +82,91 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace layers
 }  // namespace mozilla
 }  // namespace protobuf
+static ::_pb::Metadata file_level_metadata_PVideoBridge_2eproto[4];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PVideoBridge_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PVideoBridge_2eproto = nullptr;
+
+const uint32_t TableStruct_PVideoBridge_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::PVideoBridge::Msg_Ping, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::PVideoBridge::Reply_Ping, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::PVideoBridge::Reply_Ping, _impl_.a_ok_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::PVideoBridge::Msg_PTextureConstructor, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::PVideoBridge::Msg_PTextureConstructor, _impl_.a_actorid_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::PVideoBridge::Msg_PTextureConstructor, _impl_.a_ashareddata_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::PVideoBridge::Msg_PTextureConstructor, _impl_.a_areadlock_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::PVideoBridge::Msg_PTextureConstructor, _impl_.a_abackend_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::PVideoBridge::Msg_PTextureConstructor, _impl_.a_atextureflags_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::PVideoBridge::Msg_PTextureConstructor, _impl_.a_acontentid_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::PVideoBridge::Msg_PTextureConstructor, _impl_.a_aserial_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::PVideoBridge::Reply_PTextureConstructor, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::protobuf::mozilla::layers::PVideoBridge::Msg_Ping)},
+  { 6, -1, -1, sizeof(::protobuf::mozilla::layers::PVideoBridge::Reply_Ping)},
+  { 13, -1, -1, sizeof(::protobuf::mozilla::layers::PVideoBridge::Msg_PTextureConstructor)},
+  { 26, -1, -1, sizeof(::protobuf::mozilla::layers::PVideoBridge::Reply_PTextureConstructor)},
+};
+
+static const ::_pb::Message* const file_default_instances[] = {
+  &::protobuf::mozilla::layers::PVideoBridge::_Msg_Ping_default_instance_._instance,
+  &::protobuf::mozilla::layers::PVideoBridge::_Reply_Ping_default_instance_._instance,
+  &::protobuf::mozilla::layers::PVideoBridge::_Msg_PTextureConstructor_default_instance_._instance,
+  &::protobuf::mozilla::layers::PVideoBridge::_Reply_PTextureConstructor_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_PVideoBridge_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\022PVideoBridge.proto\022$protobuf.mozilla.l"
+  "ayers.PVideoBridge\032\024LayersSurfaces.proto"
+  "\032\024LayersMessages.proto\"\n\n\010Msg_Ping\"\032\n\nRe"
+  "ply_Ping\022\014\n\004a_ok\030\001 \001(\014\"\207\002\n\027Msg_PTextureC"
+  "onstructor\022\021\n\ta_actorid\030\001 \001(\022\022A\n\ra_aShar"
+  "edData\030\002 \001(\0132*.protobuf.mozilla.layers.S"
+  "urfaceDescriptor\022@\n\013a_aReadLock\030\003 \001(\0132+."
+  "protobuf.mozilla.layers.ReadLockDescript"
+  "or\022\022\n\na_aBackend\030\004 \001(\014\022\027\n\017a_aTextureFlag"
+  "s\030\005 \001(\014\022\024\n\014a_aContentId\030\006 \001(\014\022\021\n\ta_aSeri"
+  "al\030\007 \001(\004\"\033\n\031Reply_PTextureConstructorb\006p"
+  "roto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_PVideoBridge_2eproto_deps[2] = {
+  &::descriptor_table_LayersMessages_2eproto,
+  &::descriptor_table_LayersSurfaces_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_PVideoBridge_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_PVideoBridge_2eproto = {
+    false, false, 445, descriptor_table_protodef_PVideoBridge_2eproto,
+    "PVideoBridge.proto",
+    &descriptor_table_PVideoBridge_2eproto_once, descriptor_table_PVideoBridge_2eproto_deps, 2, 4,
+    schemas, file_default_instances, TableStruct_PVideoBridge_2eproto::offsets,
+    file_level_metadata_PVideoBridge_2eproto, file_level_enum_descriptors_PVideoBridge_2eproto,
+    file_level_service_descriptors_PVideoBridge_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PVideoBridge_2eproto_getter() {
+  return &descriptor_table_PVideoBridge_2eproto;
+}
+
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PVideoBridge_2eproto(&descriptor_table_PVideoBridge_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace layers {
@@ -96,179 +180,63 @@ class Msg_Ping::_Internal {
 
 Msg_Ping::Msg_Ping(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.PVideoBridge.Msg_Ping)
 }
 Msg_Ping::Msg_Ping(const Msg_Ping& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Msg_Ping* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PVideoBridge.Msg_Ping)
 }
 
-inline void Msg_Ping::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_Ping::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_Ping::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_Ping::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PVideoBridge_2eproto_getter, &descriptor_table_PVideoBridge_2eproto_once,
+      file_level_metadata_PVideoBridge_2eproto[0]);
 }
-
-Msg_Ping::~Msg_Ping() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.PVideoBridge.Msg_Ping)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Msg_Ping::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Msg_Ping::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Msg_Ping::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.layers.PVideoBridge.Msg_Ping)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Msg_Ping::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Msg_Ping::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.layers.PVideoBridge.Msg_Ping)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.PVideoBridge.Msg_Ping)
-  return target;
-}
-
-size_t Msg_Ping::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PVideoBridge.Msg_Ping)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Msg_Ping::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_Ping*>(
-      &from));
-}
-
-void Msg_Ping::MergeFrom(const Msg_Ping& from) {
-  Msg_Ping* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.PVideoBridge.Msg_Ping)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Msg_Ping::CopyFrom(const Msg_Ping& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.layers.PVideoBridge.Msg_Ping)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Msg_Ping::IsInitialized() const {
-  return true;
-}
-
-void Msg_Ping::InternalSwap(Msg_Ping* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Msg_Ping::GetTypeName() const {
-  return "protobuf.mozilla.layers.PVideoBridge.Msg_Ping";
-}
-
 
 // ===================================================================
 
 class Reply_Ping::_Internal {
  public:
-  using HasBits = decltype(std::declval<Reply_Ping>()._impl_._has_bits_);
-  static void set_has_a_ok(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Reply_Ping::Reply_Ping(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.PVideoBridge.Reply_Ping)
 }
 Reply_Ping::Reply_Ping(const Reply_Ping& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Reply_Ping* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_ok_){}};
+      decltype(_impl_.a_ok_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_ok_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_ok_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_ok()) {
+  if (!from._internal_a_ok().empty()) {
     _this->_impl_.a_ok_.Set(from._internal_a_ok(), 
       _this->GetArenaForAllocation());
   }
@@ -280,9 +248,8 @@ inline void Reply_Ping::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_ok_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_ok_){}
   };
   _impl_.a_ok_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -292,7 +259,7 @@ inline void Reply_Ping::SharedCtor(
 
 Reply_Ping::~Reply_Ping() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.PVideoBridge.Reply_Ping)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -314,22 +281,17 @@ void Reply_Ping::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_ok_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_ok_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Reply_Ping::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_ok = 1;
+      // bytes a_ok = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_ok();
@@ -349,12 +311,11 @@ const char* Reply_Ping::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -368,16 +329,15 @@ uint8_t* Reply_Ping::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_ok = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // bytes a_ok = 1;
+  if (!this->_internal_a_ok().empty()) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_ok(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.PVideoBridge.Reply_Ping)
   return target;
@@ -387,41 +347,39 @@ size_t Reply_Ping::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PVideoBridge.Reply_Ping)
   size_t total_size = 0;
 
-  // required bytes a_ok = 1;
-  if (_internal_has_a_ok()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_ok());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // bytes a_ok = 1;
+  if (!this->_internal_a_ok().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_ok());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Reply_Ping::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply_Ping*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_Ping::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Reply_Ping::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_Ping::GetClassData() const { return &_class_data_; }
 
-void Reply_Ping::MergeFrom(const Reply_Ping& from) {
-  Reply_Ping* const _this = this;
+
+void Reply_Ping::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Reply_Ping*>(&to_msg);
+  auto& from = static_cast<const Reply_Ping&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.PVideoBridge.Reply_Ping)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_ok()) {
+  if (!from._internal_a_ok().empty()) {
     _this->_internal_set_a_ok(from._internal_a_ok());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Reply_Ping::CopyFrom(const Reply_Ping& from) {
@@ -432,7 +390,6 @@ void Reply_Ping::CopyFrom(const Reply_Ping& from) {
 }
 
 bool Reply_Ping::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -441,49 +398,24 @@ void Reply_Ping::InternalSwap(Reply_Ping* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_ok_, lhs_arena,
       &other->_impl_.a_ok_, rhs_arena
   );
 }
 
-std::string Reply_Ping::GetTypeName() const {
-  return "protobuf.mozilla.layers.PVideoBridge.Reply_Ping";
+::PROTOBUF_NAMESPACE_ID::Metadata Reply_Ping::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PVideoBridge_2eproto_getter, &descriptor_table_PVideoBridge_2eproto_once,
+      file_level_metadata_PVideoBridge_2eproto[1]);
 }
-
 
 // ===================================================================
 
 class Msg_PTextureConstructor::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_PTextureConstructor>()._impl_._has_bits_);
-  static void set_has_a_actorid(HasBits* has_bits) {
-    (*has_bits)[0] |= 32u;
-  }
   static const ::protobuf::mozilla::layers::SurfaceDescriptor& a_ashareddata(const Msg_PTextureConstructor* msg);
-  static void set_has_a_ashareddata(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
   static const ::protobuf::mozilla::layers::ReadLockDescriptor& a_areadlock(const Msg_PTextureConstructor* msg);
-  static void set_has_a_areadlock(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static void set_has_a_abackend(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_atextureflags(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_a_acontentid(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_a_aserial(HasBits* has_bits) {
-    (*has_bits)[0] |= 64u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000007f) ^ 0x0000007f) != 0;
-  }
 };
 
 const ::protobuf::mozilla::layers::SurfaceDescriptor&
@@ -495,39 +427,42 @@ Msg_PTextureConstructor::_Internal::a_areadlock(const Msg_PTextureConstructor* m
   return *msg->_impl_.a_areadlock_;
 }
 void Msg_PTextureConstructor::clear_a_ashareddata() {
-  if (_impl_.a_ashareddata_ != nullptr) _impl_.a_ashareddata_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_ashareddata_ != nullptr) {
+    delete _impl_.a_ashareddata_;
+  }
+  _impl_.a_ashareddata_ = nullptr;
 }
 void Msg_PTextureConstructor::clear_a_areadlock() {
-  if (_impl_.a_areadlock_ != nullptr) _impl_.a_areadlock_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_areadlock_ != nullptr) {
+    delete _impl_.a_areadlock_;
+  }
+  _impl_.a_areadlock_ = nullptr;
 }
 Msg_PTextureConstructor::Msg_PTextureConstructor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.PVideoBridge.Msg_PTextureConstructor)
 }
 Msg_PTextureConstructor::Msg_PTextureConstructor(const Msg_PTextureConstructor& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_PTextureConstructor* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_abackend_){}
+      decltype(_impl_.a_abackend_){}
     , decltype(_impl_.a_atextureflags_){}
     , decltype(_impl_.a_acontentid_){}
     , decltype(_impl_.a_ashareddata_){nullptr}
     , decltype(_impl_.a_areadlock_){nullptr}
     , decltype(_impl_.a_actorid_){}
-    , decltype(_impl_.a_aserial_){}};
+    , decltype(_impl_.a_aserial_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_abackend_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_abackend_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_abackend()) {
+  if (!from._internal_a_abackend().empty()) {
     _this->_impl_.a_abackend_.Set(from._internal_a_abackend(), 
       _this->GetArenaForAllocation());
   }
@@ -535,7 +470,7 @@ Msg_PTextureConstructor::Msg_PTextureConstructor(const Msg_PTextureConstructor& 
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_atextureflags_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_atextureflags()) {
+  if (!from._internal_a_atextureflags().empty()) {
     _this->_impl_.a_atextureflags_.Set(from._internal_a_atextureflags(), 
       _this->GetArenaForAllocation());
   }
@@ -543,7 +478,7 @@ Msg_PTextureConstructor::Msg_PTextureConstructor(const Msg_PTextureConstructor& 
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_acontentid_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_acontentid()) {
+  if (!from._internal_a_acontentid().empty()) {
     _this->_impl_.a_acontentid_.Set(from._internal_a_acontentid(), 
       _this->GetArenaForAllocation());
   }
@@ -564,15 +499,14 @@ inline void Msg_PTextureConstructor::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_abackend_){}
+      decltype(_impl_.a_abackend_){}
     , decltype(_impl_.a_atextureflags_){}
     , decltype(_impl_.a_acontentid_){}
     , decltype(_impl_.a_ashareddata_){nullptr}
     , decltype(_impl_.a_areadlock_){nullptr}
     , decltype(_impl_.a_actorid_){int64_t{0}}
     , decltype(_impl_.a_aserial_){uint64_t{0u}}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_abackend_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -590,7 +524,7 @@ inline void Msg_PTextureConstructor::SharedCtor(
 
 Msg_PTextureConstructor::~Msg_PTextureConstructor() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.PVideoBridge.Msg_PTextureConstructor)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -616,52 +550,38 @@ void Msg_PTextureConstructor::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_abackend_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_atextureflags_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _impl_.a_acontentid_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000008u) {
-      GOOGLE_DCHECK(_impl_.a_ashareddata_ != nullptr);
-      _impl_.a_ashareddata_->Clear();
-    }
-    if (cached_has_bits & 0x00000010u) {
-      GOOGLE_DCHECK(_impl_.a_areadlock_ != nullptr);
-      _impl_.a_areadlock_->Clear();
-    }
+  _impl_.a_abackend_.ClearToEmpty();
+  _impl_.a_atextureflags_.ClearToEmpty();
+  _impl_.a_acontentid_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_ashareddata_ != nullptr) {
+    delete _impl_.a_ashareddata_;
   }
-  if (cached_has_bits & 0x00000060u) {
-    ::memset(&_impl_.a_actorid_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.a_aserial_) -
-        reinterpret_cast<char*>(&_impl_.a_actorid_)) + sizeof(_impl_.a_aserial_));
+  _impl_.a_ashareddata_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_areadlock_ != nullptr) {
+    delete _impl_.a_areadlock_;
   }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_areadlock_ = nullptr;
+  ::memset(&_impl_.a_actorid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.a_aserial_) -
+      reinterpret_cast<char*>(&_impl_.a_actorid_)) + sizeof(_impl_.a_aserial_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_PTextureConstructor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required sint64 a_actorid = 1;
+      // sint64 a_actorid = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_a_actorid(&has_bits);
           _impl_.a_actorid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 2;
+      // .protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_ashareddata(), ptr);
@@ -669,7 +589,7 @@ const char* Msg_PTextureConstructor::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 3;
+      // .protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_areadlock(), ptr);
@@ -677,7 +597,7 @@ const char* Msg_PTextureConstructor::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aBackend = 4;
+      // bytes a_aBackend = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_abackend();
@@ -686,7 +606,7 @@ const char* Msg_PTextureConstructor::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aTextureFlags = 5;
+      // bytes a_aTextureFlags = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           auto str = _internal_mutable_a_atextureflags();
@@ -695,7 +615,7 @@ const char* Msg_PTextureConstructor::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_aContentId = 6;
+      // bytes a_aContentId = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           auto str = _internal_mutable_a_acontentid();
@@ -704,10 +624,9 @@ const char* Msg_PTextureConstructor::_InternalParse(const char* ptr, ::_pbi::Par
         } else
           goto handle_unusual;
         continue;
-      // required uint64 a_aSerial = 7;
+      // uint64 a_aSerial = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
-          _Internal::set_has_a_aserial(&has_bits);
           _impl_.a_aserial_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -724,12 +643,11 @@ const char* Msg_PTextureConstructor::_InternalParse(const char* ptr, ::_pbi::Par
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -743,202 +661,153 @@ uint8_t* Msg_PTextureConstructor::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required sint64 a_actorid = 1;
-  if (cached_has_bits & 0x00000020u) {
+  // sint64 a_actorid = 1;
+  if (this->_internal_a_actorid() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteSInt64ToArray(1, this->_internal_a_actorid(), target);
   }
 
-  // required .protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 2;
-  if (cached_has_bits & 0x00000008u) {
+  // .protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 2;
+  if (this->_internal_has_a_ashareddata()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::a_ashareddata(this),
         _Internal::a_ashareddata(this).GetCachedSize(), target, stream);
   }
 
-  // required .protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 3;
-  if (cached_has_bits & 0x00000010u) {
+  // .protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 3;
+  if (this->_internal_has_a_areadlock()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(3, _Internal::a_areadlock(this),
         _Internal::a_areadlock(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes a_aBackend = 4;
-  if (cached_has_bits & 0x00000001u) {
+  // bytes a_aBackend = 4;
+  if (!this->_internal_a_abackend().empty()) {
     target = stream->WriteBytesMaybeAliased(
         4, this->_internal_a_abackend(), target);
   }
 
-  // required bytes a_aTextureFlags = 5;
-  if (cached_has_bits & 0x00000002u) {
+  // bytes a_aTextureFlags = 5;
+  if (!this->_internal_a_atextureflags().empty()) {
     target = stream->WriteBytesMaybeAliased(
         5, this->_internal_a_atextureflags(), target);
   }
 
-  // required bytes a_aContentId = 6;
-  if (cached_has_bits & 0x00000004u) {
+  // bytes a_aContentId = 6;
+  if (!this->_internal_a_acontentid().empty()) {
     target = stream->WriteBytesMaybeAliased(
         6, this->_internal_a_acontentid(), target);
   }
 
-  // required uint64 a_aSerial = 7;
-  if (cached_has_bits & 0x00000040u) {
+  // uint64 a_aSerial = 7;
+  if (this->_internal_a_aserial() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt64ToArray(7, this->_internal_a_aserial(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.PVideoBridge.Msg_PTextureConstructor)
   return target;
 }
 
-size_t Msg_PTextureConstructor::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.layers.PVideoBridge.Msg_PTextureConstructor)
-  size_t total_size = 0;
-
-  if (_internal_has_a_abackend()) {
-    // required bytes a_aBackend = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_abackend());
-  }
-
-  if (_internal_has_a_atextureflags()) {
-    // required bytes a_aTextureFlags = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_atextureflags());
-  }
-
-  if (_internal_has_a_acontentid()) {
-    // required bytes a_aContentId = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_acontentid());
-  }
-
-  if (_internal_has_a_ashareddata()) {
-    // required .protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_ashareddata_);
-  }
-
-  if (_internal_has_a_areadlock()) {
-    // required .protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_areadlock_);
-  }
-
-  if (_internal_has_a_actorid()) {
-    // required sint64 a_actorid = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
-  }
-
-  if (_internal_has_a_aserial()) {
-    // required uint64 a_aSerial = 7;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_aserial());
-  }
-
-  return total_size;
-}
 size_t Msg_PTextureConstructor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PVideoBridge.Msg_PTextureConstructor)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000007f) ^ 0x0000007f) == 0) {  // All required fields are present.
-    // required bytes a_aBackend = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_abackend());
-
-    // required bytes a_aTextureFlags = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_atextureflags());
-
-    // required bytes a_aContentId = 6;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_acontentid());
-
-    // required .protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_ashareddata_);
-
-    // required .protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_areadlock_);
-
-    // required sint64 a_actorid = 1;
-    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
-
-    // required uint64 a_aSerial = 7;
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_aserial());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // bytes a_aBackend = 4;
+  if (!this->_internal_a_abackend().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_abackend());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // bytes a_aTextureFlags = 5;
+  if (!this->_internal_a_atextureflags().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_atextureflags());
+  }
+
+  // bytes a_aContentId = 6;
+  if (!this->_internal_a_acontentid().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_acontentid());
+  }
+
+  // .protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 2;
+  if (this->_internal_has_a_ashareddata()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_ashareddata_);
+  }
+
+  // .protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 3;
+  if (this->_internal_has_a_areadlock()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_areadlock_);
+  }
+
+  // sint64 a_actorid = 1;
+  if (this->_internal_a_actorid() != 0) {
+    total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
+  }
+
+  // uint64 a_aSerial = 7;
+  if (this->_internal_a_aserial() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_aserial());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_PTextureConstructor::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_PTextureConstructor*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_PTextureConstructor::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_PTextureConstructor::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_PTextureConstructor::GetClassData() const { return &_class_data_; }
 
-void Msg_PTextureConstructor::MergeFrom(const Msg_PTextureConstructor& from) {
-  Msg_PTextureConstructor* const _this = this;
+
+void Msg_PTextureConstructor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_PTextureConstructor*>(&to_msg);
+  auto& from = static_cast<const Msg_PTextureConstructor&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.PVideoBridge.Msg_PTextureConstructor)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000007fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_abackend(from._internal_a_abackend());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_atextureflags(from._internal_a_atextureflags());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_a_acontentid(from._internal_a_acontentid());
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_internal_mutable_a_ashareddata()->::protobuf::mozilla::layers::SurfaceDescriptor::MergeFrom(
-          from._internal_a_ashareddata());
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_internal_mutable_a_areadlock()->::protobuf::mozilla::layers::ReadLockDescriptor::MergeFrom(
-          from._internal_a_areadlock());
-    }
-    if (cached_has_bits & 0x00000020u) {
-      _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
-    }
-    if (cached_has_bits & 0x00000040u) {
-      _this->_impl_.a_aserial_ = from._impl_.a_aserial_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_abackend().empty()) {
+    _this->_internal_set_a_abackend(from._internal_a_abackend());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_atextureflags().empty()) {
+    _this->_internal_set_a_atextureflags(from._internal_a_atextureflags());
+  }
+  if (!from._internal_a_acontentid().empty()) {
+    _this->_internal_set_a_acontentid(from._internal_a_acontentid());
+  }
+  if (from._internal_has_a_ashareddata()) {
+    _this->_internal_mutable_a_ashareddata()->::protobuf::mozilla::layers::SurfaceDescriptor::MergeFrom(
+        from._internal_a_ashareddata());
+  }
+  if (from._internal_has_a_areadlock()) {
+    _this->_internal_mutable_a_areadlock()->::protobuf::mozilla::layers::ReadLockDescriptor::MergeFrom(
+        from._internal_a_areadlock());
+  }
+  if (from._internal_a_actorid() != 0) {
+    _this->_internal_set_a_actorid(from._internal_a_actorid());
+  }
+  if (from._internal_a_aserial() != 0) {
+    _this->_internal_set_a_aserial(from._internal_a_aserial());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_PTextureConstructor::CopyFrom(const Msg_PTextureConstructor& from) {
@@ -949,13 +818,6 @@ void Msg_PTextureConstructor::CopyFrom(const Msg_PTextureConstructor& from) {
 }
 
 bool Msg_PTextureConstructor::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_ashareddata()) {
-    if (!_impl_.a_ashareddata_->IsInitialized()) return false;
-  }
-  if (_internal_has_a_areadlock()) {
-    if (!_impl_.a_areadlock_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -964,7 +826,6 @@ void Msg_PTextureConstructor::InternalSwap(Msg_PTextureConstructor* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_abackend_, lhs_arena,
       &other->_impl_.a_abackend_, rhs_arena
@@ -985,10 +846,11 @@ void Msg_PTextureConstructor::InternalSwap(Msg_PTextureConstructor* other) {
           reinterpret_cast<char*>(&other->_impl_.a_ashareddata_));
 }
 
-std::string Msg_PTextureConstructor::GetTypeName() const {
-  return "protobuf.mozilla.layers.PVideoBridge.Msg_PTextureConstructor";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_PTextureConstructor::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PVideoBridge_2eproto_getter, &descriptor_table_PVideoBridge_2eproto_once,
+      file_level_metadata_PVideoBridge_2eproto[2]);
 }
-
 
 // ===================================================================
 
@@ -998,145 +860,37 @@ class Reply_PTextureConstructor::_Internal {
 
 Reply_PTextureConstructor::Reply_PTextureConstructor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.PVideoBridge.Reply_PTextureConstructor)
 }
 Reply_PTextureConstructor::Reply_PTextureConstructor(const Reply_PTextureConstructor& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   Reply_PTextureConstructor* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}};
-
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.layers.PVideoBridge.Reply_PTextureConstructor)
 }
 
-inline void Reply_PTextureConstructor::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      /*decltype(_impl_._cached_size_)*/{}
-  };
+
+
+
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_PTextureConstructor::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_PTextureConstructor::GetClassData() const { return &_class_data_; }
+
+
+
+
+
+
+
+::PROTOBUF_NAMESPACE_ID::Metadata Reply_PTextureConstructor::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PVideoBridge_2eproto_getter, &descriptor_table_PVideoBridge_2eproto_once,
+      file_level_metadata_PVideoBridge_2eproto[3]);
 }
-
-Reply_PTextureConstructor::~Reply_PTextureConstructor() {
-  // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.PVideoBridge.Reply_PTextureConstructor)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void Reply_PTextureConstructor::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void Reply_PTextureConstructor::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
-}
-
-void Reply_PTextureConstructor::Clear() {
-// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.layers.PVideoBridge.Reply_PTextureConstructor)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  _internal_metadata_.Clear<std::string>();
-}
-
-const char* Reply_PTextureConstructor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* Reply_PTextureConstructor::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.layers.PVideoBridge.Reply_PTextureConstructor)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.PVideoBridge.Reply_PTextureConstructor)
-  return target;
-}
-
-size_t Reply_PTextureConstructor::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.layers.PVideoBridge.Reply_PTextureConstructor)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
-  }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void Reply_PTextureConstructor::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Reply_PTextureConstructor*>(
-      &from));
-}
-
-void Reply_PTextureConstructor::MergeFrom(const Reply_PTextureConstructor& from) {
-  Reply_PTextureConstructor* const _this = this;
-  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.PVideoBridge.Reply_PTextureConstructor)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-}
-
-void Reply_PTextureConstructor::CopyFrom(const Reply_PTextureConstructor& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.layers.PVideoBridge.Reply_PTextureConstructor)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool Reply_PTextureConstructor::IsInitialized() const {
-  return true;
-}
-
-void Reply_PTextureConstructor::InternalSwap(Reply_PTextureConstructor* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-}
-
-std::string Reply_PTextureConstructor::GetTypeName() const {
-  return "protobuf.mozilla.layers.PVideoBridge.Reply_PTextureConstructor";
-}
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace PVideoBridge

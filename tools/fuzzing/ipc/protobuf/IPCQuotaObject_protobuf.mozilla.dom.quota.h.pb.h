@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto
@@ -41,6 +43,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -63,7 +66,7 @@ namespace quota {
 // ===================================================================
 
 class IPCQuotaObject final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.IPCQuotaObject) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.IPCQuotaObject) */ {
  public:
   inline IPCQuotaObject() : IPCQuotaObject(nullptr) {}
   ~IPCQuotaObject() override;
@@ -93,13 +96,15 @@ class IPCQuotaObject final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const IPCQuotaObject& default_instance() {
     return *internal_default_instance();
   }
@@ -137,9 +142,15 @@ class IPCQuotaObject final :
   IPCQuotaObject* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<IPCQuotaObject>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const IPCQuotaObject& from);
-  void MergeFrom(const IPCQuotaObject& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const IPCQuotaObject& from) {
+    IPCQuotaObject::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -152,7 +163,7 @@ class IPCQuotaObject final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(IPCQuotaObject* other);
 
   private:
@@ -165,7 +176,10 @@ class IPCQuotaObject final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -174,11 +188,7 @@ class IPCQuotaObject final :
   enum : int {
     kAChildEndpointFieldNumber = 1,
   };
-  // required bytes a_childEndpoint = 1;
-  bool has_a_childendpoint() const;
-  private:
-  bool _internal_has_a_childendpoint() const;
-  public:
+  // bytes a_childEndpoint = 1;
   void clear_a_childendpoint();
   const std::string& a_childendpoint() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -200,9 +210,8 @@ class IPCQuotaObject final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_childendpoint_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto;
@@ -218,17 +227,9 @@ class IPCQuotaObject final :
 #endif  // __GNUC__
 // IPCQuotaObject
 
-// required bytes a_childEndpoint = 1;
-inline bool IPCQuotaObject::_internal_has_a_childendpoint() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool IPCQuotaObject::has_a_childendpoint() const {
-  return _internal_has_a_childendpoint();
-}
+// bytes a_childEndpoint = 1;
 inline void IPCQuotaObject::clear_a_childendpoint() {
   _impl_.a_childendpoint_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& IPCQuotaObject::a_childendpoint() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.IPCQuotaObject.a_childEndpoint)
@@ -237,7 +238,7 @@ inline const std::string& IPCQuotaObject::a_childendpoint() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void IPCQuotaObject::set_a_childendpoint(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_childendpoint_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.IPCQuotaObject.a_childEndpoint)
 }
@@ -250,32 +251,22 @@ inline const std::string& IPCQuotaObject::_internal_a_childendpoint() const {
   return _impl_.a_childendpoint_.Get();
 }
 inline void IPCQuotaObject::_internal_set_a_childendpoint(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_childendpoint_.Set(value, GetArenaForAllocation());
 }
 inline std::string* IPCQuotaObject::_internal_mutable_a_childendpoint() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_childendpoint_.Mutable(GetArenaForAllocation());
 }
 inline std::string* IPCQuotaObject::release_a_childendpoint() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.quota.IPCQuotaObject.a_childEndpoint)
-  if (!_internal_has_a_childendpoint()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_childendpoint_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_childendpoint_.IsDefault()) {
-    _impl_.a_childendpoint_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_childendpoint_.Release();
 }
 inline void IPCQuotaObject::set_allocated_a_childendpoint(std::string* a_childendpoint) {
   if (a_childendpoint != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_childendpoint_.SetAllocated(a_childendpoint, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/netwerk/protocol/http/PHttpChannel.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.net.PHttpChannel;
 
@@ -22,7 +21,7 @@ import "HttpChannelParams.proto";
 
 // Message declarations
 message Msg_SetClassOfService {
-  required bytes a_cos = 1;
+  bytes a_cos = 1;
 }
 
 message Msg_Suspend {
@@ -32,39 +31,39 @@ message Msg_Resume {
 }
 
 message Msg_Cancel {
-  required bytes a_status = 1;
-  required uint32 a_requestBlockingReason = 2;
-  required string a_aReason = 3;
+  bytes a_status = 1;
+  uint32 a_requestBlockingReason = 2;
+  string a_aReason = 3;
   optional string a_logString = 4;
 }
 
 message Msg_Redirect2Verify {
-  required bytes a_result = 1;
-  required bytes a_changedHeaders = 2;
-  required uint32 a_sourceRequestBlockingReason = 3;
+  bytes a_result = 1;
+  bytes a_changedHeaders = 2;
+  uint32 a_sourceRequestBlockingReason = 3;
   optional protobuf.mozilla.net.ChildLoadInfoForwarderArgs a_targetLoadInfoForwarder = 4;
-  required uint32 a_loadFlags = 5;
+  uint32 a_loadFlags = 5;
   optional bytes a_referrerInfo = 6;
   optional bytes a_apiRedirectTo = 7;
   optional protobuf.mozilla.net.CorsPreflightArgs a_corsPreflightArgs = 8;
 }
 
 message Msg_DocumentChannelCleanup {
-  required bool a_clearCacheEntry = 1;
+  bool a_clearCacheEntry = 1;
 }
 
 message Msg_RemoveCorsPreflightCacheEntry {
   optional bytes a_uri = 1;
-  required protobuf.mozilla.ipc.PrincipalInfo a_requestingPrincipal = 2;
-  required bytes a_originAttributes = 3;
+  protobuf.mozilla.ipc.PrincipalInfo a_requestingPrincipal = 2;
+  bytes a_originAttributes = 3;
 }
 
 message Msg_SetCookies {
-  required string a_baseDomain = 1;
-  required bytes a_attrs = 2;
+  string a_baseDomain = 1;
+  bytes a_attrs = 2;
   optional bytes a_host = 3;
-  required bool a_fromHttp = 4;
-  required bool a_isThirdParty = 5;
+  bool a_fromHttp = 4;
+  bool a_isThirdParty = 5;
   repeated protobuf.mozilla.net.CookieStruct a_cookies = 6;
 }
 
@@ -75,7 +74,7 @@ message Msg_OpenOriginalCacheInputStream {
 }
 
 message Msg_BytesRead {
-  required sint32 a_count = 1;
+  sint32 a_count = 1;
 }
 
 message Msg___delete__ {
@@ -85,51 +84,51 @@ message Reply___delete__ {
 }
 
 message Msg_FailedAsyncOpen {
-  required bytes a_status = 1;
+  bytes a_status = 1;
 }
 
 message Msg_OnStartRequestSent {
 }
 
 message Msg_Redirect1Begin {
-  required uint32 a_registrarId = 1;
+  uint32 a_registrarId = 1;
   optional bytes a_newOriginalUri = 2;
-  required uint32 a_newLoadFlags = 3;
-  required uint32 a_redirectFlags = 4;
-  required protobuf.mozilla.net.ParentLoadInfoForwarderArgs a_loadInfoForwarder = 5;
-  required bytes a_responseHead = 6;
+  uint32 a_newLoadFlags = 3;
+  uint32 a_redirectFlags = 4;
+  protobuf.mozilla.net.ParentLoadInfoForwarderArgs a_loadInfoForwarder = 5;
+  bytes a_responseHead = 6;
   optional bytes a_securityInfo = 7;
-  required uint64 a_channelId = 8;
-  required bytes a_oldPeerAddr = 9;
-  required protobuf.mozilla.net.ResourceTimingStructArgs a_timing = 10;
+  uint64 a_channelId = 8;
+  bytes a_oldPeerAddr = 9;
+  protobuf.mozilla.net.ResourceTimingStructArgs a_timing = 10;
 }
 
 message Msg_Redirect3Complete {
 }
 
 message Msg_RedirectFailed {
-  required bytes a_status = 1;
+  bytes a_status = 1;
 }
 
 message Msg_ReportSecurityMessage {
-  required string a_messageTag = 1;
-  required string a_messageCategory = 2;
+  string a_messageTag = 1;
+  string a_messageCategory = 2;
 }
 
 message Msg_DeleteSelf {
 }
 
 message Msg_LogBlockedCORSRequest {
-  required string a_message = 1;
-  required string a_category = 2;
-  required bool a_isWarning = 3;
+  string a_message = 1;
+  string a_category = 2;
+  bool a_isWarning = 3;
 }
 
 message Msg_LogMimeTypeMismatch {
-  required string a_messageName = 1;
-  required bool a_warning = 2;
-  required string a_url = 3;
-  required string a_contentType = 4;
+  string a_messageName = 1;
+  bool a_warning = 2;
+  string a_url = 3;
+  string a_contentType = 4;
 }
 
 message Msg_OriginalCacheInputStreamAvailable {
@@ -137,7 +136,7 @@ message Msg_OriginalCacheInputStreamAvailable {
 }
 
 message Msg_SetPriority {
-  required sint32 a_priority = 1;
+  sint32 a_priority = 1;
 }
 
 // Parameter mappings stats:

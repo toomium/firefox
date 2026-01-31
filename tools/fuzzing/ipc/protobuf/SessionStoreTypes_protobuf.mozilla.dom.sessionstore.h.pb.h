@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "CustomElementTypes.pb.h"
 #include "DOMTypes.pb.h"
 // @@protoc_insertion_point(includes)
@@ -43,6 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -97,7 +100,7 @@ namespace sessionstore {
 // ===================================================================
 
 class Checkbox final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.sessionstore.Checkbox) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.sessionstore.Checkbox) */ {
  public:
   inline Checkbox() : Checkbox(nullptr) {}
   ~Checkbox() override;
@@ -127,13 +130,15 @@ class Checkbox final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Checkbox& default_instance() {
     return *internal_default_instance();
   }
@@ -171,9 +176,15 @@ class Checkbox final :
   Checkbox* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Checkbox>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Checkbox& from);
-  void MergeFrom(const Checkbox& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Checkbox& from) {
+    Checkbox::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -186,7 +197,7 @@ class Checkbox final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Checkbox* other);
 
   private:
@@ -199,7 +210,10 @@ class Checkbox final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -208,11 +222,7 @@ class Checkbox final :
   enum : int {
     kAValueFieldNumber = 1,
   };
-  // required bool a_value = 1;
-  bool has_a_value() const;
-  private:
-  bool _internal_has_a_value() const;
-  public:
+  // bool a_value = 1;
   void clear_a_value();
   bool a_value() const;
   void set_a_value(bool value);
@@ -229,9 +239,8 @@ class Checkbox final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     bool a_value_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto;
@@ -239,7 +248,7 @@ class Checkbox final :
 // -------------------------------------------------------------------
 
 class TextField final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.sessionstore.TextField) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.sessionstore.TextField) */ {
  public:
   inline TextField() : TextField(nullptr) {}
   ~TextField() override;
@@ -269,13 +278,15 @@ class TextField final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const TextField& default_instance() {
     return *internal_default_instance();
   }
@@ -313,9 +324,15 @@ class TextField final :
   TextField* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<TextField>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const TextField& from);
-  void MergeFrom(const TextField& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const TextField& from) {
+    TextField::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -328,7 +345,7 @@ class TextField final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(TextField* other);
 
   private:
@@ -341,7 +358,10 @@ class TextField final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -350,11 +370,7 @@ class TextField final :
   enum : int {
     kAValueFieldNumber = 1,
   };
-  // required string a_value = 1;
-  bool has_a_value() const;
-  private:
-  bool _internal_has_a_value() const;
-  public:
+  // string a_value = 1;
   void clear_a_value();
   const std::string& a_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -376,9 +392,8 @@ class TextField final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_value_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto;
@@ -386,7 +401,7 @@ class TextField final :
 // -------------------------------------------------------------------
 
 class FileList final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.sessionstore.FileList) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.sessionstore.FileList) */ {
  public:
   inline FileList() : FileList(nullptr) {}
   ~FileList() override;
@@ -416,13 +431,15 @@ class FileList final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const FileList& default_instance() {
     return *internal_default_instance();
   }
@@ -460,9 +477,15 @@ class FileList final :
   FileList* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<FileList>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const FileList& from);
-  void MergeFrom(const FileList& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const FileList& from) {
+    FileList::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -475,7 +498,7 @@ class FileList final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(FileList* other);
 
   private:
@@ -488,7 +511,10 @@ class FileList final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -538,7 +564,7 @@ class FileList final :
 // -------------------------------------------------------------------
 
 class SingleSelect final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.sessionstore.SingleSelect) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.sessionstore.SingleSelect) */ {
  public:
   inline SingleSelect() : SingleSelect(nullptr) {}
   ~SingleSelect() override;
@@ -568,13 +594,15 @@ class SingleSelect final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const SingleSelect& default_instance() {
     return *internal_default_instance();
   }
@@ -612,9 +640,15 @@ class SingleSelect final :
   SingleSelect* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SingleSelect>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const SingleSelect& from);
-  void MergeFrom(const SingleSelect& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const SingleSelect& from) {
+    SingleSelect::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -627,7 +661,7 @@ class SingleSelect final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(SingleSelect* other);
 
   private:
@@ -640,7 +674,10 @@ class SingleSelect final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -650,11 +687,7 @@ class SingleSelect final :
     kAValueFieldNumber = 2,
     kAIndexFieldNumber = 1,
   };
-  // required string a_value = 2;
-  bool has_a_value() const;
-  private:
-  bool _internal_has_a_value() const;
-  public:
+  // string a_value = 2;
   void clear_a_value();
   const std::string& a_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -668,11 +701,7 @@ class SingleSelect final :
   std::string* _internal_mutable_a_value();
   public:
 
-  // required uint32 a_index = 1;
-  bool has_a_index() const;
-  private:
-  bool _internal_has_a_index() const;
-  public:
+  // uint32 a_index = 1;
   void clear_a_index();
   uint32_t a_index() const;
   void set_a_index(uint32_t value);
@@ -685,17 +714,13 @@ class SingleSelect final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_value_;
     uint32_t a_index_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto;
@@ -703,7 +728,7 @@ class SingleSelect final :
 // -------------------------------------------------------------------
 
 class MultipleSelect final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.sessionstore.MultipleSelect) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.sessionstore.MultipleSelect) */ {
  public:
   inline MultipleSelect() : MultipleSelect(nullptr) {}
   ~MultipleSelect() override;
@@ -733,13 +758,15 @@ class MultipleSelect final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const MultipleSelect& default_instance() {
     return *internal_default_instance();
   }
@@ -777,9 +804,15 @@ class MultipleSelect final :
   MultipleSelect* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<MultipleSelect>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const MultipleSelect& from);
-  void MergeFrom(const MultipleSelect& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const MultipleSelect& from) {
+    MultipleSelect::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -792,7 +825,7 @@ class MultipleSelect final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(MultipleSelect* other);
 
   private:
@@ -805,7 +838,10 @@ class MultipleSelect final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -855,7 +891,7 @@ class MultipleSelect final :
 // -------------------------------------------------------------------
 
 class FormEntryValue final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.sessionstore.FormEntryValue) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.sessionstore.FormEntryValue) */ {
  public:
   inline FormEntryValue() : FormEntryValue(nullptr) {}
   ~FormEntryValue() override;
@@ -885,13 +921,15 @@ class FormEntryValue final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const FormEntryValue& default_instance() {
     return *internal_default_instance();
   }
@@ -939,9 +977,15 @@ class FormEntryValue final :
   FormEntryValue* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<FormEntryValue>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const FormEntryValue& from);
-  void MergeFrom(const FormEntryValue& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const FormEntryValue& from) {
+    FormEntryValue::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -954,7 +998,7 @@ class FormEntryValue final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(FormEntryValue* other);
 
   private:
@@ -967,7 +1011,10 @@ class FormEntryValue final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1128,7 +1175,7 @@ class FormEntryValue final :
 // -------------------------------------------------------------------
 
 class FormEntry final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.sessionstore.FormEntry) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.sessionstore.FormEntry) */ {
  public:
   inline FormEntry() : FormEntry(nullptr) {}
   ~FormEntry() override;
@@ -1158,13 +1205,15 @@ class FormEntry final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const FormEntry& default_instance() {
     return *internal_default_instance();
   }
@@ -1202,9 +1251,15 @@ class FormEntry final :
   FormEntry* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<FormEntry>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const FormEntry& from);
-  void MergeFrom(const FormEntry& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const FormEntry& from) {
+    FormEntry::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1217,7 +1272,7 @@ class FormEntry final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(FormEntry* other);
 
   private:
@@ -1230,7 +1285,10 @@ class FormEntry final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1240,11 +1298,7 @@ class FormEntry final :
     kAIdFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required string a_id = 1;
-  bool has_a_id() const;
-  private:
-  bool _internal_has_a_id() const;
-  public:
+  // string a_id = 1;
   void clear_a_id();
   const std::string& a_id() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1258,7 +1312,7 @@ class FormEntry final :
   std::string* _internal_mutable_a_id();
   public:
 
-  // required .protobuf.mozilla.dom.sessionstore.FormEntryValue a_value = 2;
+  // .protobuf.mozilla.dom.sessionstore.FormEntryValue a_value = 2;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -1280,17 +1334,13 @@ class FormEntry final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_id_;
     ::protobuf::mozilla::dom::sessionstore::FormEntryValue* a_value_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto;
@@ -1298,7 +1348,7 @@ class FormEntry final :
 // -------------------------------------------------------------------
 
 class FormData final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.sessionstore.FormData) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.sessionstore.FormData) */ {
  public:
   inline FormData() : FormData(nullptr) {}
   ~FormData() override;
@@ -1328,13 +1378,15 @@ class FormData final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const FormData& default_instance() {
     return *internal_default_instance();
   }
@@ -1372,9 +1424,15 @@ class FormData final :
   FormData* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<FormData>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const FormData& from);
-  void MergeFrom(const FormData& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const FormData& from) {
+    FormData::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1387,7 +1445,7 @@ class FormData final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(FormData* other);
 
   private:
@@ -1400,7 +1458,10 @@ class FormData final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1449,11 +1510,7 @@ class FormData final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::sessionstore::FormEntry >&
       a_xpath() const;
 
-  // required string a_innerHTML = 4;
-  bool has_a_innerhtml() const;
-  private:
-  bool _internal_has_a_innerhtml() const;
-  public:
+  // string a_innerHTML = 4;
   void clear_a_innerhtml();
   const std::string& a_innerhtml() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1467,11 +1524,7 @@ class FormData final :
   std::string* _internal_mutable_a_innerhtml();
   public:
 
-  // required string a_uri = 5;
-  bool has_a_uri() const;
-  private:
-  bool _internal_has_a_uri() const;
-  public:
+  // string a_uri = 5;
   void clear_a_uri();
   const std::string& a_uri() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1485,11 +1538,7 @@ class FormData final :
   std::string* _internal_mutable_a_uri();
   public:
 
-  // required bool a_hasData = 1;
-  bool has_a_hasdata() const;
-  private:
-  bool _internal_has_a_hasdata() const;
-  public:
+  // bool a_hasData = 1;
   void clear_a_hasdata();
   bool a_hasdata() const;
   void set_a_hasdata(bool value);
@@ -1502,20 +1551,16 @@ class FormData final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::sessionstore::FormEntry > a_id_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::dom::sessionstore::FormEntry > a_xpath_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_innerhtml_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_uri_;
     bool a_hasdata_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto;
@@ -1523,7 +1568,7 @@ class FormData final :
 // -------------------------------------------------------------------
 
 class DocShellRestoreState final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.sessionstore.DocShellRestoreState) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.sessionstore.DocShellRestoreState) */ {
  public:
   inline DocShellRestoreState() : DocShellRestoreState(nullptr) {}
   ~DocShellRestoreState() override;
@@ -1553,13 +1598,15 @@ class DocShellRestoreState final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const DocShellRestoreState& default_instance() {
     return *internal_default_instance();
   }
@@ -1597,9 +1644,15 @@ class DocShellRestoreState final :
   DocShellRestoreState* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<DocShellRestoreState>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const DocShellRestoreState& from);
-  void MergeFrom(const DocShellRestoreState& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const DocShellRestoreState& from) {
+    DocShellRestoreState::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1612,7 +1665,7 @@ class DocShellRestoreState final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(DocShellRestoreState* other);
 
   private:
@@ -1625,7 +1678,10 @@ class DocShellRestoreState final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1653,11 +1709,7 @@ class DocShellRestoreState final :
   std::string* _internal_mutable_a_uri();
   public:
 
-  // required string a_docShellCaps = 2;
-  bool has_a_docshellcaps() const;
-  private:
-  bool _internal_has_a_docshellcaps() const;
-  public:
+  // string a_docShellCaps = 2;
   void clear_a_docshellcaps();
   const std::string& a_docshellcaps() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1698,17 +1750,9 @@ class DocShellRestoreState final :
 #endif  // __GNUC__
 // Checkbox
 
-// required bool a_value = 1;
-inline bool Checkbox::_internal_has_a_value() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Checkbox::has_a_value() const {
-  return _internal_has_a_value();
-}
+// bool a_value = 1;
 inline void Checkbox::clear_a_value() {
   _impl_.a_value_ = false;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Checkbox::_internal_a_value() const {
   return _impl_.a_value_;
@@ -1718,7 +1762,7 @@ inline bool Checkbox::a_value() const {
   return _internal_a_value();
 }
 inline void Checkbox::_internal_set_a_value(bool value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_value_ = value;
 }
 inline void Checkbox::set_a_value(bool value) {
@@ -1730,17 +1774,9 @@ inline void Checkbox::set_a_value(bool value) {
 
 // TextField
 
-// required string a_value = 1;
-inline bool TextField::_internal_has_a_value() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool TextField::has_a_value() const {
-  return _internal_has_a_value();
-}
+// string a_value = 1;
 inline void TextField::clear_a_value() {
   _impl_.a_value_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& TextField::a_value() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.TextField.a_value)
@@ -1749,7 +1785,7 @@ inline const std::string& TextField::a_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void TextField::set_a_value(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.TextField.a_value)
 }
@@ -1762,32 +1798,22 @@ inline const std::string& TextField::_internal_a_value() const {
   return _impl_.a_value_.Get();
 }
 inline void TextField::_internal_set_a_value(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_value_.Set(value, GetArenaForAllocation());
 }
 inline std::string* TextField::_internal_mutable_a_value() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_value_.Mutable(GetArenaForAllocation());
 }
 inline std::string* TextField::release_a_value() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.TextField.a_value)
-  if (!_internal_has_a_value()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_value_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_value_.IsDefault()) {
-    _impl_.a_value_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_value_.Release();
 }
 inline void TextField::set_allocated_a_value(std::string* a_value) {
   if (a_value != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_value_.SetAllocated(a_value, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1881,17 +1907,9 @@ FileList::mutable_a_valuelist() {
 
 // SingleSelect
 
-// required uint32 a_index = 1;
-inline bool SingleSelect::_internal_has_a_index() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool SingleSelect::has_a_index() const {
-  return _internal_has_a_index();
-}
+// uint32 a_index = 1;
 inline void SingleSelect::clear_a_index() {
   _impl_.a_index_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t SingleSelect::_internal_a_index() const {
   return _impl_.a_index_;
@@ -1901,7 +1919,7 @@ inline uint32_t SingleSelect::a_index() const {
   return _internal_a_index();
 }
 inline void SingleSelect::_internal_set_a_index(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_index_ = value;
 }
 inline void SingleSelect::set_a_index(uint32_t value) {
@@ -1909,17 +1927,9 @@ inline void SingleSelect::set_a_index(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.SingleSelect.a_index)
 }
 
-// required string a_value = 2;
-inline bool SingleSelect::_internal_has_a_value() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool SingleSelect::has_a_value() const {
-  return _internal_has_a_value();
-}
+// string a_value = 2;
 inline void SingleSelect::clear_a_value() {
   _impl_.a_value_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& SingleSelect::a_value() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.SingleSelect.a_value)
@@ -1928,7 +1938,7 @@ inline const std::string& SingleSelect::a_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void SingleSelect::set_a_value(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.SingleSelect.a_value)
 }
@@ -1941,32 +1951,22 @@ inline const std::string& SingleSelect::_internal_a_value() const {
   return _impl_.a_value_.Get();
 }
 inline void SingleSelect::_internal_set_a_value(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_value_.Set(value, GetArenaForAllocation());
 }
 inline std::string* SingleSelect::_internal_mutable_a_value() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_value_.Mutable(GetArenaForAllocation());
 }
 inline std::string* SingleSelect::release_a_value() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.SingleSelect.a_value)
-  if (!_internal_has_a_value()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_value_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_value_.IsDefault()) {
-    _impl_.a_value_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_value_.Release();
 }
 inline void SingleSelect::set_allocated_a_value(std::string* a_value) {
   if (a_value != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_value_.SetAllocated(a_value, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2509,17 +2509,9 @@ inline FormEntryValue::ContentCase FormEntryValue::content_case() const {
 
 // FormEntry
 
-// required string a_id = 1;
-inline bool FormEntry::_internal_has_a_id() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool FormEntry::has_a_id() const {
-  return _internal_has_a_id();
-}
+// string a_id = 1;
 inline void FormEntry::clear_a_id() {
   _impl_.a_id_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& FormEntry::a_id() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormEntry.a_id)
@@ -2528,7 +2520,7 @@ inline const std::string& FormEntry::a_id() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FormEntry::set_a_id(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.FormEntry.a_id)
 }
@@ -2541,32 +2533,22 @@ inline const std::string& FormEntry::_internal_a_id() const {
   return _impl_.a_id_.Get();
 }
 inline void FormEntry::_internal_set_a_id(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_id_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FormEntry::_internal_mutable_a_id() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_id_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FormEntry::release_a_id() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormEntry.a_id)
-  if (!_internal_has_a_id()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_id_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_id_.IsDefault()) {
-    _impl_.a_id_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_id_.Release();
 }
 inline void FormEntry::set_allocated_a_id(std::string* a_id) {
   if (a_id != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_id_.SetAllocated(a_id, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2577,18 +2559,18 @@ inline void FormEntry::set_allocated_a_id(std::string* a_id) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.FormEntry.a_id)
 }
 
-// required .protobuf.mozilla.dom.sessionstore.FormEntryValue a_value = 2;
+// .protobuf.mozilla.dom.sessionstore.FormEntryValue a_value = 2;
 inline bool FormEntry::_internal_has_a_value() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_value_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_value_ != nullptr;
 }
 inline bool FormEntry::has_a_value() const {
   return _internal_has_a_value();
 }
 inline void FormEntry::clear_a_value() {
-  if (_impl_.a_value_ != nullptr) _impl_.a_value_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_value_ != nullptr) {
+    delete _impl_.a_value_;
+  }
+  _impl_.a_value_ = nullptr;
 }
 inline const ::protobuf::mozilla::dom::sessionstore::FormEntryValue& FormEntry::_internal_a_value() const {
   const ::protobuf::mozilla::dom::sessionstore::FormEntryValue* p = _impl_.a_value_;
@@ -2606,14 +2588,14 @@ inline void FormEntry::unsafe_arena_set_allocated_a_value(
   }
   _impl_.a_value_ = a_value;
   if (a_value) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.dom.sessionstore.FormEntry.a_value)
 }
 inline ::protobuf::mozilla::dom::sessionstore::FormEntryValue* FormEntry::release_a_value() {
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::dom::sessionstore::FormEntryValue* temp = _impl_.a_value_;
   _impl_.a_value_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -2629,13 +2611,13 @@ inline ::protobuf::mozilla::dom::sessionstore::FormEntryValue* FormEntry::releas
 }
 inline ::protobuf::mozilla::dom::sessionstore::FormEntryValue* FormEntry::unsafe_arena_release_a_value() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormEntry.a_value)
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::dom::sessionstore::FormEntryValue* temp = _impl_.a_value_;
   _impl_.a_value_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::dom::sessionstore::FormEntryValue* FormEntry::_internal_mutable_a_value() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   if (_impl_.a_value_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::dom::sessionstore::FormEntryValue>(GetArenaForAllocation());
     _impl_.a_value_ = p;
@@ -2659,9 +2641,9 @@ inline void FormEntry::set_allocated_a_value(::protobuf::mozilla::dom::sessionst
       a_value = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_value, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_value_ = a_value;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.FormEntry.a_value)
@@ -2671,17 +2653,9 @@ inline void FormEntry::set_allocated_a_value(::protobuf::mozilla::dom::sessionst
 
 // FormData
 
-// required bool a_hasData = 1;
-inline bool FormData::_internal_has_a_hasdata() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool FormData::has_a_hasdata() const {
-  return _internal_has_a_hasdata();
-}
+// bool a_hasData = 1;
 inline void FormData::clear_a_hasdata() {
   _impl_.a_hasdata_ = false;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline bool FormData::_internal_a_hasdata() const {
   return _impl_.a_hasdata_;
@@ -2691,7 +2665,7 @@ inline bool FormData::a_hasdata() const {
   return _internal_a_hasdata();
 }
 inline void FormData::_internal_set_a_hasdata(bool value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_hasdata_ = value;
 }
 inline void FormData::set_a_hasdata(bool value) {
@@ -2779,17 +2753,9 @@ FormData::a_xpath() const {
   return _impl_.a_xpath_;
 }
 
-// required string a_innerHTML = 4;
-inline bool FormData::_internal_has_a_innerhtml() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool FormData::has_a_innerhtml() const {
-  return _internal_has_a_innerhtml();
-}
+// string a_innerHTML = 4;
 inline void FormData::clear_a_innerhtml() {
   _impl_.a_innerhtml_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& FormData::a_innerhtml() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormData.a_innerHTML)
@@ -2798,7 +2764,7 @@ inline const std::string& FormData::a_innerhtml() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FormData::set_a_innerhtml(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_innerhtml_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.FormData.a_innerHTML)
 }
@@ -2811,32 +2777,22 @@ inline const std::string& FormData::_internal_a_innerhtml() const {
   return _impl_.a_innerhtml_.Get();
 }
 inline void FormData::_internal_set_a_innerhtml(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_innerhtml_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FormData::_internal_mutable_a_innerhtml() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_innerhtml_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FormData::release_a_innerhtml() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormData.a_innerHTML)
-  if (!_internal_has_a_innerhtml()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_innerhtml_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_innerhtml_.IsDefault()) {
-    _impl_.a_innerhtml_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_innerhtml_.Release();
 }
 inline void FormData::set_allocated_a_innerhtml(std::string* a_innerhtml) {
   if (a_innerhtml != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_innerhtml_.SetAllocated(a_innerhtml, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2847,17 +2803,9 @@ inline void FormData::set_allocated_a_innerhtml(std::string* a_innerhtml) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.FormData.a_innerHTML)
 }
 
-// required string a_uri = 5;
-inline bool FormData::_internal_has_a_uri() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool FormData::has_a_uri() const {
-  return _internal_has_a_uri();
-}
+// string a_uri = 5;
 inline void FormData::clear_a_uri() {
   _impl_.a_uri_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& FormData::a_uri() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.FormData.a_uri)
@@ -2866,7 +2814,7 @@ inline const std::string& FormData::a_uri() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void FormData::set_a_uri(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_uri_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.FormData.a_uri)
 }
@@ -2879,32 +2827,22 @@ inline const std::string& FormData::_internal_a_uri() const {
   return _impl_.a_uri_.Get();
 }
 inline void FormData::_internal_set_a_uri(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_uri_.Set(value, GetArenaForAllocation());
 }
 inline std::string* FormData::_internal_mutable_a_uri() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_uri_.Mutable(GetArenaForAllocation());
 }
 inline std::string* FormData::release_a_uri() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.FormData.a_uri)
-  if (!_internal_has_a_uri()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_uri_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_uri_.IsDefault()) {
-    _impl_.a_uri_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_uri_.Release();
 }
 inline void FormData::set_allocated_a_uri(std::string* a_uri) {
   if (a_uri != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_uri_.SetAllocated(a_uri, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2987,17 +2925,9 @@ inline void DocShellRestoreState::set_allocated_a_uri(std::string* a_uri) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.a_URI)
 }
 
-// required string a_docShellCaps = 2;
-inline bool DocShellRestoreState::_internal_has_a_docshellcaps() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool DocShellRestoreState::has_a_docshellcaps() const {
-  return _internal_has_a_docshellcaps();
-}
+// string a_docShellCaps = 2;
 inline void DocShellRestoreState::clear_a_docshellcaps() {
   _impl_.a_docshellcaps_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& DocShellRestoreState::a_docshellcaps() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.a_docShellCaps)
@@ -3006,7 +2936,7 @@ inline const std::string& DocShellRestoreState::a_docshellcaps() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DocShellRestoreState::set_a_docshellcaps(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_docshellcaps_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.a_docShellCaps)
 }
@@ -3019,32 +2949,22 @@ inline const std::string& DocShellRestoreState::_internal_a_docshellcaps() const
   return _impl_.a_docshellcaps_.Get();
 }
 inline void DocShellRestoreState::_internal_set_a_docshellcaps(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_docshellcaps_.Set(value, GetArenaForAllocation());
 }
 inline std::string* DocShellRestoreState::_internal_mutable_a_docshellcaps() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_docshellcaps_.Mutable(GetArenaForAllocation());
 }
 inline std::string* DocShellRestoreState::release_a_docshellcaps() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.sessionstore.DocShellRestoreState.a_docShellCaps)
-  if (!_internal_has_a_docshellcaps()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_docshellcaps_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_docshellcaps_.IsDefault()) {
-    _impl_.a_docshellcaps_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_docshellcaps_.Release();
 }
 inline void DocShellRestoreState::set_allocated_a_docshellcaps(std::string* a_docshellcaps) {
   if (a_docshellcaps != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_docshellcaps_.SetAllocated(a_docshellcaps, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

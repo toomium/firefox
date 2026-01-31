@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/indexedDB/PBackgroundIDBFactoryRequest.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.indexedDB;
 
@@ -14,11 +13,11 @@ import "PBackgroundSharedTypes.proto";
 
 // Structs and unions declarations
 message OpenDatabaseRequestResponse {
-  required bytes a_database = 1;
+  bytes a_database = 1;
 }
 
 message DeleteDatabaseRequestResponse {
-  required uint64 a_previousVersion = 1;
+  uint64 a_previousVersion = 1;
 }
 
 message FactoryRequestResponse {

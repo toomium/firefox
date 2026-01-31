@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/uriloader/exthandler/PHandlerService.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PHandlerService;
 
@@ -17,64 +16,64 @@ import public "PHandlerService_protobuf.mozilla.dom.h.proto";
 
 // Message declarations
 message Msg_FillHandlerInfo {
-  required protobuf.mozilla.dom.HandlerInfo a_aHandlerInfoData = 1;
-  required string a_aOverrideType = 2;
+  protobuf.mozilla.dom.HandlerInfo a_aHandlerInfoData = 1;
+  string a_aOverrideType = 2;
 }
 
 message Reply_FillHandlerInfo {
-  required protobuf.mozilla.dom.HandlerInfo a_handlerInfoData = 1;
+  protobuf.mozilla.dom.HandlerInfo a_handlerInfoData = 1;
 }
 
 message Msg_ExistsForProtocolOS {
-  required string a_aProtocolScheme = 1;
+  string a_aProtocolScheme = 1;
 }
 
 message Reply_ExistsForProtocolOS {
-  required bool a_exists = 1;
+  bool a_exists = 1;
 }
 
 message Msg_ExistsForProtocol {
-  required string a_aProtocolScheme = 1;
+  string a_aProtocolScheme = 1;
 }
 
 message Reply_ExistsForProtocol {
-  required bool a_exists = 1;
+  bool a_exists = 1;
 }
 
 message Msg_Exists {
-  required protobuf.mozilla.dom.HandlerInfo a_aHandlerInfo = 1;
+  protobuf.mozilla.dom.HandlerInfo a_aHandlerInfo = 1;
 }
 
 message Reply_Exists {
-  required bool a_exists = 1;
+  bool a_exists = 1;
 }
 
 message Msg_GetTypeFromExtension {
-  required string a_aFileExtension = 1;
+  string a_aFileExtension = 1;
 }
 
 message Reply_GetTypeFromExtension {
-  required string a_type = 1;
+  string a_type = 1;
 }
 
 message Msg_GetMIMEInfoFromOS {
-  required string a_aMIMEType = 1;
-  required string a_aExtension = 2;
+  string a_aMIMEType = 1;
+  string a_aExtension = 2;
 }
 
 message Reply_GetMIMEInfoFromOS {
-  required bytes a_rv = 1;
-  required protobuf.mozilla.dom.HandlerInfo a_handlerInfoData = 2;
-  required bool a_found = 3;
+  bytes a_rv = 1;
+  protobuf.mozilla.dom.HandlerInfo a_handlerInfoData = 2;
+  bool a_found = 3;
 }
 
 message Msg_GetApplicationDescription {
-  required string a_aScheme = 1;
+  string a_aScheme = 1;
 }
 
 message Reply_GetApplicationDescription {
-  required bytes a_rv = 1;
-  required string a_description = 2;
+  bytes a_rv = 1;
+  string a_description = 2;
 }
 
 message Msg___delete__ {

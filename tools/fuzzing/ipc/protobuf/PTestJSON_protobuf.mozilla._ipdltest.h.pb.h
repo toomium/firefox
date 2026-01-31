@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto
@@ -41,6 +43,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace _ipdltest {
@@ -72,7 +75,7 @@ namespace _ipdltest {
 // ===================================================================
 
 class KeyValue final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.KeyValue) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.KeyValue) */ {
  public:
   inline KeyValue() : KeyValue(nullptr) {}
   ~KeyValue() override;
@@ -102,13 +105,15 @@ class KeyValue final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const KeyValue& default_instance() {
     return *internal_default_instance();
   }
@@ -146,9 +151,15 @@ class KeyValue final :
   KeyValue* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<KeyValue>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const KeyValue& from);
-  void MergeFrom(const KeyValue& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const KeyValue& from) {
+    KeyValue::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -161,7 +172,7 @@ class KeyValue final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(KeyValue* other);
 
   private:
@@ -174,7 +185,10 @@ class KeyValue final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -184,11 +198,7 @@ class KeyValue final :
     kAKeyFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required string a_key = 1;
-  bool has_a_key() const;
-  private:
-  bool _internal_has_a_key() const;
-  public:
+  // string a_key = 1;
   void clear_a_key();
   const std::string& a_key() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -202,7 +212,7 @@ class KeyValue final :
   std::string* _internal_mutable_a_key();
   public:
 
-  // required .protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
+  // .protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
   bool has_a_value() const;
   private:
   bool _internal_has_a_value() const;
@@ -224,17 +234,13 @@ class KeyValue final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_key_;
     ::protobuf::mozilla::_ipdltest::JSONVariant* a_value_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto;
@@ -242,7 +248,7 @@ class KeyValue final :
 // -------------------------------------------------------------------
 
 class JSONVariant_a_type_mVArrayOfKeyValue final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfKeyValue) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfKeyValue) */ {
  public:
   inline JSONVariant_a_type_mVArrayOfKeyValue() : JSONVariant_a_type_mVArrayOfKeyValue(nullptr) {}
   ~JSONVariant_a_type_mVArrayOfKeyValue() override;
@@ -272,13 +278,15 @@ class JSONVariant_a_type_mVArrayOfKeyValue final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const JSONVariant_a_type_mVArrayOfKeyValue& default_instance() {
     return *internal_default_instance();
   }
@@ -316,9 +324,15 @@ class JSONVariant_a_type_mVArrayOfKeyValue final :
   JSONVariant_a_type_mVArrayOfKeyValue* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<JSONVariant_a_type_mVArrayOfKeyValue>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const JSONVariant_a_type_mVArrayOfKeyValue& from);
-  void MergeFrom(const JSONVariant_a_type_mVArrayOfKeyValue& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const JSONVariant_a_type_mVArrayOfKeyValue& from) {
+    JSONVariant_a_type_mVArrayOfKeyValue::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -331,7 +345,7 @@ class JSONVariant_a_type_mVArrayOfKeyValue final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(JSONVariant_a_type_mVArrayOfKeyValue* other);
 
   private:
@@ -344,7 +358,10 @@ class JSONVariant_a_type_mVArrayOfKeyValue final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -388,7 +405,7 @@ class JSONVariant_a_type_mVArrayOfKeyValue final :
 // -------------------------------------------------------------------
 
 class JSONVariant_a_type_mVArrayOfJSONVariant final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfJSONVariant) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfJSONVariant) */ {
  public:
   inline JSONVariant_a_type_mVArrayOfJSONVariant() : JSONVariant_a_type_mVArrayOfJSONVariant(nullptr) {}
   ~JSONVariant_a_type_mVArrayOfJSONVariant() override;
@@ -418,13 +435,15 @@ class JSONVariant_a_type_mVArrayOfJSONVariant final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const JSONVariant_a_type_mVArrayOfJSONVariant& default_instance() {
     return *internal_default_instance();
   }
@@ -462,9 +481,15 @@ class JSONVariant_a_type_mVArrayOfJSONVariant final :
   JSONVariant_a_type_mVArrayOfJSONVariant* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<JSONVariant_a_type_mVArrayOfJSONVariant>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const JSONVariant_a_type_mVArrayOfJSONVariant& from);
-  void MergeFrom(const JSONVariant_a_type_mVArrayOfJSONVariant& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const JSONVariant_a_type_mVArrayOfJSONVariant& from) {
+    JSONVariant_a_type_mVArrayOfJSONVariant::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -477,7 +502,7 @@ class JSONVariant_a_type_mVArrayOfJSONVariant final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(JSONVariant_a_type_mVArrayOfJSONVariant* other);
 
   private:
@@ -490,7 +515,10 @@ class JSONVariant_a_type_mVArrayOfJSONVariant final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -534,7 +562,7 @@ class JSONVariant_a_type_mVArrayOfJSONVariant final :
 // -------------------------------------------------------------------
 
 class JSONVariant final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.JSONVariant) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.JSONVariant) */ {
  public:
   inline JSONVariant() : JSONVariant(nullptr) {}
   ~JSONVariant() override;
@@ -564,13 +592,15 @@ class JSONVariant final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const JSONVariant& default_instance() {
     return *internal_default_instance();
   }
@@ -621,9 +651,15 @@ class JSONVariant final :
   JSONVariant* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<JSONVariant>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const JSONVariant& from);
-  void MergeFrom(const JSONVariant& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const JSONVariant& from) {
+    JSONVariant::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -636,7 +672,7 @@ class JSONVariant final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(JSONVariant* other);
 
   private:
@@ -649,7 +685,10 @@ class JSONVariant final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -869,17 +908,9 @@ class JSONVariant final :
 #endif  // __GNUC__
 // KeyValue
 
-// required string a_key = 1;
-inline bool KeyValue::_internal_has_a_key() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool KeyValue::has_a_key() const {
-  return _internal_has_a_key();
-}
+// string a_key = 1;
 inline void KeyValue::clear_a_key() {
   _impl_.a_key_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& KeyValue::a_key() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla._ipdltest.KeyValue.a_key)
@@ -888,7 +919,7 @@ inline const std::string& KeyValue::a_key() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void KeyValue::set_a_key(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla._ipdltest.KeyValue.a_key)
 }
@@ -901,32 +932,22 @@ inline const std::string& KeyValue::_internal_a_key() const {
   return _impl_.a_key_.Get();
 }
 inline void KeyValue::_internal_set_a_key(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_key_.Set(value, GetArenaForAllocation());
 }
 inline std::string* KeyValue::_internal_mutable_a_key() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* KeyValue::release_a_key() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.KeyValue.a_key)
-  if (!_internal_has_a_key()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_key_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_key_.IsDefault()) {
-    _impl_.a_key_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_key_.Release();
 }
 inline void KeyValue::set_allocated_a_key(std::string* a_key) {
   if (a_key != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_key_.SetAllocated(a_key, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -937,18 +958,18 @@ inline void KeyValue::set_allocated_a_key(std::string* a_key) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.KeyValue.a_key)
 }
 
-// required .protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
+// .protobuf.mozilla._ipdltest.JSONVariant a_value = 2;
 inline bool KeyValue::_internal_has_a_value() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_value_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_value_ != nullptr;
 }
 inline bool KeyValue::has_a_value() const {
   return _internal_has_a_value();
 }
 inline void KeyValue::clear_a_value() {
-  if (_impl_.a_value_ != nullptr) _impl_.a_value_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_value_ != nullptr) {
+    delete _impl_.a_value_;
+  }
+  _impl_.a_value_ = nullptr;
 }
 inline const ::protobuf::mozilla::_ipdltest::JSONVariant& KeyValue::_internal_a_value() const {
   const ::protobuf::mozilla::_ipdltest::JSONVariant* p = _impl_.a_value_;
@@ -966,14 +987,14 @@ inline void KeyValue::unsafe_arena_set_allocated_a_value(
   }
   _impl_.a_value_ = a_value;
   if (a_value) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla._ipdltest.KeyValue.a_value)
 }
 inline ::protobuf::mozilla::_ipdltest::JSONVariant* KeyValue::release_a_value() {
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::_ipdltest::JSONVariant* temp = _impl_.a_value_;
   _impl_.a_value_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -989,13 +1010,13 @@ inline ::protobuf::mozilla::_ipdltest::JSONVariant* KeyValue::release_a_value() 
 }
 inline ::protobuf::mozilla::_ipdltest::JSONVariant* KeyValue::unsafe_arena_release_a_value() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla._ipdltest.KeyValue.a_value)
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::mozilla::_ipdltest::JSONVariant* temp = _impl_.a_value_;
   _impl_.a_value_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::_ipdltest::JSONVariant* KeyValue::_internal_mutable_a_value() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   if (_impl_.a_value_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::_ipdltest::JSONVariant>(GetArenaForAllocation());
     _impl_.a_value_ = p;
@@ -1019,9 +1040,9 @@ inline void KeyValue::set_allocated_a_value(::protobuf::mozilla::_ipdltest::JSON
       a_value = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_value, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_value_ = a_value;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla._ipdltest.KeyValue.a_value)

@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/tools/profiler/gecko/PProfiler.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.PProfiler;
 
@@ -17,86 +16,86 @@ import "ProfilerTypes.proto";
 
 // Message declarations
 message Msg_Start {
-  required protobuf.mozilla.ProfilerInitParams a_params = 1;
+  protobuf.mozilla.ProfilerInitParams a_params = 1;
 }
 
 message Reply_Start {
-  required bool a_unused = 1;
+  bool a_unused = 1;
 }
 
 message Msg_EnsureStarted {
-  required protobuf.mozilla.ProfilerInitParams a_params = 1;
+  protobuf.mozilla.ProfilerInitParams a_params = 1;
 }
 
 message Reply_EnsureStarted {
-  required bool a_unused = 1;
+  bool a_unused = 1;
 }
 
 message Msg_Stop {
 }
 
 message Reply_Stop {
-  required bool a_unused = 1;
+  bool a_unused = 1;
 }
 
 message Msg_Pause {
 }
 
 message Reply_Pause {
-  required bool a_unused = 1;
+  bool a_unused = 1;
 }
 
 message Msg_Resume {
 }
 
 message Reply_Resume {
-  required bool a_unused = 1;
+  bool a_unused = 1;
 }
 
 message Msg_PauseSampling {
 }
 
 message Reply_PauseSampling {
-  required bool a_unused = 1;
+  bool a_unused = 1;
 }
 
 message Msg_ResumeSampling {
 }
 
 message Reply_ResumeSampling {
-  required bool a_unused = 1;
+  bool a_unused = 1;
 }
 
 message Msg_WaitOnePeriodicSampling {
 }
 
 message Reply_WaitOnePeriodicSampling {
-  required bool a_sampled = 1;
+  bool a_sampled = 1;
 }
 
 message Msg_AwaitNextChunkManagerUpdate {
 }
 
 message Reply_AwaitNextChunkManagerUpdate {
-  required protobuf.mozilla.ProfileBufferChunkManagerUpdate a_update = 1;
+  protobuf.mozilla.ProfileBufferChunkManagerUpdate a_update = 1;
 }
 
 message Msg_DestroyReleasedChunksAtOrBefore {
-  required bytes a_timeStamp = 1;
+  bytes a_timeStamp = 1;
 }
 
 message Msg_GatherProfile {
 }
 
 message Reply_GatherProfile {
-  required protobuf.mozilla.IPCProfileAndAdditionalInformation a_profileAndAdditionalInformation = 1;
+  protobuf.mozilla.IPCProfileAndAdditionalInformation a_profileAndAdditionalInformation = 1;
 }
 
 message Msg_GetGatherProfileProgress {
 }
 
 message Reply_GetGatherProfileProgress {
-  required protobuf.mozilla.GatherProfileProgress a_progress = 1;
+  protobuf.mozilla.GatherProfileProgress a_progress = 1;
 }
 
 message Msg_ClearAllPages {

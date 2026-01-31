@@ -5,13 +5,12 @@
 
 // Generated from /home/tmittendorf/firefox/dom/serviceworkers/IPCNavigationPreloadState.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom;
 
 // Structs and unions declarations
 message IPCNavigationPreloadState {
-  required bool a_enabled = 1;
-  required string a_headerValue = 2;
+  bool a_enabled = 1;
+  string a_headerValue = 2;
 }

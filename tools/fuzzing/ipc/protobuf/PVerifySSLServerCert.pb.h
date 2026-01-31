@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "PSMIPCTypes.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -42,6 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PVerifySSLServerCert_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PVerifySSLServerCert_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace psm {
@@ -72,7 +76,7 @@ namespace PVerifySSLServerCert {
 // ===================================================================
 
 class Msg_OnVerifySSLServerCertFinished final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished) */ {
  public:
   inline Msg_OnVerifySSLServerCertFinished() : Msg_OnVerifySSLServerCertFinished(nullptr) {}
   ~Msg_OnVerifySSLServerCertFinished() override;
@@ -102,13 +106,15 @@ class Msg_OnVerifySSLServerCertFinished final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_OnVerifySSLServerCertFinished& default_instance() {
     return *internal_default_instance();
   }
@@ -146,9 +152,15 @@ class Msg_OnVerifySSLServerCertFinished final :
   Msg_OnVerifySSLServerCertFinished* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_OnVerifySSLServerCertFinished>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_OnVerifySSLServerCertFinished& from);
-  void MergeFrom(const Msg_OnVerifySSLServerCertFinished& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_OnVerifySSLServerCertFinished& from) {
+    Msg_OnVerifySSLServerCertFinished::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -161,7 +173,7 @@ class Msg_OnVerifySSLServerCertFinished final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_OnVerifySSLServerCertFinished* other);
 
   private:
@@ -174,7 +186,10 @@ class Msg_OnVerifySSLServerCertFinished final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -208,11 +223,7 @@ class Msg_OnVerifySSLServerCertFinished final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::psm::ByteArray >&
       a_abuiltcertchain() const;
 
-  // required bytes a_aEVStatus = 3;
-  bool has_a_aevstatus() const;
-  private:
-  bool _internal_has_a_aevstatus() const;
-  public:
+  // bytes a_aEVStatus = 3;
   void clear_a_aevstatus();
   const std::string& a_aevstatus() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -226,11 +237,7 @@ class Msg_OnVerifySSLServerCertFinished final :
   std::string* _internal_mutable_a_aevstatus();
   public:
 
-  // required bytes a_aOverridableErrorCategory = 6;
-  bool has_a_aoverridableerrorcategory() const;
-  private:
-  bool _internal_has_a_aoverridableerrorcategory() const;
-  public:
+  // bytes a_aOverridableErrorCategory = 6;
   void clear_a_aoverridableerrorcategory();
   const std::string& a_aoverridableerrorcategory() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -244,11 +251,7 @@ class Msg_OnVerifySSLServerCertFinished final :
   std::string* _internal_mutable_a_aoverridableerrorcategory();
   public:
 
-  // required uint32 a_aCertTransparencyStatus = 2;
-  bool has_a_acerttransparencystatus() const;
-  private:
-  bool _internal_has_a_acerttransparencystatus() const;
-  public:
+  // uint32 a_aCertTransparencyStatus = 2;
   void clear_a_acerttransparencystatus();
   uint32_t a_acerttransparencystatus() const;
   void set_a_acerttransparencystatus(uint32_t value);
@@ -257,11 +260,7 @@ class Msg_OnVerifySSLServerCertFinished final :
   void _internal_set_a_acerttransparencystatus(uint32_t value);
   public:
 
-  // required sint32 a_aFinalError = 5;
-  bool has_a_afinalerror() const;
-  private:
-  bool _internal_has_a_afinalerror() const;
-  public:
+  // sint32 a_aFinalError = 5;
   void clear_a_afinalerror();
   int32_t a_afinalerror() const;
   void set_a_afinalerror(int32_t value);
@@ -270,11 +269,7 @@ class Msg_OnVerifySSLServerCertFinished final :
   void _internal_set_a_afinalerror(int32_t value);
   public:
 
-  // required bool a_aSucceeded = 4;
-  bool has_a_asucceeded() const;
-  private:
-  bool _internal_has_a_asucceeded() const;
-  public:
+  // bool a_aSucceeded = 4;
   void clear_a_asucceeded();
   bool a_asucceeded() const;
   void set_a_asucceeded(bool value);
@@ -283,11 +278,7 @@ class Msg_OnVerifySSLServerCertFinished final :
   void _internal_set_a_asucceeded(bool value);
   public:
 
-  // required bool a_aIsBuiltCertChainRootBuiltInRoot = 7;
-  bool has_a_aisbuiltcertchainrootbuiltinroot() const;
-  private:
-  bool _internal_has_a_aisbuiltcertchainrootbuiltinroot() const;
-  public:
+  // bool a_aIsBuiltCertChainRootBuiltInRoot = 7;
   void clear_a_aisbuiltcertchainrootbuiltinroot();
   bool a_aisbuiltcertchainrootbuiltinroot() const;
   void set_a_aisbuiltcertchainrootbuiltinroot(bool value);
@@ -296,11 +287,7 @@ class Msg_OnVerifySSLServerCertFinished final :
   void _internal_set_a_aisbuiltcertchainrootbuiltinroot(bool value);
   public:
 
-  // required bool a_aMadeOCSPRequests = 8;
-  bool has_a_amadeocsprequests() const;
-  private:
-  bool _internal_has_a_amadeocsprequests() const;
-  public:
+  // bool a_aMadeOCSPRequests = 8;
   void clear_a_amadeocsprequests();
   bool a_amadeocsprequests() const;
   void set_a_amadeocsprequests(bool value);
@@ -313,15 +300,10 @@ class Msg_OnVerifySSLServerCertFinished final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::psm::ByteArray > a_abuiltcertchain_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aevstatus_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aoverridableerrorcategory_;
@@ -330,6 +312,7 @@ class Msg_OnVerifySSLServerCertFinished final :
     bool a_asucceeded_;
     bool a_aisbuiltcertchainrootbuiltinroot_;
     bool a_amadeocsprequests_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PVerifySSLServerCert_2eproto;
@@ -337,10 +320,9 @@ class Msg_OnVerifySSLServerCertFinished final :
 // -------------------------------------------------------------------
 
 class Msg___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.PVerifySSLServerCert.Msg___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.PVerifySSLServerCert.Msg___delete__) */ {
  public:
   inline Msg___delete__() : Msg___delete__(nullptr) {}
-  ~Msg___delete__() override;
   explicit PROTOBUF_CONSTEXPR Msg___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg___delete__(const Msg___delete__& from);
@@ -367,13 +349,15 @@ class Msg___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -411,23 +395,15 @@ class Msg___delete__ final :
   Msg___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg___delete__& from);
-  void MergeFrom(const Msg___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -439,7 +415,10 @@ class Msg___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -453,18 +432,15 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PVerifySSLServerCert_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.PVerifySSLServerCert.Reply___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.psm.PVerifySSLServerCert.Reply___delete__) */ {
  public:
   inline Reply___delete__() : Reply___delete__(nullptr) {}
-  ~Reply___delete__() override;
   explicit PROTOBUF_CONSTEXPR Reply___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply___delete__(const Reply___delete__& from);
@@ -491,13 +467,15 @@ class Reply___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -535,23 +513,15 @@ class Reply___delete__ final :
   Reply___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply___delete__& from);
-  void MergeFrom(const Reply___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -563,7 +533,10 @@ class Reply___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -577,9 +550,7 @@ class Reply___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PVerifySSLServerCert_2eproto;
 };
 // ===================================================================
@@ -630,17 +601,9 @@ Msg_OnVerifySSLServerCertFinished::a_abuiltcertchain() const {
   return _impl_.a_abuiltcertchain_;
 }
 
-// required uint32 a_aCertTransparencyStatus = 2;
-inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_a_acerttransparencystatus() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_OnVerifySSLServerCertFinished::has_a_acerttransparencystatus() const {
-  return _internal_has_a_acerttransparencystatus();
-}
+// uint32 a_aCertTransparencyStatus = 2;
 inline void Msg_OnVerifySSLServerCertFinished::clear_a_acerttransparencystatus() {
   _impl_.a_acerttransparencystatus_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_OnVerifySSLServerCertFinished::_internal_a_acerttransparencystatus() const {
   return _impl_.a_acerttransparencystatus_;
@@ -650,7 +613,7 @@ inline uint32_t Msg_OnVerifySSLServerCertFinished::a_acerttransparencystatus() c
   return _internal_a_acerttransparencystatus();
 }
 inline void Msg_OnVerifySSLServerCertFinished::_internal_set_a_acerttransparencystatus(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_acerttransparencystatus_ = value;
 }
 inline void Msg_OnVerifySSLServerCertFinished::set_a_acerttransparencystatus(uint32_t value) {
@@ -658,17 +621,9 @@ inline void Msg_OnVerifySSLServerCertFinished::set_a_acerttransparencystatus(uin
   // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aCertTransparencyStatus)
 }
 
-// required bytes a_aEVStatus = 3;
-inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_a_aevstatus() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_OnVerifySSLServerCertFinished::has_a_aevstatus() const {
-  return _internal_has_a_aevstatus();
-}
+// bytes a_aEVStatus = 3;
 inline void Msg_OnVerifySSLServerCertFinished::clear_a_aevstatus() {
   _impl_.a_aevstatus_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OnVerifySSLServerCertFinished::a_aevstatus() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aEVStatus)
@@ -677,7 +632,7 @@ inline const std::string& Msg_OnVerifySSLServerCertFinished::a_aevstatus() const
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnVerifySSLServerCertFinished::set_a_aevstatus(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_aevstatus_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aEVStatus)
 }
@@ -690,32 +645,22 @@ inline const std::string& Msg_OnVerifySSLServerCertFinished::_internal_a_aevstat
   return _impl_.a_aevstatus_.Get();
 }
 inline void Msg_OnVerifySSLServerCertFinished::_internal_set_a_aevstatus(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aevstatus_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnVerifySSLServerCertFinished::_internal_mutable_a_aevstatus() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_aevstatus_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnVerifySSLServerCertFinished::release_a_aevstatus() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aEVStatus)
-  if (!_internal_has_a_aevstatus()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_aevstatus_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_aevstatus_.IsDefault()) {
-    _impl_.a_aevstatus_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_aevstatus_.Release();
 }
 inline void Msg_OnVerifySSLServerCertFinished::set_allocated_a_aevstatus(std::string* a_aevstatus) {
   if (a_aevstatus != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_aevstatus_.SetAllocated(a_aevstatus, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -726,17 +671,9 @@ inline void Msg_OnVerifySSLServerCertFinished::set_allocated_a_aevstatus(std::st
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aEVStatus)
 }
 
-// required bool a_aSucceeded = 4;
-inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_a_asucceeded() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool Msg_OnVerifySSLServerCertFinished::has_a_asucceeded() const {
-  return _internal_has_a_asucceeded();
-}
+// bool a_aSucceeded = 4;
 inline void Msg_OnVerifySSLServerCertFinished::clear_a_asucceeded() {
   _impl_.a_asucceeded_ = false;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline bool Msg_OnVerifySSLServerCertFinished::_internal_a_asucceeded() const {
   return _impl_.a_asucceeded_;
@@ -746,7 +683,7 @@ inline bool Msg_OnVerifySSLServerCertFinished::a_asucceeded() const {
   return _internal_a_asucceeded();
 }
 inline void Msg_OnVerifySSLServerCertFinished::_internal_set_a_asucceeded(bool value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_asucceeded_ = value;
 }
 inline void Msg_OnVerifySSLServerCertFinished::set_a_asucceeded(bool value) {
@@ -754,17 +691,9 @@ inline void Msg_OnVerifySSLServerCertFinished::set_a_asucceeded(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aSucceeded)
 }
 
-// required sint32 a_aFinalError = 5;
-inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_a_afinalerror() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_OnVerifySSLServerCertFinished::has_a_afinalerror() const {
-  return _internal_has_a_afinalerror();
-}
+// sint32 a_aFinalError = 5;
 inline void Msg_OnVerifySSLServerCertFinished::clear_a_afinalerror() {
   _impl_.a_afinalerror_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline int32_t Msg_OnVerifySSLServerCertFinished::_internal_a_afinalerror() const {
   return _impl_.a_afinalerror_;
@@ -774,7 +703,7 @@ inline int32_t Msg_OnVerifySSLServerCertFinished::a_afinalerror() const {
   return _internal_a_afinalerror();
 }
 inline void Msg_OnVerifySSLServerCertFinished::_internal_set_a_afinalerror(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_afinalerror_ = value;
 }
 inline void Msg_OnVerifySSLServerCertFinished::set_a_afinalerror(int32_t value) {
@@ -782,17 +711,9 @@ inline void Msg_OnVerifySSLServerCertFinished::set_a_afinalerror(int32_t value) 
   // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aFinalError)
 }
 
-// required bytes a_aOverridableErrorCategory = 6;
-inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_a_aoverridableerrorcategory() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_OnVerifySSLServerCertFinished::has_a_aoverridableerrorcategory() const {
-  return _internal_has_a_aoverridableerrorcategory();
-}
+// bytes a_aOverridableErrorCategory = 6;
 inline void Msg_OnVerifySSLServerCertFinished::clear_a_aoverridableerrorcategory() {
   _impl_.a_aoverridableerrorcategory_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_OnVerifySSLServerCertFinished::a_aoverridableerrorcategory() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aOverridableErrorCategory)
@@ -801,7 +722,7 @@ inline const std::string& Msg_OnVerifySSLServerCertFinished::a_aoverridableerror
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnVerifySSLServerCertFinished::set_a_aoverridableerrorcategory(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_aoverridableerrorcategory_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aOverridableErrorCategory)
 }
@@ -814,32 +735,22 @@ inline const std::string& Msg_OnVerifySSLServerCertFinished::_internal_a_aoverri
   return _impl_.a_aoverridableerrorcategory_.Get();
 }
 inline void Msg_OnVerifySSLServerCertFinished::_internal_set_a_aoverridableerrorcategory(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aoverridableerrorcategory_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnVerifySSLServerCertFinished::_internal_mutable_a_aoverridableerrorcategory() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_aoverridableerrorcategory_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnVerifySSLServerCertFinished::release_a_aoverridableerrorcategory() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aOverridableErrorCategory)
-  if (!_internal_has_a_aoverridableerrorcategory()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_aoverridableerrorcategory_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_aoverridableerrorcategory_.IsDefault()) {
-    _impl_.a_aoverridableerrorcategory_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_aoverridableerrorcategory_.Release();
 }
 inline void Msg_OnVerifySSLServerCertFinished::set_allocated_a_aoverridableerrorcategory(std::string* a_aoverridableerrorcategory) {
   if (a_aoverridableerrorcategory != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_aoverridableerrorcategory_.SetAllocated(a_aoverridableerrorcategory, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -850,17 +761,9 @@ inline void Msg_OnVerifySSLServerCertFinished::set_allocated_a_aoverridableerror
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aOverridableErrorCategory)
 }
 
-// required bool a_aIsBuiltCertChainRootBuiltInRoot = 7;
-inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_a_aisbuiltcertchainrootbuiltinroot() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool Msg_OnVerifySSLServerCertFinished::has_a_aisbuiltcertchainrootbuiltinroot() const {
-  return _internal_has_a_aisbuiltcertchainrootbuiltinroot();
-}
+// bool a_aIsBuiltCertChainRootBuiltInRoot = 7;
 inline void Msg_OnVerifySSLServerCertFinished::clear_a_aisbuiltcertchainrootbuiltinroot() {
   _impl_.a_aisbuiltcertchainrootbuiltinroot_ = false;
-  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline bool Msg_OnVerifySSLServerCertFinished::_internal_a_aisbuiltcertchainrootbuiltinroot() const {
   return _impl_.a_aisbuiltcertchainrootbuiltinroot_;
@@ -870,7 +773,7 @@ inline bool Msg_OnVerifySSLServerCertFinished::a_aisbuiltcertchainrootbuiltinroo
   return _internal_a_aisbuiltcertchainrootbuiltinroot();
 }
 inline void Msg_OnVerifySSLServerCertFinished::_internal_set_a_aisbuiltcertchainrootbuiltinroot(bool value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   _impl_.a_aisbuiltcertchainrootbuiltinroot_ = value;
 }
 inline void Msg_OnVerifySSLServerCertFinished::set_a_aisbuiltcertchainrootbuiltinroot(bool value) {
@@ -878,17 +781,9 @@ inline void Msg_OnVerifySSLServerCertFinished::set_a_aisbuiltcertchainrootbuilti
   // @@protoc_insertion_point(field_set:protobuf.mozilla.psm.PVerifySSLServerCert.Msg_OnVerifySSLServerCertFinished.a_aIsBuiltCertChainRootBuiltInRoot)
 }
 
-// required bool a_aMadeOCSPRequests = 8;
-inline bool Msg_OnVerifySSLServerCertFinished::_internal_has_a_amadeocsprequests() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool Msg_OnVerifySSLServerCertFinished::has_a_amadeocsprequests() const {
-  return _internal_has_a_amadeocsprequests();
-}
+// bool a_aMadeOCSPRequests = 8;
 inline void Msg_OnVerifySSLServerCertFinished::clear_a_amadeocsprequests() {
   _impl_.a_amadeocsprequests_ = false;
-  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline bool Msg_OnVerifySSLServerCertFinished::_internal_a_amadeocsprequests() const {
   return _impl_.a_amadeocsprequests_;
@@ -898,7 +793,7 @@ inline bool Msg_OnVerifySSLServerCertFinished::a_amadeocsprequests() const {
   return _internal_a_amadeocsprequests();
 }
 inline void Msg_OnVerifySSLServerCertFinished::_internal_set_a_amadeocsprequests(bool value) {
-  _impl_._has_bits_[0] |= 0x00000040u;
+  
   _impl_.a_amadeocsprequests_ = value;
 }
 inline void Msg_OnVerifySSLServerCertFinished::set_a_amadeocsprequests(bool value) {

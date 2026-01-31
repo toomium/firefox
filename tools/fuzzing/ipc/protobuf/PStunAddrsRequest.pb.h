@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_PStunAddrsRequest_2eproto
@@ -41,6 +44,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PStunAddrsRequest_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PStunAddrsRequest_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace net {
@@ -91,10 +95,9 @@ namespace PStunAddrsRequest {
 // ===================================================================
 
 class Msg_GetStunAddrs final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PStunAddrsRequest.Msg_GetStunAddrs) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PStunAddrsRequest.Msg_GetStunAddrs) */ {
  public:
   inline Msg_GetStunAddrs() : Msg_GetStunAddrs(nullptr) {}
-  ~Msg_GetStunAddrs() override;
   explicit PROTOBUF_CONSTEXPR Msg_GetStunAddrs(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_GetStunAddrs(const Msg_GetStunAddrs& from);
@@ -121,13 +124,15 @@ class Msg_GetStunAddrs final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_GetStunAddrs& default_instance() {
     return *internal_default_instance();
   }
@@ -165,23 +170,15 @@ class Msg_GetStunAddrs final :
   Msg_GetStunAddrs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_GetStunAddrs>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_GetStunAddrs& from);
-  void MergeFrom(const Msg_GetStunAddrs& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_GetStunAddrs* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_GetStunAddrs& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_GetStunAddrs& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -193,7 +190,10 @@ class Msg_GetStunAddrs final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -207,15 +207,13 @@ class Msg_GetStunAddrs final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PStunAddrsRequest_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_RegisterMDNSHostname final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PStunAddrsRequest.Msg_RegisterMDNSHostname) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PStunAddrsRequest.Msg_RegisterMDNSHostname) */ {
  public:
   inline Msg_RegisterMDNSHostname() : Msg_RegisterMDNSHostname(nullptr) {}
   ~Msg_RegisterMDNSHostname() override;
@@ -245,13 +243,15 @@ class Msg_RegisterMDNSHostname final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_RegisterMDNSHostname& default_instance() {
     return *internal_default_instance();
   }
@@ -289,9 +289,15 @@ class Msg_RegisterMDNSHostname final :
   Msg_RegisterMDNSHostname* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_RegisterMDNSHostname>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_RegisterMDNSHostname& from);
-  void MergeFrom(const Msg_RegisterMDNSHostname& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_RegisterMDNSHostname& from) {
+    Msg_RegisterMDNSHostname::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -304,7 +310,7 @@ class Msg_RegisterMDNSHostname final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_RegisterMDNSHostname* other);
 
   private:
@@ -317,7 +323,10 @@ class Msg_RegisterMDNSHostname final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -327,11 +336,7 @@ class Msg_RegisterMDNSHostname final :
     kAHostnameFieldNumber = 1,
     kAAddressFieldNumber = 2,
   };
-  // required string a_hostname = 1;
-  bool has_a_hostname() const;
-  private:
-  bool _internal_has_a_hostname() const;
-  public:
+  // string a_hostname = 1;
   void clear_a_hostname();
   const std::string& a_hostname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -345,11 +350,7 @@ class Msg_RegisterMDNSHostname final :
   std::string* _internal_mutable_a_hostname();
   public:
 
-  // required string a_address = 2;
-  bool has_a_address() const;
-  private:
-  bool _internal_has_a_address() const;
-  public:
+  // string a_address = 2;
   void clear_a_address();
   const std::string& a_address() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -367,17 +368,13 @@ class Msg_RegisterMDNSHostname final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_hostname_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_address_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PStunAddrsRequest_2eproto;
@@ -385,7 +382,7 @@ class Msg_RegisterMDNSHostname final :
 // -------------------------------------------------------------------
 
 class Msg_QueryMDNSHostname final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PStunAddrsRequest.Msg_QueryMDNSHostname) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PStunAddrsRequest.Msg_QueryMDNSHostname) */ {
  public:
   inline Msg_QueryMDNSHostname() : Msg_QueryMDNSHostname(nullptr) {}
   ~Msg_QueryMDNSHostname() override;
@@ -415,13 +412,15 @@ class Msg_QueryMDNSHostname final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_QueryMDNSHostname& default_instance() {
     return *internal_default_instance();
   }
@@ -459,9 +458,15 @@ class Msg_QueryMDNSHostname final :
   Msg_QueryMDNSHostname* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_QueryMDNSHostname>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_QueryMDNSHostname& from);
-  void MergeFrom(const Msg_QueryMDNSHostname& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_QueryMDNSHostname& from) {
+    Msg_QueryMDNSHostname::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -474,7 +479,7 @@ class Msg_QueryMDNSHostname final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_QueryMDNSHostname* other);
 
   private:
@@ -487,7 +492,10 @@ class Msg_QueryMDNSHostname final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -496,11 +504,7 @@ class Msg_QueryMDNSHostname final :
   enum : int {
     kAHostnameFieldNumber = 1,
   };
-  // required string a_hostname = 1;
-  bool has_a_hostname() const;
-  private:
-  bool _internal_has_a_hostname() const;
-  public:
+  // string a_hostname = 1;
   void clear_a_hostname();
   const std::string& a_hostname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -522,9 +526,8 @@ class Msg_QueryMDNSHostname final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_hostname_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PStunAddrsRequest_2eproto;
@@ -532,7 +535,7 @@ class Msg_QueryMDNSHostname final :
 // -------------------------------------------------------------------
 
 class Msg_UnregisterMDNSHostname final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PStunAddrsRequest.Msg_UnregisterMDNSHostname) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PStunAddrsRequest.Msg_UnregisterMDNSHostname) */ {
  public:
   inline Msg_UnregisterMDNSHostname() : Msg_UnregisterMDNSHostname(nullptr) {}
   ~Msg_UnregisterMDNSHostname() override;
@@ -562,13 +565,15 @@ class Msg_UnregisterMDNSHostname final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_UnregisterMDNSHostname& default_instance() {
     return *internal_default_instance();
   }
@@ -606,9 +611,15 @@ class Msg_UnregisterMDNSHostname final :
   Msg_UnregisterMDNSHostname* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_UnregisterMDNSHostname>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_UnregisterMDNSHostname& from);
-  void MergeFrom(const Msg_UnregisterMDNSHostname& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_UnregisterMDNSHostname& from) {
+    Msg_UnregisterMDNSHostname::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -621,7 +632,7 @@ class Msg_UnregisterMDNSHostname final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_UnregisterMDNSHostname* other);
 
   private:
@@ -634,7 +645,10 @@ class Msg_UnregisterMDNSHostname final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -643,11 +657,7 @@ class Msg_UnregisterMDNSHostname final :
   enum : int {
     kAHostnameFieldNumber = 1,
   };
-  // required string a_hostname = 1;
-  bool has_a_hostname() const;
-  private:
-  bool _internal_has_a_hostname() const;
-  public:
+  // string a_hostname = 1;
   void clear_a_hostname();
   const std::string& a_hostname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -669,9 +679,8 @@ class Msg_UnregisterMDNSHostname final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_hostname_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PStunAddrsRequest_2eproto;
@@ -679,10 +688,9 @@ class Msg_UnregisterMDNSHostname final :
 // -------------------------------------------------------------------
 
 class Msg___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PStunAddrsRequest.Msg___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PStunAddrsRequest.Msg___delete__) */ {
  public:
   inline Msg___delete__() : Msg___delete__(nullptr) {}
-  ~Msg___delete__() override;
   explicit PROTOBUF_CONSTEXPR Msg___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg___delete__(const Msg___delete__& from);
@@ -709,13 +717,15 @@ class Msg___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -753,23 +763,15 @@ class Msg___delete__ final :
   Msg___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg___delete__& from);
-  void MergeFrom(const Msg___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -781,7 +783,10 @@ class Msg___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -795,18 +800,15 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PStunAddrsRequest_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PStunAddrsRequest.Reply___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PStunAddrsRequest.Reply___delete__) */ {
  public:
   inline Reply___delete__() : Reply___delete__(nullptr) {}
-  ~Reply___delete__() override;
   explicit PROTOBUF_CONSTEXPR Reply___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply___delete__(const Reply___delete__& from);
@@ -833,13 +835,15 @@ class Reply___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -877,23 +881,15 @@ class Reply___delete__ final :
   Reply___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply___delete__& from);
-  void MergeFrom(const Reply___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -905,7 +901,10 @@ class Reply___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -919,15 +918,13 @@ class Reply___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PStunAddrsRequest_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_OnMDNSQueryComplete final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PStunAddrsRequest.Msg_OnMDNSQueryComplete) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PStunAddrsRequest.Msg_OnMDNSQueryComplete) */ {
  public:
   inline Msg_OnMDNSQueryComplete() : Msg_OnMDNSQueryComplete(nullptr) {}
   ~Msg_OnMDNSQueryComplete() override;
@@ -957,13 +954,15 @@ class Msg_OnMDNSQueryComplete final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_OnMDNSQueryComplete& default_instance() {
     return *internal_default_instance();
   }
@@ -1001,9 +1000,15 @@ class Msg_OnMDNSQueryComplete final :
   Msg_OnMDNSQueryComplete* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_OnMDNSQueryComplete>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_OnMDNSQueryComplete& from);
-  void MergeFrom(const Msg_OnMDNSQueryComplete& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_OnMDNSQueryComplete& from) {
+    Msg_OnMDNSQueryComplete::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1016,7 +1021,7 @@ class Msg_OnMDNSQueryComplete final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_OnMDNSQueryComplete* other);
 
   private:
@@ -1029,7 +1034,10 @@ class Msg_OnMDNSQueryComplete final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1039,11 +1047,7 @@ class Msg_OnMDNSQueryComplete final :
     kAHostnameFieldNumber = 1,
     kAAddressFieldNumber = 2,
   };
-  // required string a_hostname = 1;
-  bool has_a_hostname() const;
-  private:
-  bool _internal_has_a_hostname() const;
-  public:
+  // string a_hostname = 1;
   void clear_a_hostname();
   const std::string& a_hostname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1057,11 +1061,7 @@ class Msg_OnMDNSQueryComplete final :
   std::string* _internal_mutable_a_hostname();
   public:
 
-  // required bytes a_address = 2;
-  bool has_a_address() const;
-  private:
-  bool _internal_has_a_address() const;
-  public:
+  // bytes a_address = 2;
   void clear_a_address();
   const std::string& a_address() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1079,17 +1079,13 @@ class Msg_OnMDNSQueryComplete final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_hostname_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_address_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PStunAddrsRequest_2eproto;
@@ -1097,7 +1093,7 @@ class Msg_OnMDNSQueryComplete final :
 // -------------------------------------------------------------------
 
 class Msg_OnStunAddrsAvailable final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PStunAddrsRequest.Msg_OnStunAddrsAvailable) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PStunAddrsRequest.Msg_OnStunAddrsAvailable) */ {
  public:
   inline Msg_OnStunAddrsAvailable() : Msg_OnStunAddrsAvailable(nullptr) {}
   ~Msg_OnStunAddrsAvailable() override;
@@ -1127,13 +1123,15 @@ class Msg_OnStunAddrsAvailable final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_OnStunAddrsAvailable& default_instance() {
     return *internal_default_instance();
   }
@@ -1171,9 +1169,15 @@ class Msg_OnStunAddrsAvailable final :
   Msg_OnStunAddrsAvailable* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_OnStunAddrsAvailable>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_OnStunAddrsAvailable& from);
-  void MergeFrom(const Msg_OnStunAddrsAvailable& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_OnStunAddrsAvailable& from) {
+    Msg_OnStunAddrsAvailable::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1186,7 +1190,7 @@ class Msg_OnStunAddrsAvailable final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_OnStunAddrsAvailable* other);
 
   private:
@@ -1199,7 +1203,10 @@ class Msg_OnStunAddrsAvailable final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1208,11 +1215,7 @@ class Msg_OnStunAddrsAvailable final :
   enum : int {
     kAIceStunAddrsFieldNumber = 1,
   };
-  // required bytes a_iceStunAddrs = 1;
-  bool has_a_icestunaddrs() const;
-  private:
-  bool _internal_has_a_icestunaddrs() const;
-  public:
+  // bytes a_iceStunAddrs = 1;
   void clear_a_icestunaddrs();
   const std::string& a_icestunaddrs() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1234,9 +1237,8 @@ class Msg_OnStunAddrsAvailable final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_icestunaddrs_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PStunAddrsRequest_2eproto;
@@ -1256,17 +1258,9 @@ class Msg_OnStunAddrsAvailable final :
 
 // Msg_RegisterMDNSHostname
 
-// required string a_hostname = 1;
-inline bool Msg_RegisterMDNSHostname::_internal_has_a_hostname() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_RegisterMDNSHostname::has_a_hostname() const {
-  return _internal_has_a_hostname();
-}
+// string a_hostname = 1;
 inline void Msg_RegisterMDNSHostname::clear_a_hostname() {
   _impl_.a_hostname_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_RegisterMDNSHostname::a_hostname() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PStunAddrsRequest.Msg_RegisterMDNSHostname.a_hostname)
@@ -1275,7 +1269,7 @@ inline const std::string& Msg_RegisterMDNSHostname::a_hostname() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RegisterMDNSHostname::set_a_hostname(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_hostname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PStunAddrsRequest.Msg_RegisterMDNSHostname.a_hostname)
 }
@@ -1288,32 +1282,22 @@ inline const std::string& Msg_RegisterMDNSHostname::_internal_a_hostname() const
   return _impl_.a_hostname_.Get();
 }
 inline void Msg_RegisterMDNSHostname::_internal_set_a_hostname(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_hostname_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_RegisterMDNSHostname::_internal_mutable_a_hostname() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_hostname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_RegisterMDNSHostname::release_a_hostname() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PStunAddrsRequest.Msg_RegisterMDNSHostname.a_hostname)
-  if (!_internal_has_a_hostname()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_hostname_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_hostname_.IsDefault()) {
-    _impl_.a_hostname_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_hostname_.Release();
 }
 inline void Msg_RegisterMDNSHostname::set_allocated_a_hostname(std::string* a_hostname) {
   if (a_hostname != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_hostname_.SetAllocated(a_hostname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1324,17 +1308,9 @@ inline void Msg_RegisterMDNSHostname::set_allocated_a_hostname(std::string* a_ho
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PStunAddrsRequest.Msg_RegisterMDNSHostname.a_hostname)
 }
 
-// required string a_address = 2;
-inline bool Msg_RegisterMDNSHostname::_internal_has_a_address() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_RegisterMDNSHostname::has_a_address() const {
-  return _internal_has_a_address();
-}
+// string a_address = 2;
 inline void Msg_RegisterMDNSHostname::clear_a_address() {
   _impl_.a_address_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_RegisterMDNSHostname::a_address() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PStunAddrsRequest.Msg_RegisterMDNSHostname.a_address)
@@ -1343,7 +1319,7 @@ inline const std::string& Msg_RegisterMDNSHostname::a_address() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RegisterMDNSHostname::set_a_address(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_address_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PStunAddrsRequest.Msg_RegisterMDNSHostname.a_address)
 }
@@ -1356,32 +1332,22 @@ inline const std::string& Msg_RegisterMDNSHostname::_internal_a_address() const 
   return _impl_.a_address_.Get();
 }
 inline void Msg_RegisterMDNSHostname::_internal_set_a_address(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_address_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_RegisterMDNSHostname::_internal_mutable_a_address() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_address_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_RegisterMDNSHostname::release_a_address() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PStunAddrsRequest.Msg_RegisterMDNSHostname.a_address)
-  if (!_internal_has_a_address()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_address_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_address_.IsDefault()) {
-    _impl_.a_address_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_address_.Release();
 }
 inline void Msg_RegisterMDNSHostname::set_allocated_a_address(std::string* a_address) {
   if (a_address != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_address_.SetAllocated(a_address, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1396,17 +1362,9 @@ inline void Msg_RegisterMDNSHostname::set_allocated_a_address(std::string* a_add
 
 // Msg_QueryMDNSHostname
 
-// required string a_hostname = 1;
-inline bool Msg_QueryMDNSHostname::_internal_has_a_hostname() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_QueryMDNSHostname::has_a_hostname() const {
-  return _internal_has_a_hostname();
-}
+// string a_hostname = 1;
 inline void Msg_QueryMDNSHostname::clear_a_hostname() {
   _impl_.a_hostname_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_QueryMDNSHostname::a_hostname() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PStunAddrsRequest.Msg_QueryMDNSHostname.a_hostname)
@@ -1415,7 +1373,7 @@ inline const std::string& Msg_QueryMDNSHostname::a_hostname() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_QueryMDNSHostname::set_a_hostname(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_hostname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PStunAddrsRequest.Msg_QueryMDNSHostname.a_hostname)
 }
@@ -1428,32 +1386,22 @@ inline const std::string& Msg_QueryMDNSHostname::_internal_a_hostname() const {
   return _impl_.a_hostname_.Get();
 }
 inline void Msg_QueryMDNSHostname::_internal_set_a_hostname(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_hostname_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_QueryMDNSHostname::_internal_mutable_a_hostname() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_hostname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_QueryMDNSHostname::release_a_hostname() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PStunAddrsRequest.Msg_QueryMDNSHostname.a_hostname)
-  if (!_internal_has_a_hostname()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_hostname_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_hostname_.IsDefault()) {
-    _impl_.a_hostname_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_hostname_.Release();
 }
 inline void Msg_QueryMDNSHostname::set_allocated_a_hostname(std::string* a_hostname) {
   if (a_hostname != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_hostname_.SetAllocated(a_hostname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1468,17 +1416,9 @@ inline void Msg_QueryMDNSHostname::set_allocated_a_hostname(std::string* a_hostn
 
 // Msg_UnregisterMDNSHostname
 
-// required string a_hostname = 1;
-inline bool Msg_UnregisterMDNSHostname::_internal_has_a_hostname() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_UnregisterMDNSHostname::has_a_hostname() const {
-  return _internal_has_a_hostname();
-}
+// string a_hostname = 1;
 inline void Msg_UnregisterMDNSHostname::clear_a_hostname() {
   _impl_.a_hostname_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_UnregisterMDNSHostname::a_hostname() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PStunAddrsRequest.Msg_UnregisterMDNSHostname.a_hostname)
@@ -1487,7 +1427,7 @@ inline const std::string& Msg_UnregisterMDNSHostname::a_hostname() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UnregisterMDNSHostname::set_a_hostname(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_hostname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PStunAddrsRequest.Msg_UnregisterMDNSHostname.a_hostname)
 }
@@ -1500,32 +1440,22 @@ inline const std::string& Msg_UnregisterMDNSHostname::_internal_a_hostname() con
   return _impl_.a_hostname_.Get();
 }
 inline void Msg_UnregisterMDNSHostname::_internal_set_a_hostname(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_hostname_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_UnregisterMDNSHostname::_internal_mutable_a_hostname() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_hostname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_UnregisterMDNSHostname::release_a_hostname() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PStunAddrsRequest.Msg_UnregisterMDNSHostname.a_hostname)
-  if (!_internal_has_a_hostname()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_hostname_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_hostname_.IsDefault()) {
-    _impl_.a_hostname_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_hostname_.Release();
 }
 inline void Msg_UnregisterMDNSHostname::set_allocated_a_hostname(std::string* a_hostname) {
   if (a_hostname != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_hostname_.SetAllocated(a_hostname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1548,17 +1478,9 @@ inline void Msg_UnregisterMDNSHostname::set_allocated_a_hostname(std::string* a_
 
 // Msg_OnMDNSQueryComplete
 
-// required string a_hostname = 1;
-inline bool Msg_OnMDNSQueryComplete::_internal_has_a_hostname() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_OnMDNSQueryComplete::has_a_hostname() const {
-  return _internal_has_a_hostname();
-}
+// string a_hostname = 1;
 inline void Msg_OnMDNSQueryComplete::clear_a_hostname() {
   _impl_.a_hostname_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OnMDNSQueryComplete::a_hostname() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PStunAddrsRequest.Msg_OnMDNSQueryComplete.a_hostname)
@@ -1567,7 +1489,7 @@ inline const std::string& Msg_OnMDNSQueryComplete::a_hostname() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnMDNSQueryComplete::set_a_hostname(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_hostname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PStunAddrsRequest.Msg_OnMDNSQueryComplete.a_hostname)
 }
@@ -1580,32 +1502,22 @@ inline const std::string& Msg_OnMDNSQueryComplete::_internal_a_hostname() const 
   return _impl_.a_hostname_.Get();
 }
 inline void Msg_OnMDNSQueryComplete::_internal_set_a_hostname(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_hostname_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnMDNSQueryComplete::_internal_mutable_a_hostname() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_hostname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnMDNSQueryComplete::release_a_hostname() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PStunAddrsRequest.Msg_OnMDNSQueryComplete.a_hostname)
-  if (!_internal_has_a_hostname()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_hostname_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_hostname_.IsDefault()) {
-    _impl_.a_hostname_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_hostname_.Release();
 }
 inline void Msg_OnMDNSQueryComplete::set_allocated_a_hostname(std::string* a_hostname) {
   if (a_hostname != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_hostname_.SetAllocated(a_hostname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1616,17 +1528,9 @@ inline void Msg_OnMDNSQueryComplete::set_allocated_a_hostname(std::string* a_hos
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PStunAddrsRequest.Msg_OnMDNSQueryComplete.a_hostname)
 }
 
-// required bytes a_address = 2;
-inline bool Msg_OnMDNSQueryComplete::_internal_has_a_address() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_OnMDNSQueryComplete::has_a_address() const {
-  return _internal_has_a_address();
-}
+// bytes a_address = 2;
 inline void Msg_OnMDNSQueryComplete::clear_a_address() {
   _impl_.a_address_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_OnMDNSQueryComplete::a_address() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PStunAddrsRequest.Msg_OnMDNSQueryComplete.a_address)
@@ -1635,7 +1539,7 @@ inline const std::string& Msg_OnMDNSQueryComplete::a_address() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnMDNSQueryComplete::set_a_address(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_address_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PStunAddrsRequest.Msg_OnMDNSQueryComplete.a_address)
 }
@@ -1648,32 +1552,22 @@ inline const std::string& Msg_OnMDNSQueryComplete::_internal_a_address() const {
   return _impl_.a_address_.Get();
 }
 inline void Msg_OnMDNSQueryComplete::_internal_set_a_address(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_address_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnMDNSQueryComplete::_internal_mutable_a_address() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_address_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnMDNSQueryComplete::release_a_address() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PStunAddrsRequest.Msg_OnMDNSQueryComplete.a_address)
-  if (!_internal_has_a_address()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_address_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_address_.IsDefault()) {
-    _impl_.a_address_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_address_.Release();
 }
 inline void Msg_OnMDNSQueryComplete::set_allocated_a_address(std::string* a_address) {
   if (a_address != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_address_.SetAllocated(a_address, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1688,17 +1582,9 @@ inline void Msg_OnMDNSQueryComplete::set_allocated_a_address(std::string* a_addr
 
 // Msg_OnStunAddrsAvailable
 
-// required bytes a_iceStunAddrs = 1;
-inline bool Msg_OnStunAddrsAvailable::_internal_has_a_icestunaddrs() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_OnStunAddrsAvailable::has_a_icestunaddrs() const {
-  return _internal_has_a_icestunaddrs();
-}
+// bytes a_iceStunAddrs = 1;
 inline void Msg_OnStunAddrsAvailable::clear_a_icestunaddrs() {
   _impl_.a_icestunaddrs_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_OnStunAddrsAvailable::a_icestunaddrs() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PStunAddrsRequest.Msg_OnStunAddrsAvailable.a_iceStunAddrs)
@@ -1707,7 +1593,7 @@ inline const std::string& Msg_OnStunAddrsAvailable::a_icestunaddrs() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_OnStunAddrsAvailable::set_a_icestunaddrs(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_icestunaddrs_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PStunAddrsRequest.Msg_OnStunAddrsAvailable.a_iceStunAddrs)
 }
@@ -1720,32 +1606,22 @@ inline const std::string& Msg_OnStunAddrsAvailable::_internal_a_icestunaddrs() c
   return _impl_.a_icestunaddrs_.Get();
 }
 inline void Msg_OnStunAddrsAvailable::_internal_set_a_icestunaddrs(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_icestunaddrs_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_OnStunAddrsAvailable::_internal_mutable_a_icestunaddrs() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_icestunaddrs_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_OnStunAddrsAvailable::release_a_icestunaddrs() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PStunAddrsRequest.Msg_OnStunAddrsAvailable.a_iceStunAddrs)
-  if (!_internal_has_a_icestunaddrs()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_icestunaddrs_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_icestunaddrs_.IsDefault()) {
-    _impl_.a_icestunaddrs_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_icestunaddrs_.Release();
 }
 inline void Msg_OnStunAddrsAvailable::set_allocated_a_icestunaddrs(std::string* a_icestunaddrs) {
   if (a_icestunaddrs != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_icestunaddrs_.SetAllocated(a_icestunaddrs, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_PRemoteSpellcheckEngine_2eproto
@@ -41,6 +44,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PRemoteSpellcheckEngine_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PRemoteSpellcheckEngine_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace PRemoteSpellcheckEngine {
@@ -104,10 +108,9 @@ namespace PRemoteSpellcheckEngine {
 // ===================================================================
 
 class Msg___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Msg___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Msg___delete__) */ {
  public:
   inline Msg___delete__() : Msg___delete__(nullptr) {}
-  ~Msg___delete__() override;
   explicit PROTOBUF_CONSTEXPR Msg___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg___delete__(const Msg___delete__& from);
@@ -134,13 +137,15 @@ class Msg___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -178,23 +183,15 @@ class Msg___delete__ final :
   Msg___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg___delete__& from);
-  void MergeFrom(const Msg___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -206,7 +203,10 @@ class Msg___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -220,18 +220,15 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteSpellcheckEngine_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Reply___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Reply___delete__) */ {
  public:
   inline Reply___delete__() : Reply___delete__(nullptr) {}
-  ~Reply___delete__() override;
   explicit PROTOBUF_CONSTEXPR Reply___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply___delete__(const Reply___delete__& from);
@@ -258,13 +255,15 @@ class Reply___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -302,23 +301,15 @@ class Reply___delete__ final :
   Reply___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply___delete__& from);
-  void MergeFrom(const Reply___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -330,7 +321,10 @@ class Reply___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -344,15 +338,13 @@ class Reply___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteSpellcheckEngine_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_CheckAsync final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_CheckAsync) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_CheckAsync) */ {
  public:
   inline Msg_CheckAsync() : Msg_CheckAsync(nullptr) {}
   ~Msg_CheckAsync() override;
@@ -382,13 +374,15 @@ class Msg_CheckAsync final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_CheckAsync& default_instance() {
     return *internal_default_instance();
   }
@@ -426,9 +420,15 @@ class Msg_CheckAsync final :
   Msg_CheckAsync* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_CheckAsync>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_CheckAsync& from);
-  void MergeFrom(const Msg_CheckAsync& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_CheckAsync& from) {
+    Msg_CheckAsync::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -441,7 +441,7 @@ class Msg_CheckAsync final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_CheckAsync* other);
 
   private:
@@ -454,7 +454,10 @@ class Msg_CheckAsync final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -504,7 +507,7 @@ class Msg_CheckAsync final :
 // -------------------------------------------------------------------
 
 class Reply_CheckAsync final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_CheckAsync) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_CheckAsync) */ {
  public:
   inline Reply_CheckAsync() : Reply_CheckAsync(nullptr) {}
   ~Reply_CheckAsync() override;
@@ -534,13 +537,15 @@ class Reply_CheckAsync final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_CheckAsync& default_instance() {
     return *internal_default_instance();
   }
@@ -578,9 +583,15 @@ class Reply_CheckAsync final :
   Reply_CheckAsync* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_CheckAsync>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_CheckAsync& from);
-  void MergeFrom(const Reply_CheckAsync& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_CheckAsync& from) {
+    Reply_CheckAsync::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -593,7 +604,7 @@ class Reply_CheckAsync final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_CheckAsync* other);
 
   private:
@@ -606,7 +617,10 @@ class Reply_CheckAsync final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -654,7 +668,7 @@ class Reply_CheckAsync final :
 // -------------------------------------------------------------------
 
 class Msg_SetDictionary final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionary) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionary) */ {
  public:
   inline Msg_SetDictionary() : Msg_SetDictionary(nullptr) {}
   ~Msg_SetDictionary() override;
@@ -684,13 +698,15 @@ class Msg_SetDictionary final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SetDictionary& default_instance() {
     return *internal_default_instance();
   }
@@ -728,9 +744,15 @@ class Msg_SetDictionary final :
   Msg_SetDictionary* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SetDictionary>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SetDictionary& from);
-  void MergeFrom(const Msg_SetDictionary& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SetDictionary& from) {
+    Msg_SetDictionary::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -743,7 +765,7 @@ class Msg_SetDictionary final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SetDictionary* other);
 
   private:
@@ -756,7 +778,10 @@ class Msg_SetDictionary final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -765,11 +790,7 @@ class Msg_SetDictionary final :
   enum : int {
     kAADictionaryFieldNumber = 1,
   };
-  // required string a_aDictionary = 1;
-  bool has_a_adictionary() const;
-  private:
-  bool _internal_has_a_adictionary() const;
-  public:
+  // string a_aDictionary = 1;
   void clear_a_adictionary();
   const std::string& a_adictionary() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -791,9 +812,8 @@ class Msg_SetDictionary final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adictionary_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteSpellcheckEngine_2eproto;
@@ -801,7 +821,7 @@ class Msg_SetDictionary final :
 // -------------------------------------------------------------------
 
 class Reply_SetDictionary final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionary) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionary) */ {
  public:
   inline Reply_SetDictionary() : Reply_SetDictionary(nullptr) {}
   ~Reply_SetDictionary() override;
@@ -831,13 +851,15 @@ class Reply_SetDictionary final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_SetDictionary& default_instance() {
     return *internal_default_instance();
   }
@@ -875,9 +897,15 @@ class Reply_SetDictionary final :
   Reply_SetDictionary* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_SetDictionary>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_SetDictionary& from);
-  void MergeFrom(const Reply_SetDictionary& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_SetDictionary& from) {
+    Reply_SetDictionary::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -890,7 +918,7 @@ class Reply_SetDictionary final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_SetDictionary* other);
 
   private:
@@ -903,7 +931,10 @@ class Reply_SetDictionary final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -912,11 +943,7 @@ class Reply_SetDictionary final :
   enum : int {
     kASuccessFieldNumber = 1,
   };
-  // required bool a_success = 1;
-  bool has_a_success() const;
-  private:
-  bool _internal_has_a_success() const;
-  public:
+  // bool a_success = 1;
   void clear_a_success();
   bool a_success() const;
   void set_a_success(bool value);
@@ -933,9 +960,8 @@ class Reply_SetDictionary final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     bool a_success_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteSpellcheckEngine_2eproto;
@@ -943,7 +969,7 @@ class Reply_SetDictionary final :
 // -------------------------------------------------------------------
 
 class Msg_SetDictionaries final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaries) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaries) */ {
  public:
   inline Msg_SetDictionaries() : Msg_SetDictionaries(nullptr) {}
   ~Msg_SetDictionaries() override;
@@ -973,13 +999,15 @@ class Msg_SetDictionaries final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SetDictionaries& default_instance() {
     return *internal_default_instance();
   }
@@ -1017,9 +1045,15 @@ class Msg_SetDictionaries final :
   Msg_SetDictionaries* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SetDictionaries>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SetDictionaries& from);
-  void MergeFrom(const Msg_SetDictionaries& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SetDictionaries& from) {
+    Msg_SetDictionaries::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1032,7 +1066,7 @@ class Msg_SetDictionaries final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SetDictionaries* other);
 
   private:
@@ -1045,7 +1079,10 @@ class Msg_SetDictionaries final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1095,7 +1132,7 @@ class Msg_SetDictionaries final :
 // -------------------------------------------------------------------
 
 class Reply_SetDictionaries final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaries) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaries) */ {
  public:
   inline Reply_SetDictionaries() : Reply_SetDictionaries(nullptr) {}
   ~Reply_SetDictionaries() override;
@@ -1125,13 +1162,15 @@ class Reply_SetDictionaries final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_SetDictionaries& default_instance() {
     return *internal_default_instance();
   }
@@ -1169,9 +1208,15 @@ class Reply_SetDictionaries final :
   Reply_SetDictionaries* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_SetDictionaries>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_SetDictionaries& from);
-  void MergeFrom(const Reply_SetDictionaries& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_SetDictionaries& from) {
+    Reply_SetDictionaries::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1184,7 +1229,7 @@ class Reply_SetDictionaries final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_SetDictionaries* other);
 
   private:
@@ -1197,7 +1242,10 @@ class Reply_SetDictionaries final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1206,11 +1254,7 @@ class Reply_SetDictionaries final :
   enum : int {
     kASuccessFieldNumber = 1,
   };
-  // required bool a_success = 1;
-  bool has_a_success() const;
-  private:
-  bool _internal_has_a_success() const;
-  public:
+  // bool a_success = 1;
   void clear_a_success();
   bool a_success() const;
   void set_a_success(bool value);
@@ -1227,9 +1271,8 @@ class Reply_SetDictionaries final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     bool a_success_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteSpellcheckEngine_2eproto;
@@ -1237,7 +1280,7 @@ class Reply_SetDictionaries final :
 // -------------------------------------------------------------------
 
 class Msg_Suggest final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest) */ {
  public:
   inline Msg_Suggest() : Msg_Suggest(nullptr) {}
   ~Msg_Suggest() override;
@@ -1267,13 +1310,15 @@ class Msg_Suggest final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_Suggest& default_instance() {
     return *internal_default_instance();
   }
@@ -1311,9 +1356,15 @@ class Msg_Suggest final :
   Msg_Suggest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_Suggest>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_Suggest& from);
-  void MergeFrom(const Msg_Suggest& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_Suggest& from) {
+    Msg_Suggest::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1326,7 +1377,7 @@ class Msg_Suggest final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_Suggest* other);
 
   private:
@@ -1339,7 +1390,10 @@ class Msg_Suggest final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1349,11 +1403,7 @@ class Msg_Suggest final :
     kAAWordFieldNumber = 1,
     kAACountFieldNumber = 2,
   };
-  // required string a_aWord = 1;
-  bool has_a_aword() const;
-  private:
-  bool _internal_has_a_aword() const;
-  public:
+  // string a_aWord = 1;
   void clear_a_aword();
   const std::string& a_aword() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1367,11 +1417,7 @@ class Msg_Suggest final :
   std::string* _internal_mutable_a_aword();
   public:
 
-  // required uint32 a_aCount = 2;
-  bool has_a_acount() const;
-  private:
-  bool _internal_has_a_acount() const;
-  public:
+  // uint32 a_aCount = 2;
   void clear_a_acount();
   uint32_t a_acount() const;
   void set_a_acount(uint32_t value);
@@ -1384,17 +1430,13 @@ class Msg_Suggest final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aword_;
     uint32_t a_acount_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteSpellcheckEngine_2eproto;
@@ -1402,7 +1444,7 @@ class Msg_Suggest final :
 // -------------------------------------------------------------------
 
 class Reply_Suggest final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_Suggest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_Suggest) */ {
  public:
   inline Reply_Suggest() : Reply_Suggest(nullptr) {}
   ~Reply_Suggest() override;
@@ -1432,13 +1474,15 @@ class Reply_Suggest final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_Suggest& default_instance() {
     return *internal_default_instance();
   }
@@ -1476,9 +1520,15 @@ class Reply_Suggest final :
   Reply_Suggest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_Suggest>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_Suggest& from);
-  void MergeFrom(const Reply_Suggest& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_Suggest& from) {
+    Reply_Suggest::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1491,7 +1541,7 @@ class Reply_Suggest final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_Suggest* other);
 
   private:
@@ -1504,7 +1554,10 @@ class Reply_Suggest final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1554,7 +1607,7 @@ class Reply_Suggest final :
 // -------------------------------------------------------------------
 
 class Msg_SetDictionaryFromList final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaryFromList) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionaryFromList) */ {
  public:
   inline Msg_SetDictionaryFromList() : Msg_SetDictionaryFromList(nullptr) {}
   ~Msg_SetDictionaryFromList() override;
@@ -1584,13 +1637,15 @@ class Msg_SetDictionaryFromList final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SetDictionaryFromList& default_instance() {
     return *internal_default_instance();
   }
@@ -1628,9 +1683,15 @@ class Msg_SetDictionaryFromList final :
   Msg_SetDictionaryFromList* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SetDictionaryFromList>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SetDictionaryFromList& from);
-  void MergeFrom(const Msg_SetDictionaryFromList& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SetDictionaryFromList& from) {
+    Msg_SetDictionaryFromList::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1643,7 +1704,7 @@ class Msg_SetDictionaryFromList final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SetDictionaryFromList* other);
 
   private:
@@ -1656,7 +1717,10 @@ class Msg_SetDictionaryFromList final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1706,7 +1770,7 @@ class Msg_SetDictionaryFromList final :
 // -------------------------------------------------------------------
 
 class Reply_SetDictionaryFromList final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList) */ {
  public:
   inline Reply_SetDictionaryFromList() : Reply_SetDictionaryFromList(nullptr) {}
   ~Reply_SetDictionaryFromList() override;
@@ -1736,13 +1800,15 @@ class Reply_SetDictionaryFromList final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_SetDictionaryFromList& default_instance() {
     return *internal_default_instance();
   }
@@ -1780,9 +1846,15 @@ class Reply_SetDictionaryFromList final :
   Reply_SetDictionaryFromList* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_SetDictionaryFromList>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_SetDictionaryFromList& from);
-  void MergeFrom(const Reply_SetDictionaryFromList& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_SetDictionaryFromList& from) {
+    Reply_SetDictionaryFromList::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1795,7 +1867,7 @@ class Reply_SetDictionaryFromList final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_SetDictionaryFromList* other);
 
   private:
@@ -1808,7 +1880,10 @@ class Reply_SetDictionaryFromList final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1818,11 +1893,7 @@ class Reply_SetDictionaryFromList final :
     kAADictionaryFieldNumber = 2,
     kAASuccessFieldNumber = 1,
   };
-  // required string a_aDictionary = 2;
-  bool has_a_adictionary() const;
-  private:
-  bool _internal_has_a_adictionary() const;
-  public:
+  // string a_aDictionary = 2;
   void clear_a_adictionary();
   const std::string& a_adictionary() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1836,11 +1907,7 @@ class Reply_SetDictionaryFromList final :
   std::string* _internal_mutable_a_adictionary();
   public:
 
-  // required bool a_aSuccess = 1;
-  bool has_a_asuccess() const;
-  private:
-  bool _internal_has_a_asuccess() const;
-  public:
+  // bool a_aSuccess = 1;
   void clear_a_asuccess();
   bool a_asuccess() const;
   void set_a_asuccess(bool value);
@@ -1853,17 +1920,13 @@ class Reply_SetDictionaryFromList final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adictionary_;
     bool a_asuccess_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteSpellcheckEngine_2eproto;
@@ -2017,17 +2080,9 @@ Reply_CheckAsync::mutable_a_aismisspelled() {
 
 // Msg_SetDictionary
 
-// required string a_aDictionary = 1;
-inline bool Msg_SetDictionary::_internal_has_a_adictionary() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_SetDictionary::has_a_adictionary() const {
-  return _internal_has_a_adictionary();
-}
+// string a_aDictionary = 1;
 inline void Msg_SetDictionary::clear_a_adictionary() {
   _impl_.a_adictionary_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_SetDictionary::a_adictionary() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionary.a_aDictionary)
@@ -2036,7 +2091,7 @@ inline const std::string& Msg_SetDictionary::a_adictionary() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SetDictionary::set_a_adictionary(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_adictionary_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionary.a_aDictionary)
 }
@@ -2049,32 +2104,22 @@ inline const std::string& Msg_SetDictionary::_internal_a_adictionary() const {
   return _impl_.a_adictionary_.Get();
 }
 inline void Msg_SetDictionary::_internal_set_a_adictionary(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_adictionary_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_SetDictionary::_internal_mutable_a_adictionary() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_adictionary_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_SetDictionary::release_a_adictionary() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_SetDictionary.a_aDictionary)
-  if (!_internal_has_a_adictionary()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_adictionary_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_adictionary_.IsDefault()) {
-    _impl_.a_adictionary_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_adictionary_.Release();
 }
 inline void Msg_SetDictionary::set_allocated_a_adictionary(std::string* a_adictionary) {
   if (a_adictionary != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_adictionary_.SetAllocated(a_adictionary, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2089,17 +2134,9 @@ inline void Msg_SetDictionary::set_allocated_a_adictionary(std::string* a_adicti
 
 // Reply_SetDictionary
 
-// required bool a_success = 1;
-inline bool Reply_SetDictionary::_internal_has_a_success() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Reply_SetDictionary::has_a_success() const {
-  return _internal_has_a_success();
-}
+// bool a_success = 1;
 inline void Reply_SetDictionary::clear_a_success() {
   _impl_.a_success_ = false;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_SetDictionary::_internal_a_success() const {
   return _impl_.a_success_;
@@ -2109,7 +2146,7 @@ inline bool Reply_SetDictionary::a_success() const {
   return _internal_a_success();
 }
 inline void Reply_SetDictionary::_internal_set_a_success(bool value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_success_ = value;
 }
 inline void Reply_SetDictionary::set_a_success(bool value) {
@@ -2200,17 +2237,9 @@ Msg_SetDictionaries::mutable_a_adictionaries() {
 
 // Reply_SetDictionaries
 
-// required bool a_success = 1;
-inline bool Reply_SetDictionaries::_internal_has_a_success() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Reply_SetDictionaries::has_a_success() const {
-  return _internal_has_a_success();
-}
+// bool a_success = 1;
 inline void Reply_SetDictionaries::clear_a_success() {
   _impl_.a_success_ = false;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_SetDictionaries::_internal_a_success() const {
   return _impl_.a_success_;
@@ -2220,7 +2249,7 @@ inline bool Reply_SetDictionaries::a_success() const {
   return _internal_a_success();
 }
 inline void Reply_SetDictionaries::_internal_set_a_success(bool value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_success_ = value;
 }
 inline void Reply_SetDictionaries::set_a_success(bool value) {
@@ -2232,17 +2261,9 @@ inline void Reply_SetDictionaries::set_a_success(bool value) {
 
 // Msg_Suggest
 
-// required string a_aWord = 1;
-inline bool Msg_Suggest::_internal_has_a_aword() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_Suggest::has_a_aword() const {
-  return _internal_has_a_aword();
-}
+// string a_aWord = 1;
 inline void Msg_Suggest::clear_a_aword() {
   _impl_.a_aword_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_Suggest::a_aword() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest.a_aWord)
@@ -2251,7 +2272,7 @@ inline const std::string& Msg_Suggest::a_aword() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_Suggest::set_a_aword(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_aword_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest.a_aWord)
 }
@@ -2264,32 +2285,22 @@ inline const std::string& Msg_Suggest::_internal_a_aword() const {
   return _impl_.a_aword_.Get();
 }
 inline void Msg_Suggest::_internal_set_a_aword(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_aword_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_Suggest::_internal_mutable_a_aword() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_aword_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_Suggest::release_a_aword() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest.a_aWord)
-  if (!_internal_has_a_aword()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_aword_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_aword_.IsDefault()) {
-    _impl_.a_aword_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_aword_.Release();
 }
 inline void Msg_Suggest::set_allocated_a_aword(std::string* a_aword) {
   if (a_aword != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_aword_.SetAllocated(a_aword, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2300,17 +2311,9 @@ inline void Msg_Suggest::set_allocated_a_aword(std::string* a_aword) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.PRemoteSpellcheckEngine.Msg_Suggest.a_aWord)
 }
 
-// required uint32 a_aCount = 2;
-inline bool Msg_Suggest::_internal_has_a_acount() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_Suggest::has_a_acount() const {
-  return _internal_has_a_acount();
-}
+// uint32 a_aCount = 2;
 inline void Msg_Suggest::clear_a_acount() {
   _impl_.a_acount_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t Msg_Suggest::_internal_a_acount() const {
   return _impl_.a_acount_;
@@ -2320,7 +2323,7 @@ inline uint32_t Msg_Suggest::a_acount() const {
   return _internal_a_acount();
 }
 inline void Msg_Suggest::_internal_set_a_acount(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_acount_ = value;
 }
 inline void Msg_Suggest::set_a_acount(uint32_t value) {
@@ -2490,17 +2493,9 @@ Msg_SetDictionaryFromList::mutable_a_alist() {
 
 // Reply_SetDictionaryFromList
 
-// required bool a_aSuccess = 1;
-inline bool Reply_SetDictionaryFromList::_internal_has_a_asuccess() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Reply_SetDictionaryFromList::has_a_asuccess() const {
-  return _internal_has_a_asuccess();
-}
+// bool a_aSuccess = 1;
 inline void Reply_SetDictionaryFromList::clear_a_asuccess() {
   _impl_.a_asuccess_ = false;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool Reply_SetDictionaryFromList::_internal_a_asuccess() const {
   return _impl_.a_asuccess_;
@@ -2510,7 +2505,7 @@ inline bool Reply_SetDictionaryFromList::a_asuccess() const {
   return _internal_a_asuccess();
 }
 inline void Reply_SetDictionaryFromList::_internal_set_a_asuccess(bool value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_asuccess_ = value;
 }
 inline void Reply_SetDictionaryFromList::set_a_asuccess(bool value) {
@@ -2518,17 +2513,9 @@ inline void Reply_SetDictionaryFromList::set_a_asuccess(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList.a_aSuccess)
 }
 
-// required string a_aDictionary = 2;
-inline bool Reply_SetDictionaryFromList::_internal_has_a_adictionary() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Reply_SetDictionaryFromList::has_a_adictionary() const {
-  return _internal_has_a_adictionary();
-}
+// string a_aDictionary = 2;
 inline void Reply_SetDictionaryFromList::clear_a_adictionary() {
   _impl_.a_adictionary_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_SetDictionaryFromList::a_adictionary() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList.a_aDictionary)
@@ -2537,7 +2524,7 @@ inline const std::string& Reply_SetDictionaryFromList::a_adictionary() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_SetDictionaryFromList::set_a_adictionary(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_adictionary_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList.a_aDictionary)
 }
@@ -2550,32 +2537,22 @@ inline const std::string& Reply_SetDictionaryFromList::_internal_a_adictionary()
   return _impl_.a_adictionary_.Get();
 }
 inline void Reply_SetDictionaryFromList::_internal_set_a_adictionary(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_adictionary_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_SetDictionaryFromList::_internal_mutable_a_adictionary() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_adictionary_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_SetDictionaryFromList::release_a_adictionary() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.PRemoteSpellcheckEngine.Reply_SetDictionaryFromList.a_aDictionary)
-  if (!_internal_has_a_adictionary()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_adictionary_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_adictionary_.IsDefault()) {
-    _impl_.a_adictionary_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_adictionary_.Release();
 }
 inline void Reply_SetDictionaryFromList::set_allocated_a_adictionary(std::string* a_adictionary) {
   if (a_adictionary != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_adictionary_.SetAllocated(a_adictionary, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

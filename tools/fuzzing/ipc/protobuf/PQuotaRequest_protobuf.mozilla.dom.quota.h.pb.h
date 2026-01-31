@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_PQuotaRequest_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto
@@ -41,6 +44,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PQuotaRequest_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PQuotaRequest_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -83,7 +87,7 @@ namespace quota {
 // ===================================================================
 
 class StorageNameResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.StorageNameResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.StorageNameResponse) */ {
  public:
   inline StorageNameResponse() : StorageNameResponse(nullptr) {}
   ~StorageNameResponse() override;
@@ -113,13 +117,15 @@ class StorageNameResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const StorageNameResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -157,9 +163,15 @@ class StorageNameResponse final :
   StorageNameResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<StorageNameResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const StorageNameResponse& from);
-  void MergeFrom(const StorageNameResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const StorageNameResponse& from) {
+    StorageNameResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -172,7 +184,7 @@ class StorageNameResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(StorageNameResponse* other);
 
   private:
@@ -185,7 +197,10 @@ class StorageNameResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -194,11 +209,7 @@ class StorageNameResponse final :
   enum : int {
     kANameFieldNumber = 1,
   };
-  // required string a_name = 1;
-  bool has_a_name() const;
-  private:
-  bool _internal_has_a_name() const;
-  public:
+  // string a_name = 1;
   void clear_a_name();
   const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -220,9 +231,8 @@ class StorageNameResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaRequest_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto;
@@ -230,7 +240,7 @@ class StorageNameResponse final :
 // -------------------------------------------------------------------
 
 class GetFullOriginMetadataResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.GetFullOriginMetadataResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.GetFullOriginMetadataResponse) */ {
  public:
   inline GetFullOriginMetadataResponse() : GetFullOriginMetadataResponse(nullptr) {}
   ~GetFullOriginMetadataResponse() override;
@@ -260,13 +270,15 @@ class GetFullOriginMetadataResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const GetFullOriginMetadataResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -304,9 +316,15 @@ class GetFullOriginMetadataResponse final :
   GetFullOriginMetadataResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<GetFullOriginMetadataResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const GetFullOriginMetadataResponse& from);
-  void MergeFrom(const GetFullOriginMetadataResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const GetFullOriginMetadataResponse& from) {
+    GetFullOriginMetadataResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -319,7 +337,7 @@ class GetFullOriginMetadataResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(GetFullOriginMetadataResponse* other);
 
   private:
@@ -332,7 +350,10 @@ class GetFullOriginMetadataResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -377,7 +398,7 @@ class GetFullOriginMetadataResponse final :
 // -------------------------------------------------------------------
 
 class PersistedResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.PersistedResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.PersistedResponse) */ {
  public:
   inline PersistedResponse() : PersistedResponse(nullptr) {}
   ~PersistedResponse() override;
@@ -407,13 +428,15 @@ class PersistedResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const PersistedResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -451,9 +474,15 @@ class PersistedResponse final :
   PersistedResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<PersistedResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const PersistedResponse& from);
-  void MergeFrom(const PersistedResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const PersistedResponse& from) {
+    PersistedResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -466,7 +495,7 @@ class PersistedResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(PersistedResponse* other);
 
   private:
@@ -479,7 +508,10 @@ class PersistedResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -488,11 +520,7 @@ class PersistedResponse final :
   enum : int {
     kAPersistedFieldNumber = 1,
   };
-  // required bool a_persisted = 1;
-  bool has_a_persisted() const;
-  private:
-  bool _internal_has_a_persisted() const;
-  public:
+  // bool a_persisted = 1;
   void clear_a_persisted();
   bool a_persisted() const;
   void set_a_persisted(bool value);
@@ -509,9 +537,8 @@ class PersistedResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     bool a_persisted_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaRequest_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto;
@@ -519,10 +546,9 @@ class PersistedResponse final :
 // -------------------------------------------------------------------
 
 class PersistResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.PersistResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.PersistResponse) */ {
  public:
   inline PersistResponse() : PersistResponse(nullptr) {}
-  ~PersistResponse() override;
   explicit PROTOBUF_CONSTEXPR PersistResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   PersistResponse(const PersistResponse& from);
@@ -549,13 +575,15 @@ class PersistResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const PersistResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -593,23 +621,15 @@ class PersistResponse final :
   PersistResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<PersistResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const PersistResponse& from);
-  void MergeFrom(const PersistResponse& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(PersistResponse* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const PersistResponse& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const PersistResponse& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -621,7 +641,10 @@ class PersistResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -635,15 +658,13 @@ class PersistResponse final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaRequest_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto;
 };
 // -------------------------------------------------------------------
 
 class EstimateResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.EstimateResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.EstimateResponse) */ {
  public:
   inline EstimateResponse() : EstimateResponse(nullptr) {}
   ~EstimateResponse() override;
@@ -673,13 +694,15 @@ class EstimateResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const EstimateResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -717,9 +740,15 @@ class EstimateResponse final :
   EstimateResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<EstimateResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const EstimateResponse& from);
-  void MergeFrom(const EstimateResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const EstimateResponse& from) {
+    EstimateResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -732,7 +761,7 @@ class EstimateResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(EstimateResponse* other);
 
   private:
@@ -745,7 +774,10 @@ class EstimateResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -755,11 +787,7 @@ class EstimateResponse final :
     kAUsageFieldNumber = 1,
     kALimitFieldNumber = 2,
   };
-  // required uint64 a_usage = 1;
-  bool has_a_usage() const;
-  private:
-  bool _internal_has_a_usage() const;
-  public:
+  // uint64 a_usage = 1;
   void clear_a_usage();
   uint64_t a_usage() const;
   void set_a_usage(uint64_t value);
@@ -768,11 +796,7 @@ class EstimateResponse final :
   void _internal_set_a_usage(uint64_t value);
   public:
 
-  // required uint64 a_limit = 2;
-  bool has_a_limit() const;
-  private:
-  bool _internal_has_a_limit() const;
-  public:
+  // uint64 a_limit = 2;
   void clear_a_limit();
   uint64_t a_limit() const;
   void set_a_limit(uint64_t value);
@@ -785,17 +809,13 @@ class EstimateResponse final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint64_t a_usage_;
     uint64_t a_limit_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaRequest_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto;
@@ -803,7 +823,7 @@ class EstimateResponse final :
 // -------------------------------------------------------------------
 
 class RequestResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.RequestResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.RequestResponse) */ {
  public:
   inline RequestResponse() : RequestResponse(nullptr) {}
   ~RequestResponse() override;
@@ -833,13 +853,15 @@ class RequestResponse final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const RequestResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -887,9 +909,15 @@ class RequestResponse final :
   RequestResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<RequestResponse>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const RequestResponse& from);
-  void MergeFrom(const RequestResponse& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const RequestResponse& from) {
+    RequestResponse::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -902,7 +930,7 @@ class RequestResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(RequestResponse* other);
 
   private:
@@ -915,7 +943,10 @@ class RequestResponse final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1084,17 +1115,9 @@ class RequestResponse final :
 #endif  // __GNUC__
 // StorageNameResponse
 
-// required string a_name = 1;
-inline bool StorageNameResponse::_internal_has_a_name() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool StorageNameResponse::has_a_name() const {
-  return _internal_has_a_name();
-}
+// string a_name = 1;
 inline void StorageNameResponse::clear_a_name() {
   _impl_.a_name_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& StorageNameResponse::a_name() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.dom.quota.StorageNameResponse.a_name)
@@ -1103,7 +1126,7 @@ inline const std::string& StorageNameResponse::a_name() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void StorageNameResponse::set_a_name(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.StorageNameResponse.a_name)
 }
@@ -1116,32 +1139,22 @@ inline const std::string& StorageNameResponse::_internal_a_name() const {
   return _impl_.a_name_.Get();
 }
 inline void StorageNameResponse::_internal_set_a_name(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
 inline std::string* StorageNameResponse::_internal_mutable_a_name() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* StorageNameResponse::release_a_name() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.dom.quota.StorageNameResponse.a_name)
-  if (!_internal_has_a_name()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_name_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_name_.IsDefault()) {
-    _impl_.a_name_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_name_.Release();
 }
 inline void StorageNameResponse::set_allocated_a_name(std::string* a_name) {
   if (a_name != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1228,17 +1241,9 @@ inline void GetFullOriginMetadataResponse::set_allocated_a_maybefulloriginmetada
 
 // PersistedResponse
 
-// required bool a_persisted = 1;
-inline bool PersistedResponse::_internal_has_a_persisted() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool PersistedResponse::has_a_persisted() const {
-  return _internal_has_a_persisted();
-}
+// bool a_persisted = 1;
 inline void PersistedResponse::clear_a_persisted() {
   _impl_.a_persisted_ = false;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool PersistedResponse::_internal_a_persisted() const {
   return _impl_.a_persisted_;
@@ -1248,7 +1253,7 @@ inline bool PersistedResponse::a_persisted() const {
   return _internal_a_persisted();
 }
 inline void PersistedResponse::_internal_set_a_persisted(bool value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_persisted_ = value;
 }
 inline void PersistedResponse::set_a_persisted(bool value) {
@@ -1264,17 +1269,9 @@ inline void PersistedResponse::set_a_persisted(bool value) {
 
 // EstimateResponse
 
-// required uint64 a_usage = 1;
-inline bool EstimateResponse::_internal_has_a_usage() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool EstimateResponse::has_a_usage() const {
-  return _internal_has_a_usage();
-}
+// uint64 a_usage = 1;
 inline void EstimateResponse::clear_a_usage() {
   _impl_.a_usage_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint64_t EstimateResponse::_internal_a_usage() const {
   return _impl_.a_usage_;
@@ -1284,7 +1281,7 @@ inline uint64_t EstimateResponse::a_usage() const {
   return _internal_a_usage();
 }
 inline void EstimateResponse::_internal_set_a_usage(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_usage_ = value;
 }
 inline void EstimateResponse::set_a_usage(uint64_t value) {
@@ -1292,17 +1289,9 @@ inline void EstimateResponse::set_a_usage(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.dom.quota.EstimateResponse.a_usage)
 }
 
-// required uint64 a_limit = 2;
-inline bool EstimateResponse::_internal_has_a_limit() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool EstimateResponse::has_a_limit() const {
-  return _internal_has_a_limit();
-}
+// uint64 a_limit = 2;
 inline void EstimateResponse::clear_a_limit() {
   _impl_.a_limit_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint64_t EstimateResponse::_internal_a_limit() const {
   return _impl_.a_limit_;
@@ -1312,7 +1301,7 @@ inline uint64_t EstimateResponse::a_limit() const {
   return _internal_a_limit();
 }
 inline void EstimateResponse::_internal_set_a_limit(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_limit_ = value;
 }
 inline void EstimateResponse::set_a_limit(uint64_t value) {

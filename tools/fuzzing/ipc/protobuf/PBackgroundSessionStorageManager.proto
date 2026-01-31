@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/storage/PBackgroundSessionStorageManager.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PBackgroundSessionStorageManager;
 
@@ -17,17 +16,17 @@ import "PBackgroundSharedTypes.proto";
 
 // Message declarations
 message Msg_PBackgroundSessionStorageCacheConstructor {
-  required sint64 a_actorid = 1;
-  required protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 2;
-  required string a_aOriginKey = 3;
+  sint64 a_actorid = 1;
+  protobuf.mozilla.ipc.PrincipalInfo a_aPrincipalInfo = 2;
+  string a_aOriginKey = 3;
 }
 
 message Reply_PBackgroundSessionStorageCacheConstructor {
 }
 
 message Msg_ClearStorages {
-  required bytes a_aPattern = 1;
-  required string a_aOriginScope = 2;
+  bytes a_aPattern = 1;
+  string a_aOriginScope = 2;
 }
 
 message Msg_DeleteMe {
@@ -40,8 +39,8 @@ message Reply___delete__ {
 }
 
 message Msg_ClearStoragesForOrigin {
-  required string a_aOriginAttrs = 1;
-  required string a_aOriginKey = 2;
+  string a_aOriginAttrs = 1;
+  string a_aOriginKey = 2;
 }
 
 // Parameter mappings stats:

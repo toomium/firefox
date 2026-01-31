@@ -5,12 +5,11 @@
 
 // Generated from CrashReporterInitArgs.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.CrashReporter;
 
 // Structs and unions declarations
 message CrashReporterInitArgs {
-  required bytes a_threadId = 1;
+  bytes a_threadId = 1;
 }

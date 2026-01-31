@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/ipc/ipdl/test/gtest/PTestJSON.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla._ipdltest.PTestJSON;
 
@@ -20,18 +19,18 @@ message Msg_Start {
 }
 
 message Msg_PTestJSONHandleConstructor {
-  required sint64 a_actorid = 1;
+  sint64 a_actorid = 1;
 }
 
 message Reply_PTestJSONHandleConstructor {
 }
 
 message Msg_Test {
-  required protobuf.mozilla._ipdltest.JSONVariant a_i = 1;
+  protobuf.mozilla._ipdltest.JSONVariant a_i = 1;
 }
 
 message Reply_Test {
-  required protobuf.mozilla._ipdltest.JSONVariant a_o = 1;
+  protobuf.mozilla._ipdltest.JSONVariant a_o = 1;
 }
 
 message Msg___delete__ {

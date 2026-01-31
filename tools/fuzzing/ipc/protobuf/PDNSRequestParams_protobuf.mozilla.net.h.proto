@@ -5,21 +5,20 @@
 
 // Generated from /home/tmittendorf/firefox/netwerk/dns/PDNSRequestParams.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.net;
 
 // Structs and unions declarations
 message DNSRecord {
-  required string a_canonicalName = 1;
+  string a_canonicalName = 1;
   repeated bytes a_addrs = 2;
-  required double a_trrFetchDuration = 3;
-  required double a_trrFetchDurationNetworkOnly = 4;
-  required bool a_isTRR = 5;
-  required bytes a_effectiveTRRMode = 6;
-  required uint32 a_ttl = 7;
-  required bytes a_lastUpdate = 8;
+  double a_trrFetchDuration = 3;
+  double a_trrFetchDurationNetworkOnly = 4;
+  bool a_isTRR = 5;
+  bytes a_effectiveTRRMode = 6;
+  uint32 a_ttl = 7;
+  bytes a_lastUpdate = 8;
 }
 
 message DNSRequestResponse {

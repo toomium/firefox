@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/ipc/glue/IPCStream.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.ipc;
 
@@ -15,5 +14,5 @@ import "ProtocolTypes.proto";
 
 // Structs and unions declarations
 message IPCStream {
-  required protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
+  protobuf.mozilla.ipc.InputStreamParams a_stream = 1;
 }

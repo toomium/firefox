@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "PWebGPUTypes.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -42,6 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PWebGPU_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PWebGPU_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace webgpu {
@@ -268,7 +272,7 @@ namespace PWebGPU {
 // ===================================================================
 
 class Msg_DeviceAction final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction) */ {
  public:
   inline Msg_DeviceAction() : Msg_DeviceAction(nullptr) {}
   ~Msg_DeviceAction() override;
@@ -298,13 +302,15 @@ class Msg_DeviceAction final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_DeviceAction& default_instance() {
     return *internal_default_instance();
   }
@@ -342,9 +348,15 @@ class Msg_DeviceAction final :
   Msg_DeviceAction* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_DeviceAction>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_DeviceAction& from);
-  void MergeFrom(const Msg_DeviceAction& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_DeviceAction& from) {
+    Msg_DeviceAction::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -357,7 +369,7 @@ class Msg_DeviceAction final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_DeviceAction* other);
 
   private:
@@ -370,7 +382,10 @@ class Msg_DeviceAction final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -380,11 +395,7 @@ class Msg_DeviceAction final :
     kASelfIdFieldNumber = 1,
     kABufFieldNumber = 2,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -398,11 +409,7 @@ class Msg_DeviceAction final :
   std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes a_buf = 2;
-  bool has_a_buf() const;
-  private:
-  bool _internal_has_a_buf() const;
-  public:
+  // bytes a_buf = 2;
   void clear_a_buf();
   const std::string& a_buf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -420,17 +427,13 @@ class Msg_DeviceAction final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_buf_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -438,7 +441,7 @@ class Msg_DeviceAction final :
 // -------------------------------------------------------------------
 
 class Msg_DeviceActionWithAck final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck) */ {
  public:
   inline Msg_DeviceActionWithAck() : Msg_DeviceActionWithAck(nullptr) {}
   ~Msg_DeviceActionWithAck() override;
@@ -468,13 +471,15 @@ class Msg_DeviceActionWithAck final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_DeviceActionWithAck& default_instance() {
     return *internal_default_instance();
   }
@@ -512,9 +517,15 @@ class Msg_DeviceActionWithAck final :
   Msg_DeviceActionWithAck* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_DeviceActionWithAck>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_DeviceActionWithAck& from);
-  void MergeFrom(const Msg_DeviceActionWithAck& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_DeviceActionWithAck& from) {
+    Msg_DeviceActionWithAck::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -527,7 +538,7 @@ class Msg_DeviceActionWithAck final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_DeviceActionWithAck* other);
 
   private:
@@ -540,7 +551,10 @@ class Msg_DeviceActionWithAck final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -550,11 +564,7 @@ class Msg_DeviceActionWithAck final :
     kASelfIdFieldNumber = 1,
     kABufFieldNumber = 2,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -568,11 +578,7 @@ class Msg_DeviceActionWithAck final :
   std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes a_buf = 2;
-  bool has_a_buf() const;
-  private:
-  bool _internal_has_a_buf() const;
-  public:
+  // bytes a_buf = 2;
   void clear_a_buf();
   const std::string& a_buf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -590,17 +596,13 @@ class Msg_DeviceActionWithAck final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_buf_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -608,7 +610,7 @@ class Msg_DeviceActionWithAck final :
 // -------------------------------------------------------------------
 
 class Reply_DeviceActionWithAck final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceActionWithAck) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceActionWithAck) */ {
  public:
   inline Reply_DeviceActionWithAck() : Reply_DeviceActionWithAck(nullptr) {}
   ~Reply_DeviceActionWithAck() override;
@@ -638,13 +640,15 @@ class Reply_DeviceActionWithAck final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_DeviceActionWithAck& default_instance() {
     return *internal_default_instance();
   }
@@ -682,9 +686,15 @@ class Reply_DeviceActionWithAck final :
   Reply_DeviceActionWithAck* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_DeviceActionWithAck>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_DeviceActionWithAck& from);
-  void MergeFrom(const Reply_DeviceActionWithAck& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_DeviceActionWithAck& from) {
+    Reply_DeviceActionWithAck::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -697,7 +707,7 @@ class Reply_DeviceActionWithAck final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_DeviceActionWithAck* other);
 
   private:
@@ -710,7 +720,10 @@ class Reply_DeviceActionWithAck final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -719,11 +732,7 @@ class Reply_DeviceActionWithAck final :
   enum : int {
     kADummyFieldNumber = 1,
   };
-  // required bool a_dummy = 1;
-  bool has_a_dummy() const;
-  private:
-  bool _internal_has_a_dummy() const;
-  public:
+  // bool a_dummy = 1;
   void clear_a_dummy();
   bool a_dummy() const;
   void set_a_dummy(bool value);
@@ -740,9 +749,8 @@ class Reply_DeviceActionWithAck final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     bool a_dummy_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -750,7 +758,7 @@ class Reply_DeviceActionWithAck final :
 // -------------------------------------------------------------------
 
 class Msg_TextureAction final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction) */ {
  public:
   inline Msg_TextureAction() : Msg_TextureAction(nullptr) {}
   ~Msg_TextureAction() override;
@@ -780,13 +788,15 @@ class Msg_TextureAction final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_TextureAction& default_instance() {
     return *internal_default_instance();
   }
@@ -824,9 +834,15 @@ class Msg_TextureAction final :
   Msg_TextureAction* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_TextureAction>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_TextureAction& from);
-  void MergeFrom(const Msg_TextureAction& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_TextureAction& from) {
+    Msg_TextureAction::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -839,7 +855,7 @@ class Msg_TextureAction final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_TextureAction* other);
 
   private:
@@ -852,7 +868,10 @@ class Msg_TextureAction final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -863,11 +882,7 @@ class Msg_TextureAction final :
     kAADeviceIdFieldNumber = 2,
     kABufFieldNumber = 3,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -881,11 +896,7 @@ class Msg_TextureAction final :
   std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes a_aDeviceId = 2;
-  bool has_a_adeviceid() const;
-  private:
-  bool _internal_has_a_adeviceid() const;
-  public:
+  // bytes a_aDeviceId = 2;
   void clear_a_adeviceid();
   const std::string& a_adeviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -899,11 +910,7 @@ class Msg_TextureAction final :
   std::string* _internal_mutable_a_adeviceid();
   public:
 
-  // required bytes a_buf = 3;
-  bool has_a_buf() const;
-  private:
-  bool _internal_has_a_buf() const;
-  public:
+  // bytes a_buf = 3;
   void clear_a_buf();
   const std::string& a_buf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -921,18 +928,14 @@ class Msg_TextureAction final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adeviceid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_buf_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -940,7 +943,7 @@ class Msg_TextureAction final :
 // -------------------------------------------------------------------
 
 class Msg_CommandEncoderAction final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction) */ {
  public:
   inline Msg_CommandEncoderAction() : Msg_CommandEncoderAction(nullptr) {}
   ~Msg_CommandEncoderAction() override;
@@ -970,13 +973,15 @@ class Msg_CommandEncoderAction final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_CommandEncoderAction& default_instance() {
     return *internal_default_instance();
   }
@@ -1014,9 +1019,15 @@ class Msg_CommandEncoderAction final :
   Msg_CommandEncoderAction* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_CommandEncoderAction>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_CommandEncoderAction& from);
-  void MergeFrom(const Msg_CommandEncoderAction& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_CommandEncoderAction& from) {
+    Msg_CommandEncoderAction::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1029,7 +1040,7 @@ class Msg_CommandEncoderAction final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_CommandEncoderAction* other);
 
   private:
@@ -1042,7 +1053,10 @@ class Msg_CommandEncoderAction final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1053,11 +1067,7 @@ class Msg_CommandEncoderAction final :
     kAADeviceIdFieldNumber = 2,
     kABufFieldNumber = 3,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1071,11 +1081,7 @@ class Msg_CommandEncoderAction final :
   std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes a_aDeviceId = 2;
-  bool has_a_adeviceid() const;
-  private:
-  bool _internal_has_a_adeviceid() const;
-  public:
+  // bytes a_aDeviceId = 2;
   void clear_a_adeviceid();
   const std::string& a_adeviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1089,11 +1095,7 @@ class Msg_CommandEncoderAction final :
   std::string* _internal_mutable_a_adeviceid();
   public:
 
-  // required bytes a_buf = 3;
-  bool has_a_buf() const;
-  private:
-  bool _internal_has_a_buf() const;
-  public:
+  // bytes a_buf = 3;
   void clear_a_buf();
   const std::string& a_buf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1111,18 +1113,14 @@ class Msg_CommandEncoderAction final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adeviceid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_buf_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -1130,7 +1128,7 @@ class Msg_CommandEncoderAction final :
 // -------------------------------------------------------------------
 
 class Msg_RenderPass final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass) */ {
  public:
   inline Msg_RenderPass() : Msg_RenderPass(nullptr) {}
   ~Msg_RenderPass() override;
@@ -1160,13 +1158,15 @@ class Msg_RenderPass final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_RenderPass& default_instance() {
     return *internal_default_instance();
   }
@@ -1204,9 +1204,15 @@ class Msg_RenderPass final :
   Msg_RenderPass* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_RenderPass>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_RenderPass& from);
-  void MergeFrom(const Msg_RenderPass& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_RenderPass& from) {
+    Msg_RenderPass::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1219,7 +1225,7 @@ class Msg_RenderPass final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_RenderPass* other);
 
   private:
@@ -1232,7 +1238,10 @@ class Msg_RenderPass final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1243,11 +1252,7 @@ class Msg_RenderPass final :
     kAADeviceIdFieldNumber = 2,
     kABufFieldNumber = 3,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1261,11 +1266,7 @@ class Msg_RenderPass final :
   std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes a_aDeviceId = 2;
-  bool has_a_adeviceid() const;
-  private:
-  bool _internal_has_a_adeviceid() const;
-  public:
+  // bytes a_aDeviceId = 2;
   void clear_a_adeviceid();
   const std::string& a_adeviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1279,11 +1280,7 @@ class Msg_RenderPass final :
   std::string* _internal_mutable_a_adeviceid();
   public:
 
-  // required bytes a_buf = 3;
-  bool has_a_buf() const;
-  private:
-  bool _internal_has_a_buf() const;
-  public:
+  // bytes a_buf = 3;
   void clear_a_buf();
   const std::string& a_buf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1301,18 +1298,14 @@ class Msg_RenderPass final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adeviceid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_buf_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -1320,7 +1313,7 @@ class Msg_RenderPass final :
 // -------------------------------------------------------------------
 
 class Msg_ComputePass final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass) */ {
  public:
   inline Msg_ComputePass() : Msg_ComputePass(nullptr) {}
   ~Msg_ComputePass() override;
@@ -1350,13 +1343,15 @@ class Msg_ComputePass final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_ComputePass& default_instance() {
     return *internal_default_instance();
   }
@@ -1394,9 +1389,15 @@ class Msg_ComputePass final :
   Msg_ComputePass* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ComputePass>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_ComputePass& from);
-  void MergeFrom(const Msg_ComputePass& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_ComputePass& from) {
+    Msg_ComputePass::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1409,7 +1410,7 @@ class Msg_ComputePass final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_ComputePass* other);
 
   private:
@@ -1422,7 +1423,10 @@ class Msg_ComputePass final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1433,11 +1437,7 @@ class Msg_ComputePass final :
     kAADeviceIdFieldNumber = 2,
     kABufFieldNumber = 3,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1451,11 +1451,7 @@ class Msg_ComputePass final :
   std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes a_aDeviceId = 2;
-  bool has_a_adeviceid() const;
-  private:
-  bool _internal_has_a_adeviceid() const;
-  public:
+  // bytes a_aDeviceId = 2;
   void clear_a_adeviceid();
   const std::string& a_adeviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1469,11 +1465,7 @@ class Msg_ComputePass final :
   std::string* _internal_mutable_a_adeviceid();
   public:
 
-  // required bytes a_buf = 3;
-  bool has_a_buf() const;
-  private:
-  bool _internal_has_a_buf() const;
-  public:
+  // bytes a_buf = 3;
   void clear_a_buf();
   const std::string& a_buf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1491,18 +1483,14 @@ class Msg_ComputePass final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adeviceid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_buf_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -1510,7 +1498,7 @@ class Msg_ComputePass final :
 // -------------------------------------------------------------------
 
 class Msg_DeviceCreateBuffer final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer) */ {
  public:
   inline Msg_DeviceCreateBuffer() : Msg_DeviceCreateBuffer(nullptr) {}
   ~Msg_DeviceCreateBuffer() override;
@@ -1540,13 +1528,15 @@ class Msg_DeviceCreateBuffer final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_DeviceCreateBuffer& default_instance() {
     return *internal_default_instance();
   }
@@ -1584,9 +1574,15 @@ class Msg_DeviceCreateBuffer final :
   Msg_DeviceCreateBuffer* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_DeviceCreateBuffer>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_DeviceCreateBuffer& from);
-  void MergeFrom(const Msg_DeviceCreateBuffer& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_DeviceCreateBuffer& from) {
+    Msg_DeviceCreateBuffer::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1599,7 +1595,7 @@ class Msg_DeviceCreateBuffer final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_DeviceCreateBuffer* other);
 
   private:
@@ -1612,7 +1608,10 @@ class Msg_DeviceCreateBuffer final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1624,11 +1623,7 @@ class Msg_DeviceCreateBuffer final :
     kADescFieldNumber = 3,
     kAShmFieldNumber = 4,
   };
-  // required bytes a_deviceId = 1;
-  bool has_a_deviceid() const;
-  private:
-  bool _internal_has_a_deviceid() const;
-  public:
+  // bytes a_deviceId = 1;
   void clear_a_deviceid();
   const std::string& a_deviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1642,11 +1637,7 @@ class Msg_DeviceCreateBuffer final :
   std::string* _internal_mutable_a_deviceid();
   public:
 
-  // required bytes a_bufferId = 2;
-  bool has_a_bufferid() const;
-  private:
-  bool _internal_has_a_bufferid() const;
-  public:
+  // bytes a_bufferId = 2;
   void clear_a_bufferid();
   const std::string& a_bufferid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1660,11 +1651,7 @@ class Msg_DeviceCreateBuffer final :
   std::string* _internal_mutable_a_bufferid();
   public:
 
-  // required bytes a_desc = 3;
-  bool has_a_desc() const;
-  private:
-  bool _internal_has_a_desc() const;
-  public:
+  // bytes a_desc = 3;
   void clear_a_desc();
   const std::string& a_desc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1678,11 +1665,7 @@ class Msg_DeviceCreateBuffer final :
   std::string* _internal_mutable_a_desc();
   public:
 
-  // required bytes a_shm = 4;
-  bool has_a_shm() const;
-  private:
-  bool _internal_has_a_shm() const;
-  public:
+  // bytes a_shm = 4;
   void clear_a_shm();
   const std::string& a_shm() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1700,19 +1683,15 @@ class Msg_DeviceCreateBuffer final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_deviceid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_bufferid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_desc_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_shm_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -1720,7 +1699,7 @@ class Msg_DeviceCreateBuffer final :
 // -------------------------------------------------------------------
 
 class Msg_InstanceRequestAdapter final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter) */ {
  public:
   inline Msg_InstanceRequestAdapter() : Msg_InstanceRequestAdapter(nullptr) {}
   ~Msg_InstanceRequestAdapter() override;
@@ -1750,13 +1729,15 @@ class Msg_InstanceRequestAdapter final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_InstanceRequestAdapter& default_instance() {
     return *internal_default_instance();
   }
@@ -1794,9 +1775,15 @@ class Msg_InstanceRequestAdapter final :
   Msg_InstanceRequestAdapter* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_InstanceRequestAdapter>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_InstanceRequestAdapter& from);
-  void MergeFrom(const Msg_InstanceRequestAdapter& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_InstanceRequestAdapter& from) {
+    Msg_InstanceRequestAdapter::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1809,7 +1796,7 @@ class Msg_InstanceRequestAdapter final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_InstanceRequestAdapter* other);
 
   private:
@@ -1822,7 +1809,10 @@ class Msg_InstanceRequestAdapter final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1832,11 +1822,7 @@ class Msg_InstanceRequestAdapter final :
     kAOptionsFieldNumber = 1,
     kAAAdapterIdFieldNumber = 2,
   };
-  // required bytes a_options = 1;
-  bool has_a_options() const;
-  private:
-  bool _internal_has_a_options() const;
-  public:
+  // bytes a_options = 1;
   void clear_a_options();
   const std::string& a_options() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1850,11 +1836,7 @@ class Msg_InstanceRequestAdapter final :
   std::string* _internal_mutable_a_options();
   public:
 
-  // required bytes a_aAdapterId = 2;
-  bool has_a_aadapterid() const;
-  private:
-  bool _internal_has_a_aadapterid() const;
-  public:
+  // bytes a_aAdapterId = 2;
   void clear_a_aadapterid();
   const std::string& a_aadapterid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1872,17 +1854,13 @@ class Msg_InstanceRequestAdapter final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_options_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_aadapterid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -1890,7 +1868,7 @@ class Msg_InstanceRequestAdapter final :
 // -------------------------------------------------------------------
 
 class Reply_InstanceRequestAdapter final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Reply_InstanceRequestAdapter) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Reply_InstanceRequestAdapter) */ {
  public:
   inline Reply_InstanceRequestAdapter() : Reply_InstanceRequestAdapter(nullptr) {}
   ~Reply_InstanceRequestAdapter() override;
@@ -1920,13 +1898,15 @@ class Reply_InstanceRequestAdapter final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_InstanceRequestAdapter& default_instance() {
     return *internal_default_instance();
   }
@@ -1964,9 +1944,15 @@ class Reply_InstanceRequestAdapter final :
   Reply_InstanceRequestAdapter* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_InstanceRequestAdapter>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_InstanceRequestAdapter& from);
-  void MergeFrom(const Reply_InstanceRequestAdapter& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_InstanceRequestAdapter& from) {
+    Reply_InstanceRequestAdapter::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1979,7 +1965,7 @@ class Reply_InstanceRequestAdapter final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_InstanceRequestAdapter* other);
 
   private:
@@ -1992,7 +1978,10 @@ class Reply_InstanceRequestAdapter final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2001,11 +1990,7 @@ class Reply_InstanceRequestAdapter final :
   enum : int {
     kAByteBufFieldNumber = 1,
   };
-  // required bytes a_byteBuf = 1;
-  bool has_a_bytebuf() const;
-  private:
-  bool _internal_has_a_bytebuf() const;
-  public:
+  // bytes a_byteBuf = 1;
   void clear_a_bytebuf();
   const std::string& a_bytebuf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2027,9 +2012,8 @@ class Reply_InstanceRequestAdapter final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_bytebuf_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -2037,7 +2021,7 @@ class Reply_InstanceRequestAdapter final :
 // -------------------------------------------------------------------
 
 class Msg_AdapterRequestDevice final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice) */ {
  public:
   inline Msg_AdapterRequestDevice() : Msg_AdapterRequestDevice(nullptr) {}
   ~Msg_AdapterRequestDevice() override;
@@ -2067,13 +2051,15 @@ class Msg_AdapterRequestDevice final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_AdapterRequestDevice& default_instance() {
     return *internal_default_instance();
   }
@@ -2111,9 +2097,15 @@ class Msg_AdapterRequestDevice final :
   Msg_AdapterRequestDevice* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_AdapterRequestDevice>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_AdapterRequestDevice& from);
-  void MergeFrom(const Msg_AdapterRequestDevice& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_AdapterRequestDevice& from) {
+    Msg_AdapterRequestDevice::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2126,7 +2118,7 @@ class Msg_AdapterRequestDevice final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_AdapterRequestDevice* other);
 
   private:
@@ -2139,7 +2131,10 @@ class Msg_AdapterRequestDevice final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2151,11 +2146,7 @@ class Msg_AdapterRequestDevice final :
     kANewDeviceIdFieldNumber = 3,
     kANewQueueIdFieldNumber = 4,
   };
-  // required bytes a_adapterId = 1;
-  bool has_a_adapterid() const;
-  private:
-  bool _internal_has_a_adapterid() const;
-  public:
+  // bytes a_adapterId = 1;
   void clear_a_adapterid();
   const std::string& a_adapterid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2169,11 +2160,7 @@ class Msg_AdapterRequestDevice final :
   std::string* _internal_mutable_a_adapterid();
   public:
 
-  // required bytes a_descriptorBuf = 2;
-  bool has_a_descriptorbuf() const;
-  private:
-  bool _internal_has_a_descriptorbuf() const;
-  public:
+  // bytes a_descriptorBuf = 2;
   void clear_a_descriptorbuf();
   const std::string& a_descriptorbuf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2187,11 +2174,7 @@ class Msg_AdapterRequestDevice final :
   std::string* _internal_mutable_a_descriptorbuf();
   public:
 
-  // required bytes a_newDeviceId = 3;
-  bool has_a_newdeviceid() const;
-  private:
-  bool _internal_has_a_newdeviceid() const;
-  public:
+  // bytes a_newDeviceId = 3;
   void clear_a_newdeviceid();
   const std::string& a_newdeviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2205,11 +2188,7 @@ class Msg_AdapterRequestDevice final :
   std::string* _internal_mutable_a_newdeviceid();
   public:
 
-  // required bytes a_newQueueId = 4;
-  bool has_a_newqueueid() const;
-  private:
-  bool _internal_has_a_newqueueid() const;
-  public:
+  // bytes a_newQueueId = 4;
   void clear_a_newqueueid();
   const std::string& a_newqueueid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2227,19 +2206,15 @@ class Msg_AdapterRequestDevice final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adapterid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_descriptorbuf_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_newdeviceid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_newqueueid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -2247,7 +2222,7 @@ class Msg_AdapterRequestDevice final :
 // -------------------------------------------------------------------
 
 class Reply_AdapterRequestDevice final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Reply_AdapterRequestDevice) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Reply_AdapterRequestDevice) */ {
  public:
   inline Reply_AdapterRequestDevice() : Reply_AdapterRequestDevice(nullptr) {}
   ~Reply_AdapterRequestDevice() override;
@@ -2277,13 +2252,15 @@ class Reply_AdapterRequestDevice final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_AdapterRequestDevice& default_instance() {
     return *internal_default_instance();
   }
@@ -2321,9 +2298,15 @@ class Reply_AdapterRequestDevice final :
   Reply_AdapterRequestDevice* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_AdapterRequestDevice>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_AdapterRequestDevice& from);
-  void MergeFrom(const Reply_AdapterRequestDevice& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_AdapterRequestDevice& from) {
+    Reply_AdapterRequestDevice::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2336,7 +2319,7 @@ class Reply_AdapterRequestDevice final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_AdapterRequestDevice* other);
 
   private:
@@ -2349,7 +2332,10 @@ class Reply_AdapterRequestDevice final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2358,11 +2344,7 @@ class Reply_AdapterRequestDevice final :
   enum : int {
     kASuccessFieldNumber = 1,
   };
-  // required bool a_success = 1;
-  bool has_a_success() const;
-  private:
-  bool _internal_has_a_success() const;
-  public:
+  // bool a_success = 1;
   void clear_a_success();
   bool a_success() const;
   void set_a_success(bool value);
@@ -2379,9 +2361,8 @@ class Reply_AdapterRequestDevice final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     bool a_success_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -2389,7 +2370,7 @@ class Reply_AdapterRequestDevice final :
 // -------------------------------------------------------------------
 
 class Msg_AdapterDrop final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterDrop) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterDrop) */ {
  public:
   inline Msg_AdapterDrop() : Msg_AdapterDrop(nullptr) {}
   ~Msg_AdapterDrop() override;
@@ -2419,13 +2400,15 @@ class Msg_AdapterDrop final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_AdapterDrop& default_instance() {
     return *internal_default_instance();
   }
@@ -2463,9 +2446,15 @@ class Msg_AdapterDrop final :
   Msg_AdapterDrop* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_AdapterDrop>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_AdapterDrop& from);
-  void MergeFrom(const Msg_AdapterDrop& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_AdapterDrop& from) {
+    Msg_AdapterDrop::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2478,7 +2467,7 @@ class Msg_AdapterDrop final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_AdapterDrop* other);
 
   private:
@@ -2491,7 +2480,10 @@ class Msg_AdapterDrop final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2500,11 +2492,7 @@ class Msg_AdapterDrop final :
   enum : int {
     kASelfIdFieldNumber = 1,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2526,9 +2514,8 @@ class Msg_AdapterDrop final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -2536,7 +2523,7 @@ class Msg_AdapterDrop final :
 // -------------------------------------------------------------------
 
 class Msg_DeviceCreateShaderModule final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule) */ {
  public:
   inline Msg_DeviceCreateShaderModule() : Msg_DeviceCreateShaderModule(nullptr) {}
   ~Msg_DeviceCreateShaderModule() override;
@@ -2566,13 +2553,15 @@ class Msg_DeviceCreateShaderModule final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_DeviceCreateShaderModule& default_instance() {
     return *internal_default_instance();
   }
@@ -2610,9 +2599,15 @@ class Msg_DeviceCreateShaderModule final :
   Msg_DeviceCreateShaderModule* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_DeviceCreateShaderModule>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_DeviceCreateShaderModule& from);
-  void MergeFrom(const Msg_DeviceCreateShaderModule& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_DeviceCreateShaderModule& from) {
+    Msg_DeviceCreateShaderModule::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2625,7 +2620,7 @@ class Msg_DeviceCreateShaderModule final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_DeviceCreateShaderModule* other);
 
   private:
@@ -2638,7 +2633,10 @@ class Msg_DeviceCreateShaderModule final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2650,11 +2648,7 @@ class Msg_DeviceCreateShaderModule final :
     kALabelFieldNumber = 3,
     kACodeFieldNumber = 4,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2668,11 +2662,7 @@ class Msg_DeviceCreateShaderModule final :
   std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes a_bufferId = 2;
-  bool has_a_bufferid() const;
-  private:
-  bool _internal_has_a_bufferid() const;
-  public:
+  // bytes a_bufferId = 2;
   void clear_a_bufferid();
   const std::string& a_bufferid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2686,11 +2676,7 @@ class Msg_DeviceCreateShaderModule final :
   std::string* _internal_mutable_a_bufferid();
   public:
 
-  // required string a_label = 3;
-  bool has_a_label() const;
-  private:
-  bool _internal_has_a_label() const;
-  public:
+  // string a_label = 3;
   void clear_a_label();
   const std::string& a_label() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2704,11 +2690,7 @@ class Msg_DeviceCreateShaderModule final :
   std::string* _internal_mutable_a_label();
   public:
 
-  // required string a_code = 4;
-  bool has_a_code() const;
-  private:
-  bool _internal_has_a_code() const;
-  public:
+  // string a_code = 4;
   void clear_a_code();
   const std::string& a_code() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2726,19 +2708,15 @@ class Msg_DeviceCreateShaderModule final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_bufferid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_label_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_code_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -2746,7 +2724,7 @@ class Msg_DeviceCreateShaderModule final :
 // -------------------------------------------------------------------
 
 class Reply_DeviceCreateShaderModule final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Reply_DeviceCreateShaderModule) */ {
  public:
   inline Reply_DeviceCreateShaderModule() : Reply_DeviceCreateShaderModule(nullptr) {}
   ~Reply_DeviceCreateShaderModule() override;
@@ -2776,13 +2754,15 @@ class Reply_DeviceCreateShaderModule final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_DeviceCreateShaderModule& default_instance() {
     return *internal_default_instance();
   }
@@ -2820,9 +2800,15 @@ class Reply_DeviceCreateShaderModule final :
   Reply_DeviceCreateShaderModule* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_DeviceCreateShaderModule>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_DeviceCreateShaderModule& from);
-  void MergeFrom(const Reply_DeviceCreateShaderModule& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_DeviceCreateShaderModule& from) {
+    Reply_DeviceCreateShaderModule::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2835,7 +2821,7 @@ class Reply_DeviceCreateShaderModule final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_DeviceCreateShaderModule* other);
 
   private:
@@ -2848,7 +2834,10 @@ class Reply_DeviceCreateShaderModule final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2898,7 +2887,7 @@ class Reply_DeviceCreateShaderModule final :
 // -------------------------------------------------------------------
 
 class Msg_BufferMap final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap) */ {
  public:
   inline Msg_BufferMap() : Msg_BufferMap(nullptr) {}
   ~Msg_BufferMap() override;
@@ -2928,13 +2917,15 @@ class Msg_BufferMap final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_BufferMap& default_instance() {
     return *internal_default_instance();
   }
@@ -2972,9 +2963,15 @@ class Msg_BufferMap final :
   Msg_BufferMap* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_BufferMap>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_BufferMap& from);
-  void MergeFrom(const Msg_BufferMap& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_BufferMap& from) {
+    Msg_BufferMap::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2987,7 +2984,7 @@ class Msg_BufferMap final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_BufferMap* other);
 
   private:
@@ -3000,7 +2997,10 @@ class Msg_BufferMap final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3013,11 +3013,7 @@ class Msg_BufferMap final :
     kASizeFieldNumber = 5,
     kAAModeFieldNumber = 3,
   };
-  // required bytes a_deviceId = 1;
-  bool has_a_deviceid() const;
-  private:
-  bool _internal_has_a_deviceid() const;
-  public:
+  // bytes a_deviceId = 1;
   void clear_a_deviceid();
   const std::string& a_deviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3031,11 +3027,7 @@ class Msg_BufferMap final :
   std::string* _internal_mutable_a_deviceid();
   public:
 
-  // required bytes a_bufferId = 2;
-  bool has_a_bufferid() const;
-  private:
-  bool _internal_has_a_bufferid() const;
-  public:
+  // bytes a_bufferId = 2;
   void clear_a_bufferid();
   const std::string& a_bufferid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3049,11 +3041,7 @@ class Msg_BufferMap final :
   std::string* _internal_mutable_a_bufferid();
   public:
 
-  // required uint64 a_offset = 4;
-  bool has_a_offset() const;
-  private:
-  bool _internal_has_a_offset() const;
-  public:
+  // uint64 a_offset = 4;
   void clear_a_offset();
   uint64_t a_offset() const;
   void set_a_offset(uint64_t value);
@@ -3062,11 +3050,7 @@ class Msg_BufferMap final :
   void _internal_set_a_offset(uint64_t value);
   public:
 
-  // required uint64 a_size = 5;
-  bool has_a_size() const;
-  private:
-  bool _internal_has_a_size() const;
-  public:
+  // uint64 a_size = 5;
   void clear_a_size();
   uint64_t a_size() const;
   void set_a_size(uint64_t value);
@@ -3075,11 +3059,7 @@ class Msg_BufferMap final :
   void _internal_set_a_size(uint64_t value);
   public:
 
-  // required uint32 a_aMode = 3;
-  bool has_a_amode() const;
-  private:
-  bool _internal_has_a_amode() const;
-  public:
+  // uint32 a_aMode = 3;
   void clear_a_amode();
   uint32_t a_amode() const;
   void set_a_amode(uint32_t value);
@@ -3092,20 +3072,16 @@ class Msg_BufferMap final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_deviceid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_bufferid_;
     uint64_t a_offset_;
     uint64_t a_size_;
     uint32_t a_amode_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -3113,7 +3089,7 @@ class Msg_BufferMap final :
 // -------------------------------------------------------------------
 
 class Reply_BufferMap final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Reply_BufferMap) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Reply_BufferMap) */ {
  public:
   inline Reply_BufferMap() : Reply_BufferMap(nullptr) {}
   ~Reply_BufferMap() override;
@@ -3143,13 +3119,15 @@ class Reply_BufferMap final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_BufferMap& default_instance() {
     return *internal_default_instance();
   }
@@ -3187,9 +3165,15 @@ class Reply_BufferMap final :
   Reply_BufferMap* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_BufferMap>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_BufferMap& from);
-  void MergeFrom(const Reply_BufferMap& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_BufferMap& from) {
+    Reply_BufferMap::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3202,7 +3186,7 @@ class Reply_BufferMap final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_BufferMap* other);
 
   private:
@@ -3215,7 +3199,10 @@ class Reply_BufferMap final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3224,7 +3211,7 @@ class Reply_BufferMap final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // required .protobuf.mozilla.webgpu.BufferMapResult a_result = 1;
+  // .protobuf.mozilla.webgpu.BufferMapResult a_result = 1;
   bool has_a_result() const;
   private:
   bool _internal_has_a_result() const;
@@ -3250,9 +3237,8 @@ class Reply_BufferMap final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::mozilla::webgpu::BufferMapResult* a_result_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -3260,7 +3246,7 @@ class Reply_BufferMap final :
 // -------------------------------------------------------------------
 
 class Msg_BufferUnmap final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap) */ {
  public:
   inline Msg_BufferUnmap() : Msg_BufferUnmap(nullptr) {}
   ~Msg_BufferUnmap() override;
@@ -3290,13 +3276,15 @@ class Msg_BufferUnmap final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_BufferUnmap& default_instance() {
     return *internal_default_instance();
   }
@@ -3334,9 +3322,15 @@ class Msg_BufferUnmap final :
   Msg_BufferUnmap* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_BufferUnmap>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_BufferUnmap& from);
-  void MergeFrom(const Msg_BufferUnmap& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_BufferUnmap& from) {
+    Msg_BufferUnmap::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3349,7 +3343,7 @@ class Msg_BufferUnmap final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_BufferUnmap* other);
 
   private:
@@ -3362,7 +3356,10 @@ class Msg_BufferUnmap final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3373,11 +3370,7 @@ class Msg_BufferUnmap final :
     kABufferIdFieldNumber = 2,
     kAFlushFieldNumber = 3,
   };
-  // required bytes a_deviceId = 1;
-  bool has_a_deviceid() const;
-  private:
-  bool _internal_has_a_deviceid() const;
-  public:
+  // bytes a_deviceId = 1;
   void clear_a_deviceid();
   const std::string& a_deviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3391,11 +3384,7 @@ class Msg_BufferUnmap final :
   std::string* _internal_mutable_a_deviceid();
   public:
 
-  // required bytes a_bufferId = 2;
-  bool has_a_bufferid() const;
-  private:
-  bool _internal_has_a_bufferid() const;
-  public:
+  // bytes a_bufferId = 2;
   void clear_a_bufferid();
   const std::string& a_bufferid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3409,11 +3398,7 @@ class Msg_BufferUnmap final :
   std::string* _internal_mutable_a_bufferid();
   public:
 
-  // required bool a_flush = 3;
-  bool has_a_flush() const;
-  private:
-  bool _internal_has_a_flush() const;
-  public:
+  // bool a_flush = 3;
   void clear_a_flush();
   bool a_flush() const;
   void set_a_flush(bool value);
@@ -3426,18 +3411,14 @@ class Msg_BufferUnmap final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_deviceid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_bufferid_;
     bool a_flush_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -3445,7 +3426,7 @@ class Msg_BufferUnmap final :
 // -------------------------------------------------------------------
 
 class Msg_BufferDestroy final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDestroy) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDestroy) */ {
  public:
   inline Msg_BufferDestroy() : Msg_BufferDestroy(nullptr) {}
   ~Msg_BufferDestroy() override;
@@ -3475,13 +3456,15 @@ class Msg_BufferDestroy final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_BufferDestroy& default_instance() {
     return *internal_default_instance();
   }
@@ -3519,9 +3502,15 @@ class Msg_BufferDestroy final :
   Msg_BufferDestroy* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_BufferDestroy>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_BufferDestroy& from);
-  void MergeFrom(const Msg_BufferDestroy& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_BufferDestroy& from) {
+    Msg_BufferDestroy::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3534,7 +3523,7 @@ class Msg_BufferDestroy final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_BufferDestroy* other);
 
   private:
@@ -3547,7 +3536,10 @@ class Msg_BufferDestroy final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3556,11 +3548,7 @@ class Msg_BufferDestroy final :
   enum : int {
     kASelfIdFieldNumber = 1,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3582,9 +3570,8 @@ class Msg_BufferDestroy final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -3592,7 +3579,7 @@ class Msg_BufferDestroy final :
 // -------------------------------------------------------------------
 
 class Msg_BufferDrop final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDrop) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDrop) */ {
  public:
   inline Msg_BufferDrop() : Msg_BufferDrop(nullptr) {}
   ~Msg_BufferDrop() override;
@@ -3622,13 +3609,15 @@ class Msg_BufferDrop final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_BufferDrop& default_instance() {
     return *internal_default_instance();
   }
@@ -3666,9 +3655,15 @@ class Msg_BufferDrop final :
   Msg_BufferDrop* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_BufferDrop>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_BufferDrop& from);
-  void MergeFrom(const Msg_BufferDrop& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_BufferDrop& from) {
+    Msg_BufferDrop::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3681,7 +3676,7 @@ class Msg_BufferDrop final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_BufferDrop* other);
 
   private:
@@ -3694,7 +3689,10 @@ class Msg_BufferDrop final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3703,11 +3701,7 @@ class Msg_BufferDrop final :
   enum : int {
     kASelfIdFieldNumber = 1,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3729,9 +3723,8 @@ class Msg_BufferDrop final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -3739,7 +3732,7 @@ class Msg_BufferDrop final :
 // -------------------------------------------------------------------
 
 class Msg_TextureDestroy final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy) */ {
  public:
   inline Msg_TextureDestroy() : Msg_TextureDestroy(nullptr) {}
   ~Msg_TextureDestroy() override;
@@ -3769,13 +3762,15 @@ class Msg_TextureDestroy final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_TextureDestroy& default_instance() {
     return *internal_default_instance();
   }
@@ -3813,9 +3808,15 @@ class Msg_TextureDestroy final :
   Msg_TextureDestroy* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_TextureDestroy>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_TextureDestroy& from);
-  void MergeFrom(const Msg_TextureDestroy& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_TextureDestroy& from) {
+    Msg_TextureDestroy::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3828,7 +3829,7 @@ class Msg_TextureDestroy final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_TextureDestroy* other);
 
   private:
@@ -3841,7 +3842,10 @@ class Msg_TextureDestroy final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3851,11 +3855,7 @@ class Msg_TextureDestroy final :
     kASelfIdFieldNumber = 1,
     kADeviceIdFieldNumber = 2,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3869,11 +3869,7 @@ class Msg_TextureDestroy final :
   std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes a_deviceId = 2;
-  bool has_a_deviceid() const;
-  private:
-  bool _internal_has_a_deviceid() const;
-  public:
+  // bytes a_deviceId = 2;
   void clear_a_deviceid();
   const std::string& a_deviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3891,17 +3887,13 @@ class Msg_TextureDestroy final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_deviceid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -3909,7 +3901,7 @@ class Msg_TextureDestroy final :
 // -------------------------------------------------------------------
 
 class Msg_TextureDrop final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDrop) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDrop) */ {
  public:
   inline Msg_TextureDrop() : Msg_TextureDrop(nullptr) {}
   ~Msg_TextureDrop() override;
@@ -3939,13 +3931,15 @@ class Msg_TextureDrop final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_TextureDrop& default_instance() {
     return *internal_default_instance();
   }
@@ -3983,9 +3977,15 @@ class Msg_TextureDrop final :
   Msg_TextureDrop* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_TextureDrop>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_TextureDrop& from);
-  void MergeFrom(const Msg_TextureDrop& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_TextureDrop& from) {
+    Msg_TextureDrop::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3998,7 +3998,7 @@ class Msg_TextureDrop final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_TextureDrop* other);
 
   private:
@@ -4011,7 +4011,10 @@ class Msg_TextureDrop final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4020,11 +4023,7 @@ class Msg_TextureDrop final :
   enum : int {
     kASelfIdFieldNumber = 1,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4046,9 +4045,8 @@ class Msg_TextureDrop final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -4056,7 +4054,7 @@ class Msg_TextureDrop final :
 // -------------------------------------------------------------------
 
 class Msg_TextureViewDrop final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureViewDrop) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureViewDrop) */ {
  public:
   inline Msg_TextureViewDrop() : Msg_TextureViewDrop(nullptr) {}
   ~Msg_TextureViewDrop() override;
@@ -4086,13 +4084,15 @@ class Msg_TextureViewDrop final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_TextureViewDrop& default_instance() {
     return *internal_default_instance();
   }
@@ -4130,9 +4130,15 @@ class Msg_TextureViewDrop final :
   Msg_TextureViewDrop* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_TextureViewDrop>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_TextureViewDrop& from);
-  void MergeFrom(const Msg_TextureViewDrop& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_TextureViewDrop& from) {
+    Msg_TextureViewDrop::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4145,7 +4151,7 @@ class Msg_TextureViewDrop final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_TextureViewDrop* other);
 
   private:
@@ -4158,7 +4164,10 @@ class Msg_TextureViewDrop final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4167,11 +4176,7 @@ class Msg_TextureViewDrop final :
   enum : int {
     kASelfIdFieldNumber = 1,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4193,9 +4198,8 @@ class Msg_TextureViewDrop final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -4203,7 +4207,7 @@ class Msg_TextureViewDrop final :
 // -------------------------------------------------------------------
 
 class Msg_SamplerDrop final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_SamplerDrop) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_SamplerDrop) */ {
  public:
   inline Msg_SamplerDrop() : Msg_SamplerDrop(nullptr) {}
   ~Msg_SamplerDrop() override;
@@ -4233,13 +4237,15 @@ class Msg_SamplerDrop final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SamplerDrop& default_instance() {
     return *internal_default_instance();
   }
@@ -4277,9 +4283,15 @@ class Msg_SamplerDrop final :
   Msg_SamplerDrop* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SamplerDrop>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SamplerDrop& from);
-  void MergeFrom(const Msg_SamplerDrop& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SamplerDrop& from) {
+    Msg_SamplerDrop::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4292,7 +4304,7 @@ class Msg_SamplerDrop final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SamplerDrop* other);
 
   private:
@@ -4305,7 +4317,10 @@ class Msg_SamplerDrop final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4314,11 +4329,7 @@ class Msg_SamplerDrop final :
   enum : int {
     kASelfIdFieldNumber = 1,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4340,9 +4351,8 @@ class Msg_SamplerDrop final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -4350,7 +4360,7 @@ class Msg_SamplerDrop final :
 // -------------------------------------------------------------------
 
 class Msg_QuerySetDrop final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_QuerySetDrop) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_QuerySetDrop) */ {
  public:
   inline Msg_QuerySetDrop() : Msg_QuerySetDrop(nullptr) {}
   ~Msg_QuerySetDrop() override;
@@ -4380,13 +4390,15 @@ class Msg_QuerySetDrop final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_QuerySetDrop& default_instance() {
     return *internal_default_instance();
   }
@@ -4424,9 +4436,15 @@ class Msg_QuerySetDrop final :
   Msg_QuerySetDrop* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_QuerySetDrop>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_QuerySetDrop& from);
-  void MergeFrom(const Msg_QuerySetDrop& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_QuerySetDrop& from) {
+    Msg_QuerySetDrop::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4439,7 +4457,7 @@ class Msg_QuerySetDrop final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_QuerySetDrop* other);
 
   private:
@@ -4452,7 +4470,10 @@ class Msg_QuerySetDrop final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4461,11 +4482,7 @@ class Msg_QuerySetDrop final :
   enum : int {
     kASelfIdFieldNumber = 1,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4487,9 +4504,8 @@ class Msg_QuerySetDrop final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -4497,7 +4513,7 @@ class Msg_QuerySetDrop final :
 // -------------------------------------------------------------------
 
 class Msg_DeviceDestroy final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDestroy) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDestroy) */ {
  public:
   inline Msg_DeviceDestroy() : Msg_DeviceDestroy(nullptr) {}
   ~Msg_DeviceDestroy() override;
@@ -4527,13 +4543,15 @@ class Msg_DeviceDestroy final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_DeviceDestroy& default_instance() {
     return *internal_default_instance();
   }
@@ -4571,9 +4589,15 @@ class Msg_DeviceDestroy final :
   Msg_DeviceDestroy* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_DeviceDestroy>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_DeviceDestroy& from);
-  void MergeFrom(const Msg_DeviceDestroy& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_DeviceDestroy& from) {
+    Msg_DeviceDestroy::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4586,7 +4610,7 @@ class Msg_DeviceDestroy final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_DeviceDestroy* other);
 
   private:
@@ -4599,7 +4623,10 @@ class Msg_DeviceDestroy final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4608,11 +4635,7 @@ class Msg_DeviceDestroy final :
   enum : int {
     kASelfIdFieldNumber = 1,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4634,9 +4657,8 @@ class Msg_DeviceDestroy final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -4644,7 +4666,7 @@ class Msg_DeviceDestroy final :
 // -------------------------------------------------------------------
 
 class Msg_DeviceDrop final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDrop) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDrop) */ {
  public:
   inline Msg_DeviceDrop() : Msg_DeviceDrop(nullptr) {}
   ~Msg_DeviceDrop() override;
@@ -4674,13 +4696,15 @@ class Msg_DeviceDrop final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_DeviceDrop& default_instance() {
     return *internal_default_instance();
   }
@@ -4718,9 +4742,15 @@ class Msg_DeviceDrop final :
   Msg_DeviceDrop* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_DeviceDrop>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_DeviceDrop& from);
-  void MergeFrom(const Msg_DeviceDrop& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_DeviceDrop& from) {
+    Msg_DeviceDrop::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4733,7 +4763,7 @@ class Msg_DeviceDrop final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_DeviceDrop* other);
 
   private:
@@ -4746,7 +4776,10 @@ class Msg_DeviceDrop final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4755,11 +4788,7 @@ class Msg_DeviceDrop final :
   enum : int {
     kASelfIdFieldNumber = 1,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4781,9 +4810,8 @@ class Msg_DeviceDrop final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -4791,7 +4819,7 @@ class Msg_DeviceDrop final :
 // -------------------------------------------------------------------
 
 class Msg_CommandEncoderFinish final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish) */ {
  public:
   inline Msg_CommandEncoderFinish() : Msg_CommandEncoderFinish(nullptr) {}
   ~Msg_CommandEncoderFinish() override;
@@ -4821,13 +4849,15 @@ class Msg_CommandEncoderFinish final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_CommandEncoderFinish& default_instance() {
     return *internal_default_instance();
   }
@@ -4865,9 +4895,15 @@ class Msg_CommandEncoderFinish final :
   Msg_CommandEncoderFinish* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_CommandEncoderFinish>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_CommandEncoderFinish& from);
-  void MergeFrom(const Msg_CommandEncoderFinish& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_CommandEncoderFinish& from) {
+    Msg_CommandEncoderFinish::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4880,7 +4916,7 @@ class Msg_CommandEncoderFinish final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_CommandEncoderFinish* other);
 
   private:
@@ -4893,7 +4929,10 @@ class Msg_CommandEncoderFinish final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4904,11 +4943,7 @@ class Msg_CommandEncoderFinish final :
     kADeviceIdFieldNumber = 2,
     kADescFieldNumber = 3,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4922,11 +4957,7 @@ class Msg_CommandEncoderFinish final :
   std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes a_deviceId = 2;
-  bool has_a_deviceid() const;
-  private:
-  bool _internal_has_a_deviceid() const;
-  public:
+  // bytes a_deviceId = 2;
   void clear_a_deviceid();
   const std::string& a_deviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4940,11 +4971,7 @@ class Msg_CommandEncoderFinish final :
   std::string* _internal_mutable_a_deviceid();
   public:
 
-  // required bytes a_desc = 3;
-  bool has_a_desc() const;
-  private:
-  bool _internal_has_a_desc() const;
-  public:
+  // bytes a_desc = 3;
   void clear_a_desc();
   const std::string& a_desc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4962,18 +4989,14 @@ class Msg_CommandEncoderFinish final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_deviceid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_desc_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -4981,7 +5004,7 @@ class Msg_CommandEncoderFinish final :
 // -------------------------------------------------------------------
 
 class Msg_CommandEncoderDrop final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderDrop) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderDrop) */ {
  public:
   inline Msg_CommandEncoderDrop() : Msg_CommandEncoderDrop(nullptr) {}
   ~Msg_CommandEncoderDrop() override;
@@ -5011,13 +5034,15 @@ class Msg_CommandEncoderDrop final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_CommandEncoderDrop& default_instance() {
     return *internal_default_instance();
   }
@@ -5055,9 +5080,15 @@ class Msg_CommandEncoderDrop final :
   Msg_CommandEncoderDrop* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_CommandEncoderDrop>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_CommandEncoderDrop& from);
-  void MergeFrom(const Msg_CommandEncoderDrop& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_CommandEncoderDrop& from) {
+    Msg_CommandEncoderDrop::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -5070,7 +5101,7 @@ class Msg_CommandEncoderDrop final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_CommandEncoderDrop* other);
 
   private:
@@ -5083,7 +5114,10 @@ class Msg_CommandEncoderDrop final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -5092,11 +5126,7 @@ class Msg_CommandEncoderDrop final :
   enum : int {
     kASelfIdFieldNumber = 1,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -5118,9 +5148,8 @@ class Msg_CommandEncoderDrop final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -5128,7 +5157,7 @@ class Msg_CommandEncoderDrop final :
 // -------------------------------------------------------------------
 
 class Msg_RenderBundleDrop final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderBundleDrop) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderBundleDrop) */ {
  public:
   inline Msg_RenderBundleDrop() : Msg_RenderBundleDrop(nullptr) {}
   ~Msg_RenderBundleDrop() override;
@@ -5158,13 +5187,15 @@ class Msg_RenderBundleDrop final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_RenderBundleDrop& default_instance() {
     return *internal_default_instance();
   }
@@ -5202,9 +5233,15 @@ class Msg_RenderBundleDrop final :
   Msg_RenderBundleDrop* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_RenderBundleDrop>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_RenderBundleDrop& from);
-  void MergeFrom(const Msg_RenderBundleDrop& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_RenderBundleDrop& from) {
+    Msg_RenderBundleDrop::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -5217,7 +5254,7 @@ class Msg_RenderBundleDrop final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_RenderBundleDrop* other);
 
   private:
@@ -5230,7 +5267,10 @@ class Msg_RenderBundleDrop final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -5239,11 +5279,7 @@ class Msg_RenderBundleDrop final :
   enum : int {
     kASelfIdFieldNumber = 1,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -5265,9 +5301,8 @@ class Msg_RenderBundleDrop final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -5275,7 +5310,7 @@ class Msg_RenderBundleDrop final :
 // -------------------------------------------------------------------
 
 class Msg_QueueSubmit final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit) */ {
  public:
   inline Msg_QueueSubmit() : Msg_QueueSubmit(nullptr) {}
   ~Msg_QueueSubmit() override;
@@ -5305,13 +5340,15 @@ class Msg_QueueSubmit final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_QueueSubmit& default_instance() {
     return *internal_default_instance();
   }
@@ -5349,9 +5386,15 @@ class Msg_QueueSubmit final :
   Msg_QueueSubmit* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_QueueSubmit>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_QueueSubmit& from);
-  void MergeFrom(const Msg_QueueSubmit& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_QueueSubmit& from) {
+    Msg_QueueSubmit::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -5364,7 +5407,7 @@ class Msg_QueueSubmit final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_QueueSubmit* other);
 
   private:
@@ -5377,7 +5420,10 @@ class Msg_QueueSubmit final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -5437,11 +5483,7 @@ class Msg_QueueSubmit final :
   std::string* _internal_add_a_textureids();
   public:
 
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -5455,11 +5497,7 @@ class Msg_QueueSubmit final :
   std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes a_aDeviceId = 2;
-  bool has_a_adeviceid() const;
-  private:
-  bool _internal_has_a_adeviceid() const;
-  public:
+  // bytes a_aDeviceId = 2;
   void clear_a_adeviceid();
   const std::string& a_adeviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -5477,19 +5515,15 @@ class Msg_QueueSubmit final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_commandbuffers_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_textureids_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adeviceid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -5497,7 +5531,7 @@ class Msg_QueueSubmit final :
 // -------------------------------------------------------------------
 
 class Msg_QueueOnSubmittedWorkDone final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueOnSubmittedWorkDone) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueOnSubmittedWorkDone) */ {
  public:
   inline Msg_QueueOnSubmittedWorkDone() : Msg_QueueOnSubmittedWorkDone(nullptr) {}
   ~Msg_QueueOnSubmittedWorkDone() override;
@@ -5527,13 +5561,15 @@ class Msg_QueueOnSubmittedWorkDone final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_QueueOnSubmittedWorkDone& default_instance() {
     return *internal_default_instance();
   }
@@ -5571,9 +5607,15 @@ class Msg_QueueOnSubmittedWorkDone final :
   Msg_QueueOnSubmittedWorkDone* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_QueueOnSubmittedWorkDone>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_QueueOnSubmittedWorkDone& from);
-  void MergeFrom(const Msg_QueueOnSubmittedWorkDone& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_QueueOnSubmittedWorkDone& from) {
+    Msg_QueueOnSubmittedWorkDone::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -5586,7 +5628,7 @@ class Msg_QueueOnSubmittedWorkDone final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_QueueOnSubmittedWorkDone* other);
 
   private:
@@ -5599,7 +5641,10 @@ class Msg_QueueOnSubmittedWorkDone final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -5608,11 +5653,7 @@ class Msg_QueueOnSubmittedWorkDone final :
   enum : int {
     kASelfIdFieldNumber = 1,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -5634,9 +5675,8 @@ class Msg_QueueOnSubmittedWorkDone final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -5644,7 +5684,7 @@ class Msg_QueueOnSubmittedWorkDone final :
 // -------------------------------------------------------------------
 
 class Reply_QueueOnSubmittedWorkDone final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Reply_QueueOnSubmittedWorkDone) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Reply_QueueOnSubmittedWorkDone) */ {
  public:
   inline Reply_QueueOnSubmittedWorkDone() : Reply_QueueOnSubmittedWorkDone(nullptr) {}
   ~Reply_QueueOnSubmittedWorkDone() override;
@@ -5674,13 +5714,15 @@ class Reply_QueueOnSubmittedWorkDone final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_QueueOnSubmittedWorkDone& default_instance() {
     return *internal_default_instance();
   }
@@ -5718,9 +5760,15 @@ class Reply_QueueOnSubmittedWorkDone final :
   Reply_QueueOnSubmittedWorkDone* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_QueueOnSubmittedWorkDone>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_QueueOnSubmittedWorkDone& from);
-  void MergeFrom(const Reply_QueueOnSubmittedWorkDone& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_QueueOnSubmittedWorkDone& from) {
+    Reply_QueueOnSubmittedWorkDone::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -5733,7 +5781,7 @@ class Reply_QueueOnSubmittedWorkDone final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_QueueOnSubmittedWorkDone* other);
 
   private:
@@ -5746,7 +5794,10 @@ class Reply_QueueOnSubmittedWorkDone final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -5755,11 +5806,7 @@ class Reply_QueueOnSubmittedWorkDone final :
   enum : int {
     kAOkFieldNumber = 1,
   };
-  // required bytes a_ok = 1;
-  bool has_a_ok() const;
-  private:
-  bool _internal_has_a_ok() const;
-  public:
+  // bytes a_ok = 1;
   void clear_a_ok();
   const std::string& a_ok() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -5781,9 +5828,8 @@ class Reply_QueueOnSubmittedWorkDone final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ok_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -5791,7 +5837,7 @@ class Reply_QueueOnSubmittedWorkDone final :
 // -------------------------------------------------------------------
 
 class Msg_QueueWriteAction final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction) */ {
  public:
   inline Msg_QueueWriteAction() : Msg_QueueWriteAction(nullptr) {}
   ~Msg_QueueWriteAction() override;
@@ -5821,13 +5867,15 @@ class Msg_QueueWriteAction final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_QueueWriteAction& default_instance() {
     return *internal_default_instance();
   }
@@ -5865,9 +5913,15 @@ class Msg_QueueWriteAction final :
   Msg_QueueWriteAction* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_QueueWriteAction>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_QueueWriteAction& from);
-  void MergeFrom(const Msg_QueueWriteAction& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_QueueWriteAction& from) {
+    Msg_QueueWriteAction::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -5880,7 +5934,7 @@ class Msg_QueueWriteAction final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_QueueWriteAction* other);
 
   private:
@@ -5893,7 +5947,10 @@ class Msg_QueueWriteAction final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -5905,11 +5962,7 @@ class Msg_QueueWriteAction final :
     kABufFieldNumber = 3,
     kAShmemFieldNumber = 4,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -5923,11 +5976,7 @@ class Msg_QueueWriteAction final :
   std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes a_aDeviceId = 2;
-  bool has_a_adeviceid() const;
-  private:
-  bool _internal_has_a_adeviceid() const;
-  public:
+  // bytes a_aDeviceId = 2;
   void clear_a_adeviceid();
   const std::string& a_adeviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -5941,11 +5990,7 @@ class Msg_QueueWriteAction final :
   std::string* _internal_mutable_a_adeviceid();
   public:
 
-  // required bytes a_buf = 3;
-  bool has_a_buf() const;
-  private:
-  bool _internal_has_a_buf() const;
-  public:
+  // bytes a_buf = 3;
   void clear_a_buf();
   const std::string& a_buf() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -5959,11 +6004,7 @@ class Msg_QueueWriteAction final :
   std::string* _internal_mutable_a_buf();
   public:
 
-  // required bytes a_shmem = 4;
-  bool has_a_shmem() const;
-  private:
-  bool _internal_has_a_shmem() const;
-  public:
+  // bytes a_shmem = 4;
   void clear_a_shmem();
   const std::string& a_shmem() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -5981,19 +6022,15 @@ class Msg_QueueWriteAction final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_adeviceid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_buf_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_shmem_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -6001,7 +6038,7 @@ class Msg_QueueWriteAction final :
 // -------------------------------------------------------------------
 
 class Msg_BindGroupLayoutDrop final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupLayoutDrop) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupLayoutDrop) */ {
  public:
   inline Msg_BindGroupLayoutDrop() : Msg_BindGroupLayoutDrop(nullptr) {}
   ~Msg_BindGroupLayoutDrop() override;
@@ -6031,13 +6068,15 @@ class Msg_BindGroupLayoutDrop final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_BindGroupLayoutDrop& default_instance() {
     return *internal_default_instance();
   }
@@ -6075,9 +6114,15 @@ class Msg_BindGroupLayoutDrop final :
   Msg_BindGroupLayoutDrop* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_BindGroupLayoutDrop>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_BindGroupLayoutDrop& from);
-  void MergeFrom(const Msg_BindGroupLayoutDrop& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_BindGroupLayoutDrop& from) {
+    Msg_BindGroupLayoutDrop::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -6090,7 +6135,7 @@ class Msg_BindGroupLayoutDrop final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_BindGroupLayoutDrop* other);
 
   private:
@@ -6103,7 +6148,10 @@ class Msg_BindGroupLayoutDrop final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -6112,11 +6160,7 @@ class Msg_BindGroupLayoutDrop final :
   enum : int {
     kASelfIdFieldNumber = 1,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -6138,9 +6182,8 @@ class Msg_BindGroupLayoutDrop final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -6148,7 +6191,7 @@ class Msg_BindGroupLayoutDrop final :
 // -------------------------------------------------------------------
 
 class Msg_PipelineLayoutDrop final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_PipelineLayoutDrop) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_PipelineLayoutDrop) */ {
  public:
   inline Msg_PipelineLayoutDrop() : Msg_PipelineLayoutDrop(nullptr) {}
   ~Msg_PipelineLayoutDrop() override;
@@ -6178,13 +6221,15 @@ class Msg_PipelineLayoutDrop final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_PipelineLayoutDrop& default_instance() {
     return *internal_default_instance();
   }
@@ -6222,9 +6267,15 @@ class Msg_PipelineLayoutDrop final :
   Msg_PipelineLayoutDrop* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_PipelineLayoutDrop>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_PipelineLayoutDrop& from);
-  void MergeFrom(const Msg_PipelineLayoutDrop& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_PipelineLayoutDrop& from) {
+    Msg_PipelineLayoutDrop::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -6237,7 +6288,7 @@ class Msg_PipelineLayoutDrop final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_PipelineLayoutDrop* other);
 
   private:
@@ -6250,7 +6301,10 @@ class Msg_PipelineLayoutDrop final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -6259,11 +6313,7 @@ class Msg_PipelineLayoutDrop final :
   enum : int {
     kASelfIdFieldNumber = 1,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -6285,9 +6335,8 @@ class Msg_PipelineLayoutDrop final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -6295,7 +6344,7 @@ class Msg_PipelineLayoutDrop final :
 // -------------------------------------------------------------------
 
 class Msg_BindGroupDrop final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupDrop) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupDrop) */ {
  public:
   inline Msg_BindGroupDrop() : Msg_BindGroupDrop(nullptr) {}
   ~Msg_BindGroupDrop() override;
@@ -6325,13 +6374,15 @@ class Msg_BindGroupDrop final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_BindGroupDrop& default_instance() {
     return *internal_default_instance();
   }
@@ -6369,9 +6420,15 @@ class Msg_BindGroupDrop final :
   Msg_BindGroupDrop* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_BindGroupDrop>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_BindGroupDrop& from);
-  void MergeFrom(const Msg_BindGroupDrop& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_BindGroupDrop& from) {
+    Msg_BindGroupDrop::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -6384,7 +6441,7 @@ class Msg_BindGroupDrop final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_BindGroupDrop* other);
 
   private:
@@ -6397,7 +6454,10 @@ class Msg_BindGroupDrop final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -6406,11 +6466,7 @@ class Msg_BindGroupDrop final :
   enum : int {
     kASelfIdFieldNumber = 1,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -6432,9 +6488,8 @@ class Msg_BindGroupDrop final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -6442,7 +6497,7 @@ class Msg_BindGroupDrop final :
 // -------------------------------------------------------------------
 
 class Msg_ShaderModuleDrop final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_ShaderModuleDrop) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_ShaderModuleDrop) */ {
  public:
   inline Msg_ShaderModuleDrop() : Msg_ShaderModuleDrop(nullptr) {}
   ~Msg_ShaderModuleDrop() override;
@@ -6472,13 +6527,15 @@ class Msg_ShaderModuleDrop final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_ShaderModuleDrop& default_instance() {
     return *internal_default_instance();
   }
@@ -6516,9 +6573,15 @@ class Msg_ShaderModuleDrop final :
   Msg_ShaderModuleDrop* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ShaderModuleDrop>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_ShaderModuleDrop& from);
-  void MergeFrom(const Msg_ShaderModuleDrop& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_ShaderModuleDrop& from) {
+    Msg_ShaderModuleDrop::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -6531,7 +6594,7 @@ class Msg_ShaderModuleDrop final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_ShaderModuleDrop* other);
 
   private:
@@ -6544,7 +6607,10 @@ class Msg_ShaderModuleDrop final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -6553,11 +6619,7 @@ class Msg_ShaderModuleDrop final :
   enum : int {
     kASelfIdFieldNumber = 1,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -6579,9 +6641,8 @@ class Msg_ShaderModuleDrop final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -6589,7 +6650,7 @@ class Msg_ShaderModuleDrop final :
 // -------------------------------------------------------------------
 
 class Msg_ComputePipelineDrop final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePipelineDrop) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePipelineDrop) */ {
  public:
   inline Msg_ComputePipelineDrop() : Msg_ComputePipelineDrop(nullptr) {}
   ~Msg_ComputePipelineDrop() override;
@@ -6619,13 +6680,15 @@ class Msg_ComputePipelineDrop final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_ComputePipelineDrop& default_instance() {
     return *internal_default_instance();
   }
@@ -6663,9 +6726,15 @@ class Msg_ComputePipelineDrop final :
   Msg_ComputePipelineDrop* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ComputePipelineDrop>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_ComputePipelineDrop& from);
-  void MergeFrom(const Msg_ComputePipelineDrop& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_ComputePipelineDrop& from) {
+    Msg_ComputePipelineDrop::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -6678,7 +6747,7 @@ class Msg_ComputePipelineDrop final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_ComputePipelineDrop* other);
 
   private:
@@ -6691,7 +6760,10 @@ class Msg_ComputePipelineDrop final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -6700,11 +6772,7 @@ class Msg_ComputePipelineDrop final :
   enum : int {
     kASelfIdFieldNumber = 1,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -6726,9 +6794,8 @@ class Msg_ComputePipelineDrop final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -6736,7 +6803,7 @@ class Msg_ComputePipelineDrop final :
 // -------------------------------------------------------------------
 
 class Msg_RenderPipelineDrop final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPipelineDrop) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPipelineDrop) */ {
  public:
   inline Msg_RenderPipelineDrop() : Msg_RenderPipelineDrop(nullptr) {}
   ~Msg_RenderPipelineDrop() override;
@@ -6766,13 +6833,15 @@ class Msg_RenderPipelineDrop final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_RenderPipelineDrop& default_instance() {
     return *internal_default_instance();
   }
@@ -6810,9 +6879,15 @@ class Msg_RenderPipelineDrop final :
   Msg_RenderPipelineDrop* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_RenderPipelineDrop>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_RenderPipelineDrop& from);
-  void MergeFrom(const Msg_RenderPipelineDrop& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_RenderPipelineDrop& from) {
+    Msg_RenderPipelineDrop::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -6825,7 +6900,7 @@ class Msg_RenderPipelineDrop final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_RenderPipelineDrop* other);
 
   private:
@@ -6838,7 +6913,10 @@ class Msg_RenderPipelineDrop final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -6847,11 +6925,7 @@ class Msg_RenderPipelineDrop final :
   enum : int {
     kASelfIdFieldNumber = 1,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -6873,9 +6947,8 @@ class Msg_RenderPipelineDrop final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -6883,7 +6956,7 @@ class Msg_RenderPipelineDrop final :
 // -------------------------------------------------------------------
 
 class Msg_ImplicitLayoutDrop final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop) */ {
  public:
   inline Msg_ImplicitLayoutDrop() : Msg_ImplicitLayoutDrop(nullptr) {}
   ~Msg_ImplicitLayoutDrop() override;
@@ -6913,13 +6986,15 @@ class Msg_ImplicitLayoutDrop final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_ImplicitLayoutDrop& default_instance() {
     return *internal_default_instance();
   }
@@ -6957,9 +7032,15 @@ class Msg_ImplicitLayoutDrop final :
   Msg_ImplicitLayoutDrop* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ImplicitLayoutDrop>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_ImplicitLayoutDrop& from);
-  void MergeFrom(const Msg_ImplicitLayoutDrop& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_ImplicitLayoutDrop& from) {
+    Msg_ImplicitLayoutDrop::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -6972,7 +7053,7 @@ class Msg_ImplicitLayoutDrop final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_ImplicitLayoutDrop* other);
 
   private:
@@ -6985,7 +7066,10 @@ class Msg_ImplicitLayoutDrop final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -7019,11 +7103,7 @@ class Msg_ImplicitLayoutDrop final :
   std::string* _internal_add_a_implicitbglids();
   public:
 
-  // required bytes a_implicitPlId = 1;
-  bool has_a_implicitplid() const;
-  private:
-  bool _internal_has_a_implicitplid() const;
-  public:
+  // bytes a_implicitPlId = 1;
   void clear_a_implicitplid();
   const std::string& a_implicitplid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -7045,10 +7125,9 @@ class Msg_ImplicitLayoutDrop final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_implicitbglids_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_implicitplid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -7056,7 +7135,7 @@ class Msg_ImplicitLayoutDrop final :
 // -------------------------------------------------------------------
 
 class Msg_DeviceCreateSwapChain final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain) */ {
  public:
   inline Msg_DeviceCreateSwapChain() : Msg_DeviceCreateSwapChain(nullptr) {}
   ~Msg_DeviceCreateSwapChain() override;
@@ -7086,13 +7165,15 @@ class Msg_DeviceCreateSwapChain final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_DeviceCreateSwapChain& default_instance() {
     return *internal_default_instance();
   }
@@ -7130,9 +7211,15 @@ class Msg_DeviceCreateSwapChain final :
   Msg_DeviceCreateSwapChain* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_DeviceCreateSwapChain>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_DeviceCreateSwapChain& from);
-  void MergeFrom(const Msg_DeviceCreateSwapChain& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_DeviceCreateSwapChain& from) {
+    Msg_DeviceCreateSwapChain::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -7145,7 +7232,7 @@ class Msg_DeviceCreateSwapChain final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_DeviceCreateSwapChain* other);
 
   private:
@@ -7158,7 +7245,10 @@ class Msg_DeviceCreateSwapChain final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -7196,11 +7286,7 @@ class Msg_DeviceCreateSwapChain final :
   std::string* _internal_add_a_bufferids();
   public:
 
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -7214,11 +7300,7 @@ class Msg_DeviceCreateSwapChain final :
   std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes a_queueId = 2;
-  bool has_a_queueid() const;
-  private:
-  bool _internal_has_a_queueid() const;
-  public:
+  // bytes a_queueId = 2;
   void clear_a_queueid();
   const std::string& a_queueid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -7232,11 +7314,7 @@ class Msg_DeviceCreateSwapChain final :
   std::string* _internal_mutable_a_queueid();
   public:
 
-  // required bytes a_desc = 3;
-  bool has_a_desc() const;
-  private:
-  bool _internal_has_a_desc() const;
-  public:
+  // bytes a_desc = 3;
   void clear_a_desc();
   const std::string& a_desc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -7250,11 +7328,7 @@ class Msg_DeviceCreateSwapChain final :
   std::string* _internal_mutable_a_desc();
   public:
 
-  // required bytes a_ownerId = 5;
-  bool has_a_ownerid() const;
-  private:
-  bool _internal_has_a_ownerid() const;
-  public:
+  // bytes a_ownerId = 5;
   void clear_a_ownerid();
   const std::string& a_ownerid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -7268,11 +7342,7 @@ class Msg_DeviceCreateSwapChain final :
   std::string* _internal_mutable_a_ownerid();
   public:
 
-  // required bool a_useExternalTextureInSwapChain = 6;
-  bool has_a_useexternaltextureinswapchain() const;
-  private:
-  bool _internal_has_a_useexternaltextureinswapchain() const;
-  public:
+  // bool a_useExternalTextureInSwapChain = 6;
   void clear_a_useexternaltextureinswapchain();
   bool a_useexternaltextureinswapchain() const;
   void set_a_useexternaltextureinswapchain(bool value);
@@ -7285,21 +7355,17 @@ class Msg_DeviceCreateSwapChain final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> a_bufferids_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_queueid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_desc_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ownerid_;
     bool a_useexternaltextureinswapchain_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -7307,7 +7373,7 @@ class Msg_DeviceCreateSwapChain final :
 // -------------------------------------------------------------------
 
 class Msg_SwapChainPresent final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent) */ {
  public:
   inline Msg_SwapChainPresent() : Msg_SwapChainPresent(nullptr) {}
   ~Msg_SwapChainPresent() override;
@@ -7337,13 +7403,15 @@ class Msg_SwapChainPresent final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SwapChainPresent& default_instance() {
     return *internal_default_instance();
   }
@@ -7381,9 +7449,15 @@ class Msg_SwapChainPresent final :
   Msg_SwapChainPresent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SwapChainPresent>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SwapChainPresent& from);
-  void MergeFrom(const Msg_SwapChainPresent& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SwapChainPresent& from) {
+    Msg_SwapChainPresent::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -7396,7 +7470,7 @@ class Msg_SwapChainPresent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SwapChainPresent* other);
 
   private:
@@ -7409,7 +7483,10 @@ class Msg_SwapChainPresent final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -7421,11 +7498,7 @@ class Msg_SwapChainPresent final :
     kARemoteTextureIdFieldNumber = 3,
     kARemoteTextureOwnerIdFieldNumber = 4,
   };
-  // required bytes a_textureId = 1;
-  bool has_a_textureid() const;
-  private:
-  bool _internal_has_a_textureid() const;
-  public:
+  // bytes a_textureId = 1;
   void clear_a_textureid();
   const std::string& a_textureid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -7439,11 +7512,7 @@ class Msg_SwapChainPresent final :
   std::string* _internal_mutable_a_textureid();
   public:
 
-  // required bytes a_commandEncoderId = 2;
-  bool has_a_commandencoderid() const;
-  private:
-  bool _internal_has_a_commandencoderid() const;
-  public:
+  // bytes a_commandEncoderId = 2;
   void clear_a_commandencoderid();
   const std::string& a_commandencoderid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -7457,11 +7526,7 @@ class Msg_SwapChainPresent final :
   std::string* _internal_mutable_a_commandencoderid();
   public:
 
-  // required bytes a_remoteTextureId = 3;
-  bool has_a_remotetextureid() const;
-  private:
-  bool _internal_has_a_remotetextureid() const;
-  public:
+  // bytes a_remoteTextureId = 3;
   void clear_a_remotetextureid();
   const std::string& a_remotetextureid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -7475,11 +7540,7 @@ class Msg_SwapChainPresent final :
   std::string* _internal_mutable_a_remotetextureid();
   public:
 
-  // required bytes a_remoteTextureOwnerId = 4;
-  bool has_a_remotetextureownerid() const;
-  private:
-  bool _internal_has_a_remotetextureownerid() const;
-  public:
+  // bytes a_remoteTextureOwnerId = 4;
   void clear_a_remotetextureownerid();
   const std::string& a_remotetextureownerid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -7497,19 +7558,15 @@ class Msg_SwapChainPresent final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_textureid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_commandencoderid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_remotetextureid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_remotetextureownerid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -7517,7 +7574,7 @@ class Msg_SwapChainPresent final :
 // -------------------------------------------------------------------
 
 class Msg_SwapChainDrop final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop) */ {
  public:
   inline Msg_SwapChainDrop() : Msg_SwapChainDrop(nullptr) {}
   ~Msg_SwapChainDrop() override;
@@ -7547,13 +7604,15 @@ class Msg_SwapChainDrop final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_SwapChainDrop& default_instance() {
     return *internal_default_instance();
   }
@@ -7591,9 +7650,15 @@ class Msg_SwapChainDrop final :
   Msg_SwapChainDrop* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_SwapChainDrop>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_SwapChainDrop& from);
-  void MergeFrom(const Msg_SwapChainDrop& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_SwapChainDrop& from) {
+    Msg_SwapChainDrop::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -7606,7 +7671,7 @@ class Msg_SwapChainDrop final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_SwapChainDrop* other);
 
   private:
@@ -7619,7 +7684,10 @@ class Msg_SwapChainDrop final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -7630,11 +7698,7 @@ class Msg_SwapChainDrop final :
     kATxnTypeFieldNumber = 2,
     kATxnIdFieldNumber = 3,
   };
-  // required bytes a_ownerId = 1;
-  bool has_a_ownerid() const;
-  private:
-  bool _internal_has_a_ownerid() const;
-  public:
+  // bytes a_ownerId = 1;
   void clear_a_ownerid();
   const std::string& a_ownerid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -7648,11 +7712,7 @@ class Msg_SwapChainDrop final :
   std::string* _internal_mutable_a_ownerid();
   public:
 
-  // required bytes a_txnType = 2;
-  bool has_a_txntype() const;
-  private:
-  bool _internal_has_a_txntype() const;
-  public:
+  // bytes a_txnType = 2;
   void clear_a_txntype();
   const std::string& a_txntype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -7666,11 +7726,7 @@ class Msg_SwapChainDrop final :
   std::string* _internal_mutable_a_txntype();
   public:
 
-  // required bytes a_txnId = 3;
-  bool has_a_txnid() const;
-  private:
-  bool _internal_has_a_txnid() const;
-  public:
+  // bytes a_txnId = 3;
   void clear_a_txnid();
   const std::string& a_txnid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -7688,18 +7744,14 @@ class Msg_SwapChainDrop final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_ownerid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_txntype_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_txnid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -7707,7 +7759,7 @@ class Msg_SwapChainDrop final :
 // -------------------------------------------------------------------
 
 class Msg_DevicePushErrorScope final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope) */ {
  public:
   inline Msg_DevicePushErrorScope() : Msg_DevicePushErrorScope(nullptr) {}
   ~Msg_DevicePushErrorScope() override;
@@ -7737,13 +7789,15 @@ class Msg_DevicePushErrorScope final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_DevicePushErrorScope& default_instance() {
     return *internal_default_instance();
   }
@@ -7781,9 +7835,15 @@ class Msg_DevicePushErrorScope final :
   Msg_DevicePushErrorScope* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_DevicePushErrorScope>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_DevicePushErrorScope& from);
-  void MergeFrom(const Msg_DevicePushErrorScope& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_DevicePushErrorScope& from) {
+    Msg_DevicePushErrorScope::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -7796,7 +7856,7 @@ class Msg_DevicePushErrorScope final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_DevicePushErrorScope* other);
 
   private:
@@ -7809,7 +7869,10 @@ class Msg_DevicePushErrorScope final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -7819,11 +7882,7 @@ class Msg_DevicePushErrorScope final :
     kASelfIdFieldNumber = 1,
     kAAFilterFieldNumber = 2,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -7837,11 +7896,7 @@ class Msg_DevicePushErrorScope final :
   std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes a_aFilter = 2;
-  bool has_a_afilter() const;
-  private:
-  bool _internal_has_a_afilter() const;
-  public:
+  // bytes a_aFilter = 2;
   void clear_a_afilter();
   const std::string& a_afilter() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -7859,17 +7914,13 @@ class Msg_DevicePushErrorScope final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_afilter_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -7877,7 +7928,7 @@ class Msg_DevicePushErrorScope final :
 // -------------------------------------------------------------------
 
 class Msg_DevicePopErrorScope final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePopErrorScope) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePopErrorScope) */ {
  public:
   inline Msg_DevicePopErrorScope() : Msg_DevicePopErrorScope(nullptr) {}
   ~Msg_DevicePopErrorScope() override;
@@ -7907,13 +7958,15 @@ class Msg_DevicePopErrorScope final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_DevicePopErrorScope& default_instance() {
     return *internal_default_instance();
   }
@@ -7951,9 +8004,15 @@ class Msg_DevicePopErrorScope final :
   Msg_DevicePopErrorScope* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_DevicePopErrorScope>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_DevicePopErrorScope& from);
-  void MergeFrom(const Msg_DevicePopErrorScope& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_DevicePopErrorScope& from) {
+    Msg_DevicePopErrorScope::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -7966,7 +8025,7 @@ class Msg_DevicePopErrorScope final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_DevicePopErrorScope* other);
 
   private:
@@ -7979,7 +8038,10 @@ class Msg_DevicePopErrorScope final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -7988,11 +8050,7 @@ class Msg_DevicePopErrorScope final :
   enum : int {
     kASelfIdFieldNumber = 1,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -8014,9 +8072,8 @@ class Msg_DevicePopErrorScope final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -8024,7 +8081,7 @@ class Msg_DevicePopErrorScope final :
 // -------------------------------------------------------------------
 
 class Reply_DevicePopErrorScope final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Reply_DevicePopErrorScope) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Reply_DevicePopErrorScope) */ {
  public:
   inline Reply_DevicePopErrorScope() : Reply_DevicePopErrorScope(nullptr) {}
   ~Reply_DevicePopErrorScope() override;
@@ -8054,13 +8111,15 @@ class Reply_DevicePopErrorScope final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply_DevicePopErrorScope& default_instance() {
     return *internal_default_instance();
   }
@@ -8098,9 +8157,15 @@ class Reply_DevicePopErrorScope final :
   Reply_DevicePopErrorScope* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_DevicePopErrorScope>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Reply_DevicePopErrorScope& from);
-  void MergeFrom(const Reply_DevicePopErrorScope& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Reply_DevicePopErrorScope& from) {
+    Reply_DevicePopErrorScope::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -8113,7 +8178,7 @@ class Reply_DevicePopErrorScope final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Reply_DevicePopErrorScope* other);
 
   private:
@@ -8126,7 +8191,10 @@ class Reply_DevicePopErrorScope final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -8135,11 +8203,7 @@ class Reply_DevicePopErrorScope final :
   enum : int {
     kAResultFieldNumber = 1,
   };
-  // required bytes a_result = 1;
-  bool has_a_result() const;
-  private:
-  bool _internal_has_a_result() const;
-  public:
+  // bytes a_result = 1;
   void clear_a_result();
   const std::string& a_result() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -8161,9 +8225,8 @@ class Reply_DevicePopErrorScope final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_result_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -8171,7 +8234,7 @@ class Reply_DevicePopErrorScope final :
 // -------------------------------------------------------------------
 
 class Msg_ReportError final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError) */ {
  public:
   inline Msg_ReportError() : Msg_ReportError(nullptr) {}
   ~Msg_ReportError() override;
@@ -8201,13 +8264,15 @@ class Msg_ReportError final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_ReportError& default_instance() {
     return *internal_default_instance();
   }
@@ -8245,9 +8310,15 @@ class Msg_ReportError final :
   Msg_ReportError* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ReportError>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_ReportError& from);
-  void MergeFrom(const Msg_ReportError& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_ReportError& from) {
+    Msg_ReportError::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -8260,7 +8331,7 @@ class Msg_ReportError final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_ReportError* other);
 
   private:
@@ -8273,7 +8344,10 @@ class Msg_ReportError final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -8284,11 +8358,7 @@ class Msg_ReportError final :
     kAATypeFieldNumber = 2,
     kAMessageFieldNumber = 3,
   };
-  // required bytes a_selfId = 1;
-  bool has_a_selfid() const;
-  private:
-  bool _internal_has_a_selfid() const;
-  public:
+  // bytes a_selfId = 1;
   void clear_a_selfid();
   const std::string& a_selfid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -8302,11 +8372,7 @@ class Msg_ReportError final :
   std::string* _internal_mutable_a_selfid();
   public:
 
-  // required bytes a_aType = 2;
-  bool has_a_atype() const;
-  private:
-  bool _internal_has_a_atype() const;
-  public:
+  // bytes a_aType = 2;
   void clear_a_atype();
   const std::string& a_atype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -8320,11 +8386,7 @@ class Msg_ReportError final :
   std::string* _internal_mutable_a_atype();
   public:
 
-  // required string a_message = 3;
-  bool has_a_message() const;
-  private:
-  bool _internal_has_a_message() const;
-  public:
+  // string a_message = 3;
   void clear_a_message();
   const std::string& a_message() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -8342,18 +8404,14 @@ class Msg_ReportError final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_selfid_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_atype_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_message_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
@@ -8361,7 +8419,7 @@ class Msg_ReportError final :
 // -------------------------------------------------------------------
 
 class Msg_UncapturedError final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError) */ {
  public:
   inline Msg_UncapturedError() : Msg_UncapturedError(nullptr) {}
   ~Msg_UncapturedError() override;
@@ -8391,13 +8449,15 @@ class Msg_UncapturedError final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_UncapturedError& default_instance() {
     return *internal_default_instance();
   }
@@ -8435,9 +8495,15 @@ class Msg_UncapturedError final :
   Msg_UncapturedError* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_UncapturedError>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_UncapturedError& from);
-  void MergeFrom(const Msg_UncapturedError& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_UncapturedError& from) {
+    Msg_UncapturedError::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -8450,7 +8516,7 @@ class Msg_UncapturedError final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_UncapturedError* other);
 
   private:
@@ -8463,7 +8529,10 @@ class Msg_UncapturedError final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -8491,11 +8560,7 @@ class Msg_UncapturedError final :
   std::string* _internal_mutable_a_adeviceid();
   public:
 
-  // required string a_message = 2;
-  bool has_a_message() const;
-  private:
-  bool _internal_has_a_message() const;
-  public:
+  // string a_message = 2;
   void clear_a_message();
   const std::string& a_message() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -8528,7 +8593,7 @@ class Msg_UncapturedError final :
 // -------------------------------------------------------------------
 
 class Msg_DeviceLost final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost) */ {
  public:
   inline Msg_DeviceLost() : Msg_DeviceLost(nullptr) {}
   ~Msg_DeviceLost() override;
@@ -8558,13 +8623,15 @@ class Msg_DeviceLost final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_DeviceLost& default_instance() {
     return *internal_default_instance();
   }
@@ -8602,9 +8669,15 @@ class Msg_DeviceLost final :
   Msg_DeviceLost* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_DeviceLost>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_DeviceLost& from);
-  void MergeFrom(const Msg_DeviceLost& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_DeviceLost& from) {
+    Msg_DeviceLost::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -8617,7 +8690,7 @@ class Msg_DeviceLost final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_DeviceLost* other);
 
   private:
@@ -8630,7 +8703,10 @@ class Msg_DeviceLost final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -8641,11 +8717,7 @@ class Msg_DeviceLost final :
     kAMessageFieldNumber = 3,
     kAReasonFieldNumber = 2,
   };
-  // required bytes a_aDeviceId = 1;
-  bool has_a_adeviceid() const;
-  private:
-  bool _internal_has_a_adeviceid() const;
-  public:
+  // bytes a_aDeviceId = 1;
   void clear_a_adeviceid();
   const std::string& a_adeviceid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -8659,11 +8731,7 @@ class Msg_DeviceLost final :
   std::string* _internal_mutable_a_adeviceid();
   public:
 
-  // required string a_message = 3;
-  bool has_a_message() const;
-  private:
-  bool _internal_has_a_message() const;
-  public:
+  // string a_message = 3;
   void clear_a_message();
   const std::string& a_message() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -8694,9 +8762,6 @@ class Msg_DeviceLost final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
@@ -8713,10 +8778,9 @@ class Msg_DeviceLost final :
 // -------------------------------------------------------------------
 
 class Msg___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Msg___delete__) */ {
  public:
   inline Msg___delete__() : Msg___delete__(nullptr) {}
-  ~Msg___delete__() override;
   explicit PROTOBUF_CONSTEXPR Msg___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg___delete__(const Msg___delete__& from);
@@ -8743,13 +8807,15 @@ class Msg___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -8787,23 +8853,15 @@ class Msg___delete__ final :
   Msg___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg___delete__& from);
-  void MergeFrom(const Msg___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -8815,7 +8873,10 @@ class Msg___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -8829,18 +8890,15 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Reply___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.webgpu.PWebGPU.Reply___delete__) */ {
  public:
   inline Reply___delete__() : Reply___delete__(nullptr) {}
-  ~Reply___delete__() override;
   explicit PROTOBUF_CONSTEXPR Reply___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply___delete__(const Reply___delete__& from);
@@ -8867,13 +8925,15 @@ class Reply___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -8911,23 +8971,15 @@ class Reply___delete__ final :
   Reply___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply___delete__& from);
-  void MergeFrom(const Reply___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -8939,7 +8991,10 @@ class Reply___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -8953,9 +9008,7 @@ class Reply___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PWebGPU_2eproto;
 };
 // ===================================================================
@@ -8969,17 +9022,9 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_DeviceAction
 
-// required bytes a_selfId = 1;
-inline bool Msg_DeviceAction::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_DeviceAction::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_DeviceAction::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_DeviceAction::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.a_selfId)
@@ -8988,7 +9033,7 @@ inline const std::string& Msg_DeviceAction::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceAction::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.a_selfId)
 }
@@ -9001,32 +9046,22 @@ inline const std::string& Msg_DeviceAction::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_DeviceAction::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceAction::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceAction::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_DeviceAction::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9037,17 +9072,9 @@ inline void Msg_DeviceAction::set_allocated_a_selfid(std::string* a_selfid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.a_selfId)
 }
 
-// required bytes a_buf = 2;
-inline bool Msg_DeviceAction::_internal_has_a_buf() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_DeviceAction::has_a_buf() const {
-  return _internal_has_a_buf();
-}
+// bytes a_buf = 2;
 inline void Msg_DeviceAction::clear_a_buf() {
   _impl_.a_buf_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_DeviceAction::a_buf() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.a_buf)
@@ -9056,7 +9083,7 @@ inline const std::string& Msg_DeviceAction::a_buf() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceAction::set_a_buf(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.a_buf)
 }
@@ -9069,32 +9096,22 @@ inline const std::string& Msg_DeviceAction::_internal_a_buf() const {
   return _impl_.a_buf_.Get();
 }
 inline void Msg_DeviceAction::_internal_set_a_buf(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_buf_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceAction::_internal_mutable_a_buf() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_buf_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceAction::release_a_buf() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceAction.a_buf)
-  if (!_internal_has_a_buf()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_buf_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_buf_.IsDefault()) {
-    _impl_.a_buf_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_buf_.Release();
 }
 inline void Msg_DeviceAction::set_allocated_a_buf(std::string* a_buf) {
   if (a_buf != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_buf_.SetAllocated(a_buf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9109,17 +9126,9 @@ inline void Msg_DeviceAction::set_allocated_a_buf(std::string* a_buf) {
 
 // Msg_DeviceActionWithAck
 
-// required bytes a_selfId = 1;
-inline bool Msg_DeviceActionWithAck::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_DeviceActionWithAck::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_DeviceActionWithAck::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_DeviceActionWithAck::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.a_selfId)
@@ -9128,7 +9137,7 @@ inline const std::string& Msg_DeviceActionWithAck::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceActionWithAck::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.a_selfId)
 }
@@ -9141,32 +9150,22 @@ inline const std::string& Msg_DeviceActionWithAck::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_DeviceActionWithAck::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceActionWithAck::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceActionWithAck::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_DeviceActionWithAck::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9177,17 +9176,9 @@ inline void Msg_DeviceActionWithAck::set_allocated_a_selfid(std::string* a_selfi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.a_selfId)
 }
 
-// required bytes a_buf = 2;
-inline bool Msg_DeviceActionWithAck::_internal_has_a_buf() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_DeviceActionWithAck::has_a_buf() const {
-  return _internal_has_a_buf();
-}
+// bytes a_buf = 2;
 inline void Msg_DeviceActionWithAck::clear_a_buf() {
   _impl_.a_buf_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_DeviceActionWithAck::a_buf() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.a_buf)
@@ -9196,7 +9187,7 @@ inline const std::string& Msg_DeviceActionWithAck::a_buf() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceActionWithAck::set_a_buf(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.a_buf)
 }
@@ -9209,32 +9200,22 @@ inline const std::string& Msg_DeviceActionWithAck::_internal_a_buf() const {
   return _impl_.a_buf_.Get();
 }
 inline void Msg_DeviceActionWithAck::_internal_set_a_buf(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_buf_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceActionWithAck::_internal_mutable_a_buf() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_buf_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceActionWithAck::release_a_buf() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceActionWithAck.a_buf)
-  if (!_internal_has_a_buf()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_buf_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_buf_.IsDefault()) {
-    _impl_.a_buf_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_buf_.Release();
 }
 inline void Msg_DeviceActionWithAck::set_allocated_a_buf(std::string* a_buf) {
   if (a_buf != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_buf_.SetAllocated(a_buf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9249,17 +9230,9 @@ inline void Msg_DeviceActionWithAck::set_allocated_a_buf(std::string* a_buf) {
 
 // Reply_DeviceActionWithAck
 
-// required bool a_dummy = 1;
-inline bool Reply_DeviceActionWithAck::_internal_has_a_dummy() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Reply_DeviceActionWithAck::has_a_dummy() const {
-  return _internal_has_a_dummy();
-}
+// bool a_dummy = 1;
 inline void Reply_DeviceActionWithAck::clear_a_dummy() {
   _impl_.a_dummy_ = false;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_DeviceActionWithAck::_internal_a_dummy() const {
   return _impl_.a_dummy_;
@@ -9269,7 +9242,7 @@ inline bool Reply_DeviceActionWithAck::a_dummy() const {
   return _internal_a_dummy();
 }
 inline void Reply_DeviceActionWithAck::_internal_set_a_dummy(bool value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_dummy_ = value;
 }
 inline void Reply_DeviceActionWithAck::set_a_dummy(bool value) {
@@ -9281,17 +9254,9 @@ inline void Reply_DeviceActionWithAck::set_a_dummy(bool value) {
 
 // Msg_TextureAction
 
-// required bytes a_selfId = 1;
-inline bool Msg_TextureAction::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_TextureAction::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_TextureAction::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_TextureAction::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_selfId)
@@ -9300,7 +9265,7 @@ inline const std::string& Msg_TextureAction::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_TextureAction::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_selfId)
 }
@@ -9313,32 +9278,22 @@ inline const std::string& Msg_TextureAction::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_TextureAction::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_TextureAction::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_TextureAction::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_TextureAction::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9349,17 +9304,9 @@ inline void Msg_TextureAction::set_allocated_a_selfid(std::string* a_selfid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_selfId)
 }
 
-// required bytes a_aDeviceId = 2;
-inline bool Msg_TextureAction::_internal_has_a_adeviceid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_TextureAction::has_a_adeviceid() const {
-  return _internal_has_a_adeviceid();
-}
+// bytes a_aDeviceId = 2;
 inline void Msg_TextureAction::clear_a_adeviceid() {
   _impl_.a_adeviceid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_TextureAction::a_adeviceid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_aDeviceId)
@@ -9368,7 +9315,7 @@ inline const std::string& Msg_TextureAction::a_adeviceid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_TextureAction::set_a_adeviceid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_aDeviceId)
 }
@@ -9381,32 +9328,22 @@ inline const std::string& Msg_TextureAction::_internal_a_adeviceid() const {
   return _impl_.a_adeviceid_.Get();
 }
 inline void Msg_TextureAction::_internal_set_a_adeviceid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_adeviceid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_TextureAction::_internal_mutable_a_adeviceid() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_adeviceid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_TextureAction::release_a_adeviceid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_aDeviceId)
-  if (!_internal_has_a_adeviceid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_adeviceid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_adeviceid_.IsDefault()) {
-    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_adeviceid_.Release();
 }
 inline void Msg_TextureAction::set_allocated_a_adeviceid(std::string* a_adeviceid) {
   if (a_adeviceid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_adeviceid_.SetAllocated(a_adeviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9417,17 +9354,9 @@ inline void Msg_TextureAction::set_allocated_a_adeviceid(std::string* a_adevicei
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_aDeviceId)
 }
 
-// required bytes a_buf = 3;
-inline bool Msg_TextureAction::_internal_has_a_buf() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_TextureAction::has_a_buf() const {
-  return _internal_has_a_buf();
-}
+// bytes a_buf = 3;
 inline void Msg_TextureAction::clear_a_buf() {
   _impl_.a_buf_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_TextureAction::a_buf() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_buf)
@@ -9436,7 +9365,7 @@ inline const std::string& Msg_TextureAction::a_buf() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_TextureAction::set_a_buf(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_buf)
 }
@@ -9449,32 +9378,22 @@ inline const std::string& Msg_TextureAction::_internal_a_buf() const {
   return _impl_.a_buf_.Get();
 }
 inline void Msg_TextureAction::_internal_set_a_buf(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_buf_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_TextureAction::_internal_mutable_a_buf() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_buf_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_TextureAction::release_a_buf() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureAction.a_buf)
-  if (!_internal_has_a_buf()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_buf_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_buf_.IsDefault()) {
-    _impl_.a_buf_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_buf_.Release();
 }
 inline void Msg_TextureAction::set_allocated_a_buf(std::string* a_buf) {
   if (a_buf != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_buf_.SetAllocated(a_buf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9489,17 +9408,9 @@ inline void Msg_TextureAction::set_allocated_a_buf(std::string* a_buf) {
 
 // Msg_CommandEncoderAction
 
-// required bytes a_selfId = 1;
-inline bool Msg_CommandEncoderAction::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_CommandEncoderAction::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_CommandEncoderAction::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_CommandEncoderAction::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_selfId)
@@ -9508,7 +9419,7 @@ inline const std::string& Msg_CommandEncoderAction::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CommandEncoderAction::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_selfId)
 }
@@ -9521,32 +9432,22 @@ inline const std::string& Msg_CommandEncoderAction::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_CommandEncoderAction::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CommandEncoderAction::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CommandEncoderAction::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_CommandEncoderAction::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9557,17 +9458,9 @@ inline void Msg_CommandEncoderAction::set_allocated_a_selfid(std::string* a_self
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_selfId)
 }
 
-// required bytes a_aDeviceId = 2;
-inline bool Msg_CommandEncoderAction::_internal_has_a_adeviceid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_CommandEncoderAction::has_a_adeviceid() const {
-  return _internal_has_a_adeviceid();
-}
+// bytes a_aDeviceId = 2;
 inline void Msg_CommandEncoderAction::clear_a_adeviceid() {
   _impl_.a_adeviceid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_CommandEncoderAction::a_adeviceid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_aDeviceId)
@@ -9576,7 +9469,7 @@ inline const std::string& Msg_CommandEncoderAction::a_adeviceid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CommandEncoderAction::set_a_adeviceid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_aDeviceId)
 }
@@ -9589,32 +9482,22 @@ inline const std::string& Msg_CommandEncoderAction::_internal_a_adeviceid() cons
   return _impl_.a_adeviceid_.Get();
 }
 inline void Msg_CommandEncoderAction::_internal_set_a_adeviceid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_adeviceid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CommandEncoderAction::_internal_mutable_a_adeviceid() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_adeviceid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CommandEncoderAction::release_a_adeviceid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_aDeviceId)
-  if (!_internal_has_a_adeviceid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_adeviceid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_adeviceid_.IsDefault()) {
-    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_adeviceid_.Release();
 }
 inline void Msg_CommandEncoderAction::set_allocated_a_adeviceid(std::string* a_adeviceid) {
   if (a_adeviceid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_adeviceid_.SetAllocated(a_adeviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9625,17 +9508,9 @@ inline void Msg_CommandEncoderAction::set_allocated_a_adeviceid(std::string* a_a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_aDeviceId)
 }
 
-// required bytes a_buf = 3;
-inline bool Msg_CommandEncoderAction::_internal_has_a_buf() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_CommandEncoderAction::has_a_buf() const {
-  return _internal_has_a_buf();
-}
+// bytes a_buf = 3;
 inline void Msg_CommandEncoderAction::clear_a_buf() {
   _impl_.a_buf_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_CommandEncoderAction::a_buf() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_buf)
@@ -9644,7 +9519,7 @@ inline const std::string& Msg_CommandEncoderAction::a_buf() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CommandEncoderAction::set_a_buf(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_buf)
 }
@@ -9657,32 +9532,22 @@ inline const std::string& Msg_CommandEncoderAction::_internal_a_buf() const {
   return _impl_.a_buf_.Get();
 }
 inline void Msg_CommandEncoderAction::_internal_set_a_buf(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_buf_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CommandEncoderAction::_internal_mutable_a_buf() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_buf_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CommandEncoderAction::release_a_buf() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderAction.a_buf)
-  if (!_internal_has_a_buf()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_buf_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_buf_.IsDefault()) {
-    _impl_.a_buf_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_buf_.Release();
 }
 inline void Msg_CommandEncoderAction::set_allocated_a_buf(std::string* a_buf) {
   if (a_buf != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_buf_.SetAllocated(a_buf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9697,17 +9562,9 @@ inline void Msg_CommandEncoderAction::set_allocated_a_buf(std::string* a_buf) {
 
 // Msg_RenderPass
 
-// required bytes a_selfId = 1;
-inline bool Msg_RenderPass::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_RenderPass::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_RenderPass::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_RenderPass::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_selfId)
@@ -9716,7 +9573,7 @@ inline const std::string& Msg_RenderPass::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RenderPass::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_selfId)
 }
@@ -9729,32 +9586,22 @@ inline const std::string& Msg_RenderPass::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_RenderPass::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_RenderPass::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_RenderPass::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_RenderPass::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9765,17 +9612,9 @@ inline void Msg_RenderPass::set_allocated_a_selfid(std::string* a_selfid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_selfId)
 }
 
-// required bytes a_aDeviceId = 2;
-inline bool Msg_RenderPass::_internal_has_a_adeviceid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_RenderPass::has_a_adeviceid() const {
-  return _internal_has_a_adeviceid();
-}
+// bytes a_aDeviceId = 2;
 inline void Msg_RenderPass::clear_a_adeviceid() {
   _impl_.a_adeviceid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_RenderPass::a_adeviceid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_aDeviceId)
@@ -9784,7 +9623,7 @@ inline const std::string& Msg_RenderPass::a_adeviceid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RenderPass::set_a_adeviceid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_aDeviceId)
 }
@@ -9797,32 +9636,22 @@ inline const std::string& Msg_RenderPass::_internal_a_adeviceid() const {
   return _impl_.a_adeviceid_.Get();
 }
 inline void Msg_RenderPass::_internal_set_a_adeviceid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_adeviceid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_RenderPass::_internal_mutable_a_adeviceid() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_adeviceid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_RenderPass::release_a_adeviceid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_aDeviceId)
-  if (!_internal_has_a_adeviceid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_adeviceid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_adeviceid_.IsDefault()) {
-    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_adeviceid_.Release();
 }
 inline void Msg_RenderPass::set_allocated_a_adeviceid(std::string* a_adeviceid) {
   if (a_adeviceid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_adeviceid_.SetAllocated(a_adeviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9833,17 +9662,9 @@ inline void Msg_RenderPass::set_allocated_a_adeviceid(std::string* a_adeviceid) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_aDeviceId)
 }
 
-// required bytes a_buf = 3;
-inline bool Msg_RenderPass::_internal_has_a_buf() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_RenderPass::has_a_buf() const {
-  return _internal_has_a_buf();
-}
+// bytes a_buf = 3;
 inline void Msg_RenderPass::clear_a_buf() {
   _impl_.a_buf_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_RenderPass::a_buf() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_buf)
@@ -9852,7 +9673,7 @@ inline const std::string& Msg_RenderPass::a_buf() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RenderPass::set_a_buf(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_buf)
 }
@@ -9865,32 +9686,22 @@ inline const std::string& Msg_RenderPass::_internal_a_buf() const {
   return _impl_.a_buf_.Get();
 }
 inline void Msg_RenderPass::_internal_set_a_buf(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_buf_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_RenderPass::_internal_mutable_a_buf() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_buf_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_RenderPass::release_a_buf() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPass.a_buf)
-  if (!_internal_has_a_buf()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_buf_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_buf_.IsDefault()) {
-    _impl_.a_buf_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_buf_.Release();
 }
 inline void Msg_RenderPass::set_allocated_a_buf(std::string* a_buf) {
   if (a_buf != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_buf_.SetAllocated(a_buf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9905,17 +9716,9 @@ inline void Msg_RenderPass::set_allocated_a_buf(std::string* a_buf) {
 
 // Msg_ComputePass
 
-// required bytes a_selfId = 1;
-inline bool Msg_ComputePass::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_ComputePass::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_ComputePass::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_ComputePass::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_selfId)
@@ -9924,7 +9727,7 @@ inline const std::string& Msg_ComputePass::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ComputePass::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_selfId)
 }
@@ -9937,32 +9740,22 @@ inline const std::string& Msg_ComputePass::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_ComputePass::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ComputePass::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ComputePass::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_ComputePass::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -9973,17 +9766,9 @@ inline void Msg_ComputePass::set_allocated_a_selfid(std::string* a_selfid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_selfId)
 }
 
-// required bytes a_aDeviceId = 2;
-inline bool Msg_ComputePass::_internal_has_a_adeviceid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_ComputePass::has_a_adeviceid() const {
-  return _internal_has_a_adeviceid();
-}
+// bytes a_aDeviceId = 2;
 inline void Msg_ComputePass::clear_a_adeviceid() {
   _impl_.a_adeviceid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_ComputePass::a_adeviceid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_aDeviceId)
@@ -9992,7 +9777,7 @@ inline const std::string& Msg_ComputePass::a_adeviceid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ComputePass::set_a_adeviceid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_aDeviceId)
 }
@@ -10005,32 +9790,22 @@ inline const std::string& Msg_ComputePass::_internal_a_adeviceid() const {
   return _impl_.a_adeviceid_.Get();
 }
 inline void Msg_ComputePass::_internal_set_a_adeviceid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_adeviceid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ComputePass::_internal_mutable_a_adeviceid() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_adeviceid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ComputePass::release_a_adeviceid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_aDeviceId)
-  if (!_internal_has_a_adeviceid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_adeviceid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_adeviceid_.IsDefault()) {
-    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_adeviceid_.Release();
 }
 inline void Msg_ComputePass::set_allocated_a_adeviceid(std::string* a_adeviceid) {
   if (a_adeviceid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_adeviceid_.SetAllocated(a_adeviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10041,17 +9816,9 @@ inline void Msg_ComputePass::set_allocated_a_adeviceid(std::string* a_adeviceid)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_aDeviceId)
 }
 
-// required bytes a_buf = 3;
-inline bool Msg_ComputePass::_internal_has_a_buf() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_ComputePass::has_a_buf() const {
-  return _internal_has_a_buf();
-}
+// bytes a_buf = 3;
 inline void Msg_ComputePass::clear_a_buf() {
   _impl_.a_buf_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_ComputePass::a_buf() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_buf)
@@ -10060,7 +9827,7 @@ inline const std::string& Msg_ComputePass::a_buf() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ComputePass::set_a_buf(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_buf)
 }
@@ -10073,32 +9840,22 @@ inline const std::string& Msg_ComputePass::_internal_a_buf() const {
   return _impl_.a_buf_.Get();
 }
 inline void Msg_ComputePass::_internal_set_a_buf(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_buf_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ComputePass::_internal_mutable_a_buf() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_buf_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ComputePass::release_a_buf() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePass.a_buf)
-  if (!_internal_has_a_buf()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_buf_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_buf_.IsDefault()) {
-    _impl_.a_buf_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_buf_.Release();
 }
 inline void Msg_ComputePass::set_allocated_a_buf(std::string* a_buf) {
   if (a_buf != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_buf_.SetAllocated(a_buf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10113,17 +9870,9 @@ inline void Msg_ComputePass::set_allocated_a_buf(std::string* a_buf) {
 
 // Msg_DeviceCreateBuffer
 
-// required bytes a_deviceId = 1;
-inline bool Msg_DeviceCreateBuffer::_internal_has_a_deviceid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_DeviceCreateBuffer::has_a_deviceid() const {
-  return _internal_has_a_deviceid();
-}
+// bytes a_deviceId = 1;
 inline void Msg_DeviceCreateBuffer::clear_a_deviceid() {
   _impl_.a_deviceid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_DeviceCreateBuffer::a_deviceid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_deviceId)
@@ -10132,7 +9881,7 @@ inline const std::string& Msg_DeviceCreateBuffer::a_deviceid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceCreateBuffer::set_a_deviceid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_deviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_deviceId)
 }
@@ -10145,32 +9894,22 @@ inline const std::string& Msg_DeviceCreateBuffer::_internal_a_deviceid() const {
   return _impl_.a_deviceid_.Get();
 }
 inline void Msg_DeviceCreateBuffer::_internal_set_a_deviceid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_deviceid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateBuffer::_internal_mutable_a_deviceid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_deviceid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateBuffer::release_a_deviceid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_deviceId)
-  if (!_internal_has_a_deviceid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_deviceid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_deviceid_.IsDefault()) {
-    _impl_.a_deviceid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_deviceid_.Release();
 }
 inline void Msg_DeviceCreateBuffer::set_allocated_a_deviceid(std::string* a_deviceid) {
   if (a_deviceid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_deviceid_.SetAllocated(a_deviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10181,17 +9920,9 @@ inline void Msg_DeviceCreateBuffer::set_allocated_a_deviceid(std::string* a_devi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_deviceId)
 }
 
-// required bytes a_bufferId = 2;
-inline bool Msg_DeviceCreateBuffer::_internal_has_a_bufferid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_DeviceCreateBuffer::has_a_bufferid() const {
-  return _internal_has_a_bufferid();
-}
+// bytes a_bufferId = 2;
 inline void Msg_DeviceCreateBuffer::clear_a_bufferid() {
   _impl_.a_bufferid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_DeviceCreateBuffer::a_bufferid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_bufferId)
@@ -10200,7 +9931,7 @@ inline const std::string& Msg_DeviceCreateBuffer::a_bufferid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceCreateBuffer::set_a_bufferid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_bufferid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_bufferId)
 }
@@ -10213,32 +9944,22 @@ inline const std::string& Msg_DeviceCreateBuffer::_internal_a_bufferid() const {
   return _impl_.a_bufferid_.Get();
 }
 inline void Msg_DeviceCreateBuffer::_internal_set_a_bufferid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_bufferid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateBuffer::_internal_mutable_a_bufferid() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_bufferid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateBuffer::release_a_bufferid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_bufferId)
-  if (!_internal_has_a_bufferid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_bufferid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_bufferid_.IsDefault()) {
-    _impl_.a_bufferid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_bufferid_.Release();
 }
 inline void Msg_DeviceCreateBuffer::set_allocated_a_bufferid(std::string* a_bufferid) {
   if (a_bufferid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_bufferid_.SetAllocated(a_bufferid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10249,17 +9970,9 @@ inline void Msg_DeviceCreateBuffer::set_allocated_a_bufferid(std::string* a_buff
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_bufferId)
 }
 
-// required bytes a_desc = 3;
-inline bool Msg_DeviceCreateBuffer::_internal_has_a_desc() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_DeviceCreateBuffer::has_a_desc() const {
-  return _internal_has_a_desc();
-}
+// bytes a_desc = 3;
 inline void Msg_DeviceCreateBuffer::clear_a_desc() {
   _impl_.a_desc_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_DeviceCreateBuffer::a_desc() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_desc)
@@ -10268,7 +9981,7 @@ inline const std::string& Msg_DeviceCreateBuffer::a_desc() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceCreateBuffer::set_a_desc(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_desc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_desc)
 }
@@ -10281,32 +9994,22 @@ inline const std::string& Msg_DeviceCreateBuffer::_internal_a_desc() const {
   return _impl_.a_desc_.Get();
 }
 inline void Msg_DeviceCreateBuffer::_internal_set_a_desc(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_desc_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateBuffer::_internal_mutable_a_desc() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_desc_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateBuffer::release_a_desc() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_desc)
-  if (!_internal_has_a_desc()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_desc_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_desc_.IsDefault()) {
-    _impl_.a_desc_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_desc_.Release();
 }
 inline void Msg_DeviceCreateBuffer::set_allocated_a_desc(std::string* a_desc) {
   if (a_desc != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_desc_.SetAllocated(a_desc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10317,17 +10020,9 @@ inline void Msg_DeviceCreateBuffer::set_allocated_a_desc(std::string* a_desc) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_desc)
 }
 
-// required bytes a_shm = 4;
-inline bool Msg_DeviceCreateBuffer::_internal_has_a_shm() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_DeviceCreateBuffer::has_a_shm() const {
-  return _internal_has_a_shm();
-}
+// bytes a_shm = 4;
 inline void Msg_DeviceCreateBuffer::clear_a_shm() {
   _impl_.a_shm_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& Msg_DeviceCreateBuffer::a_shm() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_shm)
@@ -10336,7 +10031,7 @@ inline const std::string& Msg_DeviceCreateBuffer::a_shm() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceCreateBuffer::set_a_shm(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000008u;
+ 
  _impl_.a_shm_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_shm)
 }
@@ -10349,32 +10044,22 @@ inline const std::string& Msg_DeviceCreateBuffer::_internal_a_shm() const {
   return _impl_.a_shm_.Get();
 }
 inline void Msg_DeviceCreateBuffer::_internal_set_a_shm(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_shm_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateBuffer::_internal_mutable_a_shm() {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   return _impl_.a_shm_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateBuffer::release_a_shm() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateBuffer.a_shm)
-  if (!_internal_has_a_shm()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.a_shm_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_shm_.IsDefault()) {
-    _impl_.a_shm_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_shm_.Release();
 }
 inline void Msg_DeviceCreateBuffer::set_allocated_a_shm(std::string* a_shm) {
   if (a_shm != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    
   }
   _impl_.a_shm_.SetAllocated(a_shm, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10389,17 +10074,9 @@ inline void Msg_DeviceCreateBuffer::set_allocated_a_shm(std::string* a_shm) {
 
 // Msg_InstanceRequestAdapter
 
-// required bytes a_options = 1;
-inline bool Msg_InstanceRequestAdapter::_internal_has_a_options() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_InstanceRequestAdapter::has_a_options() const {
-  return _internal_has_a_options();
-}
+// bytes a_options = 1;
 inline void Msg_InstanceRequestAdapter::clear_a_options() {
   _impl_.a_options_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_InstanceRequestAdapter::a_options() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.a_options)
@@ -10408,7 +10085,7 @@ inline const std::string& Msg_InstanceRequestAdapter::a_options() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_InstanceRequestAdapter::set_a_options(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_options_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.a_options)
 }
@@ -10421,32 +10098,22 @@ inline const std::string& Msg_InstanceRequestAdapter::_internal_a_options() cons
   return _impl_.a_options_.Get();
 }
 inline void Msg_InstanceRequestAdapter::_internal_set_a_options(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_options_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_InstanceRequestAdapter::_internal_mutable_a_options() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_options_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_InstanceRequestAdapter::release_a_options() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.a_options)
-  if (!_internal_has_a_options()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_options_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_options_.IsDefault()) {
-    _impl_.a_options_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_options_.Release();
 }
 inline void Msg_InstanceRequestAdapter::set_allocated_a_options(std::string* a_options) {
   if (a_options != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_options_.SetAllocated(a_options, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10457,17 +10124,9 @@ inline void Msg_InstanceRequestAdapter::set_allocated_a_options(std::string* a_o
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.a_options)
 }
 
-// required bytes a_aAdapterId = 2;
-inline bool Msg_InstanceRequestAdapter::_internal_has_a_aadapterid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_InstanceRequestAdapter::has_a_aadapterid() const {
-  return _internal_has_a_aadapterid();
-}
+// bytes a_aAdapterId = 2;
 inline void Msg_InstanceRequestAdapter::clear_a_aadapterid() {
   _impl_.a_aadapterid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_InstanceRequestAdapter::a_aadapterid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.a_aAdapterId)
@@ -10476,7 +10135,7 @@ inline const std::string& Msg_InstanceRequestAdapter::a_aadapterid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_InstanceRequestAdapter::set_a_aadapterid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_aadapterid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.a_aAdapterId)
 }
@@ -10489,32 +10148,22 @@ inline const std::string& Msg_InstanceRequestAdapter::_internal_a_aadapterid() c
   return _impl_.a_aadapterid_.Get();
 }
 inline void Msg_InstanceRequestAdapter::_internal_set_a_aadapterid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_aadapterid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_InstanceRequestAdapter::_internal_mutable_a_aadapterid() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_aadapterid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_InstanceRequestAdapter::release_a_aadapterid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_InstanceRequestAdapter.a_aAdapterId)
-  if (!_internal_has_a_aadapterid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_aadapterid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_aadapterid_.IsDefault()) {
-    _impl_.a_aadapterid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_aadapterid_.Release();
 }
 inline void Msg_InstanceRequestAdapter::set_allocated_a_aadapterid(std::string* a_aadapterid) {
   if (a_aadapterid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_aadapterid_.SetAllocated(a_aadapterid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10529,17 +10178,9 @@ inline void Msg_InstanceRequestAdapter::set_allocated_a_aadapterid(std::string* 
 
 // Reply_InstanceRequestAdapter
 
-// required bytes a_byteBuf = 1;
-inline bool Reply_InstanceRequestAdapter::_internal_has_a_bytebuf() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Reply_InstanceRequestAdapter::has_a_bytebuf() const {
-  return _internal_has_a_bytebuf();
-}
+// bytes a_byteBuf = 1;
 inline void Reply_InstanceRequestAdapter::clear_a_bytebuf() {
   _impl_.a_bytebuf_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_InstanceRequestAdapter::a_bytebuf() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Reply_InstanceRequestAdapter.a_byteBuf)
@@ -10548,7 +10189,7 @@ inline const std::string& Reply_InstanceRequestAdapter::a_bytebuf() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_InstanceRequestAdapter::set_a_bytebuf(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_bytebuf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Reply_InstanceRequestAdapter.a_byteBuf)
 }
@@ -10561,32 +10202,22 @@ inline const std::string& Reply_InstanceRequestAdapter::_internal_a_bytebuf() co
   return _impl_.a_bytebuf_.Get();
 }
 inline void Reply_InstanceRequestAdapter::_internal_set_a_bytebuf(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_bytebuf_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_InstanceRequestAdapter::_internal_mutable_a_bytebuf() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_bytebuf_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_InstanceRequestAdapter::release_a_bytebuf() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Reply_InstanceRequestAdapter.a_byteBuf)
-  if (!_internal_has_a_bytebuf()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_bytebuf_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_bytebuf_.IsDefault()) {
-    _impl_.a_bytebuf_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_bytebuf_.Release();
 }
 inline void Reply_InstanceRequestAdapter::set_allocated_a_bytebuf(std::string* a_bytebuf) {
   if (a_bytebuf != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_bytebuf_.SetAllocated(a_bytebuf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10601,17 +10232,9 @@ inline void Reply_InstanceRequestAdapter::set_allocated_a_bytebuf(std::string* a
 
 // Msg_AdapterRequestDevice
 
-// required bytes a_adapterId = 1;
-inline bool Msg_AdapterRequestDevice::_internal_has_a_adapterid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_AdapterRequestDevice::has_a_adapterid() const {
-  return _internal_has_a_adapterid();
-}
+// bytes a_adapterId = 1;
 inline void Msg_AdapterRequestDevice::clear_a_adapterid() {
   _impl_.a_adapterid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_AdapterRequestDevice::a_adapterid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_adapterId)
@@ -10620,7 +10243,7 @@ inline const std::string& Msg_AdapterRequestDevice::a_adapterid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AdapterRequestDevice::set_a_adapterid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_adapterid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_adapterId)
 }
@@ -10633,32 +10256,22 @@ inline const std::string& Msg_AdapterRequestDevice::_internal_a_adapterid() cons
   return _impl_.a_adapterid_.Get();
 }
 inline void Msg_AdapterRequestDevice::_internal_set_a_adapterid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_adapterid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_AdapterRequestDevice::_internal_mutable_a_adapterid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_adapterid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_AdapterRequestDevice::release_a_adapterid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_adapterId)
-  if (!_internal_has_a_adapterid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_adapterid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_adapterid_.IsDefault()) {
-    _impl_.a_adapterid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_adapterid_.Release();
 }
 inline void Msg_AdapterRequestDevice::set_allocated_a_adapterid(std::string* a_adapterid) {
   if (a_adapterid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_adapterid_.SetAllocated(a_adapterid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10669,17 +10282,9 @@ inline void Msg_AdapterRequestDevice::set_allocated_a_adapterid(std::string* a_a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_adapterId)
 }
 
-// required bytes a_descriptorBuf = 2;
-inline bool Msg_AdapterRequestDevice::_internal_has_a_descriptorbuf() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_AdapterRequestDevice::has_a_descriptorbuf() const {
-  return _internal_has_a_descriptorbuf();
-}
+// bytes a_descriptorBuf = 2;
 inline void Msg_AdapterRequestDevice::clear_a_descriptorbuf() {
   _impl_.a_descriptorbuf_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_AdapterRequestDevice::a_descriptorbuf() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_descriptorBuf)
@@ -10688,7 +10293,7 @@ inline const std::string& Msg_AdapterRequestDevice::a_descriptorbuf() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AdapterRequestDevice::set_a_descriptorbuf(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_descriptorbuf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_descriptorBuf)
 }
@@ -10701,32 +10306,22 @@ inline const std::string& Msg_AdapterRequestDevice::_internal_a_descriptorbuf() 
   return _impl_.a_descriptorbuf_.Get();
 }
 inline void Msg_AdapterRequestDevice::_internal_set_a_descriptorbuf(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_descriptorbuf_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_AdapterRequestDevice::_internal_mutable_a_descriptorbuf() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_descriptorbuf_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_AdapterRequestDevice::release_a_descriptorbuf() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_descriptorBuf)
-  if (!_internal_has_a_descriptorbuf()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_descriptorbuf_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_descriptorbuf_.IsDefault()) {
-    _impl_.a_descriptorbuf_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_descriptorbuf_.Release();
 }
 inline void Msg_AdapterRequestDevice::set_allocated_a_descriptorbuf(std::string* a_descriptorbuf) {
   if (a_descriptorbuf != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_descriptorbuf_.SetAllocated(a_descriptorbuf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10737,17 +10332,9 @@ inline void Msg_AdapterRequestDevice::set_allocated_a_descriptorbuf(std::string*
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_descriptorBuf)
 }
 
-// required bytes a_newDeviceId = 3;
-inline bool Msg_AdapterRequestDevice::_internal_has_a_newdeviceid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_AdapterRequestDevice::has_a_newdeviceid() const {
-  return _internal_has_a_newdeviceid();
-}
+// bytes a_newDeviceId = 3;
 inline void Msg_AdapterRequestDevice::clear_a_newdeviceid() {
   _impl_.a_newdeviceid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_AdapterRequestDevice::a_newdeviceid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_newDeviceId)
@@ -10756,7 +10343,7 @@ inline const std::string& Msg_AdapterRequestDevice::a_newdeviceid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AdapterRequestDevice::set_a_newdeviceid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_newdeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_newDeviceId)
 }
@@ -10769,32 +10356,22 @@ inline const std::string& Msg_AdapterRequestDevice::_internal_a_newdeviceid() co
   return _impl_.a_newdeviceid_.Get();
 }
 inline void Msg_AdapterRequestDevice::_internal_set_a_newdeviceid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_newdeviceid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_AdapterRequestDevice::_internal_mutable_a_newdeviceid() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_newdeviceid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_AdapterRequestDevice::release_a_newdeviceid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_newDeviceId)
-  if (!_internal_has_a_newdeviceid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_newdeviceid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_newdeviceid_.IsDefault()) {
-    _impl_.a_newdeviceid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_newdeviceid_.Release();
 }
 inline void Msg_AdapterRequestDevice::set_allocated_a_newdeviceid(std::string* a_newdeviceid) {
   if (a_newdeviceid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_newdeviceid_.SetAllocated(a_newdeviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10805,17 +10382,9 @@ inline void Msg_AdapterRequestDevice::set_allocated_a_newdeviceid(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_newDeviceId)
 }
 
-// required bytes a_newQueueId = 4;
-inline bool Msg_AdapterRequestDevice::_internal_has_a_newqueueid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_AdapterRequestDevice::has_a_newqueueid() const {
-  return _internal_has_a_newqueueid();
-}
+// bytes a_newQueueId = 4;
 inline void Msg_AdapterRequestDevice::clear_a_newqueueid() {
   _impl_.a_newqueueid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& Msg_AdapterRequestDevice::a_newqueueid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_newQueueId)
@@ -10824,7 +10393,7 @@ inline const std::string& Msg_AdapterRequestDevice::a_newqueueid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AdapterRequestDevice::set_a_newqueueid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000008u;
+ 
  _impl_.a_newqueueid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_newQueueId)
 }
@@ -10837,32 +10406,22 @@ inline const std::string& Msg_AdapterRequestDevice::_internal_a_newqueueid() con
   return _impl_.a_newqueueid_.Get();
 }
 inline void Msg_AdapterRequestDevice::_internal_set_a_newqueueid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_newqueueid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_AdapterRequestDevice::_internal_mutable_a_newqueueid() {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   return _impl_.a_newqueueid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_AdapterRequestDevice::release_a_newqueueid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterRequestDevice.a_newQueueId)
-  if (!_internal_has_a_newqueueid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.a_newqueueid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_newqueueid_.IsDefault()) {
-    _impl_.a_newqueueid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_newqueueid_.Release();
 }
 inline void Msg_AdapterRequestDevice::set_allocated_a_newqueueid(std::string* a_newqueueid) {
   if (a_newqueueid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    
   }
   _impl_.a_newqueueid_.SetAllocated(a_newqueueid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10877,17 +10436,9 @@ inline void Msg_AdapterRequestDevice::set_allocated_a_newqueueid(std::string* a_
 
 // Reply_AdapterRequestDevice
 
-// required bool a_success = 1;
-inline bool Reply_AdapterRequestDevice::_internal_has_a_success() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Reply_AdapterRequestDevice::has_a_success() const {
-  return _internal_has_a_success();
-}
+// bool a_success = 1;
 inline void Reply_AdapterRequestDevice::clear_a_success() {
   _impl_.a_success_ = false;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline bool Reply_AdapterRequestDevice::_internal_a_success() const {
   return _impl_.a_success_;
@@ -10897,7 +10448,7 @@ inline bool Reply_AdapterRequestDevice::a_success() const {
   return _internal_a_success();
 }
 inline void Reply_AdapterRequestDevice::_internal_set_a_success(bool value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_success_ = value;
 }
 inline void Reply_AdapterRequestDevice::set_a_success(bool value) {
@@ -10909,17 +10460,9 @@ inline void Reply_AdapterRequestDevice::set_a_success(bool value) {
 
 // Msg_AdapterDrop
 
-// required bytes a_selfId = 1;
-inline bool Msg_AdapterDrop::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_AdapterDrop::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_AdapterDrop::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_AdapterDrop::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterDrop.a_selfId)
@@ -10928,7 +10471,7 @@ inline const std::string& Msg_AdapterDrop::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_AdapterDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterDrop.a_selfId)
 }
@@ -10941,32 +10484,22 @@ inline const std::string& Msg_AdapterDrop::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_AdapterDrop::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_AdapterDrop::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_AdapterDrop::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_AdapterDrop.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_AdapterDrop::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -10981,17 +10514,9 @@ inline void Msg_AdapterDrop::set_allocated_a_selfid(std::string* a_selfid) {
 
 // Msg_DeviceCreateShaderModule
 
-// required bytes a_selfId = 1;
-inline bool Msg_DeviceCreateShaderModule::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_DeviceCreateShaderModule::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_DeviceCreateShaderModule::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_DeviceCreateShaderModule::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_selfId)
@@ -11000,7 +10525,7 @@ inline const std::string& Msg_DeviceCreateShaderModule::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceCreateShaderModule::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_selfId)
 }
@@ -11013,32 +10538,22 @@ inline const std::string& Msg_DeviceCreateShaderModule::_internal_a_selfid() con
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_DeviceCreateShaderModule::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateShaderModule::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateShaderModule::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_DeviceCreateShaderModule::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -11049,17 +10564,9 @@ inline void Msg_DeviceCreateShaderModule::set_allocated_a_selfid(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_selfId)
 }
 
-// required bytes a_bufferId = 2;
-inline bool Msg_DeviceCreateShaderModule::_internal_has_a_bufferid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_DeviceCreateShaderModule::has_a_bufferid() const {
-  return _internal_has_a_bufferid();
-}
+// bytes a_bufferId = 2;
 inline void Msg_DeviceCreateShaderModule::clear_a_bufferid() {
   _impl_.a_bufferid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_DeviceCreateShaderModule::a_bufferid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_bufferId)
@@ -11068,7 +10575,7 @@ inline const std::string& Msg_DeviceCreateShaderModule::a_bufferid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceCreateShaderModule::set_a_bufferid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_bufferid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_bufferId)
 }
@@ -11081,32 +10588,22 @@ inline const std::string& Msg_DeviceCreateShaderModule::_internal_a_bufferid() c
   return _impl_.a_bufferid_.Get();
 }
 inline void Msg_DeviceCreateShaderModule::_internal_set_a_bufferid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_bufferid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateShaderModule::_internal_mutable_a_bufferid() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_bufferid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateShaderModule::release_a_bufferid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_bufferId)
-  if (!_internal_has_a_bufferid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_bufferid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_bufferid_.IsDefault()) {
-    _impl_.a_bufferid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_bufferid_.Release();
 }
 inline void Msg_DeviceCreateShaderModule::set_allocated_a_bufferid(std::string* a_bufferid) {
   if (a_bufferid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_bufferid_.SetAllocated(a_bufferid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -11117,17 +10614,9 @@ inline void Msg_DeviceCreateShaderModule::set_allocated_a_bufferid(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_bufferId)
 }
 
-// required string a_label = 3;
-inline bool Msg_DeviceCreateShaderModule::_internal_has_a_label() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_DeviceCreateShaderModule::has_a_label() const {
-  return _internal_has_a_label();
-}
+// string a_label = 3;
 inline void Msg_DeviceCreateShaderModule::clear_a_label() {
   _impl_.a_label_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_DeviceCreateShaderModule::a_label() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_label)
@@ -11136,7 +10625,7 @@ inline const std::string& Msg_DeviceCreateShaderModule::a_label() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceCreateShaderModule::set_a_label(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_label_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_label)
 }
@@ -11149,32 +10638,22 @@ inline const std::string& Msg_DeviceCreateShaderModule::_internal_a_label() cons
   return _impl_.a_label_.Get();
 }
 inline void Msg_DeviceCreateShaderModule::_internal_set_a_label(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_label_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateShaderModule::_internal_mutable_a_label() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_label_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateShaderModule::release_a_label() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_label)
-  if (!_internal_has_a_label()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_label_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_label_.IsDefault()) {
-    _impl_.a_label_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_label_.Release();
 }
 inline void Msg_DeviceCreateShaderModule::set_allocated_a_label(std::string* a_label) {
   if (a_label != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_label_.SetAllocated(a_label, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -11185,17 +10664,9 @@ inline void Msg_DeviceCreateShaderModule::set_allocated_a_label(std::string* a_l
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_label)
 }
 
-// required string a_code = 4;
-inline bool Msg_DeviceCreateShaderModule::_internal_has_a_code() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_DeviceCreateShaderModule::has_a_code() const {
-  return _internal_has_a_code();
-}
+// string a_code = 4;
 inline void Msg_DeviceCreateShaderModule::clear_a_code() {
   _impl_.a_code_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& Msg_DeviceCreateShaderModule::a_code() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_code)
@@ -11204,7 +10675,7 @@ inline const std::string& Msg_DeviceCreateShaderModule::a_code() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceCreateShaderModule::set_a_code(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000008u;
+ 
  _impl_.a_code_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_code)
 }
@@ -11217,32 +10688,22 @@ inline const std::string& Msg_DeviceCreateShaderModule::_internal_a_code() const
   return _impl_.a_code_.Get();
 }
 inline void Msg_DeviceCreateShaderModule::_internal_set_a_code(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_code_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateShaderModule::_internal_mutable_a_code() {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   return _impl_.a_code_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateShaderModule::release_a_code() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateShaderModule.a_code)
-  if (!_internal_has_a_code()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.a_code_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_code_.IsDefault()) {
-    _impl_.a_code_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_code_.Release();
 }
 inline void Msg_DeviceCreateShaderModule::set_allocated_a_code(std::string* a_code) {
   if (a_code != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    
   }
   _impl_.a_code_.SetAllocated(a_code, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -11336,17 +10797,9 @@ Reply_DeviceCreateShaderModule::mutable_a_messages() {
 
 // Msg_BufferMap
 
-// required bytes a_deviceId = 1;
-inline bool Msg_BufferMap::_internal_has_a_deviceid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_BufferMap::has_a_deviceid() const {
-  return _internal_has_a_deviceid();
-}
+// bytes a_deviceId = 1;
 inline void Msg_BufferMap::clear_a_deviceid() {
   _impl_.a_deviceid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_BufferMap::a_deviceid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_deviceId)
@@ -11355,7 +10808,7 @@ inline const std::string& Msg_BufferMap::a_deviceid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_BufferMap::set_a_deviceid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_deviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_deviceId)
 }
@@ -11368,32 +10821,22 @@ inline const std::string& Msg_BufferMap::_internal_a_deviceid() const {
   return _impl_.a_deviceid_.Get();
 }
 inline void Msg_BufferMap::_internal_set_a_deviceid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_deviceid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_BufferMap::_internal_mutable_a_deviceid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_deviceid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_BufferMap::release_a_deviceid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_deviceId)
-  if (!_internal_has_a_deviceid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_deviceid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_deviceid_.IsDefault()) {
-    _impl_.a_deviceid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_deviceid_.Release();
 }
 inline void Msg_BufferMap::set_allocated_a_deviceid(std::string* a_deviceid) {
   if (a_deviceid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_deviceid_.SetAllocated(a_deviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -11404,17 +10847,9 @@ inline void Msg_BufferMap::set_allocated_a_deviceid(std::string* a_deviceid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_deviceId)
 }
 
-// required bytes a_bufferId = 2;
-inline bool Msg_BufferMap::_internal_has_a_bufferid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_BufferMap::has_a_bufferid() const {
-  return _internal_has_a_bufferid();
-}
+// bytes a_bufferId = 2;
 inline void Msg_BufferMap::clear_a_bufferid() {
   _impl_.a_bufferid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_BufferMap::a_bufferid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_bufferId)
@@ -11423,7 +10858,7 @@ inline const std::string& Msg_BufferMap::a_bufferid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_BufferMap::set_a_bufferid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_bufferid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_bufferId)
 }
@@ -11436,32 +10871,22 @@ inline const std::string& Msg_BufferMap::_internal_a_bufferid() const {
   return _impl_.a_bufferid_.Get();
 }
 inline void Msg_BufferMap::_internal_set_a_bufferid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_bufferid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_BufferMap::_internal_mutable_a_bufferid() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_bufferid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_BufferMap::release_a_bufferid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_bufferId)
-  if (!_internal_has_a_bufferid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_bufferid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_bufferid_.IsDefault()) {
-    _impl_.a_bufferid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_bufferid_.Release();
 }
 inline void Msg_BufferMap::set_allocated_a_bufferid(std::string* a_bufferid) {
   if (a_bufferid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_bufferid_.SetAllocated(a_bufferid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -11472,17 +10897,9 @@ inline void Msg_BufferMap::set_allocated_a_bufferid(std::string* a_bufferid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_bufferId)
 }
 
-// required uint32 a_aMode = 3;
-inline bool Msg_BufferMap::_internal_has_a_amode() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool Msg_BufferMap::has_a_amode() const {
-  return _internal_has_a_amode();
-}
+// uint32 a_aMode = 3;
 inline void Msg_BufferMap::clear_a_amode() {
   _impl_.a_amode_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline uint32_t Msg_BufferMap::_internal_a_amode() const {
   return _impl_.a_amode_;
@@ -11492,7 +10909,7 @@ inline uint32_t Msg_BufferMap::a_amode() const {
   return _internal_a_amode();
 }
 inline void Msg_BufferMap::_internal_set_a_amode(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_amode_ = value;
 }
 inline void Msg_BufferMap::set_a_amode(uint32_t value) {
@@ -11500,17 +10917,9 @@ inline void Msg_BufferMap::set_a_amode(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_aMode)
 }
 
-// required uint64 a_offset = 4;
-inline bool Msg_BufferMap::_internal_has_a_offset() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_BufferMap::has_a_offset() const {
-  return _internal_has_a_offset();
-}
+// uint64 a_offset = 4;
 inline void Msg_BufferMap::clear_a_offset() {
   _impl_.a_offset_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint64_t Msg_BufferMap::_internal_a_offset() const {
   return _impl_.a_offset_;
@@ -11520,7 +10929,7 @@ inline uint64_t Msg_BufferMap::a_offset() const {
   return _internal_a_offset();
 }
 inline void Msg_BufferMap::_internal_set_a_offset(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_offset_ = value;
 }
 inline void Msg_BufferMap::set_a_offset(uint64_t value) {
@@ -11528,17 +10937,9 @@ inline void Msg_BufferMap::set_a_offset(uint64_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferMap.a_offset)
 }
 
-// required uint64 a_size = 5;
-inline bool Msg_BufferMap::_internal_has_a_size() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_BufferMap::has_a_size() const {
-  return _internal_has_a_size();
-}
+// uint64 a_size = 5;
 inline void Msg_BufferMap::clear_a_size() {
   _impl_.a_size_ = uint64_t{0u};
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint64_t Msg_BufferMap::_internal_a_size() const {
   return _impl_.a_size_;
@@ -11548,7 +10949,7 @@ inline uint64_t Msg_BufferMap::a_size() const {
   return _internal_a_size();
 }
 inline void Msg_BufferMap::_internal_set_a_size(uint64_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_size_ = value;
 }
 inline void Msg_BufferMap::set_a_size(uint64_t value) {
@@ -11560,11 +10961,9 @@ inline void Msg_BufferMap::set_a_size(uint64_t value) {
 
 // Reply_BufferMap
 
-// required .protobuf.mozilla.webgpu.BufferMapResult a_result = 1;
+// .protobuf.mozilla.webgpu.BufferMapResult a_result = 1;
 inline bool Reply_BufferMap::_internal_has_a_result() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_result_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_result_ != nullptr;
 }
 inline bool Reply_BufferMap::has_a_result() const {
   return _internal_has_a_result();
@@ -11585,14 +10984,14 @@ inline void Reply_BufferMap::unsafe_arena_set_allocated_a_result(
   }
   _impl_.a_result_ = a_result;
   if (a_result) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Reply_BufferMap.a_result)
 }
 inline ::protobuf::mozilla::webgpu::BufferMapResult* Reply_BufferMap::release_a_result() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::webgpu::BufferMapResult* temp = _impl_.a_result_;
   _impl_.a_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -11608,13 +11007,13 @@ inline ::protobuf::mozilla::webgpu::BufferMapResult* Reply_BufferMap::release_a_
 }
 inline ::protobuf::mozilla::webgpu::BufferMapResult* Reply_BufferMap::unsafe_arena_release_a_result() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Reply_BufferMap.a_result)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::mozilla::webgpu::BufferMapResult* temp = _impl_.a_result_;
   _impl_.a_result_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::webgpu::BufferMapResult* Reply_BufferMap::_internal_mutable_a_result() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::webgpu::BufferMapResult>(GetArenaForAllocation());
     _impl_.a_result_ = p;
@@ -11639,9 +11038,9 @@ inline void Reply_BufferMap::set_allocated_a_result(::protobuf::mozilla::webgpu:
       a_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_result, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_result_ = a_result;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Reply_BufferMap.a_result)
@@ -11651,17 +11050,9 @@ inline void Reply_BufferMap::set_allocated_a_result(::protobuf::mozilla::webgpu:
 
 // Msg_BufferUnmap
 
-// required bytes a_deviceId = 1;
-inline bool Msg_BufferUnmap::_internal_has_a_deviceid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_BufferUnmap::has_a_deviceid() const {
-  return _internal_has_a_deviceid();
-}
+// bytes a_deviceId = 1;
 inline void Msg_BufferUnmap::clear_a_deviceid() {
   _impl_.a_deviceid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_BufferUnmap::a_deviceid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.a_deviceId)
@@ -11670,7 +11061,7 @@ inline const std::string& Msg_BufferUnmap::a_deviceid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_BufferUnmap::set_a_deviceid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_deviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.a_deviceId)
 }
@@ -11683,32 +11074,22 @@ inline const std::string& Msg_BufferUnmap::_internal_a_deviceid() const {
   return _impl_.a_deviceid_.Get();
 }
 inline void Msg_BufferUnmap::_internal_set_a_deviceid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_deviceid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_BufferUnmap::_internal_mutable_a_deviceid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_deviceid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_BufferUnmap::release_a_deviceid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.a_deviceId)
-  if (!_internal_has_a_deviceid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_deviceid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_deviceid_.IsDefault()) {
-    _impl_.a_deviceid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_deviceid_.Release();
 }
 inline void Msg_BufferUnmap::set_allocated_a_deviceid(std::string* a_deviceid) {
   if (a_deviceid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_deviceid_.SetAllocated(a_deviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -11719,17 +11100,9 @@ inline void Msg_BufferUnmap::set_allocated_a_deviceid(std::string* a_deviceid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.a_deviceId)
 }
 
-// required bytes a_bufferId = 2;
-inline bool Msg_BufferUnmap::_internal_has_a_bufferid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_BufferUnmap::has_a_bufferid() const {
-  return _internal_has_a_bufferid();
-}
+// bytes a_bufferId = 2;
 inline void Msg_BufferUnmap::clear_a_bufferid() {
   _impl_.a_bufferid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_BufferUnmap::a_bufferid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.a_bufferId)
@@ -11738,7 +11111,7 @@ inline const std::string& Msg_BufferUnmap::a_bufferid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_BufferUnmap::set_a_bufferid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_bufferid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.a_bufferId)
 }
@@ -11751,32 +11124,22 @@ inline const std::string& Msg_BufferUnmap::_internal_a_bufferid() const {
   return _impl_.a_bufferid_.Get();
 }
 inline void Msg_BufferUnmap::_internal_set_a_bufferid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_bufferid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_BufferUnmap::_internal_mutable_a_bufferid() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_bufferid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_BufferUnmap::release_a_bufferid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.a_bufferId)
-  if (!_internal_has_a_bufferid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_bufferid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_bufferid_.IsDefault()) {
-    _impl_.a_bufferid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_bufferid_.Release();
 }
 inline void Msg_BufferUnmap::set_allocated_a_bufferid(std::string* a_bufferid) {
   if (a_bufferid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_bufferid_.SetAllocated(a_bufferid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -11787,17 +11150,9 @@ inline void Msg_BufferUnmap::set_allocated_a_bufferid(std::string* a_bufferid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferUnmap.a_bufferId)
 }
 
-// required bool a_flush = 3;
-inline bool Msg_BufferUnmap::_internal_has_a_flush() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_BufferUnmap::has_a_flush() const {
-  return _internal_has_a_flush();
-}
+// bool a_flush = 3;
 inline void Msg_BufferUnmap::clear_a_flush() {
   _impl_.a_flush_ = false;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline bool Msg_BufferUnmap::_internal_a_flush() const {
   return _impl_.a_flush_;
@@ -11807,7 +11162,7 @@ inline bool Msg_BufferUnmap::a_flush() const {
   return _internal_a_flush();
 }
 inline void Msg_BufferUnmap::_internal_set_a_flush(bool value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_flush_ = value;
 }
 inline void Msg_BufferUnmap::set_a_flush(bool value) {
@@ -11819,17 +11174,9 @@ inline void Msg_BufferUnmap::set_a_flush(bool value) {
 
 // Msg_BufferDestroy
 
-// required bytes a_selfId = 1;
-inline bool Msg_BufferDestroy::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_BufferDestroy::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_BufferDestroy::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_BufferDestroy::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDestroy.a_selfId)
@@ -11838,7 +11185,7 @@ inline const std::string& Msg_BufferDestroy::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_BufferDestroy::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDestroy.a_selfId)
 }
@@ -11851,32 +11198,22 @@ inline const std::string& Msg_BufferDestroy::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_BufferDestroy::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_BufferDestroy::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_BufferDestroy::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDestroy.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_BufferDestroy::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -11891,17 +11228,9 @@ inline void Msg_BufferDestroy::set_allocated_a_selfid(std::string* a_selfid) {
 
 // Msg_BufferDrop
 
-// required bytes a_selfId = 1;
-inline bool Msg_BufferDrop::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_BufferDrop::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_BufferDrop::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_BufferDrop::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDrop.a_selfId)
@@ -11910,7 +11239,7 @@ inline const std::string& Msg_BufferDrop::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_BufferDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDrop.a_selfId)
 }
@@ -11923,32 +11252,22 @@ inline const std::string& Msg_BufferDrop::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_BufferDrop::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_BufferDrop::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_BufferDrop::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BufferDrop.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_BufferDrop::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -11963,17 +11282,9 @@ inline void Msg_BufferDrop::set_allocated_a_selfid(std::string* a_selfid) {
 
 // Msg_TextureDestroy
 
-// required bytes a_selfId = 1;
-inline bool Msg_TextureDestroy::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_TextureDestroy::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_TextureDestroy::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_TextureDestroy::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.a_selfId)
@@ -11982,7 +11293,7 @@ inline const std::string& Msg_TextureDestroy::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_TextureDestroy::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.a_selfId)
 }
@@ -11995,32 +11306,22 @@ inline const std::string& Msg_TextureDestroy::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_TextureDestroy::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_TextureDestroy::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_TextureDestroy::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_TextureDestroy::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -12031,17 +11332,9 @@ inline void Msg_TextureDestroy::set_allocated_a_selfid(std::string* a_selfid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.a_selfId)
 }
 
-// required bytes a_deviceId = 2;
-inline bool Msg_TextureDestroy::_internal_has_a_deviceid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_TextureDestroy::has_a_deviceid() const {
-  return _internal_has_a_deviceid();
-}
+// bytes a_deviceId = 2;
 inline void Msg_TextureDestroy::clear_a_deviceid() {
   _impl_.a_deviceid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_TextureDestroy::a_deviceid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.a_deviceId)
@@ -12050,7 +11343,7 @@ inline const std::string& Msg_TextureDestroy::a_deviceid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_TextureDestroy::set_a_deviceid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_deviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.a_deviceId)
 }
@@ -12063,32 +11356,22 @@ inline const std::string& Msg_TextureDestroy::_internal_a_deviceid() const {
   return _impl_.a_deviceid_.Get();
 }
 inline void Msg_TextureDestroy::_internal_set_a_deviceid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_deviceid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_TextureDestroy::_internal_mutable_a_deviceid() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_deviceid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_TextureDestroy::release_a_deviceid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDestroy.a_deviceId)
-  if (!_internal_has_a_deviceid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_deviceid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_deviceid_.IsDefault()) {
-    _impl_.a_deviceid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_deviceid_.Release();
 }
 inline void Msg_TextureDestroy::set_allocated_a_deviceid(std::string* a_deviceid) {
   if (a_deviceid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_deviceid_.SetAllocated(a_deviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -12103,17 +11386,9 @@ inline void Msg_TextureDestroy::set_allocated_a_deviceid(std::string* a_deviceid
 
 // Msg_TextureDrop
 
-// required bytes a_selfId = 1;
-inline bool Msg_TextureDrop::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_TextureDrop::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_TextureDrop::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_TextureDrop::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDrop.a_selfId)
@@ -12122,7 +11397,7 @@ inline const std::string& Msg_TextureDrop::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_TextureDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDrop.a_selfId)
 }
@@ -12135,32 +11410,22 @@ inline const std::string& Msg_TextureDrop::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_TextureDrop::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_TextureDrop::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_TextureDrop::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureDrop.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_TextureDrop::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -12175,17 +11440,9 @@ inline void Msg_TextureDrop::set_allocated_a_selfid(std::string* a_selfid) {
 
 // Msg_TextureViewDrop
 
-// required bytes a_selfId = 1;
-inline bool Msg_TextureViewDrop::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_TextureViewDrop::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_TextureViewDrop::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_TextureViewDrop::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureViewDrop.a_selfId)
@@ -12194,7 +11451,7 @@ inline const std::string& Msg_TextureViewDrop::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_TextureViewDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureViewDrop.a_selfId)
 }
@@ -12207,32 +11464,22 @@ inline const std::string& Msg_TextureViewDrop::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_TextureViewDrop::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_TextureViewDrop::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_TextureViewDrop::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_TextureViewDrop.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_TextureViewDrop::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -12247,17 +11494,9 @@ inline void Msg_TextureViewDrop::set_allocated_a_selfid(std::string* a_selfid) {
 
 // Msg_SamplerDrop
 
-// required bytes a_selfId = 1;
-inline bool Msg_SamplerDrop::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_SamplerDrop::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_SamplerDrop::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_SamplerDrop::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SamplerDrop.a_selfId)
@@ -12266,7 +11505,7 @@ inline const std::string& Msg_SamplerDrop::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SamplerDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SamplerDrop.a_selfId)
 }
@@ -12279,32 +11518,22 @@ inline const std::string& Msg_SamplerDrop::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_SamplerDrop::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_SamplerDrop::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_SamplerDrop::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SamplerDrop.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_SamplerDrop::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -12319,17 +11548,9 @@ inline void Msg_SamplerDrop::set_allocated_a_selfid(std::string* a_selfid) {
 
 // Msg_QuerySetDrop
 
-// required bytes a_selfId = 1;
-inline bool Msg_QuerySetDrop::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_QuerySetDrop::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_QuerySetDrop::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_QuerySetDrop::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QuerySetDrop.a_selfId)
@@ -12338,7 +11559,7 @@ inline const std::string& Msg_QuerySetDrop::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_QuerySetDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QuerySetDrop.a_selfId)
 }
@@ -12351,32 +11572,22 @@ inline const std::string& Msg_QuerySetDrop::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_QuerySetDrop::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_QuerySetDrop::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_QuerySetDrop::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QuerySetDrop.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_QuerySetDrop::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -12391,17 +11602,9 @@ inline void Msg_QuerySetDrop::set_allocated_a_selfid(std::string* a_selfid) {
 
 // Msg_DeviceDestroy
 
-// required bytes a_selfId = 1;
-inline bool Msg_DeviceDestroy::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_DeviceDestroy::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_DeviceDestroy::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_DeviceDestroy::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDestroy.a_selfId)
@@ -12410,7 +11613,7 @@ inline const std::string& Msg_DeviceDestroy::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceDestroy::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDestroy.a_selfId)
 }
@@ -12423,32 +11626,22 @@ inline const std::string& Msg_DeviceDestroy::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_DeviceDestroy::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceDestroy::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceDestroy::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDestroy.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_DeviceDestroy::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -12463,17 +11656,9 @@ inline void Msg_DeviceDestroy::set_allocated_a_selfid(std::string* a_selfid) {
 
 // Msg_DeviceDrop
 
-// required bytes a_selfId = 1;
-inline bool Msg_DeviceDrop::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_DeviceDrop::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_DeviceDrop::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_DeviceDrop::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDrop.a_selfId)
@@ -12482,7 +11667,7 @@ inline const std::string& Msg_DeviceDrop::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDrop.a_selfId)
 }
@@ -12495,32 +11680,22 @@ inline const std::string& Msg_DeviceDrop::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_DeviceDrop::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceDrop::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceDrop::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceDrop.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_DeviceDrop::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -12535,17 +11710,9 @@ inline void Msg_DeviceDrop::set_allocated_a_selfid(std::string* a_selfid) {
 
 // Msg_CommandEncoderFinish
 
-// required bytes a_selfId = 1;
-inline bool Msg_CommandEncoderFinish::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_CommandEncoderFinish::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_CommandEncoderFinish::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_CommandEncoderFinish::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_selfId)
@@ -12554,7 +11721,7 @@ inline const std::string& Msg_CommandEncoderFinish::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CommandEncoderFinish::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_selfId)
 }
@@ -12567,32 +11734,22 @@ inline const std::string& Msg_CommandEncoderFinish::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_CommandEncoderFinish::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CommandEncoderFinish::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CommandEncoderFinish::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_CommandEncoderFinish::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -12603,17 +11760,9 @@ inline void Msg_CommandEncoderFinish::set_allocated_a_selfid(std::string* a_self
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_selfId)
 }
 
-// required bytes a_deviceId = 2;
-inline bool Msg_CommandEncoderFinish::_internal_has_a_deviceid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_CommandEncoderFinish::has_a_deviceid() const {
-  return _internal_has_a_deviceid();
-}
+// bytes a_deviceId = 2;
 inline void Msg_CommandEncoderFinish::clear_a_deviceid() {
   _impl_.a_deviceid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_CommandEncoderFinish::a_deviceid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_deviceId)
@@ -12622,7 +11771,7 @@ inline const std::string& Msg_CommandEncoderFinish::a_deviceid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CommandEncoderFinish::set_a_deviceid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_deviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_deviceId)
 }
@@ -12635,32 +11784,22 @@ inline const std::string& Msg_CommandEncoderFinish::_internal_a_deviceid() const
   return _impl_.a_deviceid_.Get();
 }
 inline void Msg_CommandEncoderFinish::_internal_set_a_deviceid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_deviceid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CommandEncoderFinish::_internal_mutable_a_deviceid() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_deviceid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CommandEncoderFinish::release_a_deviceid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_deviceId)
-  if (!_internal_has_a_deviceid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_deviceid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_deviceid_.IsDefault()) {
-    _impl_.a_deviceid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_deviceid_.Release();
 }
 inline void Msg_CommandEncoderFinish::set_allocated_a_deviceid(std::string* a_deviceid) {
   if (a_deviceid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_deviceid_.SetAllocated(a_deviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -12671,17 +11810,9 @@ inline void Msg_CommandEncoderFinish::set_allocated_a_deviceid(std::string* a_de
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_deviceId)
 }
 
-// required bytes a_desc = 3;
-inline bool Msg_CommandEncoderFinish::_internal_has_a_desc() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_CommandEncoderFinish::has_a_desc() const {
-  return _internal_has_a_desc();
-}
+// bytes a_desc = 3;
 inline void Msg_CommandEncoderFinish::clear_a_desc() {
   _impl_.a_desc_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_CommandEncoderFinish::a_desc() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_desc)
@@ -12690,7 +11821,7 @@ inline const std::string& Msg_CommandEncoderFinish::a_desc() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CommandEncoderFinish::set_a_desc(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_desc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_desc)
 }
@@ -12703,32 +11834,22 @@ inline const std::string& Msg_CommandEncoderFinish::_internal_a_desc() const {
   return _impl_.a_desc_.Get();
 }
 inline void Msg_CommandEncoderFinish::_internal_set_a_desc(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_desc_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CommandEncoderFinish::_internal_mutable_a_desc() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_desc_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CommandEncoderFinish::release_a_desc() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderFinish.a_desc)
-  if (!_internal_has_a_desc()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_desc_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_desc_.IsDefault()) {
-    _impl_.a_desc_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_desc_.Release();
 }
 inline void Msg_CommandEncoderFinish::set_allocated_a_desc(std::string* a_desc) {
   if (a_desc != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_desc_.SetAllocated(a_desc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -12743,17 +11864,9 @@ inline void Msg_CommandEncoderFinish::set_allocated_a_desc(std::string* a_desc) 
 
 // Msg_CommandEncoderDrop
 
-// required bytes a_selfId = 1;
-inline bool Msg_CommandEncoderDrop::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_CommandEncoderDrop::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_CommandEncoderDrop::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_CommandEncoderDrop::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderDrop.a_selfId)
@@ -12762,7 +11875,7 @@ inline const std::string& Msg_CommandEncoderDrop::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CommandEncoderDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderDrop.a_selfId)
 }
@@ -12775,32 +11888,22 @@ inline const std::string& Msg_CommandEncoderDrop::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_CommandEncoderDrop::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CommandEncoderDrop::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CommandEncoderDrop::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_CommandEncoderDrop.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_CommandEncoderDrop::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -12815,17 +11918,9 @@ inline void Msg_CommandEncoderDrop::set_allocated_a_selfid(std::string* a_selfid
 
 // Msg_RenderBundleDrop
 
-// required bytes a_selfId = 1;
-inline bool Msg_RenderBundleDrop::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_RenderBundleDrop::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_RenderBundleDrop::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_RenderBundleDrop::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderBundleDrop.a_selfId)
@@ -12834,7 +11929,7 @@ inline const std::string& Msg_RenderBundleDrop::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RenderBundleDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderBundleDrop.a_selfId)
 }
@@ -12847,32 +11942,22 @@ inline const std::string& Msg_RenderBundleDrop::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_RenderBundleDrop::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_RenderBundleDrop::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_RenderBundleDrop::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderBundleDrop.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_RenderBundleDrop::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -12887,17 +11972,9 @@ inline void Msg_RenderBundleDrop::set_allocated_a_selfid(std::string* a_selfid) 
 
 // Msg_QueueSubmit
 
-// required bytes a_selfId = 1;
-inline bool Msg_QueueSubmit::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_QueueSubmit::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_QueueSubmit::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_QueueSubmit::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_selfId)
@@ -12906,7 +11983,7 @@ inline const std::string& Msg_QueueSubmit::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_QueueSubmit::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_selfId)
 }
@@ -12919,32 +11996,22 @@ inline const std::string& Msg_QueueSubmit::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_QueueSubmit::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_QueueSubmit::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_QueueSubmit::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_QueueSubmit::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -12955,17 +12022,9 @@ inline void Msg_QueueSubmit::set_allocated_a_selfid(std::string* a_selfid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_selfId)
 }
 
-// required bytes a_aDeviceId = 2;
-inline bool Msg_QueueSubmit::_internal_has_a_adeviceid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_QueueSubmit::has_a_adeviceid() const {
-  return _internal_has_a_adeviceid();
-}
+// bytes a_aDeviceId = 2;
 inline void Msg_QueueSubmit::clear_a_adeviceid() {
   _impl_.a_adeviceid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_QueueSubmit::a_adeviceid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_aDeviceId)
@@ -12974,7 +12033,7 @@ inline const std::string& Msg_QueueSubmit::a_adeviceid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_QueueSubmit::set_a_adeviceid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_aDeviceId)
 }
@@ -12987,32 +12046,22 @@ inline const std::string& Msg_QueueSubmit::_internal_a_adeviceid() const {
   return _impl_.a_adeviceid_.Get();
 }
 inline void Msg_QueueSubmit::_internal_set_a_adeviceid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_adeviceid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_QueueSubmit::_internal_mutable_a_adeviceid() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_adeviceid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_QueueSubmit::release_a_adeviceid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueSubmit.a_aDeviceId)
-  if (!_internal_has_a_adeviceid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_adeviceid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_adeviceid_.IsDefault()) {
-    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_adeviceid_.Release();
 }
 inline void Msg_QueueSubmit::set_allocated_a_adeviceid(std::string* a_adeviceid) {
   if (a_adeviceid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_adeviceid_.SetAllocated(a_adeviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -13177,17 +12226,9 @@ Msg_QueueSubmit::mutable_a_textureids() {
 
 // Msg_QueueOnSubmittedWorkDone
 
-// required bytes a_selfId = 1;
-inline bool Msg_QueueOnSubmittedWorkDone::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_QueueOnSubmittedWorkDone::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_QueueOnSubmittedWorkDone::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_QueueOnSubmittedWorkDone::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueOnSubmittedWorkDone.a_selfId)
@@ -13196,7 +12237,7 @@ inline const std::string& Msg_QueueOnSubmittedWorkDone::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_QueueOnSubmittedWorkDone::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueOnSubmittedWorkDone.a_selfId)
 }
@@ -13209,32 +12250,22 @@ inline const std::string& Msg_QueueOnSubmittedWorkDone::_internal_a_selfid() con
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_QueueOnSubmittedWorkDone::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_QueueOnSubmittedWorkDone::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_QueueOnSubmittedWorkDone::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueOnSubmittedWorkDone.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_QueueOnSubmittedWorkDone::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -13249,17 +12280,9 @@ inline void Msg_QueueOnSubmittedWorkDone::set_allocated_a_selfid(std::string* a_
 
 // Reply_QueueOnSubmittedWorkDone
 
-// required bytes a_ok = 1;
-inline bool Reply_QueueOnSubmittedWorkDone::_internal_has_a_ok() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Reply_QueueOnSubmittedWorkDone::has_a_ok() const {
-  return _internal_has_a_ok();
-}
+// bytes a_ok = 1;
 inline void Reply_QueueOnSubmittedWorkDone::clear_a_ok() {
   _impl_.a_ok_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_QueueOnSubmittedWorkDone::a_ok() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Reply_QueueOnSubmittedWorkDone.a_ok)
@@ -13268,7 +12291,7 @@ inline const std::string& Reply_QueueOnSubmittedWorkDone::a_ok() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_QueueOnSubmittedWorkDone::set_a_ok(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_ok_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Reply_QueueOnSubmittedWorkDone.a_ok)
 }
@@ -13281,32 +12304,22 @@ inline const std::string& Reply_QueueOnSubmittedWorkDone::_internal_a_ok() const
   return _impl_.a_ok_.Get();
 }
 inline void Reply_QueueOnSubmittedWorkDone::_internal_set_a_ok(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_ok_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_QueueOnSubmittedWorkDone::_internal_mutable_a_ok() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_ok_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_QueueOnSubmittedWorkDone::release_a_ok() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Reply_QueueOnSubmittedWorkDone.a_ok)
-  if (!_internal_has_a_ok()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_ok_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_ok_.IsDefault()) {
-    _impl_.a_ok_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_ok_.Release();
 }
 inline void Reply_QueueOnSubmittedWorkDone::set_allocated_a_ok(std::string* a_ok) {
   if (a_ok != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_ok_.SetAllocated(a_ok, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -13321,17 +12334,9 @@ inline void Reply_QueueOnSubmittedWorkDone::set_allocated_a_ok(std::string* a_ok
 
 // Msg_QueueWriteAction
 
-// required bytes a_selfId = 1;
-inline bool Msg_QueueWriteAction::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_QueueWriteAction::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_QueueWriteAction::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_QueueWriteAction::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_selfId)
@@ -13340,7 +12345,7 @@ inline const std::string& Msg_QueueWriteAction::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_QueueWriteAction::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_selfId)
 }
@@ -13353,32 +12358,22 @@ inline const std::string& Msg_QueueWriteAction::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_QueueWriteAction::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_QueueWriteAction::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_QueueWriteAction::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_QueueWriteAction::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -13389,17 +12384,9 @@ inline void Msg_QueueWriteAction::set_allocated_a_selfid(std::string* a_selfid) 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_selfId)
 }
 
-// required bytes a_aDeviceId = 2;
-inline bool Msg_QueueWriteAction::_internal_has_a_adeviceid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_QueueWriteAction::has_a_adeviceid() const {
-  return _internal_has_a_adeviceid();
-}
+// bytes a_aDeviceId = 2;
 inline void Msg_QueueWriteAction::clear_a_adeviceid() {
   _impl_.a_adeviceid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_QueueWriteAction::a_adeviceid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_aDeviceId)
@@ -13408,7 +12395,7 @@ inline const std::string& Msg_QueueWriteAction::a_adeviceid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_QueueWriteAction::set_a_adeviceid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_aDeviceId)
 }
@@ -13421,32 +12408,22 @@ inline const std::string& Msg_QueueWriteAction::_internal_a_adeviceid() const {
   return _impl_.a_adeviceid_.Get();
 }
 inline void Msg_QueueWriteAction::_internal_set_a_adeviceid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_adeviceid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_QueueWriteAction::_internal_mutable_a_adeviceid() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_adeviceid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_QueueWriteAction::release_a_adeviceid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_aDeviceId)
-  if (!_internal_has_a_adeviceid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_adeviceid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_adeviceid_.IsDefault()) {
-    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_adeviceid_.Release();
 }
 inline void Msg_QueueWriteAction::set_allocated_a_adeviceid(std::string* a_adeviceid) {
   if (a_adeviceid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_adeviceid_.SetAllocated(a_adeviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -13457,17 +12434,9 @@ inline void Msg_QueueWriteAction::set_allocated_a_adeviceid(std::string* a_adevi
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_aDeviceId)
 }
 
-// required bytes a_buf = 3;
-inline bool Msg_QueueWriteAction::_internal_has_a_buf() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_QueueWriteAction::has_a_buf() const {
-  return _internal_has_a_buf();
-}
+// bytes a_buf = 3;
 inline void Msg_QueueWriteAction::clear_a_buf() {
   _impl_.a_buf_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_QueueWriteAction::a_buf() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_buf)
@@ -13476,7 +12445,7 @@ inline const std::string& Msg_QueueWriteAction::a_buf() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_QueueWriteAction::set_a_buf(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_buf_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_buf)
 }
@@ -13489,32 +12458,22 @@ inline const std::string& Msg_QueueWriteAction::_internal_a_buf() const {
   return _impl_.a_buf_.Get();
 }
 inline void Msg_QueueWriteAction::_internal_set_a_buf(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_buf_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_QueueWriteAction::_internal_mutable_a_buf() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_buf_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_QueueWriteAction::release_a_buf() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_buf)
-  if (!_internal_has_a_buf()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_buf_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_buf_.IsDefault()) {
-    _impl_.a_buf_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_buf_.Release();
 }
 inline void Msg_QueueWriteAction::set_allocated_a_buf(std::string* a_buf) {
   if (a_buf != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_buf_.SetAllocated(a_buf, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -13525,17 +12484,9 @@ inline void Msg_QueueWriteAction::set_allocated_a_buf(std::string* a_buf) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_buf)
 }
 
-// required bytes a_shmem = 4;
-inline bool Msg_QueueWriteAction::_internal_has_a_shmem() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_QueueWriteAction::has_a_shmem() const {
-  return _internal_has_a_shmem();
-}
+// bytes a_shmem = 4;
 inline void Msg_QueueWriteAction::clear_a_shmem() {
   _impl_.a_shmem_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& Msg_QueueWriteAction::a_shmem() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_shmem)
@@ -13544,7 +12495,7 @@ inline const std::string& Msg_QueueWriteAction::a_shmem() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_QueueWriteAction::set_a_shmem(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000008u;
+ 
  _impl_.a_shmem_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_shmem)
 }
@@ -13557,32 +12508,22 @@ inline const std::string& Msg_QueueWriteAction::_internal_a_shmem() const {
   return _impl_.a_shmem_.Get();
 }
 inline void Msg_QueueWriteAction::_internal_set_a_shmem(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_shmem_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_QueueWriteAction::_internal_mutable_a_shmem() {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   return _impl_.a_shmem_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_QueueWriteAction::release_a_shmem() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_QueueWriteAction.a_shmem)
-  if (!_internal_has_a_shmem()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.a_shmem_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_shmem_.IsDefault()) {
-    _impl_.a_shmem_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_shmem_.Release();
 }
 inline void Msg_QueueWriteAction::set_allocated_a_shmem(std::string* a_shmem) {
   if (a_shmem != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    
   }
   _impl_.a_shmem_.SetAllocated(a_shmem, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -13597,17 +12538,9 @@ inline void Msg_QueueWriteAction::set_allocated_a_shmem(std::string* a_shmem) {
 
 // Msg_BindGroupLayoutDrop
 
-// required bytes a_selfId = 1;
-inline bool Msg_BindGroupLayoutDrop::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_BindGroupLayoutDrop::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_BindGroupLayoutDrop::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_BindGroupLayoutDrop::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupLayoutDrop.a_selfId)
@@ -13616,7 +12549,7 @@ inline const std::string& Msg_BindGroupLayoutDrop::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_BindGroupLayoutDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupLayoutDrop.a_selfId)
 }
@@ -13629,32 +12562,22 @@ inline const std::string& Msg_BindGroupLayoutDrop::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_BindGroupLayoutDrop::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_BindGroupLayoutDrop::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_BindGroupLayoutDrop::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupLayoutDrop.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_BindGroupLayoutDrop::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -13669,17 +12592,9 @@ inline void Msg_BindGroupLayoutDrop::set_allocated_a_selfid(std::string* a_selfi
 
 // Msg_PipelineLayoutDrop
 
-// required bytes a_selfId = 1;
-inline bool Msg_PipelineLayoutDrop::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_PipelineLayoutDrop::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_PipelineLayoutDrop::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_PipelineLayoutDrop::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_PipelineLayoutDrop.a_selfId)
@@ -13688,7 +12603,7 @@ inline const std::string& Msg_PipelineLayoutDrop::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_PipelineLayoutDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_PipelineLayoutDrop.a_selfId)
 }
@@ -13701,32 +12616,22 @@ inline const std::string& Msg_PipelineLayoutDrop::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_PipelineLayoutDrop::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_PipelineLayoutDrop::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_PipelineLayoutDrop::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_PipelineLayoutDrop.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_PipelineLayoutDrop::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -13741,17 +12646,9 @@ inline void Msg_PipelineLayoutDrop::set_allocated_a_selfid(std::string* a_selfid
 
 // Msg_BindGroupDrop
 
-// required bytes a_selfId = 1;
-inline bool Msg_BindGroupDrop::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_BindGroupDrop::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_BindGroupDrop::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_BindGroupDrop::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupDrop.a_selfId)
@@ -13760,7 +12657,7 @@ inline const std::string& Msg_BindGroupDrop::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_BindGroupDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupDrop.a_selfId)
 }
@@ -13773,32 +12670,22 @@ inline const std::string& Msg_BindGroupDrop::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_BindGroupDrop::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_BindGroupDrop::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_BindGroupDrop::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_BindGroupDrop.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_BindGroupDrop::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -13813,17 +12700,9 @@ inline void Msg_BindGroupDrop::set_allocated_a_selfid(std::string* a_selfid) {
 
 // Msg_ShaderModuleDrop
 
-// required bytes a_selfId = 1;
-inline bool Msg_ShaderModuleDrop::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_ShaderModuleDrop::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_ShaderModuleDrop::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_ShaderModuleDrop::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ShaderModuleDrop.a_selfId)
@@ -13832,7 +12711,7 @@ inline const std::string& Msg_ShaderModuleDrop::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ShaderModuleDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ShaderModuleDrop.a_selfId)
 }
@@ -13845,32 +12724,22 @@ inline const std::string& Msg_ShaderModuleDrop::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_ShaderModuleDrop::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ShaderModuleDrop::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ShaderModuleDrop::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ShaderModuleDrop.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_ShaderModuleDrop::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -13885,17 +12754,9 @@ inline void Msg_ShaderModuleDrop::set_allocated_a_selfid(std::string* a_selfid) 
 
 // Msg_ComputePipelineDrop
 
-// required bytes a_selfId = 1;
-inline bool Msg_ComputePipelineDrop::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_ComputePipelineDrop::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_ComputePipelineDrop::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_ComputePipelineDrop::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePipelineDrop.a_selfId)
@@ -13904,7 +12765,7 @@ inline const std::string& Msg_ComputePipelineDrop::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ComputePipelineDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePipelineDrop.a_selfId)
 }
@@ -13917,32 +12778,22 @@ inline const std::string& Msg_ComputePipelineDrop::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_ComputePipelineDrop::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ComputePipelineDrop::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ComputePipelineDrop::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ComputePipelineDrop.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_ComputePipelineDrop::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -13957,17 +12808,9 @@ inline void Msg_ComputePipelineDrop::set_allocated_a_selfid(std::string* a_selfi
 
 // Msg_RenderPipelineDrop
 
-// required bytes a_selfId = 1;
-inline bool Msg_RenderPipelineDrop::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_RenderPipelineDrop::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_RenderPipelineDrop::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_RenderPipelineDrop::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPipelineDrop.a_selfId)
@@ -13976,7 +12819,7 @@ inline const std::string& Msg_RenderPipelineDrop::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_RenderPipelineDrop::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPipelineDrop.a_selfId)
 }
@@ -13989,32 +12832,22 @@ inline const std::string& Msg_RenderPipelineDrop::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_RenderPipelineDrop::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_RenderPipelineDrop::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_RenderPipelineDrop::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_RenderPipelineDrop.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_RenderPipelineDrop::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -14029,17 +12862,9 @@ inline void Msg_RenderPipelineDrop::set_allocated_a_selfid(std::string* a_selfid
 
 // Msg_ImplicitLayoutDrop
 
-// required bytes a_implicitPlId = 1;
-inline bool Msg_ImplicitLayoutDrop::_internal_has_a_implicitplid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_ImplicitLayoutDrop::has_a_implicitplid() const {
-  return _internal_has_a_implicitplid();
-}
+// bytes a_implicitPlId = 1;
 inline void Msg_ImplicitLayoutDrop::clear_a_implicitplid() {
   _impl_.a_implicitplid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_ImplicitLayoutDrop::a_implicitplid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.a_implicitPlId)
@@ -14048,7 +12873,7 @@ inline const std::string& Msg_ImplicitLayoutDrop::a_implicitplid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ImplicitLayoutDrop::set_a_implicitplid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_implicitplid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.a_implicitPlId)
 }
@@ -14061,32 +12886,22 @@ inline const std::string& Msg_ImplicitLayoutDrop::_internal_a_implicitplid() con
   return _impl_.a_implicitplid_.Get();
 }
 inline void Msg_ImplicitLayoutDrop::_internal_set_a_implicitplid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_implicitplid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ImplicitLayoutDrop::_internal_mutable_a_implicitplid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_implicitplid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ImplicitLayoutDrop::release_a_implicitplid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ImplicitLayoutDrop.a_implicitPlId)
-  if (!_internal_has_a_implicitplid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_implicitplid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_implicitplid_.IsDefault()) {
-    _impl_.a_implicitplid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_implicitplid_.Release();
 }
 inline void Msg_ImplicitLayoutDrop::set_allocated_a_implicitplid(std::string* a_implicitplid) {
   if (a_implicitplid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_implicitplid_.SetAllocated(a_implicitplid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -14176,17 +12991,9 @@ Msg_ImplicitLayoutDrop::mutable_a_implicitbglids() {
 
 // Msg_DeviceCreateSwapChain
 
-// required bytes a_selfId = 1;
-inline bool Msg_DeviceCreateSwapChain::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_DeviceCreateSwapChain::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_DeviceCreateSwapChain::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_DeviceCreateSwapChain::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_selfId)
@@ -14195,7 +13002,7 @@ inline const std::string& Msg_DeviceCreateSwapChain::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceCreateSwapChain::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_selfId)
 }
@@ -14208,32 +13015,22 @@ inline const std::string& Msg_DeviceCreateSwapChain::_internal_a_selfid() const 
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_DeviceCreateSwapChain::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateSwapChain::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateSwapChain::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_DeviceCreateSwapChain::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -14244,17 +13041,9 @@ inline void Msg_DeviceCreateSwapChain::set_allocated_a_selfid(std::string* a_sel
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_selfId)
 }
 
-// required bytes a_queueId = 2;
-inline bool Msg_DeviceCreateSwapChain::_internal_has_a_queueid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_DeviceCreateSwapChain::has_a_queueid() const {
-  return _internal_has_a_queueid();
-}
+// bytes a_queueId = 2;
 inline void Msg_DeviceCreateSwapChain::clear_a_queueid() {
   _impl_.a_queueid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_DeviceCreateSwapChain::a_queueid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_queueId)
@@ -14263,7 +13052,7 @@ inline const std::string& Msg_DeviceCreateSwapChain::a_queueid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceCreateSwapChain::set_a_queueid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_queueid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_queueId)
 }
@@ -14276,32 +13065,22 @@ inline const std::string& Msg_DeviceCreateSwapChain::_internal_a_queueid() const
   return _impl_.a_queueid_.Get();
 }
 inline void Msg_DeviceCreateSwapChain::_internal_set_a_queueid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_queueid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateSwapChain::_internal_mutable_a_queueid() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_queueid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateSwapChain::release_a_queueid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_queueId)
-  if (!_internal_has_a_queueid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_queueid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_queueid_.IsDefault()) {
-    _impl_.a_queueid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_queueid_.Release();
 }
 inline void Msg_DeviceCreateSwapChain::set_allocated_a_queueid(std::string* a_queueid) {
   if (a_queueid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_queueid_.SetAllocated(a_queueid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -14312,17 +13091,9 @@ inline void Msg_DeviceCreateSwapChain::set_allocated_a_queueid(std::string* a_qu
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_queueId)
 }
 
-// required bytes a_desc = 3;
-inline bool Msg_DeviceCreateSwapChain::_internal_has_a_desc() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_DeviceCreateSwapChain::has_a_desc() const {
-  return _internal_has_a_desc();
-}
+// bytes a_desc = 3;
 inline void Msg_DeviceCreateSwapChain::clear_a_desc() {
   _impl_.a_desc_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_DeviceCreateSwapChain::a_desc() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_desc)
@@ -14331,7 +13102,7 @@ inline const std::string& Msg_DeviceCreateSwapChain::a_desc() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceCreateSwapChain::set_a_desc(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_desc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_desc)
 }
@@ -14344,32 +13115,22 @@ inline const std::string& Msg_DeviceCreateSwapChain::_internal_a_desc() const {
   return _impl_.a_desc_.Get();
 }
 inline void Msg_DeviceCreateSwapChain::_internal_set_a_desc(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_desc_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateSwapChain::_internal_mutable_a_desc() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_desc_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateSwapChain::release_a_desc() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_desc)
-  if (!_internal_has_a_desc()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_desc_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_desc_.IsDefault()) {
-    _impl_.a_desc_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_desc_.Release();
 }
 inline void Msg_DeviceCreateSwapChain::set_allocated_a_desc(std::string* a_desc) {
   if (a_desc != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_desc_.SetAllocated(a_desc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -14455,17 +13216,9 @@ Msg_DeviceCreateSwapChain::mutable_a_bufferids() {
   return &_impl_.a_bufferids_;
 }
 
-// required bytes a_ownerId = 5;
-inline bool Msg_DeviceCreateSwapChain::_internal_has_a_ownerid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_DeviceCreateSwapChain::has_a_ownerid() const {
-  return _internal_has_a_ownerid();
-}
+// bytes a_ownerId = 5;
 inline void Msg_DeviceCreateSwapChain::clear_a_ownerid() {
   _impl_.a_ownerid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& Msg_DeviceCreateSwapChain::a_ownerid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_ownerId)
@@ -14474,7 +13227,7 @@ inline const std::string& Msg_DeviceCreateSwapChain::a_ownerid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceCreateSwapChain::set_a_ownerid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000008u;
+ 
  _impl_.a_ownerid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_ownerId)
 }
@@ -14487,32 +13240,22 @@ inline const std::string& Msg_DeviceCreateSwapChain::_internal_a_ownerid() const
   return _impl_.a_ownerid_.Get();
 }
 inline void Msg_DeviceCreateSwapChain::_internal_set_a_ownerid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_ownerid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateSwapChain::_internal_mutable_a_ownerid() {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   return _impl_.a_ownerid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceCreateSwapChain::release_a_ownerid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_ownerId)
-  if (!_internal_has_a_ownerid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.a_ownerid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_ownerid_.IsDefault()) {
-    _impl_.a_ownerid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_ownerid_.Release();
 }
 inline void Msg_DeviceCreateSwapChain::set_allocated_a_ownerid(std::string* a_ownerid) {
   if (a_ownerid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    
   }
   _impl_.a_ownerid_.SetAllocated(a_ownerid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -14523,17 +13266,9 @@ inline void Msg_DeviceCreateSwapChain::set_allocated_a_ownerid(std::string* a_ow
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceCreateSwapChain.a_ownerId)
 }
 
-// required bool a_useExternalTextureInSwapChain = 6;
-inline bool Msg_DeviceCreateSwapChain::_internal_has_a_useexternaltextureinswapchain() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool Msg_DeviceCreateSwapChain::has_a_useexternaltextureinswapchain() const {
-  return _internal_has_a_useexternaltextureinswapchain();
-}
+// bool a_useExternalTextureInSwapChain = 6;
 inline void Msg_DeviceCreateSwapChain::clear_a_useexternaltextureinswapchain() {
   _impl_.a_useexternaltextureinswapchain_ = false;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline bool Msg_DeviceCreateSwapChain::_internal_a_useexternaltextureinswapchain() const {
   return _impl_.a_useexternaltextureinswapchain_;
@@ -14543,7 +13278,7 @@ inline bool Msg_DeviceCreateSwapChain::a_useexternaltextureinswapchain() const {
   return _internal_a_useexternaltextureinswapchain();
 }
 inline void Msg_DeviceCreateSwapChain::_internal_set_a_useexternaltextureinswapchain(bool value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_useexternaltextureinswapchain_ = value;
 }
 inline void Msg_DeviceCreateSwapChain::set_a_useexternaltextureinswapchain(bool value) {
@@ -14555,17 +13290,9 @@ inline void Msg_DeviceCreateSwapChain::set_a_useexternaltextureinswapchain(bool 
 
 // Msg_SwapChainPresent
 
-// required bytes a_textureId = 1;
-inline bool Msg_SwapChainPresent::_internal_has_a_textureid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_SwapChainPresent::has_a_textureid() const {
-  return _internal_has_a_textureid();
-}
+// bytes a_textureId = 1;
 inline void Msg_SwapChainPresent::clear_a_textureid() {
   _impl_.a_textureid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_SwapChainPresent::a_textureid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_textureId)
@@ -14574,7 +13301,7 @@ inline const std::string& Msg_SwapChainPresent::a_textureid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SwapChainPresent::set_a_textureid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_textureid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_textureId)
 }
@@ -14587,32 +13314,22 @@ inline const std::string& Msg_SwapChainPresent::_internal_a_textureid() const {
   return _impl_.a_textureid_.Get();
 }
 inline void Msg_SwapChainPresent::_internal_set_a_textureid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_textureid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_SwapChainPresent::_internal_mutable_a_textureid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_textureid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_SwapChainPresent::release_a_textureid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_textureId)
-  if (!_internal_has_a_textureid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_textureid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_textureid_.IsDefault()) {
-    _impl_.a_textureid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_textureid_.Release();
 }
 inline void Msg_SwapChainPresent::set_allocated_a_textureid(std::string* a_textureid) {
   if (a_textureid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_textureid_.SetAllocated(a_textureid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -14623,17 +13340,9 @@ inline void Msg_SwapChainPresent::set_allocated_a_textureid(std::string* a_textu
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_textureId)
 }
 
-// required bytes a_commandEncoderId = 2;
-inline bool Msg_SwapChainPresent::_internal_has_a_commandencoderid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_SwapChainPresent::has_a_commandencoderid() const {
-  return _internal_has_a_commandencoderid();
-}
+// bytes a_commandEncoderId = 2;
 inline void Msg_SwapChainPresent::clear_a_commandencoderid() {
   _impl_.a_commandencoderid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_SwapChainPresent::a_commandencoderid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_commandEncoderId)
@@ -14642,7 +13351,7 @@ inline const std::string& Msg_SwapChainPresent::a_commandencoderid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SwapChainPresent::set_a_commandencoderid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_commandencoderid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_commandEncoderId)
 }
@@ -14655,32 +13364,22 @@ inline const std::string& Msg_SwapChainPresent::_internal_a_commandencoderid() c
   return _impl_.a_commandencoderid_.Get();
 }
 inline void Msg_SwapChainPresent::_internal_set_a_commandencoderid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_commandencoderid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_SwapChainPresent::_internal_mutable_a_commandencoderid() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_commandencoderid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_SwapChainPresent::release_a_commandencoderid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_commandEncoderId)
-  if (!_internal_has_a_commandencoderid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_commandencoderid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_commandencoderid_.IsDefault()) {
-    _impl_.a_commandencoderid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_commandencoderid_.Release();
 }
 inline void Msg_SwapChainPresent::set_allocated_a_commandencoderid(std::string* a_commandencoderid) {
   if (a_commandencoderid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_commandencoderid_.SetAllocated(a_commandencoderid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -14691,17 +13390,9 @@ inline void Msg_SwapChainPresent::set_allocated_a_commandencoderid(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_commandEncoderId)
 }
 
-// required bytes a_remoteTextureId = 3;
-inline bool Msg_SwapChainPresent::_internal_has_a_remotetextureid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_SwapChainPresent::has_a_remotetextureid() const {
-  return _internal_has_a_remotetextureid();
-}
+// bytes a_remoteTextureId = 3;
 inline void Msg_SwapChainPresent::clear_a_remotetextureid() {
   _impl_.a_remotetextureid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_SwapChainPresent::a_remotetextureid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_remoteTextureId)
@@ -14710,7 +13401,7 @@ inline const std::string& Msg_SwapChainPresent::a_remotetextureid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SwapChainPresent::set_a_remotetextureid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_remotetextureid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_remoteTextureId)
 }
@@ -14723,32 +13414,22 @@ inline const std::string& Msg_SwapChainPresent::_internal_a_remotetextureid() co
   return _impl_.a_remotetextureid_.Get();
 }
 inline void Msg_SwapChainPresent::_internal_set_a_remotetextureid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_remotetextureid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_SwapChainPresent::_internal_mutable_a_remotetextureid() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_remotetextureid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_SwapChainPresent::release_a_remotetextureid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_remoteTextureId)
-  if (!_internal_has_a_remotetextureid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_remotetextureid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_remotetextureid_.IsDefault()) {
-    _impl_.a_remotetextureid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_remotetextureid_.Release();
 }
 inline void Msg_SwapChainPresent::set_allocated_a_remotetextureid(std::string* a_remotetextureid) {
   if (a_remotetextureid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_remotetextureid_.SetAllocated(a_remotetextureid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -14759,17 +13440,9 @@ inline void Msg_SwapChainPresent::set_allocated_a_remotetextureid(std::string* a
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_remoteTextureId)
 }
 
-// required bytes a_remoteTextureOwnerId = 4;
-inline bool Msg_SwapChainPresent::_internal_has_a_remotetextureownerid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_SwapChainPresent::has_a_remotetextureownerid() const {
-  return _internal_has_a_remotetextureownerid();
-}
+// bytes a_remoteTextureOwnerId = 4;
 inline void Msg_SwapChainPresent::clear_a_remotetextureownerid() {
   _impl_.a_remotetextureownerid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& Msg_SwapChainPresent::a_remotetextureownerid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_remoteTextureOwnerId)
@@ -14778,7 +13451,7 @@ inline const std::string& Msg_SwapChainPresent::a_remotetextureownerid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SwapChainPresent::set_a_remotetextureownerid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000008u;
+ 
  _impl_.a_remotetextureownerid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_remoteTextureOwnerId)
 }
@@ -14791,32 +13464,22 @@ inline const std::string& Msg_SwapChainPresent::_internal_a_remotetextureownerid
   return _impl_.a_remotetextureownerid_.Get();
 }
 inline void Msg_SwapChainPresent::_internal_set_a_remotetextureownerid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_remotetextureownerid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_SwapChainPresent::_internal_mutable_a_remotetextureownerid() {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   return _impl_.a_remotetextureownerid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_SwapChainPresent::release_a_remotetextureownerid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainPresent.a_remoteTextureOwnerId)
-  if (!_internal_has_a_remotetextureownerid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.a_remotetextureownerid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_remotetextureownerid_.IsDefault()) {
-    _impl_.a_remotetextureownerid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_remotetextureownerid_.Release();
 }
 inline void Msg_SwapChainPresent::set_allocated_a_remotetextureownerid(std::string* a_remotetextureownerid) {
   if (a_remotetextureownerid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    
   }
   _impl_.a_remotetextureownerid_.SetAllocated(a_remotetextureownerid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -14831,17 +13494,9 @@ inline void Msg_SwapChainPresent::set_allocated_a_remotetextureownerid(std::stri
 
 // Msg_SwapChainDrop
 
-// required bytes a_ownerId = 1;
-inline bool Msg_SwapChainDrop::_internal_has_a_ownerid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_SwapChainDrop::has_a_ownerid() const {
-  return _internal_has_a_ownerid();
-}
+// bytes a_ownerId = 1;
 inline void Msg_SwapChainDrop::clear_a_ownerid() {
   _impl_.a_ownerid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_SwapChainDrop::a_ownerid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_ownerId)
@@ -14850,7 +13505,7 @@ inline const std::string& Msg_SwapChainDrop::a_ownerid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SwapChainDrop::set_a_ownerid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_ownerid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_ownerId)
 }
@@ -14863,32 +13518,22 @@ inline const std::string& Msg_SwapChainDrop::_internal_a_ownerid() const {
   return _impl_.a_ownerid_.Get();
 }
 inline void Msg_SwapChainDrop::_internal_set_a_ownerid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_ownerid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_SwapChainDrop::_internal_mutable_a_ownerid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_ownerid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_SwapChainDrop::release_a_ownerid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_ownerId)
-  if (!_internal_has_a_ownerid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_ownerid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_ownerid_.IsDefault()) {
-    _impl_.a_ownerid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_ownerid_.Release();
 }
 inline void Msg_SwapChainDrop::set_allocated_a_ownerid(std::string* a_ownerid) {
   if (a_ownerid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_ownerid_.SetAllocated(a_ownerid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -14899,17 +13544,9 @@ inline void Msg_SwapChainDrop::set_allocated_a_ownerid(std::string* a_ownerid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_ownerId)
 }
 
-// required bytes a_txnType = 2;
-inline bool Msg_SwapChainDrop::_internal_has_a_txntype() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_SwapChainDrop::has_a_txntype() const {
-  return _internal_has_a_txntype();
-}
+// bytes a_txnType = 2;
 inline void Msg_SwapChainDrop::clear_a_txntype() {
   _impl_.a_txntype_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_SwapChainDrop::a_txntype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_txnType)
@@ -14918,7 +13555,7 @@ inline const std::string& Msg_SwapChainDrop::a_txntype() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SwapChainDrop::set_a_txntype(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_txntype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_txnType)
 }
@@ -14931,32 +13568,22 @@ inline const std::string& Msg_SwapChainDrop::_internal_a_txntype() const {
   return _impl_.a_txntype_.Get();
 }
 inline void Msg_SwapChainDrop::_internal_set_a_txntype(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_txntype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_SwapChainDrop::_internal_mutable_a_txntype() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_txntype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_SwapChainDrop::release_a_txntype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_txnType)
-  if (!_internal_has_a_txntype()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_txntype_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_txntype_.IsDefault()) {
-    _impl_.a_txntype_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_txntype_.Release();
 }
 inline void Msg_SwapChainDrop::set_allocated_a_txntype(std::string* a_txntype) {
   if (a_txntype != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_txntype_.SetAllocated(a_txntype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -14967,17 +13594,9 @@ inline void Msg_SwapChainDrop::set_allocated_a_txntype(std::string* a_txntype) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_txnType)
 }
 
-// required bytes a_txnId = 3;
-inline bool Msg_SwapChainDrop::_internal_has_a_txnid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_SwapChainDrop::has_a_txnid() const {
-  return _internal_has_a_txnid();
-}
+// bytes a_txnId = 3;
 inline void Msg_SwapChainDrop::clear_a_txnid() {
   _impl_.a_txnid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_SwapChainDrop::a_txnid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_txnId)
@@ -14986,7 +13605,7 @@ inline const std::string& Msg_SwapChainDrop::a_txnid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_SwapChainDrop::set_a_txnid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_txnid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_txnId)
 }
@@ -14999,32 +13618,22 @@ inline const std::string& Msg_SwapChainDrop::_internal_a_txnid() const {
   return _impl_.a_txnid_.Get();
 }
 inline void Msg_SwapChainDrop::_internal_set_a_txnid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_txnid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_SwapChainDrop::_internal_mutable_a_txnid() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_txnid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_SwapChainDrop::release_a_txnid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_SwapChainDrop.a_txnId)
-  if (!_internal_has_a_txnid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_txnid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_txnid_.IsDefault()) {
-    _impl_.a_txnid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_txnid_.Release();
 }
 inline void Msg_SwapChainDrop::set_allocated_a_txnid(std::string* a_txnid) {
   if (a_txnid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_txnid_.SetAllocated(a_txnid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -15039,17 +13648,9 @@ inline void Msg_SwapChainDrop::set_allocated_a_txnid(std::string* a_txnid) {
 
 // Msg_DevicePushErrorScope
 
-// required bytes a_selfId = 1;
-inline bool Msg_DevicePushErrorScope::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_DevicePushErrorScope::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_DevicePushErrorScope::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_DevicePushErrorScope::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.a_selfId)
@@ -15058,7 +13659,7 @@ inline const std::string& Msg_DevicePushErrorScope::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DevicePushErrorScope::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.a_selfId)
 }
@@ -15071,32 +13672,22 @@ inline const std::string& Msg_DevicePushErrorScope::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_DevicePushErrorScope::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DevicePushErrorScope::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DevicePushErrorScope::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_DevicePushErrorScope::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -15107,17 +13698,9 @@ inline void Msg_DevicePushErrorScope::set_allocated_a_selfid(std::string* a_self
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.a_selfId)
 }
 
-// required bytes a_aFilter = 2;
-inline bool Msg_DevicePushErrorScope::_internal_has_a_afilter() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_DevicePushErrorScope::has_a_afilter() const {
-  return _internal_has_a_afilter();
-}
+// bytes a_aFilter = 2;
 inline void Msg_DevicePushErrorScope::clear_a_afilter() {
   _impl_.a_afilter_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_DevicePushErrorScope::a_afilter() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.a_aFilter)
@@ -15126,7 +13709,7 @@ inline const std::string& Msg_DevicePushErrorScope::a_afilter() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DevicePushErrorScope::set_a_afilter(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_afilter_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.a_aFilter)
 }
@@ -15139,32 +13722,22 @@ inline const std::string& Msg_DevicePushErrorScope::_internal_a_afilter() const 
   return _impl_.a_afilter_.Get();
 }
 inline void Msg_DevicePushErrorScope::_internal_set_a_afilter(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_afilter_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DevicePushErrorScope::_internal_mutable_a_afilter() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_afilter_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DevicePushErrorScope::release_a_afilter() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePushErrorScope.a_aFilter)
-  if (!_internal_has_a_afilter()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_afilter_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_afilter_.IsDefault()) {
-    _impl_.a_afilter_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_afilter_.Release();
 }
 inline void Msg_DevicePushErrorScope::set_allocated_a_afilter(std::string* a_afilter) {
   if (a_afilter != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_afilter_.SetAllocated(a_afilter, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -15179,17 +13752,9 @@ inline void Msg_DevicePushErrorScope::set_allocated_a_afilter(std::string* a_afi
 
 // Msg_DevicePopErrorScope
 
-// required bytes a_selfId = 1;
-inline bool Msg_DevicePopErrorScope::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_DevicePopErrorScope::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_DevicePopErrorScope::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_DevicePopErrorScope::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePopErrorScope.a_selfId)
@@ -15198,7 +13763,7 @@ inline const std::string& Msg_DevicePopErrorScope::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DevicePopErrorScope::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePopErrorScope.a_selfId)
 }
@@ -15211,32 +13776,22 @@ inline const std::string& Msg_DevicePopErrorScope::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_DevicePopErrorScope::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DevicePopErrorScope::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DevicePopErrorScope::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DevicePopErrorScope.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_DevicePopErrorScope::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -15251,17 +13806,9 @@ inline void Msg_DevicePopErrorScope::set_allocated_a_selfid(std::string* a_selfi
 
 // Reply_DevicePopErrorScope
 
-// required bytes a_result = 1;
-inline bool Reply_DevicePopErrorScope::_internal_has_a_result() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Reply_DevicePopErrorScope::has_a_result() const {
-  return _internal_has_a_result();
-}
+// bytes a_result = 1;
 inline void Reply_DevicePopErrorScope::clear_a_result() {
   _impl_.a_result_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Reply_DevicePopErrorScope::a_result() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Reply_DevicePopErrorScope.a_result)
@@ -15270,7 +13817,7 @@ inline const std::string& Reply_DevicePopErrorScope::a_result() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Reply_DevicePopErrorScope::set_a_result(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_result_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Reply_DevicePopErrorScope.a_result)
 }
@@ -15283,32 +13830,22 @@ inline const std::string& Reply_DevicePopErrorScope::_internal_a_result() const 
   return _impl_.a_result_.Get();
 }
 inline void Reply_DevicePopErrorScope::_internal_set_a_result(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_result_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Reply_DevicePopErrorScope::_internal_mutable_a_result() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_result_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Reply_DevicePopErrorScope::release_a_result() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Reply_DevicePopErrorScope.a_result)
-  if (!_internal_has_a_result()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_result_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_result_.IsDefault()) {
-    _impl_.a_result_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_result_.Release();
 }
 inline void Reply_DevicePopErrorScope::set_allocated_a_result(std::string* a_result) {
   if (a_result != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_result_.SetAllocated(a_result, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -15323,17 +13860,9 @@ inline void Reply_DevicePopErrorScope::set_allocated_a_result(std::string* a_res
 
 // Msg_ReportError
 
-// required bytes a_selfId = 1;
-inline bool Msg_ReportError::_internal_has_a_selfid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_ReportError::has_a_selfid() const {
-  return _internal_has_a_selfid();
-}
+// bytes a_selfId = 1;
 inline void Msg_ReportError::clear_a_selfid() {
   _impl_.a_selfid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_ReportError::a_selfid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_selfId)
@@ -15342,7 +13871,7 @@ inline const std::string& Msg_ReportError::a_selfid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReportError::set_a_selfid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_selfid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_selfId)
 }
@@ -15355,32 +13884,22 @@ inline const std::string& Msg_ReportError::_internal_a_selfid() const {
   return _impl_.a_selfid_.Get();
 }
 inline void Msg_ReportError::_internal_set_a_selfid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_selfid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ReportError::_internal_mutable_a_selfid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_selfid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ReportError::release_a_selfid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_selfId)
-  if (!_internal_has_a_selfid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_selfid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_selfid_.IsDefault()) {
-    _impl_.a_selfid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_selfid_.Release();
 }
 inline void Msg_ReportError::set_allocated_a_selfid(std::string* a_selfid) {
   if (a_selfid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_selfid_.SetAllocated(a_selfid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -15391,17 +13910,9 @@ inline void Msg_ReportError::set_allocated_a_selfid(std::string* a_selfid) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_selfId)
 }
 
-// required bytes a_aType = 2;
-inline bool Msg_ReportError::_internal_has_a_atype() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_ReportError::has_a_atype() const {
-  return _internal_has_a_atype();
-}
+// bytes a_aType = 2;
 inline void Msg_ReportError::clear_a_atype() {
   _impl_.a_atype_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_ReportError::a_atype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_aType)
@@ -15410,7 +13921,7 @@ inline const std::string& Msg_ReportError::a_atype() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReportError::set_a_atype(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_atype_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_aType)
 }
@@ -15423,32 +13934,22 @@ inline const std::string& Msg_ReportError::_internal_a_atype() const {
   return _impl_.a_atype_.Get();
 }
 inline void Msg_ReportError::_internal_set_a_atype(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_atype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ReportError::_internal_mutable_a_atype() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_atype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ReportError::release_a_atype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_aType)
-  if (!_internal_has_a_atype()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_atype_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_atype_.IsDefault()) {
-    _impl_.a_atype_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_atype_.Release();
 }
 inline void Msg_ReportError::set_allocated_a_atype(std::string* a_atype) {
   if (a_atype != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_atype_.SetAllocated(a_atype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -15459,17 +13960,9 @@ inline void Msg_ReportError::set_allocated_a_atype(std::string* a_atype) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_aType)
 }
 
-// required string a_message = 3;
-inline bool Msg_ReportError::_internal_has_a_message() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_ReportError::has_a_message() const {
-  return _internal_has_a_message();
-}
+// string a_message = 3;
 inline void Msg_ReportError::clear_a_message() {
   _impl_.a_message_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& Msg_ReportError::a_message() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_message)
@@ -15478,7 +13971,7 @@ inline const std::string& Msg_ReportError::a_message() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_ReportError::set_a_message(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_message)
 }
@@ -15491,32 +13984,22 @@ inline const std::string& Msg_ReportError::_internal_a_message() const {
   return _impl_.a_message_.Get();
 }
 inline void Msg_ReportError::_internal_set_a_message(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_message_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_ReportError::_internal_mutable_a_message() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_message_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_ReportError::release_a_message() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_ReportError.a_message)
-  if (!_internal_has_a_message()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_message_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_message_.IsDefault()) {
-    _impl_.a_message_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_message_.Release();
 }
 inline void Msg_ReportError::set_allocated_a_message(std::string* a_message) {
   if (a_message != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_message_.SetAllocated(a_message, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -15599,17 +14082,9 @@ inline void Msg_UncapturedError::set_allocated_a_adeviceid(std::string* a_adevic
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.a_aDeviceId)
 }
 
-// required string a_message = 2;
-inline bool Msg_UncapturedError::_internal_has_a_message() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_UncapturedError::has_a_message() const {
-  return _internal_has_a_message();
-}
+// string a_message = 2;
 inline void Msg_UncapturedError::clear_a_message() {
   _impl_.a_message_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_UncapturedError::a_message() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.a_message)
@@ -15618,7 +14093,7 @@ inline const std::string& Msg_UncapturedError::a_message() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_UncapturedError::set_a_message(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.a_message)
 }
@@ -15631,32 +14106,22 @@ inline const std::string& Msg_UncapturedError::_internal_a_message() const {
   return _impl_.a_message_.Get();
 }
 inline void Msg_UncapturedError::_internal_set_a_message(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_message_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_UncapturedError::_internal_mutable_a_message() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_message_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_UncapturedError::release_a_message() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_UncapturedError.a_message)
-  if (!_internal_has_a_message()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_message_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_message_.IsDefault()) {
-    _impl_.a_message_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_message_.Release();
 }
 inline void Msg_UncapturedError::set_allocated_a_message(std::string* a_message) {
   if (a_message != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_message_.SetAllocated(a_message, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -15671,17 +14136,9 @@ inline void Msg_UncapturedError::set_allocated_a_message(std::string* a_message)
 
 // Msg_DeviceLost
 
-// required bytes a_aDeviceId = 1;
-inline bool Msg_DeviceLost::_internal_has_a_adeviceid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_DeviceLost::has_a_adeviceid() const {
-  return _internal_has_a_adeviceid();
-}
+// bytes a_aDeviceId = 1;
 inline void Msg_DeviceLost::clear_a_adeviceid() {
   _impl_.a_adeviceid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_DeviceLost::a_adeviceid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_aDeviceId)
@@ -15690,7 +14147,7 @@ inline const std::string& Msg_DeviceLost::a_adeviceid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceLost::set_a_adeviceid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_adeviceid_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_aDeviceId)
 }
@@ -15703,32 +14160,22 @@ inline const std::string& Msg_DeviceLost::_internal_a_adeviceid() const {
   return _impl_.a_adeviceid_.Get();
 }
 inline void Msg_DeviceLost::_internal_set_a_adeviceid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_adeviceid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceLost::_internal_mutable_a_adeviceid() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_adeviceid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceLost::release_a_adeviceid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_aDeviceId)
-  if (!_internal_has_a_adeviceid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_adeviceid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_adeviceid_.IsDefault()) {
-    _impl_.a_adeviceid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_adeviceid_.Release();
 }
 inline void Msg_DeviceLost::set_allocated_a_adeviceid(std::string* a_adeviceid) {
   if (a_adeviceid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_adeviceid_.SetAllocated(a_adeviceid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -15741,7 +14188,7 @@ inline void Msg_DeviceLost::set_allocated_a_adeviceid(std::string* a_adeviceid) 
 
 // optional uint32 a_reason = 2;
 inline bool Msg_DeviceLost::_internal_has_a_reason() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
 inline bool Msg_DeviceLost::has_a_reason() const {
@@ -15749,7 +14196,7 @@ inline bool Msg_DeviceLost::has_a_reason() const {
 }
 inline void Msg_DeviceLost::clear_a_reason() {
   _impl_.a_reason_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t Msg_DeviceLost::_internal_a_reason() const {
   return _impl_.a_reason_;
@@ -15759,7 +14206,7 @@ inline uint32_t Msg_DeviceLost::a_reason() const {
   return _internal_a_reason();
 }
 inline void Msg_DeviceLost::_internal_set_a_reason(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.a_reason_ = value;
 }
 inline void Msg_DeviceLost::set_a_reason(uint32_t value) {
@@ -15767,17 +14214,9 @@ inline void Msg_DeviceLost::set_a_reason(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_reason)
 }
 
-// required string a_message = 3;
-inline bool Msg_DeviceLost::_internal_has_a_message() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_DeviceLost::has_a_message() const {
-  return _internal_has_a_message();
-}
+// string a_message = 3;
 inline void Msg_DeviceLost::clear_a_message() {
   _impl_.a_message_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_DeviceLost::a_message() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_message)
@@ -15786,7 +14225,7 @@ inline const std::string& Msg_DeviceLost::a_message() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_DeviceLost::set_a_message(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_message)
 }
@@ -15799,32 +14238,22 @@ inline const std::string& Msg_DeviceLost::_internal_a_message() const {
   return _impl_.a_message_.Get();
 }
 inline void Msg_DeviceLost::_internal_set_a_message(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_message_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceLost::_internal_mutable_a_message() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_message_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_DeviceLost::release_a_message() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.webgpu.PWebGPU.Msg_DeviceLost.a_message)
-  if (!_internal_has_a_message()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_message_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_message_.IsDefault()) {
-    _impl_.a_message_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_message_.Release();
 }
 inline void Msg_DeviceLost::set_allocated_a_message(std::string* a_message) {
   if (a_message != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_message_.SetAllocated(a_message, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

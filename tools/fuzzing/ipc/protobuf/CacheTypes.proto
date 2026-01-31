@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/cache/CacheTypes.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 // Importing all namespaced protobuf children headers
 import public "CacheTypes_protobuf.mozilla.dom.cache.h.proto";

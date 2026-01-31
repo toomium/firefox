@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/ipc/IPCTransferable.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom;
 
@@ -16,23 +15,23 @@ import "NeckoChannelParams.proto";
 
 // Structs and unions declarations
 message IPCTransferableDataString {
-  required bytes a_data = 1;
+  bytes a_data = 1;
 }
 
 message IPCTransferableDataCString {
-  required bytes a_data = 1;
+  bytes a_data = 1;
 }
 
 message IPCTransferableDataInputStream {
-  required bytes a_data = 1;
+  bytes a_data = 1;
 }
 
 message IPCTransferableDataImageContainer {
-  required protobuf.mozilla.dom.IPCImage a_image = 1;
+  protobuf.mozilla.dom.IPCImage a_image = 1;
 }
 
 message IPCTransferableDataBlob {
-  required protobuf.mozilla.dom.IPCBlob a_blob = 1;
+  protobuf.mozilla.dom.IPCBlob a_blob = 1;
 }
 
 message IPCTransferableDataType {
@@ -46,8 +45,8 @@ message IPCTransferableDataType {
 }
 
 message IPCTransferableDataItem {
-  required string a_flavor = 1;
-  required protobuf.mozilla.dom.IPCTransferableDataType a_data = 2;
+  string a_flavor = 1;
+  protobuf.mozilla.dom.IPCTransferableDataType a_data = 2;
 }
 
 message IPCTransferableData {
@@ -62,10 +61,10 @@ message IPCTransferableDataOrError {
 }
 
 message IPCTransferable {
-  required protobuf.mozilla.dom.IPCTransferableData a_data = 1;
-  required bool a_isPrivateData = 2;
+  protobuf.mozilla.dom.IPCTransferableData a_data = 1;
+  bool a_isPrivateData = 2;
   optional bytes a_dataPrincipal = 3;
   optional protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 4;
-  required bytes a_contentPolicyType = 5;
+  bytes a_contentPolicyType = 5;
   optional bytes a_referrerInfo = 6;
 }

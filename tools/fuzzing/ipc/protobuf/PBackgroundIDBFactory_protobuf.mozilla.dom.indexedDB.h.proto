@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/indexedDB/PBackgroundIDBFactory.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.indexedDB;
 
@@ -15,16 +14,16 @@ import "PBackgroundSharedTypes.proto";
 
 // Structs and unions declarations
 message CommonFactoryRequestParams {
-  required protobuf.mozilla.dom.indexedDB.DatabaseMetadata a_metadata = 1;
-  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
+  protobuf.mozilla.dom.indexedDB.DatabaseMetadata a_metadata = 1;
+  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 2;
 }
 
 message OpenDatabaseRequestParams {
-  required protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams a_commonParams = 1;
+  protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams a_commonParams = 1;
 }
 
 message DeleteDatabaseRequestParams {
-  required protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams a_commonParams = 1;
+  protobuf.mozilla.dom.indexedDB.CommonFactoryRequestParams a_commonParams = 1;
 }
 
 message FactoryRequestParams {

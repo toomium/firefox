@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/cookiestore/PCookieStore.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom;
 
@@ -23,5 +22,5 @@ message MaybeCookieStruct {
 
 message CookieSubscription {
   optional string a_name = 1;
-  required string a_url = 2;
+  string a_url = 2;
 }

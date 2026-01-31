@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/netwerk/protocol/http/PHttpTransaction.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.net.PHttpTransaction;
 
@@ -19,58 +18,58 @@ import "NeckoChannelParams.proto";
 
 // Message declarations
 message Msg_OnStartRequest {
-  required bytes a_status = 1;
+  bytes a_status = 1;
   optional bytes a_responseHead = 2;
   optional bytes a_securityInfo = 3;
-  required bool a_proxyConnectFailed = 4;
-  required protobuf.mozilla.net.TimingStructArgs a_timings = 5;
-  required sint32 a_proxyConnectResponseCode = 6;
+  bool a_proxyConnectFailed = 4;
+  protobuf.mozilla.net.TimingStructArgs a_timings = 5;
+  sint32 a_proxyConnectResponseCode = 6;
   repeated uint32 a_dataForSniffer = 7;
   optional string a_altSvcUsed = 8;
-  required bool a_dataToChildProcess = 9;
-  required bool a_restarted = 10;
-  required uint32 a_HTTPSSVCReceivedStage = 11;
-  required bool a_supportsHttp3 = 12;
-  required bytes a_trrMode = 13;
-  required bytes a_trrSkipReason = 14;
-  required uint32 a_caps = 15;
-  required bytes a_onStartRequestStart = 16;
-  required protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_connInfoArgs = 17;
+  bool a_dataToChildProcess = 9;
+  bool a_restarted = 10;
+  uint32 a_HTTPSSVCReceivedStage = 11;
+  bool a_supportsHttp3 = 12;
+  bytes a_trrMode = 13;
+  bytes a_trrSkipReason = 14;
+  uint32 a_caps = 15;
+  bytes a_onStartRequestStart = 16;
+  protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_connInfoArgs = 17;
 }
 
 message Msg_OnTransportStatus {
-  required bytes a_status = 1;
-  required sint64 a_progress = 2;
-  required sint64 a_progressMax = 3;
+  bytes a_status = 1;
+  sint64 a_progress = 2;
+  sint64 a_progressMax = 3;
   optional protobuf.mozilla.net.NetworkAddressArg a_networkAddressArg = 4;
 }
 
 message Msg_OnDataAvailable {
-  required string a_data = 1;
-  required uint64 a_offset = 2;
-  required uint32 a_count = 3;
-  required bytes a_onDataAvailableStart = 4;
+  string a_data = 1;
+  uint64 a_offset = 2;
+  uint32 a_count = 3;
+  bytes a_onDataAvailableStart = 4;
 }
 
 message Msg_OnStopRequest {
-  required bytes a_status = 1;
-  required bool a_responseIsComplete = 2;
-  required sint64 a_transferSize = 3;
-  required protobuf.mozilla.net.TimingStructArgs a_timings = 4;
+  bytes a_status = 1;
+  bool a_responseIsComplete = 2;
+  sint64 a_transferSize = 3;
+  protobuf.mozilla.net.TimingStructArgs a_timings = 4;
   optional bytes a_responseTrailers = 5;
   optional protobuf.mozilla.net.TransactionObserverResult a_transactionObserverResult = 6;
-  required bytes a_lastActiveTabOptimization = 7;
-  required bytes a_onStopRequestStart = 8;
+  bytes a_lastActiveTabOptimization = 7;
+  bytes a_onStopRequestStart = 8;
 }
 
 message Msg_OnInitFailed {
-  required bytes a_status = 1;
+  bytes a_status = 1;
 }
 
 message Msg_EarlyHint {
-  required string a_linkHeader = 1;
-  required string a_referrerPolicy = 2;
-  required string a_cspHeader = 3;
+  string a_linkHeader = 1;
+  string a_referrerPolicy = 2;
+  string a_cspHeader = 3;
 }
 
 message Msg___delete__ {
@@ -80,30 +79,30 @@ message Reply___delete__ {
 }
 
 message Msg_Init {
-  required uint32 a_caps = 1;
-  required protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aArgs = 2;
-  required bytes a_reqHeaders = 3;
+  uint32 a_caps = 1;
+  protobuf.mozilla.net.HttpConnectionInfoCloneArgs a_aArgs = 2;
+  bytes a_reqHeaders = 3;
   optional protobuf.mozilla.ipc.IPCStream a_requestBody = 4;
-  required uint64 a_reqContentLength = 5;
-  required bool a_reqBodyIncludesHeaders = 6;
-  required uint64 a_topLevelOuterContentWindowId = 7;
-  required uint32 a_httpTrafficCategory = 8;
-  required uint64 a_requestContextID = 9;
-  required bytes a_classOfService = 10;
-  required uint32 a_initialRwin = 11;
-  required bool a_responseTimeoutEnabled = 12;
-  required uint64 a_channelId = 13;
-  required bool a_hasTransactionObserver = 14;
+  uint64 a_reqContentLength = 5;
+  bool a_reqBodyIncludesHeaders = 6;
+  uint64 a_topLevelOuterContentWindowId = 7;
+  uint32 a_httpTrafficCategory = 8;
+  uint64 a_requestContextID = 9;
+  bytes a_classOfService = 10;
+  uint32 a_initialRwin = 11;
+  bool a_responseTimeoutEnabled = 12;
+  uint64 a_channelId = 13;
+  bool a_hasTransactionObserver = 14;
   optional bytes a_throttleQueue = 15;
-  required bool a_aIsDocumentLoad = 16;
-  required bytes a_aParentIPAddressSpace = 17;
-  required bytes a_aLnaPermissionStatus = 18;
-  required bytes a_aRedirectStart = 19;
-  required bytes a_aRedirectEnd = 20;
+  bool a_aIsDocumentLoad = 16;
+  bytes a_aParentIPAddressSpace = 17;
+  bytes a_aLnaPermissionStatus = 18;
+  bytes a_aRedirectStart = 19;
+  bytes a_aRedirectEnd = 20;
 }
 
 message Msg_CancelPump {
-  required bytes a_status = 1;
+  bytes a_status = 1;
 }
 
 message Msg_SuspendPump {

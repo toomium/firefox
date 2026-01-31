@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/media/systemservices/PCameras.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.camera;
 
@@ -14,26 +13,26 @@ import "PBackgroundSharedTypes.proto";
 
 // Structs and unions declarations
 message VideoCaptureCapability {
-  required sint32 a_width = 1;
-  required sint32 a_height = 2;
-  required sint32 a_maxFPS = 3;
-  required sint32 a_videoType = 4;
-  required bool a_interlaced = 5;
+  sint32 a_width = 1;
+  sint32 a_height = 2;
+  sint32 a_maxFPS = 3;
+  sint32 a_videoType = 4;
+  bool a_interlaced = 5;
 }
 
 message VideoFrameProperties {
-  required bytes a_captureTime = 1;
-  required uint32 a_bufferSize = 2;
-  required uint32 a_rtpTimeStamp = 3;
-  required sint64 a_ntpTimeMs = 4;
-  required sint64 a_renderTimeMs = 5;
-  required sint32 a_rotation = 6;
-  required sint32 a_yAllocatedSize = 7;
-  required sint32 a_uAllocatedSize = 8;
-  required sint32 a_vAllocatedSize = 9;
-  required sint32 a_width = 10;
-  required sint32 a_height = 11;
-  required sint32 a_yStride = 12;
-  required sint32 a_uStride = 13;
-  required sint32 a_vStride = 14;
+  bytes a_captureTime = 1;
+  uint32 a_bufferSize = 2;
+  uint32 a_rtpTimeStamp = 3;
+  sint64 a_ntpTimeMs = 4;
+  sint64 a_renderTimeMs = 5;
+  sint32 a_rotation = 6;
+  sint32 a_yAllocatedSize = 7;
+  sint32 a_uAllocatedSize = 8;
+  sint32 a_vAllocatedSize = 9;
+  sint32 a_width = 10;
+  sint32 a_height = 11;
+  sint32 a_yStride = 12;
+  sint32 a_uStride = 13;
+  sint32 a_vStride = 14;
 }

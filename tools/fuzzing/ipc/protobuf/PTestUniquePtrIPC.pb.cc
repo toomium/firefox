@@ -8,7 +8,10 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -23,13 +26,12 @@ namespace _ipdltest {
 namespace PTestUniquePtrIPC {
 PROTOBUF_CONSTEXPR Msg_TestMessage::Msg_TestMessage(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_a1_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.a_a1_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_a2_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_a4_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_a3_)*/nullptr
-  , /*decltype(_impl_.a_a5_)*/nullptr} {}
+  , /*decltype(_impl_.a_a5_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_TestMessageDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_TestMessageDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -41,9 +43,8 @@ struct Msg_TestMessageDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_TestMessageDefaultTypeInternal _Msg_TestMessage_default_instance_;
 PROTOBUF_CONSTEXPR Msg_TestSendReference::Msg_TestSendReference(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_a_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}} {}
+    /*decltype(_impl_.a_a_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_TestSendReferenceDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_TestSendReferenceDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -57,6 +58,69 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace _ipdltest
 }  // namespace mozilla
 }  // namespace protobuf
+static ::_pb::Metadata file_level_metadata_PTestUniquePtrIPC_2eproto[2];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PTestUniquePtrIPC_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PTestUniquePtrIPC_2eproto = nullptr;
+
+const uint32_t TableStruct_PTestUniquePtrIPC_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestUniquePtrIPC::Msg_TestMessage, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestUniquePtrIPC::Msg_TestMessage, _impl_.a_a1_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestUniquePtrIPC::Msg_TestMessage, _impl_.a_a2_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestUniquePtrIPC::Msg_TestMessage, _impl_.a_a3_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestUniquePtrIPC::Msg_TestMessage, _impl_.a_a4_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestUniquePtrIPC::Msg_TestMessage, _impl_.a_a5_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestUniquePtrIPC::Msg_TestSendReference, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestUniquePtrIPC::Msg_TestSendReference, _impl_.a_a_),
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestUniquePtrIPC::Msg_TestMessage)},
+  { 11, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestUniquePtrIPC::Msg_TestSendReference)},
+};
+
+static const ::_pb::Message* const file_default_instances[] = {
+  &::protobuf::mozilla::_ipdltest::PTestUniquePtrIPC::_Msg_TestMessage_default_instance_._instance,
+  &::protobuf::mozilla::_ipdltest::PTestUniquePtrIPC::_Msg_TestSendReference_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_PTestUniquePtrIPC_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\027PTestUniquePtrIPC.proto\022,protobuf.mozi"
+  "lla._ipdltest.PTestUniquePtrIPC\0324PTestUn"
+  "iquePtrIPC_protobuf.mozilla._ipdltest.h."
+  "proto\"\250\001\n\017Msg_TestMessage\022\014\n\004a_a1\030\001 \001(\014\022"
+  "\014\n\004a_a2\030\002 \001(\014\0225\n\004a_a3\030\003 \001(\0132\'.protobuf.m"
+  "ozilla._ipdltest.DummyStruct\022\014\n\004a_a4\030\004 \001"
+  "(\014\0224\n\004a_a5\030\005 \001(\0132&.protobuf.mozilla._ipd"
+  "ltest.DummyUnion\"$\n\025Msg_TestSendReferenc"
+  "e\022\013\n\003a_a\030\001 \001(\014P\000b\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_PTestUniquePtrIPC_2eproto_deps[1] = {
+  &::descriptor_table_PTestUniquePtrIPC_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_PTestUniquePtrIPC_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_PTestUniquePtrIPC_2eproto = {
+    false, false, 344, descriptor_table_protodef_PTestUniquePtrIPC_2eproto,
+    "PTestUniquePtrIPC.proto",
+    &descriptor_table_PTestUniquePtrIPC_2eproto_once, descriptor_table_PTestUniquePtrIPC_2eproto_deps, 1, 2,
+    schemas, file_default_instances, TableStruct_PTestUniquePtrIPC_2eproto::offsets,
+    file_level_metadata_PTestUniquePtrIPC_2eproto, file_level_enum_descriptors_PTestUniquePtrIPC_2eproto,
+    file_level_service_descriptors_PTestUniquePtrIPC_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PTestUniquePtrIPC_2eproto_getter() {
+  return &descriptor_table_PTestUniquePtrIPC_2eproto;
+}
+
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PTestUniquePtrIPC_2eproto(&descriptor_table_PTestUniquePtrIPC_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace _ipdltest {
@@ -66,27 +130,8 @@ namespace PTestUniquePtrIPC {
 
 class Msg_TestMessage::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_TestMessage>()._impl_._has_bits_);
-  static void set_has_a_a1(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_a2(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
   static const ::protobuf::mozilla::_ipdltest::DummyStruct& a_a3(const Msg_TestMessage* msg);
-  static void set_has_a_a3(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static void set_has_a_a4(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
   static const ::protobuf::mozilla::_ipdltest::DummyUnion& a_a5(const Msg_TestMessage* msg);
-  static void set_has_a_a5(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000001f) ^ 0x0000001f) != 0;
-  }
 };
 
 const ::protobuf::mozilla::_ipdltest::DummyStruct&
@@ -98,37 +143,40 @@ Msg_TestMessage::_Internal::a_a5(const Msg_TestMessage* msg) {
   return *msg->_impl_.a_a5_;
 }
 void Msg_TestMessage::clear_a_a3() {
-  if (_impl_.a_a3_ != nullptr) _impl_.a_a3_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_a3_ != nullptr) {
+    delete _impl_.a_a3_;
+  }
+  _impl_.a_a3_ = nullptr;
 }
 void Msg_TestMessage::clear_a_a5() {
-  if (_impl_.a_a5_ != nullptr) _impl_.a_a5_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_a5_ != nullptr) {
+    delete _impl_.a_a5_;
+  }
+  _impl_.a_a5_ = nullptr;
 }
 Msg_TestMessage::Msg_TestMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage)
 }
 Msg_TestMessage::Msg_TestMessage(const Msg_TestMessage& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_TestMessage* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_a1_){}
+      decltype(_impl_.a_a1_){}
     , decltype(_impl_.a_a2_){}
     , decltype(_impl_.a_a4_){}
     , decltype(_impl_.a_a3_){nullptr}
-    , decltype(_impl_.a_a5_){nullptr}};
+    , decltype(_impl_.a_a5_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_a1_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_a1_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_a1()) {
+  if (!from._internal_a_a1().empty()) {
     _this->_impl_.a_a1_.Set(from._internal_a_a1(), 
       _this->GetArenaForAllocation());
   }
@@ -136,7 +184,7 @@ Msg_TestMessage::Msg_TestMessage(const Msg_TestMessage& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_a2_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_a2()) {
+  if (!from._internal_a_a2().empty()) {
     _this->_impl_.a_a2_.Set(from._internal_a_a2(), 
       _this->GetArenaForAllocation());
   }
@@ -144,7 +192,7 @@ Msg_TestMessage::Msg_TestMessage(const Msg_TestMessage& from)
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_a4_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_a4()) {
+  if (!from._internal_a_a4().empty()) {
     _this->_impl_.a_a4_.Set(from._internal_a_a4(), 
       _this->GetArenaForAllocation());
   }
@@ -162,13 +210,12 @@ inline void Msg_TestMessage::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_a1_){}
+      decltype(_impl_.a_a1_){}
     , decltype(_impl_.a_a2_){}
     , decltype(_impl_.a_a4_){}
     , decltype(_impl_.a_a3_){nullptr}
     , decltype(_impl_.a_a5_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_a1_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -186,7 +233,7 @@ inline void Msg_TestMessage::SharedCtor(
 
 Msg_TestMessage::~Msg_TestMessage() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -212,38 +259,27 @@ void Msg_TestMessage::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _impl_.a_a1_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _impl_.a_a2_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _impl_.a_a4_.ClearNonDefaultToEmpty();
-    }
-    if (cached_has_bits & 0x00000008u) {
-      GOOGLE_DCHECK(_impl_.a_a3_ != nullptr);
-      _impl_.a_a3_->Clear();
-    }
-    if (cached_has_bits & 0x00000010u) {
-      GOOGLE_DCHECK(_impl_.a_a5_ != nullptr);
-      _impl_.a_a5_->Clear();
-    }
+  _impl_.a_a1_.ClearToEmpty();
+  _impl_.a_a2_.ClearToEmpty();
+  _impl_.a_a4_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_a3_ != nullptr) {
+    delete _impl_.a_a3_;
   }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_a3_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_a5_ != nullptr) {
+    delete _impl_.a_a5_;
+  }
+  _impl_.a_a5_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_TestMessage::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_a1 = 1;
+      // bytes a_a1 = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_a1();
@@ -252,7 +288,7 @@ const char* Msg_TestMessage::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_a2 = 2;
+      // bytes a_a2 = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_a2();
@@ -261,7 +297,7 @@ const char* Msg_TestMessage::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla._ipdltest.DummyStruct a_a3 = 3;
+      // .protobuf.mozilla._ipdltest.DummyStruct a_a3 = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_a3(), ptr);
@@ -269,7 +305,7 @@ const char* Msg_TestMessage::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required bytes a_a4 = 4;
+      // bytes a_a4 = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           auto str = _internal_mutable_a_a4();
@@ -278,7 +314,7 @@ const char* Msg_TestMessage::_InternalParse(const char* ptr, ::_pbi::ParseContex
         } else
           goto handle_unusual;
         continue;
-      // required .protobuf.mozilla._ipdltest.DummyUnion a_a5 = 5;
+      // .protobuf.mozilla._ipdltest.DummyUnion a_a5 = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_a5(), ptr);
@@ -297,12 +333,11 @@ const char* Msg_TestMessage::_InternalParse(const char* ptr, ::_pbi::ParseContex
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -316,167 +351,125 @@ uint8_t* Msg_TestMessage::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_a1 = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // bytes a_a1 = 1;
+  if (!this->_internal_a_a1().empty()) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_a1(), target);
   }
 
-  // required bytes a_a2 = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // bytes a_a2 = 2;
+  if (!this->_internal_a_a2().empty()) {
     target = stream->WriteBytesMaybeAliased(
         2, this->_internal_a_a2(), target);
   }
 
-  // required .protobuf.mozilla._ipdltest.DummyStruct a_a3 = 3;
-  if (cached_has_bits & 0x00000008u) {
+  // .protobuf.mozilla._ipdltest.DummyStruct a_a3 = 3;
+  if (this->_internal_has_a_a3()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(3, _Internal::a_a3(this),
         _Internal::a_a3(this).GetCachedSize(), target, stream);
   }
 
-  // required bytes a_a4 = 4;
-  if (cached_has_bits & 0x00000004u) {
+  // bytes a_a4 = 4;
+  if (!this->_internal_a_a4().empty()) {
     target = stream->WriteBytesMaybeAliased(
         4, this->_internal_a_a4(), target);
   }
 
-  // required .protobuf.mozilla._ipdltest.DummyUnion a_a5 = 5;
-  if (cached_has_bits & 0x00000010u) {
+  // .protobuf.mozilla._ipdltest.DummyUnion a_a5 = 5;
+  if (this->_internal_has_a_a5()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(5, _Internal::a_a5(this),
         _Internal::a_a5(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage)
   return target;
 }
 
-size_t Msg_TestMessage::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage)
-  size_t total_size = 0;
-
-  if (_internal_has_a_a1()) {
-    // required bytes a_a1 = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_a1());
-  }
-
-  if (_internal_has_a_a2()) {
-    // required bytes a_a2 = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_a2());
-  }
-
-  if (_internal_has_a_a4()) {
-    // required bytes a_a4 = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_a4());
-  }
-
-  if (_internal_has_a_a3()) {
-    // required .protobuf.mozilla._ipdltest.DummyStruct a_a3 = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_a3_);
-  }
-
-  if (_internal_has_a_a5()) {
-    // required .protobuf.mozilla._ipdltest.DummyUnion a_a5 = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_a5_);
-  }
-
-  return total_size;
-}
 size_t Msg_TestMessage::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
-    // required bytes a_a1 = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_a1());
-
-    // required bytes a_a2 = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_a2());
-
-    // required bytes a_a4 = 4;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_a4());
-
-    // required .protobuf.mozilla._ipdltest.DummyStruct a_a3 = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_a3_);
-
-    // required .protobuf.mozilla._ipdltest.DummyUnion a_a5 = 5;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_a5_);
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // bytes a_a1 = 1;
+  if (!this->_internal_a_a1().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_a1());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // bytes a_a2 = 2;
+  if (!this->_internal_a_a2().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_a2());
+  }
+
+  // bytes a_a4 = 4;
+  if (!this->_internal_a_a4().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_a4());
+  }
+
+  // .protobuf.mozilla._ipdltest.DummyStruct a_a3 = 3;
+  if (this->_internal_has_a_a3()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_a3_);
+  }
+
+  // .protobuf.mozilla._ipdltest.DummyUnion a_a5 = 5;
+  if (this->_internal_has_a_a5()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_a5_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_TestMessage::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_TestMessage*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_TestMessage::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_TestMessage::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_TestMessage::GetClassData() const { return &_class_data_; }
 
-void Msg_TestMessage::MergeFrom(const Msg_TestMessage& from) {
-  Msg_TestMessage* const _this = this;
+
+void Msg_TestMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_TestMessage*>(&to_msg);
+  auto& from = static_cast<const Msg_TestMessage&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_a1(from._internal_a_a1());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_internal_set_a_a2(from._internal_a_a2());
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_internal_set_a_a4(from._internal_a_a4());
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_internal_mutable_a_a3()->::protobuf::mozilla::_ipdltest::DummyStruct::MergeFrom(
-          from._internal_a_a3());
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_internal_mutable_a_a5()->::protobuf::mozilla::_ipdltest::DummyUnion::MergeFrom(
-          from._internal_a_a5());
-    }
+  if (!from._internal_a_a1().empty()) {
+    _this->_internal_set_a_a1(from._internal_a_a1());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (!from._internal_a_a2().empty()) {
+    _this->_internal_set_a_a2(from._internal_a_a2());
+  }
+  if (!from._internal_a_a4().empty()) {
+    _this->_internal_set_a_a4(from._internal_a_a4());
+  }
+  if (from._internal_has_a_a3()) {
+    _this->_internal_mutable_a_a3()->::protobuf::mozilla::_ipdltest::DummyStruct::MergeFrom(
+        from._internal_a_a3());
+  }
+  if (from._internal_has_a_a5()) {
+    _this->_internal_mutable_a_a5()->::protobuf::mozilla::_ipdltest::DummyUnion::MergeFrom(
+        from._internal_a_a5());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_TestMessage::CopyFrom(const Msg_TestMessage& from) {
@@ -487,10 +480,6 @@ void Msg_TestMessage::CopyFrom(const Msg_TestMessage& from) {
 }
 
 bool Msg_TestMessage::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_a3()) {
-    if (!_impl_.a_a3_->IsInitialized()) return false;
-  }
   return true;
 }
 
@@ -499,7 +488,6 @@ void Msg_TestMessage::InternalSwap(Msg_TestMessage* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_a1_, lhs_arena,
       &other->_impl_.a_a1_, rhs_arena
@@ -520,44 +508,37 @@ void Msg_TestMessage::InternalSwap(Msg_TestMessage* other) {
           reinterpret_cast<char*>(&other->_impl_.a_a3_));
 }
 
-std::string Msg_TestMessage::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestMessage";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_TestMessage::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestUniquePtrIPC_2eproto_getter, &descriptor_table_PTestUniquePtrIPC_2eproto_once,
+      file_level_metadata_PTestUniquePtrIPC_2eproto[0]);
 }
-
 
 // ===================================================================
 
 class Msg_TestSendReference::_Internal {
  public:
-  using HasBits = decltype(std::declval<Msg_TestSendReference>()._impl_._has_bits_);
-  static void set_has_a_a(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 Msg_TestSendReference::Msg_TestSendReference(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestSendReference)
 }
 Msg_TestSendReference::Msg_TestSendReference(const Msg_TestSendReference& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   Msg_TestSendReference* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_a_){}};
+      decltype(_impl_.a_a_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_a_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_a_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_a()) {
+  if (!from._internal_a_a().empty()) {
     _this->_impl_.a_a_.Set(from._internal_a_a(), 
       _this->GetArenaForAllocation());
   }
@@ -569,9 +550,8 @@ inline void Msg_TestSendReference::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_a_){}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_a_){}
   };
   _impl_.a_a_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -581,7 +561,7 @@ inline void Msg_TestSendReference::SharedCtor(
 
 Msg_TestSendReference::~Msg_TestSendReference() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestSendReference)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -603,22 +583,17 @@ void Msg_TestSendReference::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_a_.ClearNonDefaultToEmpty();
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_a_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* Msg_TestSendReference::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bytes a_a = 1;
+      // bytes a_a = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_a_a();
@@ -638,12 +613,11 @@ const char* Msg_TestSendReference::_InternalParse(const char* ptr, ::_pbi::Parse
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -657,16 +631,15 @@ uint8_t* Msg_TestSendReference::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required bytes a_a = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // bytes a_a = 1;
+  if (!this->_internal_a_a().empty()) {
     target = stream->WriteBytesMaybeAliased(
         1, this->_internal_a_a(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestSendReference)
   return target;
@@ -676,41 +649,39 @@ size_t Msg_TestSendReference::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestSendReference)
   size_t total_size = 0;
 
-  // required bytes a_a = 1;
-  if (_internal_has_a_a()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->_internal_a_a());
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // bytes a_a = 1;
+  if (!this->_internal_a_a().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_a_a());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Msg_TestSendReference::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const Msg_TestSendReference*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_TestSendReference::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Msg_TestSendReference::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_TestSendReference::GetClassData() const { return &_class_data_; }
 
-void Msg_TestSendReference::MergeFrom(const Msg_TestSendReference& from) {
-  Msg_TestSendReference* const _this = this;
+
+void Msg_TestSendReference::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Msg_TestSendReference*>(&to_msg);
+  auto& from = static_cast<const Msg_TestSendReference&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestSendReference)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_a_a()) {
+  if (!from._internal_a_a().empty()) {
     _this->_internal_set_a_a(from._internal_a_a());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Msg_TestSendReference::CopyFrom(const Msg_TestSendReference& from) {
@@ -721,7 +692,6 @@ void Msg_TestSendReference::CopyFrom(const Msg_TestSendReference& from) {
 }
 
 bool Msg_TestSendReference::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -730,17 +700,17 @@ void Msg_TestSendReference::InternalSwap(Msg_TestSendReference* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_a_, lhs_arena,
       &other->_impl_.a_a_, rhs_arena
   );
 }
 
-std::string Msg_TestSendReference::GetTypeName() const {
-  return "protobuf.mozilla._ipdltest.PTestUniquePtrIPC.Msg_TestSendReference";
+::PROTOBUF_NAMESPACE_ID::Metadata Msg_TestSendReference::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_PTestUniquePtrIPC_2eproto_getter, &descriptor_table_PTestUniquePtrIPC_2eproto_once,
+      file_level_metadata_PTestUniquePtrIPC_2eproto[1]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace PTestUniquePtrIPC

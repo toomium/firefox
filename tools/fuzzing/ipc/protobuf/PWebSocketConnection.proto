@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/netwerk/protocol/websocket/PWebSocketConnection.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.net.PWebSocketConnection;
 
@@ -18,7 +17,7 @@ message Msg_OnTransportAvailable {
 }
 
 message Msg_OnError {
-  required bytes a_aStatus = 1;
+  bytes a_aStatus = 1;
 }
 
 message Msg_OnTCPClosed {
@@ -29,7 +28,7 @@ message Msg_OnDataReceived {
 }
 
 message Msg_OnUpgradeFailed {
-  required bytes a_aReason = 1;
+  bytes a_aReason = 1;
 }
 
 message Msg_WriteOutputData {

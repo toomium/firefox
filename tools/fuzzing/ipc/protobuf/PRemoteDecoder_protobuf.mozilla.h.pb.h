@@ -25,9 +25,11 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "PMediaDecoderParams.pb.h"
 #include "LayersSurfaces.pb.h"
 // @@protoc_insertion_point(includes)
@@ -43,6 +45,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PRemoteDecoder_5fprotobuf_2emozilla_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PRemoteDecoder_5fprotobuf_2emozilla_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 class DecodeResultIPDL;
@@ -71,7 +74,7 @@ namespace mozilla {
 // ===================================================================
 
 class DecodedOutputIPDL final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.DecodedOutputIPDL) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.DecodedOutputIPDL) */ {
  public:
   inline DecodedOutputIPDL() : DecodedOutputIPDL(nullptr) {}
   ~DecodedOutputIPDL() override;
@@ -101,13 +104,15 @@ class DecodedOutputIPDL final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const DecodedOutputIPDL& default_instance() {
     return *internal_default_instance();
   }
@@ -151,9 +156,15 @@ class DecodedOutputIPDL final :
   DecodedOutputIPDL* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<DecodedOutputIPDL>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const DecodedOutputIPDL& from);
-  void MergeFrom(const DecodedOutputIPDL& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const DecodedOutputIPDL& from) {
+    DecodedOutputIPDL::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -166,7 +177,7 @@ class DecodedOutputIPDL final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(DecodedOutputIPDL* other);
 
   private:
@@ -179,7 +190,10 @@ class DecodedOutputIPDL final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -256,7 +270,7 @@ class DecodedOutputIPDL final :
 // -------------------------------------------------------------------
 
 class InitCompletionIPDL final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.InitCompletionIPDL) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.InitCompletionIPDL) */ {
  public:
   inline InitCompletionIPDL() : InitCompletionIPDL(nullptr) {}
   ~InitCompletionIPDL() override;
@@ -286,13 +300,15 @@ class InitCompletionIPDL final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const InitCompletionIPDL& default_instance() {
     return *internal_default_instance();
   }
@@ -330,9 +346,15 @@ class InitCompletionIPDL final :
   InitCompletionIPDL* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<InitCompletionIPDL>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const InitCompletionIPDL& from);
-  void MergeFrom(const InitCompletionIPDL& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const InitCompletionIPDL& from) {
+    InitCompletionIPDL::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -345,7 +367,7 @@ class InitCompletionIPDL final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(InitCompletionIPDL* other);
 
   private:
@@ -358,7 +380,10 @@ class InitCompletionIPDL final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -374,11 +399,7 @@ class InitCompletionIPDL final :
     kAHardwareFieldNumber = 5,
     kAShouldDecoderAlwaysBeRecycledFieldNumber = 8,
   };
-  // required bytes a_type = 1;
-  bool has_a_type() const;
-  private:
-  bool _internal_has_a_type() const;
-  public:
+  // bytes a_type = 1;
   void clear_a_type();
   const std::string& a_type() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -392,11 +413,7 @@ class InitCompletionIPDL final :
   std::string* _internal_mutable_a_type();
   public:
 
-  // required string a_decoderDescription = 2;
-  bool has_a_decoderdescription() const;
-  private:
-  bool _internal_has_a_decoderdescription() const;
-  public:
+  // string a_decoderDescription = 2;
   void clear_a_decoderdescription();
   const std::string& a_decoderdescription() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -410,11 +427,7 @@ class InitCompletionIPDL final :
   std::string* _internal_mutable_a_decoderdescription();
   public:
 
-  // required string a_decoderProcessName = 3;
-  bool has_a_decoderprocessname() const;
-  private:
-  bool _internal_has_a_decoderprocessname() const;
-  public:
+  // string a_decoderProcessName = 3;
   void clear_a_decoderprocessname();
   const std::string& a_decoderprocessname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -428,11 +441,7 @@ class InitCompletionIPDL final :
   std::string* _internal_mutable_a_decoderprocessname();
   public:
 
-  // required string a_decoderCodecName = 4;
-  bool has_a_decodercodecname() const;
-  private:
-  bool _internal_has_a_decodercodecname() const;
-  public:
+  // string a_decoderCodecName = 4;
   void clear_a_decodercodecname();
   const std::string& a_decodercodecname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -446,11 +455,7 @@ class InitCompletionIPDL final :
   std::string* _internal_mutable_a_decodercodecname();
   public:
 
-  // required string a_hardwareReason = 6;
-  bool has_a_hardwarereason() const;
-  private:
-  bool _internal_has_a_hardwarereason() const;
-  public:
+  // string a_hardwareReason = 6;
   void clear_a_hardwarereason();
   const std::string& a_hardwarereason() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -464,11 +469,7 @@ class InitCompletionIPDL final :
   std::string* _internal_mutable_a_hardwarereason();
   public:
 
-  // required bytes a_conversion = 7;
-  bool has_a_conversion() const;
-  private:
-  bool _internal_has_a_conversion() const;
-  public:
+  // bytes a_conversion = 7;
   void clear_a_conversion();
   const std::string& a_conversion() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -482,11 +483,7 @@ class InitCompletionIPDL final :
   std::string* _internal_mutable_a_conversion();
   public:
 
-  // required bool a_hardware = 5;
-  bool has_a_hardware() const;
-  private:
-  bool _internal_has_a_hardware() const;
-  public:
+  // bool a_hardware = 5;
   void clear_a_hardware();
   bool a_hardware() const;
   void set_a_hardware(bool value);
@@ -495,11 +492,7 @@ class InitCompletionIPDL final :
   void _internal_set_a_hardware(bool value);
   public:
 
-  // required bool a_shouldDecoderAlwaysBeRecycled = 8;
-  bool has_a_shoulddecoderalwaysberecycled() const;
-  private:
-  bool _internal_has_a_shoulddecoderalwaysberecycled() const;
-  public:
+  // bool a_shouldDecoderAlwaysBeRecycled = 8;
   void clear_a_shoulddecoderalwaysberecycled();
   bool a_shoulddecoderalwaysberecycled() const;
   void set_a_shoulddecoderalwaysberecycled(bool value);
@@ -512,15 +505,10 @@ class InitCompletionIPDL final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_type_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_decoderdescription_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_decoderprocessname_;
@@ -529,6 +517,7 @@ class InitCompletionIPDL final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_conversion_;
     bool a_hardware_;
     bool a_shoulddecoderalwaysberecycled_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PRemoteDecoder_5fprotobuf_2emozilla_2eh_2eproto;
@@ -536,7 +525,7 @@ class InitCompletionIPDL final :
 // -------------------------------------------------------------------
 
 class InitResultIPDL final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.InitResultIPDL) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.InitResultIPDL) */ {
  public:
   inline InitResultIPDL() : InitResultIPDL(nullptr) {}
   ~InitResultIPDL() override;
@@ -566,13 +555,15 @@ class InitResultIPDL final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const InitResultIPDL& default_instance() {
     return *internal_default_instance();
   }
@@ -616,9 +607,15 @@ class InitResultIPDL final :
   InitResultIPDL* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<InitResultIPDL>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const InitResultIPDL& from);
-  void MergeFrom(const InitResultIPDL& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const InitResultIPDL& from) {
+    InitResultIPDL::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -631,7 +628,7 @@ class InitResultIPDL final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(InitResultIPDL* other);
 
   private:
@@ -644,7 +641,10 @@ class InitResultIPDL final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -721,7 +721,7 @@ class InitResultIPDL final :
 // -------------------------------------------------------------------
 
 class DecodeResultIPDL final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.DecodeResultIPDL) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.DecodeResultIPDL) */ {
  public:
   inline DecodeResultIPDL() : DecodeResultIPDL(nullptr) {}
   ~DecodeResultIPDL() override;
@@ -751,13 +751,15 @@ class DecodeResultIPDL final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const DecodeResultIPDL& default_instance() {
     return *internal_default_instance();
   }
@@ -801,9 +803,15 @@ class DecodeResultIPDL final :
   DecodeResultIPDL* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<DecodeResultIPDL>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const DecodeResultIPDL& from);
-  void MergeFrom(const DecodeResultIPDL& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const DecodeResultIPDL& from) {
+    DecodeResultIPDL::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -816,7 +824,7 @@ class DecodeResultIPDL final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(DecodeResultIPDL* other);
 
   private:
@@ -829,7 +837,10 @@ class DecodeResultIPDL final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1081,17 +1092,9 @@ inline DecodedOutputIPDL::ContentCase DecodedOutputIPDL::content_case() const {
 
 // InitCompletionIPDL
 
-// required bytes a_type = 1;
-inline bool InitCompletionIPDL::_internal_has_a_type() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool InitCompletionIPDL::has_a_type() const {
-  return _internal_has_a_type();
-}
+// bytes a_type = 1;
 inline void InitCompletionIPDL::clear_a_type() {
   _impl_.a_type_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& InitCompletionIPDL::a_type() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.a_type)
@@ -1100,7 +1103,7 @@ inline const std::string& InitCompletionIPDL::a_type() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void InitCompletionIPDL::set_a_type(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_type_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.a_type)
 }
@@ -1113,32 +1116,22 @@ inline const std::string& InitCompletionIPDL::_internal_a_type() const {
   return _impl_.a_type_.Get();
 }
 inline void InitCompletionIPDL::_internal_set_a_type(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_type_.Set(value, GetArenaForAllocation());
 }
 inline std::string* InitCompletionIPDL::_internal_mutable_a_type() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_type_.Mutable(GetArenaForAllocation());
 }
 inline std::string* InitCompletionIPDL::release_a_type() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.InitCompletionIPDL.a_type)
-  if (!_internal_has_a_type()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_type_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_type_.IsDefault()) {
-    _impl_.a_type_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_type_.Release();
 }
 inline void InitCompletionIPDL::set_allocated_a_type(std::string* a_type) {
   if (a_type != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_type_.SetAllocated(a_type, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1149,17 +1142,9 @@ inline void InitCompletionIPDL::set_allocated_a_type(std::string* a_type) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.a_type)
 }
 
-// required string a_decoderDescription = 2;
-inline bool InitCompletionIPDL::_internal_has_a_decoderdescription() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool InitCompletionIPDL::has_a_decoderdescription() const {
-  return _internal_has_a_decoderdescription();
-}
+// string a_decoderDescription = 2;
 inline void InitCompletionIPDL::clear_a_decoderdescription() {
   _impl_.a_decoderdescription_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& InitCompletionIPDL::a_decoderdescription() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.a_decoderDescription)
@@ -1168,7 +1153,7 @@ inline const std::string& InitCompletionIPDL::a_decoderdescription() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void InitCompletionIPDL::set_a_decoderdescription(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_decoderdescription_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.a_decoderDescription)
 }
@@ -1181,32 +1166,22 @@ inline const std::string& InitCompletionIPDL::_internal_a_decoderdescription() c
   return _impl_.a_decoderdescription_.Get();
 }
 inline void InitCompletionIPDL::_internal_set_a_decoderdescription(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_decoderdescription_.Set(value, GetArenaForAllocation());
 }
 inline std::string* InitCompletionIPDL::_internal_mutable_a_decoderdescription() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_decoderdescription_.Mutable(GetArenaForAllocation());
 }
 inline std::string* InitCompletionIPDL::release_a_decoderdescription() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.InitCompletionIPDL.a_decoderDescription)
-  if (!_internal_has_a_decoderdescription()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_decoderdescription_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_decoderdescription_.IsDefault()) {
-    _impl_.a_decoderdescription_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_decoderdescription_.Release();
 }
 inline void InitCompletionIPDL::set_allocated_a_decoderdescription(std::string* a_decoderdescription) {
   if (a_decoderdescription != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_decoderdescription_.SetAllocated(a_decoderdescription, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1217,17 +1192,9 @@ inline void InitCompletionIPDL::set_allocated_a_decoderdescription(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.a_decoderDescription)
 }
 
-// required string a_decoderProcessName = 3;
-inline bool InitCompletionIPDL::_internal_has_a_decoderprocessname() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool InitCompletionIPDL::has_a_decoderprocessname() const {
-  return _internal_has_a_decoderprocessname();
-}
+// string a_decoderProcessName = 3;
 inline void InitCompletionIPDL::clear_a_decoderprocessname() {
   _impl_.a_decoderprocessname_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& InitCompletionIPDL::a_decoderprocessname() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.a_decoderProcessName)
@@ -1236,7 +1203,7 @@ inline const std::string& InitCompletionIPDL::a_decoderprocessname() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void InitCompletionIPDL::set_a_decoderprocessname(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_decoderprocessname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.a_decoderProcessName)
 }
@@ -1249,32 +1216,22 @@ inline const std::string& InitCompletionIPDL::_internal_a_decoderprocessname() c
   return _impl_.a_decoderprocessname_.Get();
 }
 inline void InitCompletionIPDL::_internal_set_a_decoderprocessname(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_decoderprocessname_.Set(value, GetArenaForAllocation());
 }
 inline std::string* InitCompletionIPDL::_internal_mutable_a_decoderprocessname() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_decoderprocessname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* InitCompletionIPDL::release_a_decoderprocessname() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.InitCompletionIPDL.a_decoderProcessName)
-  if (!_internal_has_a_decoderprocessname()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_decoderprocessname_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_decoderprocessname_.IsDefault()) {
-    _impl_.a_decoderprocessname_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_decoderprocessname_.Release();
 }
 inline void InitCompletionIPDL::set_allocated_a_decoderprocessname(std::string* a_decoderprocessname) {
   if (a_decoderprocessname != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_decoderprocessname_.SetAllocated(a_decoderprocessname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1285,17 +1242,9 @@ inline void InitCompletionIPDL::set_allocated_a_decoderprocessname(std::string* 
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.a_decoderProcessName)
 }
 
-// required string a_decoderCodecName = 4;
-inline bool InitCompletionIPDL::_internal_has_a_decodercodecname() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool InitCompletionIPDL::has_a_decodercodecname() const {
-  return _internal_has_a_decodercodecname();
-}
+// string a_decoderCodecName = 4;
 inline void InitCompletionIPDL::clear_a_decodercodecname() {
   _impl_.a_decodercodecname_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& InitCompletionIPDL::a_decodercodecname() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.a_decoderCodecName)
@@ -1304,7 +1253,7 @@ inline const std::string& InitCompletionIPDL::a_decodercodecname() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void InitCompletionIPDL::set_a_decodercodecname(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000008u;
+ 
  _impl_.a_decodercodecname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.a_decoderCodecName)
 }
@@ -1317,32 +1266,22 @@ inline const std::string& InitCompletionIPDL::_internal_a_decodercodecname() con
   return _impl_.a_decodercodecname_.Get();
 }
 inline void InitCompletionIPDL::_internal_set_a_decodercodecname(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_decodercodecname_.Set(value, GetArenaForAllocation());
 }
 inline std::string* InitCompletionIPDL::_internal_mutable_a_decodercodecname() {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   return _impl_.a_decodercodecname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* InitCompletionIPDL::release_a_decodercodecname() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.InitCompletionIPDL.a_decoderCodecName)
-  if (!_internal_has_a_decodercodecname()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.a_decodercodecname_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_decodercodecname_.IsDefault()) {
-    _impl_.a_decodercodecname_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_decodercodecname_.Release();
 }
 inline void InitCompletionIPDL::set_allocated_a_decodercodecname(std::string* a_decodercodecname) {
   if (a_decodercodecname != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    
   }
   _impl_.a_decodercodecname_.SetAllocated(a_decodercodecname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1353,17 +1292,9 @@ inline void InitCompletionIPDL::set_allocated_a_decodercodecname(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.a_decoderCodecName)
 }
 
-// required bool a_hardware = 5;
-inline bool InitCompletionIPDL::_internal_has_a_hardware() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool InitCompletionIPDL::has_a_hardware() const {
-  return _internal_has_a_hardware();
-}
+// bool a_hardware = 5;
 inline void InitCompletionIPDL::clear_a_hardware() {
   _impl_.a_hardware_ = false;
-  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline bool InitCompletionIPDL::_internal_a_hardware() const {
   return _impl_.a_hardware_;
@@ -1373,7 +1304,7 @@ inline bool InitCompletionIPDL::a_hardware() const {
   return _internal_a_hardware();
 }
 inline void InitCompletionIPDL::_internal_set_a_hardware(bool value) {
-  _impl_._has_bits_[0] |= 0x00000040u;
+  
   _impl_.a_hardware_ = value;
 }
 inline void InitCompletionIPDL::set_a_hardware(bool value) {
@@ -1381,17 +1312,9 @@ inline void InitCompletionIPDL::set_a_hardware(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.a_hardware)
 }
 
-// required string a_hardwareReason = 6;
-inline bool InitCompletionIPDL::_internal_has_a_hardwarereason() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool InitCompletionIPDL::has_a_hardwarereason() const {
-  return _internal_has_a_hardwarereason();
-}
+// string a_hardwareReason = 6;
 inline void InitCompletionIPDL::clear_a_hardwarereason() {
   _impl_.a_hardwarereason_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline const std::string& InitCompletionIPDL::a_hardwarereason() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.a_hardwareReason)
@@ -1400,7 +1323,7 @@ inline const std::string& InitCompletionIPDL::a_hardwarereason() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void InitCompletionIPDL::set_a_hardwarereason(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000010u;
+ 
  _impl_.a_hardwarereason_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.a_hardwareReason)
 }
@@ -1413,32 +1336,22 @@ inline const std::string& InitCompletionIPDL::_internal_a_hardwarereason() const
   return _impl_.a_hardwarereason_.Get();
 }
 inline void InitCompletionIPDL::_internal_set_a_hardwarereason(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_hardwarereason_.Set(value, GetArenaForAllocation());
 }
 inline std::string* InitCompletionIPDL::_internal_mutable_a_hardwarereason() {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   return _impl_.a_hardwarereason_.Mutable(GetArenaForAllocation());
 }
 inline std::string* InitCompletionIPDL::release_a_hardwarereason() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.InitCompletionIPDL.a_hardwareReason)
-  if (!_internal_has_a_hardwarereason()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000010u;
-  auto* p = _impl_.a_hardwarereason_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_hardwarereason_.IsDefault()) {
-    _impl_.a_hardwarereason_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_hardwarereason_.Release();
 }
 inline void InitCompletionIPDL::set_allocated_a_hardwarereason(std::string* a_hardwarereason) {
   if (a_hardwarereason != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000010u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000010u;
+    
   }
   _impl_.a_hardwarereason_.SetAllocated(a_hardwarereason, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1449,17 +1362,9 @@ inline void InitCompletionIPDL::set_allocated_a_hardwarereason(std::string* a_ha
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.a_hardwareReason)
 }
 
-// required bytes a_conversion = 7;
-inline bool InitCompletionIPDL::_internal_has_a_conversion() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool InitCompletionIPDL::has_a_conversion() const {
-  return _internal_has_a_conversion();
-}
+// bytes a_conversion = 7;
 inline void InitCompletionIPDL::clear_a_conversion() {
   _impl_.a_conversion_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline const std::string& InitCompletionIPDL::a_conversion() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.InitCompletionIPDL.a_conversion)
@@ -1468,7 +1373,7 @@ inline const std::string& InitCompletionIPDL::a_conversion() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void InitCompletionIPDL::set_a_conversion(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000020u;
+ 
  _impl_.a_conversion_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.InitCompletionIPDL.a_conversion)
 }
@@ -1481,32 +1386,22 @@ inline const std::string& InitCompletionIPDL::_internal_a_conversion() const {
   return _impl_.a_conversion_.Get();
 }
 inline void InitCompletionIPDL::_internal_set_a_conversion(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   _impl_.a_conversion_.Set(value, GetArenaForAllocation());
 }
 inline std::string* InitCompletionIPDL::_internal_mutable_a_conversion() {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   return _impl_.a_conversion_.Mutable(GetArenaForAllocation());
 }
 inline std::string* InitCompletionIPDL::release_a_conversion() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.InitCompletionIPDL.a_conversion)
-  if (!_internal_has_a_conversion()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000020u;
-  auto* p = _impl_.a_conversion_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_conversion_.IsDefault()) {
-    _impl_.a_conversion_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_conversion_.Release();
 }
 inline void InitCompletionIPDL::set_allocated_a_conversion(std::string* a_conversion) {
   if (a_conversion != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000020u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000020u;
+    
   }
   _impl_.a_conversion_.SetAllocated(a_conversion, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1517,17 +1412,9 @@ inline void InitCompletionIPDL::set_allocated_a_conversion(std::string* a_conver
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.InitCompletionIPDL.a_conversion)
 }
 
-// required bool a_shouldDecoderAlwaysBeRecycled = 8;
-inline bool InitCompletionIPDL::_internal_has_a_shoulddecoderalwaysberecycled() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
-  return value;
-}
-inline bool InitCompletionIPDL::has_a_shoulddecoderalwaysberecycled() const {
-  return _internal_has_a_shoulddecoderalwaysberecycled();
-}
+// bool a_shouldDecoderAlwaysBeRecycled = 8;
 inline void InitCompletionIPDL::clear_a_shoulddecoderalwaysberecycled() {
   _impl_.a_shoulddecoderalwaysberecycled_ = false;
-  _impl_._has_bits_[0] &= ~0x00000080u;
 }
 inline bool InitCompletionIPDL::_internal_a_shoulddecoderalwaysberecycled() const {
   return _impl_.a_shoulddecoderalwaysberecycled_;
@@ -1537,7 +1424,7 @@ inline bool InitCompletionIPDL::a_shoulddecoderalwaysberecycled() const {
   return _internal_a_shoulddecoderalwaysberecycled();
 }
 inline void InitCompletionIPDL::_internal_set_a_shoulddecoderalwaysberecycled(bool value) {
-  _impl_._has_bits_[0] |= 0x00000080u;
+  
   _impl_.a_shoulddecoderalwaysberecycled_ = value;
 }
 inline void InitCompletionIPDL::set_a_shoulddecoderalwaysberecycled(bool value) {

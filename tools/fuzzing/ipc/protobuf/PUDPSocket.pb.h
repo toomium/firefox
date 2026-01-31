@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 #include "PUDPSocket_protobuf.h.pb.h"
 #include "IPCStream.pb.h"
 // @@protoc_insertion_point(includes)
@@ -43,6 +46,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PUDPSocket_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PUDPSocket_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace net {
@@ -117,7 +121,7 @@ namespace PUDPSocket {
 // ===================================================================
 
 class Msg_Bind final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_Bind) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_Bind) */ {
  public:
   inline Msg_Bind() : Msg_Bind(nullptr) {}
   ~Msg_Bind() override;
@@ -147,13 +151,15 @@ class Msg_Bind final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_Bind& default_instance() {
     return *internal_default_instance();
   }
@@ -191,9 +197,15 @@ class Msg_Bind final :
   Msg_Bind* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_Bind>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_Bind& from);
-  void MergeFrom(const Msg_Bind& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_Bind& from) {
+    Msg_Bind::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -206,7 +218,7 @@ class Msg_Bind final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_Bind* other);
 
   private:
@@ -219,7 +231,10 @@ class Msg_Bind final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -232,7 +247,7 @@ class Msg_Bind final :
     kARecvBufferSizeFieldNumber = 4,
     kASendBufferSizeFieldNumber = 5,
   };
-  // required .protobuf.UDPAddressInfo a_addressInfo = 1;
+  // .protobuf.UDPAddressInfo a_addressInfo = 1;
   bool has_a_addressinfo() const;
   private:
   bool _internal_has_a_addressinfo() const;
@@ -250,11 +265,7 @@ class Msg_Bind final :
       ::protobuf::UDPAddressInfo* a_addressinfo);
   ::protobuf::UDPAddressInfo* unsafe_arena_release_a_addressinfo();
 
-  // required bool a_addressReuse = 2;
-  bool has_a_addressreuse() const;
-  private:
-  bool _internal_has_a_addressreuse() const;
-  public:
+  // bool a_addressReuse = 2;
   void clear_a_addressreuse();
   bool a_addressreuse() const;
   void set_a_addressreuse(bool value);
@@ -263,11 +274,7 @@ class Msg_Bind final :
   void _internal_set_a_addressreuse(bool value);
   public:
 
-  // required bool a_loopback = 3;
-  bool has_a_loopback() const;
-  private:
-  bool _internal_has_a_loopback() const;
-  public:
+  // bool a_loopback = 3;
   void clear_a_loopback();
   bool a_loopback() const;
   void set_a_loopback(bool value);
@@ -276,11 +283,7 @@ class Msg_Bind final :
   void _internal_set_a_loopback(bool value);
   public:
 
-  // required uint32 a_recvBufferSize = 4;
-  bool has_a_recvbuffersize() const;
-  private:
-  bool _internal_has_a_recvbuffersize() const;
-  public:
+  // uint32 a_recvBufferSize = 4;
   void clear_a_recvbuffersize();
   uint32_t a_recvbuffersize() const;
   void set_a_recvbuffersize(uint32_t value);
@@ -289,11 +292,7 @@ class Msg_Bind final :
   void _internal_set_a_recvbuffersize(uint32_t value);
   public:
 
-  // required uint32 a_sendBufferSize = 5;
-  bool has_a_sendbuffersize() const;
-  private:
-  bool _internal_has_a_sendbuffersize() const;
-  public:
+  // uint32 a_sendBufferSize = 5;
   void clear_a_sendbuffersize();
   uint32_t a_sendbuffersize() const;
   void set_a_sendbuffersize(uint32_t value);
@@ -306,20 +305,16 @@ class Msg_Bind final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::UDPAddressInfo* a_addressinfo_;
     bool a_addressreuse_;
     bool a_loopback_;
     uint32_t a_recvbuffersize_;
     uint32_t a_sendbuffersize_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUDPSocket_2eproto;
@@ -327,7 +322,7 @@ class Msg_Bind final :
 // -------------------------------------------------------------------
 
 class Msg_Connect final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_Connect) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_Connect) */ {
  public:
   inline Msg_Connect() : Msg_Connect(nullptr) {}
   ~Msg_Connect() override;
@@ -357,13 +352,15 @@ class Msg_Connect final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_Connect& default_instance() {
     return *internal_default_instance();
   }
@@ -401,9 +398,15 @@ class Msg_Connect final :
   Msg_Connect* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_Connect>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_Connect& from);
-  void MergeFrom(const Msg_Connect& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_Connect& from) {
+    Msg_Connect::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -416,7 +419,7 @@ class Msg_Connect final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_Connect* other);
 
   private:
@@ -429,7 +432,10 @@ class Msg_Connect final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -438,7 +444,7 @@ class Msg_Connect final :
   enum : int {
     kAAddressInfoFieldNumber = 1,
   };
-  // required .protobuf.UDPAddressInfo a_addressInfo = 1;
+  // .protobuf.UDPAddressInfo a_addressInfo = 1;
   bool has_a_addressinfo() const;
   private:
   bool _internal_has_a_addressinfo() const;
@@ -464,9 +470,8 @@ class Msg_Connect final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::UDPAddressInfo* a_addressinfo_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUDPSocket_2eproto;
@@ -474,7 +479,7 @@ class Msg_Connect final :
 // -------------------------------------------------------------------
 
 class Msg_OutgoingData final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_OutgoingData) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_OutgoingData) */ {
  public:
   inline Msg_OutgoingData() : Msg_OutgoingData(nullptr) {}
   ~Msg_OutgoingData() override;
@@ -504,13 +509,15 @@ class Msg_OutgoingData final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_OutgoingData& default_instance() {
     return *internal_default_instance();
   }
@@ -548,9 +555,15 @@ class Msg_OutgoingData final :
   Msg_OutgoingData* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_OutgoingData>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_OutgoingData& from);
-  void MergeFrom(const Msg_OutgoingData& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_OutgoingData& from) {
+    Msg_OutgoingData::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -563,7 +576,7 @@ class Msg_OutgoingData final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_OutgoingData* other);
 
   private:
@@ -576,7 +589,10 @@ class Msg_OutgoingData final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -586,7 +602,7 @@ class Msg_OutgoingData final :
     kADataFieldNumber = 1,
     kAAddrFieldNumber = 2,
   };
-  // required .protobuf.UDPData a_data = 1;
+  // .protobuf.UDPData a_data = 1;
   bool has_a_data() const;
   private:
   bool _internal_has_a_data() const;
@@ -604,7 +620,7 @@ class Msg_OutgoingData final :
       ::protobuf::UDPData* a_data);
   ::protobuf::UDPData* unsafe_arena_release_a_data();
 
-  // required .protobuf.UDPSocketAddr a_addr = 2;
+  // .protobuf.UDPSocketAddr a_addr = 2;
   bool has_a_addr() const;
   private:
   bool _internal_has_a_addr() const;
@@ -626,17 +642,13 @@ class Msg_OutgoingData final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::UDPData* a_data_;
     ::protobuf::UDPSocketAddr* a_addr_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUDPSocket_2eproto;
@@ -644,7 +656,7 @@ class Msg_OutgoingData final :
 // -------------------------------------------------------------------
 
 class Msg_JoinMulticast final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_JoinMulticast) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_JoinMulticast) */ {
  public:
   inline Msg_JoinMulticast() : Msg_JoinMulticast(nullptr) {}
   ~Msg_JoinMulticast() override;
@@ -674,13 +686,15 @@ class Msg_JoinMulticast final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_JoinMulticast& default_instance() {
     return *internal_default_instance();
   }
@@ -718,9 +732,15 @@ class Msg_JoinMulticast final :
   Msg_JoinMulticast* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_JoinMulticast>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_JoinMulticast& from);
-  void MergeFrom(const Msg_JoinMulticast& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_JoinMulticast& from) {
+    Msg_JoinMulticast::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -733,7 +753,7 @@ class Msg_JoinMulticast final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_JoinMulticast* other);
 
   private:
@@ -746,7 +766,10 @@ class Msg_JoinMulticast final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -756,11 +779,7 @@ class Msg_JoinMulticast final :
     kAMulticastAddressFieldNumber = 1,
     kAIfaceFieldNumber = 2,
   };
-  // required string a_multicastAddress = 1;
-  bool has_a_multicastaddress() const;
-  private:
-  bool _internal_has_a_multicastaddress() const;
-  public:
+  // string a_multicastAddress = 1;
   void clear_a_multicastaddress();
   const std::string& a_multicastaddress() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -774,11 +793,7 @@ class Msg_JoinMulticast final :
   std::string* _internal_mutable_a_multicastaddress();
   public:
 
-  // required string a_iface = 2;
-  bool has_a_iface() const;
-  private:
-  bool _internal_has_a_iface() const;
-  public:
+  // string a_iface = 2;
   void clear_a_iface();
   const std::string& a_iface() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -796,17 +811,13 @@ class Msg_JoinMulticast final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_multicastaddress_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_iface_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUDPSocket_2eproto;
@@ -814,7 +825,7 @@ class Msg_JoinMulticast final :
 // -------------------------------------------------------------------
 
 class Msg_LeaveMulticast final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_LeaveMulticast) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_LeaveMulticast) */ {
  public:
   inline Msg_LeaveMulticast() : Msg_LeaveMulticast(nullptr) {}
   ~Msg_LeaveMulticast() override;
@@ -844,13 +855,15 @@ class Msg_LeaveMulticast final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_LeaveMulticast& default_instance() {
     return *internal_default_instance();
   }
@@ -888,9 +901,15 @@ class Msg_LeaveMulticast final :
   Msg_LeaveMulticast* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_LeaveMulticast>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_LeaveMulticast& from);
-  void MergeFrom(const Msg_LeaveMulticast& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_LeaveMulticast& from) {
+    Msg_LeaveMulticast::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -903,7 +922,7 @@ class Msg_LeaveMulticast final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_LeaveMulticast* other);
 
   private:
@@ -916,7 +935,10 @@ class Msg_LeaveMulticast final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -926,11 +948,7 @@ class Msg_LeaveMulticast final :
     kAMulticastAddressFieldNumber = 1,
     kAIfaceFieldNumber = 2,
   };
-  // required string a_multicastAddress = 1;
-  bool has_a_multicastaddress() const;
-  private:
-  bool _internal_has_a_multicastaddress() const;
-  public:
+  // string a_multicastAddress = 1;
   void clear_a_multicastaddress();
   const std::string& a_multicastaddress() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -944,11 +962,7 @@ class Msg_LeaveMulticast final :
   std::string* _internal_mutable_a_multicastaddress();
   public:
 
-  // required string a_iface = 2;
-  bool has_a_iface() const;
-  private:
-  bool _internal_has_a_iface() const;
-  public:
+  // string a_iface = 2;
   void clear_a_iface();
   const std::string& a_iface() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -966,17 +980,13 @@ class Msg_LeaveMulticast final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_multicastaddress_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_iface_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUDPSocket_2eproto;
@@ -984,10 +994,9 @@ class Msg_LeaveMulticast final :
 // -------------------------------------------------------------------
 
 class Msg_Close final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_Close) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_Close) */ {
  public:
   inline Msg_Close() : Msg_Close(nullptr) {}
-  ~Msg_Close() override;
   explicit PROTOBUF_CONSTEXPR Msg_Close(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_Close(const Msg_Close& from);
@@ -1014,13 +1023,15 @@ class Msg_Close final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_Close& default_instance() {
     return *internal_default_instance();
   }
@@ -1058,23 +1069,15 @@ class Msg_Close final :
   Msg_Close* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_Close>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_Close& from);
-  void MergeFrom(const Msg_Close& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_Close* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_Close& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_Close& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1086,7 +1089,10 @@ class Msg_Close final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1100,18 +1106,15 @@ class Msg_Close final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PUDPSocket_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_RequestDelete final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_RequestDelete) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_RequestDelete) */ {
  public:
   inline Msg_RequestDelete() : Msg_RequestDelete(nullptr) {}
-  ~Msg_RequestDelete() override;
   explicit PROTOBUF_CONSTEXPR Msg_RequestDelete(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_RequestDelete(const Msg_RequestDelete& from);
@@ -1138,13 +1141,15 @@ class Msg_RequestDelete final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_RequestDelete& default_instance() {
     return *internal_default_instance();
   }
@@ -1182,23 +1187,15 @@ class Msg_RequestDelete final :
   Msg_RequestDelete* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_RequestDelete>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_RequestDelete& from);
-  void MergeFrom(const Msg_RequestDelete& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_RequestDelete* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_RequestDelete& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_RequestDelete& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1210,7 +1207,10 @@ class Msg_RequestDelete final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1224,15 +1224,13 @@ class Msg_RequestDelete final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PUDPSocket_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_CallbackOpened final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_CallbackOpened) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_CallbackOpened) */ {
  public:
   inline Msg_CallbackOpened() : Msg_CallbackOpened(nullptr) {}
   ~Msg_CallbackOpened() override;
@@ -1262,13 +1260,15 @@ class Msg_CallbackOpened final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_CallbackOpened& default_instance() {
     return *internal_default_instance();
   }
@@ -1306,9 +1306,15 @@ class Msg_CallbackOpened final :
   Msg_CallbackOpened* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_CallbackOpened>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_CallbackOpened& from);
-  void MergeFrom(const Msg_CallbackOpened& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_CallbackOpened& from) {
+    Msg_CallbackOpened::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1321,7 +1327,7 @@ class Msg_CallbackOpened final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_CallbackOpened* other);
 
   private:
@@ -1334,7 +1340,10 @@ class Msg_CallbackOpened final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1343,7 +1352,7 @@ class Msg_CallbackOpened final :
   enum : int {
     kAAddressInfoFieldNumber = 1,
   };
-  // required .protobuf.UDPAddressInfo a_addressInfo = 1;
+  // .protobuf.UDPAddressInfo a_addressInfo = 1;
   bool has_a_addressinfo() const;
   private:
   bool _internal_has_a_addressinfo() const;
@@ -1369,9 +1378,8 @@ class Msg_CallbackOpened final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::UDPAddressInfo* a_addressinfo_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUDPSocket_2eproto;
@@ -1379,7 +1387,7 @@ class Msg_CallbackOpened final :
 // -------------------------------------------------------------------
 
 class Msg_CallbackConnected final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_CallbackConnected) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_CallbackConnected) */ {
  public:
   inline Msg_CallbackConnected() : Msg_CallbackConnected(nullptr) {}
   ~Msg_CallbackConnected() override;
@@ -1409,13 +1417,15 @@ class Msg_CallbackConnected final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_CallbackConnected& default_instance() {
     return *internal_default_instance();
   }
@@ -1453,9 +1463,15 @@ class Msg_CallbackConnected final :
   Msg_CallbackConnected* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_CallbackConnected>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_CallbackConnected& from);
-  void MergeFrom(const Msg_CallbackConnected& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_CallbackConnected& from) {
+    Msg_CallbackConnected::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1468,7 +1484,7 @@ class Msg_CallbackConnected final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_CallbackConnected* other);
 
   private:
@@ -1481,7 +1497,10 @@ class Msg_CallbackConnected final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1490,7 +1509,7 @@ class Msg_CallbackConnected final :
   enum : int {
     kAAddressInfoFieldNumber = 1,
   };
-  // required .protobuf.UDPAddressInfo a_addressInfo = 1;
+  // .protobuf.UDPAddressInfo a_addressInfo = 1;
   bool has_a_addressinfo() const;
   private:
   bool _internal_has_a_addressinfo() const;
@@ -1516,9 +1535,8 @@ class Msg_CallbackConnected final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::protobuf::UDPAddressInfo* a_addressinfo_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUDPSocket_2eproto;
@@ -1526,10 +1544,9 @@ class Msg_CallbackConnected final :
 // -------------------------------------------------------------------
 
 class Msg_CallbackClosed final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_CallbackClosed) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_CallbackClosed) */ {
  public:
   inline Msg_CallbackClosed() : Msg_CallbackClosed(nullptr) {}
-  ~Msg_CallbackClosed() override;
   explicit PROTOBUF_CONSTEXPR Msg_CallbackClosed(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_CallbackClosed(const Msg_CallbackClosed& from);
@@ -1556,13 +1573,15 @@ class Msg_CallbackClosed final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_CallbackClosed& default_instance() {
     return *internal_default_instance();
   }
@@ -1600,23 +1619,15 @@ class Msg_CallbackClosed final :
   Msg_CallbackClosed* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_CallbackClosed>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg_CallbackClosed& from);
-  void MergeFrom(const Msg_CallbackClosed& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg_CallbackClosed* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg_CallbackClosed& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg_CallbackClosed& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1628,7 +1639,10 @@ class Msg_CallbackClosed final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1642,15 +1656,13 @@ class Msg_CallbackClosed final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PUDPSocket_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Msg_CallbackReceivedData final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_CallbackReceivedData) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_CallbackReceivedData) */ {
  public:
   inline Msg_CallbackReceivedData() : Msg_CallbackReceivedData(nullptr) {}
   ~Msg_CallbackReceivedData() override;
@@ -1680,13 +1692,15 @@ class Msg_CallbackReceivedData final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_CallbackReceivedData& default_instance() {
     return *internal_default_instance();
   }
@@ -1724,9 +1738,15 @@ class Msg_CallbackReceivedData final :
   Msg_CallbackReceivedData* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_CallbackReceivedData>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_CallbackReceivedData& from);
-  void MergeFrom(const Msg_CallbackReceivedData& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_CallbackReceivedData& from) {
+    Msg_CallbackReceivedData::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1739,7 +1759,7 @@ class Msg_CallbackReceivedData final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_CallbackReceivedData* other);
 
   private:
@@ -1752,7 +1772,10 @@ class Msg_CallbackReceivedData final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1784,7 +1807,7 @@ class Msg_CallbackReceivedData final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t >*
       mutable_a_data();
 
-  // required .protobuf.UDPAddressInfo a_addressInfo = 1;
+  // .protobuf.UDPAddressInfo a_addressInfo = 1;
   bool has_a_addressinfo() const;
   private:
   bool _internal_has_a_addressinfo() const;
@@ -1810,10 +1833,10 @@ class Msg_CallbackReceivedData final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< uint32_t > a_data_;
+    mutable std::atomic<int> _a_data_cached_byte_size_;
     ::protobuf::UDPAddressInfo* a_addressinfo_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUDPSocket_2eproto;
@@ -1821,7 +1844,7 @@ class Msg_CallbackReceivedData final :
 // -------------------------------------------------------------------
 
 class Msg_CallbackError final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_CallbackError) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg_CallbackError) */ {
  public:
   inline Msg_CallbackError() : Msg_CallbackError(nullptr) {}
   ~Msg_CallbackError() override;
@@ -1851,13 +1874,15 @@ class Msg_CallbackError final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg_CallbackError& default_instance() {
     return *internal_default_instance();
   }
@@ -1895,9 +1920,15 @@ class Msg_CallbackError final :
   Msg_CallbackError* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_CallbackError>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const Msg_CallbackError& from);
-  void MergeFrom(const Msg_CallbackError& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const Msg_CallbackError& from) {
+    Msg_CallbackError::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1910,7 +1941,7 @@ class Msg_CallbackError final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(Msg_CallbackError* other);
 
   private:
@@ -1923,7 +1954,10 @@ class Msg_CallbackError final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1934,11 +1968,7 @@ class Msg_CallbackError final :
     kAFilenameFieldNumber = 2,
     kALineNumberFieldNumber = 3,
   };
-  // required string a_message = 1;
-  bool has_a_message() const;
-  private:
-  bool _internal_has_a_message() const;
-  public:
+  // string a_message = 1;
   void clear_a_message();
   const std::string& a_message() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1952,11 +1982,7 @@ class Msg_CallbackError final :
   std::string* _internal_mutable_a_message();
   public:
 
-  // required string a_filename = 2;
-  bool has_a_filename() const;
-  private:
-  bool _internal_has_a_filename() const;
-  public:
+  // string a_filename = 2;
   void clear_a_filename();
   const std::string& a_filename() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1970,11 +1996,7 @@ class Msg_CallbackError final :
   std::string* _internal_mutable_a_filename();
   public:
 
-  // required uint32 a_lineNumber = 3;
-  bool has_a_linenumber() const;
-  private:
-  bool _internal_has_a_linenumber() const;
-  public:
+  // uint32 a_lineNumber = 3;
   void clear_a_linenumber();
   uint32_t a_linenumber() const;
   void set_a_linenumber(uint32_t value);
@@ -1987,18 +2009,14 @@ class Msg_CallbackError final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_message_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_filename_;
     uint32_t a_linenumber_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_PUDPSocket_2eproto;
@@ -2006,10 +2024,9 @@ class Msg_CallbackError final :
 // -------------------------------------------------------------------
 
 class Msg___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Msg___delete__) */ {
  public:
   inline Msg___delete__() : Msg___delete__(nullptr) {}
-  ~Msg___delete__() override;
   explicit PROTOBUF_CONSTEXPR Msg___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg___delete__(const Msg___delete__& from);
@@ -2036,13 +2053,15 @@ class Msg___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Msg___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -2080,23 +2099,15 @@ class Msg___delete__ final :
   Msg___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Msg___delete__& from);
-  void MergeFrom(const Msg___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Msg___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Msg___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -2108,7 +2119,10 @@ class Msg___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2122,18 +2136,15 @@ class Msg___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PUDPSocket_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply___delete__ final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Reply___delete__) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.PUDPSocket.Reply___delete__) */ {
  public:
   inline Reply___delete__() : Reply___delete__(nullptr) {}
-  ~Reply___delete__() override;
   explicit PROTOBUF_CONSTEXPR Reply___delete__(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Reply___delete__(const Reply___delete__& from);
@@ -2160,13 +2171,15 @@ class Reply___delete__ final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const Reply___delete__& default_instance() {
     return *internal_default_instance();
   }
@@ -2204,23 +2217,15 @@ class Reply___delete__ final :
   Reply___delete__* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply___delete__>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const Reply___delete__& from);
-  void MergeFrom(const Reply___delete__& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(Reply___delete__* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const Reply___delete__& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -2232,7 +2237,10 @@ class Reply___delete__ final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2246,9 +2254,7 @@ class Reply___delete__ final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_PUDPSocket_2eproto;
 };
 // ===================================================================
@@ -2262,11 +2268,9 @@ class Reply___delete__ final :
 #endif  // __GNUC__
 // Msg_Bind
 
-// required .protobuf.UDPAddressInfo a_addressInfo = 1;
+// .protobuf.UDPAddressInfo a_addressInfo = 1;
 inline bool Msg_Bind::_internal_has_a_addressinfo() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_addressinfo_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_addressinfo_ != nullptr;
 }
 inline bool Msg_Bind::has_a_addressinfo() const {
   return _internal_has_a_addressinfo();
@@ -2287,14 +2291,14 @@ inline void Msg_Bind::unsafe_arena_set_allocated_a_addressinfo(
   }
   _impl_.a_addressinfo_ = a_addressinfo;
   if (a_addressinfo) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_Bind.a_addressInfo)
 }
 inline ::protobuf::UDPAddressInfo* Msg_Bind::release_a_addressinfo() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::UDPAddressInfo* temp = _impl_.a_addressinfo_;
   _impl_.a_addressinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -2310,13 +2314,13 @@ inline ::protobuf::UDPAddressInfo* Msg_Bind::release_a_addressinfo() {
 }
 inline ::protobuf::UDPAddressInfo* Msg_Bind::unsafe_arena_release_a_addressinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PUDPSocket.Msg_Bind.a_addressInfo)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::UDPAddressInfo* temp = _impl_.a_addressinfo_;
   _impl_.a_addressinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::UDPAddressInfo* Msg_Bind::_internal_mutable_a_addressinfo() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_addressinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::UDPAddressInfo>(GetArenaForAllocation());
     _impl_.a_addressinfo_ = p;
@@ -2341,25 +2345,17 @@ inline void Msg_Bind::set_allocated_a_addressinfo(::protobuf::UDPAddressInfo* a_
       a_addressinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_addressinfo, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_addressinfo_ = a_addressinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_Bind.a_addressInfo)
 }
 
-// required bool a_addressReuse = 2;
-inline bool Msg_Bind::_internal_has_a_addressreuse() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_Bind::has_a_addressreuse() const {
-  return _internal_has_a_addressreuse();
-}
+// bool a_addressReuse = 2;
 inline void Msg_Bind::clear_a_addressreuse() {
   _impl_.a_addressreuse_ = false;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline bool Msg_Bind::_internal_a_addressreuse() const {
   return _impl_.a_addressreuse_;
@@ -2369,7 +2365,7 @@ inline bool Msg_Bind::a_addressreuse() const {
   return _internal_a_addressreuse();
 }
 inline void Msg_Bind::_internal_set_a_addressreuse(bool value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_addressreuse_ = value;
 }
 inline void Msg_Bind::set_a_addressreuse(bool value) {
@@ -2377,17 +2373,9 @@ inline void Msg_Bind::set_a_addressreuse(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PUDPSocket.Msg_Bind.a_addressReuse)
 }
 
-// required bool a_loopback = 3;
-inline bool Msg_Bind::_internal_has_a_loopback() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_Bind::has_a_loopback() const {
-  return _internal_has_a_loopback();
-}
+// bool a_loopback = 3;
 inline void Msg_Bind::clear_a_loopback() {
   _impl_.a_loopback_ = false;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline bool Msg_Bind::_internal_a_loopback() const {
   return _impl_.a_loopback_;
@@ -2397,7 +2385,7 @@ inline bool Msg_Bind::a_loopback() const {
   return _internal_a_loopback();
 }
 inline void Msg_Bind::_internal_set_a_loopback(bool value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_loopback_ = value;
 }
 inline void Msg_Bind::set_a_loopback(bool value) {
@@ -2405,17 +2393,9 @@ inline void Msg_Bind::set_a_loopback(bool value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PUDPSocket.Msg_Bind.a_loopback)
 }
 
-// required uint32 a_recvBufferSize = 4;
-inline bool Msg_Bind::_internal_has_a_recvbuffersize() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_Bind::has_a_recvbuffersize() const {
-  return _internal_has_a_recvbuffersize();
-}
+// uint32 a_recvBufferSize = 4;
 inline void Msg_Bind::clear_a_recvbuffersize() {
   _impl_.a_recvbuffersize_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline uint32_t Msg_Bind::_internal_a_recvbuffersize() const {
   return _impl_.a_recvbuffersize_;
@@ -2425,7 +2405,7 @@ inline uint32_t Msg_Bind::a_recvbuffersize() const {
   return _internal_a_recvbuffersize();
 }
 inline void Msg_Bind::_internal_set_a_recvbuffersize(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_recvbuffersize_ = value;
 }
 inline void Msg_Bind::set_a_recvbuffersize(uint32_t value) {
@@ -2433,17 +2413,9 @@ inline void Msg_Bind::set_a_recvbuffersize(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PUDPSocket.Msg_Bind.a_recvBufferSize)
 }
 
-// required uint32 a_sendBufferSize = 5;
-inline bool Msg_Bind::_internal_has_a_sendbuffersize() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool Msg_Bind::has_a_sendbuffersize() const {
-  return _internal_has_a_sendbuffersize();
-}
+// uint32 a_sendBufferSize = 5;
 inline void Msg_Bind::clear_a_sendbuffersize() {
   _impl_.a_sendbuffersize_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline uint32_t Msg_Bind::_internal_a_sendbuffersize() const {
   return _impl_.a_sendbuffersize_;
@@ -2453,7 +2425,7 @@ inline uint32_t Msg_Bind::a_sendbuffersize() const {
   return _internal_a_sendbuffersize();
 }
 inline void Msg_Bind::_internal_set_a_sendbuffersize(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_sendbuffersize_ = value;
 }
 inline void Msg_Bind::set_a_sendbuffersize(uint32_t value) {
@@ -2465,11 +2437,9 @@ inline void Msg_Bind::set_a_sendbuffersize(uint32_t value) {
 
 // Msg_Connect
 
-// required .protobuf.UDPAddressInfo a_addressInfo = 1;
+// .protobuf.UDPAddressInfo a_addressInfo = 1;
 inline bool Msg_Connect::_internal_has_a_addressinfo() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_addressinfo_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_addressinfo_ != nullptr;
 }
 inline bool Msg_Connect::has_a_addressinfo() const {
   return _internal_has_a_addressinfo();
@@ -2490,14 +2460,14 @@ inline void Msg_Connect::unsafe_arena_set_allocated_a_addressinfo(
   }
   _impl_.a_addressinfo_ = a_addressinfo;
   if (a_addressinfo) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_Connect.a_addressInfo)
 }
 inline ::protobuf::UDPAddressInfo* Msg_Connect::release_a_addressinfo() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::UDPAddressInfo* temp = _impl_.a_addressinfo_;
   _impl_.a_addressinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -2513,13 +2483,13 @@ inline ::protobuf::UDPAddressInfo* Msg_Connect::release_a_addressinfo() {
 }
 inline ::protobuf::UDPAddressInfo* Msg_Connect::unsafe_arena_release_a_addressinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PUDPSocket.Msg_Connect.a_addressInfo)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::UDPAddressInfo* temp = _impl_.a_addressinfo_;
   _impl_.a_addressinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::UDPAddressInfo* Msg_Connect::_internal_mutable_a_addressinfo() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_addressinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::UDPAddressInfo>(GetArenaForAllocation());
     _impl_.a_addressinfo_ = p;
@@ -2544,9 +2514,9 @@ inline void Msg_Connect::set_allocated_a_addressinfo(::protobuf::UDPAddressInfo*
       a_addressinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_addressinfo, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_addressinfo_ = a_addressinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_Connect.a_addressInfo)
@@ -2556,11 +2526,9 @@ inline void Msg_Connect::set_allocated_a_addressinfo(::protobuf::UDPAddressInfo*
 
 // Msg_OutgoingData
 
-// required .protobuf.UDPData a_data = 1;
+// .protobuf.UDPData a_data = 1;
 inline bool Msg_OutgoingData::_internal_has_a_data() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_data_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_data_ != nullptr;
 }
 inline bool Msg_OutgoingData::has_a_data() const {
   return _internal_has_a_data();
@@ -2581,14 +2549,14 @@ inline void Msg_OutgoingData::unsafe_arena_set_allocated_a_data(
   }
   _impl_.a_data_ = a_data;
   if (a_data) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_OutgoingData.a_data)
 }
 inline ::protobuf::UDPData* Msg_OutgoingData::release_a_data() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::UDPData* temp = _impl_.a_data_;
   _impl_.a_data_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -2604,13 +2572,13 @@ inline ::protobuf::UDPData* Msg_OutgoingData::release_a_data() {
 }
 inline ::protobuf::UDPData* Msg_OutgoingData::unsafe_arena_release_a_data() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PUDPSocket.Msg_OutgoingData.a_data)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::UDPData* temp = _impl_.a_data_;
   _impl_.a_data_ = nullptr;
   return temp;
 }
 inline ::protobuf::UDPData* Msg_OutgoingData::_internal_mutable_a_data() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_data_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::UDPData>(GetArenaForAllocation());
     _impl_.a_data_ = p;
@@ -2635,19 +2603,17 @@ inline void Msg_OutgoingData::set_allocated_a_data(::protobuf::UDPData* a_data) 
       a_data = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_data, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_data_ = a_data;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_OutgoingData.a_data)
 }
 
-// required .protobuf.UDPSocketAddr a_addr = 2;
+// .protobuf.UDPSocketAddr a_addr = 2;
 inline bool Msg_OutgoingData::_internal_has_a_addr() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_addr_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_addr_ != nullptr;
 }
 inline bool Msg_OutgoingData::has_a_addr() const {
   return _internal_has_a_addr();
@@ -2668,14 +2634,14 @@ inline void Msg_OutgoingData::unsafe_arena_set_allocated_a_addr(
   }
   _impl_.a_addr_ = a_addr;
   if (a_addr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_OutgoingData.a_addr)
 }
 inline ::protobuf::UDPSocketAddr* Msg_OutgoingData::release_a_addr() {
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::UDPSocketAddr* temp = _impl_.a_addr_;
   _impl_.a_addr_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -2691,13 +2657,13 @@ inline ::protobuf::UDPSocketAddr* Msg_OutgoingData::release_a_addr() {
 }
 inline ::protobuf::UDPSocketAddr* Msg_OutgoingData::unsafe_arena_release_a_addr() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PUDPSocket.Msg_OutgoingData.a_addr)
-  _impl_._has_bits_[0] &= ~0x00000002u;
+  
   ::protobuf::UDPSocketAddr* temp = _impl_.a_addr_;
   _impl_.a_addr_ = nullptr;
   return temp;
 }
 inline ::protobuf::UDPSocketAddr* Msg_OutgoingData::_internal_mutable_a_addr() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   if (_impl_.a_addr_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::UDPSocketAddr>(GetArenaForAllocation());
     _impl_.a_addr_ = p;
@@ -2722,9 +2688,9 @@ inline void Msg_OutgoingData::set_allocated_a_addr(::protobuf::UDPSocketAddr* a_
       a_addr = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_addr, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_addr_ = a_addr;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_OutgoingData.a_addr)
@@ -2734,17 +2700,9 @@ inline void Msg_OutgoingData::set_allocated_a_addr(::protobuf::UDPSocketAddr* a_
 
 // Msg_JoinMulticast
 
-// required string a_multicastAddress = 1;
-inline bool Msg_JoinMulticast::_internal_has_a_multicastaddress() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_JoinMulticast::has_a_multicastaddress() const {
-  return _internal_has_a_multicastaddress();
-}
+// string a_multicastAddress = 1;
 inline void Msg_JoinMulticast::clear_a_multicastaddress() {
   _impl_.a_multicastaddress_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_JoinMulticast::a_multicastaddress() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PUDPSocket.Msg_JoinMulticast.a_multicastAddress)
@@ -2753,7 +2711,7 @@ inline const std::string& Msg_JoinMulticast::a_multicastaddress() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_JoinMulticast::set_a_multicastaddress(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_multicastaddress_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PUDPSocket.Msg_JoinMulticast.a_multicastAddress)
 }
@@ -2766,32 +2724,22 @@ inline const std::string& Msg_JoinMulticast::_internal_a_multicastaddress() cons
   return _impl_.a_multicastaddress_.Get();
 }
 inline void Msg_JoinMulticast::_internal_set_a_multicastaddress(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_multicastaddress_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_JoinMulticast::_internal_mutable_a_multicastaddress() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_multicastaddress_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_JoinMulticast::release_a_multicastaddress() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PUDPSocket.Msg_JoinMulticast.a_multicastAddress)
-  if (!_internal_has_a_multicastaddress()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_multicastaddress_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_multicastaddress_.IsDefault()) {
-    _impl_.a_multicastaddress_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_multicastaddress_.Release();
 }
 inline void Msg_JoinMulticast::set_allocated_a_multicastaddress(std::string* a_multicastaddress) {
   if (a_multicastaddress != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_multicastaddress_.SetAllocated(a_multicastaddress, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2802,17 +2750,9 @@ inline void Msg_JoinMulticast::set_allocated_a_multicastaddress(std::string* a_m
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_JoinMulticast.a_multicastAddress)
 }
 
-// required string a_iface = 2;
-inline bool Msg_JoinMulticast::_internal_has_a_iface() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_JoinMulticast::has_a_iface() const {
-  return _internal_has_a_iface();
-}
+// string a_iface = 2;
 inline void Msg_JoinMulticast::clear_a_iface() {
   _impl_.a_iface_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_JoinMulticast::a_iface() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PUDPSocket.Msg_JoinMulticast.a_iface)
@@ -2821,7 +2761,7 @@ inline const std::string& Msg_JoinMulticast::a_iface() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_JoinMulticast::set_a_iface(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_iface_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PUDPSocket.Msg_JoinMulticast.a_iface)
 }
@@ -2834,32 +2774,22 @@ inline const std::string& Msg_JoinMulticast::_internal_a_iface() const {
   return _impl_.a_iface_.Get();
 }
 inline void Msg_JoinMulticast::_internal_set_a_iface(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_iface_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_JoinMulticast::_internal_mutable_a_iface() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_iface_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_JoinMulticast::release_a_iface() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PUDPSocket.Msg_JoinMulticast.a_iface)
-  if (!_internal_has_a_iface()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_iface_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_iface_.IsDefault()) {
-    _impl_.a_iface_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_iface_.Release();
 }
 inline void Msg_JoinMulticast::set_allocated_a_iface(std::string* a_iface) {
   if (a_iface != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_iface_.SetAllocated(a_iface, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2874,17 +2804,9 @@ inline void Msg_JoinMulticast::set_allocated_a_iface(std::string* a_iface) {
 
 // Msg_LeaveMulticast
 
-// required string a_multicastAddress = 1;
-inline bool Msg_LeaveMulticast::_internal_has_a_multicastaddress() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_LeaveMulticast::has_a_multicastaddress() const {
-  return _internal_has_a_multicastaddress();
-}
+// string a_multicastAddress = 1;
 inline void Msg_LeaveMulticast::clear_a_multicastaddress() {
   _impl_.a_multicastaddress_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_LeaveMulticast::a_multicastaddress() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PUDPSocket.Msg_LeaveMulticast.a_multicastAddress)
@@ -2893,7 +2815,7 @@ inline const std::string& Msg_LeaveMulticast::a_multicastaddress() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LeaveMulticast::set_a_multicastaddress(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_multicastaddress_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PUDPSocket.Msg_LeaveMulticast.a_multicastAddress)
 }
@@ -2906,32 +2828,22 @@ inline const std::string& Msg_LeaveMulticast::_internal_a_multicastaddress() con
   return _impl_.a_multicastaddress_.Get();
 }
 inline void Msg_LeaveMulticast::_internal_set_a_multicastaddress(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_multicastaddress_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_LeaveMulticast::_internal_mutable_a_multicastaddress() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_multicastaddress_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_LeaveMulticast::release_a_multicastaddress() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PUDPSocket.Msg_LeaveMulticast.a_multicastAddress)
-  if (!_internal_has_a_multicastaddress()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_multicastaddress_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_multicastaddress_.IsDefault()) {
-    _impl_.a_multicastaddress_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_multicastaddress_.Release();
 }
 inline void Msg_LeaveMulticast::set_allocated_a_multicastaddress(std::string* a_multicastaddress) {
   if (a_multicastaddress != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_multicastaddress_.SetAllocated(a_multicastaddress, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2942,17 +2854,9 @@ inline void Msg_LeaveMulticast::set_allocated_a_multicastaddress(std::string* a_
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_LeaveMulticast.a_multicastAddress)
 }
 
-// required string a_iface = 2;
-inline bool Msg_LeaveMulticast::_internal_has_a_iface() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_LeaveMulticast::has_a_iface() const {
-  return _internal_has_a_iface();
-}
+// string a_iface = 2;
 inline void Msg_LeaveMulticast::clear_a_iface() {
   _impl_.a_iface_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_LeaveMulticast::a_iface() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PUDPSocket.Msg_LeaveMulticast.a_iface)
@@ -2961,7 +2865,7 @@ inline const std::string& Msg_LeaveMulticast::a_iface() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_LeaveMulticast::set_a_iface(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_iface_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PUDPSocket.Msg_LeaveMulticast.a_iface)
 }
@@ -2974,32 +2878,22 @@ inline const std::string& Msg_LeaveMulticast::_internal_a_iface() const {
   return _impl_.a_iface_.Get();
 }
 inline void Msg_LeaveMulticast::_internal_set_a_iface(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_iface_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_LeaveMulticast::_internal_mutable_a_iface() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_iface_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_LeaveMulticast::release_a_iface() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PUDPSocket.Msg_LeaveMulticast.a_iface)
-  if (!_internal_has_a_iface()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_iface_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_iface_.IsDefault()) {
-    _impl_.a_iface_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_iface_.Release();
 }
 inline void Msg_LeaveMulticast::set_allocated_a_iface(std::string* a_iface) {
   if (a_iface != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_iface_.SetAllocated(a_iface, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3022,11 +2916,9 @@ inline void Msg_LeaveMulticast::set_allocated_a_iface(std::string* a_iface) {
 
 // Msg_CallbackOpened
 
-// required .protobuf.UDPAddressInfo a_addressInfo = 1;
+// .protobuf.UDPAddressInfo a_addressInfo = 1;
 inline bool Msg_CallbackOpened::_internal_has_a_addressinfo() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_addressinfo_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_addressinfo_ != nullptr;
 }
 inline bool Msg_CallbackOpened::has_a_addressinfo() const {
   return _internal_has_a_addressinfo();
@@ -3047,14 +2939,14 @@ inline void Msg_CallbackOpened::unsafe_arena_set_allocated_a_addressinfo(
   }
   _impl_.a_addressinfo_ = a_addressinfo;
   if (a_addressinfo) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_CallbackOpened.a_addressInfo)
 }
 inline ::protobuf::UDPAddressInfo* Msg_CallbackOpened::release_a_addressinfo() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::UDPAddressInfo* temp = _impl_.a_addressinfo_;
   _impl_.a_addressinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -3070,13 +2962,13 @@ inline ::protobuf::UDPAddressInfo* Msg_CallbackOpened::release_a_addressinfo() {
 }
 inline ::protobuf::UDPAddressInfo* Msg_CallbackOpened::unsafe_arena_release_a_addressinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PUDPSocket.Msg_CallbackOpened.a_addressInfo)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::UDPAddressInfo* temp = _impl_.a_addressinfo_;
   _impl_.a_addressinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::UDPAddressInfo* Msg_CallbackOpened::_internal_mutable_a_addressinfo() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_addressinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::UDPAddressInfo>(GetArenaForAllocation());
     _impl_.a_addressinfo_ = p;
@@ -3101,9 +2993,9 @@ inline void Msg_CallbackOpened::set_allocated_a_addressinfo(::protobuf::UDPAddre
       a_addressinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_addressinfo, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_addressinfo_ = a_addressinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_CallbackOpened.a_addressInfo)
@@ -3113,11 +3005,9 @@ inline void Msg_CallbackOpened::set_allocated_a_addressinfo(::protobuf::UDPAddre
 
 // Msg_CallbackConnected
 
-// required .protobuf.UDPAddressInfo a_addressInfo = 1;
+// .protobuf.UDPAddressInfo a_addressInfo = 1;
 inline bool Msg_CallbackConnected::_internal_has_a_addressinfo() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_addressinfo_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_addressinfo_ != nullptr;
 }
 inline bool Msg_CallbackConnected::has_a_addressinfo() const {
   return _internal_has_a_addressinfo();
@@ -3138,14 +3028,14 @@ inline void Msg_CallbackConnected::unsafe_arena_set_allocated_a_addressinfo(
   }
   _impl_.a_addressinfo_ = a_addressinfo;
   if (a_addressinfo) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_CallbackConnected.a_addressInfo)
 }
 inline ::protobuf::UDPAddressInfo* Msg_CallbackConnected::release_a_addressinfo() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::UDPAddressInfo* temp = _impl_.a_addressinfo_;
   _impl_.a_addressinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -3161,13 +3051,13 @@ inline ::protobuf::UDPAddressInfo* Msg_CallbackConnected::release_a_addressinfo(
 }
 inline ::protobuf::UDPAddressInfo* Msg_CallbackConnected::unsafe_arena_release_a_addressinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PUDPSocket.Msg_CallbackConnected.a_addressInfo)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::UDPAddressInfo* temp = _impl_.a_addressinfo_;
   _impl_.a_addressinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::UDPAddressInfo* Msg_CallbackConnected::_internal_mutable_a_addressinfo() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_addressinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::UDPAddressInfo>(GetArenaForAllocation());
     _impl_.a_addressinfo_ = p;
@@ -3192,9 +3082,9 @@ inline void Msg_CallbackConnected::set_allocated_a_addressinfo(::protobuf::UDPAd
       a_addressinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_addressinfo, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_addressinfo_ = a_addressinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_CallbackConnected.a_addressInfo)
@@ -3208,11 +3098,9 @@ inline void Msg_CallbackConnected::set_allocated_a_addressinfo(::protobuf::UDPAd
 
 // Msg_CallbackReceivedData
 
-// required .protobuf.UDPAddressInfo a_addressInfo = 1;
+// .protobuf.UDPAddressInfo a_addressInfo = 1;
 inline bool Msg_CallbackReceivedData::_internal_has_a_addressinfo() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_addressinfo_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_addressinfo_ != nullptr;
 }
 inline bool Msg_CallbackReceivedData::has_a_addressinfo() const {
   return _internal_has_a_addressinfo();
@@ -3233,14 +3121,14 @@ inline void Msg_CallbackReceivedData::unsafe_arena_set_allocated_a_addressinfo(
   }
   _impl_.a_addressinfo_ = a_addressinfo;
   if (a_addressinfo) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_CallbackReceivedData.a_addressInfo)
 }
 inline ::protobuf::UDPAddressInfo* Msg_CallbackReceivedData::release_a_addressinfo() {
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::UDPAddressInfo* temp = _impl_.a_addressinfo_;
   _impl_.a_addressinfo_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -3256,13 +3144,13 @@ inline ::protobuf::UDPAddressInfo* Msg_CallbackReceivedData::release_a_addressin
 }
 inline ::protobuf::UDPAddressInfo* Msg_CallbackReceivedData::unsafe_arena_release_a_addressinfo() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PUDPSocket.Msg_CallbackReceivedData.a_addressInfo)
-  _impl_._has_bits_[0] &= ~0x00000001u;
+  
   ::protobuf::UDPAddressInfo* temp = _impl_.a_addressinfo_;
   _impl_.a_addressinfo_ = nullptr;
   return temp;
 }
 inline ::protobuf::UDPAddressInfo* Msg_CallbackReceivedData::_internal_mutable_a_addressinfo() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   if (_impl_.a_addressinfo_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::UDPAddressInfo>(GetArenaForAllocation());
     _impl_.a_addressinfo_ = p;
@@ -3287,9 +3175,9 @@ inline void Msg_CallbackReceivedData::set_allocated_a_addressinfo(::protobuf::UD
       a_addressinfo = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_addressinfo, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_addressinfo_ = a_addressinfo;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_CallbackReceivedData.a_addressInfo)
@@ -3346,17 +3234,9 @@ Msg_CallbackReceivedData::mutable_a_data() {
 
 // Msg_CallbackError
 
-// required string a_message = 1;
-inline bool Msg_CallbackError::_internal_has_a_message() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_CallbackError::has_a_message() const {
-  return _internal_has_a_message();
-}
+// string a_message = 1;
 inline void Msg_CallbackError::clear_a_message() {
   _impl_.a_message_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Msg_CallbackError::a_message() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PUDPSocket.Msg_CallbackError.a_message)
@@ -3365,7 +3245,7 @@ inline const std::string& Msg_CallbackError::a_message() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CallbackError::set_a_message(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PUDPSocket.Msg_CallbackError.a_message)
 }
@@ -3378,32 +3258,22 @@ inline const std::string& Msg_CallbackError::_internal_a_message() const {
   return _impl_.a_message_.Get();
 }
 inline void Msg_CallbackError::_internal_set_a_message(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_message_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CallbackError::_internal_mutable_a_message() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_message_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CallbackError::release_a_message() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PUDPSocket.Msg_CallbackError.a_message)
-  if (!_internal_has_a_message()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_message_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_message_.IsDefault()) {
-    _impl_.a_message_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_message_.Release();
 }
 inline void Msg_CallbackError::set_allocated_a_message(std::string* a_message) {
   if (a_message != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_message_.SetAllocated(a_message, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3414,17 +3284,9 @@ inline void Msg_CallbackError::set_allocated_a_message(std::string* a_message) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_CallbackError.a_message)
 }
 
-// required string a_filename = 2;
-inline bool Msg_CallbackError::_internal_has_a_filename() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_CallbackError::has_a_filename() const {
-  return _internal_has_a_filename();
-}
+// string a_filename = 2;
 inline void Msg_CallbackError::clear_a_filename() {
   _impl_.a_filename_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& Msg_CallbackError::a_filename() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.net.PUDPSocket.Msg_CallbackError.a_filename)
@@ -3433,7 +3295,7 @@ inline const std::string& Msg_CallbackError::a_filename() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void Msg_CallbackError::set_a_filename(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_filename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.net.PUDPSocket.Msg_CallbackError.a_filename)
 }
@@ -3446,32 +3308,22 @@ inline const std::string& Msg_CallbackError::_internal_a_filename() const {
   return _impl_.a_filename_.Get();
 }
 inline void Msg_CallbackError::_internal_set_a_filename(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_filename_.Set(value, GetArenaForAllocation());
 }
 inline std::string* Msg_CallbackError::_internal_mutable_a_filename() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_filename_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Msg_CallbackError::release_a_filename() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.net.PUDPSocket.Msg_CallbackError.a_filename)
-  if (!_internal_has_a_filename()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_filename_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_filename_.IsDefault()) {
-    _impl_.a_filename_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_filename_.Release();
 }
 inline void Msg_CallbackError::set_allocated_a_filename(std::string* a_filename) {
   if (a_filename != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_filename_.SetAllocated(a_filename, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3482,17 +3334,9 @@ inline void Msg_CallbackError::set_allocated_a_filename(std::string* a_filename)
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.net.PUDPSocket.Msg_CallbackError.a_filename)
 }
 
-// required uint32 a_lineNumber = 3;
-inline bool Msg_CallbackError::_internal_has_a_linenumber() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_CallbackError::has_a_linenumber() const {
-  return _internal_has_a_linenumber();
-}
+// uint32 a_lineNumber = 3;
 inline void Msg_CallbackError::clear_a_linenumber() {
   _impl_.a_linenumber_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline uint32_t Msg_CallbackError::_internal_a_linenumber() const {
   return _impl_.a_linenumber_;
@@ -3502,7 +3346,7 @@ inline uint32_t Msg_CallbackError::a_linenumber() const {
   return _internal_a_linenumber();
 }
 inline void Msg_CallbackError::_internal_set_a_linenumber(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_linenumber_ = value;
 }
 inline void Msg_CallbackError::set_a_linenumber(uint32_t value) {

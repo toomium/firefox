@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/gfx/layers/ipc/PCompositorBridge.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.layers.PCompositorBridge;
 
@@ -21,10 +20,10 @@ import "PCompositorBridgeTypes.proto";
 
 // Message declarations
 message Msg_DidComposite {
-  required bytes a_id = 1;
+  bytes a_id = 1;
   repeated bytes a_transactionId = 2;
-  required bytes a_compositeStart = 3;
-  required bytes a_compositeEnd = 4;
+  bytes a_compositeStart = 3;
+  bytes a_compositeEnd = 4;
 }
 
 message Msg_NotifyFrameStats {
@@ -36,17 +35,17 @@ message Msg_ParentAsyncMessages {
 }
 
 message Msg_ObserveLayersUpdate {
-  required bytes a_aLayersId = 1;
-  required bool a_aActive = 2;
+  bytes a_aLayersId = 1;
+  bool a_aActive = 2;
 }
 
 message Msg_CompositorOptionsChanged {
-  required bytes a_id = 1;
-  required bytes a_newOptions = 2;
+  bytes a_id = 1;
+  bytes a_newOptions = 2;
 }
 
 message Msg_NotifyJankedAnimations {
-  required bytes a_id = 1;
+  bytes a_id = 1;
   repeated uint64 a_aJankedAnimations = 2;
 }
 
@@ -57,31 +56,31 @@ message Reply___delete__ {
 }
 
 message Msg_PCompositorWidgetConstructor {
-  required sint64 a_actorid = 1;
-  required protobuf.mozilla.widget.CompositorWidgetInitData a_aInitData = 2;
+  sint64 a_actorid = 1;
+  protobuf.mozilla.widget.CompositorWidgetInitData a_aInitData = 2;
 }
 
 message Reply_PCompositorWidgetConstructor {
 }
 
 message Msg_Initialize {
-  required bytes a_rootLayerTreeId = 1;
+  bytes a_rootLayerTreeId = 1;
 }
 
 message Reply_Initialize {
 }
 
 message Msg_PAPZConstructor {
-  required sint64 a_actorid = 1;
-  required bytes a_layersId = 2;
+  sint64 a_actorid = 1;
+  bytes a_layersId = 2;
 }
 
 message Reply_PAPZConstructor {
 }
 
 message Msg_PAPZCTreeManagerConstructor {
-  required sint64 a_actorid = 1;
-  required bytes a_layersId = 2;
+  sint64 a_actorid = 1;
+  bytes a_layersId = 2;
 }
 
 message Reply_PAPZCTreeManagerConstructor {
@@ -109,46 +108,46 @@ message Msg_ResumeAsync {
 }
 
 message Msg_NotifyChildCreated {
-  required bytes a_id = 1;
+  bytes a_id = 1;
 }
 
 message Reply_NotifyChildCreated {
-  required bytes a_compositorOptions = 1;
+  bytes a_compositorOptions = 1;
 }
 
 message Msg_MapAndNotifyChildCreated {
-  required bytes a_id = 1;
-  required bytes a_owner = 2;
+  bytes a_id = 1;
+  bytes a_owner = 2;
 }
 
 message Reply_MapAndNotifyChildCreated {
-  required bytes a_compositorOptions = 1;
+  bytes a_compositorOptions = 1;
 }
 
 message Msg_AdoptChild {
-  required bytes a_id = 1;
+  bytes a_id = 1;
 }
 
 message Msg_NotifyChildRecreated {
-  required bytes a_id = 1;
+  bytes a_id = 1;
 }
 
 message Reply_NotifyChildRecreated {
-  required bytes a_compositorOptions = 1;
+  bytes a_compositorOptions = 1;
 }
 
 message Msg_NotifyMemoryPressure {
 }
 
 message Msg_FlushRendering {
-  required bytes a_aReasons = 1;
+  bytes a_aReasons = 1;
 }
 
 message Reply_FlushRendering {
 }
 
 message Msg_FlushRenderingAsync {
-  required bytes a_aReasons = 1;
+  bytes a_aReasons = 1;
 }
 
 message Msg_WaitOnTransactionProcessed {
@@ -158,19 +157,19 @@ message Reply_WaitOnTransactionProcessed {
 }
 
 message Msg_ForcePresent {
-  required bytes a_aReasons = 1;
+  bytes a_aReasons = 1;
 }
 
 message Msg_StartFrameTimeRecording {
-  required sint32 a_bufferSize = 1;
+  sint32 a_bufferSize = 1;
 }
 
 message Reply_StartFrameTimeRecording {
-  required uint32 a_startIndex = 1;
+  uint32 a_startIndex = 1;
 }
 
 message Msg_StopFrameTimeRecording {
-  required uint32 a_startIndex = 1;
+  uint32 a_startIndex = 1;
 }
 
 message Reply_StopFrameTimeRecording {
@@ -178,14 +177,14 @@ message Reply_StopFrameTimeRecording {
 }
 
 message Msg_PTextureConstructor {
-  required sint64 a_actorid = 1;
-  required protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 2;
-  required protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 3;
-  required bytes a_aBackend = 4;
-  required bytes a_aTextureFlags = 5;
-  required bytes a_id = 6;
-  required uint64 a_aSerial = 7;
-  required bytes a_aExternalImageId = 8;
+  sint64 a_actorid = 1;
+  protobuf.mozilla.layers.SurfaceDescriptor a_aSharedData = 2;
+  protobuf.mozilla.layers.ReadLockDescriptor a_aReadLock = 3;
+  bytes a_aBackend = 4;
+  bytes a_aTextureFlags = 5;
+  bytes a_id = 6;
+  uint64 a_aSerial = 7;
+  bytes a_aExternalImageId = 8;
 }
 
 message Reply_PTextureConstructor {
@@ -198,29 +197,29 @@ message Reply_SyncWithCompositor {
 }
 
 message Msg_PWebRenderBridgeConstructor {
-  required sint64 a_actorid = 1;
-  required bytes a_pipelineId = 2;
-  required bytes a_aSize = 3;
-  required bytes a_aKind = 4;
+  sint64 a_actorid = 1;
+  bytes a_pipelineId = 2;
+  bytes a_aSize = 3;
+  bytes a_aKind = 4;
 }
 
 message Reply_PWebRenderBridgeConstructor {
 }
 
 message Msg_CheckContentOnlyTDR {
-  required uint32 a_sequenceNum = 1;
+  uint32 a_sequenceNum = 1;
 }
 
 message Reply_CheckContentOnlyTDR {
-  required bool a_isContentOnlyTDR = 1;
+  bool a_isContentOnlyTDR = 1;
 }
 
 message Msg_BeginRecording {
-  required bytes a_aRecordingStart = 1;
+  bytes a_aRecordingStart = 1;
 }
 
 message Reply_BeginRecording {
-  required bool a_success = 1;
+  bool a_success = 1;
 }
 
 message Msg_EndRecording {
@@ -234,7 +233,7 @@ message Msg_RequestFxrOutput {
 }
 
 message Msg_DynamicToolbarOffsetChanged {
-  required sint32 a_aOffset = 1;
+  sint32 a_aOffset = 1;
 }
 
 // Parameter mappings stats:

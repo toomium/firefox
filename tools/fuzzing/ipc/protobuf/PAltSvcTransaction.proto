@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/netwerk/protocol/http/PAltSvcTransaction.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.net.PAltSvcTransaction;
 
@@ -16,14 +15,14 @@ package protobuf.mozilla.net.PAltSvcTransaction;
 
 // Message declarations
 message Msg___delete__ {
-  required bool a_aValidateResult = 1;
+  bool a_aValidateResult = 1;
 }
 
 message Reply___delete__ {
 }
 
 message Msg_OnTransactionClose {
-  required bool a_aValidateResult = 1;
+  bool a_aValidateResult = 1;
 }
 
 // Parameter mappings stats:

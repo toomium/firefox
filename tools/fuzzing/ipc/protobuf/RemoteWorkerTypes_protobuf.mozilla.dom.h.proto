@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/workers/remoteworkers/RemoteWorkerTypes.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom;
 
@@ -21,11 +20,11 @@ import "ProtocolTypes.proto";
 
 // Structs and unions declarations
 message ServiceWorkerData {
-  required protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_descriptor = 1;
-  required protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_registrationDescriptor = 2;
-  required string a_cacheName = 3;
-  required uint32 a_loadFlags = 4;
-  required string a_id = 5;
+  protobuf.mozilla.dom.IPCServiceWorkerDescriptor a_descriptor = 1;
+  protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor a_registrationDescriptor = 2;
+  string a_cacheName = 3;
+  uint32 a_loadFlags = 4;
+  string a_id = 5;
 }
 
 message OptionalServiceWorkerData {
@@ -36,49 +35,49 @@ message OptionalServiceWorkerData {
 }
 
 message RemoteWorkerData {
-  required string a_originalScriptURL = 1;
-  required protobuf.mozilla.ipc.URIParams a_baseScriptURL = 2;
-  required protobuf.mozilla.ipc.URIParams a_resolvedScriptURL = 3;
-  required bytes a_workerOptions = 4;
-  required protobuf.mozilla.ipc.PrincipalInfo a_loadingPrincipalInfo = 5;
-  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 6;
-  required protobuf.mozilla.ipc.PrincipalInfo a_partitionedPrincipalInfo = 7;
-  required bool a_useRegularPrincipal = 8;
-  required bool a_usingStorageAccess = 9;
-  required protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 10;
-  required string a_domain = 11;
-  required bool a_isSecureContext = 12;
+  string a_originalScriptURL = 1;
+  protobuf.mozilla.ipc.URIParams a_baseScriptURL = 2;
+  protobuf.mozilla.ipc.URIParams a_resolvedScriptURL = 3;
+  bytes a_workerOptions = 4;
+  protobuf.mozilla.ipc.PrincipalInfo a_loadingPrincipalInfo = 5;
+  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 6;
+  protobuf.mozilla.ipc.PrincipalInfo a_partitionedPrincipalInfo = 7;
+  bool a_useRegularPrincipal = 8;
+  bool a_usingStorageAccess = 9;
+  protobuf.mozilla.net.CookieJarSettingsArgs a_cookieJarSettings = 10;
+  string a_domain = 11;
+  bool a_isSecureContext = 12;
   optional protobuf.mozilla.dom.IPCClientInfo a_clientInfo = 13;
   optional bytes a_referrerInfo = 14;
-  required bytes a_storageAccess = 15;
-  required bool a_isThirdPartyContext = 16;
-  required bool a_shouldResistFingerprinting = 17;
+  bytes a_storageAccess = 15;
+  bool a_isThirdPartyContext = 16;
+  bool a_shouldResistFingerprinting = 17;
   optional bytes a_overriddenFingerprintingSettings = 18;
-  required bool a_isOn3PCBExceptionList = 19;
-  required bytes a_originTrials = 20;
-  required protobuf.mozilla.dom.OptionalServiceWorkerData a_serviceWorkerData = 21;
-  required bytes a_agentClusterId = 22;
-  required string a_remoteType = 23;
+  bool a_isOn3PCBExceptionList = 19;
+  bytes a_originTrials = 20;
+  protobuf.mozilla.dom.OptionalServiceWorkerData a_serviceWorkerData = 21;
+  bytes a_agentClusterId = 22;
+  string a_remoteType = 23;
 }
 
 message ErrorDataNote {
-  required uint32 a_lineNumber = 1;
-  required uint32 a_columnNumber = 2;
-  required string a_message = 3;
-  required string a_filename = 4;
+  uint32 a_lineNumber = 1;
+  uint32 a_columnNumber = 2;
+  string a_message = 3;
+  string a_filename = 4;
 }
 
 message ErrorData {
-  required bool a_isWarning = 1;
-  required uint32 a_lineNumber = 2;
-  required uint32 a_columnNumber = 3;
-  required string a_message = 4;
-  required string a_filename = 5;
+  bool a_isWarning = 1;
+  uint32 a_lineNumber = 2;
+  uint32 a_columnNumber = 3;
+  string a_message = 4;
+  string a_filename = 5;
   repeated protobuf.mozilla.dom.ErrorDataNote a_notes = 6;
 }
 
 message CSPViolation {
-  required string a_json = 1;
+  string a_json = 1;
 }
 
 message ErrorMismatchOptions {
@@ -95,19 +94,19 @@ message ErrorValue {
 }
 
 message RemoteWorkerDebuggerInfo {
-  required bool a_isChrome = 1;
-  required uint32 a_type = 2;
-  required string a_url = 3;
-  required uint64 a_windowID = 4;
-  required bytes a_principal = 5;
-  required uint64 a_serviceWorkerID = 6;
-  required string a_Id = 7;
-  required string a_name = 8;
-  required string a_parentId = 9;
+  bool a_isChrome = 1;
+  uint32 a_type = 2;
+  string a_url = 3;
+  uint64 a_windowID = 4;
+  bytes a_principal = 5;
+  uint64 a_serviceWorkerID = 6;
+  string a_Id = 7;
+  string a_name = 8;
+  string a_parentId = 9;
 }
 
 message RemoteWorkerDebuggerErrorInfo {
-  required string a_fileName = 1;
-  required uint32 a_lineNo = 2;
-  required string a_message = 3;
+  string a_fileName = 1;
+  uint32 a_lineNo = 2;
+  string a_message = 3;
 }

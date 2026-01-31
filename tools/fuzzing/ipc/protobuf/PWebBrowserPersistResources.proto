@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/webbrowserpersist/PWebBrowserPersistResources.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.PWebBrowserPersistResources;
 
@@ -16,20 +15,20 @@ package protobuf.mozilla.PWebBrowserPersistResources;
 
 // Message declarations
 message Msg_VisitResource {
-  required string a_aURI = 1;
-  required bytes a_aContentPolicyType = 2;
+  string a_aURI = 1;
+  bytes a_aContentPolicyType = 2;
 }
 
 message Msg_VisitDocument {
-  required bytes a_aSubDocument = 1;
+  bytes a_aSubDocument = 1;
 }
 
 message Msg_VisitBrowsingContext {
-  required bytes a_aContext = 1;
+  bytes a_aContext = 1;
 }
 
 message Msg___delete__ {
-  required bytes a_aStatus = 1;
+  bytes a_aStatus = 1;
 }
 
 message Reply___delete__ {

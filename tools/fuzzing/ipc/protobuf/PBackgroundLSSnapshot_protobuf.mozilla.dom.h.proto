@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/localstorage/PBackgroundLSSnapshot.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom;
 
@@ -14,12 +13,12 @@ import "PBackgroundLSSharedTypes.proto";
 
 // Structs and unions declarations
 message LSSetItemInfo {
-  required string a_key = 1;
-  required bytes a_value = 2;
+  string a_key = 1;
+  bytes a_value = 2;
 }
 
 message LSRemoveItemInfo {
-  required string a_key = 1;
+  string a_key = 1;
 }
 
 message LSClearInfo {
@@ -34,14 +33,14 @@ message LSWriteInfo {
 }
 
 message LSSetItemAndNotifyInfo {
-  required string a_key = 1;
-  required bytes a_oldValue = 2;
-  required bytes a_value = 3;
+  string a_key = 1;
+  bytes a_oldValue = 2;
+  bytes a_value = 3;
 }
 
 message LSRemoveItemAndNotifyInfo {
-  required string a_key = 1;
-  required bytes a_oldValue = 2;
+  string a_key = 1;
+  bytes a_oldValue = 2;
 }
 
 message LSWriteAndNotifyInfo {

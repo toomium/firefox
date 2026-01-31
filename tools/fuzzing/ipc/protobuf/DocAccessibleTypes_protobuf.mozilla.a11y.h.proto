@@ -5,13 +5,12 @@
 
 // Generated from /home/tmittendorf/firefox/accessible/ipc/DocAccessibleTypes.ipdlh
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.a11y;
 
 // Structs and unions declarations
 message CacheData {
-  required uint64 a_ID = 1;
+  uint64 a_ID = 1;
   optional bytes a_Fields = 2;
 }

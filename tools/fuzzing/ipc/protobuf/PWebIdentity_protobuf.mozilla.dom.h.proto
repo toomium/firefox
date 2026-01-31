@@ -5,15 +5,14 @@
 
 // Generated from /home/tmittendorf/firefox/dom/credentialmanagement/identity/PWebIdentity.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom;
 
 
 // Structs and unions declarations
 message IPCIdentityCredential {
-  required string a_id = 1;
+  string a_id = 1;
   optional string a_token = 2;
 }
 

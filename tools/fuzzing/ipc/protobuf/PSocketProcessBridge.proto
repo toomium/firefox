@@ -5,8 +5,7 @@
 
 // Generated from PSocketProcessBridge.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.net.PSocketProcessBridge;
 
@@ -16,12 +15,12 @@ package protobuf.mozilla.net.PSocketProcessBridge;
 
 // Message declarations
 message Msg_InitBackgroundDataBridge {
-  required bytes a_aEndpoint = 1;
-  required uint64 a_aChannelID = 2;
+  bytes a_aEndpoint = 1;
+  uint64 a_aChannelID = 2;
 }
 
 message Msg_InitMediaTransport {
-  required bytes a_aEndpoint = 1;
+  bytes a_aEndpoint = 1;
 }
 
 // Parameter mappings stats:

@@ -8,7 +8,10 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
+#include <google/protobuf/descriptor.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/reflection_ops.h>
+#include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -22,13 +25,12 @@ namespace mozilla {
 namespace widget {
 PROTOBUF_CONSTEXPR LookAndFeelFont::LookAndFeelFont(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.a_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.a_size_)*/0
   , /*decltype(_impl_.a_havefont_)*/false
   , /*decltype(_impl_.a_italic_)*/false
-  , /*decltype(_impl_.a_weight_)*/0} {}
+  , /*decltype(_impl_.a_weight_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LookAndFeelFontDefaultTypeInternal {
   PROTOBUF_CONSTEXPR LookAndFeelFontDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -40,20 +42,25 @@ struct LookAndFeelFontDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LookAndFeelFontDefaultTypeInternal _LookAndFeelFont_default_instance_;
 PROTOBUF_CONSTEXPR LookAndFeelTables::LookAndFeelTables(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_ints_)*/{}
+    /*decltype(_impl_.a_ints_)*/{}
+  , /*decltype(_impl_._a_ints_cached_byte_size_)*/{0}
   , /*decltype(_impl_.a_floats_)*/{}
   , /*decltype(_impl_.a_fonts_)*/{}
   , /*decltype(_impl_.a_lightcolors_)*/{}
   , /*decltype(_impl_.a_darkcolors_)*/{}
   , /*decltype(_impl_.a_intmap_)*/{}
+  , /*decltype(_impl_._a_intmap_cached_byte_size_)*/{0}
   , /*decltype(_impl_.a_floatmap_)*/{}
+  , /*decltype(_impl_._a_floatmap_cached_byte_size_)*/{0}
   , /*decltype(_impl_.a_fontmap_)*/{}
+  , /*decltype(_impl_._a_fontmap_cached_byte_size_)*/{0}
   , /*decltype(_impl_.a_lightcolormap_)*/{}
+  , /*decltype(_impl_._a_lightcolormap_cached_byte_size_)*/{0}
   , /*decltype(_impl_.a_darkcolormap_)*/{}
+  , /*decltype(_impl_._a_darkcolormap_cached_byte_size_)*/{0}
   , /*decltype(_impl_.a_passwordchar_)*/0u
-  , /*decltype(_impl_.a_passwordecho_)*/false} {}
+  , /*decltype(_impl_.a_passwordecho_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LookAndFeelTablesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR LookAndFeelTablesDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -65,9 +72,8 @@ struct LookAndFeelTablesDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LookAndFeelTablesDefaultTypeInternal _LookAndFeelTables_default_instance_;
 PROTOBUF_CONSTEXPR FullLookAndFeel::FullLookAndFeel(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_._has_bits_)*/{}
-  , /*decltype(_impl_._cached_size_)*/{}
-  , /*decltype(_impl_.a_tables_)*/nullptr} {}
+    /*decltype(_impl_.a_tables_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FullLookAndFeelDefaultTypeInternal {
   PROTOBUF_CONSTEXPR FullLookAndFeelDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -80,6 +86,92 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace widget
 }  // namespace mozilla
 }  // namespace protobuf
+static ::_pb::Metadata file_level_metadata_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto[3];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto = nullptr;
+
+const uint32_t TableStruct_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelFont, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelFont, _impl_.a_havefont_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelFont, _impl_.a_name_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelFont, _impl_.a_size_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelFont, _impl_.a_weight_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelFont, _impl_.a_italic_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_ints_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_floats_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_fonts_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_lightcolors_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_darkcolors_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_intmap_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_floatmap_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_fontmap_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_lightcolormap_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_darkcolormap_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_passwordchar_),
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_passwordecho_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::FullLookAndFeel, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::FullLookAndFeel, _impl_.a_tables_),
+};
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::protobuf::mozilla::widget::LookAndFeelFont)},
+  { 11, -1, -1, sizeof(::protobuf::mozilla::widget::LookAndFeelTables)},
+  { 29, -1, -1, sizeof(::protobuf::mozilla::widget::FullLookAndFeel)},
+};
+
+static const ::_pb::Message* const file_default_instances[] = {
+  &::protobuf::mozilla::widget::_LookAndFeelFont_default_instance_._instance,
+  &::protobuf::mozilla::widget::_LookAndFeelTables_default_instance_._instance,
+  &::protobuf::mozilla::widget::_FullLookAndFeel_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n0LookAndFeelTypes_protobuf.mozilla.widg"
+  "et.h.proto\022\027protobuf.mozilla.widget\"i\n\017L"
+  "ookAndFeelFont\022\022\n\na_haveFont\030\001 \001(\010\022\016\n\006a_"
+  "name\030\002 \001(\t\022\016\n\006a_size\030\003 \001(\002\022\020\n\010a_weight\030\004"
+  " \001(\002\022\020\n\010a_italic\030\005 \001(\010\"\267\002\n\021LookAndFeelTa"
+  "bles\022\016\n\006a_ints\030\001 \003(\021\022\020\n\010a_floats\030\002 \003(\002\0229"
+  "\n\007a_fonts\030\003 \003(\0132(.protobuf.mozilla.widge"
+  "t.LookAndFeelFont\022\025\n\ra_lightColors\030\004 \003(\014"
+  "\022\024\n\014a_darkColors\030\005 \003(\014\022\020\n\010a_intMap\030\006 \003(\r"
+  "\022\022\n\na_floatMap\030\007 \003(\r\022\021\n\ta_fontMap\030\010 \003(\r\022"
+  "\027\n\017a_lightColorMap\030\t \003(\r\022\026\n\016a_darkColorM"
+  "ap\030\n \003(\r\022\026\n\016a_passwordChar\030\013 \001(\r\022\026\n\016a_pa"
+  "sswordEcho\030\014 \001(\010\"O\n\017FullLookAndFeel\022<\n\010a"
+  "_tables\030\001 \001(\0132*.protobuf.mozilla.widget."
+  "LookAndFeelTablesb\006proto3"
+  ;
+static ::_pbi::once_flag descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto = {
+    false, false, 585, descriptor_table_protodef_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto,
+    "LookAndFeelTypes_protobuf.mozilla.widget.h.proto",
+    &descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_once, nullptr, 0, 3,
+    schemas, file_default_instances, TableStruct_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto::offsets,
+    file_level_metadata_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto, file_level_enum_descriptors_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto,
+    file_level_service_descriptors_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_getter() {
+  return &descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto;
+}
+
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto(&descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace widget {
@@ -88,51 +180,31 @@ namespace widget {
 
 class LookAndFeelFont::_Internal {
  public:
-  using HasBits = decltype(std::declval<LookAndFeelFont>()._impl_._has_bits_);
-  static void set_has_a_havefont(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
-  static void set_has_a_name(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_size(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_a_weight(HasBits* has_bits) {
-    (*has_bits)[0] |= 16u;
-  }
-  static void set_has_a_italic(HasBits* has_bits) {
-    (*has_bits)[0] |= 8u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x0000001f) ^ 0x0000001f) != 0;
-  }
 };
 
 LookAndFeelFont::LookAndFeelFont(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.widget.LookAndFeelFont)
 }
 LookAndFeelFont::LookAndFeelFont(const LookAndFeelFont& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   LookAndFeelFont* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_name_){}
+      decltype(_impl_.a_name_){}
     , decltype(_impl_.a_size_){}
     , decltype(_impl_.a_havefont_){}
     , decltype(_impl_.a_italic_){}
-    , decltype(_impl_.a_weight_){}};
+    , decltype(_impl_.a_weight_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_name_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (from._internal_has_a_name()) {
+  if (!from._internal_a_name().empty()) {
     _this->_impl_.a_name_.Set(from._internal_a_name(), 
       _this->GetArenaForAllocation());
   }
@@ -147,13 +219,12 @@ inline void LookAndFeelFont::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_name_){}
+      decltype(_impl_.a_name_){}
     , decltype(_impl_.a_size_){0}
     , decltype(_impl_.a_havefont_){false}
     , decltype(_impl_.a_italic_){false}
     , decltype(_impl_.a_weight_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
   _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -163,7 +234,7 @@ inline void LookAndFeelFont::SharedCtor(
 
 LookAndFeelFont::~LookAndFeelFont() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.widget.LookAndFeelFont)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -185,66 +256,56 @@ void LookAndFeelFont::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    _impl_.a_name_.ClearNonDefaultToEmpty();
-  }
-  if (cached_has_bits & 0x0000001eu) {
-    ::memset(&_impl_.a_size_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.a_weight_) -
-        reinterpret_cast<char*>(&_impl_.a_size_)) + sizeof(_impl_.a_weight_));
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_name_.ClearToEmpty();
+  ::memset(&_impl_.a_size_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.a_weight_) -
+      reinterpret_cast<char*>(&_impl_.a_size_)) + sizeof(_impl_.a_weight_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* LookAndFeelFont::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required bool a_haveFont = 1;
+      // bool a_haveFont = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _Internal::set_has_a_havefont(&has_bits);
           _impl_.a_havefont_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required string a_name = 2;
+      // string a_name = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           auto str = _internal_mutable_a_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.widget.LookAndFeelFont.a_name"));
         } else
           goto handle_unusual;
         continue;
-      // required float a_size = 3;
+      // float a_size = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 29)) {
-          _Internal::set_has_a_size(&has_bits);
           _impl_.a_size_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
           ptr += sizeof(float);
         } else
           goto handle_unusual;
         continue;
-      // required float a_weight = 4;
+      // float a_weight = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 37)) {
-          _Internal::set_has_a_weight(&has_bits);
           _impl_.a_weight_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
           ptr += sizeof(float);
         } else
           goto handle_unusual;
         continue;
-      // required bool a_italic = 5;
+      // bool a_italic = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _Internal::set_has_a_italic(&has_bits);
           _impl_.a_italic_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -261,12 +322,11 @@ const char* LookAndFeelFont::_InternalParse(const char* ptr, ::_pbi::ParseContex
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -280,148 +340,141 @@ uint8_t* LookAndFeelFont::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required bool a_haveFont = 1;
-  if (cached_has_bits & 0x00000004u) {
+  // bool a_haveFont = 1;
+  if (this->_internal_a_havefont() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_a_havefont(), target);
   }
 
-  // required string a_name = 2;
-  if (cached_has_bits & 0x00000001u) {
+  // string a_name = 2;
+  if (!this->_internal_a_name().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_a_name().data(), static_cast<int>(this->_internal_a_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "protobuf.mozilla.widget.LookAndFeelFont.a_name");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_a_name(), target);
   }
 
-  // required float a_size = 3;
-  if (cached_has_bits & 0x00000002u) {
+  // float a_size = 3;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_a_size = this->_internal_a_size();
+  uint32_t raw_a_size;
+  memcpy(&raw_a_size, &tmp_a_size, sizeof(tmp_a_size));
+  if (raw_a_size != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(3, this->_internal_a_size(), target);
   }
 
-  // required float a_weight = 4;
-  if (cached_has_bits & 0x00000010u) {
+  // float a_weight = 4;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_a_weight = this->_internal_a_weight();
+  uint32_t raw_a_weight;
+  memcpy(&raw_a_weight, &tmp_a_weight, sizeof(tmp_a_weight));
+  if (raw_a_weight != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteFloatToArray(4, this->_internal_a_weight(), target);
   }
 
-  // required bool a_italic = 5;
-  if (cached_has_bits & 0x00000008u) {
+  // bool a_italic = 5;
+  if (this->_internal_a_italic() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(5, this->_internal_a_italic(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.widget.LookAndFeelFont)
   return target;
 }
 
-size_t LookAndFeelFont::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.widget.LookAndFeelFont)
-  size_t total_size = 0;
-
-  if (_internal_has_a_name()) {
-    // required string a_name = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_name());
-  }
-
-  if (_internal_has_a_size()) {
-    // required float a_size = 3;
-    total_size += 1 + 4;
-  }
-
-  if (_internal_has_a_havefont()) {
-    // required bool a_haveFont = 1;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_italic()) {
-    // required bool a_italic = 5;
-    total_size += 1 + 1;
-  }
-
-  if (_internal_has_a_weight()) {
-    // required float a_weight = 4;
-    total_size += 1 + 4;
-  }
-
-  return total_size;
-}
 size_t LookAndFeelFont::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.widget.LookAndFeelFont)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x0000001f) ^ 0x0000001f) == 0) {  // All required fields are present.
-    // required string a_name = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_a_name());
-
-    // required float a_size = 3;
-    total_size += 1 + 4;
-
-    // required bool a_haveFont = 1;
-    total_size += 1 + 1;
-
-    // required bool a_italic = 5;
-    total_size += 1 + 1;
-
-    // required float a_weight = 4;
-    total_size += 1 + 4;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // string a_name = 2;
+  if (!this->_internal_a_name().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_a_name());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // float a_size = 3;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_a_size = this->_internal_a_size();
+  uint32_t raw_a_size;
+  memcpy(&raw_a_size, &tmp_a_size, sizeof(tmp_a_size));
+  if (raw_a_size != 0) {
+    total_size += 1 + 4;
+  }
+
+  // bool a_haveFont = 1;
+  if (this->_internal_a_havefont() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool a_italic = 5;
+  if (this->_internal_a_italic() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // float a_weight = 4;
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_a_weight = this->_internal_a_weight();
+  uint32_t raw_a_weight;
+  memcpy(&raw_a_weight, &tmp_a_weight, sizeof(tmp_a_weight));
+  if (raw_a_weight != 0) {
+    total_size += 1 + 4;
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void LookAndFeelFont::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const LookAndFeelFont*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LookAndFeelFont::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LookAndFeelFont::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LookAndFeelFont::GetClassData() const { return &_class_data_; }
 
-void LookAndFeelFont::MergeFrom(const LookAndFeelFont& from) {
-  LookAndFeelFont* const _this = this;
+
+void LookAndFeelFont::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LookAndFeelFont*>(&to_msg);
+  auto& from = static_cast<const LookAndFeelFont&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.widget.LookAndFeelFont)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x0000001fu) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_internal_set_a_name(from._internal_a_name());
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.a_size_ = from._impl_.a_size_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      _this->_impl_.a_havefont_ = from._impl_.a_havefont_;
-    }
-    if (cached_has_bits & 0x00000008u) {
-      _this->_impl_.a_italic_ = from._impl_.a_italic_;
-    }
-    if (cached_has_bits & 0x00000010u) {
-      _this->_impl_.a_weight_ = from._impl_.a_weight_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (!from._internal_a_name().empty()) {
+    _this->_internal_set_a_name(from._internal_a_name());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_a_size = from._internal_a_size();
+  uint32_t raw_a_size;
+  memcpy(&raw_a_size, &tmp_a_size, sizeof(tmp_a_size));
+  if (raw_a_size != 0) {
+    _this->_internal_set_a_size(from._internal_a_size());
+  }
+  if (from._internal_a_havefont() != 0) {
+    _this->_internal_set_a_havefont(from._internal_a_havefont());
+  }
+  if (from._internal_a_italic() != 0) {
+    _this->_internal_set_a_italic(from._internal_a_italic());
+  }
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_a_weight = from._internal_a_weight();
+  uint32_t raw_a_weight;
+  memcpy(&raw_a_weight, &tmp_a_weight, sizeof(tmp_a_weight));
+  if (raw_a_weight != 0) {
+    _this->_internal_set_a_weight(from._internal_a_weight());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LookAndFeelFont::CopyFrom(const LookAndFeelFont& from) {
@@ -432,7 +485,6 @@ void LookAndFeelFont::CopyFrom(const LookAndFeelFont& from) {
 }
 
 bool LookAndFeelFont::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
   return true;
 }
 
@@ -441,7 +493,6 @@ void LookAndFeelFont::InternalSwap(LookAndFeelFont* other) {
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.a_name_, lhs_arena,
       &other->_impl_.a_name_, rhs_arena
@@ -454,53 +505,49 @@ void LookAndFeelFont::InternalSwap(LookAndFeelFont* other) {
           reinterpret_cast<char*>(&other->_impl_.a_size_));
 }
 
-std::string LookAndFeelFont::GetTypeName() const {
-  return "protobuf.mozilla.widget.LookAndFeelFont";
+::PROTOBUF_NAMESPACE_ID::Metadata LookAndFeelFont::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_getter, &descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_once,
+      file_level_metadata_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto[0]);
 }
-
 
 // ===================================================================
 
 class LookAndFeelTables::_Internal {
  public:
-  using HasBits = decltype(std::declval<LookAndFeelTables>()._impl_._has_bits_);
-  static void set_has_a_passwordchar(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_a_passwordecho(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
-  }
 };
 
 LookAndFeelTables::LookAndFeelTables(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.widget.LookAndFeelTables)
 }
 LookAndFeelTables::LookAndFeelTables(const LookAndFeelTables& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   LookAndFeelTables* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_ints_){from._impl_.a_ints_}
+      decltype(_impl_.a_ints_){from._impl_.a_ints_}
+    , /*decltype(_impl_._a_ints_cached_byte_size_)*/{0}
     , decltype(_impl_.a_floats_){from._impl_.a_floats_}
     , decltype(_impl_.a_fonts_){from._impl_.a_fonts_}
     , decltype(_impl_.a_lightcolors_){from._impl_.a_lightcolors_}
     , decltype(_impl_.a_darkcolors_){from._impl_.a_darkcolors_}
     , decltype(_impl_.a_intmap_){from._impl_.a_intmap_}
+    , /*decltype(_impl_._a_intmap_cached_byte_size_)*/{0}
     , decltype(_impl_.a_floatmap_){from._impl_.a_floatmap_}
+    , /*decltype(_impl_._a_floatmap_cached_byte_size_)*/{0}
     , decltype(_impl_.a_fontmap_){from._impl_.a_fontmap_}
+    , /*decltype(_impl_._a_fontmap_cached_byte_size_)*/{0}
     , decltype(_impl_.a_lightcolormap_){from._impl_.a_lightcolormap_}
+    , /*decltype(_impl_._a_lightcolormap_cached_byte_size_)*/{0}
     , decltype(_impl_.a_darkcolormap_){from._impl_.a_darkcolormap_}
+    , /*decltype(_impl_._a_darkcolormap_cached_byte_size_)*/{0}
     , decltype(_impl_.a_passwordchar_){}
-    , decltype(_impl_.a_passwordecho_){}};
+    , decltype(_impl_.a_passwordecho_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::memcpy(&_impl_.a_passwordchar_, &from._impl_.a_passwordchar_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_passwordecho_) -
     reinterpret_cast<char*>(&_impl_.a_passwordchar_)) + sizeof(_impl_.a_passwordecho_));
@@ -512,26 +559,31 @@ inline void LookAndFeelTables::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_ints_){arena}
+      decltype(_impl_.a_ints_){arena}
+    , /*decltype(_impl_._a_ints_cached_byte_size_)*/{0}
     , decltype(_impl_.a_floats_){arena}
     , decltype(_impl_.a_fonts_){arena}
     , decltype(_impl_.a_lightcolors_){arena}
     , decltype(_impl_.a_darkcolors_){arena}
     , decltype(_impl_.a_intmap_){arena}
+    , /*decltype(_impl_._a_intmap_cached_byte_size_)*/{0}
     , decltype(_impl_.a_floatmap_){arena}
+    , /*decltype(_impl_._a_floatmap_cached_byte_size_)*/{0}
     , decltype(_impl_.a_fontmap_){arena}
+    , /*decltype(_impl_._a_fontmap_cached_byte_size_)*/{0}
     , decltype(_impl_.a_lightcolormap_){arena}
+    , /*decltype(_impl_._a_lightcolormap_cached_byte_size_)*/{0}
     , decltype(_impl_.a_darkcolormap_){arena}
+    , /*decltype(_impl_._a_darkcolormap_cached_byte_size_)*/{0}
     , decltype(_impl_.a_passwordchar_){0u}
     , decltype(_impl_.a_passwordecho_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
   };
 }
 
 LookAndFeelTables::~LookAndFeelTables() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.widget.LookAndFeelTables)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -572,52 +624,37 @@ void LookAndFeelTables::Clear() {
   _impl_.a_fontmap_.Clear();
   _impl_.a_lightcolormap_.Clear();
   _impl_.a_darkcolormap_.Clear();
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    ::memset(&_impl_.a_passwordchar_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&_impl_.a_passwordecho_) -
-        reinterpret_cast<char*>(&_impl_.a_passwordchar_)) + sizeof(_impl_.a_passwordecho_));
-  }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  ::memset(&_impl_.a_passwordchar_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.a_passwordecho_) -
+      reinterpret_cast<char*>(&_impl_.a_passwordchar_)) + sizeof(_impl_.a_passwordecho_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* LookAndFeelTables::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // repeated sint32 a_ints = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            _internal_add_a_ints(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<8>(ptr));
-        } else if (static_cast<uint8_t>(tag) == 10) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedSInt32Parser(_internal_mutable_a_ints(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 8) {
+          _internal_add_a_ints(::PROTOBUF_NAMESPACE_ID::internal::ReadVarintZigZag32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
       // repeated float a_floats = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 21)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            _internal_add_a_floats(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
-            ptr += sizeof(float);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<21>(ptr));
-        } else if (static_cast<uint8_t>(tag) == 18) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFloatParser(_internal_mutable_a_floats(), ptr, ctx);
           CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 21) {
+          _internal_add_a_floats(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr));
+          ptr += sizeof(float);
         } else
           goto handle_unusual;
         continue;
@@ -664,97 +701,70 @@ const char* LookAndFeelTables::_InternalParse(const char* ptr, ::_pbi::ParseCont
         continue;
       // repeated uint32 a_intMap = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            _internal_add_a_intmap(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<48>(ptr));
-        } else if (static_cast<uint8_t>(tag) == 50) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_intmap(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 48) {
+          _internal_add_a_intmap(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
       // repeated uint32 a_floatMap = 7;
       case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            _internal_add_a_floatmap(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<56>(ptr));
-        } else if (static_cast<uint8_t>(tag) == 58) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_floatmap(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 56) {
+          _internal_add_a_floatmap(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
       // repeated uint32 a_fontMap = 8;
       case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            _internal_add_a_fontmap(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<64>(ptr));
-        } else if (static_cast<uint8_t>(tag) == 66) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_fontmap(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 64) {
+          _internal_add_a_fontmap(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
       // repeated uint32 a_lightColorMap = 9;
       case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            _internal_add_a_lightcolormap(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<72>(ptr));
-        } else if (static_cast<uint8_t>(tag) == 74) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_lightcolormap(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 72) {
+          _internal_add_a_lightcolormap(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
       // repeated uint32 a_darkColorMap = 10;
       case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            _internal_add_a_darkcolormap(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<80>(ptr));
-        } else if (static_cast<uint8_t>(tag) == 82) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 82)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_a_darkcolormap(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 80) {
+          _internal_add_a_darkcolormap(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required uint32 a_passwordChar = 11;
+      // uint32 a_passwordChar = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 88)) {
-          _Internal::set_has_a_passwordchar(&has_bits);
           _impl_.a_passwordchar_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
-      // required bool a_passwordEcho = 12;
+      // bool a_passwordEcho = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 96)) {
-          _Internal::set_has_a_passwordecho(&has_bits);
           _impl_.a_passwordecho_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
@@ -771,12 +781,11 @@ const char* LookAndFeelTables::_InternalParse(const char* ptr, ::_pbi::ParseCont
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -791,15 +800,17 @@ uint8_t* LookAndFeelTables::_InternalSerialize(
   (void) cached_has_bits;
 
   // repeated sint32 a_ints = 1;
-  for (int i = 0, n = this->_internal_a_ints_size(); i < n; i++) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteSInt32ToArray(1, this->_internal_a_ints(i), target);
+  {
+    int byte_size = _impl_._a_ints_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteSInt32Packed(
+          1, _internal_a_ints(), byte_size, target);
+    }
   }
 
   // repeated float a_floats = 2;
-  for (int i = 0, n = this->_internal_a_floats_size(); i < n; i++) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteFloatToArray(2, this->_internal_a_floats(i), target);
+  if (this->_internal_a_floats_size() > 0) {
+    target = stream->WriteFixedPacked(2, _internal_a_floats(), target);
   }
 
   // repeated .protobuf.mozilla.widget.LookAndFeelFont a_fonts = 3;
@@ -823,86 +834,74 @@ uint8_t* LookAndFeelTables::_InternalSerialize(
   }
 
   // repeated uint32 a_intMap = 6;
-  for (int i = 0, n = this->_internal_a_intmap_size(); i < n; i++) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(6, this->_internal_a_intmap(i), target);
+  {
+    int byte_size = _impl_._a_intmap_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteUInt32Packed(
+          6, _internal_a_intmap(), byte_size, target);
+    }
   }
 
   // repeated uint32 a_floatMap = 7;
-  for (int i = 0, n = this->_internal_a_floatmap_size(); i < n; i++) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(7, this->_internal_a_floatmap(i), target);
+  {
+    int byte_size = _impl_._a_floatmap_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteUInt32Packed(
+          7, _internal_a_floatmap(), byte_size, target);
+    }
   }
 
   // repeated uint32 a_fontMap = 8;
-  for (int i = 0, n = this->_internal_a_fontmap_size(); i < n; i++) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(8, this->_internal_a_fontmap(i), target);
+  {
+    int byte_size = _impl_._a_fontmap_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteUInt32Packed(
+          8, _internal_a_fontmap(), byte_size, target);
+    }
   }
 
   // repeated uint32 a_lightColorMap = 9;
-  for (int i = 0, n = this->_internal_a_lightcolormap_size(); i < n; i++) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(9, this->_internal_a_lightcolormap(i), target);
+  {
+    int byte_size = _impl_._a_lightcolormap_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteUInt32Packed(
+          9, _internal_a_lightcolormap(), byte_size, target);
+    }
   }
 
   // repeated uint32 a_darkColorMap = 10;
-  for (int i = 0, n = this->_internal_a_darkcolormap_size(); i < n; i++) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(10, this->_internal_a_darkcolormap(i), target);
+  {
+    int byte_size = _impl_._a_darkcolormap_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteUInt32Packed(
+          10, _internal_a_darkcolormap(), byte_size, target);
+    }
   }
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required uint32 a_passwordChar = 11;
-  if (cached_has_bits & 0x00000001u) {
+  // uint32 a_passwordChar = 11;
+  if (this->_internal_a_passwordchar() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteUInt32ToArray(11, this->_internal_a_passwordchar(), target);
   }
 
-  // required bool a_passwordEcho = 12;
-  if (cached_has_bits & 0x00000002u) {
+  // bool a_passwordEcho = 12;
+  if (this->_internal_a_passwordecho() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteBoolToArray(12, this->_internal_a_passwordecho(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.widget.LookAndFeelTables)
   return target;
 }
 
-size_t LookAndFeelTables::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:protobuf.mozilla.widget.LookAndFeelTables)
-  size_t total_size = 0;
-
-  if (_internal_has_a_passwordchar()) {
-    // required uint32 a_passwordChar = 11;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_passwordchar());
-  }
-
-  if (_internal_has_a_passwordecho()) {
-    // required bool a_passwordEcho = 12;
-    total_size += 1 + 1;
-  }
-
-  return total_size;
-}
 size_t LookAndFeelTables::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.widget.LookAndFeelTables)
   size_t total_size = 0;
 
-  if (((_impl_._has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
-    // required uint32 a_passwordChar = 11;
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_passwordchar());
-
-    // required bool a_passwordEcho = 12;
-    total_size += 1 + 1;
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -911,8 +910,13 @@ size_t LookAndFeelTables::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       SInt32Size(this->_impl_.a_ints_);
-    total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_a_ints_size());
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    int cached_size = ::_pbi::ToCachedSize(data_size);
+    _impl_._a_ints_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
     total_size += data_size;
   }
 
@@ -920,8 +924,10 @@ size_t LookAndFeelTables::ByteSizeLong() const {
   {
     unsigned int count = static_cast<unsigned int>(this->_internal_a_floats_size());
     size_t data_size = 4UL * count;
-    total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_a_floats_size());
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
     total_size += data_size;
   }
 
@@ -952,8 +958,13 @@ size_t LookAndFeelTables::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_intmap_);
-    total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_a_intmap_size());
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    int cached_size = ::_pbi::ToCachedSize(data_size);
+    _impl_._a_intmap_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
     total_size += data_size;
   }
 
@@ -961,8 +972,13 @@ size_t LookAndFeelTables::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_floatmap_);
-    total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_a_floatmap_size());
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    int cached_size = ::_pbi::ToCachedSize(data_size);
+    _impl_._a_floatmap_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
     total_size += data_size;
   }
 
@@ -970,8 +986,13 @@ size_t LookAndFeelTables::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_fontmap_);
-    total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_a_fontmap_size());
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    int cached_size = ::_pbi::ToCachedSize(data_size);
+    _impl_._a_fontmap_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
     total_size += data_size;
   }
 
@@ -979,8 +1000,13 @@ size_t LookAndFeelTables::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_lightcolormap_);
-    total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_a_lightcolormap_size());
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    int cached_size = ::_pbi::ToCachedSize(data_size);
+    _impl_._a_lightcolormap_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
     total_size += data_size;
   }
 
@@ -988,27 +1014,39 @@ size_t LookAndFeelTables::ByteSizeLong() const {
   {
     size_t data_size = ::_pbi::WireFormatLite::
       UInt32Size(this->_impl_.a_darkcolormap_);
-    total_size += 1 *
-                  ::_pbi::FromIntSize(this->_internal_a_darkcolormap_size());
+    if (data_size > 0) {
+      total_size += 1 +
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
+    }
+    int cached_size = ::_pbi::ToCachedSize(data_size);
+    _impl_._a_darkcolormap_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
     total_size += data_size;
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // uint32 a_passwordChar = 11;
+  if (this->_internal_a_passwordchar() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_passwordchar());
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // bool a_passwordEcho = 12;
+  if (this->_internal_a_passwordecho() != 0) {
+    total_size += 1 + 1;
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void LookAndFeelTables::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const LookAndFeelTables*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LookAndFeelTables::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LookAndFeelTables::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LookAndFeelTables::GetClassData() const { return &_class_data_; }
 
-void LookAndFeelTables::MergeFrom(const LookAndFeelTables& from) {
-  LookAndFeelTables* const _this = this;
+
+void LookAndFeelTables::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LookAndFeelTables*>(&to_msg);
+  auto& from = static_cast<const LookAndFeelTables&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.widget.LookAndFeelTables)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1024,17 +1062,13 @@ void LookAndFeelTables::MergeFrom(const LookAndFeelTables& from) {
   _this->_impl_.a_fontmap_.MergeFrom(from._impl_.a_fontmap_);
   _this->_impl_.a_lightcolormap_.MergeFrom(from._impl_.a_lightcolormap_);
   _this->_impl_.a_darkcolormap_.MergeFrom(from._impl_.a_darkcolormap_);
-  cached_has_bits = from._impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000003u) {
-    if (cached_has_bits & 0x00000001u) {
-      _this->_impl_.a_passwordchar_ = from._impl_.a_passwordchar_;
-    }
-    if (cached_has_bits & 0x00000002u) {
-      _this->_impl_.a_passwordecho_ = from._impl_.a_passwordecho_;
-    }
-    _this->_impl_._has_bits_[0] |= cached_has_bits;
+  if (from._internal_a_passwordchar() != 0) {
+    _this->_internal_set_a_passwordchar(from._internal_a_passwordchar());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  if (from._internal_a_passwordecho() != 0) {
+    _this->_internal_set_a_passwordecho(from._internal_a_passwordecho());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LookAndFeelTables::CopyFrom(const LookAndFeelTables& from) {
@@ -1045,16 +1079,12 @@ void LookAndFeelTables::CopyFrom(const LookAndFeelTables& from) {
 }
 
 bool LookAndFeelTables::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(_impl_.a_fonts_))
-    return false;
   return true;
 }
 
 void LookAndFeelTables::InternalSwap(LookAndFeelTables* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.a_ints_.InternalSwap(&other->_impl_.a_ints_);
   _impl_.a_floats_.InternalSwap(&other->_impl_.a_floats_);
   _impl_.a_fonts_.InternalSwap(&other->_impl_.a_fonts_);
@@ -1073,23 +1103,17 @@ void LookAndFeelTables::InternalSwap(LookAndFeelTables* other) {
           reinterpret_cast<char*>(&other->_impl_.a_passwordchar_));
 }
 
-std::string LookAndFeelTables::GetTypeName() const {
-  return "protobuf.mozilla.widget.LookAndFeelTables";
+::PROTOBUF_NAMESPACE_ID::Metadata LookAndFeelTables::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_getter, &descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_once,
+      file_level_metadata_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto[1]);
 }
-
 
 // ===================================================================
 
 class FullLookAndFeel::_Internal {
  public:
-  using HasBits = decltype(std::declval<FullLookAndFeel>()._impl_._has_bits_);
   static const ::protobuf::mozilla::widget::LookAndFeelTables& a_tables(const FullLookAndFeel* msg);
-  static void set_has_a_tables(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
-  }
 };
 
 const ::protobuf::mozilla::widget::LookAndFeelTables&
@@ -1098,19 +1122,18 @@ FullLookAndFeel::_Internal::a_tables(const FullLookAndFeel* msg) {
 }
 FullLookAndFeel::FullLookAndFeel(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.widget.FullLookAndFeel)
 }
 FullLookAndFeel::FullLookAndFeel(const FullLookAndFeel& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
   FullLookAndFeel* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_}
-    , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_tables_){nullptr}};
+      decltype(_impl_.a_tables_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_a_tables()) {
     _this->_impl_.a_tables_ = new ::protobuf::mozilla::widget::LookAndFeelTables(*from._impl_.a_tables_);
   }
@@ -1122,15 +1145,14 @@ inline void FullLookAndFeel::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){}
+      decltype(_impl_.a_tables_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
-    , decltype(_impl_.a_tables_){nullptr}
   };
 }
 
 FullLookAndFeel::~FullLookAndFeel() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.widget.FullLookAndFeel)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
   }
@@ -1152,23 +1174,20 @@ void FullLookAndFeel::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    GOOGLE_DCHECK(_impl_.a_tables_ != nullptr);
-    _impl_.a_tables_->Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.a_tables_ != nullptr) {
+    delete _impl_.a_tables_;
   }
-  _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<std::string>();
+  _impl_.a_tables_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* FullLookAndFeel::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // required .protobuf.mozilla.widget.LookAndFeelTables a_tables = 1;
+      // .protobuf.mozilla.widget.LookAndFeelTables a_tables = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_a_tables(), ptr);
@@ -1187,12 +1206,11 @@ const char* FullLookAndFeel::_InternalParse(const char* ptr, ::_pbi::ParseContex
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
 message_done:
-  _impl_._has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1206,17 +1224,16 @@ uint8_t* FullLookAndFeel::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _impl_._has_bits_[0];
-  // required .protobuf.mozilla.widget.LookAndFeelTables a_tables = 1;
-  if (cached_has_bits & 0x00000001u) {
+  // .protobuf.mozilla.widget.LookAndFeelTables a_tables = 1;
+  if (this->_internal_has_a_tables()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(1, _Internal::a_tables(this),
         _Internal::a_tables(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.widget.FullLookAndFeel)
   return target;
@@ -1226,32 +1243,30 @@ size_t FullLookAndFeel::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.widget.FullLookAndFeel)
   size_t total_size = 0;
 
-  // required .protobuf.mozilla.widget.LookAndFeelTables a_tables = 1;
-  if (_internal_has_a_tables()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *_impl_.a_tables_);
-  }
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  // .protobuf.mozilla.widget.LookAndFeelTables a_tables = 1;
+  if (this->_internal_has_a_tables()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.a_tables_);
   }
-  int cached_size = ::_pbi::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void FullLookAndFeel::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::_pbi::DownCast<const FullLookAndFeel*>(
-      &from));
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FullLookAndFeel::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    FullLookAndFeel::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FullLookAndFeel::GetClassData() const { return &_class_data_; }
 
-void FullLookAndFeel::MergeFrom(const FullLookAndFeel& from) {
-  FullLookAndFeel* const _this = this;
+
+void FullLookAndFeel::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<FullLookAndFeel*>(&to_msg);
+  auto& from = static_cast<const FullLookAndFeel&>(from_msg);
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.widget.FullLookAndFeel)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1261,7 +1276,7 @@ void FullLookAndFeel::MergeFrom(const FullLookAndFeel& from) {
     _this->_internal_mutable_a_tables()->::protobuf::mozilla::widget::LookAndFeelTables::MergeFrom(
         from._internal_a_tables());
   }
-  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void FullLookAndFeel::CopyFrom(const FullLookAndFeel& from) {
@@ -1272,24 +1287,20 @@ void FullLookAndFeel::CopyFrom(const FullLookAndFeel& from) {
 }
 
 bool FullLookAndFeel::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) return false;
-  if (_internal_has_a_tables()) {
-    if (!_impl_.a_tables_->IsInitialized()) return false;
-  }
   return true;
 }
 
 void FullLookAndFeel::InternalSwap(FullLookAndFeel* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   swap(_impl_.a_tables_, other->_impl_.a_tables_);
 }
 
-std::string FullLookAndFeel::GetTypeName() const {
-  return "protobuf.mozilla.widget.FullLookAndFeel";
+::PROTOBUF_NAMESPACE_ID::Metadata FullLookAndFeel::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_getter, &descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_once,
+      file_level_metadata_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto[2]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace widget

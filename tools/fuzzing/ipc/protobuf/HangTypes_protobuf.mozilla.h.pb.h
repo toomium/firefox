@@ -23,11 +23,14 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/message_lite.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_HangTypes_5fprotobuf_2emozilla_2eh_2eproto
@@ -41,6 +44,7 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_HangTypes_5fprotobuf_2emozilla_2eh_2eproto {
   static const uint32_t offsets[];
 };
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_HangTypes_5fprotobuf_2emozilla_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 class HangAnnotation;
@@ -105,7 +109,7 @@ namespace mozilla {
 // ===================================================================
 
 class HangEntryBufOffset final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangEntryBufOffset) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangEntryBufOffset) */ {
  public:
   inline HangEntryBufOffset() : HangEntryBufOffset(nullptr) {}
   ~HangEntryBufOffset() override;
@@ -135,13 +139,15 @@ class HangEntryBufOffset final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const HangEntryBufOffset& default_instance() {
     return *internal_default_instance();
   }
@@ -179,9 +185,15 @@ class HangEntryBufOffset final :
   HangEntryBufOffset* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<HangEntryBufOffset>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const HangEntryBufOffset& from);
-  void MergeFrom(const HangEntryBufOffset& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const HangEntryBufOffset& from) {
+    HangEntryBufOffset::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -194,7 +206,7 @@ class HangEntryBufOffset final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(HangEntryBufOffset* other);
 
   private:
@@ -207,7 +219,10 @@ class HangEntryBufOffset final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -216,11 +231,7 @@ class HangEntryBufOffset final :
   enum : int {
     kAIndexFieldNumber = 1,
   };
-  // required uint32 a_index = 1;
-  bool has_a_index() const;
-  private:
-  bool _internal_has_a_index() const;
-  public:
+  // uint32 a_index = 1;
   void clear_a_index();
   uint32_t a_index() const;
   void set_a_index(uint32_t value);
@@ -237,9 +248,8 @@ class HangEntryBufOffset final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_index_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_HangTypes_5fprotobuf_2emozilla_2eh_2eproto;
@@ -247,7 +257,7 @@ class HangEntryBufOffset final :
 // -------------------------------------------------------------------
 
 class HangEntryModOffset final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangEntryModOffset) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangEntryModOffset) */ {
  public:
   inline HangEntryModOffset() : HangEntryModOffset(nullptr) {}
   ~HangEntryModOffset() override;
@@ -277,13 +287,15 @@ class HangEntryModOffset final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const HangEntryModOffset& default_instance() {
     return *internal_default_instance();
   }
@@ -321,9 +333,15 @@ class HangEntryModOffset final :
   HangEntryModOffset* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<HangEntryModOffset>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const HangEntryModOffset& from);
-  void MergeFrom(const HangEntryModOffset& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const HangEntryModOffset& from) {
+    HangEntryModOffset::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -336,7 +354,7 @@ class HangEntryModOffset final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(HangEntryModOffset* other);
 
   private:
@@ -349,7 +367,10 @@ class HangEntryModOffset final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -359,11 +380,7 @@ class HangEntryModOffset final :
     kAModuleFieldNumber = 1,
     kAOffsetFieldNumber = 2,
   };
-  // required uint32 a_module = 1;
-  bool has_a_module() const;
-  private:
-  bool _internal_has_a_module() const;
-  public:
+  // uint32 a_module = 1;
   void clear_a_module();
   uint32_t a_module() const;
   void set_a_module(uint32_t value);
@@ -372,11 +389,7 @@ class HangEntryModOffset final :
   void _internal_set_a_module(uint32_t value);
   public:
 
-  // required uint32 a_offset = 2;
-  bool has_a_offset() const;
-  private:
-  bool _internal_has_a_offset() const;
-  public:
+  // uint32 a_offset = 2;
   void clear_a_offset();
   uint32_t a_offset() const;
   void set_a_offset(uint32_t value);
@@ -389,17 +402,13 @@ class HangEntryModOffset final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     uint32_t a_module_;
     uint32_t a_offset_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_HangTypes_5fprotobuf_2emozilla_2eh_2eproto;
@@ -407,7 +416,7 @@ class HangEntryModOffset final :
 // -------------------------------------------------------------------
 
 class HangEntryProgCounter final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangEntryProgCounter) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangEntryProgCounter) */ {
  public:
   inline HangEntryProgCounter() : HangEntryProgCounter(nullptr) {}
   ~HangEntryProgCounter() override;
@@ -437,13 +446,15 @@ class HangEntryProgCounter final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const HangEntryProgCounter& default_instance() {
     return *internal_default_instance();
   }
@@ -481,9 +492,15 @@ class HangEntryProgCounter final :
   HangEntryProgCounter* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<HangEntryProgCounter>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const HangEntryProgCounter& from);
-  void MergeFrom(const HangEntryProgCounter& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const HangEntryProgCounter& from) {
+    HangEntryProgCounter::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -496,7 +513,7 @@ class HangEntryProgCounter final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(HangEntryProgCounter* other);
 
   private:
@@ -509,7 +526,10 @@ class HangEntryProgCounter final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -518,11 +538,7 @@ class HangEntryProgCounter final :
   enum : int {
     kAPcFieldNumber = 1,
   };
-  // required bytes a_pc = 1;
-  bool has_a_pc() const;
-  private:
-  bool _internal_has_a_pc() const;
-  public:
+  // bytes a_pc = 1;
   void clear_a_pc();
   const std::string& a_pc() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -544,9 +560,8 @@ class HangEntryProgCounter final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_pc_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_HangTypes_5fprotobuf_2emozilla_2eh_2eproto;
@@ -554,10 +569,9 @@ class HangEntryProgCounter final :
 // -------------------------------------------------------------------
 
 class HangEntryContent final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangEntryContent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangEntryContent) */ {
  public:
   inline HangEntryContent() : HangEntryContent(nullptr) {}
-  ~HangEntryContent() override;
   explicit PROTOBUF_CONSTEXPR HangEntryContent(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   HangEntryContent(const HangEntryContent& from);
@@ -584,13 +598,15 @@ class HangEntryContent final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const HangEntryContent& default_instance() {
     return *internal_default_instance();
   }
@@ -628,23 +644,15 @@ class HangEntryContent final :
   HangEntryContent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<HangEntryContent>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const HangEntryContent& from);
-  void MergeFrom(const HangEntryContent& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(HangEntryContent* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const HangEntryContent& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const HangEntryContent& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -656,7 +664,10 @@ class HangEntryContent final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -670,18 +681,15 @@ class HangEntryContent final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_HangTypes_5fprotobuf_2emozilla_2eh_2eproto;
 };
 // -------------------------------------------------------------------
 
 class HangEntryJit final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangEntryJit) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangEntryJit) */ {
  public:
   inline HangEntryJit() : HangEntryJit(nullptr) {}
-  ~HangEntryJit() override;
   explicit PROTOBUF_CONSTEXPR HangEntryJit(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   HangEntryJit(const HangEntryJit& from);
@@ -708,13 +716,15 @@ class HangEntryJit final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const HangEntryJit& default_instance() {
     return *internal_default_instance();
   }
@@ -752,23 +762,15 @@ class HangEntryJit final :
   HangEntryJit* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<HangEntryJit>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const HangEntryJit& from);
-  void MergeFrom(const HangEntryJit& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(HangEntryJit* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const HangEntryJit& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const HangEntryJit& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -780,7 +782,10 @@ class HangEntryJit final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -794,18 +799,15 @@ class HangEntryJit final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_HangTypes_5fprotobuf_2emozilla_2eh_2eproto;
 };
 // -------------------------------------------------------------------
 
 class HangEntryWasm final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangEntryWasm) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangEntryWasm) */ {
  public:
   inline HangEntryWasm() : HangEntryWasm(nullptr) {}
-  ~HangEntryWasm() override;
   explicit PROTOBUF_CONSTEXPR HangEntryWasm(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   HangEntryWasm(const HangEntryWasm& from);
@@ -832,13 +834,15 @@ class HangEntryWasm final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const HangEntryWasm& default_instance() {
     return *internal_default_instance();
   }
@@ -876,23 +880,15 @@ class HangEntryWasm final :
   HangEntryWasm* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<HangEntryWasm>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const HangEntryWasm& from);
-  void MergeFrom(const HangEntryWasm& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(HangEntryWasm* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const HangEntryWasm& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const HangEntryWasm& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -904,7 +900,10 @@ class HangEntryWasm final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -918,18 +917,15 @@ class HangEntryWasm final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_HangTypes_5fprotobuf_2emozilla_2eh_2eproto;
 };
 // -------------------------------------------------------------------
 
 class HangEntryChromeScript final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangEntryChromeScript) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangEntryChromeScript) */ {
  public:
   inline HangEntryChromeScript() : HangEntryChromeScript(nullptr) {}
-  ~HangEntryChromeScript() override;
   explicit PROTOBUF_CONSTEXPR HangEntryChromeScript(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   HangEntryChromeScript(const HangEntryChromeScript& from);
@@ -956,13 +952,15 @@ class HangEntryChromeScript final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const HangEntryChromeScript& default_instance() {
     return *internal_default_instance();
   }
@@ -1000,23 +998,15 @@ class HangEntryChromeScript final :
   HangEntryChromeScript* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<HangEntryChromeScript>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const HangEntryChromeScript& from);
-  void MergeFrom(const HangEntryChromeScript& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(HangEntryChromeScript* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const HangEntryChromeScript& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const HangEntryChromeScript& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1028,7 +1018,10 @@ class HangEntryChromeScript final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1042,18 +1035,15 @@ class HangEntryChromeScript final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_HangTypes_5fprotobuf_2emozilla_2eh_2eproto;
 };
 // -------------------------------------------------------------------
 
 class HangEntrySuppressed final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangEntrySuppressed) */ {
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangEntrySuppressed) */ {
  public:
   inline HangEntrySuppressed() : HangEntrySuppressed(nullptr) {}
-  ~HangEntrySuppressed() override;
   explicit PROTOBUF_CONSTEXPR HangEntrySuppressed(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   HangEntrySuppressed(const HangEntrySuppressed& from);
@@ -1080,13 +1070,15 @@ class HangEntrySuppressed final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const HangEntrySuppressed& default_instance() {
     return *internal_default_instance();
   }
@@ -1124,23 +1116,15 @@ class HangEntrySuppressed final :
   HangEntrySuppressed* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<HangEntrySuppressed>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
-  void CopyFrom(const HangEntrySuppressed& from);
-  void MergeFrom(const HangEntrySuppressed& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  void InternalSwap(HangEntrySuppressed* other);
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
+  inline void CopyFrom(const HangEntrySuppressed& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
+  void MergeFrom(const HangEntrySuppressed& from) {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
+  }
+  public:
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -1152,7 +1136,10 @@ class HangEntrySuppressed final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1166,15 +1153,13 @@ class HangEntrySuppressed final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union { Impl_ _impl_; };
   friend struct ::TableStruct_HangTypes_5fprotobuf_2emozilla_2eh_2eproto;
 };
 // -------------------------------------------------------------------
 
 class HangEntry final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangEntry) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangEntry) */ {
  public:
   inline HangEntry() : HangEntry(nullptr) {}
   ~HangEntry() override;
@@ -1204,13 +1189,15 @@ class HangEntry final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const HangEntry& default_instance() {
     return *internal_default_instance();
   }
@@ -1261,9 +1248,15 @@ class HangEntry final :
   HangEntry* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<HangEntry>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const HangEntry& from);
-  void MergeFrom(const HangEntry& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const HangEntry& from) {
+    HangEntry::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1276,7 +1269,7 @@ class HangEntry final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(HangEntry* other);
 
   private:
@@ -1289,7 +1282,10 @@ class HangEntry final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1513,7 +1509,7 @@ class HangEntry final :
 // -------------------------------------------------------------------
 
 class HangModule final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangModule) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangModule) */ {
  public:
   inline HangModule() : HangModule(nullptr) {}
   ~HangModule() override;
@@ -1543,13 +1539,15 @@ class HangModule final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const HangModule& default_instance() {
     return *internal_default_instance();
   }
@@ -1587,9 +1585,15 @@ class HangModule final :
   HangModule* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<HangModule>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const HangModule& from);
-  void MergeFrom(const HangModule& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const HangModule& from) {
+    HangModule::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1602,7 +1606,7 @@ class HangModule final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(HangModule* other);
 
   private:
@@ -1615,7 +1619,10 @@ class HangModule final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1625,11 +1632,7 @@ class HangModule final :
     kANameFieldNumber = 1,
     kABreakpadIdFieldNumber = 2,
   };
-  // required string a_name = 1;
-  bool has_a_name() const;
-  private:
-  bool _internal_has_a_name() const;
-  public:
+  // string a_name = 1;
   void clear_a_name();
   const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1643,11 +1646,7 @@ class HangModule final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_breakpadId = 2;
-  bool has_a_breakpadid() const;
-  private:
-  bool _internal_has_a_breakpadid() const;
-  public:
+  // string a_breakpadId = 2;
   void clear_a_breakpadid();
   const std::string& a_breakpadid() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1665,17 +1664,13 @@ class HangModule final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_breakpadid_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_HangTypes_5fprotobuf_2emozilla_2eh_2eproto;
@@ -1683,7 +1678,7 @@ class HangModule final :
 // -------------------------------------------------------------------
 
 class HangStack final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangStack) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangStack) */ {
  public:
   inline HangStack() : HangStack(nullptr) {}
   ~HangStack() override;
@@ -1713,13 +1708,15 @@ class HangStack final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const HangStack& default_instance() {
     return *internal_default_instance();
   }
@@ -1757,9 +1754,15 @@ class HangStack final :
   HangStack* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<HangStack>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const HangStack& from);
-  void MergeFrom(const HangStack& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const HangStack& from) {
+    HangStack::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1772,7 +1775,7 @@ class HangStack final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(HangStack* other);
 
   private:
@@ -1785,7 +1788,10 @@ class HangStack final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1864,6 +1870,7 @@ class HangStack final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::HangEntry > a_stack_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedField< int32_t > a_strbuffer_;
+    mutable std::atomic<int> _a_strbuffer_cached_byte_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::HangModule > a_modules_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -1873,7 +1880,7 @@ class HangStack final :
 // -------------------------------------------------------------------
 
 class HangAnnotation final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangAnnotation) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangAnnotation) */ {
  public:
   inline HangAnnotation() : HangAnnotation(nullptr) {}
   ~HangAnnotation() override;
@@ -1903,13 +1910,15 @@ class HangAnnotation final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const HangAnnotation& default_instance() {
     return *internal_default_instance();
   }
@@ -1947,9 +1956,15 @@ class HangAnnotation final :
   HangAnnotation* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<HangAnnotation>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const HangAnnotation& from);
-  void MergeFrom(const HangAnnotation& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const HangAnnotation& from) {
+    HangAnnotation::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1962,7 +1977,7 @@ class HangAnnotation final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(HangAnnotation* other);
 
   private:
@@ -1975,7 +1990,10 @@ class HangAnnotation final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1985,11 +2003,7 @@ class HangAnnotation final :
     kANameFieldNumber = 1,
     kAValueFieldNumber = 2,
   };
-  // required string a_name = 1;
-  bool has_a_name() const;
-  private:
-  bool _internal_has_a_name() const;
-  public:
+  // string a_name = 1;
   void clear_a_name();
   const std::string& a_name() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2003,11 +2017,7 @@ class HangAnnotation final :
   std::string* _internal_mutable_a_name();
   public:
 
-  // required string a_value = 2;
-  bool has_a_value() const;
-  private:
-  bool _internal_has_a_value() const;
-  public:
+  // string a_value = 2;
   void clear_a_value();
   const std::string& a_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2025,17 +2035,13 @@ class HangAnnotation final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_name_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_value_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_HangTypes_5fprotobuf_2emozilla_2eh_2eproto;
@@ -2043,7 +2049,7 @@ class HangAnnotation final :
 // -------------------------------------------------------------------
 
 class HangDetails final :
-    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangDetails) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.HangDetails) */ {
  public:
   inline HangDetails() : HangDetails(nullptr) {}
   ~HangDetails() override;
@@ -2073,13 +2079,15 @@ class HangDetails final :
     return *this;
   }
 
-  inline const std::string& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString);
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
   }
-  inline std::string* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<std::string>();
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
   }
-
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
   static const HangDetails& default_instance() {
     return *internal_default_instance();
   }
@@ -2117,9 +2125,15 @@ class HangDetails final :
   HangDetails* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<HangDetails>(arena);
   }
-  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
   void CopyFrom(const HangDetails& from);
-  void MergeFrom(const HangDetails& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const HangDetails& from) {
+    HangDetails::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2132,7 +2146,7 @@ class HangDetails final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const;
+  void SetCachedSize(int size) const final;
   void InternalSwap(HangDetails* other);
 
   private:
@@ -2145,7 +2159,10 @@ class HangDetails final :
                        bool is_message_owned = false);
   public:
 
-  std::string GetTypeName() const final;
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2178,11 +2195,7 @@ class HangDetails final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::HangAnnotation >&
       a_annotations() const;
 
-  // required bytes a_duration = 1;
-  bool has_a_duration() const;
-  private:
-  bool _internal_has_a_duration() const;
-  public:
+  // bytes a_duration = 1;
   void clear_a_duration();
   const std::string& a_duration() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2196,11 +2209,7 @@ class HangDetails final :
   std::string* _internal_mutable_a_duration();
   public:
 
-  // required string a_process = 2;
-  bool has_a_process() const;
-  private:
-  bool _internal_has_a_process() const;
-  public:
+  // string a_process = 2;
   void clear_a_process();
   const std::string& a_process() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2214,11 +2223,7 @@ class HangDetails final :
   std::string* _internal_mutable_a_process();
   public:
 
-  // required string a_remoteType = 3;
-  bool has_a_remotetype() const;
-  private:
-  bool _internal_has_a_remotetype() const;
-  public:
+  // string a_remoteType = 3;
   void clear_a_remotetype();
   const std::string& a_remotetype() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2232,11 +2237,7 @@ class HangDetails final :
   std::string* _internal_mutable_a_remotetype();
   public:
 
-  // required string a_threadName = 4;
-  bool has_a_threadname() const;
-  private:
-  bool _internal_has_a_threadname() const;
-  public:
+  // string a_threadName = 4;
   void clear_a_threadname();
   const std::string& a_threadname() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2250,11 +2251,7 @@ class HangDetails final :
   std::string* _internal_mutable_a_threadname();
   public:
 
-  // required string a_runnableName = 5;
-  bool has_a_runnablename() const;
-  private:
-  bool _internal_has_a_runnablename() const;
-  public:
+  // string a_runnableName = 5;
   void clear_a_runnablename();
   const std::string& a_runnablename() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2268,7 +2265,7 @@ class HangDetails final :
   std::string* _internal_mutable_a_runnablename();
   public:
 
-  // required .protobuf.mozilla.HangStack a_stack = 6;
+  // .protobuf.mozilla.HangStack a_stack = 6;
   bool has_a_stack() const;
   private:
   bool _internal_has_a_stack() const;
@@ -2290,15 +2287,10 @@ class HangDetails final :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::protobuf::mozilla::HangAnnotation > a_annotations_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_duration_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_process_;
@@ -2306,6 +2298,7 @@ class HangDetails final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_threadname_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr a_runnablename_;
     ::protobuf::mozilla::HangStack* a_stack_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_HangTypes_5fprotobuf_2emozilla_2eh_2eproto;
@@ -2321,17 +2314,9 @@ class HangDetails final :
 #endif  // __GNUC__
 // HangEntryBufOffset
 
-// required uint32 a_index = 1;
-inline bool HangEntryBufOffset::_internal_has_a_index() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool HangEntryBufOffset::has_a_index() const {
-  return _internal_has_a_index();
-}
+// uint32 a_index = 1;
 inline void HangEntryBufOffset::clear_a_index() {
   _impl_.a_index_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t HangEntryBufOffset::_internal_a_index() const {
   return _impl_.a_index_;
@@ -2341,7 +2326,7 @@ inline uint32_t HangEntryBufOffset::a_index() const {
   return _internal_a_index();
 }
 inline void HangEntryBufOffset::_internal_set_a_index(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_index_ = value;
 }
 inline void HangEntryBufOffset::set_a_index(uint32_t value) {
@@ -2353,17 +2338,9 @@ inline void HangEntryBufOffset::set_a_index(uint32_t value) {
 
 // HangEntryModOffset
 
-// required uint32 a_module = 1;
-inline bool HangEntryModOffset::_internal_has_a_module() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool HangEntryModOffset::has_a_module() const {
-  return _internal_has_a_module();
-}
+// uint32 a_module = 1;
 inline void HangEntryModOffset::clear_a_module() {
   _impl_.a_module_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline uint32_t HangEntryModOffset::_internal_a_module() const {
   return _impl_.a_module_;
@@ -2373,7 +2350,7 @@ inline uint32_t HangEntryModOffset::a_module() const {
   return _internal_a_module();
 }
 inline void HangEntryModOffset::_internal_set_a_module(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_module_ = value;
 }
 inline void HangEntryModOffset::set_a_module(uint32_t value) {
@@ -2381,17 +2358,9 @@ inline void HangEntryModOffset::set_a_module(uint32_t value) {
   // @@protoc_insertion_point(field_set:protobuf.mozilla.HangEntryModOffset.a_module)
 }
 
-// required uint32 a_offset = 2;
-inline bool HangEntryModOffset::_internal_has_a_offset() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool HangEntryModOffset::has_a_offset() const {
-  return _internal_has_a_offset();
-}
+// uint32 a_offset = 2;
 inline void HangEntryModOffset::clear_a_offset() {
   _impl_.a_offset_ = 0u;
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline uint32_t HangEntryModOffset::_internal_a_offset() const {
   return _impl_.a_offset_;
@@ -2401,7 +2370,7 @@ inline uint32_t HangEntryModOffset::a_offset() const {
   return _internal_a_offset();
 }
 inline void HangEntryModOffset::_internal_set_a_offset(uint32_t value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_offset_ = value;
 }
 inline void HangEntryModOffset::set_a_offset(uint32_t value) {
@@ -2413,17 +2382,9 @@ inline void HangEntryModOffset::set_a_offset(uint32_t value) {
 
 // HangEntryProgCounter
 
-// required bytes a_pc = 1;
-inline bool HangEntryProgCounter::_internal_has_a_pc() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool HangEntryProgCounter::has_a_pc() const {
-  return _internal_has_a_pc();
-}
+// bytes a_pc = 1;
 inline void HangEntryProgCounter::clear_a_pc() {
   _impl_.a_pc_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& HangEntryProgCounter::a_pc() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.HangEntryProgCounter.a_pc)
@@ -2432,7 +2393,7 @@ inline const std::string& HangEntryProgCounter::a_pc() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HangEntryProgCounter::set_a_pc(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_pc_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.HangEntryProgCounter.a_pc)
 }
@@ -2445,32 +2406,22 @@ inline const std::string& HangEntryProgCounter::_internal_a_pc() const {
   return _impl_.a_pc_.Get();
 }
 inline void HangEntryProgCounter::_internal_set_a_pc(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_pc_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HangEntryProgCounter::_internal_mutable_a_pc() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_pc_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HangEntryProgCounter::release_a_pc() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.HangEntryProgCounter.a_pc)
-  if (!_internal_has_a_pc()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_pc_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_pc_.IsDefault()) {
-    _impl_.a_pc_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_pc_.Release();
 }
 inline void HangEntryProgCounter::set_allocated_a_pc(std::string* a_pc) {
   if (a_pc != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_pc_.SetAllocated(a_pc, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3187,17 +3138,9 @@ inline HangEntry::ContentCase HangEntry::content_case() const {
 
 // HangModule
 
-// required string a_name = 1;
-inline bool HangModule::_internal_has_a_name() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool HangModule::has_a_name() const {
-  return _internal_has_a_name();
-}
+// string a_name = 1;
 inline void HangModule::clear_a_name() {
   _impl_.a_name_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& HangModule::a_name() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.HangModule.a_name)
@@ -3206,7 +3149,7 @@ inline const std::string& HangModule::a_name() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HangModule::set_a_name(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.HangModule.a_name)
 }
@@ -3219,32 +3162,22 @@ inline const std::string& HangModule::_internal_a_name() const {
   return _impl_.a_name_.Get();
 }
 inline void HangModule::_internal_set_a_name(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HangModule::_internal_mutable_a_name() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HangModule::release_a_name() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.HangModule.a_name)
-  if (!_internal_has_a_name()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_name_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_name_.IsDefault()) {
-    _impl_.a_name_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_name_.Release();
 }
 inline void HangModule::set_allocated_a_name(std::string* a_name) {
   if (a_name != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3255,17 +3188,9 @@ inline void HangModule::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.HangModule.a_name)
 }
 
-// required string a_breakpadId = 2;
-inline bool HangModule::_internal_has_a_breakpadid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool HangModule::has_a_breakpadid() const {
-  return _internal_has_a_breakpadid();
-}
+// string a_breakpadId = 2;
 inline void HangModule::clear_a_breakpadid() {
   _impl_.a_breakpadid_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& HangModule::a_breakpadid() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.HangModule.a_breakpadId)
@@ -3274,7 +3199,7 @@ inline const std::string& HangModule::a_breakpadid() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HangModule::set_a_breakpadid(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_breakpadid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.HangModule.a_breakpadId)
 }
@@ -3287,32 +3212,22 @@ inline const std::string& HangModule::_internal_a_breakpadid() const {
   return _impl_.a_breakpadid_.Get();
 }
 inline void HangModule::_internal_set_a_breakpadid(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_breakpadid_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HangModule::_internal_mutable_a_breakpadid() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_breakpadid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HangModule::release_a_breakpadid() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.HangModule.a_breakpadId)
-  if (!_internal_has_a_breakpadid()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_breakpadid_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_breakpadid_.IsDefault()) {
-    _impl_.a_breakpadid_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_breakpadid_.Release();
 }
 inline void HangModule::set_allocated_a_breakpadid(std::string* a_breakpadid) {
   if (a_breakpadid != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_breakpadid_.SetAllocated(a_breakpadid, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3458,17 +3373,9 @@ HangStack::a_modules() const {
 
 // HangAnnotation
 
-// required string a_name = 1;
-inline bool HangAnnotation::_internal_has_a_name() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool HangAnnotation::has_a_name() const {
-  return _internal_has_a_name();
-}
+// string a_name = 1;
 inline void HangAnnotation::clear_a_name() {
   _impl_.a_name_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& HangAnnotation::a_name() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.HangAnnotation.a_name)
@@ -3477,7 +3384,7 @@ inline const std::string& HangAnnotation::a_name() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HangAnnotation::set_a_name(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.HangAnnotation.a_name)
 }
@@ -3490,32 +3397,22 @@ inline const std::string& HangAnnotation::_internal_a_name() const {
   return _impl_.a_name_.Get();
 }
 inline void HangAnnotation::_internal_set_a_name(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_name_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HangAnnotation::_internal_mutable_a_name() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HangAnnotation::release_a_name() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.HangAnnotation.a_name)
-  if (!_internal_has_a_name()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_name_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_name_.IsDefault()) {
-    _impl_.a_name_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_name_.Release();
 }
 inline void HangAnnotation::set_allocated_a_name(std::string* a_name) {
   if (a_name != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_name_.SetAllocated(a_name, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3526,17 +3423,9 @@ inline void HangAnnotation::set_allocated_a_name(std::string* a_name) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.HangAnnotation.a_name)
 }
 
-// required string a_value = 2;
-inline bool HangAnnotation::_internal_has_a_value() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool HangAnnotation::has_a_value() const {
-  return _internal_has_a_value();
-}
+// string a_value = 2;
 inline void HangAnnotation::clear_a_value() {
   _impl_.a_value_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& HangAnnotation::a_value() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.HangAnnotation.a_value)
@@ -3545,7 +3434,7 @@ inline const std::string& HangAnnotation::a_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HangAnnotation::set_a_value(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_value_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.HangAnnotation.a_value)
 }
@@ -3558,32 +3447,22 @@ inline const std::string& HangAnnotation::_internal_a_value() const {
   return _impl_.a_value_.Get();
 }
 inline void HangAnnotation::_internal_set_a_value(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_value_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HangAnnotation::_internal_mutable_a_value() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_value_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HangAnnotation::release_a_value() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.HangAnnotation.a_value)
-  if (!_internal_has_a_value()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_value_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_value_.IsDefault()) {
-    _impl_.a_value_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_value_.Release();
 }
 inline void HangAnnotation::set_allocated_a_value(std::string* a_value) {
   if (a_value != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_value_.SetAllocated(a_value, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3598,17 +3477,9 @@ inline void HangAnnotation::set_allocated_a_value(std::string* a_value) {
 
 // HangDetails
 
-// required bytes a_duration = 1;
-inline bool HangDetails::_internal_has_a_duration() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool HangDetails::has_a_duration() const {
-  return _internal_has_a_duration();
-}
+// bytes a_duration = 1;
 inline void HangDetails::clear_a_duration() {
   _impl_.a_duration_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& HangDetails::a_duration() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.HangDetails.a_duration)
@@ -3617,7 +3488,7 @@ inline const std::string& HangDetails::a_duration() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HangDetails::set_a_duration(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000001u;
+ 
  _impl_.a_duration_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.HangDetails.a_duration)
 }
@@ -3630,32 +3501,22 @@ inline const std::string& HangDetails::_internal_a_duration() const {
   return _impl_.a_duration_.Get();
 }
 inline void HangDetails::_internal_set_a_duration(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   _impl_.a_duration_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HangDetails::_internal_mutable_a_duration() {
-  _impl_._has_bits_[0] |= 0x00000001u;
+  
   return _impl_.a_duration_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HangDetails::release_a_duration() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.HangDetails.a_duration)
-  if (!_internal_has_a_duration()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000001u;
-  auto* p = _impl_.a_duration_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_duration_.IsDefault()) {
-    _impl_.a_duration_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_duration_.Release();
 }
 inline void HangDetails::set_allocated_a_duration(std::string* a_duration) {
   if (a_duration != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000001u;
+    
   }
   _impl_.a_duration_.SetAllocated(a_duration, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3666,17 +3527,9 @@ inline void HangDetails::set_allocated_a_duration(std::string* a_duration) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.HangDetails.a_duration)
 }
 
-// required string a_process = 2;
-inline bool HangDetails::_internal_has_a_process() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool HangDetails::has_a_process() const {
-  return _internal_has_a_process();
-}
+// string a_process = 2;
 inline void HangDetails::clear_a_process() {
   _impl_.a_process_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& HangDetails::a_process() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.HangDetails.a_process)
@@ -3685,7 +3538,7 @@ inline const std::string& HangDetails::a_process() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HangDetails::set_a_process(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
+ 
  _impl_.a_process_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.HangDetails.a_process)
 }
@@ -3698,32 +3551,22 @@ inline const std::string& HangDetails::_internal_a_process() const {
   return _impl_.a_process_.Get();
 }
 inline void HangDetails::_internal_set_a_process(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   _impl_.a_process_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HangDetails::_internal_mutable_a_process() {
-  _impl_._has_bits_[0] |= 0x00000002u;
+  
   return _impl_.a_process_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HangDetails::release_a_process() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.HangDetails.a_process)
-  if (!_internal_has_a_process()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.a_process_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_process_.IsDefault()) {
-    _impl_.a_process_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_process_.Release();
 }
 inline void HangDetails::set_allocated_a_process(std::string* a_process) {
   if (a_process != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
+    
   }
   _impl_.a_process_.SetAllocated(a_process, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3734,17 +3577,9 @@ inline void HangDetails::set_allocated_a_process(std::string* a_process) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.HangDetails.a_process)
 }
 
-// required string a_remoteType = 3;
-inline bool HangDetails::_internal_has_a_remotetype() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool HangDetails::has_a_remotetype() const {
-  return _internal_has_a_remotetype();
-}
+// string a_remoteType = 3;
 inline void HangDetails::clear_a_remotetype() {
   _impl_.a_remotetype_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& HangDetails::a_remotetype() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.HangDetails.a_remoteType)
@@ -3753,7 +3588,7 @@ inline const std::string& HangDetails::a_remotetype() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HangDetails::set_a_remotetype(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ 
  _impl_.a_remotetype_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.HangDetails.a_remoteType)
 }
@@ -3766,32 +3601,22 @@ inline const std::string& HangDetails::_internal_a_remotetype() const {
   return _impl_.a_remotetype_.Get();
 }
 inline void HangDetails::_internal_set_a_remotetype(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   _impl_.a_remotetype_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HangDetails::_internal_mutable_a_remotetype() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  
   return _impl_.a_remotetype_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HangDetails::release_a_remotetype() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.HangDetails.a_remoteType)
-  if (!_internal_has_a_remotetype()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000004u;
-  auto* p = _impl_.a_remotetype_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_remotetype_.IsDefault()) {
-    _impl_.a_remotetype_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_remotetype_.Release();
 }
 inline void HangDetails::set_allocated_a_remotetype(std::string* a_remotetype) {
   if (a_remotetype != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    
   }
   _impl_.a_remotetype_.SetAllocated(a_remotetype, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3802,17 +3627,9 @@ inline void HangDetails::set_allocated_a_remotetype(std::string* a_remotetype) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.HangDetails.a_remoteType)
 }
 
-// required string a_threadName = 4;
-inline bool HangDetails::_internal_has_a_threadname() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool HangDetails::has_a_threadname() const {
-  return _internal_has_a_threadname();
-}
+// string a_threadName = 4;
 inline void HangDetails::clear_a_threadname() {
   _impl_.a_threadname_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& HangDetails::a_threadname() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.HangDetails.a_threadName)
@@ -3821,7 +3638,7 @@ inline const std::string& HangDetails::a_threadname() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HangDetails::set_a_threadname(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000008u;
+ 
  _impl_.a_threadname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.HangDetails.a_threadName)
 }
@@ -3834,32 +3651,22 @@ inline const std::string& HangDetails::_internal_a_threadname() const {
   return _impl_.a_threadname_.Get();
 }
 inline void HangDetails::_internal_set_a_threadname(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   _impl_.a_threadname_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HangDetails::_internal_mutable_a_threadname() {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  
   return _impl_.a_threadname_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HangDetails::release_a_threadname() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.HangDetails.a_threadName)
-  if (!_internal_has_a_threadname()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000008u;
-  auto* p = _impl_.a_threadname_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_threadname_.IsDefault()) {
-    _impl_.a_threadname_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_threadname_.Release();
 }
 inline void HangDetails::set_allocated_a_threadname(std::string* a_threadname) {
   if (a_threadname != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    
   }
   _impl_.a_threadname_.SetAllocated(a_threadname, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3870,17 +3677,9 @@ inline void HangDetails::set_allocated_a_threadname(std::string* a_threadname) {
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.HangDetails.a_threadName)
 }
 
-// required string a_runnableName = 5;
-inline bool HangDetails::_internal_has_a_runnablename() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool HangDetails::has_a_runnablename() const {
-  return _internal_has_a_runnablename();
-}
+// string a_runnableName = 5;
 inline void HangDetails::clear_a_runnablename() {
   _impl_.a_runnablename_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline const std::string& HangDetails::a_runnablename() const {
   // @@protoc_insertion_point(field_get:protobuf.mozilla.HangDetails.a_runnableName)
@@ -3889,7 +3688,7 @@ inline const std::string& HangDetails::a_runnablename() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void HangDetails::set_a_runnablename(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000010u;
+ 
  _impl_.a_runnablename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:protobuf.mozilla.HangDetails.a_runnableName)
 }
@@ -3902,32 +3701,22 @@ inline const std::string& HangDetails::_internal_a_runnablename() const {
   return _impl_.a_runnablename_.Get();
 }
 inline void HangDetails::_internal_set_a_runnablename(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   _impl_.a_runnablename_.Set(value, GetArenaForAllocation());
 }
 inline std::string* HangDetails::_internal_mutable_a_runnablename() {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  
   return _impl_.a_runnablename_.Mutable(GetArenaForAllocation());
 }
 inline std::string* HangDetails::release_a_runnablename() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.HangDetails.a_runnableName)
-  if (!_internal_has_a_runnablename()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000010u;
-  auto* p = _impl_.a_runnablename_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.a_runnablename_.IsDefault()) {
-    _impl_.a_runnablename_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
+  return _impl_.a_runnablename_.Release();
 }
 inline void HangDetails::set_allocated_a_runnablename(std::string* a_runnablename) {
   if (a_runnablename != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000010u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000010u;
+    
   }
   _impl_.a_runnablename_.SetAllocated(a_runnablename, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -3938,18 +3727,18 @@ inline void HangDetails::set_allocated_a_runnablename(std::string* a_runnablenam
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.HangDetails.a_runnableName)
 }
 
-// required .protobuf.mozilla.HangStack a_stack = 6;
+// .protobuf.mozilla.HangStack a_stack = 6;
 inline bool HangDetails::_internal_has_a_stack() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
-  PROTOBUF_ASSUME(!value || _impl_.a_stack_ != nullptr);
-  return value;
+  return this != internal_default_instance() && _impl_.a_stack_ != nullptr;
 }
 inline bool HangDetails::has_a_stack() const {
   return _internal_has_a_stack();
 }
 inline void HangDetails::clear_a_stack() {
-  if (_impl_.a_stack_ != nullptr) _impl_.a_stack_->Clear();
-  _impl_._has_bits_[0] &= ~0x00000020u;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_stack_ != nullptr) {
+    delete _impl_.a_stack_;
+  }
+  _impl_.a_stack_ = nullptr;
 }
 inline const ::protobuf::mozilla::HangStack& HangDetails::_internal_a_stack() const {
   const ::protobuf::mozilla::HangStack* p = _impl_.a_stack_;
@@ -3967,14 +3756,14 @@ inline void HangDetails::unsafe_arena_set_allocated_a_stack(
   }
   _impl_.a_stack_ = a_stack;
   if (a_stack) {
-    _impl_._has_bits_[0] |= 0x00000020u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000020u;
+    
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:protobuf.mozilla.HangDetails.a_stack)
 }
 inline ::protobuf::mozilla::HangStack* HangDetails::release_a_stack() {
-  _impl_._has_bits_[0] &= ~0x00000020u;
+  
   ::protobuf::mozilla::HangStack* temp = _impl_.a_stack_;
   _impl_.a_stack_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
@@ -3990,13 +3779,13 @@ inline ::protobuf::mozilla::HangStack* HangDetails::release_a_stack() {
 }
 inline ::protobuf::mozilla::HangStack* HangDetails::unsafe_arena_release_a_stack() {
   // @@protoc_insertion_point(field_release:protobuf.mozilla.HangDetails.a_stack)
-  _impl_._has_bits_[0] &= ~0x00000020u;
+  
   ::protobuf::mozilla::HangStack* temp = _impl_.a_stack_;
   _impl_.a_stack_ = nullptr;
   return temp;
 }
 inline ::protobuf::mozilla::HangStack* HangDetails::_internal_mutable_a_stack() {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  
   if (_impl_.a_stack_ == nullptr) {
     auto* p = CreateMaybeMessage<::protobuf::mozilla::HangStack>(GetArenaForAllocation());
     _impl_.a_stack_ = p;
@@ -4020,9 +3809,9 @@ inline void HangDetails::set_allocated_a_stack(::protobuf::mozilla::HangStack* a
       a_stack = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, a_stack, submessage_arena);
     }
-    _impl_._has_bits_[0] |= 0x00000020u;
+    
   } else {
-    _impl_._has_bits_[0] &= ~0x00000020u;
+    
   }
   _impl_.a_stack_ = a_stack;
   // @@protoc_insertion_point(field_set_allocated:protobuf.mozilla.HangDetails.a_stack)

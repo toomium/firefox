@@ -5,17 +5,16 @@
 
 // Generated from /home/tmittendorf/firefox/dom/network/PTCPSocket.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf;
 
 
 // Structs and unions declarations
 message TCPError {
-  required string a_name = 1;
-  required string a_message = 2;
-  required bytes a_errorCode = 3;
+  string a_name = 1;
+  string a_message = 2;
+  bytes a_errorCode = 3;
 }
 
 message SendableData {

@@ -5,8 +5,7 @@
 
 // Generated from /home/tmittendorf/firefox/dom/localstorage/PBackgroundLSObserver.ipdl
 
-syntax = "proto2";
-option optimize_for = LITE_RUNTIME;
+syntax = "proto3";
 
 package protobuf.mozilla.dom.PBackgroundLSObserver;
 
@@ -26,12 +25,12 @@ message Reply___delete__ {
 }
 
 message Msg_Observe {
-  required protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
-  required uint32 a_privateBrowsingId = 2;
-  required string a_documentURI = 3;
-  required string a_key = 4;
-  required bytes a_oldValue = 5;
-  required bytes a_newValue = 6;
+  protobuf.mozilla.ipc.PrincipalInfo a_principalInfo = 1;
+  uint32 a_privateBrowsingId = 2;
+  string a_documentURI = 3;
+  string a_key = 4;
+  bytes a_oldValue = 5;
+  bytes a_newValue = 6;
 }
 
 // Parameter mappings stats:
