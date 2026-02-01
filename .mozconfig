@@ -1,26 +1,38 @@
-#mk_add_options "export AFL_CC=$MOZ_FETCHES_DIR/clang/bin/clang"
-#mk_add_options "export AFL_CXX=$MOZ_FETCHES_DIR/clang/bin/clang++"
+export MOZ_ARTIFACT_PLATFORM="linux64-asan-fuzzing-nyx"
+export MOZ_AUTOMATION="1"
+export MOZ_AUTOMATION_PACKAGE_TESTS="1"
+
+ac_add_options --target=x86_64-linux-gnu
+ac_add_options --enable-bootstrap
+
+mk_add_options "export AFL_CC=/home/tmittendorf/.mozbuild/clang/bin/clang"
+mk_add_options "export AFL_CXX=/home/tmittendorf/.mozbuild/clang/bin/clang++"
 mk_add_options "export AFL_LLVM_INSTRUMENT=llvmnative"
 mk_add_options "export AFL_LLVM_NO_RPATH=1"
 
-#export CC="$MOZ_FETCHES_DIR/afl-instrumentation/bin/afl-clang-fast"
-#export CXX="$MOZ_FETCHES_DIR/afl-instrumentation/bin/afl-clang-fast++"
+# ccov mode
+# mk_add_options "export AFL_LLVM_INSTRUMENT=llvmcodecov"
 
-#export HOST_CC="$MOZ_FETCHES_DIR/clang/bin/clang"
-#export HOST_CXX="$MOZ_FETCHES_DIR/clang/bin/clang++"
+export CC="/home/tmittendorf/firefox/toolchain/afl-instrumentation/bin/afl-clang-fast"
+export CXX="/home/tmittendorf/firefox/toolchain/afl-instrumentation/bin/afl-clang-fast++"
+
+export HOST_CC="/home/tmittendorf/.mozbuild/clang/bin/clang"
+export HOST_CXX="/home/tmittendorf/.mozbuild/clang/bin/clang++"
 
 
 # We still need to build with debug symbols
 ac_add_options --enable-debug-symbols=-gline-tables-only
 
-export RUSTC="/root/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rustc"
+export RUSTC="/home/tmittendorf/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rustc"
 
 mk_add_options AUTOCLOBBER=1
 
 ac_add_options --enable-js-shell
 
-#mk_add_options "export MOZ_AUTOMATION_BUILD_SYMBOLS=${MOZ_AUTOMATION_BUILD_SYMBOLS-1}"
-#mk_add_options "export MOZ_AUTOMATION_PACKAGE=${MOZ_AUTOMATION_PACKAGE-1}"
+# TODO: find out how to build symbols
+# mk_add_options "export MOZ_AUTOMATION_BUILD_SYMBOLS=1"
+mk_add_options "export MOZ_AUTOMATION_PACKAGE=1"
+
 #mk_add_options "export MOZ_AUTOMATION_PACKAGE_GENERATED_SOURCES=${MOZ_AUTOMATION_PACKAGE_GENERATED_SOURCES-1}"
 #mk_add_options "export MOZ_AUTOMATION_UPLOAD=${MOZ_AUTOMATION_UPLOAD-1}"
 #mk_add_options "export MOZ_AUTOMATION_CHECK=${MOZ_AUTOMATION_CHECK-1}"
@@ -32,9 +44,6 @@ ac_add_options --enable-js-shell
 #export MOZ_AUTOMATION_MOZCONFIG=1
 #ac_add_options --enable-rust-simd
 # . "$topsrcdir/build/mozconfig.cache"
-
-
-
 
 if [ -n "$FORCE_GCC" ]; then
     #CC="$MOZ_FETCHES_DIR/gcc/bin/gcc"
@@ -53,13 +62,15 @@ else
     export CFLAGS="$CFLAGS -fcrash-diagnostics-dir=${UPLOAD_PATH}"
     export CXXFLAGS="$CXXFLAGS -fcrash-diagnostics-dir=${UPLOAD_PATH}"
 
+    # TODO: find out where we can fetch this from the CI artifacts
     #mk_add_options "export PATH=$MOZ_FETCHES_DIR/binutils/bin:$PATH"
 fi
 
 export MOZ_STDCXX_COMPAT=1
 
-#export LLVM_SYMBOLIZER="$MOZ_FETCHES_DIR/llvm-symbolizer/bin/llvm-symbolizer"
-#
+# TODO: fix, fails due to libLLVM.so not found
+# export LLVM_SYMBOLIZER="/home/tmittendorf/firefox/toolchain/llvm-symbolizer/bin/llvm-symbolizer"
+
 # Enable ASan specific code and build workarounds
 ac_add_options --enable-address-sanitizer
 
@@ -86,6 +97,6 @@ ac_add_options --enable-undefined-sanitizer
 export MOZ_PACKAGE_JSSHELL=1
 
 # Need this to prevent name conflicts with the normal nightly build packages
-# export MOZ_PKG_SPECIAL=asan
+export MOZ_PKG_SPECIAL=asan
 
 ac_add_options --disable-sandbox
