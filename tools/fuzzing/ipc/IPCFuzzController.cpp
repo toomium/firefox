@@ -663,7 +663,8 @@ bool IPCFuzzController::ObserveIPCMessage(mozilla::ipc::NodeChannel* channel,
 
 void IPCFuzzController::OnMessageError(
     mozilla::ipc::HasResultCodes::Result code, const IPC::Message& aMsg) {
-  if (!mozilla::fuzzing::Nyx::instance().is_enabled("IPC_Generic")) {
+  if (!(mozilla::fuzzing::Nyx::instance().is_enabled("IPC_Generic") ||
+        mozilla::fuzzing::Nyx::instance().is_enabled("IPC_SingleMessage"))) {
     // Fuzzer is not enabled.
     return;
   }
@@ -710,6 +711,11 @@ void IPCFuzzController::OnMessageError(
       break;
     default:
       MOZ_FUZZING_NYX_ABORT("unknown Result code");
+  }
+
+  if (mozilla::fuzzing::Nyx::instance().is_enabled("IPC_SingleMessage")) {
+    // for SingleMessage Fuzzing we just want to count and not release yet
+    return;
   }
 
   // Count this message as one iteration as well.
