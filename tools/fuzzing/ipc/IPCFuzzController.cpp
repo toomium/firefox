@@ -709,6 +709,10 @@ void IPCFuzzController::OnMessageError(
       Nyx::instance().handle_event("MOZ_IPC_PROCESS_ERROR", nullptr, 0,
                                    nullptr);
       break;
+    case ipc::HasResultCodes::MsgProcessed:
+      Nyx::instance().handle_event("MOZ_IPC_PROCESSED", nullptr, 0,
+                                   nullptr);
+      break;
     default:
       MOZ_FUZZING_NYX_ABORT("unknown Result code");
   }
