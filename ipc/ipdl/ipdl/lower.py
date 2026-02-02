@@ -6586,12 +6586,12 @@ class _GenerateProtocolActorCode(ipdl.ast.Visitor):
         errBlock = Block()
         if errfn == None:
             errBlock.addcode("""
-                MOZ_FUZZING_NYX_PRINT("Error deserializing {protoField}");
-                return {errReturn};""",
-                protoField=protoField,
+                MOZ_FUZZING_NYX_PRINT("Error deserializing '${protoField}'");
+                return ${errReturn};""",
+                protoField=ipdltype.name(),
                 errReturn=errReturn)
         else:
-            errBlock.addstmts(errfn(f"Error deserializing {protoField}"))
+            errBlock.addstmts(errfn(f"Error deserializing '{ipdltype.name()}'"))
 
         if _protobufTypeIsArray(ipdltype):
             # for "ArrayTypes" we convert the protobuf array to the mozilla array "nsTArray"
@@ -6840,6 +6840,20 @@ class _GenerateProtocolActorCode(ipdl.ast.Visitor):
             msgName = md.msgCtorFunc()
 
         protoVar = "proto"
+
+        msgvar = self.msgvar
+        msgexpr = ExprAddrOf(msgvar)
+
+        stmts = [
+            self.logMessage(md, msgexpr, "Received ", receiving=True),
+            self.profilerLabel(md),
+            Whitespace.NL,
+        ]
+
+        func.addstmts(stmts)
+
+        if 0 == len(md.params):
+            return func
 
         # convert msg to proto
         func.addcode("""
