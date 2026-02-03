@@ -948,7 +948,13 @@ void IPCFuzzController::OnDropPeer(const char* reason = nullptr,
     return;
   }
 
-  Nyx::instance().release(IPCFuzzController::instance().getMessageStopCount());
+  if (mozilla::fuzzing::Nyx::instance().is_enabled("IPC_SingleMessage")) {
+    // for singleMessage fuzzing release 1 iteration
+    Nyx::instance().release(1);
+  }
+  else {
+    Nyx::instance().release(IPCFuzzController::instance().getMessageStopCount());
+  }
 }
 
 void IPCFuzzController::StartFuzzing(mozilla::ipc::NodeChannel* channel,
