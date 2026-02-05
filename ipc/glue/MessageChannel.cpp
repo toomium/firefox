@@ -1923,11 +1923,11 @@ void MessageChannel::ReportConnectionError(const char* aFunctionName,
 
 bool MessageChannel::MaybeHandleError(Result code, const Message& aMsg,
                                       const char* channelName) {
-  if (MsgProcessed == code) return true;
-
 #ifdef FUZZING_SNAPSHOT
   mozilla::fuzzing::IPCFuzzController::instance().OnMessageError(code, aMsg);
 #endif
+
+  if (MsgProcessed == code) return true;
 
   const char* errorMsg = nullptr;
   switch (code) {
