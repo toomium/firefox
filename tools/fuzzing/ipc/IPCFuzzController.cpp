@@ -715,6 +715,10 @@ void IPCFuzzController::OnMessageError(
       Nyx::instance().handle_event("MOZ_IPC_PROTOBUF_ERROR", nullptr, 0,
                                    nullptr);
       break;
+    case ipc::HasResultCodes::MsgProcessed:
+      Nyx::instance().handle_event("MOZ_IPC_PROCESSED", nullptr, 0,
+                                   nullptr);
+      break;
     default:
       MOZ_FUZZING_NYX_ABORT("unknown Result code");
   }
@@ -1636,30 +1640,8 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
   if (!!getenv("MOZ_FUZZ_DEBUG")) {
     MOZ_FUZZING_NYX_PRINTF("DEBUG: Got protobuf message of size %u...\n", bufsize);
   }
-  // UniquePtr<TypedProtobuf> typedProtobuf = MakeUnique<TypedProtobuf>();
-  // typedProtobuf->type = aMsg->type();
-  // typedProtobuf->serialized_data.assign(
-  //  reinterpret_cast<char*>(buffer.begin()), bufsize
-  // );
 
-  // // convert typed protobuf to ipc message
-  // UniquePtr<IPC::Message> msg = ConvertProtobufToIPCMessage(typedProtobuf);
-
-  // if (!msg) {
-  //   MOZ_FUZZING_NYX_DEBUG("ERROR: Incoming protobuf data could not be converted to ipc message\n");
-  //   Nyx::instance().release(0);
-  // }
-  // // copy old header to converted ipc message, but leave payload size intact
-  // auto new_size = msg->header()->payload_size;
-  // memcpy(msg->header(), aMsg->header(), sizeof(IPC::Message::Header));
-  // msg->header()->payload_size = new_size;
-
-  // if (!!getenv("MOZ_FUZZ_DEBUG")) {
-  //   MOZ_FUZZING_NYX_PRINTF("DEBUG: Successfully converted to ipc message of size %u...\n", msg->header()->payload_size);
-  // }
-
-
-  // hiding protobuf message in disguise of ipc message
+  // hiding protobuf message inside of ipc message
   mozilla::UniquePtr<IPC::Message> msg = LibprotobufMapping::CreateMessageFromPayload(std::string(reinterpret_cast<char*>(buffer.begin()), bufsize));
 
   // copy old header to converted ipc message, but leave payload size intact
