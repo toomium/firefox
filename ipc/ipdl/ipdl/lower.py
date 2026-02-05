@@ -2798,7 +2798,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                         ${varName}.AppendElement(std::move(maybeItem.ref()));
                     }
                     else {
-                        MOZ_FUZZING_NYX_PRINT("Error deserializing ${protoField}");
+                        //MOZ_FUZZING_NYX_PRINT("Error deserializing ${protoField}");
                         return ${errReturn};
                     }
                     """,
@@ -2861,7 +2861,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                         ${varName} = mozilla::Some(std::move(*maybe_${varName}));
                     }
                     else {
-                        MOZ_FUZZING_NYX_PRINT("Error deserializing ${protoField}");
+                        //MOZ_FUZZING_NYX_PRINT("Error deserializing ${protoField}");
                         return ${errReturn};
                     }
                     """,
@@ -2908,7 +2908,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             block.addcode("""
                 auto maybe_${varName} = ${protoValue};
                 if (! maybe_${varName}.isSome()) {
-                    MOZ_FUZZING_NYX_PRINT("Error deserializing ${protoField}");
+                    //MOZ_FUZZING_NYX_PRINT("Error deserializing ${protoField}");
                     return ${errReturn};
                 }
                 auto& ${varName} = *maybe_${varName};
@@ -2940,7 +2940,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                         if (${protoVar}${sep}has_${protoField}()) {
                             auto maybe_${varName} = ${protoValue};
                             if (! maybe_${varName}.isSome()) {
-                                MOZ_FUZZING_NYX_PRINT("Error deserializing ${protoField}");
+                                //MOZ_FUZZING_NYX_PRINT("Error deserializing ${protoField}");
                                 return ${errReturn};
                             }
                             ${varName} = *maybe_${varName};
@@ -2958,7 +2958,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
                     block.addcode("""
                         auto maybe_${varName} = ${protoValue};
                         if (! maybe_${varName}.isSome()) {
-                            MOZ_FUZZING_NYX_PRINT("Error deserializing ${protoField}");
+                            //MOZ_FUZZING_NYX_PRINT("Error deserializing ${protoField}");
                             return ${errReturn};
                         }
                         auto& ${varName} = *maybe_${varName};
@@ -6586,7 +6586,7 @@ class _GenerateProtocolActorCode(ipdl.ast.Visitor):
         errBlock = Block()
         if errfn == None:
             errBlock.addcode("""
-                MOZ_FUZZING_NYX_PRINT("Error deserializing '${protoField}'");
+                //MOZ_FUZZING_NYX_PRINT("Error deserializing '${protoField}'");
                 return ${errReturn};""",
                 protoField=ipdltype.name(),
                 errReturn=errReturn)
@@ -6606,20 +6606,6 @@ class _GenerateProtocolActorCode(ipdl.ast.Visitor):
                     protoField=protoField,
                     protoValue=self._generateIPCValue(ipdltype.basetype, f"{protoVar}{sep}{protoField}(i)", side)
                 )
-            # elif _protobufTypeIsStructOrUnion(ipdltype.basetype):
-            #     inner.addcode("""
-            #         auto& item = ${protoVar}${sep}${protoField}(i);
-            #         auto& maybe_ipc_struct = ${protoValue};
-            #         if (maybe_ipc_struct) {
-            #             ${varName}.AppendElement(*maybe_ipc_struct);
-            #         }
-            #         """,
-            #         varName=varName,
-            #         protoVar=protoVar,
-            #         sep=sep,
-            #         protoField=protoField,
-            #         protoValue=self._generateIPCValue(ipdltype.basetype, "item", side),
-            #     )
             else:
                 # needs deserialization
                 inner.addcode("""

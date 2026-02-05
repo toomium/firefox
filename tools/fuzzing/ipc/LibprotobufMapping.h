@@ -67,14 +67,18 @@ class LibprotobufMapping {
         }
         return input;
       }
-      MOZ_FUZZING_NYX_PRINT("ERROR: Protobuf parsing failed - returning empty pointer\n");
+      if (!!getenv("MOZ_FUZZ_DEBUG")) {
+        MOZ_FUZZING_NYX_PRINT("ERROR: Protobuf parsing failed - returning empty pointer\n");
+      }
       return {};
   }
 
   template<typename T>
   static UniquePtr<TypedProtobuf> SerializeTypedProtobuf(UniquePtr<T>& proto, IPC::IPCMessages type) {
       if (!proto) {
-        MOZ_FUZZING_NYX_PRINT("ERROR: Cannot serialize nullptr protobuf object\n");
+        if (!!getenv("MOZ_FUZZ_DEBUG")) {
+          MOZ_FUZZING_NYX_PRINT("ERROR: Cannot serialize nullptr protobuf object\n");
+        }
         return {};
       }
       UniquePtr<TypedProtobuf> output = mozilla::MakeUnique<TypedProtobuf>();
@@ -88,8 +92,6 @@ class LibprotobufMapping {
 
     // save position before reading
     size_t offset_before = reader->iter_.iter_.AbsoluteOffset();
-    MOZ_FUZZING_NYX_PRINTF("INFO: [ConvertToProto] Read Parameter AbsoluteOffset: %lu\n",
-                      offset_before);
 
     // copy iter state
     Pickle::BufferList::IterImpl iter_before = reader->iter_.iter_;
@@ -97,14 +99,14 @@ class LibprotobufMapping {
     // read parameter
     auto readResult = IPC::ReadParam<T>(reader);
     if (!readResult) {
+      if (!!getenv("MOZ_FUZZ_DEBUG")) {
         MOZ_FUZZING_NYX_PRINT("ERROR: Reading serialized parameter failed due to empty read result\n");
-        return {};
+      }
+      return {};
     }
 
     // calculate serialized size
     size_t offset_after = reader->iter_.iter_.AbsoluteOffset();
-    MOZ_FUZZING_NYX_PRINTF("INFO: [ConvertToProto] Read Parameter AbsoluteOffset After: %lu\n",
-                    offset_after);
     size_t serialized_size = offset_after - offset_before;
 
     std::string result;
@@ -114,7 +116,9 @@ class LibprotobufMapping {
             iter_before,
             result.data(), // write into string buffer
             serialized_size)) {
-        MOZ_FUZZING_NYX_PRINT("ERROR: ReadBytes failed to copy serialized data\n");
+        if (!!getenv("MOZ_FUZZ_DEBUG")) {
+          MOZ_FUZZING_NYX_PRINT("ERROR: ReadBytes failed to copy serialized data\n");
+        }
         return {};
     }
 
@@ -167,7 +171,9 @@ template<typename T>
     // }
     auto result = IPC::ReadParam<T>(&reader__);
     if (!result) {
-      MOZ_FUZZING_NYX_PRINT("Deserialization from string failed\n");
+      if (!!getenv("MOZ_FUZZ_DEBUG")) {
+        MOZ_FUZZING_NYX_PRINT("Deserialization from string failed\n");
+      }
       return mozilla::Nothing();
     }
 

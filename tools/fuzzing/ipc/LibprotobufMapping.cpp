@@ -107,7 +107,8 @@ std::string LibprotobufMapping::ReadPayloadFromMessage(const IPC::Message& msg) 
 
     Pickle::BufferList::IterImpl iter(msg.Buffers());
     if (! iter.AdvanceAcrossSegments(msg.Buffers(), sizeof(IPC::Message::Header))) {
-        MOZ_FUZZING_NYX_ABORT("ReadPayloadFromMessage: Skipping header failed\n");
+        MOZ_FUZZING_NYX_PRINT("ReadPayloadFromMessage: Skipping header failed\n");
+        return "";
     }
 
 
@@ -121,7 +122,8 @@ std::string LibprotobufMapping::ReadPayloadFromMessage(const IPC::Message& msg) 
             iter,
             ret.data(),
             msg.header()->payload_size)) {
-        MOZ_FUZZING_NYX_ABORT("ReadPayloadFromMessage: ReadBytes failed\n");
+        MOZ_FUZZING_NYX_PRINT("ReadPayloadFromMessage: ReadBytes failed\n");
+        return "";
     }
 
     return ret;
