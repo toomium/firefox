@@ -13,8 +13,8 @@ mk_add_options "export AFL_LLVM_NO_RPATH=1"
 # ccov mode
 # mk_add_options "export AFL_LLVM_INSTRUMENT=llvmcodecov"
 
-export CC="/home/tmittendorf/firefox/toolchain/afl-instrumentation/bin/afl-clang-fast"
-export CXX="/home/tmittendorf/firefox/toolchain/afl-instrumentation/bin/afl-clang-fast++"
+export CC="/home/tmittendorf/proto_firefox_fuzzing/firefox/toolchain/afl-instrumentation/bin/afl-clang-fast"
+export CXX="/home/tmittendorf/proto_firefox_fuzzing/firefox/toolchain/afl-instrumentation/bin/afl-clang-fast++"
 
 export HOST_CC="/home/tmittendorf/.mozbuild/clang/bin/clang"
 export HOST_CXX="/home/tmittendorf/.mozbuild/clang/bin/clang++"
