@@ -1605,6 +1605,10 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
   // happens just while we are fuzzing.
   msg->SetFuzzMsg();
 
+  // mark as valid iteration
+  Nyx::instance().handle_event("MSG_ITERATION", nullptr, 0,
+                                   nullptr);
+
   return msg;
 }
 
