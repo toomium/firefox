@@ -4808,7 +4808,7 @@ class _GenerateProtocolActorCode(ipdl.ast.Visitor):
             declstmts = self.makeResolver(md, errfnRecv, routingId=idvar)
 
         # only call recv handler when we do NOT have a fuzz message OR we are not in dryrun mode while fuzzing
-        recvHandler = StmtIf(ExprVar("!msg__.IsFuzzMsg()) || !getenv(\"MOZ_FUZZ_DRYRUN\")"))
+        recvHandler = StmtIf(ExprVar("!msg__.IsFuzzMsg() || !getenv(\"MOZ_FUZZ_DRYRUN\")"))
         recvHandler.addifstmts(self.invokeRecvHandler(md))
         recvHandler.addelsestmt(StmtReturn(_Result.ProcessingError))
 
