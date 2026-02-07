@@ -7,6 +7,8 @@ from ipdl.protobuf.parser.proto_schema_parser import ast, generator
 import ipdl.type
 
 USE_PROTO3 = True
+USE_LITE_RUNTIME = not (os.getenv('FUZZING_SNAPSHOT_LPM_DEBUG') == '1')
+
 
 _NL = ast.Comment("")
 
@@ -305,8 +307,11 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             mf.syntax = "proto3"
         else:
             mf.syntax = "proto2"
-        #option_runtime = ast.Comment("option optimize_for = LITE_RUNTIME;")
-        #self.addElement(mf, option_runtime)
+
+        if USE_LITE_RUNTIME:
+            option_runtime = ast.Comment("option optimize_for = LITE_RUNTIME;")
+            self.addElement(mf, option_runtime)
+
         self.addNL(mf)
 
         if tu.protocol:
@@ -341,16 +346,17 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
         self.addComment(mf, f"// Message structs/unions generated from ipdl structs/unions: {sum([len(x) for x in self.namespacedStructsAndUnions.values()])}")
 
     def buildHeader(self, ns : str, file : ast.File, tu : ipdl.ast.TranslationUnit):
-        #option_runtime = ast.Comment("option optimize_for = LITE_RUNTIME;")
         if USE_PROTO3:
             file.syntax = "proto3"
         else:
             file.syntax = "proto2"
 
-        package = ast.Package(ns)
+        if USE_LITE_RUNTIME:
+            option_runtime = ast.Comment("option optimize_for = LITE_RUNTIME;")
+            self.addElement(file, option_runtime)
 
-        #self.addElement(file, option_runtime)
         self.addNL(file)
+        package = ast.Package(ns)
         self.addElement(file, package)
 
         # add regular imports inherited from ipdl file

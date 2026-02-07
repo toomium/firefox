@@ -3424,7 +3424,12 @@ option(
     help="Enable usage of protobuf structure awareness for snapshot fuzzing",
 )
 
+option(
+    "--enable-snapshot-fuzzing-lpm-debug",
+    help="Enable debug build for protobuf based fuzzing",
+)
 
+imply_option("--enable-snapshot-fuzzing-lpm", True, when="--enable-snapshot-fuzzing-lpm-debug")
 #imply_option("--enable-snapshot-fuzzing", True, when="--enable-snapshot-fuzzing-lpm")
 imply_option("--enable-fuzzing", True, when="--enable-snapshot-fuzzing")
 
