@@ -6,6 +6,7 @@
 // Generated from PNecko.ipdl
 
 syntax = "proto3";
+option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.net.PNecko;
 

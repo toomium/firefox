@@ -25,11 +25,9 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/message.h>
+#include <google/protobuf/message_lite.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
-#include <google/protobuf/unknown_field_set.h>
 #include "CrashReporterInitArgs.pb.h"
 #include "MemoryReportTypes.pb.h"
 #include "NeckoChannelParams.pb.h"
@@ -47,7 +45,6 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto {
   static const uint32_t offsets[];
 };
-extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace net {
@@ -75,7 +72,7 @@ namespace net {
 // ===================================================================
 
 class HttpHandlerInitArgs final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.HttpHandlerInitArgs) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.HttpHandlerInitArgs) */ {
  public:
   inline HttpHandlerInitArgs() : HttpHandlerInitArgs(nullptr) {}
   ~HttpHandlerInitArgs() override;
@@ -105,15 +102,6 @@ class HttpHandlerInitArgs final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const HttpHandlerInitArgs& default_instance() {
     return *internal_default_instance();
   }
@@ -151,15 +139,9 @@ class HttpHandlerInitArgs final :
   HttpHandlerInitArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<HttpHandlerInitArgs>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const HttpHandlerInitArgs& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const HttpHandlerInitArgs& from) {
-    HttpHandlerInitArgs::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const HttpHandlerInitArgs& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -172,7 +154,7 @@ class HttpHandlerInitArgs final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(HttpHandlerInitArgs* other);
 
   private:
@@ -185,10 +167,7 @@ class HttpHandlerInitArgs final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -404,7 +383,7 @@ class HttpHandlerInitArgs final :
 // -------------------------------------------------------------------
 
 class SocketDataArgs final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.SocketDataArgs) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.SocketDataArgs) */ {
  public:
   inline SocketDataArgs() : SocketDataArgs(nullptr) {}
   ~SocketDataArgs() override;
@@ -434,15 +413,6 @@ class SocketDataArgs final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const SocketDataArgs& default_instance() {
     return *internal_default_instance();
   }
@@ -480,15 +450,9 @@ class SocketDataArgs final :
   SocketDataArgs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SocketDataArgs>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const SocketDataArgs& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const SocketDataArgs& from) {
-    SocketDataArgs::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const SocketDataArgs& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -501,7 +465,7 @@ class SocketDataArgs final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(SocketDataArgs* other);
 
   private:
@@ -514,10 +478,7 @@ class SocketDataArgs final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -589,7 +550,7 @@ class SocketDataArgs final :
 // -------------------------------------------------------------------
 
 class SocketPorcessInitAttributes final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.SocketPorcessInitAttributes) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.net.SocketPorcessInitAttributes) */ {
  public:
   inline SocketPorcessInitAttributes() : SocketPorcessInitAttributes(nullptr) {}
   ~SocketPorcessInitAttributes() override;
@@ -619,15 +580,6 @@ class SocketPorcessInitAttributes final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const SocketPorcessInitAttributes& default_instance() {
     return *internal_default_instance();
   }
@@ -665,15 +617,9 @@ class SocketPorcessInitAttributes final :
   SocketPorcessInitAttributes* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SocketPorcessInitAttributes>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const SocketPorcessInitAttributes& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const SocketPorcessInitAttributes& from) {
-    SocketPorcessInitAttributes::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const SocketPorcessInitAttributes& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -686,7 +632,7 @@ class SocketPorcessInitAttributes final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(SocketPorcessInitAttributes* other);
 
   private:
@@ -699,10 +645,7 @@ class SocketPorcessInitAttributes final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 

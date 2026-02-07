@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -165,190 +162,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto[10];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferableDataString, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferableDataString, _impl_.a_data_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferableDataCString, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferableDataCString, _impl_.a_data_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferableDataInputStream, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferableDataInputStream, _impl_.a_data_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferableDataImageContainer, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferableDataImageContainer, _impl_.a_image_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferableDataBlob, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferableDataBlob, _impl_.a_blob_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferableDataType, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferableDataType, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferableDataType, _impl_.content_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferableDataItem, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferableDataItem, _impl_.a_flavor_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferableDataItem, _impl_.a_data_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferableData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferableData, _impl_.a_items_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferableDataOrError, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferableDataOrError, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferableDataOrError, _impl_.content_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferable, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferable, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferable, _impl_.a_data_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferable, _impl_.a_isprivatedata_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferable, _impl_.a_dataprincipal_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferable, _impl_.a_cookiejarsettings_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferable, _impl_.a_contentpolicytype_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCTransferable, _impl_.a_referrerinfo_),
-  ~0u,
-  ~0u,
-  0,
-  2,
-  ~0u,
-  1,
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::dom::IPCTransferableDataString)},
-  { 7, -1, -1, sizeof(::protobuf::mozilla::dom::IPCTransferableDataCString)},
-  { 14, -1, -1, sizeof(::protobuf::mozilla::dom::IPCTransferableDataInputStream)},
-  { 21, -1, -1, sizeof(::protobuf::mozilla::dom::IPCTransferableDataImageContainer)},
-  { 28, -1, -1, sizeof(::protobuf::mozilla::dom::IPCTransferableDataBlob)},
-  { 35, -1, -1, sizeof(::protobuf::mozilla::dom::IPCTransferableDataType)},
-  { 47, -1, -1, sizeof(::protobuf::mozilla::dom::IPCTransferableDataItem)},
-  { 55, -1, -1, sizeof(::protobuf::mozilla::dom::IPCTransferableData)},
-  { 62, -1, -1, sizeof(::protobuf::mozilla::dom::IPCTransferableDataOrError)},
-  { 71, 83, -1, sizeof(::protobuf::mozilla::dom::IPCTransferable)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::dom::_IPCTransferableDataString_default_instance_._instance,
-  &::protobuf::mozilla::dom::_IPCTransferableDataCString_default_instance_._instance,
-  &::protobuf::mozilla::dom::_IPCTransferableDataInputStream_default_instance_._instance,
-  &::protobuf::mozilla::dom::_IPCTransferableDataImageContainer_default_instance_._instance,
-  &::protobuf::mozilla::dom::_IPCTransferableDataBlob_default_instance_._instance,
-  &::protobuf::mozilla::dom::_IPCTransferableDataType_default_instance_._instance,
-  &::protobuf::mozilla::dom::_IPCTransferableDataItem_default_instance_._instance,
-  &::protobuf::mozilla::dom::_IPCTransferableData_default_instance_._instance,
-  &::protobuf::mozilla::dom::_IPCTransferableDataOrError_default_instance_._instance,
-  &::protobuf::mozilla::dom::_IPCTransferable_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n,IPCTransferable_protobuf.mozilla.dom.h"
-  ".proto\022\024protobuf.mozilla.dom\032\016DOMTypes.p"
-  "roto\032\rIPCBlob.proto\032\030NeckoChannelParams."
-  "proto\"+\n\031IPCTransferableDataString\022\016\n\006a_"
-  "data\030\001 \001(\014\",\n\032IPCTransferableDataCString"
-  "\022\016\n\006a_data\030\001 \001(\014\"0\n\036IPCTransferableDataI"
-  "nputStream\022\016\n\006a_data\030\001 \001(\014\"T\n!IPCTransfe"
-  "rableDataImageContainer\022/\n\007a_image\030\001 \001(\013"
-  "2\036.protobuf.mozilla.dom.IPCImage\"H\n\027IPCT"
-  "ransferableDataBlob\022-\n\006a_blob\030\001 \001(\0132\035.pr"
-  "otobuf.mozilla.dom.IPCBlob\"\376\003\n\027IPCTransf"
-  "erableDataType\022X\n\035a_mVIPCTransferableDat"
-  "aString\030\001 \001(\0132/.protobuf.mozilla.dom.IPC"
-  "TransferableDataStringH\000\022Z\n\036a_mVIPCTrans"
-  "ferableDataCString\030\002 \001(\01320.protobuf.mozi"
-  "lla.dom.IPCTransferableDataCStringH\000\022b\n\""
-  "a_mVIPCTransferableDataInputStream\030\003 \001(\013"
-  "24.protobuf.mozilla.dom.IPCTransferableD"
-  "ataInputStreamH\000\022h\n%a_mVIPCTransferableD"
-  "ataImageContainer\030\004 \001(\01327.protobuf.mozil"
-  "la.dom.IPCTransferableDataImageContainer"
-  "H\000\022T\n\033a_mVIPCTransferableDataBlob\030\005 \001(\0132"
-  "-.protobuf.mozilla.dom.IPCTransferableDa"
-  "taBlobH\000B\t\n\007content\"j\n\027IPCTransferableDa"
-  "taItem\022\020\n\010a_flavor\030\001 \001(\t\022=\n\006a_data\030\002 \001(\013"
-  "2-.protobuf.mozilla.dom.IPCTransferableD"
-  "ataType\"U\n\023IPCTransferableData\022>\n\007a_item"
-  "s\030\001 \003(\0132-.protobuf.mozilla.dom.IPCTransf"
-  "erableDataItem\"\215\001\n\032IPCTransferableDataOr"
-  "Error\022L\n\027a_mVIPCTransferableData\030\001 \001(\0132)"
-  ".protobuf.mozilla.dom.IPCTransferableDat"
-  "aH\000\022\026\n\014a_mVnsresult\030\002 \001(\014H\000B\t\n\007content\"\313"
-  "\002\n\017IPCTransferable\0229\n\006a_data\030\001 \001(\0132).pro"
-  "tobuf.mozilla.dom.IPCTransferableData\022\027\n"
-  "\017a_isPrivateData\030\002 \001(\010\022\034\n\017a_dataPrincipa"
-  "l\030\003 \001(\014H\000\210\001\001\022M\n\023a_cookieJarSettings\030\004 \001("
-  "\0132+.protobuf.mozilla.net.CookieJarSettin"
-  "gsArgsH\001\210\001\001\022\033\n\023a_contentPolicyType\030\005 \001(\014"
-  "\022\033\n\016a_referrerInfo\030\006 \001(\014H\002\210\001\001B\022\n\020_a_data"
-  "PrincipalB\026\n\024_a_cookieJarSettingsB\021\n\017_a_"
-  "referrerInfob\006proto3"
-  ;
-static const ::_pbi::DescriptorTable* const descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_deps[3] = {
-  &::descriptor_table_DOMTypes_2eproto,
-  &::descriptor_table_IPCBlob_2eproto,
-  &::descriptor_table_NeckoChannelParams_2eproto,
-};
-static ::_pbi::once_flag descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto = {
-    false, false, 1620, descriptor_table_protodef_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    "IPCTransferable_protobuf.mozilla.dom.h.proto",
-    &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_once, descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_deps, 3, 10,
-    schemas, file_default_instances, TableStruct_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets,
-    file_level_metadata_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto, file_level_enum_descriptors_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    file_level_service_descriptors_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter() {
-  return &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto(&descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -361,18 +174,18 @@ class IPCTransferableDataString::_Internal {
 
 IPCTransferableDataString::IPCTransferableDataString(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCTransferableDataString)
 }
 IPCTransferableDataString::IPCTransferableDataString(const IPCTransferableDataString& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IPCTransferableDataString* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_data_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_data_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_data_.Set("", GetArenaForAllocation());
@@ -400,7 +213,7 @@ inline void IPCTransferableDataString::SharedCtor(
 
 IPCTransferableDataString::~IPCTransferableDataString() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCTransferableDataString)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -423,7 +236,7 @@ void IPCTransferableDataString::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_data_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* IPCTransferableDataString::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -452,7 +265,7 @@ const char* IPCTransferableDataString::_InternalParse(const char* ptr, ::_pbi::P
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -477,8 +290,8 @@ uint8_t* IPCTransferableDataString::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCTransferableDataString)
   return target;
@@ -499,19 +312,22 @@ size_t IPCTransferableDataString::ByteSizeLong() const {
         this->_internal_a_data());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCTransferableDataString::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    IPCTransferableDataString::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCTransferableDataString::GetClassData() const { return &_class_data_; }
+void IPCTransferableDataString::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const IPCTransferableDataString*>(
+      &from));
+}
 
-
-void IPCTransferableDataString::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<IPCTransferableDataString*>(&to_msg);
-  auto& from = static_cast<const IPCTransferableDataString&>(from_msg);
+void IPCTransferableDataString::MergeFrom(const IPCTransferableDataString& from) {
+  IPCTransferableDataString* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCTransferableDataString)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -520,7 +336,7 @@ void IPCTransferableDataString::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_m
   if (!from._internal_a_data().empty()) {
     _this->_internal_set_a_data(from._internal_a_data());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void IPCTransferableDataString::CopyFrom(const IPCTransferableDataString& from) {
@@ -545,11 +361,10 @@ void IPCTransferableDataString::InternalSwap(IPCTransferableDataString* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata IPCTransferableDataString::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto[0]);
+std::string IPCTransferableDataString::GetTypeName() const {
+  return "protobuf.mozilla.dom.IPCTransferableDataString";
 }
+
 
 // ===================================================================
 
@@ -559,18 +374,18 @@ class IPCTransferableDataCString::_Internal {
 
 IPCTransferableDataCString::IPCTransferableDataCString(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCTransferableDataCString)
 }
 IPCTransferableDataCString::IPCTransferableDataCString(const IPCTransferableDataCString& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IPCTransferableDataCString* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_data_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_data_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_data_.Set("", GetArenaForAllocation());
@@ -598,7 +413,7 @@ inline void IPCTransferableDataCString::SharedCtor(
 
 IPCTransferableDataCString::~IPCTransferableDataCString() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCTransferableDataCString)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -621,7 +436,7 @@ void IPCTransferableDataCString::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_data_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* IPCTransferableDataCString::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -650,7 +465,7 @@ const char* IPCTransferableDataCString::_InternalParse(const char* ptr, ::_pbi::
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -675,8 +490,8 @@ uint8_t* IPCTransferableDataCString::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCTransferableDataCString)
   return target;
@@ -697,19 +512,22 @@ size_t IPCTransferableDataCString::ByteSizeLong() const {
         this->_internal_a_data());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCTransferableDataCString::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    IPCTransferableDataCString::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCTransferableDataCString::GetClassData() const { return &_class_data_; }
+void IPCTransferableDataCString::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const IPCTransferableDataCString*>(
+      &from));
+}
 
-
-void IPCTransferableDataCString::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<IPCTransferableDataCString*>(&to_msg);
-  auto& from = static_cast<const IPCTransferableDataCString&>(from_msg);
+void IPCTransferableDataCString::MergeFrom(const IPCTransferableDataCString& from) {
+  IPCTransferableDataCString* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCTransferableDataCString)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -718,7 +536,7 @@ void IPCTransferableDataCString::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_
   if (!from._internal_a_data().empty()) {
     _this->_internal_set_a_data(from._internal_a_data());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void IPCTransferableDataCString::CopyFrom(const IPCTransferableDataCString& from) {
@@ -743,11 +561,10 @@ void IPCTransferableDataCString::InternalSwap(IPCTransferableDataCString* other)
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata IPCTransferableDataCString::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto[1]);
+std::string IPCTransferableDataCString::GetTypeName() const {
+  return "protobuf.mozilla.dom.IPCTransferableDataCString";
 }
+
 
 // ===================================================================
 
@@ -757,18 +574,18 @@ class IPCTransferableDataInputStream::_Internal {
 
 IPCTransferableDataInputStream::IPCTransferableDataInputStream(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCTransferableDataInputStream)
 }
 IPCTransferableDataInputStream::IPCTransferableDataInputStream(const IPCTransferableDataInputStream& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IPCTransferableDataInputStream* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_data_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_data_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_data_.Set("", GetArenaForAllocation());
@@ -796,7 +613,7 @@ inline void IPCTransferableDataInputStream::SharedCtor(
 
 IPCTransferableDataInputStream::~IPCTransferableDataInputStream() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCTransferableDataInputStream)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -819,7 +636,7 @@ void IPCTransferableDataInputStream::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_data_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* IPCTransferableDataInputStream::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -848,7 +665,7 @@ const char* IPCTransferableDataInputStream::_InternalParse(const char* ptr, ::_p
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -873,8 +690,8 @@ uint8_t* IPCTransferableDataInputStream::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCTransferableDataInputStream)
   return target;
@@ -895,19 +712,22 @@ size_t IPCTransferableDataInputStream::ByteSizeLong() const {
         this->_internal_a_data());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCTransferableDataInputStream::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    IPCTransferableDataInputStream::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCTransferableDataInputStream::GetClassData() const { return &_class_data_; }
+void IPCTransferableDataInputStream::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const IPCTransferableDataInputStream*>(
+      &from));
+}
 
-
-void IPCTransferableDataInputStream::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<IPCTransferableDataInputStream*>(&to_msg);
-  auto& from = static_cast<const IPCTransferableDataInputStream&>(from_msg);
+void IPCTransferableDataInputStream::MergeFrom(const IPCTransferableDataInputStream& from) {
+  IPCTransferableDataInputStream* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCTransferableDataInputStream)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -916,7 +736,7 @@ void IPCTransferableDataInputStream::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message&
   if (!from._internal_a_data().empty()) {
     _this->_internal_set_a_data(from._internal_a_data());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void IPCTransferableDataInputStream::CopyFrom(const IPCTransferableDataInputStream& from) {
@@ -941,11 +761,10 @@ void IPCTransferableDataInputStream::InternalSwap(IPCTransferableDataInputStream
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata IPCTransferableDataInputStream::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto[2]);
+std::string IPCTransferableDataInputStream::GetTypeName() const {
+  return "protobuf.mozilla.dom.IPCTransferableDataInputStream";
 }
+
 
 // ===================================================================
 
@@ -966,18 +785,18 @@ void IPCTransferableDataImageContainer::clear_a_image() {
 }
 IPCTransferableDataImageContainer::IPCTransferableDataImageContainer(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCTransferableDataImageContainer)
 }
 IPCTransferableDataImageContainer::IPCTransferableDataImageContainer(const IPCTransferableDataImageContainer& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IPCTransferableDataImageContainer* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_image_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_image()) {
     _this->_impl_.a_image_ = new ::protobuf::mozilla::dom::IPCImage(*from._impl_.a_image_);
   }
@@ -996,7 +815,7 @@ inline void IPCTransferableDataImageContainer::SharedCtor(
 
 IPCTransferableDataImageContainer::~IPCTransferableDataImageContainer() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCTransferableDataImageContainer)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1022,7 +841,7 @@ void IPCTransferableDataImageContainer::Clear() {
     delete _impl_.a_image_;
   }
   _impl_.a_image_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* IPCTransferableDataImageContainer::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1050,7 +869,7 @@ const char* IPCTransferableDataImageContainer::_InternalParse(const char* ptr, :
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1076,8 +895,8 @@ uint8_t* IPCTransferableDataImageContainer::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCTransferableDataImageContainer)
   return target;
@@ -1098,19 +917,22 @@ size_t IPCTransferableDataImageContainer::ByteSizeLong() const {
         *_impl_.a_image_);
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCTransferableDataImageContainer::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    IPCTransferableDataImageContainer::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCTransferableDataImageContainer::GetClassData() const { return &_class_data_; }
+void IPCTransferableDataImageContainer::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const IPCTransferableDataImageContainer*>(
+      &from));
+}
 
-
-void IPCTransferableDataImageContainer::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<IPCTransferableDataImageContainer*>(&to_msg);
-  auto& from = static_cast<const IPCTransferableDataImageContainer&>(from_msg);
+void IPCTransferableDataImageContainer::MergeFrom(const IPCTransferableDataImageContainer& from) {
+  IPCTransferableDataImageContainer* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCTransferableDataImageContainer)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1120,7 +942,7 @@ void IPCTransferableDataImageContainer::MergeImpl(::PROTOBUF_NAMESPACE_ID::Messa
     _this->_internal_mutable_a_image()->::protobuf::mozilla::dom::IPCImage::MergeFrom(
         from._internal_a_image());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void IPCTransferableDataImageContainer::CopyFrom(const IPCTransferableDataImageContainer& from) {
@@ -1140,11 +962,10 @@ void IPCTransferableDataImageContainer::InternalSwap(IPCTransferableDataImageCon
   swap(_impl_.a_image_, other->_impl_.a_image_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata IPCTransferableDataImageContainer::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto[3]);
+std::string IPCTransferableDataImageContainer::GetTypeName() const {
+  return "protobuf.mozilla.dom.IPCTransferableDataImageContainer";
 }
+
 
 // ===================================================================
 
@@ -1165,18 +986,18 @@ void IPCTransferableDataBlob::clear_a_blob() {
 }
 IPCTransferableDataBlob::IPCTransferableDataBlob(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCTransferableDataBlob)
 }
 IPCTransferableDataBlob::IPCTransferableDataBlob(const IPCTransferableDataBlob& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IPCTransferableDataBlob* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_blob_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_blob()) {
     _this->_impl_.a_blob_ = new ::protobuf::mozilla::dom::IPCBlob(*from._impl_.a_blob_);
   }
@@ -1195,7 +1016,7 @@ inline void IPCTransferableDataBlob::SharedCtor(
 
 IPCTransferableDataBlob::~IPCTransferableDataBlob() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCTransferableDataBlob)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1221,7 +1042,7 @@ void IPCTransferableDataBlob::Clear() {
     delete _impl_.a_blob_;
   }
   _impl_.a_blob_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* IPCTransferableDataBlob::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1249,7 +1070,7 @@ const char* IPCTransferableDataBlob::_InternalParse(const char* ptr, ::_pbi::Par
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1275,8 +1096,8 @@ uint8_t* IPCTransferableDataBlob::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCTransferableDataBlob)
   return target;
@@ -1297,19 +1118,22 @@ size_t IPCTransferableDataBlob::ByteSizeLong() const {
         *_impl_.a_blob_);
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCTransferableDataBlob::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    IPCTransferableDataBlob::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCTransferableDataBlob::GetClassData() const { return &_class_data_; }
+void IPCTransferableDataBlob::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const IPCTransferableDataBlob*>(
+      &from));
+}
 
-
-void IPCTransferableDataBlob::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<IPCTransferableDataBlob*>(&to_msg);
-  auto& from = static_cast<const IPCTransferableDataBlob&>(from_msg);
+void IPCTransferableDataBlob::MergeFrom(const IPCTransferableDataBlob& from) {
+  IPCTransferableDataBlob* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCTransferableDataBlob)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1319,7 +1143,7 @@ void IPCTransferableDataBlob::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg
     _this->_internal_mutable_a_blob()->::protobuf::mozilla::dom::IPCBlob::MergeFrom(
         from._internal_a_blob());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void IPCTransferableDataBlob::CopyFrom(const IPCTransferableDataBlob& from) {
@@ -1339,11 +1163,10 @@ void IPCTransferableDataBlob::InternalSwap(IPCTransferableDataBlob* other) {
   swap(_impl_.a_blob_, other->_impl_.a_blob_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata IPCTransferableDataBlob::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto[4]);
+std::string IPCTransferableDataBlob::GetTypeName() const {
+  return "protobuf.mozilla.dom.IPCTransferableDataBlob";
 }
+
 
 // ===================================================================
 
@@ -1453,19 +1276,19 @@ void IPCTransferableDataType::set_allocated_a_mvipctransferabledatablob(::protob
 }
 IPCTransferableDataType::IPCTransferableDataType(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCTransferableDataType)
 }
 IPCTransferableDataType::IPCTransferableDataType(const IPCTransferableDataType& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IPCTransferableDataType* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVIPCTransferableDataString: {
@@ -1514,7 +1337,7 @@ inline void IPCTransferableDataType::SharedCtor(
 
 IPCTransferableDataType::~IPCTransferableDataType() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCTransferableDataType)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1580,7 +1403,7 @@ void IPCTransferableDataType::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* IPCTransferableDataType::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1640,7 +1463,7 @@ const char* IPCTransferableDataType::_InternalParse(const char* ptr, ::_pbi::Par
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1694,8 +1517,8 @@ uint8_t* IPCTransferableDataType::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCTransferableDataType)
   return target;
@@ -1749,19 +1572,22 @@ size_t IPCTransferableDataType::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCTransferableDataType::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    IPCTransferableDataType::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCTransferableDataType::GetClassData() const { return &_class_data_; }
+void IPCTransferableDataType::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const IPCTransferableDataType*>(
+      &from));
+}
 
-
-void IPCTransferableDataType::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<IPCTransferableDataType*>(&to_msg);
-  auto& from = static_cast<const IPCTransferableDataType&>(from_msg);
+void IPCTransferableDataType::MergeFrom(const IPCTransferableDataType& from) {
+  IPCTransferableDataType* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCTransferableDataType)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1797,7 +1623,7 @@ void IPCTransferableDataType::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void IPCTransferableDataType::CopyFrom(const IPCTransferableDataType& from) {
@@ -1818,11 +1644,10 @@ void IPCTransferableDataType::InternalSwap(IPCTransferableDataType* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata IPCTransferableDataType::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto[5]);
+std::string IPCTransferableDataType::GetTypeName() const {
+  return "protobuf.mozilla.dom.IPCTransferableDataType";
 }
+
 
 // ===================================================================
 
@@ -1837,19 +1662,19 @@ IPCTransferableDataItem::_Internal::a_data(const IPCTransferableDataItem* msg) {
 }
 IPCTransferableDataItem::IPCTransferableDataItem(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCTransferableDataItem)
 }
 IPCTransferableDataItem::IPCTransferableDataItem(const IPCTransferableDataItem& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IPCTransferableDataItem* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_flavor_){}
     , decltype(_impl_.a_data_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_flavor_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_flavor_.Set("", GetArenaForAllocation());
@@ -1881,7 +1706,7 @@ inline void IPCTransferableDataItem::SharedCtor(
 
 IPCTransferableDataItem::~IPCTransferableDataItem() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCTransferableDataItem)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1909,7 +1734,7 @@ void IPCTransferableDataItem::Clear() {
     delete _impl_.a_data_;
   }
   _impl_.a_data_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* IPCTransferableDataItem::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1924,7 +1749,7 @@ const char* IPCTransferableDataItem::_InternalParse(const char* ptr, ::_pbi::Par
           auto str = _internal_mutable_a_flavor();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCTransferableDataItem.a_flavor"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1947,7 +1772,7 @@ const char* IPCTransferableDataItem::_InternalParse(const char* ptr, ::_pbi::Par
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1983,8 +1808,8 @@ uint8_t* IPCTransferableDataItem::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCTransferableDataItem)
   return target;
@@ -2012,19 +1837,22 @@ size_t IPCTransferableDataItem::ByteSizeLong() const {
         *_impl_.a_data_);
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCTransferableDataItem::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    IPCTransferableDataItem::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCTransferableDataItem::GetClassData() const { return &_class_data_; }
+void IPCTransferableDataItem::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const IPCTransferableDataItem*>(
+      &from));
+}
 
-
-void IPCTransferableDataItem::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<IPCTransferableDataItem*>(&to_msg);
-  auto& from = static_cast<const IPCTransferableDataItem&>(from_msg);
+void IPCTransferableDataItem::MergeFrom(const IPCTransferableDataItem& from) {
+  IPCTransferableDataItem* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCTransferableDataItem)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2037,7 +1865,7 @@ void IPCTransferableDataItem::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg
     _this->_internal_mutable_a_data()->::protobuf::mozilla::dom::IPCTransferableDataType::MergeFrom(
         from._internal_a_data());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void IPCTransferableDataItem::CopyFrom(const IPCTransferableDataItem& from) {
@@ -2063,11 +1891,10 @@ void IPCTransferableDataItem::InternalSwap(IPCTransferableDataItem* other) {
   swap(_impl_.a_data_, other->_impl_.a_data_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata IPCTransferableDataItem::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto[6]);
+std::string IPCTransferableDataItem::GetTypeName() const {
+  return "protobuf.mozilla.dom.IPCTransferableDataItem";
 }
+
 
 // ===================================================================
 
@@ -2077,18 +1904,18 @@ class IPCTransferableData::_Internal {
 
 IPCTransferableData::IPCTransferableData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCTransferableData)
 }
 IPCTransferableData::IPCTransferableData(const IPCTransferableData& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IPCTransferableData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_items_){from._impl_.a_items_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.IPCTransferableData)
 }
 
@@ -2104,7 +1931,7 @@ inline void IPCTransferableData::SharedCtor(
 
 IPCTransferableData::~IPCTransferableData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCTransferableData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -2127,7 +1954,7 @@ void IPCTransferableData::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_items_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* IPCTransferableData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -2160,7 +1987,7 @@ const char* IPCTransferableData::_InternalParse(const char* ptr, ::_pbi::ParseCo
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -2187,8 +2014,8 @@ uint8_t* IPCTransferableData::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCTransferableData)
   return target;
@@ -2209,26 +2036,29 @@ size_t IPCTransferableData::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCTransferableData::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    IPCTransferableData::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCTransferableData::GetClassData() const { return &_class_data_; }
+void IPCTransferableData::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const IPCTransferableData*>(
+      &from));
+}
 
-
-void IPCTransferableData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<IPCTransferableData*>(&to_msg);
-  auto& from = static_cast<const IPCTransferableData&>(from_msg);
+void IPCTransferableData::MergeFrom(const IPCTransferableData& from) {
+  IPCTransferableData* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCTransferableData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_items_.MergeFrom(from._impl_.a_items_);
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void IPCTransferableData::CopyFrom(const IPCTransferableData& from) {
@@ -2248,11 +2078,10 @@ void IPCTransferableData::InternalSwap(IPCTransferableData* other) {
   _impl_.a_items_.InternalSwap(&other->_impl_.a_items_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata IPCTransferableData::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto[7]);
+std::string IPCTransferableData::GetTypeName() const {
+  return "protobuf.mozilla.dom.IPCTransferableData";
 }
+
 
 // ===================================================================
 
@@ -2282,19 +2111,19 @@ void IPCTransferableDataOrError::set_allocated_a_mvipctransferabledata(::protobu
 }
 IPCTransferableDataOrError::IPCTransferableDataOrError(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCTransferableDataOrError)
 }
 IPCTransferableDataOrError::IPCTransferableDataOrError(const IPCTransferableDataOrError& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IPCTransferableDataOrError* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVIPCTransferableData: {
@@ -2327,7 +2156,7 @@ inline void IPCTransferableDataOrError::SharedCtor(
 
 IPCTransferableDataOrError::~IPCTransferableDataOrError() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCTransferableDataOrError)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -2373,7 +2202,7 @@ void IPCTransferableDataOrError::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* IPCTransferableDataOrError::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -2410,7 +2239,7 @@ const char* IPCTransferableDataOrError::_InternalParse(const char* ptr, ::_pbi::
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -2442,8 +2271,8 @@ uint8_t* IPCTransferableDataOrError::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCTransferableDataOrError)
   return target;
@@ -2476,19 +2305,22 @@ size_t IPCTransferableDataOrError::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCTransferableDataOrError::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    IPCTransferableDataOrError::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCTransferableDataOrError::GetClassData() const { return &_class_data_; }
+void IPCTransferableDataOrError::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const IPCTransferableDataOrError*>(
+      &from));
+}
 
-
-void IPCTransferableDataOrError::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<IPCTransferableDataOrError*>(&to_msg);
-  auto& from = static_cast<const IPCTransferableDataOrError&>(from_msg);
+void IPCTransferableDataOrError::MergeFrom(const IPCTransferableDataOrError& from) {
+  IPCTransferableDataOrError* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCTransferableDataOrError)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2508,7 +2340,7 @@ void IPCTransferableDataOrError::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void IPCTransferableDataOrError::CopyFrom(const IPCTransferableDataOrError& from) {
@@ -2529,11 +2361,10 @@ void IPCTransferableDataOrError::InternalSwap(IPCTransferableDataOrError* other)
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata IPCTransferableDataOrError::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto[8]);
+std::string IPCTransferableDataOrError::GetTypeName() const {
+  return "protobuf.mozilla.dom.IPCTransferableDataOrError";
 }
+
 
 // ===================================================================
 
@@ -2567,12 +2398,12 @@ void IPCTransferable::clear_a_cookiejarsettings() {
 }
 IPCTransferable::IPCTransferable(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCTransferable)
 }
 IPCTransferable::IPCTransferable(const IPCTransferable& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IPCTransferable* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -2584,7 +2415,7 @@ IPCTransferable::IPCTransferable(const IPCTransferable& from)
     , decltype(_impl_.a_cookiejarsettings_){nullptr}
     , decltype(_impl_.a_isprivatedata_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_dataprincipal_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_dataprincipal_.Set("", GetArenaForAllocation());
@@ -2649,7 +2480,7 @@ inline void IPCTransferable::SharedCtor(
 
 IPCTransferable::~IPCTransferable() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCTransferable)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -2693,7 +2524,7 @@ void IPCTransferable::Clear() {
   }
   _impl_.a_isprivatedata_ = false;
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* IPCTransferable::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -2765,7 +2596,7 @@ const char* IPCTransferable::_InternalParse(const char* ptr, ::_pbi::ParseContex
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -2823,8 +2654,8 @@ uint8_t* IPCTransferable::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCTransferable)
   return target;
@@ -2879,19 +2710,22 @@ size_t IPCTransferable::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCTransferable::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    IPCTransferable::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCTransferable::GetClassData() const { return &_class_data_; }
+void IPCTransferable::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const IPCTransferable*>(
+      &from));
+}
 
-
-void IPCTransferable::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<IPCTransferable*>(&to_msg);
-  auto& from = static_cast<const IPCTransferable&>(from_msg);
+void IPCTransferable::MergeFrom(const IPCTransferable& from) {
+  IPCTransferable* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCTransferable)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2917,7 +2751,7 @@ void IPCTransferable::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const 
   if (from._internal_a_isprivatedata() != 0) {
     _this->_internal_set_a_isprivatedata(from._internal_a_isprivatedata());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void IPCTransferable::CopyFrom(const IPCTransferable& from) {
@@ -2957,11 +2791,10 @@ void IPCTransferable::InternalSwap(IPCTransferable* other) {
           reinterpret_cast<char*>(&other->_impl_.a_data_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata IPCTransferable::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_IPCTransferable_5fprotobuf_2emozilla_2edom_2eh_2eproto[9]);
+std::string IPCTransferable::GetTypeName() const {
+  return "protobuf.mozilla.dom.IPCTransferable";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace dom

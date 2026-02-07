@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -25,7 +22,8 @@ namespace mozilla {
 namespace dom {
 namespace PCycleCollectWithLogs {
 PROTOBUF_CONSTEXPR Msg_CloseGCLog::Msg_CloseGCLog(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_CloseGCLogDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_CloseGCLogDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -36,7 +34,8 @@ struct Msg_CloseGCLogDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_CloseGCLogDefaultTypeInternal _Msg_CloseGCLog_default_instance_;
 PROTOBUF_CONSTEXPR Msg_CloseCCLog::Msg_CloseCCLog(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_CloseCCLogDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_CloseCCLogDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -47,7 +46,8 @@ struct Msg_CloseCCLogDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_CloseCCLogDefaultTypeInternal _Msg_CloseCCLog_default_instance_;
 PROTOBUF_CONSTEXPR Msg___delete__::Msg___delete__(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg___delete__DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg___delete__DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -58,7 +58,8 @@ struct Msg___delete__DefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg___delete__DefaultTypeInternal _Msg___delete___default_instance_;
 PROTOBUF_CONSTEXPR Reply___delete__::Reply___delete__(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Reply___delete__DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply___delete__DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -72,71 +73,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PCycleCollectWithLogs_2eproto[4];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PCycleCollectWithLogs_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PCycleCollectWithLogs_2eproto = nullptr;
-
-const uint32_t TableStruct_PCycleCollectWithLogs_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::PCycleCollectWithLogs::Msg_CloseGCLog, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::PCycleCollectWithLogs::Msg_CloseCCLog, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::PCycleCollectWithLogs::Msg___delete__, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::PCycleCollectWithLogs::Reply___delete__, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::dom::PCycleCollectWithLogs::Msg_CloseGCLog)},
-  { 6, -1, -1, sizeof(::protobuf::mozilla::dom::PCycleCollectWithLogs::Msg_CloseCCLog)},
-  { 12, -1, -1, sizeof(::protobuf::mozilla::dom::PCycleCollectWithLogs::Msg___delete__)},
-  { 18, -1, -1, sizeof(::protobuf::mozilla::dom::PCycleCollectWithLogs::Reply___delete__)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::dom::PCycleCollectWithLogs::_Msg_CloseGCLog_default_instance_._instance,
-  &::protobuf::mozilla::dom::PCycleCollectWithLogs::_Msg_CloseCCLog_default_instance_._instance,
-  &::protobuf::mozilla::dom::PCycleCollectWithLogs::_Msg___delete___default_instance_._instance,
-  &::protobuf::mozilla::dom::PCycleCollectWithLogs::_Reply___delete___default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PCycleCollectWithLogs_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\033PCycleCollectWithLogs.proto\022*protobuf."
-  "mozilla.dom.PCycleCollectWithLogs\"\020\n\016Msg"
-  "_CloseGCLog\"\020\n\016Msg_CloseCCLog\"\020\n\016Msg___d"
-  "elete__\"\022\n\020Reply___delete__b\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_PCycleCollectWithLogs_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PCycleCollectWithLogs_2eproto = {
-    false, false, 155, descriptor_table_protodef_PCycleCollectWithLogs_2eproto,
-    "PCycleCollectWithLogs.proto",
-    &descriptor_table_PCycleCollectWithLogs_2eproto_once, nullptr, 0, 4,
-    schemas, file_default_instances, TableStruct_PCycleCollectWithLogs_2eproto::offsets,
-    file_level_metadata_PCycleCollectWithLogs_2eproto, file_level_enum_descriptors_PCycleCollectWithLogs_2eproto,
-    file_level_service_descriptors_PCycleCollectWithLogs_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PCycleCollectWithLogs_2eproto_getter() {
-  return &descriptor_table_PCycleCollectWithLogs_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PCycleCollectWithLogs_2eproto(&descriptor_table_PCycleCollectWithLogs_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -150,37 +86,145 @@ class Msg_CloseGCLog::_Internal {
 
 Msg_CloseGCLog::Msg_CloseGCLog(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg_CloseGCLog)
 }
 Msg_CloseGCLog::Msg_CloseGCLog(const Msg_CloseGCLog& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_CloseGCLog* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg_CloseGCLog)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_CloseGCLog::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_CloseGCLog::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_CloseGCLog::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PCycleCollectWithLogs_2eproto_getter, &descriptor_table_PCycleCollectWithLogs_2eproto_once,
-      file_level_metadata_PCycleCollectWithLogs_2eproto[0]);
+inline void Msg_CloseGCLog::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Msg_CloseGCLog::~Msg_CloseGCLog() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg_CloseGCLog)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Msg_CloseGCLog::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Msg_CloseGCLog::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Msg_CloseGCLog::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg_CloseGCLog)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Msg_CloseGCLog::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Msg_CloseGCLog::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg_CloseGCLog)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg_CloseGCLog)
+  return target;
+}
+
+size_t Msg_CloseGCLog::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg_CloseGCLog)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Msg_CloseGCLog::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_CloseGCLog*>(
+      &from));
+}
+
+void Msg_CloseGCLog::MergeFrom(const Msg_CloseGCLog& from) {
+  Msg_CloseGCLog* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg_CloseGCLog)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Msg_CloseGCLog::CopyFrom(const Msg_CloseGCLog& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg_CloseGCLog)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg_CloseGCLog::IsInitialized() const {
+  return true;
+}
+
+void Msg_CloseGCLog::InternalSwap(Msg_CloseGCLog* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Msg_CloseGCLog::GetTypeName() const {
+  return "protobuf.mozilla.dom.PCycleCollectWithLogs.Msg_CloseGCLog";
+}
+
 
 // ===================================================================
 
@@ -190,37 +234,145 @@ class Msg_CloseCCLog::_Internal {
 
 Msg_CloseCCLog::Msg_CloseCCLog(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg_CloseCCLog)
 }
 Msg_CloseCCLog::Msg_CloseCCLog(const Msg_CloseCCLog& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_CloseCCLog* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg_CloseCCLog)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_CloseCCLog::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_CloseCCLog::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_CloseCCLog::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PCycleCollectWithLogs_2eproto_getter, &descriptor_table_PCycleCollectWithLogs_2eproto_once,
-      file_level_metadata_PCycleCollectWithLogs_2eproto[1]);
+inline void Msg_CloseCCLog::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Msg_CloseCCLog::~Msg_CloseCCLog() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg_CloseCCLog)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Msg_CloseCCLog::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Msg_CloseCCLog::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Msg_CloseCCLog::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg_CloseCCLog)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Msg_CloseCCLog::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Msg_CloseCCLog::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg_CloseCCLog)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg_CloseCCLog)
+  return target;
+}
+
+size_t Msg_CloseCCLog::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg_CloseCCLog)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Msg_CloseCCLog::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_CloseCCLog*>(
+      &from));
+}
+
+void Msg_CloseCCLog::MergeFrom(const Msg_CloseCCLog& from) {
+  Msg_CloseCCLog* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg_CloseCCLog)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Msg_CloseCCLog::CopyFrom(const Msg_CloseCCLog& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg_CloseCCLog)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg_CloseCCLog::IsInitialized() const {
+  return true;
+}
+
+void Msg_CloseCCLog::InternalSwap(Msg_CloseCCLog* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Msg_CloseCCLog::GetTypeName() const {
+  return "protobuf.mozilla.dom.PCycleCollectWithLogs.Msg_CloseCCLog";
+}
+
 
 // ===================================================================
 
@@ -230,37 +382,145 @@ class Msg___delete__::_Internal {
 
 Msg___delete__::Msg___delete__(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg___delete__)
 }
 Msg___delete__::Msg___delete__(const Msg___delete__& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg___delete__* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg___delete__)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg___delete__::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg___delete__::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Msg___delete__::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PCycleCollectWithLogs_2eproto_getter, &descriptor_table_PCycleCollectWithLogs_2eproto_once,
-      file_level_metadata_PCycleCollectWithLogs_2eproto[2]);
+inline void Msg___delete__::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Msg___delete__::~Msg___delete__() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg___delete__)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Msg___delete__::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Msg___delete__::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Msg___delete__::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg___delete__)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Msg___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Msg___delete__::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg___delete__)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg___delete__)
+  return target;
+}
+
+size_t Msg___delete__::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg___delete__)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Msg___delete__::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg___delete__*>(
+      &from));
+}
+
+void Msg___delete__::MergeFrom(const Msg___delete__& from) {
+  Msg___delete__* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg___delete__)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Msg___delete__::CopyFrom(const Msg___delete__& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.dom.PCycleCollectWithLogs.Msg___delete__)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg___delete__::IsInitialized() const {
+  return true;
+}
+
+void Msg___delete__::InternalSwap(Msg___delete__* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Msg___delete__::GetTypeName() const {
+  return "protobuf.mozilla.dom.PCycleCollectWithLogs.Msg___delete__";
+}
+
 
 // ===================================================================
 
@@ -270,37 +530,145 @@ class Reply___delete__::_Internal {
 
 Reply___delete__::Reply___delete__(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.PCycleCollectWithLogs.Reply___delete__)
 }
 Reply___delete__::Reply___delete__(const Reply___delete__& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply___delete__* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PCycleCollectWithLogs.Reply___delete__)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply___delete__::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply___delete__::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Reply___delete__::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PCycleCollectWithLogs_2eproto_getter, &descriptor_table_PCycleCollectWithLogs_2eproto_once,
-      file_level_metadata_PCycleCollectWithLogs_2eproto[3]);
+inline void Reply___delete__::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Reply___delete__::~Reply___delete__() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.PCycleCollectWithLogs.Reply___delete__)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Reply___delete__::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Reply___delete__::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Reply___delete__::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.dom.PCycleCollectWithLogs.Reply___delete__)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Reply___delete__::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Reply___delete__::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.dom.PCycleCollectWithLogs.Reply___delete__)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.PCycleCollectWithLogs.Reply___delete__)
+  return target;
+}
+
+size_t Reply___delete__::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PCycleCollectWithLogs.Reply___delete__)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Reply___delete__::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Reply___delete__*>(
+      &from));
+}
+
+void Reply___delete__::MergeFrom(const Reply___delete__& from) {
+  Reply___delete__* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.PCycleCollectWithLogs.Reply___delete__)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Reply___delete__::CopyFrom(const Reply___delete__& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.dom.PCycleCollectWithLogs.Reply___delete__)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Reply___delete__::IsInitialized() const {
+  return true;
+}
+
+void Reply___delete__::InternalSwap(Reply___delete__* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Reply___delete__::GetTypeName() const {
+  return "protobuf.mozilla.dom.PCycleCollectWithLogs.Reply___delete__";
+}
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace PCycleCollectWithLogs

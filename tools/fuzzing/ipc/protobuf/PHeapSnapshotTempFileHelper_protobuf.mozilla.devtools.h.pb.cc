@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -55,65 +52,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace devtools
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto[2];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::devtools::OpenedFile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::devtools::OpenedFile, _impl_.a_path_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::devtools::OpenedFile, _impl_.a_snapshotid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::devtools::OpenedFile, _impl_.a_descriptor_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse, _impl_.content_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::devtools::OpenedFile)},
-  { 9, -1, -1, sizeof(::protobuf::mozilla::devtools::OpenHeapSnapshotTempFileResponse)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::devtools::_OpenedFile_default_instance_._instance,
-  &::protobuf::mozilla::devtools::_OpenHeapSnapshotTempFileResponse_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n=PHeapSnapshotTempFileHelper_protobuf.m"
-  "ozilla.devtools.h.proto\022\031protobuf.mozill"
-  "a.devtools\"H\n\nOpenedFile\022\016\n\006a_path\030\001 \001(\t"
-  "\022\024\n\014a_snapshotId\030\002 \001(\t\022\024\n\014a_descriptor\030\003"
-  " \001(\014\"\206\001\n OpenHeapSnapshotTempFileRespons"
-  "e\022\026\n\014a_mVnsresult\030\001 \001(\014H\000\022\?\n\016a_mVOpenedF"
-  "ile\030\002 \001(\0132%.protobuf.mozilla.devtools.Op"
-  "enedFileH\000B\t\n\007contentb\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto = {
-    false, false, 309, descriptor_table_protodef_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto,
-    "PHeapSnapshotTempFileHelper_protobuf.mozilla.devtools.h.proto",
-    &descriptor_table_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto_once, nullptr, 0, 2,
-    schemas, file_default_instances, TableStruct_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto::offsets,
-    file_level_metadata_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto, file_level_enum_descriptors_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto,
-    file_level_service_descriptors_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto_getter() {
-  return &descriptor_table_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto(&descriptor_table_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace devtools {
@@ -126,12 +64,12 @@ class OpenedFile::_Internal {
 
 OpenedFile::OpenedFile(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.devtools.OpenedFile)
 }
 OpenedFile::OpenedFile(const OpenedFile& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   OpenedFile* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_path_){}
@@ -139,7 +77,7 @@ OpenedFile::OpenedFile(const OpenedFile& from)
     , decltype(_impl_.a_descriptor_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_path_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_path_.Set("", GetArenaForAllocation());
@@ -193,7 +131,7 @@ inline void OpenedFile::SharedCtor(
 
 OpenedFile::~OpenedFile() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.devtools.OpenedFile)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -220,7 +158,7 @@ void OpenedFile::Clear() {
   _impl_.a_path_.ClearToEmpty();
   _impl_.a_snapshotid_.ClearToEmpty();
   _impl_.a_descriptor_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* OpenedFile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -235,7 +173,7 @@ const char* OpenedFile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
           auto str = _internal_mutable_a_path();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.devtools.OpenedFile.a_path"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -245,7 +183,7 @@ const char* OpenedFile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
           auto str = _internal_mutable_a_snapshotid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.devtools.OpenedFile.a_snapshotId"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -269,7 +207,7 @@ const char* OpenedFile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -314,8 +252,8 @@ uint8_t* OpenedFile::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.devtools.OpenedFile)
   return target;
@@ -350,19 +288,22 @@ size_t OpenedFile::ByteSizeLong() const {
         this->_internal_a_descriptor());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData OpenedFile::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    OpenedFile::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*OpenedFile::GetClassData() const { return &_class_data_; }
+void OpenedFile::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const OpenedFile*>(
+      &from));
+}
 
-
-void OpenedFile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<OpenedFile*>(&to_msg);
-  auto& from = static_cast<const OpenedFile&>(from_msg);
+void OpenedFile::MergeFrom(const OpenedFile& from) {
+  OpenedFile* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.devtools.OpenedFile)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -377,7 +318,7 @@ void OpenedFile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PRO
   if (!from._internal_a_descriptor().empty()) {
     _this->_internal_set_a_descriptor(from._internal_a_descriptor());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void OpenedFile::CopyFrom(const OpenedFile& from) {
@@ -410,11 +351,10 @@ void OpenedFile::InternalSwap(OpenedFile* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata OpenedFile::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto_getter, &descriptor_table_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto_once,
-      file_level_metadata_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto[0]);
+std::string OpenedFile::GetTypeName() const {
+  return "protobuf.mozilla.devtools.OpenedFile";
 }
+
 
 // ===================================================================
 
@@ -444,19 +384,19 @@ void OpenHeapSnapshotTempFileResponse::set_allocated_a_mvopenedfile(::protobuf::
 }
 OpenHeapSnapshotTempFileResponse::OpenHeapSnapshotTempFileResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse)
 }
 OpenHeapSnapshotTempFileResponse::OpenHeapSnapshotTempFileResponse(const OpenHeapSnapshotTempFileResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   OpenHeapSnapshotTempFileResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVnsresult: {
@@ -489,7 +429,7 @@ inline void OpenHeapSnapshotTempFileResponse::SharedCtor(
 
 OpenHeapSnapshotTempFileResponse::~OpenHeapSnapshotTempFileResponse() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -535,7 +475,7 @@ void OpenHeapSnapshotTempFileResponse::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* OpenHeapSnapshotTempFileResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -572,7 +512,7 @@ const char* OpenHeapSnapshotTempFileResponse::_InternalParse(const char* ptr, ::
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -604,8 +544,8 @@ uint8_t* OpenHeapSnapshotTempFileResponse::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse)
   return target;
@@ -638,19 +578,22 @@ size_t OpenHeapSnapshotTempFileResponse::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData OpenHeapSnapshotTempFileResponse::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    OpenHeapSnapshotTempFileResponse::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*OpenHeapSnapshotTempFileResponse::GetClassData() const { return &_class_data_; }
+void OpenHeapSnapshotTempFileResponse::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const OpenHeapSnapshotTempFileResponse*>(
+      &from));
+}
 
-
-void OpenHeapSnapshotTempFileResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<OpenHeapSnapshotTempFileResponse*>(&to_msg);
-  auto& from = static_cast<const OpenHeapSnapshotTempFileResponse&>(from_msg);
+void OpenHeapSnapshotTempFileResponse::MergeFrom(const OpenHeapSnapshotTempFileResponse& from) {
+  OpenHeapSnapshotTempFileResponse* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -670,7 +613,7 @@ void OpenHeapSnapshotTempFileResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Messag
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void OpenHeapSnapshotTempFileResponse::CopyFrom(const OpenHeapSnapshotTempFileResponse& from) {
@@ -691,11 +634,10 @@ void OpenHeapSnapshotTempFileResponse::InternalSwap(OpenHeapSnapshotTempFileResp
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata OpenHeapSnapshotTempFileResponse::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto_getter, &descriptor_table_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto_once,
-      file_level_metadata_PHeapSnapshotTempFileHelper_5fprotobuf_2emozilla_2edevtools_2eh_2eproto[1]);
+std::string OpenHeapSnapshotTempFileResponse::GetTypeName() const {
+  return "protobuf.mozilla.devtools.OpenHeapSnapshotTempFileResponse";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace devtools

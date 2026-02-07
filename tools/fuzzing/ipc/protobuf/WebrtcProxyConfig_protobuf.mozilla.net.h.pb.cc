@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -42,57 +39,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace net
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto[1];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::WebrtcProxyConfig, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::WebrtcProxyConfig, _impl_.a_tabid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::WebrtcProxyConfig, _impl_.a_alpn_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::WebrtcProxyConfig, _impl_.a_loadinfoargs_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::WebrtcProxyConfig, _impl_.a_forceproxy_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::net::WebrtcProxyConfig)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::net::_WebrtcProxyConfig_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n.WebrtcProxyConfig_protobuf.mozilla.net"
-  ".h.proto\022\024protobuf.mozilla.net\032\030NeckoCha"
-  "nnelParams.proto\"\206\001\n\021WebrtcProxyConfig\022\017"
-  "\n\007a_tabId\030\001 \001(\014\022\016\n\006a_alpn\030\002 \001(\t\022:\n\016a_loa"
-  "dInfoArgs\030\003 \001(\0132\".protobuf.mozilla.net.L"
-  "oadInfoArgs\022\024\n\014a_forceProxy\030\004 \001(\010b\006proto"
-  "3"
-  ;
-static const ::_pbi::DescriptorTable* const descriptor_table_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto_deps[1] = {
-  &::descriptor_table_NeckoChannelParams_2eproto,
-};
-static ::_pbi::once_flag descriptor_table_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto = {
-    false, false, 241, descriptor_table_protodef_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto,
-    "WebrtcProxyConfig_protobuf.mozilla.net.h.proto",
-    &descriptor_table_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto_once, descriptor_table_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto_deps, 1, 1,
-    schemas, file_default_instances, TableStruct_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto::offsets,
-    file_level_metadata_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto, file_level_enum_descriptors_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto,
-    file_level_service_descriptors_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto_getter() {
-  return &descriptor_table_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto(&descriptor_table_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace net {
@@ -116,12 +62,12 @@ void WebrtcProxyConfig::clear_a_loadinfoargs() {
 }
 WebrtcProxyConfig::WebrtcProxyConfig(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.net.WebrtcProxyConfig)
 }
 WebrtcProxyConfig::WebrtcProxyConfig(const WebrtcProxyConfig& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebrtcProxyConfig* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_tabid_){}
@@ -130,7 +76,7 @@ WebrtcProxyConfig::WebrtcProxyConfig(const WebrtcProxyConfig& from)
     , decltype(_impl_.a_forceproxy_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_tabid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_tabid_.Set("", GetArenaForAllocation());
@@ -177,7 +123,7 @@ inline void WebrtcProxyConfig::SharedCtor(
 
 WebrtcProxyConfig::~WebrtcProxyConfig() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.net.WebrtcProxyConfig)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -208,7 +154,7 @@ void WebrtcProxyConfig::Clear() {
   }
   _impl_.a_loadinfoargs_ = nullptr;
   _impl_.a_forceproxy_ = false;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebrtcProxyConfig::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -232,7 +178,7 @@ const char* WebrtcProxyConfig::_InternalParse(const char* ptr, ::_pbi::ParseCont
           auto str = _internal_mutable_a_alpn();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.WebrtcProxyConfig.a_alpn"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -263,7 +209,7 @@ const char* WebrtcProxyConfig::_InternalParse(const char* ptr, ::_pbi::ParseCont
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -311,8 +257,8 @@ uint8_t* WebrtcProxyConfig::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.net.WebrtcProxyConfig)
   return target;
@@ -352,19 +298,22 @@ size_t WebrtcProxyConfig::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebrtcProxyConfig::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebrtcProxyConfig::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebrtcProxyConfig::GetClassData() const { return &_class_data_; }
+void WebrtcProxyConfig::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebrtcProxyConfig*>(
+      &from));
+}
 
-
-void WebrtcProxyConfig::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebrtcProxyConfig*>(&to_msg);
-  auto& from = static_cast<const WebrtcProxyConfig&>(from_msg);
+void WebrtcProxyConfig::MergeFrom(const WebrtcProxyConfig& from) {
+  WebrtcProxyConfig* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.net.WebrtcProxyConfig)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -383,7 +332,7 @@ void WebrtcProxyConfig::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   if (from._internal_a_forceproxy() != 0) {
     _this->_internal_set_a_forceproxy(from._internal_a_forceproxy());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebrtcProxyConfig::CopyFrom(const WebrtcProxyConfig& from) {
@@ -418,11 +367,10 @@ void WebrtcProxyConfig::InternalSwap(WebrtcProxyConfig* other) {
           reinterpret_cast<char*>(&other->_impl_.a_loadinfoargs_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebrtcProxyConfig::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto_getter, &descriptor_table_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto_once,
-      file_level_metadata_WebrtcProxyConfig_5fprotobuf_2emozilla_2enet_2eh_2eproto[0]);
+std::string WebrtcProxyConfig::GetTypeName() const {
+  return "protobuf.mozilla.net.WebrtcProxyConfig";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace net

@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -56,65 +53,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace ipc
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PUtilityAudioDecoder_2eproto[2];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PUtilityAudioDecoder_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PUtilityAudioDecoder_2eproto = nullptr;
-
-const uint32_t TableStruct_PUtilityAudioDecoder_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ipc::PUtilityAudioDecoder::Msg_NewContentRemoteMediaManager, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ipc::PUtilityAudioDecoder::Msg_NewContentRemoteMediaManager, _impl_.a_endpoint_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ipc::PUtilityAudioDecoder::Msg_NewContentRemoteMediaManager, _impl_.a_parentid_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ipc::PUtilityAudioDecoder::Msg_UpdateMediaCodecsSupported, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ipc::PUtilityAudioDecoder::Msg_UpdateMediaCodecsSupported, _impl_.a_alocation_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ipc::PUtilityAudioDecoder::Msg_UpdateMediaCodecsSupported, _impl_.a_asupported_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::ipc::PUtilityAudioDecoder::Msg_NewContentRemoteMediaManager)},
-  { 8, -1, -1, sizeof(::protobuf::mozilla::ipc::PUtilityAudioDecoder::Msg_UpdateMediaCodecsSupported)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::ipc::PUtilityAudioDecoder::_Msg_NewContentRemoteMediaManager_default_instance_._instance,
-  &::protobuf::mozilla::ipc::PUtilityAudioDecoder::_Msg_UpdateMediaCodecsSupported_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PUtilityAudioDecoder_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\032PUtilityAudioDecoder.proto\022)protobuf.m"
-  "ozilla.ipc.PUtilityAudioDecoder\032\026Graphic"
-  "sMessages.proto\"J\n Msg_NewContentRemoteM"
-  "ediaManager\022\022\n\na_endpoint\030\001 \001(\014\022\022\n\na_par"
-  "entId\030\002 \001(\014\"K\n\036Msg_UpdateMediaCodecsSupp"
-  "orted\022\023\n\013a_aLocation\030\001 \001(\014\022\024\n\014a_aSupport"
-  "ed\030\002 \001(\014b\006proto3"
-  ;
-static const ::_pbi::DescriptorTable* const descriptor_table_PUtilityAudioDecoder_2eproto_deps[1] = {
-  &::descriptor_table_GraphicsMessages_2eproto,
-};
-static ::_pbi::once_flag descriptor_table_PUtilityAudioDecoder_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PUtilityAudioDecoder_2eproto = {
-    false, false, 256, descriptor_table_protodef_PUtilityAudioDecoder_2eproto,
-    "PUtilityAudioDecoder.proto",
-    &descriptor_table_PUtilityAudioDecoder_2eproto_once, descriptor_table_PUtilityAudioDecoder_2eproto_deps, 1, 2,
-    schemas, file_default_instances, TableStruct_PUtilityAudioDecoder_2eproto::offsets,
-    file_level_metadata_PUtilityAudioDecoder_2eproto, file_level_enum_descriptors_PUtilityAudioDecoder_2eproto,
-    file_level_service_descriptors_PUtilityAudioDecoder_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PUtilityAudioDecoder_2eproto_getter() {
-  return &descriptor_table_PUtilityAudioDecoder_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PUtilityAudioDecoder_2eproto(&descriptor_table_PUtilityAudioDecoder_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace ipc {
@@ -128,19 +66,19 @@ class Msg_NewContentRemoteMediaManager::_Internal {
 
 Msg_NewContentRemoteMediaManager::Msg_NewContentRemoteMediaManager(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.ipc.PUtilityAudioDecoder.Msg_NewContentRemoteMediaManager)
 }
 Msg_NewContentRemoteMediaManager::Msg_NewContentRemoteMediaManager(const Msg_NewContentRemoteMediaManager& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_NewContentRemoteMediaManager* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_endpoint_){}
     , decltype(_impl_.a_parentid_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_endpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_endpoint_.Set("", GetArenaForAllocation());
@@ -181,7 +119,7 @@ inline void Msg_NewContentRemoteMediaManager::SharedCtor(
 
 Msg_NewContentRemoteMediaManager::~Msg_NewContentRemoteMediaManager() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.ipc.PUtilityAudioDecoder.Msg_NewContentRemoteMediaManager)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -206,7 +144,7 @@ void Msg_NewContentRemoteMediaManager::Clear() {
 
   _impl_.a_endpoint_.ClearToEmpty();
   _impl_.a_parentid_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_NewContentRemoteMediaManager::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -244,7 +182,7 @@ const char* Msg_NewContentRemoteMediaManager::_InternalParse(const char* ptr, ::
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -275,8 +213,8 @@ uint8_t* Msg_NewContentRemoteMediaManager::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.ipc.PUtilityAudioDecoder.Msg_NewContentRemoteMediaManager)
   return target;
@@ -304,19 +242,22 @@ size_t Msg_NewContentRemoteMediaManager::ByteSizeLong() const {
         this->_internal_a_parentid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_NewContentRemoteMediaManager::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Msg_NewContentRemoteMediaManager::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_NewContentRemoteMediaManager::GetClassData() const { return &_class_data_; }
+void Msg_NewContentRemoteMediaManager::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_NewContentRemoteMediaManager*>(
+      &from));
+}
 
-
-void Msg_NewContentRemoteMediaManager::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Msg_NewContentRemoteMediaManager*>(&to_msg);
-  auto& from = static_cast<const Msg_NewContentRemoteMediaManager&>(from_msg);
+void Msg_NewContentRemoteMediaManager::MergeFrom(const Msg_NewContentRemoteMediaManager& from) {
+  Msg_NewContentRemoteMediaManager* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.ipc.PUtilityAudioDecoder.Msg_NewContentRemoteMediaManager)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -328,7 +269,7 @@ void Msg_NewContentRemoteMediaManager::MergeImpl(::PROTOBUF_NAMESPACE_ID::Messag
   if (!from._internal_a_parentid().empty()) {
     _this->_internal_set_a_parentid(from._internal_a_parentid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Msg_NewContentRemoteMediaManager::CopyFrom(const Msg_NewContentRemoteMediaManager& from) {
@@ -357,11 +298,10 @@ void Msg_NewContentRemoteMediaManager::InternalSwap(Msg_NewContentRemoteMediaMan
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_NewContentRemoteMediaManager::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PUtilityAudioDecoder_2eproto_getter, &descriptor_table_PUtilityAudioDecoder_2eproto_once,
-      file_level_metadata_PUtilityAudioDecoder_2eproto[0]);
+std::string Msg_NewContentRemoteMediaManager::GetTypeName() const {
+  return "protobuf.mozilla.ipc.PUtilityAudioDecoder.Msg_NewContentRemoteMediaManager";
 }
+
 
 // ===================================================================
 
@@ -371,19 +311,19 @@ class Msg_UpdateMediaCodecsSupported::_Internal {
 
 Msg_UpdateMediaCodecsSupported::Msg_UpdateMediaCodecsSupported(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.ipc.PUtilityAudioDecoder.Msg_UpdateMediaCodecsSupported)
 }
 Msg_UpdateMediaCodecsSupported::Msg_UpdateMediaCodecsSupported(const Msg_UpdateMediaCodecsSupported& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_UpdateMediaCodecsSupported* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_alocation_){}
     , decltype(_impl_.a_asupported_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_alocation_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_alocation_.Set("", GetArenaForAllocation());
@@ -424,7 +364,7 @@ inline void Msg_UpdateMediaCodecsSupported::SharedCtor(
 
 Msg_UpdateMediaCodecsSupported::~Msg_UpdateMediaCodecsSupported() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.ipc.PUtilityAudioDecoder.Msg_UpdateMediaCodecsSupported)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -449,7 +389,7 @@ void Msg_UpdateMediaCodecsSupported::Clear() {
 
   _impl_.a_alocation_.ClearToEmpty();
   _impl_.a_asupported_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_UpdateMediaCodecsSupported::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -487,7 +427,7 @@ const char* Msg_UpdateMediaCodecsSupported::_InternalParse(const char* ptr, ::_p
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -518,8 +458,8 @@ uint8_t* Msg_UpdateMediaCodecsSupported::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.ipc.PUtilityAudioDecoder.Msg_UpdateMediaCodecsSupported)
   return target;
@@ -547,19 +487,22 @@ size_t Msg_UpdateMediaCodecsSupported::ByteSizeLong() const {
         this->_internal_a_asupported());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_UpdateMediaCodecsSupported::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Msg_UpdateMediaCodecsSupported::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_UpdateMediaCodecsSupported::GetClassData() const { return &_class_data_; }
+void Msg_UpdateMediaCodecsSupported::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_UpdateMediaCodecsSupported*>(
+      &from));
+}
 
-
-void Msg_UpdateMediaCodecsSupported::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Msg_UpdateMediaCodecsSupported*>(&to_msg);
-  auto& from = static_cast<const Msg_UpdateMediaCodecsSupported&>(from_msg);
+void Msg_UpdateMediaCodecsSupported::MergeFrom(const Msg_UpdateMediaCodecsSupported& from) {
+  Msg_UpdateMediaCodecsSupported* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.ipc.PUtilityAudioDecoder.Msg_UpdateMediaCodecsSupported)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -571,7 +514,7 @@ void Msg_UpdateMediaCodecsSupported::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message&
   if (!from._internal_a_asupported().empty()) {
     _this->_internal_set_a_asupported(from._internal_a_asupported());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Msg_UpdateMediaCodecsSupported::CopyFrom(const Msg_UpdateMediaCodecsSupported& from) {
@@ -600,11 +543,10 @@ void Msg_UpdateMediaCodecsSupported::InternalSwap(Msg_UpdateMediaCodecsSupported
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_UpdateMediaCodecsSupported::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PUtilityAudioDecoder_2eproto_getter, &descriptor_table_PUtilityAudioDecoder_2eproto_once,
-      file_level_metadata_PUtilityAudioDecoder_2eproto[1]);
+std::string Msg_UpdateMediaCodecsSupported::GetTypeName() const {
+  return "protobuf.mozilla.ipc.PUtilityAudioDecoder.Msg_UpdateMediaCodecsSupported";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace PUtilityAudioDecoder

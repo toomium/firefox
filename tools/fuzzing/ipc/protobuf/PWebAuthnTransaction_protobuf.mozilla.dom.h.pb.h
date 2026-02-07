@@ -25,11 +25,9 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/message.h>
+#include <google/protobuf/message_lite.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
-#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto
@@ -43,7 +41,6 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto {
   static const uint32_t offsets[];
 };
-extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -163,7 +160,7 @@ namespace dom {
 // ===================================================================
 
 class WebAuthnAuthenticatorSelection final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection) */ {
  public:
   inline WebAuthnAuthenticatorSelection() : WebAuthnAuthenticatorSelection(nullptr) {}
   ~WebAuthnAuthenticatorSelection() override;
@@ -193,15 +190,6 @@ class WebAuthnAuthenticatorSelection final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnAuthenticatorSelection& default_instance() {
     return *internal_default_instance();
   }
@@ -239,15 +227,9 @@ class WebAuthnAuthenticatorSelection final :
   WebAuthnAuthenticatorSelection* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnAuthenticatorSelection>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnAuthenticatorSelection& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnAuthenticatorSelection& from) {
-    WebAuthnAuthenticatorSelection::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnAuthenticatorSelection& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -260,7 +242,7 @@ class WebAuthnAuthenticatorSelection final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnAuthenticatorSelection* other);
 
   private:
@@ -273,10 +255,7 @@ class WebAuthnAuthenticatorSelection final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -353,7 +332,7 @@ class WebAuthnAuthenticatorSelection final :
 // -------------------------------------------------------------------
 
 class WebAuthnScopedCredential final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnScopedCredential) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnScopedCredential) */ {
  public:
   inline WebAuthnScopedCredential() : WebAuthnScopedCredential(nullptr) {}
   ~WebAuthnScopedCredential() override;
@@ -383,15 +362,6 @@ class WebAuthnScopedCredential final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnScopedCredential& default_instance() {
     return *internal_default_instance();
   }
@@ -429,15 +399,9 @@ class WebAuthnScopedCredential final :
   WebAuthnScopedCredential* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnScopedCredential>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnScopedCredential& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnScopedCredential& from) {
-    WebAuthnScopedCredential::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnScopedCredential& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -450,7 +414,7 @@ class WebAuthnScopedCredential final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnScopedCredential* other);
 
   private:
@@ -463,10 +427,7 @@ class WebAuthnScopedCredential final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -526,7 +487,7 @@ class WebAuthnScopedCredential final :
 // -------------------------------------------------------------------
 
 class WebAuthnExtensionCredProtect final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionCredProtect) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionCredProtect) */ {
  public:
   inline WebAuthnExtensionCredProtect() : WebAuthnExtensionCredProtect(nullptr) {}
   ~WebAuthnExtensionCredProtect() override;
@@ -556,15 +517,6 @@ class WebAuthnExtensionCredProtect final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnExtensionCredProtect& default_instance() {
     return *internal_default_instance();
   }
@@ -602,15 +554,9 @@ class WebAuthnExtensionCredProtect final :
   WebAuthnExtensionCredProtect* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnExtensionCredProtect>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnExtensionCredProtect& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnExtensionCredProtect& from) {
-    WebAuthnExtensionCredProtect::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnExtensionCredProtect& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -623,7 +569,7 @@ class WebAuthnExtensionCredProtect final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnExtensionCredProtect* other);
 
   private:
@@ -636,10 +582,7 @@ class WebAuthnExtensionCredProtect final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -690,7 +633,7 @@ class WebAuthnExtensionCredProtect final :
 // -------------------------------------------------------------------
 
 class WebAuthnExtensionCredProps final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionCredProps) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionCredProps) */ {
  public:
   inline WebAuthnExtensionCredProps() : WebAuthnExtensionCredProps(nullptr) {}
   ~WebAuthnExtensionCredProps() override;
@@ -720,15 +663,6 @@ class WebAuthnExtensionCredProps final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnExtensionCredProps& default_instance() {
     return *internal_default_instance();
   }
@@ -766,15 +700,9 @@ class WebAuthnExtensionCredProps final :
   WebAuthnExtensionCredProps* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnExtensionCredProps>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnExtensionCredProps& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnExtensionCredProps& from) {
-    WebAuthnExtensionCredProps::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnExtensionCredProps& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -787,7 +715,7 @@ class WebAuthnExtensionCredProps final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnExtensionCredProps* other);
 
   private:
@@ -800,10 +728,7 @@ class WebAuthnExtensionCredProps final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -838,7 +763,7 @@ class WebAuthnExtensionCredProps final :
 // -------------------------------------------------------------------
 
 class WebAuthnExtensionHmacSecret final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionHmacSecret) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionHmacSecret) */ {
  public:
   inline WebAuthnExtensionHmacSecret() : WebAuthnExtensionHmacSecret(nullptr) {}
   ~WebAuthnExtensionHmacSecret() override;
@@ -868,15 +793,6 @@ class WebAuthnExtensionHmacSecret final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnExtensionHmacSecret& default_instance() {
     return *internal_default_instance();
   }
@@ -914,15 +830,9 @@ class WebAuthnExtensionHmacSecret final :
   WebAuthnExtensionHmacSecret* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnExtensionHmacSecret>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnExtensionHmacSecret& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnExtensionHmacSecret& from) {
-    WebAuthnExtensionHmacSecret::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnExtensionHmacSecret& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -935,7 +845,7 @@ class WebAuthnExtensionHmacSecret final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnExtensionHmacSecret* other);
 
   private:
@@ -948,10 +858,7 @@ class WebAuthnExtensionHmacSecret final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -986,7 +893,7 @@ class WebAuthnExtensionHmacSecret final :
 // -------------------------------------------------------------------
 
 class WebAuthnExtensionLargeBlob final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionLargeBlob) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionLargeBlob) */ {
  public:
   inline WebAuthnExtensionLargeBlob() : WebAuthnExtensionLargeBlob(nullptr) {}
   ~WebAuthnExtensionLargeBlob() override;
@@ -1016,15 +923,6 @@ class WebAuthnExtensionLargeBlob final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnExtensionLargeBlob& default_instance() {
     return *internal_default_instance();
   }
@@ -1062,15 +960,9 @@ class WebAuthnExtensionLargeBlob final :
   WebAuthnExtensionLargeBlob* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnExtensionLargeBlob>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnExtensionLargeBlob& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnExtensionLargeBlob& from) {
-    WebAuthnExtensionLargeBlob::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnExtensionLargeBlob& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1083,7 +975,7 @@ class WebAuthnExtensionLargeBlob final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnExtensionLargeBlob* other);
 
   private:
@@ -1096,10 +988,7 @@ class WebAuthnExtensionLargeBlob final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1164,7 +1053,7 @@ class WebAuthnExtensionLargeBlob final :
 // -------------------------------------------------------------------
 
 class WebAuthnExtensionMinPinLength final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionMinPinLength) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionMinPinLength) */ {
  public:
   inline WebAuthnExtensionMinPinLength() : WebAuthnExtensionMinPinLength(nullptr) {}
   ~WebAuthnExtensionMinPinLength() override;
@@ -1194,15 +1083,6 @@ class WebAuthnExtensionMinPinLength final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnExtensionMinPinLength& default_instance() {
     return *internal_default_instance();
   }
@@ -1240,15 +1120,9 @@ class WebAuthnExtensionMinPinLength final :
   WebAuthnExtensionMinPinLength* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnExtensionMinPinLength>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnExtensionMinPinLength& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnExtensionMinPinLength& from) {
-    WebAuthnExtensionMinPinLength::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnExtensionMinPinLength& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1261,7 +1135,7 @@ class WebAuthnExtensionMinPinLength final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnExtensionMinPinLength* other);
 
   private:
@@ -1274,10 +1148,7 @@ class WebAuthnExtensionMinPinLength final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1312,7 +1183,7 @@ class WebAuthnExtensionMinPinLength final :
 // -------------------------------------------------------------------
 
 class WebAuthnExtensionPrf final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionPrf) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionPrf) */ {
  public:
   inline WebAuthnExtensionPrf() : WebAuthnExtensionPrf(nullptr) {}
   ~WebAuthnExtensionPrf() override;
@@ -1342,15 +1213,6 @@ class WebAuthnExtensionPrf final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnExtensionPrf& default_instance() {
     return *internal_default_instance();
   }
@@ -1388,15 +1250,9 @@ class WebAuthnExtensionPrf final :
   WebAuthnExtensionPrf* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnExtensionPrf>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnExtensionPrf& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnExtensionPrf& from) {
-    WebAuthnExtensionPrf::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnExtensionPrf& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1409,7 +1265,7 @@ class WebAuthnExtensionPrf final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnExtensionPrf* other);
 
   private:
@@ -1422,10 +1278,7 @@ class WebAuthnExtensionPrf final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1501,7 +1354,7 @@ class WebAuthnExtensionPrf final :
 // -------------------------------------------------------------------
 
 class WebAuthnExtensionPrfValues final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionPrfValues) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionPrfValues) */ {
  public:
   inline WebAuthnExtensionPrfValues() : WebAuthnExtensionPrfValues(nullptr) {}
   ~WebAuthnExtensionPrfValues() override;
@@ -1531,15 +1384,6 @@ class WebAuthnExtensionPrfValues final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnExtensionPrfValues& default_instance() {
     return *internal_default_instance();
   }
@@ -1577,15 +1421,9 @@ class WebAuthnExtensionPrfValues final :
   WebAuthnExtensionPrfValues* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnExtensionPrfValues>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnExtensionPrfValues& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnExtensionPrfValues& from) {
-    WebAuthnExtensionPrfValues::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnExtensionPrfValues& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1598,7 +1436,7 @@ class WebAuthnExtensionPrfValues final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnExtensionPrfValues* other);
 
   private:
@@ -1611,10 +1449,7 @@ class WebAuthnExtensionPrfValues final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1699,7 +1534,7 @@ class WebAuthnExtensionPrfValues final :
 // -------------------------------------------------------------------
 
 class WebAuthnExtensionPrfEvalByCredentialEntry final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionPrfEvalByCredentialEntry) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionPrfEvalByCredentialEntry) */ {
  public:
   inline WebAuthnExtensionPrfEvalByCredentialEntry() : WebAuthnExtensionPrfEvalByCredentialEntry(nullptr) {}
   ~WebAuthnExtensionPrfEvalByCredentialEntry() override;
@@ -1729,15 +1564,6 @@ class WebAuthnExtensionPrfEvalByCredentialEntry final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnExtensionPrfEvalByCredentialEntry& default_instance() {
     return *internal_default_instance();
   }
@@ -1775,15 +1601,9 @@ class WebAuthnExtensionPrfEvalByCredentialEntry final :
   WebAuthnExtensionPrfEvalByCredentialEntry* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnExtensionPrfEvalByCredentialEntry>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnExtensionPrfEvalByCredentialEntry& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnExtensionPrfEvalByCredentialEntry& from) {
-    WebAuthnExtensionPrfEvalByCredentialEntry::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnExtensionPrfEvalByCredentialEntry& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1796,7 +1616,7 @@ class WebAuthnExtensionPrfEvalByCredentialEntry final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnExtensionPrfEvalByCredentialEntry* other);
 
   private:
@@ -1809,10 +1629,7 @@ class WebAuthnExtensionPrfEvalByCredentialEntry final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1881,7 +1698,7 @@ class WebAuthnExtensionPrfEvalByCredentialEntry final :
 // -------------------------------------------------------------------
 
 class WebAuthnExtension final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtension) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtension) */ {
  public:
   inline WebAuthnExtension() : WebAuthnExtension(nullptr) {}
   ~WebAuthnExtension() override;
@@ -1911,15 +1728,6 @@ class WebAuthnExtension final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnExtension& default_instance() {
     return *internal_default_instance();
   }
@@ -1967,15 +1775,9 @@ class WebAuthnExtension final :
   WebAuthnExtension* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnExtension>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnExtension& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnExtension& from) {
-    WebAuthnExtension::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnExtension& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1988,7 +1790,7 @@ class WebAuthnExtension final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnExtension* other);
 
   private:
@@ -2001,10 +1803,7 @@ class WebAuthnExtension final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2165,7 +1964,7 @@ class WebAuthnExtension final :
 // -------------------------------------------------------------------
 
 class WebAuthnExtensionResultAppId final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionResultAppId) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionResultAppId) */ {
  public:
   inline WebAuthnExtensionResultAppId() : WebAuthnExtensionResultAppId(nullptr) {}
   ~WebAuthnExtensionResultAppId() override;
@@ -2195,15 +1994,6 @@ class WebAuthnExtensionResultAppId final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnExtensionResultAppId& default_instance() {
     return *internal_default_instance();
   }
@@ -2241,15 +2031,9 @@ class WebAuthnExtensionResultAppId final :
   WebAuthnExtensionResultAppId* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnExtensionResultAppId>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnExtensionResultAppId& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnExtensionResultAppId& from) {
-    WebAuthnExtensionResultAppId::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnExtensionResultAppId& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2262,7 +2046,7 @@ class WebAuthnExtensionResultAppId final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnExtensionResultAppId* other);
 
   private:
@@ -2275,10 +2059,7 @@ class WebAuthnExtensionResultAppId final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2313,7 +2094,7 @@ class WebAuthnExtensionResultAppId final :
 // -------------------------------------------------------------------
 
 class WebAuthnExtensionResultCredProps final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionResultCredProps) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionResultCredProps) */ {
  public:
   inline WebAuthnExtensionResultCredProps() : WebAuthnExtensionResultCredProps(nullptr) {}
   ~WebAuthnExtensionResultCredProps() override;
@@ -2343,15 +2124,6 @@ class WebAuthnExtensionResultCredProps final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnExtensionResultCredProps& default_instance() {
     return *internal_default_instance();
   }
@@ -2389,15 +2161,9 @@ class WebAuthnExtensionResultCredProps final :
   WebAuthnExtensionResultCredProps* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnExtensionResultCredProps>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnExtensionResultCredProps& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnExtensionResultCredProps& from) {
-    WebAuthnExtensionResultCredProps::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnExtensionResultCredProps& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2410,7 +2176,7 @@ class WebAuthnExtensionResultCredProps final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnExtensionResultCredProps* other);
 
   private:
@@ -2423,10 +2189,7 @@ class WebAuthnExtensionResultCredProps final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2461,7 +2224,7 @@ class WebAuthnExtensionResultCredProps final :
 // -------------------------------------------------------------------
 
 class WebAuthnExtensionResultHmacSecret final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionResultHmacSecret) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionResultHmacSecret) */ {
  public:
   inline WebAuthnExtensionResultHmacSecret() : WebAuthnExtensionResultHmacSecret(nullptr) {}
   ~WebAuthnExtensionResultHmacSecret() override;
@@ -2491,15 +2254,6 @@ class WebAuthnExtensionResultHmacSecret final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnExtensionResultHmacSecret& default_instance() {
     return *internal_default_instance();
   }
@@ -2537,15 +2291,9 @@ class WebAuthnExtensionResultHmacSecret final :
   WebAuthnExtensionResultHmacSecret* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnExtensionResultHmacSecret>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnExtensionResultHmacSecret& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnExtensionResultHmacSecret& from) {
-    WebAuthnExtensionResultHmacSecret::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnExtensionResultHmacSecret& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2558,7 +2306,7 @@ class WebAuthnExtensionResultHmacSecret final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnExtensionResultHmacSecret* other);
 
   private:
@@ -2571,10 +2319,7 @@ class WebAuthnExtensionResultHmacSecret final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2609,7 +2354,7 @@ class WebAuthnExtensionResultHmacSecret final :
 // -------------------------------------------------------------------
 
 class WebAuthnExtensionResultLargeBlob final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionResultLargeBlob) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionResultLargeBlob) */ {
  public:
   inline WebAuthnExtensionResultLargeBlob() : WebAuthnExtensionResultLargeBlob(nullptr) {}
   ~WebAuthnExtensionResultLargeBlob() override;
@@ -2639,15 +2384,6 @@ class WebAuthnExtensionResultLargeBlob final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnExtensionResultLargeBlob& default_instance() {
     return *internal_default_instance();
   }
@@ -2685,15 +2421,9 @@ class WebAuthnExtensionResultLargeBlob final :
   WebAuthnExtensionResultLargeBlob* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnExtensionResultLargeBlob>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnExtensionResultLargeBlob& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnExtensionResultLargeBlob& from) {
-    WebAuthnExtensionResultLargeBlob::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnExtensionResultLargeBlob& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2706,7 +2436,7 @@ class WebAuthnExtensionResultLargeBlob final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnExtensionResultLargeBlob* other);
 
   private:
@@ -2719,10 +2449,7 @@ class WebAuthnExtensionResultLargeBlob final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2793,7 +2520,7 @@ class WebAuthnExtensionResultLargeBlob final :
 // -------------------------------------------------------------------
 
 class WebAuthnExtensionResultPrf final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionResultPrf) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionResultPrf) */ {
  public:
   inline WebAuthnExtensionResultPrf() : WebAuthnExtensionResultPrf(nullptr) {}
   ~WebAuthnExtensionResultPrf() override;
@@ -2823,15 +2550,6 @@ class WebAuthnExtensionResultPrf final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnExtensionResultPrf& default_instance() {
     return *internal_default_instance();
   }
@@ -2869,15 +2587,9 @@ class WebAuthnExtensionResultPrf final :
   WebAuthnExtensionResultPrf* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnExtensionResultPrf>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnExtensionResultPrf& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnExtensionResultPrf& from) {
-    WebAuthnExtensionResultPrf::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnExtensionResultPrf& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2890,7 +2602,7 @@ class WebAuthnExtensionResultPrf final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnExtensionResultPrf* other);
 
   private:
@@ -2903,10 +2615,7 @@ class WebAuthnExtensionResultPrf final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2966,7 +2675,7 @@ class WebAuthnExtensionResultPrf final :
 // -------------------------------------------------------------------
 
 class WebAuthnExtensionResult final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionResult) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnExtensionResult) */ {
  public:
   inline WebAuthnExtensionResult() : WebAuthnExtensionResult(nullptr) {}
   ~WebAuthnExtensionResult() override;
@@ -2996,15 +2705,6 @@ class WebAuthnExtensionResult final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnExtensionResult& default_instance() {
     return *internal_default_instance();
   }
@@ -3051,15 +2751,9 @@ class WebAuthnExtensionResult final :
   WebAuthnExtensionResult* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnExtensionResult>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnExtensionResult& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnExtensionResult& from) {
-    WebAuthnExtensionResult::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnExtensionResult& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3072,7 +2766,7 @@ class WebAuthnExtensionResult final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnExtensionResult* other);
 
   private:
@@ -3085,10 +2779,7 @@ class WebAuthnExtensionResult final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3228,7 +2919,7 @@ class WebAuthnExtensionResult final :
 // -------------------------------------------------------------------
 
 class WebAuthnMakeCredentialRpInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo) */ {
  public:
   inline WebAuthnMakeCredentialRpInfo() : WebAuthnMakeCredentialRpInfo(nullptr) {}
   ~WebAuthnMakeCredentialRpInfo() override;
@@ -3258,15 +2949,6 @@ class WebAuthnMakeCredentialRpInfo final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnMakeCredentialRpInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -3304,15 +2986,9 @@ class WebAuthnMakeCredentialRpInfo final :
   WebAuthnMakeCredentialRpInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnMakeCredentialRpInfo>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnMakeCredentialRpInfo& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnMakeCredentialRpInfo& from) {
-    WebAuthnMakeCredentialRpInfo::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnMakeCredentialRpInfo& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3325,7 +3001,7 @@ class WebAuthnMakeCredentialRpInfo final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnMakeCredentialRpInfo* other);
 
   private:
@@ -3338,10 +3014,7 @@ class WebAuthnMakeCredentialRpInfo final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3381,7 +3054,7 @@ class WebAuthnMakeCredentialRpInfo final :
 // -------------------------------------------------------------------
 
 class WebAuthnMakeCredentialUserInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo) */ {
  public:
   inline WebAuthnMakeCredentialUserInfo() : WebAuthnMakeCredentialUserInfo(nullptr) {}
   ~WebAuthnMakeCredentialUserInfo() override;
@@ -3411,15 +3084,6 @@ class WebAuthnMakeCredentialUserInfo final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnMakeCredentialUserInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -3457,15 +3121,9 @@ class WebAuthnMakeCredentialUserInfo final :
   WebAuthnMakeCredentialUserInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnMakeCredentialUserInfo>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnMakeCredentialUserInfo& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnMakeCredentialUserInfo& from) {
-    WebAuthnMakeCredentialUserInfo::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnMakeCredentialUserInfo& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3478,7 +3136,7 @@ class WebAuthnMakeCredentialUserInfo final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnMakeCredentialUserInfo* other);
 
   private:
@@ -3491,10 +3149,7 @@ class WebAuthnMakeCredentialUserInfo final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3575,7 +3230,7 @@ class WebAuthnMakeCredentialUserInfo final :
 // -------------------------------------------------------------------
 
 class CoseAlg final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.CoseAlg) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.CoseAlg) */ {
  public:
   inline CoseAlg() : CoseAlg(nullptr) {}
   ~CoseAlg() override;
@@ -3605,15 +3260,6 @@ class CoseAlg final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const CoseAlg& default_instance() {
     return *internal_default_instance();
   }
@@ -3651,15 +3297,9 @@ class CoseAlg final :
   CoseAlg* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<CoseAlg>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const CoseAlg& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const CoseAlg& from) {
-    CoseAlg::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const CoseAlg& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3672,7 +3312,7 @@ class CoseAlg final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(CoseAlg* other);
 
   private:
@@ -3685,10 +3325,7 @@ class CoseAlg final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3723,7 +3360,7 @@ class CoseAlg final :
 // -------------------------------------------------------------------
 
 class WebAuthnMakeCredentialInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo) */ {
  public:
   inline WebAuthnMakeCredentialInfo() : WebAuthnMakeCredentialInfo(nullptr) {}
   ~WebAuthnMakeCredentialInfo() override;
@@ -3753,15 +3390,6 @@ class WebAuthnMakeCredentialInfo final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnMakeCredentialInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -3799,15 +3427,9 @@ class WebAuthnMakeCredentialInfo final :
   WebAuthnMakeCredentialInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnMakeCredentialInfo>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnMakeCredentialInfo& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnMakeCredentialInfo& from) {
-    WebAuthnMakeCredentialInfo::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnMakeCredentialInfo& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3820,7 +3442,7 @@ class WebAuthnMakeCredentialInfo final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnMakeCredentialInfo* other);
 
   private:
@@ -3833,10 +3455,7 @@ class WebAuthnMakeCredentialInfo final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4048,7 +3667,7 @@ class WebAuthnMakeCredentialInfo final :
 // -------------------------------------------------------------------
 
 class WebAuthnMakeCredentialResult final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnMakeCredentialResult) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnMakeCredentialResult) */ {
  public:
   inline WebAuthnMakeCredentialResult() : WebAuthnMakeCredentialResult(nullptr) {}
   ~WebAuthnMakeCredentialResult() override;
@@ -4078,15 +3697,6 @@ class WebAuthnMakeCredentialResult final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnMakeCredentialResult& default_instance() {
     return *internal_default_instance();
   }
@@ -4124,15 +3734,9 @@ class WebAuthnMakeCredentialResult final :
   WebAuthnMakeCredentialResult* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnMakeCredentialResult>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnMakeCredentialResult& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnMakeCredentialResult& from) {
-    WebAuthnMakeCredentialResult::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnMakeCredentialResult& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4145,7 +3749,7 @@ class WebAuthnMakeCredentialResult final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnMakeCredentialResult* other);
 
   private:
@@ -4158,10 +3762,7 @@ class WebAuthnMakeCredentialResult final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4318,7 +3919,7 @@ class WebAuthnMakeCredentialResult final :
 // -------------------------------------------------------------------
 
 class WebAuthnMakeCredentialResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnMakeCredentialResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnMakeCredentialResponse) */ {
  public:
   inline WebAuthnMakeCredentialResponse() : WebAuthnMakeCredentialResponse(nullptr) {}
   ~WebAuthnMakeCredentialResponse() override;
@@ -4348,15 +3949,6 @@ class WebAuthnMakeCredentialResponse final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnMakeCredentialResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -4400,15 +3992,9 @@ class WebAuthnMakeCredentialResponse final :
   WebAuthnMakeCredentialResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnMakeCredentialResponse>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnMakeCredentialResponse& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnMakeCredentialResponse& from) {
-    WebAuthnMakeCredentialResponse::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnMakeCredentialResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4421,7 +4007,7 @@ class WebAuthnMakeCredentialResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnMakeCredentialResponse* other);
 
   private:
@@ -4434,10 +4020,7 @@ class WebAuthnMakeCredentialResponse final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4514,7 +4097,7 @@ class WebAuthnMakeCredentialResponse final :
 // -------------------------------------------------------------------
 
 class WebAuthnGetAssertionInfo final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnGetAssertionInfo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnGetAssertionInfo) */ {
  public:
   inline WebAuthnGetAssertionInfo() : WebAuthnGetAssertionInfo(nullptr) {}
   ~WebAuthnGetAssertionInfo() override;
@@ -4544,15 +4127,6 @@ class WebAuthnGetAssertionInfo final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnGetAssertionInfo& default_instance() {
     return *internal_default_instance();
   }
@@ -4590,15 +4164,9 @@ class WebAuthnGetAssertionInfo final :
   WebAuthnGetAssertionInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnGetAssertionInfo>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnGetAssertionInfo& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnGetAssertionInfo& from) {
-    WebAuthnGetAssertionInfo::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnGetAssertionInfo& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4611,7 +4179,7 @@ class WebAuthnGetAssertionInfo final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnGetAssertionInfo* other);
 
   private:
@@ -4624,10 +4192,7 @@ class WebAuthnGetAssertionInfo final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4791,7 +4356,7 @@ class WebAuthnGetAssertionInfo final :
 // -------------------------------------------------------------------
 
 class WebAuthnGetAssertionResult final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnGetAssertionResult) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnGetAssertionResult) */ {
  public:
   inline WebAuthnGetAssertionResult() : WebAuthnGetAssertionResult(nullptr) {}
   ~WebAuthnGetAssertionResult() override;
@@ -4821,15 +4386,6 @@ class WebAuthnGetAssertionResult final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnGetAssertionResult& default_instance() {
     return *internal_default_instance();
   }
@@ -4867,15 +4423,9 @@ class WebAuthnGetAssertionResult final :
   WebAuthnGetAssertionResult* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnGetAssertionResult>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnGetAssertionResult& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnGetAssertionResult& from) {
-    WebAuthnGetAssertionResult::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnGetAssertionResult& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4888,7 +4438,7 @@ class WebAuthnGetAssertionResult final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnGetAssertionResult* other);
 
   private:
@@ -4901,10 +4451,7 @@ class WebAuthnGetAssertionResult final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -5085,7 +4632,7 @@ class WebAuthnGetAssertionResult final :
 // -------------------------------------------------------------------
 
 class WebAuthnGetAssertionResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnGetAssertionResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.WebAuthnGetAssertionResponse) */ {
  public:
   inline WebAuthnGetAssertionResponse() : WebAuthnGetAssertionResponse(nullptr) {}
   ~WebAuthnGetAssertionResponse() override;
@@ -5115,15 +4662,6 @@ class WebAuthnGetAssertionResponse final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebAuthnGetAssertionResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -5167,15 +4705,9 @@ class WebAuthnGetAssertionResponse final :
   WebAuthnGetAssertionResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebAuthnGetAssertionResponse>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebAuthnGetAssertionResponse& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebAuthnGetAssertionResponse& from) {
-    WebAuthnGetAssertionResponse::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebAuthnGetAssertionResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -5188,7 +4720,7 @@ class WebAuthnGetAssertionResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebAuthnGetAssertionResponse* other);
 
   private:
@@ -5201,10 +4733,7 @@ class WebAuthnGetAssertionResponse final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 

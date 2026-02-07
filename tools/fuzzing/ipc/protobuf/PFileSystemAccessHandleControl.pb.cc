@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -25,7 +22,8 @@ namespace mozilla {
 namespace dom {
 namespace PFileSystemAccessHandleControl {
 PROTOBUF_CONSTEXPR Msg_Close::Msg_Close(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_CloseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_CloseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -52,56 +50,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PFileSystemAccessHandleControl_2eproto[2];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PFileSystemAccessHandleControl_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PFileSystemAccessHandleControl_2eproto = nullptr;
-
-const uint32_t TableStruct_PFileSystemAccessHandleControl_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::PFileSystemAccessHandleControl::Msg_Close, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::PFileSystemAccessHandleControl::Reply_Close, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::PFileSystemAccessHandleControl::Reply_Close, _impl_.a_ok_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::dom::PFileSystemAccessHandleControl::Msg_Close)},
-  { 6, -1, -1, sizeof(::protobuf::mozilla::dom::PFileSystemAccessHandleControl::Reply_Close)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::dom::PFileSystemAccessHandleControl::_Msg_Close_default_instance_._instance,
-  &::protobuf::mozilla::dom::PFileSystemAccessHandleControl::_Reply_Close_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PFileSystemAccessHandleControl_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n$PFileSystemAccessHandleControl.proto\0223"
-  "protobuf.mozilla.dom.PFileSystemAccessHa"
-  "ndleControl\"\013\n\tMsg_Close\"\033\n\013Reply_Close\022"
-  "\014\n\004a_ok\030\001 \001(\014b\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_PFileSystemAccessHandleControl_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PFileSystemAccessHandleControl_2eproto = {
-    false, false, 141, descriptor_table_protodef_PFileSystemAccessHandleControl_2eproto,
-    "PFileSystemAccessHandleControl.proto",
-    &descriptor_table_PFileSystemAccessHandleControl_2eproto_once, nullptr, 0, 2,
-    schemas, file_default_instances, TableStruct_PFileSystemAccessHandleControl_2eproto::offsets,
-    file_level_metadata_PFileSystemAccessHandleControl_2eproto, file_level_enum_descriptors_PFileSystemAccessHandleControl_2eproto,
-    file_level_service_descriptors_PFileSystemAccessHandleControl_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PFileSystemAccessHandleControl_2eproto_getter() {
-  return &descriptor_table_PFileSystemAccessHandleControl_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PFileSystemAccessHandleControl_2eproto(&descriptor_table_PFileSystemAccessHandleControl_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -115,37 +63,145 @@ class Msg_Close::_Internal {
 
 Msg_Close::Msg_Close(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.PFileSystemAccessHandleControl.Msg_Close)
 }
 Msg_Close::Msg_Close(const Msg_Close& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_Close* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.PFileSystemAccessHandleControl.Msg_Close)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_Close::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_Close::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_Close::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PFileSystemAccessHandleControl_2eproto_getter, &descriptor_table_PFileSystemAccessHandleControl_2eproto_once,
-      file_level_metadata_PFileSystemAccessHandleControl_2eproto[0]);
+inline void Msg_Close::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Msg_Close::~Msg_Close() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.PFileSystemAccessHandleControl.Msg_Close)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Msg_Close::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Msg_Close::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Msg_Close::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.dom.PFileSystemAccessHandleControl.Msg_Close)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Msg_Close::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Msg_Close::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.dom.PFileSystemAccessHandleControl.Msg_Close)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.PFileSystemAccessHandleControl.Msg_Close)
+  return target;
+}
+
+size_t Msg_Close::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.PFileSystemAccessHandleControl.Msg_Close)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Msg_Close::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_Close*>(
+      &from));
+}
+
+void Msg_Close::MergeFrom(const Msg_Close& from) {
+  Msg_Close* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.PFileSystemAccessHandleControl.Msg_Close)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Msg_Close::CopyFrom(const Msg_Close& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.dom.PFileSystemAccessHandleControl.Msg_Close)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg_Close::IsInitialized() const {
+  return true;
+}
+
+void Msg_Close::InternalSwap(Msg_Close* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Msg_Close::GetTypeName() const {
+  return "protobuf.mozilla.dom.PFileSystemAccessHandleControl.Msg_Close";
+}
+
 
 // ===================================================================
 
@@ -155,18 +211,18 @@ class Reply_Close::_Internal {
 
 Reply_Close::Reply_Close(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.PFileSystemAccessHandleControl.Reply_Close)
 }
 Reply_Close::Reply_Close(const Reply_Close& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_Close* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_ok_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_ok_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_ok_.Set("", GetArenaForAllocation());
@@ -194,7 +250,7 @@ inline void Reply_Close::SharedCtor(
 
 Reply_Close::~Reply_Close() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.PFileSystemAccessHandleControl.Reply_Close)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -217,7 +273,7 @@ void Reply_Close::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_ok_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_Close::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -246,7 +302,7 @@ const char* Reply_Close::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -271,8 +327,8 @@ uint8_t* Reply_Close::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.PFileSystemAccessHandleControl.Reply_Close)
   return target;
@@ -293,19 +349,22 @@ size_t Reply_Close::ByteSizeLong() const {
         this->_internal_a_ok());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_Close::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Reply_Close::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_Close::GetClassData() const { return &_class_data_; }
+void Reply_Close::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Reply_Close*>(
+      &from));
+}
 
-
-void Reply_Close::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Reply_Close*>(&to_msg);
-  auto& from = static_cast<const Reply_Close&>(from_msg);
+void Reply_Close::MergeFrom(const Reply_Close& from) {
+  Reply_Close* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.PFileSystemAccessHandleControl.Reply_Close)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -314,7 +373,7 @@ void Reply_Close::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PR
   if (!from._internal_a_ok().empty()) {
     _this->_internal_set_a_ok(from._internal_a_ok());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Reply_Close::CopyFrom(const Reply_Close& from) {
@@ -339,11 +398,10 @@ void Reply_Close::InternalSwap(Reply_Close* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Reply_Close::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PFileSystemAccessHandleControl_2eproto_getter, &descriptor_table_PFileSystemAccessHandleControl_2eproto_once,
-      file_level_metadata_PFileSystemAccessHandleControl_2eproto[1]);
+std::string Reply_Close::GetTypeName() const {
+  return "protobuf.mozilla.dom.PFileSystemAccessHandleControl.Reply_Close";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace PFileSystemAccessHandleControl

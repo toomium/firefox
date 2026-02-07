@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -410,520 +407,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace layers
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[22];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorD3D10, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorD3D10, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorD3D10, _impl_.a_handle_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorD3D10, _impl_.a_gpuprocesstextureid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorD3D10, _impl_.a_arrayindex_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorD3D10, _impl_.a_format_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorD3D10, _impl_.a_size_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorD3D10, _impl_.a_colorspace_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorD3D10, _impl_.a_colorrange_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorD3D10, _impl_.a_haskeyedmutex_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorD3D10, _impl_.a_fencesholderid_),
-  0,
-  1,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  2,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr, _impl_.a_handley_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr, _impl_.a_handlecb_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr, _impl_.a_handlecr_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr, _impl_.a_size_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr, _impl_.a_sizey_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr, _impl_.a_sizecbcr_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr, _impl_.a_colordepth_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr, _impl_.a_yuvcolorspace_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr, _impl_.a_colorrange_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr, _impl_.a_fencesholderid_),
-  0,
-  1,
-  2,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface, _impl_.a_surfaceid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface, _impl_.a_isopaque_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface, _impl_.a_yuvcolorspace_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface, _impl_.a_gpufence_),
-  ~0u,
-  ~0u,
-  ~0u,
-  0,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_.a_buffertype_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_.a_fourccformat_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_.a_modifier_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_.a_flags_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_.a_fds_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_.a_width_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_.a_height_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_.a_widthaligned_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_.a_heightaligned_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_.a_format_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_.a_strides_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_.a_offsets_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_.a_yuvcolorspace_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_.a_colorrange_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_.a_colorprimaries_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_.a_transferfunction_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_.a_fence_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_.a_uid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_.a_pid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_.a_refcount_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf, _impl_.a_semaphorefd_),
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  0,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceTextureDescriptor, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceTextureDescriptor, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceTextureDescriptor, _impl_.a_handle_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceTextureDescriptor, _impl_.a_size_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceTextureDescriptor, _impl_.a_format_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceTextureDescriptor, _impl_.a_continuous_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceTextureDescriptor, _impl_.a_forcebt709colorspace_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceTextureDescriptor, _impl_.a_transformoverride_),
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  0,
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorAndroidHardwareBuffer, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorAndroidHardwareBuffer, _impl_.a_bufferid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorAndroidHardwareBuffer, _impl_.a_size_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorAndroidHardwareBuffer, _impl_.a_format_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::EGLImageDescriptor, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::EGLImageDescriptor, _impl_.a_image_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::EGLImageDescriptor, _impl_.a_fence_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::EGLImageDescriptor, _impl_.a_size_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::EGLImageDescriptor, _impl_.a_hasalpha_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorSharedGLTexture, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorSharedGLTexture, _impl_.a_texture_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorSharedGLTexture, _impl_.a_target_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorSharedGLTexture, _impl_.a_fence_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorSharedGLTexture, _impl_.a_size_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorSharedGLTexture, _impl_.a_hasalpha_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface, _impl_.a_handle_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface, _impl_.a_size_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface, _impl_.a_format_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::RemoteDecoderVideoSubDescriptor, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::RemoteDecoderVideoSubDescriptor, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::RemoteDecoderVideoSubDescriptor, _impl_.content_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorRemoteDecoder, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorRemoteDecoder, _impl_.a_handle_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorRemoteDecoder, _impl_.a_subdesc_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorRemoteDecoder, _impl_.a_source_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorRemoteDecoder, _impl_.a_id_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo, _impl_.content_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::RGBDescriptor, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::RGBDescriptor, _impl_.a_size_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::RGBDescriptor, _impl_.a_format_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::YCbCrDescriptor, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::YCbCrDescriptor, _impl_.a_display_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::YCbCrDescriptor, _impl_.a_ysize_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::YCbCrDescriptor, _impl_.a_ystride_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::YCbCrDescriptor, _impl_.a_cbcrsize_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::YCbCrDescriptor, _impl_.a_cbcrstride_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::YCbCrDescriptor, _impl_.a_yoffset_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::YCbCrDescriptor, _impl_.a_cboffset_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::YCbCrDescriptor, _impl_.a_croffset_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::YCbCrDescriptor, _impl_.a_stereomode_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::YCbCrDescriptor, _impl_.a_colordepth_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::YCbCrDescriptor, _impl_.a_yuvcolorspace_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::YCbCrDescriptor, _impl_.a_colorrange_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::YCbCrDescriptor, _impl_.a_chromasubsampling_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::BufferDescriptor, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::BufferDescriptor, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::BufferDescriptor, _impl_.content_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::MemoryOrShmem, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::MemoryOrShmem, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::MemoryOrShmem, _impl_.content_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorBuffer, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorBuffer, _impl_.a_desc_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorBuffer, _impl_.a_data_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorShared, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorShared, _impl_.a_size_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorShared, _impl_.a_stride_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorShared, _impl_.a_format_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorShared, _impl_.a_handle_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorExternalImage, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorExternalImage, _impl_.a_source_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorExternalImage, _impl_.a_id_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorRemoteTexture, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorRemoteTexture, _impl_.a_textureid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorRemoteTexture, _impl_.a_ownerid_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorCanvasSurface, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorCanvasSurface, _impl_.a_managerid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorCanvasSurface, _impl_.a_canvasid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptorCanvasSurface, _impl_.a_surfaceid_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptor, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptor, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::SurfaceDescriptor, _impl_.content_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 15, -1, sizeof(::protobuf::mozilla::layers::SurfaceDescriptorD3D10)},
-  { 24, 40, -1, sizeof(::protobuf::mozilla::layers::SurfaceDescriptorDXGIYCbCr)},
-  { 50, 60, -1, sizeof(::protobuf::mozilla::layers::SurfaceDescriptorMacIOSurface)},
-  { 64, 91, -1, sizeof(::protobuf::mozilla::layers::SurfaceDescriptorDMABuf)},
-  { 112, 124, -1, sizeof(::protobuf::mozilla::layers::SurfaceTextureDescriptor)},
-  { 130, -1, -1, sizeof(::protobuf::mozilla::layers::SurfaceDescriptorAndroidHardwareBuffer)},
-  { 139, -1, -1, sizeof(::protobuf::mozilla::layers::EGLImageDescriptor)},
-  { 149, -1, -1, sizeof(::protobuf::mozilla::layers::SurfaceDescriptorSharedGLTexture)},
-  { 160, -1, -1, sizeof(::protobuf::mozilla::layers::SurfaceDescriptorDcompSurface)},
-  { 169, -1, -1, sizeof(::protobuf::mozilla::layers::RemoteDecoderVideoSubDescriptor)},
-  { 182, -1, -1, sizeof(::protobuf::mozilla::layers::SurfaceDescriptorRemoteDecoder)},
-  { 192, -1, -1, sizeof(::protobuf::mozilla::layers::SurfaceDescriptorGPUVideo)},
-  { 200, -1, -1, sizeof(::protobuf::mozilla::layers::RGBDescriptor)},
-  { 208, -1, -1, sizeof(::protobuf::mozilla::layers::YCbCrDescriptor)},
-  { 227, -1, -1, sizeof(::protobuf::mozilla::layers::BufferDescriptor)},
-  { 236, -1, -1, sizeof(::protobuf::mozilla::layers::MemoryOrShmem)},
-  { 245, -1, -1, sizeof(::protobuf::mozilla::layers::SurfaceDescriptorBuffer)},
-  { 253, -1, -1, sizeof(::protobuf::mozilla::layers::SurfaceDescriptorShared)},
-  { 263, -1, -1, sizeof(::protobuf::mozilla::layers::SurfaceDescriptorExternalImage)},
-  { 271, -1, -1, sizeof(::protobuf::mozilla::layers::SurfaceDescriptorRemoteTexture)},
-  { 279, -1, -1, sizeof(::protobuf::mozilla::layers::SurfaceDescriptorCanvasSurface)},
-  { 288, -1, -1, sizeof(::protobuf::mozilla::layers::SurfaceDescriptor)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::layers::_SurfaceDescriptorD3D10_default_instance_._instance,
-  &::protobuf::mozilla::layers::_SurfaceDescriptorDXGIYCbCr_default_instance_._instance,
-  &::protobuf::mozilla::layers::_SurfaceDescriptorMacIOSurface_default_instance_._instance,
-  &::protobuf::mozilla::layers::_SurfaceDescriptorDMABuf_default_instance_._instance,
-  &::protobuf::mozilla::layers::_SurfaceTextureDescriptor_default_instance_._instance,
-  &::protobuf::mozilla::layers::_SurfaceDescriptorAndroidHardwareBuffer_default_instance_._instance,
-  &::protobuf::mozilla::layers::_EGLImageDescriptor_default_instance_._instance,
-  &::protobuf::mozilla::layers::_SurfaceDescriptorSharedGLTexture_default_instance_._instance,
-  &::protobuf::mozilla::layers::_SurfaceDescriptorDcompSurface_default_instance_._instance,
-  &::protobuf::mozilla::layers::_RemoteDecoderVideoSubDescriptor_default_instance_._instance,
-  &::protobuf::mozilla::layers::_SurfaceDescriptorRemoteDecoder_default_instance_._instance,
-  &::protobuf::mozilla::layers::_SurfaceDescriptorGPUVideo_default_instance_._instance,
-  &::protobuf::mozilla::layers::_RGBDescriptor_default_instance_._instance,
-  &::protobuf::mozilla::layers::_YCbCrDescriptor_default_instance_._instance,
-  &::protobuf::mozilla::layers::_BufferDescriptor_default_instance_._instance,
-  &::protobuf::mozilla::layers::_MemoryOrShmem_default_instance_._instance,
-  &::protobuf::mozilla::layers::_SurfaceDescriptorBuffer_default_instance_._instance,
-  &::protobuf::mozilla::layers::_SurfaceDescriptorShared_default_instance_._instance,
-  &::protobuf::mozilla::layers::_SurfaceDescriptorExternalImage_default_instance_._instance,
-  &::protobuf::mozilla::layers::_SurfaceDescriptorRemoteTexture_default_instance_._instance,
-  &::protobuf::mozilla::layers::_SurfaceDescriptorCanvasSurface_default_instance_._instance,
-  &::protobuf::mozilla::layers::_SurfaceDescriptor_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n.LayersSurfaces_protobuf.mozilla.layers"
-  ".h.proto\022\027protobuf.mozilla.layers\"\253\002\n\026Su"
-  "rfaceDescriptorD3D10\022\025\n\010a_handle\030\001 \001(\014H\000"
-  "\210\001\001\022\"\n\025a_gpuProcessTextureId\030\002 \001(\014H\001\210\001\001\022"
-  "\024\n\014a_arrayIndex\030\003 \001(\r\022\020\n\010a_format\030\004 \001(\014\022"
-  "\016\n\006a_size\030\005 \001(\014\022\024\n\014a_colorSpace\030\006 \001(\014\022\024\n"
-  "\014a_colorRange\030\007 \001(\014\022\027\n\017a_hasKeyedMutex\030\010"
-  " \001(\010\022\035\n\020a_fencesHolderId\030\t \001(\014H\002\210\001\001B\013\n\t_"
-  "a_handleB\030\n\026_a_gpuProcessTextureIdB\023\n\021_a"
-  "_fencesHolderId\"\246\002\n\032SurfaceDescriptorDXG"
-  "IYCbCr\022\026\n\ta_handleY\030\001 \001(\014H\000\210\001\001\022\027\n\na_hand"
-  "leCb\030\002 \001(\014H\001\210\001\001\022\027\n\na_handleCr\030\003 \001(\014H\002\210\001\001"
-  "\022\016\n\006a_size\030\004 \001(\014\022\017\n\007a_sizeY\030\005 \001(\014\022\022\n\na_s"
-  "izeCbCr\030\006 \001(\014\022\024\n\014a_colorDepth\030\007 \001(\014\022\027\n\017a"
-  "_yUVColorSpace\030\010 \001(\014\022\024\n\014a_colorRange\030\t \001"
-  "(\014\022\030\n\020a_fencesHolderId\030\n \001(\014B\014\n\n_a_handl"
-  "eYB\r\n\013_a_handleCbB\r\n\013_a_handleCr\"\211\001\n\035Sur"
-  "faceDescriptorMacIOSurface\022\023\n\013a_surfaceI"
-  "d\030\001 \001(\r\022\022\n\na_isOpaque\030\002 \001(\010\022\027\n\017a_yUVColo"
-  "rSpace\030\003 \001(\014\022\027\n\na_gpuFence\030\004 \001(\014H\000\210\001\001B\r\n"
-  "\013_a_gpuFence\"\335\003\n\027SurfaceDescriptorDMABuf"
-  "\022\024\n\014a_bufferType\030\001 \001(\r\022\026\n\016a_fourccFormat"
-  "\030\002 \001(\r\022\022\n\na_modifier\030\003 \003(\004\022\017\n\007a_flags\030\004 "
-  "\001(\r\022\r\n\005a_fds\030\005 \003(\014\022\017\n\007a_width\030\006 \003(\r\022\020\n\010a"
-  "_height\030\007 \003(\r\022\026\n\016a_widthAligned\030\010 \003(\r\022\027\n"
-  "\017a_heightAligned\030\t \003(\r\022\020\n\010a_format\030\n \003(\r"
-  "\022\021\n\ta_strides\030\013 \003(\r\022\021\n\ta_offsets\030\014 \003(\r\022\027"
-  "\n\017a_yUVColorSpace\030\r \001(\014\022\024\n\014a_colorRange\030"
-  "\016 \001(\014\022\030\n\020a_colorPrimaries\030\017 \001(\014\022\032\n\022a_tra"
-  "nsferFunction\030\020 \001(\014\022\017\n\007a_fence\030\021 \003(\014\022\r\n\005"
-  "a_uid\030\022 \001(\r\022\r\n\005a_pid\030\023 \001(\r\022\022\n\na_refCount"
-  "\030\024 \003(\014\022\032\n\ra_semaphoreFd\030\025 \001(\014H\000\210\001\001B\020\n\016_a"
-  "_semaphoreFd\"\276\001\n\030SurfaceTextureDescripto"
-  "r\022\020\n\010a_handle\030\001 \001(\004\022\016\n\006a_size\030\002 \001(\014\022\020\n\010a"
-  "_format\030\003 \001(\014\022\024\n\014a_continuous\030\004 \001(\010\022\036\n\026a"
-  "_forceBT709ColorSpace\030\005 \001(\010\022 \n\023a_transfo"
-  "rmOverride\030\006 \001(\014H\000\210\001\001B\026\n\024_a_transformOve"
-  "rride\"^\n&SurfaceDescriptorAndroidHardwar"
-  "eBuffer\022\022\n\na_bufferId\030\001 \001(\004\022\016\n\006a_size\030\002 "
-  "\001(\014\022\020\n\010a_format\030\003 \001(\014\"Z\n\022EGLImageDescrip"
-  "tor\022\017\n\007a_image\030\001 \001(\014\022\017\n\007a_fence\030\002 \001(\014\022\016\n"
-  "\006a_size\030\003 \001(\014\022\022\n\na_hasAlpha\030\004 \001(\010\"|\n Sur"
-  "faceDescriptorSharedGLTexture\022\021\n\ta_textu"
-  "re\030\001 \001(\r\022\020\n\010a_target\030\002 \001(\r\022\017\n\007a_fence\030\003 "
-  "\001(\014\022\016\n\006a_size\030\004 \001(\014\022\022\n\na_hasAlpha\030\005 \001(\010\""
-  "S\n\035SurfaceDescriptorDcompSurface\022\020\n\010a_ha"
-  "ndle\030\001 \001(\014\022\016\n\006a_size\030\002 \001(\014\022\020\n\010a_format\030\003"
-  " \001(\014\"\233\004\n\037RemoteDecoderVideoSubDescriptor"
-  "\022U\n\032a_mVSurfaceDescriptorD3D10\030\001 \001(\0132/.p"
-  "rotobuf.mozilla.layers.SurfaceDescriptor"
-  "D3D10H\000\022]\n\036a_mVSurfaceDescriptorDXGIYCbC"
-  "r\030\002 \001(\01323.protobuf.mozilla.layers.Surfac"
-  "eDescriptorDXGIYCbCrH\000\022W\n\033a_mVSurfaceDes"
-  "criptorDMABuf\030\003 \001(\01320.protobuf.mozilla.l"
-  "ayers.SurfaceDescriptorDMABufH\000\022c\n!a_mVS"
-  "urfaceDescriptorMacIOSurface\030\004 \001(\01326.pro"
-  "tobuf.mozilla.layers.SurfaceDescriptorMa"
-  "cIOSurfaceH\000\022c\n!a_mVSurfaceDescriptorDco"
-  "mpSurface\030\005 \001(\01326.protobuf.mozilla.layer"
-  "s.SurfaceDescriptorDcompSurfaceH\000\022\024\n\na_m"
-  "Vnull_t\030\006 \001(\014H\000B\t\n\007content\"\237\001\n\036SurfaceDe"
-  "scriptorRemoteDecoder\022\020\n\010a_handle\030\001 \001(\004\022"
-  "K\n\ta_subdesc\030\002 \001(\01328.protobuf.mozilla.la"
-  "yers.RemoteDecoderVideoSubDescriptor\022\020\n\010"
-  "a_source\030\003 \001(\014\022\014\n\004a_id\030\004 \001(\014\"\215\001\n\031Surface"
-  "DescriptorGPUVideo\022e\n\"a_mVSurfaceDescrip"
-  "torRemoteDecoder\030\001 \001(\01327.protobuf.mozill"
-  "a.layers.SurfaceDescriptorRemoteDecoderH"
-  "\000B\t\n\007content\"1\n\rRGBDescriptor\022\016\n\006a_size\030"
-  "\001 \001(\014\022\020\n\010a_format\030\002 \001(\014\"\245\002\n\017YCbCrDescrip"
-  "tor\022\021\n\ta_display\030\001 \001(\014\022\017\n\007a_ySize\030\002 \001(\014\022"
-  "\021\n\ta_yStride\030\003 \001(\r\022\022\n\na_cbCrSize\030\004 \001(\014\022\024"
-  "\n\014a_cbCrStride\030\005 \001(\r\022\021\n\ta_yOffset\030\006 \001(\r\022"
-  "\022\n\na_cbOffset\030\007 \001(\r\022\022\n\na_crOffset\030\010 \001(\r\022"
-  "\024\n\014a_stereoMode\030\t \001(\014\022\024\n\014a_colorDepth\030\n "
-  "\001(\014\022\027\n\017a_yUVColorSpace\030\013 \001(\014\022\024\n\014a_colorR"
-  "ange\030\014 \001(\014\022\033\n\023a_chromaSubsampling\030\r \001(\014\""
-  "\253\001\n\020BufferDescriptor\022C\n\021a_mVRGBDescripto"
-  "r\030\001 \001(\0132&.protobuf.mozilla.layers.RGBDes"
-  "criptorH\000\022G\n\023a_mVYCbCrDescriptor\030\002 \001(\0132("
-  ".protobuf.mozilla.layers.YCbCrDescriptor"
-  "H\000B\t\n\007content\"H\n\rMemoryOrShmem\022\027\n\ra_mVui"
-  "ntptr_t\030\001 \001(\014H\000\022\023\n\ta_mVShmem\030\002 \001(\014H\000B\t\n\007"
-  "content\"\214\001\n\027SurfaceDescriptorBuffer\0229\n\006a"
-  "_desc\030\001 \001(\0132).protobuf.mozilla.layers.Bu"
-  "fferDescriptor\0226\n\006a_data\030\002 \001(\0132&.protobu"
-  "f.mozilla.layers.MemoryOrShmem\"_\n\027Surfac"
-  "eDescriptorShared\022\016\n\006a_size\030\001 \001(\014\022\020\n\010a_s"
-  "tride\030\002 \001(\021\022\020\n\010a_format\030\003 \001(\014\022\020\n\010a_handl"
-  "e\030\004 \001(\014\"@\n\036SurfaceDescriptorExternalImag"
-  "e\022\020\n\010a_source\030\001 \001(\014\022\014\n\004a_id\030\002 \001(\014\"H\n\036Sur"
-  "faceDescriptorRemoteTexture\022\023\n\013a_texture"
-  "Id\030\001 \001(\014\022\021\n\ta_ownerId\030\002 \001(\014\"^\n\036SurfaceDe"
-  "scriptorCanvasSurface\022\023\n\013a_managerId\030\001 \001"
-  "(\r\022\022\n\na_canvasId\030\002 \001(\014\022\023\n\013a_surfaceId\030\003 "
-  "\001(\014\"\204\013\n\021SurfaceDescriptor\022W\n\033a_mVSurface"
-  "DescriptorBuffer\030\001 \001(\01320.protobuf.mozill"
-  "a.layers.SurfaceDescriptorBufferH\000\022U\n\032a_"
-  "mVSurfaceDescriptorD3D10\030\002 \001(\0132/.protobu"
-  "f.mozilla.layers.SurfaceDescriptorD3D10H"
-  "\000\022]\n\036a_mVSurfaceDescriptorDXGIYCbCr\030\003 \001("
-  "\01323.protobuf.mozilla.layers.SurfaceDescr"
-  "iptorDXGIYCbCrH\000\022W\n\033a_mVSurfaceDescripto"
-  "rDMABuf\030\004 \001(\01320.protobuf.mozilla.layers."
-  "SurfaceDescriptorDMABufH\000\022Y\n\034a_mVSurface"
-  "TextureDescriptor\030\005 \001(\01321.protobuf.mozil"
-  "la.layers.SurfaceTextureDescriptorH\000\022u\n*"
-  "a_mVSurfaceDescriptorAndroidHardwareBuff"
-  "er\030\006 \001(\0132\?.protobuf.mozilla.layers.Surfa"
-  "ceDescriptorAndroidHardwareBufferH\000\022M\n\026a"
-  "_mVEGLImageDescriptor\030\007 \001(\0132+.protobuf.m"
-  "ozilla.layers.EGLImageDescriptorH\000\022c\n!a_"
-  "mVSurfaceDescriptorMacIOSurface\030\010 \001(\01326."
-  "protobuf.mozilla.layers.SurfaceDescripto"
-  "rMacIOSurfaceH\000\022i\n$a_mVSurfaceDescriptor"
-  "SharedGLTexture\030\t \001(\01329.protobuf.mozilla"
-  ".layers.SurfaceDescriptorSharedGLTexture"
-  "H\000\022[\n\035a_mVSurfaceDescriptorGPUVideo\030\n \001("
-  "\01322.protobuf.mozilla.layers.SurfaceDescr"
-  "iptorGPUVideoH\000\022e\n\"a_mVSurfaceDescriptor"
-  "RemoteTexture\030\013 \001(\01327.protobuf.mozilla.l"
-  "ayers.SurfaceDescriptorRemoteTextureH\000\022c"
-  "\n!a_mVSurfaceDescriptorDcompSurface\030\014 \001("
-  "\01326.protobuf.mozilla.layers.SurfaceDescr"
-  "iptorDcompSurfaceH\000\022e\n\"a_mVSurfaceDescri"
-  "ptorExternalImage\030\r \001(\01327.protobuf.mozil"
-  "la.layers.SurfaceDescriptorExternalImage"
-  "H\000\022e\n\"a_mVSurfaceDescriptorCanvasSurface"
-  "\030\016 \001(\01327.protobuf.mozilla.layers.Surface"
-  "DescriptorCanvasSurfaceH\000\022\024\n\na_mVnull_t\030"
-  "\017 \001(\014H\000B\t\n\007contentb\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto = {
-    false, false, 5226, descriptor_table_protodef_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto,
-    "LayersSurfaces_protobuf.mozilla.layers.h.proto",
-    &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once, nullptr, 0, 22,
-    schemas, file_default_instances, TableStruct_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto::offsets,
-    file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto, file_level_enum_descriptors_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto,
-    file_level_service_descriptors_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter() {
-  return &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto(&descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace layers {
@@ -946,12 +429,12 @@ class SurfaceDescriptorD3D10::_Internal {
 
 SurfaceDescriptorD3D10::SurfaceDescriptorD3D10(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.SurfaceDescriptorD3D10)
 }
 SurfaceDescriptorD3D10::SurfaceDescriptorD3D10(const SurfaceDescriptorD3D10& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SurfaceDescriptorD3D10* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -966,7 +449,7 @@ SurfaceDescriptorD3D10::SurfaceDescriptorD3D10(const SurfaceDescriptorD3D10& fro
     , decltype(_impl_.a_arrayindex_){}
     , decltype(_impl_.a_haskeyedmutex_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_handle_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_handle_.Set("", GetArenaForAllocation());
@@ -1078,7 +561,7 @@ inline void SurfaceDescriptorD3D10::SharedCtor(
 
 SurfaceDescriptorD3D10::~SurfaceDescriptorD3D10() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.SurfaceDescriptorD3D10)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1126,7 +609,7 @@ void SurfaceDescriptorD3D10::Clear() {
       reinterpret_cast<char*>(&_impl_.a_haskeyedmutex_) -
       reinterpret_cast<char*>(&_impl_.a_arrayindex_)) + sizeof(_impl_.a_haskeyedmutex_));
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SurfaceDescriptorD3D10::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1226,7 +709,7 @@ const char* SurfaceDescriptorD3D10::_InternalParse(const char* ptr, ::_pbi::Pars
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1300,8 +783,8 @@ uint8_t* SurfaceDescriptorD3D10::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.SurfaceDescriptorD3D10)
   return target;
@@ -1377,19 +860,22 @@ size_t SurfaceDescriptorD3D10::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SurfaceDescriptorD3D10::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SurfaceDescriptorD3D10::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SurfaceDescriptorD3D10::GetClassData() const { return &_class_data_; }
+void SurfaceDescriptorD3D10::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SurfaceDescriptorD3D10*>(
+      &from));
+}
 
-
-void SurfaceDescriptorD3D10::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SurfaceDescriptorD3D10*>(&to_msg);
-  auto& from = static_cast<const SurfaceDescriptorD3D10&>(from_msg);
+void SurfaceDescriptorD3D10::MergeFrom(const SurfaceDescriptorD3D10& from) {
+  SurfaceDescriptorD3D10* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.SurfaceDescriptorD3D10)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1425,7 +911,7 @@ void SurfaceDescriptorD3D10::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg,
   if (from._internal_a_haskeyedmutex() != 0) {
     _this->_internal_set_a_haskeyedmutex(from._internal_a_haskeyedmutex());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SurfaceDescriptorD3D10::CopyFrom(const SurfaceDescriptorD3D10& from) {
@@ -1481,11 +967,10 @@ void SurfaceDescriptorD3D10::InternalSwap(SurfaceDescriptorD3D10* other) {
           reinterpret_cast<char*>(&other->_impl_.a_arrayindex_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SurfaceDescriptorD3D10::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[0]);
+std::string SurfaceDescriptorD3D10::GetTypeName() const {
+  return "protobuf.mozilla.layers.SurfaceDescriptorD3D10";
 }
+
 
 // ===================================================================
 
@@ -1505,12 +990,12 @@ class SurfaceDescriptorDXGIYCbCr::_Internal {
 
 SurfaceDescriptorDXGIYCbCr::SurfaceDescriptorDXGIYCbCr(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr)
 }
 SurfaceDescriptorDXGIYCbCr::SurfaceDescriptorDXGIYCbCr(const SurfaceDescriptorDXGIYCbCr& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SurfaceDescriptorDXGIYCbCr* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -1526,7 +1011,7 @@ SurfaceDescriptorDXGIYCbCr::SurfaceDescriptorDXGIYCbCr(const SurfaceDescriptorDX
     , decltype(_impl_.a_colorrange_){}
     , decltype(_impl_.a_fencesholderid_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_handley_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_handley_.Set("", GetArenaForAllocation());
@@ -1672,7 +1157,7 @@ inline void SurfaceDescriptorDXGIYCbCr::SharedCtor(
 
 SurfaceDescriptorDXGIYCbCr::~SurfaceDescriptorDXGIYCbCr() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1723,7 +1208,7 @@ void SurfaceDescriptorDXGIYCbCr::Clear() {
   _impl_.a_colorrange_.ClearToEmpty();
   _impl_.a_fencesholderid_.ClearToEmpty();
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SurfaceDescriptorDXGIYCbCr::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1834,7 +1319,7 @@ const char* SurfaceDescriptorDXGIYCbCr::_InternalParse(const char* ptr, ::_pbi::
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1914,8 +1399,8 @@ uint8_t* SurfaceDescriptorDXGIYCbCr::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr)
   return target;
@@ -2002,19 +1487,22 @@ size_t SurfaceDescriptorDXGIYCbCr::ByteSizeLong() const {
         this->_internal_a_fencesholderid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SurfaceDescriptorDXGIYCbCr::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SurfaceDescriptorDXGIYCbCr::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SurfaceDescriptorDXGIYCbCr::GetClassData() const { return &_class_data_; }
+void SurfaceDescriptorDXGIYCbCr::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SurfaceDescriptorDXGIYCbCr*>(
+      &from));
+}
 
-
-void SurfaceDescriptorDXGIYCbCr::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SurfaceDescriptorDXGIYCbCr*>(&to_msg);
-  auto& from = static_cast<const SurfaceDescriptorDXGIYCbCr&>(from_msg);
+void SurfaceDescriptorDXGIYCbCr::MergeFrom(const SurfaceDescriptorDXGIYCbCr& from) {
+  SurfaceDescriptorDXGIYCbCr* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2053,7 +1541,7 @@ void SurfaceDescriptorDXGIYCbCr::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_
   if (!from._internal_a_fencesholderid().empty()) {
     _this->_internal_set_a_fencesholderid(from._internal_a_fencesholderid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SurfaceDescriptorDXGIYCbCr::CopyFrom(const SurfaceDescriptorDXGIYCbCr& from) {
@@ -2115,11 +1603,10 @@ void SurfaceDescriptorDXGIYCbCr::InternalSwap(SurfaceDescriptorDXGIYCbCr* other)
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SurfaceDescriptorDXGIYCbCr::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[1]);
+std::string SurfaceDescriptorDXGIYCbCr::GetTypeName() const {
+  return "protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr";
 }
+
 
 // ===================================================================
 
@@ -2133,12 +1620,12 @@ class SurfaceDescriptorMacIOSurface::_Internal {
 
 SurfaceDescriptorMacIOSurface::SurfaceDescriptorMacIOSurface(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface)
 }
 SurfaceDescriptorMacIOSurface::SurfaceDescriptorMacIOSurface(const SurfaceDescriptorMacIOSurface& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SurfaceDescriptorMacIOSurface* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -2148,7 +1635,7 @@ SurfaceDescriptorMacIOSurface::SurfaceDescriptorMacIOSurface(const SurfaceDescri
     , decltype(_impl_.a_surfaceid_){}
     , decltype(_impl_.a_isopaque_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_yuvcolorspace_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_yuvcolorspace_.Set("", GetArenaForAllocation());
@@ -2195,7 +1682,7 @@ inline void SurfaceDescriptorMacIOSurface::SharedCtor(
 
 SurfaceDescriptorMacIOSurface::~SurfaceDescriptorMacIOSurface() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -2227,7 +1714,7 @@ void SurfaceDescriptorMacIOSurface::Clear() {
       reinterpret_cast<char*>(&_impl_.a_isopaque_) -
       reinterpret_cast<char*>(&_impl_.a_surfaceid_)) + sizeof(_impl_.a_isopaque_));
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SurfaceDescriptorMacIOSurface::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -2282,7 +1769,7 @@ const char* SurfaceDescriptorMacIOSurface::_InternalParse(const char* ptr, ::_pb
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -2326,8 +1813,8 @@ uint8_t* SurfaceDescriptorMacIOSurface::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface)
   return target;
@@ -2366,19 +1853,22 @@ size_t SurfaceDescriptorMacIOSurface::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SurfaceDescriptorMacIOSurface::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SurfaceDescriptorMacIOSurface::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SurfaceDescriptorMacIOSurface::GetClassData() const { return &_class_data_; }
+void SurfaceDescriptorMacIOSurface::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SurfaceDescriptorMacIOSurface*>(
+      &from));
+}
 
-
-void SurfaceDescriptorMacIOSurface::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SurfaceDescriptorMacIOSurface*>(&to_msg);
-  auto& from = static_cast<const SurfaceDescriptorMacIOSurface&>(from_msg);
+void SurfaceDescriptorMacIOSurface::MergeFrom(const SurfaceDescriptorMacIOSurface& from) {
+  SurfaceDescriptorMacIOSurface* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2396,7 +1886,7 @@ void SurfaceDescriptorMacIOSurface::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& 
   if (from._internal_a_isopaque() != 0) {
     _this->_internal_set_a_isopaque(from._internal_a_isopaque());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SurfaceDescriptorMacIOSurface::CopyFrom(const SurfaceDescriptorMacIOSurface& from) {
@@ -2432,11 +1922,10 @@ void SurfaceDescriptorMacIOSurface::InternalSwap(SurfaceDescriptorMacIOSurface* 
           reinterpret_cast<char*>(&other->_impl_.a_surfaceid_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SurfaceDescriptorMacIOSurface::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[2]);
+std::string SurfaceDescriptorMacIOSurface::GetTypeName() const {
+  return "protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface";
 }
+
 
 // ===================================================================
 
@@ -2450,12 +1939,12 @@ class SurfaceDescriptorDMABuf::_Internal {
 
 SurfaceDescriptorDMABuf::SurfaceDescriptorDMABuf(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.SurfaceDescriptorDMABuf)
 }
 SurfaceDescriptorDMABuf::SurfaceDescriptorDMABuf(const SurfaceDescriptorDMABuf& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SurfaceDescriptorDMABuf* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -2490,7 +1979,7 @@ SurfaceDescriptorDMABuf::SurfaceDescriptorDMABuf(const SurfaceDescriptorDMABuf& 
     , decltype(_impl_.a_uid_){}
     , decltype(_impl_.a_pid_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_yuvcolorspace_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_yuvcolorspace_.Set("", GetArenaForAllocation());
@@ -2598,7 +2087,7 @@ inline void SurfaceDescriptorDMABuf::SharedCtor(
 
 SurfaceDescriptorDMABuf::~SurfaceDescriptorDMABuf() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.SurfaceDescriptorDMABuf)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -2658,7 +2147,7 @@ void SurfaceDescriptorDMABuf::Clear() {
       reinterpret_cast<char*>(&_impl_.a_pid_) -
       reinterpret_cast<char*>(&_impl_.a_buffertype_)) + sizeof(_impl_.a_pid_));
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SurfaceDescriptorDMABuf::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -2894,7 +2383,7 @@ const char* SurfaceDescriptorDMABuf::_InternalParse(const char* ptr, ::_pbi::Par
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -3064,8 +2553,8 @@ uint8_t* SurfaceDescriptorDMABuf::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.SurfaceDescriptorDMABuf)
   return target;
@@ -3280,19 +2769,22 @@ size_t SurfaceDescriptorDMABuf::ByteSizeLong() const {
         this->_internal_a_pid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SurfaceDescriptorDMABuf::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SurfaceDescriptorDMABuf::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SurfaceDescriptorDMABuf::GetClassData() const { return &_class_data_; }
+void SurfaceDescriptorDMABuf::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SurfaceDescriptorDMABuf*>(
+      &from));
+}
 
-
-void SurfaceDescriptorDMABuf::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SurfaceDescriptorDMABuf*>(&to_msg);
-  auto& from = static_cast<const SurfaceDescriptorDMABuf&>(from_msg);
+void SurfaceDescriptorDMABuf::MergeFrom(const SurfaceDescriptorDMABuf& from) {
+  SurfaceDescriptorDMABuf* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.SurfaceDescriptorDMABuf)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -3339,7 +2831,7 @@ void SurfaceDescriptorDMABuf::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg
   if (from._internal_a_pid() != 0) {
     _this->_internal_set_a_pid(from._internal_a_pid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SurfaceDescriptorDMABuf::CopyFrom(const SurfaceDescriptorDMABuf& from) {
@@ -3398,11 +2890,10 @@ void SurfaceDescriptorDMABuf::InternalSwap(SurfaceDescriptorDMABuf* other) {
           reinterpret_cast<char*>(&other->_impl_.a_buffertype_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SurfaceDescriptorDMABuf::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[3]);
+std::string SurfaceDescriptorDMABuf::GetTypeName() const {
+  return "protobuf.mozilla.layers.SurfaceDescriptorDMABuf";
 }
+
 
 // ===================================================================
 
@@ -3416,12 +2907,12 @@ class SurfaceTextureDescriptor::_Internal {
 
 SurfaceTextureDescriptor::SurfaceTextureDescriptor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.SurfaceTextureDescriptor)
 }
 SurfaceTextureDescriptor::SurfaceTextureDescriptor(const SurfaceTextureDescriptor& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SurfaceTextureDescriptor* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -3433,7 +2924,7 @@ SurfaceTextureDescriptor::SurfaceTextureDescriptor(const SurfaceTextureDescripto
     , decltype(_impl_.a_continuous_){}
     , decltype(_impl_.a_forcebt709colorspace_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_size_.Set("", GetArenaForAllocation());
@@ -3494,7 +2985,7 @@ inline void SurfaceTextureDescriptor::SharedCtor(
 
 SurfaceTextureDescriptor::~SurfaceTextureDescriptor() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.SurfaceTextureDescriptor)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -3528,7 +3019,7 @@ void SurfaceTextureDescriptor::Clear() {
       reinterpret_cast<char*>(&_impl_.a_forcebt709colorspace_) -
       reinterpret_cast<char*>(&_impl_.a_handle_)) + sizeof(_impl_.a_forcebt709colorspace_));
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SurfaceTextureDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -3600,7 +3091,7 @@ const char* SurfaceTextureDescriptor::_InternalParse(const char* ptr, ::_pbi::Pa
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -3656,8 +3147,8 @@ uint8_t* SurfaceTextureDescriptor::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.SurfaceTextureDescriptor)
   return target;
@@ -3708,19 +3199,22 @@ size_t SurfaceTextureDescriptor::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SurfaceTextureDescriptor::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SurfaceTextureDescriptor::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SurfaceTextureDescriptor::GetClassData() const { return &_class_data_; }
+void SurfaceTextureDescriptor::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SurfaceTextureDescriptor*>(
+      &from));
+}
 
-
-void SurfaceTextureDescriptor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SurfaceTextureDescriptor*>(&to_msg);
-  auto& from = static_cast<const SurfaceTextureDescriptor&>(from_msg);
+void SurfaceTextureDescriptor::MergeFrom(const SurfaceTextureDescriptor& from) {
+  SurfaceTextureDescriptor* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.SurfaceTextureDescriptor)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -3744,7 +3238,7 @@ void SurfaceTextureDescriptor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_ms
   if (from._internal_a_forcebt709colorspace() != 0) {
     _this->_internal_set_a_forcebt709colorspace(from._internal_a_forcebt709colorspace());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SurfaceTextureDescriptor::CopyFrom(const SurfaceTextureDescriptor& from) {
@@ -3784,11 +3278,10 @@ void SurfaceTextureDescriptor::InternalSwap(SurfaceTextureDescriptor* other) {
           reinterpret_cast<char*>(&other->_impl_.a_handle_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SurfaceTextureDescriptor::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[4]);
+std::string SurfaceTextureDescriptor::GetTypeName() const {
+  return "protobuf.mozilla.layers.SurfaceTextureDescriptor";
 }
+
 
 // ===================================================================
 
@@ -3798,12 +3291,12 @@ class SurfaceDescriptorAndroidHardwareBuffer::_Internal {
 
 SurfaceDescriptorAndroidHardwareBuffer::SurfaceDescriptorAndroidHardwareBuffer(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.SurfaceDescriptorAndroidHardwareBuffer)
 }
 SurfaceDescriptorAndroidHardwareBuffer::SurfaceDescriptorAndroidHardwareBuffer(const SurfaceDescriptorAndroidHardwareBuffer& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SurfaceDescriptorAndroidHardwareBuffer* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_size_){}
@@ -3811,7 +3304,7 @@ SurfaceDescriptorAndroidHardwareBuffer::SurfaceDescriptorAndroidHardwareBuffer(c
     , decltype(_impl_.a_bufferid_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_size_.Set("", GetArenaForAllocation());
@@ -3854,7 +3347,7 @@ inline void SurfaceDescriptorAndroidHardwareBuffer::SharedCtor(
 
 SurfaceDescriptorAndroidHardwareBuffer::~SurfaceDescriptorAndroidHardwareBuffer() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.SurfaceDescriptorAndroidHardwareBuffer)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -3880,7 +3373,7 @@ void SurfaceDescriptorAndroidHardwareBuffer::Clear() {
   _impl_.a_size_.ClearToEmpty();
   _impl_.a_format_.ClearToEmpty();
   _impl_.a_bufferid_ = uint64_t{0u};
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SurfaceDescriptorAndroidHardwareBuffer::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -3926,7 +3419,7 @@ const char* SurfaceDescriptorAndroidHardwareBuffer::_InternalParse(const char* p
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -3963,8 +3456,8 @@ uint8_t* SurfaceDescriptorAndroidHardwareBuffer::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.SurfaceDescriptorAndroidHardwareBuffer)
   return target;
@@ -3997,19 +3490,22 @@ size_t SurfaceDescriptorAndroidHardwareBuffer::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_bufferid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SurfaceDescriptorAndroidHardwareBuffer::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SurfaceDescriptorAndroidHardwareBuffer::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SurfaceDescriptorAndroidHardwareBuffer::GetClassData() const { return &_class_data_; }
+void SurfaceDescriptorAndroidHardwareBuffer::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SurfaceDescriptorAndroidHardwareBuffer*>(
+      &from));
+}
 
-
-void SurfaceDescriptorAndroidHardwareBuffer::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SurfaceDescriptorAndroidHardwareBuffer*>(&to_msg);
-  auto& from = static_cast<const SurfaceDescriptorAndroidHardwareBuffer&>(from_msg);
+void SurfaceDescriptorAndroidHardwareBuffer::MergeFrom(const SurfaceDescriptorAndroidHardwareBuffer& from) {
+  SurfaceDescriptorAndroidHardwareBuffer* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.SurfaceDescriptorAndroidHardwareBuffer)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -4024,7 +3520,7 @@ void SurfaceDescriptorAndroidHardwareBuffer::MergeImpl(::PROTOBUF_NAMESPACE_ID::
   if (from._internal_a_bufferid() != 0) {
     _this->_internal_set_a_bufferid(from._internal_a_bufferid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SurfaceDescriptorAndroidHardwareBuffer::CopyFrom(const SurfaceDescriptorAndroidHardwareBuffer& from) {
@@ -4054,11 +3550,10 @@ void SurfaceDescriptorAndroidHardwareBuffer::InternalSwap(SurfaceDescriptorAndro
   swap(_impl_.a_bufferid_, other->_impl_.a_bufferid_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SurfaceDescriptorAndroidHardwareBuffer::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[5]);
+std::string SurfaceDescriptorAndroidHardwareBuffer::GetTypeName() const {
+  return "protobuf.mozilla.layers.SurfaceDescriptorAndroidHardwareBuffer";
 }
+
 
 // ===================================================================
 
@@ -4068,12 +3563,12 @@ class EGLImageDescriptor::_Internal {
 
 EGLImageDescriptor::EGLImageDescriptor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.EGLImageDescriptor)
 }
 EGLImageDescriptor::EGLImageDescriptor(const EGLImageDescriptor& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   EGLImageDescriptor* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_image_){}
@@ -4082,7 +3577,7 @@ EGLImageDescriptor::EGLImageDescriptor(const EGLImageDescriptor& from)
     , decltype(_impl_.a_hasalpha_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_image_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_image_.Set("", GetArenaForAllocation());
@@ -4138,7 +3633,7 @@ inline void EGLImageDescriptor::SharedCtor(
 
 EGLImageDescriptor::~EGLImageDescriptor() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.EGLImageDescriptor)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -4166,7 +3661,7 @@ void EGLImageDescriptor::Clear() {
   _impl_.a_fence_.ClearToEmpty();
   _impl_.a_size_.ClearToEmpty();
   _impl_.a_hasalpha_ = false;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* EGLImageDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -4221,7 +3716,7 @@ const char* EGLImageDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseCon
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -4264,8 +3759,8 @@ uint8_t* EGLImageDescriptor::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.EGLImageDescriptor)
   return target;
@@ -4305,19 +3800,22 @@ size_t EGLImageDescriptor::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData EGLImageDescriptor::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    EGLImageDescriptor::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*EGLImageDescriptor::GetClassData() const { return &_class_data_; }
+void EGLImageDescriptor::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const EGLImageDescriptor*>(
+      &from));
+}
 
-
-void EGLImageDescriptor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<EGLImageDescriptor*>(&to_msg);
-  auto& from = static_cast<const EGLImageDescriptor&>(from_msg);
+void EGLImageDescriptor::MergeFrom(const EGLImageDescriptor& from) {
+  EGLImageDescriptor* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.EGLImageDescriptor)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -4335,7 +3833,7 @@ void EGLImageDescriptor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
   if (from._internal_a_hasalpha() != 0) {
     _this->_internal_set_a_hasalpha(from._internal_a_hasalpha());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void EGLImageDescriptor::CopyFrom(const EGLImageDescriptor& from) {
@@ -4369,11 +3867,10 @@ void EGLImageDescriptor::InternalSwap(EGLImageDescriptor* other) {
   swap(_impl_.a_hasalpha_, other->_impl_.a_hasalpha_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata EGLImageDescriptor::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[6]);
+std::string EGLImageDescriptor::GetTypeName() const {
+  return "protobuf.mozilla.layers.EGLImageDescriptor";
 }
+
 
 // ===================================================================
 
@@ -4383,12 +3880,12 @@ class SurfaceDescriptorSharedGLTexture::_Internal {
 
 SurfaceDescriptorSharedGLTexture::SurfaceDescriptorSharedGLTexture(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.SurfaceDescriptorSharedGLTexture)
 }
 SurfaceDescriptorSharedGLTexture::SurfaceDescriptorSharedGLTexture(const SurfaceDescriptorSharedGLTexture& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SurfaceDescriptorSharedGLTexture* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_fence_){}
@@ -4398,7 +3895,7 @@ SurfaceDescriptorSharedGLTexture::SurfaceDescriptorSharedGLTexture(const Surface
     , decltype(_impl_.a_hasalpha_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_fence_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_fence_.Set("", GetArenaForAllocation());
@@ -4445,7 +3942,7 @@ inline void SurfaceDescriptorSharedGLTexture::SharedCtor(
 
 SurfaceDescriptorSharedGLTexture::~SurfaceDescriptorSharedGLTexture() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.SurfaceDescriptorSharedGLTexture)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -4473,7 +3970,7 @@ void SurfaceDescriptorSharedGLTexture::Clear() {
   ::memset(&_impl_.a_texture_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_hasalpha_) -
       reinterpret_cast<char*>(&_impl_.a_texture_)) + sizeof(_impl_.a_hasalpha_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SurfaceDescriptorSharedGLTexture::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -4535,7 +4032,7 @@ const char* SurfaceDescriptorSharedGLTexture::_InternalParse(const char* ptr, ::
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -4584,8 +4081,8 @@ uint8_t* SurfaceDescriptorSharedGLTexture::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.SurfaceDescriptorSharedGLTexture)
   return target;
@@ -4628,19 +4125,22 @@ size_t SurfaceDescriptorSharedGLTexture::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SurfaceDescriptorSharedGLTexture::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SurfaceDescriptorSharedGLTexture::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SurfaceDescriptorSharedGLTexture::GetClassData() const { return &_class_data_; }
+void SurfaceDescriptorSharedGLTexture::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SurfaceDescriptorSharedGLTexture*>(
+      &from));
+}
 
-
-void SurfaceDescriptorSharedGLTexture::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SurfaceDescriptorSharedGLTexture*>(&to_msg);
-  auto& from = static_cast<const SurfaceDescriptorSharedGLTexture&>(from_msg);
+void SurfaceDescriptorSharedGLTexture::MergeFrom(const SurfaceDescriptorSharedGLTexture& from) {
+  SurfaceDescriptorSharedGLTexture* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.SurfaceDescriptorSharedGLTexture)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -4661,7 +4161,7 @@ void SurfaceDescriptorSharedGLTexture::MergeImpl(::PROTOBUF_NAMESPACE_ID::Messag
   if (from._internal_a_hasalpha() != 0) {
     _this->_internal_set_a_hasalpha(from._internal_a_hasalpha());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SurfaceDescriptorSharedGLTexture::CopyFrom(const SurfaceDescriptorSharedGLTexture& from) {
@@ -4696,11 +4196,10 @@ void SurfaceDescriptorSharedGLTexture::InternalSwap(SurfaceDescriptorSharedGLTex
           reinterpret_cast<char*>(&other->_impl_.a_texture_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SurfaceDescriptorSharedGLTexture::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[7]);
+std::string SurfaceDescriptorSharedGLTexture::GetTypeName() const {
+  return "protobuf.mozilla.layers.SurfaceDescriptorSharedGLTexture";
 }
+
 
 // ===================================================================
 
@@ -4710,12 +4209,12 @@ class SurfaceDescriptorDcompSurface::_Internal {
 
 SurfaceDescriptorDcompSurface::SurfaceDescriptorDcompSurface(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.SurfaceDescriptorDcompSurface)
 }
 SurfaceDescriptorDcompSurface::SurfaceDescriptorDcompSurface(const SurfaceDescriptorDcompSurface& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SurfaceDescriptorDcompSurface* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_handle_){}
@@ -4723,7 +4222,7 @@ SurfaceDescriptorDcompSurface::SurfaceDescriptorDcompSurface(const SurfaceDescri
     , decltype(_impl_.a_format_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_handle_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_handle_.Set("", GetArenaForAllocation());
@@ -4777,7 +4276,7 @@ inline void SurfaceDescriptorDcompSurface::SharedCtor(
 
 SurfaceDescriptorDcompSurface::~SurfaceDescriptorDcompSurface() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.SurfaceDescriptorDcompSurface)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -4804,7 +4303,7 @@ void SurfaceDescriptorDcompSurface::Clear() {
   _impl_.a_handle_.ClearToEmpty();
   _impl_.a_size_.ClearToEmpty();
   _impl_.a_format_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SurfaceDescriptorDcompSurface::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -4851,7 +4350,7 @@ const char* SurfaceDescriptorDcompSurface::_InternalParse(const char* ptr, ::_pb
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -4888,8 +4387,8 @@ uint8_t* SurfaceDescriptorDcompSurface::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.SurfaceDescriptorDcompSurface)
   return target;
@@ -4924,19 +4423,22 @@ size_t SurfaceDescriptorDcompSurface::ByteSizeLong() const {
         this->_internal_a_format());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SurfaceDescriptorDcompSurface::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SurfaceDescriptorDcompSurface::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SurfaceDescriptorDcompSurface::GetClassData() const { return &_class_data_; }
+void SurfaceDescriptorDcompSurface::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SurfaceDescriptorDcompSurface*>(
+      &from));
+}
 
-
-void SurfaceDescriptorDcompSurface::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SurfaceDescriptorDcompSurface*>(&to_msg);
-  auto& from = static_cast<const SurfaceDescriptorDcompSurface&>(from_msg);
+void SurfaceDescriptorDcompSurface::MergeFrom(const SurfaceDescriptorDcompSurface& from) {
+  SurfaceDescriptorDcompSurface* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.SurfaceDescriptorDcompSurface)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -4951,7 +4453,7 @@ void SurfaceDescriptorDcompSurface::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& 
   if (!from._internal_a_format().empty()) {
     _this->_internal_set_a_format(from._internal_a_format());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SurfaceDescriptorDcompSurface::CopyFrom(const SurfaceDescriptorDcompSurface& from) {
@@ -4984,11 +4486,10 @@ void SurfaceDescriptorDcompSurface::InternalSwap(SurfaceDescriptorDcompSurface* 
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SurfaceDescriptorDcompSurface::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[8]);
+std::string SurfaceDescriptorDcompSurface::GetTypeName() const {
+  return "protobuf.mozilla.layers.SurfaceDescriptorDcompSurface";
 }
+
 
 // ===================================================================
 
@@ -5098,19 +4599,19 @@ void RemoteDecoderVideoSubDescriptor::set_allocated_a_mvsurfacedescriptordcompsu
 }
 RemoteDecoderVideoSubDescriptor::RemoteDecoderVideoSubDescriptor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor)
 }
 RemoteDecoderVideoSubDescriptor::RemoteDecoderVideoSubDescriptor(const RemoteDecoderVideoSubDescriptor& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   RemoteDecoderVideoSubDescriptor* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVSurfaceDescriptorD3D10: {
@@ -5163,7 +4664,7 @@ inline void RemoteDecoderVideoSubDescriptor::SharedCtor(
 
 RemoteDecoderVideoSubDescriptor::~RemoteDecoderVideoSubDescriptor() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -5233,7 +4734,7 @@ void RemoteDecoderVideoSubDescriptor::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* RemoteDecoderVideoSubDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -5302,7 +4803,7 @@ const char* RemoteDecoderVideoSubDescriptor::_InternalParse(const char* ptr, ::_
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -5362,8 +4863,8 @@ uint8_t* RemoteDecoderVideoSubDescriptor::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor)
   return target;
@@ -5424,19 +4925,22 @@ size_t RemoteDecoderVideoSubDescriptor::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RemoteDecoderVideoSubDescriptor::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    RemoteDecoderVideoSubDescriptor::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RemoteDecoderVideoSubDescriptor::GetClassData() const { return &_class_data_; }
+void RemoteDecoderVideoSubDescriptor::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const RemoteDecoderVideoSubDescriptor*>(
+      &from));
+}
 
-
-void RemoteDecoderVideoSubDescriptor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<RemoteDecoderVideoSubDescriptor*>(&to_msg);
-  auto& from = static_cast<const RemoteDecoderVideoSubDescriptor&>(from_msg);
+void RemoteDecoderVideoSubDescriptor::MergeFrom(const RemoteDecoderVideoSubDescriptor& from) {
+  RemoteDecoderVideoSubDescriptor* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -5476,7 +4980,7 @@ void RemoteDecoderVideoSubDescriptor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void RemoteDecoderVideoSubDescriptor::CopyFrom(const RemoteDecoderVideoSubDescriptor& from) {
@@ -5497,11 +5001,10 @@ void RemoteDecoderVideoSubDescriptor::InternalSwap(RemoteDecoderVideoSubDescript
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata RemoteDecoderVideoSubDescriptor::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[9]);
+std::string RemoteDecoderVideoSubDescriptor::GetTypeName() const {
+  return "protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor";
 }
+
 
 // ===================================================================
 
@@ -5516,12 +5019,12 @@ SurfaceDescriptorRemoteDecoder::_Internal::a_subdesc(const SurfaceDescriptorRemo
 }
 SurfaceDescriptorRemoteDecoder::SurfaceDescriptorRemoteDecoder(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.SurfaceDescriptorRemoteDecoder)
 }
 SurfaceDescriptorRemoteDecoder::SurfaceDescriptorRemoteDecoder(const SurfaceDescriptorRemoteDecoder& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SurfaceDescriptorRemoteDecoder* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_source_){}
@@ -5530,7 +5033,7 @@ SurfaceDescriptorRemoteDecoder::SurfaceDescriptorRemoteDecoder(const SurfaceDesc
     , decltype(_impl_.a_handle_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_source_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_source_.Set("", GetArenaForAllocation());
@@ -5577,7 +5080,7 @@ inline void SurfaceDescriptorRemoteDecoder::SharedCtor(
 
 SurfaceDescriptorRemoteDecoder::~SurfaceDescriptorRemoteDecoder() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.SurfaceDescriptorRemoteDecoder)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -5608,7 +5111,7 @@ void SurfaceDescriptorRemoteDecoder::Clear() {
   }
   _impl_.a_subdesc_ = nullptr;
   _impl_.a_handle_ = uint64_t{0u};
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SurfaceDescriptorRemoteDecoder::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -5662,7 +5165,7 @@ const char* SurfaceDescriptorRemoteDecoder::_InternalParse(const char* ptr, ::_p
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -5706,8 +5209,8 @@ uint8_t* SurfaceDescriptorRemoteDecoder::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.SurfaceDescriptorRemoteDecoder)
   return target;
@@ -5747,19 +5250,22 @@ size_t SurfaceDescriptorRemoteDecoder::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_handle());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SurfaceDescriptorRemoteDecoder::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SurfaceDescriptorRemoteDecoder::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SurfaceDescriptorRemoteDecoder::GetClassData() const { return &_class_data_; }
+void SurfaceDescriptorRemoteDecoder::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SurfaceDescriptorRemoteDecoder*>(
+      &from));
+}
 
-
-void SurfaceDescriptorRemoteDecoder::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SurfaceDescriptorRemoteDecoder*>(&to_msg);
-  auto& from = static_cast<const SurfaceDescriptorRemoteDecoder&>(from_msg);
+void SurfaceDescriptorRemoteDecoder::MergeFrom(const SurfaceDescriptorRemoteDecoder& from) {
+  SurfaceDescriptorRemoteDecoder* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.SurfaceDescriptorRemoteDecoder)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -5778,7 +5284,7 @@ void SurfaceDescriptorRemoteDecoder::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message&
   if (from._internal_a_handle() != 0) {
     _this->_internal_set_a_handle(from._internal_a_handle());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SurfaceDescriptorRemoteDecoder::CopyFrom(const SurfaceDescriptorRemoteDecoder& from) {
@@ -5813,11 +5319,10 @@ void SurfaceDescriptorRemoteDecoder::InternalSwap(SurfaceDescriptorRemoteDecoder
           reinterpret_cast<char*>(&other->_impl_.a_subdesc_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SurfaceDescriptorRemoteDecoder::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[10]);
+std::string SurfaceDescriptorRemoteDecoder::GetTypeName() const {
+  return "protobuf.mozilla.layers.SurfaceDescriptorRemoteDecoder";
 }
+
 
 // ===================================================================
 
@@ -5847,19 +5352,19 @@ void SurfaceDescriptorGPUVideo::set_allocated_a_mvsurfacedescriptorremotedecoder
 }
 SurfaceDescriptorGPUVideo::SurfaceDescriptorGPUVideo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.SurfaceDescriptorGPUVideo)
 }
 SurfaceDescriptorGPUVideo::SurfaceDescriptorGPUVideo(const SurfaceDescriptorGPUVideo& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SurfaceDescriptorGPUVideo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVSurfaceDescriptorRemoteDecoder: {
@@ -5888,7 +5393,7 @@ inline void SurfaceDescriptorGPUVideo::SharedCtor(
 
 SurfaceDescriptorGPUVideo::~SurfaceDescriptorGPUVideo() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.SurfaceDescriptorGPUVideo)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -5930,7 +5435,7 @@ void SurfaceDescriptorGPUVideo::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SurfaceDescriptorGPUVideo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -5958,7 +5463,7 @@ const char* SurfaceDescriptorGPUVideo::_InternalParse(const char* ptr, ::_pbi::P
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -5984,8 +5489,8 @@ uint8_t* SurfaceDescriptorGPUVideo::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.SurfaceDescriptorGPUVideo)
   return target;
@@ -6011,19 +5516,22 @@ size_t SurfaceDescriptorGPUVideo::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SurfaceDescriptorGPUVideo::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SurfaceDescriptorGPUVideo::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SurfaceDescriptorGPUVideo::GetClassData() const { return &_class_data_; }
+void SurfaceDescriptorGPUVideo::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SurfaceDescriptorGPUVideo*>(
+      &from));
+}
 
-
-void SurfaceDescriptorGPUVideo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SurfaceDescriptorGPUVideo*>(&to_msg);
-  auto& from = static_cast<const SurfaceDescriptorGPUVideo&>(from_msg);
+void SurfaceDescriptorGPUVideo::MergeFrom(const SurfaceDescriptorGPUVideo& from) {
+  SurfaceDescriptorGPUVideo* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.SurfaceDescriptorGPUVideo)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -6039,7 +5547,7 @@ void SurfaceDescriptorGPUVideo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_m
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SurfaceDescriptorGPUVideo::CopyFrom(const SurfaceDescriptorGPUVideo& from) {
@@ -6060,11 +5568,10 @@ void SurfaceDescriptorGPUVideo::InternalSwap(SurfaceDescriptorGPUVideo* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SurfaceDescriptorGPUVideo::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[11]);
+std::string SurfaceDescriptorGPUVideo::GetTypeName() const {
+  return "protobuf.mozilla.layers.SurfaceDescriptorGPUVideo";
 }
+
 
 // ===================================================================
 
@@ -6074,19 +5581,19 @@ class RGBDescriptor::_Internal {
 
 RGBDescriptor::RGBDescriptor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.RGBDescriptor)
 }
 RGBDescriptor::RGBDescriptor(const RGBDescriptor& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   RGBDescriptor* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_size_){}
     , decltype(_impl_.a_format_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_size_.Set("", GetArenaForAllocation());
@@ -6127,7 +5634,7 @@ inline void RGBDescriptor::SharedCtor(
 
 RGBDescriptor::~RGBDescriptor() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.RGBDescriptor)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -6152,7 +5659,7 @@ void RGBDescriptor::Clear() {
 
   _impl_.a_size_.ClearToEmpty();
   _impl_.a_format_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* RGBDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -6190,7 +5697,7 @@ const char* RGBDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -6221,8 +5728,8 @@ uint8_t* RGBDescriptor::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.RGBDescriptor)
   return target;
@@ -6250,19 +5757,22 @@ size_t RGBDescriptor::ByteSizeLong() const {
         this->_internal_a_format());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RGBDescriptor::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    RGBDescriptor::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RGBDescriptor::GetClassData() const { return &_class_data_; }
+void RGBDescriptor::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const RGBDescriptor*>(
+      &from));
+}
 
-
-void RGBDescriptor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<RGBDescriptor*>(&to_msg);
-  auto& from = static_cast<const RGBDescriptor&>(from_msg);
+void RGBDescriptor::MergeFrom(const RGBDescriptor& from) {
+  RGBDescriptor* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.RGBDescriptor)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -6274,7 +5784,7 @@ void RGBDescriptor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::
   if (!from._internal_a_format().empty()) {
     _this->_internal_set_a_format(from._internal_a_format());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void RGBDescriptor::CopyFrom(const RGBDescriptor& from) {
@@ -6303,11 +5813,10 @@ void RGBDescriptor::InternalSwap(RGBDescriptor* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata RGBDescriptor::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[12]);
+std::string RGBDescriptor::GetTypeName() const {
+  return "protobuf.mozilla.layers.RGBDescriptor";
 }
+
 
 // ===================================================================
 
@@ -6317,12 +5826,12 @@ class YCbCrDescriptor::_Internal {
 
 YCbCrDescriptor::YCbCrDescriptor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.YCbCrDescriptor)
 }
 YCbCrDescriptor::YCbCrDescriptor(const YCbCrDescriptor& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   YCbCrDescriptor* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_display_){}
@@ -6340,7 +5849,7 @@ YCbCrDescriptor::YCbCrDescriptor(const YCbCrDescriptor& from)
     , decltype(_impl_.a_croffset_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_display_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_display_.Set("", GetArenaForAllocation());
@@ -6467,7 +5976,7 @@ inline void YCbCrDescriptor::SharedCtor(
 
 YCbCrDescriptor::~YCbCrDescriptor() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.YCbCrDescriptor)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -6507,7 +6016,7 @@ void YCbCrDescriptor::Clear() {
   ::memset(&_impl_.a_ystride_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_croffset_) -
       reinterpret_cast<char*>(&_impl_.a_ystride_)) + sizeof(_impl_.a_croffset_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* YCbCrDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -6639,7 +6148,7 @@ const char* YCbCrDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseContex
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -6736,8 +6245,8 @@ uint8_t* YCbCrDescriptor::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.YCbCrDescriptor)
   return target;
@@ -6832,19 +6341,22 @@ size_t YCbCrDescriptor::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_croffset());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData YCbCrDescriptor::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    YCbCrDescriptor::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*YCbCrDescriptor::GetClassData() const { return &_class_data_; }
+void YCbCrDescriptor::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const YCbCrDescriptor*>(
+      &from));
+}
 
-
-void YCbCrDescriptor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<YCbCrDescriptor*>(&to_msg);
-  auto& from = static_cast<const YCbCrDescriptor&>(from_msg);
+void YCbCrDescriptor::MergeFrom(const YCbCrDescriptor& from) {
+  YCbCrDescriptor* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.YCbCrDescriptor)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -6889,7 +6401,7 @@ void YCbCrDescriptor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const 
   if (from._internal_a_croffset() != 0) {
     _this->_internal_set_a_croffset(from._internal_a_croffset());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void YCbCrDescriptor::CopyFrom(const YCbCrDescriptor& from) {
@@ -6948,11 +6460,10 @@ void YCbCrDescriptor::InternalSwap(YCbCrDescriptor* other) {
           reinterpret_cast<char*>(&other->_impl_.a_ystride_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata YCbCrDescriptor::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[13]);
+std::string YCbCrDescriptor::GetTypeName() const {
+  return "protobuf.mozilla.layers.YCbCrDescriptor";
 }
+
 
 // ===================================================================
 
@@ -7002,19 +6513,19 @@ void BufferDescriptor::set_allocated_a_mvycbcrdescriptor(::protobuf::mozilla::la
 }
 BufferDescriptor::BufferDescriptor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.BufferDescriptor)
 }
 BufferDescriptor::BufferDescriptor(const BufferDescriptor& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   BufferDescriptor* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVRGBDescriptor: {
@@ -7048,7 +6559,7 @@ inline void BufferDescriptor::SharedCtor(
 
 BufferDescriptor::~BufferDescriptor() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.BufferDescriptor)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -7096,7 +6607,7 @@ void BufferDescriptor::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* BufferDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -7132,7 +6643,7 @@ const char* BufferDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseConte
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -7165,8 +6676,8 @@ uint8_t* BufferDescriptor::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.BufferDescriptor)
   return target;
@@ -7199,19 +6710,22 @@ size_t BufferDescriptor::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BufferDescriptor::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    BufferDescriptor::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BufferDescriptor::GetClassData() const { return &_class_data_; }
+void BufferDescriptor::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const BufferDescriptor*>(
+      &from));
+}
 
-
-void BufferDescriptor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<BufferDescriptor*>(&to_msg);
-  auto& from = static_cast<const BufferDescriptor&>(from_msg);
+void BufferDescriptor::MergeFrom(const BufferDescriptor& from) {
+  BufferDescriptor* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.BufferDescriptor)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -7232,7 +6746,7 @@ void BufferDescriptor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void BufferDescriptor::CopyFrom(const BufferDescriptor& from) {
@@ -7253,11 +6767,10 @@ void BufferDescriptor::InternalSwap(BufferDescriptor* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata BufferDescriptor::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[14]);
+std::string BufferDescriptor::GetTypeName() const {
+  return "protobuf.mozilla.layers.BufferDescriptor";
 }
+
 
 // ===================================================================
 
@@ -7267,19 +6780,19 @@ class MemoryOrShmem::_Internal {
 
 MemoryOrShmem::MemoryOrShmem(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.MemoryOrShmem)
 }
 MemoryOrShmem::MemoryOrShmem(const MemoryOrShmem& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   MemoryOrShmem* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVuintptrT: {
@@ -7311,7 +6824,7 @@ inline void MemoryOrShmem::SharedCtor(
 
 MemoryOrShmem::~MemoryOrShmem() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.MemoryOrShmem)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -7355,7 +6868,7 @@ void MemoryOrShmem::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* MemoryOrShmem::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -7393,7 +6906,7 @@ const char* MemoryOrShmem::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -7424,8 +6937,8 @@ uint8_t* MemoryOrShmem::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.MemoryOrShmem)
   return target;
@@ -7458,19 +6971,22 @@ size_t MemoryOrShmem::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MemoryOrShmem::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    MemoryOrShmem::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MemoryOrShmem::GetClassData() const { return &_class_data_; }
+void MemoryOrShmem::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const MemoryOrShmem*>(
+      &from));
+}
 
-
-void MemoryOrShmem::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<MemoryOrShmem*>(&to_msg);
-  auto& from = static_cast<const MemoryOrShmem&>(from_msg);
+void MemoryOrShmem::MergeFrom(const MemoryOrShmem& from) {
+  MemoryOrShmem* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.MemoryOrShmem)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -7489,7 +7005,7 @@ void MemoryOrShmem::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void MemoryOrShmem::CopyFrom(const MemoryOrShmem& from) {
@@ -7510,11 +7026,10 @@ void MemoryOrShmem::InternalSwap(MemoryOrShmem* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata MemoryOrShmem::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[15]);
+std::string MemoryOrShmem::GetTypeName() const {
+  return "protobuf.mozilla.layers.MemoryOrShmem";
 }
+
 
 // ===================================================================
 
@@ -7534,19 +7049,19 @@ SurfaceDescriptorBuffer::_Internal::a_data(const SurfaceDescriptorBuffer* msg) {
 }
 SurfaceDescriptorBuffer::SurfaceDescriptorBuffer(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.SurfaceDescriptorBuffer)
 }
 SurfaceDescriptorBuffer::SurfaceDescriptorBuffer(const SurfaceDescriptorBuffer& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SurfaceDescriptorBuffer* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_desc_){nullptr}
     , decltype(_impl_.a_data_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_desc()) {
     _this->_impl_.a_desc_ = new ::protobuf::mozilla::layers::BufferDescriptor(*from._impl_.a_desc_);
   }
@@ -7569,7 +7084,7 @@ inline void SurfaceDescriptorBuffer::SharedCtor(
 
 SurfaceDescriptorBuffer::~SurfaceDescriptorBuffer() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.SurfaceDescriptorBuffer)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -7600,7 +7115,7 @@ void SurfaceDescriptorBuffer::Clear() {
     delete _impl_.a_data_;
   }
   _impl_.a_data_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SurfaceDescriptorBuffer::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -7636,7 +7151,7 @@ const char* SurfaceDescriptorBuffer::_InternalParse(const char* ptr, ::_pbi::Par
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -7669,8 +7184,8 @@ uint8_t* SurfaceDescriptorBuffer::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.SurfaceDescriptorBuffer)
   return target;
@@ -7698,19 +7213,22 @@ size_t SurfaceDescriptorBuffer::ByteSizeLong() const {
         *_impl_.a_data_);
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SurfaceDescriptorBuffer::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SurfaceDescriptorBuffer::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SurfaceDescriptorBuffer::GetClassData() const { return &_class_data_; }
+void SurfaceDescriptorBuffer::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SurfaceDescriptorBuffer*>(
+      &from));
+}
 
-
-void SurfaceDescriptorBuffer::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SurfaceDescriptorBuffer*>(&to_msg);
-  auto& from = static_cast<const SurfaceDescriptorBuffer&>(from_msg);
+void SurfaceDescriptorBuffer::MergeFrom(const SurfaceDescriptorBuffer& from) {
+  SurfaceDescriptorBuffer* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.SurfaceDescriptorBuffer)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -7724,7 +7242,7 @@ void SurfaceDescriptorBuffer::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg
     _this->_internal_mutable_a_data()->::protobuf::mozilla::layers::MemoryOrShmem::MergeFrom(
         from._internal_a_data());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SurfaceDescriptorBuffer::CopyFrom(const SurfaceDescriptorBuffer& from) {
@@ -7749,11 +7267,10 @@ void SurfaceDescriptorBuffer::InternalSwap(SurfaceDescriptorBuffer* other) {
           reinterpret_cast<char*>(&other->_impl_.a_desc_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SurfaceDescriptorBuffer::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[16]);
+std::string SurfaceDescriptorBuffer::GetTypeName() const {
+  return "protobuf.mozilla.layers.SurfaceDescriptorBuffer";
 }
+
 
 // ===================================================================
 
@@ -7763,12 +7280,12 @@ class SurfaceDescriptorShared::_Internal {
 
 SurfaceDescriptorShared::SurfaceDescriptorShared(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.SurfaceDescriptorShared)
 }
 SurfaceDescriptorShared::SurfaceDescriptorShared(const SurfaceDescriptorShared& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SurfaceDescriptorShared* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_size_){}
@@ -7777,7 +7294,7 @@ SurfaceDescriptorShared::SurfaceDescriptorShared(const SurfaceDescriptorShared& 
     , decltype(_impl_.a_stride_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_size_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_size_.Set("", GetArenaForAllocation());
@@ -7833,7 +7350,7 @@ inline void SurfaceDescriptorShared::SharedCtor(
 
 SurfaceDescriptorShared::~SurfaceDescriptorShared() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.SurfaceDescriptorShared)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -7861,7 +7378,7 @@ void SurfaceDescriptorShared::Clear() {
   _impl_.a_format_.ClearToEmpty();
   _impl_.a_handle_.ClearToEmpty();
   _impl_.a_stride_ = 0;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SurfaceDescriptorShared::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -7916,7 +7433,7 @@ const char* SurfaceDescriptorShared::_InternalParse(const char* ptr, ::_pbi::Par
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -7959,8 +7476,8 @@ uint8_t* SurfaceDescriptorShared::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.SurfaceDescriptorShared)
   return target;
@@ -8000,19 +7517,22 @@ size_t SurfaceDescriptorShared::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_stride());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SurfaceDescriptorShared::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SurfaceDescriptorShared::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SurfaceDescriptorShared::GetClassData() const { return &_class_data_; }
+void SurfaceDescriptorShared::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SurfaceDescriptorShared*>(
+      &from));
+}
 
-
-void SurfaceDescriptorShared::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SurfaceDescriptorShared*>(&to_msg);
-  auto& from = static_cast<const SurfaceDescriptorShared&>(from_msg);
+void SurfaceDescriptorShared::MergeFrom(const SurfaceDescriptorShared& from) {
+  SurfaceDescriptorShared* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.SurfaceDescriptorShared)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -8030,7 +7550,7 @@ void SurfaceDescriptorShared::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg
   if (from._internal_a_stride() != 0) {
     _this->_internal_set_a_stride(from._internal_a_stride());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SurfaceDescriptorShared::CopyFrom(const SurfaceDescriptorShared& from) {
@@ -8064,11 +7584,10 @@ void SurfaceDescriptorShared::InternalSwap(SurfaceDescriptorShared* other) {
   swap(_impl_.a_stride_, other->_impl_.a_stride_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SurfaceDescriptorShared::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[17]);
+std::string SurfaceDescriptorShared::GetTypeName() const {
+  return "protobuf.mozilla.layers.SurfaceDescriptorShared";
 }
+
 
 // ===================================================================
 
@@ -8078,19 +7597,19 @@ class SurfaceDescriptorExternalImage::_Internal {
 
 SurfaceDescriptorExternalImage::SurfaceDescriptorExternalImage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.SurfaceDescriptorExternalImage)
 }
 SurfaceDescriptorExternalImage::SurfaceDescriptorExternalImage(const SurfaceDescriptorExternalImage& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SurfaceDescriptorExternalImage* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_source_){}
     , decltype(_impl_.a_id_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_source_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_source_.Set("", GetArenaForAllocation());
@@ -8131,7 +7650,7 @@ inline void SurfaceDescriptorExternalImage::SharedCtor(
 
 SurfaceDescriptorExternalImage::~SurfaceDescriptorExternalImage() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.SurfaceDescriptorExternalImage)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -8156,7 +7675,7 @@ void SurfaceDescriptorExternalImage::Clear() {
 
   _impl_.a_source_.ClearToEmpty();
   _impl_.a_id_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SurfaceDescriptorExternalImage::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -8194,7 +7713,7 @@ const char* SurfaceDescriptorExternalImage::_InternalParse(const char* ptr, ::_p
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -8225,8 +7744,8 @@ uint8_t* SurfaceDescriptorExternalImage::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.SurfaceDescriptorExternalImage)
   return target;
@@ -8254,19 +7773,22 @@ size_t SurfaceDescriptorExternalImage::ByteSizeLong() const {
         this->_internal_a_id());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SurfaceDescriptorExternalImage::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SurfaceDescriptorExternalImage::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SurfaceDescriptorExternalImage::GetClassData() const { return &_class_data_; }
+void SurfaceDescriptorExternalImage::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SurfaceDescriptorExternalImage*>(
+      &from));
+}
 
-
-void SurfaceDescriptorExternalImage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SurfaceDescriptorExternalImage*>(&to_msg);
-  auto& from = static_cast<const SurfaceDescriptorExternalImage&>(from_msg);
+void SurfaceDescriptorExternalImage::MergeFrom(const SurfaceDescriptorExternalImage& from) {
+  SurfaceDescriptorExternalImage* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.SurfaceDescriptorExternalImage)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -8278,7 +7800,7 @@ void SurfaceDescriptorExternalImage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message&
   if (!from._internal_a_id().empty()) {
     _this->_internal_set_a_id(from._internal_a_id());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SurfaceDescriptorExternalImage::CopyFrom(const SurfaceDescriptorExternalImage& from) {
@@ -8307,11 +7829,10 @@ void SurfaceDescriptorExternalImage::InternalSwap(SurfaceDescriptorExternalImage
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SurfaceDescriptorExternalImage::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[18]);
+std::string SurfaceDescriptorExternalImage::GetTypeName() const {
+  return "protobuf.mozilla.layers.SurfaceDescriptorExternalImage";
 }
+
 
 // ===================================================================
 
@@ -8321,19 +7842,19 @@ class SurfaceDescriptorRemoteTexture::_Internal {
 
 SurfaceDescriptorRemoteTexture::SurfaceDescriptorRemoteTexture(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.SurfaceDescriptorRemoteTexture)
 }
 SurfaceDescriptorRemoteTexture::SurfaceDescriptorRemoteTexture(const SurfaceDescriptorRemoteTexture& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SurfaceDescriptorRemoteTexture* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_textureid_){}
     , decltype(_impl_.a_ownerid_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_textureid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_textureid_.Set("", GetArenaForAllocation());
@@ -8374,7 +7895,7 @@ inline void SurfaceDescriptorRemoteTexture::SharedCtor(
 
 SurfaceDescriptorRemoteTexture::~SurfaceDescriptorRemoteTexture() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.SurfaceDescriptorRemoteTexture)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -8399,7 +7920,7 @@ void SurfaceDescriptorRemoteTexture::Clear() {
 
   _impl_.a_textureid_.ClearToEmpty();
   _impl_.a_ownerid_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SurfaceDescriptorRemoteTexture::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -8437,7 +7958,7 @@ const char* SurfaceDescriptorRemoteTexture::_InternalParse(const char* ptr, ::_p
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -8468,8 +7989,8 @@ uint8_t* SurfaceDescriptorRemoteTexture::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.SurfaceDescriptorRemoteTexture)
   return target;
@@ -8497,19 +8018,22 @@ size_t SurfaceDescriptorRemoteTexture::ByteSizeLong() const {
         this->_internal_a_ownerid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SurfaceDescriptorRemoteTexture::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SurfaceDescriptorRemoteTexture::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SurfaceDescriptorRemoteTexture::GetClassData() const { return &_class_data_; }
+void SurfaceDescriptorRemoteTexture::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SurfaceDescriptorRemoteTexture*>(
+      &from));
+}
 
-
-void SurfaceDescriptorRemoteTexture::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SurfaceDescriptorRemoteTexture*>(&to_msg);
-  auto& from = static_cast<const SurfaceDescriptorRemoteTexture&>(from_msg);
+void SurfaceDescriptorRemoteTexture::MergeFrom(const SurfaceDescriptorRemoteTexture& from) {
+  SurfaceDescriptorRemoteTexture* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.SurfaceDescriptorRemoteTexture)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -8521,7 +8045,7 @@ void SurfaceDescriptorRemoteTexture::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message&
   if (!from._internal_a_ownerid().empty()) {
     _this->_internal_set_a_ownerid(from._internal_a_ownerid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SurfaceDescriptorRemoteTexture::CopyFrom(const SurfaceDescriptorRemoteTexture& from) {
@@ -8550,11 +8074,10 @@ void SurfaceDescriptorRemoteTexture::InternalSwap(SurfaceDescriptorRemoteTexture
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SurfaceDescriptorRemoteTexture::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[19]);
+std::string SurfaceDescriptorRemoteTexture::GetTypeName() const {
+  return "protobuf.mozilla.layers.SurfaceDescriptorRemoteTexture";
 }
+
 
 // ===================================================================
 
@@ -8564,12 +8087,12 @@ class SurfaceDescriptorCanvasSurface::_Internal {
 
 SurfaceDescriptorCanvasSurface::SurfaceDescriptorCanvasSurface(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.SurfaceDescriptorCanvasSurface)
 }
 SurfaceDescriptorCanvasSurface::SurfaceDescriptorCanvasSurface(const SurfaceDescriptorCanvasSurface& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SurfaceDescriptorCanvasSurface* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_canvasid_){}
@@ -8577,7 +8100,7 @@ SurfaceDescriptorCanvasSurface::SurfaceDescriptorCanvasSurface(const SurfaceDesc
     , decltype(_impl_.a_managerid_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_canvasid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_canvasid_.Set("", GetArenaForAllocation());
@@ -8620,7 +8143,7 @@ inline void SurfaceDescriptorCanvasSurface::SharedCtor(
 
 SurfaceDescriptorCanvasSurface::~SurfaceDescriptorCanvasSurface() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.SurfaceDescriptorCanvasSurface)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -8646,7 +8169,7 @@ void SurfaceDescriptorCanvasSurface::Clear() {
   _impl_.a_canvasid_.ClearToEmpty();
   _impl_.a_surfaceid_.ClearToEmpty();
   _impl_.a_managerid_ = 0u;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SurfaceDescriptorCanvasSurface::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -8692,7 +8215,7 @@ const char* SurfaceDescriptorCanvasSurface::_InternalParse(const char* ptr, ::_p
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -8729,8 +8252,8 @@ uint8_t* SurfaceDescriptorCanvasSurface::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.SurfaceDescriptorCanvasSurface)
   return target;
@@ -8763,19 +8286,22 @@ size_t SurfaceDescriptorCanvasSurface::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_managerid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SurfaceDescriptorCanvasSurface::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SurfaceDescriptorCanvasSurface::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SurfaceDescriptorCanvasSurface::GetClassData() const { return &_class_data_; }
+void SurfaceDescriptorCanvasSurface::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SurfaceDescriptorCanvasSurface*>(
+      &from));
+}
 
-
-void SurfaceDescriptorCanvasSurface::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SurfaceDescriptorCanvasSurface*>(&to_msg);
-  auto& from = static_cast<const SurfaceDescriptorCanvasSurface&>(from_msg);
+void SurfaceDescriptorCanvasSurface::MergeFrom(const SurfaceDescriptorCanvasSurface& from) {
+  SurfaceDescriptorCanvasSurface* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.SurfaceDescriptorCanvasSurface)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -8790,7 +8316,7 @@ void SurfaceDescriptorCanvasSurface::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message&
   if (from._internal_a_managerid() != 0) {
     _this->_internal_set_a_managerid(from._internal_a_managerid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SurfaceDescriptorCanvasSurface::CopyFrom(const SurfaceDescriptorCanvasSurface& from) {
@@ -8820,11 +8346,10 @@ void SurfaceDescriptorCanvasSurface::InternalSwap(SurfaceDescriptorCanvasSurface
   swap(_impl_.a_managerid_, other->_impl_.a_managerid_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SurfaceDescriptorCanvasSurface::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[20]);
+std::string SurfaceDescriptorCanvasSurface::GetTypeName() const {
+  return "protobuf.mozilla.layers.SurfaceDescriptorCanvasSurface";
 }
+
 
 // ===================================================================
 
@@ -9114,19 +8639,19 @@ void SurfaceDescriptor::set_allocated_a_mvsurfacedescriptorcanvassurface(::proto
 }
 SurfaceDescriptor::SurfaceDescriptor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.SurfaceDescriptor)
 }
 SurfaceDescriptor::SurfaceDescriptor(const SurfaceDescriptor& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SurfaceDescriptor* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVSurfaceDescriptorBuffer: {
@@ -9224,7 +8749,7 @@ inline void SurfaceDescriptor::SharedCtor(
 
 SurfaceDescriptor::~SurfaceDescriptor() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.SurfaceDescriptor)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -9348,7 +8873,7 @@ void SurfaceDescriptor::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SurfaceDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -9489,7 +9014,7 @@ const char* SurfaceDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseCont
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -9612,8 +9137,8 @@ uint8_t* SurfaceDescriptor::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.SurfaceDescriptor)
   return target;
@@ -9737,19 +9262,22 @@ size_t SurfaceDescriptor::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SurfaceDescriptor::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SurfaceDescriptor::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SurfaceDescriptor::GetClassData() const { return &_class_data_; }
+void SurfaceDescriptor::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SurfaceDescriptor*>(
+      &from));
+}
 
-
-void SurfaceDescriptor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SurfaceDescriptor*>(&to_msg);
-  auto& from = static_cast<const SurfaceDescriptor&>(from_msg);
+void SurfaceDescriptor::MergeFrom(const SurfaceDescriptor& from) {
+  SurfaceDescriptor* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.SurfaceDescriptor)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -9834,7 +9362,7 @@ void SurfaceDescriptor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SurfaceDescriptor::CopyFrom(const SurfaceDescriptor& from) {
@@ -9855,11 +9383,10 @@ void SurfaceDescriptor::InternalSwap(SurfaceDescriptor* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SurfaceDescriptor::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto[21]);
+std::string SurfaceDescriptor::GetTypeName() const {
+  return "protobuf.mozilla.layers.SurfaceDescriptor";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace layers

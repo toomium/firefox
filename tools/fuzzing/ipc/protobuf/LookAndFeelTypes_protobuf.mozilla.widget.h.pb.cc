@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -86,92 +83,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace widget
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto[3];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelFont, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelFont, _impl_.a_havefont_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelFont, _impl_.a_name_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelFont, _impl_.a_size_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelFont, _impl_.a_weight_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelFont, _impl_.a_italic_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_ints_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_floats_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_fonts_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_lightcolors_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_darkcolors_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_intmap_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_floatmap_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_fontmap_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_lightcolormap_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_darkcolormap_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_passwordchar_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::LookAndFeelTables, _impl_.a_passwordecho_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::FullLookAndFeel, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::FullLookAndFeel, _impl_.a_tables_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::widget::LookAndFeelFont)},
-  { 11, -1, -1, sizeof(::protobuf::mozilla::widget::LookAndFeelTables)},
-  { 29, -1, -1, sizeof(::protobuf::mozilla::widget::FullLookAndFeel)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::widget::_LookAndFeelFont_default_instance_._instance,
-  &::protobuf::mozilla::widget::_LookAndFeelTables_default_instance_._instance,
-  &::protobuf::mozilla::widget::_FullLookAndFeel_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n0LookAndFeelTypes_protobuf.mozilla.widg"
-  "et.h.proto\022\027protobuf.mozilla.widget\"i\n\017L"
-  "ookAndFeelFont\022\022\n\na_haveFont\030\001 \001(\010\022\016\n\006a_"
-  "name\030\002 \001(\t\022\016\n\006a_size\030\003 \001(\002\022\020\n\010a_weight\030\004"
-  " \001(\002\022\020\n\010a_italic\030\005 \001(\010\"\267\002\n\021LookAndFeelTa"
-  "bles\022\016\n\006a_ints\030\001 \003(\021\022\020\n\010a_floats\030\002 \003(\002\0229"
-  "\n\007a_fonts\030\003 \003(\0132(.protobuf.mozilla.widge"
-  "t.LookAndFeelFont\022\025\n\ra_lightColors\030\004 \003(\014"
-  "\022\024\n\014a_darkColors\030\005 \003(\014\022\020\n\010a_intMap\030\006 \003(\r"
-  "\022\022\n\na_floatMap\030\007 \003(\r\022\021\n\ta_fontMap\030\010 \003(\r\022"
-  "\027\n\017a_lightColorMap\030\t \003(\r\022\026\n\016a_darkColorM"
-  "ap\030\n \003(\r\022\026\n\016a_passwordChar\030\013 \001(\r\022\026\n\016a_pa"
-  "sswordEcho\030\014 \001(\010\"O\n\017FullLookAndFeel\022<\n\010a"
-  "_tables\030\001 \001(\0132*.protobuf.mozilla.widget."
-  "LookAndFeelTablesb\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto = {
-    false, false, 585, descriptor_table_protodef_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto,
-    "LookAndFeelTypes_protobuf.mozilla.widget.h.proto",
-    &descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_once, nullptr, 0, 3,
-    schemas, file_default_instances, TableStruct_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto::offsets,
-    file_level_metadata_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto, file_level_enum_descriptors_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto,
-    file_level_service_descriptors_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_getter() {
-  return &descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto(&descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace widget {
@@ -184,12 +95,12 @@ class LookAndFeelFont::_Internal {
 
 LookAndFeelFont::LookAndFeelFont(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.widget.LookAndFeelFont)
 }
 LookAndFeelFont::LookAndFeelFont(const LookAndFeelFont& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   LookAndFeelFont* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_name_){}
@@ -199,7 +110,7 @@ LookAndFeelFont::LookAndFeelFont(const LookAndFeelFont& from)
     , decltype(_impl_.a_weight_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_name_.Set("", GetArenaForAllocation());
@@ -234,7 +145,7 @@ inline void LookAndFeelFont::SharedCtor(
 
 LookAndFeelFont::~LookAndFeelFont() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.widget.LookAndFeelFont)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -260,7 +171,7 @@ void LookAndFeelFont::Clear() {
   ::memset(&_impl_.a_size_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_weight_) -
       reinterpret_cast<char*>(&_impl_.a_size_)) + sizeof(_impl_.a_weight_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* LookAndFeelFont::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -283,7 +194,7 @@ const char* LookAndFeelFont::_InternalParse(const char* ptr, ::_pbi::ParseContex
           auto str = _internal_mutable_a_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.widget.LookAndFeelFont.a_name"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -322,7 +233,7 @@ const char* LookAndFeelFont::_InternalParse(const char* ptr, ::_pbi::ParseContex
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -383,8 +294,8 @@ uint8_t* LookAndFeelFont::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.widget.LookAndFeelFont)
   return target;
@@ -433,19 +344,22 @@ size_t LookAndFeelFont::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LookAndFeelFont::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    LookAndFeelFont::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LookAndFeelFont::GetClassData() const { return &_class_data_; }
+void LookAndFeelFont::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const LookAndFeelFont*>(
+      &from));
+}
 
-
-void LookAndFeelFont::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<LookAndFeelFont*>(&to_msg);
-  auto& from = static_cast<const LookAndFeelFont&>(from_msg);
+void LookAndFeelFont::MergeFrom(const LookAndFeelFont& from) {
+  LookAndFeelFont* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.widget.LookAndFeelFont)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -474,7 +388,7 @@ void LookAndFeelFont::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const 
   if (raw_a_weight != 0) {
     _this->_internal_set_a_weight(from._internal_a_weight());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void LookAndFeelFont::CopyFrom(const LookAndFeelFont& from) {
@@ -505,11 +419,10 @@ void LookAndFeelFont::InternalSwap(LookAndFeelFont* other) {
           reinterpret_cast<char*>(&other->_impl_.a_size_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata LookAndFeelFont::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_getter, &descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_once,
-      file_level_metadata_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto[0]);
+std::string LookAndFeelFont::GetTypeName() const {
+  return "protobuf.mozilla.widget.LookAndFeelFont";
 }
+
 
 // ===================================================================
 
@@ -519,12 +432,12 @@ class LookAndFeelTables::_Internal {
 
 LookAndFeelTables::LookAndFeelTables(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.widget.LookAndFeelTables)
 }
 LookAndFeelTables::LookAndFeelTables(const LookAndFeelTables& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   LookAndFeelTables* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_ints_){from._impl_.a_ints_}
@@ -547,7 +460,7 @@ LookAndFeelTables::LookAndFeelTables(const LookAndFeelTables& from)
     , decltype(_impl_.a_passwordecho_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   ::memcpy(&_impl_.a_passwordchar_, &from._impl_.a_passwordchar_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_passwordecho_) -
     reinterpret_cast<char*>(&_impl_.a_passwordchar_)) + sizeof(_impl_.a_passwordecho_));
@@ -583,7 +496,7 @@ inline void LookAndFeelTables::SharedCtor(
 
 LookAndFeelTables::~LookAndFeelTables() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.widget.LookAndFeelTables)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -627,7 +540,7 @@ void LookAndFeelTables::Clear() {
   ::memset(&_impl_.a_passwordchar_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_passwordecho_) -
       reinterpret_cast<char*>(&_impl_.a_passwordchar_)) + sizeof(_impl_.a_passwordecho_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* LookAndFeelTables::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -781,7 +694,7 @@ const char* LookAndFeelTables::_InternalParse(const char* ptr, ::_pbi::ParseCont
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -891,8 +804,8 @@ uint8_t* LookAndFeelTables::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.widget.LookAndFeelTables)
   return target;
@@ -1034,19 +947,22 @@ size_t LookAndFeelTables::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LookAndFeelTables::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    LookAndFeelTables::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LookAndFeelTables::GetClassData() const { return &_class_data_; }
+void LookAndFeelTables::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const LookAndFeelTables*>(
+      &from));
+}
 
-
-void LookAndFeelTables::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<LookAndFeelTables*>(&to_msg);
-  auto& from = static_cast<const LookAndFeelTables&>(from_msg);
+void LookAndFeelTables::MergeFrom(const LookAndFeelTables& from) {
+  LookAndFeelTables* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.widget.LookAndFeelTables)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1068,7 +984,7 @@ void LookAndFeelTables::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   if (from._internal_a_passwordecho() != 0) {
     _this->_internal_set_a_passwordecho(from._internal_a_passwordecho());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void LookAndFeelTables::CopyFrom(const LookAndFeelTables& from) {
@@ -1103,11 +1019,10 @@ void LookAndFeelTables::InternalSwap(LookAndFeelTables* other) {
           reinterpret_cast<char*>(&other->_impl_.a_passwordchar_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata LookAndFeelTables::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_getter, &descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_once,
-      file_level_metadata_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto[1]);
+std::string LookAndFeelTables::GetTypeName() const {
+  return "protobuf.mozilla.widget.LookAndFeelTables";
 }
+
 
 // ===================================================================
 
@@ -1122,18 +1037,18 @@ FullLookAndFeel::_Internal::a_tables(const FullLookAndFeel* msg) {
 }
 FullLookAndFeel::FullLookAndFeel(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.widget.FullLookAndFeel)
 }
 FullLookAndFeel::FullLookAndFeel(const FullLookAndFeel& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   FullLookAndFeel* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_tables_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_tables()) {
     _this->_impl_.a_tables_ = new ::protobuf::mozilla::widget::LookAndFeelTables(*from._impl_.a_tables_);
   }
@@ -1152,7 +1067,7 @@ inline void FullLookAndFeel::SharedCtor(
 
 FullLookAndFeel::~FullLookAndFeel() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.widget.FullLookAndFeel)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1178,7 +1093,7 @@ void FullLookAndFeel::Clear() {
     delete _impl_.a_tables_;
   }
   _impl_.a_tables_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* FullLookAndFeel::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1206,7 +1121,7 @@ const char* FullLookAndFeel::_InternalParse(const char* ptr, ::_pbi::ParseContex
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1232,8 +1147,8 @@ uint8_t* FullLookAndFeel::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.widget.FullLookAndFeel)
   return target;
@@ -1254,19 +1169,22 @@ size_t FullLookAndFeel::ByteSizeLong() const {
         *_impl_.a_tables_);
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FullLookAndFeel::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    FullLookAndFeel::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FullLookAndFeel::GetClassData() const { return &_class_data_; }
+void FullLookAndFeel::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const FullLookAndFeel*>(
+      &from));
+}
 
-
-void FullLookAndFeel::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<FullLookAndFeel*>(&to_msg);
-  auto& from = static_cast<const FullLookAndFeel&>(from_msg);
+void FullLookAndFeel::MergeFrom(const FullLookAndFeel& from) {
+  FullLookAndFeel* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.widget.FullLookAndFeel)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1276,7 +1194,7 @@ void FullLookAndFeel::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const 
     _this->_internal_mutable_a_tables()->::protobuf::mozilla::widget::LookAndFeelTables::MergeFrom(
         from._internal_a_tables());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void FullLookAndFeel::CopyFrom(const FullLookAndFeel& from) {
@@ -1296,11 +1214,10 @@ void FullLookAndFeel::InternalSwap(FullLookAndFeel* other) {
   swap(_impl_.a_tables_, other->_impl_.a_tables_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FullLookAndFeel::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_getter, &descriptor_table_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_once,
-      file_level_metadata_LookAndFeelTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto[2]);
+std::string FullLookAndFeel::GetTypeName() const {
+  return "protobuf.mozilla.widget.FullLookAndFeel";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace widget

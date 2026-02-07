@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -88,91 +85,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace hal
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto[4];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal::BatteryInformation, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal::BatteryInformation, _impl_.a_level_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal::BatteryInformation, _impl_.a_charging_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal::BatteryInformation, _impl_.a_remainingtime_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal::SensorData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal::SensorData, _impl_.a_sensor_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal::SensorData, _impl_.a_timestamp_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal::SensorData, _impl_.a_values_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal::NetworkInformation, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal::NetworkInformation, _impl_.a_type_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal::NetworkInformation, _impl_.a_iswifi_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal::NetworkInformation, _impl_.a_dhcpgateway_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal::WakeLockInformation, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal::WakeLockInformation, _impl_.a_topic_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal::WakeLockInformation, _impl_.a_numlocks_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal::WakeLockInformation, _impl_.a_numhidden_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::hal::WakeLockInformation, _impl_.a_lockingprocesses_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::hal::BatteryInformation)},
-  { 9, -1, -1, sizeof(::protobuf::mozilla::hal::SensorData)},
-  { 18, -1, -1, sizeof(::protobuf::mozilla::hal::NetworkInformation)},
-  { 27, -1, -1, sizeof(::protobuf::mozilla::hal::WakeLockInformation)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::hal::_BatteryInformation_default_instance_._instance,
-  &::protobuf::mozilla::hal::_SensorData_default_instance_._instance,
-  &::protobuf::mozilla::hal::_NetworkInformation_default_instance_._instance,
-  &::protobuf::mozilla::hal::_WakeLockInformation_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n!PHal_protobuf.mozilla.hal.h.proto\022\024pro"
-  "tobuf.mozilla.hal\"R\n\022BatteryInformation\022"
-  "\017\n\007a_level\030\001 \001(\001\022\022\n\na_charging\030\002 \001(\010\022\027\n\017"
-  "a_remainingTime\030\003 \001(\001\"E\n\nSensorData\022\020\n\010a"
-  "_sensor\030\001 \001(\014\022\023\n\013a_timestamp\030\002 \001(\014\022\020\n\010a_"
-  "values\030\003 \003(\002\"M\n\022NetworkInformation\022\016\n\006a_"
-  "type\030\001 \001(\r\022\020\n\010a_isWifi\030\002 \001(\010\022\025\n\ra_dhcpGa"
-  "teway\030\003 \001(\r\"k\n\023WakeLockInformation\022\017\n\007a_"
-  "topic\030\001 \001(\t\022\022\n\na_numLocks\030\002 \001(\r\022\023\n\013a_num"
-  "Hidden\030\003 \001(\r\022\032\n\022a_lockingProcesses\030\004 \003(\004"
-  "b\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto = {
-    false, false, 408, descriptor_table_protodef_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto,
-    "PHal_protobuf.mozilla.hal.h.proto",
-    &descriptor_table_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto_once, nullptr, 0, 4,
-    schemas, file_default_instances, TableStruct_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto::offsets,
-    file_level_metadata_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto, file_level_enum_descriptors_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto,
-    file_level_service_descriptors_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto_getter() {
-  return &descriptor_table_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto(&descriptor_table_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace hal {
@@ -185,12 +97,12 @@ class BatteryInformation::_Internal {
 
 BatteryInformation::BatteryInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal.BatteryInformation)
 }
 BatteryInformation::BatteryInformation(const BatteryInformation& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   BatteryInformation* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_level_){}
@@ -198,7 +110,7 @@ BatteryInformation::BatteryInformation(const BatteryInformation& from)
     , decltype(_impl_.a_charging_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   ::memcpy(&_impl_.a_level_, &from._impl_.a_level_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_charging_) -
     reinterpret_cast<char*>(&_impl_.a_level_)) + sizeof(_impl_.a_charging_));
@@ -219,7 +131,7 @@ inline void BatteryInformation::SharedCtor(
 
 BatteryInformation::~BatteryInformation() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.hal.BatteryInformation)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -243,7 +155,7 @@ void BatteryInformation::Clear() {
   ::memset(&_impl_.a_level_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_charging_) -
       reinterpret_cast<char*>(&_impl_.a_level_)) + sizeof(_impl_.a_charging_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* BatteryInformation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -287,7 +199,7 @@ const char* BatteryInformation::_InternalParse(const char* ptr, ::_pbi::ParseCon
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -332,8 +244,8 @@ uint8_t* BatteryInformation::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal.BatteryInformation)
   return target;
@@ -370,19 +282,22 @@ size_t BatteryInformation::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BatteryInformation::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    BatteryInformation::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BatteryInformation::GetClassData() const { return &_class_data_; }
+void BatteryInformation::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const BatteryInformation*>(
+      &from));
+}
 
-
-void BatteryInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<BatteryInformation*>(&to_msg);
-  auto& from = static_cast<const BatteryInformation&>(from_msg);
+void BatteryInformation::MergeFrom(const BatteryInformation& from) {
+  BatteryInformation* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal.BatteryInformation)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -405,7 +320,7 @@ void BatteryInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
   if (from._internal_a_charging() != 0) {
     _this->_internal_set_a_charging(from._internal_a_charging());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void BatteryInformation::CopyFrom(const BatteryInformation& from) {
@@ -430,11 +345,10 @@ void BatteryInformation::InternalSwap(BatteryInformation* other) {
           reinterpret_cast<char*>(&other->_impl_.a_level_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata BatteryInformation::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto_getter, &descriptor_table_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto_once,
-      file_level_metadata_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto[0]);
+std::string BatteryInformation::GetTypeName() const {
+  return "protobuf.mozilla.hal.BatteryInformation";
 }
+
 
 // ===================================================================
 
@@ -444,12 +358,12 @@ class SensorData::_Internal {
 
 SensorData::SensorData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal.SensorData)
 }
 SensorData::SensorData(const SensorData& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SensorData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_values_){from._impl_.a_values_}
@@ -457,7 +371,7 @@ SensorData::SensorData(const SensorData& from)
     , decltype(_impl_.a_timestamp_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_sensor_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_sensor_.Set("", GetArenaForAllocation());
@@ -499,7 +413,7 @@ inline void SensorData::SharedCtor(
 
 SensorData::~SensorData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.hal.SensorData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -526,7 +440,7 @@ void SensorData::Clear() {
   _impl_.a_values_.Clear();
   _impl_.a_sensor_.ClearToEmpty();
   _impl_.a_timestamp_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SensorData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -575,7 +489,7 @@ const char* SensorData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -611,8 +525,8 @@ uint8_t* SensorData::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal.SensorData)
   return target;
@@ -651,19 +565,22 @@ size_t SensorData::ByteSizeLong() const {
         this->_internal_a_timestamp());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SensorData::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SensorData::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SensorData::GetClassData() const { return &_class_data_; }
+void SensorData::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SensorData*>(
+      &from));
+}
 
-
-void SensorData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SensorData*>(&to_msg);
-  auto& from = static_cast<const SensorData&>(from_msg);
+void SensorData::MergeFrom(const SensorData& from) {
+  SensorData* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal.SensorData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -676,7 +593,7 @@ void SensorData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PRO
   if (!from._internal_a_timestamp().empty()) {
     _this->_internal_set_a_timestamp(from._internal_a_timestamp());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SensorData::CopyFrom(const SensorData& from) {
@@ -706,11 +623,10 @@ void SensorData::InternalSwap(SensorData* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SensorData::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto_getter, &descriptor_table_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto_once,
-      file_level_metadata_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto[1]);
+std::string SensorData::GetTypeName() const {
+  return "protobuf.mozilla.hal.SensorData";
 }
+
 
 // ===================================================================
 
@@ -720,12 +636,12 @@ class NetworkInformation::_Internal {
 
 NetworkInformation::NetworkInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal.NetworkInformation)
 }
 NetworkInformation::NetworkInformation(const NetworkInformation& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   NetworkInformation* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_type_){}
@@ -733,7 +649,7 @@ NetworkInformation::NetworkInformation(const NetworkInformation& from)
     , decltype(_impl_.a_dhcpgateway_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   ::memcpy(&_impl_.a_type_, &from._impl_.a_type_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_dhcpgateway_) -
     reinterpret_cast<char*>(&_impl_.a_type_)) + sizeof(_impl_.a_dhcpgateway_));
@@ -754,7 +670,7 @@ inline void NetworkInformation::SharedCtor(
 
 NetworkInformation::~NetworkInformation() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.hal.NetworkInformation)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -778,7 +694,7 @@ void NetworkInformation::Clear() {
   ::memset(&_impl_.a_type_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_dhcpgateway_) -
       reinterpret_cast<char*>(&_impl_.a_type_)) + sizeof(_impl_.a_dhcpgateway_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* NetworkInformation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -822,7 +738,7 @@ const char* NetworkInformation::_InternalParse(const char* ptr, ::_pbi::ParseCon
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -859,8 +775,8 @@ uint8_t* NetworkInformation::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal.NetworkInformation)
   return target;
@@ -889,19 +805,22 @@ size_t NetworkInformation::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_dhcpgateway());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData NetworkInformation::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    NetworkInformation::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*NetworkInformation::GetClassData() const { return &_class_data_; }
+void NetworkInformation::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const NetworkInformation*>(
+      &from));
+}
 
-
-void NetworkInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<NetworkInformation*>(&to_msg);
-  auto& from = static_cast<const NetworkInformation&>(from_msg);
+void NetworkInformation::MergeFrom(const NetworkInformation& from) {
+  NetworkInformation* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal.NetworkInformation)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -916,7 +835,7 @@ void NetworkInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
   if (from._internal_a_dhcpgateway() != 0) {
     _this->_internal_set_a_dhcpgateway(from._internal_a_dhcpgateway());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void NetworkInformation::CopyFrom(const NetworkInformation& from) {
@@ -941,11 +860,10 @@ void NetworkInformation::InternalSwap(NetworkInformation* other) {
           reinterpret_cast<char*>(&other->_impl_.a_type_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata NetworkInformation::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto_getter, &descriptor_table_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto_once,
-      file_level_metadata_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto[2]);
+std::string NetworkInformation::GetTypeName() const {
+  return "protobuf.mozilla.hal.NetworkInformation";
 }
+
 
 // ===================================================================
 
@@ -955,12 +873,12 @@ class WakeLockInformation::_Internal {
 
 WakeLockInformation::WakeLockInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.hal.WakeLockInformation)
 }
 WakeLockInformation::WakeLockInformation(const WakeLockInformation& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WakeLockInformation* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_lockingprocesses_){from._impl_.a_lockingprocesses_}
@@ -970,7 +888,7 @@ WakeLockInformation::WakeLockInformation(const WakeLockInformation& from)
     , decltype(_impl_.a_numhidden_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_topic_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_topic_.Set("", GetArenaForAllocation());
@@ -1005,7 +923,7 @@ inline void WakeLockInformation::SharedCtor(
 
 WakeLockInformation::~WakeLockInformation() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.hal.WakeLockInformation)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1033,7 +951,7 @@ void WakeLockInformation::Clear() {
   ::memset(&_impl_.a_numlocks_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_numhidden_) -
       reinterpret_cast<char*>(&_impl_.a_numlocks_)) + sizeof(_impl_.a_numhidden_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WakeLockInformation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1048,7 +966,7 @@ const char* WakeLockInformation::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_a_topic();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.hal.WakeLockInformation.a_topic"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1090,7 +1008,7 @@ const char* WakeLockInformation::_InternalParse(const char* ptr, ::_pbi::ParseCo
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1140,8 +1058,8 @@ uint8_t* WakeLockInformation::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.hal.WakeLockInformation)
   return target;
@@ -1186,19 +1104,22 @@ size_t WakeLockInformation::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_numhidden());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WakeLockInformation::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WakeLockInformation::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WakeLockInformation::GetClassData() const { return &_class_data_; }
+void WakeLockInformation::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WakeLockInformation*>(
+      &from));
+}
 
-
-void WakeLockInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WakeLockInformation*>(&to_msg);
-  auto& from = static_cast<const WakeLockInformation&>(from_msg);
+void WakeLockInformation::MergeFrom(const WakeLockInformation& from) {
+  WakeLockInformation* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.hal.WakeLockInformation)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1214,7 +1135,7 @@ void WakeLockInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, co
   if (from._internal_a_numhidden() != 0) {
     _this->_internal_set_a_numhidden(from._internal_a_numhidden());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WakeLockInformation::CopyFrom(const WakeLockInformation& from) {
@@ -1246,11 +1167,10 @@ void WakeLockInformation::InternalSwap(WakeLockInformation* other) {
           reinterpret_cast<char*>(&other->_impl_.a_numlocks_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WakeLockInformation::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto_getter, &descriptor_table_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto_once,
-      file_level_metadata_PHal_5fprotobuf_2emozilla_2ehal_2eh_2eproto[3]);
+std::string WakeLockInformation::GetTypeName() const {
+  return "protobuf.mozilla.hal.WakeLockInformation";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace hal

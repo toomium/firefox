@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -55,63 +52,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace layers
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto[2];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::RecordedFrameData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::RecordedFrameData, _impl_.a_timeoffset_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::RecordedFrameData, _impl_.a_length_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameRecording, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameRecording, _impl_.a_starttime_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameRecording, _impl_.a_frames_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameRecording, _impl_.a_bytes_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::layers::RecordedFrameData)},
-  { 8, -1, -1, sizeof(::protobuf::mozilla::layers::FrameRecording)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::layers::_RecordedFrameData_default_instance_._instance,
-  &::protobuf::mozilla::layers::_FrameRecording_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n6PCompositorBridgeTypes_protobuf.mozill"
-  "a.layers.h.proto\022\027protobuf.mozilla.layer"
-  "s\";\n\021RecordedFrameData\022\024\n\014a_timeOffset\030\001"
-  " \001(\014\022\020\n\010a_length\030\002 \001(\r\"t\n\016FrameRecording"
-  "\022\023\n\013a_startTime\030\001 \001(\014\022<\n\010a_frames\030\002 \003(\0132"
-  "*.protobuf.mozilla.layers.RecordedFrameD"
-  "ata\022\017\n\007a_bytes\030\003 \001(\014b\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto = {
-    false, false, 268, descriptor_table_protodef_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto,
-    "PCompositorBridgeTypes_protobuf.mozilla.layers.h.proto",
-    &descriptor_table_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once, nullptr, 0, 2,
-    schemas, file_default_instances, TableStruct_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto::offsets,
-    file_level_metadata_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto, file_level_enum_descriptors_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto,
-    file_level_service_descriptors_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter() {
-  return &descriptor_table_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto(&descriptor_table_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace layers {
@@ -124,19 +64,19 @@ class RecordedFrameData::_Internal {
 
 RecordedFrameData::RecordedFrameData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.RecordedFrameData)
 }
 RecordedFrameData::RecordedFrameData(const RecordedFrameData& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   RecordedFrameData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_timeoffset_){}
     , decltype(_impl_.a_length_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_timeoffset_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_timeoffset_.Set("", GetArenaForAllocation());
@@ -166,7 +106,7 @@ inline void RecordedFrameData::SharedCtor(
 
 RecordedFrameData::~RecordedFrameData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.RecordedFrameData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -190,7 +130,7 @@ void RecordedFrameData::Clear() {
 
   _impl_.a_timeoffset_.ClearToEmpty();
   _impl_.a_length_ = 0u;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* RecordedFrameData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -227,7 +167,7 @@ const char* RecordedFrameData::_InternalParse(const char* ptr, ::_pbi::ParseCont
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -258,8 +198,8 @@ uint8_t* RecordedFrameData::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.RecordedFrameData)
   return target;
@@ -285,19 +225,22 @@ size_t RecordedFrameData::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_length());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RecordedFrameData::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    RecordedFrameData::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RecordedFrameData::GetClassData() const { return &_class_data_; }
+void RecordedFrameData::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const RecordedFrameData*>(
+      &from));
+}
 
-
-void RecordedFrameData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<RecordedFrameData*>(&to_msg);
-  auto& from = static_cast<const RecordedFrameData&>(from_msg);
+void RecordedFrameData::MergeFrom(const RecordedFrameData& from) {
+  RecordedFrameData* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.RecordedFrameData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -309,7 +252,7 @@ void RecordedFrameData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   if (from._internal_a_length() != 0) {
     _this->_internal_set_a_length(from._internal_a_length());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void RecordedFrameData::CopyFrom(const RecordedFrameData& from) {
@@ -335,11 +278,10 @@ void RecordedFrameData::InternalSwap(RecordedFrameData* other) {
   swap(_impl_.a_length_, other->_impl_.a_length_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata RecordedFrameData::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto[0]);
+std::string RecordedFrameData::GetTypeName() const {
+  return "protobuf.mozilla.layers.RecordedFrameData";
 }
+
 
 // ===================================================================
 
@@ -349,12 +291,12 @@ class FrameRecording::_Internal {
 
 FrameRecording::FrameRecording(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.FrameRecording)
 }
 FrameRecording::FrameRecording(const FrameRecording& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   FrameRecording* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_frames_){from._impl_.a_frames_}
@@ -362,7 +304,7 @@ FrameRecording::FrameRecording(const FrameRecording& from)
     , decltype(_impl_.a_bytes_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_starttime_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_starttime_.Set("", GetArenaForAllocation());
@@ -404,7 +346,7 @@ inline void FrameRecording::SharedCtor(
 
 FrameRecording::~FrameRecording() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.FrameRecording)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -431,7 +373,7 @@ void FrameRecording::Clear() {
   _impl_.a_frames_.Clear();
   _impl_.a_starttime_.ClearToEmpty();
   _impl_.a_bytes_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* FrameRecording::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -482,7 +424,7 @@ const char* FrameRecording::_InternalParse(const char* ptr, ::_pbi::ParseContext
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -521,8 +463,8 @@ uint8_t* FrameRecording::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.FrameRecording)
   return target;
@@ -557,19 +499,22 @@ size_t FrameRecording::ByteSizeLong() const {
         this->_internal_a_bytes());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FrameRecording::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    FrameRecording::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FrameRecording::GetClassData() const { return &_class_data_; }
+void FrameRecording::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const FrameRecording*>(
+      &from));
+}
 
-
-void FrameRecording::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<FrameRecording*>(&to_msg);
-  auto& from = static_cast<const FrameRecording&>(from_msg);
+void FrameRecording::MergeFrom(const FrameRecording& from) {
+  FrameRecording* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.FrameRecording)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -582,7 +527,7 @@ void FrameRecording::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const :
   if (!from._internal_a_bytes().empty()) {
     _this->_internal_set_a_bytes(from._internal_a_bytes());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void FrameRecording::CopyFrom(const FrameRecording& from) {
@@ -612,11 +557,10 @@ void FrameRecording::InternalSwap(FrameRecording* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FrameRecording::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_PCompositorBridgeTypes_5fprotobuf_2emozilla_2elayers_2eh_2eproto[1]);
+std::string FrameRecording::GetTypeName() const {
+  return "protobuf.mozilla.layers.FrameRecording";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace layers

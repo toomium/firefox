@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -88,125 +85,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto[4];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor, _impl_.a_id_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor, _impl_.a_version_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor, _impl_.a_principalinfo_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor, _impl_.a_scope_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor, _impl_.a_updateviacache_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor, _impl_.a_installing_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor, _impl_.a_waiting_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor, _impl_.a_active_),
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  0,
-  1,
-  2,
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult, _impl_.content_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptorList, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptorList, _impl_.a_values_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult, _impl_.content_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 14, -1, sizeof(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptor)},
-  { 22, -1, -1, sizeof(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult)},
-  { 31, -1, -1, sizeof(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptorList)},
-  { 38, -1, -1, sizeof(::protobuf::mozilla::dom::IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::dom::_IPCServiceWorkerRegistrationDescriptor_default_instance_._instance,
-  &::protobuf::mozilla::dom::_IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult_default_instance_._instance,
-  &::protobuf::mozilla::dom::_IPCServiceWorkerRegistrationDescriptorList_default_instance_._instance,
-  &::protobuf::mozilla::dom::_IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\nCIPCServiceWorkerRegistrationDescriptor"
-  "_protobuf.mozilla.dom.h.proto\022\024protobuf."
-  "mozilla.dom\032\034PBackgroundSharedTypes.prot"
-  "o\032 IPCServiceWorkerDescriptor.proto\"\276\003\n&"
-  "IPCServiceWorkerRegistrationDescriptor\022\014"
-  "\n\004a_id\030\001 \001(\004\022\021\n\ta_version\030\002 \001(\004\022<\n\017a_pri"
-  "ncipalInfo\030\003 \001(\0132#.protobuf.mozilla.ipc."
-  "PrincipalInfo\022\017\n\007a_scope\030\004 \001(\t\022\030\n\020a_upda"
-  "teViaCache\030\005 \001(\014\022K\n\014a_installing\030\006 \001(\01320"
-  ".protobuf.mozilla.dom.IPCServiceWorkerDe"
-  "scriptorH\000\210\001\001\022H\n\ta_waiting\030\007 \001(\01320.proto"
-  "buf.mozilla.dom.IPCServiceWorkerDescript"
-  "orH\001\210\001\001\022G\n\010a_active\030\010 \001(\01320.protobuf.moz"
-  "illa.dom.IPCServiceWorkerDescriptorH\002\210\001\001"
-  "B\017\n\r_a_installingB\014\n\n_a_waitingB\013\n\t_a_ac"
-  "tive\"\337\001\n;IPCServiceWorkerRegistrationDes"
-  "criptorOrCopyableErrorResult\022r\n*a_mVIPCS"
-  "erviceWorkerRegistrationDescriptor\030\001 \001(\013"
-  "2<.protobuf.mozilla.dom.IPCServiceWorker"
-  "RegistrationDescriptorH\000\022!\n\027a_mVCopyable"
-  "ErrorResult\030\002 \001(\014H\000B\t\n\007content\"|\n*IPCSer"
-  "viceWorkerRegistrationDescriptorList\022N\n\010"
-  "a_values\030\001 \003(\0132<.protobuf.mozilla.dom.IP"
-  "CServiceWorkerRegistrationDescriptor\"\353\001\n"
-  "\?IPCServiceWorkerRegistrationDescriptorL"
-  "istOrCopyableErrorResult\022z\n.a_mVIPCServi"
-  "ceWorkerRegistrationDescriptorList\030\001 \001(\013"
-  "2@.protobuf.mozilla.dom.IPCServiceWorker"
-  "RegistrationDescriptorListH\000\022!\n\027a_mVCopy"
-  "ableErrorResult\030\002 \001(\014H\000B\t\n\007contentb\006prot"
-  "o3"
-  ;
-static const ::_pbi::DescriptorTable* const descriptor_table_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto_deps[2] = {
-  &::descriptor_table_IPCServiceWorkerDescriptor_2eproto,
-  &::descriptor_table_PBackgroundSharedTypes_2eproto,
-};
-static ::_pbi::once_flag descriptor_table_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto = {
-    false, false, 1202, descriptor_table_protodef_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    "IPCServiceWorkerRegistrationDescriptor_protobuf.mozilla.dom.h.proto",
-    &descriptor_table_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto_once, descriptor_table_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto_deps, 2, 4,
-    schemas, file_default_instances, TableStruct_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets,
-    file_level_metadata_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto, file_level_enum_descriptors_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    file_level_service_descriptors_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter() {
-  return &descriptor_table_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto(&descriptor_table_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -267,12 +145,12 @@ void IPCServiceWorkerRegistrationDescriptor::clear_a_active() {
 }
 IPCServiceWorkerRegistrationDescriptor::IPCServiceWorkerRegistrationDescriptor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor)
 }
 IPCServiceWorkerRegistrationDescriptor::IPCServiceWorkerRegistrationDescriptor(const IPCServiceWorkerRegistrationDescriptor& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IPCServiceWorkerRegistrationDescriptor* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -286,7 +164,7 @@ IPCServiceWorkerRegistrationDescriptor::IPCServiceWorkerRegistrationDescriptor(c
     , decltype(_impl_.a_id_){}
     , decltype(_impl_.a_version_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_scope_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_scope_.Set("", GetArenaForAllocation());
@@ -349,7 +227,7 @@ inline void IPCServiceWorkerRegistrationDescriptor::SharedCtor(
 
 IPCServiceWorkerRegistrationDescriptor::~IPCServiceWorkerRegistrationDescriptor() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -401,7 +279,7 @@ void IPCServiceWorkerRegistrationDescriptor::Clear() {
       reinterpret_cast<char*>(&_impl_.a_version_) -
       reinterpret_cast<char*>(&_impl_.a_id_)) + sizeof(_impl_.a_version_));
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* IPCServiceWorkerRegistrationDescriptor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -441,7 +319,7 @@ const char* IPCServiceWorkerRegistrationDescriptor::_InternalParse(const char* p
           auto str = _internal_mutable_a_scope();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor.a_scope"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -489,7 +367,7 @@ const char* IPCServiceWorkerRegistrationDescriptor::_InternalParse(const char* p
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -565,8 +443,8 @@ uint8_t* IPCServiceWorkerRegistrationDescriptor::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor)
   return target;
@@ -635,19 +513,22 @@ size_t IPCServiceWorkerRegistrationDescriptor::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_version());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCServiceWorkerRegistrationDescriptor::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    IPCServiceWorkerRegistrationDescriptor::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCServiceWorkerRegistrationDescriptor::GetClassData() const { return &_class_data_; }
+void IPCServiceWorkerRegistrationDescriptor::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const IPCServiceWorkerRegistrationDescriptor*>(
+      &from));
+}
 
-
-void IPCServiceWorkerRegistrationDescriptor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<IPCServiceWorkerRegistrationDescriptor*>(&to_msg);
-  auto& from = static_cast<const IPCServiceWorkerRegistrationDescriptor&>(from_msg);
+void IPCServiceWorkerRegistrationDescriptor::MergeFrom(const IPCServiceWorkerRegistrationDescriptor& from) {
+  IPCServiceWorkerRegistrationDescriptor* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -684,7 +565,7 @@ void IPCServiceWorkerRegistrationDescriptor::MergeImpl(::PROTOBUF_NAMESPACE_ID::
   if (from._internal_a_version() != 0) {
     _this->_internal_set_a_version(from._internal_a_version());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void IPCServiceWorkerRegistrationDescriptor::CopyFrom(const IPCServiceWorkerRegistrationDescriptor& from) {
@@ -720,11 +601,10 @@ void IPCServiceWorkerRegistrationDescriptor::InternalSwap(IPCServiceWorkerRegist
           reinterpret_cast<char*>(&other->_impl_.a_principalinfo_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata IPCServiceWorkerRegistrationDescriptor::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto[0]);
+std::string IPCServiceWorkerRegistrationDescriptor::GetTypeName() const {
+  return "protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor";
 }
+
 
 // ===================================================================
 
@@ -754,19 +634,19 @@ void IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::set_allocated_
 }
 IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult)
 }
 IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult(const IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVIPCServiceWorkerRegistrationDescriptor: {
@@ -799,7 +679,7 @@ inline void IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::SharedC
 
 IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::~IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -845,7 +725,7 @@ void IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -882,7 +762,7 @@ const char* IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::_Intern
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -914,8 +794,8 @@ uint8_t* IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::_InternalS
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult)
   return target;
@@ -948,19 +828,22 @@ size_t IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::ByteSizeLong
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::GetClassData() const { return &_class_data_; }
+void IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult*>(
+      &from));
+}
 
-
-void IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult*>(&to_msg);
-  auto& from = static_cast<const IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult&>(from_msg);
+void IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::MergeFrom(const IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult& from) {
+  IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -980,7 +863,7 @@ void IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::MergeImpl(::PR
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::CopyFrom(const IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult& from) {
@@ -1001,11 +884,10 @@ void IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::InternalSwap(I
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto[1]);
+std::string IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::GetTypeName() const {
+  return "protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult";
 }
+
 
 // ===================================================================
 
@@ -1015,18 +897,18 @@ class IPCServiceWorkerRegistrationDescriptorList::_Internal {
 
 IPCServiceWorkerRegistrationDescriptorList::IPCServiceWorkerRegistrationDescriptorList(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorList)
 }
 IPCServiceWorkerRegistrationDescriptorList::IPCServiceWorkerRegistrationDescriptorList(const IPCServiceWorkerRegistrationDescriptorList& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IPCServiceWorkerRegistrationDescriptorList* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_values_){from._impl_.a_values_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorList)
 }
 
@@ -1042,7 +924,7 @@ inline void IPCServiceWorkerRegistrationDescriptorList::SharedCtor(
 
 IPCServiceWorkerRegistrationDescriptorList::~IPCServiceWorkerRegistrationDescriptorList() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorList)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1065,7 +947,7 @@ void IPCServiceWorkerRegistrationDescriptorList::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_values_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* IPCServiceWorkerRegistrationDescriptorList::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1098,7 +980,7 @@ const char* IPCServiceWorkerRegistrationDescriptorList::_InternalParse(const cha
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1125,8 +1007,8 @@ uint8_t* IPCServiceWorkerRegistrationDescriptorList::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorList)
   return target;
@@ -1147,26 +1029,29 @@ size_t IPCServiceWorkerRegistrationDescriptorList::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCServiceWorkerRegistrationDescriptorList::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    IPCServiceWorkerRegistrationDescriptorList::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCServiceWorkerRegistrationDescriptorList::GetClassData() const { return &_class_data_; }
+void IPCServiceWorkerRegistrationDescriptorList::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const IPCServiceWorkerRegistrationDescriptorList*>(
+      &from));
+}
 
-
-void IPCServiceWorkerRegistrationDescriptorList::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<IPCServiceWorkerRegistrationDescriptorList*>(&to_msg);
-  auto& from = static_cast<const IPCServiceWorkerRegistrationDescriptorList&>(from_msg);
+void IPCServiceWorkerRegistrationDescriptorList::MergeFrom(const IPCServiceWorkerRegistrationDescriptorList& from) {
+  IPCServiceWorkerRegistrationDescriptorList* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorList)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_values_.MergeFrom(from._impl_.a_values_);
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void IPCServiceWorkerRegistrationDescriptorList::CopyFrom(const IPCServiceWorkerRegistrationDescriptorList& from) {
@@ -1186,11 +1071,10 @@ void IPCServiceWorkerRegistrationDescriptorList::InternalSwap(IPCServiceWorkerRe
   _impl_.a_values_.InternalSwap(&other->_impl_.a_values_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata IPCServiceWorkerRegistrationDescriptorList::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto[2]);
+std::string IPCServiceWorkerRegistrationDescriptorList::GetTypeName() const {
+  return "protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorList";
 }
+
 
 // ===================================================================
 
@@ -1220,19 +1104,19 @@ void IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::set_alloca
 }
 IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult)
 }
 IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult(const IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVIPCServiceWorkerRegistrationDescriptorList: {
@@ -1265,7 +1149,7 @@ inline void IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::Sha
 
 IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::~IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1311,7 +1195,7 @@ void IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1348,7 +1232,7 @@ const char* IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::_In
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1380,8 +1264,8 @@ uint8_t* IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::_Inter
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult)
   return target;
@@ -1414,19 +1298,22 @@ size_t IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::ByteSize
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::GetClassData() const { return &_class_data_; }
+void IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult*>(
+      &from));
+}
 
-
-void IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult*>(&to_msg);
-  auto& from = static_cast<const IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult&>(from_msg);
+void IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::MergeFrom(const IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult& from) {
+  IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1446,7 +1333,7 @@ void IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::MergeImpl(
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::CopyFrom(const IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult& from) {
@@ -1467,11 +1354,10 @@ void IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::InternalSw
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto[3]);
+std::string IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::GetTypeName() const {
+  return "protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace dom

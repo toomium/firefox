@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -26,7 +23,8 @@ namespace dom {
 namespace quota {
 namespace PQuotaTest {
 PROTOBUF_CONSTEXPR Msg_Try_Success_CustomErr_QmIpcFail::Msg_Try_Success_CustomErr_QmIpcFail(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_Try_Success_CustomErr_QmIpcFailDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_Try_Success_CustomErr_QmIpcFailDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -50,7 +48,8 @@ struct Reply_Try_Success_CustomErr_QmIpcFailDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_Try_Success_CustomErr_QmIpcFailDefaultTypeInternal _Reply_Try_Success_CustomErr_QmIpcFail_default_instance_;
 PROTOBUF_CONSTEXPR Msg_Try_Success_CustomErr_IpcFail::Msg_Try_Success_CustomErr_IpcFail(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_Try_Success_CustomErr_IpcFailDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_Try_Success_CustomErr_IpcFailDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -74,7 +73,8 @@ struct Reply_Try_Success_CustomErr_IpcFailDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_Try_Success_CustomErr_IpcFailDefaultTypeInternal _Reply_Try_Success_CustomErr_IpcFail_default_instance_;
 PROTOBUF_CONSTEXPR Msg_TryInspect_Success_CustomErr_QmIpcFail::Msg_TryInspect_Success_CustomErr_QmIpcFail(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_TryInspect_Success_CustomErr_QmIpcFailDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_TryInspect_Success_CustomErr_QmIpcFailDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -98,7 +98,8 @@ struct Reply_TryInspect_Success_CustomErr_QmIpcFailDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_TryInspect_Success_CustomErr_QmIpcFailDefaultTypeInternal _Reply_TryInspect_Success_CustomErr_QmIpcFail_default_instance_;
 PROTOBUF_CONSTEXPR Msg_TryInspect_Success_CustomErr_IpcFail::Msg_TryInspect_Success_CustomErr_IpcFail(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_TryInspect_Success_CustomErr_IpcFailDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_TryInspect_Success_CustomErr_IpcFailDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -126,116 +127,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PQuotaTest_2eproto[8];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PQuotaTest_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PQuotaTest_2eproto = nullptr;
-
-const uint32_t TableStruct_PQuotaTest_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::quota::PQuotaTest::Msg_Try_Success_CustomErr_QmIpcFail, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::quota::PQuotaTest::Reply_Try_Success_CustomErr_QmIpcFail, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::quota::PQuotaTest::Reply_Try_Success_CustomErr_QmIpcFail, _impl_.a_trydidnotreturn_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::quota::PQuotaTest::Msg_Try_Success_CustomErr_IpcFail, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::quota::PQuotaTest::Reply_Try_Success_CustomErr_IpcFail, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::quota::PQuotaTest::Reply_Try_Success_CustomErr_IpcFail, _impl_.a_trydidnotreturn_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::quota::PQuotaTest::Msg_TryInspect_Success_CustomErr_QmIpcFail, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::quota::PQuotaTest::Reply_TryInspect_Success_CustomErr_QmIpcFail, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::quota::PQuotaTest::Reply_TryInspect_Success_CustomErr_QmIpcFail, _impl_.a_trydidnotreturn_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::quota::PQuotaTest::Msg_TryInspect_Success_CustomErr_IpcFail, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::quota::PQuotaTest::Reply_TryInspect_Success_CustomErr_IpcFail, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::quota::PQuotaTest::Reply_TryInspect_Success_CustomErr_IpcFail, _impl_.a_trydidnotreturn_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::dom::quota::PQuotaTest::Msg_Try_Success_CustomErr_QmIpcFail)},
-  { 6, -1, -1, sizeof(::protobuf::mozilla::dom::quota::PQuotaTest::Reply_Try_Success_CustomErr_QmIpcFail)},
-  { 13, -1, -1, sizeof(::protobuf::mozilla::dom::quota::PQuotaTest::Msg_Try_Success_CustomErr_IpcFail)},
-  { 19, -1, -1, sizeof(::protobuf::mozilla::dom::quota::PQuotaTest::Reply_Try_Success_CustomErr_IpcFail)},
-  { 26, -1, -1, sizeof(::protobuf::mozilla::dom::quota::PQuotaTest::Msg_TryInspect_Success_CustomErr_QmIpcFail)},
-  { 32, -1, -1, sizeof(::protobuf::mozilla::dom::quota::PQuotaTest::Reply_TryInspect_Success_CustomErr_QmIpcFail)},
-  { 39, -1, -1, sizeof(::protobuf::mozilla::dom::quota::PQuotaTest::Msg_TryInspect_Success_CustomErr_IpcFail)},
-  { 45, -1, -1, sizeof(::protobuf::mozilla::dom::quota::PQuotaTest::Reply_TryInspect_Success_CustomErr_IpcFail)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::dom::quota::PQuotaTest::_Msg_Try_Success_CustomErr_QmIpcFail_default_instance_._instance,
-  &::protobuf::mozilla::dom::quota::PQuotaTest::_Reply_Try_Success_CustomErr_QmIpcFail_default_instance_._instance,
-  &::protobuf::mozilla::dom::quota::PQuotaTest::_Msg_Try_Success_CustomErr_IpcFail_default_instance_._instance,
-  &::protobuf::mozilla::dom::quota::PQuotaTest::_Reply_Try_Success_CustomErr_IpcFail_default_instance_._instance,
-  &::protobuf::mozilla::dom::quota::PQuotaTest::_Msg_TryInspect_Success_CustomErr_QmIpcFail_default_instance_._instance,
-  &::protobuf::mozilla::dom::quota::PQuotaTest::_Reply_TryInspect_Success_CustomErr_QmIpcFail_default_instance_._instance,
-  &::protobuf::mozilla::dom::quota::PQuotaTest::_Msg_TryInspect_Success_CustomErr_IpcFail_default_instance_._instance,
-  &::protobuf::mozilla::dom::quota::PQuotaTest::_Reply_TryInspect_Success_CustomErr_IpcFail_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PQuotaTest_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\020PQuotaTest.proto\022%protobuf.mozilla.dom"
-  ".quota.PQuotaTest\"%\n#Msg_Try_Success_Cus"
-  "tomErr_QmIpcFail\"B\n%Reply_Try_Success_Cu"
-  "stomErr_QmIpcFail\022\031\n\021a_tryDidNotReturn\030\001"
-  " \001(\010\"#\n!Msg_Try_Success_CustomErr_IpcFai"
-  "l\"@\n#Reply_Try_Success_CustomErr_IpcFail"
-  "\022\031\n\021a_tryDidNotReturn\030\001 \001(\010\",\n*Msg_TryIn"
-  "spect_Success_CustomErr_QmIpcFail\"I\n,Rep"
-  "ly_TryInspect_Success_CustomErr_QmIpcFai"
-  "l\022\031\n\021a_tryDidNotReturn\030\001 \001(\010\"*\n(Msg_TryI"
-  "nspect_Success_CustomErr_IpcFail\"G\n*Repl"
-  "y_TryInspect_Success_CustomErr_IpcFail\022\031"
-  "\n\021a_tryDidNotReturn\030\001 \001(\010b\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_PQuotaTest_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PQuotaTest_2eproto = {
-    false, false, 513, descriptor_table_protodef_PQuotaTest_2eproto,
-    "PQuotaTest.proto",
-    &descriptor_table_PQuotaTest_2eproto_once, nullptr, 0, 8,
-    schemas, file_default_instances, TableStruct_PQuotaTest_2eproto::offsets,
-    file_level_metadata_PQuotaTest_2eproto, file_level_enum_descriptors_PQuotaTest_2eproto,
-    file_level_service_descriptors_PQuotaTest_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PQuotaTest_2eproto_getter() {
-  return &descriptor_table_PQuotaTest_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PQuotaTest_2eproto(&descriptor_table_PQuotaTest_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -250,37 +141,145 @@ class Msg_Try_Success_CustomErr_QmIpcFail::_Internal {
 
 Msg_Try_Success_CustomErr_QmIpcFail::Msg_Try_Success_CustomErr_QmIpcFail(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_QmIpcFail)
 }
 Msg_Try_Success_CustomErr_QmIpcFail::Msg_Try_Success_CustomErr_QmIpcFail(const Msg_Try_Success_CustomErr_QmIpcFail& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_Try_Success_CustomErr_QmIpcFail* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_QmIpcFail)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_Try_Success_CustomErr_QmIpcFail::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_Try_Success_CustomErr_QmIpcFail::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_Try_Success_CustomErr_QmIpcFail::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PQuotaTest_2eproto_getter, &descriptor_table_PQuotaTest_2eproto_once,
-      file_level_metadata_PQuotaTest_2eproto[0]);
+inline void Msg_Try_Success_CustomErr_QmIpcFail::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Msg_Try_Success_CustomErr_QmIpcFail::~Msg_Try_Success_CustomErr_QmIpcFail() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_QmIpcFail)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Msg_Try_Success_CustomErr_QmIpcFail::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Msg_Try_Success_CustomErr_QmIpcFail::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Msg_Try_Success_CustomErr_QmIpcFail::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_QmIpcFail)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Msg_Try_Success_CustomErr_QmIpcFail::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Msg_Try_Success_CustomErr_QmIpcFail::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_QmIpcFail)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_QmIpcFail)
+  return target;
+}
+
+size_t Msg_Try_Success_CustomErr_QmIpcFail::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_QmIpcFail)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Msg_Try_Success_CustomErr_QmIpcFail::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_Try_Success_CustomErr_QmIpcFail*>(
+      &from));
+}
+
+void Msg_Try_Success_CustomErr_QmIpcFail::MergeFrom(const Msg_Try_Success_CustomErr_QmIpcFail& from) {
+  Msg_Try_Success_CustomErr_QmIpcFail* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_QmIpcFail)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Msg_Try_Success_CustomErr_QmIpcFail::CopyFrom(const Msg_Try_Success_CustomErr_QmIpcFail& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_QmIpcFail)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg_Try_Success_CustomErr_QmIpcFail::IsInitialized() const {
+  return true;
+}
+
+void Msg_Try_Success_CustomErr_QmIpcFail::InternalSwap(Msg_Try_Success_CustomErr_QmIpcFail* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Msg_Try_Success_CustomErr_QmIpcFail::GetTypeName() const {
+  return "protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_QmIpcFail";
+}
+
 
 // ===================================================================
 
@@ -290,18 +289,18 @@ class Reply_Try_Success_CustomErr_QmIpcFail::_Internal {
 
 Reply_Try_Success_CustomErr_QmIpcFail::Reply_Try_Success_CustomErr_QmIpcFail(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_QmIpcFail)
 }
 Reply_Try_Success_CustomErr_QmIpcFail::Reply_Try_Success_CustomErr_QmIpcFail(const Reply_Try_Success_CustomErr_QmIpcFail& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_Try_Success_CustomErr_QmIpcFail* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_trydidnotreturn_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_trydidnotreturn_ = from._impl_.a_trydidnotreturn_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_QmIpcFail)
 }
@@ -318,7 +317,7 @@ inline void Reply_Try_Success_CustomErr_QmIpcFail::SharedCtor(
 
 Reply_Try_Success_CustomErr_QmIpcFail::~Reply_Try_Success_CustomErr_QmIpcFail() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_QmIpcFail)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -340,7 +339,7 @@ void Reply_Try_Success_CustomErr_QmIpcFail::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_trydidnotreturn_ = false;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_Try_Success_CustomErr_QmIpcFail::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -368,7 +367,7 @@ const char* Reply_Try_Success_CustomErr_QmIpcFail::_InternalParse(const char* pt
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -393,8 +392,8 @@ uint8_t* Reply_Try_Success_CustomErr_QmIpcFail::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_QmIpcFail)
   return target;
@@ -413,19 +412,22 @@ size_t Reply_Try_Success_CustomErr_QmIpcFail::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_Try_Success_CustomErr_QmIpcFail::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Reply_Try_Success_CustomErr_QmIpcFail::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_Try_Success_CustomErr_QmIpcFail::GetClassData() const { return &_class_data_; }
+void Reply_Try_Success_CustomErr_QmIpcFail::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Reply_Try_Success_CustomErr_QmIpcFail*>(
+      &from));
+}
 
-
-void Reply_Try_Success_CustomErr_QmIpcFail::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Reply_Try_Success_CustomErr_QmIpcFail*>(&to_msg);
-  auto& from = static_cast<const Reply_Try_Success_CustomErr_QmIpcFail&>(from_msg);
+void Reply_Try_Success_CustomErr_QmIpcFail::MergeFrom(const Reply_Try_Success_CustomErr_QmIpcFail& from) {
+  Reply_Try_Success_CustomErr_QmIpcFail* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_QmIpcFail)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -434,7 +436,7 @@ void Reply_Try_Success_CustomErr_QmIpcFail::MergeImpl(::PROTOBUF_NAMESPACE_ID::M
   if (from._internal_a_trydidnotreturn() != 0) {
     _this->_internal_set_a_trydidnotreturn(from._internal_a_trydidnotreturn());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Reply_Try_Success_CustomErr_QmIpcFail::CopyFrom(const Reply_Try_Success_CustomErr_QmIpcFail& from) {
@@ -454,11 +456,10 @@ void Reply_Try_Success_CustomErr_QmIpcFail::InternalSwap(Reply_Try_Success_Custo
   swap(_impl_.a_trydidnotreturn_, other->_impl_.a_trydidnotreturn_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Reply_Try_Success_CustomErr_QmIpcFail::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PQuotaTest_2eproto_getter, &descriptor_table_PQuotaTest_2eproto_once,
-      file_level_metadata_PQuotaTest_2eproto[1]);
+std::string Reply_Try_Success_CustomErr_QmIpcFail::GetTypeName() const {
+  return "protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_QmIpcFail";
 }
+
 
 // ===================================================================
 
@@ -468,37 +469,145 @@ class Msg_Try_Success_CustomErr_IpcFail::_Internal {
 
 Msg_Try_Success_CustomErr_IpcFail::Msg_Try_Success_CustomErr_IpcFail(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_IpcFail)
 }
 Msg_Try_Success_CustomErr_IpcFail::Msg_Try_Success_CustomErr_IpcFail(const Msg_Try_Success_CustomErr_IpcFail& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_Try_Success_CustomErr_IpcFail* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_IpcFail)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_Try_Success_CustomErr_IpcFail::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_Try_Success_CustomErr_IpcFail::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_Try_Success_CustomErr_IpcFail::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PQuotaTest_2eproto_getter, &descriptor_table_PQuotaTest_2eproto_once,
-      file_level_metadata_PQuotaTest_2eproto[2]);
+inline void Msg_Try_Success_CustomErr_IpcFail::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Msg_Try_Success_CustomErr_IpcFail::~Msg_Try_Success_CustomErr_IpcFail() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_IpcFail)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Msg_Try_Success_CustomErr_IpcFail::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Msg_Try_Success_CustomErr_IpcFail::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Msg_Try_Success_CustomErr_IpcFail::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_IpcFail)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Msg_Try_Success_CustomErr_IpcFail::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Msg_Try_Success_CustomErr_IpcFail::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_IpcFail)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_IpcFail)
+  return target;
+}
+
+size_t Msg_Try_Success_CustomErr_IpcFail::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_IpcFail)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Msg_Try_Success_CustomErr_IpcFail::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_Try_Success_CustomErr_IpcFail*>(
+      &from));
+}
+
+void Msg_Try_Success_CustomErr_IpcFail::MergeFrom(const Msg_Try_Success_CustomErr_IpcFail& from) {
+  Msg_Try_Success_CustomErr_IpcFail* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_IpcFail)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Msg_Try_Success_CustomErr_IpcFail::CopyFrom(const Msg_Try_Success_CustomErr_IpcFail& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_IpcFail)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg_Try_Success_CustomErr_IpcFail::IsInitialized() const {
+  return true;
+}
+
+void Msg_Try_Success_CustomErr_IpcFail::InternalSwap(Msg_Try_Success_CustomErr_IpcFail* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Msg_Try_Success_CustomErr_IpcFail::GetTypeName() const {
+  return "protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_IpcFail";
+}
+
 
 // ===================================================================
 
@@ -508,18 +617,18 @@ class Reply_Try_Success_CustomErr_IpcFail::_Internal {
 
 Reply_Try_Success_CustomErr_IpcFail::Reply_Try_Success_CustomErr_IpcFail(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_IpcFail)
 }
 Reply_Try_Success_CustomErr_IpcFail::Reply_Try_Success_CustomErr_IpcFail(const Reply_Try_Success_CustomErr_IpcFail& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_Try_Success_CustomErr_IpcFail* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_trydidnotreturn_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_trydidnotreturn_ = from._impl_.a_trydidnotreturn_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_IpcFail)
 }
@@ -536,7 +645,7 @@ inline void Reply_Try_Success_CustomErr_IpcFail::SharedCtor(
 
 Reply_Try_Success_CustomErr_IpcFail::~Reply_Try_Success_CustomErr_IpcFail() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_IpcFail)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -558,7 +667,7 @@ void Reply_Try_Success_CustomErr_IpcFail::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_trydidnotreturn_ = false;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_Try_Success_CustomErr_IpcFail::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -586,7 +695,7 @@ const char* Reply_Try_Success_CustomErr_IpcFail::_InternalParse(const char* ptr,
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -611,8 +720,8 @@ uint8_t* Reply_Try_Success_CustomErr_IpcFail::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_IpcFail)
   return target;
@@ -631,19 +740,22 @@ size_t Reply_Try_Success_CustomErr_IpcFail::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_Try_Success_CustomErr_IpcFail::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Reply_Try_Success_CustomErr_IpcFail::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_Try_Success_CustomErr_IpcFail::GetClassData() const { return &_class_data_; }
+void Reply_Try_Success_CustomErr_IpcFail::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Reply_Try_Success_CustomErr_IpcFail*>(
+      &from));
+}
 
-
-void Reply_Try_Success_CustomErr_IpcFail::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Reply_Try_Success_CustomErr_IpcFail*>(&to_msg);
-  auto& from = static_cast<const Reply_Try_Success_CustomErr_IpcFail&>(from_msg);
+void Reply_Try_Success_CustomErr_IpcFail::MergeFrom(const Reply_Try_Success_CustomErr_IpcFail& from) {
+  Reply_Try_Success_CustomErr_IpcFail* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_IpcFail)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -652,7 +764,7 @@ void Reply_Try_Success_CustomErr_IpcFail::MergeImpl(::PROTOBUF_NAMESPACE_ID::Mes
   if (from._internal_a_trydidnotreturn() != 0) {
     _this->_internal_set_a_trydidnotreturn(from._internal_a_trydidnotreturn());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Reply_Try_Success_CustomErr_IpcFail::CopyFrom(const Reply_Try_Success_CustomErr_IpcFail& from) {
@@ -672,11 +784,10 @@ void Reply_Try_Success_CustomErr_IpcFail::InternalSwap(Reply_Try_Success_CustomE
   swap(_impl_.a_trydidnotreturn_, other->_impl_.a_trydidnotreturn_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Reply_Try_Success_CustomErr_IpcFail::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PQuotaTest_2eproto_getter, &descriptor_table_PQuotaTest_2eproto_once,
-      file_level_metadata_PQuotaTest_2eproto[3]);
+std::string Reply_Try_Success_CustomErr_IpcFail::GetTypeName() const {
+  return "protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_IpcFail";
 }
+
 
 // ===================================================================
 
@@ -686,37 +797,145 @@ class Msg_TryInspect_Success_CustomErr_QmIpcFail::_Internal {
 
 Msg_TryInspect_Success_CustomErr_QmIpcFail::Msg_TryInspect_Success_CustomErr_QmIpcFail(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_QmIpcFail)
 }
 Msg_TryInspect_Success_CustomErr_QmIpcFail::Msg_TryInspect_Success_CustomErr_QmIpcFail(const Msg_TryInspect_Success_CustomErr_QmIpcFail& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_TryInspect_Success_CustomErr_QmIpcFail* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_QmIpcFail)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_TryInspect_Success_CustomErr_QmIpcFail::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_TryInspect_Success_CustomErr_QmIpcFail::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_TryInspect_Success_CustomErr_QmIpcFail::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PQuotaTest_2eproto_getter, &descriptor_table_PQuotaTest_2eproto_once,
-      file_level_metadata_PQuotaTest_2eproto[4]);
+inline void Msg_TryInspect_Success_CustomErr_QmIpcFail::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Msg_TryInspect_Success_CustomErr_QmIpcFail::~Msg_TryInspect_Success_CustomErr_QmIpcFail() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_QmIpcFail)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Msg_TryInspect_Success_CustomErr_QmIpcFail::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Msg_TryInspect_Success_CustomErr_QmIpcFail::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Msg_TryInspect_Success_CustomErr_QmIpcFail::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_QmIpcFail)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Msg_TryInspect_Success_CustomErr_QmIpcFail::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Msg_TryInspect_Success_CustomErr_QmIpcFail::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_QmIpcFail)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_QmIpcFail)
+  return target;
+}
+
+size_t Msg_TryInspect_Success_CustomErr_QmIpcFail::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_QmIpcFail)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Msg_TryInspect_Success_CustomErr_QmIpcFail::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_TryInspect_Success_CustomErr_QmIpcFail*>(
+      &from));
+}
+
+void Msg_TryInspect_Success_CustomErr_QmIpcFail::MergeFrom(const Msg_TryInspect_Success_CustomErr_QmIpcFail& from) {
+  Msg_TryInspect_Success_CustomErr_QmIpcFail* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_QmIpcFail)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Msg_TryInspect_Success_CustomErr_QmIpcFail::CopyFrom(const Msg_TryInspect_Success_CustomErr_QmIpcFail& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_QmIpcFail)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg_TryInspect_Success_CustomErr_QmIpcFail::IsInitialized() const {
+  return true;
+}
+
+void Msg_TryInspect_Success_CustomErr_QmIpcFail::InternalSwap(Msg_TryInspect_Success_CustomErr_QmIpcFail* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Msg_TryInspect_Success_CustomErr_QmIpcFail::GetTypeName() const {
+  return "protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_QmIpcFail";
+}
+
 
 // ===================================================================
 
@@ -726,18 +945,18 @@ class Reply_TryInspect_Success_CustomErr_QmIpcFail::_Internal {
 
 Reply_TryInspect_Success_CustomErr_QmIpcFail::Reply_TryInspect_Success_CustomErr_QmIpcFail(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_QmIpcFail)
 }
 Reply_TryInspect_Success_CustomErr_QmIpcFail::Reply_TryInspect_Success_CustomErr_QmIpcFail(const Reply_TryInspect_Success_CustomErr_QmIpcFail& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_TryInspect_Success_CustomErr_QmIpcFail* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_trydidnotreturn_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_trydidnotreturn_ = from._impl_.a_trydidnotreturn_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_QmIpcFail)
 }
@@ -754,7 +973,7 @@ inline void Reply_TryInspect_Success_CustomErr_QmIpcFail::SharedCtor(
 
 Reply_TryInspect_Success_CustomErr_QmIpcFail::~Reply_TryInspect_Success_CustomErr_QmIpcFail() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_QmIpcFail)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -776,7 +995,7 @@ void Reply_TryInspect_Success_CustomErr_QmIpcFail::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_trydidnotreturn_ = false;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_TryInspect_Success_CustomErr_QmIpcFail::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -804,7 +1023,7 @@ const char* Reply_TryInspect_Success_CustomErr_QmIpcFail::_InternalParse(const c
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -829,8 +1048,8 @@ uint8_t* Reply_TryInspect_Success_CustomErr_QmIpcFail::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_QmIpcFail)
   return target;
@@ -849,19 +1068,22 @@ size_t Reply_TryInspect_Success_CustomErr_QmIpcFail::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_TryInspect_Success_CustomErr_QmIpcFail::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Reply_TryInspect_Success_CustomErr_QmIpcFail::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_TryInspect_Success_CustomErr_QmIpcFail::GetClassData() const { return &_class_data_; }
+void Reply_TryInspect_Success_CustomErr_QmIpcFail::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Reply_TryInspect_Success_CustomErr_QmIpcFail*>(
+      &from));
+}
 
-
-void Reply_TryInspect_Success_CustomErr_QmIpcFail::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Reply_TryInspect_Success_CustomErr_QmIpcFail*>(&to_msg);
-  auto& from = static_cast<const Reply_TryInspect_Success_CustomErr_QmIpcFail&>(from_msg);
+void Reply_TryInspect_Success_CustomErr_QmIpcFail::MergeFrom(const Reply_TryInspect_Success_CustomErr_QmIpcFail& from) {
+  Reply_TryInspect_Success_CustomErr_QmIpcFail* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_QmIpcFail)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -870,7 +1092,7 @@ void Reply_TryInspect_Success_CustomErr_QmIpcFail::MergeImpl(::PROTOBUF_NAMESPAC
   if (from._internal_a_trydidnotreturn() != 0) {
     _this->_internal_set_a_trydidnotreturn(from._internal_a_trydidnotreturn());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Reply_TryInspect_Success_CustomErr_QmIpcFail::CopyFrom(const Reply_TryInspect_Success_CustomErr_QmIpcFail& from) {
@@ -890,11 +1112,10 @@ void Reply_TryInspect_Success_CustomErr_QmIpcFail::InternalSwap(Reply_TryInspect
   swap(_impl_.a_trydidnotreturn_, other->_impl_.a_trydidnotreturn_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Reply_TryInspect_Success_CustomErr_QmIpcFail::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PQuotaTest_2eproto_getter, &descriptor_table_PQuotaTest_2eproto_once,
-      file_level_metadata_PQuotaTest_2eproto[5]);
+std::string Reply_TryInspect_Success_CustomErr_QmIpcFail::GetTypeName() const {
+  return "protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_QmIpcFail";
 }
+
 
 // ===================================================================
 
@@ -904,37 +1125,145 @@ class Msg_TryInspect_Success_CustomErr_IpcFail::_Internal {
 
 Msg_TryInspect_Success_CustomErr_IpcFail::Msg_TryInspect_Success_CustomErr_IpcFail(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_IpcFail)
 }
 Msg_TryInspect_Success_CustomErr_IpcFail::Msg_TryInspect_Success_CustomErr_IpcFail(const Msg_TryInspect_Success_CustomErr_IpcFail& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_TryInspect_Success_CustomErr_IpcFail* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_IpcFail)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_TryInspect_Success_CustomErr_IpcFail::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_TryInspect_Success_CustomErr_IpcFail::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_TryInspect_Success_CustomErr_IpcFail::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PQuotaTest_2eproto_getter, &descriptor_table_PQuotaTest_2eproto_once,
-      file_level_metadata_PQuotaTest_2eproto[6]);
+inline void Msg_TryInspect_Success_CustomErr_IpcFail::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Msg_TryInspect_Success_CustomErr_IpcFail::~Msg_TryInspect_Success_CustomErr_IpcFail() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_IpcFail)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Msg_TryInspect_Success_CustomErr_IpcFail::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Msg_TryInspect_Success_CustomErr_IpcFail::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Msg_TryInspect_Success_CustomErr_IpcFail::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_IpcFail)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Msg_TryInspect_Success_CustomErr_IpcFail::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Msg_TryInspect_Success_CustomErr_IpcFail::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_IpcFail)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_IpcFail)
+  return target;
+}
+
+size_t Msg_TryInspect_Success_CustomErr_IpcFail::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_IpcFail)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Msg_TryInspect_Success_CustomErr_IpcFail::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_TryInspect_Success_CustomErr_IpcFail*>(
+      &from));
+}
+
+void Msg_TryInspect_Success_CustomErr_IpcFail::MergeFrom(const Msg_TryInspect_Success_CustomErr_IpcFail& from) {
+  Msg_TryInspect_Success_CustomErr_IpcFail* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_IpcFail)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Msg_TryInspect_Success_CustomErr_IpcFail::CopyFrom(const Msg_TryInspect_Success_CustomErr_IpcFail& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_IpcFail)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg_TryInspect_Success_CustomErr_IpcFail::IsInitialized() const {
+  return true;
+}
+
+void Msg_TryInspect_Success_CustomErr_IpcFail::InternalSwap(Msg_TryInspect_Success_CustomErr_IpcFail* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Msg_TryInspect_Success_CustomErr_IpcFail::GetTypeName() const {
+  return "protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_IpcFail";
+}
+
 
 // ===================================================================
 
@@ -944,18 +1273,18 @@ class Reply_TryInspect_Success_CustomErr_IpcFail::_Internal {
 
 Reply_TryInspect_Success_CustomErr_IpcFail::Reply_TryInspect_Success_CustomErr_IpcFail(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_IpcFail)
 }
 Reply_TryInspect_Success_CustomErr_IpcFail::Reply_TryInspect_Success_CustomErr_IpcFail(const Reply_TryInspect_Success_CustomErr_IpcFail& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_TryInspect_Success_CustomErr_IpcFail* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_trydidnotreturn_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_trydidnotreturn_ = from._impl_.a_trydidnotreturn_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_IpcFail)
 }
@@ -972,7 +1301,7 @@ inline void Reply_TryInspect_Success_CustomErr_IpcFail::SharedCtor(
 
 Reply_TryInspect_Success_CustomErr_IpcFail::~Reply_TryInspect_Success_CustomErr_IpcFail() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_IpcFail)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -994,7 +1323,7 @@ void Reply_TryInspect_Success_CustomErr_IpcFail::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_trydidnotreturn_ = false;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_TryInspect_Success_CustomErr_IpcFail::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1022,7 +1351,7 @@ const char* Reply_TryInspect_Success_CustomErr_IpcFail::_InternalParse(const cha
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1047,8 +1376,8 @@ uint8_t* Reply_TryInspect_Success_CustomErr_IpcFail::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_IpcFail)
   return target;
@@ -1067,19 +1396,22 @@ size_t Reply_TryInspect_Success_CustomErr_IpcFail::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_TryInspect_Success_CustomErr_IpcFail::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Reply_TryInspect_Success_CustomErr_IpcFail::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_TryInspect_Success_CustomErr_IpcFail::GetClassData() const { return &_class_data_; }
+void Reply_TryInspect_Success_CustomErr_IpcFail::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Reply_TryInspect_Success_CustomErr_IpcFail*>(
+      &from));
+}
 
-
-void Reply_TryInspect_Success_CustomErr_IpcFail::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Reply_TryInspect_Success_CustomErr_IpcFail*>(&to_msg);
-  auto& from = static_cast<const Reply_TryInspect_Success_CustomErr_IpcFail&>(from_msg);
+void Reply_TryInspect_Success_CustomErr_IpcFail::MergeFrom(const Reply_TryInspect_Success_CustomErr_IpcFail& from) {
+  Reply_TryInspect_Success_CustomErr_IpcFail* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_IpcFail)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1088,7 +1420,7 @@ void Reply_TryInspect_Success_CustomErr_IpcFail::MergeImpl(::PROTOBUF_NAMESPACE_
   if (from._internal_a_trydidnotreturn() != 0) {
     _this->_internal_set_a_trydidnotreturn(from._internal_a_trydidnotreturn());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Reply_TryInspect_Success_CustomErr_IpcFail::CopyFrom(const Reply_TryInspect_Success_CustomErr_IpcFail& from) {
@@ -1108,11 +1440,10 @@ void Reply_TryInspect_Success_CustomErr_IpcFail::InternalSwap(Reply_TryInspect_S
   swap(_impl_.a_trydidnotreturn_, other->_impl_.a_trydidnotreturn_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Reply_TryInspect_Success_CustomErr_IpcFail::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PQuotaTest_2eproto_getter, &descriptor_table_PQuotaTest_2eproto_once,
-      file_level_metadata_PQuotaTest_2eproto[7]);
+std::string Reply_TryInspect_Success_CustomErr_IpcFail::GetTypeName() const {
+  return "protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_IpcFail";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace PQuotaTest

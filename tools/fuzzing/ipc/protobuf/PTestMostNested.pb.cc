@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -25,7 +22,8 @@ namespace mozilla {
 namespace _ipdltest {
 namespace PTestMostNested {
 PROTOBUF_CONSTEXPR Msg_Msg1::Msg_Msg1(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_Msg1DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_Msg1DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -36,7 +34,8 @@ struct Msg_Msg1DefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_Msg1DefaultTypeInternal _Msg_Msg1_default_instance_;
 PROTOBUF_CONSTEXPR Msg_Msg2::Msg_Msg2(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_Msg2DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_Msg2DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -47,7 +46,8 @@ struct Msg_Msg2DefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_Msg2DefaultTypeInternal _Msg_Msg2_default_instance_;
 PROTOBUF_CONSTEXPR Reply_Msg2::Reply_Msg2(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Reply_Msg2DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_Msg2DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -58,7 +58,8 @@ struct Reply_Msg2DefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_Msg2DefaultTypeInternal _Reply_Msg2_default_instance_;
 PROTOBUF_CONSTEXPR Msg_Msg3::Msg_Msg3(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_Msg3DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_Msg3DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -69,7 +70,8 @@ struct Msg_Msg3DefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_Msg3DefaultTypeInternal _Msg_Msg3_default_instance_;
 PROTOBUF_CONSTEXPR Msg_Msg4::Msg_Msg4(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_Msg4DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_Msg4DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -80,7 +82,8 @@ struct Msg_Msg4DefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_Msg4DefaultTypeInternal _Msg_Msg4_default_instance_;
 PROTOBUF_CONSTEXPR Reply_Msg4::Reply_Msg4(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Reply_Msg4DefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_Msg4DefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -91,7 +94,8 @@ struct Reply_Msg4DefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Reply_Msg4DefaultTypeInternal _Reply_Msg4_default_instance_;
 PROTOBUF_CONSTEXPR Msg_Start::Msg_Start(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_StartDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_StartDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -102,7 +106,8 @@ struct Msg_StartDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_StartDefaultTypeInternal _Msg_Start_default_instance_;
 PROTOBUF_CONSTEXPR Msg_StartInner::Msg_StartInner(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_StartInnerDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_StartInnerDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -113,7 +118,8 @@ struct Msg_StartInnerDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_StartInnerDefaultTypeInternal _Msg_StartInner_default_instance_;
 PROTOBUF_CONSTEXPR Reply_StartInner::Reply_StartInner(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Reply_StartInnerDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_StartInnerDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -127,113 +133,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace _ipdltest
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PTestMostNested_2eproto[9];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PTestMostNested_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PTestMostNested_2eproto = nullptr;
-
-const uint32_t TableStruct_PTestMostNested_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestMostNested::Msg_Msg1, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestMostNested::Msg_Msg2, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestMostNested::Reply_Msg2, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestMostNested::Msg_Msg3, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestMostNested::Msg_Msg4, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestMostNested::Reply_Msg4, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestMostNested::Msg_Start, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestMostNested::Msg_StartInner, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestMostNested::Reply_StartInner, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestMostNested::Msg_Msg1)},
-  { 6, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestMostNested::Msg_Msg2)},
-  { 12, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestMostNested::Reply_Msg2)},
-  { 18, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestMostNested::Msg_Msg3)},
-  { 24, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestMostNested::Msg_Msg4)},
-  { 30, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestMostNested::Reply_Msg4)},
-  { 36, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestMostNested::Msg_Start)},
-  { 42, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestMostNested::Msg_StartInner)},
-  { 48, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestMostNested::Reply_StartInner)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::_ipdltest::PTestMostNested::_Msg_Msg1_default_instance_._instance,
-  &::protobuf::mozilla::_ipdltest::PTestMostNested::_Msg_Msg2_default_instance_._instance,
-  &::protobuf::mozilla::_ipdltest::PTestMostNested::_Reply_Msg2_default_instance_._instance,
-  &::protobuf::mozilla::_ipdltest::PTestMostNested::_Msg_Msg3_default_instance_._instance,
-  &::protobuf::mozilla::_ipdltest::PTestMostNested::_Msg_Msg4_default_instance_._instance,
-  &::protobuf::mozilla::_ipdltest::PTestMostNested::_Reply_Msg4_default_instance_._instance,
-  &::protobuf::mozilla::_ipdltest::PTestMostNested::_Msg_Start_default_instance_._instance,
-  &::protobuf::mozilla::_ipdltest::PTestMostNested::_Msg_StartInner_default_instance_._instance,
-  &::protobuf::mozilla::_ipdltest::PTestMostNested::_Reply_StartInner_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PTestMostNested_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\025PTestMostNested.proto\022*protobuf.mozill"
-  "a._ipdltest.PTestMostNested\"\n\n\010Msg_Msg1\""
-  "\n\n\010Msg_Msg2\"\014\n\nReply_Msg2\"\n\n\010Msg_Msg3\"\n\n"
-  "\010Msg_Msg4\"\014\n\nReply_Msg4\"\013\n\tMsg_Start\"\020\n\016"
-  "Msg_StartInner\"\022\n\020Reply_StartInnerb\006prot"
-  "o3"
-  ;
-static ::_pbi::once_flag descriptor_table_PTestMostNested_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PTestMostNested_2eproto = {
-    false, false, 202, descriptor_table_protodef_PTestMostNested_2eproto,
-    "PTestMostNested.proto",
-    &descriptor_table_PTestMostNested_2eproto_once, nullptr, 0, 9,
-    schemas, file_default_instances, TableStruct_PTestMostNested_2eproto::offsets,
-    file_level_metadata_PTestMostNested_2eproto, file_level_enum_descriptors_PTestMostNested_2eproto,
-    file_level_service_descriptors_PTestMostNested_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PTestMostNested_2eproto_getter() {
-  return &descriptor_table_PTestMostNested_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PTestMostNested_2eproto(&descriptor_table_PTestMostNested_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace _ipdltest {
@@ -247,37 +146,145 @@ class Msg_Msg1::_Internal {
 
 Msg_Msg1::Msg_Msg1(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg1)
 }
 Msg_Msg1::Msg_Msg1(const Msg_Msg1& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_Msg1* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg1)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_Msg1::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_Msg1::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_Msg1::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PTestMostNested_2eproto_getter, &descriptor_table_PTestMostNested_2eproto_once,
-      file_level_metadata_PTestMostNested_2eproto[0]);
+inline void Msg_Msg1::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Msg_Msg1::~Msg_Msg1() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg1)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Msg_Msg1::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Msg_Msg1::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Msg_Msg1::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg1)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Msg_Msg1::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Msg_Msg1::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg1)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg1)
+  return target;
+}
+
+size_t Msg_Msg1::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg1)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Msg_Msg1::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_Msg1*>(
+      &from));
+}
+
+void Msg_Msg1::MergeFrom(const Msg_Msg1& from) {
+  Msg_Msg1* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg1)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Msg_Msg1::CopyFrom(const Msg_Msg1& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg1)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg_Msg1::IsInitialized() const {
+  return true;
+}
+
+void Msg_Msg1::InternalSwap(Msg_Msg1* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Msg_Msg1::GetTypeName() const {
+  return "protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg1";
+}
+
 
 // ===================================================================
 
@@ -287,37 +294,145 @@ class Msg_Msg2::_Internal {
 
 Msg_Msg2::Msg_Msg2(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg2)
 }
 Msg_Msg2::Msg_Msg2(const Msg_Msg2& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_Msg2* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg2)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_Msg2::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_Msg2::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_Msg2::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PTestMostNested_2eproto_getter, &descriptor_table_PTestMostNested_2eproto_once,
-      file_level_metadata_PTestMostNested_2eproto[1]);
+inline void Msg_Msg2::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Msg_Msg2::~Msg_Msg2() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg2)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Msg_Msg2::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Msg_Msg2::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Msg_Msg2::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg2)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Msg_Msg2::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Msg_Msg2::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg2)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg2)
+  return target;
+}
+
+size_t Msg_Msg2::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg2)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Msg_Msg2::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_Msg2*>(
+      &from));
+}
+
+void Msg_Msg2::MergeFrom(const Msg_Msg2& from) {
+  Msg_Msg2* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg2)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Msg_Msg2::CopyFrom(const Msg_Msg2& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg2)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg_Msg2::IsInitialized() const {
+  return true;
+}
+
+void Msg_Msg2::InternalSwap(Msg_Msg2* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Msg_Msg2::GetTypeName() const {
+  return "protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg2";
+}
+
 
 // ===================================================================
 
@@ -327,37 +442,145 @@ class Reply_Msg2::_Internal {
 
 Reply_Msg2::Reply_Msg2(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestMostNested.Reply_Msg2)
 }
 Reply_Msg2::Reply_Msg2(const Reply_Msg2& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_Msg2* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestMostNested.Reply_Msg2)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_Msg2::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_Msg2::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Reply_Msg2::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PTestMostNested_2eproto_getter, &descriptor_table_PTestMostNested_2eproto_once,
-      file_level_metadata_PTestMostNested_2eproto[2]);
+inline void Reply_Msg2::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Reply_Msg2::~Reply_Msg2() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestMostNested.Reply_Msg2)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Reply_Msg2::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Reply_Msg2::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Reply_Msg2::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestMostNested.Reply_Msg2)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Reply_Msg2::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Reply_Msg2::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestMostNested.Reply_Msg2)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestMostNested.Reply_Msg2)
+  return target;
+}
+
+size_t Reply_Msg2::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestMostNested.Reply_Msg2)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Reply_Msg2::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Reply_Msg2*>(
+      &from));
+}
+
+void Reply_Msg2::MergeFrom(const Reply_Msg2& from) {
+  Reply_Msg2* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestMostNested.Reply_Msg2)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Reply_Msg2::CopyFrom(const Reply_Msg2& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestMostNested.Reply_Msg2)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Reply_Msg2::IsInitialized() const {
+  return true;
+}
+
+void Reply_Msg2::InternalSwap(Reply_Msg2* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Reply_Msg2::GetTypeName() const {
+  return "protobuf.mozilla._ipdltest.PTestMostNested.Reply_Msg2";
+}
+
 
 // ===================================================================
 
@@ -367,37 +590,145 @@ class Msg_Msg3::_Internal {
 
 Msg_Msg3::Msg_Msg3(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg3)
 }
 Msg_Msg3::Msg_Msg3(const Msg_Msg3& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_Msg3* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg3)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_Msg3::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_Msg3::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_Msg3::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PTestMostNested_2eproto_getter, &descriptor_table_PTestMostNested_2eproto_once,
-      file_level_metadata_PTestMostNested_2eproto[3]);
+inline void Msg_Msg3::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Msg_Msg3::~Msg_Msg3() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg3)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Msg_Msg3::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Msg_Msg3::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Msg_Msg3::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg3)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Msg_Msg3::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Msg_Msg3::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg3)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg3)
+  return target;
+}
+
+size_t Msg_Msg3::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg3)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Msg_Msg3::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_Msg3*>(
+      &from));
+}
+
+void Msg_Msg3::MergeFrom(const Msg_Msg3& from) {
+  Msg_Msg3* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg3)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Msg_Msg3::CopyFrom(const Msg_Msg3& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg3)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg_Msg3::IsInitialized() const {
+  return true;
+}
+
+void Msg_Msg3::InternalSwap(Msg_Msg3* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Msg_Msg3::GetTypeName() const {
+  return "protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg3";
+}
+
 
 // ===================================================================
 
@@ -407,37 +738,145 @@ class Msg_Msg4::_Internal {
 
 Msg_Msg4::Msg_Msg4(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg4)
 }
 Msg_Msg4::Msg_Msg4(const Msg_Msg4& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_Msg4* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg4)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_Msg4::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_Msg4::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_Msg4::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PTestMostNested_2eproto_getter, &descriptor_table_PTestMostNested_2eproto_once,
-      file_level_metadata_PTestMostNested_2eproto[4]);
+inline void Msg_Msg4::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Msg_Msg4::~Msg_Msg4() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg4)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Msg_Msg4::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Msg_Msg4::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Msg_Msg4::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg4)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Msg_Msg4::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Msg_Msg4::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg4)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg4)
+  return target;
+}
+
+size_t Msg_Msg4::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg4)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Msg_Msg4::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_Msg4*>(
+      &from));
+}
+
+void Msg_Msg4::MergeFrom(const Msg_Msg4& from) {
+  Msg_Msg4* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg4)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Msg_Msg4::CopyFrom(const Msg_Msg4& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg4)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg_Msg4::IsInitialized() const {
+  return true;
+}
+
+void Msg_Msg4::InternalSwap(Msg_Msg4* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Msg_Msg4::GetTypeName() const {
+  return "protobuf.mozilla._ipdltest.PTestMostNested.Msg_Msg4";
+}
+
 
 // ===================================================================
 
@@ -447,37 +886,145 @@ class Reply_Msg4::_Internal {
 
 Reply_Msg4::Reply_Msg4(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestMostNested.Reply_Msg4)
 }
 Reply_Msg4::Reply_Msg4(const Reply_Msg4& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_Msg4* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestMostNested.Reply_Msg4)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_Msg4::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_Msg4::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Reply_Msg4::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PTestMostNested_2eproto_getter, &descriptor_table_PTestMostNested_2eproto_once,
-      file_level_metadata_PTestMostNested_2eproto[5]);
+inline void Reply_Msg4::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Reply_Msg4::~Reply_Msg4() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestMostNested.Reply_Msg4)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Reply_Msg4::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Reply_Msg4::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Reply_Msg4::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestMostNested.Reply_Msg4)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Reply_Msg4::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Reply_Msg4::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestMostNested.Reply_Msg4)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestMostNested.Reply_Msg4)
+  return target;
+}
+
+size_t Reply_Msg4::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestMostNested.Reply_Msg4)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Reply_Msg4::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Reply_Msg4*>(
+      &from));
+}
+
+void Reply_Msg4::MergeFrom(const Reply_Msg4& from) {
+  Reply_Msg4* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestMostNested.Reply_Msg4)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Reply_Msg4::CopyFrom(const Reply_Msg4& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestMostNested.Reply_Msg4)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Reply_Msg4::IsInitialized() const {
+  return true;
+}
+
+void Reply_Msg4::InternalSwap(Reply_Msg4* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Reply_Msg4::GetTypeName() const {
+  return "protobuf.mozilla._ipdltest.PTestMostNested.Reply_Msg4";
+}
+
 
 // ===================================================================
 
@@ -487,37 +1034,145 @@ class Msg_Start::_Internal {
 
 Msg_Start::Msg_Start(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Start)
 }
 Msg_Start::Msg_Start(const Msg_Start& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_Start* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Start)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_Start::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_Start::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_Start::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PTestMostNested_2eproto_getter, &descriptor_table_PTestMostNested_2eproto_once,
-      file_level_metadata_PTestMostNested_2eproto[6]);
+inline void Msg_Start::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Msg_Start::~Msg_Start() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Start)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Msg_Start::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Msg_Start::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Msg_Start::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Start)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Msg_Start::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Msg_Start::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Start)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Start)
+  return target;
+}
+
+size_t Msg_Start::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Start)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Msg_Start::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_Start*>(
+      &from));
+}
+
+void Msg_Start::MergeFrom(const Msg_Start& from) {
+  Msg_Start* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Start)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Msg_Start::CopyFrom(const Msg_Start& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_Start)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg_Start::IsInitialized() const {
+  return true;
+}
+
+void Msg_Start::InternalSwap(Msg_Start* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Msg_Start::GetTypeName() const {
+  return "protobuf.mozilla._ipdltest.PTestMostNested.Msg_Start";
+}
+
 
 // ===================================================================
 
@@ -527,37 +1182,145 @@ class Msg_StartInner::_Internal {
 
 Msg_StartInner::Msg_StartInner(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestMostNested.Msg_StartInner)
 }
 Msg_StartInner::Msg_StartInner(const Msg_StartInner& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_StartInner* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestMostNested.Msg_StartInner)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_StartInner::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_StartInner::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_StartInner::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PTestMostNested_2eproto_getter, &descriptor_table_PTestMostNested_2eproto_once,
-      file_level_metadata_PTestMostNested_2eproto[7]);
+inline void Msg_StartInner::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Msg_StartInner::~Msg_StartInner() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestMostNested.Msg_StartInner)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Msg_StartInner::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Msg_StartInner::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Msg_StartInner::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_StartInner)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Msg_StartInner::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Msg_StartInner::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_StartInner)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestMostNested.Msg_StartInner)
+  return target;
+}
+
+size_t Msg_StartInner::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_StartInner)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Msg_StartInner::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_StartInner*>(
+      &from));
+}
+
+void Msg_StartInner::MergeFrom(const Msg_StartInner& from) {
+  Msg_StartInner* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_StartInner)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Msg_StartInner::CopyFrom(const Msg_StartInner& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestMostNested.Msg_StartInner)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg_StartInner::IsInitialized() const {
+  return true;
+}
+
+void Msg_StartInner::InternalSwap(Msg_StartInner* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Msg_StartInner::GetTypeName() const {
+  return "protobuf.mozilla._ipdltest.PTestMostNested.Msg_StartInner";
+}
+
 
 // ===================================================================
 
@@ -567,37 +1330,145 @@ class Reply_StartInner::_Internal {
 
 Reply_StartInner::Reply_StartInner(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestMostNested.Reply_StartInner)
 }
 Reply_StartInner::Reply_StartInner(const Reply_StartInner& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_StartInner* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestMostNested.Reply_StartInner)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_StartInner::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_StartInner::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Reply_StartInner::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PTestMostNested_2eproto_getter, &descriptor_table_PTestMostNested_2eproto_once,
-      file_level_metadata_PTestMostNested_2eproto[8]);
+inline void Reply_StartInner::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Reply_StartInner::~Reply_StartInner() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestMostNested.Reply_StartInner)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Reply_StartInner::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Reply_StartInner::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Reply_StartInner::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestMostNested.Reply_StartInner)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Reply_StartInner::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Reply_StartInner::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestMostNested.Reply_StartInner)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestMostNested.Reply_StartInner)
+  return target;
+}
+
+size_t Reply_StartInner::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestMostNested.Reply_StartInner)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Reply_StartInner::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Reply_StartInner*>(
+      &from));
+}
+
+void Reply_StartInner::MergeFrom(const Reply_StartInner& from) {
+  Reply_StartInner* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestMostNested.Reply_StartInner)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Reply_StartInner::CopyFrom(const Reply_StartInner& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestMostNested.Reply_StartInner)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Reply_StartInner::IsInitialized() const {
+  return true;
+}
+
+void Reply_StartInner::InternalSwap(Reply_StartInner* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Reply_StartInner::GetTypeName() const {
+  return "protobuf.mozilla._ipdltest.PTestMostNested.Reply_StartInner";
+}
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace PTestMostNested

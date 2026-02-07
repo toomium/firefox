@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -72,75 +69,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace net
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PProxyAutoConfig_2eproto[3];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PProxyAutoConfig_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PProxyAutoConfig_2eproto = nullptr;
-
-const uint32_t TableStruct_PProxyAutoConfig_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PProxyAutoConfig::Msg_ConfigurePAC, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PProxyAutoConfig::Msg_ConfigurePAC, _impl_.a_apacuri_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PProxyAutoConfig::Msg_ConfigurePAC, _impl_.a_apacscriptdata_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PProxyAutoConfig::Msg_ConfigurePAC, _impl_.a_aincludepath_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PProxyAutoConfig::Msg_ConfigurePAC, _impl_.a_aextraheapsize_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PProxyAutoConfig::Msg_GetProxyForURI, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PProxyAutoConfig::Msg_GetProxyForURI, _impl_.a_atesturi_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PProxyAutoConfig::Msg_GetProxyForURI, _impl_.a_atesthost_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PProxyAutoConfig::Reply_GetProxyForURI, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PProxyAutoConfig::Reply_GetProxyForURI, _impl_.a_astatus_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PProxyAutoConfig::Reply_GetProxyForURI, _impl_.a_aresult_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::net::PProxyAutoConfig::Msg_ConfigurePAC)},
-  { 10, -1, -1, sizeof(::protobuf::mozilla::net::PProxyAutoConfig::Msg_GetProxyForURI)},
-  { 18, -1, -1, sizeof(::protobuf::mozilla::net::PProxyAutoConfig::Reply_GetProxyForURI)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::net::PProxyAutoConfig::_Msg_ConfigurePAC_default_instance_._instance,
-  &::protobuf::mozilla::net::PProxyAutoConfig::_Msg_GetProxyForURI_default_instance_._instance,
-  &::protobuf::mozilla::net::PProxyAutoConfig::_Reply_GetProxyForURI_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PProxyAutoConfig_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\026PProxyAutoConfig.proto\022%protobuf.mozil"
-  "la.net.PProxyAutoConfig\"q\n\020Msg_Configure"
-  "PAC\022\021\n\ta_aPACURI\030\001 \001(\t\022\030\n\020a_aPACScriptDa"
-  "ta\030\002 \001(\t\022\026\n\016a_aIncludePath\030\003 \001(\010\022\030\n\020a_aE"
-  "xtraHeapSize\030\004 \001(\r\"=\n\022Msg_GetProxyForURI"
-  "\022\022\n\na_aTestURI\030\001 \001(\t\022\023\n\013a_aTestHost\030\002 \001("
-  "\t\"<\n\024Reply_GetProxyForURI\022\021\n\ta_aStatus\030\001"
-  " \001(\014\022\021\n\ta_aResult\030\002 \001(\tb\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_PProxyAutoConfig_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PProxyAutoConfig_2eproto = {
-    false, false, 311, descriptor_table_protodef_PProxyAutoConfig_2eproto,
-    "PProxyAutoConfig.proto",
-    &descriptor_table_PProxyAutoConfig_2eproto_once, nullptr, 0, 3,
-    schemas, file_default_instances, TableStruct_PProxyAutoConfig_2eproto::offsets,
-    file_level_metadata_PProxyAutoConfig_2eproto, file_level_enum_descriptors_PProxyAutoConfig_2eproto,
-    file_level_service_descriptors_PProxyAutoConfig_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PProxyAutoConfig_2eproto_getter() {
-  return &descriptor_table_PProxyAutoConfig_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PProxyAutoConfig_2eproto(&descriptor_table_PProxyAutoConfig_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace net {
@@ -154,12 +82,12 @@ class Msg_ConfigurePAC::_Internal {
 
 Msg_ConfigurePAC::Msg_ConfigurePAC(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC)
 }
 Msg_ConfigurePAC::Msg_ConfigurePAC(const Msg_ConfigurePAC& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_ConfigurePAC* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_apacuri_){}
@@ -168,7 +96,7 @@ Msg_ConfigurePAC::Msg_ConfigurePAC(const Msg_ConfigurePAC& from)
     , decltype(_impl_.a_aextraheapsize_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_apacuri_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_apacuri_.Set("", GetArenaForAllocation());
@@ -214,7 +142,7 @@ inline void Msg_ConfigurePAC::SharedCtor(
 
 Msg_ConfigurePAC::~Msg_ConfigurePAC() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -242,7 +170,7 @@ void Msg_ConfigurePAC::Clear() {
   ::memset(&_impl_.a_aincludepath_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_aextraheapsize_) -
       reinterpret_cast<char*>(&_impl_.a_aincludepath_)) + sizeof(_impl_.a_aextraheapsize_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_ConfigurePAC::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -257,7 +185,7 @@ const char* Msg_ConfigurePAC::_InternalParse(const char* ptr, ::_pbi::ParseConte
           auto str = _internal_mutable_a_apacuri();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.a_aPACURI"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -267,7 +195,7 @@ const char* Msg_ConfigurePAC::_InternalParse(const char* ptr, ::_pbi::ParseConte
           auto str = _internal_mutable_a_apacscriptdata();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC.a_aPACScriptData"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -298,7 +226,7 @@ const char* Msg_ConfigurePAC::_InternalParse(const char* ptr, ::_pbi::ParseConte
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -349,8 +277,8 @@ uint8_t* Msg_ConfigurePAC::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC)
   return target;
@@ -388,19 +316,22 @@ size_t Msg_ConfigurePAC::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_aextraheapsize());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_ConfigurePAC::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Msg_ConfigurePAC::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_ConfigurePAC::GetClassData() const { return &_class_data_; }
+void Msg_ConfigurePAC::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_ConfigurePAC*>(
+      &from));
+}
 
-
-void Msg_ConfigurePAC::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Msg_ConfigurePAC*>(&to_msg);
-  auto& from = static_cast<const Msg_ConfigurePAC&>(from_msg);
+void Msg_ConfigurePAC::MergeFrom(const Msg_ConfigurePAC& from) {
+  Msg_ConfigurePAC* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -418,7 +349,7 @@ void Msg_ConfigurePAC::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const
   if (from._internal_a_aextraheapsize() != 0) {
     _this->_internal_set_a_aextraheapsize(from._internal_a_aextraheapsize());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Msg_ConfigurePAC::CopyFrom(const Msg_ConfigurePAC& from) {
@@ -453,11 +384,10 @@ void Msg_ConfigurePAC::InternalSwap(Msg_ConfigurePAC* other) {
           reinterpret_cast<char*>(&other->_impl_.a_aincludepath_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_ConfigurePAC::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PProxyAutoConfig_2eproto_getter, &descriptor_table_PProxyAutoConfig_2eproto_once,
-      file_level_metadata_PProxyAutoConfig_2eproto[0]);
+std::string Msg_ConfigurePAC::GetTypeName() const {
+  return "protobuf.mozilla.net.PProxyAutoConfig.Msg_ConfigurePAC";
 }
+
 
 // ===================================================================
 
@@ -467,19 +397,19 @@ class Msg_GetProxyForURI::_Internal {
 
 Msg_GetProxyForURI::Msg_GetProxyForURI(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI)
 }
 Msg_GetProxyForURI::Msg_GetProxyForURI(const Msg_GetProxyForURI& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_GetProxyForURI* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_atesturi_){}
     , decltype(_impl_.a_atesthost_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_atesturi_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_atesturi_.Set("", GetArenaForAllocation());
@@ -520,7 +450,7 @@ inline void Msg_GetProxyForURI::SharedCtor(
 
 Msg_GetProxyForURI::~Msg_GetProxyForURI() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -545,7 +475,7 @@ void Msg_GetProxyForURI::Clear() {
 
   _impl_.a_atesturi_.ClearToEmpty();
   _impl_.a_atesthost_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_GetProxyForURI::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -560,7 +490,7 @@ const char* Msg_GetProxyForURI::_InternalParse(const char* ptr, ::_pbi::ParseCon
           auto str = _internal_mutable_a_atesturi();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.a_aTestURI"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -570,7 +500,7 @@ const char* Msg_GetProxyForURI::_InternalParse(const char* ptr, ::_pbi::ParseCon
           auto str = _internal_mutable_a_atesthost();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI.a_aTestHost"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -585,7 +515,7 @@ const char* Msg_GetProxyForURI::_InternalParse(const char* ptr, ::_pbi::ParseCon
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -624,8 +554,8 @@ uint8_t* Msg_GetProxyForURI::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI)
   return target;
@@ -653,19 +583,22 @@ size_t Msg_GetProxyForURI::ByteSizeLong() const {
         this->_internal_a_atesthost());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_GetProxyForURI::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Msg_GetProxyForURI::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_GetProxyForURI::GetClassData() const { return &_class_data_; }
+void Msg_GetProxyForURI::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_GetProxyForURI*>(
+      &from));
+}
 
-
-void Msg_GetProxyForURI::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Msg_GetProxyForURI*>(&to_msg);
-  auto& from = static_cast<const Msg_GetProxyForURI&>(from_msg);
+void Msg_GetProxyForURI::MergeFrom(const Msg_GetProxyForURI& from) {
+  Msg_GetProxyForURI* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -677,7 +610,7 @@ void Msg_GetProxyForURI::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
   if (!from._internal_a_atesthost().empty()) {
     _this->_internal_set_a_atesthost(from._internal_a_atesthost());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Msg_GetProxyForURI::CopyFrom(const Msg_GetProxyForURI& from) {
@@ -706,11 +639,10 @@ void Msg_GetProxyForURI::InternalSwap(Msg_GetProxyForURI* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_GetProxyForURI::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PProxyAutoConfig_2eproto_getter, &descriptor_table_PProxyAutoConfig_2eproto_once,
-      file_level_metadata_PProxyAutoConfig_2eproto[1]);
+std::string Msg_GetProxyForURI::GetTypeName() const {
+  return "protobuf.mozilla.net.PProxyAutoConfig.Msg_GetProxyForURI";
 }
+
 
 // ===================================================================
 
@@ -720,19 +652,19 @@ class Reply_GetProxyForURI::_Internal {
 
 Reply_GetProxyForURI::Reply_GetProxyForURI(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI)
 }
 Reply_GetProxyForURI::Reply_GetProxyForURI(const Reply_GetProxyForURI& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_GetProxyForURI* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_astatus_){}
     , decltype(_impl_.a_aresult_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_astatus_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_astatus_.Set("", GetArenaForAllocation());
@@ -773,7 +705,7 @@ inline void Reply_GetProxyForURI::SharedCtor(
 
 Reply_GetProxyForURI::~Reply_GetProxyForURI() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -798,7 +730,7 @@ void Reply_GetProxyForURI::Clear() {
 
   _impl_.a_astatus_.ClearToEmpty();
   _impl_.a_aresult_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_GetProxyForURI::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -822,7 +754,7 @@ const char* Reply_GetProxyForURI::_InternalParse(const char* ptr, ::_pbi::ParseC
           auto str = _internal_mutable_a_aresult();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI.a_aResult"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -837,7 +769,7 @@ const char* Reply_GetProxyForURI::_InternalParse(const char* ptr, ::_pbi::ParseC
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -872,8 +804,8 @@ uint8_t* Reply_GetProxyForURI::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI)
   return target;
@@ -901,19 +833,22 @@ size_t Reply_GetProxyForURI::ByteSizeLong() const {
         this->_internal_a_aresult());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_GetProxyForURI::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Reply_GetProxyForURI::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_GetProxyForURI::GetClassData() const { return &_class_data_; }
+void Reply_GetProxyForURI::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Reply_GetProxyForURI*>(
+      &from));
+}
 
-
-void Reply_GetProxyForURI::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Reply_GetProxyForURI*>(&to_msg);
-  auto& from = static_cast<const Reply_GetProxyForURI&>(from_msg);
+void Reply_GetProxyForURI::MergeFrom(const Reply_GetProxyForURI& from) {
+  Reply_GetProxyForURI* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -925,7 +860,7 @@ void Reply_GetProxyForURI::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
   if (!from._internal_a_aresult().empty()) {
     _this->_internal_set_a_aresult(from._internal_a_aresult());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Reply_GetProxyForURI::CopyFrom(const Reply_GetProxyForURI& from) {
@@ -954,11 +889,10 @@ void Reply_GetProxyForURI::InternalSwap(Reply_GetProxyForURI* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Reply_GetProxyForURI::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PProxyAutoConfig_2eproto_getter, &descriptor_table_PProxyAutoConfig_2eproto_once,
-      file_level_metadata_PProxyAutoConfig_2eproto[2]);
+std::string Reply_GetProxyForURI::GetTypeName() const {
+  return "protobuf.mozilla.net.PProxyAutoConfig.Reply_GetProxyForURI";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace PProxyAutoConfig

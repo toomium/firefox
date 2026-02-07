@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -76,7 +73,8 @@ struct SDBRequestWriteParamsDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SDBRequestWriteParamsDefaultTypeInternal _SDBRequestWriteParams_default_instance_;
 PROTOBUF_CONSTEXPR SDBRequestCloseParams::SDBRequestCloseParams(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct SDBRequestCloseParamsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SDBRequestCloseParamsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -103,111 +101,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto[6];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::SDBRequestOpenParams, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::SDBRequestOpenParams, _impl_.a_name_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::SDBRequestSeekParams, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::SDBRequestSeekParams, _impl_.a_offset_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::SDBRequestReadParams, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::SDBRequestReadParams, _impl_.a_size_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::SDBRequestWriteParams, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::SDBRequestWriteParams, _impl_.a_data_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::SDBRequestCloseParams, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::SDBRequestParams, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::SDBRequestParams, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::SDBRequestParams, _impl_.content_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::dom::SDBRequestOpenParams)},
-  { 7, -1, -1, sizeof(::protobuf::mozilla::dom::SDBRequestSeekParams)},
-  { 14, -1, -1, sizeof(::protobuf::mozilla::dom::SDBRequestReadParams)},
-  { 21, -1, -1, sizeof(::protobuf::mozilla::dom::SDBRequestWriteParams)},
-  { 28, -1, -1, sizeof(::protobuf::mozilla::dom::SDBRequestCloseParams)},
-  { 34, -1, -1, sizeof(::protobuf::mozilla::dom::SDBRequestParams)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::dom::_SDBRequestOpenParams_default_instance_._instance,
-  &::protobuf::mozilla::dom::_SDBRequestSeekParams_default_instance_._instance,
-  &::protobuf::mozilla::dom::_SDBRequestReadParams_default_instance_._instance,
-  &::protobuf::mozilla::dom::_SDBRequestWriteParams_default_instance_._instance,
-  &::protobuf::mozilla::dom::_SDBRequestCloseParams_default_instance_._instance,
-  &::protobuf::mozilla::dom::_SDBRequestParams_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n5PBackgroundSDBConnection_protobuf.mozi"
-  "lla.dom.h.proto\022\024protobuf.mozilla.dom\"&\n"
-  "\024SDBRequestOpenParams\022\016\n\006a_name\030\001 \001(\t\"(\n"
-  "\024SDBRequestSeekParams\022\020\n\010a_offset\030\001 \001(\004\""
-  "&\n\024SDBRequestReadParams\022\016\n\006a_size\030\001 \001(\004\""
-  "\'\n\025SDBRequestWriteParams\022\016\n\006a_data\030\001 \001(\t"
-  "\"\027\n\025SDBRequestCloseParams\"\261\003\n\020SDBRequest"
-  "Params\022N\n\030a_mVSDBRequestOpenParams\030\001 \001(\013"
-  "2*.protobuf.mozilla.dom.SDBRequestOpenPa"
-  "ramsH\000\022N\n\030a_mVSDBRequestSeekParams\030\002 \001(\013"
-  "2*.protobuf.mozilla.dom.SDBRequestSeekPa"
-  "ramsH\000\022N\n\030a_mVSDBRequestReadParams\030\003 \001(\013"
-  "2*.protobuf.mozilla.dom.SDBRequestReadPa"
-  "ramsH\000\022P\n\031a_mVSDBRequestWriteParams\030\004 \001("
-  "\0132+.protobuf.mozilla.dom.SDBRequestWrite"
-  "ParamsH\000\022P\n\031a_mVSDBRequestCloseParams\030\005 "
-  "\001(\0132+.protobuf.mozilla.dom.SDBRequestClo"
-  "seParamsH\000B\t\n\007contentb\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto = {
-    false, false, 709, descriptor_table_protodef_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    "PBackgroundSDBConnection_protobuf.mozilla.dom.h.proto",
-    &descriptor_table_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto_once, nullptr, 0, 6,
-    schemas, file_default_instances, TableStruct_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets,
-    file_level_metadata_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto, file_level_enum_descriptors_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    file_level_service_descriptors_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter() {
-  return &descriptor_table_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto(&descriptor_table_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -220,18 +113,18 @@ class SDBRequestOpenParams::_Internal {
 
 SDBRequestOpenParams::SDBRequestOpenParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.SDBRequestOpenParams)
 }
 SDBRequestOpenParams::SDBRequestOpenParams(const SDBRequestOpenParams& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SDBRequestOpenParams* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_name_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_name_.Set("", GetArenaForAllocation());
@@ -259,7 +152,7 @@ inline void SDBRequestOpenParams::SharedCtor(
 
 SDBRequestOpenParams::~SDBRequestOpenParams() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.SDBRequestOpenParams)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -282,7 +175,7 @@ void SDBRequestOpenParams::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_name_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SDBRequestOpenParams::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -297,7 +190,7 @@ const char* SDBRequestOpenParams::_InternalParse(const char* ptr, ::_pbi::ParseC
           auto str = _internal_mutable_a_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.SDBRequestOpenParams.a_name"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -312,7 +205,7 @@ const char* SDBRequestOpenParams::_InternalParse(const char* ptr, ::_pbi::ParseC
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -341,8 +234,8 @@ uint8_t* SDBRequestOpenParams::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.SDBRequestOpenParams)
   return target;
@@ -363,19 +256,22 @@ size_t SDBRequestOpenParams::ByteSizeLong() const {
         this->_internal_a_name());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SDBRequestOpenParams::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SDBRequestOpenParams::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SDBRequestOpenParams::GetClassData() const { return &_class_data_; }
+void SDBRequestOpenParams::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SDBRequestOpenParams*>(
+      &from));
+}
 
-
-void SDBRequestOpenParams::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SDBRequestOpenParams*>(&to_msg);
-  auto& from = static_cast<const SDBRequestOpenParams&>(from_msg);
+void SDBRequestOpenParams::MergeFrom(const SDBRequestOpenParams& from) {
+  SDBRequestOpenParams* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.SDBRequestOpenParams)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -384,7 +280,7 @@ void SDBRequestOpenParams::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
   if (!from._internal_a_name().empty()) {
     _this->_internal_set_a_name(from._internal_a_name());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SDBRequestOpenParams::CopyFrom(const SDBRequestOpenParams& from) {
@@ -409,11 +305,10 @@ void SDBRequestOpenParams::InternalSwap(SDBRequestOpenParams* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SDBRequestOpenParams::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto[0]);
+std::string SDBRequestOpenParams::GetTypeName() const {
+  return "protobuf.mozilla.dom.SDBRequestOpenParams";
 }
+
 
 // ===================================================================
 
@@ -423,18 +318,18 @@ class SDBRequestSeekParams::_Internal {
 
 SDBRequestSeekParams::SDBRequestSeekParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.SDBRequestSeekParams)
 }
 SDBRequestSeekParams::SDBRequestSeekParams(const SDBRequestSeekParams& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SDBRequestSeekParams* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_offset_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_offset_ = from._impl_.a_offset_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.SDBRequestSeekParams)
 }
@@ -451,7 +346,7 @@ inline void SDBRequestSeekParams::SharedCtor(
 
 SDBRequestSeekParams::~SDBRequestSeekParams() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.SDBRequestSeekParams)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -473,7 +368,7 @@ void SDBRequestSeekParams::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_offset_ = uint64_t{0u};
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SDBRequestSeekParams::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -501,7 +396,7 @@ const char* SDBRequestSeekParams::_InternalParse(const char* ptr, ::_pbi::ParseC
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -526,8 +421,8 @@ uint8_t* SDBRequestSeekParams::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.SDBRequestSeekParams)
   return target;
@@ -546,19 +441,22 @@ size_t SDBRequestSeekParams::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_offset());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SDBRequestSeekParams::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SDBRequestSeekParams::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SDBRequestSeekParams::GetClassData() const { return &_class_data_; }
+void SDBRequestSeekParams::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SDBRequestSeekParams*>(
+      &from));
+}
 
-
-void SDBRequestSeekParams::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SDBRequestSeekParams*>(&to_msg);
-  auto& from = static_cast<const SDBRequestSeekParams&>(from_msg);
+void SDBRequestSeekParams::MergeFrom(const SDBRequestSeekParams& from) {
+  SDBRequestSeekParams* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.SDBRequestSeekParams)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -567,7 +465,7 @@ void SDBRequestSeekParams::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
   if (from._internal_a_offset() != 0) {
     _this->_internal_set_a_offset(from._internal_a_offset());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SDBRequestSeekParams::CopyFrom(const SDBRequestSeekParams& from) {
@@ -587,11 +485,10 @@ void SDBRequestSeekParams::InternalSwap(SDBRequestSeekParams* other) {
   swap(_impl_.a_offset_, other->_impl_.a_offset_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SDBRequestSeekParams::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto[1]);
+std::string SDBRequestSeekParams::GetTypeName() const {
+  return "protobuf.mozilla.dom.SDBRequestSeekParams";
 }
+
 
 // ===================================================================
 
@@ -601,18 +498,18 @@ class SDBRequestReadParams::_Internal {
 
 SDBRequestReadParams::SDBRequestReadParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.SDBRequestReadParams)
 }
 SDBRequestReadParams::SDBRequestReadParams(const SDBRequestReadParams& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SDBRequestReadParams* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_size_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_size_ = from._impl_.a_size_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.SDBRequestReadParams)
 }
@@ -629,7 +526,7 @@ inline void SDBRequestReadParams::SharedCtor(
 
 SDBRequestReadParams::~SDBRequestReadParams() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.SDBRequestReadParams)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -651,7 +548,7 @@ void SDBRequestReadParams::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_size_ = uint64_t{0u};
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SDBRequestReadParams::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -679,7 +576,7 @@ const char* SDBRequestReadParams::_InternalParse(const char* ptr, ::_pbi::ParseC
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -704,8 +601,8 @@ uint8_t* SDBRequestReadParams::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.SDBRequestReadParams)
   return target;
@@ -724,19 +621,22 @@ size_t SDBRequestReadParams::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_size());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SDBRequestReadParams::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SDBRequestReadParams::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SDBRequestReadParams::GetClassData() const { return &_class_data_; }
+void SDBRequestReadParams::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SDBRequestReadParams*>(
+      &from));
+}
 
-
-void SDBRequestReadParams::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SDBRequestReadParams*>(&to_msg);
-  auto& from = static_cast<const SDBRequestReadParams&>(from_msg);
+void SDBRequestReadParams::MergeFrom(const SDBRequestReadParams& from) {
+  SDBRequestReadParams* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.SDBRequestReadParams)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -745,7 +645,7 @@ void SDBRequestReadParams::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
   if (from._internal_a_size() != 0) {
     _this->_internal_set_a_size(from._internal_a_size());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SDBRequestReadParams::CopyFrom(const SDBRequestReadParams& from) {
@@ -765,11 +665,10 @@ void SDBRequestReadParams::InternalSwap(SDBRequestReadParams* other) {
   swap(_impl_.a_size_, other->_impl_.a_size_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SDBRequestReadParams::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto[2]);
+std::string SDBRequestReadParams::GetTypeName() const {
+  return "protobuf.mozilla.dom.SDBRequestReadParams";
 }
+
 
 // ===================================================================
 
@@ -779,18 +678,18 @@ class SDBRequestWriteParams::_Internal {
 
 SDBRequestWriteParams::SDBRequestWriteParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.SDBRequestWriteParams)
 }
 SDBRequestWriteParams::SDBRequestWriteParams(const SDBRequestWriteParams& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SDBRequestWriteParams* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_data_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_data_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_data_.Set("", GetArenaForAllocation());
@@ -818,7 +717,7 @@ inline void SDBRequestWriteParams::SharedCtor(
 
 SDBRequestWriteParams::~SDBRequestWriteParams() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.SDBRequestWriteParams)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -841,7 +740,7 @@ void SDBRequestWriteParams::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_data_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SDBRequestWriteParams::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -856,7 +755,7 @@ const char* SDBRequestWriteParams::_InternalParse(const char* ptr, ::_pbi::Parse
           auto str = _internal_mutable_a_data();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.SDBRequestWriteParams.a_data"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -871,7 +770,7 @@ const char* SDBRequestWriteParams::_InternalParse(const char* ptr, ::_pbi::Parse
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -900,8 +799,8 @@ uint8_t* SDBRequestWriteParams::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.SDBRequestWriteParams)
   return target;
@@ -922,19 +821,22 @@ size_t SDBRequestWriteParams::ByteSizeLong() const {
         this->_internal_a_data());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SDBRequestWriteParams::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SDBRequestWriteParams::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SDBRequestWriteParams::GetClassData() const { return &_class_data_; }
+void SDBRequestWriteParams::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SDBRequestWriteParams*>(
+      &from));
+}
 
-
-void SDBRequestWriteParams::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SDBRequestWriteParams*>(&to_msg);
-  auto& from = static_cast<const SDBRequestWriteParams&>(from_msg);
+void SDBRequestWriteParams::MergeFrom(const SDBRequestWriteParams& from) {
+  SDBRequestWriteParams* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.SDBRequestWriteParams)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -943,7 +845,7 @@ void SDBRequestWriteParams::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
   if (!from._internal_a_data().empty()) {
     _this->_internal_set_a_data(from._internal_a_data());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SDBRequestWriteParams::CopyFrom(const SDBRequestWriteParams& from) {
@@ -968,11 +870,10 @@ void SDBRequestWriteParams::InternalSwap(SDBRequestWriteParams* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SDBRequestWriteParams::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto[3]);
+std::string SDBRequestWriteParams::GetTypeName() const {
+  return "protobuf.mozilla.dom.SDBRequestWriteParams";
 }
+
 
 // ===================================================================
 
@@ -982,37 +883,145 @@ class SDBRequestCloseParams::_Internal {
 
 SDBRequestCloseParams::SDBRequestCloseParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.SDBRequestCloseParams)
 }
 SDBRequestCloseParams::SDBRequestCloseParams(const SDBRequestCloseParams& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SDBRequestCloseParams* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.SDBRequestCloseParams)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SDBRequestCloseParams::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SDBRequestCloseParams::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata SDBRequestCloseParams::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto[4]);
+inline void SDBRequestCloseParams::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+SDBRequestCloseParams::~SDBRequestCloseParams() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.SDBRequestCloseParams)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SDBRequestCloseParams::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void SDBRequestCloseParams::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SDBRequestCloseParams::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.dom.SDBRequestCloseParams)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* SDBRequestCloseParams::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* SDBRequestCloseParams::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.dom.SDBRequestCloseParams)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.SDBRequestCloseParams)
+  return target;
+}
+
+size_t SDBRequestCloseParams::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.SDBRequestCloseParams)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void SDBRequestCloseParams::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SDBRequestCloseParams*>(
+      &from));
+}
+
+void SDBRequestCloseParams::MergeFrom(const SDBRequestCloseParams& from) {
+  SDBRequestCloseParams* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.SDBRequestCloseParams)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void SDBRequestCloseParams::CopyFrom(const SDBRequestCloseParams& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.dom.SDBRequestCloseParams)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SDBRequestCloseParams::IsInitialized() const {
+  return true;
+}
+
+void SDBRequestCloseParams::InternalSwap(SDBRequestCloseParams* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string SDBRequestCloseParams::GetTypeName() const {
+  return "protobuf.mozilla.dom.SDBRequestCloseParams";
+}
+
 
 // ===================================================================
 
@@ -1122,19 +1131,19 @@ void SDBRequestParams::set_allocated_a_mvsdbrequestcloseparams(::protobuf::mozil
 }
 SDBRequestParams::SDBRequestParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.SDBRequestParams)
 }
 SDBRequestParams::SDBRequestParams(const SDBRequestParams& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SDBRequestParams* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVSDBRequestOpenParams: {
@@ -1183,7 +1192,7 @@ inline void SDBRequestParams::SharedCtor(
 
 SDBRequestParams::~SDBRequestParams() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.SDBRequestParams)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1249,7 +1258,7 @@ void SDBRequestParams::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SDBRequestParams::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1309,7 +1318,7 @@ const char* SDBRequestParams::_InternalParse(const char* ptr, ::_pbi::ParseConte
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1363,8 +1372,8 @@ uint8_t* SDBRequestParams::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.SDBRequestParams)
   return target;
@@ -1418,19 +1427,22 @@ size_t SDBRequestParams::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SDBRequestParams::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SDBRequestParams::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SDBRequestParams::GetClassData() const { return &_class_data_; }
+void SDBRequestParams::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SDBRequestParams*>(
+      &from));
+}
 
-
-void SDBRequestParams::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SDBRequestParams*>(&to_msg);
-  auto& from = static_cast<const SDBRequestParams&>(from_msg);
+void SDBRequestParams::MergeFrom(const SDBRequestParams& from) {
+  SDBRequestParams* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.SDBRequestParams)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1466,7 +1478,7 @@ void SDBRequestParams::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SDBRequestParams::CopyFrom(const SDBRequestParams& from) {
@@ -1487,11 +1499,10 @@ void SDBRequestParams::InternalSwap(SDBRequestParams* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SDBRequestParams::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PBackgroundSDBConnection_5fprotobuf_2emozilla_2edom_2eh_2eproto[5]);
+std::string SDBRequestParams::GetTypeName() const {
+  return "protobuf.mozilla.dom.SDBRequestParams";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace dom

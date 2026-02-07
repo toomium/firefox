@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -55,60 +52,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace net
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PSocketProcessBridge_2eproto[2];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PSocketProcessBridge_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PSocketProcessBridge_2eproto = nullptr;
-
-const uint32_t TableStruct_PSocketProcessBridge_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBridge::Msg_InitBackgroundDataBridge, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBridge::Msg_InitBackgroundDataBridge, _impl_.a_aendpoint_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBridge::Msg_InitBackgroundDataBridge, _impl_.a_achannelid_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBridge::Msg_InitMediaTransport, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBridge::Msg_InitMediaTransport, _impl_.a_aendpoint_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::net::PSocketProcessBridge::Msg_InitBackgroundDataBridge)},
-  { 8, -1, -1, sizeof(::protobuf::mozilla::net::PSocketProcessBridge::Msg_InitMediaTransport)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::net::PSocketProcessBridge::_Msg_InitBackgroundDataBridge_default_instance_._instance,
-  &::protobuf::mozilla::net::PSocketProcessBridge::_Msg_InitMediaTransport_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PSocketProcessBridge_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\032PSocketProcessBridge.proto\022)protobuf.m"
-  "ozilla.net.PSocketProcessBridge\"I\n\034Msg_I"
-  "nitBackgroundDataBridge\022\023\n\013a_aEndpoint\030\001"
-  " \001(\014\022\024\n\014a_aChannelID\030\002 \001(\004\"-\n\026Msg_InitMe"
-  "diaTransport\022\023\n\013a_aEndpoint\030\001 \001(\014b\006proto"
-  "3"
-  ;
-static ::_pbi::once_flag descriptor_table_PSocketProcessBridge_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PSocketProcessBridge_2eproto = {
-    false, false, 201, descriptor_table_protodef_PSocketProcessBridge_2eproto,
-    "PSocketProcessBridge.proto",
-    &descriptor_table_PSocketProcessBridge_2eproto_once, nullptr, 0, 2,
-    schemas, file_default_instances, TableStruct_PSocketProcessBridge_2eproto::offsets,
-    file_level_metadata_PSocketProcessBridge_2eproto, file_level_enum_descriptors_PSocketProcessBridge_2eproto,
-    file_level_service_descriptors_PSocketProcessBridge_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PSocketProcessBridge_2eproto_getter() {
-  return &descriptor_table_PSocketProcessBridge_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PSocketProcessBridge_2eproto(&descriptor_table_PSocketProcessBridge_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace net {
@@ -122,19 +65,19 @@ class Msg_InitBackgroundDataBridge::_Internal {
 
 Msg_InitBackgroundDataBridge::Msg_InitBackgroundDataBridge(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.net.PSocketProcessBridge.Msg_InitBackgroundDataBridge)
 }
 Msg_InitBackgroundDataBridge::Msg_InitBackgroundDataBridge(const Msg_InitBackgroundDataBridge& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_InitBackgroundDataBridge* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_aendpoint_){}
     , decltype(_impl_.a_achannelid_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_aendpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
@@ -164,7 +107,7 @@ inline void Msg_InitBackgroundDataBridge::SharedCtor(
 
 Msg_InitBackgroundDataBridge::~Msg_InitBackgroundDataBridge() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.net.PSocketProcessBridge.Msg_InitBackgroundDataBridge)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -188,7 +131,7 @@ void Msg_InitBackgroundDataBridge::Clear() {
 
   _impl_.a_aendpoint_.ClearToEmpty();
   _impl_.a_achannelid_ = uint64_t{0u};
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_InitBackgroundDataBridge::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -225,7 +168,7 @@ const char* Msg_InitBackgroundDataBridge::_InternalParse(const char* ptr, ::_pbi
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -256,8 +199,8 @@ uint8_t* Msg_InitBackgroundDataBridge::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.net.PSocketProcessBridge.Msg_InitBackgroundDataBridge)
   return target;
@@ -283,19 +226,22 @@ size_t Msg_InitBackgroundDataBridge::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_achannelid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_InitBackgroundDataBridge::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Msg_InitBackgroundDataBridge::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_InitBackgroundDataBridge::GetClassData() const { return &_class_data_; }
+void Msg_InitBackgroundDataBridge::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_InitBackgroundDataBridge*>(
+      &from));
+}
 
-
-void Msg_InitBackgroundDataBridge::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Msg_InitBackgroundDataBridge*>(&to_msg);
-  auto& from = static_cast<const Msg_InitBackgroundDataBridge&>(from_msg);
+void Msg_InitBackgroundDataBridge::MergeFrom(const Msg_InitBackgroundDataBridge& from) {
+  Msg_InitBackgroundDataBridge* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.net.PSocketProcessBridge.Msg_InitBackgroundDataBridge)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -307,7 +253,7 @@ void Msg_InitBackgroundDataBridge::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& t
   if (from._internal_a_achannelid() != 0) {
     _this->_internal_set_a_achannelid(from._internal_a_achannelid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Msg_InitBackgroundDataBridge::CopyFrom(const Msg_InitBackgroundDataBridge& from) {
@@ -333,11 +279,10 @@ void Msg_InitBackgroundDataBridge::InternalSwap(Msg_InitBackgroundDataBridge* ot
   swap(_impl_.a_achannelid_, other->_impl_.a_achannelid_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_InitBackgroundDataBridge::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PSocketProcessBridge_2eproto_getter, &descriptor_table_PSocketProcessBridge_2eproto_once,
-      file_level_metadata_PSocketProcessBridge_2eproto[0]);
+std::string Msg_InitBackgroundDataBridge::GetTypeName() const {
+  return "protobuf.mozilla.net.PSocketProcessBridge.Msg_InitBackgroundDataBridge";
 }
+
 
 // ===================================================================
 
@@ -347,18 +292,18 @@ class Msg_InitMediaTransport::_Internal {
 
 Msg_InitMediaTransport::Msg_InitMediaTransport(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.net.PSocketProcessBridge.Msg_InitMediaTransport)
 }
 Msg_InitMediaTransport::Msg_InitMediaTransport(const Msg_InitMediaTransport& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_InitMediaTransport* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_aendpoint_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_aendpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
@@ -386,7 +331,7 @@ inline void Msg_InitMediaTransport::SharedCtor(
 
 Msg_InitMediaTransport::~Msg_InitMediaTransport() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.net.PSocketProcessBridge.Msg_InitMediaTransport)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -409,7 +354,7 @@ void Msg_InitMediaTransport::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_aendpoint_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_InitMediaTransport::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -438,7 +383,7 @@ const char* Msg_InitMediaTransport::_InternalParse(const char* ptr, ::_pbi::Pars
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -463,8 +408,8 @@ uint8_t* Msg_InitMediaTransport::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.net.PSocketProcessBridge.Msg_InitMediaTransport)
   return target;
@@ -485,19 +430,22 @@ size_t Msg_InitMediaTransport::ByteSizeLong() const {
         this->_internal_a_aendpoint());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_InitMediaTransport::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Msg_InitMediaTransport::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_InitMediaTransport::GetClassData() const { return &_class_data_; }
+void Msg_InitMediaTransport::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_InitMediaTransport*>(
+      &from));
+}
 
-
-void Msg_InitMediaTransport::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Msg_InitMediaTransport*>(&to_msg);
-  auto& from = static_cast<const Msg_InitMediaTransport&>(from_msg);
+void Msg_InitMediaTransport::MergeFrom(const Msg_InitMediaTransport& from) {
+  Msg_InitMediaTransport* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.net.PSocketProcessBridge.Msg_InitMediaTransport)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -506,7 +454,7 @@ void Msg_InitMediaTransport::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg,
   if (!from._internal_a_aendpoint().empty()) {
     _this->_internal_set_a_aendpoint(from._internal_a_aendpoint());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Msg_InitMediaTransport::CopyFrom(const Msg_InitMediaTransport& from) {
@@ -531,11 +479,10 @@ void Msg_InitMediaTransport::InternalSwap(Msg_InitMediaTransport* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_InitMediaTransport::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PSocketProcessBridge_2eproto_getter, &descriptor_table_PSocketProcessBridge_2eproto_once,
-      file_level_metadata_PSocketProcessBridge_2eproto[1]);
+std::string Msg_InitMediaTransport::GetTypeName() const {
+  return "protobuf.mozilla.net.PSocketProcessBridge.Msg_InitMediaTransport";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace PSocketProcessBridge

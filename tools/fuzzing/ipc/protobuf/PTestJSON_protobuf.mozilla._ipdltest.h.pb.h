@@ -25,11 +25,9 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/message.h>
+#include <google/protobuf/message_lite.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
-#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto
@@ -43,7 +41,6 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto {
   static const uint32_t offsets[];
 };
-extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PTestJSON_5fprotobuf_2emozilla_2e_5fipdltest_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace _ipdltest {
@@ -75,7 +72,7 @@ namespace _ipdltest {
 // ===================================================================
 
 class KeyValue final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.KeyValue) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.KeyValue) */ {
  public:
   inline KeyValue() : KeyValue(nullptr) {}
   ~KeyValue() override;
@@ -105,15 +102,6 @@ class KeyValue final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const KeyValue& default_instance() {
     return *internal_default_instance();
   }
@@ -151,15 +139,9 @@ class KeyValue final :
   KeyValue* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<KeyValue>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const KeyValue& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const KeyValue& from) {
-    KeyValue::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const KeyValue& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -172,7 +154,7 @@ class KeyValue final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(KeyValue* other);
 
   private:
@@ -185,10 +167,7 @@ class KeyValue final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -248,7 +227,7 @@ class KeyValue final :
 // -------------------------------------------------------------------
 
 class JSONVariant_a_type_mVArrayOfKeyValue final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfKeyValue) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfKeyValue) */ {
  public:
   inline JSONVariant_a_type_mVArrayOfKeyValue() : JSONVariant_a_type_mVArrayOfKeyValue(nullptr) {}
   ~JSONVariant_a_type_mVArrayOfKeyValue() override;
@@ -278,15 +257,6 @@ class JSONVariant_a_type_mVArrayOfKeyValue final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const JSONVariant_a_type_mVArrayOfKeyValue& default_instance() {
     return *internal_default_instance();
   }
@@ -324,15 +294,9 @@ class JSONVariant_a_type_mVArrayOfKeyValue final :
   JSONVariant_a_type_mVArrayOfKeyValue* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<JSONVariant_a_type_mVArrayOfKeyValue>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const JSONVariant_a_type_mVArrayOfKeyValue& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const JSONVariant_a_type_mVArrayOfKeyValue& from) {
-    JSONVariant_a_type_mVArrayOfKeyValue::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const JSONVariant_a_type_mVArrayOfKeyValue& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -345,7 +309,7 @@ class JSONVariant_a_type_mVArrayOfKeyValue final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(JSONVariant_a_type_mVArrayOfKeyValue* other);
 
   private:
@@ -358,10 +322,7 @@ class JSONVariant_a_type_mVArrayOfKeyValue final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -405,7 +366,7 @@ class JSONVariant_a_type_mVArrayOfKeyValue final :
 // -------------------------------------------------------------------
 
 class JSONVariant_a_type_mVArrayOfJSONVariant final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfJSONVariant) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.JSONVariant.a_type_mVArrayOfJSONVariant) */ {
  public:
   inline JSONVariant_a_type_mVArrayOfJSONVariant() : JSONVariant_a_type_mVArrayOfJSONVariant(nullptr) {}
   ~JSONVariant_a_type_mVArrayOfJSONVariant() override;
@@ -435,15 +396,6 @@ class JSONVariant_a_type_mVArrayOfJSONVariant final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const JSONVariant_a_type_mVArrayOfJSONVariant& default_instance() {
     return *internal_default_instance();
   }
@@ -481,15 +433,9 @@ class JSONVariant_a_type_mVArrayOfJSONVariant final :
   JSONVariant_a_type_mVArrayOfJSONVariant* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<JSONVariant_a_type_mVArrayOfJSONVariant>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const JSONVariant_a_type_mVArrayOfJSONVariant& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const JSONVariant_a_type_mVArrayOfJSONVariant& from) {
-    JSONVariant_a_type_mVArrayOfJSONVariant::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const JSONVariant_a_type_mVArrayOfJSONVariant& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -502,7 +448,7 @@ class JSONVariant_a_type_mVArrayOfJSONVariant final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(JSONVariant_a_type_mVArrayOfJSONVariant* other);
 
   private:
@@ -515,10 +461,7 @@ class JSONVariant_a_type_mVArrayOfJSONVariant final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -562,7 +505,7 @@ class JSONVariant_a_type_mVArrayOfJSONVariant final :
 // -------------------------------------------------------------------
 
 class JSONVariant final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.JSONVariant) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla._ipdltest.JSONVariant) */ {
  public:
   inline JSONVariant() : JSONVariant(nullptr) {}
   ~JSONVariant() override;
@@ -592,15 +535,6 @@ class JSONVariant final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const JSONVariant& default_instance() {
     return *internal_default_instance();
   }
@@ -651,15 +585,9 @@ class JSONVariant final :
   JSONVariant* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<JSONVariant>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const JSONVariant& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const JSONVariant& from) {
-    JSONVariant::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const JSONVariant& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -672,7 +600,7 @@ class JSONVariant final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(JSONVariant* other);
 
   private:
@@ -685,10 +613,7 @@ class JSONVariant final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 

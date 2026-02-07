@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -43,52 +40,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace loader
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto[1];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::loader::ScriptData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::loader::ScriptData, _impl_.a_url_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::loader::ScriptData, _impl_.a_cachepath_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::loader::ScriptData, _impl_.a_loadtime_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::loader::ScriptData, _impl_.a_xdrdata_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::loader::ScriptData)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::loader::_ScriptData_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n,PScriptCache_protobuf.mozilla.loader.h"
-  ".proto\022\027protobuf.mozilla.loader\"W\n\nScrip"
-  "tData\022\r\n\005a_url\030\001 \001(\t\022\023\n\013a_cachePath\030\002 \001("
-  "\t\022\022\n\na_loadTime\030\003 \001(\014\022\021\n\ta_xdrData\030\004 \003(\r"
-  "b\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto = {
-    false, false, 168, descriptor_table_protodef_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto,
-    "PScriptCache_protobuf.mozilla.loader.h.proto",
-    &descriptor_table_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto_once, nullptr, 0, 1,
-    schemas, file_default_instances, TableStruct_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto::offsets,
-    file_level_metadata_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto, file_level_enum_descriptors_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto,
-    file_level_service_descriptors_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto_getter() {
-  return &descriptor_table_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto(&descriptor_table_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace loader {
@@ -101,12 +52,12 @@ class ScriptData::_Internal {
 
 ScriptData::ScriptData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.loader.ScriptData)
 }
 ScriptData::ScriptData(const ScriptData& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   ScriptData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_xdrdata_){from._impl_.a_xdrdata_}
@@ -116,7 +67,7 @@ ScriptData::ScriptData(const ScriptData& from)
     , decltype(_impl_.a_loadtime_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_url_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_url_.Set("", GetArenaForAllocation());
@@ -172,7 +123,7 @@ inline void ScriptData::SharedCtor(
 
 ScriptData::~ScriptData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.loader.ScriptData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -201,7 +152,7 @@ void ScriptData::Clear() {
   _impl_.a_url_.ClearToEmpty();
   _impl_.a_cachepath_.ClearToEmpty();
   _impl_.a_loadtime_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* ScriptData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -216,7 +167,7 @@ const char* ScriptData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
           auto str = _internal_mutable_a_url();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.loader.ScriptData.a_url"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -226,7 +177,7 @@ const char* ScriptData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
           auto str = _internal_mutable_a_cachepath();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.loader.ScriptData.a_cachePath"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -261,7 +212,7 @@ const char* ScriptData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -315,8 +266,8 @@ uint8_t* ScriptData::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.loader.ScriptData)
   return target;
@@ -365,19 +316,22 @@ size_t ScriptData::ByteSizeLong() const {
         this->_internal_a_loadtime());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ScriptData::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    ScriptData::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ScriptData::GetClassData() const { return &_class_data_; }
+void ScriptData::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const ScriptData*>(
+      &from));
+}
 
-
-void ScriptData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<ScriptData*>(&to_msg);
-  auto& from = static_cast<const ScriptData&>(from_msg);
+void ScriptData::MergeFrom(const ScriptData& from) {
+  ScriptData* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.loader.ScriptData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -393,7 +347,7 @@ void ScriptData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PRO
   if (!from._internal_a_loadtime().empty()) {
     _this->_internal_set_a_loadtime(from._internal_a_loadtime());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void ScriptData::CopyFrom(const ScriptData& from) {
@@ -427,11 +381,10 @@ void ScriptData::InternalSwap(ScriptData* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ScriptData::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto_getter, &descriptor_table_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto_once,
-      file_level_metadata_PScriptCache_5fprotobuf_2emozilla_2eloader_2eh_2eproto[0]);
+std::string ScriptData::GetTypeName() const {
+  return "protobuf.mozilla.loader.ScriptData";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace loader

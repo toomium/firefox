@@ -3,9 +3,10 @@
 // Edit at your own risk
 //
 
-// Generated from /home/tmittendorf/firefox/dom/media/gmp/PGMPVideoEncoder.ipdl
+// Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/media/gmp/PGMPVideoEncoder.ipdl
 
 syntax = "proto3";
+option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.gmp.PGMPVideoEncoder;
 

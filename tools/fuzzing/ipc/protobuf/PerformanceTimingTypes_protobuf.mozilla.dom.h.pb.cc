@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -86,115 +83,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[2];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServerTiming, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServerTiming, _impl_.a_name_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServerTiming, _impl_.a_duration_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCServerTiming, _impl_.a_description_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_servertiming_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_nexthopprotocol_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_asyncopen_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_redirectstart_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_redirectend_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_domainlookupstart_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_domainlookupend_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_connectstart_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_secureconnectionstart_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_connectend_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_requeststart_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_responsestart_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_cachereadstart_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_responseend_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_cachereadend_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_workerstart_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_workerrequeststart_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_workerresponseend_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_zerotime_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_fetchstart_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_encodedbodysize_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_transfersize_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_decodedbodysize_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_responsestatus_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_redirectcount_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_renderblocking_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_contenttype_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_allredirectssameorigin_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_allredirectspasstao_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_secureconnection_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_bodyinfoaccessallowed_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_timingallowed_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCPerformanceTimingData, _impl_.a_initialized_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::dom::IPCServerTiming)},
-  { 9, -1, -1, sizeof(::protobuf::mozilla::dom::IPCPerformanceTimingData)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::dom::_IPCServerTiming_default_instance_._instance,
-  &::protobuf::mozilla::dom::_IPCPerformanceTimingData_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n3PerformanceTimingTypes_protobuf.mozill"
-  "a.dom.h.proto\022\024protobuf.mozilla.dom\"L\n\017I"
-  "PCServerTiming\022\016\n\006a_name\030\001 \001(\t\022\022\n\na_dura"
-  "tion\030\002 \001(\001\022\025\n\ra_description\030\003 \001(\t\"\226\007\n\030IP"
-  "CPerformanceTimingData\022=\n\016a_serverTiming"
-  "\030\001 \003(\0132%.protobuf.mozilla.dom.IPCServerT"
-  "iming\022\031\n\021a_nextHopProtocol\030\002 \001(\t\022\023\n\013a_as"
-  "yncOpen\030\003 \001(\014\022\027\n\017a_redirectStart\030\004 \001(\014\022\025"
-  "\n\ra_redirectEnd\030\005 \001(\014\022\033\n\023a_domainLookupS"
-  "tart\030\006 \001(\014\022\031\n\021a_domainLookupEnd\030\007 \001(\014\022\026\n"
-  "\016a_connectStart\030\010 \001(\014\022\037\n\027a_secureConnect"
-  "ionStart\030\t \001(\014\022\024\n\014a_connectEnd\030\n \001(\014\022\026\n\016"
-  "a_requestStart\030\013 \001(\014\022\027\n\017a_responseStart\030"
-  "\014 \001(\014\022\030\n\020a_cacheReadStart\030\r \001(\014\022\025\n\ra_res"
-  "ponseEnd\030\016 \001(\014\022\026\n\016a_cacheReadEnd\030\017 \001(\014\022\025"
-  "\n\ra_workerStart\030\020 \001(\014\022\034\n\024a_workerRequest"
-  "Start\030\021 \001(\014\022\033\n\023a_workerResponseEnd\030\022 \001(\014"
-  "\022\022\n\na_zeroTime\030\023 \001(\014\022\024\n\014a_fetchStart\030\024 \001"
-  "(\014\022\031\n\021a_encodedBodySize\030\025 \001(\004\022\026\n\016a_trans"
-  "ferSize\030\026 \001(\004\022\031\n\021a_decodedBodySize\030\027 \001(\004"
-  "\022\030\n\020a_responseStatus\030\030 \001(\r\022\027\n\017a_redirect"
-  "Count\030\031 \001(\r\022\030\n\020a_renderBlocking\030\032 \001(\010\022\025\n"
-  "\ra_contentType\030\033 \001(\t\022 \n\030a_allRedirectsSa"
-  "meOrigin\030\034 \001(\010\022\035\n\025a_allRedirectsPassTAO\030"
-  "\035 \001(\010\022\032\n\022a_secureConnection\030\036 \001(\010\022\037\n\027a_b"
-  "odyInfoAccessAllowed\030\037 \001(\014\022\027\n\017a_timingAl"
-  "lowed\030  \001(\010\022\025\n\ra_initialized\030! \001(\010b\006prot"
-  "o3"
-  ;
-static ::_pbi::once_flag descriptor_table_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto = {
-    false, false, 1082, descriptor_table_protodef_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    "PerformanceTimingTypes_protobuf.mozilla.dom.h.proto",
-    &descriptor_table_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once, nullptr, 0, 2,
-    schemas, file_default_instances, TableStruct_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets,
-    file_level_metadata_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto, file_level_enum_descriptors_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    file_level_service_descriptors_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter() {
-  return &descriptor_table_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto(&descriptor_table_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -207,12 +95,12 @@ class IPCServerTiming::_Internal {
 
 IPCServerTiming::IPCServerTiming(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCServerTiming)
 }
 IPCServerTiming::IPCServerTiming(const IPCServerTiming& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IPCServerTiming* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_name_){}
@@ -220,7 +108,7 @@ IPCServerTiming::IPCServerTiming(const IPCServerTiming& from)
     , decltype(_impl_.a_duration_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_name_.Set("", GetArenaForAllocation());
@@ -263,7 +151,7 @@ inline void IPCServerTiming::SharedCtor(
 
 IPCServerTiming::~IPCServerTiming() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCServerTiming)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -289,7 +177,7 @@ void IPCServerTiming::Clear() {
   _impl_.a_name_.ClearToEmpty();
   _impl_.a_description_.ClearToEmpty();
   _impl_.a_duration_ = 0;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* IPCServerTiming::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -304,7 +192,7 @@ const char* IPCServerTiming::_InternalParse(const char* ptr, ::_pbi::ParseContex
           auto str = _internal_mutable_a_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCServerTiming.a_name"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -322,7 +210,7 @@ const char* IPCServerTiming::_InternalParse(const char* ptr, ::_pbi::ParseContex
           auto str = _internal_mutable_a_description();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCServerTiming.a_description"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -337,7 +225,7 @@ const char* IPCServerTiming::_InternalParse(const char* ptr, ::_pbi::ParseContex
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -386,8 +274,8 @@ uint8_t* IPCServerTiming::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCServerTiming)
   return target;
@@ -424,19 +312,22 @@ size_t IPCServerTiming::ByteSizeLong() const {
     total_size += 1 + 8;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCServerTiming::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    IPCServerTiming::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCServerTiming::GetClassData() const { return &_class_data_; }
+void IPCServerTiming::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const IPCServerTiming*>(
+      &from));
+}
 
-
-void IPCServerTiming::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<IPCServerTiming*>(&to_msg);
-  auto& from = static_cast<const IPCServerTiming&>(from_msg);
+void IPCServerTiming::MergeFrom(const IPCServerTiming& from) {
+  IPCServerTiming* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCServerTiming)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -455,7 +346,7 @@ void IPCServerTiming::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const 
   if (raw_a_duration != 0) {
     _this->_internal_set_a_duration(from._internal_a_duration());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void IPCServerTiming::CopyFrom(const IPCServerTiming& from) {
@@ -485,11 +376,10 @@ void IPCServerTiming::InternalSwap(IPCServerTiming* other) {
   swap(_impl_.a_duration_, other->_impl_.a_duration_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata IPCServerTiming::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[0]);
+std::string IPCServerTiming::GetTypeName() const {
+  return "protobuf.mozilla.dom.IPCServerTiming";
 }
+
 
 // ===================================================================
 
@@ -499,12 +389,12 @@ class IPCPerformanceTimingData::_Internal {
 
 IPCPerformanceTimingData::IPCPerformanceTimingData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCPerformanceTimingData)
 }
 IPCPerformanceTimingData::IPCPerformanceTimingData(const IPCPerformanceTimingData& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IPCPerformanceTimingData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_servertiming_){from._impl_.a_servertiming_}
@@ -542,7 +432,7 @@ IPCPerformanceTimingData::IPCPerformanceTimingData(const IPCPerformanceTimingDat
     , decltype(_impl_.a_initialized_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_nexthopprotocol_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_nexthopprotocol_.Set("", GetArenaForAllocation());
@@ -845,7 +735,7 @@ inline void IPCPerformanceTimingData::SharedCtor(
 
 IPCPerformanceTimingData::~IPCPerformanceTimingData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCPerformanceTimingData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -913,7 +803,7 @@ void IPCPerformanceTimingData::Clear() {
   ::memset(&_impl_.a_encodedbodysize_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_initialized_) -
       reinterpret_cast<char*>(&_impl_.a_encodedbodysize_)) + sizeof(_impl_.a_initialized_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* IPCPerformanceTimingData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -941,7 +831,7 @@ const char* IPCPerformanceTimingData::_InternalParse(const char* ptr, ::_pbi::Pa
           auto str = _internal_mutable_a_nexthopprotocol();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPerformanceTimingData.a_nextHopProtocol"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1161,7 +1051,7 @@ const char* IPCPerformanceTimingData::_InternalParse(const char* ptr, ::_pbi::Pa
           auto str = _internal_mutable_a_contenttype();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCPerformanceTimingData.a_contentType"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1225,7 +1115,7 @@ const char* IPCPerformanceTimingData::_InternalParse(const char* ptr, ::_pbi::Pa
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1452,8 +1342,8 @@ uint8_t* IPCPerformanceTimingData::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCPerformanceTimingData)
   return target;
@@ -1686,19 +1576,22 @@ size_t IPCPerformanceTimingData::ByteSizeLong() const {
     total_size += 2 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCPerformanceTimingData::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    IPCPerformanceTimingData::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCPerformanceTimingData::GetClassData() const { return &_class_data_; }
+void IPCPerformanceTimingData::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const IPCPerformanceTimingData*>(
+      &from));
+}
 
-
-void IPCPerformanceTimingData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<IPCPerformanceTimingData*>(&to_msg);
-  auto& from = static_cast<const IPCPerformanceTimingData&>(from_msg);
+void IPCPerformanceTimingData::MergeFrom(const IPCPerformanceTimingData& from) {
+  IPCPerformanceTimingData* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCPerformanceTimingData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1801,7 +1694,7 @@ void IPCPerformanceTimingData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_ms
   if (from._internal_a_initialized() != 0) {
     _this->_internal_set_a_initialized(from._internal_a_initialized());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void IPCPerformanceTimingData::CopyFrom(const IPCPerformanceTimingData& from) {
@@ -1913,11 +1806,10 @@ void IPCPerformanceTimingData::InternalSwap(IPCPerformanceTimingData* other) {
           reinterpret_cast<char*>(&other->_impl_.a_encodedbodysize_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata IPCPerformanceTimingData::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PerformanceTimingTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[1]);
+std::string IPCPerformanceTimingData::GetTypeName() const {
+  return "protobuf.mozilla.dom.IPCPerformanceTimingData";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace dom

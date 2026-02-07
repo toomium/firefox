@@ -25,11 +25,9 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/message.h>
+#include <google/protobuf/message_lite.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
-#include <google/protobuf/unknown_field_set.h>
 #include "PBackgroundSharedTypes.pb.h"
 #include "IPCStream.pb.h"
 #include "NeckoChannelParams.pb.h"
@@ -46,7 +44,6 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PWebBrowserPersistDocument_5fprotobuf_2emozilla_2eh_2eproto {
   static const uint32_t offsets[];
 };
-extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PWebBrowserPersistDocument_5fprotobuf_2emozilla_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 class WebBrowserPersistDocumentAttrs;
@@ -71,7 +68,7 @@ namespace mozilla {
 // ===================================================================
 
 class WebBrowserPersistDocumentAttrs final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.WebBrowserPersistDocumentAttrs) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.WebBrowserPersistDocumentAttrs) */ {
  public:
   inline WebBrowserPersistDocumentAttrs() : WebBrowserPersistDocumentAttrs(nullptr) {}
   ~WebBrowserPersistDocumentAttrs() override;
@@ -101,15 +98,6 @@ class WebBrowserPersistDocumentAttrs final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebBrowserPersistDocumentAttrs& default_instance() {
     return *internal_default_instance();
   }
@@ -147,15 +135,9 @@ class WebBrowserPersistDocumentAttrs final :
   WebBrowserPersistDocumentAttrs* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebBrowserPersistDocumentAttrs>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebBrowserPersistDocumentAttrs& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebBrowserPersistDocumentAttrs& from) {
-    WebBrowserPersistDocumentAttrs::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebBrowserPersistDocumentAttrs& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -168,7 +150,7 @@ class WebBrowserPersistDocumentAttrs final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebBrowserPersistDocumentAttrs* other);
 
   private:
@@ -181,10 +163,7 @@ class WebBrowserPersistDocumentAttrs final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -398,7 +377,7 @@ class WebBrowserPersistDocumentAttrs final :
 // -------------------------------------------------------------------
 
 class WebBrowserPersistURIMapEntry final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.WebBrowserPersistURIMapEntry) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.WebBrowserPersistURIMapEntry) */ {
  public:
   inline WebBrowserPersistURIMapEntry() : WebBrowserPersistURIMapEntry(nullptr) {}
   ~WebBrowserPersistURIMapEntry() override;
@@ -428,15 +407,6 @@ class WebBrowserPersistURIMapEntry final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebBrowserPersistURIMapEntry& default_instance() {
     return *internal_default_instance();
   }
@@ -474,15 +444,9 @@ class WebBrowserPersistURIMapEntry final :
   WebBrowserPersistURIMapEntry* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebBrowserPersistURIMapEntry>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebBrowserPersistURIMapEntry& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebBrowserPersistURIMapEntry& from) {
-    WebBrowserPersistURIMapEntry::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebBrowserPersistURIMapEntry& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -495,7 +459,7 @@ class WebBrowserPersistURIMapEntry final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebBrowserPersistURIMapEntry* other);
 
   private:
@@ -508,10 +472,7 @@ class WebBrowserPersistURIMapEntry final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -567,7 +528,7 @@ class WebBrowserPersistURIMapEntry final :
 // -------------------------------------------------------------------
 
 class WebBrowserPersistURIMap final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.WebBrowserPersistURIMap) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.WebBrowserPersistURIMap) */ {
  public:
   inline WebBrowserPersistURIMap() : WebBrowserPersistURIMap(nullptr) {}
   ~WebBrowserPersistURIMap() override;
@@ -597,15 +558,6 @@ class WebBrowserPersistURIMap final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const WebBrowserPersistURIMap& default_instance() {
     return *internal_default_instance();
   }
@@ -643,15 +595,9 @@ class WebBrowserPersistURIMap final :
   WebBrowserPersistURIMap* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<WebBrowserPersistURIMap>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const WebBrowserPersistURIMap& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const WebBrowserPersistURIMap& from) {
-    WebBrowserPersistURIMap::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const WebBrowserPersistURIMap& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -664,7 +610,7 @@ class WebBrowserPersistURIMap final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(WebBrowserPersistURIMap* other);
 
   private:
@@ -677,10 +623,7 @@ class WebBrowserPersistURIMap final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 

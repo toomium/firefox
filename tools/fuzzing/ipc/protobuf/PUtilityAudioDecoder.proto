@@ -6,6 +6,7 @@
 // Generated from PUtilityAudioDecoder.ipdl
 
 syntax = "proto3";
+option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.ipc.PUtilityAudioDecoder;
 

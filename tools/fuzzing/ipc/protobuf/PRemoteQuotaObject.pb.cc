@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -57,59 +54,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PRemoteQuotaObject_2eproto[2];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PRemoteQuotaObject_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PRemoteQuotaObject_2eproto = nullptr;
-
-const uint32_t TableStruct_PRemoteQuotaObject_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::quota::PRemoteQuotaObject::Msg_MaybeUpdateSize, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::quota::PRemoteQuotaObject::Msg_MaybeUpdateSize, _impl_.a_size_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::quota::PRemoteQuotaObject::Msg_MaybeUpdateSize, _impl_.a_truncate_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::quota::PRemoteQuotaObject::Reply_MaybeUpdateSize, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::quota::PRemoteQuotaObject::Reply_MaybeUpdateSize, _impl_.a_result_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::dom::quota::PRemoteQuotaObject::Msg_MaybeUpdateSize)},
-  { 8, -1, -1, sizeof(::protobuf::mozilla::dom::quota::PRemoteQuotaObject::Reply_MaybeUpdateSize)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::dom::quota::PRemoteQuotaObject::_Msg_MaybeUpdateSize_default_instance_._instance,
-  &::protobuf::mozilla::dom::quota::PRemoteQuotaObject::_Reply_MaybeUpdateSize_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PRemoteQuotaObject_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\030PRemoteQuotaObject.proto\022-protobuf.moz"
-  "illa.dom.quota.PRemoteQuotaObject\"9\n\023Msg"
-  "_MaybeUpdateSize\022\016\n\006a_size\030\001 \001(\022\022\022\n\na_tr"
-  "uncate\030\002 \001(\010\")\n\025Reply_MaybeUpdateSize\022\020\n"
-  "\010a_result\030\001 \001(\010b\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_PRemoteQuotaObject_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PRemoteQuotaObject_2eproto = {
-    false, false, 183, descriptor_table_protodef_PRemoteQuotaObject_2eproto,
-    "PRemoteQuotaObject.proto",
-    &descriptor_table_PRemoteQuotaObject_2eproto_once, nullptr, 0, 2,
-    schemas, file_default_instances, TableStruct_PRemoteQuotaObject_2eproto::offsets,
-    file_level_metadata_PRemoteQuotaObject_2eproto, file_level_enum_descriptors_PRemoteQuotaObject_2eproto,
-    file_level_service_descriptors_PRemoteQuotaObject_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PRemoteQuotaObject_2eproto_getter() {
-  return &descriptor_table_PRemoteQuotaObject_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PRemoteQuotaObject_2eproto(&descriptor_table_PRemoteQuotaObject_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -124,19 +68,19 @@ class Msg_MaybeUpdateSize::_Internal {
 
 Msg_MaybeUpdateSize::Msg_MaybeUpdateSize(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Msg_MaybeUpdateSize)
 }
 Msg_MaybeUpdateSize::Msg_MaybeUpdateSize(const Msg_MaybeUpdateSize& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_MaybeUpdateSize* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_size_){}
     , decltype(_impl_.a_truncate_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   ::memcpy(&_impl_.a_size_, &from._impl_.a_size_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_truncate_) -
     reinterpret_cast<char*>(&_impl_.a_size_)) + sizeof(_impl_.a_truncate_));
@@ -156,7 +100,7 @@ inline void Msg_MaybeUpdateSize::SharedCtor(
 
 Msg_MaybeUpdateSize::~Msg_MaybeUpdateSize() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Msg_MaybeUpdateSize)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -180,7 +124,7 @@ void Msg_MaybeUpdateSize::Clear() {
   ::memset(&_impl_.a_size_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_truncate_) -
       reinterpret_cast<char*>(&_impl_.a_size_)) + sizeof(_impl_.a_truncate_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_MaybeUpdateSize::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -216,7 +160,7 @@ const char* Msg_MaybeUpdateSize::_InternalParse(const char* ptr, ::_pbi::ParseCo
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -247,8 +191,8 @@ uint8_t* Msg_MaybeUpdateSize::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Msg_MaybeUpdateSize)
   return target;
@@ -272,19 +216,22 @@ size_t Msg_MaybeUpdateSize::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_MaybeUpdateSize::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Msg_MaybeUpdateSize::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_MaybeUpdateSize::GetClassData() const { return &_class_data_; }
+void Msg_MaybeUpdateSize::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_MaybeUpdateSize*>(
+      &from));
+}
 
-
-void Msg_MaybeUpdateSize::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Msg_MaybeUpdateSize*>(&to_msg);
-  auto& from = static_cast<const Msg_MaybeUpdateSize&>(from_msg);
+void Msg_MaybeUpdateSize::MergeFrom(const Msg_MaybeUpdateSize& from) {
+  Msg_MaybeUpdateSize* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Msg_MaybeUpdateSize)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -296,7 +243,7 @@ void Msg_MaybeUpdateSize::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, co
   if (from._internal_a_truncate() != 0) {
     _this->_internal_set_a_truncate(from._internal_a_truncate());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Msg_MaybeUpdateSize::CopyFrom(const Msg_MaybeUpdateSize& from) {
@@ -321,11 +268,10 @@ void Msg_MaybeUpdateSize::InternalSwap(Msg_MaybeUpdateSize* other) {
           reinterpret_cast<char*>(&other->_impl_.a_size_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_MaybeUpdateSize::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PRemoteQuotaObject_2eproto_getter, &descriptor_table_PRemoteQuotaObject_2eproto_once,
-      file_level_metadata_PRemoteQuotaObject_2eproto[0]);
+std::string Msg_MaybeUpdateSize::GetTypeName() const {
+  return "protobuf.mozilla.dom.quota.PRemoteQuotaObject.Msg_MaybeUpdateSize";
 }
+
 
 // ===================================================================
 
@@ -335,18 +281,18 @@ class Reply_MaybeUpdateSize::_Internal {
 
 Reply_MaybeUpdateSize::Reply_MaybeUpdateSize(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Reply_MaybeUpdateSize)
 }
 Reply_MaybeUpdateSize::Reply_MaybeUpdateSize(const Reply_MaybeUpdateSize& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_MaybeUpdateSize* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_result_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_result_ = from._impl_.a_result_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Reply_MaybeUpdateSize)
 }
@@ -363,7 +309,7 @@ inline void Reply_MaybeUpdateSize::SharedCtor(
 
 Reply_MaybeUpdateSize::~Reply_MaybeUpdateSize() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Reply_MaybeUpdateSize)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -385,7 +331,7 @@ void Reply_MaybeUpdateSize::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_result_ = false;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_MaybeUpdateSize::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -413,7 +359,7 @@ const char* Reply_MaybeUpdateSize::_InternalParse(const char* ptr, ::_pbi::Parse
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -438,8 +384,8 @@ uint8_t* Reply_MaybeUpdateSize::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Reply_MaybeUpdateSize)
   return target;
@@ -458,19 +404,22 @@ size_t Reply_MaybeUpdateSize::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_MaybeUpdateSize::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Reply_MaybeUpdateSize::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_MaybeUpdateSize::GetClassData() const { return &_class_data_; }
+void Reply_MaybeUpdateSize::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Reply_MaybeUpdateSize*>(
+      &from));
+}
 
-
-void Reply_MaybeUpdateSize::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Reply_MaybeUpdateSize*>(&to_msg);
-  auto& from = static_cast<const Reply_MaybeUpdateSize&>(from_msg);
+void Reply_MaybeUpdateSize::MergeFrom(const Reply_MaybeUpdateSize& from) {
+  Reply_MaybeUpdateSize* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.quota.PRemoteQuotaObject.Reply_MaybeUpdateSize)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -479,7 +428,7 @@ void Reply_MaybeUpdateSize::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
   if (from._internal_a_result() != 0) {
     _this->_internal_set_a_result(from._internal_a_result());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Reply_MaybeUpdateSize::CopyFrom(const Reply_MaybeUpdateSize& from) {
@@ -499,11 +448,10 @@ void Reply_MaybeUpdateSize::InternalSwap(Reply_MaybeUpdateSize* other) {
   swap(_impl_.a_result_, other->_impl_.a_result_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Reply_MaybeUpdateSize::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PRemoteQuotaObject_2eproto_getter, &descriptor_table_PRemoteQuotaObject_2eproto_once,
-      file_level_metadata_PRemoteQuotaObject_2eproto[1]);
+std::string Reply_MaybeUpdateSize::GetTypeName() const {
+  return "protobuf.mozilla.dom.quota.PRemoteQuotaObject.Reply_MaybeUpdateSize";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace PRemoteQuotaObject

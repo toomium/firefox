@@ -23,14 +23,11 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/arena.h>
 #include <google/protobuf/arenastring.h>
-#include <google/protobuf/generated_message_bases.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/message.h>
+#include <google/protobuf/message_lite.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
-#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_PQuotaTest_2eproto
@@ -44,7 +41,6 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PQuotaTest_2eproto {
   static const uint32_t offsets[];
 };
-extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PQuotaTest_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -98,9 +94,10 @@ namespace PQuotaTest {
 // ===================================================================
 
 class Msg_Try_Success_CustomErr_QmIpcFail final :
-    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_QmIpcFail) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_QmIpcFail) */ {
  public:
   inline Msg_Try_Success_CustomErr_QmIpcFail() : Msg_Try_Success_CustomErr_QmIpcFail(nullptr) {}
+  ~Msg_Try_Success_CustomErr_QmIpcFail() override;
   explicit PROTOBUF_CONSTEXPR Msg_Try_Success_CustomErr_QmIpcFail(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_Try_Success_CustomErr_QmIpcFail(const Msg_Try_Success_CustomErr_QmIpcFail& from);
@@ -127,15 +124,6 @@ class Msg_Try_Success_CustomErr_QmIpcFail final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Msg_Try_Success_CustomErr_QmIpcFail& default_instance() {
     return *internal_default_instance();
   }
@@ -173,15 +161,23 @@ class Msg_Try_Success_CustomErr_QmIpcFail final :
   Msg_Try_Success_CustomErr_QmIpcFail* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_Try_Success_CustomErr_QmIpcFail>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const Msg_Try_Success_CustomErr_QmIpcFail& from) {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const Msg_Try_Success_CustomErr_QmIpcFail& from) {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
-  }
-  public:
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  void CopyFrom(const Msg_Try_Success_CustomErr_QmIpcFail& from);
+  void MergeFrom(const Msg_Try_Success_CustomErr_QmIpcFail& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(Msg_Try_Success_CustomErr_QmIpcFail* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -193,10 +189,7 @@ class Msg_Try_Success_CustomErr_QmIpcFail final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -210,13 +203,15 @@ class Msg_Try_Success_CustomErr_QmIpcFail final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
+  union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaTest_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply_Try_Success_CustomErr_QmIpcFail final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_QmIpcFail) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_QmIpcFail) */ {
  public:
   inline Reply_Try_Success_CustomErr_QmIpcFail() : Reply_Try_Success_CustomErr_QmIpcFail(nullptr) {}
   ~Reply_Try_Success_CustomErr_QmIpcFail() override;
@@ -246,15 +241,6 @@ class Reply_Try_Success_CustomErr_QmIpcFail final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Reply_Try_Success_CustomErr_QmIpcFail& default_instance() {
     return *internal_default_instance();
   }
@@ -292,15 +278,9 @@ class Reply_Try_Success_CustomErr_QmIpcFail final :
   Reply_Try_Success_CustomErr_QmIpcFail* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_Try_Success_CustomErr_QmIpcFail>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Reply_Try_Success_CustomErr_QmIpcFail& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Reply_Try_Success_CustomErr_QmIpcFail& from) {
-    Reply_Try_Success_CustomErr_QmIpcFail::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Reply_Try_Success_CustomErr_QmIpcFail& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -313,7 +293,7 @@ class Reply_Try_Success_CustomErr_QmIpcFail final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Reply_Try_Success_CustomErr_QmIpcFail* other);
 
   private:
@@ -326,10 +306,7 @@ class Reply_Try_Success_CustomErr_QmIpcFail final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -364,9 +341,10 @@ class Reply_Try_Success_CustomErr_QmIpcFail final :
 // -------------------------------------------------------------------
 
 class Msg_Try_Success_CustomErr_IpcFail final :
-    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_IpcFail) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.PQuotaTest.Msg_Try_Success_CustomErr_IpcFail) */ {
  public:
   inline Msg_Try_Success_CustomErr_IpcFail() : Msg_Try_Success_CustomErr_IpcFail(nullptr) {}
+  ~Msg_Try_Success_CustomErr_IpcFail() override;
   explicit PROTOBUF_CONSTEXPR Msg_Try_Success_CustomErr_IpcFail(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_Try_Success_CustomErr_IpcFail(const Msg_Try_Success_CustomErr_IpcFail& from);
@@ -393,15 +371,6 @@ class Msg_Try_Success_CustomErr_IpcFail final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Msg_Try_Success_CustomErr_IpcFail& default_instance() {
     return *internal_default_instance();
   }
@@ -439,15 +408,23 @@ class Msg_Try_Success_CustomErr_IpcFail final :
   Msg_Try_Success_CustomErr_IpcFail* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_Try_Success_CustomErr_IpcFail>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const Msg_Try_Success_CustomErr_IpcFail& from) {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const Msg_Try_Success_CustomErr_IpcFail& from) {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
-  }
-  public:
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  void CopyFrom(const Msg_Try_Success_CustomErr_IpcFail& from);
+  void MergeFrom(const Msg_Try_Success_CustomErr_IpcFail& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(Msg_Try_Success_CustomErr_IpcFail* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -459,10 +436,7 @@ class Msg_Try_Success_CustomErr_IpcFail final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -476,13 +450,15 @@ class Msg_Try_Success_CustomErr_IpcFail final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
+  union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaTest_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply_Try_Success_CustomErr_IpcFail final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_IpcFail) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.PQuotaTest.Reply_Try_Success_CustomErr_IpcFail) */ {
  public:
   inline Reply_Try_Success_CustomErr_IpcFail() : Reply_Try_Success_CustomErr_IpcFail(nullptr) {}
   ~Reply_Try_Success_CustomErr_IpcFail() override;
@@ -512,15 +488,6 @@ class Reply_Try_Success_CustomErr_IpcFail final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Reply_Try_Success_CustomErr_IpcFail& default_instance() {
     return *internal_default_instance();
   }
@@ -558,15 +525,9 @@ class Reply_Try_Success_CustomErr_IpcFail final :
   Reply_Try_Success_CustomErr_IpcFail* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_Try_Success_CustomErr_IpcFail>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Reply_Try_Success_CustomErr_IpcFail& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Reply_Try_Success_CustomErr_IpcFail& from) {
-    Reply_Try_Success_CustomErr_IpcFail::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Reply_Try_Success_CustomErr_IpcFail& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -579,7 +540,7 @@ class Reply_Try_Success_CustomErr_IpcFail final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Reply_Try_Success_CustomErr_IpcFail* other);
 
   private:
@@ -592,10 +553,7 @@ class Reply_Try_Success_CustomErr_IpcFail final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -630,9 +588,10 @@ class Reply_Try_Success_CustomErr_IpcFail final :
 // -------------------------------------------------------------------
 
 class Msg_TryInspect_Success_CustomErr_QmIpcFail final :
-    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_QmIpcFail) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_QmIpcFail) */ {
  public:
   inline Msg_TryInspect_Success_CustomErr_QmIpcFail() : Msg_TryInspect_Success_CustomErr_QmIpcFail(nullptr) {}
+  ~Msg_TryInspect_Success_CustomErr_QmIpcFail() override;
   explicit PROTOBUF_CONSTEXPR Msg_TryInspect_Success_CustomErr_QmIpcFail(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_TryInspect_Success_CustomErr_QmIpcFail(const Msg_TryInspect_Success_CustomErr_QmIpcFail& from);
@@ -659,15 +618,6 @@ class Msg_TryInspect_Success_CustomErr_QmIpcFail final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Msg_TryInspect_Success_CustomErr_QmIpcFail& default_instance() {
     return *internal_default_instance();
   }
@@ -705,15 +655,23 @@ class Msg_TryInspect_Success_CustomErr_QmIpcFail final :
   Msg_TryInspect_Success_CustomErr_QmIpcFail* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_TryInspect_Success_CustomErr_QmIpcFail>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const Msg_TryInspect_Success_CustomErr_QmIpcFail& from) {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const Msg_TryInspect_Success_CustomErr_QmIpcFail& from) {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
-  }
-  public:
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  void CopyFrom(const Msg_TryInspect_Success_CustomErr_QmIpcFail& from);
+  void MergeFrom(const Msg_TryInspect_Success_CustomErr_QmIpcFail& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(Msg_TryInspect_Success_CustomErr_QmIpcFail* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -725,10 +683,7 @@ class Msg_TryInspect_Success_CustomErr_QmIpcFail final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -742,13 +697,15 @@ class Msg_TryInspect_Success_CustomErr_QmIpcFail final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
+  union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaTest_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply_TryInspect_Success_CustomErr_QmIpcFail final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_QmIpcFail) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_QmIpcFail) */ {
  public:
   inline Reply_TryInspect_Success_CustomErr_QmIpcFail() : Reply_TryInspect_Success_CustomErr_QmIpcFail(nullptr) {}
   ~Reply_TryInspect_Success_CustomErr_QmIpcFail() override;
@@ -778,15 +735,6 @@ class Reply_TryInspect_Success_CustomErr_QmIpcFail final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Reply_TryInspect_Success_CustomErr_QmIpcFail& default_instance() {
     return *internal_default_instance();
   }
@@ -824,15 +772,9 @@ class Reply_TryInspect_Success_CustomErr_QmIpcFail final :
   Reply_TryInspect_Success_CustomErr_QmIpcFail* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_TryInspect_Success_CustomErr_QmIpcFail>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Reply_TryInspect_Success_CustomErr_QmIpcFail& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Reply_TryInspect_Success_CustomErr_QmIpcFail& from) {
-    Reply_TryInspect_Success_CustomErr_QmIpcFail::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Reply_TryInspect_Success_CustomErr_QmIpcFail& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -845,7 +787,7 @@ class Reply_TryInspect_Success_CustomErr_QmIpcFail final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Reply_TryInspect_Success_CustomErr_QmIpcFail* other);
 
   private:
@@ -858,10 +800,7 @@ class Reply_TryInspect_Success_CustomErr_QmIpcFail final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -896,9 +835,10 @@ class Reply_TryInspect_Success_CustomErr_QmIpcFail final :
 // -------------------------------------------------------------------
 
 class Msg_TryInspect_Success_CustomErr_IpcFail final :
-    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_IpcFail) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.PQuotaTest.Msg_TryInspect_Success_CustomErr_IpcFail) */ {
  public:
   inline Msg_TryInspect_Success_CustomErr_IpcFail() : Msg_TryInspect_Success_CustomErr_IpcFail(nullptr) {}
+  ~Msg_TryInspect_Success_CustomErr_IpcFail() override;
   explicit PROTOBUF_CONSTEXPR Msg_TryInspect_Success_CustomErr_IpcFail(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
   Msg_TryInspect_Success_CustomErr_IpcFail(const Msg_TryInspect_Success_CustomErr_IpcFail& from);
@@ -925,15 +865,6 @@ class Msg_TryInspect_Success_CustomErr_IpcFail final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Msg_TryInspect_Success_CustomErr_IpcFail& default_instance() {
     return *internal_default_instance();
   }
@@ -971,15 +902,23 @@ class Msg_TryInspect_Success_CustomErr_IpcFail final :
   Msg_TryInspect_Success_CustomErr_IpcFail* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_TryInspect_Success_CustomErr_IpcFail>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const Msg_TryInspect_Success_CustomErr_IpcFail& from) {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const Msg_TryInspect_Success_CustomErr_IpcFail& from) {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
-  }
-  public:
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
+  void CopyFrom(const Msg_TryInspect_Success_CustomErr_IpcFail& from);
+  void MergeFrom(const Msg_TryInspect_Success_CustomErr_IpcFail& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  void InternalSwap(Msg_TryInspect_Success_CustomErr_IpcFail* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
@@ -991,10 +930,7 @@ class Msg_TryInspect_Success_CustomErr_IpcFail final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1008,13 +944,15 @@ class Msg_TryInspect_Success_CustomErr_IpcFail final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
+  union { Impl_ _impl_; };
   friend struct ::TableStruct_PQuotaTest_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Reply_TryInspect_Success_CustomErr_IpcFail final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_IpcFail) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.quota.PQuotaTest.Reply_TryInspect_Success_CustomErr_IpcFail) */ {
  public:
   inline Reply_TryInspect_Success_CustomErr_IpcFail() : Reply_TryInspect_Success_CustomErr_IpcFail(nullptr) {}
   ~Reply_TryInspect_Success_CustomErr_IpcFail() override;
@@ -1044,15 +982,6 @@ class Reply_TryInspect_Success_CustomErr_IpcFail final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Reply_TryInspect_Success_CustomErr_IpcFail& default_instance() {
     return *internal_default_instance();
   }
@@ -1090,15 +1019,9 @@ class Reply_TryInspect_Success_CustomErr_IpcFail final :
   Reply_TryInspect_Success_CustomErr_IpcFail* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_TryInspect_Success_CustomErr_IpcFail>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Reply_TryInspect_Success_CustomErr_IpcFail& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Reply_TryInspect_Success_CustomErr_IpcFail& from) {
-    Reply_TryInspect_Success_CustomErr_IpcFail::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Reply_TryInspect_Success_CustomErr_IpcFail& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1111,7 +1034,7 @@ class Reply_TryInspect_Success_CustomErr_IpcFail final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Reply_TryInspect_Success_CustomErr_IpcFail* other);
 
   private:
@@ -1124,10 +1047,7 @@ class Reply_TryInspect_Success_CustomErr_IpcFail final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 

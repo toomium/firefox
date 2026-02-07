@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -41,48 +38,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto[1];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::quota::IPCQuotaObject, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::quota::IPCQuotaObject, _impl_.a_childendpoint_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::dom::quota::IPCQuotaObject)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::dom::quota::_IPCQuotaObject_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n1IPCQuotaObject_protobuf.mozilla.dom.qu"
-  "ota.h.proto\022\032protobuf.mozilla.dom.quota\""
-  ")\n\016IPCQuotaObject\022\027\n\017a_childEndpoint\030\001 \001"
-  "(\014b\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto = {
-    false, false, 130, descriptor_table_protodef_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto,
-    "IPCQuotaObject_protobuf.mozilla.dom.quota.h.proto",
-    &descriptor_table_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto_once, nullptr, 0, 1,
-    schemas, file_default_instances, TableStruct_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto::offsets,
-    file_level_metadata_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto, file_level_enum_descriptors_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto,
-    file_level_service_descriptors_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto_getter() {
-  return &descriptor_table_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto(&descriptor_table_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -96,18 +51,18 @@ class IPCQuotaObject::_Internal {
 
 IPCQuotaObject::IPCQuotaObject(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.quota.IPCQuotaObject)
 }
 IPCQuotaObject::IPCQuotaObject(const IPCQuotaObject& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IPCQuotaObject* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_childendpoint_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_childendpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_childendpoint_.Set("", GetArenaForAllocation());
@@ -135,7 +90,7 @@ inline void IPCQuotaObject::SharedCtor(
 
 IPCQuotaObject::~IPCQuotaObject() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.quota.IPCQuotaObject)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -158,7 +113,7 @@ void IPCQuotaObject::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_childendpoint_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* IPCQuotaObject::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -187,7 +142,7 @@ const char* IPCQuotaObject::_InternalParse(const char* ptr, ::_pbi::ParseContext
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -212,8 +167,8 @@ uint8_t* IPCQuotaObject::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.quota.IPCQuotaObject)
   return target;
@@ -234,19 +189,22 @@ size_t IPCQuotaObject::ByteSizeLong() const {
         this->_internal_a_childendpoint());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCQuotaObject::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    IPCQuotaObject::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCQuotaObject::GetClassData() const { return &_class_data_; }
+void IPCQuotaObject::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const IPCQuotaObject*>(
+      &from));
+}
 
-
-void IPCQuotaObject::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<IPCQuotaObject*>(&to_msg);
-  auto& from = static_cast<const IPCQuotaObject&>(from_msg);
+void IPCQuotaObject::MergeFrom(const IPCQuotaObject& from) {
+  IPCQuotaObject* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.quota.IPCQuotaObject)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -255,7 +213,7 @@ void IPCQuotaObject::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const :
   if (!from._internal_a_childendpoint().empty()) {
     _this->_internal_set_a_childendpoint(from._internal_a_childendpoint());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void IPCQuotaObject::CopyFrom(const IPCQuotaObject& from) {
@@ -280,11 +238,10 @@ void IPCQuotaObject::InternalSwap(IPCQuotaObject* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata IPCQuotaObject::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto_getter, &descriptor_table_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto_once,
-      file_level_metadata_IPCQuotaObject_5fprotobuf_2emozilla_2edom_2equota_2eh_2eproto[0]);
+std::string IPCQuotaObject::GetTypeName() const {
+  return "protobuf.mozilla.dom.quota.IPCQuotaObject";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace quota

@@ -25,11 +25,9 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/message.h>
+#include <google/protobuf/message_lite.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
-#include <google/protobuf/unknown_field_set.h>
 #include "PBackgroundIDBSharedTypes.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -44,7 +42,6 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PBackgroundIDBCursor_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto {
   static const uint32_t offsets[];
 };
-extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PBackgroundIDBCursor_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -115,7 +112,7 @@ namespace indexedDB {
 // ===================================================================
 
 class ContinueParams final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ContinueParams) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ContinueParams) */ {
  public:
   inline ContinueParams() : ContinueParams(nullptr) {}
   ~ContinueParams() override;
@@ -145,15 +142,6 @@ class ContinueParams final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const ContinueParams& default_instance() {
     return *internal_default_instance();
   }
@@ -191,15 +179,9 @@ class ContinueParams final :
   ContinueParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<ContinueParams>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const ContinueParams& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const ContinueParams& from) {
-    ContinueParams::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const ContinueParams& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -212,7 +194,7 @@ class ContinueParams final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(ContinueParams* other);
 
   private:
@@ -225,10 +207,7 @@ class ContinueParams final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -268,7 +247,7 @@ class ContinueParams final :
 // -------------------------------------------------------------------
 
 class ContinuePrimaryKeyParams final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ContinuePrimaryKeyParams) */ {
  public:
   inline ContinuePrimaryKeyParams() : ContinuePrimaryKeyParams(nullptr) {}
   ~ContinuePrimaryKeyParams() override;
@@ -298,15 +277,6 @@ class ContinuePrimaryKeyParams final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const ContinuePrimaryKeyParams& default_instance() {
     return *internal_default_instance();
   }
@@ -344,15 +314,9 @@ class ContinuePrimaryKeyParams final :
   ContinuePrimaryKeyParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<ContinuePrimaryKeyParams>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const ContinuePrimaryKeyParams& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const ContinuePrimaryKeyParams& from) {
-    ContinuePrimaryKeyParams::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const ContinuePrimaryKeyParams& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -365,7 +329,7 @@ class ContinuePrimaryKeyParams final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(ContinuePrimaryKeyParams* other);
 
   private:
@@ -378,10 +342,7 @@ class ContinuePrimaryKeyParams final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -437,7 +398,7 @@ class ContinuePrimaryKeyParams final :
 // -------------------------------------------------------------------
 
 class AdvanceParams final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.AdvanceParams) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.AdvanceParams) */ {
  public:
   inline AdvanceParams() : AdvanceParams(nullptr) {}
   ~AdvanceParams() override;
@@ -467,15 +428,6 @@ class AdvanceParams final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const AdvanceParams& default_instance() {
     return *internal_default_instance();
   }
@@ -513,15 +465,9 @@ class AdvanceParams final :
   AdvanceParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<AdvanceParams>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const AdvanceParams& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const AdvanceParams& from) {
-    AdvanceParams::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const AdvanceParams& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -534,7 +480,7 @@ class AdvanceParams final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(AdvanceParams* other);
 
   private:
@@ -547,10 +493,7 @@ class AdvanceParams final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -585,7 +528,7 @@ class AdvanceParams final :
 // -------------------------------------------------------------------
 
 class CursorRequestParams final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.CursorRequestParams) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.CursorRequestParams) */ {
  public:
   inline CursorRequestParams() : CursorRequestParams(nullptr) {}
   ~CursorRequestParams() override;
@@ -615,15 +558,6 @@ class CursorRequestParams final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const CursorRequestParams& default_instance() {
     return *internal_default_instance();
   }
@@ -668,15 +602,9 @@ class CursorRequestParams final :
   CursorRequestParams* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<CursorRequestParams>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const CursorRequestParams& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const CursorRequestParams& from) {
-    CursorRequestParams::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const CursorRequestParams& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -689,7 +617,7 @@ class CursorRequestParams final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(CursorRequestParams* other);
 
   private:
@@ -702,10 +630,7 @@ class CursorRequestParams final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -803,7 +728,7 @@ class CursorRequestParams final :
 // -------------------------------------------------------------------
 
 class ObjectStoreCursorResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreCursorResponse) */ {
  public:
   inline ObjectStoreCursorResponse() : ObjectStoreCursorResponse(nullptr) {}
   ~ObjectStoreCursorResponse() override;
@@ -833,15 +758,6 @@ class ObjectStoreCursorResponse final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const ObjectStoreCursorResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -879,15 +795,9 @@ class ObjectStoreCursorResponse final :
   ObjectStoreCursorResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<ObjectStoreCursorResponse>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const ObjectStoreCursorResponse& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const ObjectStoreCursorResponse& from) {
-    ObjectStoreCursorResponse::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const ObjectStoreCursorResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -900,7 +810,7 @@ class ObjectStoreCursorResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(ObjectStoreCursorResponse* other);
 
   private:
@@ -913,10 +823,7 @@ class ObjectStoreCursorResponse final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -976,7 +883,7 @@ class ObjectStoreCursorResponse final :
 // -------------------------------------------------------------------
 
 class ObjectStoreKeyCursorResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.ObjectStoreKeyCursorResponse) */ {
  public:
   inline ObjectStoreKeyCursorResponse() : ObjectStoreKeyCursorResponse(nullptr) {}
   ~ObjectStoreKeyCursorResponse() override;
@@ -1006,15 +913,6 @@ class ObjectStoreKeyCursorResponse final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const ObjectStoreKeyCursorResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -1052,15 +950,9 @@ class ObjectStoreKeyCursorResponse final :
   ObjectStoreKeyCursorResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<ObjectStoreKeyCursorResponse>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const ObjectStoreKeyCursorResponse& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const ObjectStoreKeyCursorResponse& from) {
-    ObjectStoreKeyCursorResponse::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const ObjectStoreKeyCursorResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1073,7 +965,7 @@ class ObjectStoreKeyCursorResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(ObjectStoreKeyCursorResponse* other);
 
   private:
@@ -1086,10 +978,7 @@ class ObjectStoreKeyCursorResponse final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1129,7 +1018,7 @@ class ObjectStoreKeyCursorResponse final :
 // -------------------------------------------------------------------
 
 class IndexCursorResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.IndexCursorResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.IndexCursorResponse) */ {
  public:
   inline IndexCursorResponse() : IndexCursorResponse(nullptr) {}
   ~IndexCursorResponse() override;
@@ -1159,15 +1048,6 @@ class IndexCursorResponse final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const IndexCursorResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -1205,15 +1085,9 @@ class IndexCursorResponse final :
   IndexCursorResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<IndexCursorResponse>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const IndexCursorResponse& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const IndexCursorResponse& from) {
-    IndexCursorResponse::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const IndexCursorResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1226,7 +1100,7 @@ class IndexCursorResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(IndexCursorResponse* other);
 
   private:
@@ -1239,10 +1113,7 @@ class IndexCursorResponse final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1334,7 +1205,7 @@ class IndexCursorResponse final :
 // -------------------------------------------------------------------
 
 class IndexKeyCursorResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.IndexKeyCursorResponse) */ {
  public:
   inline IndexKeyCursorResponse() : IndexKeyCursorResponse(nullptr) {}
   ~IndexKeyCursorResponse() override;
@@ -1364,15 +1235,6 @@ class IndexKeyCursorResponse final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const IndexKeyCursorResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -1410,15 +1272,9 @@ class IndexKeyCursorResponse final :
   IndexKeyCursorResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<IndexKeyCursorResponse>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const IndexKeyCursorResponse& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const IndexKeyCursorResponse& from) {
-    IndexKeyCursorResponse::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const IndexKeyCursorResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1431,7 +1287,7 @@ class IndexKeyCursorResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(IndexKeyCursorResponse* other);
 
   private:
@@ -1444,10 +1300,7 @@ class IndexKeyCursorResponse final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1519,7 +1372,7 @@ class IndexKeyCursorResponse final :
 // -------------------------------------------------------------------
 
 class CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreCursorResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreCursorResponse) */ {
  public:
   inline CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse() : CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse(nullptr) {}
   ~CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse() override;
@@ -1549,15 +1402,6 @@ class CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -1595,15 +1439,9 @@ class CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse final :
   CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse& from) {
-    CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1616,7 +1454,7 @@ class CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse* other);
 
   private:
@@ -1629,10 +1467,7 @@ class CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1676,7 +1511,7 @@ class CursorResponse_a_type_mVArrayOfObjectStoreCursorResponse final :
 // -------------------------------------------------------------------
 
 class CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreKeyCursorResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfObjectStoreKeyCursorResponse) */ {
  public:
   inline CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse() : CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse(nullptr) {}
   ~CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse() override;
@@ -1706,15 +1541,6 @@ class CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -1752,15 +1578,9 @@ class CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse final :
   CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse& from) {
-    CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1773,7 +1593,7 @@ class CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse* other);
 
   private:
@@ -1786,10 +1606,7 @@ class CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1833,7 +1650,7 @@ class CursorResponse_a_type_mVArrayOfObjectStoreKeyCursorResponse final :
 // -------------------------------------------------------------------
 
 class CursorResponse_a_type_mVArrayOfIndexCursorResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexCursorResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexCursorResponse) */ {
  public:
   inline CursorResponse_a_type_mVArrayOfIndexCursorResponse() : CursorResponse_a_type_mVArrayOfIndexCursorResponse(nullptr) {}
   ~CursorResponse_a_type_mVArrayOfIndexCursorResponse() override;
@@ -1863,15 +1680,6 @@ class CursorResponse_a_type_mVArrayOfIndexCursorResponse final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const CursorResponse_a_type_mVArrayOfIndexCursorResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -1909,15 +1717,9 @@ class CursorResponse_a_type_mVArrayOfIndexCursorResponse final :
   CursorResponse_a_type_mVArrayOfIndexCursorResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<CursorResponse_a_type_mVArrayOfIndexCursorResponse>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const CursorResponse_a_type_mVArrayOfIndexCursorResponse& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const CursorResponse_a_type_mVArrayOfIndexCursorResponse& from) {
-    CursorResponse_a_type_mVArrayOfIndexCursorResponse::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const CursorResponse_a_type_mVArrayOfIndexCursorResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1930,7 +1732,7 @@ class CursorResponse_a_type_mVArrayOfIndexCursorResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(CursorResponse_a_type_mVArrayOfIndexCursorResponse* other);
 
   private:
@@ -1943,10 +1745,7 @@ class CursorResponse_a_type_mVArrayOfIndexCursorResponse final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1990,7 +1789,7 @@ class CursorResponse_a_type_mVArrayOfIndexCursorResponse final :
 // -------------------------------------------------------------------
 
 class CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexKeyCursorResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.CursorResponse.a_type_mVArrayOfIndexKeyCursorResponse) */ {
  public:
   inline CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse() : CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse(nullptr) {}
   ~CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse() override;
@@ -2020,15 +1819,6 @@ class CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -2066,15 +1856,9 @@ class CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse final :
   CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse& from) {
-    CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2087,7 +1871,7 @@ class CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse* other);
 
   private:
@@ -2100,10 +1884,7 @@ class CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2147,7 +1928,7 @@ class CursorResponse_a_type_mVArrayOfIndexKeyCursorResponse final :
 // -------------------------------------------------------------------
 
 class CursorResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.CursorResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.indexedDB.CursorResponse) */ {
  public:
   inline CursorResponse() : CursorResponse(nullptr) {}
   ~CursorResponse() override;
@@ -2177,15 +1958,6 @@ class CursorResponse final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const CursorResponse& default_instance() {
     return *internal_default_instance();
   }
@@ -2233,15 +2005,9 @@ class CursorResponse final :
   CursorResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<CursorResponse>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const CursorResponse& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const CursorResponse& from) {
-    CursorResponse::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const CursorResponse& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2254,7 +2020,7 @@ class CursorResponse final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(CursorResponse* other);
 
   private:
@@ -2267,10 +2033,7 @@ class CursorResponse final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 

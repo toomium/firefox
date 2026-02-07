@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -51,7 +48,8 @@ struct LSRemoveItemInfoDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LSRemoveItemInfoDefaultTypeInternal _LSRemoveItemInfo_default_instance_;
 PROTOBUF_CONSTEXPR LSClearInfo::LSClearInfo(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct LSClearInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR LSClearInfoDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -121,132 +119,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto[7];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::LSSetItemInfo, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::LSSetItemInfo, _impl_.a_key_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::LSSetItemInfo, _impl_.a_value_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::LSRemoveItemInfo, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::LSRemoveItemInfo, _impl_.a_key_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::LSClearInfo, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::LSWriteInfo, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::LSWriteInfo, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::LSWriteInfo, _impl_.content_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::LSSetItemAndNotifyInfo, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::LSSetItemAndNotifyInfo, _impl_.a_key_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::LSSetItemAndNotifyInfo, _impl_.a_oldvalue_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::LSSetItemAndNotifyInfo, _impl_.a_value_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo, _impl_.a_key_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo, _impl_.a_oldvalue_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::LSWriteAndNotifyInfo, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::LSWriteAndNotifyInfo, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::LSWriteAndNotifyInfo, _impl_.content_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::dom::LSSetItemInfo)},
-  { 8, -1, -1, sizeof(::protobuf::mozilla::dom::LSRemoveItemInfo)},
-  { 15, -1, -1, sizeof(::protobuf::mozilla::dom::LSClearInfo)},
-  { 21, -1, -1, sizeof(::protobuf::mozilla::dom::LSWriteInfo)},
-  { 31, -1, -1, sizeof(::protobuf::mozilla::dom::LSSetItemAndNotifyInfo)},
-  { 40, -1, -1, sizeof(::protobuf::mozilla::dom::LSRemoveItemAndNotifyInfo)},
-  { 48, -1, -1, sizeof(::protobuf::mozilla::dom::LSWriteAndNotifyInfo)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::dom::_LSSetItemInfo_default_instance_._instance,
-  &::protobuf::mozilla::dom::_LSRemoveItemInfo_default_instance_._instance,
-  &::protobuf::mozilla::dom::_LSClearInfo_default_instance_._instance,
-  &::protobuf::mozilla::dom::_LSWriteInfo_default_instance_._instance,
-  &::protobuf::mozilla::dom::_LSSetItemAndNotifyInfo_default_instance_._instance,
-  &::protobuf::mozilla::dom::_LSRemoveItemAndNotifyInfo_default_instance_._instance,
-  &::protobuf::mozilla::dom::_LSWriteAndNotifyInfo_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n2PBackgroundLSSnapshot_protobuf.mozilla"
-  ".dom.h.proto\022\024protobuf.mozilla.dom\032\036PBac"
-  "kgroundLSSharedTypes.proto\"/\n\rLSSetItemI"
-  "nfo\022\r\n\005a_key\030\001 \001(\t\022\017\n\007a_value\030\002 \001(\014\"!\n\020L"
-  "SRemoveItemInfo\022\r\n\005a_key\030\001 \001(\t\"\r\n\013LSClea"
-  "rInfo\"\340\001\n\013LSWriteInfo\022@\n\021a_mVLSSetItemIn"
-  "fo\030\001 \001(\0132#.protobuf.mozilla.dom.LSSetIte"
-  "mInfoH\000\022F\n\024a_mVLSRemoveItemInfo\030\002 \001(\0132&."
-  "protobuf.mozilla.dom.LSRemoveItemInfoH\000\022"
-  "<\n\017a_mVLSClearInfo\030\003 \001(\0132!.protobuf.mozi"
-  "lla.dom.LSClearInfoH\000B\t\n\007content\"L\n\026LSSe"
-  "tItemAndNotifyInfo\022\r\n\005a_key\030\001 \001(\t\022\022\n\na_o"
-  "ldValue\030\002 \001(\014\022\017\n\007a_value\030\003 \001(\014\">\n\031LSRemo"
-  "veItemAndNotifyInfo\022\r\n\005a_key\030\001 \001(\t\022\022\n\na_"
-  "oldValue\030\002 \001(\014\"\215\002\n\024LSWriteAndNotifyInfo\022"
-  "R\n\032a_mVLSSetItemAndNotifyInfo\030\001 \001(\0132,.pr"
-  "otobuf.mozilla.dom.LSSetItemAndNotifyInf"
-  "oH\000\022X\n\035a_mVLSRemoveItemAndNotifyInfo\030\002 \001"
-  "(\0132/.protobuf.mozilla.dom.LSRemoveItemAn"
-  "dNotifyInfoH\000\022<\n\017a_mVLSClearInfo\030\003 \001(\0132!"
-  ".protobuf.mozilla.dom.LSClearInfoH\000B\t\n\007c"
-  "ontentb\006proto3"
-  ;
-static const ::_pbi::DescriptorTable* const descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto_deps[1] = {
-  &::descriptor_table_PBackgroundLSSharedTypes_2eproto,
-};
-static ::_pbi::once_flag descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto = {
-    false, false, 854, descriptor_table_protodef_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    "PBackgroundLSSnapshot_protobuf.mozilla.dom.h.proto",
-    &descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto_once, descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto_deps, 1, 7,
-    schemas, file_default_instances, TableStruct_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets,
-    file_level_metadata_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto, file_level_enum_descriptors_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    file_level_service_descriptors_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter() {
-  return &descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto(&descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -259,19 +131,19 @@ class LSSetItemInfo::_Internal {
 
 LSSetItemInfo::LSSetItemInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.LSSetItemInfo)
 }
 LSSetItemInfo::LSSetItemInfo(const LSSetItemInfo& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   LSSetItemInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_key_){}
     , decltype(_impl_.a_value_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_key_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_key_.Set("", GetArenaForAllocation());
@@ -312,7 +184,7 @@ inline void LSSetItemInfo::SharedCtor(
 
 LSSetItemInfo::~LSSetItemInfo() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.LSSetItemInfo)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -337,7 +209,7 @@ void LSSetItemInfo::Clear() {
 
   _impl_.a_key_.ClearToEmpty();
   _impl_.a_value_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* LSSetItemInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -352,7 +224,7 @@ const char* LSSetItemInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext*
           auto str = _internal_mutable_a_key();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.LSSetItemInfo.a_key"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -376,7 +248,7 @@ const char* LSSetItemInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -411,8 +283,8 @@ uint8_t* LSSetItemInfo::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.LSSetItemInfo)
   return target;
@@ -440,19 +312,22 @@ size_t LSSetItemInfo::ByteSizeLong() const {
         this->_internal_a_value());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LSSetItemInfo::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    LSSetItemInfo::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LSSetItemInfo::GetClassData() const { return &_class_data_; }
+void LSSetItemInfo::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const LSSetItemInfo*>(
+      &from));
+}
 
-
-void LSSetItemInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<LSSetItemInfo*>(&to_msg);
-  auto& from = static_cast<const LSSetItemInfo&>(from_msg);
+void LSSetItemInfo::MergeFrom(const LSSetItemInfo& from) {
+  LSSetItemInfo* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.LSSetItemInfo)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -464,7 +339,7 @@ void LSSetItemInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::
   if (!from._internal_a_value().empty()) {
     _this->_internal_set_a_value(from._internal_a_value());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void LSSetItemInfo::CopyFrom(const LSSetItemInfo& from) {
@@ -493,11 +368,10 @@ void LSSetItemInfo::InternalSwap(LSSetItemInfo* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata LSSetItemInfo::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto[0]);
+std::string LSSetItemInfo::GetTypeName() const {
+  return "protobuf.mozilla.dom.LSSetItemInfo";
 }
+
 
 // ===================================================================
 
@@ -507,18 +381,18 @@ class LSRemoveItemInfo::_Internal {
 
 LSRemoveItemInfo::LSRemoveItemInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.LSRemoveItemInfo)
 }
 LSRemoveItemInfo::LSRemoveItemInfo(const LSRemoveItemInfo& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   LSRemoveItemInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_key_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_key_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_key_.Set("", GetArenaForAllocation());
@@ -546,7 +420,7 @@ inline void LSRemoveItemInfo::SharedCtor(
 
 LSRemoveItemInfo::~LSRemoveItemInfo() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.LSRemoveItemInfo)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -569,7 +443,7 @@ void LSRemoveItemInfo::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_key_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* LSRemoveItemInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -584,7 +458,7 @@ const char* LSRemoveItemInfo::_InternalParse(const char* ptr, ::_pbi::ParseConte
           auto str = _internal_mutable_a_key();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.LSRemoveItemInfo.a_key"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -599,7 +473,7 @@ const char* LSRemoveItemInfo::_InternalParse(const char* ptr, ::_pbi::ParseConte
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -628,8 +502,8 @@ uint8_t* LSRemoveItemInfo::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.LSRemoveItemInfo)
   return target;
@@ -650,19 +524,22 @@ size_t LSRemoveItemInfo::ByteSizeLong() const {
         this->_internal_a_key());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LSRemoveItemInfo::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    LSRemoveItemInfo::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LSRemoveItemInfo::GetClassData() const { return &_class_data_; }
+void LSRemoveItemInfo::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const LSRemoveItemInfo*>(
+      &from));
+}
 
-
-void LSRemoveItemInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<LSRemoveItemInfo*>(&to_msg);
-  auto& from = static_cast<const LSRemoveItemInfo&>(from_msg);
+void LSRemoveItemInfo::MergeFrom(const LSRemoveItemInfo& from) {
+  LSRemoveItemInfo* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.LSRemoveItemInfo)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -671,7 +548,7 @@ void LSRemoveItemInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const
   if (!from._internal_a_key().empty()) {
     _this->_internal_set_a_key(from._internal_a_key());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void LSRemoveItemInfo::CopyFrom(const LSRemoveItemInfo& from) {
@@ -696,11 +573,10 @@ void LSRemoveItemInfo::InternalSwap(LSRemoveItemInfo* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata LSRemoveItemInfo::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto[1]);
+std::string LSRemoveItemInfo::GetTypeName() const {
+  return "protobuf.mozilla.dom.LSRemoveItemInfo";
 }
+
 
 // ===================================================================
 
@@ -710,37 +586,145 @@ class LSClearInfo::_Internal {
 
 LSClearInfo::LSClearInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.LSClearInfo)
 }
 LSClearInfo::LSClearInfo(const LSClearInfo& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   LSClearInfo* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.LSClearInfo)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LSClearInfo::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LSClearInfo::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata LSClearInfo::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto[2]);
+inline void LSClearInfo::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+LSClearInfo::~LSClearInfo() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.LSClearInfo)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void LSClearInfo::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void LSClearInfo::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void LSClearInfo::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.dom.LSClearInfo)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* LSClearInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* LSClearInfo::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.dom.LSClearInfo)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.LSClearInfo)
+  return target;
+}
+
+size_t LSClearInfo::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.LSClearInfo)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void LSClearInfo::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const LSClearInfo*>(
+      &from));
+}
+
+void LSClearInfo::MergeFrom(const LSClearInfo& from) {
+  LSClearInfo* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.LSClearInfo)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void LSClearInfo::CopyFrom(const LSClearInfo& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.dom.LSClearInfo)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool LSClearInfo::IsInitialized() const {
+  return true;
+}
+
+void LSClearInfo::InternalSwap(LSClearInfo* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string LSClearInfo::GetTypeName() const {
+  return "protobuf.mozilla.dom.LSClearInfo";
+}
+
 
 // ===================================================================
 
@@ -810,19 +794,19 @@ void LSWriteInfo::set_allocated_a_mvlsclearinfo(::protobuf::mozilla::dom::LSClea
 }
 LSWriteInfo::LSWriteInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.LSWriteInfo)
 }
 LSWriteInfo::LSWriteInfo(const LSWriteInfo& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   LSWriteInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVLSSetItemInfo: {
@@ -861,7 +845,7 @@ inline void LSWriteInfo::SharedCtor(
 
 LSWriteInfo::~LSWriteInfo() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.LSWriteInfo)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -915,7 +899,7 @@ void LSWriteInfo::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* LSWriteInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -959,7 +943,7 @@ const char* LSWriteInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -999,8 +983,8 @@ uint8_t* LSWriteInfo::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.LSWriteInfo)
   return target;
@@ -1040,19 +1024,22 @@ size_t LSWriteInfo::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LSWriteInfo::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    LSWriteInfo::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LSWriteInfo::GetClassData() const { return &_class_data_; }
+void LSWriteInfo::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const LSWriteInfo*>(
+      &from));
+}
 
-
-void LSWriteInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<LSWriteInfo*>(&to_msg);
-  auto& from = static_cast<const LSWriteInfo&>(from_msg);
+void LSWriteInfo::MergeFrom(const LSWriteInfo& from) {
+  LSWriteInfo* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.LSWriteInfo)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1078,7 +1065,7 @@ void LSWriteInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PR
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void LSWriteInfo::CopyFrom(const LSWriteInfo& from) {
@@ -1099,11 +1086,10 @@ void LSWriteInfo::InternalSwap(LSWriteInfo* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata LSWriteInfo::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto[3]);
+std::string LSWriteInfo::GetTypeName() const {
+  return "protobuf.mozilla.dom.LSWriteInfo";
 }
+
 
 // ===================================================================
 
@@ -1113,12 +1099,12 @@ class LSSetItemAndNotifyInfo::_Internal {
 
 LSSetItemAndNotifyInfo::LSSetItemAndNotifyInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.LSSetItemAndNotifyInfo)
 }
 LSSetItemAndNotifyInfo::LSSetItemAndNotifyInfo(const LSSetItemAndNotifyInfo& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   LSSetItemAndNotifyInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_key_){}
@@ -1126,7 +1112,7 @@ LSSetItemAndNotifyInfo::LSSetItemAndNotifyInfo(const LSSetItemAndNotifyInfo& fro
     , decltype(_impl_.a_value_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_key_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_key_.Set("", GetArenaForAllocation());
@@ -1180,7 +1166,7 @@ inline void LSSetItemAndNotifyInfo::SharedCtor(
 
 LSSetItemAndNotifyInfo::~LSSetItemAndNotifyInfo() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.LSSetItemAndNotifyInfo)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1207,7 +1193,7 @@ void LSSetItemAndNotifyInfo::Clear() {
   _impl_.a_key_.ClearToEmpty();
   _impl_.a_oldvalue_.ClearToEmpty();
   _impl_.a_value_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* LSSetItemAndNotifyInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1222,7 +1208,7 @@ const char* LSSetItemAndNotifyInfo::_InternalParse(const char* ptr, ::_pbi::Pars
           auto str = _internal_mutable_a_key();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.LSSetItemAndNotifyInfo.a_key"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1255,7 +1241,7 @@ const char* LSSetItemAndNotifyInfo::_InternalParse(const char* ptr, ::_pbi::Pars
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1296,8 +1282,8 @@ uint8_t* LSSetItemAndNotifyInfo::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.LSSetItemAndNotifyInfo)
   return target;
@@ -1332,19 +1318,22 @@ size_t LSSetItemAndNotifyInfo::ByteSizeLong() const {
         this->_internal_a_value());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LSSetItemAndNotifyInfo::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    LSSetItemAndNotifyInfo::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LSSetItemAndNotifyInfo::GetClassData() const { return &_class_data_; }
+void LSSetItemAndNotifyInfo::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const LSSetItemAndNotifyInfo*>(
+      &from));
+}
 
-
-void LSSetItemAndNotifyInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<LSSetItemAndNotifyInfo*>(&to_msg);
-  auto& from = static_cast<const LSSetItemAndNotifyInfo&>(from_msg);
+void LSSetItemAndNotifyInfo::MergeFrom(const LSSetItemAndNotifyInfo& from) {
+  LSSetItemAndNotifyInfo* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.LSSetItemAndNotifyInfo)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1359,7 +1348,7 @@ void LSSetItemAndNotifyInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg,
   if (!from._internal_a_value().empty()) {
     _this->_internal_set_a_value(from._internal_a_value());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void LSSetItemAndNotifyInfo::CopyFrom(const LSSetItemAndNotifyInfo& from) {
@@ -1392,11 +1381,10 @@ void LSSetItemAndNotifyInfo::InternalSwap(LSSetItemAndNotifyInfo* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata LSSetItemAndNotifyInfo::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto[4]);
+std::string LSSetItemAndNotifyInfo::GetTypeName() const {
+  return "protobuf.mozilla.dom.LSSetItemAndNotifyInfo";
 }
+
 
 // ===================================================================
 
@@ -1406,19 +1394,19 @@ class LSRemoveItemAndNotifyInfo::_Internal {
 
 LSRemoveItemAndNotifyInfo::LSRemoveItemAndNotifyInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo)
 }
 LSRemoveItemAndNotifyInfo::LSRemoveItemAndNotifyInfo(const LSRemoveItemAndNotifyInfo& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   LSRemoveItemAndNotifyInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_key_){}
     , decltype(_impl_.a_oldvalue_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_key_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_key_.Set("", GetArenaForAllocation());
@@ -1459,7 +1447,7 @@ inline void LSRemoveItemAndNotifyInfo::SharedCtor(
 
 LSRemoveItemAndNotifyInfo::~LSRemoveItemAndNotifyInfo() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1484,7 +1472,7 @@ void LSRemoveItemAndNotifyInfo::Clear() {
 
   _impl_.a_key_.ClearToEmpty();
   _impl_.a_oldvalue_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* LSRemoveItemAndNotifyInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1499,7 +1487,7 @@ const char* LSRemoveItemAndNotifyInfo::_InternalParse(const char* ptr, ::_pbi::P
           auto str = _internal_mutable_a_key();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo.a_key"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1523,7 +1511,7 @@ const char* LSRemoveItemAndNotifyInfo::_InternalParse(const char* ptr, ::_pbi::P
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1558,8 +1546,8 @@ uint8_t* LSRemoveItemAndNotifyInfo::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo)
   return target;
@@ -1587,19 +1575,22 @@ size_t LSRemoveItemAndNotifyInfo::ByteSizeLong() const {
         this->_internal_a_oldvalue());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LSRemoveItemAndNotifyInfo::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    LSRemoveItemAndNotifyInfo::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LSRemoveItemAndNotifyInfo::GetClassData() const { return &_class_data_; }
+void LSRemoveItemAndNotifyInfo::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const LSRemoveItemAndNotifyInfo*>(
+      &from));
+}
 
-
-void LSRemoveItemAndNotifyInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<LSRemoveItemAndNotifyInfo*>(&to_msg);
-  auto& from = static_cast<const LSRemoveItemAndNotifyInfo&>(from_msg);
+void LSRemoveItemAndNotifyInfo::MergeFrom(const LSRemoveItemAndNotifyInfo& from) {
+  LSRemoveItemAndNotifyInfo* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1611,7 +1602,7 @@ void LSRemoveItemAndNotifyInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_m
   if (!from._internal_a_oldvalue().empty()) {
     _this->_internal_set_a_oldvalue(from._internal_a_oldvalue());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void LSRemoveItemAndNotifyInfo::CopyFrom(const LSRemoveItemAndNotifyInfo& from) {
@@ -1640,11 +1631,10 @@ void LSRemoveItemAndNotifyInfo::InternalSwap(LSRemoveItemAndNotifyInfo* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata LSRemoveItemAndNotifyInfo::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto[5]);
+std::string LSRemoveItemAndNotifyInfo::GetTypeName() const {
+  return "protobuf.mozilla.dom.LSRemoveItemAndNotifyInfo";
 }
+
 
 // ===================================================================
 
@@ -1714,19 +1704,19 @@ void LSWriteAndNotifyInfo::set_allocated_a_mvlsclearinfo(::protobuf::mozilla::do
 }
 LSWriteAndNotifyInfo::LSWriteAndNotifyInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.LSWriteAndNotifyInfo)
 }
 LSWriteAndNotifyInfo::LSWriteAndNotifyInfo(const LSWriteAndNotifyInfo& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   LSWriteAndNotifyInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVLSSetItemAndNotifyInfo: {
@@ -1765,7 +1755,7 @@ inline void LSWriteAndNotifyInfo::SharedCtor(
 
 LSWriteAndNotifyInfo::~LSWriteAndNotifyInfo() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.LSWriteAndNotifyInfo)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1819,7 +1809,7 @@ void LSWriteAndNotifyInfo::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* LSWriteAndNotifyInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1863,7 +1853,7 @@ const char* LSWriteAndNotifyInfo::_InternalParse(const char* ptr, ::_pbi::ParseC
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1903,8 +1893,8 @@ uint8_t* LSWriteAndNotifyInfo::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.LSWriteAndNotifyInfo)
   return target;
@@ -1944,19 +1934,22 @@ size_t LSWriteAndNotifyInfo::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LSWriteAndNotifyInfo::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    LSWriteAndNotifyInfo::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LSWriteAndNotifyInfo::GetClassData() const { return &_class_data_; }
+void LSWriteAndNotifyInfo::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const LSWriteAndNotifyInfo*>(
+      &from));
+}
 
-
-void LSWriteAndNotifyInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<LSWriteAndNotifyInfo*>(&to_msg);
-  auto& from = static_cast<const LSWriteAndNotifyInfo&>(from_msg);
+void LSWriteAndNotifyInfo::MergeFrom(const LSWriteAndNotifyInfo& from) {
+  LSWriteAndNotifyInfo* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.LSWriteAndNotifyInfo)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1982,7 +1975,7 @@ void LSWriteAndNotifyInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void LSWriteAndNotifyInfo::CopyFrom(const LSWriteAndNotifyInfo& from) {
@@ -2003,11 +1996,10 @@ void LSWriteAndNotifyInfo::InternalSwap(LSWriteAndNotifyInfo* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata LSWriteAndNotifyInfo::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PBackgroundLSSnapshot_5fprotobuf_2emozilla_2edom_2eh_2eproto[6]);
+std::string LSWriteAndNotifyInfo::GetTypeName() const {
+  return "protobuf.mozilla.dom.LSWriteAndNotifyInfo";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace dom

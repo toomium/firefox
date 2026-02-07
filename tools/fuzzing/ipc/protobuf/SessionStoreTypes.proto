@@ -3,9 +3,10 @@
 // Edit at your own risk
 //
 
-// Generated from /home/tmittendorf/firefox/toolkit/components/sessionstore/SessionStoreTypes.ipdlh
+// Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/toolkit/components/sessionstore/SessionStoreTypes.ipdlh
 
 syntax = "proto3";
+option optimize_for = LITE_RUNTIME;
 
 // Importing all namespaced protobuf children headers
 import public "SessionStoreTypes_protobuf.mozilla.dom.sessionstore.h.proto";

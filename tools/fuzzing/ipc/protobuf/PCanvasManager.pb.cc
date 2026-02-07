@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -38,7 +35,8 @@ struct Msg_PCanvasConstructorDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_PCanvasConstructorDefaultTypeInternal _Msg_PCanvasConstructor_default_instance_;
 PROTOBUF_CONSTEXPR Reply_PCanvasConstructor::Reply_PCanvasConstructor(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Reply_PCanvasConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_PCanvasConstructorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -62,7 +60,8 @@ struct Msg_PWebGLConstructorDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_PWebGLConstructorDefaultTypeInternal _Msg_PWebGLConstructor_default_instance_;
 PROTOBUF_CONSTEXPR Reply_PWebGLConstructor::Reply_PWebGLConstructor(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Reply_PWebGLConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_PWebGLConstructorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -86,7 +85,8 @@ struct Msg_PWebGPUConstructorDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_PWebGPUConstructorDefaultTypeInternal _Msg_PWebGPUConstructor_default_instance_;
 PROTOBUF_CONSTEXPR Reply_PWebGPUConstructor::Reply_PWebGPUConstructor(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Reply_PWebGPUConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_PWebGPUConstructorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -143,133 +143,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace gfx
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PCanvasManager_2eproto[9];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PCanvasManager_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PCanvasManager_2eproto = nullptr;
-
-const uint32_t TableStruct_PCanvasManager_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PCanvasManager::Msg_PCanvasConstructor, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PCanvasManager::Msg_PCanvasConstructor, _impl_.a_actorid_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PCanvasManager::Reply_PCanvasConstructor, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PCanvasManager::Msg_PWebGLConstructor, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PCanvasManager::Msg_PWebGLConstructor, _impl_.a_actorid_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PCanvasManager::Reply_PWebGLConstructor, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PCanvasManager::Msg_PWebGPUConstructor, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PCanvasManager::Msg_PWebGPUConstructor, _impl_.a_actorid_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PCanvasManager::Reply_PWebGPUConstructor, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PCanvasManager::Msg_Initialize, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PCanvasManager::Msg_Initialize, _impl_.a_amanagerid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PCanvasManager::Msg_GetSnapshot, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PCanvasManager::Msg_GetSnapshot, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PCanvasManager::Msg_GetSnapshot, _impl_.a_amanagerid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PCanvasManager::Msg_GetSnapshot, _impl_.a_aprotocolid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PCanvasManager::Msg_GetSnapshot, _impl_.a_ownerid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PCanvasManager::Msg_GetSnapshot, _impl_.a_commandencoderid_),
-  ~0u,
-  ~0u,
-  0,
-  1,
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PCanvasManager::Reply_GetSnapshot, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PCanvasManager::Reply_GetSnapshot, _impl_.a_ret_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::gfx::PCanvasManager::Msg_PCanvasConstructor)},
-  { 7, -1, -1, sizeof(::protobuf::mozilla::gfx::PCanvasManager::Reply_PCanvasConstructor)},
-  { 13, -1, -1, sizeof(::protobuf::mozilla::gfx::PCanvasManager::Msg_PWebGLConstructor)},
-  { 20, -1, -1, sizeof(::protobuf::mozilla::gfx::PCanvasManager::Reply_PWebGLConstructor)},
-  { 26, -1, -1, sizeof(::protobuf::mozilla::gfx::PCanvasManager::Msg_PWebGPUConstructor)},
-  { 33, -1, -1, sizeof(::protobuf::mozilla::gfx::PCanvasManager::Reply_PWebGPUConstructor)},
-  { 39, -1, -1, sizeof(::protobuf::mozilla::gfx::PCanvasManager::Msg_Initialize)},
-  { 46, 56, -1, sizeof(::protobuf::mozilla::gfx::PCanvasManager::Msg_GetSnapshot)},
-  { 60, -1, -1, sizeof(::protobuf::mozilla::gfx::PCanvasManager::Reply_GetSnapshot)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::gfx::PCanvasManager::_Msg_PCanvasConstructor_default_instance_._instance,
-  &::protobuf::mozilla::gfx::PCanvasManager::_Reply_PCanvasConstructor_default_instance_._instance,
-  &::protobuf::mozilla::gfx::PCanvasManager::_Msg_PWebGLConstructor_default_instance_._instance,
-  &::protobuf::mozilla::gfx::PCanvasManager::_Reply_PWebGLConstructor_default_instance_._instance,
-  &::protobuf::mozilla::gfx::PCanvasManager::_Msg_PWebGPUConstructor_default_instance_._instance,
-  &::protobuf::mozilla::gfx::PCanvasManager::_Reply_PWebGPUConstructor_default_instance_._instance,
-  &::protobuf::mozilla::gfx::PCanvasManager::_Msg_Initialize_default_instance_._instance,
-  &::protobuf::mozilla::gfx::PCanvasManager::_Msg_GetSnapshot_default_instance_._instance,
-  &::protobuf::mozilla::gfx::PCanvasManager::_Reply_GetSnapshot_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PCanvasManager_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\024PCanvasManager.proto\022#protobuf.mozilla"
-  ".gfx.PCanvasManager\"+\n\026Msg_PCanvasConstr"
-  "uctor\022\021\n\ta_actorid\030\001 \001(\022\"\032\n\030Reply_PCanva"
-  "sConstructor\"*\n\025Msg_PWebGLConstructor\022\021\n"
-  "\ta_actorid\030\001 \001(\022\"\031\n\027Reply_PWebGLConstruc"
-  "tor\"+\n\026Msg_PWebGPUConstructor\022\021\n\ta_actor"
-  "id\030\001 \001(\022\"\032\n\030Reply_PWebGPUConstructor\"&\n\016"
-  "Msg_Initialize\022\024\n\014a_aManagerId\030\001 \001(\r\"\234\001\n"
-  "\017Msg_GetSnapshot\022\024\n\014a_aManagerId\030\001 \001(\r\022\025"
-  "\n\ra_aProtocolId\030\002 \001(\014\022\026\n\ta_ownerId\030\003 \001(\014"
-  "H\000\210\001\001\022\037\n\022a_commandEncoderId\030\004 \001(\014H\001\210\001\001B\014"
-  "\n\n_a_ownerIdB\025\n\023_a_commandEncoderId\"\"\n\021R"
-  "eply_GetSnapshot\022\r\n\005a_ret\030\001 \001(\014b\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_PCanvasManager_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PCanvasManager_2eproto = {
-    false, false, 519, descriptor_table_protodef_PCanvasManager_2eproto,
-    "PCanvasManager.proto",
-    &descriptor_table_PCanvasManager_2eproto_once, nullptr, 0, 9,
-    schemas, file_default_instances, TableStruct_PCanvasManager_2eproto::offsets,
-    file_level_metadata_PCanvasManager_2eproto, file_level_enum_descriptors_PCanvasManager_2eproto,
-    file_level_service_descriptors_PCanvasManager_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PCanvasManager_2eproto_getter() {
-  return &descriptor_table_PCanvasManager_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PCanvasManager_2eproto(&descriptor_table_PCanvasManager_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace gfx {
@@ -283,18 +156,18 @@ class Msg_PCanvasConstructor::_Internal {
 
 Msg_PCanvasConstructor::Msg_PCanvasConstructor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.PCanvasManager.Msg_PCanvasConstructor)
 }
 Msg_PCanvasConstructor::Msg_PCanvasConstructor(const Msg_PCanvasConstructor& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_PCanvasConstructor* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_actorid_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PCanvasManager.Msg_PCanvasConstructor)
 }
@@ -311,7 +184,7 @@ inline void Msg_PCanvasConstructor::SharedCtor(
 
 Msg_PCanvasConstructor::~Msg_PCanvasConstructor() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.PCanvasManager.Msg_PCanvasConstructor)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -333,7 +206,7 @@ void Msg_PCanvasConstructor::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_actorid_ = int64_t{0};
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_PCanvasConstructor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -361,7 +234,7 @@ const char* Msg_PCanvasConstructor::_InternalParse(const char* ptr, ::_pbi::Pars
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -386,8 +259,8 @@ uint8_t* Msg_PCanvasConstructor::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.PCanvasManager.Msg_PCanvasConstructor)
   return target;
@@ -406,19 +279,22 @@ size_t Msg_PCanvasConstructor::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_PCanvasConstructor::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Msg_PCanvasConstructor::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_PCanvasConstructor::GetClassData() const { return &_class_data_; }
+void Msg_PCanvasConstructor::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_PCanvasConstructor*>(
+      &from));
+}
 
-
-void Msg_PCanvasConstructor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Msg_PCanvasConstructor*>(&to_msg);
-  auto& from = static_cast<const Msg_PCanvasConstructor&>(from_msg);
+void Msg_PCanvasConstructor::MergeFrom(const Msg_PCanvasConstructor& from) {
+  Msg_PCanvasConstructor* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.PCanvasManager.Msg_PCanvasConstructor)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -427,7 +303,7 @@ void Msg_PCanvasConstructor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg,
   if (from._internal_a_actorid() != 0) {
     _this->_internal_set_a_actorid(from._internal_a_actorid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Msg_PCanvasConstructor::CopyFrom(const Msg_PCanvasConstructor& from) {
@@ -447,11 +323,10 @@ void Msg_PCanvasConstructor::InternalSwap(Msg_PCanvasConstructor* other) {
   swap(_impl_.a_actorid_, other->_impl_.a_actorid_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_PCanvasConstructor::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PCanvasManager_2eproto_getter, &descriptor_table_PCanvasManager_2eproto_once,
-      file_level_metadata_PCanvasManager_2eproto[0]);
+std::string Msg_PCanvasConstructor::GetTypeName() const {
+  return "protobuf.mozilla.gfx.PCanvasManager.Msg_PCanvasConstructor";
 }
+
 
 // ===================================================================
 
@@ -461,37 +336,145 @@ class Reply_PCanvasConstructor::_Internal {
 
 Reply_PCanvasConstructor::Reply_PCanvasConstructor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.PCanvasManager.Reply_PCanvasConstructor)
 }
 Reply_PCanvasConstructor::Reply_PCanvasConstructor(const Reply_PCanvasConstructor& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_PCanvasConstructor* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PCanvasManager.Reply_PCanvasConstructor)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_PCanvasConstructor::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_PCanvasConstructor::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Reply_PCanvasConstructor::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PCanvasManager_2eproto_getter, &descriptor_table_PCanvasManager_2eproto_once,
-      file_level_metadata_PCanvasManager_2eproto[1]);
+inline void Reply_PCanvasConstructor::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Reply_PCanvasConstructor::~Reply_PCanvasConstructor() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.PCanvasManager.Reply_PCanvasConstructor)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Reply_PCanvasConstructor::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Reply_PCanvasConstructor::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Reply_PCanvasConstructor::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.gfx.PCanvasManager.Reply_PCanvasConstructor)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Reply_PCanvasConstructor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Reply_PCanvasConstructor::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.gfx.PCanvasManager.Reply_PCanvasConstructor)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.PCanvasManager.Reply_PCanvasConstructor)
+  return target;
+}
+
+size_t Reply_PCanvasConstructor::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PCanvasManager.Reply_PCanvasConstructor)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Reply_PCanvasConstructor::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Reply_PCanvasConstructor*>(
+      &from));
+}
+
+void Reply_PCanvasConstructor::MergeFrom(const Reply_PCanvasConstructor& from) {
+  Reply_PCanvasConstructor* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.PCanvasManager.Reply_PCanvasConstructor)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Reply_PCanvasConstructor::CopyFrom(const Reply_PCanvasConstructor& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.gfx.PCanvasManager.Reply_PCanvasConstructor)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Reply_PCanvasConstructor::IsInitialized() const {
+  return true;
+}
+
+void Reply_PCanvasConstructor::InternalSwap(Reply_PCanvasConstructor* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Reply_PCanvasConstructor::GetTypeName() const {
+  return "protobuf.mozilla.gfx.PCanvasManager.Reply_PCanvasConstructor";
+}
+
 
 // ===================================================================
 
@@ -501,18 +484,18 @@ class Msg_PWebGLConstructor::_Internal {
 
 Msg_PWebGLConstructor::Msg_PWebGLConstructor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.PCanvasManager.Msg_PWebGLConstructor)
 }
 Msg_PWebGLConstructor::Msg_PWebGLConstructor(const Msg_PWebGLConstructor& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_PWebGLConstructor* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_actorid_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PCanvasManager.Msg_PWebGLConstructor)
 }
@@ -529,7 +512,7 @@ inline void Msg_PWebGLConstructor::SharedCtor(
 
 Msg_PWebGLConstructor::~Msg_PWebGLConstructor() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.PCanvasManager.Msg_PWebGLConstructor)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -551,7 +534,7 @@ void Msg_PWebGLConstructor::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_actorid_ = int64_t{0};
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_PWebGLConstructor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -579,7 +562,7 @@ const char* Msg_PWebGLConstructor::_InternalParse(const char* ptr, ::_pbi::Parse
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -604,8 +587,8 @@ uint8_t* Msg_PWebGLConstructor::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.PCanvasManager.Msg_PWebGLConstructor)
   return target;
@@ -624,19 +607,22 @@ size_t Msg_PWebGLConstructor::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_PWebGLConstructor::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Msg_PWebGLConstructor::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_PWebGLConstructor::GetClassData() const { return &_class_data_; }
+void Msg_PWebGLConstructor::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_PWebGLConstructor*>(
+      &from));
+}
 
-
-void Msg_PWebGLConstructor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Msg_PWebGLConstructor*>(&to_msg);
-  auto& from = static_cast<const Msg_PWebGLConstructor&>(from_msg);
+void Msg_PWebGLConstructor::MergeFrom(const Msg_PWebGLConstructor& from) {
+  Msg_PWebGLConstructor* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.PCanvasManager.Msg_PWebGLConstructor)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -645,7 +631,7 @@ void Msg_PWebGLConstructor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
   if (from._internal_a_actorid() != 0) {
     _this->_internal_set_a_actorid(from._internal_a_actorid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Msg_PWebGLConstructor::CopyFrom(const Msg_PWebGLConstructor& from) {
@@ -665,11 +651,10 @@ void Msg_PWebGLConstructor::InternalSwap(Msg_PWebGLConstructor* other) {
   swap(_impl_.a_actorid_, other->_impl_.a_actorid_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_PWebGLConstructor::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PCanvasManager_2eproto_getter, &descriptor_table_PCanvasManager_2eproto_once,
-      file_level_metadata_PCanvasManager_2eproto[2]);
+std::string Msg_PWebGLConstructor::GetTypeName() const {
+  return "protobuf.mozilla.gfx.PCanvasManager.Msg_PWebGLConstructor";
 }
+
 
 // ===================================================================
 
@@ -679,37 +664,145 @@ class Reply_PWebGLConstructor::_Internal {
 
 Reply_PWebGLConstructor::Reply_PWebGLConstructor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.PCanvasManager.Reply_PWebGLConstructor)
 }
 Reply_PWebGLConstructor::Reply_PWebGLConstructor(const Reply_PWebGLConstructor& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_PWebGLConstructor* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PCanvasManager.Reply_PWebGLConstructor)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_PWebGLConstructor::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_PWebGLConstructor::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Reply_PWebGLConstructor::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PCanvasManager_2eproto_getter, &descriptor_table_PCanvasManager_2eproto_once,
-      file_level_metadata_PCanvasManager_2eproto[3]);
+inline void Reply_PWebGLConstructor::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Reply_PWebGLConstructor::~Reply_PWebGLConstructor() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.PCanvasManager.Reply_PWebGLConstructor)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Reply_PWebGLConstructor::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Reply_PWebGLConstructor::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Reply_PWebGLConstructor::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.gfx.PCanvasManager.Reply_PWebGLConstructor)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Reply_PWebGLConstructor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Reply_PWebGLConstructor::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.gfx.PCanvasManager.Reply_PWebGLConstructor)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.PCanvasManager.Reply_PWebGLConstructor)
+  return target;
+}
+
+size_t Reply_PWebGLConstructor::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PCanvasManager.Reply_PWebGLConstructor)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Reply_PWebGLConstructor::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Reply_PWebGLConstructor*>(
+      &from));
+}
+
+void Reply_PWebGLConstructor::MergeFrom(const Reply_PWebGLConstructor& from) {
+  Reply_PWebGLConstructor* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.PCanvasManager.Reply_PWebGLConstructor)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Reply_PWebGLConstructor::CopyFrom(const Reply_PWebGLConstructor& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.gfx.PCanvasManager.Reply_PWebGLConstructor)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Reply_PWebGLConstructor::IsInitialized() const {
+  return true;
+}
+
+void Reply_PWebGLConstructor::InternalSwap(Reply_PWebGLConstructor* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Reply_PWebGLConstructor::GetTypeName() const {
+  return "protobuf.mozilla.gfx.PCanvasManager.Reply_PWebGLConstructor";
+}
+
 
 // ===================================================================
 
@@ -719,18 +812,18 @@ class Msg_PWebGPUConstructor::_Internal {
 
 Msg_PWebGPUConstructor::Msg_PWebGPUConstructor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.PCanvasManager.Msg_PWebGPUConstructor)
 }
 Msg_PWebGPUConstructor::Msg_PWebGPUConstructor(const Msg_PWebGPUConstructor& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_PWebGPUConstructor* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_actorid_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PCanvasManager.Msg_PWebGPUConstructor)
 }
@@ -747,7 +840,7 @@ inline void Msg_PWebGPUConstructor::SharedCtor(
 
 Msg_PWebGPUConstructor::~Msg_PWebGPUConstructor() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.PCanvasManager.Msg_PWebGPUConstructor)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -769,7 +862,7 @@ void Msg_PWebGPUConstructor::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_actorid_ = int64_t{0};
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_PWebGPUConstructor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -797,7 +890,7 @@ const char* Msg_PWebGPUConstructor::_InternalParse(const char* ptr, ::_pbi::Pars
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -822,8 +915,8 @@ uint8_t* Msg_PWebGPUConstructor::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.PCanvasManager.Msg_PWebGPUConstructor)
   return target;
@@ -842,19 +935,22 @@ size_t Msg_PWebGPUConstructor::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_PWebGPUConstructor::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Msg_PWebGPUConstructor::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_PWebGPUConstructor::GetClassData() const { return &_class_data_; }
+void Msg_PWebGPUConstructor::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_PWebGPUConstructor*>(
+      &from));
+}
 
-
-void Msg_PWebGPUConstructor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Msg_PWebGPUConstructor*>(&to_msg);
-  auto& from = static_cast<const Msg_PWebGPUConstructor&>(from_msg);
+void Msg_PWebGPUConstructor::MergeFrom(const Msg_PWebGPUConstructor& from) {
+  Msg_PWebGPUConstructor* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.PCanvasManager.Msg_PWebGPUConstructor)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -863,7 +959,7 @@ void Msg_PWebGPUConstructor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg,
   if (from._internal_a_actorid() != 0) {
     _this->_internal_set_a_actorid(from._internal_a_actorid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Msg_PWebGPUConstructor::CopyFrom(const Msg_PWebGPUConstructor& from) {
@@ -883,11 +979,10 @@ void Msg_PWebGPUConstructor::InternalSwap(Msg_PWebGPUConstructor* other) {
   swap(_impl_.a_actorid_, other->_impl_.a_actorid_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_PWebGPUConstructor::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PCanvasManager_2eproto_getter, &descriptor_table_PCanvasManager_2eproto_once,
-      file_level_metadata_PCanvasManager_2eproto[4]);
+std::string Msg_PWebGPUConstructor::GetTypeName() const {
+  return "protobuf.mozilla.gfx.PCanvasManager.Msg_PWebGPUConstructor";
 }
+
 
 // ===================================================================
 
@@ -897,37 +992,145 @@ class Reply_PWebGPUConstructor::_Internal {
 
 Reply_PWebGPUConstructor::Reply_PWebGPUConstructor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.PCanvasManager.Reply_PWebGPUConstructor)
 }
 Reply_PWebGPUConstructor::Reply_PWebGPUConstructor(const Reply_PWebGPUConstructor& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_PWebGPUConstructor* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PCanvasManager.Reply_PWebGPUConstructor)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_PWebGPUConstructor::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_PWebGPUConstructor::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Reply_PWebGPUConstructor::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PCanvasManager_2eproto_getter, &descriptor_table_PCanvasManager_2eproto_once,
-      file_level_metadata_PCanvasManager_2eproto[5]);
+inline void Reply_PWebGPUConstructor::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Reply_PWebGPUConstructor::~Reply_PWebGPUConstructor() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.PCanvasManager.Reply_PWebGPUConstructor)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Reply_PWebGPUConstructor::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Reply_PWebGPUConstructor::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Reply_PWebGPUConstructor::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.gfx.PCanvasManager.Reply_PWebGPUConstructor)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Reply_PWebGPUConstructor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Reply_PWebGPUConstructor::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.gfx.PCanvasManager.Reply_PWebGPUConstructor)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.PCanvasManager.Reply_PWebGPUConstructor)
+  return target;
+}
+
+size_t Reply_PWebGPUConstructor::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PCanvasManager.Reply_PWebGPUConstructor)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Reply_PWebGPUConstructor::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Reply_PWebGPUConstructor*>(
+      &from));
+}
+
+void Reply_PWebGPUConstructor::MergeFrom(const Reply_PWebGPUConstructor& from) {
+  Reply_PWebGPUConstructor* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.PCanvasManager.Reply_PWebGPUConstructor)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Reply_PWebGPUConstructor::CopyFrom(const Reply_PWebGPUConstructor& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.gfx.PCanvasManager.Reply_PWebGPUConstructor)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Reply_PWebGPUConstructor::IsInitialized() const {
+  return true;
+}
+
+void Reply_PWebGPUConstructor::InternalSwap(Reply_PWebGPUConstructor* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Reply_PWebGPUConstructor::GetTypeName() const {
+  return "protobuf.mozilla.gfx.PCanvasManager.Reply_PWebGPUConstructor";
+}
+
 
 // ===================================================================
 
@@ -937,18 +1140,18 @@ class Msg_Initialize::_Internal {
 
 Msg_Initialize::Msg_Initialize(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.PCanvasManager.Msg_Initialize)
 }
 Msg_Initialize::Msg_Initialize(const Msg_Initialize& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_Initialize* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_amanagerid_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_amanagerid_ = from._impl_.a_amanagerid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PCanvasManager.Msg_Initialize)
 }
@@ -965,7 +1168,7 @@ inline void Msg_Initialize::SharedCtor(
 
 Msg_Initialize::~Msg_Initialize() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.PCanvasManager.Msg_Initialize)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -987,7 +1190,7 @@ void Msg_Initialize::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_amanagerid_ = 0u;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_Initialize::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1015,7 +1218,7 @@ const char* Msg_Initialize::_InternalParse(const char* ptr, ::_pbi::ParseContext
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1040,8 +1243,8 @@ uint8_t* Msg_Initialize::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.PCanvasManager.Msg_Initialize)
   return target;
@@ -1060,19 +1263,22 @@ size_t Msg_Initialize::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_amanagerid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_Initialize::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Msg_Initialize::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_Initialize::GetClassData() const { return &_class_data_; }
+void Msg_Initialize::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_Initialize*>(
+      &from));
+}
 
-
-void Msg_Initialize::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Msg_Initialize*>(&to_msg);
-  auto& from = static_cast<const Msg_Initialize&>(from_msg);
+void Msg_Initialize::MergeFrom(const Msg_Initialize& from) {
+  Msg_Initialize* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.PCanvasManager.Msg_Initialize)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1081,7 +1287,7 @@ void Msg_Initialize::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const :
   if (from._internal_a_amanagerid() != 0) {
     _this->_internal_set_a_amanagerid(from._internal_a_amanagerid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Msg_Initialize::CopyFrom(const Msg_Initialize& from) {
@@ -1101,11 +1307,10 @@ void Msg_Initialize::InternalSwap(Msg_Initialize* other) {
   swap(_impl_.a_amanagerid_, other->_impl_.a_amanagerid_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_Initialize::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PCanvasManager_2eproto_getter, &descriptor_table_PCanvasManager_2eproto_once,
-      file_level_metadata_PCanvasManager_2eproto[6]);
+std::string Msg_Initialize::GetTypeName() const {
+  return "protobuf.mozilla.gfx.PCanvasManager.Msg_Initialize";
 }
+
 
 // ===================================================================
 
@@ -1122,12 +1327,12 @@ class Msg_GetSnapshot::_Internal {
 
 Msg_GetSnapshot::Msg_GetSnapshot(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot)
 }
 Msg_GetSnapshot::Msg_GetSnapshot(const Msg_GetSnapshot& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_GetSnapshot* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -1137,7 +1342,7 @@ Msg_GetSnapshot::Msg_GetSnapshot(const Msg_GetSnapshot& from)
     , decltype(_impl_.a_commandencoderid_){}
     , decltype(_impl_.a_amanagerid_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_aprotocolid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_aprotocolid_.Set("", GetArenaForAllocation());
@@ -1194,7 +1399,7 @@ inline void Msg_GetSnapshot::SharedCtor(
 
 Msg_GetSnapshot::~Msg_GetSnapshot() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1230,7 +1435,7 @@ void Msg_GetSnapshot::Clear() {
   }
   _impl_.a_amanagerid_ = 0u;
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_GetSnapshot::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1286,7 +1491,7 @@ const char* Msg_GetSnapshot::_InternalParse(const char* ptr, ::_pbi::ParseContex
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1330,8 +1535,8 @@ uint8_t* Msg_GetSnapshot::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot)
   return target;
@@ -1374,19 +1579,22 @@ size_t Msg_GetSnapshot::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_amanagerid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_GetSnapshot::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Msg_GetSnapshot::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_GetSnapshot::GetClassData() const { return &_class_data_; }
+void Msg_GetSnapshot::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_GetSnapshot*>(
+      &from));
+}
 
-
-void Msg_GetSnapshot::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Msg_GetSnapshot*>(&to_msg);
-  auto& from = static_cast<const Msg_GetSnapshot&>(from_msg);
+void Msg_GetSnapshot::MergeFrom(const Msg_GetSnapshot& from) {
+  Msg_GetSnapshot* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1407,7 +1615,7 @@ void Msg_GetSnapshot::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const 
   if (from._internal_a_amanagerid() != 0) {
     _this->_internal_set_a_amanagerid(from._internal_a_amanagerid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Msg_GetSnapshot::CopyFrom(const Msg_GetSnapshot& from) {
@@ -1442,11 +1650,10 @@ void Msg_GetSnapshot::InternalSwap(Msg_GetSnapshot* other) {
   swap(_impl_.a_amanagerid_, other->_impl_.a_amanagerid_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_GetSnapshot::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PCanvasManager_2eproto_getter, &descriptor_table_PCanvasManager_2eproto_once,
-      file_level_metadata_PCanvasManager_2eproto[7]);
+std::string Msg_GetSnapshot::GetTypeName() const {
+  return "protobuf.mozilla.gfx.PCanvasManager.Msg_GetSnapshot";
 }
+
 
 // ===================================================================
 
@@ -1456,18 +1663,18 @@ class Reply_GetSnapshot::_Internal {
 
 Reply_GetSnapshot::Reply_GetSnapshot(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.PCanvasManager.Reply_GetSnapshot)
 }
 Reply_GetSnapshot::Reply_GetSnapshot(const Reply_GetSnapshot& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_GetSnapshot* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_ret_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_ret_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_ret_.Set("", GetArenaForAllocation());
@@ -1495,7 +1702,7 @@ inline void Reply_GetSnapshot::SharedCtor(
 
 Reply_GetSnapshot::~Reply_GetSnapshot() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.PCanvasManager.Reply_GetSnapshot)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1518,7 +1725,7 @@ void Reply_GetSnapshot::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_ret_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Reply_GetSnapshot::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1547,7 +1754,7 @@ const char* Reply_GetSnapshot::_InternalParse(const char* ptr, ::_pbi::ParseCont
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1572,8 +1779,8 @@ uint8_t* Reply_GetSnapshot::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.PCanvasManager.Reply_GetSnapshot)
   return target;
@@ -1594,19 +1801,22 @@ size_t Reply_GetSnapshot::ByteSizeLong() const {
         this->_internal_a_ret());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_GetSnapshot::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Reply_GetSnapshot::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_GetSnapshot::GetClassData() const { return &_class_data_; }
+void Reply_GetSnapshot::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Reply_GetSnapshot*>(
+      &from));
+}
 
-
-void Reply_GetSnapshot::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Reply_GetSnapshot*>(&to_msg);
-  auto& from = static_cast<const Reply_GetSnapshot&>(from_msg);
+void Reply_GetSnapshot::MergeFrom(const Reply_GetSnapshot& from) {
+  Reply_GetSnapshot* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.PCanvasManager.Reply_GetSnapshot)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1615,7 +1825,7 @@ void Reply_GetSnapshot::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   if (!from._internal_a_ret().empty()) {
     _this->_internal_set_a_ret(from._internal_a_ret());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Reply_GetSnapshot::CopyFrom(const Reply_GetSnapshot& from) {
@@ -1640,11 +1850,10 @@ void Reply_GetSnapshot::InternalSwap(Reply_GetSnapshot* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Reply_GetSnapshot::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PCanvasManager_2eproto_getter, &descriptor_table_PCanvasManager_2eproto_once,
-      file_level_metadata_PCanvasManager_2eproto[8]);
+std::string Reply_GetSnapshot::GetTypeName() const {
+  return "protobuf.mozilla.gfx.PCanvasManager.Reply_GetSnapshot";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace PCanvasManager

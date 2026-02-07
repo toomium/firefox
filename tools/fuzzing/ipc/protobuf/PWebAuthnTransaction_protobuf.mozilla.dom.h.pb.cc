@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -432,471 +429,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[26];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection, _impl_.a_residentkey_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection, _impl_.a_userverificationrequirement_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection, _impl_.a_authenticatorattachment_),
-  ~0u,
-  ~0u,
-  0,
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnScopedCredential, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnScopedCredential, _impl_.a_id_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnScopedCredential, _impl_.a_transports_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionCredProtect, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionCredProtect, _impl_.a_policy_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionCredProtect, _impl_.a_required_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionCredProps, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionCredProps, _impl_.a_credprops_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionHmacSecret, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionHmacSecret, _impl_.a_hmaccreatesecret_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionLargeBlob, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionLargeBlob, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionLargeBlob, _impl_.a_flag_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionLargeBlob, _impl_.a_write_),
-  0,
-  ~0u,
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionMinPinLength, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionMinPinLength, _impl_.a_minpinlength_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionPrf, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionPrf, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionPrf, _impl_.a_eval_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionPrf, _impl_.a_evalbycredentialmaybe_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionPrf, _impl_.a_evalbycredential_),
-  0,
-  ~0u,
-  ~0u,
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionPrfValues, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionPrfValues, _impl_.a_first_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionPrfValues, _impl_.a_secondmaybe_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionPrfValues, _impl_.a_second_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionPrfEvalByCredentialEntry, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionPrfEvalByCredentialEntry, _impl_.a_credentialid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionPrfEvalByCredentialEntry, _impl_.a_eval_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtension, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtension, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtension, _impl_.content_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionResultAppId, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionResultAppId, _impl_.a_appid_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionResultCredProps, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionResultCredProps, _impl_.a_rk_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionResultHmacSecret, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionResultHmacSecret, _impl_.a_hmaccreatesecret_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionResultLargeBlob, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionResultLargeBlob, _impl_.a_flag_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionResultLargeBlob, _impl_.a_blob_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionResultLargeBlob, _impl_.a_written_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionResultPrf, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionResultPrf, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionResultPrf, _impl_.a_enabled_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionResultPrf, _impl_.a_results_),
-  1,
-  0,
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionResult, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionResult, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnExtensionResult, _impl_.content_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialRpInfo, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialRpInfo, _impl_.a_name_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialUserInfo, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialUserInfo, _impl_.a_id_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialUserInfo, _impl_.a_name_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialUserInfo, _impl_.a_displayname_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::CoseAlg, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::CoseAlg, _impl_.a_alg_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo, _impl_.a_rpid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo, _impl_.a_challenge_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo, _impl_.a_timeoutms_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo, _impl_.a_excludelist_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo, _impl_.a_rp_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo, _impl_.a_user_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo, _impl_.a_cosealgs_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo, _impl_.a_extensions_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo, _impl_.a_authenticatorselection_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo, _impl_.a_attestationconveyancepreference_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialResult, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialResult, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialResult, _impl_.a_clientdatajson_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialResult, _impl_.a_attestationobject_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialResult, _impl_.a_keyhandle_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialResult, _impl_.a_transports_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialResult, _impl_.a_extensions_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialResult, _impl_.a_authenticatorattachment_),
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  0,
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse, _impl_.content_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionInfo, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionInfo, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionInfo, _impl_.a_rpid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionInfo, _impl_.a_appid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionInfo, _impl_.a_challenge_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionInfo, _impl_.a_timeoutms_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionInfo, _impl_.a_allowlist_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionInfo, _impl_.a_extensions_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionInfo, _impl_.a_userverificationrequirement_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionInfo, _impl_.a_conditionallymediated_),
-  ~0u,
-  0,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionResult, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionResult, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionResult, _impl_.a_clientdatajson_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionResult, _impl_.a_keyhandle_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionResult, _impl_.a_signature_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionResult, _impl_.a_authenticatordata_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionResult, _impl_.a_extensions_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionResult, _impl_.a_userhandle_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionResult, _impl_.a_authenticatorattachment_),
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  0,
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionResponse, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionResponse, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebAuthnGetAssertionResponse, _impl_.content_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 9, -1, sizeof(::protobuf::mozilla::dom::WebAuthnAuthenticatorSelection)},
-  { 12, -1, -1, sizeof(::protobuf::mozilla::dom::WebAuthnScopedCredential)},
-  { 20, -1, -1, sizeof(::protobuf::mozilla::dom::WebAuthnExtensionCredProtect)},
-  { 28, -1, -1, sizeof(::protobuf::mozilla::dom::WebAuthnExtensionCredProps)},
-  { 35, -1, -1, sizeof(::protobuf::mozilla::dom::WebAuthnExtensionHmacSecret)},
-  { 42, 50, -1, sizeof(::protobuf::mozilla::dom::WebAuthnExtensionLargeBlob)},
-  { 52, -1, -1, sizeof(::protobuf::mozilla::dom::WebAuthnExtensionMinPinLength)},
-  { 59, 68, -1, sizeof(::protobuf::mozilla::dom::WebAuthnExtensionPrf)},
-  { 71, -1, -1, sizeof(::protobuf::mozilla::dom::WebAuthnExtensionPrfValues)},
-  { 80, -1, -1, sizeof(::protobuf::mozilla::dom::WebAuthnExtensionPrfEvalByCredentialEntry)},
-  { 88, -1, -1, sizeof(::protobuf::mozilla::dom::WebAuthnExtension)},
-  { 101, -1, -1, sizeof(::protobuf::mozilla::dom::WebAuthnExtensionResultAppId)},
-  { 108, -1, -1, sizeof(::protobuf::mozilla::dom::WebAuthnExtensionResultCredProps)},
-  { 115, -1, -1, sizeof(::protobuf::mozilla::dom::WebAuthnExtensionResultHmacSecret)},
-  { 122, -1, -1, sizeof(::protobuf::mozilla::dom::WebAuthnExtensionResultLargeBlob)},
-  { 131, 139, -1, sizeof(::protobuf::mozilla::dom::WebAuthnExtensionResultPrf)},
-  { 141, -1, -1, sizeof(::protobuf::mozilla::dom::WebAuthnExtensionResult)},
-  { 153, -1, -1, sizeof(::protobuf::mozilla::dom::WebAuthnMakeCredentialRpInfo)},
-  { 160, -1, -1, sizeof(::protobuf::mozilla::dom::WebAuthnMakeCredentialUserInfo)},
-  { 169, -1, -1, sizeof(::protobuf::mozilla::dom::CoseAlg)},
-  { 176, -1, -1, sizeof(::protobuf::mozilla::dom::WebAuthnMakeCredentialInfo)},
-  { 192, 204, -1, sizeof(::protobuf::mozilla::dom::WebAuthnMakeCredentialResult)},
-  { 210, -1, -1, sizeof(::protobuf::mozilla::dom::WebAuthnMakeCredentialResponse)},
-  { 219, 233, -1, sizeof(::protobuf::mozilla::dom::WebAuthnGetAssertionInfo)},
-  { 241, 254, -1, sizeof(::protobuf::mozilla::dom::WebAuthnGetAssertionResult)},
-  { 261, -1, -1, sizeof(::protobuf::mozilla::dom::WebAuthnGetAssertionResponse)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::dom::_WebAuthnAuthenticatorSelection_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnScopedCredential_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnExtensionCredProtect_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnExtensionCredProps_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnExtensionHmacSecret_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnExtensionLargeBlob_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnExtensionMinPinLength_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnExtensionPrf_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnExtensionPrfValues_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnExtensionPrfEvalByCredentialEntry_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnExtension_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnExtensionResultAppId_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnExtensionResultCredProps_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnExtensionResultHmacSecret_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnExtensionResultLargeBlob_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnExtensionResultPrf_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnExtensionResult_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnMakeCredentialRpInfo_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnMakeCredentialUserInfo_default_instance_._instance,
-  &::protobuf::mozilla::dom::_CoseAlg_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnMakeCredentialInfo_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnMakeCredentialResult_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnMakeCredentialResponse_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnGetAssertionInfo_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnGetAssertionResult_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebAuthnGetAssertionResponse_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n1PWebAuthnTransaction_protobuf.mozilla."
-  "dom.h.proto\022\024protobuf.mozilla.dom\"\244\001\n\036We"
-  "bAuthnAuthenticatorSelection\022\025\n\ra_reside"
-  "ntKey\030\001 \001(\t\022%\n\035a_userVerificationRequire"
-  "ment\030\002 \001(\t\022&\n\031a_authenticatorAttachment\030"
-  "\003 \001(\tH\000\210\001\001B\034\n\032_a_authenticatorAttachment"
-  "\">\n\030WebAuthnScopedCredential\022\014\n\004a_id\030\001 \003"
-  "(\r\022\024\n\014a_transports\030\002 \001(\r\"D\n\034WebAuthnExte"
-  "nsionCredProtect\022\020\n\010a_policy\030\001 \001(\014\022\022\n\na_"
-  "required\030\002 \001(\010\"1\n\032WebAuthnExtensionCredP"
-  "rops\022\023\n\013a_credProps\030\001 \001(\010\"9\n\033WebAuthnExt"
-  "ensionHmacSecret\022\032\n\022a_hmacCreateSecret\030\001"
-  " \001(\010\"M\n\032WebAuthnExtensionLargeBlob\022\023\n\006a_"
-  "flag\030\001 \001(\010H\000\210\001\001\022\017\n\007a_write\030\002 \003(\rB\t\n\007_a_f"
-  "lag\"7\n\035WebAuthnExtensionMinPinLength\022\026\n\016"
-  "a_minPinLength\030\001 \001(\010\"\346\001\n\024WebAuthnExtensi"
-  "onPrf\022E\n\006a_eval\030\001 \001(\01320.protobuf.mozilla"
-  ".dom.WebAuthnExtensionPrfValuesH\000\210\001\001\022\037\n\027"
-  "a_evalByCredentialMaybe\030\002 \001(\010\022[\n\022a_evalB"
-  "yCredential\030\003 \003(\0132\?.protobuf.mozilla.dom"
-  ".WebAuthnExtensionPrfEvalByCredentialEnt"
-  "ryB\t\n\007_a_eval\"V\n\032WebAuthnExtensionPrfVal"
-  "ues\022\017\n\007a_first\030\001 \003(\r\022\025\n\ra_secondMaybe\030\002 "
-  "\001(\010\022\020\n\010a_second\030\003 \003(\r\"\205\001\n)WebAuthnExtens"
-  "ionPrfEvalByCredentialEntry\022\026\n\016a_credent"
-  "ialId\030\001 \003(\r\022@\n\006a_eval\030\002 \001(\01320.protobuf.m"
-  "ozilla.dom.WebAuthnExtensionPrfValues\"\306\004"
-  "\n\021WebAuthnExtension\022^\n a_mVWebAuthnExten"
-  "sionCredProtect\030\001 \001(\01322.protobuf.mozilla"
-  ".dom.WebAuthnExtensionCredProtectH\000\022Z\n\036a"
-  "_mVWebAuthnExtensionCredProps\030\002 \001(\01320.pr"
-  "otobuf.mozilla.dom.WebAuthnExtensionCred"
-  "PropsH\000\022\\\n\037a_mVWebAuthnExtensionHmacSecr"
-  "et\030\003 \001(\01321.protobuf.mozilla.dom.WebAuthn"
-  "ExtensionHmacSecretH\000\022Z\n\036a_mVWebAuthnExt"
-  "ensionLargeBlob\030\004 \001(\01320.protobuf.mozilla"
-  ".dom.WebAuthnExtensionLargeBlobH\000\022`\n!a_m"
-  "VWebAuthnExtensionMinPinLength\030\005 \001(\01323.p"
-  "rotobuf.mozilla.dom.WebAuthnExtensionMin"
-  "PinLengthH\000\022N\n\030a_mVWebAuthnExtensionPrf\030"
-  "\006 \001(\0132*.protobuf.mozilla.dom.WebAuthnExt"
-  "ensionPrfH\000B\t\n\007content\"/\n\034WebAuthnExtens"
-  "ionResultAppId\022\017\n\007a_AppId\030\001 \001(\010\"0\n WebAu"
-  "thnExtensionResultCredProps\022\014\n\004a_rk\030\001 \001("
-  "\010\"\?\n!WebAuthnExtensionResultHmacSecret\022\032"
-  "\n\022a_hmacCreateSecret\030\001 \001(\010\"U\n WebAuthnEx"
-  "tensionResultLargeBlob\022\016\n\006a_flag\030\001 \001(\010\022\016"
-  "\n\006a_blob\030\002 \003(\r\022\021\n\ta_written\030\003 \001(\010\"\232\001\n\032We"
-  "bAuthnExtensionResultPrf\022\026\n\ta_enabled\030\001 "
-  "\001(\010H\000\210\001\001\022H\n\ta_results\030\002 \001(\01320.protobuf.m"
-  "ozilla.dom.WebAuthnExtensionPrfValuesH\001\210"
-  "\001\001B\014\n\n_a_enabledB\014\n\n_a_results\"\232\004\n\027WebAu"
-  "thnExtensionResult\022^\n a_mVWebAuthnExtens"
-  "ionResultAppId\030\001 \001(\01322.protobuf.mozilla."
-  "dom.WebAuthnExtensionResultAppIdH\000\022f\n$a_"
-  "mVWebAuthnExtensionResultCredProps\030\002 \001(\013"
-  "26.protobuf.mozilla.dom.WebAuthnExtensio"
-  "nResultCredPropsH\000\022h\n%a_mVWebAuthnExtens"
-  "ionResultHmacSecret\030\003 \001(\01327.protobuf.moz"
-  "illa.dom.WebAuthnExtensionResultHmacSecr"
-  "etH\000\022f\n$a_mVWebAuthnExtensionResultLarge"
-  "Blob\030\004 \001(\01326.protobuf.mozilla.dom.WebAut"
-  "hnExtensionResultLargeBlobH\000\022Z\n\036a_mVWebA"
-  "uthnExtensionResultPrf\030\005 \001(\01320.protobuf."
-  "mozilla.dom.WebAuthnExtensionResultPrfH\000"
-  "B\t\n\007content\".\n\034WebAuthnMakeCredentialRpI"
-  "nfo\022\016\n\006a_Name\030\001 \001(\t\"U\n\036WebAuthnMakeCrede"
-  "ntialUserInfo\022\014\n\004a_Id\030\001 \003(\r\022\016\n\006a_Name\030\002 "
-  "\001(\t\022\025\n\ra_DisplayName\030\003 \001(\t\"\030\n\007CoseAlg\022\r\n"
-  "\005a_alg\030\001 \001(\022\"\232\004\n\032WebAuthnMakeCredentialI"
-  "nfo\022\016\n\006a_RpId\030\001 \001(\t\022\023\n\013a_Challenge\030\002 \003(\r"
-  "\022\023\n\013a_TimeoutMS\030\003 \001(\r\022E\n\ra_ExcludeList\030\004"
-  " \003(\0132..protobuf.mozilla.dom.WebAuthnScop"
-  "edCredential\022@\n\004a_Rp\030\005 \001(\01322.protobuf.mo"
-  "zilla.dom.WebAuthnMakeCredentialRpInfo\022D"
-  "\n\006a_User\030\006 \001(\01324.protobuf.mozilla.dom.We"
-  "bAuthnMakeCredentialUserInfo\0221\n\na_coseAl"
-  "gs\030\007 \003(\0132\035.protobuf.mozilla.dom.CoseAlg\022"
-  "=\n\014a_Extensions\030\010 \003(\0132\'.protobuf.mozilla"
-  ".dom.WebAuthnExtension\022V\n\030a_Authenticato"
-  "rSelection\030\t \001(\01324.protobuf.mozilla.dom."
-  "WebAuthnAuthenticatorSelection\022)\n!a_atte"
-  "stationConveyancePreference\030\n \001(\t\"\213\002\n\034We"
-  "bAuthnMakeCredentialResult\022\030\n\020a_ClientDa"
-  "taJSON\030\001 \001(\t\022\033\n\023a_AttestationObject\030\002 \003("
-  "\r\022\023\n\013a_KeyHandle\030\003 \003(\r\022\024\n\014a_Transports\030\004"
-  " \003(\t\022C\n\014a_Extensions\030\005 \003(\0132-.protobuf.mo"
-  "zilla.dom.WebAuthnExtensionResult\022&\n\031a_A"
-  "uthenticatorAttachment\030\006 \001(\tH\000\210\001\001B\034\n\032_a_"
-  "AuthenticatorAttachment\"\243\001\n\036WebAuthnMake"
-  "CredentialResponse\022\026\n\014a_mVnsresult\030\001 \001(\014"
-  "H\000\022^\n a_mVWebAuthnMakeCredentialResult\030\002"
-  " \001(\01322.protobuf.mozilla.dom.WebAuthnMake"
-  "CredentialResultH\000B\t\n\007content\"\302\002\n\030WebAut"
-  "hnGetAssertionInfo\022\016\n\006a_RpId\030\001 \001(\t\022\024\n\007a_"
-  "AppId\030\002 \001(\tH\000\210\001\001\022\023\n\013a_Challenge\030\003 \003(\r\022\023\n"
-  "\013a_TimeoutMS\030\004 \001(\r\022C\n\013a_AllowList\030\005 \003(\0132"
-  "..protobuf.mozilla.dom.WebAuthnScopedCre"
-  "dential\022=\n\014a_Extensions\030\006 \003(\0132\'.protobuf"
-  ".mozilla.dom.WebAuthnExtension\022%\n\035a_user"
-  "VerificationRequirement\030\007 \001(\t\022\037\n\027a_Condi"
-  "tionallyMediated\030\010 \001(\010B\n\n\010_a_AppId\"\236\002\n\032W"
-  "ebAuthnGetAssertionResult\022\030\n\020a_ClientDat"
-  "aJSON\030\001 \001(\t\022\023\n\013a_KeyHandle\030\002 \003(\r\022\023\n\013a_Si"
-  "gnature\030\003 \003(\r\022\033\n\023a_AuthenticatorData\030\004 \003"
-  "(\r\022C\n\014a_Extensions\030\005 \003(\0132-.protobuf.mozi"
-  "lla.dom.WebAuthnExtensionResult\022\024\n\014a_Use"
-  "rHandle\030\006 \003(\r\022&\n\031a_AuthenticatorAttachme"
-  "nt\030\007 \001(\tH\000\210\001\001B\034\n\032_a_AuthenticatorAttachm"
-  "ent\"\235\001\n\034WebAuthnGetAssertionResponse\022\026\n\014"
-  "a_mVnsresult\030\001 \001(\014H\000\022Z\n\036a_mVWebAuthnGetA"
-  "ssertionResult\030\002 \001(\01320.protobuf.mozilla."
-  "dom.WebAuthnGetAssertionResultH\000B\t\n\007cont"
-  "entb\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto = {
-    false, false, 4531, descriptor_table_protodef_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    "PWebAuthnTransaction_protobuf.mozilla.dom.h.proto",
-    &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once, nullptr, 0, 26,
-    schemas, file_default_instances, TableStruct_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets,
-    file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto, file_level_enum_descriptors_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    file_level_service_descriptors_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter() {
-  return &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto(&descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -913,12 +445,12 @@ class WebAuthnAuthenticatorSelection::_Internal {
 
 WebAuthnAuthenticatorSelection::WebAuthnAuthenticatorSelection(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection)
 }
 WebAuthnAuthenticatorSelection::WebAuthnAuthenticatorSelection(const WebAuthnAuthenticatorSelection& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnAuthenticatorSelection* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -927,7 +459,7 @@ WebAuthnAuthenticatorSelection::WebAuthnAuthenticatorSelection(const WebAuthnAut
     , decltype(_impl_.a_userverificationrequirement_){}
     , decltype(_impl_.a_authenticatorattachment_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_residentkey_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_residentkey_.Set("", GetArenaForAllocation());
@@ -982,7 +514,7 @@ inline void WebAuthnAuthenticatorSelection::SharedCtor(
 
 WebAuthnAuthenticatorSelection::~WebAuthnAuthenticatorSelection() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1013,7 +545,7 @@ void WebAuthnAuthenticatorSelection::Clear() {
     _impl_.a_authenticatorattachment_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnAuthenticatorSelection::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1029,7 +561,7 @@ const char* WebAuthnAuthenticatorSelection::_InternalParse(const char* ptr, ::_p
           auto str = _internal_mutable_a_residentkey();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.WebAuthnAuthenticatorSelection.a_residentKey"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1039,7 +571,7 @@ const char* WebAuthnAuthenticatorSelection::_InternalParse(const char* ptr, ::_p
           auto str = _internal_mutable_a_userverificationrequirement();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.WebAuthnAuthenticatorSelection.a_userVerificationRequirement"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1049,7 +581,7 @@ const char* WebAuthnAuthenticatorSelection::_InternalParse(const char* ptr, ::_p
           auto str = _internal_mutable_a_authenticatorattachment();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.WebAuthnAuthenticatorSelection.a_authenticatorAttachment"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1064,7 +596,7 @@ const char* WebAuthnAuthenticatorSelection::_InternalParse(const char* ptr, ::_p
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1114,8 +646,8 @@ uint8_t* WebAuthnAuthenticatorSelection::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection)
   return target;
@@ -1151,19 +683,22 @@ size_t WebAuthnAuthenticatorSelection::ByteSizeLong() const {
         this->_internal_a_authenticatorattachment());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnAuthenticatorSelection::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnAuthenticatorSelection::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnAuthenticatorSelection::GetClassData() const { return &_class_data_; }
+void WebAuthnAuthenticatorSelection::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnAuthenticatorSelection*>(
+      &from));
+}
 
-
-void WebAuthnAuthenticatorSelection::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnAuthenticatorSelection*>(&to_msg);
-  auto& from = static_cast<const WebAuthnAuthenticatorSelection&>(from_msg);
+void WebAuthnAuthenticatorSelection::MergeFrom(const WebAuthnAuthenticatorSelection& from) {
+  WebAuthnAuthenticatorSelection* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnAuthenticatorSelection)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1178,7 +713,7 @@ void WebAuthnAuthenticatorSelection::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message&
   if (from._internal_has_a_authenticatorattachment()) {
     _this->_internal_set_a_authenticatorattachment(from._internal_a_authenticatorattachment());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnAuthenticatorSelection::CopyFrom(const WebAuthnAuthenticatorSelection& from) {
@@ -1212,11 +747,10 @@ void WebAuthnAuthenticatorSelection::InternalSwap(WebAuthnAuthenticatorSelection
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnAuthenticatorSelection::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[0]);
+std::string WebAuthnAuthenticatorSelection::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnAuthenticatorSelection";
 }
+
 
 // ===================================================================
 
@@ -1226,12 +760,12 @@ class WebAuthnScopedCredential::_Internal {
 
 WebAuthnScopedCredential::WebAuthnScopedCredential(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnScopedCredential)
 }
 WebAuthnScopedCredential::WebAuthnScopedCredential(const WebAuthnScopedCredential& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnScopedCredential* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_id_){from._impl_.a_id_}
@@ -1239,7 +773,7 @@ WebAuthnScopedCredential::WebAuthnScopedCredential(const WebAuthnScopedCredentia
     , decltype(_impl_.a_transports_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_transports_ = from._impl_.a_transports_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.WebAuthnScopedCredential)
 }
@@ -1258,7 +792,7 @@ inline void WebAuthnScopedCredential::SharedCtor(
 
 WebAuthnScopedCredential::~WebAuthnScopedCredential() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnScopedCredential)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1282,7 +816,7 @@ void WebAuthnScopedCredential::Clear() {
 
   _impl_.a_id_.Clear();
   _impl_.a_transports_ = 0u;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnScopedCredential::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1321,7 +855,7 @@ const char* WebAuthnScopedCredential::_InternalParse(const char* ptr, ::_pbi::Pa
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1355,8 +889,8 @@ uint8_t* WebAuthnScopedCredential::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnScopedCredential)
   return target;
@@ -1389,19 +923,22 @@ size_t WebAuthnScopedCredential::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_transports());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnScopedCredential::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnScopedCredential::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnScopedCredential::GetClassData() const { return &_class_data_; }
+void WebAuthnScopedCredential::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnScopedCredential*>(
+      &from));
+}
 
-
-void WebAuthnScopedCredential::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnScopedCredential*>(&to_msg);
-  auto& from = static_cast<const WebAuthnScopedCredential&>(from_msg);
+void WebAuthnScopedCredential::MergeFrom(const WebAuthnScopedCredential& from) {
+  WebAuthnScopedCredential* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnScopedCredential)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1411,7 +948,7 @@ void WebAuthnScopedCredential::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_ms
   if (from._internal_a_transports() != 0) {
     _this->_internal_set_a_transports(from._internal_a_transports());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnScopedCredential::CopyFrom(const WebAuthnScopedCredential& from) {
@@ -1432,11 +969,10 @@ void WebAuthnScopedCredential::InternalSwap(WebAuthnScopedCredential* other) {
   swap(_impl_.a_transports_, other->_impl_.a_transports_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnScopedCredential::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[1]);
+std::string WebAuthnScopedCredential::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnScopedCredential";
 }
+
 
 // ===================================================================
 
@@ -1446,19 +982,19 @@ class WebAuthnExtensionCredProtect::_Internal {
 
 WebAuthnExtensionCredProtect::WebAuthnExtensionCredProtect(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnExtensionCredProtect)
 }
 WebAuthnExtensionCredProtect::WebAuthnExtensionCredProtect(const WebAuthnExtensionCredProtect& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionCredProtect* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_policy_){}
     , decltype(_impl_.a_required_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_policy_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_policy_.Set("", GetArenaForAllocation());
@@ -1488,7 +1024,7 @@ inline void WebAuthnExtensionCredProtect::SharedCtor(
 
 WebAuthnExtensionCredProtect::~WebAuthnExtensionCredProtect() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnExtensionCredProtect)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1512,7 +1048,7 @@ void WebAuthnExtensionCredProtect::Clear() {
 
   _impl_.a_policy_.ClearToEmpty();
   _impl_.a_required_ = false;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionCredProtect::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1549,7 +1085,7 @@ const char* WebAuthnExtensionCredProtect::_InternalParse(const char* ptr, ::_pbi
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1580,8 +1116,8 @@ uint8_t* WebAuthnExtensionCredProtect::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnExtensionCredProtect)
   return target;
@@ -1607,19 +1143,22 @@ size_t WebAuthnExtensionCredProtect::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnExtensionCredProtect::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnExtensionCredProtect::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnExtensionCredProtect::GetClassData() const { return &_class_data_; }
+void WebAuthnExtensionCredProtect::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnExtensionCredProtect*>(
+      &from));
+}
 
-
-void WebAuthnExtensionCredProtect::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnExtensionCredProtect*>(&to_msg);
-  auto& from = static_cast<const WebAuthnExtensionCredProtect&>(from_msg);
+void WebAuthnExtensionCredProtect::MergeFrom(const WebAuthnExtensionCredProtect& from) {
+  WebAuthnExtensionCredProtect* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnExtensionCredProtect)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1631,7 +1170,7 @@ void WebAuthnExtensionCredProtect::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& t
   if (from._internal_a_required() != 0) {
     _this->_internal_set_a_required(from._internal_a_required());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnExtensionCredProtect::CopyFrom(const WebAuthnExtensionCredProtect& from) {
@@ -1657,11 +1196,10 @@ void WebAuthnExtensionCredProtect::InternalSwap(WebAuthnExtensionCredProtect* ot
   swap(_impl_.a_required_, other->_impl_.a_required_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnExtensionCredProtect::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[2]);
+std::string WebAuthnExtensionCredProtect::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnExtensionCredProtect";
 }
+
 
 // ===================================================================
 
@@ -1671,18 +1209,18 @@ class WebAuthnExtensionCredProps::_Internal {
 
 WebAuthnExtensionCredProps::WebAuthnExtensionCredProps(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnExtensionCredProps)
 }
 WebAuthnExtensionCredProps::WebAuthnExtensionCredProps(const WebAuthnExtensionCredProps& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionCredProps* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_credprops_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_credprops_ = from._impl_.a_credprops_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.WebAuthnExtensionCredProps)
 }
@@ -1699,7 +1237,7 @@ inline void WebAuthnExtensionCredProps::SharedCtor(
 
 WebAuthnExtensionCredProps::~WebAuthnExtensionCredProps() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnExtensionCredProps)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1721,7 +1259,7 @@ void WebAuthnExtensionCredProps::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_credprops_ = false;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionCredProps::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1749,7 +1287,7 @@ const char* WebAuthnExtensionCredProps::_InternalParse(const char* ptr, ::_pbi::
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1774,8 +1312,8 @@ uint8_t* WebAuthnExtensionCredProps::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnExtensionCredProps)
   return target;
@@ -1794,19 +1332,22 @@ size_t WebAuthnExtensionCredProps::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnExtensionCredProps::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnExtensionCredProps::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnExtensionCredProps::GetClassData() const { return &_class_data_; }
+void WebAuthnExtensionCredProps::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnExtensionCredProps*>(
+      &from));
+}
 
-
-void WebAuthnExtensionCredProps::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnExtensionCredProps*>(&to_msg);
-  auto& from = static_cast<const WebAuthnExtensionCredProps&>(from_msg);
+void WebAuthnExtensionCredProps::MergeFrom(const WebAuthnExtensionCredProps& from) {
+  WebAuthnExtensionCredProps* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnExtensionCredProps)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1815,7 +1356,7 @@ void WebAuthnExtensionCredProps::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_
   if (from._internal_a_credprops() != 0) {
     _this->_internal_set_a_credprops(from._internal_a_credprops());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnExtensionCredProps::CopyFrom(const WebAuthnExtensionCredProps& from) {
@@ -1835,11 +1376,10 @@ void WebAuthnExtensionCredProps::InternalSwap(WebAuthnExtensionCredProps* other)
   swap(_impl_.a_credprops_, other->_impl_.a_credprops_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnExtensionCredProps::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[3]);
+std::string WebAuthnExtensionCredProps::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnExtensionCredProps";
 }
+
 
 // ===================================================================
 
@@ -1849,18 +1389,18 @@ class WebAuthnExtensionHmacSecret::_Internal {
 
 WebAuthnExtensionHmacSecret::WebAuthnExtensionHmacSecret(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnExtensionHmacSecret)
 }
 WebAuthnExtensionHmacSecret::WebAuthnExtensionHmacSecret(const WebAuthnExtensionHmacSecret& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionHmacSecret* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_hmaccreatesecret_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_hmaccreatesecret_ = from._impl_.a_hmaccreatesecret_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.WebAuthnExtensionHmacSecret)
 }
@@ -1877,7 +1417,7 @@ inline void WebAuthnExtensionHmacSecret::SharedCtor(
 
 WebAuthnExtensionHmacSecret::~WebAuthnExtensionHmacSecret() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnExtensionHmacSecret)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1899,7 +1439,7 @@ void WebAuthnExtensionHmacSecret::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_hmaccreatesecret_ = false;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionHmacSecret::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1927,7 +1467,7 @@ const char* WebAuthnExtensionHmacSecret::_InternalParse(const char* ptr, ::_pbi:
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1952,8 +1492,8 @@ uint8_t* WebAuthnExtensionHmacSecret::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnExtensionHmacSecret)
   return target;
@@ -1972,19 +1512,22 @@ size_t WebAuthnExtensionHmacSecret::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnExtensionHmacSecret::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnExtensionHmacSecret::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnExtensionHmacSecret::GetClassData() const { return &_class_data_; }
+void WebAuthnExtensionHmacSecret::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnExtensionHmacSecret*>(
+      &from));
+}
 
-
-void WebAuthnExtensionHmacSecret::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnExtensionHmacSecret*>(&to_msg);
-  auto& from = static_cast<const WebAuthnExtensionHmacSecret&>(from_msg);
+void WebAuthnExtensionHmacSecret::MergeFrom(const WebAuthnExtensionHmacSecret& from) {
+  WebAuthnExtensionHmacSecret* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnExtensionHmacSecret)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1993,7 +1536,7 @@ void WebAuthnExtensionHmacSecret::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to
   if (from._internal_a_hmaccreatesecret() != 0) {
     _this->_internal_set_a_hmaccreatesecret(from._internal_a_hmaccreatesecret());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnExtensionHmacSecret::CopyFrom(const WebAuthnExtensionHmacSecret& from) {
@@ -2013,11 +1556,10 @@ void WebAuthnExtensionHmacSecret::InternalSwap(WebAuthnExtensionHmacSecret* othe
   swap(_impl_.a_hmaccreatesecret_, other->_impl_.a_hmaccreatesecret_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnExtensionHmacSecret::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[4]);
+std::string WebAuthnExtensionHmacSecret::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnExtensionHmacSecret";
 }
+
 
 // ===================================================================
 
@@ -2031,12 +1573,12 @@ class WebAuthnExtensionLargeBlob::_Internal {
 
 WebAuthnExtensionLargeBlob::WebAuthnExtensionLargeBlob(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnExtensionLargeBlob)
 }
 WebAuthnExtensionLargeBlob::WebAuthnExtensionLargeBlob(const WebAuthnExtensionLargeBlob& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionLargeBlob* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -2045,7 +1587,7 @@ WebAuthnExtensionLargeBlob::WebAuthnExtensionLargeBlob(const WebAuthnExtensionLa
     , /*decltype(_impl_._a_write_cached_byte_size_)*/{0}
     , decltype(_impl_.a_flag_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_flag_ = from._impl_.a_flag_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.WebAuthnExtensionLargeBlob)
 }
@@ -2065,7 +1607,7 @@ inline void WebAuthnExtensionLargeBlob::SharedCtor(
 
 WebAuthnExtensionLargeBlob::~WebAuthnExtensionLargeBlob() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnExtensionLargeBlob)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -2090,7 +1632,7 @@ void WebAuthnExtensionLargeBlob::Clear() {
   _impl_.a_write_.Clear();
   _impl_.a_flag_ = false;
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionLargeBlob::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -2131,7 +1673,7 @@ const char* WebAuthnExtensionLargeBlob::_InternalParse(const char* ptr, ::_pbi::
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -2166,8 +1708,8 @@ uint8_t* WebAuthnExtensionLargeBlob::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnExtensionLargeBlob)
   return target;
@@ -2201,19 +1743,22 @@ size_t WebAuthnExtensionLargeBlob::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnExtensionLargeBlob::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnExtensionLargeBlob::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnExtensionLargeBlob::GetClassData() const { return &_class_data_; }
+void WebAuthnExtensionLargeBlob::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnExtensionLargeBlob*>(
+      &from));
+}
 
-
-void WebAuthnExtensionLargeBlob::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnExtensionLargeBlob*>(&to_msg);
-  auto& from = static_cast<const WebAuthnExtensionLargeBlob&>(from_msg);
+void WebAuthnExtensionLargeBlob::MergeFrom(const WebAuthnExtensionLargeBlob& from) {
+  WebAuthnExtensionLargeBlob* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnExtensionLargeBlob)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2223,7 +1768,7 @@ void WebAuthnExtensionLargeBlob::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_
   if (from._internal_has_a_flag()) {
     _this->_internal_set_a_flag(from._internal_a_flag());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnExtensionLargeBlob::CopyFrom(const WebAuthnExtensionLargeBlob& from) {
@@ -2245,11 +1790,10 @@ void WebAuthnExtensionLargeBlob::InternalSwap(WebAuthnExtensionLargeBlob* other)
   swap(_impl_.a_flag_, other->_impl_.a_flag_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnExtensionLargeBlob::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[5]);
+std::string WebAuthnExtensionLargeBlob::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnExtensionLargeBlob";
 }
+
 
 // ===================================================================
 
@@ -2259,18 +1803,18 @@ class WebAuthnExtensionMinPinLength::_Internal {
 
 WebAuthnExtensionMinPinLength::WebAuthnExtensionMinPinLength(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnExtensionMinPinLength)
 }
 WebAuthnExtensionMinPinLength::WebAuthnExtensionMinPinLength(const WebAuthnExtensionMinPinLength& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionMinPinLength* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_minpinlength_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_minpinlength_ = from._impl_.a_minpinlength_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.WebAuthnExtensionMinPinLength)
 }
@@ -2287,7 +1831,7 @@ inline void WebAuthnExtensionMinPinLength::SharedCtor(
 
 WebAuthnExtensionMinPinLength::~WebAuthnExtensionMinPinLength() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnExtensionMinPinLength)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -2309,7 +1853,7 @@ void WebAuthnExtensionMinPinLength::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_minpinlength_ = false;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionMinPinLength::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -2337,7 +1881,7 @@ const char* WebAuthnExtensionMinPinLength::_InternalParse(const char* ptr, ::_pb
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -2362,8 +1906,8 @@ uint8_t* WebAuthnExtensionMinPinLength::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnExtensionMinPinLength)
   return target;
@@ -2382,19 +1926,22 @@ size_t WebAuthnExtensionMinPinLength::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnExtensionMinPinLength::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnExtensionMinPinLength::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnExtensionMinPinLength::GetClassData() const { return &_class_data_; }
+void WebAuthnExtensionMinPinLength::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnExtensionMinPinLength*>(
+      &from));
+}
 
-
-void WebAuthnExtensionMinPinLength::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnExtensionMinPinLength*>(&to_msg);
-  auto& from = static_cast<const WebAuthnExtensionMinPinLength&>(from_msg);
+void WebAuthnExtensionMinPinLength::MergeFrom(const WebAuthnExtensionMinPinLength& from) {
+  WebAuthnExtensionMinPinLength* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnExtensionMinPinLength)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2403,7 +1950,7 @@ void WebAuthnExtensionMinPinLength::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& 
   if (from._internal_a_minpinlength() != 0) {
     _this->_internal_set_a_minpinlength(from._internal_a_minpinlength());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnExtensionMinPinLength::CopyFrom(const WebAuthnExtensionMinPinLength& from) {
@@ -2423,11 +1970,10 @@ void WebAuthnExtensionMinPinLength::InternalSwap(WebAuthnExtensionMinPinLength* 
   swap(_impl_.a_minpinlength_, other->_impl_.a_minpinlength_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnExtensionMinPinLength::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[6]);
+std::string WebAuthnExtensionMinPinLength::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnExtensionMinPinLength";
 }
+
 
 // ===================================================================
 
@@ -2446,12 +1992,12 @@ WebAuthnExtensionPrf::_Internal::a_eval(const WebAuthnExtensionPrf* msg) {
 }
 WebAuthnExtensionPrf::WebAuthnExtensionPrf(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnExtensionPrf)
 }
 WebAuthnExtensionPrf::WebAuthnExtensionPrf(const WebAuthnExtensionPrf& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionPrf* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -2460,7 +2006,7 @@ WebAuthnExtensionPrf::WebAuthnExtensionPrf(const WebAuthnExtensionPrf& from)
     , decltype(_impl_.a_eval_){nullptr}
     , decltype(_impl_.a_evalbycredentialmaybe_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_eval()) {
     _this->_impl_.a_eval_ = new ::protobuf::mozilla::dom::WebAuthnExtensionPrfValues(*from._impl_.a_eval_);
   }
@@ -2483,7 +2029,7 @@ inline void WebAuthnExtensionPrf::SharedCtor(
 
 WebAuthnExtensionPrf::~WebAuthnExtensionPrf() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnExtensionPrf)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -2514,7 +2060,7 @@ void WebAuthnExtensionPrf::Clear() {
   }
   _impl_.a_evalbycredentialmaybe_ = false;
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionPrf::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -2564,7 +2110,7 @@ const char* WebAuthnExtensionPrf::_InternalParse(const char* ptr, ::_pbi::ParseC
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -2605,8 +2151,8 @@ uint8_t* WebAuthnExtensionPrf::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnExtensionPrf)
   return target;
@@ -2640,19 +2186,22 @@ size_t WebAuthnExtensionPrf::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnExtensionPrf::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnExtensionPrf::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnExtensionPrf::GetClassData() const { return &_class_data_; }
+void WebAuthnExtensionPrf::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnExtensionPrf*>(
+      &from));
+}
 
-
-void WebAuthnExtensionPrf::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnExtensionPrf*>(&to_msg);
-  auto& from = static_cast<const WebAuthnExtensionPrf&>(from_msg);
+void WebAuthnExtensionPrf::MergeFrom(const WebAuthnExtensionPrf& from) {
+  WebAuthnExtensionPrf* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnExtensionPrf)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2666,7 +2215,7 @@ void WebAuthnExtensionPrf::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
   if (from._internal_a_evalbycredentialmaybe() != 0) {
     _this->_internal_set_a_evalbycredentialmaybe(from._internal_a_evalbycredentialmaybe());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnExtensionPrf::CopyFrom(const WebAuthnExtensionPrf& from) {
@@ -2693,11 +2242,10 @@ void WebAuthnExtensionPrf::InternalSwap(WebAuthnExtensionPrf* other) {
           reinterpret_cast<char*>(&other->_impl_.a_eval_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnExtensionPrf::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[7]);
+std::string WebAuthnExtensionPrf::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnExtensionPrf";
 }
+
 
 // ===================================================================
 
@@ -2707,12 +2255,12 @@ class WebAuthnExtensionPrfValues::_Internal {
 
 WebAuthnExtensionPrfValues::WebAuthnExtensionPrfValues(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnExtensionPrfValues)
 }
 WebAuthnExtensionPrfValues::WebAuthnExtensionPrfValues(const WebAuthnExtensionPrfValues& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionPrfValues* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_first_){from._impl_.a_first_}
@@ -2722,7 +2270,7 @@ WebAuthnExtensionPrfValues::WebAuthnExtensionPrfValues(const WebAuthnExtensionPr
     , decltype(_impl_.a_secondmaybe_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_secondmaybe_ = from._impl_.a_secondmaybe_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.WebAuthnExtensionPrfValues)
 }
@@ -2743,7 +2291,7 @@ inline void WebAuthnExtensionPrfValues::SharedCtor(
 
 WebAuthnExtensionPrfValues::~WebAuthnExtensionPrfValues() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnExtensionPrfValues)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -2769,7 +2317,7 @@ void WebAuthnExtensionPrfValues::Clear() {
   _impl_.a_first_.Clear();
   _impl_.a_second_.Clear();
   _impl_.a_secondmaybe_ = false;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionPrfValues::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -2819,7 +2367,7 @@ const char* WebAuthnExtensionPrfValues::_InternalParse(const char* ptr, ::_pbi::
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -2862,8 +2410,8 @@ uint8_t* WebAuthnExtensionPrfValues::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnExtensionPrfValues)
   return target;
@@ -2910,19 +2458,22 @@ size_t WebAuthnExtensionPrfValues::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnExtensionPrfValues::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnExtensionPrfValues::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnExtensionPrfValues::GetClassData() const { return &_class_data_; }
+void WebAuthnExtensionPrfValues::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnExtensionPrfValues*>(
+      &from));
+}
 
-
-void WebAuthnExtensionPrfValues::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnExtensionPrfValues*>(&to_msg);
-  auto& from = static_cast<const WebAuthnExtensionPrfValues&>(from_msg);
+void WebAuthnExtensionPrfValues::MergeFrom(const WebAuthnExtensionPrfValues& from) {
+  WebAuthnExtensionPrfValues* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnExtensionPrfValues)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2933,7 +2484,7 @@ void WebAuthnExtensionPrfValues::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_
   if (from._internal_a_secondmaybe() != 0) {
     _this->_internal_set_a_secondmaybe(from._internal_a_secondmaybe());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnExtensionPrfValues::CopyFrom(const WebAuthnExtensionPrfValues& from) {
@@ -2955,11 +2506,10 @@ void WebAuthnExtensionPrfValues::InternalSwap(WebAuthnExtensionPrfValues* other)
   swap(_impl_.a_secondmaybe_, other->_impl_.a_secondmaybe_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnExtensionPrfValues::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[8]);
+std::string WebAuthnExtensionPrfValues::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnExtensionPrfValues";
 }
+
 
 // ===================================================================
 
@@ -2974,12 +2524,12 @@ WebAuthnExtensionPrfEvalByCredentialEntry::_Internal::a_eval(const WebAuthnExten
 }
 WebAuthnExtensionPrfEvalByCredentialEntry::WebAuthnExtensionPrfEvalByCredentialEntry(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnExtensionPrfEvalByCredentialEntry)
 }
 WebAuthnExtensionPrfEvalByCredentialEntry::WebAuthnExtensionPrfEvalByCredentialEntry(const WebAuthnExtensionPrfEvalByCredentialEntry& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionPrfEvalByCredentialEntry* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_credentialid_){from._impl_.a_credentialid_}
@@ -2987,7 +2537,7 @@ WebAuthnExtensionPrfEvalByCredentialEntry::WebAuthnExtensionPrfEvalByCredentialE
     , decltype(_impl_.a_eval_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_eval()) {
     _this->_impl_.a_eval_ = new ::protobuf::mozilla::dom::WebAuthnExtensionPrfValues(*from._impl_.a_eval_);
   }
@@ -3008,7 +2558,7 @@ inline void WebAuthnExtensionPrfEvalByCredentialEntry::SharedCtor(
 
 WebAuthnExtensionPrfEvalByCredentialEntry::~WebAuthnExtensionPrfEvalByCredentialEntry() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnExtensionPrfEvalByCredentialEntry)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -3036,7 +2586,7 @@ void WebAuthnExtensionPrfEvalByCredentialEntry::Clear() {
     delete _impl_.a_eval_;
   }
   _impl_.a_eval_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionPrfEvalByCredentialEntry::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -3075,7 +2625,7 @@ const char* WebAuthnExtensionPrfEvalByCredentialEntry::_InternalParse(const char
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -3110,8 +2660,8 @@ uint8_t* WebAuthnExtensionPrfEvalByCredentialEntry::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnExtensionPrfEvalByCredentialEntry)
   return target;
@@ -3146,19 +2696,22 @@ size_t WebAuthnExtensionPrfEvalByCredentialEntry::ByteSizeLong() const {
         *_impl_.a_eval_);
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnExtensionPrfEvalByCredentialEntry::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnExtensionPrfEvalByCredentialEntry::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnExtensionPrfEvalByCredentialEntry::GetClassData() const { return &_class_data_; }
+void WebAuthnExtensionPrfEvalByCredentialEntry::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnExtensionPrfEvalByCredentialEntry*>(
+      &from));
+}
 
-
-void WebAuthnExtensionPrfEvalByCredentialEntry::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnExtensionPrfEvalByCredentialEntry*>(&to_msg);
-  auto& from = static_cast<const WebAuthnExtensionPrfEvalByCredentialEntry&>(from_msg);
+void WebAuthnExtensionPrfEvalByCredentialEntry::MergeFrom(const WebAuthnExtensionPrfEvalByCredentialEntry& from) {
+  WebAuthnExtensionPrfEvalByCredentialEntry* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnExtensionPrfEvalByCredentialEntry)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -3169,7 +2722,7 @@ void WebAuthnExtensionPrfEvalByCredentialEntry::MergeImpl(::PROTOBUF_NAMESPACE_I
     _this->_internal_mutable_a_eval()->::protobuf::mozilla::dom::WebAuthnExtensionPrfValues::MergeFrom(
         from._internal_a_eval());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnExtensionPrfEvalByCredentialEntry::CopyFrom(const WebAuthnExtensionPrfEvalByCredentialEntry& from) {
@@ -3190,11 +2743,10 @@ void WebAuthnExtensionPrfEvalByCredentialEntry::InternalSwap(WebAuthnExtensionPr
   swap(_impl_.a_eval_, other->_impl_.a_eval_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnExtensionPrfEvalByCredentialEntry::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[9]);
+std::string WebAuthnExtensionPrfEvalByCredentialEntry::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnExtensionPrfEvalByCredentialEntry";
 }
+
 
 // ===================================================================
 
@@ -3324,19 +2876,19 @@ void WebAuthnExtension::set_allocated_a_mvwebauthnextensionprf(::protobuf::mozil
 }
 WebAuthnExtension::WebAuthnExtension(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnExtension)
 }
 WebAuthnExtension::WebAuthnExtension(const WebAuthnExtension& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtension* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVWebAuthnExtensionCredProtect: {
@@ -3390,7 +2942,7 @@ inline void WebAuthnExtension::SharedCtor(
 
 WebAuthnExtension::~WebAuthnExtension() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnExtension)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -3462,7 +3014,7 @@ void WebAuthnExtension::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtension::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -3530,7 +3082,7 @@ const char* WebAuthnExtension::_InternalParse(const char* ptr, ::_pbi::ParseCont
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -3591,8 +3143,8 @@ uint8_t* WebAuthnExtension::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnExtension)
   return target;
@@ -3653,19 +3205,22 @@ size_t WebAuthnExtension::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnExtension::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnExtension::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnExtension::GetClassData() const { return &_class_data_; }
+void WebAuthnExtension::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnExtension*>(
+      &from));
+}
 
-
-void WebAuthnExtension::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnExtension*>(&to_msg);
-  auto& from = static_cast<const WebAuthnExtension&>(from_msg);
+void WebAuthnExtension::MergeFrom(const WebAuthnExtension& from) {
+  WebAuthnExtension* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnExtension)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -3706,7 +3261,7 @@ void WebAuthnExtension::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnExtension::CopyFrom(const WebAuthnExtension& from) {
@@ -3727,11 +3282,10 @@ void WebAuthnExtension::InternalSwap(WebAuthnExtension* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnExtension::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[10]);
+std::string WebAuthnExtension::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnExtension";
 }
+
 
 // ===================================================================
 
@@ -3741,18 +3295,18 @@ class WebAuthnExtensionResultAppId::_Internal {
 
 WebAuthnExtensionResultAppId::WebAuthnExtensionResultAppId(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnExtensionResultAppId)
 }
 WebAuthnExtensionResultAppId::WebAuthnExtensionResultAppId(const WebAuthnExtensionResultAppId& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionResultAppId* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_appid_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_appid_ = from._impl_.a_appid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.WebAuthnExtensionResultAppId)
 }
@@ -3769,7 +3323,7 @@ inline void WebAuthnExtensionResultAppId::SharedCtor(
 
 WebAuthnExtensionResultAppId::~WebAuthnExtensionResultAppId() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnExtensionResultAppId)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -3791,7 +3345,7 @@ void WebAuthnExtensionResultAppId::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_appid_ = false;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionResultAppId::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -3819,7 +3373,7 @@ const char* WebAuthnExtensionResultAppId::_InternalParse(const char* ptr, ::_pbi
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -3844,8 +3398,8 @@ uint8_t* WebAuthnExtensionResultAppId::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnExtensionResultAppId)
   return target;
@@ -3864,19 +3418,22 @@ size_t WebAuthnExtensionResultAppId::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnExtensionResultAppId::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnExtensionResultAppId::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnExtensionResultAppId::GetClassData() const { return &_class_data_; }
+void WebAuthnExtensionResultAppId::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnExtensionResultAppId*>(
+      &from));
+}
 
-
-void WebAuthnExtensionResultAppId::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnExtensionResultAppId*>(&to_msg);
-  auto& from = static_cast<const WebAuthnExtensionResultAppId&>(from_msg);
+void WebAuthnExtensionResultAppId::MergeFrom(const WebAuthnExtensionResultAppId& from) {
+  WebAuthnExtensionResultAppId* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnExtensionResultAppId)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -3885,7 +3442,7 @@ void WebAuthnExtensionResultAppId::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& t
   if (from._internal_a_appid() != 0) {
     _this->_internal_set_a_appid(from._internal_a_appid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnExtensionResultAppId::CopyFrom(const WebAuthnExtensionResultAppId& from) {
@@ -3905,11 +3462,10 @@ void WebAuthnExtensionResultAppId::InternalSwap(WebAuthnExtensionResultAppId* ot
   swap(_impl_.a_appid_, other->_impl_.a_appid_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnExtensionResultAppId::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[11]);
+std::string WebAuthnExtensionResultAppId::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnExtensionResultAppId";
 }
+
 
 // ===================================================================
 
@@ -3919,18 +3475,18 @@ class WebAuthnExtensionResultCredProps::_Internal {
 
 WebAuthnExtensionResultCredProps::WebAuthnExtensionResultCredProps(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnExtensionResultCredProps)
 }
 WebAuthnExtensionResultCredProps::WebAuthnExtensionResultCredProps(const WebAuthnExtensionResultCredProps& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionResultCredProps* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_rk_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_rk_ = from._impl_.a_rk_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.WebAuthnExtensionResultCredProps)
 }
@@ -3947,7 +3503,7 @@ inline void WebAuthnExtensionResultCredProps::SharedCtor(
 
 WebAuthnExtensionResultCredProps::~WebAuthnExtensionResultCredProps() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnExtensionResultCredProps)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -3969,7 +3525,7 @@ void WebAuthnExtensionResultCredProps::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_rk_ = false;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionResultCredProps::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -3997,7 +3553,7 @@ const char* WebAuthnExtensionResultCredProps::_InternalParse(const char* ptr, ::
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -4022,8 +3578,8 @@ uint8_t* WebAuthnExtensionResultCredProps::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnExtensionResultCredProps)
   return target;
@@ -4042,19 +3598,22 @@ size_t WebAuthnExtensionResultCredProps::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnExtensionResultCredProps::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnExtensionResultCredProps::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnExtensionResultCredProps::GetClassData() const { return &_class_data_; }
+void WebAuthnExtensionResultCredProps::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnExtensionResultCredProps*>(
+      &from));
+}
 
-
-void WebAuthnExtensionResultCredProps::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnExtensionResultCredProps*>(&to_msg);
-  auto& from = static_cast<const WebAuthnExtensionResultCredProps&>(from_msg);
+void WebAuthnExtensionResultCredProps::MergeFrom(const WebAuthnExtensionResultCredProps& from) {
+  WebAuthnExtensionResultCredProps* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnExtensionResultCredProps)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -4063,7 +3622,7 @@ void WebAuthnExtensionResultCredProps::MergeImpl(::PROTOBUF_NAMESPACE_ID::Messag
   if (from._internal_a_rk() != 0) {
     _this->_internal_set_a_rk(from._internal_a_rk());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnExtensionResultCredProps::CopyFrom(const WebAuthnExtensionResultCredProps& from) {
@@ -4083,11 +3642,10 @@ void WebAuthnExtensionResultCredProps::InternalSwap(WebAuthnExtensionResultCredP
   swap(_impl_.a_rk_, other->_impl_.a_rk_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnExtensionResultCredProps::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[12]);
+std::string WebAuthnExtensionResultCredProps::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnExtensionResultCredProps";
 }
+
 
 // ===================================================================
 
@@ -4097,18 +3655,18 @@ class WebAuthnExtensionResultHmacSecret::_Internal {
 
 WebAuthnExtensionResultHmacSecret::WebAuthnExtensionResultHmacSecret(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnExtensionResultHmacSecret)
 }
 WebAuthnExtensionResultHmacSecret::WebAuthnExtensionResultHmacSecret(const WebAuthnExtensionResultHmacSecret& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionResultHmacSecret* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_hmaccreatesecret_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_hmaccreatesecret_ = from._impl_.a_hmaccreatesecret_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.WebAuthnExtensionResultHmacSecret)
 }
@@ -4125,7 +3683,7 @@ inline void WebAuthnExtensionResultHmacSecret::SharedCtor(
 
 WebAuthnExtensionResultHmacSecret::~WebAuthnExtensionResultHmacSecret() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnExtensionResultHmacSecret)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -4147,7 +3705,7 @@ void WebAuthnExtensionResultHmacSecret::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_hmaccreatesecret_ = false;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionResultHmacSecret::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -4175,7 +3733,7 @@ const char* WebAuthnExtensionResultHmacSecret::_InternalParse(const char* ptr, :
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -4200,8 +3758,8 @@ uint8_t* WebAuthnExtensionResultHmacSecret::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnExtensionResultHmacSecret)
   return target;
@@ -4220,19 +3778,22 @@ size_t WebAuthnExtensionResultHmacSecret::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnExtensionResultHmacSecret::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnExtensionResultHmacSecret::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnExtensionResultHmacSecret::GetClassData() const { return &_class_data_; }
+void WebAuthnExtensionResultHmacSecret::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnExtensionResultHmacSecret*>(
+      &from));
+}
 
-
-void WebAuthnExtensionResultHmacSecret::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnExtensionResultHmacSecret*>(&to_msg);
-  auto& from = static_cast<const WebAuthnExtensionResultHmacSecret&>(from_msg);
+void WebAuthnExtensionResultHmacSecret::MergeFrom(const WebAuthnExtensionResultHmacSecret& from) {
+  WebAuthnExtensionResultHmacSecret* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnExtensionResultHmacSecret)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -4241,7 +3802,7 @@ void WebAuthnExtensionResultHmacSecret::MergeImpl(::PROTOBUF_NAMESPACE_ID::Messa
   if (from._internal_a_hmaccreatesecret() != 0) {
     _this->_internal_set_a_hmaccreatesecret(from._internal_a_hmaccreatesecret());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnExtensionResultHmacSecret::CopyFrom(const WebAuthnExtensionResultHmacSecret& from) {
@@ -4261,11 +3822,10 @@ void WebAuthnExtensionResultHmacSecret::InternalSwap(WebAuthnExtensionResultHmac
   swap(_impl_.a_hmaccreatesecret_, other->_impl_.a_hmaccreatesecret_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnExtensionResultHmacSecret::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[13]);
+std::string WebAuthnExtensionResultHmacSecret::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnExtensionResultHmacSecret";
 }
+
 
 // ===================================================================
 
@@ -4275,12 +3835,12 @@ class WebAuthnExtensionResultLargeBlob::_Internal {
 
 WebAuthnExtensionResultLargeBlob::WebAuthnExtensionResultLargeBlob(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnExtensionResultLargeBlob)
 }
 WebAuthnExtensionResultLargeBlob::WebAuthnExtensionResultLargeBlob(const WebAuthnExtensionResultLargeBlob& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionResultLargeBlob* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_blob_){from._impl_.a_blob_}
@@ -4289,7 +3849,7 @@ WebAuthnExtensionResultLargeBlob::WebAuthnExtensionResultLargeBlob(const WebAuth
     , decltype(_impl_.a_written_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   ::memcpy(&_impl_.a_flag_, &from._impl_.a_flag_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_written_) -
     reinterpret_cast<char*>(&_impl_.a_flag_)) + sizeof(_impl_.a_written_));
@@ -4311,7 +3871,7 @@ inline void WebAuthnExtensionResultLargeBlob::SharedCtor(
 
 WebAuthnExtensionResultLargeBlob::~WebAuthnExtensionResultLargeBlob() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnExtensionResultLargeBlob)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -4337,7 +3897,7 @@ void WebAuthnExtensionResultLargeBlob::Clear() {
   ::memset(&_impl_.a_flag_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_written_) -
       reinterpret_cast<char*>(&_impl_.a_flag_)) + sizeof(_impl_.a_written_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionResultLargeBlob::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -4384,7 +3944,7 @@ const char* WebAuthnExtensionResultLargeBlob::_InternalParse(const char* ptr, ::
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -4424,8 +3984,8 @@ uint8_t* WebAuthnExtensionResultLargeBlob::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnExtensionResultLargeBlob)
   return target;
@@ -4463,19 +4023,22 @@ size_t WebAuthnExtensionResultLargeBlob::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnExtensionResultLargeBlob::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnExtensionResultLargeBlob::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnExtensionResultLargeBlob::GetClassData() const { return &_class_data_; }
+void WebAuthnExtensionResultLargeBlob::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnExtensionResultLargeBlob*>(
+      &from));
+}
 
-
-void WebAuthnExtensionResultLargeBlob::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnExtensionResultLargeBlob*>(&to_msg);
-  auto& from = static_cast<const WebAuthnExtensionResultLargeBlob&>(from_msg);
+void WebAuthnExtensionResultLargeBlob::MergeFrom(const WebAuthnExtensionResultLargeBlob& from) {
+  WebAuthnExtensionResultLargeBlob* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnExtensionResultLargeBlob)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -4488,7 +4051,7 @@ void WebAuthnExtensionResultLargeBlob::MergeImpl(::PROTOBUF_NAMESPACE_ID::Messag
   if (from._internal_a_written() != 0) {
     _this->_internal_set_a_written(from._internal_a_written());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnExtensionResultLargeBlob::CopyFrom(const WebAuthnExtensionResultLargeBlob& from) {
@@ -4514,11 +4077,10 @@ void WebAuthnExtensionResultLargeBlob::InternalSwap(WebAuthnExtensionResultLarge
           reinterpret_cast<char*>(&other->_impl_.a_flag_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnExtensionResultLargeBlob::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[14]);
+std::string WebAuthnExtensionResultLargeBlob::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnExtensionResultLargeBlob";
 }
+
 
 // ===================================================================
 
@@ -4540,12 +4102,12 @@ WebAuthnExtensionResultPrf::_Internal::a_results(const WebAuthnExtensionResultPr
 }
 WebAuthnExtensionResultPrf::WebAuthnExtensionResultPrf(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnExtensionResultPrf)
 }
 WebAuthnExtensionResultPrf::WebAuthnExtensionResultPrf(const WebAuthnExtensionResultPrf& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionResultPrf* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -4553,7 +4115,7 @@ WebAuthnExtensionResultPrf::WebAuthnExtensionResultPrf(const WebAuthnExtensionRe
     , decltype(_impl_.a_results_){nullptr}
     , decltype(_impl_.a_enabled_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_results()) {
     _this->_impl_.a_results_ = new ::protobuf::mozilla::dom::WebAuthnExtensionPrfValues(*from._impl_.a_results_);
   }
@@ -4575,7 +4137,7 @@ inline void WebAuthnExtensionResultPrf::SharedCtor(
 
 WebAuthnExtensionResultPrf::~WebAuthnExtensionResultPrf() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnExtensionResultPrf)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -4604,7 +4166,7 @@ void WebAuthnExtensionResultPrf::Clear() {
   }
   _impl_.a_enabled_ = false;
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionResultPrf::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -4642,7 +4204,7 @@ const char* WebAuthnExtensionResultPrf::_InternalParse(const char* ptr, ::_pbi::
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -4675,8 +4237,8 @@ uint8_t* WebAuthnExtensionResultPrf::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnExtensionResultPrf)
   return target;
@@ -4705,19 +4267,22 @@ size_t WebAuthnExtensionResultPrf::ByteSizeLong() const {
     }
 
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnExtensionResultPrf::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnExtensionResultPrf::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnExtensionResultPrf::GetClassData() const { return &_class_data_; }
+void WebAuthnExtensionResultPrf::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnExtensionResultPrf*>(
+      &from));
+}
 
-
-void WebAuthnExtensionResultPrf::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnExtensionResultPrf*>(&to_msg);
-  auto& from = static_cast<const WebAuthnExtensionResultPrf&>(from_msg);
+void WebAuthnExtensionResultPrf::MergeFrom(const WebAuthnExtensionResultPrf& from) {
+  WebAuthnExtensionResultPrf* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnExtensionResultPrf)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -4734,7 +4299,7 @@ void WebAuthnExtensionResultPrf::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnExtensionResultPrf::CopyFrom(const WebAuthnExtensionResultPrf& from) {
@@ -4760,11 +4325,10 @@ void WebAuthnExtensionResultPrf::InternalSwap(WebAuthnExtensionResultPrf* other)
           reinterpret_cast<char*>(&other->_impl_.a_results_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnExtensionResultPrf::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[15]);
+std::string WebAuthnExtensionResultPrf::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnExtensionResultPrf";
 }
+
 
 // ===================================================================
 
@@ -4874,19 +4438,19 @@ void WebAuthnExtensionResult::set_allocated_a_mvwebauthnextensionresultprf(::pro
 }
 WebAuthnExtensionResult::WebAuthnExtensionResult(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnExtensionResult)
 }
 WebAuthnExtensionResult::WebAuthnExtensionResult(const WebAuthnExtensionResult& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnExtensionResult* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVWebAuthnExtensionResultAppId: {
@@ -4935,7 +4499,7 @@ inline void WebAuthnExtensionResult::SharedCtor(
 
 WebAuthnExtensionResult::~WebAuthnExtensionResult() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnExtensionResult)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -5001,7 +4565,7 @@ void WebAuthnExtensionResult::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnExtensionResult::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -5061,7 +4625,7 @@ const char* WebAuthnExtensionResult::_InternalParse(const char* ptr, ::_pbi::Par
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -5115,8 +4679,8 @@ uint8_t* WebAuthnExtensionResult::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnExtensionResult)
   return target;
@@ -5170,19 +4734,22 @@ size_t WebAuthnExtensionResult::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnExtensionResult::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnExtensionResult::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnExtensionResult::GetClassData() const { return &_class_data_; }
+void WebAuthnExtensionResult::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnExtensionResult*>(
+      &from));
+}
 
-
-void WebAuthnExtensionResult::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnExtensionResult*>(&to_msg);
-  auto& from = static_cast<const WebAuthnExtensionResult&>(from_msg);
+void WebAuthnExtensionResult::MergeFrom(const WebAuthnExtensionResult& from) {
+  WebAuthnExtensionResult* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnExtensionResult)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -5218,7 +4785,7 @@ void WebAuthnExtensionResult::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnExtensionResult::CopyFrom(const WebAuthnExtensionResult& from) {
@@ -5239,11 +4806,10 @@ void WebAuthnExtensionResult::InternalSwap(WebAuthnExtensionResult* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnExtensionResult::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[16]);
+std::string WebAuthnExtensionResult::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnExtensionResult";
 }
+
 
 // ===================================================================
 
@@ -5253,18 +4819,18 @@ class WebAuthnMakeCredentialRpInfo::_Internal {
 
 WebAuthnMakeCredentialRpInfo::WebAuthnMakeCredentialRpInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo)
 }
 WebAuthnMakeCredentialRpInfo::WebAuthnMakeCredentialRpInfo(const WebAuthnMakeCredentialRpInfo& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnMakeCredentialRpInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_name_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_name_.Set("", GetArenaForAllocation());
@@ -5292,7 +4858,7 @@ inline void WebAuthnMakeCredentialRpInfo::SharedCtor(
 
 WebAuthnMakeCredentialRpInfo::~WebAuthnMakeCredentialRpInfo() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -5315,7 +4881,7 @@ void WebAuthnMakeCredentialRpInfo::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_name_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnMakeCredentialRpInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -5330,7 +4896,7 @@ const char* WebAuthnMakeCredentialRpInfo::_InternalParse(const char* ptr, ::_pbi
           auto str = _internal_mutable_a_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo.a_Name"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -5345,7 +4911,7 @@ const char* WebAuthnMakeCredentialRpInfo::_InternalParse(const char* ptr, ::_pbi
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -5374,8 +4940,8 @@ uint8_t* WebAuthnMakeCredentialRpInfo::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo)
   return target;
@@ -5396,19 +4962,22 @@ size_t WebAuthnMakeCredentialRpInfo::ByteSizeLong() const {
         this->_internal_a_name());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnMakeCredentialRpInfo::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnMakeCredentialRpInfo::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnMakeCredentialRpInfo::GetClassData() const { return &_class_data_; }
+void WebAuthnMakeCredentialRpInfo::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnMakeCredentialRpInfo*>(
+      &from));
+}
 
-
-void WebAuthnMakeCredentialRpInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnMakeCredentialRpInfo*>(&to_msg);
-  auto& from = static_cast<const WebAuthnMakeCredentialRpInfo&>(from_msg);
+void WebAuthnMakeCredentialRpInfo::MergeFrom(const WebAuthnMakeCredentialRpInfo& from) {
+  WebAuthnMakeCredentialRpInfo* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -5417,7 +4986,7 @@ void WebAuthnMakeCredentialRpInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& t
   if (!from._internal_a_name().empty()) {
     _this->_internal_set_a_name(from._internal_a_name());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnMakeCredentialRpInfo::CopyFrom(const WebAuthnMakeCredentialRpInfo& from) {
@@ -5442,11 +5011,10 @@ void WebAuthnMakeCredentialRpInfo::InternalSwap(WebAuthnMakeCredentialRpInfo* ot
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnMakeCredentialRpInfo::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[17]);
+std::string WebAuthnMakeCredentialRpInfo::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnMakeCredentialRpInfo";
 }
+
 
 // ===================================================================
 
@@ -5456,12 +5024,12 @@ class WebAuthnMakeCredentialUserInfo::_Internal {
 
 WebAuthnMakeCredentialUserInfo::WebAuthnMakeCredentialUserInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo)
 }
 WebAuthnMakeCredentialUserInfo::WebAuthnMakeCredentialUserInfo(const WebAuthnMakeCredentialUserInfo& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnMakeCredentialUserInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_id_){from._impl_.a_id_}
@@ -5470,7 +5038,7 @@ WebAuthnMakeCredentialUserInfo::WebAuthnMakeCredentialUserInfo(const WebAuthnMak
     , decltype(_impl_.a_displayname_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_name_.Set("", GetArenaForAllocation());
@@ -5513,7 +5081,7 @@ inline void WebAuthnMakeCredentialUserInfo::SharedCtor(
 
 WebAuthnMakeCredentialUserInfo::~WebAuthnMakeCredentialUserInfo() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -5540,7 +5108,7 @@ void WebAuthnMakeCredentialUserInfo::Clear() {
   _impl_.a_id_.Clear();
   _impl_.a_name_.ClearToEmpty();
   _impl_.a_displayname_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnMakeCredentialUserInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -5566,7 +5134,7 @@ const char* WebAuthnMakeCredentialUserInfo::_InternalParse(const char* ptr, ::_p
           auto str = _internal_mutable_a_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo.a_Name"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -5576,7 +5144,7 @@ const char* WebAuthnMakeCredentialUserInfo::_InternalParse(const char* ptr, ::_p
           auto str = _internal_mutable_a_displayname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo.a_DisplayName"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -5591,7 +5159,7 @@ const char* WebAuthnMakeCredentialUserInfo::_InternalParse(const char* ptr, ::_p
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -5639,8 +5207,8 @@ uint8_t* WebAuthnMakeCredentialUserInfo::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo)
   return target;
@@ -5682,19 +5250,22 @@ size_t WebAuthnMakeCredentialUserInfo::ByteSizeLong() const {
         this->_internal_a_displayname());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnMakeCredentialUserInfo::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnMakeCredentialUserInfo::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnMakeCredentialUserInfo::GetClassData() const { return &_class_data_; }
+void WebAuthnMakeCredentialUserInfo::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnMakeCredentialUserInfo*>(
+      &from));
+}
 
-
-void WebAuthnMakeCredentialUserInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnMakeCredentialUserInfo*>(&to_msg);
-  auto& from = static_cast<const WebAuthnMakeCredentialUserInfo&>(from_msg);
+void WebAuthnMakeCredentialUserInfo::MergeFrom(const WebAuthnMakeCredentialUserInfo& from) {
+  WebAuthnMakeCredentialUserInfo* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -5707,7 +5278,7 @@ void WebAuthnMakeCredentialUserInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message&
   if (!from._internal_a_displayname().empty()) {
     _this->_internal_set_a_displayname(from._internal_a_displayname());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnMakeCredentialUserInfo::CopyFrom(const WebAuthnMakeCredentialUserInfo& from) {
@@ -5737,11 +5308,10 @@ void WebAuthnMakeCredentialUserInfo::InternalSwap(WebAuthnMakeCredentialUserInfo
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnMakeCredentialUserInfo::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[18]);
+std::string WebAuthnMakeCredentialUserInfo::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnMakeCredentialUserInfo";
 }
+
 
 // ===================================================================
 
@@ -5751,18 +5321,18 @@ class CoseAlg::_Internal {
 
 CoseAlg::CoseAlg(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.CoseAlg)
 }
 CoseAlg::CoseAlg(const CoseAlg& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   CoseAlg* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_alg_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_alg_ = from._impl_.a_alg_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.CoseAlg)
 }
@@ -5779,7 +5349,7 @@ inline void CoseAlg::SharedCtor(
 
 CoseAlg::~CoseAlg() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.CoseAlg)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -5801,7 +5371,7 @@ void CoseAlg::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_alg_ = int64_t{0};
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* CoseAlg::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -5829,7 +5399,7 @@ const char* CoseAlg::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) 
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -5854,8 +5424,8 @@ uint8_t* CoseAlg::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.CoseAlg)
   return target;
@@ -5874,19 +5444,22 @@ size_t CoseAlg::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_alg());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CoseAlg::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    CoseAlg::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CoseAlg::GetClassData() const { return &_class_data_; }
+void CoseAlg::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const CoseAlg*>(
+      &from));
+}
 
-
-void CoseAlg::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<CoseAlg*>(&to_msg);
-  auto& from = static_cast<const CoseAlg&>(from_msg);
+void CoseAlg::MergeFrom(const CoseAlg& from) {
+  CoseAlg* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.CoseAlg)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -5895,7 +5468,7 @@ void CoseAlg::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOB
   if (from._internal_a_alg() != 0) {
     _this->_internal_set_a_alg(from._internal_a_alg());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void CoseAlg::CopyFrom(const CoseAlg& from) {
@@ -5915,11 +5488,10 @@ void CoseAlg::InternalSwap(CoseAlg* other) {
   swap(_impl_.a_alg_, other->_impl_.a_alg_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata CoseAlg::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[19]);
+std::string CoseAlg::GetTypeName() const {
+  return "protobuf.mozilla.dom.CoseAlg";
 }
+
 
 // ===================================================================
 
@@ -5944,12 +5516,12 @@ WebAuthnMakeCredentialInfo::_Internal::a_authenticatorselection(const WebAuthnMa
 }
 WebAuthnMakeCredentialInfo::WebAuthnMakeCredentialInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo)
 }
 WebAuthnMakeCredentialInfo::WebAuthnMakeCredentialInfo(const WebAuthnMakeCredentialInfo& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnMakeCredentialInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_challenge_){from._impl_.a_challenge_}
@@ -5965,7 +5537,7 @@ WebAuthnMakeCredentialInfo::WebAuthnMakeCredentialInfo(const WebAuthnMakeCredent
     , decltype(_impl_.a_timeoutms_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_rpid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_rpid_.Set("", GetArenaForAllocation());
@@ -6025,7 +5597,7 @@ inline void WebAuthnMakeCredentialInfo::SharedCtor(
 
 WebAuthnMakeCredentialInfo::~WebAuthnMakeCredentialInfo() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -6074,7 +5646,7 @@ void WebAuthnMakeCredentialInfo::Clear() {
   }
   _impl_.a_authenticatorselection_ = nullptr;
   _impl_.a_timeoutms_ = 0u;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnMakeCredentialInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -6089,7 +5661,7 @@ const char* WebAuthnMakeCredentialInfo::_InternalParse(const char* ptr, ::_pbi::
           auto str = _internal_mutable_a_rpid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_RpId"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -6181,7 +5753,7 @@ const char* WebAuthnMakeCredentialInfo::_InternalParse(const char* ptr, ::_pbi::
           auto str = _internal_mutable_a_attestationconveyancepreference();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.WebAuthnMakeCredentialInfo.a_attestationConveyancePreference"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -6196,7 +5768,7 @@ const char* WebAuthnMakeCredentialInfo::_InternalParse(const char* ptr, ::_pbi::
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -6295,8 +5867,8 @@ uint8_t* WebAuthnMakeCredentialInfo::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo)
   return target;
@@ -6385,19 +5957,22 @@ size_t WebAuthnMakeCredentialInfo::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_timeoutms());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnMakeCredentialInfo::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnMakeCredentialInfo::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnMakeCredentialInfo::GetClassData() const { return &_class_data_; }
+void WebAuthnMakeCredentialInfo::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnMakeCredentialInfo*>(
+      &from));
+}
 
-
-void WebAuthnMakeCredentialInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnMakeCredentialInfo*>(&to_msg);
-  auto& from = static_cast<const WebAuthnMakeCredentialInfo&>(from_msg);
+void WebAuthnMakeCredentialInfo::MergeFrom(const WebAuthnMakeCredentialInfo& from) {
+  WebAuthnMakeCredentialInfo* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnMakeCredentialInfo)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -6428,7 +6003,7 @@ void WebAuthnMakeCredentialInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_
   if (from._internal_a_timeoutms() != 0) {
     _this->_internal_set_a_timeoutms(from._internal_a_timeoutms());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnMakeCredentialInfo::CopyFrom(const WebAuthnMakeCredentialInfo& from) {
@@ -6467,11 +6042,10 @@ void WebAuthnMakeCredentialInfo::InternalSwap(WebAuthnMakeCredentialInfo* other)
           reinterpret_cast<char*>(&other->_impl_.a_rp_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnMakeCredentialInfo::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[20]);
+std::string WebAuthnMakeCredentialInfo::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnMakeCredentialInfo";
 }
+
 
 // ===================================================================
 
@@ -6485,12 +6059,12 @@ class WebAuthnMakeCredentialResult::_Internal {
 
 WebAuthnMakeCredentialResult::WebAuthnMakeCredentialResult(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnMakeCredentialResult)
 }
 WebAuthnMakeCredentialResult::WebAuthnMakeCredentialResult(const WebAuthnMakeCredentialResult& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnMakeCredentialResult* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -6504,7 +6078,7 @@ WebAuthnMakeCredentialResult::WebAuthnMakeCredentialResult(const WebAuthnMakeCre
     , decltype(_impl_.a_clientdatajson_){}
     , decltype(_impl_.a_authenticatorattachment_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_clientdatajson_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_clientdatajson_.Set("", GetArenaForAllocation());
@@ -6552,7 +6126,7 @@ inline void WebAuthnMakeCredentialResult::SharedCtor(
 
 WebAuthnMakeCredentialResult::~WebAuthnMakeCredentialResult() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnMakeCredentialResult)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -6589,7 +6163,7 @@ void WebAuthnMakeCredentialResult::Clear() {
     _impl_.a_authenticatorattachment_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnMakeCredentialResult::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -6605,7 +6179,7 @@ const char* WebAuthnMakeCredentialResult::_InternalParse(const char* ptr, ::_pbi
           auto str = _internal_mutable_a_clientdatajson();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.WebAuthnMakeCredentialResult.a_ClientDataJSON"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -6640,7 +6214,7 @@ const char* WebAuthnMakeCredentialResult::_InternalParse(const char* ptr, ::_pbi
             auto str = _internal_add_a_transports();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.WebAuthnMakeCredentialResult.a_Transports"));
+            CHK_(::_pbi::VerifyUTF8(str, nullptr));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
         } else
@@ -6665,7 +6239,7 @@ const char* WebAuthnMakeCredentialResult::_InternalParse(const char* ptr, ::_pbi
           auto str = _internal_mutable_a_authenticatorattachment();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.WebAuthnMakeCredentialResult.a_AuthenticatorAttachment"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -6680,7 +6254,7 @@ const char* WebAuthnMakeCredentialResult::_InternalParse(const char* ptr, ::_pbi
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -6756,8 +6330,8 @@ uint8_t* WebAuthnMakeCredentialResult::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnMakeCredentialResult)
   return target;
@@ -6829,19 +6403,22 @@ size_t WebAuthnMakeCredentialResult::ByteSizeLong() const {
         this->_internal_a_authenticatorattachment());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnMakeCredentialResult::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnMakeCredentialResult::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnMakeCredentialResult::GetClassData() const { return &_class_data_; }
+void WebAuthnMakeCredentialResult::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnMakeCredentialResult*>(
+      &from));
+}
 
-
-void WebAuthnMakeCredentialResult::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnMakeCredentialResult*>(&to_msg);
-  auto& from = static_cast<const WebAuthnMakeCredentialResult&>(from_msg);
+void WebAuthnMakeCredentialResult::MergeFrom(const WebAuthnMakeCredentialResult& from) {
+  WebAuthnMakeCredentialResult* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnMakeCredentialResult)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -6857,7 +6434,7 @@ void WebAuthnMakeCredentialResult::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& t
   if (from._internal_has_a_authenticatorattachment()) {
     _this->_internal_set_a_authenticatorattachment(from._internal_a_authenticatorattachment());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnMakeCredentialResult::CopyFrom(const WebAuthnMakeCredentialResult& from) {
@@ -6891,11 +6468,10 @@ void WebAuthnMakeCredentialResult::InternalSwap(WebAuthnMakeCredentialResult* ot
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnMakeCredentialResult::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[21]);
+std::string WebAuthnMakeCredentialResult::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnMakeCredentialResult";
 }
+
 
 // ===================================================================
 
@@ -6925,19 +6501,19 @@ void WebAuthnMakeCredentialResponse::set_allocated_a_mvwebauthnmakecredentialres
 }
 WebAuthnMakeCredentialResponse::WebAuthnMakeCredentialResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnMakeCredentialResponse)
 }
 WebAuthnMakeCredentialResponse::WebAuthnMakeCredentialResponse(const WebAuthnMakeCredentialResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnMakeCredentialResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVnsresult: {
@@ -6970,7 +6546,7 @@ inline void WebAuthnMakeCredentialResponse::SharedCtor(
 
 WebAuthnMakeCredentialResponse::~WebAuthnMakeCredentialResponse() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnMakeCredentialResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -7016,7 +6592,7 @@ void WebAuthnMakeCredentialResponse::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnMakeCredentialResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -7053,7 +6629,7 @@ const char* WebAuthnMakeCredentialResponse::_InternalParse(const char* ptr, ::_p
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -7085,8 +6661,8 @@ uint8_t* WebAuthnMakeCredentialResponse::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnMakeCredentialResponse)
   return target;
@@ -7119,19 +6695,22 @@ size_t WebAuthnMakeCredentialResponse::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnMakeCredentialResponse::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnMakeCredentialResponse::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnMakeCredentialResponse::GetClassData() const { return &_class_data_; }
+void WebAuthnMakeCredentialResponse::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnMakeCredentialResponse*>(
+      &from));
+}
 
-
-void WebAuthnMakeCredentialResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnMakeCredentialResponse*>(&to_msg);
-  auto& from = static_cast<const WebAuthnMakeCredentialResponse&>(from_msg);
+void WebAuthnMakeCredentialResponse::MergeFrom(const WebAuthnMakeCredentialResponse& from) {
+  WebAuthnMakeCredentialResponse* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnMakeCredentialResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -7151,7 +6730,7 @@ void WebAuthnMakeCredentialResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message&
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnMakeCredentialResponse::CopyFrom(const WebAuthnMakeCredentialResponse& from) {
@@ -7172,11 +6751,10 @@ void WebAuthnMakeCredentialResponse::InternalSwap(WebAuthnMakeCredentialResponse
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnMakeCredentialResponse::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[22]);
+std::string WebAuthnMakeCredentialResponse::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnMakeCredentialResponse";
 }
+
 
 // ===================================================================
 
@@ -7190,12 +6768,12 @@ class WebAuthnGetAssertionInfo::_Internal {
 
 WebAuthnGetAssertionInfo::WebAuthnGetAssertionInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnGetAssertionInfo)
 }
 WebAuthnGetAssertionInfo::WebAuthnGetAssertionInfo(const WebAuthnGetAssertionInfo& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnGetAssertionInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -7210,7 +6788,7 @@ WebAuthnGetAssertionInfo::WebAuthnGetAssertionInfo(const WebAuthnGetAssertionInf
     , decltype(_impl_.a_timeoutms_){}
     , decltype(_impl_.a_conditionallymediated_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_rpid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_rpid_.Set("", GetArenaForAllocation());
@@ -7274,7 +6852,7 @@ inline void WebAuthnGetAssertionInfo::SharedCtor(
 
 WebAuthnGetAssertionInfo::~WebAuthnGetAssertionInfo() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnGetAssertionInfo)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -7314,7 +6892,7 @@ void WebAuthnGetAssertionInfo::Clear() {
       reinterpret_cast<char*>(&_impl_.a_conditionallymediated_) -
       reinterpret_cast<char*>(&_impl_.a_timeoutms_)) + sizeof(_impl_.a_conditionallymediated_));
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnGetAssertionInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -7330,7 +6908,7 @@ const char* WebAuthnGetAssertionInfo::_InternalParse(const char* ptr, ::_pbi::Pa
           auto str = _internal_mutable_a_rpid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.WebAuthnGetAssertionInfo.a_RpId"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -7340,7 +6918,7 @@ const char* WebAuthnGetAssertionInfo::_InternalParse(const char* ptr, ::_pbi::Pa
           auto str = _internal_mutable_a_appid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.WebAuthnGetAssertionInfo.a_AppId"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -7395,7 +6973,7 @@ const char* WebAuthnGetAssertionInfo::_InternalParse(const char* ptr, ::_pbi::Pa
           auto str = _internal_mutable_a_userverificationrequirement();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.WebAuthnGetAssertionInfo.a_userVerificationRequirement"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -7418,7 +6996,7 @@ const char* WebAuthnGetAssertionInfo::_InternalParse(const char* ptr, ::_pbi::Pa
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -7505,8 +7083,8 @@ uint8_t* WebAuthnGetAssertionInfo::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnGetAssertionInfo)
   return target;
@@ -7580,19 +7158,22 @@ size_t WebAuthnGetAssertionInfo::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnGetAssertionInfo::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnGetAssertionInfo::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnGetAssertionInfo::GetClassData() const { return &_class_data_; }
+void WebAuthnGetAssertionInfo::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnGetAssertionInfo*>(
+      &from));
+}
 
-
-void WebAuthnGetAssertionInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnGetAssertionInfo*>(&to_msg);
-  auto& from = static_cast<const WebAuthnGetAssertionInfo&>(from_msg);
+void WebAuthnGetAssertionInfo::MergeFrom(const WebAuthnGetAssertionInfo& from) {
+  WebAuthnGetAssertionInfo* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnGetAssertionInfo)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -7616,7 +7197,7 @@ void WebAuthnGetAssertionInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_ms
   if (from._internal_a_conditionallymediated() != 0) {
     _this->_internal_set_a_conditionallymediated(from._internal_a_conditionallymediated());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnGetAssertionInfo::CopyFrom(const WebAuthnGetAssertionInfo& from) {
@@ -7659,11 +7240,10 @@ void WebAuthnGetAssertionInfo::InternalSwap(WebAuthnGetAssertionInfo* other) {
           reinterpret_cast<char*>(&other->_impl_.a_timeoutms_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnGetAssertionInfo::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[23]);
+std::string WebAuthnGetAssertionInfo::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnGetAssertionInfo";
 }
+
 
 // ===================================================================
 
@@ -7677,12 +7257,12 @@ class WebAuthnGetAssertionResult::_Internal {
 
 WebAuthnGetAssertionResult::WebAuthnGetAssertionResult(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnGetAssertionResult)
 }
 WebAuthnGetAssertionResult::WebAuthnGetAssertionResult(const WebAuthnGetAssertionResult& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnGetAssertionResult* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -7699,7 +7279,7 @@ WebAuthnGetAssertionResult::WebAuthnGetAssertionResult(const WebAuthnGetAssertio
     , decltype(_impl_.a_clientdatajson_){}
     , decltype(_impl_.a_authenticatorattachment_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_clientdatajson_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_clientdatajson_.Set("", GetArenaForAllocation());
@@ -7750,7 +7330,7 @@ inline void WebAuthnGetAssertionResult::SharedCtor(
 
 WebAuthnGetAssertionResult::~WebAuthnGetAssertionResult() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnGetAssertionResult)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -7789,7 +7369,7 @@ void WebAuthnGetAssertionResult::Clear() {
     _impl_.a_authenticatorattachment_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnGetAssertionResult::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -7805,7 +7385,7 @@ const char* WebAuthnGetAssertionResult::_InternalParse(const char* ptr, ::_pbi::
           auto str = _internal_mutable_a_clientdatajson();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.WebAuthnGetAssertionResult.a_ClientDataJSON"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -7872,7 +7452,7 @@ const char* WebAuthnGetAssertionResult::_InternalParse(const char* ptr, ::_pbi::
           auto str = _internal_mutable_a_authenticatorattachment();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.WebAuthnGetAssertionResult.a_AuthenticatorAttachment"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -7887,7 +7467,7 @@ const char* WebAuthnGetAssertionResult::_InternalParse(const char* ptr, ::_pbi::
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -7971,8 +7551,8 @@ uint8_t* WebAuthnGetAssertionResult::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnGetAssertionResult)
   return target;
@@ -8064,19 +7644,22 @@ size_t WebAuthnGetAssertionResult::ByteSizeLong() const {
         this->_internal_a_authenticatorattachment());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnGetAssertionResult::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnGetAssertionResult::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnGetAssertionResult::GetClassData() const { return &_class_data_; }
+void WebAuthnGetAssertionResult::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnGetAssertionResult*>(
+      &from));
+}
 
-
-void WebAuthnGetAssertionResult::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnGetAssertionResult*>(&to_msg);
-  auto& from = static_cast<const WebAuthnGetAssertionResult&>(from_msg);
+void WebAuthnGetAssertionResult::MergeFrom(const WebAuthnGetAssertionResult& from) {
+  WebAuthnGetAssertionResult* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnGetAssertionResult)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -8093,7 +7676,7 @@ void WebAuthnGetAssertionResult::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_
   if (from._internal_has_a_authenticatorattachment()) {
     _this->_internal_set_a_authenticatorattachment(from._internal_a_authenticatorattachment());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnGetAssertionResult::CopyFrom(const WebAuthnGetAssertionResult& from) {
@@ -8128,11 +7711,10 @@ void WebAuthnGetAssertionResult::InternalSwap(WebAuthnGetAssertionResult* other)
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnGetAssertionResult::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[24]);
+std::string WebAuthnGetAssertionResult::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnGetAssertionResult";
 }
+
 
 // ===================================================================
 
@@ -8162,19 +7744,19 @@ void WebAuthnGetAssertionResponse::set_allocated_a_mvwebauthngetassertionresult(
 }
 WebAuthnGetAssertionResponse::WebAuthnGetAssertionResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebAuthnGetAssertionResponse)
 }
 WebAuthnGetAssertionResponse::WebAuthnGetAssertionResponse(const WebAuthnGetAssertionResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebAuthnGetAssertionResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVnsresult: {
@@ -8207,7 +7789,7 @@ inline void WebAuthnGetAssertionResponse::SharedCtor(
 
 WebAuthnGetAssertionResponse::~WebAuthnGetAssertionResponse() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebAuthnGetAssertionResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -8253,7 +7835,7 @@ void WebAuthnGetAssertionResponse::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebAuthnGetAssertionResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -8290,7 +7872,7 @@ const char* WebAuthnGetAssertionResponse::_InternalParse(const char* ptr, ::_pbi
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -8322,8 +7904,8 @@ uint8_t* WebAuthnGetAssertionResponse::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebAuthnGetAssertionResponse)
   return target;
@@ -8356,19 +7938,22 @@ size_t WebAuthnGetAssertionResponse::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebAuthnGetAssertionResponse::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebAuthnGetAssertionResponse::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebAuthnGetAssertionResponse::GetClassData() const { return &_class_data_; }
+void WebAuthnGetAssertionResponse::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebAuthnGetAssertionResponse*>(
+      &from));
+}
 
-
-void WebAuthnGetAssertionResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebAuthnGetAssertionResponse*>(&to_msg);
-  auto& from = static_cast<const WebAuthnGetAssertionResponse&>(from_msg);
+void WebAuthnGetAssertionResponse::MergeFrom(const WebAuthnGetAssertionResponse& from) {
+  WebAuthnGetAssertionResponse* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebAuthnGetAssertionResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -8388,7 +7973,7 @@ void WebAuthnGetAssertionResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& t
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebAuthnGetAssertionResponse::CopyFrom(const WebAuthnGetAssertionResponse& from) {
@@ -8409,11 +7994,10 @@ void WebAuthnGetAssertionResponse::InternalSwap(WebAuthnGetAssertionResponse* ot
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebAuthnGetAssertionResponse::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebAuthnTransaction_5fprotobuf_2emozilla_2edom_2eh_2eproto[25]);
+std::string WebAuthnGetAssertionResponse::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebAuthnGetAssertionResponse";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace dom

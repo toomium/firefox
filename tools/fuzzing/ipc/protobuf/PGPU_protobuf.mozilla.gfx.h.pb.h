@@ -25,11 +25,9 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/message.h>
+#include <google/protobuf/message_lite.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
-#include <google/protobuf/unknown_field_set.h>
 #include "CrashReporterInitArgs.pb.h"
 #include "GraphicsMessages.pb.h"
 #include "MemoryReportTypes.pb.h"
@@ -48,7 +46,6 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PGPU_5fprotobuf_2emozilla_2egfx_2eh_2eproto {
   static const uint32_t offsets[];
 };
-extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PGPU_5fprotobuf_2emozilla_2egfx_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace gfx {
@@ -68,7 +65,7 @@ namespace gfx {
 // ===================================================================
 
 class LayerTreeIdMapping final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gfx.LayerTreeIdMapping) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.gfx.LayerTreeIdMapping) */ {
  public:
   inline LayerTreeIdMapping() : LayerTreeIdMapping(nullptr) {}
   ~LayerTreeIdMapping() override;
@@ -98,15 +95,6 @@ class LayerTreeIdMapping final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const LayerTreeIdMapping& default_instance() {
     return *internal_default_instance();
   }
@@ -144,15 +132,9 @@ class LayerTreeIdMapping final :
   LayerTreeIdMapping* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<LayerTreeIdMapping>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const LayerTreeIdMapping& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const LayerTreeIdMapping& from) {
-    LayerTreeIdMapping::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const LayerTreeIdMapping& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -165,7 +147,7 @@ class LayerTreeIdMapping final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(LayerTreeIdMapping* other);
 
   private:
@@ -178,10 +160,7 @@ class LayerTreeIdMapping final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 

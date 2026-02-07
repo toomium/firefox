@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -44,52 +41,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto[1];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::locks::IPCLockRequest, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::locks::IPCLockRequest, _impl_.a_name_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::locks::IPCLockRequest, _impl_.a_lockmode_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::locks::IPCLockRequest, _impl_.a_ifavailable_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::locks::IPCLockRequest, _impl_.a_steal_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::dom::locks::IPCLockRequest)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::dom::locks::_IPCLockRequest_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n/PLockManager_protobuf.mozilla.dom.lock"
-  "s.h.proto\022\032protobuf.mozilla.dom.locks\"\\\n"
-  "\016IPCLockRequest\022\016\n\006a_name\030\001 \001(\t\022\022\n\na_loc"
-  "kMode\030\002 \001(\014\022\025\n\ra_ifAvailable\030\003 \001(\010\022\017\n\007a_"
-  "steal\030\004 \001(\010b\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto = {
-    false, false, 179, descriptor_table_protodef_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto,
-    "PLockManager_protobuf.mozilla.dom.locks.h.proto",
-    &descriptor_table_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto_once, nullptr, 0, 1,
-    schemas, file_default_instances, TableStruct_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto::offsets,
-    file_level_metadata_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto, file_level_enum_descriptors_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto,
-    file_level_service_descriptors_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto_getter() {
-  return &descriptor_table_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto(&descriptor_table_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -103,12 +54,12 @@ class IPCLockRequest::_Internal {
 
 IPCLockRequest::IPCLockRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.locks.IPCLockRequest)
 }
 IPCLockRequest::IPCLockRequest(const IPCLockRequest& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IPCLockRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_name_){}
@@ -117,7 +68,7 @@ IPCLockRequest::IPCLockRequest(const IPCLockRequest& from)
     , decltype(_impl_.a_steal_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_name_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_name_.Set("", GetArenaForAllocation());
@@ -163,7 +114,7 @@ inline void IPCLockRequest::SharedCtor(
 
 IPCLockRequest::~IPCLockRequest() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.locks.IPCLockRequest)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -191,7 +142,7 @@ void IPCLockRequest::Clear() {
   ::memset(&_impl_.a_ifavailable_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_steal_) -
       reinterpret_cast<char*>(&_impl_.a_ifavailable_)) + sizeof(_impl_.a_steal_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* IPCLockRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -206,7 +157,7 @@ const char* IPCLockRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext
           auto str = _internal_mutable_a_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.locks.IPCLockRequest.a_name"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -246,7 +197,7 @@ const char* IPCLockRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -293,8 +244,8 @@ uint8_t* IPCLockRequest::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.locks.IPCLockRequest)
   return target;
@@ -332,19 +283,22 @@ size_t IPCLockRequest::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCLockRequest::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    IPCLockRequest::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCLockRequest::GetClassData() const { return &_class_data_; }
+void IPCLockRequest::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const IPCLockRequest*>(
+      &from));
+}
 
-
-void IPCLockRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<IPCLockRequest*>(&to_msg);
-  auto& from = static_cast<const IPCLockRequest&>(from_msg);
+void IPCLockRequest::MergeFrom(const IPCLockRequest& from) {
+  IPCLockRequest* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.locks.IPCLockRequest)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -362,7 +316,7 @@ void IPCLockRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const :
   if (from._internal_a_steal() != 0) {
     _this->_internal_set_a_steal(from._internal_a_steal());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void IPCLockRequest::CopyFrom(const IPCLockRequest& from) {
@@ -397,11 +351,10 @@ void IPCLockRequest::InternalSwap(IPCLockRequest* other) {
           reinterpret_cast<char*>(&other->_impl_.a_ifavailable_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata IPCLockRequest::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto_getter, &descriptor_table_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto_once,
-      file_level_metadata_PLockManager_5fprotobuf_2emozilla_2edom_2elocks_2eh_2eproto[0]);
+std::string IPCLockRequest::GetTypeName() const {
+  return "protobuf.mozilla.dom.locks.IPCLockRequest";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace locks

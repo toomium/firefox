@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -154,165 +151,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto[9];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::Checkbox, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::Checkbox, _impl_.a_value_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::TextField, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::TextField, _impl_.a_value_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::FileList, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::FileList, _impl_.a_valuelist_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::SingleSelect, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::SingleSelect, _impl_.a_index_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::SingleSelect, _impl_.a_value_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::MultipleSelect, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::MultipleSelect, _impl_.a_valuelist_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::FormEntryValue, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::FormEntryValue, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::FormEntryValue, _impl_.content_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::FormEntry, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::FormEntry, _impl_.a_id_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::FormEntry, _impl_.a_value_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::FormData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::FormData, _impl_.a_hasdata_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::FormData, _impl_.a_id_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::FormData, _impl_.a_xpath_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::FormData, _impl_.a_innerhtml_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::FormData, _impl_.a_uri_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::DocShellRestoreState, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::DocShellRestoreState, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::DocShellRestoreState, _impl_.a_uri_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::sessionstore::DocShellRestoreState, _impl_.a_docshellcaps_),
-  0,
-  ~0u,
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::dom::sessionstore::Checkbox)},
-  { 7, -1, -1, sizeof(::protobuf::mozilla::dom::sessionstore::TextField)},
-  { 14, -1, -1, sizeof(::protobuf::mozilla::dom::sessionstore::FileList)},
-  { 21, -1, -1, sizeof(::protobuf::mozilla::dom::sessionstore::SingleSelect)},
-  { 29, -1, -1, sizeof(::protobuf::mozilla::dom::sessionstore::MultipleSelect)},
-  { 36, -1, -1, sizeof(::protobuf::mozilla::dom::sessionstore::FormEntryValue)},
-  { 49, -1, -1, sizeof(::protobuf::mozilla::dom::sessionstore::FormEntry)},
-  { 57, -1, -1, sizeof(::protobuf::mozilla::dom::sessionstore::FormData)},
-  { 68, 76, -1, sizeof(::protobuf::mozilla::dom::sessionstore::DocShellRestoreState)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::dom::sessionstore::_Checkbox_default_instance_._instance,
-  &::protobuf::mozilla::dom::sessionstore::_TextField_default_instance_._instance,
-  &::protobuf::mozilla::dom::sessionstore::_FileList_default_instance_._instance,
-  &::protobuf::mozilla::dom::sessionstore::_SingleSelect_default_instance_._instance,
-  &::protobuf::mozilla::dom::sessionstore::_MultipleSelect_default_instance_._instance,
-  &::protobuf::mozilla::dom::sessionstore::_FormEntryValue_default_instance_._instance,
-  &::protobuf::mozilla::dom::sessionstore::_FormEntry_default_instance_._instance,
-  &::protobuf::mozilla::dom::sessionstore::_FormData_default_instance_._instance,
-  &::protobuf::mozilla::dom::sessionstore::_DocShellRestoreState_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n;SessionStoreTypes_protobuf.mozilla.dom"
-  ".sessionstore.h.proto\022!protobuf.mozilla."
-  "dom.sessionstore\032\030CustomElementTypes.pro"
-  "to\032\016DOMTypes.proto\"\033\n\010Checkbox\022\017\n\007a_valu"
-  "e\030\001 \001(\010\"\034\n\tTextField\022\017\n\007a_value\030\001 \001(\t\"\037\n"
-  "\010FileList\022\023\n\013a_valueList\030\001 \003(\t\"0\n\014Single"
-  "Select\022\017\n\007a_index\030\001 \001(\r\022\017\n\007a_value\030\002 \001(\t"
-  "\"%\n\016MultipleSelect\022\023\n\013a_valueList\030\001 \003(\t\""
-  "\326\003\n\016FormEntryValue\022C\n\014a_mVCheckbox\030\001 \001(\013"
-  "2+.protobuf.mozilla.dom.sessionstore.Che"
-  "ckboxH\000\022E\n\ra_mVTextField\030\002 \001(\0132,.protobu"
-  "f.mozilla.dom.sessionstore.TextFieldH\000\022C"
-  "\n\014a_mVFileList\030\003 \001(\0132+.protobuf.mozilla."
-  "dom.sessionstore.FileListH\000\022K\n\020a_mVSingl"
-  "eSelect\030\004 \001(\0132/.protobuf.mozilla.dom.ses"
-  "sionstore.SingleSelectH\000\022O\n\022a_mVMultiple"
-  "Select\030\005 \001(\01321.protobuf.mozilla.dom.sess"
-  "ionstore.MultipleSelectH\000\022J\n\026a_mVCustomE"
-  "lementTuple\030\006 \001(\0132(.protobuf.mozilla.dom"
-  ".CustomElementTupleH\000B\t\n\007content\"]\n\tForm"
-  "Entry\022\014\n\004a_id\030\001 \001(\t\022B\n\007a_value\030\002 \001(\01321.p"
-  "rotobuf.mozilla.dom.sessionstore.FormEnt"
-  "ryValue\"\274\001\n\010FormData\022\021\n\ta_hasData\030\001 \001(\010\022"
-  ":\n\004a_id\030\002 \003(\0132,.protobuf.mozilla.dom.ses"
-  "sionstore.FormEntry\022=\n\007a_xpath\030\003 \003(\0132,.p"
-  "rotobuf.mozilla.dom.sessionstore.FormEnt"
-  "ry\022\023\n\013a_innerHTML\030\004 \001(\t\022\r\n\005a_uri\030\005 \001(\t\"L"
-  "\n\024DocShellRestoreState\022\022\n\005a_URI\030\001 \001(\014H\000\210"
-  "\001\001\022\026\n\016a_docShellCaps\030\002 \001(\tB\010\n\006_a_URIb\006pr"
-  "oto3"
-  ;
-static const ::_pbi::DescriptorTable* const descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_deps[2] = {
-  &::descriptor_table_CustomElementTypes_2eproto,
-  &::descriptor_table_DOMTypes_2eproto,
-};
-static ::_pbi::once_flag descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto = {
-    false, false, 1164, descriptor_table_protodef_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto,
-    "SessionStoreTypes_protobuf.mozilla.dom.sessionstore.h.proto",
-    &descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_once, descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_deps, 2, 9,
-    schemas, file_default_instances, TableStruct_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto::offsets,
-    file_level_metadata_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto, file_level_enum_descriptors_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto,
-    file_level_service_descriptors_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_getter() {
-  return &descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto(&descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -326,18 +164,18 @@ class Checkbox::_Internal {
 
 Checkbox::Checkbox(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.sessionstore.Checkbox)
 }
 Checkbox::Checkbox(const Checkbox& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Checkbox* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_value_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_value_ = from._impl_.a_value_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.sessionstore.Checkbox)
 }
@@ -354,7 +192,7 @@ inline void Checkbox::SharedCtor(
 
 Checkbox::~Checkbox() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.sessionstore.Checkbox)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -376,7 +214,7 @@ void Checkbox::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_value_ = false;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Checkbox::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -404,7 +242,7 @@ const char* Checkbox::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -429,8 +267,8 @@ uint8_t* Checkbox::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.sessionstore.Checkbox)
   return target;
@@ -449,19 +287,22 @@ size_t Checkbox::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Checkbox::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Checkbox::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Checkbox::GetClassData() const { return &_class_data_; }
+void Checkbox::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Checkbox*>(
+      &from));
+}
 
-
-void Checkbox::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Checkbox*>(&to_msg);
-  auto& from = static_cast<const Checkbox&>(from_msg);
+void Checkbox::MergeFrom(const Checkbox& from) {
+  Checkbox* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.sessionstore.Checkbox)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -470,7 +311,7 @@ void Checkbox::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTO
   if (from._internal_a_value() != 0) {
     _this->_internal_set_a_value(from._internal_a_value());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Checkbox::CopyFrom(const Checkbox& from) {
@@ -490,11 +331,10 @@ void Checkbox::InternalSwap(Checkbox* other) {
   swap(_impl_.a_value_, other->_impl_.a_value_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Checkbox::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_getter, &descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_once,
-      file_level_metadata_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto[0]);
+std::string Checkbox::GetTypeName() const {
+  return "protobuf.mozilla.dom.sessionstore.Checkbox";
 }
+
 
 // ===================================================================
 
@@ -504,18 +344,18 @@ class TextField::_Internal {
 
 TextField::TextField(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.sessionstore.TextField)
 }
 TextField::TextField(const TextField& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   TextField* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_value_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_value_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_value_.Set("", GetArenaForAllocation());
@@ -543,7 +383,7 @@ inline void TextField::SharedCtor(
 
 TextField::~TextField() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.sessionstore.TextField)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -566,7 +406,7 @@ void TextField::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_value_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* TextField::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -581,7 +421,7 @@ const char* TextField::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
           auto str = _internal_mutable_a_value();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.sessionstore.TextField.a_value"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -596,7 +436,7 @@ const char* TextField::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -625,8 +465,8 @@ uint8_t* TextField::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.sessionstore.TextField)
   return target;
@@ -647,19 +487,22 @@ size_t TextField::ByteSizeLong() const {
         this->_internal_a_value());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData TextField::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    TextField::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*TextField::GetClassData() const { return &_class_data_; }
+void TextField::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const TextField*>(
+      &from));
+}
 
-
-void TextField::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<TextField*>(&to_msg);
-  auto& from = static_cast<const TextField&>(from_msg);
+void TextField::MergeFrom(const TextField& from) {
+  TextField* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.sessionstore.TextField)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -668,7 +511,7 @@ void TextField::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROT
   if (!from._internal_a_value().empty()) {
     _this->_internal_set_a_value(from._internal_a_value());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void TextField::CopyFrom(const TextField& from) {
@@ -693,11 +536,10 @@ void TextField::InternalSwap(TextField* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata TextField::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_getter, &descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_once,
-      file_level_metadata_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto[1]);
+std::string TextField::GetTypeName() const {
+  return "protobuf.mozilla.dom.sessionstore.TextField";
 }
+
 
 // ===================================================================
 
@@ -707,18 +549,18 @@ class FileList::_Internal {
 
 FileList::FileList(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.sessionstore.FileList)
 }
 FileList::FileList(const FileList& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   FileList* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_valuelist_){from._impl_.a_valuelist_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.sessionstore.FileList)
 }
 
@@ -734,7 +576,7 @@ inline void FileList::SharedCtor(
 
 FileList::~FileList() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.sessionstore.FileList)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -757,7 +599,7 @@ void FileList::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_valuelist_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* FileList::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -775,7 +617,7 @@ const char* FileList::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
             auto str = _internal_add_a_valuelist();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.sessionstore.FileList.a_valueList"));
+            CHK_(::_pbi::VerifyUTF8(str, nullptr));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -792,7 +634,7 @@ const char* FileList::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -821,8 +663,8 @@ uint8_t* FileList::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.sessionstore.FileList)
   return target;
@@ -844,26 +686,29 @@ size_t FileList::ByteSizeLong() const {
       _impl_.a_valuelist_.Get(i));
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FileList::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    FileList::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FileList::GetClassData() const { return &_class_data_; }
+void FileList::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const FileList*>(
+      &from));
+}
 
-
-void FileList::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<FileList*>(&to_msg);
-  auto& from = static_cast<const FileList&>(from_msg);
+void FileList::MergeFrom(const FileList& from) {
+  FileList* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.sessionstore.FileList)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_valuelist_.MergeFrom(from._impl_.a_valuelist_);
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void FileList::CopyFrom(const FileList& from) {
@@ -883,11 +728,10 @@ void FileList::InternalSwap(FileList* other) {
   _impl_.a_valuelist_.InternalSwap(&other->_impl_.a_valuelist_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FileList::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_getter, &descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_once,
-      file_level_metadata_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto[2]);
+std::string FileList::GetTypeName() const {
+  return "protobuf.mozilla.dom.sessionstore.FileList";
 }
+
 
 // ===================================================================
 
@@ -897,19 +741,19 @@ class SingleSelect::_Internal {
 
 SingleSelect::SingleSelect(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.sessionstore.SingleSelect)
 }
 SingleSelect::SingleSelect(const SingleSelect& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SingleSelect* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_value_){}
     , decltype(_impl_.a_index_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_value_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_value_.Set("", GetArenaForAllocation());
@@ -939,7 +783,7 @@ inline void SingleSelect::SharedCtor(
 
 SingleSelect::~SingleSelect() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.sessionstore.SingleSelect)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -963,7 +807,7 @@ void SingleSelect::Clear() {
 
   _impl_.a_value_.ClearToEmpty();
   _impl_.a_index_ = 0u;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SingleSelect::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -986,7 +830,7 @@ const char* SingleSelect::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
           auto str = _internal_mutable_a_value();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.sessionstore.SingleSelect.a_value"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1001,7 +845,7 @@ const char* SingleSelect::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1036,8 +880,8 @@ uint8_t* SingleSelect::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.sessionstore.SingleSelect)
   return target;
@@ -1063,19 +907,22 @@ size_t SingleSelect::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_index());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SingleSelect::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SingleSelect::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SingleSelect::GetClassData() const { return &_class_data_; }
+void SingleSelect::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SingleSelect*>(
+      &from));
+}
 
-
-void SingleSelect::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SingleSelect*>(&to_msg);
-  auto& from = static_cast<const SingleSelect&>(from_msg);
+void SingleSelect::MergeFrom(const SingleSelect& from) {
+  SingleSelect* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.sessionstore.SingleSelect)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1087,7 +934,7 @@ void SingleSelect::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
   if (from._internal_a_index() != 0) {
     _this->_internal_set_a_index(from._internal_a_index());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SingleSelect::CopyFrom(const SingleSelect& from) {
@@ -1113,11 +960,10 @@ void SingleSelect::InternalSwap(SingleSelect* other) {
   swap(_impl_.a_index_, other->_impl_.a_index_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SingleSelect::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_getter, &descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_once,
-      file_level_metadata_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto[3]);
+std::string SingleSelect::GetTypeName() const {
+  return "protobuf.mozilla.dom.sessionstore.SingleSelect";
 }
+
 
 // ===================================================================
 
@@ -1127,18 +973,18 @@ class MultipleSelect::_Internal {
 
 MultipleSelect::MultipleSelect(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.sessionstore.MultipleSelect)
 }
 MultipleSelect::MultipleSelect(const MultipleSelect& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   MultipleSelect* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_valuelist_){from._impl_.a_valuelist_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.sessionstore.MultipleSelect)
 }
 
@@ -1154,7 +1000,7 @@ inline void MultipleSelect::SharedCtor(
 
 MultipleSelect::~MultipleSelect() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.sessionstore.MultipleSelect)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1177,7 +1023,7 @@ void MultipleSelect::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_valuelist_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* MultipleSelect::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1195,7 +1041,7 @@ const char* MultipleSelect::_InternalParse(const char* ptr, ::_pbi::ParseContext
             auto str = _internal_add_a_valuelist();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.sessionstore.MultipleSelect.a_valueList"));
+            CHK_(::_pbi::VerifyUTF8(str, nullptr));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
         } else
@@ -1212,7 +1058,7 @@ const char* MultipleSelect::_InternalParse(const char* ptr, ::_pbi::ParseContext
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1241,8 +1087,8 @@ uint8_t* MultipleSelect::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.sessionstore.MultipleSelect)
   return target;
@@ -1264,26 +1110,29 @@ size_t MultipleSelect::ByteSizeLong() const {
       _impl_.a_valuelist_.Get(i));
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MultipleSelect::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    MultipleSelect::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MultipleSelect::GetClassData() const { return &_class_data_; }
+void MultipleSelect::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const MultipleSelect*>(
+      &from));
+}
 
-
-void MultipleSelect::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<MultipleSelect*>(&to_msg);
-  auto& from = static_cast<const MultipleSelect&>(from_msg);
+void MultipleSelect::MergeFrom(const MultipleSelect& from) {
+  MultipleSelect* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.sessionstore.MultipleSelect)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_valuelist_.MergeFrom(from._impl_.a_valuelist_);
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void MultipleSelect::CopyFrom(const MultipleSelect& from) {
@@ -1303,11 +1152,10 @@ void MultipleSelect::InternalSwap(MultipleSelect* other) {
   _impl_.a_valuelist_.InternalSwap(&other->_impl_.a_valuelist_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata MultipleSelect::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_getter, &descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_once,
-      file_level_metadata_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto[4]);
+std::string MultipleSelect::GetTypeName() const {
+  return "protobuf.mozilla.dom.sessionstore.MultipleSelect";
 }
+
 
 // ===================================================================
 
@@ -1446,19 +1294,19 @@ void FormEntryValue::clear_a_mvcustomelementtuple() {
 }
 FormEntryValue::FormEntryValue(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.sessionstore.FormEntryValue)
 }
 FormEntryValue::FormEntryValue(const FormEntryValue& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   FormEntryValue* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVCheckbox: {
@@ -1512,7 +1360,7 @@ inline void FormEntryValue::SharedCtor(
 
 FormEntryValue::~FormEntryValue() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.sessionstore.FormEntryValue)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1584,7 +1432,7 @@ void FormEntryValue::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* FormEntryValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1652,7 +1500,7 @@ const char* FormEntryValue::_InternalParse(const char* ptr, ::_pbi::ParseContext
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1713,8 +1561,8 @@ uint8_t* FormEntryValue::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.sessionstore.FormEntryValue)
   return target;
@@ -1775,19 +1623,22 @@ size_t FormEntryValue::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FormEntryValue::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    FormEntryValue::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FormEntryValue::GetClassData() const { return &_class_data_; }
+void FormEntryValue::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const FormEntryValue*>(
+      &from));
+}
 
-
-void FormEntryValue::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<FormEntryValue*>(&to_msg);
-  auto& from = static_cast<const FormEntryValue&>(from_msg);
+void FormEntryValue::MergeFrom(const FormEntryValue& from) {
+  FormEntryValue* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.sessionstore.FormEntryValue)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1828,7 +1679,7 @@ void FormEntryValue::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const :
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void FormEntryValue::CopyFrom(const FormEntryValue& from) {
@@ -1849,11 +1700,10 @@ void FormEntryValue::InternalSwap(FormEntryValue* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FormEntryValue::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_getter, &descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_once,
-      file_level_metadata_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto[5]);
+std::string FormEntryValue::GetTypeName() const {
+  return "protobuf.mozilla.dom.sessionstore.FormEntryValue";
 }
+
 
 // ===================================================================
 
@@ -1868,19 +1718,19 @@ FormEntry::_Internal::a_value(const FormEntry* msg) {
 }
 FormEntry::FormEntry(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.sessionstore.FormEntry)
 }
 FormEntry::FormEntry(const FormEntry& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   FormEntry* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_id_){}
     , decltype(_impl_.a_value_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_id_.Set("", GetArenaForAllocation());
@@ -1912,7 +1762,7 @@ inline void FormEntry::SharedCtor(
 
 FormEntry::~FormEntry() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.sessionstore.FormEntry)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1940,7 +1790,7 @@ void FormEntry::Clear() {
     delete _impl_.a_value_;
   }
   _impl_.a_value_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* FormEntry::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1955,7 +1805,7 @@ const char* FormEntry::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
           auto str = _internal_mutable_a_id();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.sessionstore.FormEntry.a_id"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1978,7 +1828,7 @@ const char* FormEntry::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -2014,8 +1864,8 @@ uint8_t* FormEntry::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.sessionstore.FormEntry)
   return target;
@@ -2043,19 +1893,22 @@ size_t FormEntry::ByteSizeLong() const {
         *_impl_.a_value_);
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FormEntry::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    FormEntry::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FormEntry::GetClassData() const { return &_class_data_; }
+void FormEntry::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const FormEntry*>(
+      &from));
+}
 
-
-void FormEntry::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<FormEntry*>(&to_msg);
-  auto& from = static_cast<const FormEntry&>(from_msg);
+void FormEntry::MergeFrom(const FormEntry& from) {
+  FormEntry* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.sessionstore.FormEntry)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2068,7 +1921,7 @@ void FormEntry::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROT
     _this->_internal_mutable_a_value()->::protobuf::mozilla::dom::sessionstore::FormEntryValue::MergeFrom(
         from._internal_a_value());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void FormEntry::CopyFrom(const FormEntry& from) {
@@ -2094,11 +1947,10 @@ void FormEntry::InternalSwap(FormEntry* other) {
   swap(_impl_.a_value_, other->_impl_.a_value_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FormEntry::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_getter, &descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_once,
-      file_level_metadata_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto[6]);
+std::string FormEntry::GetTypeName() const {
+  return "protobuf.mozilla.dom.sessionstore.FormEntry";
 }
+
 
 // ===================================================================
 
@@ -2108,12 +1960,12 @@ class FormData::_Internal {
 
 FormData::FormData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.sessionstore.FormData)
 }
 FormData::FormData(const FormData& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   FormData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_id_){from._impl_.a_id_}
@@ -2123,7 +1975,7 @@ FormData::FormData(const FormData& from)
     , decltype(_impl_.a_hasdata_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_innerhtml_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_innerhtml_.Set("", GetArenaForAllocation());
@@ -2168,7 +2020,7 @@ inline void FormData::SharedCtor(
 
 FormData::~FormData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.sessionstore.FormData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -2198,7 +2050,7 @@ void FormData::Clear() {
   _impl_.a_innerhtml_.ClearToEmpty();
   _impl_.a_uri_.ClearToEmpty();
   _impl_.a_hasdata_ = false;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* FormData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -2247,7 +2099,7 @@ const char* FormData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
           auto str = _internal_mutable_a_innerhtml();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.sessionstore.FormData.a_innerHTML"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -2257,7 +2109,7 @@ const char* FormData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
           auto str = _internal_mutable_a_uri();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.sessionstore.FormData.a_uri"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -2272,7 +2124,7 @@ const char* FormData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -2333,8 +2185,8 @@ uint8_t* FormData::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.sessionstore.FormData)
   return target;
@@ -2381,19 +2233,22 @@ size_t FormData::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FormData::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    FormData::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FormData::GetClassData() const { return &_class_data_; }
+void FormData::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const FormData*>(
+      &from));
+}
 
-
-void FormData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<FormData*>(&to_msg);
-  auto& from = static_cast<const FormData&>(from_msg);
+void FormData::MergeFrom(const FormData& from) {
+  FormData* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.sessionstore.FormData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2410,7 +2265,7 @@ void FormData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTO
   if (from._internal_a_hasdata() != 0) {
     _this->_internal_set_a_hasdata(from._internal_a_hasdata());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void FormData::CopyFrom(const FormData& from) {
@@ -2442,11 +2297,10 @@ void FormData::InternalSwap(FormData* other) {
   swap(_impl_.a_hasdata_, other->_impl_.a_hasdata_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FormData::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_getter, &descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_once,
-      file_level_metadata_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto[7]);
+std::string FormData::GetTypeName() const {
+  return "protobuf.mozilla.dom.sessionstore.FormData";
 }
+
 
 // ===================================================================
 
@@ -2460,12 +2314,12 @@ class DocShellRestoreState::_Internal {
 
 DocShellRestoreState::DocShellRestoreState(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.sessionstore.DocShellRestoreState)
 }
 DocShellRestoreState::DocShellRestoreState(const DocShellRestoreState& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   DocShellRestoreState* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -2473,7 +2327,7 @@ DocShellRestoreState::DocShellRestoreState(const DocShellRestoreState& from)
     , decltype(_impl_.a_uri_){}
     , decltype(_impl_.a_docshellcaps_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_uri_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_uri_.Set("", GetArenaForAllocation());
@@ -2515,7 +2369,7 @@ inline void DocShellRestoreState::SharedCtor(
 
 DocShellRestoreState::~DocShellRestoreState() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.sessionstore.DocShellRestoreState)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -2544,7 +2398,7 @@ void DocShellRestoreState::Clear() {
   }
   _impl_.a_docshellcaps_.ClearToEmpty();
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* DocShellRestoreState::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -2569,7 +2423,7 @@ const char* DocShellRestoreState::_InternalParse(const char* ptr, ::_pbi::ParseC
           auto str = _internal_mutable_a_docshellcaps();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.sessionstore.DocShellRestoreState.a_docShellCaps"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -2584,7 +2438,7 @@ const char* DocShellRestoreState::_InternalParse(const char* ptr, ::_pbi::ParseC
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -2620,8 +2474,8 @@ uint8_t* DocShellRestoreState::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.sessionstore.DocShellRestoreState)
   return target;
@@ -2650,19 +2504,22 @@ size_t DocShellRestoreState::ByteSizeLong() const {
         this->_internal_a_docshellcaps());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData DocShellRestoreState::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    DocShellRestoreState::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*DocShellRestoreState::GetClassData() const { return &_class_data_; }
+void DocShellRestoreState::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const DocShellRestoreState*>(
+      &from));
+}
 
-
-void DocShellRestoreState::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<DocShellRestoreState*>(&to_msg);
-  auto& from = static_cast<const DocShellRestoreState&>(from_msg);
+void DocShellRestoreState::MergeFrom(const DocShellRestoreState& from) {
+  DocShellRestoreState* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.sessionstore.DocShellRestoreState)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2674,7 +2531,7 @@ void DocShellRestoreState::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
   if (!from._internal_a_docshellcaps().empty()) {
     _this->_internal_set_a_docshellcaps(from._internal_a_docshellcaps());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void DocShellRestoreState::CopyFrom(const DocShellRestoreState& from) {
@@ -2704,11 +2561,10 @@ void DocShellRestoreState::InternalSwap(DocShellRestoreState* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata DocShellRestoreState::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_getter, &descriptor_table_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto_once,
-      file_level_metadata_SessionStoreTypes_5fprotobuf_2emozilla_2edom_2esessionstore_2eh_2eproto[8]);
+std::string DocShellRestoreState::GetTypeName() const {
+  return "protobuf.mozilla.dom.sessionstore.DocShellRestoreState";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace sessionstore

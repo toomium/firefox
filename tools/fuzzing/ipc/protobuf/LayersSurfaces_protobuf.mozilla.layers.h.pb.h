@@ -25,11 +25,9 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/message.h>
+#include <google/protobuf/message_lite.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
-#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto
@@ -43,7 +41,6 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto {
   static const uint32_t offsets[];
 };
-extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_LayersSurfaces_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace layers {
@@ -147,7 +144,7 @@ namespace layers {
 // ===================================================================
 
 class SurfaceDescriptorD3D10 final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorD3D10) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorD3D10) */ {
  public:
   inline SurfaceDescriptorD3D10() : SurfaceDescriptorD3D10(nullptr) {}
   ~SurfaceDescriptorD3D10() override;
@@ -177,15 +174,6 @@ class SurfaceDescriptorD3D10 final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const SurfaceDescriptorD3D10& default_instance() {
     return *internal_default_instance();
   }
@@ -223,15 +211,9 @@ class SurfaceDescriptorD3D10 final :
   SurfaceDescriptorD3D10* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SurfaceDescriptorD3D10>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const SurfaceDescriptorD3D10& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const SurfaceDescriptorD3D10& from) {
-    SurfaceDescriptorD3D10::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const SurfaceDescriptorD3D10& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -244,7 +226,7 @@ class SurfaceDescriptorD3D10 final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(SurfaceDescriptorD3D10* other);
 
   private:
@@ -257,10 +239,7 @@ class SurfaceDescriptorD3D10 final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -431,7 +410,7 @@ class SurfaceDescriptorD3D10 final :
 // -------------------------------------------------------------------
 
 class SurfaceDescriptorDXGIYCbCr final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorDXGIYCbCr) */ {
  public:
   inline SurfaceDescriptorDXGIYCbCr() : SurfaceDescriptorDXGIYCbCr(nullptr) {}
   ~SurfaceDescriptorDXGIYCbCr() override;
@@ -461,15 +440,6 @@ class SurfaceDescriptorDXGIYCbCr final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const SurfaceDescriptorDXGIYCbCr& default_instance() {
     return *internal_default_instance();
   }
@@ -507,15 +477,9 @@ class SurfaceDescriptorDXGIYCbCr final :
   SurfaceDescriptorDXGIYCbCr* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SurfaceDescriptorDXGIYCbCr>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const SurfaceDescriptorDXGIYCbCr& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const SurfaceDescriptorDXGIYCbCr& from) {
-    SurfaceDescriptorDXGIYCbCr::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const SurfaceDescriptorDXGIYCbCr& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -528,7 +492,7 @@ class SurfaceDescriptorDXGIYCbCr final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(SurfaceDescriptorDXGIYCbCr* other);
 
   private:
@@ -541,10 +505,7 @@ class SurfaceDescriptorDXGIYCbCr final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -741,7 +702,7 @@ class SurfaceDescriptorDXGIYCbCr final :
 // -------------------------------------------------------------------
 
 class SurfaceDescriptorMacIOSurface final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorMacIOSurface) */ {
  public:
   inline SurfaceDescriptorMacIOSurface() : SurfaceDescriptorMacIOSurface(nullptr) {}
   ~SurfaceDescriptorMacIOSurface() override;
@@ -771,15 +732,6 @@ class SurfaceDescriptorMacIOSurface final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const SurfaceDescriptorMacIOSurface& default_instance() {
     return *internal_default_instance();
   }
@@ -817,15 +769,9 @@ class SurfaceDescriptorMacIOSurface final :
   SurfaceDescriptorMacIOSurface* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SurfaceDescriptorMacIOSurface>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const SurfaceDescriptorMacIOSurface& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const SurfaceDescriptorMacIOSurface& from) {
-    SurfaceDescriptorMacIOSurface::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const SurfaceDescriptorMacIOSurface& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -838,7 +784,7 @@ class SurfaceDescriptorMacIOSurface final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(SurfaceDescriptorMacIOSurface* other);
 
   private:
@@ -851,10 +797,7 @@ class SurfaceDescriptorMacIOSurface final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -937,7 +880,7 @@ class SurfaceDescriptorMacIOSurface final :
 // -------------------------------------------------------------------
 
 class SurfaceDescriptorDMABuf final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorDMABuf) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorDMABuf) */ {
  public:
   inline SurfaceDescriptorDMABuf() : SurfaceDescriptorDMABuf(nullptr) {}
   ~SurfaceDescriptorDMABuf() override;
@@ -967,15 +910,6 @@ class SurfaceDescriptorDMABuf final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const SurfaceDescriptorDMABuf& default_instance() {
     return *internal_default_instance();
   }
@@ -1013,15 +947,9 @@ class SurfaceDescriptorDMABuf final :
   SurfaceDescriptorDMABuf* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SurfaceDescriptorDMABuf>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const SurfaceDescriptorDMABuf& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const SurfaceDescriptorDMABuf& from) {
-    SurfaceDescriptorDMABuf::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const SurfaceDescriptorDMABuf& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1034,7 +962,7 @@ class SurfaceDescriptorDMABuf final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(SurfaceDescriptorDMABuf* other);
 
   private:
@@ -1047,10 +975,7 @@ class SurfaceDescriptorDMABuf final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1492,7 +1417,7 @@ class SurfaceDescriptorDMABuf final :
 // -------------------------------------------------------------------
 
 class SurfaceTextureDescriptor final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceTextureDescriptor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceTextureDescriptor) */ {
  public:
   inline SurfaceTextureDescriptor() : SurfaceTextureDescriptor(nullptr) {}
   ~SurfaceTextureDescriptor() override;
@@ -1522,15 +1447,6 @@ class SurfaceTextureDescriptor final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const SurfaceTextureDescriptor& default_instance() {
     return *internal_default_instance();
   }
@@ -1568,15 +1484,9 @@ class SurfaceTextureDescriptor final :
   SurfaceTextureDescriptor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SurfaceTextureDescriptor>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const SurfaceTextureDescriptor& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const SurfaceTextureDescriptor& from) {
-    SurfaceTextureDescriptor::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const SurfaceTextureDescriptor& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1589,7 +1499,7 @@ class SurfaceTextureDescriptor final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(SurfaceTextureDescriptor* other);
 
   private:
@@ -1602,10 +1512,7 @@ class SurfaceTextureDescriptor final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1715,7 +1622,7 @@ class SurfaceTextureDescriptor final :
 // -------------------------------------------------------------------
 
 class SurfaceDescriptorAndroidHardwareBuffer final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorAndroidHardwareBuffer) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorAndroidHardwareBuffer) */ {
  public:
   inline SurfaceDescriptorAndroidHardwareBuffer() : SurfaceDescriptorAndroidHardwareBuffer(nullptr) {}
   ~SurfaceDescriptorAndroidHardwareBuffer() override;
@@ -1745,15 +1652,6 @@ class SurfaceDescriptorAndroidHardwareBuffer final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const SurfaceDescriptorAndroidHardwareBuffer& default_instance() {
     return *internal_default_instance();
   }
@@ -1791,15 +1689,9 @@ class SurfaceDescriptorAndroidHardwareBuffer final :
   SurfaceDescriptorAndroidHardwareBuffer* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SurfaceDescriptorAndroidHardwareBuffer>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const SurfaceDescriptorAndroidHardwareBuffer& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const SurfaceDescriptorAndroidHardwareBuffer& from) {
-    SurfaceDescriptorAndroidHardwareBuffer::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const SurfaceDescriptorAndroidHardwareBuffer& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1812,7 +1704,7 @@ class SurfaceDescriptorAndroidHardwareBuffer final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(SurfaceDescriptorAndroidHardwareBuffer* other);
 
   private:
@@ -1825,10 +1717,7 @@ class SurfaceDescriptorAndroidHardwareBuffer final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1895,7 +1784,7 @@ class SurfaceDescriptorAndroidHardwareBuffer final :
 // -------------------------------------------------------------------
 
 class EGLImageDescriptor final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.EGLImageDescriptor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.EGLImageDescriptor) */ {
  public:
   inline EGLImageDescriptor() : EGLImageDescriptor(nullptr) {}
   ~EGLImageDescriptor() override;
@@ -1925,15 +1814,6 @@ class EGLImageDescriptor final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const EGLImageDescriptor& default_instance() {
     return *internal_default_instance();
   }
@@ -1971,15 +1851,9 @@ class EGLImageDescriptor final :
   EGLImageDescriptor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<EGLImageDescriptor>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const EGLImageDescriptor& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const EGLImageDescriptor& from) {
-    EGLImageDescriptor::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const EGLImageDescriptor& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1992,7 +1866,7 @@ class EGLImageDescriptor final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(EGLImageDescriptor* other);
 
   private:
@@ -2005,10 +1879,7 @@ class EGLImageDescriptor final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2091,7 +1962,7 @@ class EGLImageDescriptor final :
 // -------------------------------------------------------------------
 
 class SurfaceDescriptorSharedGLTexture final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorSharedGLTexture) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorSharedGLTexture) */ {
  public:
   inline SurfaceDescriptorSharedGLTexture() : SurfaceDescriptorSharedGLTexture(nullptr) {}
   ~SurfaceDescriptorSharedGLTexture() override;
@@ -2121,15 +1992,6 @@ class SurfaceDescriptorSharedGLTexture final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const SurfaceDescriptorSharedGLTexture& default_instance() {
     return *internal_default_instance();
   }
@@ -2167,15 +2029,9 @@ class SurfaceDescriptorSharedGLTexture final :
   SurfaceDescriptorSharedGLTexture* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SurfaceDescriptorSharedGLTexture>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const SurfaceDescriptorSharedGLTexture& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const SurfaceDescriptorSharedGLTexture& from) {
-    SurfaceDescriptorSharedGLTexture::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const SurfaceDescriptorSharedGLTexture& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2188,7 +2044,7 @@ class SurfaceDescriptorSharedGLTexture final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(SurfaceDescriptorSharedGLTexture* other);
 
   private:
@@ -2201,10 +2057,7 @@ class SurfaceDescriptorSharedGLTexture final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2293,7 +2146,7 @@ class SurfaceDescriptorSharedGLTexture final :
 // -------------------------------------------------------------------
 
 class SurfaceDescriptorDcompSurface final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorDcompSurface) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorDcompSurface) */ {
  public:
   inline SurfaceDescriptorDcompSurface() : SurfaceDescriptorDcompSurface(nullptr) {}
   ~SurfaceDescriptorDcompSurface() override;
@@ -2323,15 +2176,6 @@ class SurfaceDescriptorDcompSurface final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const SurfaceDescriptorDcompSurface& default_instance() {
     return *internal_default_instance();
   }
@@ -2369,15 +2213,9 @@ class SurfaceDescriptorDcompSurface final :
   SurfaceDescriptorDcompSurface* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SurfaceDescriptorDcompSurface>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const SurfaceDescriptorDcompSurface& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const SurfaceDescriptorDcompSurface& from) {
-    SurfaceDescriptorDcompSurface::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const SurfaceDescriptorDcompSurface& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2390,7 +2228,7 @@ class SurfaceDescriptorDcompSurface final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(SurfaceDescriptorDcompSurface* other);
 
   private:
@@ -2403,10 +2241,7 @@ class SurfaceDescriptorDcompSurface final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2478,7 +2313,7 @@ class SurfaceDescriptorDcompSurface final :
 // -------------------------------------------------------------------
 
 class RemoteDecoderVideoSubDescriptor final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.RemoteDecoderVideoSubDescriptor) */ {
  public:
   inline RemoteDecoderVideoSubDescriptor() : RemoteDecoderVideoSubDescriptor(nullptr) {}
   ~RemoteDecoderVideoSubDescriptor() override;
@@ -2508,15 +2343,6 @@ class RemoteDecoderVideoSubDescriptor final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const RemoteDecoderVideoSubDescriptor& default_instance() {
     return *internal_default_instance();
   }
@@ -2564,15 +2390,9 @@ class RemoteDecoderVideoSubDescriptor final :
   RemoteDecoderVideoSubDescriptor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<RemoteDecoderVideoSubDescriptor>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const RemoteDecoderVideoSubDescriptor& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const RemoteDecoderVideoSubDescriptor& from) {
-    RemoteDecoderVideoSubDescriptor::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const RemoteDecoderVideoSubDescriptor& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2585,7 +2405,7 @@ class RemoteDecoderVideoSubDescriptor final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(RemoteDecoderVideoSubDescriptor* other);
 
   private:
@@ -2598,10 +2418,7 @@ class RemoteDecoderVideoSubDescriptor final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2762,7 +2579,7 @@ class RemoteDecoderVideoSubDescriptor final :
 // -------------------------------------------------------------------
 
 class SurfaceDescriptorRemoteDecoder final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorRemoteDecoder) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorRemoteDecoder) */ {
  public:
   inline SurfaceDescriptorRemoteDecoder() : SurfaceDescriptorRemoteDecoder(nullptr) {}
   ~SurfaceDescriptorRemoteDecoder() override;
@@ -2792,15 +2609,6 @@ class SurfaceDescriptorRemoteDecoder final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const SurfaceDescriptorRemoteDecoder& default_instance() {
     return *internal_default_instance();
   }
@@ -2838,15 +2646,9 @@ class SurfaceDescriptorRemoteDecoder final :
   SurfaceDescriptorRemoteDecoder* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SurfaceDescriptorRemoteDecoder>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const SurfaceDescriptorRemoteDecoder& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const SurfaceDescriptorRemoteDecoder& from) {
-    SurfaceDescriptorRemoteDecoder::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const SurfaceDescriptorRemoteDecoder& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2859,7 +2661,7 @@ class SurfaceDescriptorRemoteDecoder final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(SurfaceDescriptorRemoteDecoder* other);
 
   private:
@@ -2872,10 +2674,7 @@ class SurfaceDescriptorRemoteDecoder final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2962,7 +2761,7 @@ class SurfaceDescriptorRemoteDecoder final :
 // -------------------------------------------------------------------
 
 class SurfaceDescriptorGPUVideo final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorGPUVideo) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorGPUVideo) */ {
  public:
   inline SurfaceDescriptorGPUVideo() : SurfaceDescriptorGPUVideo(nullptr) {}
   ~SurfaceDescriptorGPUVideo() override;
@@ -2992,15 +2791,6 @@ class SurfaceDescriptorGPUVideo final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const SurfaceDescriptorGPUVideo& default_instance() {
     return *internal_default_instance();
   }
@@ -3043,15 +2833,9 @@ class SurfaceDescriptorGPUVideo final :
   SurfaceDescriptorGPUVideo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SurfaceDescriptorGPUVideo>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const SurfaceDescriptorGPUVideo& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const SurfaceDescriptorGPUVideo& from) {
-    SurfaceDescriptorGPUVideo::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const SurfaceDescriptorGPUVideo& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3064,7 +2848,7 @@ class SurfaceDescriptorGPUVideo final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(SurfaceDescriptorGPUVideo* other);
 
   private:
@@ -3077,10 +2861,7 @@ class SurfaceDescriptorGPUVideo final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3136,7 +2917,7 @@ class SurfaceDescriptorGPUVideo final :
 // -------------------------------------------------------------------
 
 class RGBDescriptor final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.RGBDescriptor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.RGBDescriptor) */ {
  public:
   inline RGBDescriptor() : RGBDescriptor(nullptr) {}
   ~RGBDescriptor() override;
@@ -3166,15 +2947,6 @@ class RGBDescriptor final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const RGBDescriptor& default_instance() {
     return *internal_default_instance();
   }
@@ -3212,15 +2984,9 @@ class RGBDescriptor final :
   RGBDescriptor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<RGBDescriptor>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const RGBDescriptor& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const RGBDescriptor& from) {
-    RGBDescriptor::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const RGBDescriptor& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3233,7 +2999,7 @@ class RGBDescriptor final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(RGBDescriptor* other);
 
   private:
@@ -3246,10 +3012,7 @@ class RGBDescriptor final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3305,7 +3068,7 @@ class RGBDescriptor final :
 // -------------------------------------------------------------------
 
 class YCbCrDescriptor final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.YCbCrDescriptor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.YCbCrDescriptor) */ {
  public:
   inline YCbCrDescriptor() : YCbCrDescriptor(nullptr) {}
   ~YCbCrDescriptor() override;
@@ -3335,15 +3098,6 @@ class YCbCrDescriptor final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const YCbCrDescriptor& default_instance() {
     return *internal_default_instance();
   }
@@ -3381,15 +3135,9 @@ class YCbCrDescriptor final :
   YCbCrDescriptor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<YCbCrDescriptor>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const YCbCrDescriptor& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const YCbCrDescriptor& from) {
-    YCbCrDescriptor::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const YCbCrDescriptor& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3402,7 +3150,7 @@ class YCbCrDescriptor final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(YCbCrDescriptor* other);
 
   private:
@@ -3415,10 +3163,7 @@ class YCbCrDescriptor final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3625,7 +3370,7 @@ class YCbCrDescriptor final :
 // -------------------------------------------------------------------
 
 class BufferDescriptor final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.BufferDescriptor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.BufferDescriptor) */ {
  public:
   inline BufferDescriptor() : BufferDescriptor(nullptr) {}
   ~BufferDescriptor() override;
@@ -3655,15 +3400,6 @@ class BufferDescriptor final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const BufferDescriptor& default_instance() {
     return *internal_default_instance();
   }
@@ -3707,15 +3443,9 @@ class BufferDescriptor final :
   BufferDescriptor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<BufferDescriptor>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const BufferDescriptor& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const BufferDescriptor& from) {
-    BufferDescriptor::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const BufferDescriptor& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3728,7 +3458,7 @@ class BufferDescriptor final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(BufferDescriptor* other);
 
   private:
@@ -3741,10 +3471,7 @@ class BufferDescriptor final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3821,7 +3548,7 @@ class BufferDescriptor final :
 // -------------------------------------------------------------------
 
 class MemoryOrShmem final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.MemoryOrShmem) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.MemoryOrShmem) */ {
  public:
   inline MemoryOrShmem() : MemoryOrShmem(nullptr) {}
   ~MemoryOrShmem() override;
@@ -3851,15 +3578,6 @@ class MemoryOrShmem final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const MemoryOrShmem& default_instance() {
     return *internal_default_instance();
   }
@@ -3903,15 +3621,9 @@ class MemoryOrShmem final :
   MemoryOrShmem* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<MemoryOrShmem>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const MemoryOrShmem& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const MemoryOrShmem& from) {
-    MemoryOrShmem::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const MemoryOrShmem& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3924,7 +3636,7 @@ class MemoryOrShmem final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(MemoryOrShmem* other);
 
   private:
@@ -3937,10 +3649,7 @@ class MemoryOrShmem final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4017,7 +3726,7 @@ class MemoryOrShmem final :
 // -------------------------------------------------------------------
 
 class SurfaceDescriptorBuffer final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorBuffer) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorBuffer) */ {
  public:
   inline SurfaceDescriptorBuffer() : SurfaceDescriptorBuffer(nullptr) {}
   ~SurfaceDescriptorBuffer() override;
@@ -4047,15 +3756,6 @@ class SurfaceDescriptorBuffer final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const SurfaceDescriptorBuffer& default_instance() {
     return *internal_default_instance();
   }
@@ -4093,15 +3793,9 @@ class SurfaceDescriptorBuffer final :
   SurfaceDescriptorBuffer* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SurfaceDescriptorBuffer>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const SurfaceDescriptorBuffer& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const SurfaceDescriptorBuffer& from) {
-    SurfaceDescriptorBuffer::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const SurfaceDescriptorBuffer& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4114,7 +3808,7 @@ class SurfaceDescriptorBuffer final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(SurfaceDescriptorBuffer* other);
 
   private:
@@ -4127,10 +3821,7 @@ class SurfaceDescriptorBuffer final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4194,7 +3885,7 @@ class SurfaceDescriptorBuffer final :
 // -------------------------------------------------------------------
 
 class SurfaceDescriptorShared final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorShared) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorShared) */ {
  public:
   inline SurfaceDescriptorShared() : SurfaceDescriptorShared(nullptr) {}
   ~SurfaceDescriptorShared() override;
@@ -4224,15 +3915,6 @@ class SurfaceDescriptorShared final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const SurfaceDescriptorShared& default_instance() {
     return *internal_default_instance();
   }
@@ -4270,15 +3952,9 @@ class SurfaceDescriptorShared final :
   SurfaceDescriptorShared* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SurfaceDescriptorShared>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const SurfaceDescriptorShared& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const SurfaceDescriptorShared& from) {
-    SurfaceDescriptorShared::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const SurfaceDescriptorShared& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4291,7 +3967,7 @@ class SurfaceDescriptorShared final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(SurfaceDescriptorShared* other);
 
   private:
@@ -4304,10 +3980,7 @@ class SurfaceDescriptorShared final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4390,7 +4063,7 @@ class SurfaceDescriptorShared final :
 // -------------------------------------------------------------------
 
 class SurfaceDescriptorExternalImage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorExternalImage) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorExternalImage) */ {
  public:
   inline SurfaceDescriptorExternalImage() : SurfaceDescriptorExternalImage(nullptr) {}
   ~SurfaceDescriptorExternalImage() override;
@@ -4420,15 +4093,6 @@ class SurfaceDescriptorExternalImage final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const SurfaceDescriptorExternalImage& default_instance() {
     return *internal_default_instance();
   }
@@ -4466,15 +4130,9 @@ class SurfaceDescriptorExternalImage final :
   SurfaceDescriptorExternalImage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SurfaceDescriptorExternalImage>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const SurfaceDescriptorExternalImage& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const SurfaceDescriptorExternalImage& from) {
-    SurfaceDescriptorExternalImage::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const SurfaceDescriptorExternalImage& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4487,7 +4145,7 @@ class SurfaceDescriptorExternalImage final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(SurfaceDescriptorExternalImage* other);
 
   private:
@@ -4500,10 +4158,7 @@ class SurfaceDescriptorExternalImage final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4559,7 +4214,7 @@ class SurfaceDescriptorExternalImage final :
 // -------------------------------------------------------------------
 
 class SurfaceDescriptorRemoteTexture final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorRemoteTexture) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorRemoteTexture) */ {
  public:
   inline SurfaceDescriptorRemoteTexture() : SurfaceDescriptorRemoteTexture(nullptr) {}
   ~SurfaceDescriptorRemoteTexture() override;
@@ -4589,15 +4244,6 @@ class SurfaceDescriptorRemoteTexture final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const SurfaceDescriptorRemoteTexture& default_instance() {
     return *internal_default_instance();
   }
@@ -4635,15 +4281,9 @@ class SurfaceDescriptorRemoteTexture final :
   SurfaceDescriptorRemoteTexture* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SurfaceDescriptorRemoteTexture>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const SurfaceDescriptorRemoteTexture& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const SurfaceDescriptorRemoteTexture& from) {
-    SurfaceDescriptorRemoteTexture::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const SurfaceDescriptorRemoteTexture& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4656,7 +4296,7 @@ class SurfaceDescriptorRemoteTexture final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(SurfaceDescriptorRemoteTexture* other);
 
   private:
@@ -4669,10 +4309,7 @@ class SurfaceDescriptorRemoteTexture final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4728,7 +4365,7 @@ class SurfaceDescriptorRemoteTexture final :
 // -------------------------------------------------------------------
 
 class SurfaceDescriptorCanvasSurface final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorCanvasSurface) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptorCanvasSurface) */ {
  public:
   inline SurfaceDescriptorCanvasSurface() : SurfaceDescriptorCanvasSurface(nullptr) {}
   ~SurfaceDescriptorCanvasSurface() override;
@@ -4758,15 +4395,6 @@ class SurfaceDescriptorCanvasSurface final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const SurfaceDescriptorCanvasSurface& default_instance() {
     return *internal_default_instance();
   }
@@ -4804,15 +4432,9 @@ class SurfaceDescriptorCanvasSurface final :
   SurfaceDescriptorCanvasSurface* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SurfaceDescriptorCanvasSurface>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const SurfaceDescriptorCanvasSurface& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const SurfaceDescriptorCanvasSurface& from) {
-    SurfaceDescriptorCanvasSurface::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const SurfaceDescriptorCanvasSurface& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -4825,7 +4447,7 @@ class SurfaceDescriptorCanvasSurface final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(SurfaceDescriptorCanvasSurface* other);
 
   private:
@@ -4838,10 +4460,7 @@ class SurfaceDescriptorCanvasSurface final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -4908,7 +4527,7 @@ class SurfaceDescriptorCanvasSurface final :
 // -------------------------------------------------------------------
 
 class SurfaceDescriptor final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.SurfaceDescriptor) */ {
  public:
   inline SurfaceDescriptor() : SurfaceDescriptor(nullptr) {}
   ~SurfaceDescriptor() override;
@@ -4938,15 +4557,6 @@ class SurfaceDescriptor final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const SurfaceDescriptor& default_instance() {
     return *internal_default_instance();
   }
@@ -5003,15 +4613,9 @@ class SurfaceDescriptor final :
   SurfaceDescriptor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<SurfaceDescriptor>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const SurfaceDescriptor& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const SurfaceDescriptor& from) {
-    SurfaceDescriptor::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const SurfaceDescriptor& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -5024,7 +4628,7 @@ class SurfaceDescriptor final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(SurfaceDescriptor* other);
 
   private:
@@ -5037,10 +4641,7 @@ class SurfaceDescriptor final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 

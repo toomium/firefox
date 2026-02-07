@@ -25,11 +25,9 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/message.h>
+#include <google/protobuf/message_lite.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
-#include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_PAPZInputBridge_2eproto
@@ -43,7 +41,6 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_PAPZInputBridge_2eproto {
   static const uint32_t offsets[];
 };
-extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_PAPZInputBridge_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace layers {
@@ -138,7 +135,7 @@ namespace PAPZInputBridge {
 // ===================================================================
 
 class Msg_ReceiveMultiTouchInputEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMultiTouchInputEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMultiTouchInputEvent) */ {
  public:
   inline Msg_ReceiveMultiTouchInputEvent() : Msg_ReceiveMultiTouchInputEvent(nullptr) {}
   ~Msg_ReceiveMultiTouchInputEvent() override;
@@ -168,15 +165,6 @@ class Msg_ReceiveMultiTouchInputEvent final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Msg_ReceiveMultiTouchInputEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -214,15 +202,9 @@ class Msg_ReceiveMultiTouchInputEvent final :
   Msg_ReceiveMultiTouchInputEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ReceiveMultiTouchInputEvent>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Msg_ReceiveMultiTouchInputEvent& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Msg_ReceiveMultiTouchInputEvent& from) {
-    Msg_ReceiveMultiTouchInputEvent::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Msg_ReceiveMultiTouchInputEvent& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -235,7 +217,7 @@ class Msg_ReceiveMultiTouchInputEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Msg_ReceiveMultiTouchInputEvent* other);
 
   private:
@@ -248,10 +230,7 @@ class Msg_ReceiveMultiTouchInputEvent final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -302,7 +281,7 @@ class Msg_ReceiveMultiTouchInputEvent final :
 // -------------------------------------------------------------------
 
 class Reply_ReceiveMultiTouchInputEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMultiTouchInputEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMultiTouchInputEvent) */ {
  public:
   inline Reply_ReceiveMultiTouchInputEvent() : Reply_ReceiveMultiTouchInputEvent(nullptr) {}
   ~Reply_ReceiveMultiTouchInputEvent() override;
@@ -332,15 +311,6 @@ class Reply_ReceiveMultiTouchInputEvent final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Reply_ReceiveMultiTouchInputEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -378,15 +348,9 @@ class Reply_ReceiveMultiTouchInputEvent final :
   Reply_ReceiveMultiTouchInputEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_ReceiveMultiTouchInputEvent>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Reply_ReceiveMultiTouchInputEvent& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Reply_ReceiveMultiTouchInputEvent& from) {
-    Reply_ReceiveMultiTouchInputEvent::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Reply_ReceiveMultiTouchInputEvent& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -399,7 +363,7 @@ class Reply_ReceiveMultiTouchInputEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Reply_ReceiveMultiTouchInputEvent* other);
 
   private:
@@ -412,10 +376,7 @@ class Reply_ReceiveMultiTouchInputEvent final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -471,7 +432,7 @@ class Reply_ReceiveMultiTouchInputEvent final :
 // -------------------------------------------------------------------
 
 class Msg_ReceiveMouseInputEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMouseInputEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveMouseInputEvent) */ {
  public:
   inline Msg_ReceiveMouseInputEvent() : Msg_ReceiveMouseInputEvent(nullptr) {}
   ~Msg_ReceiveMouseInputEvent() override;
@@ -501,15 +462,6 @@ class Msg_ReceiveMouseInputEvent final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Msg_ReceiveMouseInputEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -547,15 +499,9 @@ class Msg_ReceiveMouseInputEvent final :
   Msg_ReceiveMouseInputEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ReceiveMouseInputEvent>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Msg_ReceiveMouseInputEvent& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Msg_ReceiveMouseInputEvent& from) {
-    Msg_ReceiveMouseInputEvent::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Msg_ReceiveMouseInputEvent& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -568,7 +514,7 @@ class Msg_ReceiveMouseInputEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Msg_ReceiveMouseInputEvent* other);
 
   private:
@@ -581,10 +527,7 @@ class Msg_ReceiveMouseInputEvent final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -635,7 +578,7 @@ class Msg_ReceiveMouseInputEvent final :
 // -------------------------------------------------------------------
 
 class Reply_ReceiveMouseInputEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMouseInputEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveMouseInputEvent) */ {
  public:
   inline Reply_ReceiveMouseInputEvent() : Reply_ReceiveMouseInputEvent(nullptr) {}
   ~Reply_ReceiveMouseInputEvent() override;
@@ -665,15 +608,6 @@ class Reply_ReceiveMouseInputEvent final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Reply_ReceiveMouseInputEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -711,15 +645,9 @@ class Reply_ReceiveMouseInputEvent final :
   Reply_ReceiveMouseInputEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_ReceiveMouseInputEvent>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Reply_ReceiveMouseInputEvent& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Reply_ReceiveMouseInputEvent& from) {
-    Reply_ReceiveMouseInputEvent::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Reply_ReceiveMouseInputEvent& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -732,7 +660,7 @@ class Reply_ReceiveMouseInputEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Reply_ReceiveMouseInputEvent* other);
 
   private:
@@ -745,10 +673,7 @@ class Reply_ReceiveMouseInputEvent final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -804,7 +729,7 @@ class Reply_ReceiveMouseInputEvent final :
 // -------------------------------------------------------------------
 
 class Msg_ReceivePanGestureInputEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePanGestureInputEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePanGestureInputEvent) */ {
  public:
   inline Msg_ReceivePanGestureInputEvent() : Msg_ReceivePanGestureInputEvent(nullptr) {}
   ~Msg_ReceivePanGestureInputEvent() override;
@@ -834,15 +759,6 @@ class Msg_ReceivePanGestureInputEvent final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Msg_ReceivePanGestureInputEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -880,15 +796,9 @@ class Msg_ReceivePanGestureInputEvent final :
   Msg_ReceivePanGestureInputEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ReceivePanGestureInputEvent>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Msg_ReceivePanGestureInputEvent& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Msg_ReceivePanGestureInputEvent& from) {
-    Msg_ReceivePanGestureInputEvent::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Msg_ReceivePanGestureInputEvent& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -901,7 +811,7 @@ class Msg_ReceivePanGestureInputEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Msg_ReceivePanGestureInputEvent* other);
 
   private:
@@ -914,10 +824,7 @@ class Msg_ReceivePanGestureInputEvent final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -968,7 +875,7 @@ class Msg_ReceivePanGestureInputEvent final :
 // -------------------------------------------------------------------
 
 class Reply_ReceivePanGestureInputEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePanGestureInputEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePanGestureInputEvent) */ {
  public:
   inline Reply_ReceivePanGestureInputEvent() : Reply_ReceivePanGestureInputEvent(nullptr) {}
   ~Reply_ReceivePanGestureInputEvent() override;
@@ -998,15 +905,6 @@ class Reply_ReceivePanGestureInputEvent final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Reply_ReceivePanGestureInputEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -1044,15 +942,9 @@ class Reply_ReceivePanGestureInputEvent final :
   Reply_ReceivePanGestureInputEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_ReceivePanGestureInputEvent>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Reply_ReceivePanGestureInputEvent& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Reply_ReceivePanGestureInputEvent& from) {
-    Reply_ReceivePanGestureInputEvent::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Reply_ReceivePanGestureInputEvent& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1065,7 +957,7 @@ class Reply_ReceivePanGestureInputEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Reply_ReceivePanGestureInputEvent* other);
 
   private:
@@ -1078,10 +970,7 @@ class Reply_ReceivePanGestureInputEvent final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1137,7 +1026,7 @@ class Reply_ReceivePanGestureInputEvent final :
 // -------------------------------------------------------------------
 
 class Msg_ReceivePinchGestureInputEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePinchGestureInputEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceivePinchGestureInputEvent) */ {
  public:
   inline Msg_ReceivePinchGestureInputEvent() : Msg_ReceivePinchGestureInputEvent(nullptr) {}
   ~Msg_ReceivePinchGestureInputEvent() override;
@@ -1167,15 +1056,6 @@ class Msg_ReceivePinchGestureInputEvent final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Msg_ReceivePinchGestureInputEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -1213,15 +1093,9 @@ class Msg_ReceivePinchGestureInputEvent final :
   Msg_ReceivePinchGestureInputEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ReceivePinchGestureInputEvent>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Msg_ReceivePinchGestureInputEvent& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Msg_ReceivePinchGestureInputEvent& from) {
-    Msg_ReceivePinchGestureInputEvent::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Msg_ReceivePinchGestureInputEvent& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1234,7 +1108,7 @@ class Msg_ReceivePinchGestureInputEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Msg_ReceivePinchGestureInputEvent* other);
 
   private:
@@ -1247,10 +1121,7 @@ class Msg_ReceivePinchGestureInputEvent final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1301,7 +1172,7 @@ class Msg_ReceivePinchGestureInputEvent final :
 // -------------------------------------------------------------------
 
 class Reply_ReceivePinchGestureInputEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePinchGestureInputEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceivePinchGestureInputEvent) */ {
  public:
   inline Reply_ReceivePinchGestureInputEvent() : Reply_ReceivePinchGestureInputEvent(nullptr) {}
   ~Reply_ReceivePinchGestureInputEvent() override;
@@ -1331,15 +1202,6 @@ class Reply_ReceivePinchGestureInputEvent final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Reply_ReceivePinchGestureInputEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -1377,15 +1239,9 @@ class Reply_ReceivePinchGestureInputEvent final :
   Reply_ReceivePinchGestureInputEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_ReceivePinchGestureInputEvent>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Reply_ReceivePinchGestureInputEvent& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Reply_ReceivePinchGestureInputEvent& from) {
-    Reply_ReceivePinchGestureInputEvent::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Reply_ReceivePinchGestureInputEvent& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1398,7 +1254,7 @@ class Reply_ReceivePinchGestureInputEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Reply_ReceivePinchGestureInputEvent* other);
 
   private:
@@ -1411,10 +1267,7 @@ class Reply_ReceivePinchGestureInputEvent final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1470,7 +1323,7 @@ class Reply_ReceivePinchGestureInputEvent final :
 // -------------------------------------------------------------------
 
 class Msg_ReceiveTapGestureInputEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveTapGestureInputEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveTapGestureInputEvent) */ {
  public:
   inline Msg_ReceiveTapGestureInputEvent() : Msg_ReceiveTapGestureInputEvent(nullptr) {}
   ~Msg_ReceiveTapGestureInputEvent() override;
@@ -1500,15 +1353,6 @@ class Msg_ReceiveTapGestureInputEvent final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Msg_ReceiveTapGestureInputEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -1546,15 +1390,9 @@ class Msg_ReceiveTapGestureInputEvent final :
   Msg_ReceiveTapGestureInputEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ReceiveTapGestureInputEvent>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Msg_ReceiveTapGestureInputEvent& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Msg_ReceiveTapGestureInputEvent& from) {
-    Msg_ReceiveTapGestureInputEvent::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Msg_ReceiveTapGestureInputEvent& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1567,7 +1405,7 @@ class Msg_ReceiveTapGestureInputEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Msg_ReceiveTapGestureInputEvent* other);
 
   private:
@@ -1580,10 +1418,7 @@ class Msg_ReceiveTapGestureInputEvent final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1634,7 +1469,7 @@ class Msg_ReceiveTapGestureInputEvent final :
 // -------------------------------------------------------------------
 
 class Reply_ReceiveTapGestureInputEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveTapGestureInputEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveTapGestureInputEvent) */ {
  public:
   inline Reply_ReceiveTapGestureInputEvent() : Reply_ReceiveTapGestureInputEvent(nullptr) {}
   ~Reply_ReceiveTapGestureInputEvent() override;
@@ -1664,15 +1499,6 @@ class Reply_ReceiveTapGestureInputEvent final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Reply_ReceiveTapGestureInputEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -1710,15 +1536,9 @@ class Reply_ReceiveTapGestureInputEvent final :
   Reply_ReceiveTapGestureInputEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_ReceiveTapGestureInputEvent>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Reply_ReceiveTapGestureInputEvent& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Reply_ReceiveTapGestureInputEvent& from) {
-    Reply_ReceiveTapGestureInputEvent::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Reply_ReceiveTapGestureInputEvent& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1731,7 +1551,7 @@ class Reply_ReceiveTapGestureInputEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Reply_ReceiveTapGestureInputEvent* other);
 
   private:
@@ -1744,10 +1564,7 @@ class Reply_ReceiveTapGestureInputEvent final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1803,7 +1620,7 @@ class Reply_ReceiveTapGestureInputEvent final :
 // -------------------------------------------------------------------
 
 class Msg_ReceiveScrollWheelInputEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveScrollWheelInputEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveScrollWheelInputEvent) */ {
  public:
   inline Msg_ReceiveScrollWheelInputEvent() : Msg_ReceiveScrollWheelInputEvent(nullptr) {}
   ~Msg_ReceiveScrollWheelInputEvent() override;
@@ -1833,15 +1650,6 @@ class Msg_ReceiveScrollWheelInputEvent final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Msg_ReceiveScrollWheelInputEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -1879,15 +1687,9 @@ class Msg_ReceiveScrollWheelInputEvent final :
   Msg_ReceiveScrollWheelInputEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ReceiveScrollWheelInputEvent>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Msg_ReceiveScrollWheelInputEvent& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Msg_ReceiveScrollWheelInputEvent& from) {
-    Msg_ReceiveScrollWheelInputEvent::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Msg_ReceiveScrollWheelInputEvent& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1900,7 +1702,7 @@ class Msg_ReceiveScrollWheelInputEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Msg_ReceiveScrollWheelInputEvent* other);
 
   private:
@@ -1913,10 +1715,7 @@ class Msg_ReceiveScrollWheelInputEvent final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -1967,7 +1766,7 @@ class Msg_ReceiveScrollWheelInputEvent final :
 // -------------------------------------------------------------------
 
 class Reply_ReceiveScrollWheelInputEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveScrollWheelInputEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveScrollWheelInputEvent) */ {
  public:
   inline Reply_ReceiveScrollWheelInputEvent() : Reply_ReceiveScrollWheelInputEvent(nullptr) {}
   ~Reply_ReceiveScrollWheelInputEvent() override;
@@ -1997,15 +1796,6 @@ class Reply_ReceiveScrollWheelInputEvent final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Reply_ReceiveScrollWheelInputEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -2043,15 +1833,9 @@ class Reply_ReceiveScrollWheelInputEvent final :
   Reply_ReceiveScrollWheelInputEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_ReceiveScrollWheelInputEvent>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Reply_ReceiveScrollWheelInputEvent& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Reply_ReceiveScrollWheelInputEvent& from) {
-    Reply_ReceiveScrollWheelInputEvent::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Reply_ReceiveScrollWheelInputEvent& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2064,7 +1848,7 @@ class Reply_ReceiveScrollWheelInputEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Reply_ReceiveScrollWheelInputEvent* other);
 
   private:
@@ -2077,10 +1861,7 @@ class Reply_ReceiveScrollWheelInputEvent final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2136,7 +1917,7 @@ class Reply_ReceiveScrollWheelInputEvent final :
 // -------------------------------------------------------------------
 
 class Msg_ReceiveKeyboardInputEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveKeyboardInputEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_ReceiveKeyboardInputEvent) */ {
  public:
   inline Msg_ReceiveKeyboardInputEvent() : Msg_ReceiveKeyboardInputEvent(nullptr) {}
   ~Msg_ReceiveKeyboardInputEvent() override;
@@ -2166,15 +1947,6 @@ class Msg_ReceiveKeyboardInputEvent final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Msg_ReceiveKeyboardInputEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -2212,15 +1984,9 @@ class Msg_ReceiveKeyboardInputEvent final :
   Msg_ReceiveKeyboardInputEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ReceiveKeyboardInputEvent>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Msg_ReceiveKeyboardInputEvent& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Msg_ReceiveKeyboardInputEvent& from) {
-    Msg_ReceiveKeyboardInputEvent::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Msg_ReceiveKeyboardInputEvent& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2233,7 +1999,7 @@ class Msg_ReceiveKeyboardInputEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Msg_ReceiveKeyboardInputEvent* other);
 
   private:
@@ -2246,10 +2012,7 @@ class Msg_ReceiveKeyboardInputEvent final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2300,7 +2063,7 @@ class Msg_ReceiveKeyboardInputEvent final :
 // -------------------------------------------------------------------
 
 class Reply_ReceiveKeyboardInputEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveKeyboardInputEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Reply_ReceiveKeyboardInputEvent) */ {
  public:
   inline Reply_ReceiveKeyboardInputEvent() : Reply_ReceiveKeyboardInputEvent(nullptr) {}
   ~Reply_ReceiveKeyboardInputEvent() override;
@@ -2330,15 +2093,6 @@ class Reply_ReceiveKeyboardInputEvent final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Reply_ReceiveKeyboardInputEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -2376,15 +2130,9 @@ class Reply_ReceiveKeyboardInputEvent final :
   Reply_ReceiveKeyboardInputEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_ReceiveKeyboardInputEvent>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Reply_ReceiveKeyboardInputEvent& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Reply_ReceiveKeyboardInputEvent& from) {
-    Reply_ReceiveKeyboardInputEvent::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Reply_ReceiveKeyboardInputEvent& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2397,7 +2145,7 @@ class Reply_ReceiveKeyboardInputEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Reply_ReceiveKeyboardInputEvent* other);
 
   private:
@@ -2410,10 +2158,7 @@ class Reply_ReceiveKeyboardInputEvent final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2469,7 +2214,7 @@ class Reply_ReceiveKeyboardInputEvent final :
 // -------------------------------------------------------------------
 
 class Msg_UpdateWheelTransaction final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_UpdateWheelTransaction) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_UpdateWheelTransaction) */ {
  public:
   inline Msg_UpdateWheelTransaction() : Msg_UpdateWheelTransaction(nullptr) {}
   ~Msg_UpdateWheelTransaction() override;
@@ -2499,15 +2244,6 @@ class Msg_UpdateWheelTransaction final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Msg_UpdateWheelTransaction& default_instance() {
     return *internal_default_instance();
   }
@@ -2545,15 +2281,9 @@ class Msg_UpdateWheelTransaction final :
   Msg_UpdateWheelTransaction* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_UpdateWheelTransaction>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Msg_UpdateWheelTransaction& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Msg_UpdateWheelTransaction& from) {
-    Msg_UpdateWheelTransaction::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Msg_UpdateWheelTransaction& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2566,7 +2296,7 @@ class Msg_UpdateWheelTransaction final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Msg_UpdateWheelTransaction* other);
 
   private:
@@ -2579,10 +2309,7 @@ class Msg_UpdateWheelTransaction final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2659,7 +2386,7 @@ class Msg_UpdateWheelTransaction final :
 // -------------------------------------------------------------------
 
 class Msg_ProcessUnhandledEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_ProcessUnhandledEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_ProcessUnhandledEvent) */ {
  public:
   inline Msg_ProcessUnhandledEvent() : Msg_ProcessUnhandledEvent(nullptr) {}
   ~Msg_ProcessUnhandledEvent() override;
@@ -2689,15 +2416,6 @@ class Msg_ProcessUnhandledEvent final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Msg_ProcessUnhandledEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -2735,15 +2453,9 @@ class Msg_ProcessUnhandledEvent final :
   Msg_ProcessUnhandledEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_ProcessUnhandledEvent>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Msg_ProcessUnhandledEvent& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Msg_ProcessUnhandledEvent& from) {
-    Msg_ProcessUnhandledEvent::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Msg_ProcessUnhandledEvent& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2756,7 +2468,7 @@ class Msg_ProcessUnhandledEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Msg_ProcessUnhandledEvent* other);
 
   private:
@@ -2769,10 +2481,7 @@ class Msg_ProcessUnhandledEvent final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -2812,7 +2521,7 @@ class Msg_ProcessUnhandledEvent final :
 // -------------------------------------------------------------------
 
 class Reply_ProcessUnhandledEvent final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Reply_ProcessUnhandledEvent) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Reply_ProcessUnhandledEvent) */ {
  public:
   inline Reply_ProcessUnhandledEvent() : Reply_ProcessUnhandledEvent(nullptr) {}
   ~Reply_ProcessUnhandledEvent() override;
@@ -2842,15 +2551,6 @@ class Reply_ProcessUnhandledEvent final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Reply_ProcessUnhandledEvent& default_instance() {
     return *internal_default_instance();
   }
@@ -2888,15 +2588,9 @@ class Reply_ProcessUnhandledEvent final :
   Reply_ProcessUnhandledEvent* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Reply_ProcessUnhandledEvent>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Reply_ProcessUnhandledEvent& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Reply_ProcessUnhandledEvent& from) {
-    Reply_ProcessUnhandledEvent::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Reply_ProcessUnhandledEvent& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2909,7 +2603,7 @@ class Reply_ProcessUnhandledEvent final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Reply_ProcessUnhandledEvent* other);
 
   private:
@@ -2922,10 +2616,7 @@ class Reply_ProcessUnhandledEvent final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3008,7 +2699,7 @@ class Reply_ProcessUnhandledEvent final :
 // -------------------------------------------------------------------
 
 class Msg_CallInputBlockCallback final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_CallInputBlockCallback) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_CallInputBlockCallback) */ {
  public:
   inline Msg_CallInputBlockCallback() : Msg_CallInputBlockCallback(nullptr) {}
   ~Msg_CallInputBlockCallback() override;
@@ -3038,15 +2729,6 @@ class Msg_CallInputBlockCallback final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Msg_CallInputBlockCallback& default_instance() {
     return *internal_default_instance();
   }
@@ -3084,15 +2766,9 @@ class Msg_CallInputBlockCallback final :
   Msg_CallInputBlockCallback* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_CallInputBlockCallback>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Msg_CallInputBlockCallback& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Msg_CallInputBlockCallback& from) {
-    Msg_CallInputBlockCallback::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Msg_CallInputBlockCallback& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3105,7 +2781,7 @@ class Msg_CallInputBlockCallback final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Msg_CallInputBlockCallback* other);
 
   private:
@@ -3118,10 +2794,7 @@ class Msg_CallInputBlockCallback final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -3172,7 +2845,7 @@ class Msg_CallInputBlockCallback final :
 // -------------------------------------------------------------------
 
 class Msg_HandleTap final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.layers.PAPZInputBridge.Msg_HandleTap) */ {
  public:
   inline Msg_HandleTap() : Msg_HandleTap(nullptr) {}
   ~Msg_HandleTap() override;
@@ -3202,15 +2875,6 @@ class Msg_HandleTap final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const Msg_HandleTap& default_instance() {
     return *internal_default_instance();
   }
@@ -3248,15 +2912,9 @@ class Msg_HandleTap final :
   Msg_HandleTap* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Msg_HandleTap>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const Msg_HandleTap& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const Msg_HandleTap& from) {
-    Msg_HandleTap::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const Msg_HandleTap& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -3269,7 +2927,7 @@ class Msg_HandleTap final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(Msg_HandleTap* other);
 
   private:
@@ -3282,10 +2940,7 @@ class Msg_HandleTap final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 

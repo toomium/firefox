@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -51,75 +48,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace layers
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto[1];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_id_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_compositestart_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_renderstart_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_compositeend_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_contentframetime_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_resourceuploadtime_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_gpucacheuploadtime_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_transactionstart_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_refreshstart_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_fwdtime_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_scenebuilttime_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_skippedcomposites_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::layers::FrameStats, _impl_.a_url_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::layers::FrameStats)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::layers::_FrameStats_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n1PCompositorBridge_protobuf.mozilla.lay"
-  "ers.h.proto\022\027protobuf.mozilla.layers\032\024La"
-  "yersSurfaces.proto\032\024LayersMessages.proto"
-  "\032\031PlatformWidgetTypes.proto\032\034PCompositor"
-  "BridgeTypes.proto\"\310\002\n\nFrameStats\022\014\n\004a_id"
-  "\030\001 \001(\014\022\030\n\020a_compositeStart\030\002 \001(\014\022\025\n\ra_re"
-  "nderStart\030\003 \001(\014\022\026\n\016a_compositeEnd\030\004 \001(\014\022"
-  "\032\n\022a_contentFrameTime\030\005 \001(\021\022\034\n\024a_resourc"
-  "eUploadTime\030\006 \001(\001\022\034\n\024a_gpuCacheUploadTim"
-  "e\030\007 \001(\001\022\032\n\022a_transactionStart\030\010 \001(\014\022\026\n\016a"
-  "_refreshStart\030\t \001(\014\022\021\n\ta_fwdTime\030\n \001(\014\022\030"
-  "\n\020a_sceneBuiltTime\030\013 \001(\014\022\033\n\023a_skippedCom"
-  "posites\030\014 \001(\r\022\r\n\005a_url\030\r \001(\tb\006proto3"
-  ;
-static const ::_pbi::DescriptorTable* const descriptor_table_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto_deps[4] = {
-  &::descriptor_table_LayersMessages_2eproto,
-  &::descriptor_table_LayersSurfaces_2eproto,
-  &::descriptor_table_PCompositorBridgeTypes_2eproto,
-  &::descriptor_table_PlatformWidgetTypes_2eproto,
-};
-static ::_pbi::once_flag descriptor_table_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto = {
-    false, false, 516, descriptor_table_protodef_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto,
-    "PCompositorBridge_protobuf.mozilla.layers.h.proto",
-    &descriptor_table_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once, descriptor_table_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto_deps, 4, 1,
-    schemas, file_default_instances, TableStruct_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto::offsets,
-    file_level_metadata_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto, file_level_enum_descriptors_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto,
-    file_level_service_descriptors_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter() {
-  return &descriptor_table_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto(&descriptor_table_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace layers {
@@ -132,12 +60,12 @@ class FrameStats::_Internal {
 
 FrameStats::FrameStats(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.layers.FrameStats)
 }
 FrameStats::FrameStats(const FrameStats& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   FrameStats* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_id_){}
@@ -155,7 +83,7 @@ FrameStats::FrameStats(const FrameStats& from)
     , decltype(_impl_.a_skippedcomposites_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_id_.Set("", GetArenaForAllocation());
@@ -294,7 +222,7 @@ inline void FrameStats::SharedCtor(
 
 FrameStats::~FrameStats() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.layers.FrameStats)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -336,7 +264,7 @@ void FrameStats::Clear() {
   ::memset(&_impl_.a_resourceuploadtime_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_skippedcomposites_) -
       reinterpret_cast<char*>(&_impl_.a_resourceuploadtime_)) + sizeof(_impl_.a_skippedcomposites_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -455,7 +383,7 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
           auto str = _internal_mutable_a_url();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.layers.FrameStats.a_url"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -470,7 +398,7 @@ const char* FrameStats::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -579,8 +507,8 @@ uint8_t* FrameStats::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.layers.FrameStats)
   return target;
@@ -685,19 +613,22 @@ size_t FrameStats::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_skippedcomposites());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FrameStats::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    FrameStats::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FrameStats::GetClassData() const { return &_class_data_; }
+void FrameStats::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const FrameStats*>(
+      &from));
+}
 
-
-void FrameStats::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<FrameStats*>(&to_msg);
-  auto& from = static_cast<const FrameStats&>(from_msg);
+void FrameStats::MergeFrom(const FrameStats& from) {
+  FrameStats* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.layers.FrameStats)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -750,7 +681,7 @@ void FrameStats::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PRO
   if (from._internal_a_skippedcomposites() != 0) {
     _this->_internal_set_a_skippedcomposites(from._internal_a_skippedcomposites());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void FrameStats::CopyFrom(const FrameStats& from) {
@@ -813,11 +744,10 @@ void FrameStats::InternalSwap(FrameStats* other) {
           reinterpret_cast<char*>(&other->_impl_.a_resourceuploadtime_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FrameStats::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto_getter, &descriptor_table_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto_once,
-      file_level_metadata_PCompositorBridge_5fprotobuf_2emozilla_2elayers_2eh_2eproto[0]);
+std::string FrameStats::GetTypeName() const {
+  return "protobuf.mozilla.layers.FrameStats";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace layers

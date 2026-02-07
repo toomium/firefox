@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -45,7 +42,8 @@ struct GamepadAddedDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GamepadAddedDefaultTypeInternal _GamepadAdded_default_instance_;
 PROTOBUF_CONSTEXPR GamepadRemoved::GamepadRemoved(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct GamepadRemovedDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GamepadRemovedDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -170,185 +168,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[10];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadAdded, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadAdded, _impl_.a_id_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadAdded, _impl_.a_mapping_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadAdded, _impl_.a_hand_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadAdded, _impl_.a_display_id_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadAdded, _impl_.a_num_buttons_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadAdded, _impl_.a_num_axes_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadAdded, _impl_.a_num_haptics_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadAdded, _impl_.a_num_lights_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadAdded, _impl_.a_num_touches_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadRemoved, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadAxisInformation, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadAxisInformation, _impl_.a_axis_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadAxisInformation, _impl_.a_value_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadButtonInformation, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadButtonInformation, _impl_.a_button_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadButtonInformation, _impl_.a_value_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadButtonInformation, _impl_.a_pressed_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadButtonInformation, _impl_.a_touched_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadPoseInformation, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadPoseInformation, _impl_.a_pose_state_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadLightIndicatorTypeInformation, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadLightIndicatorTypeInformation, _impl_.a_light_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadLightIndicatorTypeInformation, _impl_.a_type_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadHandInformation, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadHandInformation, _impl_.a_hand_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadTouchInformation, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadTouchInformation, _impl_.a_index_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadTouchInformation, _impl_.a_touch_state_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadChangeEventBody, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadChangeEventBody, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadChangeEventBody, _impl_.content_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadChangeEvent, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadChangeEvent, _impl_.a_handle_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::GamepadChangeEvent, _impl_.a_body_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::dom::GamepadAdded)},
-  { 15, -1, -1, sizeof(::protobuf::mozilla::dom::GamepadRemoved)},
-  { 21, -1, -1, sizeof(::protobuf::mozilla::dom::GamepadAxisInformation)},
-  { 29, -1, -1, sizeof(::protobuf::mozilla::dom::GamepadButtonInformation)},
-  { 39, -1, -1, sizeof(::protobuf::mozilla::dom::GamepadPoseInformation)},
-  { 46, -1, -1, sizeof(::protobuf::mozilla::dom::GamepadLightIndicatorTypeInformation)},
-  { 54, -1, -1, sizeof(::protobuf::mozilla::dom::GamepadHandInformation)},
-  { 61, -1, -1, sizeof(::protobuf::mozilla::dom::GamepadTouchInformation)},
-  { 69, -1, -1, sizeof(::protobuf::mozilla::dom::GamepadChangeEventBody)},
-  { 84, -1, -1, sizeof(::protobuf::mozilla::dom::GamepadChangeEvent)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::dom::_GamepadAdded_default_instance_._instance,
-  &::protobuf::mozilla::dom::_GamepadRemoved_default_instance_._instance,
-  &::protobuf::mozilla::dom::_GamepadAxisInformation_default_instance_._instance,
-  &::protobuf::mozilla::dom::_GamepadButtonInformation_default_instance_._instance,
-  &::protobuf::mozilla::dom::_GamepadPoseInformation_default_instance_._instance,
-  &::protobuf::mozilla::dom::_GamepadLightIndicatorTypeInformation_default_instance_._instance,
-  &::protobuf::mozilla::dom::_GamepadHandInformation_default_instance_._instance,
-  &::protobuf::mozilla::dom::_GamepadTouchInformation_default_instance_._instance,
-  &::protobuf::mozilla::dom::_GamepadChangeEventBody_default_instance_._instance,
-  &::protobuf::mozilla::dom::_GamepadChangeEvent_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n.GamepadEventTypes_protobuf.mozilla.dom"
-  ".h.proto\022\024protobuf.mozilla.dom\"\304\001\n\014Gamep"
-  "adAdded\022\014\n\004a_id\030\001 \001(\t\022\021\n\ta_mapping\030\002 \001(\014"
-  "\022\016\n\006a_hand\030\003 \001(\014\022\024\n\014a_display_id\030\004 \001(\r\022\025"
-  "\n\ra_num_buttons\030\005 \001(\r\022\022\n\na_num_axes\030\006 \001("
-  "\r\022\025\n\ra_num_haptics\030\007 \001(\r\022\024\n\014a_num_lights"
-  "\030\010 \001(\r\022\025\n\ra_num_touches\030\t \001(\r\"\020\n\016Gamepad"
-  "Removed\"9\n\026GamepadAxisInformation\022\016\n\006a_a"
-  "xis\030\001 \001(\r\022\017\n\007a_value\030\002 \001(\001\"c\n\030GamepadBut"
-  "tonInformation\022\020\n\010a_button\030\001 \001(\r\022\017\n\007a_va"
-  "lue\030\002 \001(\001\022\021\n\ta_pressed\030\003 \001(\010\022\021\n\ta_touche"
-  "d\030\004 \001(\010\".\n\026GamepadPoseInformation\022\024\n\014a_p"
-  "ose_state\030\001 \001(\014\"G\n$GamepadLightIndicator"
-  "TypeInformation\022\017\n\007a_light\030\001 \001(\r\022\016\n\006a_ty"
-  "pe\030\002 \001(\014\"(\n\026GamepadHandInformation\022\016\n\006a_"
-  "hand\030\001 \001(\014\"A\n\027GamepadTouchInformation\022\017\n"
-  "\007a_index\030\001 \001(\r\022\025\n\ra_touch_state\030\002 \001(\014\"\301\005"
-  "\n\026GamepadChangeEventBody\022>\n\020a_mVGamepadA"
-  "dded\030\001 \001(\0132\".protobuf.mozilla.dom.Gamepa"
-  "dAddedH\000\022B\n\022a_mVGamepadRemoved\030\002 \001(\0132$.p"
-  "rotobuf.mozilla.dom.GamepadRemovedH\000\022R\n\032"
-  "a_mVGamepadAxisInformation\030\003 \001(\0132,.proto"
-  "buf.mozilla.dom.GamepadAxisInformationH\000"
-  "\022V\n\034a_mVGamepadButtonInformation\030\004 \001(\0132."
-  ".protobuf.mozilla.dom.GamepadButtonInfor"
-  "mationH\000\022R\n\032a_mVGamepadHandInformation\030\005"
-  " \001(\0132,.protobuf.mozilla.dom.GamepadHandI"
-  "nformationH\000\022n\n(a_mVGamepadLightIndicato"
-  "rTypeInformation\030\006 \001(\0132:.protobuf.mozill"
-  "a.dom.GamepadLightIndicatorTypeInformati"
-  "onH\000\022R\n\032a_mVGamepadPoseInformation\030\007 \001(\013"
-  "2,.protobuf.mozilla.dom.GamepadPoseInfor"
-  "mationH\000\022T\n\033a_mVGamepadTouchInformation\030"
-  "\010 \001(\0132-.protobuf.mozilla.dom.GamepadTouc"
-  "hInformationH\000B\t\n\007content\"d\n\022GamepadChan"
-  "geEvent\022\020\n\010a_handle\030\001 \001(\014\022<\n\006a_body\030\002 \001("
-  "\0132,.protobuf.mozilla.dom.GamepadChangeEv"
-  "entBodyb\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto = {
-    false, false, 1495, descriptor_table_protodef_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    "GamepadEventTypes_protobuf.mozilla.dom.h.proto",
-    &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once, nullptr, 0, 10,
-    schemas, file_default_instances, TableStruct_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets,
-    file_level_metadata_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto, file_level_enum_descriptors_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    file_level_service_descriptors_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter() {
-  return &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto(&descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -361,12 +180,12 @@ class GamepadAdded::_Internal {
 
 GamepadAdded::GamepadAdded(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.GamepadAdded)
 }
 GamepadAdded::GamepadAdded(const GamepadAdded& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   GamepadAdded* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_id_){}
@@ -380,7 +199,7 @@ GamepadAdded::GamepadAdded(const GamepadAdded& from)
     , decltype(_impl_.a_num_touches_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_id_.Set("", GetArenaForAllocation());
@@ -443,7 +262,7 @@ inline void GamepadAdded::SharedCtor(
 
 GamepadAdded::~GamepadAdded() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.GamepadAdded)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -473,7 +292,7 @@ void GamepadAdded::Clear() {
   ::memset(&_impl_.a_display_id_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_num_touches_) -
       reinterpret_cast<char*>(&_impl_.a_display_id_)) + sizeof(_impl_.a_num_touches_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* GamepadAdded::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -488,7 +307,7 @@ const char* GamepadAdded::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
           auto str = _internal_mutable_a_id();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.GamepadAdded.a_id"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -569,7 +388,7 @@ const char* GamepadAdded::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -646,8 +465,8 @@ uint8_t* GamepadAdded::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.GamepadAdded)
   return target;
@@ -712,19 +531,22 @@ size_t GamepadAdded::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_num_touches());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GamepadAdded::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    GamepadAdded::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GamepadAdded::GetClassData() const { return &_class_data_; }
+void GamepadAdded::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const GamepadAdded*>(
+      &from));
+}
 
-
-void GamepadAdded::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<GamepadAdded*>(&to_msg);
-  auto& from = static_cast<const GamepadAdded&>(from_msg);
+void GamepadAdded::MergeFrom(const GamepadAdded& from) {
+  GamepadAdded* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.GamepadAdded)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -757,7 +579,7 @@ void GamepadAdded::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
   if (from._internal_a_num_touches() != 0) {
     _this->_internal_set_a_num_touches(from._internal_a_num_touches());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void GamepadAdded::CopyFrom(const GamepadAdded& from) {
@@ -796,11 +618,10 @@ void GamepadAdded::InternalSwap(GamepadAdded* other) {
           reinterpret_cast<char*>(&other->_impl_.a_display_id_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GamepadAdded::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[0]);
+std::string GamepadAdded::GetTypeName() const {
+  return "protobuf.mozilla.dom.GamepadAdded";
 }
+
 
 // ===================================================================
 
@@ -810,37 +631,145 @@ class GamepadRemoved::_Internal {
 
 GamepadRemoved::GamepadRemoved(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.GamepadRemoved)
 }
 GamepadRemoved::GamepadRemoved(const GamepadRemoved& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   GamepadRemoved* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.GamepadRemoved)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GamepadRemoved::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GamepadRemoved::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata GamepadRemoved::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[1]);
+inline void GamepadRemoved::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+GamepadRemoved::~GamepadRemoved() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.GamepadRemoved)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void GamepadRemoved::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void GamepadRemoved::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void GamepadRemoved::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.dom.GamepadRemoved)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* GamepadRemoved::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* GamepadRemoved::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.dom.GamepadRemoved)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.GamepadRemoved)
+  return target;
+}
+
+size_t GamepadRemoved::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.dom.GamepadRemoved)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void GamepadRemoved::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const GamepadRemoved*>(
+      &from));
+}
+
+void GamepadRemoved::MergeFrom(const GamepadRemoved& from) {
+  GamepadRemoved* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.GamepadRemoved)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void GamepadRemoved::CopyFrom(const GamepadRemoved& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.dom.GamepadRemoved)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GamepadRemoved::IsInitialized() const {
+  return true;
+}
+
+void GamepadRemoved::InternalSwap(GamepadRemoved* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string GamepadRemoved::GetTypeName() const {
+  return "protobuf.mozilla.dom.GamepadRemoved";
+}
+
 
 // ===================================================================
 
@@ -850,19 +779,19 @@ class GamepadAxisInformation::_Internal {
 
 GamepadAxisInformation::GamepadAxisInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.GamepadAxisInformation)
 }
 GamepadAxisInformation::GamepadAxisInformation(const GamepadAxisInformation& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   GamepadAxisInformation* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_value_){}
     , decltype(_impl_.a_axis_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   ::memcpy(&_impl_.a_value_, &from._impl_.a_value_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_axis_) -
     reinterpret_cast<char*>(&_impl_.a_value_)) + sizeof(_impl_.a_axis_));
@@ -882,7 +811,7 @@ inline void GamepadAxisInformation::SharedCtor(
 
 GamepadAxisInformation::~GamepadAxisInformation() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.GamepadAxisInformation)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -906,7 +835,7 @@ void GamepadAxisInformation::Clear() {
   ::memset(&_impl_.a_value_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_axis_) -
       reinterpret_cast<char*>(&_impl_.a_value_)) + sizeof(_impl_.a_axis_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* GamepadAxisInformation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -942,7 +871,7 @@ const char* GamepadAxisInformation::_InternalParse(const char* ptr, ::_pbi::Pars
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -977,8 +906,8 @@ uint8_t* GamepadAxisInformation::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.GamepadAxisInformation)
   return target;
@@ -1006,19 +935,22 @@ size_t GamepadAxisInformation::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_axis());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GamepadAxisInformation::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    GamepadAxisInformation::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GamepadAxisInformation::GetClassData() const { return &_class_data_; }
+void GamepadAxisInformation::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const GamepadAxisInformation*>(
+      &from));
+}
 
-
-void GamepadAxisInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<GamepadAxisInformation*>(&to_msg);
-  auto& from = static_cast<const GamepadAxisInformation&>(from_msg);
+void GamepadAxisInformation::MergeFrom(const GamepadAxisInformation& from) {
+  GamepadAxisInformation* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.GamepadAxisInformation)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1034,7 +966,7 @@ void GamepadAxisInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg,
   if (from._internal_a_axis() != 0) {
     _this->_internal_set_a_axis(from._internal_a_axis());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void GamepadAxisInformation::CopyFrom(const GamepadAxisInformation& from) {
@@ -1059,11 +991,10 @@ void GamepadAxisInformation::InternalSwap(GamepadAxisInformation* other) {
           reinterpret_cast<char*>(&other->_impl_.a_value_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GamepadAxisInformation::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[2]);
+std::string GamepadAxisInformation::GetTypeName() const {
+  return "protobuf.mozilla.dom.GamepadAxisInformation";
 }
+
 
 // ===================================================================
 
@@ -1073,12 +1004,12 @@ class GamepadButtonInformation::_Internal {
 
 GamepadButtonInformation::GamepadButtonInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.GamepadButtonInformation)
 }
 GamepadButtonInformation::GamepadButtonInformation(const GamepadButtonInformation& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   GamepadButtonInformation* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_value_){}
@@ -1087,7 +1018,7 @@ GamepadButtonInformation::GamepadButtonInformation(const GamepadButtonInformatio
     , decltype(_impl_.a_touched_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   ::memcpy(&_impl_.a_value_, &from._impl_.a_value_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_touched_) -
     reinterpret_cast<char*>(&_impl_.a_value_)) + sizeof(_impl_.a_touched_));
@@ -1109,7 +1040,7 @@ inline void GamepadButtonInformation::SharedCtor(
 
 GamepadButtonInformation::~GamepadButtonInformation() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.GamepadButtonInformation)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1133,7 +1064,7 @@ void GamepadButtonInformation::Clear() {
   ::memset(&_impl_.a_value_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_touched_) -
       reinterpret_cast<char*>(&_impl_.a_value_)) + sizeof(_impl_.a_touched_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* GamepadButtonInformation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1185,7 +1116,7 @@ const char* GamepadButtonInformation::_InternalParse(const char* ptr, ::_pbi::Pa
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1232,8 +1163,8 @@ uint8_t* GamepadButtonInformation::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.GamepadButtonInformation)
   return target;
@@ -1271,19 +1202,22 @@ size_t GamepadButtonInformation::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GamepadButtonInformation::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    GamepadButtonInformation::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GamepadButtonInformation::GetClassData() const { return &_class_data_; }
+void GamepadButtonInformation::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const GamepadButtonInformation*>(
+      &from));
+}
 
-
-void GamepadButtonInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<GamepadButtonInformation*>(&to_msg);
-  auto& from = static_cast<const GamepadButtonInformation&>(from_msg);
+void GamepadButtonInformation::MergeFrom(const GamepadButtonInformation& from) {
+  GamepadButtonInformation* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.GamepadButtonInformation)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1305,7 +1239,7 @@ void GamepadButtonInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_ms
   if (from._internal_a_touched() != 0) {
     _this->_internal_set_a_touched(from._internal_a_touched());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void GamepadButtonInformation::CopyFrom(const GamepadButtonInformation& from) {
@@ -1330,11 +1264,10 @@ void GamepadButtonInformation::InternalSwap(GamepadButtonInformation* other) {
           reinterpret_cast<char*>(&other->_impl_.a_value_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GamepadButtonInformation::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[3]);
+std::string GamepadButtonInformation::GetTypeName() const {
+  return "protobuf.mozilla.dom.GamepadButtonInformation";
 }
+
 
 // ===================================================================
 
@@ -1344,18 +1277,18 @@ class GamepadPoseInformation::_Internal {
 
 GamepadPoseInformation::GamepadPoseInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.GamepadPoseInformation)
 }
 GamepadPoseInformation::GamepadPoseInformation(const GamepadPoseInformation& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   GamepadPoseInformation* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_pose_state_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_pose_state_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_pose_state_.Set("", GetArenaForAllocation());
@@ -1383,7 +1316,7 @@ inline void GamepadPoseInformation::SharedCtor(
 
 GamepadPoseInformation::~GamepadPoseInformation() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.GamepadPoseInformation)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1406,7 +1339,7 @@ void GamepadPoseInformation::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_pose_state_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* GamepadPoseInformation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1435,7 +1368,7 @@ const char* GamepadPoseInformation::_InternalParse(const char* ptr, ::_pbi::Pars
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1460,8 +1393,8 @@ uint8_t* GamepadPoseInformation::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.GamepadPoseInformation)
   return target;
@@ -1482,19 +1415,22 @@ size_t GamepadPoseInformation::ByteSizeLong() const {
         this->_internal_a_pose_state());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GamepadPoseInformation::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    GamepadPoseInformation::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GamepadPoseInformation::GetClassData() const { return &_class_data_; }
+void GamepadPoseInformation::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const GamepadPoseInformation*>(
+      &from));
+}
 
-
-void GamepadPoseInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<GamepadPoseInformation*>(&to_msg);
-  auto& from = static_cast<const GamepadPoseInformation&>(from_msg);
+void GamepadPoseInformation::MergeFrom(const GamepadPoseInformation& from) {
+  GamepadPoseInformation* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.GamepadPoseInformation)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1503,7 +1439,7 @@ void GamepadPoseInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg,
   if (!from._internal_a_pose_state().empty()) {
     _this->_internal_set_a_pose_state(from._internal_a_pose_state());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void GamepadPoseInformation::CopyFrom(const GamepadPoseInformation& from) {
@@ -1528,11 +1464,10 @@ void GamepadPoseInformation::InternalSwap(GamepadPoseInformation* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GamepadPoseInformation::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[4]);
+std::string GamepadPoseInformation::GetTypeName() const {
+  return "protobuf.mozilla.dom.GamepadPoseInformation";
 }
+
 
 // ===================================================================
 
@@ -1542,19 +1477,19 @@ class GamepadLightIndicatorTypeInformation::_Internal {
 
 GamepadLightIndicatorTypeInformation::GamepadLightIndicatorTypeInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.GamepadLightIndicatorTypeInformation)
 }
 GamepadLightIndicatorTypeInformation::GamepadLightIndicatorTypeInformation(const GamepadLightIndicatorTypeInformation& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   GamepadLightIndicatorTypeInformation* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_type_){}
     , decltype(_impl_.a_light_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_type_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_type_.Set("", GetArenaForAllocation());
@@ -1584,7 +1519,7 @@ inline void GamepadLightIndicatorTypeInformation::SharedCtor(
 
 GamepadLightIndicatorTypeInformation::~GamepadLightIndicatorTypeInformation() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.GamepadLightIndicatorTypeInformation)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1608,7 +1543,7 @@ void GamepadLightIndicatorTypeInformation::Clear() {
 
   _impl_.a_type_.ClearToEmpty();
   _impl_.a_light_ = 0u;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* GamepadLightIndicatorTypeInformation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1645,7 +1580,7 @@ const char* GamepadLightIndicatorTypeInformation::_InternalParse(const char* ptr
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1676,8 +1611,8 @@ uint8_t* GamepadLightIndicatorTypeInformation::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.GamepadLightIndicatorTypeInformation)
   return target;
@@ -1703,19 +1638,22 @@ size_t GamepadLightIndicatorTypeInformation::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_light());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GamepadLightIndicatorTypeInformation::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    GamepadLightIndicatorTypeInformation::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GamepadLightIndicatorTypeInformation::GetClassData() const { return &_class_data_; }
+void GamepadLightIndicatorTypeInformation::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const GamepadLightIndicatorTypeInformation*>(
+      &from));
+}
 
-
-void GamepadLightIndicatorTypeInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<GamepadLightIndicatorTypeInformation*>(&to_msg);
-  auto& from = static_cast<const GamepadLightIndicatorTypeInformation&>(from_msg);
+void GamepadLightIndicatorTypeInformation::MergeFrom(const GamepadLightIndicatorTypeInformation& from) {
+  GamepadLightIndicatorTypeInformation* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.GamepadLightIndicatorTypeInformation)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1727,7 +1665,7 @@ void GamepadLightIndicatorTypeInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Me
   if (from._internal_a_light() != 0) {
     _this->_internal_set_a_light(from._internal_a_light());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void GamepadLightIndicatorTypeInformation::CopyFrom(const GamepadLightIndicatorTypeInformation& from) {
@@ -1753,11 +1691,10 @@ void GamepadLightIndicatorTypeInformation::InternalSwap(GamepadLightIndicatorTyp
   swap(_impl_.a_light_, other->_impl_.a_light_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GamepadLightIndicatorTypeInformation::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[5]);
+std::string GamepadLightIndicatorTypeInformation::GetTypeName() const {
+  return "protobuf.mozilla.dom.GamepadLightIndicatorTypeInformation";
 }
+
 
 // ===================================================================
 
@@ -1767,18 +1704,18 @@ class GamepadHandInformation::_Internal {
 
 GamepadHandInformation::GamepadHandInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.GamepadHandInformation)
 }
 GamepadHandInformation::GamepadHandInformation(const GamepadHandInformation& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   GamepadHandInformation* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_hand_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_hand_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_hand_.Set("", GetArenaForAllocation());
@@ -1806,7 +1743,7 @@ inline void GamepadHandInformation::SharedCtor(
 
 GamepadHandInformation::~GamepadHandInformation() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.GamepadHandInformation)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1829,7 +1766,7 @@ void GamepadHandInformation::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_hand_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* GamepadHandInformation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1858,7 +1795,7 @@ const char* GamepadHandInformation::_InternalParse(const char* ptr, ::_pbi::Pars
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1883,8 +1820,8 @@ uint8_t* GamepadHandInformation::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.GamepadHandInformation)
   return target;
@@ -1905,19 +1842,22 @@ size_t GamepadHandInformation::ByteSizeLong() const {
         this->_internal_a_hand());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GamepadHandInformation::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    GamepadHandInformation::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GamepadHandInformation::GetClassData() const { return &_class_data_; }
+void GamepadHandInformation::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const GamepadHandInformation*>(
+      &from));
+}
 
-
-void GamepadHandInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<GamepadHandInformation*>(&to_msg);
-  auto& from = static_cast<const GamepadHandInformation&>(from_msg);
+void GamepadHandInformation::MergeFrom(const GamepadHandInformation& from) {
+  GamepadHandInformation* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.GamepadHandInformation)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1926,7 +1866,7 @@ void GamepadHandInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg,
   if (!from._internal_a_hand().empty()) {
     _this->_internal_set_a_hand(from._internal_a_hand());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void GamepadHandInformation::CopyFrom(const GamepadHandInformation& from) {
@@ -1951,11 +1891,10 @@ void GamepadHandInformation::InternalSwap(GamepadHandInformation* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GamepadHandInformation::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[6]);
+std::string GamepadHandInformation::GetTypeName() const {
+  return "protobuf.mozilla.dom.GamepadHandInformation";
 }
+
 
 // ===================================================================
 
@@ -1965,19 +1904,19 @@ class GamepadTouchInformation::_Internal {
 
 GamepadTouchInformation::GamepadTouchInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.GamepadTouchInformation)
 }
 GamepadTouchInformation::GamepadTouchInformation(const GamepadTouchInformation& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   GamepadTouchInformation* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_touch_state_){}
     , decltype(_impl_.a_index_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_touch_state_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_touch_state_.Set("", GetArenaForAllocation());
@@ -2007,7 +1946,7 @@ inline void GamepadTouchInformation::SharedCtor(
 
 GamepadTouchInformation::~GamepadTouchInformation() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.GamepadTouchInformation)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -2031,7 +1970,7 @@ void GamepadTouchInformation::Clear() {
 
   _impl_.a_touch_state_.ClearToEmpty();
   _impl_.a_index_ = 0u;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* GamepadTouchInformation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -2068,7 +2007,7 @@ const char* GamepadTouchInformation::_InternalParse(const char* ptr, ::_pbi::Par
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -2099,8 +2038,8 @@ uint8_t* GamepadTouchInformation::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.GamepadTouchInformation)
   return target;
@@ -2126,19 +2065,22 @@ size_t GamepadTouchInformation::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_index());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GamepadTouchInformation::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    GamepadTouchInformation::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GamepadTouchInformation::GetClassData() const { return &_class_data_; }
+void GamepadTouchInformation::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const GamepadTouchInformation*>(
+      &from));
+}
 
-
-void GamepadTouchInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<GamepadTouchInformation*>(&to_msg);
-  auto& from = static_cast<const GamepadTouchInformation&>(from_msg);
+void GamepadTouchInformation::MergeFrom(const GamepadTouchInformation& from) {
+  GamepadTouchInformation* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.GamepadTouchInformation)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2150,7 +2092,7 @@ void GamepadTouchInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg
   if (from._internal_a_index() != 0) {
     _this->_internal_set_a_index(from._internal_a_index());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void GamepadTouchInformation::CopyFrom(const GamepadTouchInformation& from) {
@@ -2176,11 +2118,10 @@ void GamepadTouchInformation::InternalSwap(GamepadTouchInformation* other) {
   swap(_impl_.a_index_, other->_impl_.a_index_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GamepadTouchInformation::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[7]);
+std::string GamepadTouchInformation::GetTypeName() const {
+  return "protobuf.mozilla.dom.GamepadTouchInformation";
 }
+
 
 // ===================================================================
 
@@ -2350,19 +2291,19 @@ void GamepadChangeEventBody::set_allocated_a_mvgamepadtouchinformation(::protobu
 }
 GamepadChangeEventBody::GamepadChangeEventBody(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.GamepadChangeEventBody)
 }
 GamepadChangeEventBody::GamepadChangeEventBody(const GamepadChangeEventBody& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   GamepadChangeEventBody* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVGamepadAdded: {
@@ -2426,7 +2367,7 @@ inline void GamepadChangeEventBody::SharedCtor(
 
 GamepadChangeEventBody::~GamepadChangeEventBody() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.GamepadChangeEventBody)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -2510,7 +2451,7 @@ void GamepadChangeEventBody::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* GamepadChangeEventBody::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -2594,7 +2535,7 @@ const char* GamepadChangeEventBody::_InternalParse(const char* ptr, ::_pbi::Pars
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -2669,8 +2610,8 @@ uint8_t* GamepadChangeEventBody::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.GamepadChangeEventBody)
   return target;
@@ -2745,19 +2686,22 @@ size_t GamepadChangeEventBody::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GamepadChangeEventBody::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    GamepadChangeEventBody::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GamepadChangeEventBody::GetClassData() const { return &_class_data_; }
+void GamepadChangeEventBody::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const GamepadChangeEventBody*>(
+      &from));
+}
 
-
-void GamepadChangeEventBody::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<GamepadChangeEventBody*>(&to_msg);
-  auto& from = static_cast<const GamepadChangeEventBody&>(from_msg);
+void GamepadChangeEventBody::MergeFrom(const GamepadChangeEventBody& from) {
+  GamepadChangeEventBody* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.GamepadChangeEventBody)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2808,7 +2752,7 @@ void GamepadChangeEventBody::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg,
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void GamepadChangeEventBody::CopyFrom(const GamepadChangeEventBody& from) {
@@ -2829,11 +2773,10 @@ void GamepadChangeEventBody::InternalSwap(GamepadChangeEventBody* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GamepadChangeEventBody::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[8]);
+std::string GamepadChangeEventBody::GetTypeName() const {
+  return "protobuf.mozilla.dom.GamepadChangeEventBody";
 }
+
 
 // ===================================================================
 
@@ -2848,19 +2791,19 @@ GamepadChangeEvent::_Internal::a_body(const GamepadChangeEvent* msg) {
 }
 GamepadChangeEvent::GamepadChangeEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.GamepadChangeEvent)
 }
 GamepadChangeEvent::GamepadChangeEvent(const GamepadChangeEvent& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   GamepadChangeEvent* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_handle_){}
     , decltype(_impl_.a_body_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_handle_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_handle_.Set("", GetArenaForAllocation());
@@ -2892,7 +2835,7 @@ inline void GamepadChangeEvent::SharedCtor(
 
 GamepadChangeEvent::~GamepadChangeEvent() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.GamepadChangeEvent)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -2920,7 +2863,7 @@ void GamepadChangeEvent::Clear() {
     delete _impl_.a_body_;
   }
   _impl_.a_body_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* GamepadChangeEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -2957,7 +2900,7 @@ const char* GamepadChangeEvent::_InternalParse(const char* ptr, ::_pbi::ParseCon
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -2989,8 +2932,8 @@ uint8_t* GamepadChangeEvent::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.GamepadChangeEvent)
   return target;
@@ -3018,19 +2961,22 @@ size_t GamepadChangeEvent::ByteSizeLong() const {
         *_impl_.a_body_);
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GamepadChangeEvent::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    GamepadChangeEvent::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GamepadChangeEvent::GetClassData() const { return &_class_data_; }
+void GamepadChangeEvent::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const GamepadChangeEvent*>(
+      &from));
+}
 
-
-void GamepadChangeEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<GamepadChangeEvent*>(&to_msg);
-  auto& from = static_cast<const GamepadChangeEvent&>(from_msg);
+void GamepadChangeEvent::MergeFrom(const GamepadChangeEvent& from) {
+  GamepadChangeEvent* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.GamepadChangeEvent)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -3043,7 +2989,7 @@ void GamepadChangeEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
     _this->_internal_mutable_a_body()->::protobuf::mozilla::dom::GamepadChangeEventBody::MergeFrom(
         from._internal_a_body());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void GamepadChangeEvent::CopyFrom(const GamepadChangeEvent& from) {
@@ -3069,11 +3015,10 @@ void GamepadChangeEvent::InternalSwap(GamepadChangeEvent* other) {
   swap(_impl_.a_body_, other->_impl_.a_body_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GamepadChangeEvent::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_GamepadEventTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[9]);
+std::string GamepadChangeEvent::GetTypeName() const {
+  return "protobuf.mozilla.dom.GamepadChangeEvent";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace dom

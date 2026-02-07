@@ -3,9 +3,10 @@
 // Edit at your own risk
 //
 
-// Generated from /home/tmittendorf/firefox/netwerk/ipc/PFileChannel.ipdl
+// Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/netwerk/ipc/PFileChannel.ipdl
 
 syntax = "proto3";
+option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.net.PFileChannel;
 

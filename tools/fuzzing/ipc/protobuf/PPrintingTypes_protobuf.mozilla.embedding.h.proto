@@ -3,9 +3,10 @@
 // Edit at your own risk
 //
 
-// Generated from /home/tmittendorf/firefox/toolkit/components/printingui/ipc/PPrintingTypes.ipdlh
+// Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/toolkit/components/printingui/ipc/PPrintingTypes.ipdlh
 
 syntax = "proto3";
+option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.embedding;
 

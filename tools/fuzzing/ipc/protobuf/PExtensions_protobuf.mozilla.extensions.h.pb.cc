@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -43,58 +40,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace extensions
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto[1];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::extensions::FrameTransitionData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::extensions::FrameTransitionData, _impl_.a_clientredirect_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::extensions::FrameTransitionData, _impl_.a_formsubmit_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::extensions::FrameTransitionData, _impl_.a_forwardback_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::extensions::FrameTransitionData, _impl_.a_reload_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::extensions::FrameTransitionData, _impl_.a_serverredirect_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::extensions::FrameTransitionData)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::extensions::_FrameTransitionData_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n/PExtensions_protobuf.mozilla.extension"
-  "s.h.proto\022\033protobuf.mozilla.extensions\032\016"
-  "DOMTypes.proto\"\210\001\n\023FrameTransitionData\022\030"
-  "\n\020a_clientRedirect\030\001 \001(\010\022\024\n\014a_formSubmit"
-  "\030\002 \001(\010\022\025\n\ra_forwardBack\030\003 \001(\010\022\020\n\010a_reloa"
-  "d\030\004 \001(\010\022\030\n\020a_serverRedirect\030\005 \001(\010b\006proto"
-  "3"
-  ;
-static const ::_pbi::DescriptorTable* const descriptor_table_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto_deps[1] = {
-  &::descriptor_table_DOMTypes_2eproto,
-};
-static ::_pbi::once_flag descriptor_table_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto = {
-    false, false, 241, descriptor_table_protodef_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto,
-    "PExtensions_protobuf.mozilla.extensions.h.proto",
-    &descriptor_table_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto_once, descriptor_table_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto_deps, 1, 1,
-    schemas, file_default_instances, TableStruct_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto::offsets,
-    file_level_metadata_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto, file_level_enum_descriptors_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto,
-    file_level_service_descriptors_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto_getter() {
-  return &descriptor_table_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto(&descriptor_table_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace extensions {
@@ -107,12 +52,12 @@ class FrameTransitionData::_Internal {
 
 FrameTransitionData::FrameTransitionData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.extensions.FrameTransitionData)
 }
 FrameTransitionData::FrameTransitionData(const FrameTransitionData& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   FrameTransitionData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_clientredirect_){}
@@ -122,7 +67,7 @@ FrameTransitionData::FrameTransitionData(const FrameTransitionData& from)
     , decltype(_impl_.a_serverredirect_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   ::memcpy(&_impl_.a_clientredirect_, &from._impl_.a_clientredirect_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_serverredirect_) -
     reinterpret_cast<char*>(&_impl_.a_clientredirect_)) + sizeof(_impl_.a_serverredirect_));
@@ -145,7 +90,7 @@ inline void FrameTransitionData::SharedCtor(
 
 FrameTransitionData::~FrameTransitionData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.extensions.FrameTransitionData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -169,7 +114,7 @@ void FrameTransitionData::Clear() {
   ::memset(&_impl_.a_clientredirect_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_serverredirect_) -
       reinterpret_cast<char*>(&_impl_.a_clientredirect_)) + sizeof(_impl_.a_serverredirect_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* FrameTransitionData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -229,7 +174,7 @@ const char* FrameTransitionData::_InternalParse(const char* ptr, ::_pbi::ParseCo
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -278,8 +223,8 @@ uint8_t* FrameTransitionData::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.extensions.FrameTransitionData)
   return target;
@@ -318,19 +263,22 @@ size_t FrameTransitionData::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FrameTransitionData::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    FrameTransitionData::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FrameTransitionData::GetClassData() const { return &_class_data_; }
+void FrameTransitionData::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const FrameTransitionData*>(
+      &from));
+}
 
-
-void FrameTransitionData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<FrameTransitionData*>(&to_msg);
-  auto& from = static_cast<const FrameTransitionData&>(from_msg);
+void FrameTransitionData::MergeFrom(const FrameTransitionData& from) {
+  FrameTransitionData* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.extensions.FrameTransitionData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -351,7 +299,7 @@ void FrameTransitionData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, co
   if (from._internal_a_serverredirect() != 0) {
     _this->_internal_set_a_serverredirect(from._internal_a_serverredirect());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void FrameTransitionData::CopyFrom(const FrameTransitionData& from) {
@@ -376,11 +324,10 @@ void FrameTransitionData::InternalSwap(FrameTransitionData* other) {
           reinterpret_cast<char*>(&other->_impl_.a_clientredirect_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FrameTransitionData::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto_getter, &descriptor_table_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto_once,
-      file_level_metadata_PExtensions_5fprotobuf_2emozilla_2eextensions_2eh_2eproto[0]);
+std::string FrameTransitionData::GetTypeName() const {
+  return "protobuf.mozilla.extensions.FrameTransitionData";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace extensions

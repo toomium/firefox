@@ -3,9 +3,10 @@
 // Edit at your own risk
 //
 
-// Generated from /home/tmittendorf/firefox/gfx/layers/ipc/LayersSurfaces.ipdlh
+// Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/gfx/layers/ipc/LayersSurfaces.ipdlh
 
 syntax = "proto3";
+option optimize_for = LITE_RUNTIME;
 
 // Importing all namespaced protobuf children headers
 import public "LayersSurfaces_protobuf.mozilla.layers.h.proto";

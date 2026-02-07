@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -50,84 +47,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[1];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WindowGlobalInit, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WindowGlobalInit, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WindowGlobalInit, _impl_.a_context_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WindowGlobalInit, _impl_.a_principal_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WindowGlobalInit, _impl_.a_storageprincipal_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WindowGlobalInit, _impl_.a_documenturi_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WindowGlobalInit, _impl_.a_isinitialdocument_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WindowGlobalInit, _impl_.a_blockallmixedcontent_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WindowGlobalInit, _impl_.a_upgradeinsecurerequests_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WindowGlobalInit, _impl_.a_sandboxflags_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WindowGlobalInit, _impl_.a_cookiejarsettings_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WindowGlobalInit, _impl_.a_httpsonlystatus_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WindowGlobalInit, _impl_.a_securityinfo_),
-  ~0u,
-  0,
-  1,
-  2,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  3,
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 17, -1, sizeof(::protobuf::mozilla::dom::WindowGlobalInit)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::dom::_WindowGlobalInit_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n.WindowGlobalTypes_protobuf.mozilla.dom"
-  ".h.proto\022\024protobuf.mozilla.dom\032\030NeckoCha"
-  "nnelParams.proto\032\016DOMTypes.proto\"\302\003\n\020Win"
-  "dowGlobalInit\022\021\n\ta_context\030\001 \001(\014\022\030\n\013a_pr"
-  "incipal\030\002 \001(\014H\000\210\001\001\022\037\n\022a_storagePrincipal"
-  "\030\003 \001(\014H\001\210\001\001\022\032\n\ra_documentURI\030\004 \001(\014H\002\210\001\001\022"
-  "\033\n\023a_isInitialDocument\030\005 \001(\010\022\036\n\026a_blockA"
-  "llMixedContent\030\006 \001(\010\022!\n\031a_upgradeInsecur"
-  "eRequests\030\007 \001(\010\022\026\n\016a_sandboxFlags\030\010 \001(\r\022"
-  "H\n\023a_cookieJarSettings\030\t \001(\0132+.protobuf."
-  "mozilla.net.CookieJarSettingsArgs\022\031\n\021a_h"
-  "ttpsOnlyStatus\030\n \001(\r\022\033\n\016a_securityInfo\030\013"
-  " \001(\014H\003\210\001\001B\016\n\014_a_principalB\025\n\023_a_storageP"
-  "rincipalB\020\n\016_a_documentURIB\021\n\017_a_securit"
-  "yInfob\006proto3"
-  ;
-static const ::_pbi::DescriptorTable* const descriptor_table_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_deps[2] = {
-  &::descriptor_table_DOMTypes_2eproto,
-  &::descriptor_table_NeckoChannelParams_2eproto,
-};
-static ::_pbi::once_flag descriptor_table_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto = {
-    false, false, 573, descriptor_table_protodef_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    "WindowGlobalTypes_protobuf.mozilla.dom.h.proto",
-    &descriptor_table_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once, descriptor_table_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_deps, 2, 1,
-    schemas, file_default_instances, TableStruct_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets,
-    file_level_metadata_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto, file_level_enum_descriptors_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    file_level_service_descriptors_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter() {
-  return &descriptor_table_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto(&descriptor_table_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -164,12 +83,12 @@ void WindowGlobalInit::clear_a_cookiejarsettings() {
 }
 WindowGlobalInit::WindowGlobalInit(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WindowGlobalInit)
 }
 WindowGlobalInit::WindowGlobalInit(const WindowGlobalInit& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WindowGlobalInit* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -186,7 +105,7 @@ WindowGlobalInit::WindowGlobalInit(const WindowGlobalInit& from)
     , decltype(_impl_.a_sandboxflags_){}
     , decltype(_impl_.a_httpsonlystatus_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_context_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_context_.Set("", GetArenaForAllocation());
@@ -279,7 +198,7 @@ inline void WindowGlobalInit::SharedCtor(
 
 WindowGlobalInit::~WindowGlobalInit() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WindowGlobalInit)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -330,7 +249,7 @@ void WindowGlobalInit::Clear() {
       reinterpret_cast<char*>(&_impl_.a_httpsonlystatus_) -
       reinterpret_cast<char*>(&_impl_.a_isinitialdocument_)) + sizeof(_impl_.a_httpsonlystatus_));
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WindowGlobalInit::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -444,7 +363,7 @@ const char* WindowGlobalInit::_InternalParse(const char* ptr, ::_pbi::ParseConte
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -531,8 +450,8 @@ uint8_t* WindowGlobalInit::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WindowGlobalInit)
   return target;
@@ -616,19 +535,22 @@ size_t WindowGlobalInit::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_httpsonlystatus());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WindowGlobalInit::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WindowGlobalInit::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WindowGlobalInit::GetClassData() const { return &_class_data_; }
+void WindowGlobalInit::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WindowGlobalInit*>(
+      &from));
+}
 
-
-void WindowGlobalInit::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WindowGlobalInit*>(&to_msg);
-  auto& from = static_cast<const WindowGlobalInit&>(from_msg);
+void WindowGlobalInit::MergeFrom(const WindowGlobalInit& from) {
+  WindowGlobalInit* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WindowGlobalInit)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -671,7 +593,7 @@ void WindowGlobalInit::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const
   if (from._internal_a_httpsonlystatus() != 0) {
     _this->_internal_set_a_httpsonlystatus(from._internal_a_httpsonlystatus());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WindowGlobalInit::CopyFrom(const WindowGlobalInit& from) {
@@ -719,11 +641,10 @@ void WindowGlobalInit::InternalSwap(WindowGlobalInit* other) {
           reinterpret_cast<char*>(&other->_impl_.a_cookiejarsettings_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WindowGlobalInit::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_WindowGlobalTypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[0]);
+std::string WindowGlobalInit::GetTypeName() const {
+  return "protobuf.mozilla.dom.WindowGlobalInit";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace dom

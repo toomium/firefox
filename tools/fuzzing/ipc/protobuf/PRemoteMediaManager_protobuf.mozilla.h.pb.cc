@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -52,69 +49,6 @@ struct RemoteDecoderInfoIPDLDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RemoteDecoderInfoIPDLDefaultTypeInternal _RemoteDecoderInfoIPDL_default_instance_;
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto[2];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::VideoDecoderInfoIPDL, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::VideoDecoderInfoIPDL, _impl_.a_videoinfo_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::VideoDecoderInfoIPDL, _impl_.a_framerate_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::RemoteDecoderInfoIPDL, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::RemoteDecoderInfoIPDL, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::RemoteDecoderInfoIPDL, _impl_.content_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::VideoDecoderInfoIPDL)},
-  { 8, -1, -1, sizeof(::protobuf::mozilla::RemoteDecoderInfoIPDL)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::_VideoDecoderInfoIPDL_default_instance_._instance,
-  &::protobuf::mozilla::_RemoteDecoderInfoIPDL_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n,PRemoteMediaManager_protobuf.mozilla.h"
-  ".proto\022\020protobuf.mozilla\032\024LayersSurfaces"
-  ".proto\032\031PMediaDecoderParams.proto\"@\n\024Vid"
-  "eoDecoderInfoIPDL\022\023\n\013a_videoInfo\030\001 \001(\014\022\023"
-  "\n\013a_framerate\030\002 \001(\002\"\207\001\n\025RemoteDecoderInf"
-  "oIPDL\022\027\n\ra_mVAudioInfo\030\001 \001(\014H\000\022J\n\030a_mVVi"
-  "deoDecoderInfoIPDL\030\002 \001(\0132&.protobuf.mozi"
-  "lla.VideoDecoderInfoIPDLH\000B\t\n\007contentb\006p"
-  "roto3"
-  ;
-static const ::_pbi::DescriptorTable* const descriptor_table_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto_deps[2] = {
-  &::descriptor_table_LayersSurfaces_2eproto,
-  &::descriptor_table_PMediaDecoderParams_2eproto,
-};
-static ::_pbi::once_flag descriptor_table_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto = {
-    false, false, 325, descriptor_table_protodef_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto,
-    "PRemoteMediaManager_protobuf.mozilla.h.proto",
-    &descriptor_table_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto_once, descriptor_table_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto_deps, 2, 2,
-    schemas, file_default_instances, TableStruct_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto::offsets,
-    file_level_metadata_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto, file_level_enum_descriptors_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto,
-    file_level_service_descriptors_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto_getter() {
-  return &descriptor_table_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto(&descriptor_table_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 
@@ -126,19 +60,19 @@ class VideoDecoderInfoIPDL::_Internal {
 
 VideoDecoderInfoIPDL::VideoDecoderInfoIPDL(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.VideoDecoderInfoIPDL)
 }
 VideoDecoderInfoIPDL::VideoDecoderInfoIPDL(const VideoDecoderInfoIPDL& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   VideoDecoderInfoIPDL* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_videoinfo_){}
     , decltype(_impl_.a_framerate_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_videoinfo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_videoinfo_.Set("", GetArenaForAllocation());
@@ -168,7 +102,7 @@ inline void VideoDecoderInfoIPDL::SharedCtor(
 
 VideoDecoderInfoIPDL::~VideoDecoderInfoIPDL() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.VideoDecoderInfoIPDL)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -192,7 +126,7 @@ void VideoDecoderInfoIPDL::Clear() {
 
   _impl_.a_videoinfo_.ClearToEmpty();
   _impl_.a_framerate_ = 0;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* VideoDecoderInfoIPDL::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -229,7 +163,7 @@ const char* VideoDecoderInfoIPDL::_InternalParse(const char* ptr, ::_pbi::ParseC
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -264,8 +198,8 @@ uint8_t* VideoDecoderInfoIPDL::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.VideoDecoderInfoIPDL)
   return target;
@@ -295,19 +229,22 @@ size_t VideoDecoderInfoIPDL::ByteSizeLong() const {
     total_size += 1 + 4;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData VideoDecoderInfoIPDL::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    VideoDecoderInfoIPDL::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*VideoDecoderInfoIPDL::GetClassData() const { return &_class_data_; }
+void VideoDecoderInfoIPDL::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const VideoDecoderInfoIPDL*>(
+      &from));
+}
 
-
-void VideoDecoderInfoIPDL::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<VideoDecoderInfoIPDL*>(&to_msg);
-  auto& from = static_cast<const VideoDecoderInfoIPDL&>(from_msg);
+void VideoDecoderInfoIPDL::MergeFrom(const VideoDecoderInfoIPDL& from) {
+  VideoDecoderInfoIPDL* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.VideoDecoderInfoIPDL)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -323,7 +260,7 @@ void VideoDecoderInfoIPDL::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
   if (raw_a_framerate != 0) {
     _this->_internal_set_a_framerate(from._internal_a_framerate());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void VideoDecoderInfoIPDL::CopyFrom(const VideoDecoderInfoIPDL& from) {
@@ -349,11 +286,10 @@ void VideoDecoderInfoIPDL::InternalSwap(VideoDecoderInfoIPDL* other) {
   swap(_impl_.a_framerate_, other->_impl_.a_framerate_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata VideoDecoderInfoIPDL::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto_getter, &descriptor_table_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto_once,
-      file_level_metadata_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto[0]);
+std::string VideoDecoderInfoIPDL::GetTypeName() const {
+  return "protobuf.mozilla.VideoDecoderInfoIPDL";
 }
+
 
 // ===================================================================
 
@@ -383,19 +319,19 @@ void RemoteDecoderInfoIPDL::set_allocated_a_mvvideodecoderinfoipdl(::protobuf::m
 }
 RemoteDecoderInfoIPDL::RemoteDecoderInfoIPDL(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.RemoteDecoderInfoIPDL)
 }
 RemoteDecoderInfoIPDL::RemoteDecoderInfoIPDL(const RemoteDecoderInfoIPDL& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   RemoteDecoderInfoIPDL* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVAudioInfo: {
@@ -428,7 +364,7 @@ inline void RemoteDecoderInfoIPDL::SharedCtor(
 
 RemoteDecoderInfoIPDL::~RemoteDecoderInfoIPDL() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.RemoteDecoderInfoIPDL)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -474,7 +410,7 @@ void RemoteDecoderInfoIPDL::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* RemoteDecoderInfoIPDL::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -511,7 +447,7 @@ const char* RemoteDecoderInfoIPDL::_InternalParse(const char* ptr, ::_pbi::Parse
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -543,8 +479,8 @@ uint8_t* RemoteDecoderInfoIPDL::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.RemoteDecoderInfoIPDL)
   return target;
@@ -577,19 +513,22 @@ size_t RemoteDecoderInfoIPDL::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RemoteDecoderInfoIPDL::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    RemoteDecoderInfoIPDL::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RemoteDecoderInfoIPDL::GetClassData() const { return &_class_data_; }
+void RemoteDecoderInfoIPDL::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const RemoteDecoderInfoIPDL*>(
+      &from));
+}
 
-
-void RemoteDecoderInfoIPDL::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<RemoteDecoderInfoIPDL*>(&to_msg);
-  auto& from = static_cast<const RemoteDecoderInfoIPDL&>(from_msg);
+void RemoteDecoderInfoIPDL::MergeFrom(const RemoteDecoderInfoIPDL& from) {
+  RemoteDecoderInfoIPDL* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.RemoteDecoderInfoIPDL)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -609,7 +548,7 @@ void RemoteDecoderInfoIPDL::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void RemoteDecoderInfoIPDL::CopyFrom(const RemoteDecoderInfoIPDL& from) {
@@ -630,11 +569,10 @@ void RemoteDecoderInfoIPDL::InternalSwap(RemoteDecoderInfoIPDL* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata RemoteDecoderInfoIPDL::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto_getter, &descriptor_table_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto_once,
-      file_level_metadata_PRemoteMediaManager_5fprotobuf_2emozilla_2eh_2eproto[1]);
+std::string RemoteDecoderInfoIPDL::GetTypeName() const {
+  return "protobuf.mozilla.RemoteDecoderInfoIPDL";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace mozilla

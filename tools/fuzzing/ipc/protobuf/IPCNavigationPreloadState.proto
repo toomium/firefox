@@ -3,9 +3,10 @@
 // Edit at your own risk
 //
 
-// Generated from /home/tmittendorf/firefox/dom/serviceworkers/IPCNavigationPreloadState.ipdlh
+// Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/serviceworkers/IPCNavigationPreloadState.ipdlh
 
 syntax = "proto3";
+option optimize_for = LITE_RUNTIME;
 
 // Importing all namespaced protobuf children headers
 import public "IPCNavigationPreloadState_protobuf.mozilla.dom.h.proto";

@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -66,78 +63,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto[3];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileCreationSuccessResult, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileCreationSuccessResult, _impl_.a_blob_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileCreationErrorResult, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileCreationErrorResult, _impl_.a_errorcode_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileCreationResult, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileCreationResult, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::FileCreationResult, _impl_.content_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::dom::FileCreationSuccessResult)},
-  { 7, -1, -1, sizeof(::protobuf::mozilla::dom::FileCreationErrorResult)},
-  { 14, -1, -1, sizeof(::protobuf::mozilla::dom::FileCreationResult)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::dom::_FileCreationSuccessResult_default_instance_._instance,
-  &::protobuf::mozilla::dom::_FileCreationErrorResult_default_instance_._instance,
-  &::protobuf::mozilla::dom::_FileCreationResult_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n)PFileCreator_protobuf.mozilla.dom.h.pr"
-  "oto\022\024protobuf.mozilla.dom\032\rIPCBlob.proto"
-  "\"J\n\031FileCreationSuccessResult\022-\n\006a_blob\030"
-  "\001 \001(\0132\035.protobuf.mozilla.dom.IPCBlob\".\n\027"
-  "FileCreationErrorResult\022\023\n\013a_errorCode\030\001"
-  " \001(\014\"\317\001\n\022FileCreationResult\022X\n\035a_mVFileC"
-  "reationSuccessResult\030\001 \001(\0132/.protobuf.mo"
-  "zilla.dom.FileCreationSuccessResultH\000\022T\n"
-  "\033a_mVFileCreationErrorResult\030\002 \001(\0132-.pro"
-  "tobuf.mozilla.dom.FileCreationErrorResul"
-  "tH\000B\t\n\007contentb\006proto3"
-  ;
-static const ::_pbi::DescriptorTable* const descriptor_table_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto_deps[1] = {
-  &::descriptor_table_IPCBlob_2eproto,
-};
-static ::_pbi::once_flag descriptor_table_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto = {
-    false, false, 422, descriptor_table_protodef_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    "PFileCreator_protobuf.mozilla.dom.h.proto",
-    &descriptor_table_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto_once, descriptor_table_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto_deps, 1, 3,
-    schemas, file_default_instances, TableStruct_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets,
-    file_level_metadata_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto, file_level_enum_descriptors_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    file_level_service_descriptors_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter() {
-  return &descriptor_table_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto(&descriptor_table_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -161,18 +86,18 @@ void FileCreationSuccessResult::clear_a_blob() {
 }
 FileCreationSuccessResult::FileCreationSuccessResult(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.FileCreationSuccessResult)
 }
 FileCreationSuccessResult::FileCreationSuccessResult(const FileCreationSuccessResult& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   FileCreationSuccessResult* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_blob_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_blob()) {
     _this->_impl_.a_blob_ = new ::protobuf::mozilla::dom::IPCBlob(*from._impl_.a_blob_);
   }
@@ -191,7 +116,7 @@ inline void FileCreationSuccessResult::SharedCtor(
 
 FileCreationSuccessResult::~FileCreationSuccessResult() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.FileCreationSuccessResult)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -217,7 +142,7 @@ void FileCreationSuccessResult::Clear() {
     delete _impl_.a_blob_;
   }
   _impl_.a_blob_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* FileCreationSuccessResult::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -245,7 +170,7 @@ const char* FileCreationSuccessResult::_InternalParse(const char* ptr, ::_pbi::P
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -271,8 +196,8 @@ uint8_t* FileCreationSuccessResult::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.FileCreationSuccessResult)
   return target;
@@ -293,19 +218,22 @@ size_t FileCreationSuccessResult::ByteSizeLong() const {
         *_impl_.a_blob_);
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FileCreationSuccessResult::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    FileCreationSuccessResult::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FileCreationSuccessResult::GetClassData() const { return &_class_data_; }
+void FileCreationSuccessResult::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const FileCreationSuccessResult*>(
+      &from));
+}
 
-
-void FileCreationSuccessResult::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<FileCreationSuccessResult*>(&to_msg);
-  auto& from = static_cast<const FileCreationSuccessResult&>(from_msg);
+void FileCreationSuccessResult::MergeFrom(const FileCreationSuccessResult& from) {
+  FileCreationSuccessResult* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.FileCreationSuccessResult)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -315,7 +243,7 @@ void FileCreationSuccessResult::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_m
     _this->_internal_mutable_a_blob()->::protobuf::mozilla::dom::IPCBlob::MergeFrom(
         from._internal_a_blob());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void FileCreationSuccessResult::CopyFrom(const FileCreationSuccessResult& from) {
@@ -335,11 +263,10 @@ void FileCreationSuccessResult::InternalSwap(FileCreationSuccessResult* other) {
   swap(_impl_.a_blob_, other->_impl_.a_blob_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FileCreationSuccessResult::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto[0]);
+std::string FileCreationSuccessResult::GetTypeName() const {
+  return "protobuf.mozilla.dom.FileCreationSuccessResult";
 }
+
 
 // ===================================================================
 
@@ -349,18 +276,18 @@ class FileCreationErrorResult::_Internal {
 
 FileCreationErrorResult::FileCreationErrorResult(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.FileCreationErrorResult)
 }
 FileCreationErrorResult::FileCreationErrorResult(const FileCreationErrorResult& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   FileCreationErrorResult* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_errorcode_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_errorcode_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_errorcode_.Set("", GetArenaForAllocation());
@@ -388,7 +315,7 @@ inline void FileCreationErrorResult::SharedCtor(
 
 FileCreationErrorResult::~FileCreationErrorResult() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.FileCreationErrorResult)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -411,7 +338,7 @@ void FileCreationErrorResult::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_errorcode_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* FileCreationErrorResult::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -440,7 +367,7 @@ const char* FileCreationErrorResult::_InternalParse(const char* ptr, ::_pbi::Par
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -465,8 +392,8 @@ uint8_t* FileCreationErrorResult::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.FileCreationErrorResult)
   return target;
@@ -487,19 +414,22 @@ size_t FileCreationErrorResult::ByteSizeLong() const {
         this->_internal_a_errorcode());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FileCreationErrorResult::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    FileCreationErrorResult::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FileCreationErrorResult::GetClassData() const { return &_class_data_; }
+void FileCreationErrorResult::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const FileCreationErrorResult*>(
+      &from));
+}
 
-
-void FileCreationErrorResult::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<FileCreationErrorResult*>(&to_msg);
-  auto& from = static_cast<const FileCreationErrorResult&>(from_msg);
+void FileCreationErrorResult::MergeFrom(const FileCreationErrorResult& from) {
+  FileCreationErrorResult* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.FileCreationErrorResult)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -508,7 +438,7 @@ void FileCreationErrorResult::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg
   if (!from._internal_a_errorcode().empty()) {
     _this->_internal_set_a_errorcode(from._internal_a_errorcode());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void FileCreationErrorResult::CopyFrom(const FileCreationErrorResult& from) {
@@ -533,11 +463,10 @@ void FileCreationErrorResult::InternalSwap(FileCreationErrorResult* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FileCreationErrorResult::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto[1]);
+std::string FileCreationErrorResult::GetTypeName() const {
+  return "protobuf.mozilla.dom.FileCreationErrorResult";
 }
+
 
 // ===================================================================
 
@@ -587,19 +516,19 @@ void FileCreationResult::set_allocated_a_mvfilecreationerrorresult(::protobuf::m
 }
 FileCreationResult::FileCreationResult(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.FileCreationResult)
 }
 FileCreationResult::FileCreationResult(const FileCreationResult& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   FileCreationResult* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVFileCreationSuccessResult: {
@@ -633,7 +562,7 @@ inline void FileCreationResult::SharedCtor(
 
 FileCreationResult::~FileCreationResult() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.FileCreationResult)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -681,7 +610,7 @@ void FileCreationResult::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* FileCreationResult::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -717,7 +646,7 @@ const char* FileCreationResult::_InternalParse(const char* ptr, ::_pbi::ParseCon
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -750,8 +679,8 @@ uint8_t* FileCreationResult::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.FileCreationResult)
   return target;
@@ -784,19 +713,22 @@ size_t FileCreationResult::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FileCreationResult::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    FileCreationResult::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FileCreationResult::GetClassData() const { return &_class_data_; }
+void FileCreationResult::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const FileCreationResult*>(
+      &from));
+}
 
-
-void FileCreationResult::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<FileCreationResult*>(&to_msg);
-  auto& from = static_cast<const FileCreationResult&>(from_msg);
+void FileCreationResult::MergeFrom(const FileCreationResult& from) {
+  FileCreationResult* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.FileCreationResult)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -817,7 +749,7 @@ void FileCreationResult::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void FileCreationResult::CopyFrom(const FileCreationResult& from) {
@@ -838,11 +770,10 @@ void FileCreationResult::InternalSwap(FileCreationResult* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FileCreationResult::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PFileCreator_5fprotobuf_2emozilla_2edom_2eh_2eproto[2]);
+std::string FileCreationResult::GetTypeName() const {
+  return "protobuf.mozilla.dom.FileCreationResult";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace dom

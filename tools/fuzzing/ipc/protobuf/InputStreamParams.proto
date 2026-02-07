@@ -3,9 +3,10 @@
 // Edit at your own risk
 //
 
-// Generated from /home/tmittendorf/firefox/ipc/glue/InputStreamParams.ipdlh
+// Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/ipc/glue/InputStreamParams.ipdlh
 
 syntax = "proto3";
+option optimize_for = LITE_RUNTIME;
 
 // Importing all namespaced protobuf children headers
 import public "InputStreamParams_protobuf.mozilla.ipc.h.proto";

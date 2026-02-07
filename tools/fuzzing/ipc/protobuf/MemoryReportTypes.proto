@@ -3,9 +3,10 @@
 // Edit at your own risk
 //
 
-// Generated from /home/tmittendorf/firefox/dom/ipc/MemoryReportTypes.ipdlh
+// Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/ipc/MemoryReportTypes.ipdlh
 
 syntax = "proto3";
+option optimize_for = LITE_RUNTIME;
 
 // Importing all namespaced protobuf children headers
 import public "MemoryReportTypes_protobuf.mozilla.dom.h.proto";

@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -69,87 +66,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace camera
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto[2];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoCaptureCapability, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoCaptureCapability, _impl_.a_width_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoCaptureCapability, _impl_.a_height_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoCaptureCapability, _impl_.a_maxfps_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoCaptureCapability, _impl_.a_videotype_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoCaptureCapability, _impl_.a_interlaced_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_capturetime_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_buffersize_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_rtptimestamp_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_ntptimems_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_rendertimems_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_rotation_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_yallocatedsize_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_uallocatedsize_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_vallocatedsize_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_width_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_height_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_ystride_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_ustride_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::camera::VideoFrameProperties, _impl_.a_vstride_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::camera::VideoCaptureCapability)},
-  { 11, -1, -1, sizeof(::protobuf::mozilla::camera::VideoFrameProperties)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::camera::_VideoCaptureCapability_default_instance_._instance,
-  &::protobuf::mozilla::camera::_VideoFrameProperties_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n(PCameras_protobuf.mozilla.camera.h.pro"
-  "to\022\027protobuf.mozilla.camera\032\034PBackground"
-  "SharedTypes.proto\"x\n\026VideoCaptureCapabil"
-  "ity\022\017\n\007a_width\030\001 \001(\021\022\020\n\010a_height\030\002 \001(\021\022\020"
-  "\n\010a_maxFPS\030\003 \001(\021\022\023\n\013a_videoType\030\004 \001(\021\022\024\n"
-  "\014a_interlaced\030\005 \001(\010\"\306\002\n\024VideoFrameProper"
-  "ties\022\025\n\ra_captureTime\030\001 \001(\014\022\024\n\014a_bufferS"
-  "ize\030\002 \001(\r\022\026\n\016a_rtpTimeStamp\030\003 \001(\r\022\023\n\013a_n"
-  "tpTimeMs\030\004 \001(\022\022\026\n\016a_renderTimeMs\030\005 \001(\022\022\022"
-  "\n\na_rotation\030\006 \001(\021\022\030\n\020a_yAllocatedSize\030\007"
-  " \001(\021\022\030\n\020a_uAllocatedSize\030\010 \001(\021\022\030\n\020a_vAll"
-  "ocatedSize\030\t \001(\021\022\017\n\007a_width\030\n \001(\021\022\020\n\010a_h"
-  "eight\030\013 \001(\021\022\021\n\ta_yStride\030\014 \001(\021\022\021\n\ta_uStr"
-  "ide\030\r \001(\021\022\021\n\ta_vStride\030\016 \001(\021b\006proto3"
-  ;
-static const ::_pbi::DescriptorTable* const descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto_deps[1] = {
-  &::descriptor_table_PBackgroundSharedTypes_2eproto,
-};
-static ::_pbi::once_flag descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto = {
-    false, false, 556, descriptor_table_protodef_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto,
-    "PCameras_protobuf.mozilla.camera.h.proto",
-    &descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto_once, descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto_deps, 1, 2,
-    schemas, file_default_instances, TableStruct_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto::offsets,
-    file_level_metadata_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto, file_level_enum_descriptors_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto,
-    file_level_service_descriptors_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto_getter() {
-  return &descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto(&descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace camera {
@@ -162,12 +78,12 @@ class VideoCaptureCapability::_Internal {
 
 VideoCaptureCapability::VideoCaptureCapability(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.camera.VideoCaptureCapability)
 }
 VideoCaptureCapability::VideoCaptureCapability(const VideoCaptureCapability& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   VideoCaptureCapability* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_width_){}
@@ -177,7 +93,7 @@ VideoCaptureCapability::VideoCaptureCapability(const VideoCaptureCapability& fro
     , decltype(_impl_.a_interlaced_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   ::memcpy(&_impl_.a_width_, &from._impl_.a_width_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_interlaced_) -
     reinterpret_cast<char*>(&_impl_.a_width_)) + sizeof(_impl_.a_interlaced_));
@@ -200,7 +116,7 @@ inline void VideoCaptureCapability::SharedCtor(
 
 VideoCaptureCapability::~VideoCaptureCapability() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.camera.VideoCaptureCapability)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -224,7 +140,7 @@ void VideoCaptureCapability::Clear() {
   ::memset(&_impl_.a_width_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_interlaced_) -
       reinterpret_cast<char*>(&_impl_.a_width_)) + sizeof(_impl_.a_interlaced_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* VideoCaptureCapability::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -284,7 +200,7 @@ const char* VideoCaptureCapability::_InternalParse(const char* ptr, ::_pbi::Pars
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -333,8 +249,8 @@ uint8_t* VideoCaptureCapability::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.camera.VideoCaptureCapability)
   return target;
@@ -373,19 +289,22 @@ size_t VideoCaptureCapability::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData VideoCaptureCapability::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    VideoCaptureCapability::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*VideoCaptureCapability::GetClassData() const { return &_class_data_; }
+void VideoCaptureCapability::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const VideoCaptureCapability*>(
+      &from));
+}
 
-
-void VideoCaptureCapability::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<VideoCaptureCapability*>(&to_msg);
-  auto& from = static_cast<const VideoCaptureCapability&>(from_msg);
+void VideoCaptureCapability::MergeFrom(const VideoCaptureCapability& from) {
+  VideoCaptureCapability* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.camera.VideoCaptureCapability)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -406,7 +325,7 @@ void VideoCaptureCapability::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg,
   if (from._internal_a_interlaced() != 0) {
     _this->_internal_set_a_interlaced(from._internal_a_interlaced());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void VideoCaptureCapability::CopyFrom(const VideoCaptureCapability& from) {
@@ -431,11 +350,10 @@ void VideoCaptureCapability::InternalSwap(VideoCaptureCapability* other) {
           reinterpret_cast<char*>(&other->_impl_.a_width_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata VideoCaptureCapability::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto_getter, &descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto_once,
-      file_level_metadata_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto[0]);
+std::string VideoCaptureCapability::GetTypeName() const {
+  return "protobuf.mozilla.camera.VideoCaptureCapability";
 }
+
 
 // ===================================================================
 
@@ -445,12 +363,12 @@ class VideoFrameProperties::_Internal {
 
 VideoFrameProperties::VideoFrameProperties(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.camera.VideoFrameProperties)
 }
 VideoFrameProperties::VideoFrameProperties(const VideoFrameProperties& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   VideoFrameProperties* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_capturetime_){}
@@ -469,7 +387,7 @@ VideoFrameProperties::VideoFrameProperties(const VideoFrameProperties& from)
     , decltype(_impl_.a_vstride_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_capturetime_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_capturetime_.Set("", GetArenaForAllocation());
@@ -513,7 +431,7 @@ inline void VideoFrameProperties::SharedCtor(
 
 VideoFrameProperties::~VideoFrameProperties() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.camera.VideoFrameProperties)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -539,7 +457,7 @@ void VideoFrameProperties::Clear() {
   ::memset(&_impl_.a_buffersize_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_vstride_) -
       reinterpret_cast<char*>(&_impl_.a_buffersize_)) + sizeof(_impl_.a_vstride_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* VideoFrameProperties::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -672,7 +590,7 @@ const char* VideoFrameProperties::_InternalParse(const char* ptr, ::_pbi::ParseC
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -775,8 +693,8 @@ uint8_t* VideoFrameProperties::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.camera.VideoFrameProperties)
   return target;
@@ -862,19 +780,22 @@ size_t VideoFrameProperties::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_vstride());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData VideoFrameProperties::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    VideoFrameProperties::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*VideoFrameProperties::GetClassData() const { return &_class_data_; }
+void VideoFrameProperties::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const VideoFrameProperties*>(
+      &from));
+}
 
-
-void VideoFrameProperties::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<VideoFrameProperties*>(&to_msg);
-  auto& from = static_cast<const VideoFrameProperties&>(from_msg);
+void VideoFrameProperties::MergeFrom(const VideoFrameProperties& from) {
+  VideoFrameProperties* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.camera.VideoFrameProperties)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -922,7 +843,7 @@ void VideoFrameProperties::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
   if (from._internal_a_vstride() != 0) {
     _this->_internal_set_a_vstride(from._internal_a_vstride());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void VideoFrameProperties::CopyFrom(const VideoFrameProperties& from) {
@@ -953,11 +874,10 @@ void VideoFrameProperties::InternalSwap(VideoFrameProperties* other) {
           reinterpret_cast<char*>(&other->_impl_.a_buffersize_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata VideoFrameProperties::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto_getter, &descriptor_table_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto_once,
-      file_level_metadata_PCameras_5fprotobuf_2emozilla_2ecamera_2eh_2eproto[1]);
+std::string VideoFrameProperties::GetTypeName() const {
+  return "protobuf.mozilla.camera.VideoFrameProperties";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace camera

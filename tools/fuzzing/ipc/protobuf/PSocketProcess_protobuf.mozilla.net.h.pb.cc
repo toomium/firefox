@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -82,106 +79,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace net
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto[3];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::HttpHandlerInitArgs, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::HttpHandlerInitArgs, _impl_.a_mlegacyappname_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::HttpHandlerInitArgs, _impl_.a_mlegacyappversion_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::HttpHandlerInitArgs, _impl_.a_mplatform_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::HttpHandlerInitArgs, _impl_.a_moscpu_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::HttpHandlerInitArgs, _impl_.a_mmisc_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::HttpHandlerInitArgs, _impl_.a_mproduct_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::HttpHandlerInitArgs, _impl_.a_mproductsub_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::HttpHandlerInitArgs, _impl_.a_mappname_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::HttpHandlerInitArgs, _impl_.a_mappversion_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::HttpHandlerInitArgs, _impl_.a_mcompatfirefox_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::HttpHandlerInitArgs, _impl_.a_mcompatdevice_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::HttpHandlerInitArgs, _impl_.a_mdevicemodelid_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::SocketDataArgs, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::SocketDataArgs, _impl_.a_totalsent_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::SocketDataArgs, _impl_.a_totalrecv_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::SocketDataArgs, _impl_.a_info_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::SocketPorcessInitAttributes, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::SocketPorcessInitAttributes, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::SocketPorcessInitAttributes, _impl_.a_moffline_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::SocketPorcessInitAttributes, _impl_.a_mconnectivity_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::SocketPorcessInitAttributes, _impl_.a_minitsandbox_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::SocketPorcessInitAttributes, _impl_.a_msandboxbroker_),
-  ~0u,
-  ~0u,
-  ~0u,
-  0,
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::net::HttpHandlerInitArgs)},
-  { 18, -1, -1, sizeof(::protobuf::mozilla::net::SocketDataArgs)},
-  { 27, 37, -1, sizeof(::protobuf::mozilla::net::SocketPorcessInitAttributes)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::net::_HttpHandlerInitArgs_default_instance_._instance,
-  &::protobuf::mozilla::net::_SocketDataArgs_default_instance_._instance,
-  &::protobuf::mozilla::net::_SocketPorcessInitAttributes_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n+PSocketProcess_protobuf.mozilla.net.h."
-  "proto\022\024protobuf.mozilla.net\032\033CrashReport"
-  "erInitArgs.proto\032\027MemoryReportTypes.prot"
-  "o\032\030NeckoChannelParams.proto\032\020PrefsTypes."
-  "proto\"\247\002\n\023HttpHandlerInitArgs\022\030\n\020a_mLega"
-  "cyAppName\030\001 \001(\t\022\033\n\023a_mLegacyAppVersion\030\002"
-  " \001(\t\022\023\n\013a_mPlatform\030\003 \001(\t\022\020\n\010a_mOscpu\030\004 "
-  "\001(\t\022\017\n\007a_mMisc\030\005 \001(\t\022\022\n\na_mProduct\030\006 \001(\t"
-  "\022\025\n\ra_mProductSub\030\007 \001(\t\022\022\n\na_mAppName\030\010 "
-  "\001(\t\022\025\n\ra_mAppVersion\030\t \001(\t\022\030\n\020a_mCompatF"
-  "irefox\030\n \001(\t\022\027\n\017a_mCompatDevice\030\013 \001(\t\022\030\n"
-  "\020a_mDeviceModelId\030\014 \001(\t\"J\n\016SocketDataArg"
-  "s\022\023\n\013a_totalSent\030\001 \001(\004\022\023\n\013a_totalRecv\030\002 "
-  "\001(\004\022\016\n\006a_info\030\003 \003(\014\"\226\001\n\033SocketPorcessIni"
-  "tAttributes\022\022\n\na_mOffline\030\001 \001(\010\022\027\n\017a_mCo"
-  "nnectivity\030\002 \001(\010\022\026\n\016a_mInitSandbox\030\003 \001(\010"
-  "\022\035\n\020a_mSandboxBroker\030\004 \001(\014H\000\210\001\001B\023\n\021_a_mS"
-  "andboxBrokerb\006proto3"
-  ;
-static const ::_pbi::DescriptorTable* const descriptor_table_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto_deps[4] = {
-  &::descriptor_table_CrashReporterInitArgs_2eproto,
-  &::descriptor_table_MemoryReportTypes_2eproto,
-  &::descriptor_table_NeckoChannelParams_2eproto,
-  &::descriptor_table_PrefsTypes_2eproto,
-};
-static ::_pbi::once_flag descriptor_table_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto = {
-    false, false, 700, descriptor_table_protodef_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto,
-    "PSocketProcess_protobuf.mozilla.net.h.proto",
-    &descriptor_table_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto_once, descriptor_table_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto_deps, 4, 3,
-    schemas, file_default_instances, TableStruct_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto::offsets,
-    file_level_metadata_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto, file_level_enum_descriptors_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto,
-    file_level_service_descriptors_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto_getter() {
-  return &descriptor_table_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto(&descriptor_table_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace net {
@@ -194,12 +91,12 @@ class HttpHandlerInitArgs::_Internal {
 
 HttpHandlerInitArgs::HttpHandlerInitArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.net.HttpHandlerInitArgs)
 }
 HttpHandlerInitArgs::HttpHandlerInitArgs(const HttpHandlerInitArgs& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   HttpHandlerInitArgs* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_mlegacyappname_){}
@@ -216,7 +113,7 @@ HttpHandlerInitArgs::HttpHandlerInitArgs(const HttpHandlerInitArgs& from)
     , decltype(_impl_.a_mdevicemodelid_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_mlegacyappname_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_mlegacyappname_.Set("", GetArenaForAllocation());
@@ -387,7 +284,7 @@ inline void HttpHandlerInitArgs::SharedCtor(
 
 HttpHandlerInitArgs::~HttpHandlerInitArgs() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.net.HttpHandlerInitArgs)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -432,7 +329,7 @@ void HttpHandlerInitArgs::Clear() {
   _impl_.a_mcompatfirefox_.ClearToEmpty();
   _impl_.a_mcompatdevice_.ClearToEmpty();
   _impl_.a_mdevicemodelid_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -447,7 +344,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_a_mlegacyappname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.HttpHandlerInitArgs.a_mLegacyAppName"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -457,7 +354,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_a_mlegacyappversion();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.HttpHandlerInitArgs.a_mLegacyAppVersion"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -467,7 +364,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_a_mplatform();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.HttpHandlerInitArgs.a_mPlatform"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -477,7 +374,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_a_moscpu();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.HttpHandlerInitArgs.a_mOscpu"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -487,7 +384,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_a_mmisc();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.HttpHandlerInitArgs.a_mMisc"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -497,7 +394,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_a_mproduct();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.HttpHandlerInitArgs.a_mProduct"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -507,7 +404,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_a_mproductsub();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.HttpHandlerInitArgs.a_mProductSub"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -517,7 +414,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_a_mappname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.HttpHandlerInitArgs.a_mAppName"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -527,7 +424,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_a_mappversion();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.HttpHandlerInitArgs.a_mAppVersion"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -537,7 +434,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_a_mcompatfirefox();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.HttpHandlerInitArgs.a_mCompatFirefox"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -547,7 +444,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_a_mcompatdevice();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.HttpHandlerInitArgs.a_mCompatDevice"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -557,7 +454,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_a_mdevicemodelid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.HttpHandlerInitArgs.a_mDeviceModelId"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -572,7 +469,7 @@ const char* HttpHandlerInitArgs::_InternalParse(const char* ptr, ::_pbi::ParseCo
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -711,8 +608,8 @@ uint8_t* HttpHandlerInitArgs::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.net.HttpHandlerInitArgs)
   return target;
@@ -810,19 +707,22 @@ size_t HttpHandlerInitArgs::ByteSizeLong() const {
         this->_internal_a_mdevicemodelid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData HttpHandlerInitArgs::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    HttpHandlerInitArgs::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*HttpHandlerInitArgs::GetClassData() const { return &_class_data_; }
+void HttpHandlerInitArgs::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const HttpHandlerInitArgs*>(
+      &from));
+}
 
-
-void HttpHandlerInitArgs::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<HttpHandlerInitArgs*>(&to_msg);
-  auto& from = static_cast<const HttpHandlerInitArgs&>(from_msg);
+void HttpHandlerInitArgs::MergeFrom(const HttpHandlerInitArgs& from) {
+  HttpHandlerInitArgs* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.net.HttpHandlerInitArgs)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -864,7 +764,7 @@ void HttpHandlerInitArgs::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, co
   if (!from._internal_a_mdevicemodelid().empty()) {
     _this->_internal_set_a_mdevicemodelid(from._internal_a_mdevicemodelid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void HttpHandlerInitArgs::CopyFrom(const HttpHandlerInitArgs& from) {
@@ -933,11 +833,10 @@ void HttpHandlerInitArgs::InternalSwap(HttpHandlerInitArgs* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata HttpHandlerInitArgs::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto_getter, &descriptor_table_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto_once,
-      file_level_metadata_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto[0]);
+std::string HttpHandlerInitArgs::GetTypeName() const {
+  return "protobuf.mozilla.net.HttpHandlerInitArgs";
 }
+
 
 // ===================================================================
 
@@ -947,12 +846,12 @@ class SocketDataArgs::_Internal {
 
 SocketDataArgs::SocketDataArgs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.net.SocketDataArgs)
 }
 SocketDataArgs::SocketDataArgs(const SocketDataArgs& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SocketDataArgs* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_info_){from._impl_.a_info_}
@@ -960,7 +859,7 @@ SocketDataArgs::SocketDataArgs(const SocketDataArgs& from)
     , decltype(_impl_.a_totalrecv_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   ::memcpy(&_impl_.a_totalsent_, &from._impl_.a_totalsent_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_totalrecv_) -
     reinterpret_cast<char*>(&_impl_.a_totalsent_)) + sizeof(_impl_.a_totalrecv_));
@@ -981,7 +880,7 @@ inline void SocketDataArgs::SharedCtor(
 
 SocketDataArgs::~SocketDataArgs() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.net.SocketDataArgs)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1007,7 +906,7 @@ void SocketDataArgs::Clear() {
   ::memset(&_impl_.a_totalsent_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_totalrecv_) -
       reinterpret_cast<char*>(&_impl_.a_totalsent_)) + sizeof(_impl_.a_totalrecv_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SocketDataArgs::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1057,7 +956,7 @@ const char* SocketDataArgs::_InternalParse(const char* ptr, ::_pbi::ParseContext
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1094,8 +993,8 @@ uint8_t* SocketDataArgs::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.net.SocketDataArgs)
   return target;
@@ -1127,19 +1026,22 @@ size_t SocketDataArgs::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_totalrecv());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SocketDataArgs::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SocketDataArgs::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SocketDataArgs::GetClassData() const { return &_class_data_; }
+void SocketDataArgs::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SocketDataArgs*>(
+      &from));
+}
 
-
-void SocketDataArgs::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SocketDataArgs*>(&to_msg);
-  auto& from = static_cast<const SocketDataArgs&>(from_msg);
+void SocketDataArgs::MergeFrom(const SocketDataArgs& from) {
+  SocketDataArgs* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.net.SocketDataArgs)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1152,7 +1054,7 @@ void SocketDataArgs::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const :
   if (from._internal_a_totalrecv() != 0) {
     _this->_internal_set_a_totalrecv(from._internal_a_totalrecv());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SocketDataArgs::CopyFrom(const SocketDataArgs& from) {
@@ -1178,11 +1080,10 @@ void SocketDataArgs::InternalSwap(SocketDataArgs* other) {
           reinterpret_cast<char*>(&other->_impl_.a_totalsent_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SocketDataArgs::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto_getter, &descriptor_table_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto_once,
-      file_level_metadata_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto[1]);
+std::string SocketDataArgs::GetTypeName() const {
+  return "protobuf.mozilla.net.SocketDataArgs";
 }
+
 
 // ===================================================================
 
@@ -1196,12 +1097,12 @@ class SocketPorcessInitAttributes::_Internal {
 
 SocketPorcessInitAttributes::SocketPorcessInitAttributes(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.net.SocketPorcessInitAttributes)
 }
 SocketPorcessInitAttributes::SocketPorcessInitAttributes(const SocketPorcessInitAttributes& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   SocketPorcessInitAttributes* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -1211,7 +1112,7 @@ SocketPorcessInitAttributes::SocketPorcessInitAttributes(const SocketPorcessInit
     , decltype(_impl_.a_mconnectivity_){}
     , decltype(_impl_.a_minitsandbox_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_msandboxbroker_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_msandboxbroker_.Set("", GetArenaForAllocation());
@@ -1246,7 +1147,7 @@ inline void SocketPorcessInitAttributes::SharedCtor(
 
 SocketPorcessInitAttributes::~SocketPorcessInitAttributes() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.net.SocketPorcessInitAttributes)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1276,7 +1177,7 @@ void SocketPorcessInitAttributes::Clear() {
       reinterpret_cast<char*>(&_impl_.a_minitsandbox_) -
       reinterpret_cast<char*>(&_impl_.a_moffline_)) + sizeof(_impl_.a_minitsandbox_));
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* SocketPorcessInitAttributes::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1330,7 +1231,7 @@ const char* SocketPorcessInitAttributes::_InternalParse(const char* ptr, ::_pbi:
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1374,8 +1275,8 @@ uint8_t* SocketPorcessInitAttributes::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.net.SocketPorcessInitAttributes)
   return target;
@@ -1412,19 +1313,22 @@ size_t SocketPorcessInitAttributes::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SocketPorcessInitAttributes::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SocketPorcessInitAttributes::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SocketPorcessInitAttributes::GetClassData() const { return &_class_data_; }
+void SocketPorcessInitAttributes::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const SocketPorcessInitAttributes*>(
+      &from));
+}
 
-
-void SocketPorcessInitAttributes::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SocketPorcessInitAttributes*>(&to_msg);
-  auto& from = static_cast<const SocketPorcessInitAttributes&>(from_msg);
+void SocketPorcessInitAttributes::MergeFrom(const SocketPorcessInitAttributes& from) {
+  SocketPorcessInitAttributes* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.net.SocketPorcessInitAttributes)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1442,7 +1346,7 @@ void SocketPorcessInitAttributes::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to
   if (from._internal_a_minitsandbox() != 0) {
     _this->_internal_set_a_minitsandbox(from._internal_a_minitsandbox());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void SocketPorcessInitAttributes::CopyFrom(const SocketPorcessInitAttributes& from) {
@@ -1474,11 +1378,10 @@ void SocketPorcessInitAttributes::InternalSwap(SocketPorcessInitAttributes* othe
           reinterpret_cast<char*>(&other->_impl_.a_moffline_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SocketPorcessInitAttributes::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto_getter, &descriptor_table_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto_once,
-      file_level_metadata_PSocketProcess_5fprotobuf_2emozilla_2enet_2eh_2eproto[2]);
+std::string SocketPorcessInitAttributes::GetTypeName() const {
+  return "protobuf.mozilla.net.SocketPorcessInitAttributes";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace net

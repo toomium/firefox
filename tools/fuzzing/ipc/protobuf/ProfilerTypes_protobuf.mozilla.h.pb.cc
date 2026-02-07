@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -103,120 +100,6 @@ struct IPCProfileAndAdditionalInformationDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IPCProfileAndAdditionalInformationDefaultTypeInternal _IPCProfileAndAdditionalInformation_default_instance_;
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto[5];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ProfilerInitParams, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ProfilerInitParams, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ProfilerInitParams, _impl_.a_enabled_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ProfilerInitParams, _impl_.a_entries_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ProfilerInitParams, _impl_.a_duration_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ProfilerInitParams, _impl_.a_interval_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ProfilerInitParams, _impl_.a_features_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ProfilerInitParams, _impl_.a_activetabid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ProfilerInitParams, _impl_.a_filters_),
-  ~0u,
-  ~0u,
-  0,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ProfileBufferChunkMetadata, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ProfileBufferChunkMetadata, _impl_.a_donetimestamp_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ProfileBufferChunkMetadata, _impl_.a_bufferbytes_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ProfileBufferChunkManagerUpdate, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ProfileBufferChunkManagerUpdate, _impl_.a_unreleasedbytes_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ProfileBufferChunkManagerUpdate, _impl_.a_releasedbytes_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ProfileBufferChunkManagerUpdate, _impl_.a_oldestdonetimestamp_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::ProfileBufferChunkManagerUpdate, _impl_.a_newlyreleasedchunks_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::GatherProfileProgress, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::GatherProfileProgress, _impl_.a_progressproportionvalueunderlyingtype_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::GatherProfileProgress, _impl_.a_progresslocation_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::IPCProfileAndAdditionalInformation, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::IPCProfileAndAdditionalInformation, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::IPCProfileAndAdditionalInformation, _impl_.a_profileshmem_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::IPCProfileAndAdditionalInformation, _impl_.a_additionalinformation_),
-  ~0u,
-  0,
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 13, -1, sizeof(::protobuf::mozilla::ProfilerInitParams)},
-  { 20, -1, -1, sizeof(::protobuf::mozilla::ProfileBufferChunkMetadata)},
-  { 28, -1, -1, sizeof(::protobuf::mozilla::ProfileBufferChunkManagerUpdate)},
-  { 38, -1, -1, sizeof(::protobuf::mozilla::GatherProfileProgress)},
-  { 46, 54, -1, sizeof(::protobuf::mozilla::IPCProfileAndAdditionalInformation)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::_ProfilerInitParams_default_instance_._instance,
-  &::protobuf::mozilla::_ProfileBufferChunkMetadata_default_instance_._instance,
-  &::protobuf::mozilla::_ProfileBufferChunkManagerUpdate_default_instance_._instance,
-  &::protobuf::mozilla::_GatherProfileProgress_default_instance_._instance,
-  &::protobuf::mozilla::_IPCProfileAndAdditionalInformation_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n&ProfilerTypes_protobuf.mozilla.h.proto"
-  "\022\020protobuf.mozilla\"\264\001\n\022ProfilerInitParam"
-  "s\022\021\n\ta_enabled\030\001 \001(\010\022\021\n\ta_entries\030\002 \001(\r\022"
-  "\027\n\na_duration\030\003 \001(\001H\000\210\001\001\022\022\n\na_interval\030\004"
-  " \001(\001\022\022\n\na_features\030\005 \001(\r\022\025\n\ra_activeTabI"
-  "D\030\006 \001(\004\022\021\n\ta_filters\030\007 \003(\tB\r\n\013_a_duratio"
-  "n\"L\n\032ProfileBufferChunkMetadata\022\027\n\017a_don"
-  "eTimeStamp\030\001 \001(\014\022\025\n\ra_bufferBytes\030\002 \001(\r\""
-  "\301\001\n\037ProfileBufferChunkManagerUpdate\022\031\n\021a"
-  "_unreleasedBytes\030\001 \001(\004\022\027\n\017a_releasedByte"
-  "s\030\002 \001(\004\022\035\n\025a_oldestDoneTimeStamp\030\003 \001(\014\022K"
-  "\n\025a_newlyReleasedChunks\030\004 \003(\0132,.protobuf"
-  ".mozilla.ProfileBufferChunkMetadata\"d\n\025G"
-  "atherProfileProgress\022/\n\'a_progressPropor"
-  "tionValueUnderlyingType\030\001 \001(\r\022\032\n\022a_progr"
-  "essLocation\030\002 \001(\t\"~\n\"IPCProfileAndAdditi"
-  "onalInformation\022\026\n\016a_profileShmem\030\001 \001(\014\022"
-  "$\n\027a_additionalInformation\030\002 \001(\014H\000\210\001\001B\032\n"
-  "\030_a_additionalInformationb\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto = {
-    false, false, 753, descriptor_table_protodef_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto,
-    "ProfilerTypes_protobuf.mozilla.h.proto",
-    &descriptor_table_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto_once, nullptr, 0, 5,
-    schemas, file_default_instances, TableStruct_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto::offsets,
-    file_level_metadata_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto, file_level_enum_descriptors_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto,
-    file_level_service_descriptors_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto_getter() {
-  return &descriptor_table_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto(&descriptor_table_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 
@@ -232,12 +115,12 @@ class ProfilerInitParams::_Internal {
 
 ProfilerInitParams::ProfilerInitParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.ProfilerInitParams)
 }
 ProfilerInitParams::ProfilerInitParams(const ProfilerInitParams& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   ProfilerInitParams* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -250,7 +133,7 @@ ProfilerInitParams::ProfilerInitParams(const ProfilerInitParams& from)
     , decltype(_impl_.a_activetabid_){}
     , decltype(_impl_.a_features_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   ::memcpy(&_impl_.a_enabled_, &from._impl_.a_enabled_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_features_) -
     reinterpret_cast<char*>(&_impl_.a_enabled_)) + sizeof(_impl_.a_features_));
@@ -276,7 +159,7 @@ inline void ProfilerInitParams::SharedCtor(
 
 ProfilerInitParams::~ProfilerInitParams() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.ProfilerInitParams)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -307,7 +190,7 @@ void ProfilerInitParams::Clear() {
       reinterpret_cast<char*>(&_impl_.a_features_) -
       reinterpret_cast<char*>(&_impl_.a_interval_)) + sizeof(_impl_.a_features_));
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* ProfilerInitParams::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -375,7 +258,7 @@ const char* ProfilerInitParams::_InternalParse(const char* ptr, ::_pbi::ParseCon
             auto str = _internal_add_a_filters();
             ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
             CHK_(ptr);
-            CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.ProfilerInitParams.a_filters"));
+            CHK_(::_pbi::VerifyUTF8(str, nullptr));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<58>(ptr));
         } else
@@ -392,7 +275,7 @@ const char* ProfilerInitParams::_InternalParse(const char* ptr, ::_pbi::ParseCon
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -462,8 +345,8 @@ uint8_t* ProfilerInitParams::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.ProfilerInitParams)
   return target;
@@ -520,19 +403,22 @@ size_t ProfilerInitParams::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_features());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ProfilerInitParams::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    ProfilerInitParams::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ProfilerInitParams::GetClassData() const { return &_class_data_; }
+void ProfilerInitParams::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const ProfilerInitParams*>(
+      &from));
+}
 
-
-void ProfilerInitParams::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<ProfilerInitParams*>(&to_msg);
-  auto& from = static_cast<const ProfilerInitParams&>(from_msg);
+void ProfilerInitParams::MergeFrom(const ProfilerInitParams& from) {
+  ProfilerInitParams* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.ProfilerInitParams)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -561,7 +447,7 @@ void ProfilerInitParams::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
   if (from._internal_a_features() != 0) {
     _this->_internal_set_a_features(from._internal_a_features());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void ProfilerInitParams::CopyFrom(const ProfilerInitParams& from) {
@@ -588,11 +474,10 @@ void ProfilerInitParams::InternalSwap(ProfilerInitParams* other) {
           reinterpret_cast<char*>(&other->_impl_.a_enabled_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ProfilerInitParams::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto_getter, &descriptor_table_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto_once,
-      file_level_metadata_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto[0]);
+std::string ProfilerInitParams::GetTypeName() const {
+  return "protobuf.mozilla.ProfilerInitParams";
 }
+
 
 // ===================================================================
 
@@ -602,19 +487,19 @@ class ProfileBufferChunkMetadata::_Internal {
 
 ProfileBufferChunkMetadata::ProfileBufferChunkMetadata(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.ProfileBufferChunkMetadata)
 }
 ProfileBufferChunkMetadata::ProfileBufferChunkMetadata(const ProfileBufferChunkMetadata& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   ProfileBufferChunkMetadata* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_donetimestamp_){}
     , decltype(_impl_.a_bufferbytes_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_donetimestamp_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_donetimestamp_.Set("", GetArenaForAllocation());
@@ -644,7 +529,7 @@ inline void ProfileBufferChunkMetadata::SharedCtor(
 
 ProfileBufferChunkMetadata::~ProfileBufferChunkMetadata() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.ProfileBufferChunkMetadata)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -668,7 +553,7 @@ void ProfileBufferChunkMetadata::Clear() {
 
   _impl_.a_donetimestamp_.ClearToEmpty();
   _impl_.a_bufferbytes_ = 0u;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* ProfileBufferChunkMetadata::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -705,7 +590,7 @@ const char* ProfileBufferChunkMetadata::_InternalParse(const char* ptr, ::_pbi::
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -736,8 +621,8 @@ uint8_t* ProfileBufferChunkMetadata::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.ProfileBufferChunkMetadata)
   return target;
@@ -763,19 +648,22 @@ size_t ProfileBufferChunkMetadata::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_bufferbytes());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ProfileBufferChunkMetadata::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    ProfileBufferChunkMetadata::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ProfileBufferChunkMetadata::GetClassData() const { return &_class_data_; }
+void ProfileBufferChunkMetadata::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const ProfileBufferChunkMetadata*>(
+      &from));
+}
 
-
-void ProfileBufferChunkMetadata::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<ProfileBufferChunkMetadata*>(&to_msg);
-  auto& from = static_cast<const ProfileBufferChunkMetadata&>(from_msg);
+void ProfileBufferChunkMetadata::MergeFrom(const ProfileBufferChunkMetadata& from) {
+  ProfileBufferChunkMetadata* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.ProfileBufferChunkMetadata)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -787,7 +675,7 @@ void ProfileBufferChunkMetadata::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_
   if (from._internal_a_bufferbytes() != 0) {
     _this->_internal_set_a_bufferbytes(from._internal_a_bufferbytes());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void ProfileBufferChunkMetadata::CopyFrom(const ProfileBufferChunkMetadata& from) {
@@ -813,11 +701,10 @@ void ProfileBufferChunkMetadata::InternalSwap(ProfileBufferChunkMetadata* other)
   swap(_impl_.a_bufferbytes_, other->_impl_.a_bufferbytes_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ProfileBufferChunkMetadata::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto_getter, &descriptor_table_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto_once,
-      file_level_metadata_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto[1]);
+std::string ProfileBufferChunkMetadata::GetTypeName() const {
+  return "protobuf.mozilla.ProfileBufferChunkMetadata";
 }
+
 
 // ===================================================================
 
@@ -827,12 +714,12 @@ class ProfileBufferChunkManagerUpdate::_Internal {
 
 ProfileBufferChunkManagerUpdate::ProfileBufferChunkManagerUpdate(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.ProfileBufferChunkManagerUpdate)
 }
 ProfileBufferChunkManagerUpdate::ProfileBufferChunkManagerUpdate(const ProfileBufferChunkManagerUpdate& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   ProfileBufferChunkManagerUpdate* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_newlyreleasedchunks_){from._impl_.a_newlyreleasedchunks_}
@@ -841,7 +728,7 @@ ProfileBufferChunkManagerUpdate::ProfileBufferChunkManagerUpdate(const ProfileBu
     , decltype(_impl_.a_releasedbytes_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_oldestdonetimestamp_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_oldestdonetimestamp_.Set("", GetArenaForAllocation());
@@ -875,7 +762,7 @@ inline void ProfileBufferChunkManagerUpdate::SharedCtor(
 
 ProfileBufferChunkManagerUpdate::~ProfileBufferChunkManagerUpdate() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.ProfileBufferChunkManagerUpdate)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -903,7 +790,7 @@ void ProfileBufferChunkManagerUpdate::Clear() {
   ::memset(&_impl_.a_unreleasedbytes_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_releasedbytes_) -
       reinterpret_cast<char*>(&_impl_.a_unreleasedbytes_)) + sizeof(_impl_.a_releasedbytes_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* ProfileBufferChunkManagerUpdate::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -961,7 +848,7 @@ const char* ProfileBufferChunkManagerUpdate::_InternalParse(const char* ptr, ::_
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1006,8 +893,8 @@ uint8_t* ProfileBufferChunkManagerUpdate::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.ProfileBufferChunkManagerUpdate)
   return target;
@@ -1045,19 +932,22 @@ size_t ProfileBufferChunkManagerUpdate::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_releasedbytes());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ProfileBufferChunkManagerUpdate::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    ProfileBufferChunkManagerUpdate::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ProfileBufferChunkManagerUpdate::GetClassData() const { return &_class_data_; }
+void ProfileBufferChunkManagerUpdate::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const ProfileBufferChunkManagerUpdate*>(
+      &from));
+}
 
-
-void ProfileBufferChunkManagerUpdate::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<ProfileBufferChunkManagerUpdate*>(&to_msg);
-  auto& from = static_cast<const ProfileBufferChunkManagerUpdate&>(from_msg);
+void ProfileBufferChunkManagerUpdate::MergeFrom(const ProfileBufferChunkManagerUpdate& from) {
+  ProfileBufferChunkManagerUpdate* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.ProfileBufferChunkManagerUpdate)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1073,7 +963,7 @@ void ProfileBufferChunkManagerUpdate::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message
   if (from._internal_a_releasedbytes() != 0) {
     _this->_internal_set_a_releasedbytes(from._internal_a_releasedbytes());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void ProfileBufferChunkManagerUpdate::CopyFrom(const ProfileBufferChunkManagerUpdate& from) {
@@ -1105,11 +995,10 @@ void ProfileBufferChunkManagerUpdate::InternalSwap(ProfileBufferChunkManagerUpda
           reinterpret_cast<char*>(&other->_impl_.a_unreleasedbytes_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ProfileBufferChunkManagerUpdate::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto_getter, &descriptor_table_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto_once,
-      file_level_metadata_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto[2]);
+std::string ProfileBufferChunkManagerUpdate::GetTypeName() const {
+  return "protobuf.mozilla.ProfileBufferChunkManagerUpdate";
 }
+
 
 // ===================================================================
 
@@ -1119,19 +1008,19 @@ class GatherProfileProgress::_Internal {
 
 GatherProfileProgress::GatherProfileProgress(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.GatherProfileProgress)
 }
 GatherProfileProgress::GatherProfileProgress(const GatherProfileProgress& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   GatherProfileProgress* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_progresslocation_){}
     , decltype(_impl_.a_progressproportionvalueunderlyingtype_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_progresslocation_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_progresslocation_.Set("", GetArenaForAllocation());
@@ -1161,7 +1050,7 @@ inline void GatherProfileProgress::SharedCtor(
 
 GatherProfileProgress::~GatherProfileProgress() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.GatherProfileProgress)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1185,7 +1074,7 @@ void GatherProfileProgress::Clear() {
 
   _impl_.a_progresslocation_.ClearToEmpty();
   _impl_.a_progressproportionvalueunderlyingtype_ = 0u;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* GatherProfileProgress::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1208,7 +1097,7 @@ const char* GatherProfileProgress::_InternalParse(const char* ptr, ::_pbi::Parse
           auto str = _internal_mutable_a_progresslocation();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.GatherProfileProgress.a_progressLocation"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1223,7 +1112,7 @@ const char* GatherProfileProgress::_InternalParse(const char* ptr, ::_pbi::Parse
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1258,8 +1147,8 @@ uint8_t* GatherProfileProgress::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.GatherProfileProgress)
   return target;
@@ -1285,19 +1174,22 @@ size_t GatherProfileProgress::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_progressproportionvalueunderlyingtype());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GatherProfileProgress::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    GatherProfileProgress::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GatherProfileProgress::GetClassData() const { return &_class_data_; }
+void GatherProfileProgress::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const GatherProfileProgress*>(
+      &from));
+}
 
-
-void GatherProfileProgress::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<GatherProfileProgress*>(&to_msg);
-  auto& from = static_cast<const GatherProfileProgress&>(from_msg);
+void GatherProfileProgress::MergeFrom(const GatherProfileProgress& from) {
+  GatherProfileProgress* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.GatherProfileProgress)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1309,7 +1201,7 @@ void GatherProfileProgress::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
   if (from._internal_a_progressproportionvalueunderlyingtype() != 0) {
     _this->_internal_set_a_progressproportionvalueunderlyingtype(from._internal_a_progressproportionvalueunderlyingtype());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void GatherProfileProgress::CopyFrom(const GatherProfileProgress& from) {
@@ -1335,11 +1227,10 @@ void GatherProfileProgress::InternalSwap(GatherProfileProgress* other) {
   swap(_impl_.a_progressproportionvalueunderlyingtype_, other->_impl_.a_progressproportionvalueunderlyingtype_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GatherProfileProgress::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto_getter, &descriptor_table_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto_once,
-      file_level_metadata_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto[3]);
+std::string GatherProfileProgress::GetTypeName() const {
+  return "protobuf.mozilla.GatherProfileProgress";
 }
+
 
 // ===================================================================
 
@@ -1353,12 +1244,12 @@ class IPCProfileAndAdditionalInformation::_Internal {
 
 IPCProfileAndAdditionalInformation::IPCProfileAndAdditionalInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.IPCProfileAndAdditionalInformation)
 }
 IPCProfileAndAdditionalInformation::IPCProfileAndAdditionalInformation(const IPCProfileAndAdditionalInformation& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IPCProfileAndAdditionalInformation* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -1366,7 +1257,7 @@ IPCProfileAndAdditionalInformation::IPCProfileAndAdditionalInformation(const IPC
     , decltype(_impl_.a_profileshmem_){}
     , decltype(_impl_.a_additionalinformation_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_profileshmem_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_profileshmem_.Set("", GetArenaForAllocation());
@@ -1408,7 +1299,7 @@ inline void IPCProfileAndAdditionalInformation::SharedCtor(
 
 IPCProfileAndAdditionalInformation::~IPCProfileAndAdditionalInformation() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.IPCProfileAndAdditionalInformation)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1437,7 +1328,7 @@ void IPCProfileAndAdditionalInformation::Clear() {
     _impl_.a_additionalinformation_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* IPCProfileAndAdditionalInformation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1476,7 +1367,7 @@ const char* IPCProfileAndAdditionalInformation::_InternalParse(const char* ptr, 
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1508,8 +1399,8 @@ uint8_t* IPCProfileAndAdditionalInformation::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.IPCProfileAndAdditionalInformation)
   return target;
@@ -1538,19 +1429,22 @@ size_t IPCProfileAndAdditionalInformation::ByteSizeLong() const {
         this->_internal_a_additionalinformation());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCProfileAndAdditionalInformation::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    IPCProfileAndAdditionalInformation::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCProfileAndAdditionalInformation::GetClassData() const { return &_class_data_; }
+void IPCProfileAndAdditionalInformation::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const IPCProfileAndAdditionalInformation*>(
+      &from));
+}
 
-
-void IPCProfileAndAdditionalInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<IPCProfileAndAdditionalInformation*>(&to_msg);
-  auto& from = static_cast<const IPCProfileAndAdditionalInformation&>(from_msg);
+void IPCProfileAndAdditionalInformation::MergeFrom(const IPCProfileAndAdditionalInformation& from) {
+  IPCProfileAndAdditionalInformation* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.IPCProfileAndAdditionalInformation)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1562,7 +1456,7 @@ void IPCProfileAndAdditionalInformation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Mess
   if (from._internal_has_a_additionalinformation()) {
     _this->_internal_set_a_additionalinformation(from._internal_a_additionalinformation());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void IPCProfileAndAdditionalInformation::CopyFrom(const IPCProfileAndAdditionalInformation& from) {
@@ -1592,11 +1486,10 @@ void IPCProfileAndAdditionalInformation::InternalSwap(IPCProfileAndAdditionalInf
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata IPCProfileAndAdditionalInformation::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto_getter, &descriptor_table_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto_once,
-      file_level_metadata_ProfilerTypes_5fprotobuf_2emozilla_2eh_2eproto[4]);
+std::string IPCProfileAndAdditionalInformation::GetTypeName() const {
+  return "protobuf.mozilla.IPCProfileAndAdditionalInformation";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace mozilla

@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -78,90 +75,6 @@ struct UDPDataDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UDPDataDefaultTypeInternal _UDPData_default_instance_;
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PUDPSocket_5fprotobuf_2eh_2eproto[4];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PUDPSocket_5fprotobuf_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PUDPSocket_5fprotobuf_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PUDPSocket_5fprotobuf_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::UDPAddressInfo, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::UDPAddressInfo, _impl_.a_addr_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::UDPAddressInfo, _impl_.a_port_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::UDPSocketAddr, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::UDPSocketAddr, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::UDPSocketAddr, _impl_.content_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::UDPData_a_type_mVArrayOfuint8_t, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::UDPData_a_type_mVArrayOfuint8_t, _impl_.a_mvarrayofuint8_t_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::UDPData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::UDPData, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::UDPData, _impl_.content_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::UDPAddressInfo)},
-  { 8, -1, -1, sizeof(::protobuf::UDPSocketAddr)},
-  { 17, -1, -1, sizeof(::protobuf::UDPData_a_type_mVArrayOfuint8_t)},
-  { 24, -1, -1, sizeof(::protobuf::UDPData)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::_UDPAddressInfo_default_instance_._instance,
-  &::protobuf::_UDPSocketAddr_default_instance_._instance,
-  &::protobuf::_UDPData_a_type_mVArrayOfuint8_t_default_instance_._instance,
-  &::protobuf::_UDPData_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PUDPSocket_5fprotobuf_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\033PUDPSocket_protobuf.h.proto\022\010protobuf\032"
-  "\017IPCStream.proto\"0\n\016UDPAddressInfo\022\016\n\006a_"
-  "addr\030\001 \001(\t\022\016\n\006a_port\030\002 \001(\r\"i\n\rUDPSocketA"
-  "ddr\0226\n\022a_mVUDPAddressInfo\030\001 \001(\0132\030.protob"
-  "uf.UDPAddressInfoH\000\022\025\n\013a_mVNetAddr\030\002 \001(\014"
-  "H\000B\t\n\007content\"\316\001\n\007UDPData\022G\n\022a_mVArrayOf"
-  "uint8_t\030\001 \001(\0132).protobuf.UDPData.a_type_"
-  "mVArrayOfuint8_tH\000\0228\n\ra_mVIPCStream\030\002 \001("
-  "\0132\037.protobuf.mozilla.ipc.IPCStreamH\000\0325\n\027"
-  "a_type_mVArrayOfuint8_t\022\032\n\022a_mVArrayOfui"
-  "nt8_t\030\001 \003(\rB\t\n\007contentb\006proto3"
-  ;
-static const ::_pbi::DescriptorTable* const descriptor_table_PUDPSocket_5fprotobuf_2eh_2eproto_deps[1] = {
-  &::descriptor_table_IPCStream_2eproto,
-};
-static ::_pbi::once_flag descriptor_table_PUDPSocket_5fprotobuf_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PUDPSocket_5fprotobuf_2eh_2eproto = {
-    false, false, 430, descriptor_table_protodef_PUDPSocket_5fprotobuf_2eh_2eproto,
-    "PUDPSocket_protobuf.h.proto",
-    &descriptor_table_PUDPSocket_5fprotobuf_2eh_2eproto_once, descriptor_table_PUDPSocket_5fprotobuf_2eh_2eproto_deps, 1, 4,
-    schemas, file_default_instances, TableStruct_PUDPSocket_5fprotobuf_2eh_2eproto::offsets,
-    file_level_metadata_PUDPSocket_5fprotobuf_2eh_2eproto, file_level_enum_descriptors_PUDPSocket_5fprotobuf_2eh_2eproto,
-    file_level_service_descriptors_PUDPSocket_5fprotobuf_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PUDPSocket_5fprotobuf_2eh_2eproto_getter() {
-  return &descriptor_table_PUDPSocket_5fprotobuf_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PUDPSocket_5fprotobuf_2eh_2eproto(&descriptor_table_PUDPSocket_5fprotobuf_2eh_2eproto);
 namespace protobuf {
 
 // ===================================================================
@@ -172,19 +85,19 @@ class UDPAddressInfo::_Internal {
 
 UDPAddressInfo::UDPAddressInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.UDPAddressInfo)
 }
 UDPAddressInfo::UDPAddressInfo(const UDPAddressInfo& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   UDPAddressInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_addr_){}
     , decltype(_impl_.a_port_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_addr_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_addr_.Set("", GetArenaForAllocation());
@@ -214,7 +127,7 @@ inline void UDPAddressInfo::SharedCtor(
 
 UDPAddressInfo::~UDPAddressInfo() {
   // @@protoc_insertion_point(destructor:protobuf.UDPAddressInfo)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -238,7 +151,7 @@ void UDPAddressInfo::Clear() {
 
   _impl_.a_addr_.ClearToEmpty();
   _impl_.a_port_ = 0u;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* UDPAddressInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -253,7 +166,7 @@ const char* UDPAddressInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext
           auto str = _internal_mutable_a_addr();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.UDPAddressInfo.a_addr"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -276,7 +189,7 @@ const char* UDPAddressInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -311,8 +224,8 @@ uint8_t* UDPAddressInfo::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.UDPAddressInfo)
   return target;
@@ -338,19 +251,22 @@ size_t UDPAddressInfo::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_port());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData UDPAddressInfo::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    UDPAddressInfo::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*UDPAddressInfo::GetClassData() const { return &_class_data_; }
+void UDPAddressInfo::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const UDPAddressInfo*>(
+      &from));
+}
 
-
-void UDPAddressInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<UDPAddressInfo*>(&to_msg);
-  auto& from = static_cast<const UDPAddressInfo&>(from_msg);
+void UDPAddressInfo::MergeFrom(const UDPAddressInfo& from) {
+  UDPAddressInfo* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.UDPAddressInfo)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -362,7 +278,7 @@ void UDPAddressInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const :
   if (from._internal_a_port() != 0) {
     _this->_internal_set_a_port(from._internal_a_port());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void UDPAddressInfo::CopyFrom(const UDPAddressInfo& from) {
@@ -388,11 +304,10 @@ void UDPAddressInfo::InternalSwap(UDPAddressInfo* other) {
   swap(_impl_.a_port_, other->_impl_.a_port_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata UDPAddressInfo::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PUDPSocket_5fprotobuf_2eh_2eproto_getter, &descriptor_table_PUDPSocket_5fprotobuf_2eh_2eproto_once,
-      file_level_metadata_PUDPSocket_5fprotobuf_2eh_2eproto[0]);
+std::string UDPAddressInfo::GetTypeName() const {
+  return "protobuf.UDPAddressInfo";
 }
+
 
 // ===================================================================
 
@@ -422,19 +337,19 @@ void UDPSocketAddr::set_allocated_a_mvudpaddressinfo(::protobuf::UDPAddressInfo*
 }
 UDPSocketAddr::UDPSocketAddr(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.UDPSocketAddr)
 }
 UDPSocketAddr::UDPSocketAddr(const UDPSocketAddr& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   UDPSocketAddr* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVUDPAddressInfo: {
@@ -467,7 +382,7 @@ inline void UDPSocketAddr::SharedCtor(
 
 UDPSocketAddr::~UDPSocketAddr() {
   // @@protoc_insertion_point(destructor:protobuf.UDPSocketAddr)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -513,7 +428,7 @@ void UDPSocketAddr::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* UDPSocketAddr::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -550,7 +465,7 @@ const char* UDPSocketAddr::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -582,8 +497,8 @@ uint8_t* UDPSocketAddr::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.UDPSocketAddr)
   return target;
@@ -616,19 +531,22 @@ size_t UDPSocketAddr::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData UDPSocketAddr::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    UDPSocketAddr::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*UDPSocketAddr::GetClassData() const { return &_class_data_; }
+void UDPSocketAddr::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const UDPSocketAddr*>(
+      &from));
+}
 
-
-void UDPSocketAddr::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<UDPSocketAddr*>(&to_msg);
-  auto& from = static_cast<const UDPSocketAddr&>(from_msg);
+void UDPSocketAddr::MergeFrom(const UDPSocketAddr& from) {
+  UDPSocketAddr* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.UDPSocketAddr)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -648,7 +566,7 @@ void UDPSocketAddr::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void UDPSocketAddr::CopyFrom(const UDPSocketAddr& from) {
@@ -669,11 +587,10 @@ void UDPSocketAddr::InternalSwap(UDPSocketAddr* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata UDPSocketAddr::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PUDPSocket_5fprotobuf_2eh_2eproto_getter, &descriptor_table_PUDPSocket_5fprotobuf_2eh_2eproto_once,
-      file_level_metadata_PUDPSocket_5fprotobuf_2eh_2eproto[1]);
+std::string UDPSocketAddr::GetTypeName() const {
+  return "protobuf.UDPSocketAddr";
 }
+
 
 // ===================================================================
 
@@ -683,19 +600,19 @@ class UDPData_a_type_mVArrayOfuint8_t::_Internal {
 
 UDPData_a_type_mVArrayOfuint8_t::UDPData_a_type_mVArrayOfuint8_t(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.UDPData.a_type_mVArrayOfuint8_t)
 }
 UDPData_a_type_mVArrayOfuint8_t::UDPData_a_type_mVArrayOfuint8_t(const UDPData_a_type_mVArrayOfuint8_t& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   UDPData_a_type_mVArrayOfuint8_t* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_mvarrayofuint8_t_){from._impl_.a_mvarrayofuint8_t_}
     , /*decltype(_impl_._a_mvarrayofuint8_t_cached_byte_size_)*/{0}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.UDPData.a_type_mVArrayOfuint8_t)
 }
 
@@ -712,7 +629,7 @@ inline void UDPData_a_type_mVArrayOfuint8_t::SharedCtor(
 
 UDPData_a_type_mVArrayOfuint8_t::~UDPData_a_type_mVArrayOfuint8_t() {
   // @@protoc_insertion_point(destructor:protobuf.UDPData.a_type_mVArrayOfuint8_t)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -735,7 +652,7 @@ void UDPData_a_type_mVArrayOfuint8_t::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_mvarrayofuint8_t_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* UDPData_a_type_mVArrayOfuint8_t::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -766,7 +683,7 @@ const char* UDPData_a_type_mVArrayOfuint8_t::_InternalParse(const char* ptr, ::_
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -794,8 +711,8 @@ uint8_t* UDPData_a_type_mVArrayOfuint8_t::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.UDPData.a_type_mVArrayOfuint8_t)
   return target;
@@ -823,26 +740,29 @@ size_t UDPData_a_type_mVArrayOfuint8_t::ByteSizeLong() const {
     total_size += data_size;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData UDPData_a_type_mVArrayOfuint8_t::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    UDPData_a_type_mVArrayOfuint8_t::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*UDPData_a_type_mVArrayOfuint8_t::GetClassData() const { return &_class_data_; }
+void UDPData_a_type_mVArrayOfuint8_t::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const UDPData_a_type_mVArrayOfuint8_t*>(
+      &from));
+}
 
-
-void UDPData_a_type_mVArrayOfuint8_t::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<UDPData_a_type_mVArrayOfuint8_t*>(&to_msg);
-  auto& from = static_cast<const UDPData_a_type_mVArrayOfuint8_t&>(from_msg);
+void UDPData_a_type_mVArrayOfuint8_t::MergeFrom(const UDPData_a_type_mVArrayOfuint8_t& from) {
+  UDPData_a_type_mVArrayOfuint8_t* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.UDPData.a_type_mVArrayOfuint8_t)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_mvarrayofuint8_t_.MergeFrom(from._impl_.a_mvarrayofuint8_t_);
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void UDPData_a_type_mVArrayOfuint8_t::CopyFrom(const UDPData_a_type_mVArrayOfuint8_t& from) {
@@ -862,11 +782,10 @@ void UDPData_a_type_mVArrayOfuint8_t::InternalSwap(UDPData_a_type_mVArrayOfuint8
   _impl_.a_mvarrayofuint8_t_.InternalSwap(&other->_impl_.a_mvarrayofuint8_t_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata UDPData_a_type_mVArrayOfuint8_t::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PUDPSocket_5fprotobuf_2eh_2eproto_getter, &descriptor_table_PUDPSocket_5fprotobuf_2eh_2eproto_once,
-      file_level_metadata_PUDPSocket_5fprotobuf_2eh_2eproto[2]);
+std::string UDPData_a_type_mVArrayOfuint8_t::GetTypeName() const {
+  return "protobuf.UDPData.a_type_mVArrayOfuint8_t";
 }
+
 
 // ===================================================================
 
@@ -925,19 +844,19 @@ void UDPData::clear_a_mvipcstream() {
 }
 UDPData::UDPData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.UDPData)
 }
 UDPData::UDPData(const UDPData& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   UDPData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVArrayOfuint8T: {
@@ -971,7 +890,7 @@ inline void UDPData::SharedCtor(
 
 UDPData::~UDPData() {
   // @@protoc_insertion_point(destructor:protobuf.UDPData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1019,7 +938,7 @@ void UDPData::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* UDPData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1055,7 +974,7 @@ const char* UDPData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) 
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1088,8 +1007,8 @@ uint8_t* UDPData::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.UDPData)
   return target;
@@ -1122,19 +1041,22 @@ size_t UDPData::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData UDPData::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    UDPData::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*UDPData::GetClassData() const { return &_class_data_; }
+void UDPData::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const UDPData*>(
+      &from));
+}
 
-
-void UDPData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<UDPData*>(&to_msg);
-  auto& from = static_cast<const UDPData&>(from_msg);
+void UDPData::MergeFrom(const UDPData& from) {
+  UDPData* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.UDPData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1155,7 +1077,7 @@ void UDPData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOB
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void UDPData::CopyFrom(const UDPData& from) {
@@ -1176,11 +1098,10 @@ void UDPData::InternalSwap(UDPData* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata UDPData::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PUDPSocket_5fprotobuf_2eh_2eproto_getter, &descriptor_table_PUDPSocket_5fprotobuf_2eh_2eproto_once,
-      file_level_metadata_PUDPSocket_5fprotobuf_2eh_2eproto[3]);
+std::string UDPData::GetTypeName() const {
+  return "protobuf.UDPData";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace protobuf

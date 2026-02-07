@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -99,129 +96,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace net
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PSocketProcessBackground_2eproto[4];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PSocketProcessBackground_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PSocketProcessBackground_2eproto = nullptr;
-
-const uint32_t TableStruct_PSocketProcessBackground_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitVerifySSLServerCert, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitVerifySSLServerCert, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitVerifySSLServerCert, _impl_.a_aendpoint_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitVerifySSLServerCert, _impl_.a_apeercertchain_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitVerifySSLServerCert, _impl_.a_ahostname_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitVerifySSLServerCert, _impl_.a_aport_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitVerifySSLServerCert, _impl_.a_aoriginattributes_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitVerifySSLServerCert, _impl_.a_astapledocspresponse_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitVerifySSLServerCert, _impl_.a_asctsfromtlsextension_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitVerifySSLServerCert, _impl_.a_adcinfo_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitVerifySSLServerCert, _impl_.a_aproviderflags_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitVerifySSLServerCert, _impl_.a_acertverifierflags_),
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  0,
-  1,
-  2,
-  ~0u,
-  ~0u,
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitSelectTLSClientAuthCert, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitSelectTLSClientAuthCert, _impl_.a_aendpoint_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitSelectTLSClientAuthCert, _impl_.a_ahostname_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitSelectTLSClientAuthCert, _impl_.a_aoriginattributes_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitSelectTLSClientAuthCert, _impl_.a_aport_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitSelectTLSClientAuthCert, _impl_.a_aproviderflags_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitSelectTLSClientAuthCert, _impl_.a_aprovidertlsflags_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitSelectTLSClientAuthCert, _impl_.a_aservercertbytes_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitSelectTLSClientAuthCert, _impl_.a_acanames_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitSelectTLSClientAuthCert, _impl_.a_abrowserid_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitIPCClientCerts, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitIPCClientCerts, _impl_.a_aendpoint_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitWebSocketConnection, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitWebSocketConnection, _impl_.a_aendpoint_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitWebSocketConnection, _impl_.a_alistenerid_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 16, -1, sizeof(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitVerifySSLServerCert)},
-  { 26, -1, -1, sizeof(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitSelectTLSClientAuthCert)},
-  { 41, -1, -1, sizeof(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitIPCClientCerts)},
-  { 48, -1, -1, sizeof(::protobuf::mozilla::net::PSocketProcessBackground::Msg_InitWebSocketConnection)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::net::PSocketProcessBackground::_Msg_InitVerifySSLServerCert_default_instance_._instance,
-  &::protobuf::mozilla::net::PSocketProcessBackground::_Msg_InitSelectTLSClientAuthCert_default_instance_._instance,
-  &::protobuf::mozilla::net::PSocketProcessBackground::_Msg_InitIPCClientCerts_default_instance_._instance,
-  &::protobuf::mozilla::net::PSocketProcessBackground::_Msg_InitWebSocketConnection_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PSocketProcessBackground_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\036PSocketProcessBackground.proto\022-protob"
-  "uf.mozilla.net.PSocketProcessBackground\032"
-  "\021PSMIPCTypes.proto\"\204\004\n\033Msg_InitVerifySSL"
-  "ServerCert\022\023\n\013a_aEndpoint\030\001 \001(\014\0229\n\020a_aPe"
-  "erCertChain\030\002 \003(\0132\037.protobuf.mozilla.psm"
-  ".ByteArray\022\023\n\013a_aHostName\030\003 \001(\t\022\017\n\007a_aPo"
-  "rt\030\004 \001(\021\022\033\n\023a_aOriginAttributes\030\005 \001(\014\022D\n"
-  "\026a_aStapledOCSPResponse\030\006 \001(\0132\037.protobuf"
-  ".mozilla.psm.ByteArrayH\000\210\001\001\022E\n\027a_aSctsFr"
-  "omTLSExtension\030\007 \001(\0132\037.protobuf.mozilla."
-  "psm.ByteArrayH\001\210\001\001\022H\n\ta_aDcInfo\030\010 \001(\01320."
-  "protobuf.mozilla.psm.DelegatedCredential"
-  "InfoArgH\002\210\001\001\022\030\n\020a_aProviderFlags\030\t \001(\r\022\034"
-  "\n\024a_aCertVerifierFlags\030\n \001(\rB\031\n\027_a_aStap"
-  "ledOCSPResponseB\032\n\030_a_aSctsFromTLSExtens"
-  "ionB\014\n\n_a_aDcInfo\"\270\002\n\037Msg_InitSelectTLSC"
-  "lientAuthCert\022\023\n\013a_aEndpoint\030\001 \001(\014\022\023\n\013a_"
-  "aHostName\030\002 \001(\t\022\033\n\023a_aOriginAttributes\030\003"
-  " \001(\014\022\017\n\007a_aPort\030\004 \001(\021\022\030\n\020a_aProviderFlag"
-  "s\030\005 \001(\r\022\033\n\023a_aProviderTlsFlags\030\006 \001(\r\022;\n\022"
-  "a_aServerCertBytes\030\007 \001(\0132\037.protobuf.mozi"
-  "lla.psm.ByteArray\0223\n\na_aCANames\030\010 \003(\0132\037."
-  "protobuf.mozilla.psm.ByteArray\022\024\n\014a_aBro"
-  "wserId\030\t \001(\004\"-\n\026Msg_InitIPCClientCerts\022\023"
-  "\n\013a_aEndpoint\030\001 \001(\014\"I\n\033Msg_InitWebSocket"
-  "Connection\022\023\n\013a_aEndpoint\030\001 \001(\014\022\025\n\ra_aLi"
-  "stenerId\030\002 \001(\rb\006proto3"
-  ;
-static const ::_pbi::DescriptorTable* const descriptor_table_PSocketProcessBackground_2eproto_deps[1] = {
-  &::descriptor_table_PSMIPCTypes_2eproto,
-};
-static ::_pbi::once_flag descriptor_table_PSocketProcessBackground_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PSocketProcessBackground_2eproto = {
-    false, false, 1062, descriptor_table_protodef_PSocketProcessBackground_2eproto,
-    "PSocketProcessBackground.proto",
-    &descriptor_table_PSocketProcessBackground_2eproto_once, descriptor_table_PSocketProcessBackground_2eproto_deps, 1, 4,
-    schemas, file_default_instances, TableStruct_PSocketProcessBackground_2eproto::offsets,
-    file_level_metadata_PSocketProcessBackground_2eproto, file_level_enum_descriptors_PSocketProcessBackground_2eproto,
-    file_level_service_descriptors_PSocketProcessBackground_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PSocketProcessBackground_2eproto_getter() {
-  return &descriptor_table_PSocketProcessBackground_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PSocketProcessBackground_2eproto(&descriptor_table_PSocketProcessBackground_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace net {
@@ -275,12 +149,12 @@ void Msg_InitVerifySSLServerCert::clear_a_adcinfo() {
 }
 Msg_InitVerifySSLServerCert::Msg_InitVerifySSLServerCert(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitVerifySSLServerCert)
 }
 Msg_InitVerifySSLServerCert::Msg_InitVerifySSLServerCert(const Msg_InitVerifySSLServerCert& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_InitVerifySSLServerCert* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -296,7 +170,7 @@ Msg_InitVerifySSLServerCert::Msg_InitVerifySSLServerCert(const Msg_InitVerifySSL
     , decltype(_impl_.a_aproviderflags_){}
     , decltype(_impl_.a_acertverifierflags_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_aendpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
@@ -370,7 +244,7 @@ inline void Msg_InitVerifySSLServerCert::SharedCtor(
 
 Msg_InitVerifySSLServerCert::~Msg_InitVerifySSLServerCert() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitVerifySSLServerCert)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -421,7 +295,7 @@ void Msg_InitVerifySSLServerCert::Clear() {
       reinterpret_cast<char*>(&_impl_.a_acertverifierflags_) -
       reinterpret_cast<char*>(&_impl_.a_aport_)) + sizeof(_impl_.a_acertverifierflags_));
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_InitVerifySSLServerCert::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -459,7 +333,7 @@ const char* Msg_InitVerifySSLServerCert::_InternalParse(const char* ptr, ::_pbi:
           auto str = _internal_mutable_a_ahostname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.PSocketProcessBackground.Msg_InitVerifySSLServerCert.a_aHostName"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -531,7 +405,7 @@ const char* Msg_InitVerifySSLServerCert::_InternalParse(const char* ptr, ::_pbi:
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -620,8 +494,8 @@ uint8_t* Msg_InitVerifySSLServerCert::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitVerifySSLServerCert)
   return target;
@@ -702,19 +576,22 @@ size_t Msg_InitVerifySSLServerCert::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_acertverifierflags());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_InitVerifySSLServerCert::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Msg_InitVerifySSLServerCert::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_InitVerifySSLServerCert::GetClassData() const { return &_class_data_; }
+void Msg_InitVerifySSLServerCert::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_InitVerifySSLServerCert*>(
+      &from));
+}
 
-
-void Msg_InitVerifySSLServerCert::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Msg_InitVerifySSLServerCert*>(&to_msg);
-  auto& from = static_cast<const Msg_InitVerifySSLServerCert&>(from_msg);
+void Msg_InitVerifySSLServerCert::MergeFrom(const Msg_InitVerifySSLServerCert& from) {
+  Msg_InitVerifySSLServerCert* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitVerifySSLServerCert)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -754,7 +631,7 @@ void Msg_InitVerifySSLServerCert::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to
   if (from._internal_a_acertverifierflags() != 0) {
     _this->_internal_set_a_acertverifierflags(from._internal_a_acertverifierflags());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Msg_InitVerifySSLServerCert::CopyFrom(const Msg_InitVerifySSLServerCert& from) {
@@ -795,11 +672,10 @@ void Msg_InitVerifySSLServerCert::InternalSwap(Msg_InitVerifySSLServerCert* othe
           reinterpret_cast<char*>(&other->_impl_.a_astapledocspresponse_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_InitVerifySSLServerCert::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PSocketProcessBackground_2eproto_getter, &descriptor_table_PSocketProcessBackground_2eproto_once,
-      file_level_metadata_PSocketProcessBackground_2eproto[0]);
+std::string Msg_InitVerifySSLServerCert::GetTypeName() const {
+  return "protobuf.mozilla.net.PSocketProcessBackground.Msg_InitVerifySSLServerCert";
 }
+
 
 // ===================================================================
 
@@ -823,12 +699,12 @@ void Msg_InitSelectTLSClientAuthCert::clear_a_acanames() {
 }
 Msg_InitSelectTLSClientAuthCert::Msg_InitSelectTLSClientAuthCert(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitSelectTLSClientAuthCert)
 }
 Msg_InitSelectTLSClientAuthCert::Msg_InitSelectTLSClientAuthCert(const Msg_InitSelectTLSClientAuthCert& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_InitSelectTLSClientAuthCert* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_acanames_){from._impl_.a_acanames_}
@@ -842,7 +718,7 @@ Msg_InitSelectTLSClientAuthCert::Msg_InitSelectTLSClientAuthCert(const Msg_InitS
     , decltype(_impl_.a_aprovidertlsflags_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_aendpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
@@ -908,7 +784,7 @@ inline void Msg_InitSelectTLSClientAuthCert::SharedCtor(
 
 Msg_InitSelectTLSClientAuthCert::~Msg_InitSelectTLSClientAuthCert() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitSelectTLSClientAuthCert)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -945,7 +821,7 @@ void Msg_InitSelectTLSClientAuthCert::Clear() {
   ::memset(&_impl_.a_aport_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_aprovidertlsflags_) -
       reinterpret_cast<char*>(&_impl_.a_aport_)) + sizeof(_impl_.a_aprovidertlsflags_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_InitSelectTLSClientAuthCert::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -969,7 +845,7 @@ const char* Msg_InitSelectTLSClientAuthCert::_InternalParse(const char* ptr, ::_
           auto str = _internal_mutable_a_ahostname();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.net.PSocketProcessBackground.Msg_InitSelectTLSClientAuthCert.a_aHostName"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1046,7 +922,7 @@ const char* Msg_InitSelectTLSClientAuthCert::_InternalParse(const char* ptr, ::_
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1126,8 +1002,8 @@ uint8_t* Msg_InitSelectTLSClientAuthCert::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitSelectTLSClientAuthCert)
   return target;
@@ -1196,19 +1072,22 @@ size_t Msg_InitSelectTLSClientAuthCert::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_aprovidertlsflags());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_InitSelectTLSClientAuthCert::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Msg_InitSelectTLSClientAuthCert::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_InitSelectTLSClientAuthCert::GetClassData() const { return &_class_data_; }
+void Msg_InitSelectTLSClientAuthCert::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_InitSelectTLSClientAuthCert*>(
+      &from));
+}
 
-
-void Msg_InitSelectTLSClientAuthCert::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Msg_InitSelectTLSClientAuthCert*>(&to_msg);
-  auto& from = static_cast<const Msg_InitSelectTLSClientAuthCert&>(from_msg);
+void Msg_InitSelectTLSClientAuthCert::MergeFrom(const Msg_InitSelectTLSClientAuthCert& from) {
+  Msg_InitSelectTLSClientAuthCert* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitSelectTLSClientAuthCert)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1240,7 +1119,7 @@ void Msg_InitSelectTLSClientAuthCert::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message
   if (from._internal_a_aprovidertlsflags() != 0) {
     _this->_internal_set_a_aprovidertlsflags(from._internal_a_aprovidertlsflags());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Msg_InitSelectTLSClientAuthCert::CopyFrom(const Msg_InitSelectTLSClientAuthCert& from) {
@@ -1280,11 +1159,10 @@ void Msg_InitSelectTLSClientAuthCert::InternalSwap(Msg_InitSelectTLSClientAuthCe
           reinterpret_cast<char*>(&other->_impl_.a_aservercertbytes_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_InitSelectTLSClientAuthCert::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PSocketProcessBackground_2eproto_getter, &descriptor_table_PSocketProcessBackground_2eproto_once,
-      file_level_metadata_PSocketProcessBackground_2eproto[1]);
+std::string Msg_InitSelectTLSClientAuthCert::GetTypeName() const {
+  return "protobuf.mozilla.net.PSocketProcessBackground.Msg_InitSelectTLSClientAuthCert";
 }
+
 
 // ===================================================================
 
@@ -1294,18 +1172,18 @@ class Msg_InitIPCClientCerts::_Internal {
 
 Msg_InitIPCClientCerts::Msg_InitIPCClientCerts(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitIPCClientCerts)
 }
 Msg_InitIPCClientCerts::Msg_InitIPCClientCerts(const Msg_InitIPCClientCerts& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_InitIPCClientCerts* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_aendpoint_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_aendpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
@@ -1333,7 +1211,7 @@ inline void Msg_InitIPCClientCerts::SharedCtor(
 
 Msg_InitIPCClientCerts::~Msg_InitIPCClientCerts() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitIPCClientCerts)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1356,7 +1234,7 @@ void Msg_InitIPCClientCerts::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_aendpoint_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_InitIPCClientCerts::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1385,7 +1263,7 @@ const char* Msg_InitIPCClientCerts::_InternalParse(const char* ptr, ::_pbi::Pars
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1410,8 +1288,8 @@ uint8_t* Msg_InitIPCClientCerts::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitIPCClientCerts)
   return target;
@@ -1432,19 +1310,22 @@ size_t Msg_InitIPCClientCerts::ByteSizeLong() const {
         this->_internal_a_aendpoint());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_InitIPCClientCerts::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Msg_InitIPCClientCerts::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_InitIPCClientCerts::GetClassData() const { return &_class_data_; }
+void Msg_InitIPCClientCerts::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_InitIPCClientCerts*>(
+      &from));
+}
 
-
-void Msg_InitIPCClientCerts::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Msg_InitIPCClientCerts*>(&to_msg);
-  auto& from = static_cast<const Msg_InitIPCClientCerts&>(from_msg);
+void Msg_InitIPCClientCerts::MergeFrom(const Msg_InitIPCClientCerts& from) {
+  Msg_InitIPCClientCerts* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitIPCClientCerts)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1453,7 +1334,7 @@ void Msg_InitIPCClientCerts::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg,
   if (!from._internal_a_aendpoint().empty()) {
     _this->_internal_set_a_aendpoint(from._internal_a_aendpoint());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Msg_InitIPCClientCerts::CopyFrom(const Msg_InitIPCClientCerts& from) {
@@ -1478,11 +1359,10 @@ void Msg_InitIPCClientCerts::InternalSwap(Msg_InitIPCClientCerts* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_InitIPCClientCerts::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PSocketProcessBackground_2eproto_getter, &descriptor_table_PSocketProcessBackground_2eproto_once,
-      file_level_metadata_PSocketProcessBackground_2eproto[2]);
+std::string Msg_InitIPCClientCerts::GetTypeName() const {
+  return "protobuf.mozilla.net.PSocketProcessBackground.Msg_InitIPCClientCerts";
 }
+
 
 // ===================================================================
 
@@ -1492,19 +1372,19 @@ class Msg_InitWebSocketConnection::_Internal {
 
 Msg_InitWebSocketConnection::Msg_InitWebSocketConnection(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitWebSocketConnection)
 }
 Msg_InitWebSocketConnection::Msg_InitWebSocketConnection(const Msg_InitWebSocketConnection& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_InitWebSocketConnection* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_aendpoint_){}
     , decltype(_impl_.a_alistenerid_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_aendpoint_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_aendpoint_.Set("", GetArenaForAllocation());
@@ -1534,7 +1414,7 @@ inline void Msg_InitWebSocketConnection::SharedCtor(
 
 Msg_InitWebSocketConnection::~Msg_InitWebSocketConnection() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitWebSocketConnection)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1558,7 +1438,7 @@ void Msg_InitWebSocketConnection::Clear() {
 
   _impl_.a_aendpoint_.ClearToEmpty();
   _impl_.a_alistenerid_ = 0u;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_InitWebSocketConnection::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1595,7 +1475,7 @@ const char* Msg_InitWebSocketConnection::_InternalParse(const char* ptr, ::_pbi:
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1626,8 +1506,8 @@ uint8_t* Msg_InitWebSocketConnection::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitWebSocketConnection)
   return target;
@@ -1653,19 +1533,22 @@ size_t Msg_InitWebSocketConnection::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_alistenerid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_InitWebSocketConnection::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Msg_InitWebSocketConnection::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_InitWebSocketConnection::GetClassData() const { return &_class_data_; }
+void Msg_InitWebSocketConnection::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_InitWebSocketConnection*>(
+      &from));
+}
 
-
-void Msg_InitWebSocketConnection::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Msg_InitWebSocketConnection*>(&to_msg);
-  auto& from = static_cast<const Msg_InitWebSocketConnection&>(from_msg);
+void Msg_InitWebSocketConnection::MergeFrom(const Msg_InitWebSocketConnection& from) {
+  Msg_InitWebSocketConnection* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.net.PSocketProcessBackground.Msg_InitWebSocketConnection)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1677,7 +1560,7 @@ void Msg_InitWebSocketConnection::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to
   if (from._internal_a_alistenerid() != 0) {
     _this->_internal_set_a_alistenerid(from._internal_a_alistenerid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Msg_InitWebSocketConnection::CopyFrom(const Msg_InitWebSocketConnection& from) {
@@ -1703,11 +1586,10 @@ void Msg_InitWebSocketConnection::InternalSwap(Msg_InitWebSocketConnection* othe
   swap(_impl_.a_alistenerid_, other->_impl_.a_alistenerid_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_InitWebSocketConnection::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PSocketProcessBackground_2eproto_getter, &descriptor_table_PSocketProcessBackground_2eproto_once,
-      file_level_metadata_PSocketProcessBackground_2eproto[3]);
+std::string Msg_InitWebSocketConnection::GetTypeName() const {
+  return "protobuf.mozilla.net.PSocketProcessBackground.Msg_InitWebSocketConnection";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace PSocketProcessBackground

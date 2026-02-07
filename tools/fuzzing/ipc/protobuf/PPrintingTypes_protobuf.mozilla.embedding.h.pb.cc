@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -109,201 +106,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace embedding
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto[2];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::CStringKeyValue, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::CStringKeyValue, _impl_.a_key_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::CStringKeyValue, _impl_.a_value_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_remoteprintjob_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_edgetop_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_edgeleft_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_edgebottom_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_edgeright_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_margintop_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_marginleft_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_marginbottom_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_marginright_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_unwriteablemargintop_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_unwriteablemarginleft_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_unwriteablemarginbottom_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_unwriteablemarginright_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_scaling_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_printbgcolors_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_printbgimages_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_honorpagerulemargins_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_usepagerulesizeaspapersize_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_ignoreunwriteablemargins_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_showmarginguides_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_printselectiononly_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_pageranges_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_title_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_docurl_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_headerstrleft_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_headerstrcenter_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_headerstrright_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_footerstrleft_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_footerstrcenter_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_footerstrright_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_printsilent_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_shrinktofit_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_paperid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_paperwidth_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_paperheight_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_papersizeunit_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_printreversed_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_printincolor_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_orientation_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_numcopies_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_numpagespersheet_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_outputdestination_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_outputformat_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_printpagedelay_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_resolution_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_duplex_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_isinitializedfromprinter_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_isinitializedfromprefs_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_drivername_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_devicename_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_devmodedata_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_gtkprintsettings_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_disposition_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::embedding::PrintData, _impl_.a_destination_),
-  0,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::embedding::CStringKeyValue)},
-  { 8, 68, -1, sizeof(::protobuf::mozilla::embedding::PrintData)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::embedding::_CStringKeyValue_default_instance_._instance,
-  &::protobuf::mozilla::embedding::_PrintData_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n1PPrintingTypes_protobuf.mozilla.embedd"
-  "ing.h.proto\022\032protobuf.mozilla.embedding\""
-  "1\n\017CStringKeyValue\022\r\n\005a_key\030\001 \001(\t\022\017\n\007a_v"
-  "alue\030\002 \001(\t\"\246\013\n\tPrintData\022\035\n\020a_remotePrin"
-  "tJob\030\001 \001(\014H\000\210\001\001\022\021\n\ta_edgeTop\030\002 \001(\001\022\022\n\na_"
-  "edgeLeft\030\003 \001(\001\022\024\n\014a_edgeBottom\030\004 \001(\001\022\023\n\013"
-  "a_edgeRight\030\005 \001(\001\022\023\n\013a_marginTop\030\006 \001(\001\022\024"
-  "\n\014a_marginLeft\030\007 \001(\001\022\026\n\016a_marginBottom\030\010"
-  " \001(\001\022\025\n\ra_marginRight\030\t \001(\001\022\036\n\026a_unwrite"
-  "ableMarginTop\030\n \001(\001\022\037\n\027a_unwriteableMarg"
-  "inLeft\030\013 \001(\001\022!\n\031a_unwriteableMarginBotto"
-  "m\030\014 \001(\001\022 \n\030a_unwriteableMarginRight\030\r \001("
-  "\001\022\021\n\ta_scaling\030\016 \001(\001\022\027\n\017a_printBGColors\030"
-  "\017 \001(\010\022\027\n\017a_printBGImages\030\020 \001(\010\022\036\n\026a_hono"
-  "rPageRuleMargins\030\021 \001(\010\022$\n\034a_usePageRuleS"
-  "izeAsPaperSize\030\022 \001(\010\022\"\n\032a_ignoreUnwritea"
-  "bleMargins\030\023 \001(\010\022\032\n\022a_showMarginGuides\030\024"
-  " \001(\010\022\034\n\024a_printSelectionOnly\030\025 \001(\010\022\024\n\014a_"
-  "pageRanges\030\026 \003(\021\022\017\n\007a_title\030\027 \001(\t\022\020\n\010a_d"
-  "ocURL\030\030 \001(\t\022\027\n\017a_headerStrLeft\030\031 \001(\t\022\031\n\021"
-  "a_headerStrCenter\030\032 \001(\t\022\030\n\020a_headerStrRi"
-  "ght\030\033 \001(\t\022\027\n\017a_footerStrLeft\030\034 \001(\t\022\031\n\021a_"
-  "footerStrCenter\030\035 \001(\t\022\030\n\020a_footerStrRigh"
-  "t\030\036 \001(\t\022\025\n\ra_printSilent\030\037 \001(\010\022\025\n\ra_shri"
-  "nkToFit\030  \001(\010\022\021\n\ta_paperId\030! \001(\t\022\024\n\014a_pa"
-  "perWidth\030\" \001(\001\022\025\n\ra_paperHeight\030# \001(\001\022\027\n"
-  "\017a_paperSizeUnit\030$ \001(\021\022\027\n\017a_printReverse"
-  "d\030% \001(\010\022\026\n\016a_printInColor\030& \001(\010\022\025\n\ra_ori"
-  "entation\030\' \001(\021\022\023\n\013a_numCopies\030( \001(\021\022\032\n\022a"
-  "_numPagesPerSheet\030) \001(\021\022\033\n\023a_outputDesti"
-  "nation\030* \001(\021\022\026\n\016a_outputFormat\030+ \001(\021\022\030\n\020"
-  "a_printPageDelay\030, \001(\021\022\024\n\014a_resolution\030-"
-  " \001(\021\022\020\n\010a_duplex\030. \001(\021\022\"\n\032a_isInitialize"
-  "dFromPrinter\030/ \001(\010\022 \n\030a_isInitializedFro"
-  "mPrefs\0300 \001(\010\022\024\n\014a_driverName\0301 \001(\t\022\024\n\014a_"
-  "deviceName\0302 \001(\t\022\025\n\ra_devModeData\0303 \003(\r\022"
-  "G\n\022a_GTKPrintSettings\0304 \003(\0132+.protobuf.m"
-  "ozilla.embedding.CStringKeyValue\022\025\n\ra_di"
-  "sposition\0305 \001(\t\022\025\n\ra_destination\0306 \001(\rB\023"
-  "\n\021_a_remotePrintJobb\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto = {
-    false, false, 1587, descriptor_table_protodef_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto,
-    "PPrintingTypes_protobuf.mozilla.embedding.h.proto",
-    &descriptor_table_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto_once, nullptr, 0, 2,
-    schemas, file_default_instances, TableStruct_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto::offsets,
-    file_level_metadata_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto, file_level_enum_descriptors_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto,
-    file_level_service_descriptors_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto_getter() {
-  return &descriptor_table_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto(&descriptor_table_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace embedding {
@@ -316,19 +118,19 @@ class CStringKeyValue::_Internal {
 
 CStringKeyValue::CStringKeyValue(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.embedding.CStringKeyValue)
 }
 CStringKeyValue::CStringKeyValue(const CStringKeyValue& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   CStringKeyValue* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_key_){}
     , decltype(_impl_.a_value_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_key_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_key_.Set("", GetArenaForAllocation());
@@ -369,7 +171,7 @@ inline void CStringKeyValue::SharedCtor(
 
 CStringKeyValue::~CStringKeyValue() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.embedding.CStringKeyValue)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -394,7 +196,7 @@ void CStringKeyValue::Clear() {
 
   _impl_.a_key_.ClearToEmpty();
   _impl_.a_value_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* CStringKeyValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -409,7 +211,7 @@ const char* CStringKeyValue::_InternalParse(const char* ptr, ::_pbi::ParseContex
           auto str = _internal_mutable_a_key();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.embedding.CStringKeyValue.a_key"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -419,7 +221,7 @@ const char* CStringKeyValue::_InternalParse(const char* ptr, ::_pbi::ParseContex
           auto str = _internal_mutable_a_value();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.embedding.CStringKeyValue.a_value"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -434,7 +236,7 @@ const char* CStringKeyValue::_InternalParse(const char* ptr, ::_pbi::ParseContex
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -473,8 +275,8 @@ uint8_t* CStringKeyValue::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.embedding.CStringKeyValue)
   return target;
@@ -502,19 +304,22 @@ size_t CStringKeyValue::ByteSizeLong() const {
         this->_internal_a_value());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CStringKeyValue::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    CStringKeyValue::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CStringKeyValue::GetClassData() const { return &_class_data_; }
+void CStringKeyValue::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const CStringKeyValue*>(
+      &from));
+}
 
-
-void CStringKeyValue::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<CStringKeyValue*>(&to_msg);
-  auto& from = static_cast<const CStringKeyValue&>(from_msg);
+void CStringKeyValue::MergeFrom(const CStringKeyValue& from) {
+  CStringKeyValue* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.embedding.CStringKeyValue)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -526,7 +331,7 @@ void CStringKeyValue::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const 
   if (!from._internal_a_value().empty()) {
     _this->_internal_set_a_value(from._internal_a_value());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void CStringKeyValue::CopyFrom(const CStringKeyValue& from) {
@@ -555,11 +360,10 @@ void CStringKeyValue::InternalSwap(CStringKeyValue* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata CStringKeyValue::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto_getter, &descriptor_table_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto_once,
-      file_level_metadata_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto[0]);
+std::string CStringKeyValue::GetTypeName() const {
+  return "protobuf.mozilla.embedding.CStringKeyValue";
 }
+
 
 // ===================================================================
 
@@ -573,12 +377,12 @@ class PrintData::_Internal {
 
 PrintData::PrintData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.embedding.PrintData)
 }
 PrintData::PrintData(const PrintData& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   PrintData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -640,7 +444,7 @@ PrintData::PrintData(const PrintData& from)
     , decltype(_impl_.a_isinitializedfromprefs_){}
     , decltype(_impl_.a_destination_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_remoteprintjob_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_remoteprintjob_.Set("", GetArenaForAllocation());
@@ -871,7 +675,7 @@ inline void PrintData::SharedCtor(
 
 PrintData::~PrintData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.embedding.PrintData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -931,7 +735,7 @@ void PrintData::Clear() {
       reinterpret_cast<char*>(&_impl_.a_destination_) -
       reinterpret_cast<char*>(&_impl_.a_edgetop_)) + sizeof(_impl_.a_destination_));
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1127,7 +931,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
           auto str = _internal_mutable_a_title();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.embedding.PrintData.a_title"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1137,7 +941,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
           auto str = _internal_mutable_a_docurl();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.embedding.PrintData.a_docURL"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1147,7 +951,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
           auto str = _internal_mutable_a_headerstrleft();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.embedding.PrintData.a_headerStrLeft"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1157,7 +961,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
           auto str = _internal_mutable_a_headerstrcenter();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.embedding.PrintData.a_headerStrCenter"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1167,7 +971,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
           auto str = _internal_mutable_a_headerstrright();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.embedding.PrintData.a_headerStrRight"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1177,7 +981,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
           auto str = _internal_mutable_a_footerstrleft();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.embedding.PrintData.a_footerStrLeft"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1187,7 +991,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
           auto str = _internal_mutable_a_footerstrcenter();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.embedding.PrintData.a_footerStrCenter"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1197,7 +1001,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
           auto str = _internal_mutable_a_footerstrright();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.embedding.PrintData.a_footerStrRight"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1223,7 +1027,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
           auto str = _internal_mutable_a_paperid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.embedding.PrintData.a_paperId"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1353,7 +1157,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
           auto str = _internal_mutable_a_drivername();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.embedding.PrintData.a_driverName"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1363,7 +1167,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
           auto str = _internal_mutable_a_devicename();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.embedding.PrintData.a_deviceName"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1397,7 +1201,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
           auto str = _internal_mutable_a_disposition();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.embedding.PrintData.a_disposition"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1420,7 +1224,7 @@ const char* PrintData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1880,8 +1684,8 @@ uint8_t* PrintData::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.embedding.PrintData)
   return target;
@@ -2292,19 +2096,22 @@ size_t PrintData::ByteSizeLong() const {
         this->_internal_a_destination());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PrintData::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    PrintData::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PrintData::GetClassData() const { return &_class_data_; }
+void PrintData::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const PrintData*>(
+      &from));
+}
 
-
-void PrintData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<PrintData*>(&to_msg);
-  auto& from = static_cast<const PrintData&>(from_msg);
+void PrintData::MergeFrom(const PrintData& from) {
+  PrintData* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.embedding.PrintData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2526,7 +2333,7 @@ void PrintData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROT
   if (from._internal_a_destination() != 0) {
     _this->_internal_set_a_destination(from._internal_a_destination());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void PrintData::CopyFrom(const PrintData& from) {
@@ -2609,11 +2416,10 @@ void PrintData::InternalSwap(PrintData* other) {
           reinterpret_cast<char*>(&other->_impl_.a_edgetop_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata PrintData::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto_getter, &descriptor_table_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto_once,
-      file_level_metadata_PPrintingTypes_5fprotobuf_2emozilla_2eembedding_2eh_2eproto[1]);
+std::string PrintData::GetTypeName() const {
+  return "protobuf.mozilla.embedding.PrintData";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace embedding

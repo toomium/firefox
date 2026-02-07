@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -25,7 +22,8 @@ namespace mozilla {
 namespace _ipdltest {
 namespace PTestManyChildAllocs {
 PROTOBUF_CONSTEXPR Msg_Go::Msg_Go(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_GoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_GoDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -36,7 +34,8 @@ struct Msg_GoDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_GoDefaultTypeInternal _Msg_Go_default_instance_;
 PROTOBUF_CONSTEXPR Msg_Done::Msg_Done(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_DoneDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_DoneDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -60,7 +59,8 @@ struct Msg_PTestManyChildAllocsSubConstructorDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_PTestManyChildAllocsSubConstructorDefaultTypeInternal _Msg_PTestManyChildAllocsSubConstructor_default_instance_;
 PROTOBUF_CONSTEXPR Reply_PTestManyChildAllocsSubConstructor::Reply_PTestManyChildAllocsSubConstructor(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Reply_PTestManyChildAllocsSubConstructorDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Reply_PTestManyChildAllocsSubConstructorDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -74,74 +74,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace _ipdltest
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PTestManyChildAllocs_2eproto[4];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PTestManyChildAllocs_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PTestManyChildAllocs_2eproto = nullptr;
-
-const uint32_t TableStruct_PTestManyChildAllocs_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestManyChildAllocs::Msg_Go, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestManyChildAllocs::Msg_Done, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestManyChildAllocs::Msg_PTestManyChildAllocsSubConstructor, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestManyChildAllocs::Msg_PTestManyChildAllocsSubConstructor, _impl_.a_actorid_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::_ipdltest::PTestManyChildAllocs::Reply_PTestManyChildAllocsSubConstructor, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestManyChildAllocs::Msg_Go)},
-  { 6, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestManyChildAllocs::Msg_Done)},
-  { 12, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestManyChildAllocs::Msg_PTestManyChildAllocsSubConstructor)},
-  { 19, -1, -1, sizeof(::protobuf::mozilla::_ipdltest::PTestManyChildAllocs::Reply_PTestManyChildAllocsSubConstructor)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::_ipdltest::PTestManyChildAllocs::_Msg_Go_default_instance_._instance,
-  &::protobuf::mozilla::_ipdltest::PTestManyChildAllocs::_Msg_Done_default_instance_._instance,
-  &::protobuf::mozilla::_ipdltest::PTestManyChildAllocs::_Msg_PTestManyChildAllocsSubConstructor_default_instance_._instance,
-  &::protobuf::mozilla::_ipdltest::PTestManyChildAllocs::_Reply_PTestManyChildAllocsSubConstructor_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PTestManyChildAllocs_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\032PTestManyChildAllocs.proto\022/protobuf.m"
-  "ozilla._ipdltest.PTestManyChildAllocs\"\010\n"
-  "\006Msg_Go\"\n\n\010Msg_Done\";\n&Msg_PTestManyChil"
-  "dAllocsSubConstructor\022\021\n\ta_actorid\030\001 \001(\022"
-  "\"*\n(Reply_PTestManyChildAllocsSubConstru"
-  "ctorb\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_PTestManyChildAllocs_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PTestManyChildAllocs_2eproto = {
-    false, false, 212, descriptor_table_protodef_PTestManyChildAllocs_2eproto,
-    "PTestManyChildAllocs.proto",
-    &descriptor_table_PTestManyChildAllocs_2eproto_once, nullptr, 0, 4,
-    schemas, file_default_instances, TableStruct_PTestManyChildAllocs_2eproto::offsets,
-    file_level_metadata_PTestManyChildAllocs_2eproto, file_level_enum_descriptors_PTestManyChildAllocs_2eproto,
-    file_level_service_descriptors_PTestManyChildAllocs_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PTestManyChildAllocs_2eproto_getter() {
-  return &descriptor_table_PTestManyChildAllocs_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PTestManyChildAllocs_2eproto(&descriptor_table_PTestManyChildAllocs_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace _ipdltest {
@@ -155,37 +87,145 @@ class Msg_Go::_Internal {
 
 Msg_Go::Msg_Go(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_Go)
 }
 Msg_Go::Msg_Go(const Msg_Go& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_Go* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_Go)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_Go::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_Go::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_Go::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PTestManyChildAllocs_2eproto_getter, &descriptor_table_PTestManyChildAllocs_2eproto_once,
-      file_level_metadata_PTestManyChildAllocs_2eproto[0]);
+inline void Msg_Go::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Msg_Go::~Msg_Go() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_Go)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Msg_Go::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Msg_Go::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Msg_Go::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_Go)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Msg_Go::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Msg_Go::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_Go)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_Go)
+  return target;
+}
+
+size_t Msg_Go::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_Go)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Msg_Go::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_Go*>(
+      &from));
+}
+
+void Msg_Go::MergeFrom(const Msg_Go& from) {
+  Msg_Go* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_Go)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Msg_Go::CopyFrom(const Msg_Go& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_Go)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg_Go::IsInitialized() const {
+  return true;
+}
+
+void Msg_Go::InternalSwap(Msg_Go* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Msg_Go::GetTypeName() const {
+  return "protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_Go";
+}
+
 
 // ===================================================================
 
@@ -195,37 +235,145 @@ class Msg_Done::_Internal {
 
 Msg_Done::Msg_Done(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_Done)
 }
 Msg_Done::Msg_Done(const Msg_Done& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_Done* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_Done)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_Done::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_Done::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_Done::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PTestManyChildAllocs_2eproto_getter, &descriptor_table_PTestManyChildAllocs_2eproto_once,
-      file_level_metadata_PTestManyChildAllocs_2eproto[1]);
+inline void Msg_Done::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Msg_Done::~Msg_Done() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_Done)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Msg_Done::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Msg_Done::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Msg_Done::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_Done)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Msg_Done::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Msg_Done::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_Done)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_Done)
+  return target;
+}
+
+size_t Msg_Done::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_Done)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Msg_Done::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_Done*>(
+      &from));
+}
+
+void Msg_Done::MergeFrom(const Msg_Done& from) {
+  Msg_Done* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_Done)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Msg_Done::CopyFrom(const Msg_Done& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_Done)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg_Done::IsInitialized() const {
+  return true;
+}
+
+void Msg_Done::InternalSwap(Msg_Done* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Msg_Done::GetTypeName() const {
+  return "protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_Done";
+}
+
 
 // ===================================================================
 
@@ -235,18 +383,18 @@ class Msg_PTestManyChildAllocsSubConstructor::_Internal {
 
 Msg_PTestManyChildAllocsSubConstructor::Msg_PTestManyChildAllocsSubConstructor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_PTestManyChildAllocsSubConstructor)
 }
 Msg_PTestManyChildAllocsSubConstructor::Msg_PTestManyChildAllocsSubConstructor(const Msg_PTestManyChildAllocsSubConstructor& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_PTestManyChildAllocsSubConstructor* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_actorid_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_actorid_ = from._impl_.a_actorid_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_PTestManyChildAllocsSubConstructor)
 }
@@ -263,7 +411,7 @@ inline void Msg_PTestManyChildAllocsSubConstructor::SharedCtor(
 
 Msg_PTestManyChildAllocsSubConstructor::~Msg_PTestManyChildAllocsSubConstructor() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_PTestManyChildAllocsSubConstructor)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -285,7 +433,7 @@ void Msg_PTestManyChildAllocsSubConstructor::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_actorid_ = int64_t{0};
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_PTestManyChildAllocsSubConstructor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -313,7 +461,7 @@ const char* Msg_PTestManyChildAllocsSubConstructor::_InternalParse(const char* p
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -338,8 +486,8 @@ uint8_t* Msg_PTestManyChildAllocsSubConstructor::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_PTestManyChildAllocsSubConstructor)
   return target;
@@ -358,19 +506,22 @@ size_t Msg_PTestManyChildAllocsSubConstructor::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::SInt64SizePlusOne(this->_internal_a_actorid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_PTestManyChildAllocsSubConstructor::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Msg_PTestManyChildAllocsSubConstructor::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_PTestManyChildAllocsSubConstructor::GetClassData() const { return &_class_data_; }
+void Msg_PTestManyChildAllocsSubConstructor::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_PTestManyChildAllocsSubConstructor*>(
+      &from));
+}
 
-
-void Msg_PTestManyChildAllocsSubConstructor::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Msg_PTestManyChildAllocsSubConstructor*>(&to_msg);
-  auto& from = static_cast<const Msg_PTestManyChildAllocsSubConstructor&>(from_msg);
+void Msg_PTestManyChildAllocsSubConstructor::MergeFrom(const Msg_PTestManyChildAllocsSubConstructor& from) {
+  Msg_PTestManyChildAllocsSubConstructor* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_PTestManyChildAllocsSubConstructor)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -379,7 +530,7 @@ void Msg_PTestManyChildAllocsSubConstructor::MergeImpl(::PROTOBUF_NAMESPACE_ID::
   if (from._internal_a_actorid() != 0) {
     _this->_internal_set_a_actorid(from._internal_a_actorid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Msg_PTestManyChildAllocsSubConstructor::CopyFrom(const Msg_PTestManyChildAllocsSubConstructor& from) {
@@ -399,11 +550,10 @@ void Msg_PTestManyChildAllocsSubConstructor::InternalSwap(Msg_PTestManyChildAllo
   swap(_impl_.a_actorid_, other->_impl_.a_actorid_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_PTestManyChildAllocsSubConstructor::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PTestManyChildAllocs_2eproto_getter, &descriptor_table_PTestManyChildAllocs_2eproto_once,
-      file_level_metadata_PTestManyChildAllocs_2eproto[2]);
+std::string Msg_PTestManyChildAllocsSubConstructor::GetTypeName() const {
+  return "protobuf.mozilla._ipdltest.PTestManyChildAllocs.Msg_PTestManyChildAllocsSubConstructor";
 }
+
 
 // ===================================================================
 
@@ -413,37 +563,145 @@ class Reply_PTestManyChildAllocsSubConstructor::_Internal {
 
 Reply_PTestManyChildAllocsSubConstructor::Reply_PTestManyChildAllocsSubConstructor(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Reply_PTestManyChildAllocsSubConstructor)
 }
 Reply_PTestManyChildAllocsSubConstructor::Reply_PTestManyChildAllocsSubConstructor(const Reply_PTestManyChildAllocsSubConstructor& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Reply_PTestManyChildAllocsSubConstructor* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Reply_PTestManyChildAllocsSubConstructor)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Reply_PTestManyChildAllocsSubConstructor::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Reply_PTestManyChildAllocsSubConstructor::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Reply_PTestManyChildAllocsSubConstructor::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PTestManyChildAllocs_2eproto_getter, &descriptor_table_PTestManyChildAllocs_2eproto_once,
-      file_level_metadata_PTestManyChildAllocs_2eproto[3]);
+inline void Reply_PTestManyChildAllocsSubConstructor::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Reply_PTestManyChildAllocsSubConstructor::~Reply_PTestManyChildAllocsSubConstructor() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Reply_PTestManyChildAllocsSubConstructor)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Reply_PTestManyChildAllocsSubConstructor::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Reply_PTestManyChildAllocsSubConstructor::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Reply_PTestManyChildAllocsSubConstructor::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Reply_PTestManyChildAllocsSubConstructor)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Reply_PTestManyChildAllocsSubConstructor::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Reply_PTestManyChildAllocsSubConstructor::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Reply_PTestManyChildAllocsSubConstructor)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Reply_PTestManyChildAllocsSubConstructor)
+  return target;
+}
+
+size_t Reply_PTestManyChildAllocsSubConstructor::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Reply_PTestManyChildAllocsSubConstructor)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Reply_PTestManyChildAllocsSubConstructor::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Reply_PTestManyChildAllocsSubConstructor*>(
+      &from));
+}
+
+void Reply_PTestManyChildAllocsSubConstructor::MergeFrom(const Reply_PTestManyChildAllocsSubConstructor& from) {
+  Reply_PTestManyChildAllocsSubConstructor* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Reply_PTestManyChildAllocsSubConstructor)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Reply_PTestManyChildAllocsSubConstructor::CopyFrom(const Reply_PTestManyChildAllocsSubConstructor& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla._ipdltest.PTestManyChildAllocs.Reply_PTestManyChildAllocsSubConstructor)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Reply_PTestManyChildAllocsSubConstructor::IsInitialized() const {
+  return true;
+}
+
+void Reply_PTestManyChildAllocsSubConstructor::InternalSwap(Reply_PTestManyChildAllocsSubConstructor* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Reply_PTestManyChildAllocsSubConstructor::GetTypeName() const {
+  return "protobuf.mozilla._ipdltest.PTestManyChildAllocs.Reply_PTestManyChildAllocsSubConstructor";
+}
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace PTestManyChildAllocs

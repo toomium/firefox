@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -68,82 +65,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto[3];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestResponse, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestResponse, _impl_.a_database_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestResponse, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestResponse, _impl_.a_previousversion_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::indexedDB::FactoryRequestResponse, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::indexedDB::FactoryRequestResponse, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::indexedDB::FactoryRequestResponse, _impl_.content_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::dom::indexedDB::OpenDatabaseRequestResponse)},
-  { 7, -1, -1, sizeof(::protobuf::mozilla::dom::indexedDB::DeleteDatabaseRequestResponse)},
-  { 14, -1, -1, sizeof(::protobuf::mozilla::dom::indexedDB::FactoryRequestResponse)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::dom::indexedDB::_OpenDatabaseRequestResponse_default_instance_._instance,
-  &::protobuf::mozilla::dom::indexedDB::_DeleteDatabaseRequestResponse_default_instance_._instance,
-  &::protobuf::mozilla::dom::indexedDB::_FactoryRequestResponse_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\nCPBackgroundIDBFactoryRequest_protobuf."
-  "mozilla.dom.indexedDB.h.proto\022\036protobuf."
-  "mozilla.dom.indexedDB\032\034PBackgroundShared"
-  "Types.proto\"1\n\033OpenDatabaseRequestRespon"
-  "se\022\022\n\na_database\030\001 \001(\014\":\n\035DeleteDatabase"
-  "RequestResponse\022\031\n\021a_previousVersion\030\001 \001"
-  "(\004\"\217\002\n\026FactoryRequestResponse\022\026\n\014a_mVnsr"
-  "esult\030\001 \001(\014H\000\022f\n\037a_mVOpenDatabaseRequest"
-  "Response\030\002 \001(\0132;.protobuf.mozilla.dom.in"
-  "dexedDB.OpenDatabaseRequestResponseH\000\022j\n"
-  "!a_mVDeleteDatabaseRequestResponse\030\003 \001(\013"
-  "2=.protobuf.mozilla.dom.indexedDB.Delete"
-  "DatabaseRequestResponseH\000B\t\n\007contentb\006pr"
-  "oto3"
-  ;
-static const ::_pbi::DescriptorTable* const descriptor_table_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto_deps[1] = {
-  &::descriptor_table_PBackgroundSharedTypes_2eproto,
-};
-static ::_pbi::once_flag descriptor_table_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto = {
-    false, false, 524, descriptor_table_protodef_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto,
-    "PBackgroundIDBFactoryRequest_protobuf.mozilla.dom.indexedDB.h.proto",
-    &descriptor_table_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto_once, descriptor_table_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto_deps, 1, 3,
-    schemas, file_default_instances, TableStruct_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto::offsets,
-    file_level_metadata_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto, file_level_enum_descriptors_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto,
-    file_level_service_descriptors_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto_getter() {
-  return &descriptor_table_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto(&descriptor_table_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -157,18 +78,18 @@ class OpenDatabaseRequestResponse::_Internal {
 
 OpenDatabaseRequestResponse::OpenDatabaseRequestResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestResponse)
 }
 OpenDatabaseRequestResponse::OpenDatabaseRequestResponse(const OpenDatabaseRequestResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   OpenDatabaseRequestResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_database_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_database_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_database_.Set("", GetArenaForAllocation());
@@ -196,7 +117,7 @@ inline void OpenDatabaseRequestResponse::SharedCtor(
 
 OpenDatabaseRequestResponse::~OpenDatabaseRequestResponse() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -219,7 +140,7 @@ void OpenDatabaseRequestResponse::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_database_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* OpenDatabaseRequestResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -248,7 +169,7 @@ const char* OpenDatabaseRequestResponse::_InternalParse(const char* ptr, ::_pbi:
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -273,8 +194,8 @@ uint8_t* OpenDatabaseRequestResponse::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestResponse)
   return target;
@@ -295,19 +216,22 @@ size_t OpenDatabaseRequestResponse::ByteSizeLong() const {
         this->_internal_a_database());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData OpenDatabaseRequestResponse::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    OpenDatabaseRequestResponse::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*OpenDatabaseRequestResponse::GetClassData() const { return &_class_data_; }
+void OpenDatabaseRequestResponse::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const OpenDatabaseRequestResponse*>(
+      &from));
+}
 
-
-void OpenDatabaseRequestResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<OpenDatabaseRequestResponse*>(&to_msg);
-  auto& from = static_cast<const OpenDatabaseRequestResponse&>(from_msg);
+void OpenDatabaseRequestResponse::MergeFrom(const OpenDatabaseRequestResponse& from) {
+  OpenDatabaseRequestResponse* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -316,7 +240,7 @@ void OpenDatabaseRequestResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to
   if (!from._internal_a_database().empty()) {
     _this->_internal_set_a_database(from._internal_a_database());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void OpenDatabaseRequestResponse::CopyFrom(const OpenDatabaseRequestResponse& from) {
@@ -341,11 +265,10 @@ void OpenDatabaseRequestResponse::InternalSwap(OpenDatabaseRequestResponse* othe
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata OpenDatabaseRequestResponse::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto_getter, &descriptor_table_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto_once,
-      file_level_metadata_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto[0]);
+std::string OpenDatabaseRequestResponse::GetTypeName() const {
+  return "protobuf.mozilla.dom.indexedDB.OpenDatabaseRequestResponse";
 }
+
 
 // ===================================================================
 
@@ -355,18 +278,18 @@ class DeleteDatabaseRequestResponse::_Internal {
 
 DeleteDatabaseRequestResponse::DeleteDatabaseRequestResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestResponse)
 }
 DeleteDatabaseRequestResponse::DeleteDatabaseRequestResponse(const DeleteDatabaseRequestResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   DeleteDatabaseRequestResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_previousversion_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _this->_impl_.a_previousversion_ = from._impl_.a_previousversion_;
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestResponse)
 }
@@ -383,7 +306,7 @@ inline void DeleteDatabaseRequestResponse::SharedCtor(
 
 DeleteDatabaseRequestResponse::~DeleteDatabaseRequestResponse() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -405,7 +328,7 @@ void DeleteDatabaseRequestResponse::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_previousversion_ = uint64_t{0u};
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* DeleteDatabaseRequestResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -433,7 +356,7 @@ const char* DeleteDatabaseRequestResponse::_InternalParse(const char* ptr, ::_pb
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -458,8 +381,8 @@ uint8_t* DeleteDatabaseRequestResponse::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestResponse)
   return target;
@@ -478,19 +401,22 @@ size_t DeleteDatabaseRequestResponse::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_previousversion());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData DeleteDatabaseRequestResponse::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    DeleteDatabaseRequestResponse::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*DeleteDatabaseRequestResponse::GetClassData() const { return &_class_data_; }
+void DeleteDatabaseRequestResponse::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const DeleteDatabaseRequestResponse*>(
+      &from));
+}
 
-
-void DeleteDatabaseRequestResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<DeleteDatabaseRequestResponse*>(&to_msg);
-  auto& from = static_cast<const DeleteDatabaseRequestResponse&>(from_msg);
+void DeleteDatabaseRequestResponse::MergeFrom(const DeleteDatabaseRequestResponse& from) {
+  DeleteDatabaseRequestResponse* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -499,7 +425,7 @@ void DeleteDatabaseRequestResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& 
   if (from._internal_a_previousversion() != 0) {
     _this->_internal_set_a_previousversion(from._internal_a_previousversion());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void DeleteDatabaseRequestResponse::CopyFrom(const DeleteDatabaseRequestResponse& from) {
@@ -519,11 +445,10 @@ void DeleteDatabaseRequestResponse::InternalSwap(DeleteDatabaseRequestResponse* 
   swap(_impl_.a_previousversion_, other->_impl_.a_previousversion_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata DeleteDatabaseRequestResponse::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto_getter, &descriptor_table_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto_once,
-      file_level_metadata_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto[1]);
+std::string DeleteDatabaseRequestResponse::GetTypeName() const {
+  return "protobuf.mozilla.dom.indexedDB.DeleteDatabaseRequestResponse";
 }
+
 
 // ===================================================================
 
@@ -573,19 +498,19 @@ void FactoryRequestResponse::set_allocated_a_mvdeletedatabaserequestresponse(::p
 }
 FactoryRequestResponse::FactoryRequestResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.indexedDB.FactoryRequestResponse)
 }
 FactoryRequestResponse::FactoryRequestResponse(const FactoryRequestResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   FactoryRequestResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVnsresult: {
@@ -623,7 +548,7 @@ inline void FactoryRequestResponse::SharedCtor(
 
 FactoryRequestResponse::~FactoryRequestResponse() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.indexedDB.FactoryRequestResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -675,7 +600,7 @@ void FactoryRequestResponse::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* FactoryRequestResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -720,7 +645,7 @@ const char* FactoryRequestResponse::_InternalParse(const char* ptr, ::_pbi::Pars
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -759,8 +684,8 @@ uint8_t* FactoryRequestResponse::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.indexedDB.FactoryRequestResponse)
   return target;
@@ -800,19 +725,22 @@ size_t FactoryRequestResponse::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FactoryRequestResponse::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    FactoryRequestResponse::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FactoryRequestResponse::GetClassData() const { return &_class_data_; }
+void FactoryRequestResponse::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const FactoryRequestResponse*>(
+      &from));
+}
 
-
-void FactoryRequestResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<FactoryRequestResponse*>(&to_msg);
-  auto& from = static_cast<const FactoryRequestResponse&>(from_msg);
+void FactoryRequestResponse::MergeFrom(const FactoryRequestResponse& from) {
+  FactoryRequestResponse* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.indexedDB.FactoryRequestResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -837,7 +765,7 @@ void FactoryRequestResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg,
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void FactoryRequestResponse::CopyFrom(const FactoryRequestResponse& from) {
@@ -858,11 +786,10 @@ void FactoryRequestResponse::InternalSwap(FactoryRequestResponse* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FactoryRequestResponse::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto_getter, &descriptor_table_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto_once,
-      file_level_metadata_PBackgroundIDBFactoryRequest_5fprotobuf_2emozilla_2edom_2eindexedDB_2eh_2eproto[2]);
+std::string FactoryRequestResponse::GetTypeName() const {
+  return "protobuf.mozilla.dom.indexedDB.FactoryRequestResponse";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace indexedDB

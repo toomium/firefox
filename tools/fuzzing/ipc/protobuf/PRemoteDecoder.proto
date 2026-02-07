@@ -3,9 +3,10 @@
 // Edit at your own risk
 //
 
-// Generated from /home/tmittendorf/firefox/dom/media/ipc/PRemoteDecoder.ipdl
+// Generated from /mnt/fastStorage/tmittendorf/proto_firefox_fuzzing/firefox/dom/media/ipc/PRemoteDecoder.ipdl
 
 syntax = "proto3";
+option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.PRemoteDecoder;
 

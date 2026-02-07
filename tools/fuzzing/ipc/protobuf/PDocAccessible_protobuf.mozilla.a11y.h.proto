@@ -6,6 +6,7 @@
 // Generated from PDocAccessible.ipdl
 
 syntax = "proto3";
+option optimize_for = LITE_RUNTIME;
 
 package protobuf.mozilla.a11y;
 

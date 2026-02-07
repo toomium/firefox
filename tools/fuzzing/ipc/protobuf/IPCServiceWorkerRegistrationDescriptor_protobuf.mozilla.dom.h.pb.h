@@ -25,11 +25,9 @@
 #include <google/protobuf/arenastring.h>
 #include <google/protobuf/generated_message_util.h>
 #include <google/protobuf/metadata_lite.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/message.h>
+#include <google/protobuf/message_lite.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
-#include <google/protobuf/unknown_field_set.h>
 #include "PBackgroundSharedTypes.pb.h"
 #include "IPCServiceWorkerDescriptor.pb.h"
 // @@protoc_insertion_point(includes)
@@ -45,7 +43,6 @@ PROTOBUF_NAMESPACE_CLOSE
 struct TableStruct_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto {
   static const uint32_t offsets[];
 };
-extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_IPCServiceWorkerRegistrationDescriptor_5fprotobuf_2emozilla_2edom_2eh_2eproto;
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -77,7 +74,7 @@ namespace dom {
 // ===================================================================
 
 class IPCServiceWorkerRegistrationDescriptor final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptor) */ {
  public:
   inline IPCServiceWorkerRegistrationDescriptor() : IPCServiceWorkerRegistrationDescriptor(nullptr) {}
   ~IPCServiceWorkerRegistrationDescriptor() override;
@@ -107,15 +104,6 @@ class IPCServiceWorkerRegistrationDescriptor final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const IPCServiceWorkerRegistrationDescriptor& default_instance() {
     return *internal_default_instance();
   }
@@ -153,15 +141,9 @@ class IPCServiceWorkerRegistrationDescriptor final :
   IPCServiceWorkerRegistrationDescriptor* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<IPCServiceWorkerRegistrationDescriptor>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const IPCServiceWorkerRegistrationDescriptor& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const IPCServiceWorkerRegistrationDescriptor& from) {
-    IPCServiceWorkerRegistrationDescriptor::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const IPCServiceWorkerRegistrationDescriptor& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -174,7 +156,7 @@ class IPCServiceWorkerRegistrationDescriptor final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(IPCServiceWorkerRegistrationDescriptor* other);
 
   private:
@@ -187,10 +169,7 @@ class IPCServiceWorkerRegistrationDescriptor final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -349,7 +328,7 @@ class IPCServiceWorkerRegistrationDescriptor final :
 // -------------------------------------------------------------------
 
 class IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult) */ {
  public:
   inline IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult() : IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult(nullptr) {}
   ~IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult() override;
@@ -379,15 +358,6 @@ class IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult& default_instance() {
     return *internal_default_instance();
   }
@@ -431,15 +401,9 @@ class IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult final :
   IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult& from) {
-    IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -452,7 +416,7 @@ class IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult* other);
 
   private:
@@ -465,10 +429,7 @@ class IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -545,7 +506,7 @@ class IPCServiceWorkerRegistrationDescriptorOrCopyableErrorResult final :
 // -------------------------------------------------------------------
 
 class IPCServiceWorkerRegistrationDescriptorList final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorList) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorList) */ {
  public:
   inline IPCServiceWorkerRegistrationDescriptorList() : IPCServiceWorkerRegistrationDescriptorList(nullptr) {}
   ~IPCServiceWorkerRegistrationDescriptorList() override;
@@ -575,15 +536,6 @@ class IPCServiceWorkerRegistrationDescriptorList final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const IPCServiceWorkerRegistrationDescriptorList& default_instance() {
     return *internal_default_instance();
   }
@@ -621,15 +573,9 @@ class IPCServiceWorkerRegistrationDescriptorList final :
   IPCServiceWorkerRegistrationDescriptorList* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<IPCServiceWorkerRegistrationDescriptorList>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const IPCServiceWorkerRegistrationDescriptorList& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const IPCServiceWorkerRegistrationDescriptorList& from) {
-    IPCServiceWorkerRegistrationDescriptorList::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const IPCServiceWorkerRegistrationDescriptorList& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -642,7 +588,7 @@ class IPCServiceWorkerRegistrationDescriptorList final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(IPCServiceWorkerRegistrationDescriptorList* other);
 
   private:
@@ -655,10 +601,7 @@ class IPCServiceWorkerRegistrationDescriptorList final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 
@@ -702,7 +645,7 @@ class IPCServiceWorkerRegistrationDescriptorList final :
 // -------------------------------------------------------------------
 
 class IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult) */ {
+    public ::PROTOBUF_NAMESPACE_ID::MessageLite /* @@protoc_insertion_point(class_definition:protobuf.mozilla.dom.IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult) */ {
  public:
   inline IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult() : IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult(nullptr) {}
   ~IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult() override;
@@ -732,15 +675,6 @@ class IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult final :
     return *this;
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
   static const IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult& default_instance() {
     return *internal_default_instance();
   }
@@ -784,15 +718,9 @@ class IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult final :
   IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult>(arena);
   }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CheckTypeAndMergeFrom(const ::PROTOBUF_NAMESPACE_ID::MessageLite& from)  final;
   void CopyFrom(const IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult& from) {
-    IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
+  void MergeFrom(const IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -805,7 +733,7 @@ class IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult final :
   private:
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
-  void SetCachedSize(int size) const final;
+  void SetCachedSize(int size) const;
   void InternalSwap(IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult* other);
 
   private:
@@ -818,10 +746,7 @@ class IPCServiceWorkerRegistrationDescriptorListOrCopyableErrorResult final :
                        bool is_message_owned = false);
   public:
 
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  std::string GetTypeName() const final;
 
   // nested types ----------------------------------------------------
 

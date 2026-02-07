@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -125,137 +122,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto[7];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::UnidirectionalStream, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::UnidirectionalStream, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::UnidirectionalStream, _impl_.a_streamid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::UnidirectionalStream, _impl_.a_outstream_),
-  ~0u,
-  0,
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::UnidirectionalStreamResponse, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::UnidirectionalStreamResponse, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::UnidirectionalStreamResponse, _impl_.content_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::BidirectionalStream, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::BidirectionalStream, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::BidirectionalStream, _impl_.a_streamid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::BidirectionalStream, _impl_.a_instream_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::BidirectionalStream, _impl_.a_outstream_),
-  ~0u,
-  0,
-  1,
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::BidirectionalStreamResponse, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::BidirectionalStreamResponse, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::BidirectionalStreamResponse, _impl_.content_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ResetError, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::ResetError, _impl_.a_error_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::StopSendingError, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::StopSendingError, _impl_.a_error_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::StreamResetOrStopSendingError, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::StreamResetOrStopSendingError, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::StreamResetOrStopSendingError, _impl_.content_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 8, -1, sizeof(::protobuf::mozilla::dom::UnidirectionalStream)},
-  { 10, -1, -1, sizeof(::protobuf::mozilla::dom::UnidirectionalStreamResponse)},
-  { 19, 28, -1, sizeof(::protobuf::mozilla::dom::BidirectionalStream)},
-  { 31, -1, -1, sizeof(::protobuf::mozilla::dom::BidirectionalStreamResponse)},
-  { 40, -1, -1, sizeof(::protobuf::mozilla::dom::ResetError)},
-  { 47, -1, -1, sizeof(::protobuf::mozilla::dom::StopSendingError)},
-  { 54, -1, -1, sizeof(::protobuf::mozilla::dom::StreamResetOrStopSendingError)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::dom::_UnidirectionalStream_default_instance_._instance,
-  &::protobuf::mozilla::dom::_UnidirectionalStreamResponse_default_instance_._instance,
-  &::protobuf::mozilla::dom::_BidirectionalStream_default_instance_._instance,
-  &::protobuf::mozilla::dom::_BidirectionalStreamResponse_default_instance_._instance,
-  &::protobuf::mozilla::dom::_ResetError_default_instance_._instance,
-  &::protobuf::mozilla::dom::_StopSendingError_default_instance_._instance,
-  &::protobuf::mozilla::dom::_StreamResetOrStopSendingError_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n*PWebTransport_protobuf.mozilla.dom.h.p"
-  "roto\022\024protobuf.mozilla.dom\032\034PBackgroundS"
-  "haredTypes.proto\"T\n\024UnidirectionalStream"
-  "\022\022\n\na_streamId\030\001 \001(\004\022\030\n\013a_outStream\030\002 \001("
-  "\014H\000\210\001\001B\016\n\014_a_outStream\"\221\001\n\034Unidirectiona"
-  "lStreamResponse\022\026\n\014a_mVnsresult\030\001 \001(\014H\000\022"
-  "N\n\030a_mVUnidirectionalStream\030\002 \001(\0132*.prot"
-  "obuf.mozilla.dom.UnidirectionalStreamH\000B"
-  "\t\n\007content\"{\n\023BidirectionalStream\022\022\n\na_s"
-  "treamId\030\001 \001(\004\022\027\n\na_inStream\030\002 \001(\014H\000\210\001\001\022\030"
-  "\n\013a_outStream\030\003 \001(\014H\001\210\001\001B\r\n\013_a_inStreamB"
-  "\016\n\014_a_outStream\"\216\001\n\033BidirectionalStreamR"
-  "esponse\022\026\n\014a_mVnsresult\030\001 \001(\014H\000\022L\n\027a_mVB"
-  "idirectionalStream\030\002 \001(\0132).protobuf.mozi"
-  "lla.dom.BidirectionalStreamH\000B\t\n\007content"
-  "\"\035\n\nResetError\022\017\n\007a_error\030\001 \001(\014\"#\n\020StopS"
-  "endingError\022\017\n\007a_error\030\001 \001(\014\"\256\001\n\035StreamR"
-  "esetOrStopSendingError\022:\n\016a_mVResetError"
-  "\030\001 \001(\0132 .protobuf.mozilla.dom.ResetError"
-  "H\000\022F\n\024a_mVStopSendingError\030\002 \001(\0132&.proto"
-  "buf.mozilla.dom.StopSendingErrorH\000B\t\n\007co"
-  "ntentb\006proto3"
-  ;
-static const ::_pbi::DescriptorTable* const descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto_deps[1] = {
-  &::descriptor_table_PBackgroundSharedTypes_2eproto,
-};
-static ::_pbi::once_flag descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto = {
-    false, false, 853, descriptor_table_protodef_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    "PWebTransport_protobuf.mozilla.dom.h.proto",
-    &descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto_once, descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto_deps, 1, 7,
-    schemas, file_default_instances, TableStruct_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets,
-    file_level_metadata_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto, file_level_enum_descriptors_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    file_level_service_descriptors_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter() {
-  return &descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto(&descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -272,12 +138,12 @@ class UnidirectionalStream::_Internal {
 
 UnidirectionalStream::UnidirectionalStream(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.UnidirectionalStream)
 }
 UnidirectionalStream::UnidirectionalStream(const UnidirectionalStream& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   UnidirectionalStream* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -285,7 +151,7 @@ UnidirectionalStream::UnidirectionalStream(const UnidirectionalStream& from)
     , decltype(_impl_.a_outstream_){}
     , decltype(_impl_.a_streamid_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_outstream_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_outstream_.Set("", GetArenaForAllocation());
@@ -316,7 +182,7 @@ inline void UnidirectionalStream::SharedCtor(
 
 UnidirectionalStream::~UnidirectionalStream() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.UnidirectionalStream)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -344,7 +210,7 @@ void UnidirectionalStream::Clear() {
   }
   _impl_.a_streamid_ = uint64_t{0u};
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* UnidirectionalStream::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -382,7 +248,7 @@ const char* UnidirectionalStream::_InternalParse(const char* ptr, ::_pbi::ParseC
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -414,8 +280,8 @@ uint8_t* UnidirectionalStream::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.UnidirectionalStream)
   return target;
@@ -442,19 +308,22 @@ size_t UnidirectionalStream::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_streamid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData UnidirectionalStream::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    UnidirectionalStream::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*UnidirectionalStream::GetClassData() const { return &_class_data_; }
+void UnidirectionalStream::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const UnidirectionalStream*>(
+      &from));
+}
 
-
-void UnidirectionalStream::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<UnidirectionalStream*>(&to_msg);
-  auto& from = static_cast<const UnidirectionalStream&>(from_msg);
+void UnidirectionalStream::MergeFrom(const UnidirectionalStream& from) {
+  UnidirectionalStream* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.UnidirectionalStream)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -466,7 +335,7 @@ void UnidirectionalStream::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
   if (from._internal_a_streamid() != 0) {
     _this->_internal_set_a_streamid(from._internal_a_streamid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void UnidirectionalStream::CopyFrom(const UnidirectionalStream& from) {
@@ -493,11 +362,10 @@ void UnidirectionalStream::InternalSwap(UnidirectionalStream* other) {
   swap(_impl_.a_streamid_, other->_impl_.a_streamid_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata UnidirectionalStream::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto[0]);
+std::string UnidirectionalStream::GetTypeName() const {
+  return "protobuf.mozilla.dom.UnidirectionalStream";
 }
+
 
 // ===================================================================
 
@@ -527,19 +395,19 @@ void UnidirectionalStreamResponse::set_allocated_a_mvunidirectionalstream(::prot
 }
 UnidirectionalStreamResponse::UnidirectionalStreamResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.UnidirectionalStreamResponse)
 }
 UnidirectionalStreamResponse::UnidirectionalStreamResponse(const UnidirectionalStreamResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   UnidirectionalStreamResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVnsresult: {
@@ -572,7 +440,7 @@ inline void UnidirectionalStreamResponse::SharedCtor(
 
 UnidirectionalStreamResponse::~UnidirectionalStreamResponse() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.UnidirectionalStreamResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -618,7 +486,7 @@ void UnidirectionalStreamResponse::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* UnidirectionalStreamResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -655,7 +523,7 @@ const char* UnidirectionalStreamResponse::_InternalParse(const char* ptr, ::_pbi
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -687,8 +555,8 @@ uint8_t* UnidirectionalStreamResponse::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.UnidirectionalStreamResponse)
   return target;
@@ -721,19 +589,22 @@ size_t UnidirectionalStreamResponse::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData UnidirectionalStreamResponse::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    UnidirectionalStreamResponse::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*UnidirectionalStreamResponse::GetClassData() const { return &_class_data_; }
+void UnidirectionalStreamResponse::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const UnidirectionalStreamResponse*>(
+      &from));
+}
 
-
-void UnidirectionalStreamResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<UnidirectionalStreamResponse*>(&to_msg);
-  auto& from = static_cast<const UnidirectionalStreamResponse&>(from_msg);
+void UnidirectionalStreamResponse::MergeFrom(const UnidirectionalStreamResponse& from) {
+  UnidirectionalStreamResponse* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.UnidirectionalStreamResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -753,7 +624,7 @@ void UnidirectionalStreamResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& t
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void UnidirectionalStreamResponse::CopyFrom(const UnidirectionalStreamResponse& from) {
@@ -774,11 +645,10 @@ void UnidirectionalStreamResponse::InternalSwap(UnidirectionalStreamResponse* ot
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata UnidirectionalStreamResponse::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto[1]);
+std::string UnidirectionalStreamResponse::GetTypeName() const {
+  return "protobuf.mozilla.dom.UnidirectionalStreamResponse";
 }
+
 
 // ===================================================================
 
@@ -795,12 +665,12 @@ class BidirectionalStream::_Internal {
 
 BidirectionalStream::BidirectionalStream(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.BidirectionalStream)
 }
 BidirectionalStream::BidirectionalStream(const BidirectionalStream& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   BidirectionalStream* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -809,7 +679,7 @@ BidirectionalStream::BidirectionalStream(const BidirectionalStream& from)
     , decltype(_impl_.a_outstream_){}
     , decltype(_impl_.a_streamid_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_instream_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_instream_.Set("", GetArenaForAllocation());
@@ -853,7 +723,7 @@ inline void BidirectionalStream::SharedCtor(
 
 BidirectionalStream::~BidirectionalStream() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.BidirectionalStream)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -887,7 +757,7 @@ void BidirectionalStream::Clear() {
   }
   _impl_.a_streamid_ = uint64_t{0u};
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* BidirectionalStream::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -934,7 +804,7 @@ const char* BidirectionalStream::_InternalParse(const char* ptr, ::_pbi::ParseCo
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -972,8 +842,8 @@ uint8_t* BidirectionalStream::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.BidirectionalStream)
   return target;
@@ -1009,19 +879,22 @@ size_t BidirectionalStream::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_a_streamid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BidirectionalStream::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    BidirectionalStream::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BidirectionalStream::GetClassData() const { return &_class_data_; }
+void BidirectionalStream::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const BidirectionalStream*>(
+      &from));
+}
 
-
-void BidirectionalStream::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<BidirectionalStream*>(&to_msg);
-  auto& from = static_cast<const BidirectionalStream&>(from_msg);
+void BidirectionalStream::MergeFrom(const BidirectionalStream& from) {
+  BidirectionalStream* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.BidirectionalStream)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1039,7 +912,7 @@ void BidirectionalStream::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, co
   if (from._internal_a_streamid() != 0) {
     _this->_internal_set_a_streamid(from._internal_a_streamid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void BidirectionalStream::CopyFrom(const BidirectionalStream& from) {
@@ -1070,11 +943,10 @@ void BidirectionalStream::InternalSwap(BidirectionalStream* other) {
   swap(_impl_.a_streamid_, other->_impl_.a_streamid_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata BidirectionalStream::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto[2]);
+std::string BidirectionalStream::GetTypeName() const {
+  return "protobuf.mozilla.dom.BidirectionalStream";
 }
+
 
 // ===================================================================
 
@@ -1104,19 +976,19 @@ void BidirectionalStreamResponse::set_allocated_a_mvbidirectionalstream(::protob
 }
 BidirectionalStreamResponse::BidirectionalStreamResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.BidirectionalStreamResponse)
 }
 BidirectionalStreamResponse::BidirectionalStreamResponse(const BidirectionalStreamResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   BidirectionalStreamResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVnsresult: {
@@ -1149,7 +1021,7 @@ inline void BidirectionalStreamResponse::SharedCtor(
 
 BidirectionalStreamResponse::~BidirectionalStreamResponse() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.BidirectionalStreamResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1195,7 +1067,7 @@ void BidirectionalStreamResponse::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* BidirectionalStreamResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1232,7 +1104,7 @@ const char* BidirectionalStreamResponse::_InternalParse(const char* ptr, ::_pbi:
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1264,8 +1136,8 @@ uint8_t* BidirectionalStreamResponse::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.BidirectionalStreamResponse)
   return target;
@@ -1298,19 +1170,22 @@ size_t BidirectionalStreamResponse::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BidirectionalStreamResponse::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    BidirectionalStreamResponse::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BidirectionalStreamResponse::GetClassData() const { return &_class_data_; }
+void BidirectionalStreamResponse::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const BidirectionalStreamResponse*>(
+      &from));
+}
 
-
-void BidirectionalStreamResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<BidirectionalStreamResponse*>(&to_msg);
-  auto& from = static_cast<const BidirectionalStreamResponse&>(from_msg);
+void BidirectionalStreamResponse::MergeFrom(const BidirectionalStreamResponse& from) {
+  BidirectionalStreamResponse* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.BidirectionalStreamResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1330,7 +1205,7 @@ void BidirectionalStreamResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void BidirectionalStreamResponse::CopyFrom(const BidirectionalStreamResponse& from) {
@@ -1351,11 +1226,10 @@ void BidirectionalStreamResponse::InternalSwap(BidirectionalStreamResponse* othe
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata BidirectionalStreamResponse::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto[3]);
+std::string BidirectionalStreamResponse::GetTypeName() const {
+  return "protobuf.mozilla.dom.BidirectionalStreamResponse";
 }
+
 
 // ===================================================================
 
@@ -1365,18 +1239,18 @@ class ResetError::_Internal {
 
 ResetError::ResetError(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.ResetError)
 }
 ResetError::ResetError(const ResetError& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   ResetError* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_error_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_error_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_error_.Set("", GetArenaForAllocation());
@@ -1404,7 +1278,7 @@ inline void ResetError::SharedCtor(
 
 ResetError::~ResetError() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.ResetError)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1427,7 +1301,7 @@ void ResetError::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_error_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* ResetError::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1456,7 +1330,7 @@ const char* ResetError::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1481,8 +1355,8 @@ uint8_t* ResetError::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.ResetError)
   return target;
@@ -1503,19 +1377,22 @@ size_t ResetError::ByteSizeLong() const {
         this->_internal_a_error());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ResetError::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    ResetError::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ResetError::GetClassData() const { return &_class_data_; }
+void ResetError::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const ResetError*>(
+      &from));
+}
 
-
-void ResetError::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<ResetError*>(&to_msg);
-  auto& from = static_cast<const ResetError&>(from_msg);
+void ResetError::MergeFrom(const ResetError& from) {
+  ResetError* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.ResetError)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1524,7 +1401,7 @@ void ResetError::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PRO
   if (!from._internal_a_error().empty()) {
     _this->_internal_set_a_error(from._internal_a_error());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void ResetError::CopyFrom(const ResetError& from) {
@@ -1549,11 +1426,10 @@ void ResetError::InternalSwap(ResetError* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ResetError::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto[4]);
+std::string ResetError::GetTypeName() const {
+  return "protobuf.mozilla.dom.ResetError";
 }
+
 
 // ===================================================================
 
@@ -1563,18 +1439,18 @@ class StopSendingError::_Internal {
 
 StopSendingError::StopSendingError(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.StopSendingError)
 }
 StopSendingError::StopSendingError(const StopSendingError& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   StopSendingError* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_error_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_error_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_error_.Set("", GetArenaForAllocation());
@@ -1602,7 +1478,7 @@ inline void StopSendingError::SharedCtor(
 
 StopSendingError::~StopSendingError() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.StopSendingError)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1625,7 +1501,7 @@ void StopSendingError::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_error_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* StopSendingError::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1654,7 +1530,7 @@ const char* StopSendingError::_InternalParse(const char* ptr, ::_pbi::ParseConte
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1679,8 +1555,8 @@ uint8_t* StopSendingError::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.StopSendingError)
   return target;
@@ -1701,19 +1577,22 @@ size_t StopSendingError::ByteSizeLong() const {
         this->_internal_a_error());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StopSendingError::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    StopSendingError::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StopSendingError::GetClassData() const { return &_class_data_; }
+void StopSendingError::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const StopSendingError*>(
+      &from));
+}
 
-
-void StopSendingError::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<StopSendingError*>(&to_msg);
-  auto& from = static_cast<const StopSendingError&>(from_msg);
+void StopSendingError::MergeFrom(const StopSendingError& from) {
+  StopSendingError* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.StopSendingError)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1722,7 +1601,7 @@ void StopSendingError::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const
   if (!from._internal_a_error().empty()) {
     _this->_internal_set_a_error(from._internal_a_error());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void StopSendingError::CopyFrom(const StopSendingError& from) {
@@ -1747,11 +1626,10 @@ void StopSendingError::InternalSwap(StopSendingError* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata StopSendingError::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto[5]);
+std::string StopSendingError::GetTypeName() const {
+  return "protobuf.mozilla.dom.StopSendingError";
 }
+
 
 // ===================================================================
 
@@ -1801,19 +1679,19 @@ void StreamResetOrStopSendingError::set_allocated_a_mvstopsendingerror(::protobu
 }
 StreamResetOrStopSendingError::StreamResetOrStopSendingError(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.StreamResetOrStopSendingError)
 }
 StreamResetOrStopSendingError::StreamResetOrStopSendingError(const StreamResetOrStopSendingError& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   StreamResetOrStopSendingError* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVResetError: {
@@ -1847,7 +1725,7 @@ inline void StreamResetOrStopSendingError::SharedCtor(
 
 StreamResetOrStopSendingError::~StreamResetOrStopSendingError() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.StreamResetOrStopSendingError)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1895,7 +1773,7 @@ void StreamResetOrStopSendingError::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* StreamResetOrStopSendingError::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1931,7 +1809,7 @@ const char* StreamResetOrStopSendingError::_InternalParse(const char* ptr, ::_pb
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1964,8 +1842,8 @@ uint8_t* StreamResetOrStopSendingError::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.StreamResetOrStopSendingError)
   return target;
@@ -1998,19 +1876,22 @@ size_t StreamResetOrStopSendingError::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StreamResetOrStopSendingError::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    StreamResetOrStopSendingError::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StreamResetOrStopSendingError::GetClassData() const { return &_class_data_; }
+void StreamResetOrStopSendingError::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const StreamResetOrStopSendingError*>(
+      &from));
+}
 
-
-void StreamResetOrStopSendingError::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<StreamResetOrStopSendingError*>(&to_msg);
-  auto& from = static_cast<const StreamResetOrStopSendingError&>(from_msg);
+void StreamResetOrStopSendingError::MergeFrom(const StreamResetOrStopSendingError& from) {
+  StreamResetOrStopSendingError* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.StreamResetOrStopSendingError)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2031,7 +1912,7 @@ void StreamResetOrStopSendingError::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& 
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void StreamResetOrStopSendingError::CopyFrom(const StreamResetOrStopSendingError& from) {
@@ -2052,11 +1933,10 @@ void StreamResetOrStopSendingError::InternalSwap(StreamResetOrStopSendingError* 
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata StreamResetOrStopSendingError::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebTransport_5fprotobuf_2emozilla_2edom_2eh_2eproto[6]);
+std::string StreamResetOrStopSendingError::GetTypeName() const {
+  return "protobuf.mozilla.dom.StreamResetOrStopSendingError";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace dom

@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -55,66 +52,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto[2];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCIdentityCredential, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCIdentityCredential, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCIdentityCredential, _impl_.a_id_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::IPCIdentityCredential, _impl_.a_token_),
-  ~0u,
-  0,
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebIdentityGetCredentialResponse, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebIdentityGetCredentialResponse, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebIdentityGetCredentialResponse, _impl_.content_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 8, -1, sizeof(::protobuf::mozilla::dom::IPCIdentityCredential)},
-  { 10, -1, -1, sizeof(::protobuf::mozilla::dom::WebIdentityGetCredentialResponse)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::dom::_IPCIdentityCredential_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebIdentityGetCredentialResponse_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n)PWebIdentity_protobuf.mozilla.dom.h.pr"
-  "oto\022\024protobuf.mozilla.dom\"G\n\025IPCIdentity"
-  "Credential\022\014\n\004a_id\030\001 \001(\t\022\024\n\007a_token\030\002 \001("
-  "\tH\000\210\001\001B\n\n\010_a_token\"\227\001\n WebIdentityGetCre"
-  "dentialResponse\022\026\n\014a_mVnsresult\030\001 \001(\014H\000\022"
-  "P\n\031a_mVIPCIdentityCredential\030\002 \001(\0132+.pro"
-  "tobuf.mozilla.dom.IPCIdentityCredentialH"
-  "\000B\t\n\007contentb\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto = {
-    false, false, 300, descriptor_table_protodef_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    "PWebIdentity_protobuf.mozilla.dom.h.proto",
-    &descriptor_table_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto_once, nullptr, 0, 2,
-    schemas, file_default_instances, TableStruct_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets,
-    file_level_metadata_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto, file_level_enum_descriptors_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    file_level_service_descriptors_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter() {
-  return &descriptor_table_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto(&descriptor_table_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -131,12 +68,12 @@ class IPCIdentityCredential::_Internal {
 
 IPCIdentityCredential::IPCIdentityCredential(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.IPCIdentityCredential)
 }
 IPCIdentityCredential::IPCIdentityCredential(const IPCIdentityCredential& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   IPCIdentityCredential* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -144,7 +81,7 @@ IPCIdentityCredential::IPCIdentityCredential(const IPCIdentityCredential& from)
     , decltype(_impl_.a_id_){}
     , decltype(_impl_.a_token_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_id_.Set("", GetArenaForAllocation());
@@ -186,7 +123,7 @@ inline void IPCIdentityCredential::SharedCtor(
 
 IPCIdentityCredential::~IPCIdentityCredential() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.IPCIdentityCredential)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -215,7 +152,7 @@ void IPCIdentityCredential::Clear() {
     _impl_.a_token_.ClearNonDefaultToEmpty();
   }
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* IPCIdentityCredential::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -231,7 +168,7 @@ const char* IPCIdentityCredential::_InternalParse(const char* ptr, ::_pbi::Parse
           auto str = _internal_mutable_a_id();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCIdentityCredential.a_id"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -241,7 +178,7 @@ const char* IPCIdentityCredential::_InternalParse(const char* ptr, ::_pbi::Parse
           auto str = _internal_mutable_a_token();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.IPCIdentityCredential.a_token"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -256,7 +193,7 @@ const char* IPCIdentityCredential::_InternalParse(const char* ptr, ::_pbi::Parse
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -296,8 +233,8 @@ uint8_t* IPCIdentityCredential::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.IPCIdentityCredential)
   return target;
@@ -326,19 +263,22 @@ size_t IPCIdentityCredential::ByteSizeLong() const {
         this->_internal_a_token());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IPCIdentityCredential::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    IPCIdentityCredential::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IPCIdentityCredential::GetClassData() const { return &_class_data_; }
+void IPCIdentityCredential::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const IPCIdentityCredential*>(
+      &from));
+}
 
-
-void IPCIdentityCredential::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<IPCIdentityCredential*>(&to_msg);
-  auto& from = static_cast<const IPCIdentityCredential&>(from_msg);
+void IPCIdentityCredential::MergeFrom(const IPCIdentityCredential& from) {
+  IPCIdentityCredential* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.IPCIdentityCredential)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -350,7 +290,7 @@ void IPCIdentityCredential::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
   if (from._internal_has_a_token()) {
     _this->_internal_set_a_token(from._internal_a_token());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void IPCIdentityCredential::CopyFrom(const IPCIdentityCredential& from) {
@@ -380,11 +320,10 @@ void IPCIdentityCredential::InternalSwap(IPCIdentityCredential* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata IPCIdentityCredential::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto[0]);
+std::string IPCIdentityCredential::GetTypeName() const {
+  return "protobuf.mozilla.dom.IPCIdentityCredential";
 }
+
 
 // ===================================================================
 
@@ -414,19 +353,19 @@ void WebIdentityGetCredentialResponse::set_allocated_a_mvipcidentitycredential(:
 }
 WebIdentityGetCredentialResponse::WebIdentityGetCredentialResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebIdentityGetCredentialResponse)
 }
 WebIdentityGetCredentialResponse::WebIdentityGetCredentialResponse(const WebIdentityGetCredentialResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebIdentityGetCredentialResponse* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVnsresult: {
@@ -459,7 +398,7 @@ inline void WebIdentityGetCredentialResponse::SharedCtor(
 
 WebIdentityGetCredentialResponse::~WebIdentityGetCredentialResponse() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebIdentityGetCredentialResponse)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -505,7 +444,7 @@ void WebIdentityGetCredentialResponse::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebIdentityGetCredentialResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -542,7 +481,7 @@ const char* WebIdentityGetCredentialResponse::_InternalParse(const char* ptr, ::
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -574,8 +513,8 @@ uint8_t* WebIdentityGetCredentialResponse::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebIdentityGetCredentialResponse)
   return target;
@@ -608,19 +547,22 @@ size_t WebIdentityGetCredentialResponse::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebIdentityGetCredentialResponse::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebIdentityGetCredentialResponse::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebIdentityGetCredentialResponse::GetClassData() const { return &_class_data_; }
+void WebIdentityGetCredentialResponse::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebIdentityGetCredentialResponse*>(
+      &from));
+}
 
-
-void WebIdentityGetCredentialResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebIdentityGetCredentialResponse*>(&to_msg);
-  auto& from = static_cast<const WebIdentityGetCredentialResponse&>(from_msg);
+void WebIdentityGetCredentialResponse::MergeFrom(const WebIdentityGetCredentialResponse& from) {
+  WebIdentityGetCredentialResponse* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebIdentityGetCredentialResponse)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -640,7 +582,7 @@ void WebIdentityGetCredentialResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Messag
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebIdentityGetCredentialResponse::CopyFrom(const WebIdentityGetCredentialResponse& from) {
@@ -661,11 +603,10 @@ void WebIdentityGetCredentialResponse::InternalSwap(WebIdentityGetCredentialResp
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebIdentityGetCredentialResponse::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PWebIdentity_5fprotobuf_2emozilla_2edom_2eh_2eproto[1]);
+std::string WebIdentityGetCredentialResponse::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebIdentityGetCredentialResponse";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace dom

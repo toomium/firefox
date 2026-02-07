@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -165,184 +162,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace gfx
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto[9];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::D3D11DeviceStatus, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::D3D11DeviceStatus, _impl_.a_iswarp_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::D3D11DeviceStatus, _impl_.a_texturesharingworks_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::D3D11DeviceStatus, _impl_.a_featurelevel_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::D3D11DeviceStatus, _impl_.a_adapter_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::D3D11DeviceStatus, _impl_.a_sequencenumber_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::D3D11DeviceStatus, _impl_.a_formatoptions_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::DevicePrefs, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::DevicePrefs, _impl_.a_hwcompositing_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::DevicePrefs, _impl_.a_d3d11compositing_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::DevicePrefs, _impl_.a_oglcompositing_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::DevicePrefs, _impl_.a_used2d1_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::DevicePrefs, _impl_.a_d3d11hwangle_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::ContentDeviceData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::ContentDeviceData, _impl_.a_prefs_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::ContentDeviceData, _impl_.a_d3d11_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::ContentDeviceData, _impl_.a_cmsoutputprofiledata_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::FeatureFailure, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::FeatureFailure, _impl_.a_status_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::FeatureFailure, _impl_.a_message_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::FeatureFailure, _impl_.a_failureid_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::GPUDeviceData, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::GPUDeviceData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::GPUDeviceData, _impl_.a_d3d11compositing_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::GPUDeviceData, _impl_.a_oglcompositing_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::GPUDeviceData, _impl_.a_gpudevice_),
-  0,
-  1,
-  2,
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t, _impl_.a_mvarrayofuint64_t_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::GfxVarValue, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::GfxVarValue, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::GfxVarValue, _impl_.content_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::GfxVarUpdate, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::GfxVarUpdate, _impl_.a_index_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::GfxVarUpdate, _impl_.a_value_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::GfxInfoFeatureStatus, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::GfxInfoFeatureStatus, _impl_.a_feature_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::GfxInfoFeatureStatus, _impl_.a_status_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::GfxInfoFeatureStatus, _impl_.a_failureid_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::gfx::D3D11DeviceStatus)},
-  { 12, -1, -1, sizeof(::protobuf::mozilla::gfx::DevicePrefs)},
-  { 23, -1, -1, sizeof(::protobuf::mozilla::gfx::ContentDeviceData)},
-  { 32, -1, -1, sizeof(::protobuf::mozilla::gfx::FeatureFailure)},
-  { 41, 50, -1, sizeof(::protobuf::mozilla::gfx::GPUDeviceData)},
-  { 53, -1, -1, sizeof(::protobuf::mozilla::gfx::GfxVarValue_a_type_mVArrayOfuint64_t)},
-  { 60, -1, -1, sizeof(::protobuf::mozilla::gfx::GfxVarValue)},
-  { 77, -1, -1, sizeof(::protobuf::mozilla::gfx::GfxVarUpdate)},
-  { 85, -1, -1, sizeof(::protobuf::mozilla::gfx::GfxInfoFeatureStatus)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::gfx::_D3D11DeviceStatus_default_instance_._instance,
-  &::protobuf::mozilla::gfx::_DevicePrefs_default_instance_._instance,
-  &::protobuf::mozilla::gfx::_ContentDeviceData_default_instance_._instance,
-  &::protobuf::mozilla::gfx::_FeatureFailure_default_instance_._instance,
-  &::protobuf::mozilla::gfx::_GPUDeviceData_default_instance_._instance,
-  &::protobuf::mozilla::gfx::_GfxVarValue_a_type_mVArrayOfuint64_t_default_instance_._instance,
-  &::protobuf::mozilla::gfx::_GfxVarValue_default_instance_._instance,
-  &::protobuf::mozilla::gfx::_GfxVarUpdate_default_instance_._instance,
-  &::protobuf::mozilla::gfx::_GfxInfoFeatureStatus_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n-GraphicsMessages_protobuf.mozilla.gfx."
-  "h.proto\022\024protobuf.mozilla.gfx\"\242\001\n\021D3D11D"
-  "eviceStatus\022\020\n\010a_isWARP\030\001 \001(\010\022\035\n\025a_textu"
-  "reSharingWorks\030\002 \001(\010\022\026\n\016a_featureLevel\030\003"
-  " \001(\r\022\021\n\ta_adapter\030\004 \001(\014\022\030\n\020a_sequenceNum"
-  "ber\030\005 \001(\021\022\027\n\017a_formatOptions\030\006 \001(\014\"\207\001\n\013D"
-  "evicePrefs\022\027\n\017a_hwCompositing\030\001 \001(\014\022\032\n\022a"
-  "_d3d11Compositing\030\002 \001(\014\022\030\n\020a_oglComposit"
-  "ing\030\003 \001(\014\022\021\n\ta_useD2D1\030\004 \001(\014\022\026\n\016a_d3d11H"
-  "wAngle\030\005 \001(\014\"\241\001\n\021ContentDeviceData\0222\n\007a_"
-  "prefs\030\001 \001(\0132!.protobuf.mozilla.gfx.Devic"
-  "ePrefs\0228\n\007a_d3d11\030\002 \001(\0132\'.protobuf.mozil"
-  "la.gfx.D3D11DeviceStatus\022\036\n\026a_cmsOutputP"
-  "rofileData\030\003 \003(\r\"J\n\016FeatureFailure\022\020\n\010a_"
-  "status\030\001 \001(\014\022\021\n\ta_message\030\002 \001(\t\022\023\n\013a_fai"
-  "lureId\030\003 \001(\t\"\232\002\n\rGPUDeviceData\022E\n\022a_d3d1"
-  "1Compositing\030\001 \001(\0132$.protobuf.mozilla.gf"
-  "x.FeatureFailureH\000\210\001\001\022C\n\020a_oglCompositin"
-  "g\030\002 \001(\0132$.protobuf.mozilla.gfx.FeatureFa"
-  "ilureH\001\210\001\001\022A\n\013a_gpuDevice\030\003 \001(\0132\'.protob"
-  "uf.mozilla.gfx.D3D11DeviceStatusH\002\210\001\001B\025\n"
-  "\023_a_d3d11CompositingB\023\n\021_a_oglCompositin"
-  "gB\016\n\014_a_gpuDevice\"\205\003\n\013GfxVarValue\022\031\n\017a_m"
-  "VBackendType\030\001 \001(\014H\000\022\022\n\010a_mVbool\030\002 \001(\010H\000"
-  "\022\034\n\022a_mVgfxImageFormat\030\003 \001(\014H\000\022\025\n\013a_mVIn"
-  "tSize\030\004 \001(\014H\000\022\027\n\ra_mVnsCString\030\005 \001(\tH\000\022\026"
-  "\n\014a_mVnsString\030\006 \001(\tH\000\022\025\n\013a_mVint32_t\030\007 "
-  "\001(\021H\000\022\026\n\014a_mVuint64_t\030\010 \001(\004H\000\022\023\n\ta_mVflo"
-  "at\030\t \001(\002H\000\022Y\n\023a_mVArrayOfuint64_t\030\n \001(\0132"
-  ":.protobuf.mozilla.gfx.GfxVarValue.a_typ"
-  "e_mVArrayOfuint64_tH\000\0327\n\030a_type_mVArrayO"
-  "fuint64_t\022\033\n\023a_mVArrayOfuint64_t\030\001 \003(\004B\t"
-  "\n\007content\"S\n\014GfxVarUpdate\022\017\n\007a_index\030\001 \001"
-  "(\r\0222\n\007a_value\030\002 \001(\0132!.protobuf.mozilla.g"
-  "fx.GfxVarValue\"P\n\024GfxInfoFeatureStatus\022\021"
-  "\n\ta_feature\030\001 \001(\021\022\020\n\010a_status\030\002 \001(\021\022\023\n\013a"
-  "_failureId\030\003 \001(\tb\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto = {
-    false, false, 1464, descriptor_table_protodef_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto,
-    "GraphicsMessages_protobuf.mozilla.gfx.h.proto",
-    &descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto_once, nullptr, 0, 9,
-    schemas, file_default_instances, TableStruct_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto::offsets,
-    file_level_metadata_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto, file_level_enum_descriptors_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto,
-    file_level_service_descriptors_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto_getter() {
-  return &descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto(&descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace gfx {
@@ -355,12 +174,12 @@ class D3D11DeviceStatus::_Internal {
 
 D3D11DeviceStatus::D3D11DeviceStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.D3D11DeviceStatus)
 }
 D3D11DeviceStatus::D3D11DeviceStatus(const D3D11DeviceStatus& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   D3D11DeviceStatus* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_adapter_){}
@@ -371,7 +190,7 @@ D3D11DeviceStatus::D3D11DeviceStatus(const D3D11DeviceStatus& from)
     , decltype(_impl_.a_sequencenumber_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_adapter_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_adapter_.Set("", GetArenaForAllocation());
@@ -419,7 +238,7 @@ inline void D3D11DeviceStatus::SharedCtor(
 
 D3D11DeviceStatus::~D3D11DeviceStatus() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.D3D11DeviceStatus)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -447,7 +266,7 @@ void D3D11DeviceStatus::Clear() {
   ::memset(&_impl_.a_iswarp_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_sequencenumber_) -
       reinterpret_cast<char*>(&_impl_.a_iswarp_)) + sizeof(_impl_.a_sequencenumber_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* D3D11DeviceStatus::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -517,7 +336,7 @@ const char* D3D11DeviceStatus::_InternalParse(const char* ptr, ::_pbi::ParseCont
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -572,8 +391,8 @@ uint8_t* D3D11DeviceStatus::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.D3D11DeviceStatus)
   return target;
@@ -621,19 +440,22 @@ size_t D3D11DeviceStatus::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_sequencenumber());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData D3D11DeviceStatus::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    D3D11DeviceStatus::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*D3D11DeviceStatus::GetClassData() const { return &_class_data_; }
+void D3D11DeviceStatus::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const D3D11DeviceStatus*>(
+      &from));
+}
 
-
-void D3D11DeviceStatus::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<D3D11DeviceStatus*>(&to_msg);
-  auto& from = static_cast<const D3D11DeviceStatus&>(from_msg);
+void D3D11DeviceStatus::MergeFrom(const D3D11DeviceStatus& from) {
+  D3D11DeviceStatus* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.D3D11DeviceStatus)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -657,7 +479,7 @@ void D3D11DeviceStatus::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   if (from._internal_a_sequencenumber() != 0) {
     _this->_internal_set_a_sequencenumber(from._internal_a_sequencenumber());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void D3D11DeviceStatus::CopyFrom(const D3D11DeviceStatus& from) {
@@ -692,11 +514,10 @@ void D3D11DeviceStatus::InternalSwap(D3D11DeviceStatus* other) {
           reinterpret_cast<char*>(&other->_impl_.a_iswarp_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata D3D11DeviceStatus::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto_getter, &descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto_once,
-      file_level_metadata_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto[0]);
+std::string D3D11DeviceStatus::GetTypeName() const {
+  return "protobuf.mozilla.gfx.D3D11DeviceStatus";
 }
+
 
 // ===================================================================
 
@@ -706,12 +527,12 @@ class DevicePrefs::_Internal {
 
 DevicePrefs::DevicePrefs(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.DevicePrefs)
 }
 DevicePrefs::DevicePrefs(const DevicePrefs& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   DevicePrefs* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_hwcompositing_){}
@@ -721,7 +542,7 @@ DevicePrefs::DevicePrefs(const DevicePrefs& from)
     , decltype(_impl_.a_d3d11hwangle_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_hwcompositing_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_hwcompositing_.Set("", GetArenaForAllocation());
@@ -801,7 +622,7 @@ inline void DevicePrefs::SharedCtor(
 
 DevicePrefs::~DevicePrefs() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.DevicePrefs)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -832,7 +653,7 @@ void DevicePrefs::Clear() {
   _impl_.a_oglcompositing_.ClearToEmpty();
   _impl_.a_used2d1_.ClearToEmpty();
   _impl_.a_d3d11hwangle_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* DevicePrefs::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -897,7 +718,7 @@ const char* DevicePrefs::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -946,8 +767,8 @@ uint8_t* DevicePrefs::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.DevicePrefs)
   return target;
@@ -996,19 +817,22 @@ size_t DevicePrefs::ByteSizeLong() const {
         this->_internal_a_d3d11hwangle());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData DevicePrefs::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    DevicePrefs::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*DevicePrefs::GetClassData() const { return &_class_data_; }
+void DevicePrefs::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const DevicePrefs*>(
+      &from));
+}
 
-
-void DevicePrefs::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<DevicePrefs*>(&to_msg);
-  auto& from = static_cast<const DevicePrefs&>(from_msg);
+void DevicePrefs::MergeFrom(const DevicePrefs& from) {
+  DevicePrefs* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.DevicePrefs)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1029,7 +853,7 @@ void DevicePrefs::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PR
   if (!from._internal_a_d3d11hwangle().empty()) {
     _this->_internal_set_a_d3d11hwangle(from._internal_a_d3d11hwangle());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void DevicePrefs::CopyFrom(const DevicePrefs& from) {
@@ -1070,11 +894,10 @@ void DevicePrefs::InternalSwap(DevicePrefs* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata DevicePrefs::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto_getter, &descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto_once,
-      file_level_metadata_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto[1]);
+std::string DevicePrefs::GetTypeName() const {
+  return "protobuf.mozilla.gfx.DevicePrefs";
 }
+
 
 // ===================================================================
 
@@ -1094,12 +917,12 @@ ContentDeviceData::_Internal::a_d3d11(const ContentDeviceData* msg) {
 }
 ContentDeviceData::ContentDeviceData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.ContentDeviceData)
 }
 ContentDeviceData::ContentDeviceData(const ContentDeviceData& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   ContentDeviceData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_cmsoutputprofiledata_){from._impl_.a_cmsoutputprofiledata_}
@@ -1108,7 +931,7 @@ ContentDeviceData::ContentDeviceData(const ContentDeviceData& from)
     , decltype(_impl_.a_d3d11_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_prefs()) {
     _this->_impl_.a_prefs_ = new ::protobuf::mozilla::gfx::DevicePrefs(*from._impl_.a_prefs_);
   }
@@ -1133,7 +956,7 @@ inline void ContentDeviceData::SharedCtor(
 
 ContentDeviceData::~ContentDeviceData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.ContentDeviceData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1166,7 +989,7 @@ void ContentDeviceData::Clear() {
     delete _impl_.a_d3d11_;
   }
   _impl_.a_d3d11_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* ContentDeviceData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1213,7 +1036,7 @@ const char* ContentDeviceData::_InternalParse(const char* ptr, ::_pbi::ParseCont
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1255,8 +1078,8 @@ uint8_t* ContentDeviceData::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.ContentDeviceData)
   return target;
@@ -1298,19 +1121,22 @@ size_t ContentDeviceData::ByteSizeLong() const {
         *_impl_.a_d3d11_);
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ContentDeviceData::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    ContentDeviceData::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ContentDeviceData::GetClassData() const { return &_class_data_; }
+void ContentDeviceData::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const ContentDeviceData*>(
+      &from));
+}
 
-
-void ContentDeviceData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<ContentDeviceData*>(&to_msg);
-  auto& from = static_cast<const ContentDeviceData&>(from_msg);
+void ContentDeviceData::MergeFrom(const ContentDeviceData& from) {
+  ContentDeviceData* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.ContentDeviceData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1325,7 +1151,7 @@ void ContentDeviceData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
     _this->_internal_mutable_a_d3d11()->::protobuf::mozilla::gfx::D3D11DeviceStatus::MergeFrom(
         from._internal_a_d3d11());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void ContentDeviceData::CopyFrom(const ContentDeviceData& from) {
@@ -1351,11 +1177,10 @@ void ContentDeviceData::InternalSwap(ContentDeviceData* other) {
           reinterpret_cast<char*>(&other->_impl_.a_prefs_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ContentDeviceData::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto_getter, &descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto_once,
-      file_level_metadata_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto[2]);
+std::string ContentDeviceData::GetTypeName() const {
+  return "protobuf.mozilla.gfx.ContentDeviceData";
 }
+
 
 // ===================================================================
 
@@ -1365,12 +1190,12 @@ class FeatureFailure::_Internal {
 
 FeatureFailure::FeatureFailure(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.FeatureFailure)
 }
 FeatureFailure::FeatureFailure(const FeatureFailure& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   FeatureFailure* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_status_){}
@@ -1378,7 +1203,7 @@ FeatureFailure::FeatureFailure(const FeatureFailure& from)
     , decltype(_impl_.a_failureid_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_status_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_status_.Set("", GetArenaForAllocation());
@@ -1432,7 +1257,7 @@ inline void FeatureFailure::SharedCtor(
 
 FeatureFailure::~FeatureFailure() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.FeatureFailure)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1459,7 +1284,7 @@ void FeatureFailure::Clear() {
   _impl_.a_status_.ClearToEmpty();
   _impl_.a_message_.ClearToEmpty();
   _impl_.a_failureid_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* FeatureFailure::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1483,7 +1308,7 @@ const char* FeatureFailure::_InternalParse(const char* ptr, ::_pbi::ParseContext
           auto str = _internal_mutable_a_message();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.gfx.FeatureFailure.a_message"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1493,7 +1318,7 @@ const char* FeatureFailure::_InternalParse(const char* ptr, ::_pbi::ParseContext
           auto str = _internal_mutable_a_failureid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.gfx.FeatureFailure.a_failureId"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1508,7 +1333,7 @@ const char* FeatureFailure::_InternalParse(const char* ptr, ::_pbi::ParseContext
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1553,8 +1378,8 @@ uint8_t* FeatureFailure::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.FeatureFailure)
   return target;
@@ -1589,19 +1414,22 @@ size_t FeatureFailure::ByteSizeLong() const {
         this->_internal_a_failureid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FeatureFailure::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    FeatureFailure::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FeatureFailure::GetClassData() const { return &_class_data_; }
+void FeatureFailure::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const FeatureFailure*>(
+      &from));
+}
 
-
-void FeatureFailure::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<FeatureFailure*>(&to_msg);
-  auto& from = static_cast<const FeatureFailure&>(from_msg);
+void FeatureFailure::MergeFrom(const FeatureFailure& from) {
+  FeatureFailure* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.FeatureFailure)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1616,7 +1444,7 @@ void FeatureFailure::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const :
   if (!from._internal_a_failureid().empty()) {
     _this->_internal_set_a_failureid(from._internal_a_failureid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void FeatureFailure::CopyFrom(const FeatureFailure& from) {
@@ -1649,11 +1477,10 @@ void FeatureFailure::InternalSwap(FeatureFailure* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FeatureFailure::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto_getter, &descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto_once,
-      file_level_metadata_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto[3]);
+std::string FeatureFailure::GetTypeName() const {
+  return "protobuf.mozilla.gfx.FeatureFailure";
 }
+
 
 // ===================================================================
 
@@ -1688,12 +1515,12 @@ GPUDeviceData::_Internal::a_gpudevice(const GPUDeviceData* msg) {
 }
 GPUDeviceData::GPUDeviceData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.GPUDeviceData)
 }
 GPUDeviceData::GPUDeviceData(const GPUDeviceData& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   GPUDeviceData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -1702,7 +1529,7 @@ GPUDeviceData::GPUDeviceData(const GPUDeviceData& from)
     , decltype(_impl_.a_oglcompositing_){nullptr}
     , decltype(_impl_.a_gpudevice_){nullptr}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_d3d11compositing()) {
     _this->_impl_.a_d3d11compositing_ = new ::protobuf::mozilla::gfx::FeatureFailure(*from._impl_.a_d3d11compositing_);
   }
@@ -1730,7 +1557,7 @@ inline void GPUDeviceData::SharedCtor(
 
 GPUDeviceData::~GPUDeviceData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.GPUDeviceData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1770,7 +1597,7 @@ void GPUDeviceData::Clear() {
     }
   }
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* GPUDeviceData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1815,7 +1642,7 @@ const char* GPUDeviceData::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1856,8 +1683,8 @@ uint8_t* GPUDeviceData::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.GPUDeviceData)
   return target;
@@ -1895,19 +1722,22 @@ size_t GPUDeviceData::ByteSizeLong() const {
     }
 
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GPUDeviceData::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    GPUDeviceData::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GPUDeviceData::GetClassData() const { return &_class_data_; }
+void GPUDeviceData::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const GPUDeviceData*>(
+      &from));
+}
 
-
-void GPUDeviceData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<GPUDeviceData*>(&to_msg);
-  auto& from = static_cast<const GPUDeviceData&>(from_msg);
+void GPUDeviceData::MergeFrom(const GPUDeviceData& from) {
+  GPUDeviceData* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.GPUDeviceData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1928,7 +1758,7 @@ void GPUDeviceData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::
           from._internal_a_gpudevice());
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void GPUDeviceData::CopyFrom(const GPUDeviceData& from) {
@@ -1954,11 +1784,10 @@ void GPUDeviceData::InternalSwap(GPUDeviceData* other) {
           reinterpret_cast<char*>(&other->_impl_.a_d3d11compositing_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GPUDeviceData::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto_getter, &descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto_once,
-      file_level_metadata_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto[4]);
+std::string GPUDeviceData::GetTypeName() const {
+  return "protobuf.mozilla.gfx.GPUDeviceData";
 }
+
 
 // ===================================================================
 
@@ -1968,19 +1797,19 @@ class GfxVarValue_a_type_mVArrayOfuint64_t::_Internal {
 
 GfxVarValue_a_type_mVArrayOfuint64_t::GfxVarValue_a_type_mVArrayOfuint64_t(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.GfxVarValue.a_type_mVArrayOfuint64_t)
 }
 GfxVarValue_a_type_mVArrayOfuint64_t::GfxVarValue_a_type_mVArrayOfuint64_t(const GfxVarValue_a_type_mVArrayOfuint64_t& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   GfxVarValue_a_type_mVArrayOfuint64_t* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_mvarrayofuint64_t_){from._impl_.a_mvarrayofuint64_t_}
     , /*decltype(_impl_._a_mvarrayofuint64_t_cached_byte_size_)*/{0}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.GfxVarValue.a_type_mVArrayOfuint64_t)
 }
 
@@ -1997,7 +1826,7 @@ inline void GfxVarValue_a_type_mVArrayOfuint64_t::SharedCtor(
 
 GfxVarValue_a_type_mVArrayOfuint64_t::~GfxVarValue_a_type_mVArrayOfuint64_t() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.GfxVarValue.a_type_mVArrayOfuint64_t)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -2020,7 +1849,7 @@ void GfxVarValue_a_type_mVArrayOfuint64_t::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_mvarrayofuint64_t_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* GfxVarValue_a_type_mVArrayOfuint64_t::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -2051,7 +1880,7 @@ const char* GfxVarValue_a_type_mVArrayOfuint64_t::_InternalParse(const char* ptr
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -2079,8 +1908,8 @@ uint8_t* GfxVarValue_a_type_mVArrayOfuint64_t::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.GfxVarValue.a_type_mVArrayOfuint64_t)
   return target;
@@ -2108,26 +1937,29 @@ size_t GfxVarValue_a_type_mVArrayOfuint64_t::ByteSizeLong() const {
     total_size += data_size;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GfxVarValue_a_type_mVArrayOfuint64_t::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    GfxVarValue_a_type_mVArrayOfuint64_t::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GfxVarValue_a_type_mVArrayOfuint64_t::GetClassData() const { return &_class_data_; }
+void GfxVarValue_a_type_mVArrayOfuint64_t::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const GfxVarValue_a_type_mVArrayOfuint64_t*>(
+      &from));
+}
 
-
-void GfxVarValue_a_type_mVArrayOfuint64_t::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<GfxVarValue_a_type_mVArrayOfuint64_t*>(&to_msg);
-  auto& from = static_cast<const GfxVarValue_a_type_mVArrayOfuint64_t&>(from_msg);
+void GfxVarValue_a_type_mVArrayOfuint64_t::MergeFrom(const GfxVarValue_a_type_mVArrayOfuint64_t& from) {
+  GfxVarValue_a_type_mVArrayOfuint64_t* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.GfxVarValue.a_type_mVArrayOfuint64_t)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_mvarrayofuint64_t_.MergeFrom(from._impl_.a_mvarrayofuint64_t_);
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void GfxVarValue_a_type_mVArrayOfuint64_t::CopyFrom(const GfxVarValue_a_type_mVArrayOfuint64_t& from) {
@@ -2147,11 +1979,10 @@ void GfxVarValue_a_type_mVArrayOfuint64_t::InternalSwap(GfxVarValue_a_type_mVArr
   _impl_.a_mvarrayofuint64_t_.InternalSwap(&other->_impl_.a_mvarrayofuint64_t_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GfxVarValue_a_type_mVArrayOfuint64_t::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto_getter, &descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto_once,
-      file_level_metadata_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto[5]);
+std::string GfxVarValue_a_type_mVArrayOfuint64_t::GetTypeName() const {
+  return "protobuf.mozilla.gfx.GfxVarValue.a_type_mVArrayOfuint64_t";
 }
+
 
 // ===================================================================
 
@@ -2181,19 +2012,19 @@ void GfxVarValue::set_allocated_a_mvarrayofuint64_t(::protobuf::mozilla::gfx::Gf
 }
 GfxVarValue::GfxVarValue(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.GfxVarValue)
 }
 GfxVarValue::GfxVarValue(const GfxVarValue& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   GfxVarValue* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVBackendType: {
@@ -2258,7 +2089,7 @@ inline void GfxVarValue::SharedCtor(
 
 GfxVarValue::~GfxVarValue() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.GfxVarValue)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -2336,7 +2167,7 @@ void GfxVarValue::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* GfxVarValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -2386,7 +2217,7 @@ const char* GfxVarValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
           auto str = _internal_mutable_a_mvnscstring();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.gfx.GfxVarValue.a_mVnsCString"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -2396,7 +2227,7 @@ const char* GfxVarValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
           auto str = _internal_mutable_a_mvnsstring();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.gfx.GfxVarValue.a_mVnsString"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -2443,7 +2274,7 @@ const char* GfxVarValue::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -2531,8 +2362,8 @@ uint8_t* GfxVarValue::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.GfxVarValue)
   return target;
@@ -2613,19 +2444,22 @@ size_t GfxVarValue::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GfxVarValue::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    GfxVarValue::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GfxVarValue::GetClassData() const { return &_class_data_; }
+void GfxVarValue::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const GfxVarValue*>(
+      &from));
+}
 
-
-void GfxVarValue::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<GfxVarValue*>(&to_msg);
-  auto& from = static_cast<const GfxVarValue&>(from_msg);
+void GfxVarValue::MergeFrom(const GfxVarValue& from) {
+  GfxVarValue* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.GfxVarValue)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2677,7 +2511,7 @@ void GfxVarValue::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PR
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void GfxVarValue::CopyFrom(const GfxVarValue& from) {
@@ -2698,11 +2532,10 @@ void GfxVarValue::InternalSwap(GfxVarValue* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GfxVarValue::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto_getter, &descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto_once,
-      file_level_metadata_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto[6]);
+std::string GfxVarValue::GetTypeName() const {
+  return "protobuf.mozilla.gfx.GfxVarValue";
 }
+
 
 // ===================================================================
 
@@ -2717,19 +2550,19 @@ GfxVarUpdate::_Internal::a_value(const GfxVarUpdate* msg) {
 }
 GfxVarUpdate::GfxVarUpdate(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.GfxVarUpdate)
 }
 GfxVarUpdate::GfxVarUpdate(const GfxVarUpdate& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   GfxVarUpdate* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_value_){nullptr}
     , decltype(_impl_.a_index_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   if (from._internal_has_a_value()) {
     _this->_impl_.a_value_ = new ::protobuf::mozilla::gfx::GfxVarValue(*from._impl_.a_value_);
   }
@@ -2750,7 +2583,7 @@ inline void GfxVarUpdate::SharedCtor(
 
 GfxVarUpdate::~GfxVarUpdate() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.GfxVarUpdate)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -2777,7 +2610,7 @@ void GfxVarUpdate::Clear() {
   }
   _impl_.a_value_ = nullptr;
   _impl_.a_index_ = 0u;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* GfxVarUpdate::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -2813,7 +2646,7 @@ const char* GfxVarUpdate::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -2845,8 +2678,8 @@ uint8_t* GfxVarUpdate::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.GfxVarUpdate)
   return target;
@@ -2872,19 +2705,22 @@ size_t GfxVarUpdate::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_index());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GfxVarUpdate::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    GfxVarUpdate::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GfxVarUpdate::GetClassData() const { return &_class_data_; }
+void GfxVarUpdate::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const GfxVarUpdate*>(
+      &from));
+}
 
-
-void GfxVarUpdate::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<GfxVarUpdate*>(&to_msg);
-  auto& from = static_cast<const GfxVarUpdate&>(from_msg);
+void GfxVarUpdate::MergeFrom(const GfxVarUpdate& from) {
+  GfxVarUpdate* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.GfxVarUpdate)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2897,7 +2733,7 @@ void GfxVarUpdate::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
   if (from._internal_a_index() != 0) {
     _this->_internal_set_a_index(from._internal_a_index());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void GfxVarUpdate::CopyFrom(const GfxVarUpdate& from) {
@@ -2922,11 +2758,10 @@ void GfxVarUpdate::InternalSwap(GfxVarUpdate* other) {
           reinterpret_cast<char*>(&other->_impl_.a_value_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GfxVarUpdate::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto_getter, &descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto_once,
-      file_level_metadata_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto[7]);
+std::string GfxVarUpdate::GetTypeName() const {
+  return "protobuf.mozilla.gfx.GfxVarUpdate";
 }
+
 
 // ===================================================================
 
@@ -2936,12 +2771,12 @@ class GfxInfoFeatureStatus::_Internal {
 
 GfxInfoFeatureStatus::GfxInfoFeatureStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.GfxInfoFeatureStatus)
 }
 GfxInfoFeatureStatus::GfxInfoFeatureStatus(const GfxInfoFeatureStatus& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   GfxInfoFeatureStatus* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_failureid_){}
@@ -2949,7 +2784,7 @@ GfxInfoFeatureStatus::GfxInfoFeatureStatus(const GfxInfoFeatureStatus& from)
     , decltype(_impl_.a_status_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_failureid_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_failureid_.Set("", GetArenaForAllocation());
@@ -2982,7 +2817,7 @@ inline void GfxInfoFeatureStatus::SharedCtor(
 
 GfxInfoFeatureStatus::~GfxInfoFeatureStatus() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.GfxInfoFeatureStatus)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -3008,7 +2843,7 @@ void GfxInfoFeatureStatus::Clear() {
   ::memset(&_impl_.a_feature_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.a_status_) -
       reinterpret_cast<char*>(&_impl_.a_feature_)) + sizeof(_impl_.a_status_));
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* GfxInfoFeatureStatus::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -3039,7 +2874,7 @@ const char* GfxInfoFeatureStatus::_InternalParse(const char* ptr, ::_pbi::ParseC
           auto str = _internal_mutable_a_failureid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.gfx.GfxInfoFeatureStatus.a_failureId"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -3054,7 +2889,7 @@ const char* GfxInfoFeatureStatus::_InternalParse(const char* ptr, ::_pbi::ParseC
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -3095,8 +2930,8 @@ uint8_t* GfxInfoFeatureStatus::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.GfxInfoFeatureStatus)
   return target;
@@ -3127,19 +2962,22 @@ size_t GfxInfoFeatureStatus::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::SInt32SizePlusOne(this->_internal_a_status());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GfxInfoFeatureStatus::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    GfxInfoFeatureStatus::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GfxInfoFeatureStatus::GetClassData() const { return &_class_data_; }
+void GfxInfoFeatureStatus::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const GfxInfoFeatureStatus*>(
+      &from));
+}
 
-
-void GfxInfoFeatureStatus::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<GfxInfoFeatureStatus*>(&to_msg);
-  auto& from = static_cast<const GfxInfoFeatureStatus&>(from_msg);
+void GfxInfoFeatureStatus::MergeFrom(const GfxInfoFeatureStatus& from) {
+  GfxInfoFeatureStatus* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.GfxInfoFeatureStatus)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -3154,7 +2992,7 @@ void GfxInfoFeatureStatus::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
   if (from._internal_a_status() != 0) {
     _this->_internal_set_a_status(from._internal_a_status());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void GfxInfoFeatureStatus::CopyFrom(const GfxInfoFeatureStatus& from) {
@@ -3185,11 +3023,10 @@ void GfxInfoFeatureStatus::InternalSwap(GfxInfoFeatureStatus* other) {
           reinterpret_cast<char*>(&other->_impl_.a_feature_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GfxInfoFeatureStatus::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto_getter, &descriptor_table_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto_once,
-      file_level_metadata_GraphicsMessages_5fprotobuf_2emozilla_2egfx_2eh_2eproto[8]);
+std::string GfxInfoFeatureStatus::GetTypeName() const {
+  return "protobuf.mozilla.gfx.GfxInfoFeatureStatus";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace gfx

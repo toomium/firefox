@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -56,74 +53,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace widget
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto[2];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::GtkCompositorWidgetInitData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::GtkCompositorWidgetInitData, _impl_.a_xwindow_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::GtkCompositorWidgetInitData, _impl_.a_xdisplaystring_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::GtkCompositorWidgetInitData, _impl_.a_isx11display_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::GtkCompositorWidgetInitData, _impl_.a_initialclientsize_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::CompositorWidgetInitData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::CompositorWidgetInitData, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::widget::CompositorWidgetInitData, _impl_.content_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::widget::GtkCompositorWidgetInitData)},
-  { 10, -1, -1, sizeof(::protobuf::mozilla::widget::CompositorWidgetInitData)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::widget::_GtkCompositorWidgetInitData_default_instance_._instance,
-  &::protobuf::mozilla::widget::_CompositorWidgetInitData_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n3PlatformWidgetTypes_protobuf.mozilla.w"
-  "idget.h.proto\022\027protobuf.mozilla.widget\032\031"
-  "HeadlessWidgetTypes.proto\"\177\n\033GtkComposit"
-  "orWidgetInitData\022\021\n\ta_XWindow\030\001 \001(\014\022\030\n\020a"
-  "_XDisplayString\030\002 \001(\t\022\026\n\016a_IsX11Display\030"
-  "\003 \001(\010\022\033\n\023a_InitialClientSize\030\004 \001(\014\"\361\001\n\030C"
-  "ompositorWidgetInitData\022_\n\037a_mVGtkCompos"
-  "itorWidgetInitData\030\001 \001(\01324.protobuf.mozi"
-  "lla.widget.GtkCompositorWidgetInitDataH\000"
-  "\022i\n$a_mVHeadlessCompositorWidgetInitData"
-  "\030\002 \001(\01329.protobuf.mozilla.widget.Headles"
-  "sCompositorWidgetInitDataH\000B\t\n\007contentb\006"
-  "proto3"
-  ;
-static const ::_pbi::DescriptorTable* const descriptor_table_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_deps[1] = {
-  &::descriptor_table_HeadlessWidgetTypes_2eproto,
-};
-static ::_pbi::once_flag descriptor_table_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto = {
-    false, false, 486, descriptor_table_protodef_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto,
-    "PlatformWidgetTypes_protobuf.mozilla.widget.h.proto",
-    &descriptor_table_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_once, descriptor_table_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_deps, 1, 2,
-    schemas, file_default_instances, TableStruct_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto::offsets,
-    file_level_metadata_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto, file_level_enum_descriptors_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto,
-    file_level_service_descriptors_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_getter() {
-  return &descriptor_table_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto(&descriptor_table_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace widget {
@@ -136,12 +65,12 @@ class GtkCompositorWidgetInitData::_Internal {
 
 GtkCompositorWidgetInitData::GtkCompositorWidgetInitData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.widget.GtkCompositorWidgetInitData)
 }
 GtkCompositorWidgetInitData::GtkCompositorWidgetInitData(const GtkCompositorWidgetInitData& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   GtkCompositorWidgetInitData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_xwindow_){}
@@ -150,7 +79,7 @@ GtkCompositorWidgetInitData::GtkCompositorWidgetInitData(const GtkCompositorWidg
     , decltype(_impl_.a_isx11display_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_xwindow_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_xwindow_.Set("", GetArenaForAllocation());
@@ -206,7 +135,7 @@ inline void GtkCompositorWidgetInitData::SharedCtor(
 
 GtkCompositorWidgetInitData::~GtkCompositorWidgetInitData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.widget.GtkCompositorWidgetInitData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -234,7 +163,7 @@ void GtkCompositorWidgetInitData::Clear() {
   _impl_.a_xdisplaystring_.ClearToEmpty();
   _impl_.a_initialclientsize_.ClearToEmpty();
   _impl_.a_isx11display_ = false;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* GtkCompositorWidgetInitData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -258,7 +187,7 @@ const char* GtkCompositorWidgetInitData::_InternalParse(const char* ptr, ::_pbi:
           auto str = _internal_mutable_a_xdisplaystring();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.widget.GtkCompositorWidgetInitData.a_XDisplayString"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -290,7 +219,7 @@ const char* GtkCompositorWidgetInitData::_InternalParse(const char* ptr, ::_pbi:
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -337,8 +266,8 @@ uint8_t* GtkCompositorWidgetInitData::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.widget.GtkCompositorWidgetInitData)
   return target;
@@ -378,19 +307,22 @@ size_t GtkCompositorWidgetInitData::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GtkCompositorWidgetInitData::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    GtkCompositorWidgetInitData::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GtkCompositorWidgetInitData::GetClassData() const { return &_class_data_; }
+void GtkCompositorWidgetInitData::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const GtkCompositorWidgetInitData*>(
+      &from));
+}
 
-
-void GtkCompositorWidgetInitData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<GtkCompositorWidgetInitData*>(&to_msg);
-  auto& from = static_cast<const GtkCompositorWidgetInitData&>(from_msg);
+void GtkCompositorWidgetInitData::MergeFrom(const GtkCompositorWidgetInitData& from) {
+  GtkCompositorWidgetInitData* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.widget.GtkCompositorWidgetInitData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -408,7 +340,7 @@ void GtkCompositorWidgetInitData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to
   if (from._internal_a_isx11display() != 0) {
     _this->_internal_set_a_isx11display(from._internal_a_isx11display());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void GtkCompositorWidgetInitData::CopyFrom(const GtkCompositorWidgetInitData& from) {
@@ -442,11 +374,10 @@ void GtkCompositorWidgetInitData::InternalSwap(GtkCompositorWidgetInitData* othe
   swap(_impl_.a_isx11display_, other->_impl_.a_isx11display_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GtkCompositorWidgetInitData::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_getter, &descriptor_table_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_once,
-      file_level_metadata_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto[0]);
+std::string GtkCompositorWidgetInitData::GetTypeName() const {
+  return "protobuf.mozilla.widget.GtkCompositorWidgetInitData";
 }
+
 
 // ===================================================================
 
@@ -505,19 +436,19 @@ void CompositorWidgetInitData::clear_a_mvheadlesscompositorwidgetinitdata() {
 }
 CompositorWidgetInitData::CompositorWidgetInitData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.widget.CompositorWidgetInitData)
 }
 CompositorWidgetInitData::CompositorWidgetInitData(const CompositorWidgetInitData& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   CompositorWidgetInitData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVGtkCompositorWidgetInitData: {
@@ -551,7 +482,7 @@ inline void CompositorWidgetInitData::SharedCtor(
 
 CompositorWidgetInitData::~CompositorWidgetInitData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.widget.CompositorWidgetInitData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -599,7 +530,7 @@ void CompositorWidgetInitData::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* CompositorWidgetInitData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -635,7 +566,7 @@ const char* CompositorWidgetInitData::_InternalParse(const char* ptr, ::_pbi::Pa
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -668,8 +599,8 @@ uint8_t* CompositorWidgetInitData::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.widget.CompositorWidgetInitData)
   return target;
@@ -702,19 +633,22 @@ size_t CompositorWidgetInitData::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CompositorWidgetInitData::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    CompositorWidgetInitData::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CompositorWidgetInitData::GetClassData() const { return &_class_data_; }
+void CompositorWidgetInitData::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const CompositorWidgetInitData*>(
+      &from));
+}
 
-
-void CompositorWidgetInitData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<CompositorWidgetInitData*>(&to_msg);
-  auto& from = static_cast<const CompositorWidgetInitData&>(from_msg);
+void CompositorWidgetInitData::MergeFrom(const CompositorWidgetInitData& from) {
+  CompositorWidgetInitData* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.widget.CompositorWidgetInitData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -735,7 +669,7 @@ void CompositorWidgetInitData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_ms
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void CompositorWidgetInitData::CopyFrom(const CompositorWidgetInitData& from) {
@@ -756,11 +690,10 @@ void CompositorWidgetInitData::InternalSwap(CompositorWidgetInitData* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata CompositorWidgetInitData::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_getter, &descriptor_table_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto_once,
-      file_level_metadata_PlatformWidgetTypes_5fprotobuf_2emozilla_2ewidget_2eh_2eproto[1]);
+std::string CompositorWidgetInitData::GetTypeName() const {
+  return "protobuf.mozilla.widget.CompositorWidgetInitData";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace widget

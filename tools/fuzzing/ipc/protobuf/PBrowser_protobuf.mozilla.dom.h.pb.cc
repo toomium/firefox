@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -121,185 +118,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto[5];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressData, _impl_.a_browsingcontext_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressData, _impl_.a_loadtype_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RequestData, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RequestData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RequestData, _impl_.a_requesturi_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RequestData, _impl_.a_originalrequesturi_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RequestData, _impl_.a_matchedlist_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::RequestData, _impl_.a_canceledreason_),
-  0,
-  1,
-  ~0u,
-  ~0u,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressStateChangeData, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressStateChangeData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressStateChangeData, _impl_.a_isnavigating_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressStateChangeData, _impl_.a_mayenablecharacterencodingmenu_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressStateChangeData, _impl_.a_contenttype_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressStateChangeData, _impl_.a_charset_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressStateChangeData, _impl_.a_documenturi_),
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  0,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressLocationChangeData, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressLocationChangeData, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressLocationChangeData, _impl_.a_isnavigating_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressLocationChangeData, _impl_.a_issyntheticdocument_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressLocationChangeData, _impl_.a_mayenablecharacterencodingmenu_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressLocationChangeData, _impl_.a_contenttype_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressLocationChangeData, _impl_.a_title_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressLocationChangeData, _impl_.a_charset_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressLocationChangeData, _impl_.a_documenturi_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressLocationChangeData, _impl_.a_contentprincipal_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressLocationChangeData, _impl_.a_contentpartitionedprincipal_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressLocationChangeData, _impl_.a_csp_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressLocationChangeData, _impl_.a_referrerinfo_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::WebProgressLocationChangeData, _impl_.a_requestcontextid_),
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  0,
-  1,
-  2,
-  3,
-  4,
-  5,
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::PrintPreviewResultInfo, _impl_._has_bits_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::PrintPreviewResultInfo, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::PrintPreviewResultInfo, _impl_.a_sheetcount_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::PrintPreviewResultInfo, _impl_.a_totalpagecount_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::PrintPreviewResultInfo, _impl_.a_isempty_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::PrintPreviewResultInfo, _impl_.a_hasselection_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::PrintPreviewResultInfo, _impl_.a_hasselfselection_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::PrintPreviewResultInfo, _impl_.a_printlandscape_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::PrintPreviewResultInfo, _impl_.a_pagewidth_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::PrintPreviewResultInfo, _impl_.a_pageheight_),
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  ~0u,
-  0,
-  1,
-  2,
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::dom::WebProgressData)},
-  { 8, 18, -1, sizeof(::protobuf::mozilla::dom::RequestData)},
-  { 22, 33, -1, sizeof(::protobuf::mozilla::dom::WebProgressStateChangeData)},
-  { 38, 56, -1, sizeof(::protobuf::mozilla::dom::WebProgressLocationChangeData)},
-  { 68, 82, -1, sizeof(::protobuf::mozilla::dom::PrintPreviewResultInfo)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::dom::_WebProgressData_default_instance_._instance,
-  &::protobuf::mozilla::dom::_RequestData_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebProgressStateChangeData_default_instance_._instance,
-  &::protobuf::mozilla::dom::_WebProgressLocationChangeData_default_instance_._instance,
-  &::protobuf::mozilla::dom::_PrintPreviewResultInfo_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n%PBrowser_protobuf.mozilla.dom.h.proto\022"
-  "\024protobuf.mozilla.dom\032\016DOMTypes.proto\032\030N"
-  "eckoChannelParams.proto\032\027WindowGlobalTyp"
-  "es.proto\032\rIPCBlob.proto\032\017IPCStream.proto"
-  "\032\025IPCTransferable.proto\032\017URIParams.proto"
-  "\032\024PPrintingTypes.proto\032\021PTabContext.prot"
-  "o\032\034PBackgroundSharedTypes.proto\"@\n\017WebPr"
-  "ogressData\022\031\n\021a_browsingContext\030\001 \001(\014\022\022\n"
-  "\na_loadType\030\002 \001(\r\"\246\001\n\013RequestData\022\031\n\014a_r"
-  "equestURI\030\001 \001(\014H\000\210\001\001\022!\n\024a_originalReques"
-  "tURI\030\002 \001(\014H\001\210\001\001\022\025\n\ra_matchedList\030\003 \001(\t\022\030"
-  "\n\020a_canceledReason\030\004 \001(\tB\017\n\r_a_requestUR"
-  "IB\027\n\025_a_originalRequestURI\"\266\001\n\032WebProgre"
-  "ssStateChangeData\022\026\n\016a_isNavigating\030\001 \001("
-  "\010\022(\n a_mayEnableCharacterEncodingMenu\030\002 "
-  "\001(\010\022\025\n\ra_contentType\030\003 \001(\t\022\021\n\ta_charset\030"
-  "\004 \001(\t\022\032\n\ra_documentURI\030\005 \001(\014H\000\210\001\001B\020\n\016_a_"
-  "documentURI\"\365\003\n\035WebProgressLocationChang"
-  "eData\022\026\n\016a_isNavigating\030\001 \001(\010\022\035\n\025a_isSyn"
-  "theticDocument\030\002 \001(\010\022(\n a_mayEnableChara"
-  "cterEncodingMenu\030\003 \001(\010\022\025\n\ra_contentType\030"
-  "\004 \001(\t\022\017\n\007a_title\030\005 \001(\t\022\021\n\ta_charset\030\006 \001("
-  "\t\022\032\n\ra_documentURI\030\007 \001(\014H\000\210\001\001\022\037\n\022a_conte"
-  "ntPrincipal\030\010 \001(\014H\001\210\001\001\022*\n\035a_contentParti"
-  "tionedPrincipal\030\t \001(\014H\002\210\001\001\022\022\n\005a_csp\030\n \001("
-  "\014H\003\210\001\001\022\033\n\016a_referrerInfo\030\013 \001(\014H\004\210\001\001\022\037\n\022a"
-  "_requestContextID\030\014 \001(\004H\005\210\001\001B\020\n\016_a_docum"
-  "entURIB\025\n\023_a_contentPrincipalB \n\036_a_cont"
-  "entPartitionedPrincipalB\010\n\006_a_cspB\021\n\017_a_"
-  "referrerInfoB\025\n\023_a_requestContextID\"\231\002\n\026"
-  "PrintPreviewResultInfo\022\024\n\014a_sheetCount\030\001"
-  " \001(\r\022\030\n\020a_totalPageCount\030\002 \001(\r\022\021\n\ta_isEm"
-  "pty\030\003 \001(\010\022\026\n\016a_hasSelection\030\004 \001(\010\022\032\n\022a_h"
-  "asSelfSelection\030\005 \001(\010\022\035\n\020a_printLandscap"
-  "e\030\006 \001(\010H\000\210\001\001\022\030\n\013a_pageWidth\030\007 \001(\002H\001\210\001\001\022\031"
-  "\n\014a_pageHeight\030\010 \001(\002H\002\210\001\001B\023\n\021_a_printLan"
-  "dscapeB\016\n\014_a_pageWidthB\017\n\r_a_pageHeightb"
-  "\006proto3"
-  ;
-static const ::_pbi::DescriptorTable* const descriptor_table_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto_deps[10] = {
-  &::descriptor_table_DOMTypes_2eproto,
-  &::descriptor_table_IPCBlob_2eproto,
-  &::descriptor_table_IPCStream_2eproto,
-  &::descriptor_table_IPCTransferable_2eproto,
-  &::descriptor_table_NeckoChannelParams_2eproto,
-  &::descriptor_table_PBackgroundSharedTypes_2eproto,
-  &::descriptor_table_PPrintingTypes_2eproto,
-  &::descriptor_table_PTabContext_2eproto,
-  &::descriptor_table_URIParams_2eproto,
-  &::descriptor_table_WindowGlobalTypes_2eproto,
-};
-static ::_pbi::once_flag descriptor_table_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto = {
-    false, false, 1487, descriptor_table_protodef_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    "PBrowser_protobuf.mozilla.dom.h.proto",
-    &descriptor_table_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto_once, descriptor_table_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto_deps, 10, 5,
-    schemas, file_default_instances, TableStruct_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets,
-    file_level_metadata_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto, file_level_enum_descriptors_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    file_level_service_descriptors_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter() {
-  return &descriptor_table_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto(&descriptor_table_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -312,19 +130,19 @@ class WebProgressData::_Internal {
 
 WebProgressData::WebProgressData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebProgressData)
 }
 WebProgressData::WebProgressData(const WebProgressData& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebProgressData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_browsingcontext_){}
     , decltype(_impl_.a_loadtype_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_browsingcontext_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_browsingcontext_.Set("", GetArenaForAllocation());
@@ -354,7 +172,7 @@ inline void WebProgressData::SharedCtor(
 
 WebProgressData::~WebProgressData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebProgressData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -378,7 +196,7 @@ void WebProgressData::Clear() {
 
   _impl_.a_browsingcontext_.ClearToEmpty();
   _impl_.a_loadtype_ = 0u;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebProgressData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -415,7 +233,7 @@ const char* WebProgressData::_InternalParse(const char* ptr, ::_pbi::ParseContex
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -446,8 +264,8 @@ uint8_t* WebProgressData::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebProgressData)
   return target;
@@ -473,19 +291,22 @@ size_t WebProgressData::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_loadtype());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebProgressData::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebProgressData::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebProgressData::GetClassData() const { return &_class_data_; }
+void WebProgressData::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebProgressData*>(
+      &from));
+}
 
-
-void WebProgressData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebProgressData*>(&to_msg);
-  auto& from = static_cast<const WebProgressData&>(from_msg);
+void WebProgressData::MergeFrom(const WebProgressData& from) {
+  WebProgressData* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebProgressData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -497,7 +318,7 @@ void WebProgressData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const 
   if (from._internal_a_loadtype() != 0) {
     _this->_internal_set_a_loadtype(from._internal_a_loadtype());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebProgressData::CopyFrom(const WebProgressData& from) {
@@ -523,11 +344,10 @@ void WebProgressData::InternalSwap(WebProgressData* other) {
   swap(_impl_.a_loadtype_, other->_impl_.a_loadtype_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebProgressData::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto[0]);
+std::string WebProgressData::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebProgressData";
 }
+
 
 // ===================================================================
 
@@ -544,12 +364,12 @@ class RequestData::_Internal {
 
 RequestData::RequestData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.RequestData)
 }
 RequestData::RequestData(const RequestData& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   RequestData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -559,7 +379,7 @@ RequestData::RequestData(const RequestData& from)
     , decltype(_impl_.a_matchedlist_){}
     , decltype(_impl_.a_canceledreason_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_requesturi_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_requesturi_.Set("", GetArenaForAllocation());
@@ -627,7 +447,7 @@ inline void RequestData::SharedCtor(
 
 RequestData::~RequestData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.RequestData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -664,7 +484,7 @@ void RequestData::Clear() {
   _impl_.a_matchedlist_.ClearToEmpty();
   _impl_.a_canceledreason_.ClearToEmpty();
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* RequestData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -698,7 +518,7 @@ const char* RequestData::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
           auto str = _internal_mutable_a_matchedlist();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.RequestData.a_matchedList"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -708,7 +528,7 @@ const char* RequestData::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
           auto str = _internal_mutable_a_canceledreason();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.RequestData.a_canceledReason"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -723,7 +543,7 @@ const char* RequestData::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -775,8 +595,8 @@ uint8_t* RequestData::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.RequestData)
   return target;
@@ -821,19 +641,22 @@ size_t RequestData::ByteSizeLong() const {
         this->_internal_a_canceledreason());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RequestData::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    RequestData::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RequestData::GetClassData() const { return &_class_data_; }
+void RequestData::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const RequestData*>(
+      &from));
+}
 
-
-void RequestData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<RequestData*>(&to_msg);
-  auto& from = static_cast<const RequestData&>(from_msg);
+void RequestData::MergeFrom(const RequestData& from) {
+  RequestData* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.RequestData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -854,7 +677,7 @@ void RequestData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PR
   if (!from._internal_a_canceledreason().empty()) {
     _this->_internal_set_a_canceledreason(from._internal_a_canceledreason());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void RequestData::CopyFrom(const RequestData& from) {
@@ -892,11 +715,10 @@ void RequestData::InternalSwap(RequestData* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata RequestData::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto[1]);
+std::string RequestData::GetTypeName() const {
+  return "protobuf.mozilla.dom.RequestData";
 }
+
 
 // ===================================================================
 
@@ -910,12 +732,12 @@ class WebProgressStateChangeData::_Internal {
 
 WebProgressStateChangeData::WebProgressStateChangeData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebProgressStateChangeData)
 }
 WebProgressStateChangeData::WebProgressStateChangeData(const WebProgressStateChangeData& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebProgressStateChangeData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -926,7 +748,7 @@ WebProgressStateChangeData::WebProgressStateChangeData(const WebProgressStateCha
     , decltype(_impl_.a_isnavigating_){}
     , decltype(_impl_.a_mayenablecharacterencodingmenu_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_contenttype_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_contenttype_.Set("", GetArenaForAllocation());
@@ -986,7 +808,7 @@ inline void WebProgressStateChangeData::SharedCtor(
 
 WebProgressStateChangeData::~WebProgressStateChangeData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebProgressStateChangeData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1020,7 +842,7 @@ void WebProgressStateChangeData::Clear() {
       reinterpret_cast<char*>(&_impl_.a_mayenablecharacterencodingmenu_) -
       reinterpret_cast<char*>(&_impl_.a_isnavigating_)) + sizeof(_impl_.a_mayenablecharacterencodingmenu_));
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebProgressStateChangeData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1052,7 +874,7 @@ const char* WebProgressStateChangeData::_InternalParse(const char* ptr, ::_pbi::
           auto str = _internal_mutable_a_contenttype();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.WebProgressStateChangeData.a_contentType"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1062,7 +884,7 @@ const char* WebProgressStateChangeData::_InternalParse(const char* ptr, ::_pbi::
           auto str = _internal_mutable_a_charset();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.WebProgressStateChangeData.a_charset"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1086,7 +908,7 @@ const char* WebProgressStateChangeData::_InternalParse(const char* ptr, ::_pbi::
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1144,8 +966,8 @@ uint8_t* WebProgressStateChangeData::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebProgressStateChangeData)
   return target;
@@ -1191,19 +1013,22 @@ size_t WebProgressStateChangeData::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebProgressStateChangeData::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebProgressStateChangeData::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebProgressStateChangeData::GetClassData() const { return &_class_data_; }
+void WebProgressStateChangeData::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebProgressStateChangeData*>(
+      &from));
+}
 
-
-void WebProgressStateChangeData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebProgressStateChangeData*>(&to_msg);
-  auto& from = static_cast<const WebProgressStateChangeData&>(from_msg);
+void WebProgressStateChangeData::MergeFrom(const WebProgressStateChangeData& from) {
+  WebProgressStateChangeData* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebProgressStateChangeData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1224,7 +1049,7 @@ void WebProgressStateChangeData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_
   if (from._internal_a_mayenablecharacterencodingmenu() != 0) {
     _this->_internal_set_a_mayenablecharacterencodingmenu(from._internal_a_mayenablecharacterencodingmenu());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebProgressStateChangeData::CopyFrom(const WebProgressStateChangeData& from) {
@@ -1264,11 +1089,10 @@ void WebProgressStateChangeData::InternalSwap(WebProgressStateChangeData* other)
           reinterpret_cast<char*>(&other->_impl_.a_isnavigating_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebProgressStateChangeData::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto[2]);
+std::string WebProgressStateChangeData::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebProgressStateChangeData";
 }
+
 
 // ===================================================================
 
@@ -1297,12 +1121,12 @@ class WebProgressLocationChangeData::_Internal {
 
 WebProgressLocationChangeData::WebProgressLocationChangeData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.WebProgressLocationChangeData)
 }
 WebProgressLocationChangeData::WebProgressLocationChangeData(const WebProgressLocationChangeData& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   WebProgressLocationChangeData* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -1320,7 +1144,7 @@ WebProgressLocationChangeData::WebProgressLocationChangeData(const WebProgressLo
     , decltype(_impl_.a_issyntheticdocument_){}
     , decltype(_impl_.a_mayenablecharacterencodingmenu_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_contenttype_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_contenttype_.Set("", GetArenaForAllocation());
@@ -1447,7 +1271,7 @@ inline void WebProgressLocationChangeData::SharedCtor(
 
 WebProgressLocationChangeData::~WebProgressLocationChangeData() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.WebProgressLocationChangeData)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -1502,7 +1326,7 @@ void WebProgressLocationChangeData::Clear() {
       reinterpret_cast<char*>(&_impl_.a_mayenablecharacterencodingmenu_) -
       reinterpret_cast<char*>(&_impl_.a_isnavigating_)) + sizeof(_impl_.a_mayenablecharacterencodingmenu_));
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* WebProgressLocationChangeData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -1542,7 +1366,7 @@ const char* WebProgressLocationChangeData::_InternalParse(const char* ptr, ::_pb
           auto str = _internal_mutable_a_contenttype();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.WebProgressLocationChangeData.a_contentType"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1552,7 +1376,7 @@ const char* WebProgressLocationChangeData::_InternalParse(const char* ptr, ::_pb
           auto str = _internal_mutable_a_title();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.WebProgressLocationChangeData.a_title"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1562,7 +1386,7 @@ const char* WebProgressLocationChangeData::_InternalParse(const char* ptr, ::_pb
           auto str = _internal_mutable_a_charset();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.WebProgressLocationChangeData.a_charset"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -1631,7 +1455,7 @@ const char* WebProgressLocationChangeData::_InternalParse(const char* ptr, ::_pb
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -1735,8 +1559,8 @@ uint8_t* WebProgressLocationChangeData::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.WebProgressLocationChangeData)
   return target;
@@ -1829,19 +1653,22 @@ size_t WebProgressLocationChangeData::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WebProgressLocationChangeData::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    WebProgressLocationChangeData::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WebProgressLocationChangeData::GetClassData() const { return &_class_data_; }
+void WebProgressLocationChangeData::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const WebProgressLocationChangeData*>(
+      &from));
+}
 
-
-void WebProgressLocationChangeData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<WebProgressLocationChangeData*>(&to_msg);
-  auto& from = static_cast<const WebProgressLocationChangeData&>(from_msg);
+void WebProgressLocationChangeData::MergeFrom(const WebProgressLocationChangeData& from) {
+  WebProgressLocationChangeData* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.WebProgressLocationChangeData)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -1887,7 +1714,7 @@ void WebProgressLocationChangeData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& 
   if (from._internal_a_mayenablecharacterencodingmenu() != 0) {
     _this->_internal_set_a_mayenablecharacterencodingmenu(from._internal_a_mayenablecharacterencodingmenu());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void WebProgressLocationChangeData::CopyFrom(const WebProgressLocationChangeData& from) {
@@ -1947,11 +1774,10 @@ void WebProgressLocationChangeData::InternalSwap(WebProgressLocationChangeData* 
           reinterpret_cast<char*>(&other->_impl_.a_requestcontextid_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WebProgressLocationChangeData::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto[3]);
+std::string WebProgressLocationChangeData::GetTypeName() const {
+  return "protobuf.mozilla.dom.WebProgressLocationChangeData";
 }
+
 
 // ===================================================================
 
@@ -1971,12 +1797,12 @@ class PrintPreviewResultInfo::_Internal {
 
 PrintPreviewResultInfo::PrintPreviewResultInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.PrintPreviewResultInfo)
 }
 PrintPreviewResultInfo::PrintPreviewResultInfo(const PrintPreviewResultInfo& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   PrintPreviewResultInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_._has_bits_){from._impl_._has_bits_}
@@ -1990,7 +1816,7 @@ PrintPreviewResultInfo::PrintPreviewResultInfo(const PrintPreviewResultInfo& fro
     , decltype(_impl_.a_pagewidth_){}
     , decltype(_impl_.a_pageheight_){}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   ::memcpy(&_impl_.a_sheetcount_, &from._impl_.a_sheetcount_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.a_pageheight_) -
     reinterpret_cast<char*>(&_impl_.a_sheetcount_)) + sizeof(_impl_.a_pageheight_));
@@ -2017,7 +1843,7 @@ inline void PrintPreviewResultInfo::SharedCtor(
 
 PrintPreviewResultInfo::~PrintPreviewResultInfo() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.PrintPreviewResultInfo)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -2048,7 +1874,7 @@ void PrintPreviewResultInfo::Clear() {
         reinterpret_cast<char*>(&_impl_.a_printlandscape_)) + sizeof(_impl_.a_pageheight_));
   }
   _impl_._has_bits_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* PrintPreviewResultInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -2136,7 +1962,7 @@ const char* PrintPreviewResultInfo::_InternalParse(const char* ptr, ::_pbi::Pars
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -2204,8 +2030,8 @@ uint8_t* PrintPreviewResultInfo::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.PrintPreviewResultInfo)
   return target;
@@ -2262,19 +2088,22 @@ size_t PrintPreviewResultInfo::ByteSizeLong() const {
     }
 
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PrintPreviewResultInfo::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    PrintPreviewResultInfo::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PrintPreviewResultInfo::GetClassData() const { return &_class_data_; }
+void PrintPreviewResultInfo::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const PrintPreviewResultInfo*>(
+      &from));
+}
 
-
-void PrintPreviewResultInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<PrintPreviewResultInfo*>(&to_msg);
-  auto& from = static_cast<const PrintPreviewResultInfo&>(from_msg);
+void PrintPreviewResultInfo::MergeFrom(const PrintPreviewResultInfo& from) {
+  PrintPreviewResultInfo* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.PrintPreviewResultInfo)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -2308,7 +2137,7 @@ void PrintPreviewResultInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg,
     }
     _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void PrintPreviewResultInfo::CopyFrom(const PrintPreviewResultInfo& from) {
@@ -2334,11 +2163,10 @@ void PrintPreviewResultInfo::InternalSwap(PrintPreviewResultInfo* other) {
           reinterpret_cast<char*>(&other->_impl_.a_sheetcount_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata PrintPreviewResultInfo::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_PBrowser_5fprotobuf_2emozilla_2edom_2eh_2eproto[4]);
+std::string PrintPreviewResultInfo::GetTypeName() const {
+  return "protobuf.mozilla.dom.PrintPreviewResultInfo";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace dom

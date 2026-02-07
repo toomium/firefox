@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -71,75 +68,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace dom
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[3];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::MIDIPortInfo, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::MIDIPortInfo, _impl_.a_id_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::MIDIPortInfo, _impl_.a_name_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::MIDIPortInfo, _impl_.a_manufacturer_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::MIDIPortInfo, _impl_.a_version_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::MIDIPortInfo, _impl_.a_type_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::MIDIMessage, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::MIDIMessage, _impl_.a_data_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::MIDIMessage, _impl_.a_timestamp_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::MIDIPortList, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::dom::MIDIPortList, _impl_.a_ports_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::dom::MIDIPortInfo)},
-  { 11, -1, -1, sizeof(::protobuf::mozilla::dom::MIDIMessage)},
-  { 19, -1, -1, sizeof(::protobuf::mozilla::dom::MIDIPortList)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::dom::_MIDIPortInfo_default_instance_._instance,
-  &::protobuf::mozilla::dom::_MIDIMessage_default_instance_._instance,
-  &::protobuf::mozilla::dom::_MIDIPortList_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n&MIDITypes_protobuf.mozilla.dom.h.proto"
-  "\022\024protobuf.mozilla.dom\"g\n\014MIDIPortInfo\022\014"
-  "\n\004a_id\030\001 \001(\t\022\016\n\006a_name\030\002 \001(\t\022\026\n\016a_manufa"
-  "cturer\030\003 \001(\t\022\021\n\ta_version\030\004 \001(\t\022\016\n\006a_typ"
-  "e\030\005 \001(\r\"2\n\013MIDIMessage\022\016\n\006a_data\030\001 \003(\r\022\023"
-  "\n\013a_timestamp\030\002 \001(\014\"C\n\014MIDIPortList\0223\n\007a"
-  "_ports\030\001 \003(\0132\".protobuf.mozilla.dom.MIDI"
-  "PortInfob\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto = {
-    false, false, 296, descriptor_table_protodef_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    "MIDITypes_protobuf.mozilla.dom.h.proto",
-    &descriptor_table_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once, nullptr, 0, 3,
-    schemas, file_default_instances, TableStruct_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto::offsets,
-    file_level_metadata_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto, file_level_enum_descriptors_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-    file_level_service_descriptors_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter() {
-  return &descriptor_table_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto(&descriptor_table_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace dom {
@@ -152,12 +80,12 @@ class MIDIPortInfo::_Internal {
 
 MIDIPortInfo::MIDIPortInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.MIDIPortInfo)
 }
 MIDIPortInfo::MIDIPortInfo(const MIDIPortInfo& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   MIDIPortInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_id_){}
@@ -167,7 +95,7 @@ MIDIPortInfo::MIDIPortInfo(const MIDIPortInfo& from)
     , decltype(_impl_.a_type_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_id_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_id_.Set("", GetArenaForAllocation());
@@ -236,7 +164,7 @@ inline void MIDIPortInfo::SharedCtor(
 
 MIDIPortInfo::~MIDIPortInfo() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.MIDIPortInfo)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -266,7 +194,7 @@ void MIDIPortInfo::Clear() {
   _impl_.a_manufacturer_.ClearToEmpty();
   _impl_.a_version_.ClearToEmpty();
   _impl_.a_type_ = 0u;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* MIDIPortInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -281,7 +209,7 @@ const char* MIDIPortInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
           auto str = _internal_mutable_a_id();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.MIDIPortInfo.a_id"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -291,7 +219,7 @@ const char* MIDIPortInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
           auto str = _internal_mutable_a_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.MIDIPortInfo.a_name"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -301,7 +229,7 @@ const char* MIDIPortInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
           auto str = _internal_mutable_a_manufacturer();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.MIDIPortInfo.a_manufacturer"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -311,7 +239,7 @@ const char* MIDIPortInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
           auto str = _internal_mutable_a_version();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "protobuf.mozilla.dom.MIDIPortInfo.a_version"));
+          CHK_(::_pbi::VerifyUTF8(str, nullptr));
         } else
           goto handle_unusual;
         continue;
@@ -334,7 +262,7 @@ const char* MIDIPortInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -399,8 +327,8 @@ uint8_t* MIDIPortInfo::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.MIDIPortInfo)
   return target;
@@ -447,19 +375,22 @@ size_t MIDIPortInfo::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_a_type());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MIDIPortInfo::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    MIDIPortInfo::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MIDIPortInfo::GetClassData() const { return &_class_data_; }
+void MIDIPortInfo::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const MIDIPortInfo*>(
+      &from));
+}
 
-
-void MIDIPortInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<MIDIPortInfo*>(&to_msg);
-  auto& from = static_cast<const MIDIPortInfo&>(from_msg);
+void MIDIPortInfo::MergeFrom(const MIDIPortInfo& from) {
+  MIDIPortInfo* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.MIDIPortInfo)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -480,7 +411,7 @@ void MIDIPortInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
   if (from._internal_a_type() != 0) {
     _this->_internal_set_a_type(from._internal_a_type());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void MIDIPortInfo::CopyFrom(const MIDIPortInfo& from) {
@@ -518,11 +449,10 @@ void MIDIPortInfo::InternalSwap(MIDIPortInfo* other) {
   swap(_impl_.a_type_, other->_impl_.a_type_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata MIDIPortInfo::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[0]);
+std::string MIDIPortInfo::GetTypeName() const {
+  return "protobuf.mozilla.dom.MIDIPortInfo";
 }
+
 
 // ===================================================================
 
@@ -532,12 +462,12 @@ class MIDIMessage::_Internal {
 
 MIDIMessage::MIDIMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.MIDIMessage)
 }
 MIDIMessage::MIDIMessage(const MIDIMessage& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   MIDIMessage* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_data_){from._impl_.a_data_}
@@ -545,7 +475,7 @@ MIDIMessage::MIDIMessage(const MIDIMessage& from)
     , decltype(_impl_.a_timestamp_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_timestamp_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_timestamp_.Set("", GetArenaForAllocation());
@@ -575,7 +505,7 @@ inline void MIDIMessage::SharedCtor(
 
 MIDIMessage::~MIDIMessage() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.MIDIMessage)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -600,7 +530,7 @@ void MIDIMessage::Clear() {
 
   _impl_.a_data_.Clear();
   _impl_.a_timestamp_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* MIDIMessage::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -640,7 +570,7 @@ const char* MIDIMessage::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -674,8 +604,8 @@ uint8_t* MIDIMessage::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.MIDIMessage)
   return target;
@@ -710,19 +640,22 @@ size_t MIDIMessage::ByteSizeLong() const {
         this->_internal_a_timestamp());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MIDIMessage::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    MIDIMessage::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MIDIMessage::GetClassData() const { return &_class_data_; }
+void MIDIMessage::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const MIDIMessage*>(
+      &from));
+}
 
-
-void MIDIMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<MIDIMessage*>(&to_msg);
-  auto& from = static_cast<const MIDIMessage&>(from_msg);
+void MIDIMessage::MergeFrom(const MIDIMessage& from) {
+  MIDIMessage* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.MIDIMessage)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -732,7 +665,7 @@ void MIDIMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PR
   if (!from._internal_a_timestamp().empty()) {
     _this->_internal_set_a_timestamp(from._internal_a_timestamp());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void MIDIMessage::CopyFrom(const MIDIMessage& from) {
@@ -758,11 +691,10 @@ void MIDIMessage::InternalSwap(MIDIMessage* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata MIDIMessage::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[1]);
+std::string MIDIMessage::GetTypeName() const {
+  return "protobuf.mozilla.dom.MIDIMessage";
 }
+
 
 // ===================================================================
 
@@ -772,18 +704,18 @@ class MIDIPortList::_Internal {
 
 MIDIPortList::MIDIPortList(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.dom.MIDIPortList)
 }
 MIDIPortList::MIDIPortList(const MIDIPortList& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   MIDIPortList* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_ports_){from._impl_.a_ports_}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.dom.MIDIPortList)
 }
 
@@ -799,7 +731,7 @@ inline void MIDIPortList::SharedCtor(
 
 MIDIPortList::~MIDIPortList() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.dom.MIDIPortList)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -822,7 +754,7 @@ void MIDIPortList::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_ports_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* MIDIPortList::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -855,7 +787,7 @@ const char* MIDIPortList::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -882,8 +814,8 @@ uint8_t* MIDIPortList::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.dom.MIDIPortList)
   return target;
@@ -904,26 +836,29 @@ size_t MIDIPortList::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MIDIPortList::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    MIDIPortList::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MIDIPortList::GetClassData() const { return &_class_data_; }
+void MIDIPortList::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const MIDIPortList*>(
+      &from));
+}
 
-
-void MIDIPortList::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<MIDIPortList*>(&to_msg);
-  auto& from = static_cast<const MIDIPortList&>(from_msg);
+void MIDIPortList::MergeFrom(const MIDIPortList& from) {
+  MIDIPortList* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.dom.MIDIPortList)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_ports_.MergeFrom(from._impl_.a_ports_);
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void MIDIPortList::CopyFrom(const MIDIPortList& from) {
@@ -943,11 +878,10 @@ void MIDIPortList::InternalSwap(MIDIPortList* other) {
   _impl_.a_ports_.InternalSwap(&other->_impl_.a_ports_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata MIDIPortList::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_getter, &descriptor_table_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto_once,
-      file_level_metadata_MIDITypes_5fprotobuf_2emozilla_2edom_2eh_2eproto[2]);
+std::string MIDIPortList::GetTypeName() const {
+  return "protobuf.mozilla.dom.MIDIPortList";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace dom

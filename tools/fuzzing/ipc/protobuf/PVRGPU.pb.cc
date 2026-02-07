@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -25,7 +22,8 @@ namespace mozilla {
 namespace gfx {
 namespace PVRGPU {
 PROTOBUF_CONSTEXPR Msg_StartVRService::Msg_StartVRService(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_StartVRServiceDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_StartVRServiceDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -36,7 +34,8 @@ struct Msg_StartVRServiceDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_StartVRServiceDefaultTypeInternal _Msg_StartVRService_default_instance_;
 PROTOBUF_CONSTEXPR Msg_StopVRService::Msg_StopVRService(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_StopVRServiceDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_StopVRServiceDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -61,7 +60,8 @@ struct Msg_PuppetSubmitDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_PuppetSubmitDefaultTypeInternal _Msg_PuppetSubmit_default_instance_;
 PROTOBUF_CONSTEXPR Msg_PuppetReset::Msg_PuppetReset(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_PuppetResetDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PuppetResetDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -72,7 +72,8 @@ struct Msg_PuppetResetDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_PuppetResetDefaultTypeInternal _Msg_PuppetReset_default_instance_;
 PROTOBUF_CONSTEXPR Msg_PuppetCheckForCompletion::Msg_PuppetCheckForCompletion(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_PuppetCheckForCompletionDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_PuppetCheckForCompletionDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -83,7 +84,8 @@ struct Msg_PuppetCheckForCompletionDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Msg_PuppetCheckForCompletionDefaultTypeInternal _Msg_PuppetCheckForCompletion_default_instance_;
 PROTOBUF_CONSTEXPR Msg_NotifyPuppetComplete::Msg_NotifyPuppetComplete(
-    ::_pbi::ConstantInitialized) {}
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_._cached_size_)*/{}} {}
 struct Msg_NotifyPuppetCompleteDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Msg_NotifyPuppetCompleteDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
@@ -97,90 +99,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace gfx
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PVRGPU_2eproto[6];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PVRGPU_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PVRGPU_2eproto = nullptr;
-
-const uint32_t TableStruct_PVRGPU_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PVRGPU::Msg_StartVRService, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PVRGPU::Msg_StopVRService, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PVRGPU::Msg_PuppetSubmit, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PVRGPU::Msg_PuppetSubmit, _impl_.a_abuffer_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PVRGPU::Msg_PuppetReset, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PVRGPU::Msg_PuppetCheckForCompletion, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PVRGPU::Msg_NotifyPuppetComplete, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::gfx::PVRGPU::Msg_StartVRService)},
-  { 6, -1, -1, sizeof(::protobuf::mozilla::gfx::PVRGPU::Msg_StopVRService)},
-  { 12, -1, -1, sizeof(::protobuf::mozilla::gfx::PVRGPU::Msg_PuppetSubmit)},
-  { 19, -1, -1, sizeof(::protobuf::mozilla::gfx::PVRGPU::Msg_PuppetReset)},
-  { 25, -1, -1, sizeof(::protobuf::mozilla::gfx::PVRGPU::Msg_PuppetCheckForCompletion)},
-  { 31, -1, -1, sizeof(::protobuf::mozilla::gfx::PVRGPU::Msg_NotifyPuppetComplete)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::gfx::PVRGPU::_Msg_StartVRService_default_instance_._instance,
-  &::protobuf::mozilla::gfx::PVRGPU::_Msg_StopVRService_default_instance_._instance,
-  &::protobuf::mozilla::gfx::PVRGPU::_Msg_PuppetSubmit_default_instance_._instance,
-  &::protobuf::mozilla::gfx::PVRGPU::_Msg_PuppetReset_default_instance_._instance,
-  &::protobuf::mozilla::gfx::PVRGPU::_Msg_PuppetCheckForCompletion_default_instance_._instance,
-  &::protobuf::mozilla::gfx::PVRGPU::_Msg_NotifyPuppetComplete_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PVRGPU_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\014PVRGPU.proto\022\033protobuf.mozilla.gfx.PVR"
-  "GPU\"\024\n\022Msg_StartVRService\"\023\n\021Msg_StopVRS"
-  "ervice\"%\n\020Msg_PuppetSubmit\022\021\n\ta_aBuffer\030"
-  "\001 \003(\004\"\021\n\017Msg_PuppetReset\"\036\n\034Msg_PuppetCh"
-  "eckForCompletion\"\032\n\030Msg_NotifyPuppetComp"
-  "leteb\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_PVRGPU_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PVRGPU_2eproto = {
-    false, false, 212, descriptor_table_protodef_PVRGPU_2eproto,
-    "PVRGPU.proto",
-    &descriptor_table_PVRGPU_2eproto_once, nullptr, 0, 6,
-    schemas, file_default_instances, TableStruct_PVRGPU_2eproto::offsets,
-    file_level_metadata_PVRGPU_2eproto, file_level_enum_descriptors_PVRGPU_2eproto,
-    file_level_service_descriptors_PVRGPU_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PVRGPU_2eproto_getter() {
-  return &descriptor_table_PVRGPU_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PVRGPU_2eproto(&descriptor_table_PVRGPU_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace gfx {
@@ -194,37 +112,145 @@ class Msg_StartVRService::_Internal {
 
 Msg_StartVRService::Msg_StartVRService(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.PVRGPU.Msg_StartVRService)
 }
 Msg_StartVRService::Msg_StartVRService(const Msg_StartVRService& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_StartVRService* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PVRGPU.Msg_StartVRService)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_StartVRService::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_StartVRService::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_StartVRService::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PVRGPU_2eproto_getter, &descriptor_table_PVRGPU_2eproto_once,
-      file_level_metadata_PVRGPU_2eproto[0]);
+inline void Msg_StartVRService::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Msg_StartVRService::~Msg_StartVRService() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.PVRGPU.Msg_StartVRService)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Msg_StartVRService::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Msg_StartVRService::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Msg_StartVRService::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.gfx.PVRGPU.Msg_StartVRService)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Msg_StartVRService::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Msg_StartVRService::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.gfx.PVRGPU.Msg_StartVRService)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.PVRGPU.Msg_StartVRService)
+  return target;
+}
+
+size_t Msg_StartVRService::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRGPU.Msg_StartVRService)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Msg_StartVRService::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_StartVRService*>(
+      &from));
+}
+
+void Msg_StartVRService::MergeFrom(const Msg_StartVRService& from) {
+  Msg_StartVRService* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.PVRGPU.Msg_StartVRService)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Msg_StartVRService::CopyFrom(const Msg_StartVRService& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.gfx.PVRGPU.Msg_StartVRService)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg_StartVRService::IsInitialized() const {
+  return true;
+}
+
+void Msg_StartVRService::InternalSwap(Msg_StartVRService* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Msg_StartVRService::GetTypeName() const {
+  return "protobuf.mozilla.gfx.PVRGPU.Msg_StartVRService";
+}
+
 
 // ===================================================================
 
@@ -234,37 +260,145 @@ class Msg_StopVRService::_Internal {
 
 Msg_StopVRService::Msg_StopVRService(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.PVRGPU.Msg_StopVRService)
 }
 Msg_StopVRService::Msg_StopVRService(const Msg_StopVRService& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_StopVRService* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PVRGPU.Msg_StopVRService)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_StopVRService::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_StopVRService::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_StopVRService::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PVRGPU_2eproto_getter, &descriptor_table_PVRGPU_2eproto_once,
-      file_level_metadata_PVRGPU_2eproto[1]);
+inline void Msg_StopVRService::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Msg_StopVRService::~Msg_StopVRService() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.PVRGPU.Msg_StopVRService)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Msg_StopVRService::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Msg_StopVRService::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Msg_StopVRService::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.gfx.PVRGPU.Msg_StopVRService)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Msg_StopVRService::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Msg_StopVRService::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.gfx.PVRGPU.Msg_StopVRService)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.PVRGPU.Msg_StopVRService)
+  return target;
+}
+
+size_t Msg_StopVRService::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRGPU.Msg_StopVRService)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Msg_StopVRService::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_StopVRService*>(
+      &from));
+}
+
+void Msg_StopVRService::MergeFrom(const Msg_StopVRService& from) {
+  Msg_StopVRService* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.PVRGPU.Msg_StopVRService)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Msg_StopVRService::CopyFrom(const Msg_StopVRService& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.gfx.PVRGPU.Msg_StopVRService)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg_StopVRService::IsInitialized() const {
+  return true;
+}
+
+void Msg_StopVRService::InternalSwap(Msg_StopVRService* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Msg_StopVRService::GetTypeName() const {
+  return "protobuf.mozilla.gfx.PVRGPU.Msg_StopVRService";
+}
+
 
 // ===================================================================
 
@@ -274,19 +408,19 @@ class Msg_PuppetSubmit::_Internal {
 
 Msg_PuppetSubmit::Msg_PuppetSubmit(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetSubmit)
 }
 Msg_PuppetSubmit::Msg_PuppetSubmit(const Msg_PuppetSubmit& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_PuppetSubmit* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_abuffer_){from._impl_.a_abuffer_}
     , /*decltype(_impl_._a_abuffer_cached_byte_size_)*/{0}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetSubmit)
 }
 
@@ -303,7 +437,7 @@ inline void Msg_PuppetSubmit::SharedCtor(
 
 Msg_PuppetSubmit::~Msg_PuppetSubmit() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetSubmit)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -326,7 +460,7 @@ void Msg_PuppetSubmit::Clear() {
   (void) cached_has_bits;
 
   _impl_.a_abuffer_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_PuppetSubmit::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -357,7 +491,7 @@ const char* Msg_PuppetSubmit::_InternalParse(const char* ptr, ::_pbi::ParseConte
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -385,8 +519,8 @@ uint8_t* Msg_PuppetSubmit::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetSubmit)
   return target;
@@ -414,26 +548,29 @@ size_t Msg_PuppetSubmit::ByteSizeLong() const {
     total_size += data_size;
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_PuppetSubmit::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Msg_PuppetSubmit::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_PuppetSubmit::GetClassData() const { return &_class_data_; }
+void Msg_PuppetSubmit::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_PuppetSubmit*>(
+      &from));
+}
 
-
-void Msg_PuppetSubmit::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Msg_PuppetSubmit*>(&to_msg);
-  auto& from = static_cast<const Msg_PuppetSubmit&>(from_msg);
+void Msg_PuppetSubmit::MergeFrom(const Msg_PuppetSubmit& from) {
+  Msg_PuppetSubmit* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetSubmit)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   _this->_impl_.a_abuffer_.MergeFrom(from._impl_.a_abuffer_);
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Msg_PuppetSubmit::CopyFrom(const Msg_PuppetSubmit& from) {
@@ -453,11 +590,10 @@ void Msg_PuppetSubmit::InternalSwap(Msg_PuppetSubmit* other) {
   _impl_.a_abuffer_.InternalSwap(&other->_impl_.a_abuffer_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_PuppetSubmit::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PVRGPU_2eproto_getter, &descriptor_table_PVRGPU_2eproto_once,
-      file_level_metadata_PVRGPU_2eproto[2]);
+std::string Msg_PuppetSubmit::GetTypeName() const {
+  return "protobuf.mozilla.gfx.PVRGPU.Msg_PuppetSubmit";
 }
+
 
 // ===================================================================
 
@@ -467,37 +603,145 @@ class Msg_PuppetReset::_Internal {
 
 Msg_PuppetReset::Msg_PuppetReset(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetReset)
 }
 Msg_PuppetReset::Msg_PuppetReset(const Msg_PuppetReset& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_PuppetReset* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetReset)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_PuppetReset::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_PuppetReset::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_PuppetReset::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PVRGPU_2eproto_getter, &descriptor_table_PVRGPU_2eproto_once,
-      file_level_metadata_PVRGPU_2eproto[3]);
+inline void Msg_PuppetReset::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Msg_PuppetReset::~Msg_PuppetReset() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetReset)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Msg_PuppetReset::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Msg_PuppetReset::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Msg_PuppetReset::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetReset)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Msg_PuppetReset::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Msg_PuppetReset::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetReset)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetReset)
+  return target;
+}
+
+size_t Msg_PuppetReset::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetReset)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Msg_PuppetReset::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_PuppetReset*>(
+      &from));
+}
+
+void Msg_PuppetReset::MergeFrom(const Msg_PuppetReset& from) {
+  Msg_PuppetReset* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetReset)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Msg_PuppetReset::CopyFrom(const Msg_PuppetReset& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetReset)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg_PuppetReset::IsInitialized() const {
+  return true;
+}
+
+void Msg_PuppetReset::InternalSwap(Msg_PuppetReset* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Msg_PuppetReset::GetTypeName() const {
+  return "protobuf.mozilla.gfx.PVRGPU.Msg_PuppetReset";
+}
+
 
 // ===================================================================
 
@@ -507,37 +751,145 @@ class Msg_PuppetCheckForCompletion::_Internal {
 
 Msg_PuppetCheckForCompletion::Msg_PuppetCheckForCompletion(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetCheckForCompletion)
 }
 Msg_PuppetCheckForCompletion::Msg_PuppetCheckForCompletion(const Msg_PuppetCheckForCompletion& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_PuppetCheckForCompletion* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetCheckForCompletion)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_PuppetCheckForCompletion::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_PuppetCheckForCompletion::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_PuppetCheckForCompletion::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PVRGPU_2eproto_getter, &descriptor_table_PVRGPU_2eproto_once,
-      file_level_metadata_PVRGPU_2eproto[4]);
+inline void Msg_PuppetCheckForCompletion::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Msg_PuppetCheckForCompletion::~Msg_PuppetCheckForCompletion() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetCheckForCompletion)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Msg_PuppetCheckForCompletion::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Msg_PuppetCheckForCompletion::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Msg_PuppetCheckForCompletion::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetCheckForCompletion)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Msg_PuppetCheckForCompletion::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Msg_PuppetCheckForCompletion::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetCheckForCompletion)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetCheckForCompletion)
+  return target;
+}
+
+size_t Msg_PuppetCheckForCompletion::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetCheckForCompletion)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Msg_PuppetCheckForCompletion::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_PuppetCheckForCompletion*>(
+      &from));
+}
+
+void Msg_PuppetCheckForCompletion::MergeFrom(const Msg_PuppetCheckForCompletion& from) {
+  Msg_PuppetCheckForCompletion* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetCheckForCompletion)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Msg_PuppetCheckForCompletion::CopyFrom(const Msg_PuppetCheckForCompletion& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.gfx.PVRGPU.Msg_PuppetCheckForCompletion)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg_PuppetCheckForCompletion::IsInitialized() const {
+  return true;
+}
+
+void Msg_PuppetCheckForCompletion::InternalSwap(Msg_PuppetCheckForCompletion* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Msg_PuppetCheckForCompletion::GetTypeName() const {
+  return "protobuf.mozilla.gfx.PVRGPU.Msg_PuppetCheckForCompletion";
+}
+
 
 // ===================================================================
 
@@ -547,37 +899,145 @@ class Msg_NotifyPuppetComplete::_Internal {
 
 Msg_NotifyPuppetComplete::Msg_NotifyPuppetComplete(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.PVRGPU.Msg_NotifyPuppetComplete)
 }
 Msg_NotifyPuppetComplete::Msg_NotifyPuppetComplete(const Msg_NotifyPuppetComplete& from)
-  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_NotifyPuppetComplete* const _this = this; (void)_this;
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:protobuf.mozilla.gfx.PVRGPU.Msg_NotifyPuppetComplete)
 }
 
-
-
-
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_NotifyPuppetComplete::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
-    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_NotifyPuppetComplete::GetClassData() const { return &_class_data_; }
-
-
-
-
-
-
-
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_NotifyPuppetComplete::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PVRGPU_2eproto_getter, &descriptor_table_PVRGPU_2eproto_once,
-      file_level_metadata_PVRGPU_2eproto[5]);
+inline void Msg_NotifyPuppetComplete::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      /*decltype(_impl_._cached_size_)*/{}
+  };
 }
+
+Msg_NotifyPuppetComplete::~Msg_NotifyPuppetComplete() {
+  // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.PVRGPU.Msg_NotifyPuppetComplete)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void Msg_NotifyPuppetComplete::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void Msg_NotifyPuppetComplete::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void Msg_NotifyPuppetComplete::Clear() {
+// @@protoc_insertion_point(message_clear_start:protobuf.mozilla.gfx.PVRGPU.Msg_NotifyPuppetComplete)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<std::string>();
+}
+
+const char* Msg_NotifyPuppetComplete::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* Msg_NotifyPuppetComplete::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:protobuf.mozilla.gfx.PVRGPU.Msg_NotifyPuppetComplete)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.PVRGPU.Msg_NotifyPuppetComplete)
+  return target;
+}
+
+size_t Msg_NotifyPuppetComplete::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:protobuf.mozilla.gfx.PVRGPU.Msg_NotifyPuppetComplete)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Msg_NotifyPuppetComplete::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_NotifyPuppetComplete*>(
+      &from));
+}
+
+void Msg_NotifyPuppetComplete::MergeFrom(const Msg_NotifyPuppetComplete& from) {
+  Msg_NotifyPuppetComplete* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.PVRGPU.Msg_NotifyPuppetComplete)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+}
+
+void Msg_NotifyPuppetComplete::CopyFrom(const Msg_NotifyPuppetComplete& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:protobuf.mozilla.gfx.PVRGPU.Msg_NotifyPuppetComplete)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg_NotifyPuppetComplete::IsInitialized() const {
+  return true;
+}
+
+void Msg_NotifyPuppetComplete::InternalSwap(Msg_NotifyPuppetComplete* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+}
+
+std::string Msg_NotifyPuppetComplete::GetTypeName() const {
+  return "protobuf.mozilla.gfx.PVRGPU.Msg_NotifyPuppetComplete";
+}
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace PVRGPU

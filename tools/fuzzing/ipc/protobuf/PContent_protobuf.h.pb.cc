@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -36,83 +33,6 @@ struct ChromeRegistryItemDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ChromeRegistryItemDefaultTypeInternal _ChromeRegistryItem_default_instance_;
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PContent_5fprotobuf_2eh_2eproto[1];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PContent_5fprotobuf_2eh_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PContent_5fprotobuf_2eh_2eproto = nullptr;
-
-const uint32_t TableStruct_PContent_5fprotobuf_2eh_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::ChromeRegistryItem, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::protobuf::ChromeRegistryItem, _impl_._oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  ::_pbi::kInvalidFieldOffsetTag,
-  PROTOBUF_FIELD_OFFSET(::protobuf::ChromeRegistryItem, _impl_.content_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::ChromeRegistryItem)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::_ChromeRegistryItem_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PContent_5fprotobuf_2eh_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\031PContent_protobuf.h.proto\022\010protobuf\032\033C"
-  "rashReporterInitArgs.proto\032\016DOMTypes.pro"
-  "to\032\027WindowGlobalTypes.proto\032\rIPCBlob.pro"
-  "to\032\017IPCStream.proto\032\025IPCTransferable.pro"
-  "to\032\024PPrintingTypes.proto\032\021PTabContext.pr"
-  "oto\032\023ProtocolTypes.proto\032\034PBackgroundSha"
-  "redTypes.proto\032\030PContentPermission.proto"
-  "\032\026GraphicsMessages.proto\032\027MemoryReportTy"
-  "pes.proto\032\024ClientIPCTypes.proto\032\017HangTyp"
-  "es.proto\032\020PrefsTypes.proto\032\030NeckoChannel"
-  "Params.proto\032\021PSMIPCTypes.proto\032\026LookAnd"
-  "FeelTypes.proto\"~\n\022ChromeRegistryItem\022\033\n"
-  "\021a_mVChromePackage\030\001 \001(\014H\000\022\035\n\023a_mVOverri"
-  "deMapping\030\002 \001(\014H\000\022!\n\027a_mVSubstitutionMap"
-  "ping\030\003 \001(\014H\000B\t\n\007contentb\006proto3"
-  ;
-static const ::_pbi::DescriptorTable* const descriptor_table_PContent_5fprotobuf_2eh_2eproto_deps[19] = {
-  &::descriptor_table_ClientIPCTypes_2eproto,
-  &::descriptor_table_CrashReporterInitArgs_2eproto,
-  &::descriptor_table_DOMTypes_2eproto,
-  &::descriptor_table_GraphicsMessages_2eproto,
-  &::descriptor_table_HangTypes_2eproto,
-  &::descriptor_table_IPCBlob_2eproto,
-  &::descriptor_table_IPCStream_2eproto,
-  &::descriptor_table_IPCTransferable_2eproto,
-  &::descriptor_table_LookAndFeelTypes_2eproto,
-  &::descriptor_table_MemoryReportTypes_2eproto,
-  &::descriptor_table_NeckoChannelParams_2eproto,
-  &::descriptor_table_PBackgroundSharedTypes_2eproto,
-  &::descriptor_table_PContentPermission_2eproto,
-  &::descriptor_table_PPrintingTypes_2eproto,
-  &::descriptor_table_PSMIPCTypes_2eproto,
-  &::descriptor_table_PTabContext_2eproto,
-  &::descriptor_table_PrefsTypes_2eproto,
-  &::descriptor_table_ProtocolTypes_2eproto,
-  &::descriptor_table_WindowGlobalTypes_2eproto,
-};
-static ::_pbi::once_flag descriptor_table_PContent_5fprotobuf_2eh_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PContent_5fprotobuf_2eh_2eproto = {
-    false, false, 591, descriptor_table_protodef_PContent_5fprotobuf_2eh_2eproto,
-    "PContent_protobuf.h.proto",
-    &descriptor_table_PContent_5fprotobuf_2eh_2eproto_once, descriptor_table_PContent_5fprotobuf_2eh_2eproto_deps, 19, 1,
-    schemas, file_default_instances, TableStruct_PContent_5fprotobuf_2eh_2eproto::offsets,
-    file_level_metadata_PContent_5fprotobuf_2eh_2eproto, file_level_enum_descriptors_PContent_5fprotobuf_2eh_2eproto,
-    file_level_service_descriptors_PContent_5fprotobuf_2eh_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PContent_5fprotobuf_2eh_2eproto_getter() {
-  return &descriptor_table_PContent_5fprotobuf_2eh_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PContent_5fprotobuf_2eh_2eproto(&descriptor_table_PContent_5fprotobuf_2eh_2eproto);
 namespace protobuf {
 
 // ===================================================================
@@ -123,19 +43,19 @@ class ChromeRegistryItem::_Internal {
 
 ChromeRegistryItem::ChromeRegistryItem(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.ChromeRegistryItem)
 }
 ChromeRegistryItem::ChromeRegistryItem(const ChromeRegistryItem& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   ChromeRegistryItem* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.content_){}
     , /*decltype(_impl_._cached_size_)*/{}
     , /*decltype(_impl_._oneof_case_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   clear_has_content();
   switch (from.content_case()) {
     case kAMVChromePackage: {
@@ -171,7 +91,7 @@ inline void ChromeRegistryItem::SharedCtor(
 
 ChromeRegistryItem::~ChromeRegistryItem() {
   // @@protoc_insertion_point(destructor:protobuf.ChromeRegistryItem)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -219,7 +139,7 @@ void ChromeRegistryItem::Clear() {
   (void) cached_has_bits;
 
   clear_content();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* ChromeRegistryItem::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -266,7 +186,7 @@ const char* ChromeRegistryItem::_InternalParse(const char* ptr, ::_pbi::ParseCon
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -303,8 +223,8 @@ uint8_t* ChromeRegistryItem::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.ChromeRegistryItem)
   return target;
@@ -344,19 +264,22 @@ size_t ChromeRegistryItem::ByteSizeLong() const {
       break;
     }
   }
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ChromeRegistryItem::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    ChromeRegistryItem::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ChromeRegistryItem::GetClassData() const { return &_class_data_; }
+void ChromeRegistryItem::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const ChromeRegistryItem*>(
+      &from));
+}
 
-
-void ChromeRegistryItem::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<ChromeRegistryItem*>(&to_msg);
-  auto& from = static_cast<const ChromeRegistryItem&>(from_msg);
+void ChromeRegistryItem::MergeFrom(const ChromeRegistryItem& from) {
+  ChromeRegistryItem* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.ChromeRegistryItem)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -379,7 +302,7 @@ void ChromeRegistryItem::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
       break;
     }
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void ChromeRegistryItem::CopyFrom(const ChromeRegistryItem& from) {
@@ -400,11 +323,10 @@ void ChromeRegistryItem::InternalSwap(ChromeRegistryItem* other) {
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ChromeRegistryItem::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PContent_5fprotobuf_2eh_2eproto_getter, &descriptor_table_PContent_5fprotobuf_2eh_2eproto_once,
-      file_level_metadata_PContent_5fprotobuf_2eh_2eproto[0]);
+std::string ChromeRegistryItem::GetTypeName() const {
+  return "protobuf.ChromeRegistryItem";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace protobuf

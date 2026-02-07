@@ -8,10 +8,7 @@
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
@@ -42,48 +39,6 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace gfx
 }  // namespace mozilla
 }  // namespace protobuf
-static ::_pb::Metadata file_level_metadata_PVsyncBridge_2eproto[1];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_PVsyncBridge_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_PVsyncBridge_2eproto = nullptr;
-
-const uint32_t TableStruct_PVsyncBridge_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PVsyncBridge::Msg_NotifyVsync, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PVsyncBridge::Msg_NotifyVsync, _impl_.a_vsync_),
-  PROTOBUF_FIELD_OFFSET(::protobuf::mozilla::gfx::PVsyncBridge::Msg_NotifyVsync, _impl_.a_layersid_),
-};
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::protobuf::mozilla::gfx::PVsyncBridge::Msg_NotifyVsync)},
-};
-
-static const ::_pb::Message* const file_default_instances[] = {
-  &::protobuf::mozilla::gfx::PVsyncBridge::_Msg_NotifyVsync_default_instance_._instance,
-};
-
-const char descriptor_table_protodef_PVsyncBridge_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\022PVsyncBridge.proto\022!protobuf.mozilla.g"
-  "fx.PVsyncBridge\"6\n\017Msg_NotifyVsync\022\017\n\007a_"
-  "vsync\030\001 \001(\014\022\022\n\na_layersId\030\002 \001(\014b\006proto3"
-  ;
-static ::_pbi::once_flag descriptor_table_PVsyncBridge_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_PVsyncBridge_2eproto = {
-    false, false, 119, descriptor_table_protodef_PVsyncBridge_2eproto,
-    "PVsyncBridge.proto",
-    &descriptor_table_PVsyncBridge_2eproto_once, nullptr, 0, 1,
-    schemas, file_default_instances, TableStruct_PVsyncBridge_2eproto::offsets,
-    file_level_metadata_PVsyncBridge_2eproto, file_level_enum_descriptors_PVsyncBridge_2eproto,
-    file_level_service_descriptors_PVsyncBridge_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_PVsyncBridge_2eproto_getter() {
-  return &descriptor_table_PVsyncBridge_2eproto;
-}
-
-// Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_PVsyncBridge_2eproto(&descriptor_table_PVsyncBridge_2eproto);
 namespace protobuf {
 namespace mozilla {
 namespace gfx {
@@ -97,19 +52,19 @@ class Msg_NotifyVsync::_Internal {
 
 Msg_NotifyVsync::Msg_NotifyVsync(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync)
 }
 Msg_NotifyVsync::Msg_NotifyVsync(const Msg_NotifyVsync& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::MessageLite() {
   Msg_NotifyVsync* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.a_vsync_){}
     , decltype(_impl_.a_layersid_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
   _impl_.a_vsync_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.a_vsync_.Set("", GetArenaForAllocation());
@@ -150,7 +105,7 @@ inline void Msg_NotifyVsync::SharedCtor(
 
 Msg_NotifyVsync::~Msg_NotifyVsync() {
   // @@protoc_insertion_point(destructor:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<std::string>()) {
   (void)arena;
     return;
   }
@@ -175,7 +130,7 @@ void Msg_NotifyVsync::Clear() {
 
   _impl_.a_vsync_.ClearToEmpty();
   _impl_.a_layersid_.ClearToEmpty();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear<std::string>();
 }
 
 const char* Msg_NotifyVsync::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
@@ -213,7 +168,7 @@ const char* Msg_NotifyVsync::_InternalParse(const char* ptr, ::_pbi::ParseContex
     }
     ptr = UnknownFieldParse(
         tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        _internal_metadata_.mutable_unknown_fields<std::string>(),
         ptr, ctx);
     CHK_(ptr != nullptr);
   }  // while
@@ -244,8 +199,8 @@ uint8_t* Msg_NotifyVsync::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync)
   return target;
@@ -273,19 +228,22 @@ size_t Msg_NotifyVsync::ByteSizeLong() const {
         this->_internal_a_layersid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+  }
+  int cached_size = ::_pbi::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Msg_NotifyVsync::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    Msg_NotifyVsync::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Msg_NotifyVsync::GetClassData() const { return &_class_data_; }
+void Msg_NotifyVsync::CheckTypeAndMergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const Msg_NotifyVsync*>(
+      &from));
+}
 
-
-void Msg_NotifyVsync::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<Msg_NotifyVsync*>(&to_msg);
-  auto& from = static_cast<const Msg_NotifyVsync&>(from_msg);
+void Msg_NotifyVsync::MergeFrom(const Msg_NotifyVsync& from) {
+  Msg_NotifyVsync* const _this = this;
   // @@protoc_insertion_point(class_specific_merge_from_start:protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
@@ -297,7 +255,7 @@ void Msg_NotifyVsync::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const 
   if (!from._internal_a_layersid().empty()) {
     _this->_internal_set_a_layersid(from._internal_a_layersid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void Msg_NotifyVsync::CopyFrom(const Msg_NotifyVsync& from) {
@@ -326,11 +284,10 @@ void Msg_NotifyVsync::InternalSwap(Msg_NotifyVsync* other) {
   );
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Msg_NotifyVsync::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_PVsyncBridge_2eproto_getter, &descriptor_table_PVsyncBridge_2eproto_once,
-      file_level_metadata_PVsyncBridge_2eproto[0]);
+std::string Msg_NotifyVsync::GetTypeName() const {
+  return "protobuf.mozilla.gfx.PVsyncBridge.Msg_NotifyVsync";
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace PVsyncBridge
