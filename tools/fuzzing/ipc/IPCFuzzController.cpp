@@ -1651,7 +1651,7 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
     typedProtobuf->serialized_data.assign(
       reinterpret_cast<char*>(buffer.begin()), bufsize
     );
-    msg = ConvertProtobufToIPCMessage(typedProtobuf)
+    msg = ConvertProtobufToIPCMessage(typedProtobuf);
 
     if (!msg) {
       // if conversion failed, count it as a deserialization error

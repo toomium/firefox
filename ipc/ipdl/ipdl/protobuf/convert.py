@@ -135,7 +135,6 @@ class ProtobufTypeMapper(ipdl.type.TypeVisitor):
 
     def visitMaybeType(self, m : ipdl.type.MaybeType, *args):
         return self.mapType(m.basetype, countParam=False)
-        #return m.basetype.accept(self)
 
     def visitMessageType(self, m, *args):
         return super().visitMessageType(m, *args)
@@ -208,6 +207,7 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
             cardinality = None
         else:
             cardinality = ast.FieldCardinality.REQUIRED
+
         if isinstance(ipdltype, ipdl.type.MaybeType) or ipdltype.isRefcounted():
             cardinality = ast.FieldCardinality.OPTIONAL
         elif isinstance(ipdltype, ipdl.type.ArrayType):
@@ -231,11 +231,6 @@ class _GenerateProtobufCode(ipdl.ast.Visitor):
 
         # add normal msg including incoming params
         for parm in md.inParams:
-            if md.prettyMsgName() == "Msg_PDocAccessibleConstructor":
-                pprint(vars(parm))
-                pprint(vars(parm.type))
-                if isinstance(parm.type, ipdl.type.ActorType):
-                    pprint(vars(parm.type.protocol))
             field = self.mapParam(parm.progname, parm.type)
             field.number = field_num
             send_msg.elements.append(field)
