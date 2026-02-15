@@ -1660,6 +1660,39 @@ UniquePtr<IPC::Message> IPCFuzzController::replaceIPCMessage(
       Nyx::instance().release(1);
     }
   }
+  else if(Nyx::instance().is_replay()) {
+    if (!!getenv("MOZ_IPC_TO_PROTO")) {
+      // testfile is in IPC format, we have to convert it first
+      char* ipcMsgData = buffer.begin();
+
+      // Payload must be int aligned
+      bufsize -= bufsize % 4;
+
+      // Need at least a header and the control bytes.
+      if (bufsize < sizeof(IPC::Message::Header)) {
+        MOZ_FUZZING_NYX_DEBUG("INFO: Not enough data to craft IPC message.\n");
+        Nyx::instance().release(0);
+      }
+
+      buffer.shrinkTo(bufsize);
+
+      // Copy the header of the original message
+      memcpy(ipcMsgData, aMsg->header(), sizeof(IPC::Message::Header));
+      IPC::Message::Header* ipchdr = (IPC::Message::Header*)ipcMsgData;
+
+      size_t ipcMsgLen = buffer.length();
+      ipchdr->payload_size = ipcMsgLen - sizeof(IPC::Message::Header);
+
+      UniquePtr<IPC::Message> msg_temp(new IPC::Message(ipcMsgData, ipcMsgLen));
+
+      UniquePtr<TypedProtobuf> proto = ConvertIPCMessageToProtobuf(msg_temp);
+
+      msg = LibprotobufMapping::CreateMessageFromPayload(proto->serialized_data);
+    }
+    else {
+      msg = LibprotobufMapping::CreateMessageFromPayload(std::string(reinterpret_cast<char*>(buffer.begin()), bufsize));
+    }
+  }
   else {
     // DIRECT MODE
     // hiding protobuf message inside of ipc message
